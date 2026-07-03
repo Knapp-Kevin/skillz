@@ -19,65 +19,9 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseFrontmatter, truncate } from "./lib/frontmatter.ts";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-
-// ── Minimal frontmatter parser ───────────────────────────────────────
-
-function parseFrontmatter(md: string): Record<string, any> | null {
-  const m = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!m) return null;
-  const lines = m[1].split(/\r?\n/);
-  const out: Record<string, any> = {};
-  let i = 0;
-
-  function parseBlock(indent: number): Record<string, any> {
-    const obj: Record<string, any> = {};
-    while (i < lines.length) {
-      const line = lines[i];
-      if (!line.trim()) { i++; continue; }
-      const curIndent = line.length - line.trimStart().length;
-      if (curIndent < indent) break;
-      if (curIndent > indent) { i++; continue; } // stray deeper line; skip
-      const kv = line.trim().match(/^([\w][\w.-]*):\s*(.*)$/);
-      if (!kv) { i++; continue; }
-      const key = kv[1];
-      let val = kv[2];
-      i++;
-      if (val === ">-" || val === ">" || val === "|" || val === "|-") {
-        // folded/literal block: collect deeper-indented lines
-        const parts: string[] = [];
-        while (i < lines.length) {
-          const l = lines[i];
-          if (l.trim() && l.length - l.trimStart().length <= indent) break;
-          if (l.trim()) parts.push(l.trim());
-          i++;
-        }
-        obj[key] = parts.join(" ");
-      } else if (val === "") {
-        // nested map or list
-        if (i < lines.length && lines[i].trim().startsWith("- ")) {
-          const arr: string[] = [];
-          while (i < lines.length && lines[i].trim().startsWith("- ")) {
-            arr.push(lines[i].trim().slice(2).replace(/^["']|["']$/g, ""));
-            i++;
-          }
-          obj[key] = arr;
-        } else if (i < lines.length && lines[i].length - lines[i].trimStart().length > indent) {
-          obj[key] = parseBlock(lines[i].length - lines[i].trimStart().length);
-        } else {
-          obj[key] = "";
-        }
-      } else {
-        obj[key] = val.replace(/^["']|["']$/g, "");
-      }
-    }
-    return obj;
-  }
-
-  Object.assign(out, parseBlock(0));
-  return out;
-}
 
 function relPosix(p: string): string {
   return relative(ROOT, p).split(sep).join("/");
@@ -264,12 +208,16 @@ const index = {
   vendor: vendorIndex,
 };
 
-writeFileSync(join(ROOT, "index.json"), JSON.stringify(index, null, 2) + "\n");
-
-function truncate(s: unknown, n: number): string {
-  const clean = (typeof s === "string" ? s : "").replace(/\s+/g, " ").trim();
-  return clean.length <= n ? clean : clean.slice(0, n - 1).trimEnd() + "…";
+// Idempotent regeneration: keep the prior `generated` stamp when nothing
+// else changed, so `git diff --exit-code index.json` can verify freshness.
+const indexPath = join(ROOT, "index.json");
+const stripGenerated = (s: string) => s.replace(/"generated": "[^"]*"/, '"generated": ""');
+let serialized = JSON.stringify(index, null, 2) + "\n";
+if (existsSync(indexPath)) {
+  const prior = readFileSync(indexPath, "utf8");
+  if (stripGenerated(prior) === stripGenerated(serialized)) serialized = prior;
 }
+writeFileSync(indexPath, serialized);
 
 let md = `# Skill Index
 

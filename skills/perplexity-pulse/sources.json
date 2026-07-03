@@ -1,0 +1,18 @@
+{
+  "name": "Perplexity Pulse",
+  "github": ["ppl-ai/api-discussion", "ppl-ai/modelcontextprotocol"],
+  "subreddits": ["perplexity_ai"],
+  "keywords": [],
+  "pages": [
+    { "label": "Perplexity blog", "url": "https://www.perplexity.ai/hub/blog" },
+    { "label": "API changelog", "url": "https://docs.perplexity.ai/changelog" },
+    { "label": "Sonar API docs", "url": "https://docs.perplexity.ai/" }
+  ],
+  "searches": [
+    "Perplexity announcement site:perplexity.ai",
+    "Perplexity Sonar API update",
+    "Comet browser Perplexity release",
+    "Perplexity site:reddit.com/r/perplexity_ai",
+    "Perplexity model deprecation pricing"
+  ]
+}

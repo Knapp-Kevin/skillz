@@ -1,0 +1,27 @@
+{
+  "name": "Governance Pulse",
+  "github": [
+    "OWASP/www-project-top-10-for-large-language-model-applications",
+    "usnistgov/AIRC",
+    "EthicalML/awesome-artificial-intelligence-guidelines"
+  ],
+  "github_search": [
+    { "label": "new AI-governance repos", "q": "ai governance created:>{SINCE} stars:>10" },
+    { "label": "new agent-security repos", "q": "agent security llm created:>{SINCE} stars:>10" }
+  ],
+  "subreddits": [],
+  "keywords": [],
+  "pages": [
+    { "label": "EU AI Act tracker", "url": "https://artificialintelligenceact.eu/" },
+    { "label": "NIST AI RMF", "url": "https://www.nist.gov/itl/ai-risk-management-framework" },
+    { "label": "Anthropic transparency", "url": "https://www.anthropic.com/transparency" },
+    { "label": "OWASP GenAI security project", "url": "https://genai.owasp.org/" }
+  ],
+  "searches": [
+    "EU AI Act implementation deadline news",
+    "NIST AI RMF update",
+    "OWASP agentic top 10 update",
+    "AI agent governance framework announcement",
+    "AI regulation news this week"
+  ]
+}

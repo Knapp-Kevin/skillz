@@ -1,0 +1,18 @@
+{
+  "name": "OpenAI Pulse",
+  "github": ["openai/openai-python", "openai/openai-node", "openai/codex", "openai/openai-cookbook", "openai/openai-agents-python"],
+  "subreddits": ["OpenAI"],
+  "keywords": [],
+  "pages": [
+    { "label": "API changelog", "url": "https://platform.openai.com/docs/changelog" },
+    { "label": "News", "url": "https://openai.com/news/" },
+    { "label": "Model release notes", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" }
+  ],
+  "searches": [
+    "OpenAI announcement site:openai.com",
+    "new GPT model release",
+    "OpenAI API changelog deprecation",
+    "OpenAI site:reddit.com/r/OpenAI",
+    "Codex CLI update site:reddit.com"
+  ]
+}

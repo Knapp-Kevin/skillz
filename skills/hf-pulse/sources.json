@@ -1,0 +1,19 @@
+{
+  "name": "Hugging Face Pulse",
+  "github": ["huggingface/transformers", "huggingface/smolagents", "huggingface/huggingface_hub"],
+  "github_orgs": ["huggingface"],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["hugging face", "huggingface", "transformers", "smolagents"],
+  "pages": [
+    { "label": "HF blog", "url": "https://huggingface.co/blog" },
+    { "label": "Trending models", "url": "https://huggingface.co/models?sort=trending" },
+    { "label": "Daily papers", "url": "https://huggingface.co/papers" },
+    { "label": "Trending spaces", "url": "https://huggingface.co/spaces?sort=trending" }
+  ],
+  "searches": [
+    "Hugging Face announcement site:huggingface.co/blog",
+    "trending model huggingface this week",
+    "Hugging Face site:reddit.com/r/LocalLLaMA",
+    "transformers library release notes"
+  ]
+}

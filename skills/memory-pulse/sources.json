@@ -1,0 +1,21 @@
+{
+  "name": "Memory Pulse (agentic memory & context engineering)",
+  "github": ["letta-ai/letta", "mem0ai/mem0", "getzep/zep", "topoteretes/cognee", "camel-ai/camel"],
+  "github_search": [
+    { "label": "new agent-memory repos", "q": "agent memory llm created:>{SINCE} stars:>20" },
+    { "label": "new context-engineering repos", "q": "context engineering created:>{SINCE} stars:>20" }
+  ],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["memory", "context engineering", "rag", "knowledge graph"],
+  "pages": [
+    { "label": "Letta blog", "url": "https://www.letta.com/blog" },
+    { "label": "Mem0 blog", "url": "https://mem0.ai/blog" }
+  ],
+  "searches": [
+    "agentic memory paper arxiv",
+    "LLM long-term memory framework release",
+    "context engineering best practices",
+    "agent memory benchmark",
+    "temporal knowledge graph agent memory"
+  ]
+}

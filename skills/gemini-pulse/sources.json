@@ -1,0 +1,18 @@
+{
+  "name": "Gemini Pulse",
+  "github": ["google-gemini/gemini-cli", "google-gemini/cookbook", "googleapis/python-genai", "google/adk-python"],
+  "subreddits": ["Bard", "GoogleGeminiAI"],
+  "keywords": [],
+  "pages": [
+    { "label": "Gemini API changelog", "url": "https://ai.google.dev/gemini-api/docs/changelog" },
+    { "label": "Google AI blog", "url": "https://blog.google/technology/ai/" },
+    { "label": "DeepMind blog", "url": "https://deepmind.google/discover/blog/" }
+  ],
+  "searches": [
+    "Gemini model release site:blog.google",
+    "Gemini API changelog update",
+    "Google DeepMind announcement",
+    "Gemini site:reddit.com/r/Bard OR site:reddit.com/r/GoogleGeminiAI",
+    "gemini-cli release notes"
+  ]
+}

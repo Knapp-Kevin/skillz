@@ -1,0 +1,26 @@
+{
+  "name": "MCP Pulse (Model Context Protocol)",
+  "github": [
+    "modelcontextprotocol/modelcontextprotocol",
+    "modelcontextprotocol/servers",
+    "modelcontextprotocol/registry",
+    "modelcontextprotocol/typescript-sdk",
+    "modelcontextprotocol/python-sdk"
+  ],
+  "github_search": [
+    { "label": "new MCP servers", "q": "mcp server created:>{SINCE} stars:>15" },
+    { "label": "new MCP tooling", "q": "model-context-protocol created:>{SINCE} stars:>10" }
+  ],
+  "subreddits": ["mcp"],
+  "keywords": [],
+  "pages": [
+    { "label": "MCP spec changelog", "url": "https://modelcontextprotocol.io/specification/changelog" },
+    { "label": "MCP blog", "url": "https://blog.modelcontextprotocol.io/" }
+  ],
+  "searches": [
+    "Model Context Protocol spec update",
+    "new MCP server release",
+    "MCP registry announcement",
+    "MCP security vulnerability"
+  ]
+}
