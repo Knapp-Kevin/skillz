@@ -1,0 +1,1371 @@
+{
+  "version": 1,
+  "generated": "2026-07-03T18:18:28.232Z",
+  "repo": "skillz",
+  "root": "https://github.com/Knapp-Kevin/skillz",
+  "skills": [
+    {
+      "name": "claude-pulse",
+      "displayName": "Claude Pulse",
+      "description": "Scan the latest Claude updates directly from Anthropic's official release notes, blog posts, and announcements, plus top community commentary from Claude- and AI-coding-focused subreddits. Use when the user asks \"what's new with Claude\", \"latest Claude features\", \"Claude update digest\", \"check Claude changelog\", \"Claude pulse\", or wants a synthesized read on new Claude models, features, and community reception.",
+      "category": "Productivity",
+      "version": "1.1.0",
+      "path": "skills/claude-pulse",
+      "skillFile": "skills/claude-pulse/SKILL.md",
+      "scripts": [
+        "skills/claude-pulse/scripts/pulse.ts"
+      ]
+    }
+  ],
+  "vendor": {
+    "knowledge-work-plugins": {
+      "source": "https://github.com/anthropics/knowledge-work-plugins",
+      "install": "/plugin marketplace add anthropics/knowledge-work-plugins",
+      "plugins": [
+        {
+          "name": "apollo",
+          "displayName": "Apollo.io",
+          "description": "Prospect, enrich leads, and load outreach sequences with Apollo.io — one-click MCP server integration for Claude Code and Cowork.",
+          "path": "vendor/knowledge-work-plugins/partner-built/apollo",
+          "skills": [
+            {
+              "name": "enrich-lead",
+              "description": "Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full contact card with email, phone, title, company intel, and next actions.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/apollo/skills/enrich-lead/SKILL.md"
+            },
+            {
+              "name": "prospect",
+              "description": "Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked table of enriched decision-maker leads with emails and phone numbers.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/apollo/skills/prospect/SKILL.md"
+            },
+            {
+              "name": "sequence-load",
+              "description": "Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles enrichment, contact creation, deduplication, and enrollment in one flow.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/apollo/skills/sequence-load/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "bio-research",
+          "displayName": "Bio Research",
+          "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D",
+          "path": "vendor/knowledge-work-plugins/bio-research",
+          "skills": [
+            {
+              "name": "instrument-data-to-allotrope",
+              "description": "Convert laboratory instrument output files (PDF, CSV, Excel, TXT) to Allotrope Simple Model (ASM) JSON format or flattened 2D CSV. Use this skill when scientists need to standardize instrument data for LIMS systems, data lakes, or downstream analysis. Supports auto-detection of instrument types. Outputs include full ASM JSON, flattened CSV for easy import, and exportable Python code for data engineers. Common triggers include converting instrument files, standardizing lab data, preparing data for upload to LIMS/ELN systems, or generating parser code for production pipelines.",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/instrument-data-to-allotrope/SKILL.md"
+            },
+            {
+              "name": "nextflow-development",
+              "description": "Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on sequencing data. Use when analyzing RNA-seq, WGS/WES, or ATAC-seq data—either local FASTQs or public datasets from GEO/SRA. Triggers on nf-core, Nextflow, FASTQ analysis, variant calling, gene expression, differential expression, GEO reanalysis, GSE/GSM/SRR accessions, or samplesheet creation.",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/nextflow-development/SKILL.md"
+            },
+            {
+              "name": "scientific-problem-selection",
+              "description": "This skill should be used when scientists need help with research problem selection, project ideation, troubleshooting stuck projects, or strategic scientific decisions. Use this skill when users ask to pitch a new research idea, work through a project problem, evaluate project risks, plan research strategy, navigate decision trees, or get help choosing what scientific problem to work on. Typical requests include \"I have an idea for a project\", \"I'm stuck on my research\", \"help me evaluate this project\", \"what should I work on\", or \"I need strategic advice about my research\".",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/scientific-problem-selection/SKILL.md"
+            },
+            {
+              "name": "scvi-tools",
+              "description": "Deep learning for single-cell analysis using scvi-tools. This skill should be used when users need (1) data integration and batch correction with scVI/scANVI, (2) ATAC-seq analysis with PeakVI, (3) CITE-seq multi-modal analysis with totalVI, (4) multiome RNA+ATAC analysis with MultiVI, (5) spatial transcriptomics deconvolution with DestVI, (6) label transfer and reference mapping with scANVI/scArches, (7) RNA velocity with veloVI, or (8) any deep learning-based single-cell method. Triggers include mentions of scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI, scArches, variational autoencoder, VAE, batch correction, data integration, multi-modal, CITE-seq, multiome, reference mapping, latent space.",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/scvi-tools/SKILL.md"
+            },
+            {
+              "name": "single-cell-rna-qc",
+              "description": "Performs quality control on single-cell RNA-seq data (.h5ad or .h5 files) using scverse best practices with MAD-based filtering and comprehensive visualizations. Use when users request QC analysis, filtering low-quality cells, assessing data quality, or following scverse/scanpy best practices for single-cell analysis.",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/single-cell-rna-qc/SKILL.md"
+            },
+            {
+              "name": "start",
+              "description": "Set up your bio-research environment and explore available tools. Use when first getting oriented with the plugin, checking which literature, drug-discovery, or visualization MCP servers are connected, or surveying available analysis skills before starting a new project.",
+              "skillFile": "vendor/knowledge-work-plugins/bio-research/skills/start/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "brand-voice",
+          "displayName": "Brand Voice",
+          "description": "Discover your brand voice from existing documents and conversations, generate enforceable guidelines, and validate AI-generated content against your established tone and positioning.",
+          "path": "vendor/knowledge-work-plugins/partner-built/brand-voice",
+          "skills": [
+            {
+              "name": "brand-voice-enforcement",
+              "description": "This skill applies brand guidelines to content creation. It should be used when the user asks to \"write an email\", \"draft a proposal\", \"create a pitch deck\", \"write a LinkedIn post\", \"draft a presentation\", \"write a Slack message\", \"draft sales content\", or any content creation request where brand voice should be applied. Also triggers on \"on-brand\", \"brand voice\", \"enforce voice\", \"apply brand guidelines\", \"brand-aligned content\", \"write in our voice\", \"use our brand tone\", \"make this sound like us\", \"rewrite this in our tone\", or \"this doesn't sound on-brand\". Not for generating guidelines from scratch (use guideline-generation) or discovering brand materials (use discover-brand).",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/brand-voice/skills/brand-voice-enforcement/SKILL.md"
+            },
+            {
+              "name": "discover-brand",
+              "description": "This skill orchestrates autonomous discovery of brand materials across enterprise platforms (Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola, Slack). It should be used when the user asks to \"discover brand materials\", \"find brand documents\", \"search for brand guidelines\", \"audit brand content\", \"what brand materials do we have\", \"find our style guide\", \"where are our brand docs\", \"do we have a style guide\", \"discover brand voice\", \"brand content audit\", or \"find brand assets\".",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/brand-voice/skills/discover-brand/SKILL.md"
+            },
+            {
+              "name": "guideline-generation",
+              "description": "This skill generates, creates, or builds brand voice guidelines from source materials. It should be used when the user asks to \"generate brand guidelines\", \"create a style guide\", \"extract brand voice\", \"create guidelines from calls\", \"consolidate brand materials\", \"analyze my sales calls for brand voice\", \"build a brand playbook from documents\", \"synthesize a voice and tone guide\", or uploads brand documents, transcripts, or meeting recordings for brand analysis. Also triggers when the user has a discovery report and wants to convert it into actionable guidelines.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/brand-voice/skills/guideline-generation/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "common-room",
+          "displayName": "Common Room",
+          "description": "Turn Common Room into your GTM copilot. Research accounts and contacts, prep for calls with attendee profiles and talking points, and draft personalized outreach across email, LinkedIn, and phone.",
+          "path": "vendor/knowledge-work-plugins/partner-built/common-room",
+          "skills": [
+            {
+              "name": "account-research",
+              "description": "Research a company using Common Room data. Triggers on 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]', or any account-level question.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/account-research/SKILL.md"
+            },
+            {
+              "name": "call-prep",
+              "description": "Prepare for a customer or prospect call using Common Room signals. Triggers on 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]', or any call preparation request.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/call-prep/SKILL.md"
+            },
+            {
+              "name": "compose-outreach",
+              "description": "Generate personalized outreach messages using Common Room signals. Triggers on 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]', or any outreach drafting request.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/compose-outreach/SKILL.md"
+            },
+            {
+              "name": "contact-research",
+              "description": "Research a specific person using Common Room data. Triggers on 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead', or any contact-level question.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/contact-research/SKILL.md"
+            },
+            {
+              "name": "prospect",
+              "description": "Build targeted account or contact lists using Common Room's Prospector. Triggers on 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]', or any list-building request.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/prospect/SKILL.md"
+            },
+            {
+              "name": "weekly-prep-brief",
+              "description": "Generate a comprehensive weekly briefing for all external calls in the next 7 days. Triggers on 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep', or any weekly planning request.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/common-room/skills/weekly-prep-brief/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "cowork-plugin-management",
+          "displayName": "Plugin Management",
+          "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works.",
+          "path": "vendor/knowledge-work-plugins/cowork-plugin-management",
+          "skills": [
+            {
+              "name": "cowork-plugin-customizer",
+              "description": "Customize a Claude Code plugin for a specific organization's tools and workflows. Use when: customize plugin, set up plugin, configure plugin, tailor plugin, adjust plugin settings, customize plugin connectors, customize plugin skill, tweak plugin, modify plugin configuration.",
+              "skillFile": "vendor/knowledge-work-plugins/cowork-plugin-management/skills/cowork-plugin-customizer/SKILL.md"
+            },
+            {
+              "name": "create-cowork-plugin",
+              "description": "Guide users through creating a new plugin from scratch in a cowork session. Use when users want to create a plugin, build a plugin, make a new plugin, develop a plugin, scaffold a plugin, start a plugin from scratch, or design a plugin. This skill requires Cowork mode with access to the outputs directory for delivering the final .plugin file.",
+              "skillFile": "vendor/knowledge-work-plugins/cowork-plugin-management/skills/create-cowork-plugin/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "customer-support",
+          "displayName": "Customer Support",
+          "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content.",
+          "path": "vendor/knowledge-work-plugins/customer-support",
+          "skills": [
+            {
+              "name": "customer-escalation",
+              "description": "Package an escalation for engineering, product, or leadership with full context. Use when a bug needs engineering attention beyond normal support, multiple customers report the same issue, a customer is threatening to churn, or an issue has sat unresolved past its SLA.",
+              "skillFile": "vendor/knowledge-work-plugins/customer-support/skills/customer-escalation/SKILL.md"
+            },
+            {
+              "name": "customer-research",
+              "description": "Multi-source research on a customer question or topic with source attribution. Use when a customer asks something you need to look up, investigating whether a bug has been reported before, checking what was previously told to a specific account, or gathering background before drafting a response.",
+              "skillFile": "vendor/knowledge-work-plugins/customer-support/skills/customer-research/SKILL.md"
+            },
+            {
+              "name": "draft-response",
+              "description": "Draft a professional customer-facing response tailored to the situation and relationship. Use when answering a product question, responding to an escalation or outage, delivering bad news like a delay or won't-fix, declining a feature request, or replying to a billing issue.",
+              "skillFile": "vendor/knowledge-work-plugins/customer-support/skills/draft-response/SKILL.md"
+            },
+            {
+              "name": "kb-article",
+              "description": "Draft a knowledge base article from a resolved issue or common question. Use when a ticket resolution is worth documenting for self-service, the same question keeps coming up, a workaround needs to be published, or a known issue should be communicated to customers.",
+              "skillFile": "vendor/knowledge-work-plugins/customer-support/skills/kb-article/SKILL.md"
+            },
+            {
+              "name": "ticket-triage",
+              "description": "Triage and prioritize a support ticket or customer issue. Use when a new ticket comes in and needs categorization, assigning P1-P4 priority, deciding which team should handle it, or checking whether it's a duplicate or known issue before routing.",
+              "skillFile": "vendor/knowledge-work-plugins/customer-support/skills/ticket-triage/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "data",
+          "displayName": "Data",
+          "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders.",
+          "path": "vendor/knowledge-work-plugins/data",
+          "skills": [
+            {
+              "name": "analyze",
+              "description": "Answer data questions -- from quick lookups to full analyses. Use when looking up a single metric, investigating what's driving a trend or drop, comparing segments over time, or preparing a formal data report for stakeholders.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/analyze/SKILL.md"
+            },
+            {
+              "name": "build-dashboard",
+              "description": "Build an interactive HTML dashboard with charts, filters, and tables. Use when creating an executive overview with KPI cards, turning query results into a shareable self-contained report, building a team monitoring snapshot, or needing multiple charts with filters in one browser-openable file.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/build-dashboard/SKILL.md"
+            },
+            {
+              "name": "create-viz",
+              "description": "Create publication-quality visualizations with Python. Use when turning query results or a DataFrame into a chart, selecting the right chart type for a trend or comparison, generating a plot for a report or presentation, or needing an interactive chart with hover and zoom.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/create-viz/SKILL.md"
+            },
+            {
+              "name": "data-context-extractor",
+              "description": "Generate or improve a company-specific data analysis skill by extracting tribal knowledge from analysts. BOOTSTRAP MODE - Triggers: \"Create a data context skill\", \"Set up data analysis for our warehouse\", \"Help me create a skill for our database\", \"Generate a data skill for [company]\" → Discovers schemas, asks key questions, generates initial skill with reference files ITERATION MODE - Triggers: \"Add context about [domain]\", \"The skill needs more info about [topic]\", \"Update the data skill with [metrics/tables/terminology]\", \"Improve the [domain] reference\" → Loads existing skill, asks targeted questions, appends/updates reference files Use when data analysts want Claude to understand their company's specific data warehouse, terminology, metrics definitions, and common query patterns.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/data-context-extractor/SKILL.md"
+            },
+            {
+              "name": "data-visualization",
+              "description": "Create effective data visualizations with Python (matplotlib, seaborn, plotly). Use when building charts, choosing the right chart type for a dataset, creating publication-quality figures, or applying design principles like accessibility and color theory.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/data-visualization/SKILL.md"
+            },
+            {
+              "name": "explore-data",
+              "description": "Profile and explore a dataset to understand its shape, quality, and patterns. Use when encountering a new table or file, checking null rates and column distributions, spotting data quality issues like duplicates or suspicious values, or deciding which dimensions and metrics to analyze.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/explore-data/SKILL.md"
+            },
+            {
+              "name": "sql-queries",
+              "description": "Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Use when writing queries, optimizing slow SQL, translating between dialects, or building complex analytical queries with CTEs, window functions, or aggregations.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/sql-queries/SKILL.md"
+            },
+            {
+              "name": "statistical-analysis",
+              "description": "Apply statistical methods including descriptive stats, trend analysis, outlier detection, and hypothesis testing. Use when analyzing distributions, testing for significance, detecting anomalies, computing correlations, or interpreting statistical results.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/statistical-analysis/SKILL.md"
+            },
+            {
+              "name": "validate-data",
+              "description": "QA an analysis before sharing -- methodology, accuracy, and bias checks. Use when reviewing an analysis before a stakeholder presentation, spot-checking calculations and aggregation logic, verifying a SQL query's results look right, or assessing whether conclusions are actually supported by the data.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/validate-data/SKILL.md"
+            },
+            {
+              "name": "write-query",
+              "description": "Write optimized SQL for your dialect with best practices. Use when translating a natural-language data need into SQL, building a multi-CTE query with joins and aggregations, optimizing a query against a large partitioned table, or getting dialect-specific syntax for Snowflake, BigQuery, Postgres, etc.",
+              "skillFile": "vendor/knowledge-work-plugins/data/skills/write-query/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "design",
+          "displayName": "Design",
+          "description": "Accelerate design workflows — critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs.",
+          "path": "vendor/knowledge-work-plugins/design",
+          "skills": [
+            {
+              "name": "accessibility-review",
+              "description": "Run a WCAG 2.1 AA accessibility audit on a design or page. Trigger with \"audit accessibility\", \"check a11y\", \"is this accessible?\", or when reviewing a design for color contrast, keyboard navigation, touch target size, or screen reader behavior before handoff.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/accessibility-review/SKILL.md"
+            },
+            {
+              "name": "design-critique",
+              "description": "Get structured design feedback on usability, hierarchy, and consistency. Trigger with \"review this design\", \"critique this mockup\", \"what do you think of this screen?\", or when sharing a Figma link or screenshot for feedback at any stage from exploration to final polish.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/design-critique/SKILL.md"
+            },
+            {
+              "name": "design-handoff",
+              "description": "Generate developer handoff specs from a design. Use when a design is ready for engineering and needs a spec sheet covering layout, design tokens, component props, interaction states, responsive breakpoints, edge cases, and animation details.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/design-handoff/SKILL.md"
+            },
+            {
+              "name": "design-system",
+              "description": "Audit, document, or extend your design system. Use when checking for naming inconsistencies or hardcoded values across components, writing documentation for a component's variants, states, and accessibility notes, or designing a new pattern that fits the existing system.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/design-system/SKILL.md"
+            },
+            {
+              "name": "research-synthesis",
+              "description": "Synthesize user research into themes, insights, and recommendations. Use when you have interview transcripts, survey results, usability test notes, support tickets, or NPS responses that need to be distilled into patterns, user segments, and prioritized next steps.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/research-synthesis/SKILL.md"
+            },
+            {
+              "name": "user-research",
+              "description": "Plan, conduct, and synthesize user research. Trigger with \"user research plan\", \"interview guide\", \"usability test\", \"survey design\", \"research questions\", or when the user needs help with any aspect of understanding their users through research.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/user-research/SKILL.md"
+            },
+            {
+              "name": "ux-copy",
+              "description": "Write or review UX copy — microcopy, error messages, empty states, CTAs. Trigger with \"write copy for\", \"what should this button say?\", \"review this error message\", or when naming a CTA, wording a confirmation dialog, filling an empty state, or writing onboarding text.",
+              "skillFile": "vendor/knowledge-work-plugins/design/skills/ux-copy/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "engineering",
+          "displayName": "Engineering",
+          "description": "Streamline engineering workflows — standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone.",
+          "path": "vendor/knowledge-work-plugins/engineering",
+          "skills": [
+            {
+              "name": "architecture",
+              "description": "Create or evaluate an architecture decision record (ADR). Use when choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or designing a new component from requirements and constraints.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/architecture/SKILL.md"
+            },
+            {
+              "name": "code-review",
+              "description": "Review code changes for security, performance, and correctness. Trigger with a PR URL or diff, \"review this before I merge\", \"is this code safe?\", or when checking a change for N+1 queries, injection risks, missing edge cases, or error handling gaps.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/code-review/SKILL.md"
+            },
+            {
+              "name": "debug",
+              "description": "Structured debugging session — reproduce, isolate, diagnose, and fix. Trigger with an error message or stack trace, \"this works in staging but not prod\", \"something broke after the deploy\", or when behavior diverges from expected and the cause isn't obvious.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/debug/SKILL.md"
+            },
+            {
+              "name": "deploy-checklist",
+              "description": "Pre-deployment verification checklist. Use when about to ship a release, deploying a change with database migrations or feature flags, verifying CI status and approvals before going to production, or documenting rollback triggers ahead of time.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/deploy-checklist/SKILL.md"
+            },
+            {
+              "name": "documentation",
+              "description": "Write and maintain technical documentation. Trigger with \"write docs for\", \"document this\", \"create a README\", \"write a runbook\", \"onboarding guide\", or when the user needs help with any form of technical writing — API docs, architecture docs, or operational runbooks.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/documentation/SKILL.md"
+            },
+            {
+              "name": "incident-response",
+              "description": "Run an incident response workflow — triage, communicate, and write postmortem. Trigger with \"we have an incident\", \"production is down\", an alert that needs severity assessment, a status update mid-incident, or when writing a blameless postmortem after resolution.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/incident-response/SKILL.md"
+            },
+            {
+              "name": "standup",
+              "description": "Generate a standup update from recent activity. Use when preparing for daily standup, summarizing yesterday's commits and PRs and ticket moves, formatting work into yesterday/today/blockers, or structuring a few rough notes into a shareable update.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/standup/SKILL.md"
+            },
+            {
+              "name": "system-design",
+              "description": "Design systems, services, and architectures. Trigger with \"design a system for\", \"how should we architect\", \"system design for\", \"what's the right architecture for\", or when the user needs help with API design, data modeling, or service boundaries.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/system-design/SKILL.md"
+            },
+            {
+              "name": "tech-debt",
+              "description": "Identify, categorize, and prioritize technical debt. Trigger with \"tech debt\", \"technical debt audit\", \"what should we refactor\", \"code health\", or when the user asks about code quality, refactoring priorities, or maintenance backlog.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/tech-debt/SKILL.md"
+            },
+            {
+              "name": "testing-strategy",
+              "description": "Design test strategies and test plans. Trigger with \"how should we test\", \"test strategy for\", \"write tests for\", \"test plan\", \"what tests do we need\", or when the user needs help with testing approaches, coverage, or test architecture.",
+              "skillFile": "vendor/knowledge-work-plugins/engineering/skills/testing-strategy/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "enterprise-search",
+          "displayName": "Enterprise Search",
+          "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps.",
+          "path": "vendor/knowledge-work-plugins/enterprise-search",
+          "skills": [
+            {
+              "name": "digest",
+              "description": "Generate a daily or weekly digest of activity across all connected sources. Use when catching up after time away, starting the day and wanting a summary of mentions and action items, or reviewing a week's decisions and document updates grouped by project.",
+              "skillFile": "vendor/knowledge-work-plugins/enterprise-search/skills/digest/SKILL.md"
+            },
+            {
+              "name": "knowledge-synthesis",
+              "description": "Combines search results from multiple sources into coherent, deduplicated answers with source attribution. Handles confidence scoring based on freshness and authority, and summarizes large result sets effectively.",
+              "skillFile": "vendor/knowledge-work-plugins/enterprise-search/skills/knowledge-synthesis/SKILL.md"
+            },
+            {
+              "name": "search",
+              "description": "Search across all connected sources in one query. Trigger with \"find that doc about...\", \"what did we decide on...\", \"where was the conversation about...\", or when looking for a decision, document, or discussion that could live in chat, email, cloud storage, or a project tracker.",
+              "skillFile": "vendor/knowledge-work-plugins/enterprise-search/skills/search/SKILL.md"
+            },
+            {
+              "name": "search-strategy",
+              "description": "Query decomposition and multi-source search orchestration. Breaks natural language questions into targeted searches per source, translates queries into source-specific syntax, ranks results by relevance, and handles ambiguity and fallback strategies.",
+              "skillFile": "vendor/knowledge-work-plugins/enterprise-search/skills/search-strategy/SKILL.md"
+            },
+            {
+              "name": "source-management",
+              "description": "Manages connected MCP sources for enterprise search. Detects available sources, guides users to connect new ones, handles source priority ordering, and manages rate limiting awareness.",
+              "skillFile": "vendor/knowledge-work-plugins/enterprise-search/skills/source-management/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "finance",
+          "displayName": "Finance",
+          "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean.",
+          "path": "vendor/knowledge-work-plugins/finance",
+          "skills": [
+            {
+              "name": "audit-support",
+              "description": "Support SOX 404 compliance with control testing methodology, sample selection, and documentation standards. Use when generating testing workpapers, selecting audit samples, classifying control deficiencies, or preparing for internal or external audits.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/audit-support/SKILL.md"
+            },
+            {
+              "name": "close-management",
+              "description": "Manage the month-end close process with task sequencing, dependencies, and status tracking. Use when planning the close calendar, tracking close progress, identifying blockers, or sequencing close activities by day.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/close-management/SKILL.md"
+            },
+            {
+              "name": "financial-statements",
+              "description": "Generate financial statements (income statement, balance sheet, cash flow) with period-over-period comparison and variance analysis. Use when preparing a monthly or quarterly P&L, closing the books and need to flag material variances, comparing actuals to budget, building a financial summary for leadership review, or looking up GAAP presentation requirements and period-end adjustments.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/financial-statements/SKILL.md"
+            },
+            {
+              "name": "journal-entry",
+              "description": "Prepare journal entries with proper debits, credits, and supporting detail. Use when booking month-end accruals (AP, payroll, prepaid), recording depreciation or amortization, posting revenue recognition or deferred revenue adjustments, or documenting an entry for audit review.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/journal-entry/SKILL.md"
+            },
+            {
+              "name": "journal-entry-prep",
+              "description": "Prepare journal entries with proper debits, credits, and supporting documentation for month-end close. Use when booking accruals, prepaid amortization, fixed asset depreciation, payroll entries, revenue recognition, or any manual journal entry.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/journal-entry-prep/SKILL.md"
+            },
+            {
+              "name": "reconciliation",
+              "description": "Reconcile accounts by comparing GL balances to subledgers, bank statements, or third-party data. Use when performing bank reconciliations, GL-to-subledger recs, intercompany reconciliations, or identifying and categorizing reconciling items.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/reconciliation/SKILL.md"
+            },
+            {
+              "name": "sox-testing",
+              "description": "Generate SOX sample selections, testing workpapers, and control assessments. Use when planning quarterly or annual SOX 404 testing, pulling a sample for a control (revenue, P2P, ITGC, close), building a testing workpaper template, or evaluating and classifying a control deficiency.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/sox-testing/SKILL.md"
+            },
+            {
+              "name": "variance-analysis",
+              "description": "Decompose financial variances into drivers with narrative explanations and waterfall analysis. Use when analyzing budget vs. actual, period-over-period changes, revenue or expense variances, or preparing variance commentary for leadership.",
+              "skillFile": "vendor/knowledge-work-plugins/finance/skills/variance-analysis/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "human-resources",
+          "displayName": "Human Resources",
+          "description": "Streamline people operations — recruiting, onboarding, performance reviews, compensation analysis, and policy guidance. Maintain compliance and keep your team running smoothly.",
+          "path": "vendor/knowledge-work-plugins/human-resources",
+          "skills": [
+            {
+              "name": "comp-analysis",
+              "description": "Analyze compensation — benchmarking, band placement, and equity modeling. Trigger with \"what should we pay a [role]\", \"is this offer competitive\", \"model this equity grant\", or when uploading comp data to find outliers and retention risks.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/comp-analysis/SKILL.md"
+            },
+            {
+              "name": "draft-offer",
+              "description": "Draft an offer letter with comp details and terms. Use when a candidate is ready for an offer, assembling a total comp package (base, equity, signing bonus), writing the offer letter text itself, or prepping negotiation guidance for the hiring manager.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/draft-offer/SKILL.md"
+            },
+            {
+              "name": "interview-prep",
+              "description": "Create structured interview plans with competency-based questions and scorecards. Trigger with \"interview plan for\", \"interview questions for\", \"how should we interview\", \"scorecard for\", or when the user is preparing to interview candidates.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/interview-prep/SKILL.md"
+            },
+            {
+              "name": "onboarding",
+              "description": "Generate an onboarding checklist and first-week plan for a new hire. Use when someone has a start date coming up, building the pre-start task list (accounts, equipment, buddy), scheduling Day 1 and Week 1, or setting 30/60/90-day goals for a new team member.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/onboarding/SKILL.md"
+            },
+            {
+              "name": "org-planning",
+              "description": "Headcount planning, org design, and team structure optimization. Trigger with \"org planning\", \"headcount plan\", \"team structure\", \"reorg\", \"who should we hire next\", or when the user is thinking about team size, reporting structure, or organizational design.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/org-planning/SKILL.md"
+            },
+            {
+              "name": "people-report",
+              "description": "Generate headcount, attrition, diversity, or org health reports. Use when pulling a headcount snapshot for leadership, analyzing turnover trends by team, preparing diversity representation metrics, or assessing span of control and flight risk across the org.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/people-report/SKILL.md"
+            },
+            {
+              "name": "performance-review",
+              "description": "Structure a performance review with self-assessment, manager template, and calibration prep. Use when review season kicks off and you need a self-assessment template, writing a manager review for a direct report, prepping rating distributions and promotion cases for calibration, or turning vague feedback into specific behavioral examples.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/performance-review/SKILL.md"
+            },
+            {
+              "name": "policy-lookup",
+              "description": "Find and explain company policies in plain language. Trigger with \"what's our PTO policy\", \"can I work remotely from another country\", \"how do expenses work\", or any plain-language question about benefits, travel, leave, or handbook rules.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/policy-lookup/SKILL.md"
+            },
+            {
+              "name": "recruiting-pipeline",
+              "description": "Track and manage recruiting pipeline stages. Trigger with \"recruiting update\", \"candidate pipeline\", \"how many candidates\", \"hiring status\", or when the user discusses sourcing, screening, interviewing, or extending offers.",
+              "skillFile": "vendor/knowledge-work-plugins/human-resources/skills/recruiting-pipeline/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "legal",
+          "displayName": "Legal",
+          "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge.",
+          "path": "vendor/knowledge-work-plugins/legal",
+          "skills": [
+            {
+              "name": "brief",
+              "description": "Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of legal-relevant items across email, calendar, and contracts, when researching a specific legal question across internal sources, or when a developing situation (data breach, litigation threat, regulatory inquiry) needs rapid context.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/brief/SKILL.md"
+            },
+            {
+              "name": "compliance-check",
+              "description": "Run a compliance check on a proposed action, product feature, or business initiative, surfacing applicable regulations, required approvals, and risk areas. Use when launching a feature that touches personal data, when marketing or product proposes something with regulatory implications, or when you need to know which approvals and jurisdictional requirements apply before proceeding.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/compliance-check/SKILL.md"
+            },
+            {
+              "name": "legal-response",
+              "description": "Generate a response to a common legal inquiry using configured templates, with built-in escalation checks for situations that shouldn't use a templated reply. Use when responding to data subject requests, litigation hold notices, vendor legal questions, NDA requests from business teams, or subpoenas.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/legal-response/SKILL.md"
+            },
+            {
+              "name": "legal-risk-assessment",
+              "description": "Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter needs senior counsel or outside legal review.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/legal-risk-assessment/SKILL.md"
+            },
+            {
+              "name": "meeting-briefing",
+              "description": "Prepare structured briefings for meetings with legal relevance and track resulting action items. Use when preparing for contract negotiations, board meetings, compliance reviews, or any meeting where legal context, background research, or action tracking is needed.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/meeting-briefing/SKILL.md"
+            },
+            {
+              "name": "review-contract",
+              "description": "Review a contract against your organization's negotiation playbook — flag deviations, generate redlines, provide business impact analysis. Use when reviewing vendor or customer agreements, when you need clause-by-clause analysis against standard positions, or when preparing a negotiation strategy with prioritized redlines and fallback positions.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/review-contract/SKILL.md"
+            },
+            {
+              "name": "signature-request",
+              "description": "Prepare and route a document for e-signature — run a pre-signature checklist, configure signing order, and send for execution. Use when a contract is finalized and ready to sign, when verifying entity names, exhibits, and signature blocks before sending, or when setting up an envelope with sequential or parallel signers.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/signature-request/SKILL.md"
+            },
+            {
+              "name": "triage-nda",
+              "description": "Rapidly triage an incoming NDA and classify it as GREEN (standard approval), YELLOW (counsel review), or RED (full legal review). Use when a new NDA arrives from sales or business development, when screening for embedded non-solicits, non-competes, or missing carveouts, or when deciding whether an NDA can be signed under standard delegation.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/triage-nda/SKILL.md"
+            },
+            {
+              "name": "vendor-check",
+              "description": "Check the status of existing agreements with a vendor across all connected systems — CLM, CRM, email, and document storage — with gap analysis and upcoming deadlines. Use when onboarding or renewing a vendor, when you need a consolidated view of what's signed and what's missing (MSA, DPA, SOW), or when checking for approaching expirations and surviving obligations.",
+              "skillFile": "vendor/knowledge-work-plugins/legal/skills/vendor-check/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "marketing",
+          "displayName": "Marketing",
+          "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working.",
+          "path": "vendor/knowledge-work-plugins/marketing",
+          "skills": [
+            {
+              "name": "brand-review",
+              "description": "Review content against your brand voice, style guide, and messaging pillars, flagging deviations by severity with specific before/after fixes. Use when checking a draft before it ships, when auditing copy for voice consistency and terminology, or when screening for unsubstantiated claims, missing disclaimers, and other legal flags.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/brand-review/SKILL.md"
+            },
+            {
+              "name": "campaign-plan",
+              "description": "Generate a full campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics. Use when planning a product launch, lead-gen push, or awareness campaign, when you need a week-by-week content calendar with dependencies, or when translating a marketing goal into a structured, executable plan.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/campaign-plan/SKILL.md"
+            },
+            {
+              "name": "competitive-brief",
+              "description": "Research competitors and generate a positioning and messaging comparison with content gaps, opportunities, and threats. Use when building sales battlecards, when finding positioning gaps and messaging angles competitors haven't claimed, or when a competitor makes a move and you need to assess the impact.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/competitive-brief/SKILL.md"
+            },
+            {
+              "name": "content-creation",
+              "description": "Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/content-creation/SKILL.md"
+            },
+            {
+              "name": "draft-content",
+              "description": "Draft blog posts, social media, email newsletters, landing pages, press releases, and case studies with channel-specific formatting and SEO recommendations. Use when writing any marketing content, when you need headline or subject line options, or when adapting a message for a specific platform, audience, and brand voice.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/draft-content/SKILL.md"
+            },
+            {
+              "name": "email-sequence",
+              "description": "Design and draft multi-email sequences with full copy, timing, branching logic, exit conditions, and performance benchmarks. Use when building onboarding, lead nurture, re-engagement, win-back, or product launch flows, when you need a complete drip campaign with A/B test suggestions, or when mapping a sequence end-to-end with a flow diagram.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/email-sequence/SKILL.md"
+            },
+            {
+              "name": "performance-report",
+              "description": "Build a marketing performance report with key metrics, trend analysis, wins and misses, and prioritized optimization recommendations. Use when wrapping a campaign, when preparing weekly, monthly, or quarterly channel summaries for stakeholders, or when you need data translated into an executive summary with next-period priorities.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/performance-report/SKILL.md"
+            },
+            {
+              "name": "seo-audit",
+              "description": "Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison. Use when assessing a site's SEO health, when finding keyword opportunities and content gaps competitors own, or when you need a prioritized action plan split into quick wins and strategic investments.",
+              "skillFile": "vendor/knowledge-work-plugins/marketing/skills/seo-audit/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "operations",
+          "displayName": "Operations",
+          "description": "Optimize business operations — vendor management, process documentation, change management, capacity planning, and compliance tracking. Keep your organization running efficiently.",
+          "path": "vendor/knowledge-work-plugins/operations",
+          "skills": [
+            {
+              "name": "capacity-plan",
+              "description": "Plan resource capacity — workload analysis and utilization forecasting. Use when heading into quarterly planning, the team feels overallocated and you need the numbers, deciding whether to hire or deprioritize, or stress-testing whether upcoming projects fit the people you have.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/capacity-plan/SKILL.md"
+            },
+            {
+              "name": "change-request",
+              "description": "Create a change management request with impact analysis and rollback plan. Use when proposing a system or process change that needs approval, preparing a change record for CAB review, documenting risk and rollback steps before a deployment, or planning stakeholder communications for a rollout.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/change-request/SKILL.md"
+            },
+            {
+              "name": "compliance-tracking",
+              "description": "Track compliance requirements and audit readiness. Trigger with \"compliance\", \"audit prep\", \"SOC 2\", \"ISO 27001\", \"GDPR\", \"regulatory requirement\", or when the user needs help tracking, preparing for, or documenting compliance activities.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/compliance-tracking/SKILL.md"
+            },
+            {
+              "name": "process-doc",
+              "description": "Document a business process — flowcharts, RACI, and SOPs. Use when formalizing a process that lives in someone's head, building a RACI to clarify who owns what, writing an SOP for a handoff or audit, or capturing the exceptions and edge cases of how work actually gets done.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/process-doc/SKILL.md"
+            },
+            {
+              "name": "process-optimization",
+              "description": "Analyze and improve business processes. Trigger with \"this process is slow\", \"how can we improve\", \"streamline this workflow\", \"too many steps\", \"bottleneck\", or when the user describes an inefficient process they want to fix.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/process-optimization/SKILL.md"
+            },
+            {
+              "name": "risk-assessment",
+              "description": "Identify, assess, and mitigate operational risks. Trigger with \"what are the risks\", \"risk assessment\", \"risk register\", \"what could go wrong\", or when the user is evaluating risks associated with a project, vendor, process, or decision.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/risk-assessment/SKILL.md"
+            },
+            {
+              "name": "runbook",
+              "description": "Create or update an operational runbook for a recurring task or procedure. Use when documenting a task that on-call or ops needs to run repeatably, turning tribal knowledge into exact step-by-step commands, adding troubleshooting and rollback steps to an existing procedure, or writing escalation paths for when things go wrong.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/runbook/SKILL.md"
+            },
+            {
+              "name": "status-report",
+              "description": "Generate a status report with KPIs, risks, and action items. Use when writing a weekly or monthly update for leadership, summarizing project health with green/yellow/red status, surfacing risks and decisions that need stakeholder attention, or turning a pile of project tracker activity into a readable narrative.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/status-report/SKILL.md"
+            },
+            {
+              "name": "vendor-review",
+              "description": "Evaluate a vendor — cost analysis, risk assessment, and recommendation. Use when reviewing a new vendor proposal, deciding whether to renew or replace a contract, comparing two vendors side-by-side, or building a TCO breakdown and negotiation points before procurement sign-off.",
+              "skillFile": "vendor/knowledge-work-plugins/operations/skills/vendor-review/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "pdf-viewer",
+          "displayName": "PDF Viewer",
+          "description": "View, annotate, and sign PDFs in a live interactive viewer. Mark up contracts, fill forms with visual feedback, stamp approvals, and place signatures — then download the annotated copy.",
+          "path": "vendor/knowledge-work-plugins/pdf-viewer",
+          "skills": [
+            {
+              "name": "view-pdf",
+              "description": "Interactive PDF viewer. Use when the user wants to open, show, or view a PDF and collaborate on it visually — annotate, highlight, stamp, fill form fields, place signature/initials, or review markup together. Not for summarization or text extraction (use native Read instead).",
+              "skillFile": "vendor/knowledge-work-plugins/pdf-viewer/skills/view-pdf/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "product-management",
+          "displayName": "Product Management",
+          "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape.",
+          "path": "vendor/knowledge-work-plugins/product-management",
+          "skills": [
+            {
+              "name": "competitive-brief",
+              "description": "Create a competitive analysis brief for one or more competitors or a feature area. Use when informing product strategy or feature prioritization, building sales battle cards, prepping board or investor materials, or deciding where to differentiate vs. achieve parity.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/competitive-brief/SKILL.md"
+            },
+            {
+              "name": "metrics-review",
+              "description": "Review and analyze product metrics with trend analysis and actionable insights. Use when running a weekly, monthly, or quarterly metrics review, investigating a sudden spike or drop, comparing performance against targets, or turning raw numbers into a scorecard with recommended actions.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/metrics-review/SKILL.md"
+            },
+            {
+              "name": "product-brainstorming",
+              "description": "Brainstorm product ideas, explore problem spaces, and challenge assumptions as a thinking partner. Use when exploring a new opportunity, generating solutions to a product problem, stress-testing an idea, or when a PM needs to think out loud with a sharp sparring partner before converging on a direction.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/product-brainstorming/SKILL.md"
+            },
+            {
+              "name": "roadmap-update",
+              "description": "Update, create, or reprioritize your product roadmap. Use when adding a new initiative and deciding what moves to make room, shifting priorities after new information comes in, moving timelines due to a dependency slip, or building a Now/Next/Later view from scratch.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/roadmap-update/SKILL.md"
+            },
+            {
+              "name": "sprint-planning",
+              "description": "Plan a sprint — scope work, estimate capacity, set goals, and draft a sprint plan. Use when kicking off a new sprint, sizing a backlog against team availability (accounting for PTO and meetings), deciding what's P0 vs. stretch, or handling carryover from the last sprint.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/sprint-planning/SKILL.md"
+            },
+            {
+              "name": "stakeholder-update",
+              "description": "Generate a stakeholder update tailored to audience and cadence. Use when writing a weekly or monthly status for leadership, announcing a launch, escalating a risk or blocker, or translating the same progress into exec-brief, engineering-detail, or customer-facing versions.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/stakeholder-update/SKILL.md"
+            },
+            {
+              "name": "synthesize-research",
+              "description": "Synthesize user research from interviews, surveys, and feedback into structured insights. Use when you have a pile of interview notes, survey responses, or support tickets to make sense of, need to extract themes and rank findings by frequency and impact, or want to turn raw feedback into roadmap recommendations.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/synthesize-research/SKILL.md"
+            },
+            {
+              "name": "write-spec",
+              "description": "Write a feature spec or PRD from a problem statement or feature idea. Use when turning a vague idea or user request into a structured document, scoping a feature with goals and non-goals, defining success metrics and acceptance criteria, or breaking a big ask into a phased spec.",
+              "skillFile": "vendor/knowledge-work-plugins/product-management/skills/write-spec/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "productivity",
+          "displayName": "Productivity",
+          "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track.",
+          "path": "vendor/knowledge-work-plugins/productivity",
+          "skills": [
+            {
+              "name": "memory-management",
+              "description": "Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so Claude understands requests like a colleague would. CLAUDE.md for working memory, memory/ directory for the full knowledge base.",
+              "skillFile": "vendor/knowledge-work-plugins/productivity/skills/memory-management/SKILL.md"
+            },
+            {
+              "name": "start",
+              "description": "Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms, project codenames) you use in your todos.",
+              "skillFile": "vendor/knowledge-work-plugins/productivity/skills/start/SKILL.md"
+            },
+            {
+              "name": "task-management",
+              "description": "Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments.",
+              "skillFile": "vendor/knowledge-work-plugins/productivity/skills/task-management/SKILL.md"
+            },
+            {
+              "name": "update",
+              "description": "Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or running a comprehensive scan to catch todos buried in chat and email.",
+              "skillFile": "vendor/knowledge-work-plugins/productivity/skills/update/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "sales",
+          "displayName": "Sales",
+          "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward.",
+          "path": "vendor/knowledge-work-plugins/sales",
+          "skills": [
+            {
+              "name": "account-research",
+              "description": "Research a company or person and get actionable sales intel. Works standalone with web search, supercharged when you connect enrichment tools or your CRM. Trigger with \"research [company]\", \"look up [person]\", \"intel on [prospect]\", \"who is [name] at [company]\", or \"tell me about [company]\".",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/account-research/SKILL.md"
+            },
+            {
+              "name": "call-prep",
+              "description": "Prepare for a sales call with account context, attendee research, and suggested agenda. Works standalone with user input and web research, supercharged when you connect your CRM, email, chat, or transcripts. Trigger with \"prep me for my call with [company]\", \"I'm meeting with [company] prep me\", \"call prep [company]\", or \"get me ready for [meeting]\".",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/call-prep/SKILL.md"
+            },
+            {
+              "name": "call-summary",
+              "description": "Process call notes or a transcript — extract action items, draft follow-up email, generate internal summary. Use when pasting rough notes or a transcript after a discovery, demo, or negotiation call, drafting a customer follow-up, logging the activity for your CRM, or capturing objections and next steps for your team.",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/call-summary/SKILL.md"
+            },
+            {
+              "name": "competitive-intelligence",
+              "description": "Research your competitors and build an interactive battlecard. Outputs an HTML artifact with clickable competitor cards and a comparison matrix. Trigger with \"competitive intel\", \"research competitors\", \"how do we compare to [competitor]\", \"battlecard for [competitor]\", or \"what's new with [competitor]\".",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/competitive-intelligence/SKILL.md"
+            },
+            {
+              "name": "create-an-asset",
+              "description": "Generate tailored sales assets (landing pages, decks, one-pagers, workflow demos) from your deal context. Describe your prospect, audience, and goal — get a polished, branded asset ready to share with customers.",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/create-an-asset/SKILL.md"
+            },
+            {
+              "name": "daily-briefing",
+              "description": "Start your day with a prioritized sales briefing. Works standalone when you tell me your meetings and priorities, supercharged when you connect your calendar, CRM, and email. Trigger with \"morning briefing\", \"daily brief\", \"what's on my plate today\", \"prep my day\", or \"start my day\".",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/daily-briefing/SKILL.md"
+            },
+            {
+              "name": "draft-outreach",
+              "description": "Research a prospect then draft personalized outreach. Uses web research by default, supercharged with enrichment and CRM. Trigger with \"draft outreach to [person/company]\", \"write cold email to [prospect]\", \"reach out to [name]\".",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/draft-outreach/SKILL.md"
+            },
+            {
+              "name": "forecast",
+              "description": "Generate a weighted sales forecast with best/likely/worst scenarios, commit vs. upside breakdown, and gap analysis. Use when preparing a quarterly forecast call, assessing gap-to-quota from a pipeline CSV, deciding which deals to commit vs. call upside, or checking pipeline coverage against your number.",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/forecast/SKILL.md"
+            },
+            {
+              "name": "pipeline-review",
+              "description": "Analyze pipeline health — prioritize deals, flag risks, get a weekly action plan. Use when running a weekly pipeline review, deciding which deals to focus on this week, spotting stale or stuck opportunities, auditing for hygiene issues like bad close dates, or identifying single-threaded deals.",
+              "skillFile": "vendor/knowledge-work-plugins/sales/skills/pipeline-review/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "slack-by-salesforce",
+          "displayName": "Slack",
+          "description": "Slack integration for searching messages, sending communications, managing canvases, and more",
+          "path": "vendor/knowledge-work-plugins/partner-built/slack",
+          "skills": [
+            {
+              "name": "slack-messaging",
+              "description": "Guidance for composing well-formatted, effective Slack messages using mrkdwn syntax",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/slack/skills/slack-messaging/SKILL.md"
+            },
+            {
+              "name": "slack-search",
+              "description": "Guidance for effectively searching Slack to find messages, files, channels, and people",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/slack/skills/slack-search/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "small-business",
+          "displayName": "Small Business",
+          "description": "Pre-built small business workflows (including payroll planning, month-end close, weekly briefs, and growth campaigns) using your QuickBooks, PayPal, HubSpot, Docusign, Gsuite, O365, Canva, and other connected tools. You approve every step that touches money or customers.",
+          "path": "vendor/knowledge-work-plugins/small-business",
+          "skills": [
+            {
+              "name": "business-pulse",
+              "description": "Produces a one-page cross-functional business snapshot for SMB owners — cash position (QuickBooks), sales trend (PayPal/Square), pipeline movement (HubSpot), this week's commitments (Calendar), urgent watch-list items (Gmail/Slack), and the single most important thing needing attention today. Proactively tries every available connector and gracefully scopes to whatever is connected — one connector gives a partial pulse; the full stack gives the full picture. Trigger when the user asks how the business is doing, wants a snapshot, a weekly summary, a Monday brief, or says anything like \"what am I missing\" or \"catch me up on the business.\"",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/business-pulse/SKILL.md"
+            },
+            {
+              "name": "call-list",
+              "description": "Ranks the top-5 leads most worth calling today, supplies talking points from email history, blocks time on the calendar, and drafts follow-up messages. Accepts optional count and date arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/call-list/SKILL.md"
+            },
+            {
+              "name": "canva-creator",
+              "description": "Takes an approved content brief and executes a campaign end-to-end: builds the posting calendar, generates Canva designs for social posts, drafts caption and email copy, and stages social sends in HubSpot. Canva is used for social posts only (Instagram, Facebook, X, LinkedIn) — email content is drafted as plain text and surfaced inline for the owner to send from their own tool. Every step requires explicit owner approval. Use when the user says \"make the content,\" \"generate the posts,\" \"create the assets,\" \"turn this into a campaign,\" or hands off an approved brief for execution.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/canva-creator/SKILL.md"
+            },
+            {
+              "name": "cash-flow-snapshot",
+              "description": "Reads AR/AP, historical cash timing, and known fixed costs from QuickBooks, PayPal, Stripe, or Square — or a CSV upload — and produces a 30/60/90-day cash flow forecast with percentage-variance confidence bands and named risk flags. Delivers a chat summary and a downloadable XLSX. Use when the user asks \"forecast my cash flow,\" \"will I make payroll,\" mentions \"runway,\" or says \"cash crunch.\" Falls back to CSV upload when no connector is live.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/cash-flow-snapshot/SKILL.md"
+            },
+            {
+              "name": "close-month",
+              "description": "Closes the month — reconciles QB vs payment processors, flags gaps, writes P&L narrative, exports close packet. Accepts optional month and save-to arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/close-month/SKILL.md"
+            },
+            {
+              "name": "content-strategy",
+              "description": "Analyzes sales data from PayPal and QuickBooks to find top performers and slow movers, layers in seasonality, and produces a prioritized 30-day content brief: what to push, what offers to run, what to hold. Strategic output only — no calendars or assets. Use when the user asks what to post, wants a content plan, asks what's selling, or what to promote this month.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/content-strategy/SKILL.md"
+            },
+            {
+              "name": "contract-review",
+              "description": "Lightweight NDA, MSA, and vendor contract review for SMBs without legal on staff. Reads contracts from local files, Gmail attachments, or DocuSign envelopes; flags non-standard terms; explains risks in plain English; and outputs a marked-up redline as a separate DOCX. Use when the user says \"review this contract,\" \"what am I signing,\" \"red flags,\" \"flag any concerns,\" \"check the payment terms,\" or uploads/forwards a contract or legal agreement.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/contract-review/SKILL.md"
+            },
+            {
+              "name": "crm-cleanup",
+              "description": "Scans HubSpot for stale deals, duplicate contacts, and missing fields, then fixes what the owner approves. Accepts optional scope argument for deals, contacts, or all.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/crm-cleanup/SKILL.md"
+            },
+            {
+              "name": "crm-maintenance",
+              "description": "Keeps HubSpot current without the owner opening it: creates and updates contacts and deals from email and calendar context, logs notes and calls, and flags stale records. The \"stop doing data entry\" skill. Use when the user asks to update the CRM, log a call, clean up HubSpot, or add context to a deal.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/crm-maintenance/SKILL.md"
+            },
+            {
+              "name": "customer-pulse",
+              "description": "Aggregates PayPal disputes, HubSpot feedback and tickets, and email sentiment (plus pasted or exported Google/Yelp reviews) into a themes report with verbatim evidence and a \"do these three things this week\" list. Use when the user asks how customers are feeling, for review analysis, what people are saying, or about disputes.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/customer-pulse/SKILL.md"
+            },
+            {
+              "name": "customer-pulse-check",
+              "description": "Synthesizes themes from PayPal disputes, HubSpot tickets, and review exports into a top-3 fixable issues list with drafted response templates. Accepts optional since-date argument.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/customer-pulse-check/SKILL.md"
+            },
+            {
+              "name": "friday-brief",
+              "description": "Delivers the Friday end-of-week pulse — revenue vs prior week, top sellers, wins and watches. Accepts optional lookback window of 7 or 14 days.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/friday-brief/SKILL.md"
+            },
+            {
+              "name": "handle-complaint",
+              "description": "Handles an incoming customer complaint end-to-end — pulls context, drafts a response, and suggests an operational fix. Accepts optional email or ticket ID argument.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/handle-complaint/SKILL.md"
+            },
+            {
+              "name": "invoice-chase",
+              "description": "Drafts overdue-invoice reminder emails from QuickBooks and PayPal data, matched to each customer's payment history and tone (gentle for good customers, firm for repeat late payers). Sends via PayPal with owner approval; non-PayPal invoices queue as mail drafts. Use when the user asks \"who owes me money,\" mentions overdue invoices, or wants to follow up on unpaid invoices.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/invoice-chase/SKILL.md"
+            },
+            {
+              "name": "job-post-builder",
+              "description": "Builds end-to-end hiring packets — job post, structured interview guide with scoring rubric, and offer letter template — from a hiring brief. Triggers on: \"help me hire\", \"we're hiring for\", \"write a job post\", \"job description\", \"JD\", \"open role\", \"create a job ad\", \"interview questions\", \"scoring rubric\", \"draft an offer letter\", \"send an offer\", \"make a hiring packet\", or any request to recruit for a position. When in doubt, trigger — covers the full hiring workflow from job post through DocuSign envelope creation via browser. Does NOT screen or rank applicants.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/job-post-builder/SKILL.md"
+            },
+            {
+              "name": "lead-triage",
+              "description": "Scores inbound HubSpot leads by engagement signals, company fit, and urgency markers to produce a \"call these 5 today\" list with talking points, drafts the follow-ups, and blocks Calendar time. Use when the user asks to prioritize leads, who to call first, or about their pipeline.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/lead-triage/SKILL.md"
+            },
+            {
+              "name": "margin-analyzer",
+              "description": "Analyzes unit economics by product or service using PayPal merchant insights and QuickBooks cost data, benchmarks against inflation and cost changes, and shows pricing-scenario data (e.g. \"a 5% increase historically correlates with ~3% volume drop\"). Surfaces analysis only — does not recommend a price. Use when the user asks about raising prices, pricing, margin analysis, what to charge, whether costs are eating into profit, or how a price change might affect their business. Trigger even if the user doesn't say \"margin\" explicitly — phrases like \"am I making enough?\", \"should I charge more?\", or \"my costs are going up\" all call for this skill.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/margin-analyzer/SKILL.md"
+            },
+            {
+              "name": "monday-brief",
+              "description": "Generates a one-page Monday morning briefing — cash, sales, pipeline, week ahead, top three to-dos. Accepts optional post destination and save-to arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/monday-brief/SKILL.md"
+            },
+            {
+              "name": "month-end-prep",
+              "description": "Walks an SMB owner through month-end close: reconciles QuickBooks against PayPal (and Square/Stripe) settlements, flags uncategorized transactions, suspicious duplicates, and missing receipts, then writes a plain-English P&L narrative and exports a close packet (xlsx + one-page PDF). Use when the user says \"close the month,\" \"month-end,\" \"reconcile,\" \"what's missing,\" \"P&L,\" or asks why revenue or margin changed this month.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/month-end-prep/SKILL.md"
+            },
+            {
+              "name": "month-heads-up",
+              "description": "Runs on the 25th — shows the next 30-day cash-flow outlook and flags anything that needs attention before month-end. Accepts optional 30 or 60 day horizon.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/month-heads-up/SKILL.md"
+            },
+            {
+              "name": "plan-payroll",
+              "description": "Forecasts cash, ranks overdue invoices, and stages PayPal reminders so the owner can confidently run payroll. Accepts optional horizon and payroll-date arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/plan-payroll/SKILL.md"
+            },
+            {
+              "name": "price-check",
+              "description": "Produces a margin-by-product table and three pricing-scenario data views so the owner can see the full financial picture before making a pricing decision. Accepts optional product name argument.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/price-check/SKILL.md"
+            },
+            {
+              "name": "quarterly-review",
+              "description": "Generates a full QBR narrative — revenue trend, margin trend, customer health, top opportunities and risks — as a presentation-ready PDF or deck. Accepts optional quarter and save-to arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/quarterly-review/SKILL.md"
+            },
+            {
+              "name": "review-contract",
+              "description": "Reviews a contract in plain English, surfaces red flags with severity ratings, and produces a marked-up docx/PDF with suggested redlines. Accepts optional file path or DocuSign envelope ID.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/review-contract/SKILL.md"
+            },
+            {
+              "name": "run-campaign",
+              "description": "Runs an end-to-end marketing campaign — sales analysis, content brief, Canva assets, HubSpot send. Accepts optional lookback and channel arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/run-campaign/SKILL.md"
+            },
+            {
+              "name": "sales-brief",
+              "description": "Surfaces top and bottom sellers, identifies seasonality patterns, and produces a 2-week content brief to push winners and clear slow movers. Accepts optional lookback window of 30, 60, or 90 days.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/sales-brief/SKILL.md"
+            },
+            {
+              "name": "smb-onboard",
+              "description": "Claude as the trainer. Walks an SMB owner through connecting their first two tools, runs one recipe to prove immediate value, interviews them about their business (industry, size, top three headaches), stores that context persistently so every other skill benefits, and sets a weekly check-in cadence. Use when the owner is getting started or says any of: \"set me up,\" \"setup,\" \"help me get set up,\" \"get started,\" \"help me get started,\" \"get me started,\" \"what can you do,\" \"I'm new to this,\" or is in their first session.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/smb-onboard/SKILL.md"
+            },
+            {
+              "name": "smb-router",
+              "description": "The front door to the Small Business plugin. Listens to what the owner needs right now — vague or specific — and routes them to the best skill or slash command for the moment. Also serves as a guide: explains what's available, suggests what to try next, and adapts recommendations based on stored business context. Trigger whenever the owner asks \"what can you do,\" \"help me with my business,\" \"what should I focus on,\" \"I don't know where to start,\" or any open-ended business request that doesn't clearly match a single skill.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/smb-router/SKILL.md"
+            },
+            {
+              "name": "tax-prep",
+              "description": "Prepares tax-season materials — quarterly estimated tax calculation or year-end 1099 prep — and produces an accountant handoff packet. Accepts optional mode and year arguments.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/tax-prep/SKILL.md"
+            },
+            {
+              "name": "tax-season-organizer",
+              "description": "Prepares tax-season materials for small business owners — framed as deliverables for their accountant, not tax advice. Two modes: (1) quarterly estimated tax calculation — pulls YTD net income from QuickBooks and calculates the federal income tax + self-employment tax liability and quarterly payment due; (2) year-end 1099 prep — scans QuickBooks, PayPal, and Stripe for contractors paid over $600, builds a 1099-NEC candidate list with missing W-9 flags, and produces a plain-English summary a CPA can work from directly. Trigger this skill whenever the user mentions: quarterly taxes, estimated tax payment, how much to set aside for taxes, 1099s, 1099-NEC, year-end tax prep, contractor payments, W-9s, or any phrase suggesting they are preparing for a tax deadline or handing materials to an accountant. Also trigger proactively when a user asks about net profit or YTD income in a context that suggests they are worried about their tax bill.",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/tax-season-organizer/SKILL.md"
+            },
+            {
+              "name": "ticket-deflector",
+              "description": "Reads a forwarded customer email or ticket, pulls order/refund status from PayPal and account history from HubSpot, drafts a tone-matched reply in the owner's writing voice, and can issue a PayPal refund with explicit owner approval. Use when the user says \"draft a response,\" \"answer this customer,\" \"where's my order,\" or \"I want a refund.\"",
+              "skillFile": "vendor/knowledge-work-plugins/small-business/skills/ticket-deflector/SKILL.md"
+            }
+          ]
+        },
+        {
+          "name": "zoom-plugin",
+          "displayName": "Zoom",
+          "description": "Plan, build, and debug Zoom integrations across REST APIs, Meeting SDK, Video SDK, webhooks, bots, and MCP workflows. Search meetings, retrieve recordings, access transcripts, and design AI-powered Zoom experiences.",
+          "path": "vendor/knowledge-work-plugins/partner-built/zoom-plugin",
+          "skills": [
+            {
+              "name": "build-zoom-bot",
+              "description": "Build a Zoom meeting bot, recorder, or real-time media workflow. Use when joining meetings programmatically, processing live media or transcripts, or combining Meeting SDK, RTMS, and backend services.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/build-zoom-bot/SKILL.md"
+            },
+            {
+              "name": "build-zoom-contact-center-app",
+              "description": "Reference skill for Zoom Contact Center. Use after routing to a contact-center workflow when implementing app, web, or native integrations; engagement context and state handling; campaigns; callbacks; or version-drift troubleshooting.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/contact-center/SKILL.md"
+            },
+            {
+              "name": "build-zoom-meeting-app",
+              "description": "Build or embed a Zoom meeting flow. Use when implementing Meeting SDK joins, web or mobile meeting embeds, meeting lifecycle flows, or when deciding between Meeting SDK and Video SDK.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/build-zoom-meeting-app/SKILL.md"
+            },
+            {
+              "name": "build-zoom-meeting-sdk-app",
+              "description": "Reference skill for Zoom Meeting SDK. Use after routing to a meeting-embed workflow when implementing real Zoom meeting joins, platform-specific SDK behavior, auth and join flows, waiting room issues, or meeting bot patterns.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/meeting-sdk/SKILL.md"
+            },
+            {
+              "name": "build-zoom-phone-integration",
+              "description": "Reference skill for Zoom Phone. Use after routing to a phone workflow when implementing OAuth, Phone APIs, webhooks, Smart Embed events, URI schemes, CRM or CTI dialers, or call handling automation.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/phone/SKILL.md"
+            },
+            {
+              "name": "build-zoom-rest-api-app",
+              "description": "Reference skill for Zoom REST API. Use after choosing an API-based workflow when you need endpoint selection, resource-management patterns, OAuth requirements, rate-limit awareness, or API error debugging.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/rest-api/SKILL.md"
+            },
+            {
+              "name": "build-zoom-team-chat-app",
+              "description": "Reference skill for Zoom Team Chat. Use after routing to a chat workflow when building user-scoped messaging integrations, chatbot experiences, rich cards, buttons, slash commands, or chat webhooks.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/team-chat/SKILL.md"
+            },
+            {
+              "name": "build-zoom-video-sdk-app",
+              "description": "Reference skill for Zoom Video SDK. Use after routing to a custom-session workflow when the user needs full control over the video experience rather than an actual Zoom meeting.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/video-sdk/SKILL.md"
+            },
+            {
+              "name": "build-zoom-virtual-agent",
+              "description": "Reference skill for Zoom Virtual Agent. Use after routing to a virtual-agent workflow when implementing web embeds, Android or iOS wrapper integrations, knowledge-base sync, lifecycle handling, or troubleshooting.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/virtual-agent/SKILL.md"
+            },
+            {
+              "name": "choose-zoom-approach",
+              "description": "Choose the right Zoom architecture for a use case. Use when deciding between REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Zoom MCP, Phone, Contact Center, or a hybrid approach.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/choose-zoom-approach/SKILL.md"
+            },
+            {
+              "name": "debug-zoom",
+              "description": "Debug a broken Zoom integration by isolating the failure point and routing into the right Zoom references. Use when auth, API, webhook, SDK, or MCP behavior is failing and you need a ranked hypothesis list plus verification steps.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/debug-zoom/SKILL.md"
+            },
+            {
+              "name": "debug-zoom-integration",
+              "description": "Debug broken Zoom implementations quickly. Use when auth, webhooks, SDK joins, MCP transport, or real-time media workflows are failing and you need to isolate the layer before proposing a fix.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/debug-zoom-integration/SKILL.md"
+            },
+            {
+              "name": "design-mcp-workflow",
+              "description": "Design a Zoom MCP workflow for Claude. Use when deciding whether Zoom MCP fits a task, when planning tool-based AI workflows, or when separating MCP responsibilities from REST API responsibilities.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/design-mcp-workflow/SKILL.md"
+            },
+            {
+              "name": "plan-zoom-integration",
+              "description": "Turn a Zoom integration idea into an implementation plan with architecture, auth, and delivery milestones. Use when you need a practical build plan, phased delivery sequence, risk list, and next-step recommendation.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/plan-zoom-integration/SKILL.md"
+            },
+            {
+              "name": "plan-zoom-product",
+              "description": "Choose the right Zoom building surface for a use case and explain the tradeoffs clearly. Use when deciding between REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Phone, Contact Center, or MCP for a specific product idea or integration goal.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/plan-zoom-product/SKILL.md"
+            },
+            {
+              "name": "probe-sdk",
+              "description": "Reference skill for Zoom Probe SDK. Use after routing to a preflight workflow when testing browser compatibility, media permissions, audio or video diagnostics, and network readiness before users join.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/probe-sdk/SKILL.md"
+            },
+            {
+              "name": "rivet-sdk",
+              "description": "Reference skill for Zoom Rivet SDK. Use after routing to a Rivet-based server workflow when implementing auth handling, webhook consumers, API wrappers, multi-module composition, or Lambda receiver patterns.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/rivet-sdk/SKILL.md"
+            },
+            {
+              "name": "scribe",
+              "description": "Reference skill for Zoom AI Services Scribe. Use after routing to a transcription workflow when handling uploaded or stored media, Build-platform JWT auth, fast mode transcription, batch jobs, or transcript pipeline design.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/scribe/SKILL.md"
+            },
+            {
+              "name": "setup-zoom-mcp",
+              "description": "Decide when Zoom MCP is the right fit and produce a safe setup plan for Claude. Use when planning AI workflows over Zoom data, deciding between MCP and REST, or defining a hybrid MCP architecture.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/setup-zoom-mcp/SKILL.md"
+            },
+            {
+              "name": "setup-zoom-oauth",
+              "description": "Implement Zoom authentication correctly. Use when setting up app credentials, choosing an OAuth grant, requesting scopes, handling token refresh, or debugging auth failures.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/setup-zoom-oauth/SKILL.md"
+            },
+            {
+              "name": "setup-zoom-webhooks",
+              "description": "Reference skill for Zoom webhooks. Use after routing to an event-driven workflow when implementing subscriptions, signature verification, delivery handling, retries, or event-type selection.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/webhooks/SKILL.md"
+            },
+            {
+              "name": "setup-zoom-websockets",
+              "description": "Reference skill for Zoom WebSockets. Use after routing to a low-latency event workflow when persistent connections, faster event delivery, or security constraints make WebSockets preferable to webhooks.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/websockets/SKILL.md"
+            },
+            {
+              "name": "start",
+              "description": "Start here for any Zoom integration or app idea. Use when you need to choose the right Zoom surface, shape the architecture, or route into the correct implementation skill without reading the whole Zoom doc set first.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/start/SKILL.md"
+            },
+            {
+              "name": "ui-toolkit/web",
+              "description": "Reference skill for Zoom Video SDK UI Toolkit. Use after routing to a web video workflow when you want prebuilt React UI instead of building a fully custom Video SDK interface.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/ui-toolkit/SKILL.md"
+            },
+            {
+              "name": "zoom-apps-sdk",
+              "description": "Reference skill for Zoom Apps SDK. Use after routing to an in-client app workflow when building web apps that run inside Zoom meetings, webinars, the main client, or Zoom Phone.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/zoom-apps-sdk/SKILL.md"
+            },
+            {
+              "name": "zoom-cobrowse-sdk",
+              "description": "Reference skill for Zoom Cobrowse SDK. Use after routing to a collaborative-support workflow when implementing browser co-browsing, annotation tools, privacy masking, remote assist, or PIN-based session sharing.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/cobrowse-sdk/SKILL.md"
+            },
+            {
+              "name": "zoom-general",
+              "description": "Cross-product Zoom reference skill. Use after the workflow is clear when you need shared platform guidance, app-model comparisons, authentication context, scopes, marketplace considerations, or API-vs-MCP routing.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/general/SKILL.md"
+            },
+            {
+              "name": "zoom-mcp",
+              "description": "Guidance for the bundled Zoom MCP connectors. Use after routing to an MCP workflow when planning or troubleshooting tool-based access to meetings, recordings, meeting assets, or transcripts. Route Zoom Docs requests to the dedicated Docs MCP server and Whiteboard-specific requests to `zoom-mcp/whiteboard`.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/zoom-mcp/SKILL.md"
+            },
+            {
+              "name": "zoom-oauth",
+              "description": "Reference skill for Zoom authentication. Use after routing to an auth workflow when choosing app credentials, grant types, scopes, token refresh behavior, or debugging Zoom OAuth failures.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/oauth/SKILL.md"
+            },
+            {
+              "name": "zoom-rtms",
+              "description": "Reference skill for Zoom RTMS. Use after routing to a live-media workflow when processing real-time audio, video, chat, transcripts, screen share, or contact-center voice streams.",
+              "skillFile": "vendor/knowledge-work-plugins/partner-built/zoom-plugin/skills/rtms/SKILL.md"
+            }
+          ]
+        }
+      ],
+      "externalPartnerPlugins": [
+        {
+          "name": "adobe-for-creativity",
+          "description": "Brings together Adobe Creative Cloud tools for images, vectors, design, and video. Edit multiple assets at once, adapt for different platforms, and complete multi-step creative workflows for polished results."
+        },
+        {
+          "name": "adspirer-ads-agent",
+          "description": "Cross-platform ad management for Google Ads, Meta Ads, TikTok Ads, and LinkedIn Ads. 91 tools for keyword research, campaign creation, performance analysis, and budget optimization."
+        },
+        {
+          "name": "ai-firstify",
+          "description": "AI-first project auditor and re-engineer based on the 9 design principles and 7 design patterns from the TechWolf AI-First Bootcamp"
+        },
+        {
+          "name": "airtable",
+          "description": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Claude fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server."
+        },
+        {
+          "name": "airwallex-agentos",
+          "description": "Bring Airwallex's global financial infrastructure to Claude. Orchestrate actions across your account in plain language, e.g., set up invoices from a PO, onboard suppliers from invoices, and check current cash position across currencies. AgentOS bundles pre-built finance Skills with MCP servers. A public CLI connects your agent to Airwallex's capabilities."
+        },
+        {
+          "name": "atlan",
+          "description": "Atlan data catalog plugin for Claude Code. Search, explore, govern, and manage your data assets through natural language. Powered by the Atlan MCP server with semantic search, lineage traversal, glossary management, data quality rules, and more."
+        },
+        {
+          "name": "auth0",
+          "description": "Essential Auth0 skills including quickstarts, migration from other providers, and Multi-Factor Authentication (MFA)."
+        },
+        {
+          "name": "base44",
+          "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills"
+        },
+        {
+          "name": "bigdata-com",
+          "description": "Official Bigdata.com plugin providing financial research, analytics, and intelligence tools powered by Bigdata MCP."
+        },
+        {
+          "name": "box",
+          "description": "Work with your Box content directly from Claude Code — search files, organize folders, collaborate with your team, and use Box AI to answer questions, summarize documents, and extract data without leaving your workflow."
+        },
+        {
+          "name": "brightdata-plugin",
+          "description": "Web scraping, Google search, structured data extraction, and MCP server integration powered by Bright Data. Includes 7 skills: scrape any webpage as markdown (with bot detection/CAPTCHA bypass), search Google with structured JSON results, extract data from 40+ websites (Amazon, LinkedIn, Instagram, TikTok, YouTube, and more), orchestrate Bright Data's 60+ MCP tools, built-in best practices for Web Unlocker, SERP API, Web Scraper API, and Browser API, Python SDK best practices for the brightda..."
+        },
+        {
+          "name": "buildkite",
+          "description": "Official Buildkite skills for Claude Code, Cursor, and other AI coding agents — pipelines, migration, preflight, agent runtime, CLI, and API"
+        },
+        {
+          "name": "canva",
+          "description": "Create, edit, review, resize, and brand-check Canva designs with the Canva MCP server."
+        },
+        {
+          "name": "carta-cap-table",
+          "description": "Carta Cap Table plugin — skills and hooks for querying cap tables, grants, SAFEs, 409A valuations, waterfall scenarios, and more"
+        },
+        {
+          "name": "carta-crm",
+          "description": "Manage the Carta CRM conversationally — search, add, update, and enrich investors, companies, contacts, deals, notes, and fundraisings via the Carta CRM MCP Server"
+        },
+        {
+          "name": "carta-investors",
+          "description": "Carta Investors plugin — skills for querying investors data, performance benchmarks, regulatory reporting, AGM deck generation, brand extraction, and more via the Carta MCP server"
+        },
+        {
+          "name": "clickhouse",
+          "description": "ClickHouse Claude Code plugin: skills (ClickHouse best practices), rules and MCP."
+        },
+        {
+          "name": "cloudinary",
+          "description": "Use Cloudinary directly in Claude. Manage assets, apply transformations, optimize media, and more through natural conversation."
+        },
+        {
+          "name": "cockroachdb",
+          "description": "CockroachDB plugin for Claude Code — explore schemas, write optimized SQL, debug queries, and manage distributed database clusters directly from your AI coding agent."
+        },
+        {
+          "name": "daloopa",
+          "description": "Financial analysis skills powered by Daloopa's institutional-grade data"
+        },
+        {
+          "name": "datadog",
+          "description": "Use Datadog directly in Claude Code through a preconfigured Datadog MCP server. Query logs, metrics, traces, dashboards, and more through natural conversation. This plugin is in preview."
+        },
+        {
+          "name": "datarobot-agent-skills",
+          "description": "DataRobot skills for AI/ML workflows — model training, deployment, predictions, feature engineering, monitoring, explainability, data preparation, App Framework CI/CD, and external agent monitoring."
+        },
+        {
+          "name": "desktop-commander",
+          "description": "MCP server for terminal commands, process management, and file operations across text, code, PDF, DOCX, Excel, images, and structured data."
+        },
+        {
+          "name": "dropbox",
+          "description": "The Dropbox plugin for Claude connects your Dropbox files directly to Claude, so you can search, organize, save generated content, and create sharing links without switching tools. It respects your existing Dropbox permissions, and Claude only works with files you already have access to."
+        },
+        {
+          "name": "exa",
+          "description": "Exa AI web search, deep research, and content extraction. Provides MCP tools and research skills for comprehensive web search, people discovery, company research, academic papers, and more."
+        },
+        {
+          "name": "fastly-agent-toolkit",
+          "description": "Fastly development tools and platform skills"
+        },
+        {
+          "name": "figma",
+          "description": "Figma design platform integration. Access design files, extract component information, read design tokens, and translate designs into code. Bridge the gap between design and development workflows."
+        },
+        {
+          "name": "grafana-assistant",
+          "description": "Skills and rules for developing and using the Grafana Assistant app and CLI."
+        },
+        {
+          "name": "grafana-cloud-mcp",
+          "description": "Hosted MCP server for AI-assisted Grafana Cloud observability — no local installation required."
+        },
+        {
+          "name": "grasp",
+          "description": "Deal-work workflows powered by Grasp company lookup, table creation, import, buyer, transaction, table enrichment, contact, and market research tools."
+        },
+        {
+          "name": "intercom",
+          "description": "Intercom integration for Claude Code. Search conversations, analyze customer support patterns, look up contacts and companies, and install the Intercom Messenger. Connect your Intercom workspace to get real-time insights from customer data."
+        },
+        {
+          "name": "langfuse",
+          "description": "Skills for working with Langfuse, the open-source LLM engineering platform for tracing, prompt management, and evaluation."
+        },
+        {
+          "name": "learn-with-coursera",
+          "description": "Turn any learning intent into a personalized Coursera experience. Asks three quick questions (topic, familiarity, preferred format), searches Coursera's catalog, and delivers the right next step — a course, hands-on project, short video, or live roleplay — then maps a path forward. Requires the Coursera connector for catalog tools."
+        },
+        {
+          "name": "lseg",
+          "description": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics."
+        },
+        {
+          "name": "lusha",
+          "description": "Prospect, enrich, and build call-ready lead lists using Lusha's B2B intelligence platform — verified phone numbers, company signals, and lookalike targeting."
+        },
+        {
+          "name": "mintlify",
+          "description": "Build beautiful documentation sites with Mintlify. Convert non-markdown files into properly formatted MDX pages, add and modify content with correct component use, and automate documentation updates."
+        },
+        {
+          "name": "miro",
+          "description": "Secure access to Miro boards. Enables AI to read board context, create diagrams, and generate code with enterprise-grade security."
+        },
+        {
+          "name": "monday-com",
+          "description": "The official monday.com plugin for Claude Cowork. Manage boards, items, docs, and forms across work management, CRM, dev, service, and campaigns. Full read and write access via OAuth."
+        },
+        {
+          "name": "monday-crm",
+          "description": "Run your monday CRM in plain language. Build a pipeline from scratch, start the day with a ranked deal briefing, spin up a forecast dashboard, audit board health, clean up messy data in bulk, and turn meeting notes into deal updates. Every skill writes back into monday as a real update, doc, or dashboard. Built on the official monday MCP connector."
+        },
+        {
+          "name": "nimble",
+          "description": "Nimble web data toolkit — search, extract, map, crawl the web and work with structured data agents"
+        },
+        {
+          "name": "pixeltable",
+          "description": "Build multimodal AI applications with Pixeltable -- tables, computed columns, embedding search, UDFs, tool-calling agents, and 25+ AI provider integrations."
+        },
+        {
+          "name": "planetscale",
+          "description": "An authenticated hosted MCP server that accesses your PlanetScale organizations, databases, branches, schema, and Insights data. Query against your data, surface slow queries, and get organizational and account information."
+        },
+        {
+          "name": "postiz",
+          "description": "Social media automation CLI for scheduling posts, managing integrations, uploading media, and tracking analytics across 28+ platforms including X, LinkedIn, Reddit, YouTube, TikTok, Instagram, and more"
+        },
+        {
+          "name": "prisma",
+          "description": "Prisma MCP integration for Postgres database management, schema migrations, SQL queries, and connection string management. Provision Prisma Postgres databases, run migrations, and interact with your data directly."
+        },
+        {
+          "name": "product-tracking-skills",
+          "description": "AI agent skills that make SaaS products data-ready for product analytics — from codebase scan to tracking plan to working instrumentation code."
+        },
+        {
+          "name": "qdrant-skills",
+          "description": "Agent skills for Qdrant vector search: scaling, performance optimization, search quality, monitoring, deployment, model migration, version upgrades, and SDK usage"
+        },
+        {
+          "name": "qodo-skills",
+          "description": "Shift-left code review skills that bring Qodo's quality standards and code review capabilities into your local development workflow. Catch issues before commit, enforce organizational standards, and resolve PR feedback directly in your agent."
+        },
+        {
+          "name": "qt-development-skills",
+          "description": "Agentic engineering skills for Qt software development, including Qt C++/QML code review, QML coding, and Qt C++/QML code documentation. These skills use AI and can make mistakes. Always double-check the output carefully."
+        },
+        {
+          "name": "sanity-plugin",
+          "description": "Sanity content platform integration with MCP server, agent skills, and slash commands. Query and author content, build and optimize GROQ queries, design schemas, and set up Visual Editing."
+        },
+        {
+          "name": "searchfit-seo",
+          "description": "Free AI-powered SEO toolkit — audit websites, plan content strategy, optimize pages, generate schema markup, cluster keywords, and track AI visibility. Works with any website or codebase."
+        },
+        {
+          "name": "servicenow-sdk",
+          "description": "Create, edit, and deploy ServiceNow applications with the Fluent SDK effortlessly through Claude. Helps developers build, extend, and manage ServiceNow applications, workflows, and agents using the ServiceNow SDK."
+        },
+        {
+          "name": "sp-global",
+          "description": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries"
+        },
+        {
+          "name": "tavily",
+          "description": "Build AI applications with real-time web data using Tavily's search, extract, crawl, and research APIs."
+        },
+        {
+          "name": "twilio-developer-kit",
+          "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers SMS, Voice, WhatsApp, Verify, SendGrid, Compliance, and 30+ products."
+        },
+        {
+          "name": "valtown",
+          "description": "Build and deploy on Val Town. Bundles the Val Town MCP server and platform skills (HTTP vals, cron/intervals, SQLite, email, OAuth, React UI, third-party integrations, templates)."
+        },
+        {
+          "name": "vanta-mcp-plugin",
+          "description": "The Vanta plugin connects Claude to Vanta's security and compliance platform through the Vanta MCP server. List failing compliance tests, get test-specific remediation context, and fix failing tests with code changes — directly from your Claude session."
+        },
+        {
+          "name": "vibe-prospecting",
+          "description": "Vibe Prospecting connects Claude to live B2B company and contact data so users can search, match, enrich, filter, and export prospects at scale. It turns natural-language requests into structured GTM workflows for lead generation, CRM enrichment, company research, executive discovery, and multi-step prospecting automation inside Claude Cowork and Claude Code."
+        },
+        {
+          "name": "wix",
+          "description": "Build, manage, and deploy Wix sites and apps. Includes CLI development skills and Wix MCP server for site management, eCommerce, CMS, dashboard extensions, and more."
+        },
+        {
+          "name": "zapier",
+          "description": "Connect 8,000+ apps to your AI workflow. Discover, enable, and execute Zapier actions directly from your client."
+        },
+        {
+          "name": "zoominfo",
+          "description": "Search companies and contacts, enrich leads, find lookalikes, and get AI-ranked contact recommendations. Pre-built skills chain multiple ZoomInfo tools into complete B2B sales workflows."
+        }
+      ]
+    }
+  }
+}
