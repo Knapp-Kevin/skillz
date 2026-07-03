@@ -39,8 +39,9 @@ This repo maintaining itself.
 
 | Skill | What it does |
 |-------|--------------|
-| `skill-forge` | Scaffold a new skill in this repo from `docs/skill-template.md`: prompts for name/description/cadence, creates the directory, registers it in README. |
-| `skill-audit` | Validate every `skills/*/SKILL.md`: frontmatter completeness, description quality (does it say *when* to use?), script runnability, dead links. Run before syncing anywhere. |
+| `skills-pulse` ✅ | **Shipped.** Weekly ecosystem intake scan: watchlist repo activity, marketplace sweep, redundancy filter, registry candidate proposals. |
+| `skill-forge` | Scaffold a new skill in this repo from `docs/skill-template.md`: prompts for name/description/cadence, creates the directory, regenerates the index. |
+| `skill-audit` | Validate every `skills/*/SKILL.md`: frontmatter completeness, description quality (does it say *when* to use?), script runnability, dead links. Also lint `registry/candidates.yaml` entries against the evaluation framework. Run before syncing anywhere. |
 | `skill-sync` | Deploy skills from this repo to their consumers: symlinks into `~/.claude/skills/`, per-host copies following Qor-logic's `dist_compile` pattern (`.claude/`, `.kilo/`, `.codex/`, `.gemini/`), and generated COREFORGE Synapse `manifest.json` (skillId, permissions, runtime derived from frontmatter). Idempotent; reports drift. |
 | `memory-distill` | Weekly consolidation of Claude Code's persistent memory: merge duplicates, expire stale project facts, tighten the MEMORY.md index. |
 

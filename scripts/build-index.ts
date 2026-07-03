@@ -180,10 +180,79 @@ function scanVendorPlugins(): { local: VendorPlugin[]; external: ExternalPlugin[
   };
 }
 
+// ── Generic vendor trees (official skill repos with varied layouts) ──
+
+interface GenericVendor { dir: string; label: string; source: string; }
+
+const GENERIC_VENDORS: GenericVendor[] = [
+  { dir: "anthropic-skills", label: "Anthropic Skills", source: "https://github.com/anthropics/skills" },
+  { dir: "vercel-agent-skills", label: "Vercel Agent Skills", source: "https://github.com/vercel-labs/agent-skills" },
+  { dir: "microsoft-skills", label: "Microsoft Skills", source: "https://github.com/microsoft/skills" },
+  { dir: "azure-skills", label: "Microsoft Azure Skills", source: "https://github.com/microsoft/azure-skills" },
+  { dir: "aws-agent-toolkit", label: "AWS Agent Toolkit", source: "https://github.com/aws/agent-toolkit-for-aws" },
+];
+
+const SKIP_DIRS = new Set([".git", "node_modules", "docs-site", "tests", "template", "assets", "landing-page"]);
+
+function findSkillFiles(dir: string, depth = 0): string[] {
+  if (depth > 6) return [];
+  const found: string[] = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (SKIP_DIRS.has(entry.name)) continue;
+      found.push(...findSkillFiles(join(dir, entry.name), depth + 1));
+    } else if (entry.name === "SKILL.md") {
+      found.push(join(dir, entry.name));
+    }
+  }
+  return found;
+}
+
+function scanVendorTree(vendorDir: string): { skills: VendorSkill[]; duplicatesDropped: number } {
+  const base = join(ROOT, "vendor", vendorDir);
+  if (!existsSync(base)) return { skills: [], duplicatesDropped: 0 };
+  // Some repos ship the same skill under multiple host layouts (e.g. AWS's
+  // skills/ vs plugins/). Dedupe by skill name, preferring canonical paths.
+  const rank = (p: string) => {
+    const rel = relative(base, p).split(sep).join("/");
+    return rel.startsWith("skills/") ? 0 : rel.startsWith("plugins/") ? 1 : 2;
+  };
+  const files = findSkillFiles(base).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  const byName = new Map<string, VendorSkill>();
+  let duplicatesDropped = 0;
+  for (const file of files) {
+    const fm = parseFrontmatter(readFileSync(file, "utf8"));
+    const name = fm?.name ?? relative(base, file).split(sep).slice(-2, -1)[0] ?? file;
+    if (byName.has(name)) { duplicatesDropped++; continue; }
+    byName.set(name, {
+      name,
+      description: fm?.description ?? "",
+      skillFile: relPosix(file),
+    });
+  }
+  return {
+    skills: [...byName.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    duplicatesDropped,
+  };
+}
+
 // ── Emit ─────────────────────────────────────────────────────────────
 
 const localSkills = scanLocalSkills();
 const { local: vendorPlugins, external: externalPlugins } = scanVendorPlugins();
+const genericVendorResults = GENERIC_VENDORS.map((v) => ({ ...v, ...scanVendorTree(v.dir) }));
+
+const vendorIndex: Record<string, any> = {
+  "knowledge-work-plugins": {
+    source: "https://github.com/anthropics/knowledge-work-plugins",
+    install: "/plugin marketplace add anthropics/knowledge-work-plugins",
+    plugins: vendorPlugins,
+    externalPartnerPlugins: externalPlugins,
+  },
+};
+for (const v of genericVendorResults) {
+  vendorIndex[v.dir] = { label: v.label, source: v.source, skills: v.skills };
+}
 
 const index = {
   version: 1,
@@ -191,20 +260,14 @@ const index = {
   repo: "skillz",
   root: "https://github.com/Knapp-Kevin/skillz",
   skills: localSkills,
-  vendor: {
-    "knowledge-work-plugins": {
-      source: "https://github.com/anthropics/knowledge-work-plugins",
-      install: "/plugin marketplace add anthropics/knowledge-work-plugins",
-      plugins: vendorPlugins,
-      externalPartnerPlugins: externalPlugins,
-    },
-  },
+  registry: "registry/candidates.yaml",
+  vendor: vendorIndex,
 };
 
 writeFileSync(join(ROOT, "index.json"), JSON.stringify(index, null, 2) + "\n");
 
-function truncate(s: string, n: number): string {
-  const clean = s.replace(/\s+/g, " ").trim();
+function truncate(s: unknown, n: number): string {
+  const clean = (typeof s === "string" ? s : "").replace(/\s+/g, " ").trim();
   return clean.length <= n ? clean : clean.slice(0, n - 1).trimEnd() + "…";
 }
 
@@ -262,11 +325,27 @@ Registered in the marketplace but sourced from partner repos — install via the
   }
 }
 
+for (const v of genericVendorResults) {
+  md += `\n## Vendored: [${v.label}](${v.source}) (\`vendor/${v.dir}/\`)\n\n`;
+  if (v.skills.length === 0) {
+    md += `_No SKILL.md files found (submodule not initialized?)._\n`;
+    continue;
+  }
+  md += `${v.skills.length} skills`;
+  if (v.duplicatesDropped > 0) md += ` (${v.duplicatesDropped} duplicate per-host copies deduped)`;
+  md += `.\n\n| Skill | Description |\n|-------|-------------|\n`;
+  for (const s of v.skills) {
+    md += `| [${s.name}](${s.skillFile}) | ${truncate(s.description, 160)} |\n`;
+  }
+}
+
 writeFileSync(join(ROOT, "INDEX.md"), md);
 
 const vendorSkillCount = vendorPlugins.reduce((n, p) => n + p.skills.length, 0);
+const genericCount = genericVendorResults.reduce((n, v) => n + v.skills.length, 0);
 console.error(
   `[index] Wrote index.json + INDEX.md — ${localSkills.length} local skill(s), ` +
   `${vendorPlugins.length} vendored plugin(s) with ${vendorSkillCount} skill(s), ` +
-  `${externalPlugins.length} external partner plugin(s).`
+  `${externalPlugins.length} external partner plugin(s), ` +
+  `${genericCount} skill(s) across ${genericVendorResults.length} official vendor repo(s).`
 );

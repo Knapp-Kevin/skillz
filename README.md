@@ -45,19 +45,35 @@ The generator scans `skills/*/SKILL.md` frontmatter (warning on name/directory m
 ## Repository layout
 
 ```
-INDEX.md / index.json        # generated skill registry — start here
-skills/                      # one directory per skill
-  claude-pulse/
-    SKILL.md                 #   frontmatter (name, description) + instructions
-    scripts/pulse.ts         #   optional zero-install support scripts
+INDEX.md / index.json        # generated skill index — start here
+skills/                      # first-party skills, one directory each
+  claude-pulse/              #   weekly Claude release + community digest
+  skills-pulse/              #   weekly ecosystem intake scan → registry proposals
+registry/
+  candidates.yaml            # intake decisions: adopted/sandbox/track/rejected/quarantined
+vendor/                      # official skill sources, as git submodules
+  anthropic-skills/          #   github.com/anthropics/skills
+  knowledge-work-plugins/    #   github.com/anthropics/knowledge-work-plugins
+  vercel-agent-skills/       #   github.com/vercel-labs/agent-skills
+  microsoft-skills/          #   github.com/microsoft/skills
+  azure-skills/              #   github.com/microsoft/azure-skills
+  aws-agent-toolkit/         #   github.com/aws/agent-toolkit-for-aws
 scripts/
-  build-index.ts             # index generator
-vendor/
-  knowledge-work-plugins/    # git submodule: Anthropic's plugin marketplace
+  build-index.ts             # index generator (scans skills/ + all of vendor/)
 docs/
   skill-template.md          # starting point for new skills
+  evaluation-framework.md    # scoring rubric, statuses, permission tiers
+  agent-skills-longlist.md   # ecosystem horizon scan (research input)
 ROADMAP.md                   # planned skill series + portability contract
 ```
+
+## How this stays lean
+
+The repo covers the full agentic surface — local, cloud, and everything between — without becoming a junk drawer, by drawing three lines:
+
+1. **Vendor only official sources.** Anthropic (general + office + marketplace), Vercel (frontend), Microsoft/Azure and AWS (cloud) come in as submodules, deduplicated upstream and indexed here. Community skills are *registered*, not copied.
+2. **Every third-party skill is a decision, not a download.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine per candidate with a permission tier and rationale, scored per [docs/evaluation-framework.md](docs/evaluation-framework.md). Redundancy with Qor-logic or a Claude Code built-in is a rejection reason on its own (`covered_by`).
+3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist weekly, filters finds against the registry/index/Qor-logic/built-ins, and proposes registry entries — it never installs anything.
 
 ## Authoring a skill
 
@@ -72,18 +88,27 @@ Start from [docs/skill-template.md](docs/skill-template.md). Conventions:
 
 The full portability contract (capability declarations, MCP-only external services, tiered content) is in [ROADMAP.md](ROADMAP.md#portability-contract-system-agnostic-requirements).
 
-## Vendored: Anthropic knowledge-work-plugins
+## Vendored official sources
 
-[`vendor/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) is Anthropic's official marketplace of knowledge-work plugins — productivity, enterprise search, sales, finance, data, design, engineering, legal, marketing, HR, operations, bio-research, and more, plus 60 partner-built plugins. Each bundles skills as `<plugin>/skills/<name>/SKILL.md`; all are enumerated in [INDEX.md](INDEX.md). Useful both to install and as reference implementations.
+Six official skill repos are vendored as submodules and fully enumerated in [INDEX.md](INDEX.md):
 
-Install into Claude Code straight from the source (no submodule needed):
+| Source | Coverage | Skills |
+|--------|----------|--------|
+| [anthropics/skills](https://github.com/anthropics/skills) | Office docs (docx/pdf/pptx/xlsx), skill-creator, mcp-builder, frontend design, webapp testing | 18 |
+| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Knowledge-work marketplace: productivity, sales, finance, legal, data, design + 60 partner plugins | 185 |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | React/Next.js best practices, composition patterns, web design guidelines | 9 |
+| [microsoft/skills](https://github.com/microsoft/skills) | Microsoft ecosystem: M365, Foundry, dev tooling | ~190 |
+| [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | Azure: plan/validate/deploy, RBAC, cost, diagnostics, AKS | ~68 |
+| [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | AWS: core services, Bedrock agents, data analytics, DevSecOps | ~115 |
+
+Marketplace-listed plugins install straight from source (no submodule needed):
 
 ```
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin install productivity@knowledge-work-plugins
 ```
 
-Refresh the vendored copy: `git submodule update --remote vendor/knowledge-work-plugins`, then regenerate the index.
+Refresh all vendored copies: `git submodule update --remote`, then regenerate the index. **Vendored ≠ blanket-trusted:** write-tier skills inside these repos (deploys, RBAC, cost changes) still require the permission gates in [docs/evaluation-framework.md](docs/evaluation-framework.md).
 
 ## Positioning in the MythologIQ ecosystem
 

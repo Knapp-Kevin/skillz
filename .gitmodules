@@ -1,3 +1,18 @@
 [submodule "vendor/knowledge-work-plugins"]
 	path = vendor/knowledge-work-plugins
 	url = https://github.com/anthropics/knowledge-work-plugins.git
+[submodule "vendor/anthropic-skills"]
+	path = vendor/anthropic-skills
+	url = https://github.com/anthropics/skills.git
+[submodule "vendor/vercel-agent-skills"]
+	path = vendor/vercel-agent-skills
+	url = https://github.com/vercel-labs/agent-skills.git
+[submodule "vendor/microsoft-skills"]
+	path = vendor/microsoft-skills
+	url = https://github.com/microsoft/skills.git
+[submodule "vendor/azure-skills"]
+	path = vendor/azure-skills
+	url = https://github.com/microsoft/azure-skills.git
+[submodule "vendor/aws-agent-toolkit"]
+	path = vendor/aws-agent-toolkit
+	url = https://github.com/aws/agent-toolkit-for-aws.git

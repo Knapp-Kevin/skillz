@@ -1,0 +1,270 @@
+# Skill intake registry — decisions about third-party skills.
+#
+# One file, one entry per candidate. This records DECISIONS, not discovery;
+# the horizon scan lives in docs/agent-skills-longlist.md and the scoring
+# rubric in docs/evaluation-framework.md.
+#
+# Fields:
+#   id               kebab-case identifier
+#   name             display name
+#   source           URL or collection name
+#   category         one or more of: meta, sdlc, verification, security,
+#                    language, frontend, browser, cloud, data, documents,
+#                    collaboration, ai-dev, media, marketing, commerce,
+#                    research, assistant
+#   status           adopted | sandbox | track | rejected | quarantined
+#                    (see docs/evaluation-framework.md for definitions)
+#   permission_tier  read-only | plan-only | generate | staging-write |
+#                    production-write | identity | cost | destructive
+#   resolved_path    path inside this repo if vendored (omit otherwise)
+#   covered_by       existing MythologIQ capability that makes it redundant
+#   rationale        one-line reason for the status
+#
+# Rules of the lane (see README Positioning):
+#   - SDLC-discipline skills that duplicate Qor-logic are REJECTED here with
+#     a covered_by pointer, not adopted twice.
+#   - Anything that mutates external state without an approval gate is at
+#     best QUARANTINED.
+
+version: 1
+updated: 2026-07-03
+
+candidates:
+  # ── Meta: skill authoring & governance ─────────────────────────────
+  - id: skill-creator
+    name: Skill Creator
+    source: https://github.com/anthropics/skills
+    category: [meta]
+    status: adopted
+    permission_tier: generate
+    resolved_path: vendor/anthropic-skills/skills/skill-creator
+    rationale: Official authoring skill; complements docs/skill-template.md for in-house skill creation.
+
+  - id: mcp-builder
+    name: MCP Builder
+    source: https://github.com/anthropics/skills
+    category: [meta, ai-dev]
+    status: adopted
+    permission_tier: generate
+    resolved_path: vendor/anthropic-skills/skills/mcp-builder
+    rationale: Official; MCP servers are the portability layer of the whole ecosystem (see ROADMAP portability contract).
+
+  - id: rules-distiller
+    name: Rules Distiller
+    source: skills.sh ecosystem
+    category: [meta]
+    status: sandbox
+    permission_tier: read-only
+    rationale: Extracting reusable rules from skills/docs is directly relevant to registry curation; verify quality before adopting.
+
+  - id: find-skills
+    name: find-skills
+    source: skills.sh ecosystem
+    category: [meta]
+    status: rejected
+    permission_tier: generate
+    covered_by: skills-pulse (this repo) + registry review gate
+    rationale: Auto-installing skills from a marketplace bypasses the intake gate this registry exists to enforce.
+
+  - id: agnix
+    name: agnix (agent config linter)
+    source: community
+    category: [meta, verification]
+    status: track
+    permission_tier: read-only
+    rationale: Linting SKILL.md/CLAUDE.md/MCP configs fits skill-audit (ROADMAP); evaluate as dependency vs inspiration.
+
+  # ── SDLC discipline (mostly covered by Qor-logic) ──────────────────
+  - id: superpowers-planning
+    name: writing-plans / executing-plans (Superpowers)
+    source: https://github.com/obra/superpowers
+    category: [sdlc]
+    status: rejected
+    permission_tier: generate
+    covered_by: Qor-logic /qor-plan + /qor-implement (gated, with artifacts)
+    rationale: Duplicates the gated plan->implement chain; adopting both creates conflicting process authority.
+
+  - id: verification-before-completion
+    name: verification-before-completion
+    source: https://github.com/obra/superpowers
+    category: [sdlc, verification]
+    status: rejected
+    permission_tier: read-only
+    covered_by: Qor-logic /qor-substantiate + /qor-validate (Merkle-sealed)
+    rationale: Qor-logic already binds completion to verification with evidence; a second soft version dilutes the gate.
+
+  - id: systematic-debugging
+    name: systematic-debugging
+    source: https://github.com/obra/superpowers
+    category: [sdlc]
+    status: rejected
+    permission_tier: read-only
+    covered_by: Qor-logic /qor-debug + qor-ultimate-debugger agent
+    rationale: Root-cause discipline already enforced by the gated chain.
+
+  - id: handoff
+    name: handoff
+    source: community
+    category: [sdlc, collaboration]
+    status: sandbox
+    permission_tier: generate
+    rationale: Continuation-context authoring is NOT covered by Qor-logic gates; useful for multi-agent and cross-session work.
+
+  - id: grill-with-docs
+    name: grill-with-docs
+    source: community
+    category: [sdlc, verification]
+    status: track
+    permission_tier: read-only
+    covered_by: partially by Qor-logic /qor-audit tribunal
+    rationale: Doc-grounded adversarial critique may add value pre-audit; test whether it improves audit pass rates.
+
+  - id: to-issues
+    name: to-issues
+    source: community
+    category: [collaboration]
+    status: sandbox
+    permission_tier: staging-write
+    rationale: Plan->GitHub-issues conversion is ungated glue work; fits this repo's lane. Requires gh write approval.
+
+  # ── Verification & security ────────────────────────────────────────
+  - id: verification-loop
+    name: Verification Loop
+    source: marketplace
+    category: [verification]
+    status: track
+    permission_tier: read-only
+    covered_by: partially by /code-review, /security-review (Claude Code built-ins) and Qor-logic audit
+    rationale: Multi-phase quality gate; evaluate what it adds over built-ins before adopting.
+
+  - id: security-review-community
+    name: Security Review (community variants)
+    source: marketplace
+    category: [security, verification]
+    status: rejected
+    permission_tier: read-only
+    covered_by: Claude Code /security-review built-in + aws-agents-for-devsecops (vendored)
+    rationale: Redundant with maintained built-in and official vendor coverage.
+
+  - id: ai-regression-testing
+    name: AI Regression Testing
+    source: marketplace
+    category: [verification, ai-dev]
+    status: track
+    permission_tier: read-only
+    rationale: Behavior-regression detection for AI products is strategic for COREFORGE/Qortara; no trusted implementation identified yet.
+
+  # ── Cloud (official, vendored) ─────────────────────────────────────
+  - id: azure-skills-plugin
+    name: Microsoft Azure Skills
+    source: https://github.com/microsoft/azure-skills
+    category: [cloud]
+    status: adopted
+    permission_tier: read-only
+    resolved_path: vendor/azure-skills
+    rationale: Official; Qortara runs on Azure. Read-only/planning skills usable now; deploy/RBAC/cost skills individually gated per evaluation-framework permission tiers.
+
+  - id: aws-agent-toolkit
+    name: AWS Agent Toolkit
+    source: https://github.com/aws/agent-toolkit-for-aws
+    category: [cloud]
+    status: adopted
+    permission_tier: read-only
+    resolved_path: vendor/aws-agent-toolkit
+    rationale: Official; aws-agents-for-devsecops and read-only diagnostics adoptable; deploy paths gated.
+
+  - id: microsoft-skills
+    name: Microsoft Skills
+    source: https://github.com/microsoft/skills
+    category: [cloud, documents, collaboration]
+    status: adopted
+    permission_tier: read-only
+    resolved_path: vendor/microsoft-skills
+    rationale: Official Microsoft ecosystem coverage (M365, Foundry, dev tooling); individual skills still reviewed before write-tier use.
+
+  - id: hashicorp-agent-skills
+    name: HashiCorp agent-skills (Terraform)
+    source: https://github.com/hashicorp/agent-skills
+    category: [cloud]
+    status: track
+    permission_tier: plan-only
+    rationale: Vendor when IaC enters active scope; Terraform changes are production-adjacent by nature.
+
+  # ── Frontend & documents (official, vendored) ──────────────────────
+  - id: vercel-agent-skills
+    name: Vercel Agent Skills
+    source: https://github.com/vercel-labs/agent-skills
+    category: [frontend]
+    status: adopted
+    permission_tier: generate
+    resolved_path: vendor/vercel-agent-skills
+    rationale: Official React/Next.js/web-design guidance; already proven in use (react-best-practices, web-design-guidelines).
+
+  - id: anthropic-office-skills
+    name: Anthropic docx/pdf/pptx/xlsx
+    source: https://github.com/anthropics/skills
+    category: [documents]
+    status: adopted
+    permission_tier: generate
+    resolved_path: vendor/anthropic-skills
+    rationale: Official document artifact skills; core office utility for every agent surface.
+
+  # ── Browser / computer use ─────────────────────────────────────────
+  - id: agent-browser
+    name: agent-browser (and computer-use skills generally)
+    source: community
+    category: [browser]
+    status: quarantined
+    permission_tier: destructive
+    rationale: Form submission, authenticated sessions, downloads. Only under explicit per-session permission policy; Claude-in-Chrome MCP already covers the governed path.
+
+  - id: just-scrape
+    name: just-scrape
+    source: community
+    category: [browser, data]
+    status: quarantined
+    permission_tier: read-only
+    rationale: Scraping needs legal/robots/rate-limit review per target; never blanket-enabled.
+
+  # ── Commerce / assistant ───────────────────────────────────────────
+  - id: ucp
+    name: Universal Commerce Protocol
+    source: community
+    category: [commerce]
+    status: quarantined
+    permission_tier: destructive
+    rationale: Checkout/payment operations; requires explicit human confirmation per transaction, out of scope until commerce is.
+
+  - id: openpaw
+    name: OpenPaw assistant bundle
+    source: community
+    category: [assistant]
+    status: rejected
+    permission_tier: identity
+    covered_by: connected MCP servers (Gmail, Calendar, Slack) + ROADMAP daily-ops series
+    rationale: Broad permission-heavy bundle; the same outcomes are planned as scoped, read-only-by-default skills here.
+
+  # ── Media / marketing ──────────────────────────────────────────────
+  - id: face-swap-lipsync-avatar
+    name: face-swap / lipsync / ai-avatar-video
+    source: marketplace
+    category: [media]
+    status: rejected
+    permission_tier: generate
+    rationale: Likeness/consent risk with no current product need.
+
+  - id: viral-content-skills
+    name: viral-short-form / viral-captions-and-ctas
+    source: marketplace
+    category: [marketing]
+    status: rejected
+    permission_tier: generate
+    rationale: High slop risk; violates the marketing constraints in the longlist (voice preservation, no synthetic authority).
+
+  - id: devmarketing-skills
+    name: devmarketing-skills
+    source: community
+    category: [marketing]
+    status: track
+    permission_tier: generate
+    rationale: Developer-marketing workflows (docs-as-marketing, HN, onboarding) fit future GTM for FailSafe/Qortara; review quality when needed.
