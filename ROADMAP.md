@@ -6,12 +6,27 @@ The repo's purpose is skills that run on a **daily or weekly cadence**, either i
 
 Siblings of `claude-pulse`: same digest shape, different domain.
 
-| Skill | What it digests | Sources |
-|-------|-----------------|---------|
-| `repo-pulse` | Activity across your GitHub repos: commits, PRs needing review, stale branches, CI failures, new issues | `gh` CLI (already authenticated locally) |
-| `deps-pulse` | Dependency updates and CVEs across active projects | `npm outdated`/`npm audit`, `cargo audit`, GitHub advisories |
-| `ai-pulse` | Broader AI ecosystem beyond Claude: notable papers, model releases, tooling | Hugging Face MCP (paper_search, hub_repo_search), web search |
-| `tauri-pulse` | Tauri/Rust ecosystem releases and breaking changes (you maintain Tauri 2 projects and a large tauri2-* skill set) | GitHub releases for tauri-apps/*, crates.io, Tauri blog |
+All pulses share one collector (`scripts/pulse-run.ts`) driven by a per-skill `sources.json` — adding a pulse is a data change, not new code.
+
+**Shipped — vendor pulses** ✅: `claude-pulse` (bespoke script, predates the engine), `openai-pulse`, `gemini-pulse`, `llama-pulse`, `mistral-pulse`, `xai-pulse`, `deepseek-pulse`, `qwen-pulse`, `glm-pulse` (z.ai/Zhipu), `kimi-pulse` (Moonshot), `perplexity-pulse`.
+
+Vendor watchlist (add a `sources.json` when they ship something load-bearing): MiniMax, ByteDance Seed/Doubao, Tencent Hunyuan, Baidu Ernie, Cohere, AI2 (OLMo), NVIDIA (Nemotron).
+
+**Shipped — topic pulses** ✅: `governance-pulse` (EU AI Act / NIST / OWASP / governance-tooling market + optional read-only local ledger drift), `memory-pulse` (agentic memory & context engineering → COREFORGE Vault), `github-pulse` (new & trending repos, AI-centric), `hf-pulse` (Hugging Face cross-vendor view; prefers the connected HF MCP tools), `mcp-pulse` (protocol spec/SDK/servers/security — the portability layer itself).
+
+Remaining candidates, in rough priority order:
+
+| Skill | What it digests | Why / why not yet |
+|-------|-----------------|-------------------|
+| `inference-pulse` | Local-inference runtimes: llama.cpp, Ollama, vLLM, quantization formats, GPU/NPU support | Strong GG-CORE fit — a `sources.json` away; next up when local-runtime decisions get active |
+| `repo-pulse` | Activity across your own GitHub repos: commits, PRs needing review, stale branches, CI failures | Needs `gh` CLI integration, not the generic engine |
+| `deps-pulse` | Dependency updates and CVEs across active projects | Needs per-project scanners (`npm audit`, `cargo audit`), not the generic engine |
+| `tauri-pulse` | Tauri/Rust ecosystem releases and breaking changes | A `sources.json` away; ship when a Tauri upgrade cycle nears |
+| `voice-pulse` | Voice-AI ecosystem: ElevenLabs, realtime speech APIs, TTS/STT models | You maintain ElevenLabs integrations; ship if voice work resumes |
+| `benchmark-pulse` | New evals, leaderboard movement (LMArena, SWE-bench, agentic benchmarks) | Useful but vendor pulses already carry the headline results — watch for redundancy |
+| `market-pulse` | AI business news: funding, M&A, enterprise adoption, competitor moves in agent governance | Feeds Qortara GTM; lower cadence (monthly), mostly web-search driven |
+
+Considered and skipped for now: `robotics-pulse`, `image/video-gen-pulse` (no active product need — registry `track` at most), `arxiv-pulse` as a standalone (memory-pulse and hf-pulse's paper themes cover the agent-relevant slice; a general paper firehose is noise).
 
 ## 2. Daily ops series — personal cadence (daily)
 
@@ -41,17 +56,63 @@ This repo maintaining itself.
 |-------|--------------|
 | `skills-pulse` ✅ | **Shipped.** Weekly ecosystem intake scan: watchlist repo activity, marketplace sweep, redundancy filter, registry candidate proposals. |
 | `skill-forge` | Scaffold a new skill in this repo from `docs/skill-template.md`: prompts for name/description/cadence, creates the directory, regenerates the index. |
-| `skill-audit` | Validate every `skills/*/SKILL.md`: frontmatter completeness, description quality (does it say *when* to use?), script runnability, dead links. Also lint `registry/candidates.yaml` entries against the evaluation framework. Run before syncing anywhere. |
-| `skill-sync` | Deploy skills from this repo to their consumers: symlinks into `~/.claude/skills/`, per-host copies following Qor-logic's `dist_compile` pattern (`.claude/`, `.kilo/`, `.codex/`, `.gemini/`), and generated COREFORGE Synapse `manifest.json` (skillId, permissions, runtime derived from frontmatter). Idempotent; reports drift. |
+| `skill-audit` ✅ | **Shipped.** Mechanical repo validation: SKILL.md conventions, script `--help` health, registry enum/rationale/resolved_path lint, index freshness. `node skills/skill-audit/scripts/audit.ts`. |
+| `skill-sync` ✅ | **Shipped.** Deploys portable skills (dry-run default, `--apply` to execute): junctions into `~/.claude/skills/` (`--claude-user`), copies to any path (`--dest`), COREFORGE Synapse `manifest.json` bundles (`--coreforge`). Repo-bound meta-skills excluded by construction. Per-host `dist_compile`-style variants remain future work. |
 | `memory-distill` | Weekly consolidation of Claude Code's persistent memory: merge duplicates, expire stale project facts, tighten the MEMORY.md index. |
 
-## Suggested build order
+## 5. Research series — structured inquiry (on-demand)
 
-1. `repo-pulse` — highest leverage, `gh` does the heavy lifting, template already exists (claude-pulse).
-2. `daily-briefing` — the anchor habit the other daily skills feed into.
-3. `skill-sync` + `skill-audit` — once ~3 skills exist, deployment and validation pay for themselves.
-4. `repo-doctor` and `standup-writer` — both are mostly git plumbing.
-5. Everything else as the cadence proves itself.
+The biggest unshipped category. Pulses answer "what changed"; these answer "what should I believe / choose."
+
+| Skill | What it does |
+|-------|--------------|
+| `deep-dive` | Multi-source research dossier on any topic: scope → parallel source sweep → adversarial fact-check → cited report. System-agnostic sibling of Claude Code's deep-research harness. |
+| `compare` | Structured comparison (tools, models, vendors, approaches): criteria elicited first, evidence per cell, weighted recommendation. Kills "which X should I use" thrash. |
+| `fact-check` | Claim verification: decompose into checkable sub-claims, source each, report confidence + what would change the verdict. |
+| `paper-digest` | Read a paper properly: claims, method, evidence quality, limitations, replication status, relevance to our stack. Feeds memory-pulse/hf-pulse finds. |
+| `source-vetting` | Trust evaluation of a repo/vendor/dataset before it enters the registry: maintainer history, activity authenticity, license, security posture. Operationalizes the evaluation framework's source-trust criterion. |
+
+## 6. Agent-ops series — running the fleet itself (recurring + on-demand)
+
+| Skill | What it does |
+|-------|--------------|
+| `skill-eval` | Before/after effectiveness testing for a candidate skill: sample tasks with and without the skill loaded, scored comparison → registry evidence. Closes the loop the evaluation framework declares (`eval_plan`) but nothing runs today. **Highest-leverage gap in the repo.** |
+| `mcp-vetting` | Security review of an MCP server before connecting: tool surface, permissions, network behavior, injection exposure, provenance. Pairs with mcp-pulse finds and the registry's quarantine tier. |
+| `agent-postmortem` | After a failed/expensive agent session: extract root cause, cost drivers, and lessons → memory files or shadow-genome entries. Bridges to Qor-logic without touching its gates. |
+| `handoff-writer` | Continuation context for cross-session/cross-agent work: state, decisions, open threads, next actions. (Registry `sandbox` candidate exists; build first-party.) |
+| `permissions-review` | Periodic audit of what agents can touch: MCP servers, allowlists, credentials, hooks. Read-only report with tightening recommendations. |
+
+## 7. Comms & writing series (on-demand)
+
+| Skill | What it does |
+|-------|--------------|
+| `brief-writer` | One-page decision brief: situation, options, recommendation, risks. The default artifact for asking a human to decide something. |
+| `devlog-draft` | Founder-led content from real work: turn a week of git history + decisions into a devlog/blog draft that preserves voice. Constraints per registry marketing rules (no synthetic authority, no fake traction). |
+| `deck-outline` | Narrative-first deck outlines (pitch, update, launch); execution hands off to the vendored pptx skill. |
+
+## 8. Life-ops series — personal & small-business (recurring)
+
+Extends the Daily-ops series beyond the workday.
+
+| Skill | What it does |
+|-------|--------------|
+| `finance-review` | Monthly money digest: statements/exports in, categorized trends + anomalies out (vendored xlsx skill does the mechanics). Read-only; never initiates transactions. |
+| `smallbiz-ops` | Upkeep cadence for the family business sites (Hill House Transport, Neat & Clean, Chesapeake Moms Club): content freshness, uptime, listings/SEO drift, seasonal to-dos. |
+| `career-radar` | Periodic market scan for roles/rates matching a profile; builds on the job-ranger/career-ops work already in the ecosystem. |
+| `learning-plan` | Structured skill acquisition: goal → curriculum from real sources → weekly cadence with checkpoints; pairs with `/schedule`. |
+| `decision-log` | Personal ADR: capture non-code life/business decisions with context and revisit dates. Life-side sibling of qor-meta-log-decision. |
+
+## Suggested build order (updated 2026-07-03)
+
+Shipped so far: the pulse fleet (16), skill-audit, skill-sync, skills-pulse. Next:
+
+1. `skill-eval` — closes the registry's evaluate loop; every later adoption decision gets cheaper and more honest.
+2. `deep-dive` + `compare` — the research core; highest daily utility across work and life.
+3. `daily-briefing` — the anchor habit the other daily skills feed into (Gmail/Calendar MCPs already connected).
+4. `mcp-vetting` — before the next MCP server gets connected, not after.
+5. `repo-pulse` + `repo-doctor` + `standup-writer` — the git-plumbing cluster, built together.
+6. `brief-writer` + `handoff-writer` — small, immediately useful, exercise the comms patterns.
+7. Life-ops as cadence proves itself; `finance-review` first (xlsx machinery already vendored).
 
 ## Design rules for every new skill
 

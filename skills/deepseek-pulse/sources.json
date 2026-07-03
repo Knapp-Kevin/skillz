@@ -1,0 +1,16 @@
+{
+  "name": "DeepSeek Pulse",
+  "github_orgs": ["deepseek-ai"],
+  "subreddits": ["LocalLLaMA", "DeepSeek"],
+  "keywords": ["deepseek"],
+  "pages": [
+    { "label": "API news", "url": "https://api-docs.deepseek.com/news/" },
+    { "label": "Hugging Face org", "url": "https://huggingface.co/deepseek-ai" }
+  ],
+  "searches": [
+    "DeepSeek model release",
+    "DeepSeek paper arxiv",
+    "DeepSeek site:reddit.com/r/LocalLLaMA",
+    "deepseek-ai site:huggingface.co new model"
+  ]
+}

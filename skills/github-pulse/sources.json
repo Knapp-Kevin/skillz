@@ -1,0 +1,21 @@
+{
+  "name": "GitHub Pulse (new & trending repos, AI-centric)",
+  "github_search": [
+    { "label": "hottest new repos (any topic)", "q": "created:>{SINCE} stars:>150" },
+    { "label": "new AI/LLM repos", "q": "llm OR ai-agent OR agentic created:>{SINCE} stars:>50" },
+    { "label": "new agent-framework repos", "q": "topic:agents created:>{SINCE} stars:>25" },
+    { "label": "new MCP repos", "q": "mcp model-context-protocol created:>{SINCE} stars:>25" },
+    { "label": "new dev-tool repos", "q": "topic:developer-tools created:>{SINCE} stars:>50" }
+  ],
+  "subreddits": [],
+  "keywords": [],
+  "pages": [
+    { "label": "GitHub trending (daily)", "url": "https://github.com/trending" },
+    { "label": "GitHub trending (weekly)", "url": "https://github.com/trending?since=weekly" }
+  ],
+  "searches": [
+    "trending github repo this week AI",
+    "show HN github site:news.ycombinator.com",
+    "new open source AI tool site:reddit.com/r/LocalLLaMA OR site:reddit.com/r/opensource"
+  ]
+}

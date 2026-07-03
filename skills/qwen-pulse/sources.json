@@ -1,0 +1,16 @@
+{
+  "name": "Qwen Pulse (Alibaba)",
+  "github_orgs": ["QwenLM"],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["qwen", "qwq", "alibaba"],
+  "pages": [
+    { "label": "Qwen blog", "url": "https://qwenlm.github.io/blog/" },
+    { "label": "Hugging Face org", "url": "https://huggingface.co/Qwen" }
+  ],
+  "searches": [
+    "Qwen model release site:qwenlm.github.io",
+    "new Qwen weights huggingface",
+    "Qwen site:reddit.com/r/LocalLLaMA",
+    "Alibaba Qwen announcement"
+  ]
+}

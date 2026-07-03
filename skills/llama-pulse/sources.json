@@ -1,0 +1,17 @@
+{
+  "name": "Llama Pulse (Meta AI)",
+  "github": ["meta-llama/llama-models", "meta-llama/llama-stack", "meta-llama/llama-cookbook"],
+  "github_orgs": ["meta-llama"],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["llama", "meta ai", "meta-llama"],
+  "pages": [
+    { "label": "Meta AI blog", "url": "https://ai.meta.com/blog/" },
+    { "label": "Llama models site", "url": "https://www.llama.com/" }
+  ],
+  "searches": [
+    "Meta Llama release site:ai.meta.com",
+    "new Llama model weights",
+    "Llama site:reddit.com/r/LocalLLaMA",
+    "Meta AI research announcement"
+  ]
+}

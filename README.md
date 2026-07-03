@@ -48,7 +48,19 @@ The generator scans `skills/*/SKILL.md` frontmatter (warning on name/directory m
 INDEX.md / index.json        # generated skill index — start here
 skills/                      # first-party skills, one directory each
   claude-pulse/              #   weekly Claude release + community digest
+  openai-pulse/ gemini-pulse/ llama-pulse/ mistral-pulse/
+  xai-pulse/ deepseek-pulse/ qwen-pulse/ glm-pulse/
+  kimi-pulse/ perplexity-pulse/
+                             #   vendor pulses: SKILL.md + sources.json,
+                             #   all driven by scripts/pulse-run.ts
+  governance-pulse/          #   AI regulation, standards, governance-tooling market
+  memory-pulse/              #   agentic memory & context engineering
+  github-pulse/              #   new & trending repos, AI-centric
+  hf-pulse/                  #   Hugging Face cross-vendor view (prefers HF MCP tools)
+  mcp-pulse/                 #   MCP spec/SDK/servers/security
   skills-pulse/              #   weekly ecosystem intake scan → registry proposals
+  skill-audit/               #   repo self-validation (conventions, scripts, registry)
+  skill-sync/                #   deploy portable skills (junction/copy/COREFORGE manifest)
 registry/
   candidates.yaml            # intake decisions: adopted/sandbox/track/rejected/quarantined
 vendor/                      # official skill sources, as git submodules
@@ -60,6 +72,9 @@ vendor/                      # official skill sources, as git submodules
   aws-agent-toolkit/         #   github.com/aws/agent-toolkit-for-aws
 scripts/
   build-index.ts             # index generator (scans skills/ + all of vendor/)
+  pulse-run.ts               # shared pulse collector, driven by sources.json specs
+  lib/frontmatter.ts         # shared zero-dep frontmatter parser
+tests/                       # behavior tests: node --test "tests/*.test.mjs"
 docs/
   skill-template.md          # starting point for new skills
   evaluation-framework.md    # scoring rubric, statuses, permission tiers
@@ -74,6 +89,7 @@ The repo covers the full agentic surface — local, cloud, and everything betwee
 1. **Vendor only official sources.** Anthropic (general + office + marketplace), Vercel (frontend), Microsoft/Azure and AWS (cloud) come in as submodules, deduplicated upstream and indexed here. Community skills are *registered*, not copied.
 2. **Every third-party skill is a decision, not a download.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine per candidate with a permission tier and rationale, scored per [docs/evaluation-framework.md](docs/evaluation-framework.md). Redundancy with Qor-logic or a Claude Code built-in is a rejection reason on its own (`covered_by`).
 3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist weekly, filters finds against the registry/index/Qor-logic/built-ins, and proposes registry entries — it never installs anything.
+4. **The repo maintains itself.** [`skill-audit`](skills/skill-audit/SKILL.md) validates conventions, script health, registry enums, and index freshness (`node skills/skill-audit/scripts/audit.ts`, exit 1 on drift). [`skill-sync`](skills/skill-sync/SKILL.md) deploys portable skills — junction into `~/.claude/skills`, copy anywhere, or COREFORGE Synapse manifests — dry-run by default. Behavior tests: `node --test "tests/*.test.mjs"`.
 
 ## Authoring a skill
 

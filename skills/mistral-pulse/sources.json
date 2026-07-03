@@ -1,0 +1,17 @@
+{
+  "name": "Mistral Pulse",
+  "github": ["mistralai/mistral-common", "mistralai/client-python", "mistralai/mistral-inference"],
+  "github_orgs": ["mistralai"],
+  "subreddits": ["MistralAI", "LocalLLaMA"],
+  "keywords": ["mistral", "magistral", "codestral", "devstral", "le chat"],
+  "pages": [
+    { "label": "Mistral news", "url": "https://mistral.ai/news" },
+    { "label": "API changelog", "url": "https://docs.mistral.ai/getting-started/changelog/" }
+  ],
+  "searches": [
+    "Mistral AI announcement site:mistral.ai",
+    "new Mistral model release",
+    "Mistral site:reddit.com/r/LocalLLaMA",
+    "Codestral OR Devstral OR Magistral release"
+  ]
+}

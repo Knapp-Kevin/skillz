@@ -15,7 +15,24 @@
 | Skill | Category | Description | Scripts |
 |-------|----------|-------------|---------|
 | [claude-pulse](skills/claude-pulse/SKILL.md) | Productivity | Scan the latest Claude updates directly from Anthropic's official release notes, blog posts, and announcements, plus top community commentary from Claude- and… | [pulse.ts](skills/claude-pulse/scripts/pulse.ts) |
+| [deepseek-pulse](skills/deepseek-pulse/SKILL.md) | Productivity | Scan the latest DeepSeek developments — new open weights, papers, API news, org repo activity, and r/LocalLLaMA reception — and synthesize a digest. Use when t… | — |
+| [gemini-pulse](skills/gemini-pulse/SKILL.md) | Productivity | Scan the latest Google Gemini / DeepMind developments — model releases, Gemini API changelog, gemini-cli and SDK repo activity, and community reception — and s… | — |
+| [github-pulse](skills/github-pulse/SKILL.md) | Productivity | Scan GitHub for the week's hottest new repositories — overall and AI-centric (LLM tooling, agent frameworks, MCP servers, dev tools) — and synthesize a digest… | — |
+| [glm-pulse](skills/glm-pulse/SKILL.md) | Productivity | Scan the latest z.ai / Zhipu GLM developments — new open weights, org repo activity (zai-org, THUDM), API and coding-plan changes, and r/LocalLLaMA reception —… | — |
+| [governance-pulse](skills/governance-pulse/SKILL.md) | Productivity | Scan the AI governance landscape — EU AI Act milestones, NIST AI RMF updates, OWASP LLM/agentic security work, vendor transparency and policy announcements, an… | — |
+| [hf-pulse](skills/hf-pulse/SKILL.md) | Productivity | Scan the Hugging Face ecosystem — trending models/datasets/spaces, daily papers, HF blog, and library releases (transformers, smolagents, hub) — and synthesize… | — |
+| [kimi-pulse](skills/kimi-pulse/SKILL.md) | Productivity | Scan the latest Moonshot AI / Kimi developments — new open weights (K2 line), org repo activity, API changes, and r/LocalLLaMA reception — and synthesize a dig… | — |
+| [llama-pulse](skills/llama-pulse/SKILL.md) | Productivity | Scan the latest Meta AI / Llama developments — new open weights, llama-stack and cookbook repo activity, research announcements, and r/LocalLLaMA reception — a… | — |
+| [mcp-pulse](skills/mcp-pulse/SKILL.md) | Productivity | Scan the Model Context Protocol ecosystem — spec and SDK releases, registry news, notable new servers, and MCP security advisories — and synthesize a digest. U… | — |
+| [memory-pulse](skills/memory-pulse/SKILL.md) | Productivity | Scan the agentic-memory and context-engineering ecosystem — memory frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and community discussion — and… | — |
+| [mistral-pulse](skills/mistral-pulse/SKILL.md) | Productivity | Scan the latest Mistral AI developments — model releases (Mistral, Codestral, Devstral, Magistral), API changelog, SDK repo activity, and community reception —… | — |
+| [openai-pulse](skills/openai-pulse/SKILL.md) | Productivity | Scan the latest OpenAI developments — model releases, API changelog, Codex/SDK repo activity, and community reception — and synthesize a digest. Use when the u… | — |
+| [perplexity-pulse](skills/perplexity-pulse/SKILL.md) | Productivity | Scan the latest Perplexity developments — Sonar API and model changes, Comet browser, product launches, and community reception — and synthesize a digest. Use… | — |
+| [qwen-pulse](skills/qwen-pulse/SKILL.md) | Productivity | Scan the latest Qwen (Alibaba) developments — new open weights, QwenLM org repo activity, blog posts, and r/LocalLLaMA reception — and synthesize a digest. Use… | — |
+| [skill-audit](skills/skill-audit/SKILL.md) | Meta | Validate this repository's conventions mechanically: SKILL.md frontmatter (name/directory match, trigger-bearing description, version), script health (--help e… | [audit.ts](skills/skill-audit/scripts/audit.ts) |
+| [skill-sync](skills/skill-sync/SKILL.md) | Meta | Deploy this repository's portable skills to their consumers: junction into the Claude Code user skills directory, copy to any local path, or emit COREFORGE Syn… | [sync.ts](skills/skill-sync/scripts/sync.ts) |
 | [skills-pulse](skills/skills-pulse/SKILL.md) | Meta | Scan the agent-skills ecosystem for new and updated skills across the official vendor repos (Anthropic, Vercel, Microsoft, Azure, AWS) and community marketplac… | [scout.ts](skills/skills-pulse/scripts/scout.ts) |
+| [xai-pulse](skills/xai-pulse/SKILL.md) | Productivity | Scan the latest xAI / Grok developments — model releases, API release notes, SDK repo activity, and community reception — and synthesize a digest. Use when the… | — |
 
 ## Vendored: [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (`vendor/`)
 

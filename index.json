@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-03T20:16:49.616Z",
+  "generated": "2026-07-03T21:47:47.836Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -17,6 +17,170 @@
       ]
     },
     {
+      "name": "deepseek-pulse",
+      "displayName": "DeepSeek Pulse",
+      "description": "Scan the latest DeepSeek developments — new open weights, papers, API news, org repo activity, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with DeepSeek\", \"DeepSeek pulse\", \"new DeepSeek model\", or wants open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/deepseek-pulse",
+      "skillFile": "skills/deepseek-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "gemini-pulse",
+      "displayName": "Gemini Pulse",
+      "description": "Scan the latest Google Gemini / DeepMind developments — model releases, Gemini API changelog, gemini-cli and SDK repo activity, and community reception — and synthesize a digest. Use when the user asks \"what's new with Gemini\", \"Gemini pulse\", \"Google AI news\", \"DeepMind update digest\", or wants competitive awareness of Google alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/gemini-pulse",
+      "skillFile": "skills/gemini-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "github-pulse",
+      "displayName": "GitHub Pulse",
+      "description": "Scan GitHub for the week's hottest new repositories — overall and AI-centric (LLM tooling, agent frameworks, MCP servers, dev tools) — and synthesize a digest of what's worth attention. Use when the user asks \"github pulse\", \"what's trending on GitHub\", \"new AI repos this week\", \"top new repositories\", or wants a repo-radar feeding the skills registry and tooling decisions.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/github-pulse",
+      "skillFile": "skills/github-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "glm-pulse",
+      "displayName": "GLM Pulse",
+      "description": "Scan the latest z.ai / Zhipu GLM developments — new open weights, org repo activity (zai-org, THUDM), API and coding-plan changes, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with GLM\", \"GLM pulse\", \"z.ai news\", \"Zhipu update\", or wants open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/glm-pulse",
+      "skillFile": "skills/glm-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "governance-pulse",
+      "displayName": "Governance Pulse",
+      "description": "Scan the AI governance landscape — EU AI Act milestones, NIST AI RMF updates, OWASP LLM/agentic security work, vendor transparency and policy announcements, and new governance/agent-security repos — and synthesize a digest. Use when the user asks \"governance pulse\", \"AI regulation news\", \"what changed in AI governance\", \"EU AI Act update\", or wants regulatory awareness feeding Qortara/FailSafe/Qor-logic positioning.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/governance-pulse",
+      "skillFile": "skills/governance-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "hf-pulse",
+      "displayName": "Hugging Face Pulse",
+      "description": "Scan the Hugging Face ecosystem — trending models/datasets/spaces, daily papers, HF blog, and library releases (transformers, smolagents, hub) — and synthesize a digest. Use when the user asks \"huggingface pulse\", \"what's trending on Hugging Face\", \"HF papers this week\", \"new models on the hub\", or wants open-model ecosystem awareness across all vendors at once.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/hf-pulse",
+      "skillFile": "skills/hf-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "kimi-pulse",
+      "displayName": "Kimi Pulse",
+      "description": "Scan the latest Moonshot AI / Kimi developments — new open weights (K2 line), org repo activity, API changes, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Kimi\", \"Kimi pulse\", \"Moonshot news\", \"Kimi K2 update\", or wants open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/kimi-pulse",
+      "skillFile": "skills/kimi-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "llama-pulse",
+      "displayName": "Llama Pulse",
+      "description": "Scan the latest Meta AI / Llama developments — new open weights, llama-stack and cookbook repo activity, research announcements, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Llama\", \"llama pulse\", \"Meta AI news\", \"new open weights from Meta\", or wants open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/llama-pulse",
+      "skillFile": "skills/llama-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "mcp-pulse",
+      "displayName": "MCP Pulse",
+      "description": "Scan the Model Context Protocol ecosystem — spec and SDK releases, registry news, notable new servers, and MCP security advisories — and synthesize a digest. Use when the user asks \"mcp pulse\", \"what's new with MCP\", \"new MCP servers worth using\", \"MCP spec changes\", or wants protocol-level awareness for agent integration work.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/mcp-pulse",
+      "skillFile": "skills/mcp-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "memory-pulse",
+      "displayName": "Memory Pulse",
+      "description": "Scan the agentic-memory and context-engineering ecosystem — memory frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and community discussion — and synthesize a digest. Use when the user asks \"memory pulse\", \"what's new in agent memory\", \"context engineering news\", \"agentic memory papers\", or wants ecosystem awareness feeding COREFORGE Vault and agent memory architecture decisions.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/memory-pulse",
+      "skillFile": "skills/memory-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "mistral-pulse",
+      "displayName": "Mistral Pulse",
+      "description": "Scan the latest Mistral AI developments — model releases (Mistral, Codestral, Devstral, Magistral), API changelog, SDK repo activity, and community reception — and synthesize a digest. Use when the user asks \"what's new with Mistral\", \"Mistral pulse\", \"Codestral news\", or wants European/open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/mistral-pulse",
+      "skillFile": "skills/mistral-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "openai-pulse",
+      "displayName": "OpenAI Pulse",
+      "description": "Scan the latest OpenAI developments — model releases, API changelog, Codex/SDK repo activity, and community reception — and synthesize a digest. Use when the user asks \"what's new with OpenAI\", \"OpenAI pulse\", \"latest GPT news\", \"OpenAI update digest\", or wants competitive awareness of OpenAI alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/openai-pulse",
+      "skillFile": "skills/openai-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "perplexity-pulse",
+      "displayName": "Perplexity Pulse",
+      "description": "Scan the latest Perplexity developments — Sonar API and model changes, Comet browser, product launches, and community reception — and synthesize a digest. Use when the user asks \"what's new with Perplexity\", \"Perplexity pulse\", \"Sonar API update\", \"Comet news\", or wants answer-engine/search-AI awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/perplexity-pulse",
+      "skillFile": "skills/perplexity-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "qwen-pulse",
+      "displayName": "Qwen Pulse",
+      "description": "Scan the latest Qwen (Alibaba) developments — new open weights, QwenLM org repo activity, blog posts, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Qwen\", \"Qwen pulse\", \"new Qwen model\", or wants open-model awareness alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/qwen-pulse",
+      "skillFile": "skills/qwen-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "skill-audit",
+      "displayName": "Skill Audit",
+      "description": "Validate this repository's conventions mechanically: SKILL.md frontmatter (name/directory match, trigger-bearing description, version), script health (--help exit codes), intake-registry enums, and index freshness. Use when the user asks \"audit the skills repo\", \"validate the skills\", \"lint the registry\", before running skill-sync, or as a pre-commit check after adding or editing any skill.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/skill-audit",
+      "skillFile": "skills/skill-audit/SKILL.md",
+      "scripts": [
+        "skills/skill-audit/scripts/audit.ts"
+      ]
+    },
+    {
+      "name": "skill-sync",
+      "displayName": "Skill Sync",
+      "description": "Deploy this repository's portable skills to their consumers: junction into the Claude Code user skills directory, copy to any local path, or emit COREFORGE Synapse-style manifest.json bundles — dry-run by default with drift reporting. Use when the user asks \"sync the skills\", \"deploy skills to Claude Code\", \"install the skills locally\", \"generate COREFORGE manifests\", or after skill-audit passes on new or changed skills.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/skill-sync",
+      "skillFile": "skills/skill-sync/SKILL.md",
+      "scripts": [
+        "skills/skill-sync/scripts/sync.ts"
+      ]
+    },
+    {
       "name": "skills-pulse",
       "displayName": "Skills Pulse",
       "description": "Scan the agent-skills ecosystem for new and updated skills across the official vendor repos (Anthropic, Vercel, Microsoft, Azure, AWS) and community marketplaces, then propose intake candidates for the registry. Use when the user asks \"skills pulse\", \"any new agent skills\", \"scan the skill watchlist\", \"update the skill registry\", or on a weekly intake schedule.",
@@ -27,6 +191,16 @@
       "scripts": [
         "skills/skills-pulse/scripts/scout.ts"
       ]
+    },
+    {
+      "name": "xai-pulse",
+      "displayName": "xAI Pulse",
+      "description": "Scan the latest xAI / Grok developments — model releases, API release notes, SDK repo activity, and community reception — and synthesize a digest. Use when the user asks \"what's new with Grok\", \"xAI pulse\", \"Grok update digest\", or wants competitive awareness of xAI alongside the other vendor pulses.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/xai-pulse",
+      "skillFile": "skills/xai-pulse/SKILL.md",
+      "scripts": []
     }
   ],
   "registry": "registry/candidates.yaml",

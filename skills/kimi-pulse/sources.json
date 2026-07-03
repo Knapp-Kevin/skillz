@@ -1,0 +1,18 @@
+{
+  "name": "Kimi Pulse (Moonshot AI)",
+  "github_orgs": ["MoonshotAI"],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["kimi", "moonshot", "k2"],
+  "pages": [
+    { "label": "Moonshot platform docs", "url": "https://platform.moonshot.ai/docs" },
+    { "label": "Hugging Face org", "url": "https://huggingface.co/moonshotai" },
+    { "label": "Kimi", "url": "https://www.kimi.com/" }
+  ],
+  "searches": [
+    "Kimi model release Moonshot",
+    "Kimi K2 site:reddit.com/r/LocalLLaMA",
+    "moonshotai site:huggingface.co new model",
+    "Moonshot AI announcement",
+    "Kimi API pricing changelog"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "xAI Pulse",
+  "github": ["xai-org/xai-sdk-python"],
+  "github_orgs": ["xai-org"],
+  "subreddits": ["grok"],
+  "keywords": ["grok", "xai"],
+  "pages": [
+    { "label": "xAI news", "url": "https://x.ai/news" },
+    { "label": "API release notes", "url": "https://docs.x.ai/docs/release-notes" }
+  ],
+  "searches": [
+    "xAI Grok announcement site:x.ai",
+    "new Grok model release",
+    "Grok API changelog",
+    "Grok site:reddit.com/r/grok OR site:reddit.com/r/LocalLLaMA"
+  ]
+}

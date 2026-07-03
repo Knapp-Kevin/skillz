@@ -1,0 +1,18 @@
+{
+  "name": "GLM Pulse (z.ai / Zhipu)",
+  "github_orgs": ["zai-org", "THUDM"],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["glm", "z.ai", "zhipu", "chatglm"],
+  "pages": [
+    { "label": "z.ai blog", "url": "https://z.ai/blog" },
+    { "label": "API docs / changelog", "url": "https://docs.z.ai/" },
+    { "label": "Hugging Face org", "url": "https://huggingface.co/zai-org" }
+  ],
+  "searches": [
+    "GLM model release site:z.ai",
+    "Zhipu z.ai announcement",
+    "GLM site:reddit.com/r/LocalLLaMA",
+    "zai-org site:huggingface.co new model",
+    "GLM coding plan API pricing"
+  ]
+}

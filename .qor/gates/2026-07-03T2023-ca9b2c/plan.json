@@ -1,0 +1,43 @@
+{
+  "phase": "plan",
+  "session_id": "2026-07-03T2023-ca9b2c",
+  "ts": "2026-07-03T20:26:24Z",
+  "plan_path": "docs/plan-qor-phase1-meta-skill-audit-sync.md",
+  "phases": [
+    "skill-audit",
+    "skill-sync",
+    "wiring"
+  ],
+  "ci_commands": [
+    "node --test tests/",
+    "node skills/skill-audit/scripts/audit.ts",
+    "node scripts/build-index.ts",
+    "node skills/skill-sync/scripts/sync.ts --dest %TEMP%\\skillz-sync-check"
+  ],
+  "open_questions": [],
+  "doc_tier": "standard",
+  "boundaries": {
+    "limitations": [
+      "audit validates structure/script health, not skill quality",
+      "sync targets local filesystem only"
+    ],
+    "non_goals": [
+      "gated SDLC semantics",
+      "network operations",
+      "third-party auto-install"
+    ],
+    "exclusions": [
+      "vendor/ trees never audited or synced"
+    ]
+  },
+  "high_risk_target": false,
+  "feature_inventory_touches": [],
+  "ai_provenance": {
+    "system": "Qor-logic",
+    "version": "0.15.1",
+    "host": "unknown",
+    "model_family": "opus",
+    "human_oversight": "absent",
+    "ts": "2026-07-03T20:26:24Z"
+  }
+}
