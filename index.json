@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T06:52:15.655Z",
+  "generated": "2026-07-04T07:01:34.016Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -37,9 +37,9 @@
     {
       "name": "career-radar",
       "displayName": "Career Radar",
-      "description": "Run a periodic market scan for roles and rates matching a stated profile (default: agent-governance architecture / AI platform engineering, remote-friendly) — clustering postings by role type, noting demand signals, and comparing against the profile's positioning. Use when the user asks \"run the career radar\", \"what's the market doing for my profile\", \"scan roles and rates\", or wants a monthly read on demand for their skills.",
+      "description": "Run a periodic market scan for roles and rates matching the operator's bound professional profile — clustering postings by role type, noting demand signals, and comparing against the profile's positioning. Use when the user asks \"run the career radar\", \"what's the market doing for my profile\", \"scan roles and rates\", or wants a monthly read on demand for their skills.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/career-radar",
       "skillFile": "skills/career-radar/SKILL.md",
       "scripts": []
@@ -69,9 +69,9 @@
     {
       "name": "daily-briefing",
       "displayName": "Daily Briefing",
-      "description": "Build a one-screen, action-first morning brief from today's calendar, actionable unread email, and yesterday's loose ends across memory files, task lists, and MythologIQ git activity. Use when the user asks \"daily briefing\", \"morning brief\", \"what's on today\", \"start my day\", or wants a single view of what needs a decision today.",
+      "description": "Build a one-screen, action-first morning brief from today's calendar, actionable unread email, and yesterday's loose ends across memory files, task lists, and git activity across the bound workspace. Use when the user asks \"daily briefing\", \"morning brief\", \"what's on today\", \"start my day\", or wants a single view of what needs a decision today.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/daily-briefing",
       "skillFile": "skills/daily-briefing/SKILL.md",
       "scripts": []
@@ -111,7 +111,7 @@
       "displayName": "DeepSeek Pulse",
       "description": "Scan the latest DeepSeek developments — new open weights, papers, API news, org repo activity, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with DeepSeek\", \"DeepSeek pulse\", \"new DeepSeek model\", or wants open-model awareness alongside the other vendor pulses.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/deepseek-pulse",
       "skillFile": "skills/deepseek-pulse/SKILL.md",
       "scripts": []
@@ -119,9 +119,9 @@
     {
       "name": "devlog-draft",
       "displayName": "Devlog Draft",
-      "description": "Draft a founder-led devlog or blog post from real work evidence — git history across the MythologIQ repos plus logged decisions — telling one narrative in the operator's own voice. Use when the user asks \"draft a devlog\", \"write a blog post about this week's work\", \"turn my commits into a post\", or wants a build-in-public update grounded in what actually shipped.",
+      "description": "Draft a founder-led devlog or blog post from real work evidence — git history across the bound workspace repos plus logged decisions — telling one narrative in the operator's own voice. Use when the user asks \"draft a devlog\", \"write a blog post about this week's work\", \"turn my commits into a post\", or wants a build-in-public update grounded in what actually shipped.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/devlog-draft",
       "skillFile": "skills/devlog-draft/SKILL.md",
       "scripts": []
@@ -171,7 +171,7 @@
       "displayName": "GLM Pulse",
       "description": "Scan the latest z.ai / Zhipu GLM developments — new open weights, org repo activity (zai-org, THUDM), API and coding-plan changes, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with GLM\", \"GLM pulse\", \"z.ai news\", \"Zhipu update\", or wants open-model awareness alongside the other vendor pulses.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/glm-pulse",
       "skillFile": "skills/glm-pulse/SKILL.md",
       "scripts": []
@@ -179,9 +179,9 @@
     {
       "name": "governance-pulse",
       "displayName": "Governance Pulse",
-      "description": "Scan the AI governance landscape — EU AI Act milestones, NIST AI RMF updates, OWASP LLM/agentic security work, vendor transparency and policy announcements, and new governance/agent-security repos — and synthesize a digest. Use when the user asks \"governance pulse\", \"AI regulation news\", \"what changed in AI governance\", \"EU AI Act update\", or wants regulatory awareness feeding Qortara/FailSafe/Qor-logic positioning.",
+      "description": "Scan the AI governance landscape — EU AI Act milestones, NIST AI RMF updates, OWASP LLM/agentic security work, vendor transparency and policy announcements, and new governance/agent-security repos — and synthesize a digest. Use when the user asks \"governance pulse\", \"AI regulation news\", \"what changed in AI governance\", \"EU AI Act update\", or wants regulatory awareness feeding the operator's bound governance-product positioning.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/governance-pulse",
       "skillFile": "skills/governance-pulse/SKILL.md",
       "scripts": []
@@ -219,9 +219,9 @@
     {
       "name": "inference-pulse",
       "displayName": "Inference Pulse",
-      "description": "Scan the local-inference runtime ecosystem — llama.cpp, Ollama, and vLLM releases and breaking changes, quantization format shifts (GGUF), and GPU/NPU support movements — and synthesize a digest with a GG-CORE relevance verdict. Use when the user asks \"inference pulse\", \"what's new in llama.cpp\", \"local inference news\", \"GGUF changes\", or wants runtime awareness for GG-CORE work.",
+      "description": "Scan the local-inference runtime ecosystem — llama.cpp, Ollama, and vLLM releases and breaking changes, quantization format shifts (GGUF), and GPU/NPU support movements — and synthesize a digest with a relevance verdict for the operator's bound local-runtime target. Use when the user asks \"inference pulse\", \"what's new in llama.cpp\", \"local inference news\", \"GGUF changes\", or wants runtime awareness for local-inference work.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/inference-pulse",
       "skillFile": "skills/inference-pulse/SKILL.md",
       "scripts": []
@@ -251,7 +251,7 @@
       "displayName": "Llama Pulse",
       "description": "Scan the latest Meta AI / Llama developments — new open weights, llama-stack and cookbook repo activity, research announcements, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Llama\", \"llama pulse\", \"Meta AI news\", \"new open weights from Meta\", or wants open-model awareness alongside the other vendor pulses.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/llama-pulse",
       "skillFile": "skills/llama-pulse/SKILL.md",
       "scripts": []
@@ -261,7 +261,7 @@
       "displayName": "MCP Pulse",
       "description": "Scan the Model Context Protocol ecosystem — spec and SDK releases, registry news, notable new servers, and MCP security advisories — and synthesize a digest. Use when the user asks \"mcp pulse\", \"what's new with MCP\", \"new MCP servers worth using\", \"MCP spec changes\", or wants protocol-level awareness for agent integration work.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/mcp-pulse",
       "skillFile": "skills/mcp-pulse/SKILL.md",
       "scripts": []
@@ -279,9 +279,9 @@
     {
       "name": "memory-pulse",
       "displayName": "Memory Pulse",
-      "description": "Scan the agentic-memory and context-engineering ecosystem — memory frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and community discussion — and synthesize a digest. Use when the user asks \"memory pulse\", \"what's new in agent memory\", \"context engineering news\", \"agentic memory papers\", or wants ecosystem awareness feeding COREFORGE Vault and agent memory architecture decisions.",
+      "description": "Scan the agentic-memory and context-engineering ecosystem — memory frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and community discussion — and synthesize a digest. Use when the user asks \"memory pulse\", \"what's new in agent memory\", \"context engineering news\", \"agentic memory papers\", or wants ecosystem awareness feeding the operator's bound memory-layer project and agent memory architecture decisions.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/memory-pulse",
       "skillFile": "skills/memory-pulse/SKILL.md",
       "scripts": []
@@ -309,9 +309,9 @@
     {
       "name": "paper-digest",
       "displayName": "Paper Digest",
-      "description": "Read a research paper properly: extract the actual claim, plain-language method, evidence quality, admitted and unadmitted limitations, and a relevance verdict for the MythologIQ stack. Use when the user asks \"digest this paper\", \"read this arXiv link\", \"is this paper any good\", \"summarize this paper for us\", or drops a PDF, arXiv, or HF papers URL.",
+      "description": "Read a research paper properly: extract the actual claim, plain-language method, evidence quality, admitted and unadmitted limitations, and a relevance verdict for the operator's bound stack. Use when the user asks \"digest this paper\", \"read this arXiv link\", \"is this paper any good\", \"summarize this paper for us\", or drops a PDF, arXiv, or HF papers URL.",
       "category": "Research",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/paper-digest",
       "skillFile": "skills/paper-digest/SKILL.md",
       "scripts": []
@@ -341,7 +341,7 @@
       "displayName": "Qwen Pulse",
       "description": "Scan the latest Qwen (Alibaba) developments — new open weights, QwenLM org repo activity, blog posts, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Qwen\", \"Qwen pulse\", \"new Qwen model\", or wants open-model awareness alongside the other vendor pulses.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/qwen-pulse",
       "skillFile": "skills/qwen-pulse/SKILL.md",
       "scripts": []
@@ -359,9 +359,9 @@
     {
       "name": "repo-pulse",
       "displayName": "Repo Pulse",
-      "description": "Produce a weekly cross-repo digest of the operator's own GitHub repos via the gh CLI — PRs waiting on you, red CI runs, stale branches, and repos with uncommitted local work under G:\\MythologIQ — ranked action-first. Use when the user asks \"repo pulse\", \"what needs my attention on my repos\", \"weekly repo digest\", or wants a sweep of everything waiting on them.",
+      "description": "Produce a weekly cross-repo digest of the operator's own GitHub repos via the gh CLI — PRs waiting on you, red CI runs, stale branches, and repos with uncommitted local work under the bound workspace root(s) — ranked action-first. Use when the user asks \"repo pulse\", \"what needs my attention on my repos\", \"weekly repo digest\", or wants a sweep of everything waiting on them.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/repo-pulse",
       "skillFile": "skills/repo-pulse/SKILL.md",
       "scripts": []
@@ -425,9 +425,9 @@
     {
       "name": "smallbiz-ops",
       "displayName": "Small Biz Ops",
-      "description": "Run the monthly upkeep sweep for the family business web presences — Hill House Transport, Neat & Clean, and Chesapeake Moms Club — checking content freshness, site uptime, listings drift across search results, and seasonal to-dos. Use when the user asks \"run the business site check\", \"smallbiz ops sweep\", \"are the family sites healthy\", or wants the monthly web presence review.",
+      "description": "Run the monthly upkeep sweep for a bound portfolio of small-business web presences — checking content freshness, site uptime, listings drift across search results, and seasonal to-dos. Use when the user asks \"run the business site check\", \"smallbiz ops sweep\", \"are the business sites healthy\", or wants the monthly web presence review.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/smallbiz-ops",
       "skillFile": "skills/smallbiz-ops/SKILL.md",
       "scripts": []
@@ -445,9 +445,9 @@
     {
       "name": "standup-writer",
       "displayName": "Standup Writer",
-      "description": "Generate an evidence-backed standup or worklog entry in did / doing / blocked format from git commits across the MythologIQ repos, task-state changes, and calendar events since yesterday or the last standup. Use when the user asks \"write my standup\", \"what did I do yesterday\", \"generate a worklog\", \"standup notes\", or needs a status update grounded in real work.",
+      "description": "Generate an evidence-backed standup or worklog entry in did / doing / blocked format from git commits across the bound workspace repos, task-state changes, and calendar events since yesterday or the last standup. Use when the user asks \"write my standup\", \"what did I do yesterday\", \"generate a worklog\", \"standup notes\", or needs a status update grounded in real work.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/standup-writer",
       "skillFile": "skills/standup-writer/SKILL.md",
       "scripts": []
@@ -477,7 +477,7 @@
       "displayName": "Week in Review",
       "description": "Run a Friday retrospective from git history, task states, and the week's calendar: what shipped, what stalled and why, decisions made, and what carries into next week as Monday's starting list. Use when the user asks \"week in review\", \"weekly retro\", \"what shipped this week\", \"wrap up the week\", or wants a carry-forward list that feeds Monday's daily-briefing.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/week-in-review",
       "skillFile": "skills/week-in-review/SKILL.md",
       "scripts": []

@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Llama Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Llama Pulse
@@ -49,4 +49,4 @@ Vendor pulse for Meta AI's Llama family and its open-weights ecosystem. Sources 
 ## Notes
 
 - License changes on open weights are the deprecation-equivalent here — flag them first.
-- Relevant to GG-CORE local inference: note anything affecting local-runtime model choices.
+- Note anything affecting local-runtime model choices (scored against the bound runtime target, when one is bound — see inference-pulse's Bind pattern).

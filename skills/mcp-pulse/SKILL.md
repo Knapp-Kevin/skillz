@@ -11,12 +11,12 @@ metadata:
   category: Productivity
   display-name: MCP Pulse
   emoji: "🔌"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # MCP Pulse
 
-Topic pulse for the Model Context Protocol — the portability layer this repo's own contract depends on (external services go through MCP so connectors swap per platform). Spec drift here ripples into every agent surface: Claude Code, COREFORGE Synapse, Qortara adapters.
+Topic pulse for the Model Context Protocol — the portability layer this repo's own contract depends on (external services go through MCP so connectors swap per platform). Spec drift here ripples into every agent surface: Claude Code and the bound platform's MCP integration and adapters.
 
 ## Execution Flow
 
@@ -50,4 +50,4 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 ## Notes
 
 - Server finds that merit adoption go through the intake registry (`registry/candidates.yaml`) with a permission tier — an MCP server is the highest-trust dependency class there is.
-- Flag anything affecting COREFORGE's Synapse MCP integration or the vendored plugins' `.mcp.json` configs.
+- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).

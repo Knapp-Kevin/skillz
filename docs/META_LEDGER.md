@@ -490,6 +490,64 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #16: GATE TRIBUNAL — PASS (issue #4 cycle, audit iteration 5)
+
+**Timestamp**: 2026-07-04T08:20:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 6
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter5.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter5.json, LF-normalized)
+= 3f80589fa01b502b098d442d207948c2746146535538fd9b4682549c91b73c4e
+```
+
+**Previous Hash**: `af4279035140f11f0e3f712c6a931bdd1affe04e56d7617797d032054abb5607`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 866d6ff5327391cde87e881b4cf35f2c893376c859ecf0b664de7d1fddb4ef64
+```
+
+**Decision**: PASS at first iteration (one plan-review self-correction pre-submission: GG-CORE fully removed rather than kept as example, keeping the sweep grep at zero). B18 de-specification plan: 16 portable skills, three bind clusters, task-surface as reference pattern, audit heuristic explicitly transferred to issue #5. L1. Next: /qor-implement (three-specialist parallel delegation, disjoint ownership).
+
+---
+
+### Entry #17: SUBSTANTIATE — SEAL (issue #4: B18 de-specification + Bind steps)
+
+**Timestamp**: 2026-07-04T08:30:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 6
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter4.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter4.json, LF-normalized)
+= a352b42c50b37508da9d6d2f45f0bc94b05a5af0857247aeee251ca6c215119b
+```
+
+**Previous Hash**: `866d6ff5327391cde87e881b4cf35f2c893376c859ecf0b664de7d1fddb4ef64`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 6ced6606ebcd0322ebf3574578323b4155f55cbcd1b8cd06297b2e99939ee023
+```
+
+**Decision**: SEAL. Issue #4 delivered by three parallel specialists + observer pass: smallbiz-ops (bound portfolio), career-radar (bound profile), 5 workspace-root binds (repo-pulse, standup-writer, week-in-review, daily-briefing, devlog-draft), 9 product-relevance binds (inference-pulse GG-CORE removed entirely, 4 vendor-pulse notes lines, memory-pulse, mcp-pulse, paper-digest, governance-pulse now capability-detected via .qor//META_LEDGER presence). Observer caught 4 residual product references (Qortara/FailSafe lines) beyond the planned sweep terms — cleared; final sweep zero hits. Every bind declares the bound source authoritative over memory with elicit + offer-to-persist fallback. CI green: 11/11, audit 48/0, index regenerated (16 version bumps + description changes). B18 → Done D17.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -505,6 +563,7 @@ Each major change cycle gets an iteration number.
 | 3 | #9 | #11 | COMPLETE | Issue #1 state-metadata alignment (plan-qor-phase3-issue1-state-alignment.md) |
 | 4 | #12 | #13 | COMPLETE | Issue #2 GitHub Actions CI (plan-qor-phase4-issue2-ci.md) |
 | 5 | #14 | #15 | COMPLETE | Issue #3 B14 weak-model negative rules (plan-qor-phase5-issue3-b14-negative-rules.md) |
+| 6 | #16 | #17 | COMPLETE | Issue #4 B18 de-specification + Bind steps (plan-qor-phase6-issue4-b18-despecification.md) |
 
 ---
 

@@ -5,19 +5,20 @@ description: >-
   frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and
   community discussion — and synthesize a digest. Use when the user asks
   "memory pulse", "what's new in agent memory", "context engineering news",
-  "agentic memory papers", or wants ecosystem awareness feeding COREFORGE
-  Vault and agent memory architecture decisions.
+  "agentic memory papers", or wants ecosystem awareness feeding the
+  operator's bound memory-layer project and agent memory architecture
+  decisions.
 metadata:
   author: frostwulf.zo.computer
   category: Productivity
   display-name: Memory Pulse
   emoji: "🧠"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Memory Pulse
 
-Topic pulse for agentic memory: long-term memory frameworks, context engineering, knowledge-graph memory, and the research frontier. Feeds COREFORGE Vault (encrypted storage, knowledge graph, RAG) and agent-architecture decisions.
+Topic pulse for agentic memory: long-term memory frameworks, context engineering, knowledge-graph memory, and the research frontier. Feeds the operator's bound memory-layer project and agent-architecture decisions. **Bind:** discover the memory-layer project from an operator profile or project governance doc — when none is bound, the verdict goes generic (relevance to a typical agent-memory layer) and the skill offers to bind one for next time.
 
 ## Execution Flow
 
@@ -43,7 +44,7 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 ## Research frontier (papers, with one-line takeaways)
 ## Framework releases (Letta, Mem0, Zep, cognee, new entrants)
 ## New repos worth a look (filtered from search hits)
-## Relevance to COREFORGE Vault / agent memory
+## Relevance to the bound memory layer / agent memory
 ## Notable patterns
 ## Sources
 ```

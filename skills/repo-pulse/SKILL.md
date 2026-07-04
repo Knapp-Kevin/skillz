@@ -3,7 +3,8 @@ name: repo-pulse
 description: >-
   Produce a weekly cross-repo digest of the operator's own GitHub repos via
   the gh CLI — PRs waiting on you, red CI runs, stale branches, and repos
-  with uncommitted local work under G:\MythologIQ — ranked action-first.
+  with uncommitted local work under the bound workspace root(s) — ranked
+  action-first.
   Use when the user asks "repo pulse", "what needs my attention on my repos",
   "weekly repo digest", or wants a sweep of everything waiting on them.
 metadata:
@@ -11,7 +12,7 @@ metadata:
   category: Productivity
   display-name: Repo Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Repo Pulse
@@ -20,12 +21,13 @@ A weekly digest across all of the operator's GitHub repos, assembled from the au
 
 ## Execution Flow
 
-1. **Enumerate repos:** `gh repo list --limit 50 --json name,owner,pushedAt`. Mark repos pushed within the last 30 days as active; the rest get one line in the digest at most.
-2. **Collect PRs per active repo:** `gh pr list --repo <owner>/<name> --json number,title,isDraft,reviewRequests,updatedAt`. A PR "waits on the operator" if it requests their review or is their own PR with changes requested.
-3. **Check CI per active repo:** `gh run list --repo <owner>/<name> --limit 5 --json displayTitle,conclusion,headBranch,updatedAt`. Collect runs with `conclusion: failure` on default or PR branches.
-4. **Check local checkouts** under `G:\MythologIQ`: for each repo directory found there, run `git status --porcelain` (uncommitted work) and `git log --oneline @{u}..` (unpushed commits). Stale branches: `git branch -r --sort=committerdate` and flag branches with no commits in 60+ days that are not merged.
-5. **Rank:** needs-you items (review requests, red CI, unpushed work) first, ordered by age; informational notes after.
-6. **Present** in the Output Format below. Propose actions; take none.
+1. **Bind the workspace.** Discover the bound workspace root(s) — the directory(ies) whose git repos this skill sweeps — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions. If none is discoverable, ask once and offer to persist the answer for future runs.
+2. **Enumerate repos:** `gh repo list --limit 50 --json name,owner,pushedAt`. Mark repos pushed within the last 30 days as active; the rest get one line in the digest at most.
+3. **Collect PRs per active repo:** `gh pr list --repo <owner>/<name> --json number,title,isDraft,reviewRequests,updatedAt`. A PR "waits on the operator" if it requests their review or is their own PR with changes requested.
+4. **Check CI per active repo:** `gh run list --repo <owner>/<name> --limit 5 --json displayTitle,conclusion,headBranch,updatedAt`. Collect runs with `conclusion: failure` on default or PR branches.
+5. **Check local checkouts** under the bound workspace root(s): for each repo directory found there, run `git status --porcelain` (uncommitted work) and `git log --oneline @{u}..` (unpushed commits). Stale branches: `git branch -r --sort=committerdate` and flag branches with no commits in 60+ days that are not merged.
+6. **Rank:** needs-you items (review requests, red CI, unpushed work) first, ordered by age; informational notes after.
+7. **Present** in the Output Format below. Propose actions; take none.
 
 ## Scheduling
 

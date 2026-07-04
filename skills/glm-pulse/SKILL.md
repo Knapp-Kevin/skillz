@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: GLM Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # GLM Pulse
@@ -49,4 +49,4 @@ Vendor pulse for z.ai (Zhipu) and the GLM family. Sources are data (`sources.jso
 ## Notes
 
 - Hugging Face uploads frequently precede announcements — treat the org page as a primary source.
-- Note anything affecting local-runtime (GG-CORE) model choices or coding-agent cost baselines.
+- Note anything affecting local-runtime model choices or coding-agent cost baselines (scored against the bound runtime target, when one is bound — see inference-pulse's Bind pattern).

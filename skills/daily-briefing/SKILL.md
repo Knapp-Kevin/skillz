@@ -3,15 +3,15 @@ name: daily-briefing
 description: >-
   Build a one-screen, action-first morning brief from today's calendar,
   actionable unread email, and yesterday's loose ends across memory files,
-  task lists, and MythologIQ git activity. Use when the user asks "daily
-  briefing", "morning brief", "what's on today", "start my day", or wants
-  a single view of what needs a decision today.
+  task lists, and git activity across the bound workspace. Use when the
+  user asks "daily briefing", "morning brief", "what's on today", "start
+  my day", or wants a single view of what needs a decision today.
 metadata:
   author: frostwulf.zo.computer
   category: Productivity
   display-name: Daily Briefing
   emoji: "🌅"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Daily Briefing
@@ -22,7 +22,7 @@ Produce a single-screen morning brief that puts today's required decisions at th
 
 1. **Calendar.** Pull today's events via the Google Calendar MCP tools. Note the first and last meeting, gaps long enough for focused work, and any event that implies preparation (a review, a call with an agenda, a deadline).
 2. **Email.** Scan unread mail via the Gmail MCP tools. Keep only messages worth acting on: direct asks, time-sensitive items, and mail from key contacts. Ignore newsletters and notifications.
-3. **Loose ends.** Gather yesterday's open threads from three sources: memory files and task lists in the current project, and recent git activity across the `G:\MythologIQ` repos via local git commands (e.g. `git log --all --since=yesterday --oneline` per repo). Uncommitted work and half-finished branches count as loose ends.
+3. **Loose ends.** Gather yesterday's open threads from three sources: memory files and task lists in the current project, and recent git activity across the bound workspace repos via local git commands (e.g. `git log --all --since=yesterday --oneline` per repo). Discover the bound workspace root(s) from the operator's profile, host memory, or a workspace governance note — the bound source wins over assumptions; if none is discoverable, ask once and offer to persist the answer for future runs. Uncommitted work and half-finished branches count as loose ends.
 4. **Rank.** Decisions the user must make today go first, then externally imposed deadlines, then carried-over work. Cap "Act on" at five items; everything else is FYI or dropped.
 5. **Present** in the Output Format below. One screen means one screen — trim, do not scroll.
 

@@ -2,7 +2,7 @@
 name: devlog-draft
 description: >-
   Draft a founder-led devlog or blog post from real work evidence — git
-  history across the MythologIQ repos plus logged decisions — telling one
+  history across the bound workspace repos plus logged decisions — telling one
   narrative in the operator's own voice. Use when the user asks "draft a
   devlog", "write a blog post about this week's work", "turn my commits
   into a post", or wants a build-in-public update grounded in what actually
@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: Devlog Draft
   emoji: "📝"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Devlog Draft
@@ -21,7 +21,7 @@ Produce a devlog draft built from evidence, not vibes: commits and decisions fro
 
 ## Execution Flow
 
-1. **Pin the window.** Ask the operator for the time window (e.g. "last two weeks") and, if ambiguous, which MythologIQ repos are in scope. Do not guess a window.
+1. **Pin the window.** Discover the bound workspace root(s) — the directory(ies) whose git repos supply the evidence — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions, and if none is discoverable, ask once and offer to persist the answer for future runs. Then ask the operator for the time window (e.g. "last two weeks") and, if ambiguous, which of the bound repos are in scope. Do not guess a window.
 2. **Gather evidence.** Run `git log --since=<window> --oneline --stat` across each in-scope repo. Read decision entries for the window from `docs/DECISIONS.md` or the project's ledgers. Collect exact commit messages and decision phrasing — this is the quote pool.
 3. **Pick ONE narrative.** Scan the evidence for the single story worth telling: a problem wrestled with, a bet placed, a reversal, a thing learned. A devlog is not a changelog; if the evidence only supports a list of changes, say so and ask the operator which thread matters to them.
 4. **Draft in the operator's voice.** Quote their actual phrasing — commit messages, decision-log sentences — wherever possible rather than paraphrasing it into marketing prose. Tag each factual claim inline with its evidence (commit hash, decision entry, file).

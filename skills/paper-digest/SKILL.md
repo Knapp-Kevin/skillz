@@ -3,7 +3,7 @@ name: paper-digest
 description: >-
   Read a research paper properly: extract the actual claim, plain-language
   method, evidence quality, admitted and unadmitted limitations, and a
-  relevance verdict for the MythologIQ stack. Use when the user asks
+  relevance verdict for the operator's bound stack. Use when the user asks
   "digest this paper", "read this arXiv link", "is this paper any good",
   "summarize this paper for us", or drops a PDF, arXiv, or HF papers URL.
 metadata:
@@ -11,12 +11,12 @@ metadata:
   category: Research
   display-name: Paper Digest
   emoji: "📄"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Paper Digest
 
-A critical read of one paper that separates what the authors demonstrated from what the abstract markets, and ends with whether it matters for the MythologIQ stack (agent governance, memory, local inference). Feeds the finds surfaced by memory-pulse and hf-pulse.
+A critical read of one paper that separates what the authors demonstrated from what the abstract markets, and ends with whether it matters for the operator's bound stack (agent governance, memory, local inference). Feeds the finds surfaced by memory-pulse and hf-pulse.
 
 ## Execution Flow
 
@@ -25,7 +25,7 @@ A critical read of one paper that separates what the authors demonstrated from w
 3. **Summarize the method in plain language.** A paragraph a practitioner can act on: what was built, trained, or measured, and against what.
 4. **Check evidence quality.** Are benchmarks cherry-picked or standard? Are baselines fair and current, or strawmen? Is code released and runnable? Has anyone replicated it — search for independent reproductions, critiques, and follow-up citations rather than trusting the paper's own framing.
 5. **List limitations, admitted and unadmitted.** What the authors concede in the limitations section, and what they do not: scale gaps, compute assumptions, distribution shift, evaluation blind spots.
-6. **Deliver the relevance verdict.** So-what for the MythologIQ stack: does this change anything for agent governance, memory architecture, or local inference — and if promising, whether it warrants a registry `track` entry.
+6. **Deliver the relevance verdict.** So-what for the bound stack (from operator profile/governance doc; ask and offer to bind if none): does this change anything for agent governance, memory architecture, or local inference — and if promising, whether it warrants a registry `track` entry.
 
 ## Output Format
 

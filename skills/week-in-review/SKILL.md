@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Week in Review
   emoji: "🗓️"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Week in Review
@@ -20,12 +20,13 @@ A Friday retrospective built from evidence: what actually shipped (git history a
 
 ## Execution Flow
 
-1. **Set the window** — Monday morning through now, or since the last review if one exists in the project's notes or memory files.
-2. **Shipped.** Sweep the repos under `G:\MythologIQ` with local git commands: `git log --all --since=<window> --oneline` and merged branches (`git branch --merged`) per repo. Shipped means merged, tagged, deployed, or delivered — not merely committed.
-3. **Stalled.** Compare against the week's starting intentions (last review's carry-forward, task lists, memory files). Anything planned but not shipped is stalled; state the honest reason — descoped, blocked, displaced by something more urgent, or simply harder than expected. No euphemisms.
-4. **Decisions.** Collect decisions made this week from memory files, the project's decisions log (see the decision-log skill), and decision-shaped commit messages or meeting outcomes pulled via the Google Calendar MCP tools.
-5. **Carry-forward.** Distill stalled and unfinished items into a ranked starting list for next week. Write it so Monday's daily-briefing can consume it verbatim; save it to the project's notes or memory files if the user agrees.
-6. **Present** in the Output Format below.
+1. **Bind the workspace.** Discover the bound workspace root(s) — the directory(ies) whose git repos this review sweeps — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions. If none is discoverable, ask once and offer to persist the answer for future runs.
+2. **Set the window** — Monday morning through now, or since the last review if one exists in the project's notes or memory files.
+3. **Shipped.** Sweep the bound repos with local git commands: `git log --all --since=<window> --oneline` and merged branches (`git branch --merged`) per repo. Shipped means merged, tagged, deployed, or delivered — not merely committed.
+4. **Stalled.** Compare against the week's starting intentions (last review's carry-forward, task lists, memory files). Anything planned but not shipped is stalled; state the honest reason — descoped, blocked, displaced by something more urgent, or simply harder than expected. No euphemisms.
+5. **Decisions.** Collect decisions made this week from memory files, the project's decisions log (see the decision-log skill), and decision-shaped commit messages or meeting outcomes pulled via the Google Calendar MCP tools.
+6. **Carry-forward.** Distill stalled and unfinished items into a ranked starting list for next week. Write it so Monday's daily-briefing can consume it verbatim; save it to the project's notes or memory files if the user agrees.
+7. **Present** in the Output Format below.
 
 ## Scheduling
 

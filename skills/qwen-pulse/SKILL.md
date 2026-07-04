@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Qwen Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Qwen Pulse
@@ -49,4 +49,4 @@ Vendor pulse for Alibaba's Qwen family. Sources are data (`sources.json`), synth
 ## Notes
 
 - Hugging Face uploads frequently precede blog posts — treat the org page as a primary source.
-- Note anything affecting local-runtime (GG-CORE) model choices.
+- Note anything affecting local-runtime model choices (scored against the bound runtime target, when one is bound — see inference-pulse's Bind pattern).

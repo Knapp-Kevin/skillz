@@ -72,7 +72,7 @@ skillz/
 
 ## Next Actions
 
-- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules; remaining: #4 B18 de-specification → #5 semantic risk audit → #6 vendor freshness workflow
+- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules, #4 ✅ B18 de-specification; remaining: #5 semantic risk audit → #6 vendor freshness workflow
 - [ ] B13: `min-model-capability` metadata rollout remainder (first field shipped: handoff-writer, issue #3)
 - [ ] B15: Gemini host target for skill-sync (TOML conversion)
 - [ ] B17: skill-eval on ponytail (sandbox) before any adoption decision
