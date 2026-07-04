@@ -287,6 +287,93 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #9: GATE TRIBUNAL — VETO (issue #1 cycle, audit iteration 1)
+
+**Timestamp**: 2026-07-04T06:50:00-04:00
+**Phase**: GATE
+**Type**: VETO
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 3
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter1.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter1.json, LF-normalized)
+= 2c466540ac6899bfc6f4e0ff473a14e7b7f0560c847a314abef0ae7d1d68c698
+```
+
+**Previous Hash**: `6744f93e91a82383a92c39a4ca077b69ee87ffc2ed05bdfc4d2d3b20de8852b7`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 39bf90c5817aa61e5cc8e299e621e3dbf83cde08fc3bfbff3ceb860ed6dc3e0a
+```
+
+**Decision**: VETO (`specification-drift`). Plan for issue #1 state alignment certified ROADMAP.md as current while its §Suggested build order still queued seven shipped items as "Next". Alignment work must apply the same evidence standard to no-edit claims as to edit claims. Shadow Genome Failure #5. Required next: Governor amends plan, re-audit.
+
+---
+
+### Entry #10: GATE TRIBUNAL — PASS (issue #1 cycle, audit iteration 2)
+
+**Timestamp**: 2026-07-04T06:55:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 3
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter2.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter2.json, LF-normalized)
+= e965dd04aa93d1e0bc1991596187645a57af1b9046a419e96cd3a17832f341b3
+```
+
+**Previous Hash**: `39bf90c5817aa61e5cc8e299e621e3dbf83cde08fc3bfbff3ceb860ed6dc3e0a`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 038a08bb8f3bda571baa8ce5727ad15f4e8204a8d0250ddf695794a885964db0
+```
+
+**Decision**: PASS. Amended plan adds Phase 3 (ROADMAP §Suggested build order refresh) with inline evidence; all count claims run-verified (48 skills / 3 repo-bound / 4 scripted / 6 sources / 524 vendor / 11 tests). L1 docs-only. Next: /qor-implement bound to amended plan.
+
+---
+
+### Entry #11: SUBSTANTIATE — SEAL (issue #1: state alignment)
+
+**Timestamp**: 2026-07-04T07:10:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 3
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter1.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter1.json, LF-normalized)
+= e672f228c0ceed8cafd4d823476bf7cb8fd77de5c2827fd39d9eb7c3c4e0cf2e
+```
+
+**Previous Hash**: `038a08bb8f3bda571baa8ce5727ad15f4e8204a8d0250ddf695794a885964db0`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 5012fa1d94a2170f06da4d62941c840419c413fcecdc3f1e8fa197117571e3e9
+```
+
+**Decision**: SEAL. Issue #1 delivered per amended plan: SYSTEM_STATE refreshed to ground truth (48 skills / 45+3 split / 4 scripted / 11 tests / 524 vendor-indexed / stale Next Actions replaced), FEATURE_INDEX FX10 corrected to 44 instruction skills with the >=46 test floor explicitly labeled intentional, ROADMAP build-order section converted to historical record. CI re-run green: 11/11 tests, audit 48/0, index idempotent. Change-set confinement exact (6 modified + plan + gates). Local commit only — Review Boundary holds (no push/PR/merge).
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -299,6 +386,7 @@ Each major change cycle gets an iteration number.
 | 0 | #1 | #1 | COMPLETE | Genesis/Bootstrap |
 | 1 | #2 | #5 | COMPLETE | Meta series completion: skill-audit + skill-sync (plan-qor-phase1-meta-skill-audit-sync.md) |
 | 2 | #6 | #8 | COMPLETE | 1.0 backlog close-out: --hosts target, audit scope extensions, 11 skills, weak-model eval, proposals (plan-qor-phase2-one-dot-zero.md) |
+| 3 | #9 | #11 | COMPLETE | Issue #1 state-metadata alignment (plan-qor-phase3-issue1-state-alignment.md) |
 
 ---
 

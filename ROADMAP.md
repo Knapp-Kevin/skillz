@@ -73,17 +73,9 @@ Pulses answer "what changed"; these answer "what should I believe / choose."
 
 **Shipped** ✅: `decision-log` (personal/business ADR with revisit dates), `finance-review` (monthly money digest, read-only), `smallbiz-ops` (family-business site upkeep cadence), `career-radar` (role/rate market scan), `learning-plan` (structured skill acquisition with `/schedule` cadence).
 
-## Suggested build order (updated 2026-07-03)
+## Build order (complete — 2026-07-04)
 
-Shipped so far: the pulse fleet (16), skill-audit, skill-sync, skills-pulse. Next:
-
-1. `skill-eval` — closes the registry's evaluate loop; every later adoption decision gets cheaper and more honest.
-2. `deep-dive` + `compare` — the research core; highest daily utility across work and life.
-3. `daily-briefing` — the anchor habit the other daily skills feed into (Gmail/Calendar MCPs already connected).
-4. `mcp-vetting` — before the next MCP server gets connected, not after.
-5. `repo-pulse` + `repo-doctor` + `standup-writer` — the git-plumbing cluster, built together.
-6. `brief-writer` + `handoff-writer` — small, immediately useful, exercise the comms patterns.
-7. Life-ops as cadence proves itself; `finance-review` first (xlsx machinery already vendored).
+The original seven-step build order shipped in full across sessions ca9b2c and 927a53 (close-out: docs/BACKLOG.md D03-D08): skill-eval, deep-dive + compare, daily-briefing, mcp-vetting, the git-plumbing cluster (repo-pulse, repo-doctor, standup-writer), brief-writer + handoff-writer, and the life-ops series starting with finance-review. This section is a historical record, not a queue — current open work lives in docs/BACKLOG.md §Open and the repo's GitHub issues.
 
 ## Design rules for every new skill
 

@@ -13,7 +13,7 @@ Maps every user-touchable feature to its implementation and its proof. Rows are 
 | FX07 | Generic pulse collection (repos, orgs, search, changelogs, reddit) | `scripts/pulse-run.ts` + per-skill `sources.json` | `--help` contract enforced by FX02 (audit.ts covers repo-level `scripts/*.ts` since 2026-07-04); sources.json parse + fallback-marker checks enforced by FX02; live smoke qwen-pulse 2026-07-03 |
 | FX08 | Watchlist intake scan | `skills/skills-pulse/scripts/scout.ts` | Manual smoke (live run 2026-07-03); `--help` contract enforced by FX02 |
 | FX09 | Claude release digest | `skills/claude-pulse/scripts/pulse.ts` | Manual smoke (live run 2026-07-03); `--help` contract enforced by FX02 |
-| FX10 | 42 instruction skills (pulses, research, agent-ops, daily-ops, comms, life-ops, hygiene) | `skills/*/SKILL.md` (no scripts) | FX02 convention checks + `tests/skill-tools.test.mjs::audit-reports-skill-count` (asserts validated count >= 46) |
+| FX10 | 44 instruction skills — 48 first-party minus 4 scripted (pulses, research, agent-ops, daily-ops, comms, life-ops, hygiene, meta) | `skills/*/SKILL.md` (no scripts) | FX02 convention checks + `tests/skill-tools.test.mjs::audit-reports-skill-count` (asserts validated count >= 46; intentional floor, not exact — index churn must not break the test) |
 | FX11 | Multi-host deployment (`--hosts`: .claude/.kilo/.codex skill dirs of a target repo) | `skills/skill-sync/scripts/sync.ts` | `tests/skill-tools.test.mjs::sync-hosts-writes-three-host-dirs` (three paths + repo-bound exclusion) |
 
 Rows FX08–FX09 carry script smoke-tests rather than automated behavior tests; upgrading them to fixture-based tests is acceptable future work but not currently required (network-dependent collectors).

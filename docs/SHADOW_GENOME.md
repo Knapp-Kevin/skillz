@@ -173,6 +173,39 @@ The portable/repo-bound dichotomy silently accreted a third class — engine-con
 
 ---
 
+### Failure #5: Alignment plan certified an unverified surface as current
+
+**Date**: 2026-07-04
+**Iteration**: 3 (session 2026-07-04T0632-7cc26a, audit iteration 1)
+**Verdict ID**: GATE VETO on plan-qor-phase3-issue1-state-alignment.md
+**Category**: SPEC_DRIFT
+
+#### What Was Attempted
+
+First plan submission for the issue #1 state-metadata reconciliation. The plan's Ground Truth table grep-verified every numeric count, then asserted "ROADMAP.md ... verified current — no edits needed there" on the strength of a partial check (Shipped ✅ lines only). ROADMAP §Suggested build order still presented seven shipped items as a "Next" queue.
+
+#### Why It Failed
+
+- Violation (`specification-drift`): the plan applied evidence discipline asymmetrically — counts got grep-evidence, but the "surface is current" claims got none. A no-edit claim is still a claim and needs the same evidence standard as an edit claim.
+
+#### Pattern to Avoid
+
+**Anti-Pattern**: in alignment/reconciliation work, marking a surface "verified current" after checking only the sections where drift was expected.
+
+**Correct Pattern**: for every surface in an alignment scope, walk every section that makes a state claim (counts, statuses, queues, next-actions) before writing "no edits needed"; attach evidence to no-change verdicts exactly as to change verdicts.
+
+#### Resolution
+
+| Status | Action Taken |
+|--------|--------------|
+| FIXED | Phase 3 (ROADMAP build-order refresh) added with inline evidence; stale-surfaces inventory and D2 corrected. PASS at audit iteration 2 (Entry #10). |
+
+#### Related Entries
+- Ledger Entry: #9 (VETO), #10 (PASS)
+- Audit Report: .agent/staging/AUDIT_REPORT.md
+
+---
+
 ## Pattern Library (Extracted Lessons)
 
 <!--
