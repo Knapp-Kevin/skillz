@@ -200,6 +200,93 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #6: GATE TRIBUNAL — VETO (iteration 2 cycle, audit iteration 1)
+
+**Timestamp**: 2026-07-04T00:35:00-04:00
+**Phase**: GATE
+**Type**: AUDIT
+**Author**: Judge (independent subagent; chain revalidated genesis-forward incl. CRLF ruling)
+**Iteration**: 2
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0405-927a53/audit-iter1.json (LF-canonical bytes per Chain Integrity ruling)
+
+**Content Hash**:
+```
+SHA256(audit-iter1.json, LF-normalized)
+= 98376b80157d58f9e91c8d965733a49c3863bed26a55af20d20cfa2f8bd4ced4
+```
+
+**Previous Hash**: `f1150ab740220837df77dda32088878b9ad53365baf6ea889daa7d8cafcd259b`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 2d7dc2f1fe4f31d7d0fa27533326a3dec3c8c4246f873cbe6bc6c9cf07f01572
+```
+
+**Decision**: VETO on docs/plan-qor-phase2-one-dot-zero.md (`7fbd2ff2…`). Findings: macro-architecture (engine-dependent skills' deployment class unenforced — F1 factual basis partially refuted by Governor grep: 15/15 engine consumers carry a fallback, but the convention was prose-only and not grep-discoverable, proving the finding's durable core), coverage-gap (sources.json + repo scripts uncovered by audit.ts; FX07 claim false), specification-drift (skill-forge repo-bound undeclared), test-failure (46-skill D4 claim unasserted). All remediated as plan amendments + declared audit.ts scope extensions; LF-canonicalization ruling recorded in Chain Integrity Notes; .gitattributes applied at gate time. Resubmitted at LF-canonical hash b8edca27556d6b2d3fa8660c919200a28dbdd8ae52cc2214fca3182739e9bbeb. See docs/SHADOW_GENOME.md Failure #4.
+
+---
+
+### Entry #7: GATE TRIBUNAL — PASS (iteration 2 cycle, audit iteration 2)
+
+**Timestamp**: 2026-07-04T00:50:00-04:00
+**Phase**: GATE
+**Type**: AUDIT
+**Author**: Judge (independent subagent; full LD re-walk; Judge's own iteration-1 evidence error recorded on the record)
+**Iteration**: 2
+
+**Artifacts Hashed**:
+- docs/plan-qor-phase2-one-dot-zero.md (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(plan-qor-phase2-one-dot-zero.md, LF-normalized)
+= b8edca27556d6b2d3fa8660c919200a28dbdd8ae52cc2214fca3182739e9bbeb
+```
+
+**Previous Hash**: `2d7dc2f1fe4f31d7d0fa27533326a3dec3c8c4246f873cbe6bc6c9cf07f01572`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= e81584c6b28431bcff59bd225258e7609d252f43877e4fbdd178e5fe72d410ed
+```
+
+**Decision**: PASS. All four iteration-1 findings verified closed; delta cryptographically confirmed as exactly the declared remediations + the .gitattributes inventory row; Judge independently reproduced the F1 evidence correction (14/15 literal marker + hf-pulse variant) and recorded its own iteration-1 grep error. Deployment-class taxonomy now partitions the tree completely (portable / portable-with-fallback / repo-bound) with mechanical enforcement declared. Implementation authorized, bound to the plan at the content hash above.
+
+---
+
+### Entry #8: SUBSTANTIATE — SEAL (1.0 cycle)
+
+**Timestamp**: 2026-07-04T01:40:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (independent subagent)
+**Iteration**: 2
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0405-927a53/implement-iter1.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter1.json, LF-normalized)
+= c9ee8adc359448effb84a6d9aaf083c59e2bbfe49ab5f7d1348dd759476c19ed
+```
+
+**Previous Hash**: `e81584c6b28431bcff59bd225258e7609d252f43877e4fbdd178e5fe72d410ed`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 6744f93e91a82383a92c39a4ca077b69ee87ffc2ed05bdfc4d2d3b20de8852b7
+```
+
+**Decision**: SEAL. Five CI commands independently re-run green (11/11 tests; audit 46 skills / 0 failures; index deterministic; hosts dry-run non-mutating); razor clean function-by-function (audit.ts 164, sync.ts 189, zero nested ternaries); new checks fire against fixtures; 11 skills delivered per plan; haiku eval LD-4-conformant with the single-zero security rule correctly applied (degradation verdict → B14); registry/backlog/feature-index/doc wiring verified; change-set confinement exact (31 files). Binding ruling codified: eval reports and exemplars reference scenario credentials by prefix/description only, never literal — even synthetic ones. Reality matches Promise. The repo lands at 1.0: 46 self-validating skills, three enforced deployment classes, 11-test behavior suite, and an eval program with its first actionable negative result. Commit+push executed under the operator's pre-authorized Review Boundary.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -211,6 +298,7 @@ Each major change cycle gets an iteration number.
 |-----------|-------------|-----------|--------|-------------|
 | 0 | #1 | #1 | COMPLETE | Genesis/Bootstrap |
 | 1 | #2 | #5 | COMPLETE | Meta series completion: skill-audit + skill-sync (plan-qor-phase1-meta-skill-audit-sync.md) |
+| 2 | #6 | #8 | COMPLETE | 1.0 backlog close-out: --hosts target, audit scope extensions, 11 skills, weak-model eval, proposals (plan-qor-phase2-one-dot-zero.md) |
 
 ---
 
@@ -223,6 +311,7 @@ Record any chain-related events here.
 | Date | Event | Details |
 |------|-------|---------|
 | 2026-07-03 | Chain Initialized | Genesis hash created (Entry #1) |
+| 2026-07-04 | Line-ending drift detected and ruled on | Judge chain validation found docs/plan-qor-phase1-meta-skill-audit-sync.md's working copy hashing `857bd243…` (CRLF) vs sealed `cb6c475f…` — cause: `core.autocrlf=true` rewrote line endings at checkout after commit. CR-stripping reproduces the sealed hash byte-exactly; HEAD blob matches; content intact. **Binding ruling**: seal content hashes are defined over LF-normalized bytes (equivalently, the git blob); verification canonicalizes before comparing. `.gitattributes` added pinning governance artifacts to `eol=lf`. |
 | 2026-07-03 | Sealed artifact overwritten | Entry #2's artifact binding broken: `.qor/gates/2026-07-03T2023-ca9b2c/audit.json` (sealed at `3da98e31…`, iteration-1 VETO) was overwritten by the iteration-2 PASS verdict (`683679a8…`) because gate artifacts used a mutable singleton filename. Detected by Judge at audit iteration 3. Corrective discipline: one seal, one immutable file — gate artifacts are now iteration-versioned (`audit-iter2.json`, `plan-iter4.json`, …); surviving PASS artifact re-bound in Entry #4. Ledger entries themselves untouched. |
 
 ---
@@ -236,6 +325,7 @@ Record /ql-validate results here.
 | Date | Validator | Result | Notes |
 |------|-----------|--------|-------|
 | 2026-07-03 | Judge (independent subagent) | VALID | Full chain recomputed genesis-forward at substantiate: 75c1c698 → b65b565c → 2a697ef6 → 4f85b370 → f1150ab7. Entry #2 artifact-binding break detected at audit iteration 3, remediated via versioned artifacts + Entry #4 re-binding. |
+| 2026-07-04 | Judge (independent subagent) | VALID | Genesis-forward recomputation through eight entries: 75c1c698 → b65b565c → 2a697ef6 → 4f85b370 → f1150ab7 → 2d7dc2f1 → e81584c6 → 6744f93e. CRLF drift event detected and ruled (LF-canonical hashing); .gitattributes pinned. |
 
 ---
 

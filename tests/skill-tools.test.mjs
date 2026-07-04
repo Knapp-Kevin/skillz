@@ -38,6 +38,37 @@ test("audit-passes-on-repo", () => {
   assert.equal(code, 0, `repo self-audit must pass\n${out}`);
 });
 
+test("audit-reports-skill-count", () => {
+  const { code, out } = run(AUDIT, []);
+  assert.equal(code, 0, out);
+  const m = out.match(/skill-audit: (\d+) skill\(s\)/);
+  assert.ok(m, `summary must report validated-skill count\n${out}`);
+  assert.ok(parseInt(m[1], 10) >= 46, `expected >= 46 skills, got ${m[1]}`);
+});
+
+test("audit-fails-on-bad-sources", () => {
+  const { code, out } = run(AUDIT, ["--skills-dir", join(ROOT, "tests", "fixtures")]);
+  assert.equal(code, 1, `expected exit 1, got ${code}\n${out}`);
+  assert.match(out, /bad-skill[^\n]*sources\.json/, "finding must tie the malformed sources.json to its skill");
+});
+
+test("sync-hosts-writes-three-host-dirs", () => {
+  const root = tmp("hosts");
+  try {
+    const { code, out } = run(SYNC, ["--apply", "--hosts", root]);
+    assert.equal(code, 0, out);
+    for (const h of [".claude", ".kilo", ".codex"]) {
+      assert.ok(
+        existsSync(join(root, h, "skills", "claude-pulse", "SKILL.md")),
+        `${h}/skills copy missing`,
+      );
+      assert.ok(!existsSync(join(root, h, "skills", "skill-audit")), `repo-bound skill leaked into ${h}`);
+    }
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("audit-rejects-bad-registry-status", () => {
   const { code, out } = run(AUDIT, ["--registry", join(ROOT, "tests", "fixtures", "bad-registry.yaml")]);
   assert.equal(code, 1, `expected exit 1, got ${code}\n${out}`);

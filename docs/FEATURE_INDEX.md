@@ -10,9 +10,10 @@ Maps every user-touchable feature to its implementation and its proof. Rows are 
 | FX04 | Repo-bound exclusion from deployment | `sync.ts` (LD-2) | `::sync-excludes-repo-bound` |
 | FX05 | Claude Code junction target with testable root | `sync.ts --claude-user[-root]` | `::sync-junction-under-temp-root` |
 | FX06 | COREFORGE Synapse manifest emission (exact 8-key shape) | `sync.ts --coreforge` | `::sync-coreforge-manifest-shape` (full key-set assertion) |
-| FX07 | Generic pulse collection (repos, orgs, search, changelogs, reddit) | `scripts/pulse-run.ts` + per-skill `sources.json` | Manual smoke (qwen-pulse live run 2026-07-03); `--help` contract enforced by FX02 |
+| FX07 | Generic pulse collection (repos, orgs, search, changelogs, reddit) | `scripts/pulse-run.ts` + per-skill `sources.json` | `--help` contract enforced by FX02 (audit.ts covers repo-level `scripts/*.ts` since 2026-07-04); sources.json parse + fallback-marker checks enforced by FX02; live smoke qwen-pulse 2026-07-03 |
 | FX08 | Watchlist intake scan | `skills/skills-pulse/scripts/scout.ts` | Manual smoke (live run 2026-07-03); `--help` contract enforced by FX02 |
 | FX09 | Claude release digest | `skills/claude-pulse/scripts/pulse.ts` | Manual smoke (live run 2026-07-03); `--help` contract enforced by FX02 |
-| FX10 | 31 instruction skills (pulses, research, agent-ops, daily-ops, comms) | `skills/*/SKILL.md` (no scripts) | FX02's convention checks (name/description/version) — behavior is model-executed, verified per use |
+| FX10 | 42 instruction skills (pulses, research, agent-ops, daily-ops, comms, life-ops, hygiene) | `skills/*/SKILL.md` (no scripts) | FX02 convention checks + `tests/skill-tools.test.mjs::audit-reports-skill-count` (asserts validated count >= 46) |
+| FX11 | Multi-host deployment (`--hosts`: .claude/.kilo/.codex skill dirs of a target repo) | `skills/skill-sync/scripts/sync.ts` | `tests/skill-tools.test.mjs::sync-hosts-writes-three-host-dirs` (three paths + repo-bound exclusion) |
 
-Rows FX07–FX09 carry script smoke-tests rather than automated behavior tests; upgrading them to fixture-based tests is acceptable future work but not currently required (network-dependent collectors).
+Rows FX08–FX09 carry script smoke-tests rather than automated behavior tests; upgrading them to fixture-based tests is acceptable future work but not currently required (network-dependent collectors).

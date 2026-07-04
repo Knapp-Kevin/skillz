@@ -138,6 +138,41 @@ The LD-1 extraction moved `parseFrontmatter` verbatim into scripts/lib/frontmatt
 
 ---
 
+### Failure #4: Deployment class accreted silently; coverage claims outran the tool
+
+**Date**: 2026-07-04
+**Iteration**: 2 (session 2026-07-04T0405-927a53, audit iteration 1)
+**Verdict ID**: GATE VETO on plan-qor-phase2-one-dot-zero.md
+**Category**: GHOST_PATH
+
+#### What Was Attempted
+
+The portable/repo-bound dichotomy silently accreted a third class — engine-consuming pulse skills — with a fallback convention carried only in prose (and in one skill, variant wording a reasonable grep could not find). Simultaneously, FEATURE_INDEX FX07 claimed pulse-run.ts's `--help` contract was "enforced by FX02" when audit.ts's scan scope (skills/*/scripts only) never covered repo-level scripts, and sources.json files had no mechanical validation at all.
+
+#### Why It Failed
+
+- Violation 1: a deployment-relevant skill class existed with no flag, no mechanical guard, and a convention that was not grep-discoverable — prose conventions that a reasonable grep cannot find are effectively absent.
+- Violation 2: an "enforced by X" claim in FEATURE_INDEX was not verified against X's actual scan scope.
+- Violation 3: a new repo-bound-by-nature skill (skill-forge) was planned without its deployment class declared.
+
+#### Pattern to Avoid
+
+**Anti-Pattern**: letting deployment classes accrete implicitly; asserting enforcement in feature inventories without grep-verifying the enforcing tool's scope; standardizing conventions by example instead of by marker.
+
+**Correct Pattern**: every skill's runtime dependencies determine an explicit, mechanically enforced deployment class (LD-5: portable-with-fallback marker checked by audit.ts); every "enforced by X" claim is verified against X's actual scan before it is written down.
+
+#### Resolution
+
+| Status | Action Taken |
+|--------|--------------|
+| FIXED (plan-level) | LD-5 added; audit.ts scope extensions declared (sources.json parse, repo scripts --help, fallback marker, count reporting); skill-forge declared repo-bound; D4 count claim converted to an asserted test. PASS at audit iteration 2 (Entry #7, chain `e81584c6…`); Judge independently reproduced the F1 evidence correction and recorded its own iteration-1 grep error. |
+
+#### Related Entries
+- Ledger Entry: #6 (VETO), #7 (PASS at plan `b8edca27…`)
+- Audit Report: .agent/staging/AUDIT_REPORT.md
+
+---
+
 ## Pattern Library (Extracted Lessons)
 
 <!--

@@ -1,0 +1,69 @@
+{
+  "phase": "ideation",
+  "session_id": "2026-07-04T0405-927a53",
+  "ts": "2026-07-04T04:06:19Z",
+  "concept_name": "skillz-1.0-completion",
+  "spark": {
+    "observation": "Operator seeded skillz as the ultimate system-agnostic skill repository; foundation is sealed (35 skills, registry, index, meta tooling) but the backlog (B02-B12) leaves series gaps, single-host deployment, and frontier-only eval evidence.",
+    "initial_question": "What are we missing, and how do we land the complete final product? (operator, 2026-07-03/04)",
+    "why_now": "Foundation cycle sealed at f1150ab7; backlog fully enumerated; operator explicitly commanded full cycles to land the complete final product."
+  },
+  "problem_frame": {
+    "affected_actors": [
+      "operator (Kevin)",
+      "MythologIQ agents on Claude Code",
+      "agents on other hosts (Kilo, Codex, COREFORGE)",
+      "weak-model executors"
+    ],
+    "failure_mode": "Repo stalls at partial: comms/life-ops/hygiene series unshipped, deployment limited to the Claude Code user dir on one machine, skill effectiveness unproven below frontier tier, and the seal-integrity lesson never reaches Qor-logic upstream.",
+    "cost_of_failure": "Fragmented agent capability across hosts, repeated ad-hoc prompting for covered workflows, adoption decisions without evidence, and a recurrence-prone gate-artifact defect left unfixed upstream."
+  },
+  "transformation_statement": "MythologIQ operators and agents move from a partially populated skill library usable mainly via Claude Code on one machine to a complete, evidence-backed 1.0 library deployable to every local and cloud host, without losing governance traceability or accepting ungated third-party risk.",
+  "boundaries": {
+    "non_goals": [
+      "gated SDLC skills (Qor-logic domain)",
+      "skill execution infrastructure",
+      "copying community skills",
+      "Gemini TOML host compilation (deferred: format conversion, not copy)"
+    ],
+    "limitations": [
+      "instruction-skill quality is convention + eval verified, not per-use verified",
+      "gh-based hygiene skills require an authenticated gh CLI"
+    ],
+    "exclusions": [
+      "vendor/ tree modifications",
+      "network mutations of any external system",
+      "automated registry edits"
+    ],
+    "forbidden_interpretations": [
+      "complete final product does NOT mean vendoring more third-party skills; it means closing the declared backlog"
+    ]
+  },
+  "governance_profile": {
+    "risk_grade": "L2",
+    "evidence_required": [
+      "node --test green",
+      "skill-audit exit 0",
+      "blind-judged weak-model eval report (B11)",
+      "Judge PASS on plan",
+      "substantiate seal chained to ledger"
+    ],
+    "escalation_triggers": [
+      "secret exposure",
+      "3 same-signature VETOs",
+      "sync writing outside declared targets"
+    ]
+  },
+  "readiness": {
+    "status": "ready",
+    "recommended_next_phase": "plan"
+  },
+  "ai_provenance": {
+    "system": "Qor-logic",
+    "version": "0.15.1",
+    "host": "unknown",
+    "model_family": "opus",
+    "human_oversight": "absent",
+    "ts": "2026-07-04T04:06:19Z"
+  }
+}

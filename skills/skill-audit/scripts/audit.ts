@@ -67,7 +67,12 @@ function checkSkills(skillsDir: string): string[] {
   return skillFiles;
 }
 
-// ── Check 2: every skill script answers --help with exit 0 ──────────
+// ── Check 2: every skill + repo script answers --help with exit 0 ───
+
+function checkHelp(file: string, label: string): void {
+  const res = spawnSync(process.execPath, [file, "--help"], { timeout: 30_000, encoding: "utf8" });
+  if (res.status !== 0) fail(`${label}: --help exited ${res.status}`);
+}
 
 function checkScripts(skillsDir: string): void {
   for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
@@ -75,9 +80,31 @@ function checkScripts(skillsDir: string): void {
     const scriptsDir = join(skillsDir, entry.name, "scripts");
     if (!existsSync(scriptsDir)) continue;
     for (const f of readdirSync(scriptsDir).filter((f) => f.endsWith(".ts"))) {
-      const file = join(scriptsDir, f);
-      const res = spawnSync(process.execPath, [file, "--help"], { timeout: 30_000, encoding: "utf8" });
-      if (res.status !== 0) fail(`${entry.name}/scripts/${f}: --help exited ${res.status}`);
+      checkHelp(join(scriptsDir, f), `${entry.name}/scripts/${f}`);
+    }
+  }
+  // Repo-level tooling scripts share the same contract (FEATURE_INDEX FX07).
+  const repoScripts = join(ROOT, "scripts");
+  for (const f of readdirSync(repoScripts).filter((f) => f.endsWith(".ts"))) {
+    checkHelp(join(repoScripts, f), `scripts/${f}`);
+  }
+}
+
+// ── Check 2b: sources.json parses; engine consumers carry the fallback marker ──
+
+function checkSources(skillsDir: string): void {
+  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const sources = join(skillsDir, entry.name, "sources.json");
+    if (!existsSync(sources)) continue;
+    try {
+      JSON.parse(readFileSync(sources, "utf8"));
+    } catch {
+      fail(`${entry.name}: sources.json does not parse as JSON`);
+    }
+    const skillFile = join(skillsDir, entry.name, "SKILL.md");
+    if (existsSync(skillFile) && !readFileSync(skillFile, "utf8").includes("engine is unavailable")) {
+      fail(`${entry.name}: sources.json present but SKILL.md lacks the "engine is unavailable" fallback marker (LD-5)`);
     }
   }
 }
@@ -127,10 +154,11 @@ function checkIndexFreshness(skillFiles: string[]): void {
 
 const skillFiles = checkSkills(values["skills-dir"]!);
 checkScripts(values["skills-dir"]!);
+checkSources(values["skills-dir"]!);
 checkRegistry(values.registry!);
 checkIndexFreshness(skillFiles);
 
 for (const f of findings) console.log(`${f.level}: ${f.msg}`);
 const failures = findings.filter((f) => f.level === "FAIL").length;
-console.log(`\nskill-audit: ${failures} failure(s), ${findings.length - failures} warning(s)`);
+console.log(`\nskill-audit: ${skillFiles.length} skill(s), ${failures} failure(s), ${findings.length - failures} warning(s)`);
 process.exit(failures > 0 ? 1 : 0);

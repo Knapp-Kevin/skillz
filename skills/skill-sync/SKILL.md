@@ -29,6 +29,7 @@ Runs `scripts/sync.ts`, which discovers portable skills (frontmatter without `re
 | Claude Code user skills | `--claude-user` | Directory junction at `<root>/<name>` (root defaults to `~/.claude/skills`, overridable via `--claude-user-root`) |
 | Any local directory | `--dest <path>` | Recursive copy; drift = any byte difference |
 | COREFORGE Synapse | `--coreforge <path>` | Per-skill `manifest.json` derived from frontmatter (skillId, version, entryPoint, runtime) plus SKILL.md and scripts |
+| Markdown host dirs of a target repo | `--hosts <targetRepo>` | Copies each portable skill to `<targetRepo>/.claude/skills/`, `.kilo/skills/`, and `.codex/skills/` (Qor-logic host-dir convention; Gemini excluded — TOML conversion, not copy) |
 
 **Dry-run by default** — prints `create` / `update` / `up-to-date` / `skip:repo-bound` per skill per target. Nothing is written without `--apply`.
 

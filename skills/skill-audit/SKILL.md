@@ -25,11 +25,12 @@ Mechanical validation of the skillz repo. Drift is a failing exit code, not a co
 Runs `scripts/audit.ts`, which checks in order:
 
 1. **Skill conventions** — every `skills/<dir>/SKILL.md`: frontmatter parses, `name` matches the directory, `description` is non-empty and carries "Use when" trigger guidance, `metadata.version` present.
-2. **Script health** — every `skills/<dir>/scripts/*.ts` answers `--help` with exit 0 (spawned, 30s timeout).
-3. **Registry lint** — every `registry/candidates.yaml` entry has a valid `status` and `permission_tier` (enums from `docs/evaluation-framework.md`), a non-empty `rationale`, and — for adopted entries — an existing `resolved_path`.
-4. **Index freshness** (WARN-only) — `INDEX.md` must be newer than every SKILL.md.
+2. **Script health** — every `skills/<dir>/scripts/*.ts` AND every repo-level `scripts/*.ts` answers `--help` with exit 0 (spawned, 30s timeout).
+3. **Pulse specs** — every `skills/<dir>/sources.json` parses as JSON, and any skill carrying one contains the `engine is unavailable` standalone-fallback marker in its SKILL.md (portable-with-fallback deployment class).
+4. **Registry lint** — every `registry/candidates.yaml` entry has a valid `status` and `permission_tier` (enums from `docs/evaluation-framework.md`), a non-empty `rationale`, and — for adopted entries — an existing `resolved_path`.
+5. **Index freshness** (WARN-only) — `INDEX.md` must be newer than every SKILL.md.
 
-Exit 0 = clean (warnings allowed); exit 1 = failures found.
+Exit 0 = clean (warnings allowed); exit 1 = failures found. The summary line reports the validated-skill count.
 
 ## Execution Flow
 
