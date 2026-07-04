@@ -11,7 +11,7 @@ metadata:
   category: Research
   display-name: Source Vetting
   emoji: "🛡️"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Source Vetting
@@ -51,6 +51,7 @@ A trust evaluation that treats every candidate as an untrusted dependency until 
 
 These override the dimension checklist. Confidence must trace to signals actually gathered.
 
+- **Never reproduce secret-shaped strings** found while inspecting a candidate (tokens, keys, credentials in its code, issues, or CI logs) — type + short prefix only; a leaked credential in a candidate is a security-posture finding, and flagging probable exposure is part of the verdict.
 - **Never simulate a missing signal.** Absent activity data, unverifiable provenance, or an unreadable license lowers confidence — it is never estimated, assumed, or filled from memory.
 - **Never fabricate stars, downloads, or dates** — every figure cites where it was read, with the read date.
 - **An empty dimension stays visibly empty** in the output; the verdict line must acknowledge it.

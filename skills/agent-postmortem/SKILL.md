@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Agent Postmortem
   emoji: "🩻"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Agent Postmortem
@@ -56,7 +56,7 @@ These override the format above. A wrong-but-confident root cause is the most ex
 - **Every timeline entry cites evidence** (transcript line, log, diff). No evidence → open question, not timeline.
 - **Undetermined stays undetermined.** If evidence does not settle the root cause, write `undetermined — candidates: <list>` with what would discriminate between them.
 - **Never reproduce secrets encountered in transcripts** — tokens, keys, cookies by type + short prefix only; if one was exposed, rotation is the first lesson.
-- **Mark inference as inference**; never promote a suspected cause to an established one to fill the Classification slot.
+- **Mark inference as inference**; never invent or promote a suspected cause to an established one to fill the Classification slot — an unfillable slot reads `not established`.
 
 ## Notes
 

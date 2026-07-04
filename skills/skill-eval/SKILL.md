@@ -12,7 +12,7 @@ metadata:
   category: Meta
   display-name: Skill Eval
   emoji: "⚖️"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Skill Eval
@@ -51,6 +51,14 @@ Baseline tokens: <n> | With skill: <n> | Delta: <+/-n (%)>
 status: <current> → <proposed>
 evidence: <this report's task table, summarized in one line per task>
 ```
+
+## Negative rules
+
+These override the report format. An eval's only value is that its numbers happened.
+
+- **Never fabricate a result.** A score, token count, or delta that was not actually measured reads `not established` — an arm that did not run is reported as not run, never reconstructed from expectation.
+- **Never reproduce secret-shaped strings** appearing in eval transcripts or scenario material (even synthetic ones) — type + short prefix only, per the sealed exemplar rule from the 2026-07-04 haiku eval.
+- **Verdicts trace to rubric rows.** A degradation or improvement claim cites the specific graded behaviors that moved; unverifiable movement is `unverifiable`, not rounded to a direction.
 
 ## Notes
 

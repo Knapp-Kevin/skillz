@@ -23,6 +23,9 @@ jobs:
       - name: Skill audit
         run: node skills/skill-audit/scripts/audit.ts
 
+      - name: Skill risk audit
+        run: node skills/skill-audit/scripts/risk-audit.ts
+
       - name: Index freshness
         run: |
           node scripts/build-index.ts

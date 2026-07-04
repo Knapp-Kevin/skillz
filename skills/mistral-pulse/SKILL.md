@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Mistral Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Mistral Pulse
@@ -48,5 +48,6 @@ Vendor pulse for Mistral AI. Sources are data (`sources.json`), synthesis is you
 
 ## Notes
 
+- Read-only: this skill fetches and reports; it never posts, subscribes, or mutates anything.
 - Official sources are authoritative; community commentary is signal, not truth.
 - As an EU vendor, Mistral compliance/regulatory positioning items also feed governance-pulse — cross-reference, don't duplicate.

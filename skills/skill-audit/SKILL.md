@@ -12,7 +12,7 @@ metadata:
   category: Meta
   display-name: Skill Audit
   emoji: "🔍"
-  version: 1.0.0
+  version: 1.1.0
   repo-bound: true
 ---
 
@@ -32,6 +32,15 @@ Runs `scripts/audit.ts`, which checks in order:
 
 Exit 0 = clean (warnings allowed); exit 1 = failures found. The summary line reports the validated-skill count.
 
+A second script, `scripts/risk-audit.ts`, runs the **semantic risk layer** (issue #5): structure can be valid while the bottle still holds poison. Deterministic checks, same exit contract:
+
+1. **Negative-rules completeness (FAIL)** — any skill whose Output Format carries evidence/decision slots (`because`, `[reason]`, `rationale`, `root cause`, `verdict`) must have a `## Negative rules` section covering secret handling, anti-fabrication, and a missing-evidence fallback (template §Capability floor rule 8).
+2. **Mutating-action ambiguity (FAIL)** — send/push/delete/publish/deploy/create-issue/archive/enroll/pay/buy with no approval or read-only language anywhere in the skill; `move`/`update` are WARN-class (verb/noun ambiguity).
+3. **Portable specificity (WARN)** — absolute paths or operator/org terms in a portable skill body (repo-bound skills exempt; term list embedded — this tool is repo-bound, local specificity here is intentional).
+4. **External-service ambiguity (WARN)** — direct vendor API hosts or env-key requirements without an MCP or web-tool fallback mention.
+
+It is a static risk filter, not an outcome evaluation — `skill-eval` owns behavioral proof.
+
 ## Execution Flow
 
 1. Run from the repo root (either runtime works):
@@ -48,7 +57,7 @@ Exit 0 = clean (warnings allowed); exit 1 = failures found. The summary line rep
 ## Scheduling
 
 - **Claude Code:** run ad hoc before commits, or `/schedule` a weekly repo-health run paired with skills-pulse.
-- **CI:** `node --test "tests/*.test.mjs"` plus `node skills/skill-audit/scripts/audit.ts` are the repo's declared CI commands.
+- **CI:** `node --test "tests/*.test.mjs"`, `node skills/skill-audit/scripts/audit.ts`, and `node skills/skill-audit/scripts/risk-audit.ts` are the repo's declared CI commands (`.github/workflows/ci.yml`).
 
 ## Output Format
 

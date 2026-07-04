@@ -11,7 +11,7 @@ metadata:
   category: Research
   display-name: Fact Check
   emoji: "🔎"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Fact Check
@@ -43,6 +43,7 @@ A claim verification that traces each part of a statement to primary sources and
 
 These override the verdict format. `unverifiable` is a first-class verdict, not a failure to be rounded away.
 
+- **Never reproduce secret-shaped strings** encountered in sources (tokens, keys, credentials) — type + short prefix only; flag probable exposure instead of quoting it.
 - **Never round unverifiable to true or false.** A sub-claim with no reachable primary evidence is `unverifiable`, full stop.
 - **Never fabricate a source, publication date, or quotation** — every Sources line was actually opened during this check.
 - **Report conflicts as conflicts.** When credible sources disagree, the disagreement is the finding; do not average it into a verdict.

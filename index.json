@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T07:01:34.016Z",
+  "generated": "2026-07-04T07:11:57.064Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -19,7 +19,7 @@
       "displayName": "Agent Postmortem",
       "description": "Extract durable lessons from a failed, wrong, or unexpectedly expensive agent session: reconstruct the timeline, find the earliest determining point, classify the failure, and propose where each lesson should live. Use when the user asks \"postmortem that session\", \"why did the agent fail\", \"what went wrong with that run\", or \"that run cost way too much\".",
       "category": "Meta",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/agent-postmortem",
       "skillFile": "skills/agent-postmortem/SKILL.md",
       "scripts": []
@@ -61,7 +61,7 @@
       "displayName": "Compare",
       "description": "Run a structured comparison of tools, models, vendors, or approaches: criteria confirmed first, evidence gathered per matrix cell, weighted recommendation with the runner-up's best counter-argument. Use when the user asks \"compare X and Y\", \"which should I use, X or Y\", \"X vs Y\", \"help me choose between\", or is thrashing on a which-tool decision.",
       "category": "Research",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/compare",
       "skillFile": "skills/compare/SKILL.md",
       "scripts": []
@@ -101,7 +101,7 @@
       "displayName": "Deep Dive",
       "description": "Build a multi-source research dossier on any topic: scope it, sweep sources in parallel angles, adversarially fact-check the load-bearing claims, and synthesize a cited report. Use when the user asks \"deep dive on X\", \"research X thoroughly\", \"give me a dossier on X\", \"what's the real story with X\", or wants a fact-checked, multi-source answer rather than a quick summary.",
       "category": "Research",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/deep-dive",
       "skillFile": "skills/deep-dive/SKILL.md",
       "scripts": []
@@ -131,7 +131,7 @@
       "displayName": "Fact Check",
       "description": "Verify a claim by decomposing it into checkable sub-claims, sourcing each from primary evidence, and reporting a verdict with confidence and what would flip it. Use when the user asks \"fact-check this\", \"is it true that\", \"verify this claim\", \"did X really happen\", or forwards a statement whose accuracy matters before acting on it.",
       "category": "Research",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/fact-check",
       "skillFile": "skills/fact-check/SKILL.md",
       "scripts": []
@@ -271,7 +271,7 @@
       "displayName": "MCP Vetting",
       "description": "Security review of an MCP server before it is connected: provenance, tool surface, data flow, injection exposure, and version pinning, ending in a permission-tier verdict and a recommended registry entry. Use when the user asks \"vet this MCP server\", \"is this MCP safe to connect\", \"review this MCP before I add it\", or before any new server enters the config.",
       "category": "Meta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/mcp-vetting",
       "skillFile": "skills/mcp-vetting/SKILL.md",
       "scripts": []
@@ -291,7 +291,7 @@
       "displayName": "Mistral Pulse",
       "description": "Scan the latest Mistral AI developments — model releases (Mistral, Codestral, Devstral, Magistral), API changelog, SDK repo activity, and community reception — and synthesize a digest. Use when the user asks \"what's new with Mistral\", \"Mistral pulse\", \"Codestral news\", or wants European/open-model awareness alongside the other vendor pulses.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "skills/mistral-pulse",
       "skillFile": "skills/mistral-pulse/SKILL.md",
       "scripts": []
@@ -371,11 +371,12 @@
       "displayName": "Skill Audit",
       "description": "Validate this repository's conventions mechanically: SKILL.md frontmatter (name/directory match, trigger-bearing description, version), script health (--help exit codes), intake-registry enums, and index freshness. Use when the user asks \"audit the skills repo\", \"validate the skills\", \"lint the registry\", before running skill-sync, or as a pre-commit check after adding or editing any skill.",
       "category": "Meta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/skill-audit",
       "skillFile": "skills/skill-audit/SKILL.md",
       "scripts": [
-        "skills/skill-audit/scripts/audit.ts"
+        "skills/skill-audit/scripts/audit.ts",
+        "skills/skill-audit/scripts/risk-audit.ts"
       ]
     },
     {
@@ -383,7 +384,7 @@
       "displayName": "Skill Eval",
       "description": "Before/after effectiveness testing of a candidate skill: run sample tasks with and without the skill loaded, score both arms, and produce registry evidence for an adopt/reject/quarantine decision. Use when the user asks \"evaluate this skill\", \"does this skill actually help\", \"run the eval plan for a candidate\", or when a registry entry needs proof before a status change.",
       "category": "Meta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/skill-eval",
       "skillFile": "skills/skill-eval/SKILL.md",
       "scripts": []
@@ -437,7 +438,7 @@
       "displayName": "Source Vetting",
       "description": "Evaluate the trustworthiness of a repo, vendor, dataset, or skill before adoption: provenance, activity authenticity, license, security posture, and community standing, mapped to a registry verdict. Use when the user asks \"vet this repo\", \"can we trust this\", \"should we adopt X\", \"check this dependency before we use it\", or a pulse skill surfaces a candidate.",
       "category": "Research",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/source-vetting",
       "skillFile": "skills/source-vetting/SKILL.md",
       "scripts": []

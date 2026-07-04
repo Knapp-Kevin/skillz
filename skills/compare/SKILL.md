@@ -11,7 +11,7 @@ metadata:
   category: Research
   display-name: Compare
   emoji: "⚖️"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Compare
@@ -46,6 +46,7 @@ A decision-grade comparison built on confirmed criteria and sourced evidence, en
 
 These override the matrix format. A tie with reasons beats a manufactured winner.
 
+- **Never reproduce secret-shaped strings** from vendor docs or trials (API keys, tokens) — type + short prefix only; flag probable exposure.
 - **An empty matrix cell is `no data`** and is excluded from the weighted read — never silently estimated to keep a row scoreable.
 - **Never invent vendor claims, prices, or benchmark numbers** — each cell cites where it was read.
 - **If the evidence cannot separate two options, say so** and name what measurement would; do not force a recommendation.

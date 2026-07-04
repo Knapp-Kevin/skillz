@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const AUDIT = join(ROOT, "skills", "skill-audit", "scripts", "audit.ts");
 const SYNC = join(ROOT, "skills", "skill-sync", "scripts", "sync.ts");
+const RISK = join(ROOT, "skills", "skill-audit", "scripts", "risk-audit.ts");
 
 function run(script, args) {
   const res = spawnSync(process.execPath, [script, ...args], {
@@ -50,6 +51,31 @@ test("audit-fails-on-bad-sources", () => {
   const { code, out } = run(AUDIT, ["--skills-dir", join(ROOT, "tests", "fixtures")]);
   assert.equal(code, 1, `expected exit 1, got ${code}\n${out}`);
   assert.match(out, /bad-skill[^\n]*sources\.json/, "finding must tie the malformed sources.json to its skill");
+});
+
+test("risk-audit-fails-on-mutating-without-approval", () => {
+  const { code, out } = run(RISK, ["--skills-dir", join(ROOT, "tests", "fixtures-risk", "failing")]);
+  assert.equal(code, 1, `expected exit 1, got ${code}\n${out}`);
+  assert.match(out, /mutating-no-approval[^\n]*mutating action "(send|publish|delete)"/i, "finding must name the skill and the verb");
+  assert.match(out, /no approval\/read-only language/, "finding must name the missing-approval ground");
+});
+
+test("risk-audit-fails-on-missing-negative-rules", () => {
+  const { code, out } = run(RISK, ["--skills-dir", join(ROOT, "tests", "fixtures-risk", "failing")]);
+  assert.equal(code, 1, out);
+  assert.match(out, /judgment-no-negative-rules[^\n]*no "## Negative rules" section/, "finding must tie the missing section to the slot-bearing skill");
+});
+
+test("risk-audit-warns-on-portable-specificity", () => {
+  const { code, out } = run(RISK, ["--skills-dir", join(ROOT, "tests", "fixtures-risk", "warn-only")]);
+  assert.equal(code, 0, `warnings alone must not fail the audit\n${out}`);
+  assert.match(out, /WARN: portable-specific[^\n]*absolute path/, "warn must name the absolute path");
+  assert.match(out, /WARN: portable-specific[^\n]*operator\/org term "GG-CORE"/, "warn must name the org term");
+});
+
+test("risk-audit-passes-on-repo", () => {
+  const { code, out } = run(RISK, []);
+  assert.equal(code, 0, `first-party skills must be risk-clean\n${out}`);
 });
 
 test("sync-hosts-writes-three-host-dirs", () => {

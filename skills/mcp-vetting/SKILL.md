@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: MCP Vetting
   emoji: "🛡️"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # MCP Vetting
@@ -55,6 +55,14 @@ status: <adopted | sandbox | quarantined | rejected>
 permission_tier: <tier>
 rationale: <one sentence>
 ```
+
+## Negative rules
+
+These override the checklist format. A vetting report that leaks what it vets has failed at its own job.
+
+- **Never reproduce secret-shaped strings** from server configs, env examples, or docs (API keys, tokens, connection strings) — type + short prefix only; a credential visible in a candidate's repo is itself a security finding with a rotation recommendation.
+- **Never fabricate a security posture.** If a dimension could not be checked (unreadable code, no advisories database, opaque distribution), the verdict line says `not established` for that dimension — an unchecked box is never a passed box.
+- **Unknown stays unknown.** Missing evidence lowers the confidence stated with the verdict; it is never filled with assumptions about what "a typical server" does.
 
 ## Notes
 

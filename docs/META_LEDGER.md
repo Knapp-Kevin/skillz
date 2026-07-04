@@ -548,6 +548,64 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #18: GATE TRIBUNAL — PASS (issue #5 cycle, audit iteration 6)
+
+**Timestamp**: 2026-07-04T08:55:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 7
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter6.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter6.json, LF-normalized)
+= 4864e82cfcc85eb31fa4be809e7b56ffc1061f5d91d571f75b51315f9fcfa29f
+```
+
+**Previous Hash**: `6ced6606ebcd0322ebf3574578323b4155f55cbcd1b8cd06297b2e99939ee023`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= d5966098057355a2a4801087beb70b2ead5e66085d7f1015b25f27fc68863394
+```
+
+**Decision**: PASS at first iteration. Risk-audit plan (issue #5): separate razor-compliant script under skill-audit; five check families; four behavioral tests (no presence-only — plan_test_lint's single WARN adjudicated a false positive on a fixture description); doc_tier standard with term home in skill-audit's SKILL.md. L2. Next: /qor-implement.
+
+---
+
+### Entry #19: SUBSTANTIATE — SEAL (issue #5: semantic risk audit)
+
+**Timestamp**: 2026-07-04T09:10:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 7
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter5.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter5.json, LF-normalized)
+= 0d0389c1f1fd606fd4679de8eefb42c97b9c0908edb863e2f310aed2d454fcc0
+```
+
+**Previous Hash**: `d5966098057355a2a4801087beb70b2ead5e66085d7f1015b25f27fc68863394`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= fa999ec725fccfca46197f333aee2ed6310a6dac1abda3002440e0352e026647
+```
+
+**Decision**: SEAL. Issue #5 delivered: risk-audit.ts (142 lines, razor-clean) with negative-rules completeness FAIL, mutating-action FAIL (move/update WARN-class by documented posture), portable-specificity WARN (absorbed from #4 per posted transfer), vendor-API-fallback WARN; schema-pressure check documented as absorbed into the evidence-gap class. First live run caught six real FAILs — skill-eval and mcp-vetting had verdict slots with no negative rules; source-vetting/fact-check/compare lacked secret rules; agent-postmortem's wording evaded the fabrication class — all remediated (+ deep-dive secret bullet for uniformity, + mistral-pulse read-only posture line, a true catch of the read-only-by-default design rule). 15/15 tests including WARN≠FAIL behavioral proof and repo-clean run; CI gains the "Skill risk audit" step; FX13 mapped; template rule 8 now cites its enforcement point. The shelf label and the bottle contents are now both checked.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -564,6 +622,7 @@ Each major change cycle gets an iteration number.
 | 4 | #12 | #13 | COMPLETE | Issue #2 GitHub Actions CI (plan-qor-phase4-issue2-ci.md) |
 | 5 | #14 | #15 | COMPLETE | Issue #3 B14 weak-model negative rules (plan-qor-phase5-issue3-b14-negative-rules.md) |
 | 6 | #16 | #17 | COMPLETE | Issue #4 B18 de-specification + Bind steps (plan-qor-phase6-issue4-b18-despecification.md) |
+| 7 | #18 | #19 | COMPLETE | Issue #5 semantic risk audit (plan-qor-phase7-issue5-risk-audit.md) |
 
 ---
 

@@ -52,7 +52,7 @@ skillz/
 | Local skills | 48 (45 portable, 3 repo-bound: skill-audit, skill-forge, skill-sync) |
 | Scripted skills | 4 (claude-pulse, skills-pulse, skill-audit, skill-sync) |
 | Repo tooling scripts | 3 (build-index, pulse-run, lib/frontmatter) |
-| Behavior tests | 11 (all passing) |
+| Behavior tests | 15 (all passing) |
 | Vendored sources | 6 submodules, 524 indexed skills (kwp 185, microsoft 186, aws 93, azure 34, anthropic 17, vercel 9) |
 | Section 4 violations | 0 (verified at substantiate, Entry #8) |
 
@@ -65,14 +65,14 @@ skillz/
 | Merkle Chain | VALID | Genesis-forward recomputed at Entry #8 (2026-07-04); head 6744f93e |
 | Blueprint Sync | SYNCED | ARCHITECTURE_PLAN load-bearing rules hold across tree |
 | Section 4 Compliance | PASS | Judge-verified at 1.0 substantiate (Entry #8) |
-| Test Status | PASS | 11/11 via `node --test "tests/*.test.mjs"` |
+| Test Status | PASS | 15/15 via `node --test "tests/*.test.mjs"` |
 | Index Freshness | PASS | Regeneration idempotent; skill-audit exit 0 (48 skills) |
 
 ---
 
 ## Next Actions
 
-- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules, #4 ✅ B18 de-specification; remaining: #5 semantic risk audit → #6 vendor freshness workflow
+- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules, #4 ✅ B18 de-specification, #5 ✅ semantic risk audit; remaining: #6 vendor freshness workflow
 - [ ] B13: `min-model-capability` metadata rollout remainder (first field shipped: handoff-writer, issue #3)
 - [ ] B15: Gemini host target for skill-sync (TOML conversion)
 - [ ] B17: skill-eval on ponytail (sandbox) before any adoption decision
