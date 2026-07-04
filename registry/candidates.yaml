@@ -53,9 +53,9 @@ candidates:
     name: Rules Distiller
     source: skills.sh ecosystem
     category: [meta]
-    status: sandbox
+    status: track
     permission_tier: read-only
-    rationale: Extracting reusable rules from skills/docs is directly relevant to registry curation; verify quality before adopting.
+    rationale: Eval blocked (2026-07-03) — no canonical artifact acquirable; locate and source-vet before evaluation. Rule-extraction concept remains relevant to registry curation.
 
   - id: find-skills
     name: find-skills
@@ -106,9 +106,10 @@ candidates:
     name: handoff
     source: community
     category: [sdlc, collaboration]
-    status: sandbox
+    status: rejected
     permission_tier: generate
-    rationale: Continuation-context authoring is NOT covered by Qor-logic gates; useful for multi-agent and cross-session work.
+    covered_by: first-party skills/handoff-writer
+    rationale: Superseded by first-party handoff-writer; eval evidence (docs/evals/2026-07-03-handoff-writer.md) shows even the first-party version is tier-dependent — no case for a third-party dependency.
 
   - id: grill-with-docs
     name: grill-with-docs
@@ -123,9 +124,9 @@ candidates:
     name: to-issues
     source: community
     category: [collaboration]
-    status: sandbox
+    status: track
     permission_tier: staging-write
-    rationale: Plan->GitHub-issues conversion is ungated glue work; fits this repo's lane. Requires gh write approval.
+    rationale: Eval blocked (2026-07-03) — no canonical artifact acquirable; must be located and source-vetted before any evaluation can run. Concept remains attractive ungated glue work.
 
   # ── Verification & security ────────────────────────────────────────
   - id: verification-loop

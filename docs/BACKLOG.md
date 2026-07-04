@@ -6,18 +6,9 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 
 | ID | Item | Series | Notes |
 |----|------|--------|-------|
-| B01 | Run `skill-eval` on sandbox registry candidates (`handoff` superseded by first-party handoff-writer; `to-issues`, `rules-distiller`) | agent-ops | First real use of the eval loop |
-| B02 | `devlog-draft` + `deck-outline` skills | comms | Per ROADMAP §7 |
-| B03 | `finance-review` skill | life-ops | Vendored xlsx does mechanics; read-only |
-| B04 | `smallbiz-ops`, `career-radar`, `learning-plan` skills | life-ops | Per ROADMAP §8 |
-| B05 | `inference-pulse` sources.json | pulse | llama.cpp / Ollama / vLLM; GG-CORE relevance |
-| B06 | `repo-pulse`, `repo-doctor`, `standup` git-plumbing cluster (`gh`-based) | hygiene | repo-pulse + repo-doctor + todo-harvester |
-| B07 | `skill-forge` scaffold skill | meta | Template exists; automate instantiation |
-| B08 | skill-sync per-host compile variants (`.kilo/`, `.codex/`, `.gemini/`) | meta | Follow Qor-logic dist_compile pattern |
-| B09 | Migrate claude-pulse onto the shared pulse engine (sources.json) | pulse | Retire bespoke pulse.ts once parity confirmed |
-| B10 | Upstream proposal to Qor-logic: iteration-versioned gate artifacts (one seal, one immutable file) | governance | From Shadow Genome Failure #2 |
-| B11 | Re-run handoff-writer eval with weak-model arms (Haiku-tier) to test the capability-equalizer hypothesis | agent-ops | From docs/evals/2026-07-03-handoff-writer.md ceiling-effect verdict |
-| B12 | Add `min-model-capability` metadata + `references/examples.md` few-shot exemplars to high-judgment skills (research + agent-ops series) | meta | Weak-model enablement per template §Capability floor |
+| B13 | `min-model-capability` metadata rollout across high-judgment skills (B12 remainder — exemplars shipped for handoff-writer + brief-writer; metadata field + more exemplars pending) | meta | Per template §Capability floor rule 7 |
+| B14 | handoff-writer secrets-handling + anti-fabrication rules, then weak-tier re-eval; add "negative rules" guidance (rule 8) to template §Capability floor | agent-ops | From the 2026-07-04 haiku eval: treatment reproduced a leaked token (define-every-term induced) and fabricated a scenario fact (schema-slot pressure); baseline made neither error |
+| B15 | Gemini host target for skill-sync (TOML conversion) | meta | Deferred from B08; format conversion, not copy |
 
 ## Done
 
@@ -26,3 +17,14 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 | D01 | skill-audit + skill-sync (Meta series core) | Session 2026-07-03T2023-ca9b2c, seal f1150ab7 |
 | D02 | Pulse fleet: 16 pulses on shared engine | commit a046ccf |
 | D03 | Research series (5), agent-ops series (5), daily-ops (4), brief-writer, decision-log | 2026-07-03 gap-fill batch |
+| D04 (B01) | skill-eval first run on registry candidates | docs/evals/2026-07-03-handoff-writer.md; registry updated 2026-07-04 |
+| D05 (B02) | devlog-draft + deck-outline | Session 927a53 (1.0 cycle) |
+| D06 (B03/B04) | finance-review, smallbiz-ops, career-radar, learning-plan | Session 927a53 |
+| D07 (B05) | inference-pulse (SKILL.md + sources.json) | Session 927a53 |
+| D08 (B06) | repo-pulse, repo-doctor, todo-harvester | Session 927a53 |
+| D09 (B07) | skill-forge (repo-bound) | Session 927a53 |
+| D10 (B08, partial) | skill-sync `--hosts` (.claude/.kilo/.codex copies; Gemini deferred to B15) | Session 927a53, FX11 |
+| D11 (B09) | claude-pulse engine migration — REJECTED with reason (LD-2: bespoke undated-changelog cap has no engine equivalent; complecting rejected) | Plan phase2, Judge-verified sound |
+| D12 (B10) | Upstream proposal authored | docs/proposals/qor-versioned-gate-artifacts.md |
+| D13 (B11) | Weak-model eval executed | docs/evals/2026-07-04-handoff-writer-haiku.md |
+| D14 (B12, core) | Gold-standard exemplars for handoff-writer + brief-writer | skills/*/references/examples.md |

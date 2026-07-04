@@ -36,12 +36,13 @@ const { values } = parseArgs({
     "claude-user-root": { type: "string", default: join(homedir(), ".claude", "skills") },
     dest: { type: "string" },
     coreforge: { type: "string" },
+    hosts: { type: "string" },
     help: { type: "boolean", default: false },
   },
 });
 
 if (values.help) {
-  console.log("skill-sync — deploy portable skills\n\nUsage: node sync.ts [--apply] [--claude-user] [--claude-user-root <path>] [--dest <path>] [--coreforge <path>]");
+  console.log("skill-sync — deploy portable skills\n\nUsage: node sync.ts [--apply] [--claude-user] [--claude-user-root <path>] [--dest <path>] [--coreforge <path>] [--hosts <targetRepo>]");
   process.exit(0);
 }
 
@@ -149,12 +150,31 @@ function syncCoreforge(skill: Skill, destRoot: string): string {
   return action;
 }
 
+// ── Target: --hosts (markdown host dirs of a target repo) ────────────
+
+const HOST_DIRS = [".claude", ".kilo", ".codex"];
+
+function syncHosts(skill: Skill, repoRoot: string): string {
+  const actions = HOST_DIRS.map((h) => {
+    const dst = join(repoRoot, h, "skills", skill.name);
+    const action = copyDrift(skill.dir, dst);
+    if (values.apply && action !== "up-to-date") {
+      cpSync(skill.dir, dst, { recursive: true, force: true });
+    }
+    return action;
+  });
+  const unique = [...new Set(actions)];
+  if (unique.length === 1) return unique[0];
+  return actions.map((a, i) => `${HOST_DIRS[i]}:${a}`).join(" ");
+}
+
 // ── Main ─────────────────────────────────────────────────────────────
 
 const targets: Array<{ label: string; fn: (s: Skill) => string }> = [];
 if (values["claude-user"]) targets.push({ label: `claude-user(${values["claude-user-root"]})`, fn: (s) => syncJunction(s, values["claude-user-root"]!) });
 if (values.dest) targets.push({ label: `dest(${values.dest})`, fn: (s) => syncDest(s, values.dest!) });
 if (values.coreforge) targets.push({ label: `coreforge(${values.coreforge})`, fn: (s) => syncCoreforge(s, values.coreforge!) });
+if (values.hosts) targets.push({ label: `hosts(${values.hosts})`, fn: (s) => syncHosts(s, values.hosts!) });
 
 if (targets.length === 0) {
   console.log("No targets given. Use --claude-user, --dest <path>, and/or --coreforge <path>.");

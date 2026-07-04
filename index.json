@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-03T21:54:10.715Z",
+  "generated": "2026-07-04T04:25:12.179Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -22,6 +22,16 @@
       "version": "1.0.0",
       "path": "skills/brief-writer",
       "skillFile": "skills/brief-writer/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "career-radar",
+      "displayName": "Career Radar",
+      "description": "Run a periodic market scan for roles and rates matching a stated profile (default: agent-governance architecture / AI platform engineering, remote-friendly) — clustering postings by role type, noting demand signals, and comparing against the profile's positioning. Use when the user asks \"run the career radar\", \"what's the market doing for my profile\", \"scan roles and rates\", or wants a monthly read on demand for their skills.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/career-radar",
+      "skillFile": "skills/career-radar/SKILL.md",
       "scripts": []
     },
     {
@@ -67,6 +77,16 @@
       "scripts": []
     },
     {
+      "name": "deck-outline",
+      "displayName": "Deck Outline",
+      "description": "Build a narrative-first outline for a pitch, update, or launch deck: the one decision or feeling the deck must produce, a 10-14 beat narrative spine, and per-slide headline claims with evidence and visual suggestions. Use when the user asks \"outline a deck\", \"help me structure my pitch\", \"plan my launch presentation\", or wants slides that argue instead of list.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/deck-outline",
+      "skillFile": "skills/deck-outline/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "deep-dive",
       "displayName": "Deep Dive",
       "description": "Build a multi-source research dossier on any topic: scope it, sweep sources in parallel angles, adversarially fact-check the load-bearing claims, and synthesize a cited report. Use when the user asks \"deep dive on X\", \"research X thoroughly\", \"give me a dossier on X\", \"what's the real story with X\", or wants a fact-checked, multi-source answer rather than a quick summary.",
@@ -87,6 +107,16 @@
       "scripts": []
     },
     {
+      "name": "devlog-draft",
+      "displayName": "Devlog Draft",
+      "description": "Draft a founder-led devlog or blog post from real work evidence — git history across the MythologIQ repos plus logged decisions — telling one narrative in the operator's own voice. Use when the user asks \"draft a devlog\", \"write a blog post about this week's work\", \"turn my commits into a post\", or wants a build-in-public update grounded in what actually shipped.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/devlog-draft",
+      "skillFile": "skills/devlog-draft/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "fact-check",
       "displayName": "Fact Check",
       "description": "Verify a claim by decomposing it into checkable sub-claims, sourcing each from primary evidence, and reporting a verdict with confidence and what would flip it. Use when the user asks \"fact-check this\", \"is it true that\", \"verify this claim\", \"did X really happen\", or forwards a statement whose accuracy matters before acting on it.",
@@ -94,6 +124,16 @@
       "version": "1.0.0",
       "path": "skills/fact-check",
       "skillFile": "skills/fact-check/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "finance-review",
+      "displayName": "Finance Review",
+      "description": "Produce a monthly money digest from statement exports the operator drops in a folder: category trends vs the prior month, anomalies with their evidence rows, and upcoming known charges. Use when the user asks \"review my finances\", \"monthly money digest\", \"go through these statements\", or drops CSV/XLSX bank exports for analysis. Strictly read-only.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/finance-review",
+      "skillFile": "skills/finance-review/SKILL.md",
       "scripts": []
     },
     {
@@ -167,6 +207,16 @@
       "scripts": []
     },
     {
+      "name": "inference-pulse",
+      "displayName": "Inference Pulse",
+      "description": "Scan the local-inference runtime ecosystem — llama.cpp, Ollama, and vLLM releases and breaking changes, quantization format shifts (GGUF), and GPU/NPU support movements — and synthesize a digest with a GG-CORE relevance verdict. Use when the user asks \"inference pulse\", \"what's new in llama.cpp\", \"local inference news\", \"GGUF changes\", or wants runtime awareness for GG-CORE work.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/inference-pulse",
+      "skillFile": "skills/inference-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "kimi-pulse",
       "displayName": "Kimi Pulse",
       "description": "Scan the latest Moonshot AI / Kimi developments — new open weights (K2 line), org repo activity, API changes, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with Kimi\", \"Kimi pulse\", \"Moonshot news\", \"Kimi K2 update\", or wants open-model awareness alongside the other vendor pulses.",
@@ -174,6 +224,16 @@
       "version": "1.0.0",
       "path": "skills/kimi-pulse",
       "skillFile": "skills/kimi-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "learning-plan",
+      "displayName": "Learning Plan",
+      "description": "Build a structured skill-acquisition plan: a curriculum from real, named sources verified to exist, a weekly cadence with concrete checkpoints, and a progress-review protocol for when weeks slip. Use when the user asks \"make me a learning plan\", \"help me learn X\", \"build a study schedule\", or wants a curriculum with checkpoints instead of a link pile.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/learning-plan",
+      "skillFile": "skills/learning-plan/SKILL.md",
       "scripts": []
     },
     {
@@ -277,6 +337,26 @@
       "scripts": []
     },
     {
+      "name": "repo-doctor",
+      "displayName": "Repo Doctor",
+      "description": "Run a one-shot health check of a single repository — stale branches, uncommitted or unpushed work, TODO/FIXME count trend, failing CI, README drift, missing or old LICENSE, dependency staleness — and emit a prioritized punch list with an exact fix command per item. Use when the user asks \"check this repo's health\", \"run repo doctor\", \"audit this repo\", or wants a punch list before a release or handoff.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/repo-doctor",
+      "skillFile": "skills/repo-doctor/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "repo-pulse",
+      "displayName": "Repo Pulse",
+      "description": "Produce a weekly cross-repo digest of the operator's own GitHub repos via the gh CLI — PRs waiting on you, red CI runs, stale branches, and repos with uncommitted local work under G:\\MythologIQ — ranked action-first. Use when the user asks \"repo pulse\", \"what needs my attention on my repos\", \"weekly repo digest\", or wants a sweep of everything waiting on them.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/repo-pulse",
+      "skillFile": "skills/repo-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "skill-audit",
       "displayName": "Skill Audit",
       "description": "Validate this repository's conventions mechanically: SKILL.md frontmatter (name/directory match, trigger-bearing description, version), script health (--help exit codes), intake-registry enums, and index freshness. Use when the user asks \"audit the skills repo\", \"validate the skills\", \"lint the registry\", before running skill-sync, or as a pre-commit check after adding or editing any skill.",
@@ -296,6 +376,16 @@
       "version": "1.0.0",
       "path": "skills/skill-eval",
       "skillFile": "skills/skill-eval/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "skill-forge",
+      "displayName": "Skill Forge",
+      "description": "Scaffold a new skill in this repository: elicit name, triggers, category, cadence, and deployment class; instantiate docs/skill-template.md; then audit and reindex. Use when the user asks \"create a new skill\", \"scaffold a skill\", \"forge a skill\", \"add a pulse skill\", or wants a convention-clean skills/<name>/ starting point.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/skill-forge",
+      "skillFile": "skills/skill-forge/SKILL.md",
       "scripts": []
     },
     {
@@ -323,6 +413,16 @@
       ]
     },
     {
+      "name": "smallbiz-ops",
+      "displayName": "Small Biz Ops",
+      "description": "Run the monthly upkeep sweep for the family business web presences — Hill House Transport, Neat & Clean, and Chesapeake Moms Club — checking content freshness, site uptime, listings drift across search results, and seasonal to-dos. Use when the user asks \"run the business site check\", \"smallbiz ops sweep\", \"are the family sites healthy\", or wants the monthly web presence review.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/smallbiz-ops",
+      "skillFile": "skills/smallbiz-ops/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "source-vetting",
       "displayName": "Source Vetting",
       "description": "Evaluate the trustworthiness of a repo, vendor, dataset, or skill before adoption: provenance, activity authenticity, license, security posture, and community standing, mapped to a registry verdict. Use when the user asks \"vet this repo\", \"can we trust this\", \"should we adopt X\", \"check this dependency before we use it\", or a pulse skill surfaces a candidate.",
@@ -340,6 +440,16 @@
       "version": "1.0.0",
       "path": "skills/standup-writer",
       "skillFile": "skills/standup-writer/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "todo-harvester",
+      "displayName": "TODO Harvester",
+      "description": "Sweep a repository's TODO, FIXME, HACK, and XXX comments into a triaged list — aged via git blame, clustered by subsystem, and classified as quick-fix, needs-ticket, or stale-delete-candidate. Use when the user asks \"harvest the TODOs\", \"what's buried in the FIXMEs\", \"triage the code comments\", or wants the debt markers in a repo turned into actionable items.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/todo-harvester",
+      "skillFile": "skills/todo-harvester/SKILL.md",
       "scripts": []
     },
     {

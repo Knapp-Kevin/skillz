@@ -16,10 +16,10 @@ Vendor watchlist (add a `sources.json` when they ship something load-bearing): M
 
 Remaining candidates, in rough priority order:
 
+**Also shipped** ✅ (1.0 cycle): `inference-pulse` (llama.cpp/Ollama/vLLM → GG-CORE relevance verdicts), `repo-pulse` (`gh`-based own-repo digest).
+
 | Skill | What it digests | Why / why not yet |
 |-------|-----------------|-------------------|
-| `inference-pulse` | Local-inference runtimes: llama.cpp, Ollama, vLLM, quantization formats, GPU/NPU support | Strong GG-CORE fit — a `sources.json` away; next up when local-runtime decisions get active |
-| `repo-pulse` | Activity across your own GitHub repos: commits, PRs needing review, stale branches, CI failures | Needs `gh` CLI integration, not the generic engine |
 | `deps-pulse` | Dependency updates and CVEs across active projects | Needs per-project scanners (`npm audit`, `cargo audit`), not the generic engine |
 | `tauri-pulse` | Tauri/Rust ecosystem releases and breaking changes | A `sources.json` away; ship when a Tauri upgrade cycle nears |
 | `voice-pulse` | Voice-AI ecosystem: ElevenLabs, realtime speech APIs, TTS/STT models | You maintain ElevenLabs integrations; ship if voice work resumes |
@@ -67,23 +67,11 @@ Pulses answer "what changed"; these answer "what should I believe / choose."
 
 ## 7. Comms & writing series (on-demand)
 
-**Shipped** ✅: `brief-writer` (one-page decision briefs).
-
-| Skill | What it does |
-|-------|--------------|
-| `devlog-draft` | Founder-led content from real work: turn a week of git history + decisions into a devlog/blog draft that preserves voice. Constraints per registry marketing rules (no synthetic authority, no fake traction). |
-| `deck-outline` | Narrative-first deck outlines (pitch, update, launch); execution hands off to the vendored pptx skill. |
+**Shipped** ✅: `brief-writer` (one-page decision briefs), `devlog-draft` (voice-preserving founder content from real git history), `deck-outline` (narrative-first outlines; vendored pptx executes).
 
 ## 8. Life-ops series — personal & small-business (recurring)
 
-**Shipped** ✅: `decision-log` (personal/business ADR with revisit dates; life-side sibling of qor-meta-log-decision).
-
-| Skill | What it does |
-|-------|--------------|
-| `finance-review` | Monthly money digest: statements/exports in, categorized trends + anomalies out (vendored xlsx skill does the mechanics). Read-only; never initiates transactions. |
-| `smallbiz-ops` | Upkeep cadence for the family business sites (Hill House Transport, Neat & Clean, Chesapeake Moms Club): content freshness, uptime, listings/SEO drift, seasonal to-dos. |
-| `career-radar` | Periodic market scan for roles/rates matching a profile; builds on the job-ranger/career-ops work already in the ecosystem. |
-| `learning-plan` | Structured skill acquisition: goal → curriculum from real sources → weekly cadence with checkpoints; pairs with `/schedule`. |
+**Shipped** ✅: `decision-log` (personal/business ADR with revisit dates), `finance-review` (monthly money digest, read-only), `smallbiz-ops` (family-business site upkeep cadence), `career-radar` (role/rate market scan), `learning-plan` (structured skill acquisition with `/schedule` cadence).
 
 ## Suggested build order (updated 2026-07-03)
 

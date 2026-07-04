@@ -33,16 +33,17 @@ git clone --recurse-submodules <url>
 
 ## Skill series
 
-35 first-party skills across six series:
+46 first-party skills across seven series:
 
 | Series | Skills | Cadence |
 |--------|--------|---------|
-| **Pulse** (16) | `claude-pulse` + 10 more vendor pulses (openai, gemini, llama, mistral, xai, deepseek, qwen, glm, kimi, perplexity) + 5 topic pulses (`governance`, `memory`, `github`, `hf`, `mcp`) — all driven by one engine (`scripts/pulse-run.ts`) with per-skill `sources.json`; adding a pulse is a data change | weekly |
+| **Pulse** (17) | 11 vendor pulses (claude, openai, gemini, llama, mistral, xai, deepseek, qwen, glm, kimi, perplexity) + 6 topic pulses (`governance`, `memory`, `github`, `hf`, `mcp`, `inference`) — all driven by one engine (`scripts/pulse-run.ts`) with per-skill `sources.json`; adding a pulse is a data change | weekly |
 | **Research** (5) | `deep-dive`, `compare`, `fact-check`, `paper-digest`, `source-vetting` — structured inquiry with adversarial fact-checking and registry-ready verdicts | on demand |
 | **Agent-ops** (5) | `skill-eval`, `mcp-vetting`, `agent-postmortem`, `handoff-writer`, `permissions-review` — running the agent fleet itself | on demand / monthly |
 | **Daily-ops** (4) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review` — via connected Gmail/Calendar/Slack MCPs, draft-only for anything that sends | daily / weekly |
-| **Comms & life** (2) | `brief-writer`, `decision-log` | on demand |
-| **Meta** (3) | `skills-pulse` (ecosystem intake), `skill-audit` (repo self-validation), `skill-sync` (deployment) — the last two are repo-bound and never deploy | weekly / pre-commit |
+| **Comms & life** (8) | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | on demand / monthly |
+| **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester` — `gh`/git-evidence based, read-only punch lists | weekly / on demand |
+| **Meta** (4) | `skills-pulse` (ecosystem intake), `skill-audit` (self-validation), `skill-sync` (deployment: junction/copy/COREFORGE/multi-host), `skill-forge` (scaffolding) — audit/sync/forge are repo-bound and never deploy | weekly / pre-commit |
 
 ## Skill index
 
@@ -60,7 +61,7 @@ The generator scans `skills/*/SKILL.md` frontmatter (warning on name/directory m
 
 ```
 INDEX.md / index.json        # generated skill index — start here
-skills/                      # 35 first-party skills, one directory each
+skills/                      # 46 first-party skills, one directory each
   <vendor>-pulse/            #   11 vendor + 5 topic pulses (SKILL.md + sources.json)
   deep-dive/ compare/ ...    #   research series (5)
   skill-eval/ mcp-vetting/ … #   agent-ops series (5)

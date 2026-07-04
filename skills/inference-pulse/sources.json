@@ -1,0 +1,26 @@
+{
+  "name": "Inference Pulse (local inference runtimes)",
+  "github": [
+    "ggml-org/llama.cpp",
+    "ollama/ollama",
+    "vllm-project/vllm"
+  ],
+  "github_search": [
+    { "label": "new inference-runtime repos", "q": "llm inference engine created:>{SINCE} stars:>50" },
+    { "label": "new GGUF tooling", "q": "gguf created:>{SINCE} stars:>15" }
+  ],
+  "subreddits": ["LocalLLaMA"],
+  "keywords": ["llama.cpp", "ollama", "vllm", "gguf", "quantization"],
+  "pages": [
+    { "label": "llama.cpp releases", "url": "https://github.com/ggml-org/llama.cpp/releases" },
+    { "label": "Ollama blog", "url": "https://ollama.com/blog" },
+    { "label": "vLLM blog", "url": "https://blog.vllm.ai" }
+  ],
+  "searches": [
+    "llama.cpp breaking change release",
+    "Ollama release new features",
+    "vLLM release notes breaking changes",
+    "GGUF quantization format update",
+    "NPU local LLM inference support"
+  ]
+}
