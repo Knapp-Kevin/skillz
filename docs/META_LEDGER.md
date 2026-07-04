@@ -374,6 +374,64 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #12: GATE TRIBUNAL — PASS (issue #2 cycle, audit iteration 3)
+
+**Timestamp**: 2026-07-04T07:25:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 4
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter3.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter3.json, LF-normalized)
+= 6e6dc9aca6d2cf362d54d6600293a6ff4c3e51b1aa9b71387430d4441c45ab7a
+```
+
+**Previous Hash**: `5012fa1d94a2170f06da4d62941c840419c413fcecdc3f1e8fa197117571e3e9`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 88d28dee86cd29887940b7d5f5fe64d1f644efdcd893e96ec63fa2afdc707f60
+```
+
+**Decision**: PASS at first iteration. CI plan (issue #2): one workflow, four declared commands verbatim, zero-install preserved, recursive submodule checkout, D4.d waiver for the Actions run (unrunnable pre-push) with local-equivalent verification. Next: /qor-implement.
+
+---
+
+### Entry #13: SUBSTANTIATE — SEAL (issue #2: GitHub Actions CI)
+
+**Timestamp**: 2026-07-04T07:35:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 4
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter2.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter2.json, LF-normalized)
+= 9950d8e2bfe7a42b5c299bf067ae6ea4b6a9755291c5e76462a5bfe7dfd55f49
+```
+
+**Previous Hash**: `88d28dee86cd29887940b7d5f5fe64d1f644efdcd893e96ec63fa2afdc707f60`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 3ad9caabee5398c1f7cb3baa2bb0b18258c959638226897fc28f4e86b62be719
+```
+
+**Decision**: SEAL. Issue #2 delivered: .github/workflows/ci.yml (PR + push-to-main triggers, recursive submodules, Node 22, four commands, no install step), FEATURE_INDEX FX12 row, README proof-path reference. Local verification green: YAML parses, 11/11 tests, audit 48/0, index idempotent. Actions-run proof deferred per D4.d until push. Operator revised the Review Boundary mid-session (2026-07-04): push + merge authorized per cycle from this seal forward.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -387,6 +445,7 @@ Each major change cycle gets an iteration number.
 | 1 | #2 | #5 | COMPLETE | Meta series completion: skill-audit + skill-sync (plan-qor-phase1-meta-skill-audit-sync.md) |
 | 2 | #6 | #8 | COMPLETE | 1.0 backlog close-out: --hosts target, audit scope extensions, 11 skills, weak-model eval, proposals (plan-qor-phase2-one-dot-zero.md) |
 | 3 | #9 | #11 | COMPLETE | Issue #1 state-metadata alignment (plan-qor-phase3-issue1-state-alignment.md) |
+| 4 | #12 | #13 | COMPLETE | Issue #2 GitHub Actions CI (plan-qor-phase4-issue2-ci.md) |
 
 ---
 

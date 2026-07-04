@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Behavior tests
+        run: node --test "tests/*.test.mjs"
+
+      - name: Skill audit
+        run: node skills/skill-audit/scripts/audit.ts
+
+      - name: Index freshness
+        run: |
+          node scripts/build-index.ts
+          git diff --exit-code INDEX.md index.json
