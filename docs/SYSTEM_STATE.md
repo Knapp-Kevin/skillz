@@ -31,12 +31,12 @@ skillz/
 |   |-- research: deep-dive, compare, fact-check, paper-digest, source-vetting
 |   |-- agent-ops: skill-eval, mcp-vetting, agent-postmortem,
 |   |   handoff-writer, permissions-review
-|   |-- daily-ops: daily-briefing, inbox-triage, standup-writer, week-in-review
+|   |-- daily-ops: daily-briefing, inbox-triage, standup-writer,
+|   |   week-in-review, task-surface
 |   |-- repo hygiene: repo-pulse, repo-doctor, todo-harvester
-|   |-- comms: brief-writer, devlog-draft, deck-outline
-|   |-- life-ops: decision-log, finance-review, smallbiz-ops,
-|   |   career-radar, learning-plan
-|   `-- meta: skills-pulse, agent-home-doctor, task-surface,
+|   |-- comms & life: brief-writer, decision-log, devlog-draft, deck-outline,
+|   |   finance-review, smallbiz-ops, career-radar, learning-plan
+|   `-- meta: skills-pulse, agent-home-doctor,
 |       skill-audit*, skill-sync*, skill-forge*   (*repo-bound)
 |-- tests/skill-tools.test.mjs + fixtures/
 |-- vendor/                               (6 official submodules, 524 indexed skills)
