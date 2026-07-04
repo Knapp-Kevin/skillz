@@ -14,6 +14,7 @@
 
 | Skill | Category | Description | Scripts |
 |-------|----------|-------------|---------|
+| [agent-home-doctor](skills/agent-home-doctor/SKILL.md) | Meta | Audit and clean an AI agent CLI's home directory (~/.claude, ~/.codex, ~/.gemini, ~/.kilo, or any equivalent): find unbounded history growth, uncleaned temp di… | — |
 | [agent-postmortem](skills/agent-postmortem/SKILL.md) | Meta | Extract durable lessons from a failed, wrong, or unexpectedly expensive agent session: reconstruct the timeline, find the earliest determining point, classify… | — |
 | [brief-writer](skills/brief-writer/SKILL.md) | Productivity | Write a one-page decision brief for a human decision-maker: the decision and deadline, situation, 2-4 options with costs, risks, and reversibility, a recommend… | — |
 | [career-radar](skills/career-radar/SKILL.md) | Productivity | Run a periodic market scan for roles and rates matching a stated profile (default: agent-governance architecture / AI platform engineering, remote-friendly) —… | — |

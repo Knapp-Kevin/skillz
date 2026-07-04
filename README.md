@@ -33,7 +33,7 @@ git clone --recurse-submodules <url>
 
 ## Skill series
 
-47 first-party skills across seven series:
+48 first-party skills across seven series:
 
 | Series | Skills | Cadence |
 |--------|--------|---------|
@@ -43,7 +43,7 @@ git clone --recurse-submodules <url>
 | **Daily-ops** (5) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` (forge + operate a cross-org task-coordination repo, bound to its own governance doc) — draft-only for anything that sends or writes | daily / weekly |
 | **Comms & life** (8) | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | on demand / monthly |
 | **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester` — `gh`/git-evidence based, read-only punch lists | weekly / on demand |
-| **Meta** (4) | `skills-pulse` (ecosystem intake), `skill-audit` (self-validation), `skill-sync` (deployment: junction/copy/COREFORGE/multi-host), `skill-forge` (scaffolding) — audit/sync/forge are repo-bound and never deploy | weekly / pre-commit |
+| **Meta** (5) | `skills-pulse` (ecosystem intake), `skill-audit` (self-validation), `skill-sync` (deployment: junction/copy/COREFORGE/multi-host), `skill-forge` (scaffolding), `agent-home-doctor` (audit/clean any agent CLI's home dir — pathology library + tiered remediation) — audit/sync/forge are repo-bound and never deploy | weekly / pre-commit / as-needed |
 
 ## Skill index
 
@@ -61,7 +61,7 @@ The generator scans `skills/*/SKILL.md` frontmatter (warning on name/directory m
 
 ```
 INDEX.md / index.json        # generated skill index — start here
-skills/                      # 47 first-party skills, one directory each
+skills/                      # 48 first-party skills, one directory each
   <vendor>-pulse/            #   11 vendor + 5 topic pulses (SKILL.md + sources.json)
   deep-dive/ compare/ ...    #   research series (5)
   skill-eval/ mcp-vetting/ … #   agent-ops series (5)

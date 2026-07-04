@@ -1,9 +1,19 @@
 {
   "version": 1,
-  "generated": "2026-07-04T05:07:00.764Z",
+  "generated": "2026-07-04T05:23:59.996Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
+    {
+      "name": "agent-home-doctor",
+      "displayName": "Agent Home Doctor",
+      "description": "Audit and clean an AI agent CLI's home directory (~/.claude, ~/.codex, ~/.gemini, ~/.kilo, or any equivalent): find unbounded history growth, uncleaned temp dirs, extension-surface duplication, dead config references, deprecated-prefix remnants, and stale backups, then remediate in risk tiers. Use when the user asks \"clean up my .claude folder\", \"audit my agent directories\", \"why is my agent home huge\", \"what's safe to delete here\", or after major CLI updates that historically leave cruft.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/agent-home-doctor",
+      "skillFile": "skills/agent-home-doctor/SKILL.md",
+      "scripts": []
+    },
     {
       "name": "agent-postmortem",
       "displayName": "Agent Postmortem",
