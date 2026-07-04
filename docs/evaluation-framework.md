@@ -16,6 +16,8 @@ discovered (skills-pulse / longlist / ad-hoc)
 
 Every transition updates the registry entry. No skill is symlinked into `~/.claude/skills/`, referenced by an agent, or compiled to a host without an `adopted` entry (vendored official repos count as adopted-at-source; individual write-tier skills inside them still need their own review).
 
+**Model-tier rule for evals** (from docs/evals/2026-07-03-handoff-writer.md): a "no effect" verdict measured only on a frontier model is a *ceiling effect*, not a rejection ground — instruction skills encode exactly the behaviors weaker tiers omit. Sandbox evaluations of instruction-only skills should include a weak-model arm before generalizing; a skill that lifts weak models to the rubric ceiling at ~5% token cost is an equalizer worth adopting even when frontier deltas are zero.
+
 ## Scoring rubric (0–3 per criterion)
 
 | Criterion | 0 | 3 |

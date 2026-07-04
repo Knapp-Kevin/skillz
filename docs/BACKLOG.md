@@ -16,6 +16,8 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 | B08 | skill-sync per-host compile variants (`.kilo/`, `.codex/`, `.gemini/`) | meta | Follow Qor-logic dist_compile pattern |
 | B09 | Migrate claude-pulse onto the shared pulse engine (sources.json) | pulse | Retire bespoke pulse.ts once parity confirmed |
 | B10 | Upstream proposal to Qor-logic: iteration-versioned gate artifacts (one seal, one immutable file) | governance | From Shadow Genome Failure #2 |
+| B11 | Re-run handoff-writer eval with weak-model arms (Haiku-tier) to test the capability-equalizer hypothesis | agent-ops | From docs/evals/2026-07-03-handoff-writer.md ceiling-effect verdict |
+| B12 | Add `min-model-capability` metadata + `references/examples.md` few-shot exemplars to high-judgment skills (research + agent-ops series) | meta | Weak-model enablement per template §Capability floor |
 
 ## Done
 

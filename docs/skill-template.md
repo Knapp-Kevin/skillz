@@ -59,6 +59,20 @@ does and which part the model does — synthesis belongs to the model.>
   (read-only? requires approval before sending/mutating?).>
 ```
 
+## Capability floor — design for the weakest model that will run this
+
+Skills are executed by whatever model the host provides. Do NOT write model-adaptive prose ("if you are a smaller model…") — models cannot reliably self-assess tier, and branching text bloats context for everyone. Instead, make the *structure* carry weak models while frontier models skim it:
+
+1. **Move judgment into determinism.** Anything a script can decide, a script decides ("script collects, model synthesizes"). The skeleton the script emits is the floor no model can fall below.
+2. **Encode frontier behavior as explicit procedure.** Numbered steps, mandatory output sections, and taxonomies (e.g., handoff-writer's two landmine kinds) are a distillation of what strong models do unprompted — weak models follow the recipe instead of deriving it.
+3. **Ship the acceptance check, not just the instruction.** A pre-written self-check ("if a sentence only makes sense to someone who was present, rewrite it") lets a weak model *verify* to a standard it cannot *generate* to unaided; checking is easier than generating.
+4. **Constrain the generation space.** Tables to fill and skeletons to complete beat open prose; every blank is a prompt.
+5. **Decompose.** Many small, narrow steps outperform one big ask on weak models; if a step needs cross-step memory, write the intermediate result down.
+6. **Exemplars over adjectives.** For high-judgment skills, add a `references/examples.md` with one gold-standard output; imitation transfers where instruction doesn't. Tiered loading keeps it out of context until needed.
+7. **Declare the floor as data, not prose.** Optional frontmatter `metadata.min-model-capability: haiku|sonnet|opus` (Qor-logic precedent) — hosts and routers enforce it; the model never has to self-assess.
+
+Evidence basis: docs/evals/2026-07-03-handoff-writer.md — on a frontier model an instruction-only skill scored 0 delta (ceiling effect); the rubric behaviors it encodes are exactly what weaker tiers omit.
+
 Checklist before merging a new skill:
 
 - [ ] `name` matches directory; description says **when** to use it, not just what it does
