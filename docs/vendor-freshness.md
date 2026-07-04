@@ -44,7 +44,7 @@ Updated at every check or refresh (initial data: live `git ls-remote`, 2026-07-0
 
 | Source | Pinned | Upstream (last checked) | Last checked | Last refreshed | Status |
 |--------|--------|------------------------|--------------|----------------|--------|
-| vendor/knowledge-work-plugins | dd091bc | ca3e3fb (2026-07-04) | 2026-07-04 | 2026-07-02 (initial vendoring) | **refresh needed** — classify on review |
+| vendor/knowledge-work-plugins | ca3e3fb | ca3e3fb (2026-07-04) | 2026-07-04 | 2026-07-04 | current — last delta docs-only/metadata (partner-plugin pointer bumps: fastly, carta, wix; marketplace.json only; index diff zero) |
 | vendor/anthropic-skills | 9d2f1ae | 9d2f1ae (2026-07-04) | 2026-07-04 | 2026-07-02 (initial vendoring) | current |
 | vendor/vercel-agent-skills | f8a72b9 | f8a72b9 (2026-07-04) | 2026-07-04 | 2026-07-02 (initial vendoring) | current |
 | vendor/microsoft-skills | 32cad4e | 32cad4e (2026-07-04) | 2026-07-04 | 2026-07-02 (initial vendoring) | current |
