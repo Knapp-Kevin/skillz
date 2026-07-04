@@ -13,7 +13,7 @@ metadata:
   category: Meta
   display-name: Agent Home Doctor
   emoji: "🩺"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Agent Home Doctor
@@ -22,7 +22,7 @@ An adaptive framework: agent CLI vendors change their extension surfaces and sto
 
 ## Execution Flow
 
-1. **Bind.** Identify the target home dir (ask, or enumerate `~/.claude`, `~/.codex`, `~/.gemini`, `~/.kilo`, `~/.copilot`, editor dirs). Read the operator's conventions from profile/memory (retention days, deprecated-prefix migration maps like a legacy→successor rename, never-touch additions). Absent a policy, default retention 30 days and propose recording the choices.
+1. **Bind.** Enumerate **ALL dot-directories in the profile root** — never a hardcoded name list (a hardcoded list is the unwarranted-specificity sin and will miss homes; verified failure mode 2026-07-04). Classify each discovered dir: agent CLI home, toolchain/package cache, app data, or unknown. Read the operator's conventions from profile/memory (retention days, deprecated-prefix migration maps like a legacy→successor rename, never-touch additions). Absent a policy, default retention 30 days and propose recording the choices.
 2. **Inventory.** Top-level size/count map (`dirs` with recursive sums), then per-offender drilldowns. Establish the never-touch set FIRST: credentials/keys, memory/notes dirs, user-authored content (custom skills/commands/hooks), active session state, anything the operator marks.
 3. **Diagnose against the pathology library** — check each:
    - **Unbounded history**: transcript/session/edit-history dirs with entries older than retention (`file-history/`, `projects/`, `sessions/`); check whether the CLI has a retention setting that's unset.
@@ -54,7 +54,10 @@ An adaptive framework: agent CLI vendors change their extension surfaces and sto
 
 ## Notes
 
-- The never-touch set is absolute: credentials, memory/notes, user-authored content, active sessions. When ownership of an item is uncertain, it is report-only.
+- The never-touch set is absolute: credentials, memory/notes, user-authored content, active sessions, and **downloaded model caches** (e.g., `~/.cache/huggingface`, whisper models) — large but intentional; report, never delete by default.
 - Duplication claims require hash verification; "looks the same" is not evidence.
 - Tier 2 is moves-to-backup by definition — deletion of moved content is a later, separate operator decision.
+- **Locked directories**: fall back to copy-to-backup-then-clear-contents; leave the held husk and note it (frees on process exit/reboot). Never take ownership or kill processes to force a move.
+- **Verify nesting before claiming moves**: a recursive listing flattens hierarchy — confirm what is top-level vs nested, and re-count the backup destination after every move (verified failure mode 2026-07-04: a "moved" batch that never landed).
+- **Third-party apps squatting in a CLI home** (e.g., a 5.6GB IDE living inside `~/.gemini`): report the uninstall lever, never delete app data yourself.
 - Cross-CLI: run per home dir; the pathology library is vendor-agnostic even though every layout differs.
