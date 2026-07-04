@@ -18,6 +18,7 @@ One complete exemplar (per docs/skill-template.md §Capability floor rule 6: imi
 
 ## Decisions
 - Reuse existing with_lock() over new locking, because the primitive exists and must be reviewable before the freeze.
+- Cache TTL left at 300s — rationale: not established (value predates this session; no discussion found). Flagged in open threads rather than invented here.
 
 ## Open threads
 1. Apply fix — next action: wrap the full invalidate+refresh in cache.py with with_lock('cache:'+key); expect the stale-write log line to stop under a two-worker repro. Blocked on: nothing.

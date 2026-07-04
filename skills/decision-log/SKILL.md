@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: Decision Log
   emoji: "🧭"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Decision Log
@@ -47,6 +47,15 @@ Keep a durable record of life and business decisions in ADR style: what was deci
 ## Coming up (next 30 days)
 - [YYYY-MM-DD] [Decision] — revisit due [date]
 ```
+
+## Negative rules
+
+These override the entry format. The log's value is that it records what was actually decided and why — not what a plausible rationale would have been.
+
+- **Never backfill rationale the decider did not give.** Ask, or record `rationale: not established (recorded after the fact)`.
+- **Never invent alternatives considered.** `alternatives: none recorded` is a complete, valid entry.
+- **Never fabricate a revisit date** to finish the template; it comes from the decider or the entry's own risk discussion, or it is `not set`.
+- **Secrets never belong in an entry** — reference systems by name, credentials by type + short prefix only.
 
 ## Notes
 

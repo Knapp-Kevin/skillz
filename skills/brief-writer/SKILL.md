@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Brief Writer
   emoji: "📄"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Brief Writer
@@ -49,6 +49,15 @@ Produce a one-page brief that lets a human make a decision without a meeting: wh
 ## What Would Change This
 - [Specific fact or measurement that would flip the recommendation]
 ```
+
+## Negative rules
+
+These override the format above. An honest gap beats a confident invention on every axis a decision-maker cares about.
+
+- **Never invent a number.** Costs, dates, and figures without a source get `not established` — do not decorate the options table to make it look complete.
+- **Unknown risk is stated as unknown**, with what would establish it; reversibility is never guessed.
+- **Never reproduce secret-shaped strings** (tokens, keys, passwords) in a brief — type + short prefix only; if one surfaced in source material, recommend rotation.
+- **Mark inference as inference** — "(inferred: <basis>)" — never as a stakeholder statement.
 
 ## Notes
 

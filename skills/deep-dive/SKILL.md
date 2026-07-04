@@ -12,7 +12,7 @@ metadata:
   category: Research
   display-name: Deep Dive
   emoji: "🔬"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Deep Dive
@@ -39,6 +39,14 @@ A research dossier that separates what is established from what is opinion and w
 ## Open questions
 ## Sources (with dates)
 ```
+
+## Negative rules
+
+These override the output format. The dossier's authority comes entirely from its sourcing.
+
+- **A finding without a source is not a finding** — move it to Open questions.
+- **Never fabricate citations or dates**; every Sources line was actually read during this dive.
+- **TL;DR confidence must match the evidence under it** — unknowns are stated in the TL;DR, not smoothed over.
 
 ## Notes
 

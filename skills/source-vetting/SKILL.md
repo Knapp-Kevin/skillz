@@ -11,7 +11,7 @@ metadata:
   category: Research
   display-name: Source Vetting
   emoji: "🛡️"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Source Vetting
@@ -46,6 +46,14 @@ A trust evaluation that treats every candidate as an untrusted dependency until 
   permission_tier: [read-only|plan-only|generate|staging-write|production-write|identity|cost|destructive]
   rationale: [one line]
 ```
+
+## Negative rules
+
+These override the dimension checklist. Confidence must trace to signals actually gathered.
+
+- **Never simulate a missing signal.** Absent activity data, unverifiable provenance, or an unreadable license lowers confidence — it is never estimated, assumed, or filled from memory.
+- **Never fabricate stars, downloads, or dates** — every figure cites where it was read, with the read date.
+- **An empty dimension stays visibly empty** in the output; the verdict line must acknowledge it.
 
 ## Notes
 

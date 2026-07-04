@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T05:34:14.877Z",
+  "generated": "2026-07-04T06:52:15.655Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -19,7 +19,7 @@
       "displayName": "Agent Postmortem",
       "description": "Extract durable lessons from a failed, wrong, or unexpectedly expensive agent session: reconstruct the timeline, find the earliest determining point, classify the failure, and propose where each lesson should live. Use when the user asks \"postmortem that session\", \"why did the agent fail\", \"what went wrong with that run\", or \"that run cost way too much\".",
       "category": "Meta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/agent-postmortem",
       "skillFile": "skills/agent-postmortem/SKILL.md",
       "scripts": []
@@ -29,7 +29,7 @@
       "displayName": "Brief Writer",
       "description": "Write a one-page decision brief for a human decision-maker: the decision and deadline, situation, 2-4 options with costs, risks, and reversibility, a recommendation with reasoning, and what would change it. Use when the user asks \"write a decision brief\", \"help me pitch this decision\", \"options memo\", \"one-pager for a decision\", or needs to ask someone to decide.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/brief-writer",
       "skillFile": "skills/brief-writer/SKILL.md",
       "scripts": []
@@ -61,7 +61,7 @@
       "displayName": "Compare",
       "description": "Run a structured comparison of tools, models, vendors, or approaches: criteria confirmed first, evidence gathered per matrix cell, weighted recommendation with the runner-up's best counter-argument. Use when the user asks \"compare X and Y\", \"which should I use, X or Y\", \"X vs Y\", \"help me choose between\", or is thrashing on a which-tool decision.",
       "category": "Research",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/compare",
       "skillFile": "skills/compare/SKILL.md",
       "scripts": []
@@ -81,7 +81,7 @@
       "displayName": "Decision Log",
       "description": "Capture personal and business decisions as lightweight ADR entries — date, context, options considered, choice and why, revisit-by date — appended to a designated decisions log, and list decisions due for revisit. Use when the user says \"log this decision\", \"record that we decided\", \"add to the decision log\", \"what decisions are due for revisit\", or wants a paper trail for non-code choices.",
       "category": "Productivity",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/decision-log",
       "skillFile": "skills/decision-log/SKILL.md",
       "scripts": []
@@ -101,7 +101,7 @@
       "displayName": "Deep Dive",
       "description": "Build a multi-source research dossier on any topic: scope it, sweep sources in parallel angles, adversarially fact-check the load-bearing claims, and synthesize a cited report. Use when the user asks \"deep dive on X\", \"research X thoroughly\", \"give me a dossier on X\", \"what's the real story with X\", or wants a fact-checked, multi-source answer rather than a quick summary.",
       "category": "Research",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/deep-dive",
       "skillFile": "skills/deep-dive/SKILL.md",
       "scripts": []
@@ -131,7 +131,7 @@
       "displayName": "Fact Check",
       "description": "Verify a claim by decomposing it into checkable sub-claims, sourcing each from primary evidence, and reporting a verdict with confidence and what would flip it. Use when the user asks \"fact-check this\", \"is it true that\", \"verify this claim\", \"did X really happen\", or forwards a statement whose accuracy matters before acting on it.",
       "category": "Research",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/fact-check",
       "skillFile": "skills/fact-check/SKILL.md",
       "scripts": []
@@ -191,7 +191,7 @@
       "displayName": "Handoff Writer",
       "description": "Write continuation context for cross-session or cross-agent work: current state, decisions with rationale, open threads with exact next actions, and landmines, so a successor can act without re-deriving anything. Use when the user asks \"write a handoff\", \"prepare context for the next session\", \"summarize where we are for another agent\", or before a context switch.",
       "category": "Meta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/handoff-writer",
       "skillFile": "skills/handoff-writer/SKILL.md",
       "scripts": []
@@ -437,7 +437,7 @@
       "displayName": "Source Vetting",
       "description": "Evaluate the trustworthiness of a repo, vendor, dataset, or skill before adoption: provenance, activity authenticity, license, security posture, and community standing, mapped to a registry verdict. Use when the user asks \"vet this repo\", \"can we trust this\", \"should we adopt X\", \"check this dependency before we use it\", or a pulse skill surfaces a candidate.",
       "category": "Research",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "skills/source-vetting",
       "skillFile": "skills/source-vetting/SKILL.md",
       "scripts": []

@@ -432,6 +432,64 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #14: GATE TRIBUNAL — PASS (issue #3 cycle, audit iteration 4)
+
+**Timestamp**: 2026-07-04T07:50:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 5
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter4.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter4.json, LF-normalized)
+= f366c34e41e0b00e18e917444e8ad97a20e840bf689af8ea920666395159dfbd
+```
+
+**Previous Hash**: `3ad9caabee5398c1f7cb3baa2bb0b18258c959638226897fc28f4e86b62be719`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= cbd114b682d1d49e6d2b9f7ef6523d7d5df49490027135a158a9a9b3934ac69d
+```
+
+**Decision**: PASS at first iteration. B14 negative-rules plan (issue #3): template rule 8 + 8 skill bodies + eval-backed min-model-capability on handoff-writer. Infrastructure verified: build-index ignores min-model-capability; audit.ts requires only metadata.version. Presence-substring testing correctly deferred to issue #5's risk audit per doctrine-test-functionality. L2 (security-relevant content). Next: /qor-implement.
+
+---
+
+### Entry #15: SUBSTANTIATE — SEAL (issue #3: B14 weak-model negative rules)
+
+**Timestamp**: 2026-07-04T08:00:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 5
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter3.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter3.json, LF-normalized)
+= fad8649e265fae20dfdfa5c18e4e724143df125d4cbfdbb091d857fd2d3456a7
+```
+
+**Previous Hash**: `cbd114b682d1d49e6d2b9f7ef6523d7d5df49490027135a158a9a9b3934ac69d`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= af4279035140f11f0e3f712c6a931bdd1affe04e56d7617797d032054abb5607
+```
+
+**Decision**: SEAL. Issue #3 delivered: §Negative rules in handoff-writer (secrets by type+prefix, define-every-term scoped off credentials, rotation on exposure, `not established` for evidence-free slots, inference marking, empty-sections-valid) + 7 tailored variants (brief-writer, decision-log, agent-postmortem, source-vetting, fact-check, deep-dive, compare); template §Capability floor rule 8 + merge-checklist row; exemplar demonstrates `not established`; handoff-writer `min-model-capability: sonnet`. CI green: 11/11, audit 48/0, index regenerated (version bumps 1.0.0→1.1.0 serialize into index — bumps were an implementation addition not declared in plan text; recorded as deviation, content-neutral). B14 → Done D16. Weak-tier behavioral re-eval deferred until #5's mechanical enforcement lands.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -446,6 +504,7 @@ Each major change cycle gets an iteration number.
 | 2 | #6 | #8 | COMPLETE | 1.0 backlog close-out: --hosts target, audit scope extensions, 11 skills, weak-model eval, proposals (plan-qor-phase2-one-dot-zero.md) |
 | 3 | #9 | #11 | COMPLETE | Issue #1 state-metadata alignment (plan-qor-phase3-issue1-state-alignment.md) |
 | 4 | #12 | #13 | COMPLETE | Issue #2 GitHub Actions CI (plan-qor-phase4-issue2-ci.md) |
+| 5 | #14 | #15 | COMPLETE | Issue #3 B14 weak-model negative rules (plan-qor-phase5-issue3-b14-negative-rules.md) |
 
 ---
 
