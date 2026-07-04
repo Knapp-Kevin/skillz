@@ -120,6 +120,8 @@ Six official skill repos are vendored as submodules and fully enumerated in [IND
 | [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | Azure: plan/validate/deploy, RBAC, cost, diagnostics, AKS | ~68 |
 | [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | AWS: core services, Bedrock agents, data analytics, DevSecOps | ~115 |
 
+Pins are refreshed deliberately, never automatically: [docs/vendor-freshness.md](docs/vendor-freshness.md) is the review-first workflow and per-source freshness table; CI validates the pinned state only.
+
 Marketplace-listed plugins install straight from source (no submodule needed):
 
 ```

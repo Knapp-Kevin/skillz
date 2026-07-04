@@ -606,6 +606,64 @@ SHA256(content_hash + previous_hash)
 
 ---
 
+### Entry #20: GATE TRIBUNAL — PASS (issue #6 cycle, audit iteration 7)
+
+**Timestamp**: 2026-07-04T09:25:00-04:00
+**Phase**: GATE
+**Type**: PASS
+**Author**: Judge (solo mode, session 2026-07-04T0632-7cc26a)
+**Iteration**: 8
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/audit-iter7.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(audit-iter7.json, LF-normalized)
+= bc10ee57160bf93fcaf06442fb8d85472c4bceb09f0a483e311a4f99594ad74f
+```
+
+**Previous Hash**: `fa999ec725fccfca46197f333aee2ed6310a6dac1abda3002440e0352e026647`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= 29393ad201d3e81082364e6bc7ded5e3fd7702d2623ec4e932caad0efea8acd6
+```
+
+**Decision**: PASS at first iteration. Vendor-freshness plan (issue #6): documentation + skills-pulse reporting spec; the issue's own CI posture recommendation adopted (pinned-state validation only; drift detection scheduled/manual); non-goals honored (no auto-refresh, no auto-adopt, no blanket trust). L1. Next: /qor-implement.
+
+---
+
+### Entry #21: SUBSTANTIATE — SEAL (issue #6: vendored-source freshness workflow)
+
+**Timestamp**: 2026-07-04T09:35:00-04:00
+**Phase**: SUBSTANTIATE
+**Type**: SEAL
+**Author**: Judge (session 2026-07-04T0632-7cc26a)
+**Iteration**: 8
+
+**Artifacts Hashed**:
+- .qor/gates/2026-07-04T0632-7cc26a/implement-iter6.json (LF-canonical)
+
+**Content Hash**:
+```
+SHA256(implement-iter6.json, LF-normalized)
+= 5cd02d513c2cce537ad896eafeb15d727cf8cd42278a322fa97b7d868f2aa542
+```
+
+**Previous Hash**: `29393ad201d3e81082364e6bc7ded5e3fd7702d2623ec4e932caad0efea8acd6`
+
+**Chain Hash**:
+```
+SHA256(content_hash + previous_hash)
+= bc06cf8c4bff47b85550b1ee66ecc55b4d8cd4ecc08ddd8aad42cdcab268a963
+```
+
+**Decision**: SEAL. Issue #6 delivered: docs/vendor-freshness.md (review-first refresh workflow, per-source freshness table seeded with live ls-remote data, CI posture stated); skills-pulse §Submodule freshness reporting contract (pinned SHA / upstream SHA / refresh verdict / delta classification); README + SYSTEM_STATE references. The initial live check found real drift — knowledge-work-plugins pinned dd091bc vs upstream ca3e3fb — recorded as refresh-needed per the workflow, deliberately NOT refreshed (review-first, non-goal honored). CI green: 15/15, audit 48/0, risk-audit 48/0, index regenerated. Issues #1–#6 batch complete at Entry #21.
+
+---
+
 ## Iteration Tracking
 
 <!--
@@ -623,6 +681,7 @@ Each major change cycle gets an iteration number.
 | 5 | #14 | #15 | COMPLETE | Issue #3 B14 weak-model negative rules (plan-qor-phase5-issue3-b14-negative-rules.md) |
 | 6 | #16 | #17 | COMPLETE | Issue #4 B18 de-specification + Bind steps (plan-qor-phase6-issue4-b18-despecification.md) |
 | 7 | #18 | #19 | COMPLETE | Issue #5 semantic risk audit (plan-qor-phase7-issue5-risk-audit.md) |
+| 8 | #20 | #21 | COMPLETE | Issue #6 vendored-source freshness workflow (plan-qor-phase8-issue6-vendor-freshness.md) |
 
 ---
 

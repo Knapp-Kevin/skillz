@@ -53,7 +53,7 @@ skillz/
 | Scripted skills | 4 (claude-pulse, skills-pulse, skill-audit, skill-sync) |
 | Repo tooling scripts | 3 (build-index, pulse-run, lib/frontmatter) |
 | Behavior tests | 15 (all passing) |
-| Vendored sources | 6 submodules, 524 indexed skills (kwp 185, microsoft 186, aws 93, azure 34, anthropic 17, vercel 9) |
+| Vendored sources | 6 submodules, 524 indexed skills (kwp 185, microsoft 186, aws 93, azure 34, anthropic 17, vercel 9) — freshness: docs/vendor-freshness.md |
 | Section 4 violations | 0 (verified at substantiate, Entry #8) |
 
 ---
@@ -72,7 +72,7 @@ skillz/
 
 ## Next Actions
 
-- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules, #4 ✅ B18 de-specification, #5 ✅ semantic risk audit; remaining: #6 vendor freshness workflow
+- [ ] Issues #1–#6 governed cycle (session 7cc26a): #1 ✅ state alignment, #2 ✅ CI, #3 ✅ B14 negative rules, #4 ✅ B18 de-specification, #5 ✅ semantic risk audit, #6 ✅ vendor freshness workflow — batch complete
 - [ ] B13: `min-model-capability` metadata rollout remainder (first field shipped: handoff-writer, issue #3)
 - [ ] B15: Gemini host target for skill-sync (TOML conversion)
 - [ ] B17: skill-eval on ponytail (sandbox) before any adoption decision

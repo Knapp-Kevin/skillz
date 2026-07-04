@@ -12,7 +12,7 @@ metadata:
   category: Meta
   display-name: Skills Pulse
   emoji: "🧭"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Skills Pulse
@@ -49,10 +49,11 @@ Weekly intake scan of the agent-skills ecosystem. Finds what's new, filters it a
    4. Claude Code built-ins (`/code-review`, `/security-review`, `/verify`)
    5. This repo's ROADMAP — planned first-party?
 
-4. **If vendored submodules have upstream activity** (script flags this), refresh and re-index:
+4. **Submodule freshness.** Report per vendored source: current pinned SHA, latest upstream SHA or release where detectable (`git ls-remote <url> HEAD`; releases via `gh api repos/<owner>/<repo>/releases/latest` when `gh` is available), a refresh-needed verdict, and the likely classification of the delta — docs-only / skill-content / tooling — inferred from upstream commit paths. Refreshing itself follows `docs/vendor-freshness.md` (the governing workflow: one source at a time, review before commit, re-index in the same commit, registry re-check on skill-content or tooling deltas):
 
    ```
-   git submodule update --remote
+   git submodule update --remote vendor/<source>
+   git -C vendor/<source> log --oneline --stat <old-pin>..HEAD
    node scripts/build-index.ts
    ```
 
@@ -75,8 +76,10 @@ Fetch each watchlist repo's releases/commits pages on GitHub directly and do the
 ## Watchlist activity
 - [repo]: [n commits / release vX.Y] — [what changed, one line]
 
-## Submodule refresh needed
-- [repos with upstream activity, or "none"]
+## Submodule freshness
+| Source | Pinned | Upstream | Refresh? | Likely delta |
+|--------|--------|----------|----------|--------------|
+| [vendor/x] | [sha] | [sha / release] | [yes/no] | [docs-only / skill-content / tooling] |
 
 ## New candidates (non-redundant)
 ### [skill name] — [source]
