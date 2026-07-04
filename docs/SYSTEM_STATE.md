@@ -4,37 +4,38 @@
 
 | Attribute | Value |
 |-----------|-------|
-| **Last Updated** | [ISO 8601 timestamp] |
-| **Updated By** | [Governor \| Judge \| Specialist] |
-| **Phase** | [BOOTSTRAP \| IMPLEMENTING \| SUBSTANTIATED] |
-| **Iteration** | [N] |
-| **Session Seal** | [hash prefix or PENDING] |
+| **Last Updated** | 2026-07-03T18:30:00-04:00 |
+| **Updated By** | Governor |
+| **Phase** | SUBSTANTIATED |
+| **Iteration** | 1 |
+| **Session Seal** | f1150ab7 (Entry #5) |
 
 ---
 
 ## File Tree (Current Reality)
 
-<!--
-This is the ACTUAL state of the project, not the planned state.
-Updated by /qor-substantiate or /qor-refactor.
--->
-
 ```
-project/
-|-- .agent/
-|   `-- staging/
-|       `-- AUDIT_REPORT.md
-|-- docs/
-|   |-- CONCEPT.md
-|   |-- ARCHITECTURE_PLAN.md
-|   |-- META_LEDGER.md
-|   |-- SYSTEM_STATE.md (this file)
-|   `-- SHADOW_GENOME.md
-|-- src/
-|   `-- [actual source tree]
-|-- tests/
-|   `-- [actual test tree]
-`-- [other project files]
+skillz/
+|-- .agent/staging/AUDIT_REPORT.md
+|-- .qor/gates/2026-07-03T2023-ca9b2c/   (versioned gate artifacts)
+|-- docs/                                 (governance + framework docs)
+|-- registry/candidates.yaml              (third-party intake decisions)
+|-- scripts/
+|   |-- build-index.ts                    (index generator)
+|   |-- pulse-run.ts                      (shared pulse collector)
+|   `-- lib/frontmatter.ts                (shared parser)
+|-- skills/                               (35 first-party skills)
+|   |-- 16 pulses: claude/openai/gemini/llama/mistral/xai/deepseek/
+|   |   qwen/glm/kimi/perplexity + governance/memory/github/hf/mcp
+|   |-- research: deep-dive, compare, fact-check, paper-digest, source-vetting
+|   |-- agent-ops: skill-eval, mcp-vetting, agent-postmortem,
+|   |   handoff-writer, permissions-review
+|   |-- daily-ops: daily-briefing, inbox-triage, standup-writer, week-in-review
+|   |-- comms/life: brief-writer, decision-log
+|   `-- meta: skills-pulse, skill-audit*, skill-sync*   (*repo-bound, scripted)
+|-- tests/skill-tools.test.mjs + fixtures/
+|-- vendor/                               (6 official submodules, ~524 skills)
+`-- INDEX.md / index.json                 (generated registry surface)
 ```
 
 ---
@@ -43,79 +44,13 @@ project/
 
 | Metric | Value |
 |--------|-------|
-| Total Source Files | [count] |
-| Total Test Files | [count] |
-| Total Lines of Code | [count] |
-| Average File Size | [lines] |
-| Max File Size | [lines] (file: [name]) |
-| Max Function Size | [lines] (file: [name]) |
-| Section 4 Violations | [count] |
-
----
-
-## Blueprint Compliance
-
-<!--
-Compare ARCHITECTURE_PLAN.md (Promise) vs actual files (Reality).
--->
-
-| Status | Planned | Actual | Notes |
-|--------|---------|--------|-------|
-| OK Delivered | [count] | [count] | Files matching blueprint |
-| WARN Unplanned | 0 | [count] | Files not in blueprint |
-| FAIL Missing | [count] | 0 | Planned but not created |
-
-**Compliance Rate**: [percentage]%
-
----
-
-## Dependency Manifest
-
-<!--
-Current dependencies vs what was approved in blueprint.
--->
-
-| Package | Approved | Installed | Status |
-|---------|----------|-----------|--------|
-| [name] | OK | OK | OK |
-| [name] | FAIL | OK | UNPLANNED |
-| [name] | OK | FAIL | MISSING |
-
----
-
-## Section 4 Razor Compliance
-
-### File-Level (Macro KISS)
-
-| File | Lines | Status |
-|------|-------|--------|
-| [path] | [N]/250 | OK/FAIL |
-
-### Function-Level (Micro KISS)
-
-| File | Longest Function | Deepest Nesting | Status |
-|------|-----------------|-----------------|--------|
-| [path] | [N]/40 lines | [N]/3 levels | OK/FAIL |
-
----
-
-## Test Coverage
-
-| Component | Test File | Exists | Passing |
-|-----------|-----------|--------|---------|
-| [name] | [path] | OK/FAIL | OK/FAIL/- |
-
----
-
-## Recent Changes
-
-<!--
-List of files modified in current iteration.
--->
-
-| File | Change Type | Lines Changed |
-|------|-------------|---------------|
-| [path] | [Created \| Modified \| Deleted] | [+N, -M] |
+| Local skills | 35 (33 portable, 2 repo-bound) |
+| Scripted skills | 4 (claude-pulse, skills-pulse, skill-audit, skill-sync) |
+| Repo tooling scripts | 3 (build-index, pulse-run, lib/frontmatter) |
+| Behavior tests | 8 (all passing) |
+| Vendored sources | 6 submodules, 524 indexed skills + 60 partner plugins |
+| Max code file size | 183/250 lines (scripts/pulse-run.ts) |
+| Section 4 violations | 0 (verified at substantiate, Entry #5) |
 
 ---
 
@@ -123,19 +58,19 @@ List of files modified in current iteration.
 
 | Indicator | Status | Details |
 |-----------|--------|---------|
-| Merkle Chain | [VALID \| BROKEN] | Last validated: [date] |
-| Blueprint Sync | [SYNCED \| DRIFT] | [details] |
-| Section 4 Compliance | [PASS \| VIOLATIONS] | [count] violations |
-| Test Status | [PASS \| FAIL \| UNKNOWN] | [details] |
+| Merkle Chain | VALID | Genesis-forward recomputed at Entry #5 (2026-07-03) |
+| Blueprint Sync | SYNCED | ARCHITECTURE_PLAN load-bearing rules hold across tree |
+| Section 4 Compliance | PASS | Judge-verified function-by-function at substantiate |
+| Test Status | PASS | 8/8 via `node --test "tests/*.test.mjs"` |
+| Index Freshness | PASS | Regeneration idempotent; skill-audit exit 0 |
 
 ---
 
 ## Next Actions
 
-Based on current state:
-
-- [ ] [Recommended action 1]
-- [ ] [Recommended action 2]
+- [ ] Run `skill-eval` on first sandbox-status registry candidates (handoff, to-issues)
+- [ ] Deploy portable skills via `skill-sync --claude-user --apply` after review
+- [ ] Ship remaining comms/life-ops skills per ROADMAP build order
 
 ---
 

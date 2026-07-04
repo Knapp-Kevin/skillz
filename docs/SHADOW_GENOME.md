@@ -156,7 +156,7 @@ Aggregate lessons from failures into reusable patterns.
 
 | Anti-Pattern | Correct Pattern | Examples |
 |--------------|-----------------|----------|
-| `// TODO: auth` | Full implementation | See Failure #X |
+| Auth placeholder comments | Full implementation | See Failure #X |
 | Hardcoded tokens | Environment vars | See Failure #Y |
 
 ### Architecture Patterns

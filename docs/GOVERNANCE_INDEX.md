@@ -1,6 +1,6 @@
 # Governance Index
 
-**Last Reviewed**: [ISO 8601 date]
+**Last Reviewed**: 2026-07-03
 
 A single authoritative map of every governance artifact in this project, organized
 into six freshness tiers with explicit drift contracts. A stale entry here is

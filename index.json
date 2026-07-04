@@ -1,9 +1,29 @@
 {
   "version": 1,
-  "generated": "2026-07-03T21:47:47.836Z",
+  "generated": "2026-07-03T21:54:10.715Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
+    {
+      "name": "agent-postmortem",
+      "displayName": "Agent Postmortem",
+      "description": "Extract durable lessons from a failed, wrong, or unexpectedly expensive agent session: reconstruct the timeline, find the earliest determining point, classify the failure, and propose where each lesson should live. Use when the user asks \"postmortem that session\", \"why did the agent fail\", \"what went wrong with that run\", or \"that run cost way too much\".",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/agent-postmortem",
+      "skillFile": "skills/agent-postmortem/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "brief-writer",
+      "displayName": "Brief Writer",
+      "description": "Write a one-page decision brief for a human decision-maker: the decision and deadline, situation, 2-4 options with costs, risks, and reversibility, a recommendation with reasoning, and what would change it. Use when the user asks \"write a decision brief\", \"help me pitch this decision\", \"options memo\", \"one-pager for a decision\", or needs to ask someone to decide.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/brief-writer",
+      "skillFile": "skills/brief-writer/SKILL.md",
+      "scripts": []
+    },
     {
       "name": "claude-pulse",
       "displayName": "Claude Pulse",
@@ -17,6 +37,46 @@
       ]
     },
     {
+      "name": "compare",
+      "displayName": "Compare",
+      "description": "Run a structured comparison of tools, models, vendors, or approaches: criteria confirmed first, evidence gathered per matrix cell, weighted recommendation with the runner-up's best counter-argument. Use when the user asks \"compare X and Y\", \"which should I use, X or Y\", \"X vs Y\", \"help me choose between\", or is thrashing on a which-tool decision.",
+      "category": "Research",
+      "version": "1.0.0",
+      "path": "skills/compare",
+      "skillFile": "skills/compare/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "daily-briefing",
+      "displayName": "Daily Briefing",
+      "description": "Build a one-screen, action-first morning brief from today's calendar, actionable unread email, and yesterday's loose ends across memory files, task lists, and MythologIQ git activity. Use when the user asks \"daily briefing\", \"morning brief\", \"what's on today\", \"start my day\", or wants a single view of what needs a decision today.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/daily-briefing",
+      "skillFile": "skills/daily-briefing/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "decision-log",
+      "displayName": "Decision Log",
+      "description": "Capture personal and business decisions as lightweight ADR entries — date, context, options considered, choice and why, revisit-by date — appended to a designated decisions log, and list decisions due for revisit. Use when the user says \"log this decision\", \"record that we decided\", \"add to the decision log\", \"what decisions are due for revisit\", or wants a paper trail for non-code choices.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/decision-log",
+      "skillFile": "skills/decision-log/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "deep-dive",
+      "displayName": "Deep Dive",
+      "description": "Build a multi-source research dossier on any topic: scope it, sweep sources in parallel angles, adversarially fact-check the load-bearing claims, and synthesize a cited report. Use when the user asks \"deep dive on X\", \"research X thoroughly\", \"give me a dossier on X\", \"what's the real story with X\", or wants a fact-checked, multi-source answer rather than a quick summary.",
+      "category": "Research",
+      "version": "1.0.0",
+      "path": "skills/deep-dive",
+      "skillFile": "skills/deep-dive/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "deepseek-pulse",
       "displayName": "DeepSeek Pulse",
       "description": "Scan the latest DeepSeek developments — new open weights, papers, API news, org repo activity, and r/LocalLLaMA reception — and synthesize a digest. Use when the user asks \"what's new with DeepSeek\", \"DeepSeek pulse\", \"new DeepSeek model\", or wants open-model awareness alongside the other vendor pulses.",
@@ -24,6 +84,16 @@
       "version": "1.0.0",
       "path": "skills/deepseek-pulse",
       "skillFile": "skills/deepseek-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "fact-check",
+      "displayName": "Fact Check",
+      "description": "Verify a claim by decomposing it into checkable sub-claims, sourcing each from primary evidence, and reporting a verdict with confidence and what would flip it. Use when the user asks \"fact-check this\", \"is it true that\", \"verify this claim\", \"did X really happen\", or forwards a statement whose accuracy matters before acting on it.",
+      "category": "Research",
+      "version": "1.0.0",
+      "path": "skills/fact-check",
+      "skillFile": "skills/fact-check/SKILL.md",
       "scripts": []
     },
     {
@@ -67,6 +137,16 @@
       "scripts": []
     },
     {
+      "name": "handoff-writer",
+      "displayName": "Handoff Writer",
+      "description": "Write continuation context for cross-session or cross-agent work: current state, decisions with rationale, open threads with exact next actions, and landmines, so a successor can act without re-deriving anything. Use when the user asks \"write a handoff\", \"prepare context for the next session\", \"summarize where we are for another agent\", or before a context switch.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/handoff-writer",
+      "skillFile": "skills/handoff-writer/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "hf-pulse",
       "displayName": "Hugging Face Pulse",
       "description": "Scan the Hugging Face ecosystem — trending models/datasets/spaces, daily papers, HF blog, and library releases (transformers, smolagents, hub) — and synthesize a digest. Use when the user asks \"huggingface pulse\", \"what's trending on Hugging Face\", \"HF papers this week\", \"new models on the hub\", or wants open-model ecosystem awareness across all vendors at once.",
@@ -74,6 +154,16 @@
       "version": "1.0.0",
       "path": "skills/hf-pulse",
       "skillFile": "skills/hf-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "inbox-triage",
+      "displayName": "Inbox Triage",
+      "description": "Classify the Gmail inbox into act / delegate / read-later / archive piles, draft (never send) replies for the act pile, and flag time-sensitive mail or messages from key contacts. Use when the user asks \"triage my inbox\", \"sort my email\", \"what needs a reply\", \"clear my inbox\", or wants drafted responses ready for review.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/inbox-triage",
+      "skillFile": "skills/inbox-triage/SKILL.md",
       "scripts": []
     },
     {
@@ -107,6 +197,16 @@
       "scripts": []
     },
     {
+      "name": "mcp-vetting",
+      "displayName": "MCP Vetting",
+      "description": "Security review of an MCP server before it is connected: provenance, tool surface, data flow, injection exposure, and version pinning, ending in a permission-tier verdict and a recommended registry entry. Use when the user asks \"vet this MCP server\", \"is this MCP safe to connect\", \"review this MCP before I add it\", or before any new server enters the config.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/mcp-vetting",
+      "skillFile": "skills/mcp-vetting/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "memory-pulse",
       "displayName": "Memory Pulse",
       "description": "Scan the agentic-memory and context-engineering ecosystem — memory frameworks (Letta, Mem0, Zep, cognee), new papers, new repos, and community discussion — and synthesize a digest. Use when the user asks \"memory pulse\", \"what's new in agent memory\", \"context engineering news\", \"agentic memory papers\", or wants ecosystem awareness feeding COREFORGE Vault and agent memory architecture decisions.",
@@ -134,6 +234,26 @@
       "version": "1.0.0",
       "path": "skills/openai-pulse",
       "skillFile": "skills/openai-pulse/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "paper-digest",
+      "displayName": "Paper Digest",
+      "description": "Read a research paper properly: extract the actual claim, plain-language method, evidence quality, admitted and unadmitted limitations, and a relevance verdict for the MythologIQ stack. Use when the user asks \"digest this paper\", \"read this arXiv link\", \"is this paper any good\", \"summarize this paper for us\", or drops a PDF, arXiv, or HF papers URL.",
+      "category": "Research",
+      "version": "1.0.0",
+      "path": "skills/paper-digest",
+      "skillFile": "skills/paper-digest/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "permissions-review",
+      "displayName": "Permissions Review",
+      "description": "Periodic audit of everything agents can touch — connected MCP servers and their tool surfaces, permission allowlists, hooks, and reachable credentials — producing a risk-ranked report with recommended tightenings. Use when the user asks \"review agent permissions\", \"what can my agents touch\", \"audit the allowlists\", or on the monthly security cadence.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/permissions-review",
+      "skillFile": "skills/permissions-review/SKILL.md",
       "scripts": []
     },
     {
@@ -169,6 +289,16 @@
       ]
     },
     {
+      "name": "skill-eval",
+      "displayName": "Skill Eval",
+      "description": "Before/after effectiveness testing of a candidate skill: run sample tasks with and without the skill loaded, score both arms, and produce registry evidence for an adopt/reject/quarantine decision. Use when the user asks \"evaluate this skill\", \"does this skill actually help\", \"run the eval plan for a candidate\", or when a registry entry needs proof before a status change.",
+      "category": "Meta",
+      "version": "1.0.0",
+      "path": "skills/skill-eval",
+      "skillFile": "skills/skill-eval/SKILL.md",
+      "scripts": []
+    },
+    {
       "name": "skill-sync",
       "displayName": "Skill Sync",
       "description": "Deploy this repository's portable skills to their consumers: junction into the Claude Code user skills directory, copy to any local path, or emit COREFORGE Synapse-style manifest.json bundles — dry-run by default with drift reporting. Use when the user asks \"sync the skills\", \"deploy skills to Claude Code\", \"install the skills locally\", \"generate COREFORGE manifests\", or after skill-audit passes on new or changed skills.",
@@ -191,6 +321,36 @@
       "scripts": [
         "skills/skills-pulse/scripts/scout.ts"
       ]
+    },
+    {
+      "name": "source-vetting",
+      "displayName": "Source Vetting",
+      "description": "Evaluate the trustworthiness of a repo, vendor, dataset, or skill before adoption: provenance, activity authenticity, license, security posture, and community standing, mapped to a registry verdict. Use when the user asks \"vet this repo\", \"can we trust this\", \"should we adopt X\", \"check this dependency before we use it\", or a pulse skill surfaces a candidate.",
+      "category": "Research",
+      "version": "1.0.0",
+      "path": "skills/source-vetting",
+      "skillFile": "skills/source-vetting/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "standup-writer",
+      "displayName": "Standup Writer",
+      "description": "Generate an evidence-backed standup or worklog entry in did / doing / blocked format from git commits across the MythologIQ repos, task-state changes, and calendar events since yesterday or the last standup. Use when the user asks \"write my standup\", \"what did I do yesterday\", \"generate a worklog\", \"standup notes\", or needs a status update grounded in real work.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/standup-writer",
+      "skillFile": "skills/standup-writer/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "week-in-review",
+      "displayName": "Week in Review",
+      "description": "Run a Friday retrospective from git history, task states, and the week's calendar: what shipped, what stalled and why, decisions made, and what carries into next week as Monday's starting list. Use when the user asks \"week in review\", \"weekly retro\", \"what shipped this week\", \"wrap up the week\", or wants a carry-forward list that feeds Monday's daily-briefing.",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/week-in-review",
+      "skillFile": "skills/week-in-review/SKILL.md",
+      "scripts": []
     },
     {
       "name": "xai-pulse",
