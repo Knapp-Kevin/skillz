@@ -320,7 +320,7 @@ candidates:
     category: [data, research]
     status: track
     permission_tier: read-only
-    rationale: Credible MIT quant-finance knowledge-extraction framework (NeurIPS'25 workshop paper, organic traction); no concrete consumption path in skillz yet — revisit if a quant research pipeline enters scope.
+    rationale: Credible MIT quant-finance knowledge-extraction framework (NeurIPS'25 workshop paper, organic traction). Operator ruling 2026-07-04 - quant pipelines are ENTIRELY out of scope for this repo; any governed-quant demo vertical belongs to the product layer (Qortara/bicameral), where this entry would transfer. Do not relitigate here.
 
   - id: unsloth
     name: Unsloth (fine-tuning and local training)
