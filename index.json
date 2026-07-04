@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T07:21:18.344Z",
+  "generated": "2026-07-04T07:34:00.076Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -191,7 +191,7 @@
       "displayName": "Handoff Writer",
       "description": "Write continuation context for cross-session or cross-agent work: current state, decisions with rationale, open threads with exact next actions, and landmines, so a successor can act without re-deriving anything. Use when the user asks \"write a handoff\", \"prepare context for the next session\", \"summarize where we are for another agent\", or before a context switch.",
       "category": "Meta",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/handoff-writer",
       "skillFile": "skills/handoff-writer/SKILL.md",
       "scripts": []

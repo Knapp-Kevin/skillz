@@ -11,8 +11,8 @@ metadata:
   category: Meta
   display-name: Handoff Writer
   emoji: "🤝"
-  version: 1.1.0
-  min-model-capability: sonnet
+  version: 1.1.1
+  min-model-capability: haiku
 ---
 
 # Handoff Writer
