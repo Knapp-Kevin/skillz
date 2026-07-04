@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T04:25:12.179Z",
+  "generated": "2026-07-04T05:07:00.764Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -440,6 +440,16 @@
       "version": "1.0.0",
       "path": "skills/standup-writer",
       "skillFile": "skills/standup-writer/SKILL.md",
+      "scripts": []
+    },
+    {
+      "name": "task-surface",
+      "displayName": "Task Surface",
+      "description": "Build and operate a personal task-coordination repository: a single command surface for responsibilities scattered across orgs, repos, PRs, reviews, and commitments. Scaffolds the repo and its governance document from elicited needs when none exists, then binds to that document to run intake, triage, daily views, weekly reviews, and convert-to-canonical flows. Use when the user asks \"set up a task repo\", \"track this\", \"what's on my plate\", \"what's waiting on me\", \"what am I blocking\", \"run my weekly review\", or \"turn this into a real issue\".",
+      "category": "Productivity",
+      "version": "1.0.0",
+      "path": "skills/task-surface",
+      "skillFile": "skills/task-surface/SKILL.md",
       "scripts": []
     },
     {

@@ -59,6 +59,15 @@ does and which part the model does — synthesis belongs to the model.>
   (read-only? requires approval before sending/mutating?).>
 ```
 
+## Adaptive frameworks, not bespoke tools — universal rule
+
+Root skills must remain **environment-agnostic adaptive frameworks**. Custom interactions live in a **governance flag/document** the skill discovers and binds to at runtime — never hardcoded in SKILL.md. Unwarranted specificity invalidates a skill the moment it meets a different environment.
+
+1. **Ship the adaptation function, not the values.** When behavior depends on local convention (formats, taxonomies, paths, org names, personal defaults), the Execution Flow's FIRST step is **Bind**: discover the governing document, in order — (a) the target repo's own convention/governance doc (README, AGENTS.md, or equivalent), (b) the operator profile / host memory, (c) elicit from the operator and offer to record the answers as a governance doc for next time.
+2. **The bound document is authoritative.** If it conflicts with anything remembered or assumed, the document wins; improving the workflow means editing that document, not the skill.
+3. **Forge when absent.** Skills whose whole domain is convention-shaped (task coordination, project structure, review cadences) should be able to *generate* the governance document from elicited needs — scaffold mode — then operate against what they scaffolded.
+4. **No operator specifics in skill bodies.** Org names, absolute paths, business names, and personal defaults in a SKILL.md are defects, not conveniences (see BACKLOG B18 for the de-specification sweep of early violations).
+
 ## Capability floor — design for the weakest model that will run this
 
 Skills are executed by whatever model the host provides. Do NOT write model-adaptive prose ("if you are a smaller model…") — models cannot reliably self-assess tier, and branching text bloats context for everyone. Instead, make the *structure* carry weak models while frontier models skim it:
@@ -79,4 +88,5 @@ Checklist before merging a new skill:
 - [ ] Script runs on both `bun` and `node` with no install step
 - [ ] Web-tool fallback documented for every scripted source
 - [ ] Mutating actions (send/push/delete) gated behind explicit approval
+- [ ] No hardcoded operator/org/environment specifics; a Bind step exists wherever behavior depends on local convention (§Adaptive frameworks)
 - [ ] Index regenerated: `node scripts/build-index.ts` (updates INDEX.md + index.json)
