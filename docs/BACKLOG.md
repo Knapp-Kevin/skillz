@@ -9,7 +9,6 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 | B13 | `min-model-capability` metadata rollout across high-judgment skills (B12 remainder — exemplars shipped for handoff-writer + brief-writer; metadata field + more exemplars pending) | meta | Per template §Capability floor rule 7 |
 | B14 | handoff-writer secrets-handling + anti-fabrication rules, then weak-tier re-eval; add "negative rules" guidance (rule 8) to template §Capability floor | agent-ops | From the 2026-07-04 haiku eval: treatment reproduced a leaked token (define-every-term induced) and fabricated a scenario fact (schema-slot pressure); baseline made neither error |
 | B15 | Gemini host target for skill-sync (TOML conversion) | meta | Deferred from B08; format conversion, not copy |
-| B16 | Forward OpenSpec's delta-spec artifact model to Qor-logic as design input (spec diffs per change vs full regeneration) | governance | From 2026-07-04 intake vetting; OpenSpec itself rejected as chain duplicate |
 | B17 | skill-eval on ponytail (sandbox): frontier + weak-model arms; check process-authority conflict with Qor-logic before any adoption | agent-ops | MIT SKILL.md-format content, copy path exists but must earn adoption; self-reported benchmarks unverified |
 
 ## Done
@@ -30,3 +29,4 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 | D12 (B10) | Upstream proposal authored | docs/proposals/qor-versioned-gate-artifacts.md |
 | D13 (B11) | Weak-model eval executed | docs/evals/2026-07-04-handoff-writer-haiku.md |
 | D14 (B12, core) | Gold-standard exemplars for handoff-writer + brief-writer | skills/*/references/examples.md |
+| D15 (B10+B16) | Eight enhancement issues filed on MythologIQ-Labs-LLC/Qor-logic (#237–#244): versioned gate artifacts, LF-canonical hashing, living-spec delta-fold (full OpenSpec capability gap analysis), status --json, onboard tutorial, provenance auto-detect, weak-tier negative-rules doctrine, canary/dist_compile hardening | 2026-07-04 |
