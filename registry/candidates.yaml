@@ -269,3 +269,73 @@ candidates:
     status: track
     permission_tier: generate
     rationale: Developer-marketing workflows (docs-as-marketing, HN, onboarding) fit future GTM for FailSafe/Qortara; review quality when needed.
+
+  # ── 2026-07-04 intake (operator-submitted batch; vetted per evaluation framework) ──
+  - id: build-your-own-x
+    name: build-your-own-x (CodeCrafters tutorial index)
+    source: https://github.com/codecrafters-io/build-your-own-x
+    category: [research]
+    status: track
+    permission_tier: read-only
+    covered_by: skills/learning-plan (named curriculum source)
+    rationale: Link index, not a skill; CC0 claimed in README but no LICENSE file; value is a verified-source pool for learning-plan curricula — each linked tutorial carries its own license.
+
+  - id: openspec
+    name: OpenSpec (Fission AI)
+    source: https://github.com/Fission-AI/OpenSpec
+    category: [sdlc]
+    status: rejected
+    permission_tier: generate
+    covered_by: Qor-logic /qor-plan + /qor-implement + /qor-validate (gated, with artifacts)
+    rationale: Well-built MIT SDD framework, but an ungated propose-to-apply chain duplicates the gated Qor-logic chain (same ground as superpowers-planning); delta-spec artifact model forwarded as Qor-logic design input (BACKLOG B16), not adopted here.
+
+  - id: warp-client
+    name: Warp client (open-source agentic terminal)
+    source: https://github.com/warpdotdev/warp
+    category: [ai-dev]
+    status: track
+    permission_tier: read-only
+    rationale: Platform peer, not a skill; AGPL-3.0 product code (never copy) with MIT warpui crates (reusable for COREFORGE if terminal-grade Rust UI is ever needed); watched via openai-pulse for agent-first OSS workflow signals.
+
+  - id: understand-anything
+    name: Understand Anything (codebase knowledge graph)
+    source: https://github.com/Egonex-AI/Understand-Anything
+    category: [ai-dev, research]
+    status: track
+    permission_tier: generate
+    covered_by: partially by Qor-logic /qor-onboard-codebase
+    rationale: MIT local-first codebase-graph plugin with an Ollama path (GG-CORE fit), but unknown org, anomalous star velocity (70k in 3.5 months), and curl-pipe-bash installer fail source trust; sandbox only from a pinned commit after security review.
+
+  - id: headroom
+    name: Headroom (context compression layer)
+    source: https://github.com/headroomlabs-ai/headroom
+    category: [ai-dev]
+    status: track
+    permission_tier: read-only
+    rationale: Real Apache-2.0 context-compression infra relevant to COREFORGE agent cost, but 6 months old, single-founder provenance, hype-inflated stars, and independently reported token-measurement/cache-busting flaws; watched via memory-pulse, revisit when measurement issues close.
+
+  - id: quant-mind
+    name: QuantMind (LLMQuant)
+    source: https://github.com/LLMQuant/quant-mind
+    category: [data, research]
+    status: track
+    permission_tier: read-only
+    rationale: Credible MIT quant-finance knowledge-extraction framework (NeurIPS'25 workshop paper, organic traction); no concrete consumption path in skillz yet — revisit if a quant research pipeline enters scope.
+
+  - id: unsloth
+    name: Unsloth (fine-tuning and local training)
+    source: https://github.com/unslothai/unsloth
+    category: [ai-dev]
+    status: track
+    permission_tier: read-only
+    covered_by: skills/inference-pulse (watchlist source)
+    rationale: Mature, officially collaborated Apache-2.0 training/finetuning framework strategic to GG-CORE; not a skill — tracked as an inference-pulse github source; Studio component is AGPL-3.0, never copy it.
+
+  - id: ponytail
+    name: ponytail (lazy-senior-dev YAGNI ruleset)
+    source: https://github.com/DietrichGebert/ponytail
+    category: [sdlc, meta]
+    status: sandbox
+    permission_tier: generate
+    covered_by: partially by /simplify + /code-review built-ins (review-time); Qor-logic owns gated refactor
+    rationale: MIT SKILL.md-format generation-time minimalism rules with a real copy path, but 3 weeks old, single maintainer, self-reported benchmarks, hype-velocity stars (73k) — skill-eval with weak-model arm required before adoption (BACKLOG B17); check for process-authority conflicts with Qor-logic.

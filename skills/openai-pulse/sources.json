@@ -1,6 +1,6 @@
 {
   "name": "OpenAI Pulse",
-  "github": ["openai/openai-python", "openai/openai-node", "openai/codex", "openai/openai-cookbook", "openai/openai-agents-python"],
+  "github": ["openai/openai-python", "openai/openai-node", "openai/codex", "openai/openai-cookbook", "openai/openai-agents-python", "warpdotdev/warp"],
   "subreddits": ["OpenAI"],
   "keywords": [],
   "pages": [

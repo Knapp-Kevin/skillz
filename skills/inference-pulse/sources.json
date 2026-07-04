@@ -3,14 +3,15 @@
   "github": [
     "ggml-org/llama.cpp",
     "ollama/ollama",
-    "vllm-project/vllm"
+    "vllm-project/vllm",
+    "unslothai/unsloth"
   ],
   "github_search": [
     { "label": "new inference-runtime repos", "q": "llm inference engine created:>{SINCE} stars:>50" },
     { "label": "new GGUF tooling", "q": "gguf created:>{SINCE} stars:>15" }
   ],
   "subreddits": ["LocalLLaMA"],
-  "keywords": ["llama.cpp", "ollama", "vllm", "gguf", "quantization"],
+  "keywords": ["llama.cpp", "ollama", "vllm", "gguf", "quantization", "unsloth", "fine-tuning"],
   "pages": [
     { "label": "llama.cpp releases", "url": "https://github.com/ggml-org/llama.cpp/releases" },
     { "label": "Ollama blog", "url": "https://ollama.com/blog" },

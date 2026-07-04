@@ -59,3 +59,4 @@ Produce a learning plan a real week can survive: a goal pinned to the operator's
 - Sources must be real and verified via web search; a plan citing an invented book is worse than no plan.
 - Checkpoints are demonstrable artifacts or from-memory explanations — never "finished reading".
 - Read-only: this skill produces the plan document. Creating the actual `/schedule` routine or sharing the plan happens only with explicit operator approval.
+- For build-from-scratch goals, draw candidate tutorials from codecrafters-io/build-your-own-x (curated, CC0-claimed link index) - still verify each linked source individually before inclusion.

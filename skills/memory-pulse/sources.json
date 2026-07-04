@@ -1,6 +1,6 @@
 {
   "name": "Memory Pulse (agentic memory & context engineering)",
-  "github": ["letta-ai/letta", "mem0ai/mem0", "getzep/zep", "topoteretes/cognee", "camel-ai/camel"],
+  "github": ["letta-ai/letta", "mem0ai/mem0", "getzep/zep", "topoteretes/cognee", "camel-ai/camel", "headroomlabs-ai/headroom"],
   "github_search": [
     { "label": "new agent-memory repos", "q": "agent memory llm created:>{SINCE} stars:>20" },
     { "label": "new context-engineering repos", "q": "context engineering created:>{SINCE} stars:>20" }
