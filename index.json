@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-04T07:15:16.876Z",
+  "generated": "2026-07-04T07:21:18.344Z",
   "repo": "skillz",
   "root": "https://github.com/Knapp-Kevin/skillz",
   "skills": [
@@ -416,7 +416,7 @@
       "displayName": "Skills Pulse",
       "description": "Scan the agent-skills ecosystem for new and updated skills across the official vendor repos (Anthropic, Vercel, Microsoft, Azure, AWS) and community marketplaces, then propose intake candidates for the registry. Use when the user asks \"skills pulse\", \"any new agent skills\", \"scan the skill watchlist\", \"update the skill registry\", or on a weekly intake schedule.",
       "category": "Meta",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "path": "skills/skills-pulse",
       "skillFile": "skills/skills-pulse/SKILL.md",
       "scripts": [

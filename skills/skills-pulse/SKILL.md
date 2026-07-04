@@ -12,7 +12,7 @@ metadata:
   category: Meta
   display-name: Skills Pulse
   emoji: "🧭"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Skills Pulse
@@ -45,7 +45,7 @@ Weekly intake scan of the agent-skills ecosystem. Finds what's new, filters it a
 3. **Filter for redundancy** — this is the step that keeps the repo from becoming counterproductive by excess. For each find, check in order (reject with a `covered_by` note if matched):
    1. `registry/candidates.yaml` — already decided?
    2. `INDEX.md` — already vendored or local?
-   3. Qor-logic (`../Qor-logic/qor/skills/`) — gated/SDLC territory?
+   3. The bound gated/SDLC registry, if the operator has one (discover its path from the operator profile or workspace layout; e.g. a sibling Qor-logic checkout) — lifecycle-governed territory?
    4. Claude Code built-ins (`/code-review`, `/security-review`, `/verify`)
    5. This repo's ROADMAP — planned first-party?
 
