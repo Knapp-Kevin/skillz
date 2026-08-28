@@ -13,11 +13,11 @@
       "name": "eligible-reuse",
       "mode": "first-visit",
       "user_evidence": {
-        "recurring_pattern": "The user repeatedly asks for pull-request reviews that separately check repository coding standards and whether the change implements the originating issue or specification.",
+        "recurring_pattern": "The user repeatedly asks for comprehensive pull-request reviews where several independent specialists inspect the same change for different classes of failure, including correctness, security, architecture, testing, reliability, compatibility, and documentation. Findings should be concrete, evidence-backed, deduplicated, and aggregated into one review.",
         "corrections": [
-          "Do not blend standards violations and spec misses into one severity list.",
-          "Cite evidence for findings.",
-          "Keep the two review axes independent."
+          "Keep specialist reviewers independent so they do not converge on the same perspective.",
+          "Do not keep vague findings that lack a concrete failure mode, user impact, security risk, or maintenance cost.",
+          "Default to a single review pass unless I explicitly ask you to fix and rerun reviewers until clean."
         ],
         "host": "agent host with repository read access and subagent capability",
         "installation": "portable-handoff"
@@ -30,14 +30,14 @@
       "expected_decision": "ADOPT_OR_ADAPT_IF_USER_FIT_REQUIRES_MINOR_HOST_CHANGES",
       "must_observe": [
         "candidate is eligible for trusted unchanged consideration only if its current fingerprint/status matches",
-        "agent evaluates actual workflow fit rather than selecting only because status is verified",
-        "agent preserves the user's separate standards/spec review requirement",
+        "agent evaluates actual workflow and host fit rather than selecting only because status is verified",
+        "agent preserves independent specialist review, evidence-backed findings, aggregation, and single-pass default behavior",
         "installation or handoff state is explicit"
       ],
       "must_not": [
         "select candidate solely because of source reputation",
         "claim behavioral validation that was not run",
-        "collapse the two requested review axes"
+        "replace the specialist fleet with one undifferentiated reviewer"
       ]
     },
     {
