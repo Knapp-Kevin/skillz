@@ -1,10 +1,10 @@
 #!/usr/bin/env bun
 /**
- * skill-sync — deploys this repo's portable skills to local consumers.
+ * skill-sync — deploys this repo's portable library skills to local consumers.
  *
  * Dry-run by default (prints planned actions); --apply executes (LD-3).
- * Skills with `repo-bound: true` in frontmatter metadata are never
- * deployed (LD-2) — their scripts depend on this repo's tree.
+ * Engine skills are structurally separate under engine/skills and are never
+ * part of the deployable library inventory.
  *
  * Targets (composable):
  *   --claude-user [--claude-user-root <path>]  junction per skill
@@ -13,21 +13,21 @@
  *   --coreforge <path>                         Synapse-style manifest.json + files
  *
  * Usage (Bun or Node 22.18+):
- *   node skills/skill-sync/scripts/sync.ts --dest C:\agents\skills
- *   node skills/skill-sync/scripts/sync.ts --apply --claude-user
+ *   node engine/skills/skill-sync/scripts/sync.ts --dest C:\agents\skills
+ *   node engine/skills/skill-sync/scripts/sync.ts --apply --claude-user
  */
 
 import { parseArgs } from "node:util";
 import {
-  readdirSync, readFileSync, existsSync, statSync, mkdirSync,
+  readdirSync, readFileSync, existsSync, mkdirSync,
   cpSync, rmSync, symlinkSync, realpathSync, writeFileSync,
 } from "node:fs";
 import { join, dirname, relative } from "node:path";
 import { homedir } from "node:os";
 import { fileURLToPath } from "node:url";
-import { parseFrontmatter } from "../../../scripts/lib/frontmatter.ts";
+import { parseFrontmatter } from "../../../../scripts/lib/frontmatter.ts";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 
 const { values } = parseArgs({
   options: {
@@ -42,7 +42,7 @@ const { values } = parseArgs({
 });
 
 if (values.help) {
-  console.log("skill-sync — deploy portable skills\n\nUsage: node sync.ts [--apply] [--claude-user] [--claude-user-root <path>] [--dest <path>] [--coreforge <path>] [--hosts <targetRepo>]");
+  console.log("skill-sync — deploy portable library skills\n\nUsage: node sync.ts [--apply] [--claude-user] [--claude-user-root <path>] [--dest <path>] [--coreforge <path>] [--hosts <targetRepo>]");
   process.exit(0);
 }
 
@@ -55,7 +55,9 @@ function discoverSkills(): Skill[] {
   for (const entry of readdirSync(join(ROOT, "skills"), { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
     const dir = join(ROOT, "skills", entry.name);
-    const fm = parseFrontmatter(readFileSync(join(dir, "SKILL.md"), "utf8")) ?? {};
+    const skillFile = join(dir, "SKILL.md");
+    if (!existsSync(skillFile)) continue;
+    const fm = parseFrontmatter(readFileSync(skillFile, "utf8")) ?? {};
     skills.push({
       name: entry.name, dir, fm,
       repoBound: fm.metadata?.["repo-bound"] === "true",
@@ -84,8 +86,6 @@ function copyDrift(src: string, dst: string): "create" | "update" | "up-to-date"
   return "up-to-date";
 }
 
-// ── Target: --dest (recursive copy) ──────────────────────────────────
-
 function syncDest(skill: Skill, destRoot: string): string {
   const dst = join(destRoot, skill.name);
   const action = copyDrift(skill.dir, dst);
@@ -94,8 +94,6 @@ function syncDest(skill: Skill, destRoot: string): string {
   }
   return action;
 }
-
-// ── Target: --claude-user (junction) ─────────────────────────────────
 
 function junctionDrift(link: string, target: string): "create" | "update" | "up-to-date" {
   if (!existsSync(link)) return "create";
@@ -116,8 +114,6 @@ function syncJunction(skill: Skill, root: string): string {
   }
   return action;
 }
-
-// ── Target: --coreforge (Synapse-style manifest + files) ─────────────
 
 function buildManifest(skill: Skill): string {
   const meta = skill.fm.metadata ?? {};
@@ -150,8 +146,6 @@ function syncCoreforge(skill: Skill, destRoot: string): string {
   return action;
 }
 
-// ── Target: --hosts (markdown host dirs of a target repo) ────────────
-
 const HOST_DIRS = [".claude", ".kilo", ".codex"];
 
 function syncHosts(skill: Skill, repoRoot: string): string {
@@ -168,8 +162,6 @@ function syncHosts(skill: Skill, repoRoot: string): string {
   return actions.map((a, i) => `${HOST_DIRS[i]}:${a}`).join(" ");
 }
 
-// ── Main ─────────────────────────────────────────────────────────────
-
 const targets: Array<{ label: string; fn: (s: Skill) => string }> = [];
 if (values["claude-user"]) targets.push({ label: `claude-user(${values["claude-user-root"]})`, fn: (s) => syncJunction(s, values["claude-user-root"]!) });
 if (values.dest) targets.push({ label: `dest(${values.dest})`, fn: (s) => syncDest(s, values.dest!) });
@@ -177,7 +169,7 @@ if (values.coreforge) targets.push({ label: `coreforge(${values.coreforge})`, fn
 if (values.hosts) targets.push({ label: `hosts(${values.hosts})`, fn: (s) => syncHosts(s, values.hosts!) });
 
 if (targets.length === 0) {
-  console.log("No targets given. Use --claude-user, --dest <path>, and/or --coreforge <path>.");
+  console.log("No targets given. Use --claude-user, --dest <path>, --coreforge <path>, and/or --hosts <path>.");
   process.exit(0);
 }
 
