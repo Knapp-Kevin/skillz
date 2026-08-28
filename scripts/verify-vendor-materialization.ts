@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
- * Verify that every source declared `inclusion: vendored` is materialized at
- * exactly the gitlink revision recorded by the superproject.
+ * Verify that the superproject is clean and every source declared
+ * `inclusion: vendored` is materialized at exactly the gitlink revision
+ * recorded by the superproject.
  *
  * This is intentionally stricter than checking whether vendor/<name> exists.
  * An uninitialized submodule directory can still sit inside the parent Git
- * worktree, and a dirty submodule can change catalog output without changing
- * its recorded gitlink.
+ * worktree, and dirty source content can change catalog output without
+ * changing its recorded gitlink.
  *
  * Usage:
  *   node scripts/verify-vendor-materialization.ts
@@ -29,7 +30,7 @@ const { values } = parseArgs({
 });
 
 if (values.help) {
-  console.log("verify-vendor-materialization — require every vendored source to be initialized, clean, and checked out at the superproject gitlink revision\n\nUsage: node scripts/verify-vendor-materialization.ts [--repo-root <path>]");
+  console.log("verify-vendor-materialization — require a clean superproject and every vendored source to be initialized, clean, and checked out at the superproject gitlink revision\n\nUsage: node scripts/verify-vendor-materialization.ts [--repo-root <path>]");
   process.exit(0);
 }
 
@@ -105,6 +106,21 @@ if (canonicalPath(rootTop.stdout) !== canonicalPath(ROOT)) {
   process.exit(1);
 }
 
+// The proof is tied to superproject HEAD. Ignore submodule state here because
+// each vendored source is checked more precisely below. Any other tracked or
+// untracked superproject change would make the named commit an incomplete
+// description of the state being evaluated.
+const rootStatus = git(["status", "--porcelain", "--untracked-files=all", "--ignore-submodules=all"]);
+if (rootStatus.status !== 0) {
+  console.error(`FAIL: cannot inspect superproject working tree${rootStatus.stderr ? ` (${rootStatus.stderr})` : ""}`);
+  process.exit(1);
+}
+if (rootStatus.stdout) {
+  console.error("FAIL: superproject is dirty; alpha proof must begin from the exact committed state before generated catalog files are refreshed");
+  console.error(rootStatus.stdout);
+  process.exit(1);
+}
+
 for (const source of parseVendoredSources()) {
   const rel = source.resolved_path;
   if (!rel) {
@@ -167,4 +183,4 @@ console.log(`\nvendor-materialization: ok=${passes.length} fail=${failures.lengt
 for (const failure of failures) console.error(`FAIL: ${failure}`);
 
 if (failures.length > 0) process.exit(1);
-console.log(`PASS: all ${passes.length} vendored sources are initialized, clean, and pinned exactly.`);
+console.log(`PASS: clean superproject; all ${passes.length} vendored sources are initialized, clean, and pinned exactly.`);
