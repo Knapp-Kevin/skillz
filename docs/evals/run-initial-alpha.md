@@ -11,15 +11,17 @@ Use a fully materialized checkout of the exact commit under evaluation.
 Before any journey run:
 
 1. initialize all pinned vendor submodules;
-2. run `node scripts/build-index.ts`;
-3. confirm `index.json` reports schema version 2;
+2. run `node scripts/verify-index-idempotency.ts`;
+3. record the reported schema-v2 exact counts and require the second generation pass to be byte-identical;
 4. run `node engine/skills/skill-audit/scripts/audit.ts`;
 5. run `node engine/skills/skill-audit/scripts/risk-audit.ts`;
-6. run the repository's local Node test suite, including selection and initial-implementation contract tests;
+6. run the repository's local Node test suite, including selection, initial-implementation, and journey-fixture contract tests;
 7. run `node engine/skills/source-vetting/scripts/verify-characterization-integrity.ts`;
 8. record the commit SHA, generated catalog counts, host/model identity, and materialization state.
 
-If one of these cannot run, record the limitation. Do not convert a missing check into a pass.
+`verify-index-idempotency.ts` is allowed to refresh stale checked-in generated output on its first pass. Its second pass must leave both `INDEX.md` and `index.json` byte-identical. A failure is a catalog blocker, not a warning.
+
+If one of these checks cannot run, record the limitation. Do not convert a missing check into a pass.
 
 ## Isolation
 
