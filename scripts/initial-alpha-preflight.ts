@@ -14,6 +14,11 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  console.log("initial-alpha-preflight — run catalog determinism, audits, repository tests, and characterization-integrity checks before journey evaluation\n\nUsage: node scripts/initial-alpha-preflight.ts");
+  process.exit(0);
+}
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 interface Step {
