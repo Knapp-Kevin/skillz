@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: code-review
+display_name: Code Review
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/code-review/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 5c89081d4bbeb3d039a42093653f90bb698d780e
+upstream_last_updated_at: 2026-08-19T13:01:26Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/code-review/SKILL.md
+permission_tier: read-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: relies on repository standards/spec evidence and docs/agents/issue-tracker.md conventions supplied by the intact source
+import_eligibility: already-vendored
+rationale: Strong two-axis review model keeps standards conformance separate from spec fidelity, reducing the chance that one kind of success masks failure on the other axis.
