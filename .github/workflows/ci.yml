@@ -1,9 +1,10 @@
 name: CI
 
+# Automatic GitHub Actions are intentionally disabled while the repository's
+# Actions budget is unavailable. Run this workflow manually only when budget
+# and validation intent are explicitly available.
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
