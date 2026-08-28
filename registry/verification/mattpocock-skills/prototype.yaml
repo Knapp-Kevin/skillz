@@ -8,7 +8,7 @@ content_blob_sha: a0044501fe0d385b4d8575b610188ede9b236ccf
 characterized_at: 2026-08-28
 last_verified_at: 2026-08-28
 verification_status: trusted-baseline
-verification_basis: matt-pocock-trusted-baseline-policy-plus-integrity-review
+verification_basis: source-quality-policy-plus-integrity-review
 validation_status: not-run
 tags:
   use_case: [prototyping, ux, implementation, evaluation]
@@ -16,4 +16,4 @@ tags:
   characteristic: [hypothesis-driven, iterative, visual-verification, evidence-first]
   authority: [mutating]
   portability: [medium]
-notes: Quality accepted by Matt Pocock trusted-baseline policy. Characterization captures question-first throwaway prototyping, state visibility, and explicit separation from production code. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
+notes: Characterization captures question-first throwaway prototyping, state visibility, and explicit separation from production code. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
