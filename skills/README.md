@@ -4,36 +4,32 @@ This directory contains the locally maintained and directly imported portion of 
 
 ## Counting rule
 
-**Every user-facing skill directory under `skills/` counts as library inventory, but `skills/` is not the entire library.**
+**Every user-facing skill directory under `skills/` counts, but `skills/` is not the entire library.**
 
-The complete usable library also includes approved, indexed third-party skill references from the source corpus under [`vendor/`](../vendor/). Those reference skills have always been part of the repository's searchable/comparable skill inventory and continue to count as available library skills.
+The complete usable library also includes approved indexed third-party skill references from pinned source corpora under [`vendor/`](../vendor/). Repository machinery under [`engine/skills/`](../engine/skills/) is the exception and does not count.
 
-Repository machinery is the exception. Bootstrap, authoring, evaluation, auditing, synchronization, ecosystem scanning, and source-vetting procedures live under [`engine/skills/`](../engine/skills/) and do **not** count toward the library total.
-
-So when someone asks, "How many skills does this repository have?", report the indexed user-facing library corpus, not merely the number of directories directly under `skills/`.
+When someone asks how many skills the repository has, report the indexed user-facing corpus, not merely the number of directories here.
 
 ## What belongs here
 
-A skill belongs in this directory when it is locally maintained or intentionally imported as an independently installable or reusable capability for an AI agent or user workflow.
+A capability belongs here when it makes sense for a user to install or use independently of maintaining `skillz`, even if the repository also happens to use it internally.
 
-Examples include research, writing, debugging, planning, monitoring, review, operations, domain workflows, and other capabilities that remain useful even if the `skillz` repository itself did not exist.
+Third-party skills directly imported here must preserve applicable licensing and provenance under [`../registry/skills/`](../registry/skills/).
 
-A skill can still be used internally by `skillz` and remain here. The deciding question is not "does skillz use it?" The deciding question is:
+## Availability is not verification
 
-> Would this capability make sense for a user to install independently of maintaining `skillz`?
+Pinned vendor sources are part of the larger library corpus, but their individual skills do not inherit quality merely from repository inclusion.
 
-If yes, it belongs in the user-facing library rather than the engine.
+The useful distinctions are:
 
-## Third-party skills
+- **local/imported**: maintained directly under `skills/`;
+- **indexed reference**: available through approved sources under `vendor/`;
+- **characterized**: has source provenance plus controlled tags/fingerprint;
+- **trusted-baseline**: Matt Pocock quality policy applies to the exact characterized skill;
+- **verified**: structured skill-quality rubric passed;
+- **validated**: representative behavioral evidence also passed;
+- **unverified**: available/design evidence, not trusted unchanged by default;
+- **stale**: prior characterization no longer matches the current skill content;
+- **engine**: repository machinery under `engine/skills/`, excluded from library counts.
 
-Third-party skills directly imported into this directory must preserve applicable upstream licensing and have provenance recorded under [`registry/skills/`](../registry/skills/).
-
-Pinned repositories under [`vendor/`](../vendor/) provide the larger reference library. Their indexed skills count as available reference skills, while individual curation and validation status are tracked separately. Presence in an approved source does not mean every skill is individually endorsed.
-
-The useful distinction is therefore:
-
-- **local/imported library skills**: maintained directly under `skills/`;
-- **indexed reference skills**: available through approved source corpora under `vendor/`;
-- **curated skills**: individually reviewed and documented;
-- **validated skills**: curated skills with additional behavioral evidence;
-- **engine skills**: repository machinery under `engine/skills/`, excluded from library counts.
+See [`../docs/skill-verification.md`](../docs/skill-verification.md) and [`../registry/verification/README.md`](../registry/verification/README.md).

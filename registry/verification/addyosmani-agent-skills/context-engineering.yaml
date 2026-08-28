@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: context-engineering
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: vendor/addyosmani-agent-skills/skills/context-engineering/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: be991103fe2b13f7e5f6f5da9d3c6029ad30ac64
+characterized_at: 2026-08-28
+last_verified_at: not-run
+verification_status: unverified
+verification_basis: pending-structured-review
+validation_status: not-run
+tags:
+  use_case: [context-management]
+  lifecycle: [planning]
+  characteristic: [context-efficient, evidence-first]
+  authority: [read-only]
+  portability: [high]
+notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.

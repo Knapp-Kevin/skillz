@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: browser-testing-with-devtools
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: vendor/addyosmani-agent-skills/skills/browser-testing-with-devtools/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9864d2724e273e1164d62ab10b73590ae00fd6a8
+characterized_at: 2026-08-28
+last_verified_at: not-run
+verification_status: unverified
+verification_basis: pending-structured-review
+validation_status: not-run
+tags:
+  use_case: [browser-testing]
+  lifecycle: [verification]
+  characteristic: [tool-assisted, visual-verification, evidence-first]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Characterized for selection research only. Browser/tool authority and security guidance must be checked during verification.

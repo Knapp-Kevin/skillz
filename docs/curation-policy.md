@@ -2,113 +2,67 @@
 
 `skillz` is a library, not a dump.
 
-The library is intended to grow to hundreds of useful skills, but a larger count is not itself evidence of quality. Curation exists to preserve source identity, freshness, licensing, dependencies, safety context, and the reason a skill earned a place.
+A large corpus is useful only when source identity, licensing, freshness, quality state, dependencies, and intended use can be distinguished. Curation therefore separates **availability**, **provenance**, **characterization**, **verification**, and **behavioral validation**.
 
-## Two things can be true
+## Five separate questions
 
-A skill may be valuable enough to curate without being copied into this repository yet.
+1. **Available/indexed:** Can the library find and use this skill or source?
+2. **Provenance:** Where did it come from, under what license, and what exact upstream version was inspected?
+3. **Characterized:** What is it for, what assumptions/authority does it carry, and which controlled tags describe it?
+4. **Verified/trusted:** Has this exact version earned eligibility for trusted unchanged selection?
+5. **Validated:** Do representative behavioral cases show that it improves outcomes?
 
-A curated skill can therefore be:
+Do not collapse these states into a single word like "curated."
 
-- **vendored**: present inside an intact pinned upstream repository under `vendor/`,
-- **imported**: copied into this repository with required upstream notices and any necessary local adaptation,
-- **external**: reviewed and indexed as useful, but still read from its upstream source because bringing it in incompletely would be misleading or broken.
+## Source defaults
 
-Curation status and physical availability are separate facts.
+Source identity does not establish individual skill quality.
 
-## Companion record
+- Matt Pocock skills are the sole current `trusted-baseline` exception by explicit repository policy.
+- Every other skill-bearing source defaults to `unverified`, including official vendor repositories.
+- Normative specifications may be `not-applicable` because they are references rather than normal installable skills.
 
-Every curated third-party skill must have a companion YAML record under `registry/skills/<source-id>/<skill-name>.yaml`.
+Matt skills still require fingerprints and characterization to participate as well-described selection candidates. A changed fingerprint invalidates prior characterization until refreshed.
 
-The record is the auditable answer to questions future maintainers should not have to rediscover:
+## Provenance companion
 
-- Where did this skill come from?
-- What exact upstream path contains it?
-- Who maintains the source?
-- What license applies?
-- What source revision was inspected?
-- What commit most recently changed this skill?
-- When did that skill-specific change occur?
-- When did we curate and last check it?
-- Is the skill actually present here, or only tracked externally?
-- Does it depend on shared files, scripts, tools, or host capabilities?
-- What permission/risk tier does using it imply?
-- Why did it earn a place?
-- Has it been behaviorally evaluated here, or merely source-reviewed?
+Every individually characterized third-party skill must have a provenance record under:
 
-## Freshness semantics
+```text
+registry/skills/<source-id>/<skill-name>.yaml
+```
 
-`upstream_last_updated_at` means the timestamp of the most recent upstream commit that changed the skill or its canonical skill file.
+It records source repository/path/class, license, relationship, source snapshot, skill-specific upstream revision/date, curation/check dates, availability, local path when applicable, permission tier, portability, dependencies, import eligibility, and rationale.
 
-It does **not** mean:
+`upstream_last_updated_at` is the timestamp of the most recent upstream commit that changed the canonical skill file or material skill content. Repository activity is a separate signal.
 
-- the repository's last push,
-- the repository's latest release,
-- the date the source was added here,
-- the date somebody happened to look at it.
+## Verification companion
 
-Repository activity is recorded separately as `source_last_pushed_at` when useful.
+Every characterized third-party skill must also have a record under:
 
-A skill is not rejected merely for age. Stable skills can remain valuable for years. Age is a review signal, not a quality score.
+```text
+registry/verification/<source-id>/<skill-name>.yaml
+```
 
-## Required fields
+This record binds quality status and tags to the exact canonical `SKILL.md` Git blob SHA.
 
-Every companion record must include:
+If the hash changes, the assessment is operationally stale until review is refreshed. See [`skill-verification.md`](skill-verification.md).
 
-- `schema_version`
-- `skill_name`
-- `display_name`
-- `source_id`
-- `source_repository`
-- `source_path`
-- `source_class`
-- `license`
-- `relationship`
-- `source_snapshot_revision`
-- `upstream_revision`
-- `upstream_last_updated_at`
-- `curated_at`
-- `last_checked_at`
-- `availability`
-- `permission_tier`
-- `portability`
-- `review_status`
-- `dependency_status`
-- `dependencies`
-- `import_eligibility`
-- `rationale`
+## Physical availability
 
-`local_path` is required for `vendored` and `imported` records and must be omitted for `external` records.
+A skill may be:
 
-## Curation dispositions
+- `vendored`: present inside an intact pinned upstream repository under `vendor/`;
+- `imported`: copied into this repository with required upstream obligations preserved;
+- `external`: individually tracked upstream because bringing it in incompletely would be misleading or broken.
 
-- **curated**: high enough signal to make available to library users and bootstrap comparison.
-- **sandbox**: promising but requires behavioral or security evaluation before normal use.
-- **track**: worth monitoring, not yet promoted into the curated library.
-- **quarantined**: potentially useful but carries unresolved authority, security, licensing, or provenance risk.
-- **retired**: previously curated, no longer recommended for new use. Provenance history remains.
+Do not copy a standalone `SKILL.md` when it relies on shared references, scripts, templates, assets, hooks, or other files that are not also present.
 
-## Import rule
+## Licensing
 
-Do not copy a standalone `SKILL.md` when it relies on shared upstream references, scripts, templates, assets, hooks, or other files that are not also present.
+The root MIT license applies only to first-party `skillz` material.
 
-A partial copy that looks installable but breaks when followed is worse than an honest external reference.
-
-When a source is best consumed as a coherent collection, prefer a pinned submodule or another intact-source mechanism over cherry-picking individual files.
-
-## License rule
-
-The root MIT license applies to first-party `skillz` content only.
-
-Third-party skills retain their upstream license obligations. Companion records must identify the upstream license. Copied or materially adapted work must preserve notices required by that license and follow `docs/third-party-provenance.md`.
-
-## Review rule
-
-Curation answers, "Is this worth making available?"
-
-Behavioral evaluation answers, "Does this improve outcomes in our representative cases?"
-
-Those are separate. A source-reviewed skill may be curated before full local behavioral evaluation, but `review_status` must say so plainly.
+Third-party material retains upstream obligations. Preserve required copyright, attribution, NOTICE, and license terms. Record copied/adapted relationships using [`third-party-provenance.md`](third-party-provenance.md). When terms are unclear, keep the material reference-only.
 
 ## Update rule
 
@@ -116,25 +70,20 @@ Upstream changes are evidence, not automatic upgrades.
 
 On refresh:
 
-1. inspect the skill-specific upstream delta,
-2. update `upstream_revision` and `upstream_last_updated_at`,
-3. update `source_snapshot_revision` when the source pin changes,
-4. re-check license and dependencies,
-5. re-run security/behavioral review when behavior changed materially,
-6. update `last_checked_at`,
-7. preserve prior provenance through git history.
+1. inspect the skill-specific upstream delta;
+2. update source pin and provenance revision/date when appropriate;
+3. recompute the canonical skill fingerprint;
+4. if the fingerprint changed, treat old tags/status/evidence as stale;
+5. re-check dependencies, license, scope, authority, and portability;
+6. re-run structured verification for material changes;
+7. re-run behavioral validation when prior evidence may no longer apply;
+8. update tags if behavior or use changes;
+9. preserve prior history through git.
 
 ## Selection rule
 
-Prefer skills that add one or more of:
+Direct trusted reuse prefers `trusted-baseline`, `verified`, or `validated` skills whose characterization matches the user's need.
 
-- durable workflow discipline,
-- strong failure handling,
-- security or authority boundaries,
-- clear trigger/non-trigger behavior,
-- useful technical expertise,
-- measurable verification,
-- cross-host portability,
-- a capability not already covered well by the library.
+`unverified` material can inform design and may be verified on demand, but should not be silently installed as trusted unchanged material. `stale`, `rejected`, and `retired` material is excluded from default selection.
 
-Do not curate merely because a repository is popular. Stars are discovery evidence, not competence certificates.
+Popularity and official branding are discovery/provenance signals, not competence certificates.

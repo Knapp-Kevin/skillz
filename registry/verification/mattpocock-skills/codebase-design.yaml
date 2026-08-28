@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: codebase-design
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/codebase-design/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3f63c8146dd2604b419c929e9876b90c30d410e9
+characterized_at: 2026-08-28
+last_verified_at: 2026-08-28
+verification_status: trusted-baseline
+verification_basis: matt-pocock-trusted-baseline-policy-plus-integrity-review
+validation_status: not-run
+tags:
+  use_case: [architecture]
+  lifecycle: [planning, design]
+  characteristic: [modularity, maintainability, decomposition]
+  authority: [generate-only]
+  portability: [high]
+notes: Quality accepted by Matt Pocock trusted-baseline policy; individually fingerprinted and characterized. No local behavioral validation claimed.

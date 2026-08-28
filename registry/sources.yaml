@@ -1,83 +1,175 @@
 # Skill source registry
 #
-# This file classifies repositories that are allowed to participate in
-# comparative skill discovery. Inclusion is not blanket trust.
-# Individual skills still require the evaluation/permission rules in
-# docs/evaluation-framework.md and, when curated, a companion record under
-# registry/skills/.
-#
-# `build-index.ts` consumes vendored entries for generated source indexing.
+# Source identity/trust and individual skill quality are intentionally separate.
+# `class` says who/what the source is. `source_role` says how skillz uses it.
+# `verification_default` says how an individual skill enters the quality lifecycle.
+# Only Matt Pocock skills may default to trusted-baseline. Every other skill-bearing
+# source enters as unverified until an individual verification record says otherwise.
 
-version: 1
+version: 2
 
 sources:
   - id: anthropic-skills
     name: Anthropic Skills
     source: https://github.com/anthropics/skills
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/anthropic-skills
     inclusion: vendored
-    rationale: First-party Anthropic skill implementations and authoring/tooling references.
+    license: MIXED
+    rationale: First-party Anthropic skill implementations and authoring/tooling references. Per-skill terms must be checked because the repository contains mixed licensing.
 
   - id: anthropic-knowledge-work-plugins
     name: Anthropic Knowledge Work Plugins
     source: https://github.com/anthropics/knowledge-work-plugins
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/knowledge-work-plugins
     inclusion: vendored
+    license: Apache-2.0
     rationale: First-party Anthropic knowledge-work plugin marketplace and skills.
 
   - id: vercel-agent-skills
     name: Vercel Agent Skills
     source: https://github.com/vercel-labs/agent-skills
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/vercel-agent-skills
     inclusion: vendored
-    rationale: First-party Vercel web/frontend engineering skill references.
+    license: MIT
+    rationale: First-party Vercel web and frontend engineering skill references.
 
   - id: microsoft-skills
     name: Microsoft Skills
     source: https://github.com/microsoft/skills
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/microsoft-skills
     inclusion: vendored
+    license: MIT
     rationale: First-party Microsoft ecosystem skill references.
 
   - id: microsoft-azure-skills
     name: Microsoft Azure Skills
     source: https://github.com/microsoft/azure-skills
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/azure-skills
     inclusion: vendored
+    license: MIT
     rationale: First-party Azure planning, deployment, diagnostics, and cloud skill references.
 
   - id: aws-agent-toolkit
     name: AWS Agent Toolkit
     source: https://github.com/aws/agent-toolkit-for-aws
     class: official
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/aws-agent-toolkit
     inclusion: vendored
+    license: Apache-2.0
     rationale: First-party AWS service and agent-development skill references.
 
   - id: mattpocock-skills
     name: Matt Pocock Skills
     source: https://github.com/mattpocock/skills
     class: community-vetted
+    source_role: vendored-corpus
+    verification_default: trusted-baseline
     resolved_path: vendor/mattpocock-skills
     inclusion: vendored
     license: MIT
     upstream_copyright: Copyright (c) 2026 Matt Pocock
     pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
     index_exclude_dirs: deprecated,in-progress
-    rationale: High-value engineering and productivity skill patterns used for direct library use, comparison, adaptation, supplementation, composition, and benchmarking; not treated as platform authority.
+    rationale: Trusted-quality baseline by repository policy. Individual skills still require integrity fingerprints and characterization tags before they are treated as characterized selection candidates.
 
   - id: addyosmani-agent-skills
     name: Addy Osmani Agent Skills
     source: https://github.com/addyosmani/agent-skills
     class: community-vetted
+    source_role: vendored-corpus
+    verification_default: unverified
     resolved_path: vendor/addyosmani-agent-skills
     inclusion: vendored
     license: MIT
     upstream_copyright: Copyright (c) 2025 Addy Osmani
     pinned_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
-    rationale: Active production-grade engineering skill collection with strong coverage of context, API design, debugging, testing, review, observability, incremental implementation, and spec-driven development. Vendored intact so shared references and validation assets remain coherent; individual curation is still recorded per skill.
+    rationale: Active engineering skill collection retained intact for comparison and curation. Individual skills remain unverified until they pass the skillz verification rubric.
+
+  - id: openhands-extensions
+    name: OpenHands Extensions
+    source: https://github.com/OpenHands/extensions
+    class: official-ecosystem
+    source_role: vendored-corpus
+    verification_default: unverified
+    resolved_path: vendor/openhands-extensions
+    inclusion: vendored
+    license: MIT
+    pinned_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037b
+    rationale: Active OpenHands public extension registry. The repository identity is useful provenance, but individual extensions and skills are not quality-trusted by default.
+
+  - id: cline-skills
+    name: Cline Skills
+    source: https://github.com/cline/skills
+    class: official
+    source_role: vendored-corpus
+    verification_default: unverified
+    resolved_path: vendor/cline-skills
+    inclusion: vendored
+    license: Apache-2.0
+    pinned_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+    rationale: Cline's first-party skill collection, useful for reviewer orchestration, skill authoring, search, frontend, and specialized workflow patterns. Individual skills require verification.
+
+  - id: cloudflare-skills
+    name: Cloudflare Skills
+    source: https://github.com/cloudflare/skills
+    class: official
+    source_role: vendored-corpus
+    verification_default: unverified
+    resolved_path: vendor/cloudflare-skills
+    inclusion: vendored
+    license: Apache-2.0
+    pinned_revision: f96bff754e428838818017f75817f0f9428acd48
+    rationale: First-party Cloudflare skill set with retrieval-oriented platform guidance. Individual skills require verification and platform-specific characterization.
+
+  - id: google-agents-cli
+    name: Google Agents CLI
+    source: https://github.com/google/agents-cli
+    class: official
+    source_role: vendored-corpus
+    verification_default: unverified
+    resolved_path: vendor/google-agents-cli
+    inclusion: vendored
+    license: Apache-2.0
+    pinned_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+    rationale: First-party Google agent-development, evaluation, observability, and deployment skills. Individual skills require verification and explicit host/tool dependency characterization.
+
+  - id: agentskills-spec
+    name: Agent Skills Specification
+    source: https://github.com/agentskills/agentskills
+    class: standard-authority
+    source_role: normative-spec
+    verification_default: not-applicable
+    resolved_path: external/agentskills-spec
+    inclusion: tracked
+    license: Apache-2.0
+    pinned_revision: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+    rationale: Normative format and portability reference. It informs validation and authoring rules but is not counted as a normal installable skill corpus.
+
+  - id: github-awesome-copilot
+    name: GitHub Awesome Copilot
+    source: https://github.com/github/awesome-copilot
+    class: community-aggregated
+    source_role: dynamic-discovery
+    verification_default: unverified
+    resolved_path: external/github-awesome-copilot
+    inclusion: tracked
+    license: MIT
+    pinned_revision: f11a4e441c5ff061b4f8ae37952be8c602e4034e
+    rationale: Large, fast-moving community-contributed discovery surface. Tracked for candidate discovery rather than vendored wholesale; every discovered skill is unverified until individually reviewed.

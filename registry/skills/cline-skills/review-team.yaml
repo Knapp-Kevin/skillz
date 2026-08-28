@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: review-team
+display_name: Review Team
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/review-team/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 08473edb6a3f41dd0b495b69303cf3d0cd9c670d
+upstream_last_updated_at: 2026-05-17T05:22:26Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/cline-skills/skills/review-team/SKILL.md
+permission_tier: mutate-on-explicit-iterate
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: reviewer prompt set under skills/review-team/reviewers plus host subagent capability
+import_eligibility: already-vendored
+rationale: Strong independent specialist-review orchestration with evidence-based aggregation, explicit single versus iterative authority, bounded reruns, and an intact reviewer dependency set.

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: incremental-implementation
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: vendor/addyosmani-agent-skills/skills/incremental-implementation/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6df12f9a878c80305c42bcdbe8a43a10d2e0c933
+characterized_at: 2026-08-28
+last_verified_at: not-run
+verification_status: unverified
+verification_basis: pending-structured-review
+validation_status: not-run
+tags:
+  use_case: [implementation]
+  lifecycle: [implementation]
+  characteristic: [incremental, test-gated, behavior-preserving]
+  authority: [mutating]
+  portability: [high]
+notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
