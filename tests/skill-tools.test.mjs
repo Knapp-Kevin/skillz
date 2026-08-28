@@ -1,7 +1,4 @@
-// Behavior tests for skill-audit and skill-sync scripts.
-// Plan: docs/plan-qor-phase1-meta-skill-audit-sync.md (gate 412faf5c…).
-// Each test invokes the script as a child process and asserts on exit code
-// plus output or filesystem state — no presence-only assertions.
+// Behavior tests for engine skill-audit and skill-sync scripts.
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -12,9 +9,9 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const AUDIT = join(ROOT, "skills", "skill-audit", "scripts", "audit.ts");
-const SYNC = join(ROOT, "skills", "skill-sync", "scripts", "sync.ts");
-const RISK = join(ROOT, "skills", "skill-audit", "scripts", "risk-audit.ts");
+const AUDIT = join(ROOT, "engine", "skills", "skill-audit", "scripts", "audit.ts");
+const SYNC = join(ROOT, "engine", "skills", "skill-sync", "scripts", "sync.ts");
+const RISK = join(ROOT, "engine", "skills", "skill-audit", "scripts", "risk-audit.ts");
 
 function run(script, args) {
   const res = spawnSync(process.execPath, [script, ...args], {
@@ -34,17 +31,17 @@ test("audit-fails-on-bad-skill", () => {
   assert.match(out, /wrong-name/, "finding must name the mismatched frontmatter name");
 });
 
-test("audit-passes-on-repo", () => {
+test("audit-passes-on-library", () => {
   const { code, out } = run(AUDIT, []);
-  assert.equal(code, 0, `repo self-audit must pass\n${out}`);
+  assert.equal(code, 0, `library self-audit must pass\n${out}`);
 });
 
-test("audit-reports-skill-count", () => {
+test("audit-reports-library-skill-count only", () => {
   const { code, out } = run(AUDIT, []);
   assert.equal(code, 0, out);
-  const m = out.match(/skill-audit: (\d+) skill\(s\)/);
-  assert.ok(m, `summary must report validated-skill count\n${out}`);
-  assert.ok(parseInt(m[1], 10) >= 46, `expected >= 46 skills, got ${m[1]}`);
+  const m = out.match(/skill-audit: (\d+) library skill\(s\)/);
+  assert.ok(m, `summary must report library-skill count\n${out}`);
+  assert.equal(parseInt(m[1], 10), 42, `expected 42 library skills after moving 7 engine skills, got ${m[1]}`);
 });
 
 test("audit-fails-on-bad-sources", () => {
@@ -73,22 +70,22 @@ test("risk-audit-warns-on-portable-specificity", () => {
   assert.match(out, /WARN: portable-specific[^\n]*operator\/org term "GG-CORE"/, "warn must name the org term");
 });
 
-test("risk-audit-passes-on-repo", () => {
+test("risk-audit-passes-on-library", () => {
   const { code, out } = run(RISK, []);
-  assert.equal(code, 0, `first-party skills must be risk-clean\n${out}`);
+  assert.equal(code, 0, `library skills must be risk-clean\n${out}`);
+  assert.match(out, /risk-audit: 42 library skill\(s\)/);
 });
 
-test("sync-hosts-writes-three-host-dirs", () => {
+test("sync-hosts-writes-library skills and never engine skills", () => {
   const root = tmp("hosts");
   try {
     const { code, out } = run(SYNC, ["--apply", "--hosts", root]);
     assert.equal(code, 0, out);
     for (const h of [".claude", ".kilo", ".codex"]) {
-      assert.ok(
-        existsSync(join(root, h, "skills", "claude-pulse", "SKILL.md")),
-        `${h}/skills copy missing`,
-      );
-      assert.ok(!existsSync(join(root, h, "skills", "skill-audit")), `repo-bound skill leaked into ${h}`);
+      assert.ok(existsSync(join(root, h, "skills", "claude-pulse", "SKILL.md")), `${h}/skills library copy missing`);
+      assert.ok(!existsSync(join(root, h, "skills", "skill-audit")), `engine skill leaked into ${h}`);
+      assert.ok(!existsSync(join(root, h, "skills", "skill-bootstrap")), `engine skill leaked into ${h}`);
+      assert.ok(!existsSync(join(root, h, "skills", "skills-pulse")), `engine skill leaked into ${h}`);
     }
   } finally {
     rmSync(root, { recursive: true, force: true });
@@ -101,14 +98,16 @@ test("audit-rejects-bad-registry-status", () => {
   assert.match(out, /yolo/, "finding must name the invalid status value");
 });
 
-test("sync-dry-run-mutates-nothing", () => {
+test("sync-dry-run-mutates-nothing and only discovers library", () => {
   const dest = tmp("dry");
   try {
     const { code, out } = run(SYNC, ["--dest", dest]);
     assert.equal(code, 0, out);
     assert.equal(readdirSync(dest).length, 0, "dry-run must not write to dest");
-    assert.match(out, /claude-pulse: create/, "dry-run must plan a create per portable skill");
-    assert.match(out, /skills-pulse: create/);
+    assert.match(out, /claude-pulse: create/, "dry-run must plan a create per portable library skill");
+    assert.doesNotMatch(out, /skills-pulse:/, "engine skills must not appear in library sync planning");
+    assert.doesNotMatch(out, /skill-audit:/, "engine skills must not appear in library sync planning");
+    assert.doesNotMatch(out, /skill-sync:/, "engine skills must not appear in library sync planning");
   } finally {
     rmSync(dest, { recursive: true, force: true });
   }
@@ -130,20 +129,6 @@ test("sync-apply-copies-and-reports-drift", () => {
   }
 });
 
-test("sync-excludes-repo-bound", () => {
-  const dest = tmp("bound");
-  try {
-    const { code, out } = run(SYNC, ["--apply", "--dest", dest]);
-    assert.equal(code, 0, out);
-    assert.match(out, /skill-audit: skip:repo-bound/);
-    assert.match(out, /skill-sync: skip:repo-bound/);
-    assert.ok(!existsSync(join(dest, "skill-audit")), "repo-bound skill must not deploy");
-    assert.ok(!existsSync(join(dest, "skill-sync")), "repo-bound skill must not deploy");
-  } finally {
-    rmSync(dest, { recursive: true, force: true });
-  }
-});
-
 test("sync-junction-under-temp-root", () => {
   const root = tmp("junction");
   try {
@@ -154,10 +139,10 @@ test("sync-junction-under-temp-root", () => {
     assert.equal(
       realpathSync(link),
       realpathSync(join(ROOT, "skills", "claude-pulse")),
-      "junction must resolve to the skill directory",
+      "junction must resolve to the library skill directory",
     );
-    assert.ok(!existsSync(join(root, "skill-audit")), "no repo-bound entries under temp root");
-    assert.ok(!existsSync(join(root, "skill-sync")), "no repo-bound entries under temp root");
+    assert.ok(!existsSync(join(root, "skill-audit")), "engine skill must not be deployed");
+    assert.ok(!existsSync(join(root, "skills-pulse")), "engine skill must not be deployed");
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
