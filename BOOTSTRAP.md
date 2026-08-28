@@ -12,7 +12,7 @@ You can start with one simple request.
 
 Give your AI this repository and tell it:
 
-> Read `BOOTSTRAP.md` and help me figure out which skills would make you better at helping me. Look at the work, history, memory, files, tools, and instructions you can actually access. Find things I do again and again. Find skills in this repository that already help with those things. Improve or combine them when that makes sense. Create a new skill only when something useful is truly missing. Do not guess about information you cannot see.
+> Read `BOOTSTRAP.md` and help me figure out which skills would make you better at helping me. Look at the work, history, memory, files, tools, and instructions you can actually access. Find things I do again and again. Find skills in this repository that already help with those things. Improve or combine them when that makes sense. Create a new skill only when something useful is truly missing. Do not guess about information you cannot see. When the skills are ready, either install them for me if you can do that safely, or give me simple step-by-step instructions for installing them in the AI system I am using.
 
 That is the whole starting process.
 
@@ -139,6 +139,51 @@ It should not send messages, change permissions, delete things, install software
 
 Those actions still need the permission required by the system you are using.
 
+Installing a skill is also a change. If your AI can install the skill itself, it should tell you what it is going to do and follow the permissions of the system you are using.
+
+## How do I install the skills when they are ready?
+
+You should not have to figure that out by yourself.
+
+The bootstrap must look at the AI system you are using and finish the job in the easiest safe way it can.
+
+There are three common cases:
+
+### 1. Your AI can install the skill for you
+
+Some local AI tools can write skill files into the correct folder themselves.
+
+If the AI has permission to do that, it can install the skill and then check that it works.
+
+You should see a clear result such as:
+
+**Installed and tested. You do not need to do anything else.**
+
+### 2. You need to upload the skill yourself
+
+Some web apps make you click a few buttons and upload the skill.
+
+In that case, your AI should prepare the correct file for you and give you very simple instructions.
+
+For example:
+
+1. Open the AI app.
+2. Open its Skills page.
+3. Click the button to add or upload a skill.
+4. Choose the file your AI created for you.
+5. Turn the skill on if the app asks you to.
+6. Try the test sentence your AI gives you.
+
+The real instructions should use the exact buttons and file names for the AI system you are actually using.
+
+### 3. Your AI system cannot install skills
+
+Then the bootstrap should tell you that clearly.
+
+It should keep your skill in a portable form so you can use it later with a compatible system. If there is a safe temporary way to get similar behavior, such as project instructions, the AI can explain that separately.
+
+It must not pretend that a workaround is the same as installing a real skill.
+
 ## What do I get at the end?
 
 The bootstrap should give you:
@@ -155,7 +200,17 @@ The bootstrap should give you:
 4. **A validation plan**
    A way to test whether the new or improved skills actually make the AI better.
 
-The important part is that the result can live outside one AI's private memory.
+5. **An installation result**
+   Either the skills are installed and tested, or you get the exact files and simple steps needed to install them yourself.
+
+You should always be able to tell:
+
+- what is already done
+- what file you need, if any
+- what you need to do next
+- how you know the skill is working
+
+The important part is that the result can live outside one AI's private memory **and you know how to actually use it**.
 
 ## For advanced users and agents
 
@@ -163,6 +218,7 @@ The simple explanation ends here. The machinery underneath it is documented in:
 
 - [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md) — the full bootstrap procedure
 - [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md) — the portable profile format
+- [`docs/installation-handoff.md`](docs/installation-handoff.md) — how installation, upload, and verification must be handed off
 - [`docs/third-party-provenance.md`](docs/third-party-provenance.md) — rules for credit and source tracking
 - [`INDEX.md`](INDEX.md) — the full skill catalog
 - [`index.json`](index.json) — the machine-readable catalog
