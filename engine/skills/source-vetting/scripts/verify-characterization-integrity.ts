@@ -6,6 +6,12 @@ import { spawnSync } from "node:child_process";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 const VERIFY_ROOT = join(ROOT, "registry", "verification");
+const requireAvailable = process.argv.includes("--require-available");
+
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  console.log("verify-characterization-integrity — compare characterized skill files to their recorded Git blob fingerprints\n\nUsage: node verify-characterization-integrity.ts [--require-available]\n\n--require-available  Treat a characterized skill whose local_path is not materialized as a failure. Intended for alpha/release preflight after vendor materialization has been verified.");
+  process.exit(0);
+}
 
 function yamlFiles(dir) {
   if (!existsSync(dir)) return [];
@@ -43,7 +49,8 @@ for (const recordPath of yamlFiles(VERIFY_ROOT)) {
 
   const absolute = join(ROOT, localPath);
   if (!existsSync(absolute)) {
-    console.log(`UNAVAILABLE ${skillName}: ${localPath} is not materialized (submodule may be uninitialized)`);
+    const level = requireAvailable ? "FAIL / UNAVAILABLE" : "UNAVAILABLE";
+    console.log(`${level} ${skillName}: ${localPath} is not materialized${requireAvailable ? "" : " (submodule may be uninitialized)"}`);
     unavailable++;
     continue;
   }
@@ -70,5 +77,5 @@ for (const recordPath of yamlFiles(VERIFY_ROOT)) {
   ok++;
 }
 
-console.log(`\ncharacterization-integrity: ok=${ok} unavailable=${unavailable} stale=${stale} malformed=${malformed}`);
-process.exitCode = stale > 0 || malformed > 0 ? 1 : 0;
+console.log(`\ncharacterization-integrity: ok=${ok} unavailable=${unavailable} stale=${stale} malformed=${malformed} requireAvailable=${requireAvailable}`);
+process.exitCode = stale > 0 || malformed > 0 || (requireAvailable && unavailable > 0) ? 1 : 0;
