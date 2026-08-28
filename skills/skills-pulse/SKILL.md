@@ -79,7 +79,7 @@ Fetch the watchlist repositories' releases/commits pages directly and do the mar
 
 ## Output Format
 
-```
+````markdown
 # Skills Pulse — [Date Range]
 
 ## Watchlist activity
@@ -101,7 +101,7 @@ Proposed registry entry:
 
 ## Filtered out (redundant)
 - [name] — covered by [existing capability]
-```
+````
 
 ## Notes
 
