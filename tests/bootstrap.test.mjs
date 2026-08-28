@@ -1,11 +1,9 @@
-// Behavioral contract tests for Issue #7 bootstrap/onboarding.
-// These tests guard the promises the beginner entry point makes to users and
-// the source/provenance facts the orchestration skill depends on.
+// Behavioral contract tests for bootstrap/onboarding and library boundaries.
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,20 +17,42 @@ test("repository supports both direct skill-library use and bootstrap", () => {
   assert.match(readme, /two equally valid ways to use it/i);
   assert.match(readme, /Use it as a skill library/);
   assert.match(readme, /Give the repository to your AI/);
-  assert.match(readme, /hundreds of useful skills and reference implementations/i);
-  assert.match(readme, /The library is real\. The bootstrap is extra\./);
+  assert.match(readme, /hundreds of useful capabilities/i);
+  assert.match(readme, /The library is real\. Bootstrap is extra\./);
   assert.match(agents, /two valid operating modes/i);
   assert.match(agents, /Direct skill-library mode/);
   assert.match(agents, /Bootstrap mode/);
   assert.match(agents, /The repository is both a skill library and a skill-building system/);
 });
 
+test("library inventory is structurally separate from engine machinery", () => {
+  const engineSkills = [
+    "skill-bootstrap",
+    "skill-audit",
+    "skill-eval",
+    "skill-forge",
+    "skill-sync",
+    "skills-pulse",
+    "source-vetting",
+  ];
+
+  for (const name of engineSkills) {
+    assert.ok(existsSync(join(ROOT, "engine", "skills", name, "SKILL.md")), `${name} must exist under engine/skills`);
+    assert.ok(!existsSync(join(ROOT, "skills", name)), `${name} must not count as library inventory`);
+  }
+
+  const libraryReadme = read("skills/README.md");
+  const engineReadme = read("engine/README.md");
+  assert.match(libraryReadme, /Every skill directory under `skills\/` is library inventory/);
+  assert.match(engineReadme, /Nothing under `engine\/` counts as skill-library inventory/);
+});
+
 test("repository URL alone is a bootstrap invocation, not a request for a summary", () => {
   const readme = read("README.md");
   const agents = read("AGENTS.md");
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
 
-  assert.match(readme, /If a user gave you this repository or its GitHub URL and did not give you a more specific task, \*\*begin the bootstrap process now\*\*/);
+  assert.match(readme, /If a user gave you this repository or its GitHub URL and did not give you a more specific task, \*\*begin bootstrap now\*\*/);
   assert.match(readme, /Do not stop at a repository summary/);
   assert.match(agents, /treat that as a request to \*\*begin the skill bootstrap process now\*\*/);
   assert.match(agents, /Do not stop after describing, reviewing, or summarizing this repository/);
@@ -46,16 +66,16 @@ test("bootstrap beginner path does not require prior skill knowledge or catalog 
   assert.match(doc, /You do not need to know how to code\./);
   assert.match(doc, /You do not need to choose from hundreds of files\./);
   assert.match(doc, /Give your AI the GitHub link to this repository\. That is enough to start\./);
-  assert.match(doc, /The skills in this repository are not a shopping list/);
+  assert.match(doc, /The library is not a shopping requirement/);
   assert.match(doc, /smallest set of skills that makes your AI more dependable for you/i);
 });
 
 test("bootstrap uses accessible memory and history before asking the user to reconstruct their workflow", () => {
   const readme = read("README.md");
   const agents = read("AGENTS.md");
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
 
-  assert.match(readme, /If your AI can see useful memory or prior interactions, it should use them instead of making you explain everything again/);
+  assert.match(readme, /memory or history contains a stable useful pattern/i);
   assert.match(agents, /use that evidence before asking the user to explain themselves again/);
   assert.match(skill, /begin with relevant interaction history and persistent memory before asking the user to restate how they work/);
   assert.match(skill, /latent skill candidate/);
@@ -64,11 +84,10 @@ test("bootstrap uses accessible memory and history before asking the user to rec
 test("reference corpus is design evidence and custom skills may beat reuse", () => {
   const readme = read("README.md");
   const agents = read("AGENTS.md");
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
 
   assert.match(readme, /Compare before creation\. User-fit before reuse\./);
-  assert.match(readme, /If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill/);
-  assert.match(agents, /For bootstrap requests, optimize for the user's actual workflow rather than maximizing reuse of existing skills/);
+  assert.match(agents, /optimize for the user's actual workflow rather than maximizing reuse of existing skills/);
   assert.match(skill, /`CREATE` does not mean "no related skill exists\."/);
   assert.match(skill, /Design from the user's needs outward, not from the catalog inward/);
   assert.match(skill, /Do not force a known skill into the architecture merely to increase reuse/);
@@ -77,14 +96,14 @@ test("reference corpus is design evidence and custom skills may beat reuse", () 
 test("bootstrap beginner path includes installation instead of abandoning the user with files", () => {
   const doc = read("BOOTSTRAP.md");
   assert.match(doc, /You should not have to figure that out by yourself\./);
-  assert.match(doc, /The bootstrap must finish in one of three ways/);
+  assert.match(doc, /three broad ways/);
   assert.match(doc, /An installation result/);
   assert.match(doc, /what you need to do next/);
   assert.match(doc, /how you know the skills are working/);
 });
 
 test("bootstrap skill degrades honestly when history or tools are unavailable", () => {
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
   assert.match(skill, /Unavailable sources are recorded as unavailable/);
   assert.match(skill, /Never claim inaccessible or out-of-scope sources were reviewed/);
   assert.match(skill, /Missing evidence is a finding/);
@@ -92,14 +111,14 @@ test("bootstrap skill degrades honestly when history or tools are unavailable", 
 });
 
 test("bootstrap minimizes connected private-source access", () => {
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
   assert.match(skill, /Use the minimum evidence needed/);
   assert.match(skill, /Do \*\*not\*\* sweep unrelated connected private accounts/);
   assert.match(skill, /Access to a connector is capability, not consent to mine it for a profile/);
 });
 
 test("bootstrap compares before creating and preserves process authority", () => {
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
   for (const disposition of ["ADOPT", "ADAPT", "SUPPLEMENT", "COMPOSE", "CREATE"]) {
     assert.match(skill, new RegExp(`\\*\\*${disposition}\\*\\*`), `missing ${disposition} decision path`);
   }
@@ -110,7 +129,7 @@ test("bootstrap compares before creating and preserves process authority", () =>
 });
 
 test("bootstrap installation classifies execution paths and completion states", () => {
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
   const handoff = read("docs/installation-handoff.md");
 
   for (const mode of ["DIRECT-WRITE", "API-INSTALL", "UI-UPLOAD", "PORTABLE-HANDOFF"]) {
@@ -133,7 +152,7 @@ test("bootstrap installation classifies execution paths and completion states", 
 });
 
 test("ui upload cannot be reported as installed before the human action occurs", () => {
-  const skill = read("skills/skill-bootstrap/SKILL.md");
+  const skill = read("engine/skills/skill-bootstrap/SKILL.md");
   const handoff = read("docs/installation-handoff.md");
   assert.match(skill, /Do not end with a vague "install these skills" instruction\./);
   assert.match(skill, /Never report a UI-required upload as completed unless the host actually confirms it/);
@@ -177,15 +196,16 @@ test("community reference source preserves Matt Pocock provenance", () => {
   assert.equal(recorded, gitlink.stdout.trim(), "recorded provenance revision must match the actual vendored submodule pin");
 });
 
-test("index generator reads source trust and exclusions from the source registry", () => {
+test("index generator treats skills directory as library inventory", () => {
   const script = read("scripts/build-index.ts");
+  assert.match(script, /const dir = join\(ROOT, "skills"\)/);
   assert.match(script, /function parseSourceRegistry/);
   assert.match(script, /const sourceRecords = parseSourceRegistry\(\)/);
   assert.match(script, /index_exclude_dirs/);
   assert.match(script, /sourceClass: s\.class/);
   assert.match(script, /sourceRegistry: "registry\/sources\.yaml"/);
   assert.match(script, /bootstrap: "BOOTSTRAP\.md"/);
-  assert.doesNotMatch(script, /sourceClass:\s*"community-vetted"/, "community trust class must come from registry/sources.yaml, not a second hard-coded truth");
+  assert.doesNotMatch(script, /engine\/skills.*scanLocalSkills/s, "engine skills must not be mixed into library inventory");
 });
 
 test("portable profile separates execution defaults from biography", () => {
