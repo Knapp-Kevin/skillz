@@ -20,7 +20,7 @@ Maps user-touchable and governance-critical features to their implementation and
 | FX07 | Human browse-by-purpose categories | `skills/categories/`, `registry/categories.yaml` | **STATIC PASS** |
 | FX08 | Recursive local skill discovery | `scripts/lib/skill-discovery.ts` | **STATIC PASS**: shared by index, audit, risk-audit, sync |
 | FX09 | Schema-v2 catalog generation | `scripts/build-index.ts` | **IMPLEMENTED / RUNTIME PENDING**: materialized generation + exact counts required |
-| FX10 | Two-pass catalog idempotency proof | `scripts/verify-index-idempotency.ts` | **IMPLEMENTED / RUNTIME PENDING** |
+| FX10 | Semantic catalog coherence + two-pass idempotency proof | `scripts/verify-index-idempotency.ts`, `scripts/lib/catalog-invariants.mjs` | **STATIC PASS / RUNTIME PENDING ON CURRENT FULL CORPUS**: unit tests cover count/source/shape invariants; materialized second-pass proof still required |
 | FX11 | Source identity, role, exact pin, and license registry | `registry/sources.yaml` | **STATIC PASS / POLICY** |
 | FX12 | Per-skill third-party provenance and attribution | `registry/skills/`, `docs/third-party-provenance.md`, `THIRD_PARTY_NOTICES.md` | **STATIC PASS / POLICY** |
 | FX13 | Exact-version verification and characterization state | `registry/verification/`, `scripts/lib/verification-registry.ts` | **STATIC PASS** |

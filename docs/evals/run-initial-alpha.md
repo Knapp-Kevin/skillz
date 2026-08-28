@@ -21,7 +21,7 @@ node scripts/initial-alpha-preflight.ts
 That command runs, in order:
 
 1. vendored-source materialization proof: every `inclusion: vendored` registry source must be a `160000` gitlink, initialized as its own Git worktree, checked out at exactly the SHA pinned by the superproject, and clean including untracked files;
-2. catalog regeneration and second-pass byte-identical idempotency proof;
+2. catalog regeneration, schema-v2 semantic-invariant checks, and second-pass byte-identical idempotency proof;
 3. library structural audit;
 4. library risk audit;
 5. all repository contract tests;
@@ -30,6 +30,8 @@ That command runs, in order:
 It must end with `READY FOR JOURNEY EVALUATION`.
 
 The materialization step is load-bearing. A deterministic catalog generated from missing, mismatched, or locally modified submodules is not valid alpha evidence.
+
+The catalog proof is also semantic, not merely syntactic. It rejects malformed or impossible count fields, local/source coverage mismatches, duplicate vendored source identities, any vendored source that contributes zero indexed skills, and aggregate counts that do not recompute from the generated entries.
 
 The preflight is allowed to refresh stale checked-in `INDEX.md` / `index.json` on the first generator pass. The second pass must be byte-identical. Record the exact schema-v2 counts printed by the catalog proof.
 
