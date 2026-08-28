@@ -11,12 +11,11 @@ This review assumes the design is wrong until the evidence says otherwise.
 
 **NEEDS REVISION before governed promotion.**
 
-The architecture is directionally sound and preserves the repo's reuse-over-creation doctrine, but two material risks remain:
+The core architecture is sound enough to proceed through validation. The initial evidence-scope/privacy defect found during this review has been corrected in `skill-bootstrap` v0.2.0: ambient working context is eligible, while unrelated connected private accounts require a clear scope basis and are otherwise reported as available but not inspected.
 
-1. evidence-scope/privacy rules need to distinguish ambient working context from connected private accounts,
-2. public/general-user distribution is not yet solved because the repository is currently private and has no root license.
+Remaining promotion blockers are generated-index freshness, behavioral evaluation, source-metadata drift resolution/deferment, and the repository's governed substantiation cycle.
 
-Generated-index freshness and behavioral evaluation are also incomplete, so the branch is correctly still a draft.
+Public/general-user distribution has two additional unresolved product decisions: the repository is currently private and has no root first-party license.
 
 ## Findings
 
@@ -28,11 +27,11 @@ Generated-index freshness and behavioral evaluation are also incomplete, so the 
 | Missing evidence | PASS | Unavailable history/memory/tools are recorded as unavailable and cannot be reconstructed from assumption. | Verify novice/no-history eval. |
 | Authority boundaries | PASS | Discovery is read-only by default; proposal is not authorization; external skills do not become authoritative by presence. | Verify unsafe-mutation eval. |
 | Sensitive profile data | PASS | Portable profile is execution-method focused and explicitly excludes biography, secrets, health, ideology, and unrelated personal facts. | Keep. |
-| Evidence scope/privacy | NEEDS REVISION | "Available" connected sources could be interpreted too broadly. A host with Gmail, Slack, calendar, or other private connectors should not sweep unrelated private content merely to infer skills. | Add an explicit source-minimization rule: ambient current conversation/memory/workspace/config is eligible by default; private external accounts require user inclusion, project scope, or another clear authority basis. |
+| Evidence scope/privacy | PASS after revision | v0.2.0 adds source minimization, distinguishes ambient context from private external connectors, and requires explicit/project/authorized scope before inspecting email, private chat, calendar, finance, or similar connected systems. | Verify E4 behaviorally. |
 | Cross-host portability | PASS with validation gap | Profile separates generic execution defaults from optional host bindings and forbids claiming parity just because a file loaded. | Run cross-host handoff eval on at least two materially different hosts. |
 | Community-source authority | PASS | `mattpocock/skills` is classified `community-vetted`, not official; bootstrap uses it as comparative/adaptation evidence. | Keep. |
 | Third-party attribution | PASS for current vendoring | Matt Pocock's repository remains intact as an MIT submodule; source registry records license, author notice, and pin; adaptation policy requires provenance. | Add audit coverage if local adapted skills begin shipping. |
-| Provenance drift | NEEDS REVISION, partially mitigated | `.gitmodules`, `registry/sources.yaml`, and build-index constants duplicate source facts. The test now verifies the recorded Matt pin matches the actual gitlink, but source class/path can still drift across files. | Prefer making `registry/sources.yaml` the future single source of truth for index source metadata, or add a deterministic audit cross-check. |
+| Provenance drift | NEEDS REVISION, partially mitigated | `.gitmodules`, `registry/sources.yaml`, and build-index constants duplicate source facts. The test verifies the recorded Matt pin matches the actual gitlink, but source class/path can still drift across files. | Prefer making `registry/sources.yaml` the future single source of truth for index source metadata, or add a deterministic audit cross-check. |
 | Deprecated/in-progress references | PASS | Index generator excludes Matt's `deprecated` and `in-progress` skill areas from the active comparison catalog while preserving the repository intact. | Verify generated index after submodule checkout. |
 | Beginner comprehension | PASS, provisional | README and BOOTSTRAP explain the outcome without requiring skill jargon and provide one copyable starting instruction. | Run a novice comprehension test with no repo context beyond README/BOOTSTRAP. |
 | Beginner execution burden | PASS with host caveat | User does not need to navigate INDEX or choose skills manually. | Host still needs repository/file access; document per-host access paths later. |
@@ -114,12 +113,11 @@ Expected:
 
 The following must be cleared before PR #8 is eligible to leave draft:
 
-1. add the evidence-scope/privacy rule,
-2. regenerate INDEX.md/index.json and prove idempotency,
-3. pass behavior tests + skill audit + risk audit,
-4. execute the behavioral eval matrix or an equivalent governed subset with explicit evidence,
-5. resolve or explicitly defer source-registry single-source-of-truth drift,
-6. complete required S.H.I.E.L.D. governance/substantiation.
+1. regenerate INDEX.md/index.json and prove idempotency,
+2. pass behavior tests + skill audit + risk audit,
+3. execute the behavioral eval matrix or an equivalent governed subset with explicit evidence,
+4. resolve or explicitly defer source-registry single-source-of-truth drift,
+5. complete required S.H.I.E.L.D. governance/substantiation.
 
 Public release has two additional blockers that do not necessarily block an internal merge:
 
