@@ -10,6 +10,8 @@
 
 You do not need to understand how agent skills work. You do not need to read hundreds of files. You can hand this repository to an AI and let it do the comparison work for you.
 
+> **AI agent?** Jump directly to [If you are an AI agent reading this](#if-you-are-an-ai-agent-reading-this). For the operating contract, read [`AGENTS.md`](AGENTS.md). For first-visit and returning-user workflows, read [`BOOTSTRAP.md`](BOOTSTRAP.md).
+
 ## Start here
 
 ### First visit: build your skill set
