@@ -25,10 +25,11 @@ The bootstrap process helps your AI:
 3. find skills in this repository that already help with those things,
 4. improve or combine existing skills when that is better than starting over,
 5. create a new skill only when something useful is truly missing,
-6. test whether those skills actually make the AI more dependable, and
-7. save the important working rules in a portable form that can help another compatible AI later.
+6. test whether those skills actually make the AI more dependable,
+7. save the important working rules in a portable form that can help another compatible AI later, and
+8. **install the skills when it safely can, or give you the exact file and simple steps needed to install them yourself.**
 
-In plain language: **instead of teaching every AI the same lessons over and over, turn the useful lessons into reusable skills.**
+In plain language: **instead of teaching every AI the same lessons over and over, turn the useful lessons into reusable skills, then make sure you can actually use them.**
 
 > **Beginner path:** [BOOTSTRAP.md](BOOTSTRAP.md)
 >
@@ -38,9 +39,9 @@ In plain language: **instead of teaching every AI the same lessons over and over
 
 ## What is in this repository?
 
-The repository contains first-party skills plus a curated reference library from official and selected community sources. It also contains the tools for discovering, comparing, testing, creating, auditing, and moving those skills between supported agent hosts.
+The repository contains first-party skills plus a curated reference library from official and selected community sources. It also contains the tools for discovering, comparing, testing, creating, auditing, installing, and moving those skills between supported agent hosts.
 
-The goal is not to collect the most skills. The goal is to help an agent find the **smallest useful set** for the person or system it is helping.
+The goal is not to collect the most skills. The goal is to help an agent find the **smallest useful set** for the person or system it is helping and leave that person with a working installation path.
 
 Reference skills do not automatically become trusted or authoritative. Agents compare them against the target workflow and may adopt, adapt, supplement, compose, benchmark, or reject them.
 
@@ -53,10 +54,10 @@ Third-party work keeps its attribution and license information. See [docs/third-
 Give your agent this instruction:
 
 ```
-Read BOOTSTRAP.md and help me figure out which skills would make you better at helping me.
+Read BOOTSTRAP.md and help me figure out which skills would make you better at helping me. When they are ready, either install them if you can safely do that, or give me the exact files and simple steps I need to install them in the AI system I am using.
 ```
 
-The full orchestration procedure lives in [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md).
+The full orchestration procedure lives in [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md). Installation and upload handoff rules live in [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
 ### Claude Code: use a known skill directly
 
@@ -75,7 +76,9 @@ node skills/skill-sync/scripts/sync.ts --claude-user --apply
 
 ### Any other agent
 
-Point it at the relevant `SKILL.md` and instruct it to follow the skill's execution flow. Skills are plain Markdown plus optional zero-install scripts using Bun or Node 22.18+. No framework is required.
+If the host supports installable skills, the bootstrap should identify its current installation method and either perform it with the required authority or produce the host-specific upload package and instructions. If the host does not support skills, preserve the portable source and describe any adapter separately instead of pretending it is installed.
+
+Skills are plain Markdown plus optional zero-install scripts using Bun or Node 22.18+. No framework is required for the canonical source.
 
 ### Clone with the vendored references
 
@@ -95,7 +98,7 @@ git clone --recurse-submodules <url>
 | **Daily-ops** (5) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` (forge + operate a cross-org task-coordination repo, bound to its own governance doc), draft-only for anything that sends or writes | daily / weekly |
 | **Comms & life** (8) | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | on demand / monthly |
 | **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester`, `gh`/git-evidence based, read-only punch lists | weekly / on demand |
-| **Meta** (6) | `skill-bootstrap` (personal skill discovery/onboarding), `skills-pulse` (ecosystem intake + source freshness), `skill-audit` (two-layer self-validation), `skill-sync` (deployment), `skill-forge` (scaffolding), `agent-home-doctor` (agent CLI home audit/cleanup) | onboarding / weekly / pre-commit / as-needed |
+| **Meta** (6) | `skill-bootstrap` (personal skill discovery/onboarding + installation handoff), `skills-pulse` (ecosystem intake + source freshness), `skill-audit` (two-layer self-validation), `skill-sync` (deployment), `skill-forge` (scaffolding), `agent-home-doctor` (agent CLI home audit/cleanup) | onboarding / weekly / pre-commit / as-needed |
 
 ## Skill index
 
@@ -134,7 +137,8 @@ scripts/
 tests/                       # behavior tests
 .github/workflows/ci.yml     # CI: tests + audit + risk audit + index freshness
 docs/
-  portable-skill-profile.md  # cross-host user execution profile
+  portable-skill-profile.md  # cross-host user execution + installation profile
+  installation-handoff.md    # direct install / upload / verification contract
   third-party-provenance.md  # attribution + adaptation rules
   skill-template.md          # local authoring scaffold
   evaluation-framework.md    # adoption/evaluation framework
@@ -155,7 +159,7 @@ The repo covers local, cloud, and cross-host agent work without becoming a junk 
 1. **Centralize intentionally.** Official sources are preferred for vendor/platform capabilities. Selected community repositories may also be vendored when they add strong comparative or supplemental value and licensing/provenance permit it. Source class is explicit in `registry/sources.yaml`.
 2. **Every third-party skill is still a decision.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine decisions with permission tiers and rationale. Being present in `vendor/` makes a skill available for comparison; it does not automatically authorize use.
 3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist, filters finds against the registry/index/gated registry/built-ins, reports upstream drift, and proposes candidates. It never installs anything.
-4. **The repo maintains itself.** The audit layers plus [`skill-sync`](skills/skill-sync/SKILL.md) keep validation and distribution mechanical.
+4. **The repo maintains itself.** The audit layers plus [`skill-sync`](skills/skill-sync/SKILL.md) keep validation and local distribution mechanical; the installation handoff contract covers hosts that require APIs or human UI upload.
 
 ## Authoring a skill
 
@@ -218,4 +222,4 @@ Rules of the lane:
 
 ## Status
 
-The repository now includes the bootstrap/onboarding architecture on the Issue #7 feature branch in addition to the previously shipped skill series. Validation, generated-index refresh, behavioral bootstrap evals, and governed substantiation remain required before this work may be merged to main.
+The repository now includes the bootstrap/onboarding architecture on the Issue #7 feature branch in addition to the previously shipped skill series. Validation, generated-index refresh, behavioral bootstrap evals including direct-write and UI-upload installation cases, and governed substantiation remain required before this work may be merged to main.
