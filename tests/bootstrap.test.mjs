@@ -23,9 +23,17 @@ test("bootstrap beginner path does not require prior skill knowledge", () => {
 test("bootstrap skill degrades honestly when history or tools are unavailable", () => {
   const skill = read("skills/skill-bootstrap/SKILL.md");
   assert.match(skill, /Unavailable sources are recorded as unavailable/);
-  assert.match(skill, /Never claim inaccessible sources were reviewed/);
+  assert.match(skill, /Never claim inaccessible or out-of-scope sources were reviewed/);
   assert.match(skill, /Missing evidence is a finding/);
   assert.match(skill, /DO NOT CREATE/);
+});
+
+test("bootstrap minimizes connected private-source access", () => {
+  const skill = read("skills/skill-bootstrap/SKILL.md");
+  assert.match(skill, /Use the minimum evidence needed/);
+  assert.match(skill, /Do \*\*not\*\* sweep unrelated connected private accounts/);
+  assert.match(skill, /Access to a connector is capability, not consent to mine it for a profile/);
+  assert.match(skill, /Available but out of scope \/ not inspected/);
 });
 
 test("bootstrap compares before creating and preserves process authority", () => {
