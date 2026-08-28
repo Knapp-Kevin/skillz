@@ -14,6 +14,11 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  console.log("verify-index-idempotency — regenerate the catalog twice and require byte-identical second-pass output\n\nUsage: node scripts/verify-index-idempotency.ts");
+  process.exit(0);
+}
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BUILD = join(ROOT, "scripts", "build-index.ts");
 const INDEX_JSON = join(ROOT, "index.json");
