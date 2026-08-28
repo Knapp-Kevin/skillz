@@ -22,3 +22,15 @@
 [submodule "vendor/addyosmani-agent-skills"]
 	path = vendor/addyosmani-agent-skills
 	url = https://github.com/addyosmani/agent-skills.git
+[submodule "vendor/openhands-extensions"]
+	path = vendor/openhands-extensions
+	url = https://github.com/OpenHands/extensions.git
+[submodule "vendor/cline-skills"]
+	path = vendor/cline-skills
+	url = https://github.com/cline/skills.git
+[submodule "vendor/cloudflare-skills"]
+	path = vendor/cloudflare-skills
+	url = https://github.com/cloudflare/skills.git
+[submodule "vendor/google-agents-cli"]
+	path = vendor/google-agents-cli
+	url = https://github.com/google/agents-cli.git
