@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: observability-and-instrumentation
+display_name: Observability and Instrumentation
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/observability-and-instrumentation/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 91d4d07522de9577caf5d213e5bf1acc38fa3df2
+upstream_last_updated_at: 2026-08-07T11:27:44Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/addyosmani-agent-skills/skills/observability-and-instrumentation/SKILL.md
+permission_tier: generate
+portability: high
+review_status: curated-source-reviewed
+dependency_status: source-intact
+dependencies: upstream repo-level references directory preserved in vendored source
+import_eligibility: already-vendored
+rationale: Valuable production observability guidance with its shared upstream checklists preserved intact.

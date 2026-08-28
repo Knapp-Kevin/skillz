@@ -3,10 +3,10 @@
 # This file classifies repositories that are allowed to participate in
 # comparative skill discovery. Inclusion is not blanket trust.
 # Individual skills still require the evaluation/permission rules in
-# docs/evaluation-framework.md.
+# docs/evaluation-framework.md and, when curated, a companion record under
+# registry/skills/.
 #
-# `build-index.ts` consumes this registry for source names, URLs, trust class,
-# license metadata, resolved vendor paths, and optional index exclusions.
+# `build-index.ts` consumes vendored entries for generated source indexing.
 
 version: 1
 
@@ -69,4 +69,15 @@ sources:
     upstream_copyright: Copyright (c) 2026 Matt Pocock
     pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
     index_exclude_dirs: deprecated,in-progress
-    rationale: High-value engineering and productivity skill patterns used for comparison, adaptation, supplementation, composition, and benchmarking; not treated as platform authority.
+    rationale: High-value engineering and productivity skill patterns used for direct library use, comparison, adaptation, supplementation, composition, and benchmarking; not treated as platform authority.
+
+  - id: addyosmani-agent-skills
+    name: Addy Osmani Agent Skills
+    source: https://github.com/addyosmani/agent-skills
+    class: community-vetted
+    resolved_path: vendor/addyosmani-agent-skills
+    inclusion: vendored
+    license: MIT
+    upstream_copyright: Copyright (c) 2025 Addy Osmani
+    pinned_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+    rationale: Active production-grade engineering skill collection with strong coverage of context, API design, debugging, testing, review, observability, incremental implementation, and spec-driven development. Vendored intact so shared references and validation assets remain coherent; individual curation is still recorded per skill.

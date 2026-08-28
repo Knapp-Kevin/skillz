@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: research
+display_name: Research
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/research/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/research/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: satisfied by pinned vendored source
+import_eligibility: already-vendored
+rationale: High-signal evidence-gathering workflow that complements the repository's own research skills and provides an independent comparative implementation.
