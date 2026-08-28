@@ -1,28 +1,70 @@
 # 🛠️ skillz
 
 [![CI](https://github.com/Knapp-Kevin/skillz/actions/workflows/ci.yml/badge.svg)](https://github.com/Knapp-Kevin/skillz/actions/workflows/ci.yml)
-![Skills](https://img.shields.io/badge/first--party_skills-48-blue)
-![Vendored](https://img.shields.io/badge/vendored_skills-524_across_6_sources-8A2BE2)
+![Skills](https://img.shields.io/badge/first--party_skills-49-blue)
+![Sources](https://img.shields.io/badge/reference_sources-7-8A2BE2)
 ![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![Install](https://img.shields.io/badge/install-zero-success)
 
-**System-agnostic agent skills for MythologIQ agents and Claude Code alike** — recurring awareness (pulses, briefings), on-demand judgment (research, decision briefs), agent fleet operations, and the meta-tooling that keeps it all validated and deployed. Ungated by design: work that runs on a schedule or a question, not through a gate.
+**A portable skill library that helps AI systems learn better ways to work with you.**
 
-> 📇 **Looking for a skill? Start at [INDEX.md](INDEX.md)** (human/agent-readable) or [index.json](index.json) (machine-readable). Both are generated — see [Skill index](#skill-index).
+## New here? Start here.
 
-*Count badges are maintained by the same state-alignment discipline as the docs (verified against `skill-audit` output at every governed cycle); the CI badge is live.*
+You do not need to know what an AI skill is.
+
+You do not need to choose from hundreds of files.
+
+You do not need to be a programmer.
+
+Give your AI this repository and point it to **[BOOTSTRAP.md](BOOTSTRAP.md)**.
+
+The bootstrap process helps your AI:
+
+1. look at the work, history, memory, files, tools, and instructions it can actually access,
+2. notice things you do again and again,
+3. find skills in this repository that already help with those things,
+4. improve or combine existing skills when that is better than starting over,
+5. create a new skill only when something useful is truly missing,
+6. test whether those skills actually make the AI more dependable, and
+7. save the important working rules in a portable form that can help another compatible AI later.
+
+In plain language: **instead of teaching every AI the same lessons over and over, turn the useful lessons into reusable skills.**
+
+> **Beginner path:** [BOOTSTRAP.md](BOOTSTRAP.md)
+>
+> **Already know which skill you need?** Use [INDEX.md](INDEX.md) or [index.json](index.json).
 
 ---
 
+## What is in this repository?
+
+The repository contains first-party skills plus a curated reference library from official and selected community sources. It also contains the tools for discovering, comparing, testing, creating, auditing, and moving those skills between supported agent hosts.
+
+The goal is not to collect the most skills. The goal is to help an agent find the **smallest useful set** for the person or system it is helping.
+
+Reference skills do not automatically become trusted or authoritative. Agents compare them against the target workflow and may adopt, adapt, supplement, compose, benchmark, or reject them.
+
+Third-party work keeps its attribution and license information. See [docs/third-party-provenance.md](docs/third-party-provenance.md) and [registry/sources.yaml](registry/sources.yaml).
+
 ## Quick start
 
-**Claude Code — use a skill from this repo directly:**
+### Beginner or first-time setup
+
+Give your agent this instruction:
+
+```
+Read BOOTSTRAP.md and help me figure out which skills would make you better at helping me.
+```
+
+The full orchestration procedure lives in [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md).
+
+### Claude Code: use a known skill directly
 
 ```
 Read G:\MythologIQ\skillz\INDEX.md, then run the claude-pulse skill.
 ```
 
-**Claude Code — install a skill permanently:**
+### Claude Code: install a skill permanently
 
 ```powershell
 # personal (all projects)
@@ -31,9 +73,11 @@ New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\claude-pu
 node skills/skill-sync/scripts/sync.ts --claude-user --apply
 ```
 
-**Any other agent:** point it at the skill's `SKILL.md` (paths in the index) and instruct it to follow the **Execution Flow** section. Skills are plain markdown plus optional zero-install scripts (Bun or Node 22.18+) — no framework required.
+### Any other agent
 
-**Clone with the vendored plugins:**
+Point it at the relevant `SKILL.md` and instruct it to follow the skill's execution flow. Skills are plain Markdown plus optional zero-install scripts using Bun or Node 22.18+. No framework is required.
+
+### Clone with the vendored references
 
 ```
 git clone --recurse-submodules <url>
@@ -41,104 +85,114 @@ git clone --recurse-submodules <url>
 
 ## Skill series
 
-48 first-party skills across seven series:
+49 first-party skills across seven series:
 
 | Series | Skills | Cadence |
 |--------|--------|---------|
-| **Pulse** (17) | 11 vendor pulses (claude, openai, gemini, llama, mistral, xai, deepseek, qwen, glm, kimi, perplexity) + 6 topic pulses (`governance`, `memory`, `github`, `hf`, `mcp`, `inference`) — all driven by one engine (`scripts/pulse-run.ts`) with per-skill `sources.json`; adding a pulse is a data change | weekly |
-| **Research** (5) | `deep-dive`, `compare`, `fact-check`, `paper-digest`, `source-vetting` — structured inquiry with adversarial fact-checking and registry-ready verdicts | on demand |
-| **Agent-ops** (5) | `skill-eval`, `mcp-vetting`, `agent-postmortem`, `handoff-writer`, `permissions-review` — running the agent fleet itself | on demand / monthly |
-| **Daily-ops** (5) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` (forge + operate a cross-org task-coordination repo, bound to its own governance doc) — draft-only for anything that sends or writes | daily / weekly |
+| **Pulse** (17) | 11 vendor pulses (claude, openai, gemini, llama, mistral, xai, deepseek, qwen, glm, kimi, perplexity) + 6 topic pulses (`governance`, `memory`, `github`, `hf`, `mcp`, `inference`), all driven by one engine (`scripts/pulse-run.ts`) with per-skill `sources.json`; adding a pulse is a data change | weekly |
+| **Research** (5) | `deep-dive`, `compare`, `fact-check`, `paper-digest`, `source-vetting`, structured inquiry with adversarial fact-checking and registry-ready verdicts | on demand |
+| **Agent-ops** (5) | `skill-eval`, `mcp-vetting`, `agent-postmortem`, `handoff-writer`, `permissions-review`, running the agent fleet itself | on demand / monthly |
+| **Daily-ops** (5) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` (forge + operate a cross-org task-coordination repo, bound to its own governance doc), draft-only for anything that sends or writes | daily / weekly |
 | **Comms & life** (8) | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | on demand / monthly |
-| **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester` — `gh`/git-evidence based, read-only punch lists | weekly / on demand |
-| **Meta** (5) | `skills-pulse` (ecosystem intake + vendor freshness), `skill-audit` (two-layer self-validation), `skill-sync` (deployment: junction/copy/COREFORGE/multi-host), `skill-forge` (scaffolding), `agent-home-doctor` (audit/clean any agent CLI's home dir — pathology library + tiered remediation) — audit/sync/forge are repo-bound and never deploy | weekly / pre-commit / as-needed |
+| **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester`, `gh`/git-evidence based, read-only punch lists | weekly / on demand |
+| **Meta** (6) | `skill-bootstrap` (personal skill discovery/onboarding), `skills-pulse` (ecosystem intake + source freshness), `skill-audit` (two-layer self-validation), `skill-sync` (deployment), `skill-forge` (scaffolding), `agent-home-doctor` (agent CLI home audit/cleanup) | onboarding / weekly / pre-commit / as-needed |
 
 ## Skill index
 
-[INDEX.md](INDEX.md) and [index.json](index.json) are the canonical registry: every local skill (name, description, category, entry point, scripts) plus the full contents of the vendored official sources. Agents should resolve skills through the index rather than globbing the tree.
+[INDEX.md](INDEX.md) and [index.json](index.json) are the canonical catalog: every local skill plus the indexed contents of the vendored reference corpus. Agents should resolve skills through the index rather than globbing the tree.
 
-They are **generated — never edit by hand**. After adding or changing a skill:
+They are **generated, never edit them by hand**. After adding or changing a skill or reference source:
 
 ```
 node scripts/build-index.ts
 ```
 
-The generator scans `skills/*/SKILL.md` frontmatter (warning on name/directory mismatches) and all vendor trees.
+The generator scans `skills/*/SKILL.md` frontmatter and the allowed vendor/reference trees. Source trust classification lives in [registry/sources.yaml](registry/sources.yaml).
 
 ## Repository layout
 
 ```
-INDEX.md / index.json        # generated skill index — start here
-skills/                      # 48 first-party skills, one directory each
-  <vendor>-pulse/            #   11 vendor + 6 topic pulses (SKILL.md + sources.json)
-  deep-dive/ compare/ ...    #   research series (5)
-  skill-eval/ mcp-vetting/ … #   agent-ops series (5)
-  daily-briefing/ ...        #   daily-ops series (5)
-  brief-writer/ decision-log/#   comms & life (8)
-  skills-pulse/ skill-audit/ #   meta series (audit/sync/forge are repo-bound;
-  skill-sync/ skill-forge/   #   skill-audit ships audit.ts + risk-audit.ts)
+BOOTSTRAP.md                 # beginner and agent onboarding entry point
+INDEX.md / index.json        # generated skill index
+skills/                      # 49 first-party skills
+  skill-bootstrap/           # user-specific skill discovery/orchestration
+  <vendor>-pulse/            # 11 vendor + 6 topic pulses
+  deep-dive/ compare/ ...    # research series
+  skill-eval/ mcp-vetting/ … # agent-ops series
+  daily-briefing/ ...        # daily-ops series
+  brief-writer/ decision-log/# comms & life
+  skills-pulse/ skill-audit/ # meta series
+  skill-sync/ skill-forge/
 registry/
-  candidates.yaml            # intake decisions: adopted/sandbox/track/rejected/quarantined
-vendor/                      # official skill sources, as git submodules (6)
+  candidates.yaml            # per-skill intake decisions
+  sources.yaml               # reference-source trust + provenance classes
+vendor/                      # pinned official + community-vetted source repos
 scripts/
-  build-index.ts             # index generator (scans skills/ + all of vendor/)
-  pulse-run.ts               # shared pulse collector, driven by sources.json specs
+  build-index.ts             # index generator
+  pulse-run.ts               # shared pulse collector
   lib/frontmatter.ts         # shared zero-dep frontmatter parser
-tests/                       # 15 behavior tests: node --test "tests/*.test.mjs"
+tests/                       # behavior tests
 .github/workflows/ci.yml     # CI: tests + audit + risk audit + index freshness
-docs/                        # skill template, evaluation framework, eval reports,
-                             #   vendor-freshness workflow, governance artifacts
+docs/
+  portable-skill-profile.md  # cross-host user execution profile
+  third-party-provenance.md  # attribution + adaptation rules
+  skill-template.md          # local authoring scaffold
+  evaluation-framework.md    # adoption/evaluation framework
 ROADMAP.md                   # series status + design rules + portability contract
 ```
 
 ## Validation: two layers, both enforced
 
-1. **Structural** — [`skill-audit`](skills/skill-audit/SKILL.md) (`scripts/audit.ts`): frontmatter conventions, script `--help` health, pulse-spec parsing, registry enums, index freshness. Exit 1 on drift.
-2. **Semantic risk** — `scripts/risk-audit.ts`: a structurally valid skill can still induce dangerous behavior, so this layer FAILs high-judgment skills missing negative-rule classes (secret handling, anti-fabrication, missing-evidence fallback) and mutating actions without approval language, and WARNs on portable-skill operator specifics and vendor-API references without an MCP/web fallback.
+1. **Structural**: [`skill-audit`](skills/skill-audit/SKILL.md) (`scripts/audit.ts`) checks frontmatter conventions, script `--help` health, pulse-spec parsing, registry enums, and index freshness. Exit 1 means drift.
+2. **Semantic risk**: `scripts/risk-audit.ts` catches structurally valid skills that still induce dangerous behavior. It fails high-judgment skills missing negative-rule classes (secret handling, anti-fabrication, missing-evidence fallback) and mutating actions without approval language, and warns on portable-skill operator specifics and vendor-API references without an MCP/web fallback.
 
-Both run in [CI](.github/workflows/ci.yml) on every PR and push to main, alongside the 15-test behavior suite and an index-idempotency diff. The risk layer earned its keep on its first live run: it caught six real gaps in already-audited skills.
+Both run in CI on every PR and push to main alongside the behavior suite and index-idempotency diff. The risk layer caught six real gaps on its first live run, which is a nice reminder that syntax can be perfect while the bottle still contains poison.
 
 ## How this stays lean
 
-The repo covers the full agentic surface — local, cloud, and everything between — without becoming a junk drawer, by drawing four lines:
+The repo covers local, cloud, and cross-host agent work without becoming a junk drawer by drawing four lines:
 
-1. **Vendor only official sources.** Anthropic (general + office + marketplace), Vercel (frontend), Microsoft/Azure and AWS (cloud) come in as submodules, deduplicated upstream and indexed here. Community skills are *registered*, not copied.
-2. **Every third-party skill is a decision, not a download.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine per candidate with a permission tier and rationale, scored per [docs/evaluation-framework.md](docs/evaluation-framework.md). Redundancy with Qor-logic or a Claude Code built-in is a rejection reason on its own (`covered_by`).
-3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist weekly, filters finds against the registry/index/gated-registry/built-ins, reports per-source vendor freshness, and proposes registry entries — it never installs anything.
-4. **The repo maintains itself.** The two audit layers above plus [`skill-sync`](skills/skill-sync/SKILL.md) deployment (junction into `~/.claude/skills`, copy anywhere, COREFORGE Synapse manifests, multi-host — dry-run by default) keep validation and distribution mechanical.
+1. **Centralize intentionally.** Official sources are preferred for vendor/platform capabilities. Selected community repositories may also be vendored when they add strong comparative or supplemental value and licensing/provenance permit it. Source class is explicit in `registry/sources.yaml`.
+2. **Every third-party skill is still a decision.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine decisions with permission tiers and rationale. Being present in `vendor/` makes a skill available for comparison; it does not automatically authorize use.
+3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist, filters finds against the registry/index/gated registry/built-ins, reports upstream drift, and proposes candidates. It never installs anything.
+4. **The repo maintains itself.** The audit layers plus [`skill-sync`](skills/skill-sync/SKILL.md) keep validation and distribution mechanical.
 
 ## Authoring a skill
 
-Start from [docs/skill-template.md](docs/skill-template.md). Conventions (mechanically enforced by the two audit layers):
+Start from [docs/skill-template.md](docs/skill-template.md). Conventions enforced by the audit layers include:
 
-- `skills/<name>/SKILL.md` is the single source of truth; frontmatter `name` matches the directory, and `description` states both *what it does* and *when to use it* (that's what models match against).
-- **Script collects, model synthesizes** — scripts fetch and structure; judgment stays in the instructions. Most skills need no script at all.
-- Scripts run on Bun **or** Node 22.18+ with no install step, and every scripted source documents a pure web-tool fallback.
-- Read-only by default; anything that mutates (send, push, delete) requires explicit approval per action.
-- **Adaptive frameworks, not configurations.** Skills ship the framework; operator/org/environment specifics live in *bound governance documents* discovered at runtime (a Bind step early in the flow; the bound document wins over memory; elicit + offer to persist when none exists). No hardcoded operator values in portable skill bodies.
-- **Negative rules ship with the scaffold.** High-judgment skills (mandatory evidence/decision slots) carry explicit prohibitions: never reproduce secret-shaped strings (type + short prefix only, rotation on exposure), write `not established` for evidence-free slots, mark inference as inference, empty sections are valid. Evidence: the [weak-model eval pair](docs/evals/) — structure alone *redistributed* failure modes at Haiku tier until the negative rules shipped, after which the degradation reversed (treatment 29/30 vs baseline 26/30, zero treatment security violations).
-- Declare the capability floor as data when evidence supports it: `metadata.min-model-capability: haiku|sonnet|opus` (hosts and routers enforce it; models never self-assess).
-- Recurring skills include a Scheduling section (`/schedule` pairing for Claude Code).
+- `skills/<name>/SKILL.md` is the single source of truth. Frontmatter `name` matches the directory, and `description` states both what it does and when to use it.
+- **Script collects, model synthesizes.** Scripts fetch and structure; judgment stays in instructions. Most skills need no script.
+- Scripts run on Bun or Node 22.18+ with no install step, and every scripted source documents a pure web-tool fallback.
+- Read-only by default. Anything that mutates external state requires explicit approval as appropriate to the target environment.
+- **Adaptive frameworks, not configurations.** Skills ship the framework; operator/org/environment specifics live in bound governance documents discovered at runtime. No hardcoded operator values in portable skill bodies.
+- **Negative rules ship with the scaffold.** High-judgment skills carry explicit prohibitions against reproducing secrets, fabricating missing evidence, or turning inference into fact.
+- Declare a capability floor as data when evidence supports it: `metadata.min-model-capability: haiku|sonnet|opus`.
+- Recurring skills include a Scheduling section.
+- If a local skill copies or materially adapts third-party work, preserve provenance per [docs/third-party-provenance.md](docs/third-party-provenance.md).
 - Finish by regenerating the index.
 
-The full portability contract (capability declarations, MCP-only external services, tiered content) is in [ROADMAP.md](ROADMAP.md#portability-contract-system-agnostic-requirements).
+The full portability contract is in [ROADMAP.md](ROADMAP.md#portability-contract-system-agnostic-requirements).
 
-## Vendored official sources
+## Vendored reference sources
 
-Six official skill repos are vendored as submodules and fully enumerated in [INDEX.md](INDEX.md):
+The repository currently includes six official source repositories and one community-vetted source repository as pinned submodules.
 
-| Source | Coverage | Skills |
-|--------|----------|--------|
-| [anthropics/skills](https://github.com/anthropics/skills) | Office docs (docx/pdf/pptx/xlsx), skill-creator, mcp-builder, frontend design, webapp testing | 18 |
-| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Knowledge-work marketplace: productivity, sales, finance, legal, data, design + 60 partner plugins | 185 |
-| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | React/Next.js best practices, composition patterns, web design guidelines | 9 |
-| [microsoft/skills](https://github.com/microsoft/skills) | Microsoft ecosystem: M365, Foundry, dev tooling | ~190 |
-| [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | Azure: plan/validate/deploy, RBAC, cost, diagnostics, AKS | ~68 |
-| [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | AWS: core services, Bedrock agents, data analytics, DevSecOps | ~115 |
+| Source | Class | Coverage |
+|--------|-------|----------|
+| [anthropics/skills](https://github.com/anthropics/skills) | official | Office docs, skill-creator, MCP builder, frontend design, webapp testing |
+| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | official | Knowledge-work marketplace: productivity, sales, finance, legal, data, design, partner plugins |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | official | React/Next.js best practices, composition patterns, web design guidelines |
+| [microsoft/skills](https://github.com/microsoft/skills) | official | Microsoft ecosystem: M365, Foundry, dev tooling |
+| [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | official | Azure plan/validate/deploy, RBAC, cost, diagnostics, AKS |
+| [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | official | AWS core services, Bedrock agents, analytics, DevSecOps |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | community-vetted | Engineering and productivity skill patterns used for comparison, adaptation, supplementation, composition, and benchmarking |
 
-Pins are refreshed deliberately, never automatically: [docs/vendor-freshness.md](docs/vendor-freshness.md) is the review-first workflow and per-source freshness table (one source at a time, classify the delta, re-index in the same commit); CI validates the pinned state only, and `skills-pulse` reports upstream drift on cadence. **Vendored ≠ blanket-trusted:** write-tier skills inside these repos (deploys, RBAC, cost changes) still require the permission gates in [docs/evaluation-framework.md](docs/evaluation-framework.md).
+Pins are refreshed deliberately, never automatically. [docs/vendor-freshness.md](docs/vendor-freshness.md) defines the review-first workflow. **Vendored does not mean blanket-trusted.** Write-tier skills, community skills, and source updates still receive the permission, redundancy, and behavioral evaluation appropriate to their impact.
 
-Marketplace-listed plugins install straight from source (no submodule needed):
+Matt Pocock's repository is MIT-licensed and is included as an attributed source. Local skills that copy or materially adapt third-party work must preserve required notices and record their relationship to the upstream source.
+
+Marketplace-listed Anthropic plugins can also install straight from source:
 
 ```
 /plugin marketplace add anthropics/knowledge-work-plugins
@@ -147,21 +201,21 @@ Marketplace-listed plugins install straight from source (no submodule needed):
 
 ## Governed development
 
-Changes to this repo's tooling go through the Qor-logic S.H.I.E.L.D. lifecycle: planned, adversarially audited to a binding PASS/VETO, implemented against the sealed plan, and substantiated before merge. The governance record lives in `docs/` (META_LEDGER — 21 chain-verified entries and counting, SHADOW_GENOME, SYSTEM_STATE, BACKLOG, FEATURE_INDEX). The *skills themselves* remain ungated — governance applies to building the repo, never to running a pulse.
+Changes to this repository's tooling go through the Qor-logic S.H.I.E.L.D. lifecycle: planned, adversarially audited to a binding PASS/VETO, implemented against the sealed plan, and substantiated before merge. The governance record lives in `docs/`. The skills themselves remain ungated. Governance applies to building the repository, not to merely running a normal skill.
 
 ## Positioning in the MythologIQ ecosystem
 
-This repo is the **ungated, system-agnostic** skill library. It deliberately does NOT overlap with:
+This repo is the **ungated, system-agnostic** skill library. It deliberately does not overlap with:
 
-- **[Qor-logic](../Qor-logic)** — the canonical *gated* SDLC skill registry (30 skills, phase-gate chain, Cedar policies, Merkle ledger). Anything lifecycle-governed lives there, not here. The two registries are **independent by construction** (no runtime dependency in either direction) and **doctrinally aligned** (same negative-rules vocabulary, adaptive-frameworks pattern, capability-floor metadata). Qor-logic already compiles one SKILL.md source to per-host variants (`.claude/`, `.kilo/`, `.codex/`, `.gemini/`) — this repo borrows that single-source/compile-to-host pattern without the gates.
-- **COREFORGE / Synapse** — a *consumer* of skills, not a registry. Synapse loads Claude-format `SKILL.md` directly and native skills via `manifest.json`. Skills here target Claude-format first; `skill-sync --coreforge` generates Synapse manifests from frontmatter.
+- **[Qor-logic](../Qor-logic)**: the canonical gated SDLC skill registry. Anything lifecycle-governed lives there, not here. The registries are independent by construction and doctrinally aligned.
+- **COREFORGE / Synapse**: a consumer of skills, not a registry. Synapse loads Claude-format `SKILL.md` directly and native skills via `manifest.json`. Skills here target Claude-format first; `skill-sync --coreforge` generates Synapse manifests from frontmatter.
 
 Rules of the lane:
 
-1. **No gates.** Skills here read cadence sources (releases, repos, inbox, calendar) and synthesize. They never write `.qor/gates/` artifacts and never enter the Qor delegation table. A skill that needs a PASS/VETO belongs in Qor-logic.
-2. **Governance-aware, not governance-bound.** A skill MAY read governance outputs (e.g., a workspace's META_LEDGER, shadow genome) as a *source* for a digest — read-only.
-3. **Portable by construction.** Markdown SKILL.md as single source of truth; capability needs declared generically in frontmatter (no platform permissions like elevation or process spawn); external services via MCP; web-tool fallback for every scripted source; local convention via Bind, never via hardcoding.
+1. **No gates at runtime.** Skills here may read cadence sources and synthesize, but they do not create Qor gate artifacts or enter the Qor delegation table. A skill that needs a PASS/VETO belongs in Qor-logic.
+2. **Governance-aware, not governance-bound.** A skill may read governance outputs as a source, read-only.
+3. **Portable by construction.** `SKILL.md` is the source of truth, capability needs are generic, external services use swappable connectors where possible, and local convention is bound at runtime rather than hardcoded.
 
 ## Status
 
-All seven series are shipped and validated (48 skills, 15/15 behavior tests, both audit layers clean, index idempotent — re-proven by CI on every push). The original build order completed 2026-07-04; current open work lives in [docs/BACKLOG.md](docs/BACKLOG.md) §Open (min-model-capability rollout, Gemini host target, sandbox evals) and the repo's GitHub issues. The eval program has its first full loop closed: frontier ceiling → weak-tier failure discovery → negative rules → mechanical enforcement → weak-tier reversal confirmed ([docs/evals/](docs/evals/)). Design rules, series detail, and the portability contract: [ROADMAP.md](ROADMAP.md).
+The repository now includes the bootstrap/onboarding architecture on the Issue #7 feature branch in addition to the previously shipped skill series. Validation, generated-index refresh, behavioral bootstrap evals, and governed substantiation remain required before this work may be merged to main.
