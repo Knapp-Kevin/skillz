@@ -6,13 +6,31 @@
 ![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Give this repository to your AI. It helps build the right skill set for you.**
+**A growing skill library for AI agents, plus a bootstrap system that can build the right skill set for you.**
 
-`skillz` is a portable skill discovery, design, evaluation, installation, and transfer system for AI agents.
+`skillz` has two equally valid ways to use it.
 
-It is **not** primarily a catalog of skills for a person to browse and choose from.
+## 1. Use it as a skill library
 
-The repository gives an AI enough process, reference material, validation tools, and installation guidance to study how a person actually works and build the smallest skill system that fits them.
+Browse, search, compare, install, adapt, or reuse skills directly.
+
+The repository is intended to accumulate **hundreds of useful skills and reference implementations** across first-party, official, and vetted community sources. Experienced users and agents can work directly with [`INDEX.md`](INDEX.md), [`index.json`](index.json), [`skills/`](skills/), and the curated sources under [`vendor/`](vendor/).
+
+If you already know what you need, use the repository like a normal skill collection.
+
+## 2. Give the repository to your AI
+
+If you do **not** know which skills you need, give your AI the GitHub link to this repository.
+
+The bootstrap layer lets the agent do the hard part for you: inspect the relevant history, memory, instructions, recurring corrections, workspace context, and existing skills it can legitimately access; infer durable working methods; compare those needs against the library; create new skills when the library does not fit; validate the result; and install or package the final skill system.
+
+You do not need to know how skills work.
+You do not need to know how to code.
+You do not need to choose from hundreds of files.
+
+The library remains available. The bootstrap simply makes it usable by people who would rather not become amateur skill librarians first.
+
+---
 
 ## If you are an AI agent reading this
 
@@ -24,22 +42,19 @@ Do not stop at a repository summary, feature list, or "this looks useful" respon
 2. Read [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md).
 3. Use the relevant history, memory, instructions, workspace context, existing skills, and recurring corrections your current host can legitimately access.
 4. Identify durable working methods that should become reusable skills.
-5. Compare those needs against this repository's local and third-party references.
-6. Build the skill system that best fits the user.
-7. Validate it.
-8. Install it when you safely can, or prepare the correct files and simple installation steps when the user must act.
+5. Search and compare the repository's accumulated skill library and reference sources.
+6. Reuse, refine, adapt, supplement, or compose existing skills when they genuinely fit.
+7. Create new custom skills when a better fit does not already exist.
+8. Validate the resulting skill system.
+9. Install it when you safely can, or prepare the correct files and simple installation steps when the user must act.
 
 For agents that automatically read repository instruction files, [`AGENTS.md`](AGENTS.md) defines the same entry contract.
 
+If the user explicitly asks to browse, search, compare, or install a known skill, do that directly instead of running a full bootstrap.
+
 ## For humans: what happens when I give my AI this link?
 
-You do not need to know how skills work.
-
-You do not need to know how to code.
-
-You do not need to pick skills from a giant list.
-
-Your AI should start by looking at the useful information it already has about how you work.
+Your AI should start by looking at useful information it already has about how you work.
 
 That can include things such as:
 
@@ -56,15 +71,15 @@ If your AI can see useful memory or prior interactions, it should use them inste
 
 If it cannot see old conversations or memory, it should say so and work with the evidence it actually has. It must not pretend it knows things it cannot see.
 
-## The goal is your skill system, not our skill list
+## The library is real. The bootstrap is extra.
 
-The skills already in this repository are **ingredients and reference material**.
+The skills in this repository are useful in their own right.
 
-They show useful ways to solve problems, write triggers, structure procedures, validate work, handle failure, protect authority boundaries, and make behavior more dependable.
+An experienced user may browse the index, install a specific skill, compare several implementations, or use the repository as a reference library without ever running bootstrap.
 
-They are not a menu you are expected to shop from.
+The bootstrap adds another path for users who do not know which skills they need or whose most useful workflows have never been written as skills at all.
 
-For each need, the bootstrap may decide to:
+For each observed need, bootstrap may decide to:
 
 - **KEEP** an existing skill that already fits,
 - **REFINE** a skill that has the right purpose but needs stronger behavior,
@@ -77,64 +92,39 @@ For each need, the bootstrap may decide to:
 - leave something **DYNAMIC** when formalizing it would make it worse,
 - or **DO NOT CREATE** anything when a skill would add no real value.
 
-A related skill already existing in the repository does **not** mean the agent should force the user's workflow to fit it.
+A related skill already existing in the repository does not mean the agent should force the user's workflow to fit it.
 
-If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill and use existing skills only as design references where they help.
+If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill and use existing skills as references where they help.
 
 ## Memory can contain skills that have never been written down
 
 People often teach an AI a workflow without ever calling it a skill.
 
-For example, a user may repeatedly tell an agent to:
+For example, someone may repeatedly teach an agent to research first, distinguish evidence from assumptions, challenge its own recommendation, respect approval boundaries, and verify the result before claiming completion.
 
-1. research the current state first,
-2. distinguish evidence from assumptions,
-3. make a recommendation,
-4. adversarially challenge it,
-5. implement only after the approach survives review,
-6. verify the result before claiming completion.
-
-If that pattern appears repeatedly in accessible history or memory, the bootstrap should recognize that the user has already developed a **latent skill**.
+If a stable pattern appears repeatedly in accessible history or memory, bootstrap should recognize it as a **latent skill candidate**.
 
 The job is to extract the durable method, improve it where useful, test it, and save it outside the memory of one AI product.
 
 That is how behavior learned through months of interaction can become portable instead of disappearing when the user changes agents.
 
-## What this repository provides to the agent
-
-The repository supplies the machinery needed to do that work:
-
-- **Discover** recurring workflows, corrections, safeguards, and latent skills.
-- **Compare** those needs against strong first-party, official, and vetted community references.
-- **Synthesize** useful patterns from multiple references without inheriting unnecessary ceremony or assumptions.
-- **Create** custom skills when existing implementations do not fit.
-- **Evaluate** whether a skill actually improves behavior.
-- **Audit** structure, risk, authority boundaries, missing-evidence handling, and unsafe assumptions.
-- **Install** directly when the active agent has the capability and authority.
-- **Hand off** exact packages and beginner-readable steps when installation requires human action.
-- **Transfer** durable working methods between compatible AI systems instead of trapping them inside one provider's memory.
-
-The goal is the **smallest useful skill system that makes the agent more dependable for the person it serves**.
-
 ## Compare before creation. User-fit before reuse.
 
-The agent should always inspect relevant existing implementations before inventing a solved mechanism from scratch.
+The agent should inspect relevant existing implementations before inventing a solved mechanism from scratch.
 
-But reuse is not the objective.
+But reuse is not a quota.
 
 **User fit is the objective.**
 
-Existing skills are valuable because they may contain tested ideas, safeguards, abstractions, failure handling, validation methods, or useful vocabulary. Those pieces can strengthen a custom skill even when the existing skill itself should not be adopted.
+Existing skills may contribute tested ideas, safeguards, trigger patterns, abstractions, failure handling, validation methods, or useful procedures. Those pieces can strengthen a custom skill even when the existing skill itself should not be adopted.
 
-The bootstrap should therefore ask:
+The right question is:
 
-> What is the best skill for this person's actual workflow, given everything we can learn from the reference corpus?
+> What is the best skill for this person's actual workflow, given everything we can learn from the library and reference corpus?
 
 Not:
 
-> Which skill in this repository can we make the user live with?
-
-Humanity has endured enough software designed around the second question.
+> Which existing skill can we make the user live with?
 
 ## Installation is part of the result
 
@@ -165,16 +155,16 @@ The Portable User Skill Profile records durable execution defaults, selected/cus
 
 See [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md).
 
-## Where reference material comes from
+## Where the skills come from
 
-The repository can use several kinds of evidence:
+The repository accumulates several kinds of material:
 
 1. **First-party skills and tooling** created and maintained here.
-2. **Official reference sources** from platform and tooling vendors.
-3. **Vetted community references** that provide useful patterns or comparative value.
-4. **Tracked external sources** that may be consulted when the curated corpus does not adequately cover a need.
+2. **Official skills and reference sources** from platform and tooling vendors.
+3. **Vetted community skills and references** that provide useful direct or comparative value.
+4. **Tracked external sources** that may be consulted when the curated library does not adequately cover a need.
 
-Third-party material retains its upstream attribution and licensing requirements. Inclusion makes a source available for comparison; it does not grant blanket trust or authority.
+Third-party material retains its upstream attribution and licensing requirements. Inclusion makes a source available for direct use or comparison according to its classification; it does not grant blanket trust or authority.
 
 See:
 
@@ -183,15 +173,15 @@ See:
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for licensing boundaries,
 - [`registry/candidates.yaml`](registry/candidates.yaml) for individual candidate decisions.
 
-## Reference corpus, not storefront
+## Browse the skill library
 
-[`INDEX.md`](INDEX.md) and [`index.json`](index.json) are machine- and human-readable maps of the reference corpus.
+[`INDEX.md`](INDEX.md) and [`index.json`](index.json) are the generated maps of the accumulated skill library and allowed reference sources.
 
-They primarily exist so **agents can search and compare efficiently**.
+Use them when you already know what you are looking for, want to explore available skills, or need machine-readable discovery.
 
-A beginner should not need to open the index, understand source repositories, or select skills manually.
+Bootstrap uses the same library internally, but a beginner should not be required to browse it manually.
 
-When the curated corpus has no strong match, that is not a failure. It is evidence that the agent may need to synthesize a new skill using the repository's design and evaluation methods.
+When the library has no strong match, bootstrap can use its references and authoring/evaluation machinery to synthesize a new skill rather than treating "no result" as the end of the process.
 
 ## Repository layout
 
@@ -199,18 +189,18 @@ When the curated corpus has no strong match, that is not a failure. It is eviden
 README.md                     # human + agent entry point
 AGENTS.md                     # self-starting agent entry contract
 BOOTSTRAP.md                  # simple bootstrap explanation and procedure
-INDEX.md / index.json         # generated reference map
-skills/
+INDEX.md / index.json         # generated skill-library index
+skills/                       # reusable first-party skills
   skill-bootstrap/            # discover + design the fitted skill system
   skill-eval/                 # behavioral before/after evaluation
   skill-forge/                # custom skill creation
   skill-audit/                # structural + semantic-risk validation
   skill-sync/                 # supported local deployment
-  ...                         # reusable first-party capabilities
+  ...
 registry/
   candidates.yaml             # per-skill intake decisions
   sources.yaml                # reference-source trust + provenance
-vendor/                       # pinned official + community-vetted references
+vendor/                       # pinned official + community-vetted skill sources
 scripts/                      # deterministic repository tooling
 tests/                        # behavior and contract tests
 docs/
@@ -222,18 +212,18 @@ docs/
 
 ## Design rules
 
-1. **The repository URL is an invocation.** When a user points an agent here without another task, bootstrap should begin.
-2. **Do not make the user shop for skills.** The agent performs discovery and comparison.
-3. **Compare before creation.** Learn from existing solutions before designing another one.
-4. **User-fit before reuse.** Never preserve reuse at the expense of a better custom skill.
-5. **The corpus is design evidence.** Borrow useful invariants without inheriting unnecessary workflow ceremony.
-6. **Behavior over aesthetics.** A polished skill that does not improve outcomes is not an improvement.
-7. **Portable core, replaceable adapters.** Keep durable behavior independent from host-specific installation details.
-8. **Read-only discovery by default.** Installation and other mutations require the authority expected by the target environment.
-9. **Minimum necessary evidence.** Access to a private connector is not permission to mine it for profile data.
-10. **Explicit provenance.** Materially copied or adapted third-party work keeps its required attribution and license obligations.
-11. **Smallest useful system.** More skills are not automatically better.
-12. **Installation is part of done.** The result must either work on the target or tell the user exactly what remains.
+1. **Maintain a useful skill library.** Accumulate high-value skills and references without turning the repository into an uncurated dump.
+2. **Support direct use.** Experienced users and agents can browse, search, compare, and install specific skills without bootstrap.
+3. **The repository URL is a bootstrap invocation when no other task is given.** Beginners should be able to point an agent here and start.
+4. **Do not make bootstrap users shop for skills.** The agent performs discovery and comparison for them.
+5. **Compare before creation.** Learn from existing solutions before designing another one.
+6. **User-fit before reuse.** Never preserve reuse at the expense of a better custom skill.
+7. **Behavior over aesthetics.** A polished skill that does not improve outcomes is not an improvement.
+8. **Portable core, replaceable adapters.** Keep durable behavior independent from host-specific installation details.
+9. **Read-only discovery by default.** Installation and other mutations require the authority expected by the target environment.
+10. **Minimum necessary evidence.** Access to a private connector is not permission to mine it for profile data.
+11. **Explicit provenance.** Materially copied or adapted third-party work keeps its required attribution and license obligations.
+12. **Installation is part of bootstrap completion.** The result must either work on the target or tell the user exactly what remains.
 
 ## Validation
 
@@ -253,7 +243,9 @@ See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-pr
 
 ## For advanced users and agents
 
-The beginner experience intentionally hides most of the machinery. Advanced users and agents can work directly with:
+Use the library directly through [`INDEX.md`](INDEX.md), [`index.json`](index.json), [`skills/`](skills/), and [`vendor/`](vendor/).
+
+Use the bootstrap machinery through:
 
 - [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md)
 - [`skills/skill-eval/SKILL.md`](skills/skill-eval/SKILL.md)
