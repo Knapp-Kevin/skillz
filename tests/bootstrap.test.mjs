@@ -55,7 +55,7 @@ test("reference corpus is design evidence and custom skills may beat reuse", () 
   assert.match(readme, /Compare before creation\. User-fit before reuse\./);
   assert.match(readme, /If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill/);
   assert.match(agents, /Optimize for the user's actual workflow, not for reuse of the repository's existing skills/);
-  assert.match(skill, /CREATE does not mean "no related skill exists\."/);
+  assert.match(skill, /`CREATE` does not mean "no related skill exists\."/);
   assert.match(skill, /Design from the user's needs outward, not from the catalog inward/);
   assert.match(skill, /Do not force a known skill into the architecture merely to increase reuse/);
 });
