@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * Render only the agent-facing portion of an initial alpha journey fixture.
- * Expected decisions and scoring criteria are deliberately withheld.
+ * Render only the public agent-facing portion of an initial alpha journey.
+ * Evaluator-only decisions and scoring criteria are intentionally not stored
+ * in the public fixture or repository.
  *
  * Usage:
- *   node scripts/render-alpha-scenario.ts A1
- *   node scripts/render-alpha-scenario.ts R2 --json
+ *   node scripts/render-alpha-scenario.ts <scenario-id>
+ *   node scripts/render-alpha-scenario.ts <scenario-id> --json
  */
 
 import { parseArgs } from "node:util";
@@ -25,7 +26,7 @@ const { positionals, values } = parseArgs({
 });
 
 if (values.help || !positionals[0]) {
-  console.log("render-alpha-scenario — print leak-safe journey input\n\nUsage: node scripts/render-alpha-scenario.ts <A1|A2|A3|R1|R2> [--json]");
+  console.log("render-alpha-scenario — print public treatment-agent journey input\n\nUsage: node scripts/render-alpha-scenario.ts <scenario-id> [--json]");
   process.exit(values.help ? 0 : 2);
 }
 
@@ -39,6 +40,7 @@ if (!scenario) {
 }
 
 const safeInput: Record<string, unknown> = {
+  scenario_set: fixture.set_id,
   scenario_id: scenario.id,
   mode: scenario.mode,
 };
@@ -55,6 +57,7 @@ if (values.json) {
 }
 
 console.log(`# Initial Alpha Scenario ${scenario.id}`);
+console.log(`\nScenario set: ${fixture.set_id}`);
 console.log(`\nMode: ${scenario.mode}`);
 console.log(`\n${prompt}`);
 console.log("\n## Synthetic user context\n");
