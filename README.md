@@ -2,154 +2,141 @@
 
 ![Library Corpus](https://img.shields.io/badge/indexed_library-500%2B-blue)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
-![Sources](https://img.shields.io/badge/reference_sources-8-8A2BE2)
+![Registered Sources](https://img.shields.io/badge/registered_sources-14-8A2BE2)
 ![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A large, curated library of reusable AI skills, plus an engine that can discover, build, evaluate, and install the right skill set for a particular person.**
+**A large reusable AI-skill library, plus an engine that can discover, build, evaluate, and install a fitted skill set for a particular person.**
 
-`skillz` has two equally valid ways to use it.
+`skillz` has two equally valid entry paths.
 
 ## 1. Use it as a skill library
 
-Browse, search, compare, install, adapt, or reuse skills directly through [`INDEX.md`](INDEX.md), [`index.json`](index.json), the locally maintained skills under [`skills/`](skills/), and the approved indexed source corpus under [`vendor/`](vendor/).
+Browse, search, compare, install, adapt, or reuse skills through [`INDEX.md`](INDEX.md), [`index.json`](index.json), the locally maintained skills under [`skills/`](skills/), and the approved indexed source corpus under [`vendor/`](vendor/).
 
-**The library is the whole indexed user-facing corpus, not merely the directories directly under `skills/`.**
+**The library is the whole indexed user-facing corpus, not merely the directories under `skills/`.**
 
-Historically this repository already contained hundreds of indexed reference skills. The July 4 state record verified **524 vendor-indexed skills** alongside 48 local skills. Current curation work has added additional sources rather than removing those skills, so the repository continues to contain a 500+ skill corpus. The exact current deduplicated total should come from the regenerated index rather than a hand-maintained badge.
+The repository historically recorded 524 vendor-indexed skills alongside 48 local skills. Current work has added sources rather than removed the historical corpus, so the repository still contains **500+ available library skills**. The exact current deduplicated count is intentionally deferred to the next generated-index refresh rather than maintained by hand.
 
 ## 2. Give the repository to your AI
 
-If you do not know which skills you need, give your AI the GitHub link to this repository.
+If you do not know which skills you need, give your AI this repository URL. With no more specific task, that is the bootstrap invocation.
 
-That is the bootstrap invocation.
+The engine can use relevant history, memory, instructions, recurring corrections, workspace context, and existing skills that the current host legitimately exposes; infer durable working methods; compare those needs against the library; create new skills when necessary; evaluate the result; and install or package the fitted skill system.
 
-The engine can inspect relevant history, memory, instructions, recurring corrections, workspace context, and existing skills that the current host legitimately exposes; infer durable working methods; compare those needs against the library and reference corpus; create new skills when necessary; validate the result; and install or package the final skill system.
+You do not need to know how skills work, know how to code, or choose from hundreds of files.
 
-You do not need to know how skills work.
-You do not need to know how to code.
-You do not need to choose from hundreds of files.
+The library is the asset. Bootstrap is the accessibility and synthesis layer built on top of it.
 
-The library remains a first-class product. Bootstrap is an accessibility and synthesis layer on top of it.
-
----
-
-## What counts as a skill?
-
-The repository has several different populations, and only one of them should be excluded from the library count.
+## What counts, and what does not
 
 ### Local/imported library: `skills/`
 
-[`skills/`](skills/) contains capabilities maintained directly in this repository or deliberately imported here.
-
-These are user-facing skills and count toward the library.
+[`skills/`](skills/) contains user-facing skills maintained or deliberately imported directly in this repository. They count.
 
 ### Indexed reference library: `vendor/`
 
-[`vendor/`](vendor/) contains pinned official and community-vetted source repositories used for direct discovery, comparison, adaptation, composition, and bootstrap synthesis.
+[`vendor/`](vendor/) contains pinned upstream source repositories. Approved indexed user-facing skills in these sources are part of the available library corpus and count.
 
-**Indexed user-facing skills from approved source corpora count as available library skills.** They do not need to be copied into `skills/` merely to count.
-
-Individual review state is tracked separately. A skill may be available in the indexed corpus without yet being individually curated or behaviorally validated.
+Availability does **not** mean quality verification. A skill may be present and searchable while still being unverified.
 
 ### Engine machinery: `engine/skills/`
 
-The engine uses skill-shaped procedures because that makes the repository's own behavior explicit and composable. Those procedures are not library inventory.
+[`engine/skills/`](engine/skills/) contains bootstrap, forge, evaluation, audit, sync, ecosystem scanning, and source-vetting procedures used to operate `skillz`. These do **not** count as library inventory.
 
-Current engine skills include:
+The boundary test is simple: would the capability make sense to install independently of maintaining `skillz`? If yes, it can be library material. If its purpose is operating this repository, it is engine machinery.
 
-- `skill-bootstrap`
-- `skill-forge`
-- `skill-eval`
-- `skill-audit`
-- `skill-sync`
-- `skills-pulse`
-- `source-vetting`
+## Quality is not inherited from a logo
 
-These operate discovery, authoring, curation, validation, deployment, and repository maintenance. **They do not count toward the library total.**
+Source reputation and individual skill quality are separate facts.
 
-The boundary test is:
+The quality lifecycle is:
 
-> Would this capability make sense for a user to install independently of maintaining `skillz`?
+```text
+available/indexed -> characterized -> unverified | trusted-baseline | verified -> validated
+                                             \-> stale | rejected | retired
+```
 
-If yes, it belongs in the user-facing library even if `skillz` also uses it internally. If its purpose is operating `skillz` itself, it belongs in the engine.
+Current policy:
 
----
+- **Matt Pocock** is the sole `trusted-baseline` source. Matt skills do not need to prove baseline quality from scratch, but individual skills still need fingerprints and characterization tags before they are treated as fully characterized selection candidates.
+- **Every other skill-bearing source starts `unverified`**, including official vendor repositories.
+- `verified` means an exact skill version passed the structured quality/effectiveness rubric in [`docs/skill-verification.md`](docs/skill-verification.md).
+- `validated` is stronger. It requires representative behavioral evidence showing the skill improves outcomes.
+- `stale` means the canonical skill changed after characterization or the supporting evidence no longer matches.
+
+### Hash-bound characterization
+
+Each individually characterized third-party skill has:
+
+1. provenance under [`registry/skills/`](registry/skills/), and
+2. quality/tags under [`registry/verification/`](registry/verification/).
+
+Verification records bind to the exact canonical `SKILL.md` Git blob SHA. A hash change invalidates the old characterization for operational selection until it is reviewed again.
+
+Run the zero-network integrity check deliberately with:
+
+```bash
+node engine/skills/source-vetting/scripts/verify-characterization-integrity.ts
+```
+
+Tags come from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) and describe use case, lifecycle phase, workflow characteristics, authority level, and portability. Those dimensions are intended to improve bootstrap matching instead of treating skill names as the entire selection algorithm.
+
+## Current curation state
+
+There are currently **14 registered sources**:
+
+- 12 pinned vendored corpora;
+- 1 normative specification source, the Agent Skills specification;
+- 1 tracked dynamic-discovery source, GitHub Awesome Copilot.
+
+The current individually characterized sample contains:
+
+- 3 Matt Pocock skills marked `trusted-baseline` and fingerprinted;
+- 3 non-Matt skills that passed structured verification: Cline `review-team`, Cloudflare `agents-sdk`, and Google `google-agents-cli-eval`;
+- 10 Addy Osmani skills characterized and fingerprinted but intentionally reset to `unverified` under the new policy.
+
+None of those records claims local behavioral validation unless actual eval evidence exists.
+
+See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verification.md`](docs/skill-verification.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## If you are an AI agent reading this
 
-If a user gave you this repository or its GitHub URL and did not give you a more specific task, **begin bootstrap now**.
-
-Do not stop at a repository summary, feature list, or "this looks useful" response unless the user explicitly asked for an overview.
+If the user supplied this repository or its GitHub URL without a more specific task, **begin bootstrap now**.
 
 1. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
-2. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
-3. Use the relevant history, memory, instructions, workspace context, existing skills, and recurring corrections your current host can legitimately access.
-4. Identify durable working methods that should become reusable skills.
-5. Search and compare the entire indexed library, including local skills and approved reference sources.
-6. Reuse, refine, adapt, supplement, or compose existing skills when they genuinely fit.
-7. Create new custom skills when a better fit does not already exist.
-8. Evaluate and adversarially review the resulting skill system.
-9. Install it when you safely can, or prepare the correct files and simple installation steps when the user must act.
+2. Read [`AGENTS.md`](AGENTS.md).
+3. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
+4. Use only relevant history, memory, workspace context, and instructions the host legitimately exposes.
+5. Identify durable or latent working methods.
+6. Search the entire indexed user-facing library, including approved vendor sources.
+7. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
+8. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
+9. Create a custom skill when the user's real workflow is not adequately represented.
+10. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
 
-For agents that automatically read repository instruction files, [`AGENTS.md`](AGENTS.md) defines the same entry contract.
+For direct browse/search/install requests, use library mode rather than forcing bootstrap.
 
-If the user explicitly asks to browse, search, compare, or install a known skill, do that directly instead of running a full bootstrap.
+## Selection safety
 
-## The library is real. Bootstrap is extra.
+For third-party unchanged reuse:
 
-An experienced user may browse the library, install a specific skill, compare implementations, or use the repository as a reference without ever running bootstrap.
+- prefer individually characterized records whose current fingerprint matches and whose status is `trusted-baseline`, `verified`, or `validated`;
+- treat `unverified` skills as design evidence until verified on demand;
+- exclude `stale`, `rejected`, and `retired` records from default selection;
+- a Matt skill without an individual characterization record may inherit source-quality confidence, but it still lacks a locally bound fingerprint/tag profile and should be characterized before being treated as a fully governed selection candidate.
 
-Bootstrap exists for users who do not know which skills they need or whose most valuable workflows have never been written as skills at all.
-
-For each observed need, bootstrap may decide to:
-
-- **KEEP** an existing skill that already fits,
-- **REFINE** a skill that has the right purpose but needs stronger behavior,
-- **ADOPT** a strong existing skill,
-- **ADAPT** a useful reference to the user's environment,
-- **SUPPLEMENT** a current skill with a useful pattern,
-- **COMPOSE** several skills,
-- **CREATE** a completely new custom skill,
-- use a smaller **CHECKLIST/HELPER** instead,
-- leave something **DYNAMIC** when formalization would make it worse,
-- or **DO NOT CREATE** anything when a skill would add no real value.
-
-A related skill already existing does not mean the agent should force the user's workflow to fit it.
-
-**Compare before creation. User-fit before reuse.**
+A high-quality skill can still be the wrong fit. **Compare before creation. User-fit before reuse.**
 
 ## Memory can contain unwritten skills
 
-People often teach an AI a workflow without ever naming it as a skill.
+Repeated instructions, recurring corrections, stable task sequences, approval boundaries, tool combinations, and completion standards can be evidence of a latent skill candidate.
 
-Repeated instructions, recurring corrections, stable task sequences, approval boundaries, tool combinations, and completion standards can be evidence of a **latent skill candidate**.
+When accessible history or memory contains a stable useful pattern, bootstrap should preserve the durable method rather than forcing the user to reconstruct it. Do not invent inaccessible history or mine unrelated private connectors merely because they exist.
 
-When accessible memory or history contains a stable useful pattern, bootstrap should be able to extract the durable method, improve it where useful, evaluate it, and preserve it outside one product's memory.
+## Installation is part of completion
 
-Do not invent inaccessible history. Access to a private connector is capability, not permission to mine it for a profile.
-
-## Curation and provenance
-
-`skillz` is intended to become large, but it is not intended to become a dump.
-
-Third-party skills should have an auditable companion record under [`registry/skills/`](registry/skills/) containing source repository/path, upstream license, source pin, skill-specific last-update revision/date, curation/check dates, dependencies, portability, permission tier, review status, and rationale.
-
-The library distinguishes:
-
-- **available/indexed**: present in the searchable approved corpus;
-- **curated**: individually reviewed and documented;
-- **validated**: curated with additional behavioral evidence here.
-
-Those states are not interchangeable, but all available/indexed user-facing skills are part of the library corpus.
-
-See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`registry/sources.yaml`](registry/sources.yaml), and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
-
-## Installation is part of the result
-
-Bootstrap is not finished when it produces Markdown and leaves the user to figure out the rest.
-
-For each target host or surface, completion should be explicit:
+A fitted skill system should finish with an explicit host-level state such as:
 
 - `INSTALLED + VERIFIED`
 - `INSTALLED, VERIFICATION PENDING`
@@ -163,65 +150,35 @@ See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 ## Repository layout
 
 ```text
-README.md                     # human + agent entry point
-AGENTS.md                     # self-starting agent entry contract
-BOOTSTRAP.md                  # beginner-facing bootstrap procedure
-INDEX.md / index.json         # generated map of the full indexed library
+README.md / AGENTS.md / BOOTSTRAP.md
+INDEX.md / index.json             # generated library map
 
-skills/                       # locally maintained/imported user-facing skills
-  README.md
-  fact-check/
-  brief-writer/
-  repo-doctor/
-  ...
-
-engine/                       # repository machinery; excluded from library counts
-  README.md
-  skills/
-    skill-bootstrap/
-    skill-forge/
-    skill-eval/
-    skill-audit/
-    skill-sync/
-    skills-pulse/
-    source-vetting/
+skills/                           # local/imported user-facing library
+engine/skills/                    # repository machinery, excluded from count
 
 registry/
-  candidates.yaml             # intake decisions
-  sources.yaml                # source trust/provenance
-  skills/                     # per-skill provenance companions
+  sources.yaml                    # source identity, role, default quality state
+  taxonomy.yaml                   # controlled characterization vocabulary
+  skills/                         # provenance companions
+  verification/                   # hash-bound quality/tags/evidence
 
-vendor/                       # pinned indexed reference/source repositories
-scripts/                      # deterministic repository tooling
-tests/                        # behavior and contract tests
-docs/                         # architecture, curation, eval, install docs
+vendor/                           # pinned indexed upstream corpora
+scripts/                          # deterministic repository tooling
+tests/                            # behavior and contract tests
+docs/                             # architecture, curation, eval, install docs
 ```
 
-## Design rules
+## Alpha status
 
-1. **Count the user-facing indexed corpus, not the engine.** Local/imported and indexed reference skills are library inventory; engine procedures are not.
-2. **Maintain a useful library.** Accumulate high-value skills without turning the repository into an uncurated dump.
-3. **Support direct use.** Experienced users and agents can browse, search, compare, and install specific skills without bootstrap.
-4. **The repository URL is a bootstrap invocation when no other task is given.**
-5. **Do not make bootstrap users shop for skills.** The agent performs discovery and comparison for them.
-6. **Compare before creation.** Learn from existing solutions before inventing another one.
-7. **User-fit before reuse.** Never preserve reuse at the expense of a better custom skill.
-8. **Behavior over aesthetics.** A polished skill that does not improve outcomes is not an improvement.
-9. **Portable core, replaceable adapters.** Keep durable behavior independent from host-specific installation details.
-10. **Read-only discovery by default.** Installation and other mutations require the expected authority.
-11. **Minimum necessary evidence.** Do not mine unrelated private data merely because it is accessible.
-12. **Explicit provenance.** Materially copied or adapted third-party work keeps its required attribution and license obligations.
-13. **Installation is part of bootstrap completion.**
+Alpha is **not locked yet**. The foundational governance is now in place, but bootstrap selection still needs to consume verification/tags directly, the generated index needs a current deterministic refresh, and representative end-to-end fitted-set evals still need to demonstrate reuse, rejection, custom creation, and installation/handoff behavior.
 
-## Validation
+See [`docs/alpha-lock.md`](docs/alpha-lock.md) for the exact remaining gate list.
 
-Repository machinery under `engine/` validates the user-facing library and source corpus.
+## Validation and Actions
 
-Structural or risk checks prove conformance to repository rules. They do not by themselves prove that a skill improves outcomes. High-value changes should also receive controlled behavioral evaluation.
+Structural audits and risk checks prove repository conformance. They do not prove behavioral effectiveness.
 
-Automatic GitHub Actions are currently disabled to protect the Actions budget. The workflow remains available for deliberate manual execution.
-
-See [`engine/skills/skill-eval/SKILL.md`](engine/skills/skill-eval/SKILL.md).
+Automatic GitHub Actions are currently disabled to protect the Actions budget. The workflow is manual-dispatch only. Do not treat an intentionally absent CI run as evidence of failure or success.
 
 ## Licensing
 

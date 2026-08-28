@@ -1,76 +1,65 @@
 # Agent Entry Contract
 
-This repository has **two valid operating modes** and **two different skill layers**.
+This repository is both a user-facing skill library and a skill-building engine.
 
-## Repository structure rule
+## Inventory boundary
 
-- `skills/` is the **user-facing skill library**. A skill in this directory counts as library inventory and should make sense to install or use independently of operating this repository.
-- `engine/skills/` is **skillz machinery**. These skill-shaped procedures operate the bootstrap, curation, evaluation, auditing, authoring, synchronization, and source-maintenance system. They do **not** count as library inventory.
-- `vendor/` contains pinned upstream reference sources. A skill hidden inside a vendored source does not count as a `skillz` library skill merely because the submodule exists.
-- `registry/skills/` contains provenance and curation records for third-party skills.
+- `skills/`: local/imported user-facing skills. Count them.
+- approved indexed skill material under `vendor/`: referenced user-facing library skills. Count them.
+- `engine/skills/`: procedures that operate `skillz` itself. Do **not** count them.
+- `registry/skills/`: provenance for individually characterized third-party skills.
+- `registry/verification/`: hash-bound quality state and controlled tags.
 
-The test is simple: **Would this capability make sense for a user to install independently of maintaining `skillz`?** If yes, it may belong in `skills/`. If its purpose is operating this repository's skill-building system, it belongs in `engine/skills/`.
+Availability and quality are separate. A vendored skill can be part of the searchable library while still being unverified.
 
-## Direct skill-library mode
+## Direct library mode
 
-If the user asks to browse, search, compare, inspect, install, adapt, or use a specific skill, treat `skillz` as a normal skill library.
+If the user asks to browse, search, compare, inspect, install, adapt, or use a known skill, treat `skillz` as a normal library. Do not force full bootstrap.
 
-Use `INDEX.md`, `index.json`, `skills/`, `registry/`, and allowed reference sources to satisfy that request directly.
-
-Do not force a full bootstrap when the user already knows what they want.
+For third-party unchanged reuse, consult both provenance and verification metadata when available.
 
 ## Bootstrap mode
 
-If a user gives you this repository or its GitHub URL and does not provide a more specific task, treat that as a request to **begin the skill bootstrap process now**.
-
-Do not stop after describing, reviewing, or summarizing this repository unless the user explicitly asked for a repository overview.
-
-### Default action
+If the user gives you this repository or its GitHub URL without another specific task, **begin bootstrap now**. Do not stop at a repository summary.
 
 1. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
 2. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
-3. Inspect the relevant in-scope interaction history, memory, workspace context, existing instructions, existing skills, and recurring corrections that your current host actually exposes.
-4. Infer the working methods that would benefit from durable reusable skills.
-5. Search and compare this repository's accumulated skill library and allowed reference corpus.
-6. Reuse, adapt, supplement, or compose existing skills when that is genuinely the best fit.
-7. Create new custom skills when the user's workflow is not adequately represented, even when related reference skills exist.
-8. Adversarially review and validate the resulting skill system.
-9. Install the resulting skills when the current host supports installation and the required authority exists. Otherwise create the correct package and give the user the shortest beginner-readable installation handoff.
+3. Inspect only relevant interaction history, persistent memory, workspace context, existing instructions/skills, recurring corrections, and tool patterns the host legitimately exposes.
+4. Identify durable working methods and latent skill candidates.
+5. Search and compare the complete indexed user-facing library, including approved vendor corpora.
+6. Use `registry/verification/` and `registry/taxonomy.yaml` to judge unchanged-reuse eligibility and fit.
+7. Reuse, adapt, supplement, or compose existing skills when that is genuinely the best fit.
+8. Create new custom skills when the user's workflow is not adequately represented, even when related references exist.
+9. Adversarially review and behaviorally evaluate the fitted skill system as appropriate.
+10. Install when authorized, or produce the correct portable artifact and shortest beginner-readable handoff.
 
-## Core rule
+## Third-party quality rule
 
-**The repository is both a skill library and a skill-building system.**
+Source reputation does not equal individual skill verification.
 
-The library and the machinery are distinct.
+- Matt Pocock is the sole current `trusted-baseline` source policy.
+- All other skill-bearing sources default to `unverified`.
+- An individual characterization record applies only to its recorded Git blob SHA.
+- If the current blob hash changes, treat prior characterization as `stale` until refreshed.
+- `verified` means the structured rubric passed.
+- `validated` additionally requires representative behavioral evidence.
 
-For direct-use requests, help the user use the library.
+For unchanged trusted selection, prefer an individually characterized record with a matching fingerprint and status `trusted-baseline`, `verified`, or `validated`.
 
-For bootstrap requests, optimize for the user's actual workflow rather than maximizing reuse of existing skills.
+`unverified` material may inform design or be verified on demand, but do not silently install it as trusted unchanged material. Exclude `stale`, `rejected`, and `retired` material from default selection.
 
-An existing skill is valuable both as something that may be used directly and as evidence that a problem may already have useful design patterns. It is not a requirement to use that implementation during bootstrap.
+A Matt skill without an individual characterization record may inherit source-quality confidence, but it does not yet have local tags/fingerprint governance. Characterize it before treating it as a fully governed selection candidate.
 
-A bootstrap result may contain existing skills used unchanged, adapted skills, supplemented skills, composed skills, entirely new custom skills informed by references, a mixture of those, or no new skill at all when formalization would not help.
+## Core doctrine
 
-Do not force the user's workflow to fit the library. Do not diminish the library merely because bootstrap exists.
+**Compare before creation. User-fit before reuse.**
 
-## Memory and history
+A reference can contribute triggers, safeguards, procedures, tests, abstractions, and failure handling without becoming the user's final workflow. Create a custom skill when that better matches the user's actual method.
 
-When the current host exposes prior interaction history or persistent memory, use that evidence before asking the user to explain themselves again.
+## Memory and privacy
 
-Look especially for repeated instructions, recurring corrections, preferred completion standards, recurring task sequences, recurring tool combinations, approval or safety boundaries, repeated failure modes, and implicit workflows that already behave like skills but exist only in memory or conversation history.
-
-Do not invent inaccessible history. Do not sweep unrelated private connectors merely because they exist. Follow the evidence-scope rules in `engine/skills/skill-bootstrap`.
-
-## Library behavior
-
-`skills/` is the primary browsable/installable library surface.
-
-`INDEX.md` and `index.json` should report library inventory separately from engine tooling and reference-source inventory.
-
-Experienced users and agents may browse, search, compare, reuse, and install library skills directly. During bootstrap, the library plus approved reference sources become comparison and design evidence. A beginner should not be required to browse hundreds of skills manually because the agent can perform that comparison on their behalf.
+Use relevant memory/history before asking the user to repeat accessible information. Never invent inaccessible history. Access to a private connector is capability, not consent to mine it for a profile.
 
 ## Mutation boundary
 
-Discovery and design are read-only by default. Installing skills, writing outside the active workspace, changing permissions, publishing, sending, or making other external mutations requires the authority expected by the target environment.
-
-A recommendation is not authorization.
+Discovery and design are read-only by default. Installing skills, writing outside the active workspace, changing permissions, publishing, sending, or causing external side effects requires the authority expected by the target environment. A recommendation is not authorization.
