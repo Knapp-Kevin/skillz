@@ -1,22 +1,22 @@
 # 🛠️ skillz
 
-![Library Skills](https://img.shields.io/badge/library_skills-42-blue)
+![Library Corpus](https://img.shields.io/badge/indexed_library-500%2B-blue)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
 ![Sources](https://img.shields.io/badge/reference_sources-8-8A2BE2)
 ![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A growing library of reusable AI skills, plus an engine that can discover, build, evaluate, and install the right skill set for a particular person.**
+**A large, curated library of reusable AI skills, plus an engine that can discover, build, evaluate, and install the right skill set for a particular person.**
 
 `skillz` has two equally valid ways to use it.
 
 ## 1. Use it as a skill library
 
-Browse, search, compare, install, adapt, or reuse skills directly.
+Browse, search, compare, install, adapt, or reuse skills directly through [`INDEX.md`](INDEX.md), [`index.json`](index.json), the locally maintained skills under [`skills/`](skills/), and the approved indexed source corpus under [`vendor/`](vendor/).
 
-The public library lives in [`skills/`](skills/). **Only actual library skills count toward the skill total.** Repository machinery is deliberately separated under [`engine/skills/`](engine/skills/) and does not count.
+**The library is the whole indexed user-facing corpus, not merely the directories directly under `skills/`.**
 
-The goal is for `skills/` to grow into a large, curated collection containing hundreds of useful capabilities across first-party and properly attributed third-party material.
+Historically this repository already contained hundreds of indexed reference skills. The July 4 state record verified **524 vendor-indexed skills** alongside 48 local skills. Current curation work has added additional sources rather than removing those skills, so the repository continues to contain a 500+ skill corpus. The exact current deduplicated total should come from the regenerated index rather than a hand-maintained badge.
 
 ## 2. Give the repository to your AI
 
@@ -34,21 +34,27 @@ The library remains a first-class product. Bootstrap is an accessibility and syn
 
 ---
 
-## Library skills versus engine skills
+## What counts as a skill?
 
-This distinction is fundamental.
+The repository has several different populations, and only one of them should be excluded from the library count.
 
-### `skills/` = library inventory
+### Local/imported library: `skills/`
 
-A skill belongs in [`skills/`](skills/) when it makes sense for a user or agent to install and use independently of maintaining this repository.
+[`skills/`](skills/) contains capabilities maintained directly in this repository or deliberately imported here.
 
-Examples include research, writing, review, debugging, planning, monitoring, operations, and domain workflows.
+These are user-facing skills and count toward the library.
 
-If somebody asks, **"How many skills are in skillz?"**, the first-party/imported library count comes from this directory.
+### Indexed reference library: `vendor/`
 
-### `engine/skills/` = repository machinery
+[`vendor/`](vendor/) contains pinned official and community-vetted source repositories used for direct discovery, comparison, adaptation, composition, and bootstrap synthesis.
 
-The engine uses skill-shaped procedures because skills are a useful way to make agent behavior explicit and composable. Those procedures are not catalog inventory.
+**Indexed user-facing skills from approved source corpora count as available library skills.** They do not need to be copied into `skills/` merely to count.
+
+Individual review state is tracked separately. A skill may be available in the indexed corpus without yet being individually curated or behaviorally validated.
+
+### Engine machinery: `engine/skills/`
+
+The engine uses skill-shaped procedures because that makes the repository's own behavior explicit and composable. Those procedures are not library inventory.
 
 Current engine skills include:
 
@@ -60,19 +66,13 @@ Current engine skills include:
 - `skills-pulse`
 - `source-vetting`
 
-These operate the repository's discovery, authoring, curation, validation, deployment, and maintenance processes. They **do not count** toward the library total.
+These operate discovery, authoring, curation, validation, deployment, and repository maintenance. **They do not count toward the library total.**
 
 The boundary test is:
 
 > Would this capability make sense for a user to install independently of maintaining `skillz`?
 
-If yes, it may belong in `skills/` even if this repository also uses it internally. Internal use alone does not make something engine machinery.
-
-### `vendor/` = reference/source corpus
-
-Pinned upstream repositories under [`vendor/`](vendor/) provide comparison material, upstream source integrity, and update/provenance anchors.
-
-A `SKILL.md` existing inside a submodule does **not** automatically become a `skillz` library skill or inflate the library count. Skills must be deliberately curated/promoted or imported into the library according to licensing, provenance, dependency, and review rules.
+If yes, it belongs in the user-facing library even if `skillz` also uses it internally. If its purpose is operating `skillz` itself, it belongs in the engine.
 
 ---
 
@@ -86,7 +86,7 @@ Do not stop at a repository summary, feature list, or "this looks useful" respon
 2. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
 3. Use the relevant history, memory, instructions, workspace context, existing skills, and recurring corrections your current host can legitimately access.
 4. Identify durable working methods that should become reusable skills.
-5. Search and compare the actual library in `skills/` and approved reference sources.
+5. Search and compare the entire indexed library, including local skills and approved reference sources.
 6. Reuse, refine, adapt, supplement, or compose existing skills when they genuinely fit.
 7. Create new custom skills when a better fit does not already exist.
 8. Evaluate and adversarially review the resulting skill system.
@@ -129,6 +129,22 @@ When accessible memory or history contains a stable useful pattern, bootstrap sh
 
 Do not invent inaccessible history. Access to a private connector is capability, not permission to mine it for a profile.
 
+## Curation and provenance
+
+`skillz` is intended to become large, but it is not intended to become a dump.
+
+Third-party skills should have an auditable companion record under [`registry/skills/`](registry/skills/) containing source repository/path, upstream license, source pin, skill-specific last-update revision/date, curation/check dates, dependencies, portability, permission tier, review status, and rationale.
+
+The library distinguishes:
+
+- **available/indexed**: present in the searchable approved corpus;
+- **curated**: individually reviewed and documented;
+- **validated**: curated with additional behavioral evidence here.
+
+Those states are not interchangeable, but all available/indexed user-facing skills are part of the library corpus.
+
+See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`registry/sources.yaml`](registry/sources.yaml), and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
+
 ## Installation is part of the result
 
 Bootstrap is not finished when it produces Markdown and leaves the user to figure out the rest.
@@ -144,38 +160,22 @@ For each target host or surface, completion should be explicit:
 
 See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
-## Curation and provenance
-
-`skillz` is intended to become large, but it is not intended to become a dump.
-
-Third-party skills should have an auditable companion record under [`registry/skills/`](registry/skills/) containing source repository/path, upstream license, source pin, skill-specific last-update revision/date, curation/check dates, dependencies, portability, permission tier, review status, and rationale.
-
-The library distinguishes:
-
-- **available source material** — present in an approved source corpus,
-- **curated skills** — individually reviewed and documented,
-- **validated skills** — curated skills with additional behavioral evidence here.
-
-Those states are not interchangeable.
-
-See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`registry/sources.yaml`](registry/sources.yaml), and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
-
 ## Repository layout
 
 ```text
 README.md                     # human + agent entry point
 AGENTS.md                     # self-starting agent entry contract
 BOOTSTRAP.md                  # beginner-facing bootstrap procedure
-INDEX.md / index.json         # generated library/reference index
+INDEX.md / index.json         # generated map of the full indexed library
 
-skills/                       # ACTUAL USER-FACING LIBRARY; these count
-  README.md                   # library boundary and counting rule
+skills/                       # locally maintained/imported user-facing skills
+  README.md
   fact-check/
   brief-writer/
   repo-doctor/
   ...
 
-engine/                       # repository machinery; does not count
+engine/                       # repository machinery; excluded from library counts
   README.md
   skills/
     skill-bootstrap/
@@ -191,7 +191,7 @@ registry/
   sources.yaml                # source trust/provenance
   skills/                     # per-skill provenance companions
 
-vendor/                       # pinned upstream reference/source repos
+vendor/                       # pinned indexed reference/source repositories
 scripts/                      # deterministic repository tooling
 tests/                        # behavior and contract tests
 docs/                         # architecture, curation, eval, install docs
@@ -199,7 +199,7 @@ docs/                         # architecture, curation, eval, install docs
 
 ## Design rules
 
-1. **`skills/` is the library.** Engine machinery and submodule contents do not inflate its count.
+1. **Count the user-facing indexed corpus, not the engine.** Local/imported and indexed reference skills are library inventory; engine procedures are not.
 2. **Maintain a useful library.** Accumulate high-value skills without turning the repository into an uncurated dump.
 3. **Support direct use.** Experienced users and agents can browse, search, compare, and install specific skills without bootstrap.
 4. **The repository URL is a bootstrap invocation when no other task is given.**
@@ -215,9 +215,11 @@ docs/                         # architecture, curation, eval, install docs
 
 ## Validation
 
-Repository machinery under `engine/` validates the actual library under `skills/`.
+Repository machinery under `engine/` validates the user-facing library and source corpus.
 
 Structural or risk checks prove conformance to repository rules. They do not by themselves prove that a skill improves outcomes. High-value changes should also receive controlled behavioral evaluation.
+
+Automatic GitHub Actions are currently disabled to protect the Actions budget. The workflow remains available for deliberate manual execution.
 
 See [`engine/skills/skill-eval/SKILL.md`](engine/skills/skill-eval/SKILL.md).
 
@@ -228,15 +230,3 @@ First-party content is licensed under the [MIT License](LICENSE).
 Third-party repositories and materially derived content retain their applicable upstream license obligations. The root MIT license does not relicense vendored or otherwise identified third-party material.
 
 See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
-
-## Advanced engine entry points
-
-- [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md)
-- [`engine/skills/skill-forge/SKILL.md`](engine/skills/skill-forge/SKILL.md)
-- [`engine/skills/skill-eval/SKILL.md`](engine/skills/skill-eval/SKILL.md)
-- [`engine/skills/skill-audit/SKILL.md`](engine/skills/skill-audit/SKILL.md)
-- [`engine/skills/skill-sync/SKILL.md`](engine/skills/skill-sync/SKILL.md)
-- [`engine/skills/skills-pulse/SKILL.md`](engine/skills/skills-pulse/SKILL.md)
-- [`engine/skills/source-vetting/SKILL.md`](engine/skills/source-vetting/SKILL.md)
-
-The point of those engine components is to make the library easier to discover, grow, validate, and personalize. They are not the library itself.
