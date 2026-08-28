@@ -6,7 +6,11 @@
 ![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![Install](https://img.shields.io/badge/install-zero-success)
 
-**A portable skill library that helps AI systems learn better ways to work with you.**
+**A portable skill discovery, creation, evaluation, and installation system for AI agents.**
+
+`skillz` helps an AI learn how you work, find reusable skills that already solve your problems, improve or combine them when useful, create only what is missing, and carry those working methods between compatible AI systems.
+
+It is designed for people who know exactly what they need and for people who have never heard the phrase "AI skill" before.
 
 ## New here? Start here.
 
@@ -16,20 +20,20 @@ You do not need to choose from hundreds of files.
 
 You do not need to be a programmer.
 
-Give your AI this repository and point it to **[BOOTSTRAP.md](BOOTSTRAP.md)**.
+Give your AI access to this repository and point it to **[BOOTSTRAP.md](BOOTSTRAP.md)**.
 
 The bootstrap process helps your AI:
 
-1. look at the work, history, memory, files, tools, and instructions it can actually access,
+1. look at the relevant work, history, memory, files, tools, and instructions it can actually access,
 2. notice things you do again and again,
 3. find skills in this repository that already help with those things,
 4. improve or combine existing skills when that is better than starting over,
 5. create a new skill only when something useful is truly missing,
 6. test whether those skills actually make the AI more dependable,
-7. save the important working rules in a portable form that can help another compatible AI later, and
+7. save important working rules in a portable form that another compatible system can use, and
 8. **install the skills when it safely can, or give you the exact file and simple steps needed to install them yourself.**
 
-In plain language: **instead of teaching every AI the same lessons over and over, turn the useful lessons into reusable skills, then make sure you can actually use them.**
+In plain language: **teach an AI how you work once, turn the useful lessons into reusable skills, and make those skills portable instead of trapping them inside one product's memory.**
 
 > **Beginner path:** [BOOTSTRAP.md](BOOTSTRAP.md)
 >
@@ -37,189 +41,205 @@ In plain language: **instead of teaching every AI the same lessons over and over
 
 ---
 
-## What is in this repository?
+## What this repository does
 
-The repository contains first-party skills plus a curated reference library from official and selected community sources. It also contains the tools for discovering, comparing, testing, creating, auditing, installing, and moving those skills between supported agent hosts.
+`skillz` is more than a folder of prompts.
 
-The goal is not to collect the most skills. The goal is to help an agent find the **smallest useful set** for the person or system it is helping and leave that person with a working installation path.
+It provides a complete lifecycle for reusable agent behavior:
 
-Reference skills do not automatically become trusted or authoritative. Agents compare them against the target workflow and may adopt, adapt, supplement, compose, benchmark, or reject them.
+- **Discover** — identify repeated workflows, corrections, safeguards, and execution patterns that may deserve a skill.
+- **Compare** — check existing first-party, official, and vetted community skills before inventing another one.
+- **Adapt** — borrow useful patterns without silently replacing the user's process or experience.
+- **Create** — build a custom skill only when the existing corpus leaves a real gap.
+- **Evaluate** — test whether a skill actually improves behavior rather than merely looking sophisticated.
+- **Audit** — check structure, risk, authority boundaries, missing evidence handling, and unsafe assumptions.
+- **Install** — deploy automatically when the active agent has the capability and authority, or prepare the correct package plus simple human instructions when it does not.
+- **Transfer** — keep durable working methods outside any one provider's private memory so compatible agent systems can reuse them.
 
-Third-party work keeps its attribution and license information. See [docs/third-party-provenance.md](docs/third-party-provenance.md) and [registry/sources.yaml](registry/sources.yaml).
+The goal is not to collect the most skills. The goal is to find the **smallest useful set that makes the agent more dependable for the person or system it serves**.
 
-## Quick start
+## One-command-style starting instruction
 
-### Beginner or first-time setup
+Give the connected AI this instruction:
 
-Give your agent this instruction:
-
-```
+```text
 Read BOOTSTRAP.md and help me figure out which skills would make you better at helping me. When they are ready, either install them if you can safely do that, or give me the exact files and simple steps I need to install them in the AI system I am using.
 ```
 
-The full orchestration procedure lives in [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md). Installation and upload handoff rules live in [`docs/installation-handoff.md`](docs/installation-handoff.md).
+The user should not need to understand the repository layout, package format, filesystem paths, or installation mechanics before getting useful results.
 
-### Claude Code: use a known skill directly
+## How the bootstrap decides what to do
 
-```
-Read G:\MythologIQ\skillz\INDEX.md, then run the claude-pulse skill.
-```
+For each potential capability, the bootstrap can decide to:
 
-### Claude Code: install a skill permanently
+- **KEEP** an existing skill that already works,
+- **REFINE** a good skill that needs stronger instructions, tests, or safeguards,
+- **ADOPT** a strong existing skill,
+- **ADAPT** a strong reference to the user's environment,
+- **SUPPLEMENT** a current skill with one useful pattern from another source,
+- **COMPOSE** separate skills that should remain separate,
+- **CREATE** a new skill when there is a stable, justified gap,
+- use a **CHECKLIST/HELPER** instead when a full skill would be excessive,
+- leave a workflow **DYNAMIC** when formalizing it would make it worse, or
+- **DO NOT CREATE** anything when the value is not there.
 
-```powershell
-# personal (all projects)
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\claude-pulse" -Target "G:\MythologIQ\skillz\skills\claude-pulse"
-# or deploy everything portable at once:
-node skills/skill-sync/scripts/sync.ts --claude-user --apply
-```
+Presence in the repository is not automatic trust. A popular or official skill can still be wrong for the target workflow.
 
-### Any other agent
+## Installation is part of the result
 
-If the host supports installable skills, the bootstrap should identify its current installation method and either perform it with the required authority or produce the host-specific upload package and instructions. If the host does not support skills, preserve the portable source and describe any adapter separately instead of pretending it is installed.
+A bootstrap is not finished when it produces a folder and leaves the user staring at it like an archaeological artifact.
 
-Skills are plain Markdown plus optional zero-install scripts using Bun or Node 22.18+. No framework is required for the canonical source.
+For each target agent or surface, the result must end in a clear state such as:
 
-### Clone with the vendored references
+- `INSTALLED + VERIFIED`
+- `INSTALLED, VERIFICATION PENDING`
+- `READY TO UPLOAD`
+- `USER ACTION REQUIRED`
+- `BLOCKED: HOST DOES NOT SUPPORT SKILLS`
+- `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED`
 
-```
-git clone --recurse-submodules <url>
-```
+When the active agent has a supported filesystem, API, repository, or installer and the required authority, it can perform installation directly.
+
+When a web or desktop interface requires a human upload, the agent should prepare the correct artifact when possible and give short, current, click-by-click instructions that identify the exact file and end with one small test.
+
+See [`docs/installation-handoff.md`](docs/installation-handoff.md).
+
+## Portable by design
+
+The canonical skill remains separate from any one host's private memory or UI.
+
+Host-specific installation is treated as an adapter layer. The same portable skill may be installed differently on a local coding agent, a web assistant, an IDE agent, an API-driven agent, or another compatible system.
+
+The repository does **not** assume that one product, vendor, runtime, or interface is the permanent center of the user's workflow.
+
+The Portable User Skill Profile records durable execution defaults, selected skills, validation state, and installation state separately for each known host/surface. See [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md).
+
+## Where the skills come from
+
+The repository contains:
+
+1. **First-party skills** created and maintained here.
+2. **Official reference sources** from platform and tooling vendors.
+3. **Selected community references** included because they provide useful patterns for comparison, adaptation, supplementation, composition, or benchmarking.
+
+Third-party work keeps its attribution and license information. Inclusion makes a source available for evaluation; it does not grant blanket authority or trust.
+
+See:
+
+- [`registry/sources.yaml`](registry/sources.yaml) — source identity, trust class, path, and provenance metadata
+- [`docs/third-party-provenance.md`](docs/third-party-provenance.md) — attribution and adaptation rules
+- [`registry/candidates.yaml`](registry/candidates.yaml) — individual candidate decisions
 
 ## Skill series
 
 49 first-party skills across seven series:
 
-| Series | Skills | Cadence |
+| Series | Skills | Purpose |
 |--------|--------|---------|
-| **Pulse** (17) | 11 vendor pulses (claude, openai, gemini, llama, mistral, xai, deepseek, qwen, glm, kimi, perplexity) + 6 topic pulses (`governance`, `memory`, `github`, `hf`, `mcp`, `inference`), all driven by one engine (`scripts/pulse-run.ts`) with per-skill `sources.json`; adding a pulse is a data change | weekly |
-| **Research** (5) | `deep-dive`, `compare`, `fact-check`, `paper-digest`, `source-vetting`, structured inquiry with adversarial fact-checking and registry-ready verdicts | on demand |
-| **Agent-ops** (5) | `skill-eval`, `mcp-vetting`, `agent-postmortem`, `handoff-writer`, `permissions-review`, running the agent fleet itself | on demand / monthly |
-| **Daily-ops** (5) | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` (forge + operate a cross-org task-coordination repo, bound to its own governance doc), draft-only for anything that sends or writes | daily / weekly |
-| **Comms & life** (8) | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | on demand / monthly |
-| **Repo hygiene** (3) | `repo-pulse`, `repo-doctor`, `todo-harvester`, `gh`/git-evidence based, read-only punch lists | weekly / on demand |
-| **Meta** (6) | `skill-bootstrap` (personal skill discovery/onboarding + installation handoff), `skills-pulse` (ecosystem intake + source freshness), `skill-audit` (two-layer self-validation), `skill-sync` (deployment), `skill-forge` (scaffolding), `agent-home-doctor` (agent CLI home audit/cleanup) | onboarding / weekly / pre-commit / as-needed |
+| **Pulse** | vendor and topic monitoring skills driven by a shared collector | recurring ecosystem awareness |
+| **Research** | `deep-dive`, `compare`, `fact-check`, `paper-digest`, `source-vetting` | structured evidence-based inquiry |
+| **Agent-ops** | `skill-eval`, `mcp-vetting`, `agent-postmortem`, `handoff-writer`, `permissions-review` | operating and improving agent systems |
+| **Daily-ops** | `daily-briefing`, `inbox-triage`, `standup-writer`, `week-in-review`, `task-surface` | recurring operational work |
+| **Comms & life** | `brief-writer`, `decision-log`, `devlog-draft`, `deck-outline`, `finance-review`, `smallbiz-ops`, `career-radar`, `learning-plan` | reusable communication and planning workflows |
+| **Repo hygiene** | `repo-pulse`, `repo-doctor`, `todo-harvester` | repository inspection and maintenance |
+| **Meta** | `skill-bootstrap`, `skills-pulse`, `skill-audit`, `skill-sync`, `skill-forge`, `agent-home-doctor` | discover, build, validate, install, and maintain skills |
 
 ## Skill index
 
-[INDEX.md](INDEX.md) and [index.json](index.json) are the canonical catalog: every local skill plus the indexed contents of the vendored reference corpus. Agents should resolve skills through the index rather than globbing the tree.
+[INDEX.md](INDEX.md) and [index.json](index.json) are the generated catalog of local skills and allowed reference sources.
 
-They are **generated, never edit them by hand**. After adding or changing a skill or reference source:
+Agents should resolve skills through the index rather than scanning the repository blindly.
 
-```
+After adding or changing a skill or reference source:
+
+```text
 node scripts/build-index.ts
 ```
 
-The generator scans `skills/*/SKILL.md` frontmatter and the allowed vendor/reference trees. Source trust classification lives in [registry/sources.yaml](registry/sources.yaml).
+The index is generated and should not be edited by hand.
 
 ## Repository layout
 
-```
-BOOTSTRAP.md                 # beginner and agent onboarding entry point
-INDEX.md / index.json        # generated skill index
-skills/                      # 49 first-party skills
-  skill-bootstrap/           # user-specific skill discovery/orchestration
-  <vendor>-pulse/            # 11 vendor + 6 topic pulses
-  deep-dive/ compare/ ...    # research series
-  skill-eval/ mcp-vetting/ … # agent-ops series
-  daily-briefing/ ...        # daily-ops series
-  brief-writer/ decision-log/# comms & life
-  skills-pulse/ skill-audit/ # meta series
-  skill-sync/ skill-forge/
+```text
+BOOTSTRAP.md                 # beginner + agent onboarding entry point
+INDEX.md / index.json        # generated skill catalog
+skills/                      # first-party skills
+  skill-bootstrap/           # discovery, architecture, validation + install handoff
+  skill-eval/                # controlled skill evaluation
+  skill-forge/               # skill creation
+  skill-audit/               # structural + semantic-risk validation
+  skill-sync/                # supported local deployment
+  ...
 registry/
   candidates.yaml            # per-skill intake decisions
-  sources.yaml               # reference-source trust + provenance classes
-vendor/                      # pinned official + community-vetted source repos
-scripts/
-  build-index.ts             # index generator
-  pulse-run.ts               # shared pulse collector
-  lib/frontmatter.ts         # shared zero-dep frontmatter parser
-tests/                       # behavior tests
-.github/workflows/ci.yml     # CI: tests + audit + risk audit + index freshness
+  sources.yaml               # reference source trust + provenance
+vendor/                      # pinned official + community-vetted references
+scripts/                     # shared deterministic tooling
+tests/                       # behavior and contract tests
 docs/
-  portable-skill-profile.md  # cross-host user execution + installation profile
+  portable-skill-profile.md  # portable execution + installation profile
   installation-handoff.md    # direct install / upload / verification contract
   third-party-provenance.md  # attribution + adaptation rules
+  evaluation-framework.md    # adoption and evaluation rules
   skill-template.md          # local authoring scaffold
-  evaluation-framework.md    # adoption/evaluation framework
-ROADMAP.md                   # series status + design rules + portability contract
+ROADMAP.md                   # architecture and development status
 ```
 
-## Validation: two layers, both enforced
+## Validation
 
-1. **Structural**: [`skill-audit`](skills/skill-audit/SKILL.md) (`scripts/audit.ts`) checks frontmatter conventions, script `--help` health, pulse-spec parsing, registry enums, and index freshness. Exit 1 means drift.
-2. **Semantic risk**: `scripts/risk-audit.ts` catches structurally valid skills that still induce dangerous behavior. It fails high-judgment skills missing negative-rule classes (secret handling, anti-fabrication, missing-evidence fallback) and mutating actions without approval language, and warns on portable-skill operator specifics and vendor-API references without an MCP/web fallback.
+Repository tooling uses two enforced validation layers:
 
-Both run in CI on every PR and push to main alongside the behavior suite and index-idempotency diff. The risk layer caught six real gaps on its first live run, which is a nice reminder that syntax can be perfect while the bottle still contains poison.
+1. **Structural validation** checks skill shape, metadata, scripts, registry values, and generated-index freshness.
+2. **Semantic-risk validation** checks for dangerous or misleading behavior such as secret handling failures, fabricated evidence, unsafe mutations, missing approval boundaries, and portability assumptions.
 
-## How this stays lean
+Behavior tests run alongside both layers.
 
-The repo covers local, cloud, and cross-host agent work without becoming a junk drawer by drawing four lines:
+Passing structural checks is not proof that a skill is useful. High-value changes should also receive behavioral evaluation against representative tasks.
 
-1. **Centralize intentionally.** Official sources are preferred for vendor/platform capabilities. Selected community repositories may also be vendored when they add strong comparative or supplemental value and licensing/provenance permit it. Source class is explicit in `registry/sources.yaml`.
-2. **Every third-party skill is still a decision.** [`registry/candidates.yaml`](registry/candidates.yaml) records adopt/sandbox/track/reject/quarantine decisions with permission tiers and rationale. Being present in `vendor/` makes a skill available for comparison; it does not automatically authorize use.
-3. **Intake is a cadence skill.** [`skills-pulse`](skills/skills-pulse/SKILL.md) scans the watchlist, filters finds against the registry/index/gated registry/built-ins, reports upstream drift, and proposes candidates. It never installs anything.
-4. **The repo maintains itself.** The audit layers plus [`skill-sync`](skills/skill-sync/SKILL.md) keep validation and local distribution mechanical; the installation handoff contract covers hosts that require APIs or human UI upload.
+## Design rules
 
-## Authoring a skill
+The repository stays useful instead of becoming an enormous prompt junk drawer by following a few rules:
 
-Start from [docs/skill-template.md](docs/skill-template.md). Conventions enforced by the audit layers include:
-
-- `skills/<name>/SKILL.md` is the single source of truth. Frontmatter `name` matches the directory, and `description` states both what it does and when to use it.
-- **Script collects, model synthesizes.** Scripts fetch and structure; judgment stays in instructions. Most skills need no script.
-- Scripts run on Bun or Node 22.18+ with no install step, and every scripted source documents a pure web-tool fallback.
-- Read-only by default. Anything that mutates external state requires explicit approval as appropriate to the target environment.
-- **Adaptive frameworks, not configurations.** Skills ship the framework; operator/org/environment specifics live in bound governance documents discovered at runtime. No hardcoded operator values in portable skill bodies.
-- **Negative rules ship with the scaffold.** High-judgment skills carry explicit prohibitions against reproducing secrets, fabricating missing evidence, or turning inference into fact.
-- Declare a capability floor as data when evidence supports it: `metadata.min-model-capability: haiku|sonnet|opus`.
-- Recurring skills include a Scheduling section.
-- If a local skill copies or materially adapts third-party work, preserve provenance per [docs/third-party-provenance.md](docs/third-party-provenance.md).
-- Finish by regenerating the index.
-
-The full portability contract is in [ROADMAP.md](ROADMAP.md#portability-contract-system-agnostic-requirements).
+1. **Reuse before creation.** Search the existing corpus before making another skill.
+2. **Behavior over aesthetics.** A beautifully written skill that does not improve outcomes is not an improvement.
+3. **Portable core, replaceable adapters.** Keep durable behavior independent from host-specific installation details.
+4. **Read-only discovery by default.** Installation, publishing, permission changes, and other mutations require the authority expected by the target environment.
+5. **Minimum necessary evidence.** Access to a connected private source is not permission to mine it for profile data.
+6. **Explicit provenance.** Materially copied or adapted third-party work keeps required attribution and licensing information.
+7. **Smallest useful system.** More skills are not automatically better.
+8. **Installation is part of done.** The result must either work on the target or tell the user exactly what remains.
 
 ## Vendored reference sources
 
-The repository currently includes six official source repositories and one community-vetted source repository as pinned submodules.
+The current reference corpus includes official sources from Anthropic, Vercel, Microsoft, Azure, and AWS, plus a community-vetted skill collection from Matt Pocock.
 
-| Source | Class | Coverage |
-|--------|-------|----------|
-| [anthropics/skills](https://github.com/anthropics/skills) | official | Office docs, skill-creator, MCP builder, frontend design, webapp testing |
-| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | official | Knowledge-work marketplace: productivity, sales, finance, legal, data, design, partner plugins |
-| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | official | React/Next.js best practices, composition patterns, web design guidelines |
-| [microsoft/skills](https://github.com/microsoft/skills) | official | Microsoft ecosystem: M365, Foundry, dev tooling |
-| [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | official | Azure plan/validate/deploy, RBAC, cost, diagnostics, AKS |
-| [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | official | AWS core services, Bedrock agents, analytics, DevSecOps |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | community-vetted | Engineering and productivity skill patterns used for comparison, adaptation, supplementation, composition, and benchmarking |
+The complete source registry, classifications, resolved paths, and provenance metadata live in [`registry/sources.yaml`](registry/sources.yaml).
 
-Pins are refreshed deliberately, never automatically. [docs/vendor-freshness.md](docs/vendor-freshness.md) defines the review-first workflow. **Vendored does not mean blanket-trusted.** Write-tier skills, community skills, and source updates still receive the permission, redundancy, and behavioral evaluation appropriate to their impact.
+Pins are refreshed deliberately rather than silently. Third-party source updates remain subject to review and evaluation.
 
-Matt Pocock's repository is MIT-licensed and is included as an attributed source. Local skills that copy or materially adapt third-party work must preserve required notices and record their relationship to the upstream source.
+## For advanced users and agents
 
-Marketplace-listed Anthropic plugins can also install straight from source:
+The beginner entry point intentionally hides most of the machinery. Advanced users and agents can work directly with:
 
-```
-/plugin marketplace add anthropics/knowledge-work-plugins
-/plugin install productivity@knowledge-work-plugins
-```
+- [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md)
+- [`skills/skill-eval/SKILL.md`](skills/skill-eval/SKILL.md)
+- [`skills/skill-forge/SKILL.md`](skills/skill-forge/SKILL.md)
+- [`skills/skill-audit/SKILL.md`](skills/skill-audit/SKILL.md)
+- [`skills/skill-sync/SKILL.md`](skills/skill-sync/SKILL.md)
+- [`docs/evaluation-framework.md`](docs/evaluation-framework.md)
+- [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md)
+- [`docs/installation-handoff.md`](docs/installation-handoff.md)
 
-## Governed development
+Specific products and hosts belong in their installation adapters and verified host instructions, not in the repository's core identity.
 
-Changes to this repository's tooling go through the Qor-logic S.H.I.E.L.D. lifecycle: planned, adversarially audited to a binding PASS/VETO, implemented against the sealed plan, and substantiated before merge. The governance record lives in `docs/`. The skills themselves remain ungated. Governance applies to building the repository, not to merely running a normal skill.
+## Development status
 
-## Positioning in the MythologIQ ecosystem
+The next-generation bootstrap/onboarding architecture is being developed through Issue #7 and PR #8.
 
-This repo is the **ungated, system-agnostic** skill library. It deliberately does not overlap with:
+Before promotion to `main`, the branch still requires:
 
-- **[Qor-logic](../Qor-logic)**: the canonical gated SDLC skill registry. Anything lifecycle-governed lives there, not here. The registries are independent by construction and doctrinally aligned.
-- **COREFORGE / Synapse**: a consumer of skills, not a registry. Synapse loads Claude-format `SKILL.md` directly and native skills via `manifest.json`. Skills here target Claude-format first; `skill-sync --coreforge` generates Synapse manifests from frontmatter.
+- generated `INDEX.md` / `index.json` refresh and idempotency proof,
+- behavioral bootstrap evaluation, including direct-install and human-upload cases,
+- final governed substantiation required by the repository's development process.
 
-Rules of the lane:
-
-1. **No gates at runtime.** Skills here may read cadence sources and synthesize, but they do not create Qor gate artifacts or enter the Qor delegation table. A skill that needs a PASS/VETO belongs in Qor-logic.
-2. **Governance-aware, not governance-bound.** A skill may read governance outputs as a source, read-only.
-3. **Portable by construction.** `SKILL.md` is the source of truth, capability needs are generic, external services use swappable connectors where possible, and local convention is bound at runtime rather than hardcoded.
-
-## Status
-
-The repository now includes the bootstrap/onboarding architecture on the Issue #7 feature branch in addition to the previously shipped skill series. Validation, generated-index refresh, behavioral bootstrap evals including direct-write and UI-upload installation cases, and governed substantiation remain required before this work may be merged to main.
+The public repository may be browsed now, but the bootstrap changes described above are not on `main` until PR #8 is merged.
