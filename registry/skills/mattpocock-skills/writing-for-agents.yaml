@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: writing-for-agents
+display_name: Writing for Agents
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/writing-for-agents/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/writing-for-agents/SKILL.md
+permission_tier: generate
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: references SKILL-MECHANICS.md from the intact source when writing skills
+import_eligibility: already-vendored
+rationale: High-value guidance for agent-consumed documents, especially trigger wording, progressive disclosure, completion criteria, context load, pruning, and avoiding duplicated or stale instructions.
