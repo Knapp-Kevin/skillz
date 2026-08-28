@@ -81,7 +81,7 @@ Skills help solve that problem.
 
 Instead of important working habits living only inside one AI's memory, they can live in files that other compatible AI systems can read too.
 
-That means the way you taught ChatGPT to work can help inform Claude, a local agent, or another compatible system later.
+That means useful working methods learned with one AI can help another compatible AI later.
 
 The AI systems will not become identical. They have different tools and abilities. But your important working rules do not have to disappear every time you change systems.
 
