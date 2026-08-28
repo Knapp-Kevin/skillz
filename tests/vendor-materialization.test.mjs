@@ -61,11 +61,20 @@ function makeFixture(t) {
   return { base, source, parent, submodule: join(parent, "vendor", "sample") };
 }
 
-test("vendor materialization verifier accepts an initialized clean exact pin", (t) => {
+test("vendor materialization verifier accepts a clean superproject and initialized clean exact pin", (t) => {
   const { parent } = makeFixture(t);
   const result = runVerifier(parent);
   assert.equal(result.status, 0, result.stderr || result.stdout);
-  assert.match(result.stdout, /PASS: all 1 vendored sources are initialized, clean, and pinned exactly/);
+  assert.match(result.stdout, /PASS: clean superproject; all 1 vendored sources are initialized, clean, and pinned exactly/);
+});
+
+test("vendor materialization verifier rejects dirty superproject state", (t) => {
+  const { parent } = makeFixture(t);
+  writeFileSync(join(parent, "UNTRACKED.txt"), "not part of the evaluated commit\n");
+
+  const result = runVerifier(parent);
+  assert.notEqual(result.status, 0);
+  assert.match(`${result.stdout}\n${result.stderr}`, /superproject is dirty/i);
 });
 
 test("vendor materialization verifier rejects an uninitialized or missing submodule", (t) => {
