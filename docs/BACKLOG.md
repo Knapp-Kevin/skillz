@@ -1,34 +1,62 @@
 # Backlog
 
-Open work items, ordered by the ROADMAP build order. IDs are stable; completed items move to Done with the closing reference.
+Current work is ordered by the initial-alpha finish line. Broad skill acquisition and refinement are intentionally post-alpha unless they expose a blocker in the first-visit or returning-user experience.
 
-## Open
+## Active: required before initial alpha lock
 
-| ID | Item | Series | Notes |
-|----|------|--------|-------|
-| B13 | `min-model-capability` metadata rollout across high-judgment skills (B12 remainder — exemplars shipped for handoff-writer + brief-writer; metadata field + more exemplars pending) | meta | Per template §Capability floor rule 7 |
-| B15 | Gemini host target for skill-sync (TOML conversion) | meta | Deferred from B08; format conversion, not copy |
-| B17 | skill-eval on ponytail (sandbox): frontier + weak-model arms; check process-authority conflict with Qor-logic before any adoption | agent-ops | MIT SKILL.md-format content, copy path exists but must earn adoption; self-reported benchmarks unverified |
-| B19 | Skill bootstrap/onboarding: infer latent user workflows, compare against centralized reference corpus, produce portable User Skill Profile, and hand off to eval/forge/audit/sync | meta | Issue #7 / draft PR #8. Beginner path must remain understandable without prior skill knowledge. Validation + governed substantiation pending. |
+| ID | Item | State | Completion evidence |
+|---|---|---|---|
+| A01 | Materialize all 12 pinned vendor submodules and run `node scripts/initial-alpha-preflight.ts` | BLOCKED BY CURRENT EXECUTION ENVIRONMENT | Preflight ends `READY FOR JOURNEY EVALUATION`; schema-v2 counts recorded; second catalog pass byte-identical |
+| A02 | Run first-visit scenario A1: eligible reuse/minimal adaptation | READY AFTER A01 | Actual isolated result under `docs/evals/results/`, no hard fail, fixture pass |
+| A03 | Run first-visit scenario A2: refuse unverified/stale trusted unchanged reuse | READY AFTER A01 | Actual isolated result, no quality-state escalation without evidence |
+| A04 | Run first-visit scenario A3: custom creation when library fit is materially worse | READY AFTER A01 | Actual isolated result showing comparison before creation and truthful validation/install state |
+| A05 | Run returning-user scenario R1: minimal justified refinement | READY AFTER A01 | Existing set inventoried, drift surfaced, valid custom behavior preserved, changed capability re-evaluated |
+| A06 | Run returning-user scenario R2: no-change decision | READY AFTER A01 | Actual isolated result concludes `NO CHANGE NEEDED` without inventing a gap |
+| A07 | Reconcile generated counts, README, alpha checklist, and Issue #15 | READY AFTER A01-A06 | Generated index/README agree; evidence linked; `docs/alpha-lock.md` updated |
+| A08 | Declare initial implementation alpha locked | BLOCKED UNTIL A01-A07 | Every remaining alpha gate supported by actual evidence |
 
-## Done
+## Post-alpha enrichment
 
-| ID | Item | Closed by |
-|----|------|-----------|
-| D01 | skill-audit + skill-sync (Meta series core) | Session 2026-07-03T2023-ca9b2c, seal f1150ab7 |
-| D02 | Pulse fleet: 16 pulses on shared engine | commit a046ccf |
-| D03 | Research series (5), agent-ops series (5), daily-ops (4), brief-writer, decision-log | 2026-07-03 gap-fill batch |
-| D04 (B01) | skill-eval first run on registry candidates | docs/evals/2026-07-03-handoff-writer.md; registry updated 2026-07-04 |
-| D05 (B02) | devlog-draft + deck-outline | Session 927a53 (1.0 cycle) |
-| D06 (B03/B04) | finance-review, smallbiz-ops, career-radar, learning-plan | Session 927a53 |
-| D07 (B05) | inference-pulse (SKILL.md + sources.json) | Session 927a53 |
-| D08 (B06) | repo-pulse, repo-doctor, todo-harvester | Session 927a53 |
-| D09 (B07) | skill-forge (repo-bound) | Session 927a53 |
-| D10 (B08, partial) | skill-sync `--hosts` (.claude/.kilo/.codex copies; Gemini deferred to B15) | Session 927a53, FX11 |
-| D11 (B09) | claude-pulse engine migration — REJECTED with reason (LD-2: bespoke undated-changelog cap has no engine equivalent; complecting rejected) | Plan phase2, Judge-verified sound |
-| D12 (B10) | Upstream proposal authored | docs/proposals/qor-versioned-gate-artifacts.md |
-| D13 (B11) | Weak-model eval executed | docs/evals/2026-07-04-handoff-writer-haiku.md |
-| D14 (B12, core) | Gold-standard exemplars for handoff-writer + brief-writer | skills/*/references/examples.md |
-| D15 (B10+B16) | Eight enhancement issues filed on MythologIQ-Labs-LLC/Qor-logic (#237–#244): versioned gate artifacts, LF-canonical hashing, living-spec delta-fold (full OpenSpec capability gap analysis), status --json, onboard tutorial, provenance auto-detect, weak-tier negative-rules doctrine, canary/dist_compile hardening | 2026-07-04 |
-| D16 (B14) | Negative rules shipped: §Negative rules in handoff-writer + 7 high-judgment skills (brief-writer, decision-log, agent-postmortem, source-vetting, fact-check, deep-dive, compare); template §Capability floor rule 8 + checklist row; `min-model-capability: sonnet` on handoff-writer. Mechanical enforcement: risk-audit.ts (issue #5). Weak-tier re-eval executed 2026-07-04: degradation reversed (treatment 29/30 vs baseline 26/30, zero treatment security violations; docs/evals/2026-07-04-handoff-writer-haiku-retest.md); min-model-capability lowered sonnet→haiku on that evidence | Issue #3, session 7cc26a |
-| D17 (B18) | De-specification sweep: 16 portable skills rebuilt as adaptive frameworks with Bind steps (bound source authoritative over memory; elicit + offer-to-persist when absent) — smallbiz-ops portfolio, career-radar profile, 5 workspace-root binds, 9 product-relevance binds. Audit WARN heuristic transferred to issue #5 per posted comment | Issue #4, session 7cc26a |
+These are useful but **not blockers** for the initial implementation.
+
+| ID | Item | Area | Notes |
+|---|---|---|---|
+| P01 | Continue source discovery and corpus expansion | curation | Add sources only with correct source role, pin/freshness, license, and attribution |
+| P02 | Characterize more existing corpus skills | curation | Fingerprint + controlled tags + provenance before treating as fully characterized |
+| P03 | Structured verification of additional third-party skills | quality | Unverified remains design evidence until it earns stronger status |
+| P04 | Behavioral validation of high-value skills | evaluation | Use representative before/after evidence where practical |
+| P05 | Improve category navigation and direct-library browsing | human UX | Let categories evolve from real corpus growth without destabilizing skill IDs |
+| P06 | Refine selection taxonomy and weights from real usage | selection | Tags inform shortlisting; final user-fit judgment remains required |
+| P07 | Expand returning-user drift/overlap heuristics | refinement | Prefer smallest justified change; preserve `NO CHANGE NEEDED` outcome |
+| P08 | Add additional supported host installation adapters | portability | Only when host packaging/install behavior is established |
+| P09 | Revisit minimum-model/capability metadata where evidence supports it | quality | Historical B13; do not block alpha |
+| P10 | Consider additional host format conversion in skill-sync | portability | Historical B15; do not block alpha |
+| P11 | Revisit historical sandbox candidates when they are relevant | curation | Historical B17 and similar items; source reputation is not proof |
+
+## Completed foundational work
+
+| ID | Item | Evidence |
+|---|---|---|
+| D01 | Separate user-facing library from repository engine machinery | `skills/`, `engine/skills/`, README/AGENTS boundary |
+| D02 | Human-first README with explicit AI-agent jump | `README.md` |
+| D03 | First-visit bootstrap route | `BOOTSTRAP.md`, `AGENTS.md`, `engine/skills/skill-bootstrap/` |
+| D04 | Returning-user refinement route | README/BOOTSTRAP/AGENTS contracts |
+| D05 | Human browse-by-purpose categories | `skills/categories/`, `registry/categories.yaml` |
+| D06 | Third-party provenance/attribution companion model | `registry/skills/`, `docs/third-party-provenance.md`, `THIRD_PARTY_NOTICES.md` |
+| D07 | Exact-version verification/fingerprint model | `registry/verification/`, `docs/skill-verification.md` |
+| D08 | Controlled characterization taxonomy | `registry/taxonomy.yaml` |
+| D09 | Source role + source pin/license registry | `registry/sources.yaml` |
+| D10 | Governed candidate selector | `engine/skills/skill-bootstrap/scripts/select-candidates.ts`, selection tests |
+| D11 | Recursive skill discovery across catalog/audit/risk/sync | `scripts/lib/skill-discovery.ts` and consumers |
+| D12 | Schema-v2 generated-catalog implementation | `scripts/build-index.ts` |
+| D13 | Catalog two-pass idempotency verifier | `scripts/verify-index-idempotency.ts` |
+| D14 | One-command initial-alpha preflight | `scripts/initial-alpha-preflight.ts` |
+| D15 | Frozen five-scenario journey proof matrix | `docs/evals/fixtures/initial-alpha-scenarios.json` |
+| D16 | Leak-safe journey scenario renderer | `scripts/render-alpha-scenario.ts` + tests |
+| D17 | Actions budget protection | `.github/workflows/ci.yml` manual-dispatch only |
+
+## Historical records
+
+The July 2026 build series and its B/D identifiers remain available in git history, historical plan documents, evaluation reports, and governance ledger artifacts. They are not the current implementation queue.
+
+For the authoritative finish line, use `docs/alpha-lock.md`, `docs/initial-implementation.md`, `docs/evals/run-initial-alpha.md`, and GitHub Issue #15.
