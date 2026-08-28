@@ -1,107 +1,174 @@
-# Bootstrap Your Agent Skills
+# Make Your AI Better at Helping You
 
-This is the easiest way into this repository.
+This repository helps your AI learn **how you like to work** and turn that into reusable skills.
 
-You do **not** need to know what an agent skill is, which skills you need, or how this repository is organized. Point your agent at this file and ask it to bootstrap your skill system.
+You do not need to know how skills work.
+You do not need to know how to code.
+You do not need to choose from hundreds of files.
+
+You can start with one simple request.
 
 ## Start here
 
-Give your agent this repository and tell it:
+Give your AI this repository and tell it:
 
-> Read `BOOTSTRAP.md` and `skills/skill-bootstrap/SKILL.md`. Use whatever history, memory, workspace files, tools, repositories, and prior interactions you can actually access to identify the smallest useful set of reusable skills for how I work. Compare my needs against this repository before creating anything new. Do not claim to have inspected information you cannot access. Preserve my existing workflow unless a change is separately justified.
+> Read `BOOTSTRAP.md` and help me figure out which skills would make you better at helping me. Look at the work, history, memory, files, tools, and instructions you can actually access. Find things I do again and again. Find skills in this repository that already help with those things. Improve or combine them when that makes sense. Create a new skill only when something useful is truly missing. Do not guess about information you cannot see.
 
-That is enough to begin.
+That is the whole starting process.
 
-## What the bootstrap does
+## What is a skill?
 
-The bootstrap process treats your existing behavior as evidence.
+A skill is a reusable set of instructions that teaches an AI how to do something the way you need it done.
 
-It looks for:
+For example, maybe you always want your AI to:
 
-- workflows you repeat frequently
-- reasoning patterns you repeatedly reconstruct
-- sequences that coordinate several tools or systems
-- places where mistakes are expensive or common
-- corrections you repeatedly make to agents
-- evidence, validation, security, or approval rules that matter to your work
-- existing skills that already serve you well
-- skills that exist implicitly in your behavior but have never been formalized
-- areas where a checklist, helper, or dynamic reasoning is better than a skill
+- check its work before saying a task is finished
+- research before making an important recommendation
+- review code in the same careful way every time
+- ask before making dangerous changes
+- create reports in a format you like
+- follow the same steps when fixing bugs
 
-It then compares those needs against the repository's local skills and curated reference corpus.
+You may already be teaching your AI these things over and over without realizing it.
 
-The result is **not** "install everything." The result should be the smallest coherent skill layer that materially improves reliability, consistency, efficiency, governance, or portability.
+This repository helps turn those repeated instructions into skills.
 
-## What the agent should produce
+## What will it do for me?
 
-A successful bootstrap returns four things:
+Your AI will look for patterns in the information it can access.
 
-1. **Usage findings** — what recurring working patterns were actually supported by evidence.
-2. **Skill decisions** — what to keep, refine, adopt, adapt, supplement, compose, create, or deliberately leave dynamic.
-3. **Portable User Skill Profile** — durable execution preferences and skill selections that can move between compatible agent hosts without relying on one provider's memory system.
-4. **Validation plan** — how proposed changes will be tested before they are trusted.
+It will try to find:
 
-The profile format is defined in [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md).
+- things you do often
+- instructions you keep repeating
+- mistakes you keep correcting
+- jobs that need the same steps every time
+- important rules you do not want forgotten
+- skills you already have that work well
+- places where a better skill could make your AI more dependable
 
-## How reference skills are used
+Then it checks the skills already collected in this repository.
 
-This repository intentionally centralizes strong skill implementations so an agent can compare before inventing.
+It asks:
 
-Reference skills are evidence, not automatic authority.
+**Do we already have a good skill for this?**
 
-The bootstrap classifies useful references as:
+If yes, use it.
 
-- **ADOPT** — use the existing skill as-is when it already fits.
-- **ADAPT** — customize a strong existing implementation for the target environment.
-- **SUPPLEMENT** — keep the target skill but borrow a specific pattern that measurably strengthens it.
-- **COMPOSE** — keep responsibilities separate and use both skills together.
-- **BENCHMARK** — use the reference to test quality without incorporating it.
-- **REJECT** — do not use it because it is redundant, unsafe, conflicting, stale, or simply worse for the job.
+**Is there a good skill that is close, but needs changes?**
 
-The user experience should remain recognizably yours. A clever external skill is not permission to replace your workflow with its author's workflow.
+If yes, adapt it to your needs.
 
-## Third-party skills and credit
+**Does your current skill work, but another skill has one really useful idea?**
 
-Official and community skill sources remain attributable to their original authors and licenses.
+If yes, borrow that useful part without replacing the way you already work.
 
-If a local skill directly copies, materially adapts, or borrows distinctive procedures from another skill, provenance must be recorded according to [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
+**Is something truly missing?**
 
-Attribution is part of correctness, not decorative paperwork.
+Only then should it create a new skill.
 
-## Available evidence varies by host
+The goal is not to give you hundreds of skills.
 
-Different agents expose different information.
+The goal is to give you the **smallest set of skills that actually makes your AI better for you**.
 
-A host may provide some combination of:
+## Why is this useful?
 
-- current conversation history
-- persistent memory
-- project or workspace instructions
-- repository history
-- connected files and documents
-- email/calendar/chat connectors
-- task history
-- tool invocation history
+Most AI assistants remember things differently.
 
-The bootstrap must use only evidence it can actually access.
+You might spend weeks teaching one AI how you like to work, then open another AI and have to start over.
 
-If history or memory is unavailable, it should say so and continue with the evidence that exists. Missing evidence is not an invitation to manufacture a personality profile from three prompts and a hunch.
+Skills help solve that problem.
 
-## Read-only first
+Instead of important working habits living only inside one AI's memory, they can live in files that other compatible AI systems can read too.
 
-Discovery and recommendation are read-only by default.
+That means the way you taught ChatGPT to work can help inform Claude, a local agent, or another compatible system later.
 
-The bootstrap may propose skills, profiles, files, installation steps, or repository changes. It must not send messages, change permissions, install dependencies, mutate external systems, or deploy anything without the authority required by the target environment.
+The AI systems will not become identical. They have different tools and abilities. But your important working rules do not have to disappear every time you change systems.
 
-## For experienced users
+## Where do the skills come from?
 
-If you already know the capability you need, skip bootstrap and use:
+This repository contains several kinds of skills:
 
-- [`INDEX.md`](INDEX.md) — human/agent-readable skill catalog
-- [`index.json`](index.json) — machine-readable catalog
-- [`skills/skill-eval/SKILL.md`](skills/skill-eval/SKILL.md) — baseline-versus-treatment skill evaluation
-- [`skills/skill-forge/SKILL.md`](skills/skill-forge/SKILL.md) — local skill scaffolding
-- [`skills/skill-audit/SKILL.md`](skills/skill-audit/SKILL.md) — structural and semantic-risk validation
-- [`skills/skill-sync/SKILL.md`](skills/skill-sync/SKILL.md) — deployment to supported hosts
+- skills created specifically for this repository
+- official skills from companies such as Anthropic, Microsoft, AWS, and Vercel
+- selected community skills that are useful enough to study, compare, adapt, or use
 
-Bootstrap exists so beginners do not have to understand any of those pieces before getting value from them.
+For example, the repository can include skills from Matt Pocock's skill collection as an attributed community reference source.
+
+We keep information about where outside skills came from and who created them. If we copy or meaningfully change someone else's work, we keep the required credit and license information.
+
+## It does not blindly copy everything
+
+A popular skill is not automatically a good skill for you.
+
+The bootstrap process compares skills instead of blindly installing them.
+
+It may decide to:
+
+- **USE** a skill that already fits
+- **IMPROVE** one of your existing skills
+- **ADAPT** another skill to fit your needs
+- **BORROW** one useful idea from another skill
+- **COMBINE** separate skills that work well together
+- **CREATE** a new skill when nothing suitable exists
+- **SKIP** a skill that adds no real value
+
+Your way of working stays important. Another person's skill should help your process, not quietly replace it.
+
+## What if my AI cannot see my old conversations or memory?
+
+That is okay.
+
+Different AI systems can access different information.
+
+The bootstrap process should use only what the AI can really see.
+
+If it cannot see your old conversations, it should say that.
+If it cannot access your files, it should say that.
+If it only has a little information, it should make smaller, more careful recommendations.
+
+It must not pretend it knows things about you that it does not know.
+
+## Will it change things automatically?
+
+Not by default.
+
+The first job is to look, compare, and recommend.
+
+It should not send messages, change permissions, delete things, install software, publish work, or make other important outside changes just because it found a useful skill.
+
+Those actions still need the permission required by the system you are using.
+
+## What do I get at the end?
+
+The bootstrap should give you:
+
+1. **What it noticed**
+   The repeated ways you already work.
+
+2. **Which skills would help**
+   Including skills you already have, skills that should be improved, and skills worth adding.
+
+3. **A portable skill profile**
+   A small file describing the important ways your AI should work with you.
+
+4. **A validation plan**
+   A way to test whether the new or improved skills actually make the AI better.
+
+The important part is that the result can live outside one AI's private memory.
+
+## For advanced users and agents
+
+The simple explanation ends here. The machinery underneath it is documented in:
+
+- [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md) — the full bootstrap procedure
+- [`docs/portable-skill-profile.md`](docs/portable-skill-profile.md) — the portable profile format
+- [`docs/third-party-provenance.md`](docs/third-party-provenance.md) — rules for credit and source tracking
+- [`INDEX.md`](INDEX.md) — the full skill catalog
+- [`index.json`](index.json) — the machine-readable catalog
+- [`skills/skill-eval/SKILL.md`](skills/skill-eval/SKILL.md) — tests whether a skill actually helps
+- [`skills/skill-forge/SKILL.md`](skills/skill-forge/SKILL.md) — creates new repository skills
+- [`skills/skill-audit/SKILL.md`](skills/skill-audit/SKILL.md) — checks skills for structural and safety problems
+- [`skills/skill-sync/SKILL.md`](skills/skill-sync/SKILL.md) — moves supported skills to other agent hosts
+
+The beginner should not need to understand any of those pieces before getting useful results.
