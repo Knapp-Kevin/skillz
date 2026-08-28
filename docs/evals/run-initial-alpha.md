@@ -56,11 +56,14 @@ The verifier requires:
 - the same public `set_id`;
 - SHA-256 equality with the exact committed public fixture bytes;
 - exactly the same neutral scenario IDs;
-- a frozen expected decision plus at least three `must_observe` and three `must_not` criteria for every scenario.
+- a frozen expected decision plus at least three `must_observe` and three `must_not` criteria for every scenario;
+- the supplied rubric path and its real filesystem target must both resolve **outside the repository/treatment workspace**.
+
+A successful verifier run reports `rubric_location: OUTSIDE REPOSITORY`. Record that result with the evaluation evidence.
 
 If bundle verification fails, stop. Do not repair the rubric after seeing treatment output. Correct the mismatch first and restart the evaluation with a freshly frozen bundle.
 
-The private rubric must never be committed to Git, pasted into the treatment conversation, attached to the treatment workspace, or exposed through a tool the treatment agent can access.
+The private rubric must never be committed to Git, copied anywhere under the treatment repository, pasted into the treatment conversation, attached to the treatment workspace, or exposed through a tool the treatment agent can access. A valid hash is not isolation if the treatment agent can still open the file.
 
 ## 3. Isolate each journey
 
@@ -139,6 +142,8 @@ Scenario set:
 Scenario ID:
 Repository commit:
 Public fixture SHA-256:
+Private rubric verification: PASS / FAIL
+Private rubric location: OUTSIDE REPOSITORY / INVALID
 Catalog generated at:
 Catalog counts:
 Agent/host/model:
