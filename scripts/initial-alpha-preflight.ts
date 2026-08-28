@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) {
-  console.log("initial-alpha-preflight — run catalog determinism, audits, repository tests, and characterization-integrity checks before journey evaluation\n\nUsage: node scripts/initial-alpha-preflight.ts");
+  console.log("initial-alpha-preflight — prove vendored source materialization, catalog determinism, audits, repository tests, and characterization integrity before journey evaluation\n\nUsage: node scripts/initial-alpha-preflight.ts");
   process.exit(0);
 }
 
@@ -32,6 +32,10 @@ const testFiles = readdirSync(join(ROOT, "tests"))
   .map((name) => join(ROOT, "tests", name));
 
 const steps: Step[] = [
+  {
+    name: "vendored source materialization",
+    args: [join(ROOT, "scripts", "verify-vendor-materialization.ts")],
+  },
   {
     name: "catalog determinism",
     args: [join(ROOT, "scripts", "verify-index-idempotency.ts")],
@@ -50,7 +54,10 @@ const steps: Step[] = [
   },
   {
     name: "characterization fingerprint integrity",
-    args: [join(ROOT, "engine", "skills", "source-vetting", "scripts", "verify-characterization-integrity.ts")],
+    args: [
+      join(ROOT, "engine", "skills", "source-vetting", "scripts", "verify-characterization-integrity.ts"),
+      "--require-available",
+    ],
   },
 ];
 
