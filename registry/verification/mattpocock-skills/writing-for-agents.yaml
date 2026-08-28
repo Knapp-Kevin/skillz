@@ -8,7 +8,7 @@ content_blob_sha: a37608daf6e835e767deecfb498facecaaba82ba
 characterized_at: 2026-08-28
 last_verified_at: 2026-08-28
 verification_status: trusted-baseline
-verification_basis: matt-pocock-trusted-baseline-policy-plus-integrity-review
+verification_basis: source-quality-policy-plus-integrity-review
 validation_status: not-run
 tags:
   use_case: [skill-authoring, agent-development, writing, documentation, context-management]
@@ -16,4 +16,4 @@ tags:
   characteristic: [context-efficient, progressive-disclosure, maintainability, contract-first]
   authority: [generate-only]
   portability: [high]
-notes: Quality accepted by Matt Pocock trusted-baseline policy. Characterization highlights trigger/pointer quality, information hierarchy, completion criteria, progressive disclosure, pruning, and single-source-of-truth discipline. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
+notes: Characterization highlights trigger/pointer quality, information hierarchy, completion criteria, progressive disclosure, pruning, and single-source-of-truth discipline. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
