@@ -11,9 +11,12 @@ This review assumes the design is wrong until the evidence says otherwise.
 
 **NEEDS REVISION before governed promotion.**
 
-The core architecture is sound enough to proceed through validation. The initial evidence-scope/privacy defect found during this review has been corrected in `skill-bootstrap` v0.2.0: ambient working context is eligible, while unrelated connected private accounts require a clear scope basis and are otherwise reported as available but not inspected.
+The core architecture is sound enough to proceed through validation. Two architectural defects found during this review have already been corrected:
 
-Remaining promotion blockers are generated-index freshness, behavioral evaluation, source-metadata drift resolution/deferment, and the repository's governed substantiation cycle.
+1. `skill-bootstrap` v0.2.0 now minimizes evidence scope and does not treat private connected accounts as fair game merely because a connector exists.
+2. `registry/sources.yaml` now drives build-index source names, URLs, trust classes, licenses, resolved paths, and index exclusions instead of duplicating those facts in `build-index.ts`.
+
+Remaining promotion blockers are generated-index freshness, behavioral evaluation, and the repository's governed substantiation cycle.
 
 Public/general-user distribution has two additional unresolved product decisions: the repository is currently private and has no root first-party license.
 
@@ -31,8 +34,8 @@ Public/general-user distribution has two additional unresolved product decisions
 | Cross-host portability | PASS with validation gap | Profile separates generic execution defaults from optional host bindings and forbids claiming parity just because a file loaded. | Run cross-host handoff eval on at least two materially different hosts. |
 | Community-source authority | PASS | `mattpocock/skills` is classified `community-vetted`, not official; bootstrap uses it as comparative/adaptation evidence. | Keep. |
 | Third-party attribution | PASS for current vendoring | Matt Pocock's repository remains intact as an MIT submodule; source registry records license, author notice, and pin; adaptation policy requires provenance. | Add audit coverage if local adapted skills begin shipping. |
-| Provenance drift | NEEDS REVISION, partially mitigated | `.gitmodules`, `registry/sources.yaml`, and build-index constants duplicate source facts. The test verifies the recorded Matt pin matches the actual gitlink, but source class/path can still drift across files. | Prefer making `registry/sources.yaml` the future single source of truth for index source metadata, or add a deterministic audit cross-check. |
-| Deprecated/in-progress references | PASS | Index generator excludes Matt's `deprecated` and `in-progress` skill areas from the active comparison catalog while preserving the repository intact. | Verify generated index after submodule checkout. |
+| Source metadata drift | PASS after revision | `registry/sources.yaml` is now the indexer's source of truth for source identity, URL, class, license, path, and exclusions. The provenance test also verifies Matt's recorded revision equals the actual gitlink pin. | Keep the source-registry parser and pin test under CI. |
+| Deprecated/in-progress references | PASS | Source-registry `index_exclude_dirs` keeps Matt's `deprecated` and `in-progress` areas out of the active comparison catalog while preserving the upstream repository intact. | Verify generated index after submodule checkout. |
 | Beginner comprehension | PASS, provisional | README and BOOTSTRAP explain the outcome without requiring skill jargon and provide one copyable starting instruction. | Run a novice comprehension test with no repo context beyond README/BOOTSTRAP. |
 | Beginner execution burden | PASS with host caveat | User does not need to navigate INDEX or choose skills manually. | Host still needs repository/file access; document per-host access paths later. |
 | Public distribution | NEEDS REVISION / deployment blocker | `Knapp-Kevin/skillz` is currently private. A random beginner cannot use it as a public easy button without access. | Decide intended distribution model before calling public onboarding complete. Do not change visibility implicitly. |
@@ -116,8 +119,7 @@ The following must be cleared before PR #8 is eligible to leave draft:
 1. regenerate INDEX.md/index.json and prove idempotency,
 2. pass behavior tests + skill audit + risk audit,
 3. execute the behavioral eval matrix or an equivalent governed subset with explicit evidence,
-4. resolve or explicitly defer source-registry single-source-of-truth drift,
-5. complete required S.H.I.E.L.D. governance/substantiation.
+4. complete required S.H.I.E.L.D. governance/substantiation.
 
 Public release has two additional blockers that do not necessarily block an internal merge:
 
