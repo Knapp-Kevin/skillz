@@ -1,6 +1,5 @@
 # 🛠️ skillz
 
-[![CI](https://github.com/Knapp-Kevin/skillz/actions/workflows/ci.yml/badge.svg)](https://github.com/Knapp-Kevin/skillz/actions/workflows/ci.yml)
 ![Library Skills](https://img.shields.io/badge/library_skills-42-blue)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
 ![Sources](https://img.shields.io/badge/reference_sources-8-8A2BE2)
