@@ -99,13 +99,14 @@ available/indexed -> characterized -> unverified | trusted-baseline | verified -
                                              \-> stale | rejected | retired
 ```
 
-Current policy:
+The rules are version-specific:
 
-- **Matt Pocock** is the sole `trusted-baseline` source. Matt skills do not need to prove baseline quality from scratch, but individual skills still need fingerprints and characterization tags before they become fully governed selection candidates.
-- **Every other skill-bearing source starts `unverified`**, including official vendor repositories.
+- `trusted-baseline` means the exact characterized version is eligible under the repository's source-quality policy and has a matching integrity fingerprint.
 - `verified` means an exact skill version passed the structured quality and effectiveness rubric in [`docs/skill-verification.md`](docs/skill-verification.md).
 - `validated` is stronger. It requires representative behavioral evidence showing the skill improves outcomes.
+- `unverified` means the skill may be useful as reference or design evidence but has not earned trusted unchanged selection.
 - `stale` means the canonical skill changed after characterization or the supporting evidence no longer matches.
+- `rejected` and `retired` are excluded from normal selection.
 
 Each individually characterized third-party skill has provenance under [`registry/skills/`](registry/skills/) and quality metadata under [`registry/verification/`](registry/verification/). Verification records bind to the exact canonical `SKILL.md` Git blob SHA. A hash change makes the previous characterization stale until it is reviewed again.
 
@@ -119,13 +120,7 @@ There are currently **14 registered sources**:
 - 1 normative specification source, the Agent Skills specification;
 - 1 tracked dynamic-discovery source, GitHub Awesome Copilot.
 
-The current individually characterized sample includes:
-
-- 3 Matt Pocock skills marked `trusted-baseline` and fingerprinted;
-- 3 non-Matt skills that passed structured verification: Cline `review-team`, Cloudflare `agents-sdk`, and Google `google-agents-cli-eval`;
-- 10 Addy Osmani skills characterized and fingerprinted but intentionally marked `unverified` under the stricter policy.
-
-No record claims local behavioral validation unless actual evaluation evidence exists.
+The individually characterized shelf includes exact-version records across multiple sources, with a mixture of `trusted-baseline`, `verified`, and deliberately `unverified` states. No record claims local behavioral validation unless actual evaluation evidence exists.
 
 See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verification.md`](docs/skill-verification.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
@@ -170,7 +165,7 @@ For third-party unchanged reuse:
 - prefer individually characterized records whose current fingerprint matches and whose status is `trusted-baseline`, `verified`, or `validated`;
 - treat `unverified` skills as design evidence until verified on demand;
 - exclude `stale`, `rejected`, and `retired` records from default selection;
-- a Matt skill without an individual characterization record may inherit source-quality confidence, but it still lacks a locally bound fingerprint and tag profile and should be characterized before being treated as a fully governed selection candidate.
+- require a locally bound fingerprint and characterization profile before treating a candidate as fully governed for selection.
 
 A high-quality skill can still be the wrong fit. **Compare before creation. User-fit before reuse.**
 
