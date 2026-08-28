@@ -115,14 +115,14 @@ Before adopting, adapting, or creating, check in order:
 2. **Host built-ins** such as code review, security review, verification, or equivalent native capabilities.
 3. **Vendored official sources** in `INDEX.md`. Prefer the official implementation for platform-specific behavior unless evidence supports a local adaptation.
 4. **Vendored community-vetted sources** in `INDEX.md`. Use them as comparative/adaptation/supplemental evidence, not automatic authority.
-5. **This repo's local skills and ROADMAP**. If covered or planned here, refine/compose rather than adding a competing copy.
+5. **This repo's library skills and ROADMAP**. If covered or planned here, refine/compose rather than adding a competing copy.
 6. **Tracked community sources** only when the previous layers do not adequately cover the need.
 
 Two skills that answer the same trigger without an explicit composition relationship are worse than one. They create conflicting process authority and bloat context.
 
 ## Behavioral evaluation
 
-Use [`skills/skill-eval/SKILL.md`](../skills/skill-eval/SKILL.md) for controlled baseline-versus-treatment testing.
+Use [`engine/skills/skill-eval/SKILL.md`](../engine/skills/skill-eval/SKILL.md) for controlled baseline-versus-treatment testing. `skill-eval` is repository machinery and does not count as library inventory.
 
 When evaluating an adaptation or supplement, prefer three arms when practical:
 
