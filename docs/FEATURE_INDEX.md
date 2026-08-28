@@ -34,7 +34,7 @@ Maps user-touchable and governance-critical features to their implementation and
 | FX21 | Skill effectiveness evaluation procedure | `engine/skills/skill-eval/`, `docs/evaluation-framework.md` | **POLICY/PROCEDURE**: no result may be claimed without actual runs |
 | FX22 | One-command initial-alpha preflight | `scripts/initial-alpha-preflight.ts` | **IMPLEMENTED / RUNTIME PENDING** |
 | FX23 | Rotated public-only v2 alpha treatment fixtures | `docs/evals/fixtures/initial-alpha-scenarios.json` | **STATIC PASS**: neutral IDs; public tests forbid expected decisions, candidate hints, scoring criteria, or answer-key fields; retired v1 set is invalid as evidence |
-| FX24 | Public treatment renderer + private evaluator-bundle binding | `scripts/render-alpha-scenario.ts`, `scripts/verify-alpha-evaluator-bundle.mjs` | **STATIC PASS**: renderer exposes only public context; private verifier binds evaluator rubric to exact public set ID, SHA-256, and scenario coverage |
+| FX24 | Public treatment renderer + private evaluator-bundle binding | `scripts/render-alpha-scenario.ts`, `scripts/verify-alpha-evaluator-bundle.mjs` | **STATIC PASS**: renderer exposes only public context; private verifier binds evaluator rubric to exact public set ID, SHA-256, scenario coverage, and an evaluator-only filesystem location outside the repository |
 | FX25 | Blind first-visit eligible reuse/minimal-adaptation proof | rotated v2 private evaluator mapping | **BEHAVIORAL PENDING** |
 | FX26 | Blind first-visit unsafe/unproven unchanged-reuse refusal proof | rotated v2 private evaluator mapping | **BEHAVIORAL PENDING** |
 | FX27 | Blind first-visit custom-creation proof | rotated v2 private evaluator mapping | **BEHAVIORAL PENDING** |
@@ -42,11 +42,11 @@ Maps user-touchable and governance-critical features to their implementation and
 | FX29 | Blind returning-user no-change proof | rotated v2 private evaluator mapping | **BEHAVIORAL PENDING** |
 | FX30 | Automatic GitHub Actions budget protection | `.github/workflows/ci.yml` | **POLICY PASS**: manual-dispatch only |
 | FX31 | Exact alpha source-state proof | `scripts/verify-vendor-materialization.ts` | **STATIC PASS / RUNTIME PENDING ON CURRENT FULL CORPUS**: local Git fixtures cover clean exact pin, dirty superproject, missing submodule, wrong submodule HEAD, and dirty source content; preflight executes this before catalog generation |
-| FX32 | Behavioral answer-key isolation | public v2 fixture + private fingerprint-bound evaluator bundle | **STATIC PASS / BEHAVIORAL PENDING**: public Git contains no v2 outcome mapping; evaluator bundle must remain outside treatment-accessible surfaces and is verified before scoring |
+| FX32 | Behavioral answer-key isolation | public v2 fixture + private fingerprint-bound evaluator bundle | **STATIC PASS / BEHAVIORAL PENDING**: public Git contains no v2 outcome mapping; evaluator verifier rejects rubrics stored or resolved inside the treatment repository; host-level treatment access must still be kept separate during actual runs |
 
 ## Alpha rule
 
-Static presence and contract tests are necessary but do not establish the complete user experience. Initial alpha remains unlocked until FX31 source-state proof and FX09/FX10/FX22 runtime proof succeed on the current fully materialized commit, the private v2 evaluator bundle is verified against the exact public fixture, and FX25-FX29 have actual blind behavioral evidence.
+Static presence and contract tests are necessary but do not establish the complete user experience. Initial alpha remains unlocked until FX31 source-state proof and FX09/FX10/FX22 runtime proof succeed on the current fully materialized commit, the private v2 evaluator bundle verifies against the exact public fixture **from outside the treatment repository**, and FX25-FX29 have actual blind behavioral evidence.
 
 The retired public v1 A1/A2/A3/R1/R2 mappings cannot satisfy FX25-FX29 because their answer keys remain recoverable from public Git history.
 
