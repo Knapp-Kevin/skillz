@@ -9,6 +9,7 @@ Open work items, ordered by the ROADMAP build order. IDs are stable; completed i
 | B13 | `min-model-capability` metadata rollout across high-judgment skills (B12 remainder — exemplars shipped for handoff-writer + brief-writer; metadata field + more exemplars pending) | meta | Per template §Capability floor rule 7 |
 | B15 | Gemini host target for skill-sync (TOML conversion) | meta | Deferred from B08; format conversion, not copy |
 | B17 | skill-eval on ponytail (sandbox): frontier + weak-model arms; check process-authority conflict with Qor-logic before any adoption | agent-ops | MIT SKILL.md-format content, copy path exists but must earn adoption; self-reported benchmarks unverified |
+| B19 | Skill bootstrap/onboarding: infer latent user workflows, compare against centralized reference corpus, produce portable User Skill Profile, and hand off to eval/forge/audit/sync | meta | Issue #7 / draft PR #8. Beginner path must remain understandable without prior skill knowledge. Validation + governed substantiation pending. |
 
 ## Done
 
