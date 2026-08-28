@@ -19,3 +19,6 @@
 [submodule "vendor/mattpocock-skills"]
 	path = vendor/mattpocock-skills
 	url = https://github.com/mattpocock/skills.git
+[submodule "vendor/addyosmani-agent-skills"]
+	path = vendor/addyosmani-agent-skills
+	url = https://github.com/addyosmani/agent-skills.git

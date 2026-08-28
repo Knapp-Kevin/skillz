@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: debugging-and-error-recovery
+display_name: Debugging and Error Recovery
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/debugging-and-error-recovery/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 45ccfb6f3dcb0116e91f8a0d5a8338840c1b404f
+upstream_last_updated_at: 2026-07-22T20:35:05Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/addyosmani-agent-skills/skills/debugging-and-error-recovery/SKILL.md
+permission_tier: generate
+portability: high
+review_status: curated-source-reviewed
+dependency_status: self-contained
+dependencies: repository-native test/build/debug commands
+import_eligibility: already-vendored
+rationale: Systematic debugging and recovery guidance recently hardened to avoid assuming an npm-family ecosystem, improving portability across real codebases.

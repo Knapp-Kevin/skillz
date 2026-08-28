@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: browser-testing-with-devtools
+display_name: Browser Testing with DevTools
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/browser-testing-with-devtools/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: e8c9b4632d9e4ab8ca4ea514dae03e25683e8186
+upstream_last_updated_at: 2026-06-11T03:20:03Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/addyosmani-agent-skills/skills/browser-testing-with-devtools/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-tool-dependent
+dependencies: browser DevTools or equivalent browser automation capability
+import_eligibility: already-vendored
+rationale: Practical browser verification workflow with an explicit 2026 security hardening change that defaults to isolated browser profiles instead of exposing a user's daily authenticated profile.
