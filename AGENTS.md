@@ -62,18 +62,16 @@ If the user is explicitly asking to improve `skillz` itself, use the repository 
 
 Source reputation does not equal individual skill verification.
 
-- Matt Pocock is the sole current `trusted-baseline` source policy.
-- All other skill-bearing sources default to `unverified`.
+- Every characterized skill receives an exact-version quality state under the repository's quality policy.
 - An individual characterization record applies only to its recorded Git blob SHA.
 - If the current blob hash changes, treat prior characterization as `stale` until refreshed.
+- `trusted-baseline` means the exact version is eligible under an established source-quality policy plus matching fingerprint and characterization.
 - `verified` means the structured rubric passed.
 - `validated` additionally requires representative behavioral evidence.
 
 For unchanged trusted selection, prefer an individually characterized record with a matching fingerprint and status `trusted-baseline`, `verified`, or `validated`.
 
 `unverified` material may inform design or be verified on demand, but do not silently install it as trusted unchanged material. Exclude `stale`, `rejected`, and `retired` material from default selection.
-
-A Matt skill without an individual characterization record may inherit source-quality confidence, but it does not yet have local tags/fingerprint governance. Characterize it before treating it as a fully governed selection candidate.
 
 ## Core doctrine
 
