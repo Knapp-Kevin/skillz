@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: agents-sdk
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/agents-sdk/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d9f1c8a9eaeb271888fb82ecda5d79ebf264944a
+characterized_at: 2026-08-28
+last_verified_at: 2026-08-28
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [agent-development, cloud]
+  lifecycle: [implementation, operations]
+  characteristic: [retrieval-first, retrieval-map, reference-heavy, tool-routing, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Strong freshness defense and authoritative task-to-doc mapping. Platform-specific and capable of project mutation, so selection must respect Cloudflare context and user authority. Behavioral validation remains pending.

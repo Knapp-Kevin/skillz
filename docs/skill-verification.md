@@ -1,0 +1,97 @@
+# Skill Verification Standard
+
+Source reputation and skill quality are separate facts.
+
+A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. For that reason, every non-Matt skill enters `skillz` as **unverified**.
+
+Matt Pocock skills are the sole current `trusted-baseline` exception. That exception skips the requirement to prove baseline quality from scratch; it does **not** skip fingerprinting, characterization, tags, dependency review, or stale-on-change behavior.
+
+## Quality lifecycle
+
+```text
+discovered -> characterized -> unverified
+                           -> trusted-baseline   (Matt policy only)
+                           -> verified           (structured gate passed)
+verified -> validated                           (behavioral evidence passed)
+any assessed state -> stale                     (fingerprint/evidence drift)
+reviewed -> rejected | retired
+```
+
+`verified` and `validated` are intentionally different. Static review can establish that a skill is coherent, bounded, useful, and fit for consideration. It cannot prove that the skill improves model behavior. Behavioral evidence is required for `validated`.
+
+## Hard-fail conditions
+
+A non-Matt skill cannot be promoted to `verified` while any of these are unresolved:
+
+1. hidden or unbounded authority escalation;
+2. mutation or external side effects without a clear trigger/consent boundary;
+3. prompt-injection-like instructions that try to override higher-priority policy or unrelated user intent;
+4. missing or broken required references, scripts, templates, or host capabilities;
+5. unclear provenance or unresolved license obligations;
+6. instructions that encourage fabricated evidence, hidden gaps, or false completion claims;
+7. materially unsafe failure behavior;
+8. canonical skill content that does not match its recorded fingerprint.
+
+## Structured verification rubric
+
+Score each dimension `0`, `1`, or `2`:
+
+- `0`: deficient or unsafe;
+- `1`: usable but materially constrained or ambiguous;
+- `2`: clear, strong, and appropriate for the claimed scope.
+
+| Dimension | What is evaluated |
+|---|---|
+| Trigger precision | Clear activation and important non-trigger boundaries |
+| Procedural clarity | Steps are executable, ordered, and not dependent on magical inference |
+| Authority and safety | Mutations, cost, privacy, approvals, and side effects are bounded |
+| Failure handling | Retries, abstention, escalation, and stop conditions are explicit where needed |
+| Evidence discipline | Claims of correctness/completion are tied to observable evidence |
+| Dependency coherence | Referenced files, tools, packages, and host features exist and are described |
+| Portability honesty | Host/platform assumptions are explicit rather than masquerading as universal |
+| Usefulness/differentiation | Adds durable capability or a meaningfully stronger method than obvious prompting |
+| Adversarial resilience | Resists common shortcuts, looping, scope creep, confirmation bias, or unsafe execution |
+| Effectiveness design | The workflow contains credible mechanisms likely to improve outcomes, even before local behavioral validation |
+
+Promotion to `verified` requires:
+
+- no hard fail;
+- at least **15/20** overall;
+- Trigger precision, Authority and safety, and Dependency coherence each score at least `1`;
+- an exact content fingerprint;
+- controlled characterization tags;
+- reviewer notes explaining material limitations.
+
+## Behavioral validation
+
+`validated` requires representative eval evidence. At minimum:
+
+1. a case where the skill should trigger;
+2. a case where it should not trigger;
+3. at least one pressure/adversarial case relevant to its likely failure mode;
+4. a comparison against no-skill or prior-skill behavior when practical;
+5. evidence that the skill improves the intended outcome without creating unacceptable regressions.
+
+Upstream tests may contribute evidence, but they do not automatically become local validation. Record exactly what was run or inspected.
+
+## Hash invalidation
+
+Verification is attached to the exact canonical `SKILL.md` blob SHA. When that hash changes:
+
+1. mark the existing assessment stale in operational use;
+2. inspect the upstream delta and dependency changes;
+3. refresh provenance dates/revisions;
+4. re-run the structured rubric for material behavior changes;
+5. re-run relevant behavioral validation when prior evidence could be invalidated;
+6. update tags if scope, authority, portability, or behavior changed;
+7. record the new fingerprint only after review.
+
+No upstream source is auto-upgraded merely because a newer commit exists.
+
+## Selection semantics
+
+- `trusted-baseline`, `verified`, `validated`: eligible for unchanged selection if tags and user fit match.
+- `unverified`: design evidence only by default; verify before direct trusted installation.
+- `stale`, `rejected`, `retired`: excluded from normal selection.
+
+A high-quality skill may still be a bad fit for a particular user. Verification establishes eligibility, not inevitability.

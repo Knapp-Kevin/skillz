@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: agents-sdk
+display_name: Cloudflare Agents SDK
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/agents-sdk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: e96fbc77bcedab03c5f00378103d6453ca8dafc0
+upstream_last_updated_at: 2026-04-15T07:46:50Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/agents-sdk/SKILL.md
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Cloudflare Agents SDK package plus source-intact references and current Cloudflare documentation
+import_eligibility: already-vendored
+rationale: Retrieval-first platform guidance explicitly counteracts stale model knowledge, maps tasks to authoritative docs, and documents installation/configuration assumptions and gotchas.

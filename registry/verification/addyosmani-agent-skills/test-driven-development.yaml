@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: test-driven-development
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: vendor/addyosmani-agent-skills/skills/test-driven-development/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0cfd2f33d78961a23365b34bd92e08026dd140bc
+characterized_at: 2026-08-28
+last_verified_at: not-run
+verification_status: unverified
+verification_basis: pending-structured-review
+validation_status: not-run
+tags:
+  use_case: [testing, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [test-driven, iterative, behavior-preserving]
+  authority: [mutating]
+  portability: [high]
+notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.

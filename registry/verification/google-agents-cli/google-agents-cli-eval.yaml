@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: google-agents-cli-eval
+source_id: google-agents-cli
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+local_path: vendor/google-agents-cli/skills/google-agents-cli-eval/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2ce4c881733de6cc75dce97bb7e3c4391df69c75
+characterized_at: 2026-08-28
+last_verified_at: 2026-08-28
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [evaluation, agent-development]
+  lifecycle: [verification]
+  characteristic: [metric-driven, holdout-aware, evidence-first, iterative, cost-bounded]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Explicit metric selection, failure-to-fix mapping, holdout discipline, and warnings around expensive optimization. Requires Google agents-cli/ADK context and may incur external model/service cost. Behavioral validation remains pending.

@@ -1,0 +1,94 @@
+# Controlled vocabulary for skill characterization.
+# Add values here before using them in registry/verification records.
+
+version: 1
+
+dimensions:
+  use_case:
+    - agent-development
+    - api-design
+    - architecture
+    - browser-testing
+    - cloud
+    - code-review
+    - context-management
+    - debugging
+    - deployment
+    - documentation
+    - evaluation
+    - implementation
+    - memory
+    - observability
+    - orchestration
+    - planning
+    - refactoring
+    - research
+    - security
+    - testing
+    - ux
+    - web-search
+
+  lifecycle:
+    - discovery
+    - planning
+    - design
+    - implementation
+    - verification
+    - release
+    - operations
+    - maintenance
+
+  characteristic:
+    - behavior-preserving
+    - compatibility-aware
+    - context-efficient
+    - contract-first
+    - cost-bounded
+    - decomposition
+    - deterministic
+    - evidence-first
+    - holdout-aware
+    - human-review
+    - hypothesis-driven
+    - incremental
+    - instrumentation
+    - iterative
+    - maintainability
+    - metric-driven
+    - modularity
+    - orchestration
+    - production-oriented
+    - reference-heavy
+    - retrieval-first
+    - retrieval-map
+    - risk-aware
+    - safety-bounded
+    - source-driven
+    - spec-driven
+    - synthesis
+    - test-driven
+    - test-gated
+    - tool-assisted
+    - tool-routing
+    - traceable
+    - visual-verification
+
+  authority:
+    - read-only
+    - generate-only
+    - mutating
+    - external-side-effect
+
+  portability:
+    - high
+    - medium
+    - low
+
+verification_statuses:
+  - unverified
+  - trusted-baseline
+  - verified
+  - validated
+  - stale
+  - rejected
+  - retired

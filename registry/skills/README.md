@@ -1,15 +1,15 @@
-# Curated Skill Companion Records
+# Third-Party Skill Provenance Records
 
-Each YAML file below this directory is the provenance and curation companion for one third-party skill.
+Each YAML file below this directory answers where an individually characterized third-party skill came from, which upstream revision/path was inspected, what license applies, when the skill itself last changed, whether its dependencies are intact, and where it is available.
 
-The path convention is:
+Path convention:
 
 ```text
 registry/skills/<source-id>/<skill-name>.yaml
 ```
 
-The skill itself may be vendored, imported, or external. See `docs/curation-policy.md` for the meaning of those states and the required schema.
+These records are intentionally separate from upstream `SKILL.md` files. Vendored repositories are not modified merely to attach our local metadata.
 
-These records are intentionally separate from upstream `SKILL.md` files. We do not modify vendored third-party repositories merely to attach our local metadata.
+Provenance is **not** a quality certificate. Quality state, controlled tags, and hash-bound characterization live separately under [`../verification/`](../verification/).
 
-A companion record is not an endorsement of every other skill in its source repository, and `review_status: curated` is not the same thing as behavioral validation.
+See [`../../docs/curation-policy.md`](../../docs/curation-policy.md), [`../../docs/skill-verification.md`](../../docs/skill-verification.md), and [`../taxonomy.yaml`](../taxonomy.yaml).
