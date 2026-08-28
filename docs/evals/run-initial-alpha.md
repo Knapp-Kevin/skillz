@@ -8,6 +8,10 @@ The goal is to test the **skillz experience**, not the individual source authors
 
 Use a fully materialized checkout of the exact commit under evaluation. Initialize all pinned vendor submodules first.
 
+```bash
+git submodule update --init --recursive
+```
+
 Then run one command:
 
 ```bash
@@ -16,13 +20,16 @@ node scripts/initial-alpha-preflight.ts
 
 That command runs, in order:
 
-1. catalog regeneration and second-pass byte-identical idempotency proof;
-2. library structural audit;
-3. library risk audit;
-4. all repository contract tests;
-5. characterization fingerprint-integrity verification.
+1. vendored-source materialization proof: every `inclusion: vendored` registry source must be a `160000` gitlink, initialized as its own Git worktree, checked out at exactly the SHA pinned by the superproject, and clean including untracked files;
+2. catalog regeneration and second-pass byte-identical idempotency proof;
+3. library structural audit;
+4. library risk audit;
+5. all repository contract tests;
+6. characterization fingerprint-integrity verification in strict availability mode.
 
 It must end with `READY FOR JOURNEY EVALUATION`.
+
+The materialization step is load-bearing. A deterministic catalog generated from missing, mismatched, or locally modified submodules is not valid alpha evidence.
 
 The preflight is allowed to refresh stale checked-in `INDEX.md` / `index.json` on the first generator pass. The second pass must be byte-identical. Record the exact schema-v2 counts printed by the catalog proof.
 
