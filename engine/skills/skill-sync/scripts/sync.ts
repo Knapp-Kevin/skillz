@@ -6,15 +6,15 @@
  * Engine skills are structurally separate under engine/skills and are never
  * part of the deployable library inventory.
  *
+ * Library skills may be organized under category folders inside `skills/`.
+ * Installation remains flat by stable skill ID unless a target adapter says
+ * otherwise, so repository browsing structure does not change host skill IDs.
+ *
  * Targets (composable):
  *   --claude-user [--claude-user-root <path>]  junction per skill
  *                                              (default root: ~/.claude/skills)
  *   --dest <path>                              recursive copy per skill
  *   --coreforge <path>                         Synapse-style manifest.json + files
- *
- * Usage (Bun or Node 22.18+):
- *   node engine/skills/skill-sync/scripts/sync.ts --dest C:\agents\skills
- *   node engine/skills/skill-sync/scripts/sync.ts --apply --claude-user
  */
 
 import { parseArgs } from "node:util";
@@ -26,6 +26,7 @@ import { join, dirname, relative } from "node:path";
 import { homedir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { parseFrontmatter } from "../../../../scripts/lib/frontmatter.ts";
+import { discoverSkillDirs } from "../../../../scripts/lib/skill-discovery.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 
@@ -51,19 +52,15 @@ const mode = values.apply ? "apply" : "dry-run";
 interface Skill { name: string; dir: string; fm: Record<string, any>; repoBound: boolean; }
 
 function discoverSkills(): Skill[] {
-  const skills: Skill[] = [];
-  for (const entry of readdirSync(join(ROOT, "skills"), { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const dir = join(ROOT, "skills", entry.name);
-    const skillFile = join(dir, "SKILL.md");
-    if (!existsSync(skillFile)) continue;
-    const fm = parseFrontmatter(readFileSync(skillFile, "utf8")) ?? {};
-    skills.push({
-      name: entry.name, dir, fm,
+  return discoverSkillDirs(join(ROOT, "skills")).map((skill) => {
+    const fm = parseFrontmatter(readFileSync(skill.skillFile, "utf8")) ?? {};
+    return {
+      name: fm.name ?? skill.name,
+      dir: skill.dir,
+      fm,
       repoBound: fm.metadata?.["repo-bound"] === "true",
-    });
-  }
-  return skills;
+    };
+  });
 }
 
 function listFiles(dir: string): string[] {
@@ -89,9 +86,7 @@ function copyDrift(src: string, dst: string): "create" | "update" | "up-to-date"
 function syncDest(skill: Skill, destRoot: string): string {
   const dst = join(destRoot, skill.name);
   const action = copyDrift(skill.dir, dst);
-  if (values.apply && action !== "up-to-date") {
-    cpSync(skill.dir, dst, { recursive: true, force: true });
-  }
+  if (values.apply && action !== "up-to-date") cpSync(skill.dir, dst, { recursive: true, force: true });
   return action;
 }
 
@@ -152,9 +147,7 @@ function syncHosts(skill: Skill, repoRoot: string): string {
   const actions = HOST_DIRS.map((h) => {
     const dst = join(repoRoot, h, "skills", skill.name);
     const action = copyDrift(skill.dir, dst);
-    if (values.apply && action !== "up-to-date") {
-      cpSync(skill.dir, dst, { recursive: true, force: true });
-    }
+    if (values.apply && action !== "up-to-date") cpSync(skill.dir, dst, { recursive: true, force: true });
     return action;
   });
   const unique = [...new Set(actions)];
