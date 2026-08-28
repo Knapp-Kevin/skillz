@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "vendor": {
+    "fixture-source": {
+      "sourceId": "fixture-source",
+      "label": "Fixture Source",
+      "sourceRole": "vendored-corpus",
+      "skills": [
+        {
+          "name": "verified-debug",
+          "description": "Verified debugging workflow",
+          "skillFile": "vendor/fixture/verified-debug/SKILL.md",
+          "quality": {
+            "characterized": true,
+            "verificationStatus": "verified",
+            "validationStatus": "not-run",
+            "tags": {
+              "use_case": ["debugging"],
+              "lifecycle": ["verification"],
+              "characteristic": ["evidence-first", "hypothesis-driven"],
+              "authority": ["read-only"],
+              "portability": ["high"]
+            }
+          }
+        },
+        {
+          "name": "unverified-debug",
+          "description": "Promising but unverified debugging workflow",
+          "skillFile": "vendor/fixture/unverified-debug/SKILL.md",
+          "quality": {
+            "characterized": true,
+            "verificationStatus": "unverified",
+            "validationStatus": "not-run",
+            "tags": {
+              "use_case": ["debugging"],
+              "lifecycle": ["verification"],
+              "characteristic": ["evidence-first"],
+              "authority": ["read-only"],
+              "portability": ["high"]
+            }
+          }
+        },
+        {
+          "name": "stale-debug",
+          "description": "Previously reviewed but changed",
+          "skillFile": "vendor/fixture/stale-debug/SKILL.md",
+          "quality": {
+            "characterized": true,
+            "verificationStatus": "stale",
+            "validationStatus": "not-run",
+            "tags": {
+              "use_case": ["debugging"],
+              "lifecycle": ["verification"],
+              "characteristic": ["evidence-first"],
+              "authority": ["read-only"],
+              "portability": ["high"]
+            }
+          }
+        },
+        {
+          "name": "validated-research",
+          "description": "Behaviorally validated research workflow",
+          "skillFile": "vendor/fixture/validated-research/SKILL.md",
+          "quality": {
+            "characterized": true,
+            "verificationStatus": "validated",
+            "validationStatus": "passed",
+            "tags": {
+              "use_case": ["research"],
+              "lifecycle": ["discovery"],
+              "characteristic": ["evidence-first", "source-driven"],
+              "authority": ["read-only"],
+              "portability": ["high"]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
