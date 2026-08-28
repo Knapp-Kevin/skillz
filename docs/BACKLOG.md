@@ -6,14 +6,21 @@ Current work is ordered by the initial-alpha finish line. Broad skill acquisitio
 
 | ID | Item | State | Completion evidence |
 |---|---|---|---|
-| A01 | Materialize all 12 pinned vendor submodules and run `node scripts/initial-alpha-preflight.ts` | BLOCKED BY CURRENT EXECUTION ENVIRONMENT | Preflight ends `READY FOR JOURNEY EVALUATION`; schema-v2 counts recorded; second catalog pass byte-identical |
-| A02 | Run first-visit scenario A1: eligible reuse/minimal adaptation | READY AFTER A01 | Actual isolated result under `docs/evals/results/`, no hard fail, fixture pass |
-| A03 | Run first-visit scenario A2: refuse unverified/stale trusted unchanged reuse | READY AFTER A01 | Actual isolated result, no quality-state escalation without evidence |
-| A04 | Run first-visit scenario A3: custom creation when library fit is materially worse | READY AFTER A01 | Actual isolated result showing comparison before creation and truthful validation/install state |
-| A05 | Run returning-user scenario R1: minimal justified refinement | READY AFTER A01 | Existing set inventoried, drift surfaced, valid custom behavior preserved, changed capability re-evaluated |
-| A06 | Run returning-user scenario R2: no-change decision | READY AFTER A01 | Actual isolated result concludes `NO CHANGE NEEDED` without inventing a gap |
-| A07 | Reconcile generated counts, README, alpha checklist, and Issue #15 | READY AFTER A01-A06 | Generated index/README agree; evidence linked; `docs/alpha-lock.md` updated |
-| A08 | Declare initial implementation alpha locked | BLOCKED UNTIL A01-A07 | Every remaining alpha gate supported by actual evidence |
+| A01 | Materialize all 12 pinned vendor submodules and run `node scripts/initial-alpha-preflight.ts` | BLOCKED BY CURRENT EXECUTION ENVIRONMENT | Clean exact source-state proof passes; schema-v2 semantic invariants pass; exact counts recorded; second catalog pass byte-identical; preflight ends `READY FOR JOURNEY EVALUATION` |
+| A02 | Verify the separately held private v2 evaluator bundle against the exact committed public treatment fixture | READY AFTER ISOLATION REPAIR MERGES | `verify-alpha-evaluator-bundle.mjs` passes set ID, public SHA-256, complete neutral scenario coverage, and frozen criteria structure |
+| A03 | Execute all three rotated v2 first-visit treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves eligible reuse/minimal adaptation, unsafe/unproven unchanged-reuse refusal, and custom creation; each treatment output frozen before private rubric entry is opened |
+| A04 | Execute both rotated v2 returning-user treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves minimal justified refinement and a correct no-change outcome while preserving valid existing behavior |
+| A05 | Privately score the five frozen treatment outputs and write public evidence records | READY AFTER A03-A04 | All five satisfy frozen private criteria with no hard fail; public result files record set ID, scenario ID, public fixture hash, scores/outcome, evidence, and truthful install/handoff state without republishing the active answer key |
+| A06 | Reconcile generated counts, README, alpha checklist, system state, and Issue #15 | READY AFTER A01-A05 | Generated index/README agree; five blind evidence records linked; current docs agree |
+| A07 | Declare initial implementation alpha locked | BLOCKED UNTIL A01-A06 | Every remaining alpha gate supported by actual materialized and blind behavioral evidence |
+
+## Invalid / retired alpha work
+
+| Item | State | Reason |
+|---|---|---|
+| Original public A1/A2/A3/R1/R2 behavioral set | RETIRED / INVALID AS BLIND EVIDENCE | Expected decisions, candidate hints, and scoring criteria were committed publicly and remain recoverable from Git history. The renderer hid them from stdout but not from a repository-reading treatment agent. |
+
+Do not execute the retired set for alpha closure. The current v2 public treatment fixture uses neutral scenario IDs, while evaluator-only mappings live in a private fingerprint-bound bundle outside the repository.
 
 ## Post-alpha enrichment
 
@@ -49,11 +56,12 @@ These are useful but **not blockers** for the initial implementation.
 | D10 | Governed candidate selector | `engine/skills/skill-bootstrap/scripts/select-candidates.ts`, selection tests |
 | D11 | Recursive skill discovery across catalog/audit/risk/sync | `scripts/lib/skill-discovery.ts` and consumers |
 | D12 | Schema-v2 generated-catalog implementation | `scripts/build-index.ts` |
-| D13 | Catalog two-pass idempotency verifier | `scripts/verify-index-idempotency.ts` |
-| D14 | One-command initial-alpha preflight | `scripts/initial-alpha-preflight.ts` |
-| D15 | Frozen five-scenario journey proof matrix | `docs/evals/fixtures/initial-alpha-scenarios.json` |
-| D16 | Leak-safe journey scenario renderer | `scripts/render-alpha-scenario.ts` + tests |
-| D17 | Actions budget protection | `.github/workflows/ci.yml` manual-dispatch only |
+| D13 | Semantic catalog invariants + two-pass idempotency verifier | `scripts/lib/catalog-invariants.mjs`, `scripts/verify-index-idempotency.ts` |
+| D14 | Exact vendored-source materialization proof in one-command alpha preflight | `scripts/verify-vendor-materialization.ts`, `scripts/initial-alpha-preflight.ts` |
+| D15 | Rotated public-only v2 treatment fixture | `docs/evals/fixtures/initial-alpha-scenarios.json` |
+| D16 | Public treatment renderer with neutral v2 IDs | `scripts/render-alpha-scenario.ts` + tests |
+| D17 | Private evaluator-bundle fingerprint verifier | `scripts/verify-alpha-evaluator-bundle.mjs` + tests |
+| D18 | Actions budget protection | `.github/workflows/ci.yml` manual-dispatch only |
 
 ## Historical records
 
