@@ -1,10 +1,10 @@
 #!/usr/bin/env bun
 /**
- * skill-audit — validates this repo's skills, scripts, and intake registry.
+ * skill-audit — validates this repo's library skills, scripts, and intake registry.
  *
  * Usage (Bun or Node 22.18+, from repo root or anywhere):
- *   node skills/skill-audit/scripts/audit.ts
- *   node skills/skill-audit/scripts/audit.ts --skills-dir <path> --registry <path>
+ *   node engine/skills/skill-audit/scripts/audit.ts
+ *   node engine/skills/skill-audit/scripts/audit.ts --skills-dir <path> --registry <path>
  *
  * Exit 0 = clean (warnings allowed). Exit 1 = one or more FAIL findings.
  * Registry parsing is a purpose-built block parser for candidates.yaml's
@@ -16,9 +16,9 @@ import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import { parseFrontmatter } from "../../../scripts/lib/frontmatter.ts";
+import { parseFrontmatter } from "../../../../scripts/lib/frontmatter.ts";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 const STATUSES = ["adopted", "sandbox", "track", "rejected", "quarantined"];
 const TIERS = [
   "read-only", "plan-only", "generate", "staging-write",
@@ -43,8 +43,6 @@ const findings: Finding[] = [];
 const fail = (msg: string) => findings.push({ level: "FAIL", msg });
 const warn = (msg: string) => findings.push({ level: "WARN", msg });
 
-// ── Check 1: SKILL.md frontmatter conventions ────────────────────────
-
 function checkSkillFile(dir: string, skillFile: string): void {
   const fm = parseFrontmatter(readFileSync(skillFile, "utf8"));
   if (!fm) { fail(`${dir}: SKILL.md frontmatter does not parse`); return; }
@@ -67,8 +65,6 @@ function checkSkills(skillsDir: string): string[] {
   return skillFiles;
 }
 
-// ── Check 2: every skill + repo script answers --help with exit 0 ───
-
 function checkHelp(file: string, label: string): void {
   const res = spawnSync(process.execPath, [file, "--help"], { timeout: 30_000, encoding: "utf8" });
   if (res.status !== 0) fail(`${label}: --help exited ${res.status}`);
@@ -83,14 +79,11 @@ function checkScripts(skillsDir: string): void {
       checkHelp(join(scriptsDir, f), `${entry.name}/scripts/${f}`);
     }
   }
-  // Repo-level tooling scripts share the same contract (FEATURE_INDEX FX07).
   const repoScripts = join(ROOT, "scripts");
   for (const f of readdirSync(repoScripts).filter((f) => f.endsWith(".ts"))) {
     checkHelp(join(repoScripts, f), `scripts/${f}`);
   }
 }
-
-// ── Check 2b: sources.json parses; engine consumers carry the fallback marker ──
 
 function checkSources(skillsDir: string): void {
   for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
@@ -108,8 +101,6 @@ function checkSources(skillsDir: string): void {
     }
   }
 }
-
-// ── Check 3: registry lint ───────────────────────────────────────────
 
 function parseRegistry(path: string): Record<string, string>[] {
   const entries: Record<string, string>[] = [];
@@ -140,17 +131,13 @@ function checkRegistry(path: string): void {
   for (const e of entries) checkRegistryEntry(e);
 }
 
-// ── Check 4 (WARN): index freshness by mtime ─────────────────────────
-
 function checkIndexFreshness(skillFiles: string[]): void {
   const indexPath = join(ROOT, "INDEX.md");
   if (!existsSync(indexPath)) { warn("INDEX.md missing — run: node scripts/build-index.ts"); return; }
   const indexTime = statSync(indexPath).mtimeMs;
   const stale = skillFiles.some((f) => statSync(f).mtimeMs > indexTime);
-  if (stale) warn("INDEX.md older than a SKILL.md — run: node scripts/build-index.ts");
+  if (stale) warn("INDEX.md older than a library SKILL.md — run: node scripts/build-index.ts");
 }
-
-// ── Main ─────────────────────────────────────────────────────────────
 
 const skillFiles = checkSkills(values["skills-dir"]!);
 checkScripts(values["skills-dir"]!);
@@ -160,5 +147,5 @@ checkIndexFreshness(skillFiles);
 
 for (const f of findings) console.log(`${f.level}: ${f.msg}`);
 const failures = findings.filter((f) => f.level === "FAIL").length;
-console.log(`\nskill-audit: ${skillFiles.length} skill(s), ${failures} failure(s), ${findings.length - failures} warning(s)`);
+console.log(`\nskill-audit: ${skillFiles.length} library skill(s), ${failures} failure(s), ${findings.length - failures} warning(s)`);
 process.exit(failures > 0 ? 1 : 0);

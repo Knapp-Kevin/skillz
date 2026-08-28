@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * risk-audit — semantic risk filter for first-party skills (issue #5).
+ * risk-audit — semantic risk filter for library skills (issue #5).
  *
  * Complements audit.ts's structural checks with deterministic risk-pattern
  * detection: missing negative rules in high-judgment skills, schema pressure
@@ -9,7 +9,7 @@
  * references without an MCP/web fallback.
  *
  * Usage (Bun or Node 22.18+):
- *   node skills/skill-audit/scripts/risk-audit.ts [--skills-dir <path>]
+ *   node engine/skills/skill-audit/scripts/risk-audit.ts [--skills-dir <path>]
  *
  * Exit 0 = clean or warnings only. Exit 1 = one or more FAIL findings.
  * Posture: regex heuristics, not semantic proof. `move`/`update` are
@@ -23,7 +23,7 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 
 const { values } = parseArgs({
   options: {
@@ -42,8 +42,6 @@ const findings: Finding[] = [];
 const fail = (msg: string) => findings.push({ level: "FAIL", msg });
 const warn = (msg: string) => findings.push({ level: "WARN", msg });
 
-// ── Vocabulary ───────────────────────────────────────────────────────
-
 const SLOT_RE = /\bbecause\b|\[reason\]|\[rationale\]|\broot cause\b|\bverdict\b/i;
 const SECRET_RULE_RE = /secret|token|credential|\bkey\b/i;
 const FABRICATION_RULE_RE = /not established|never invent|fabricat/i;
@@ -58,8 +56,6 @@ const RISK_TERMS = [
 ];
 const VENDOR_API_RE = /\bapi\.[a-z][a-z0-9-]*\.(com|ai|dev|io)\b|[A-Z][A-Z0-9_]{2,}_API_KEY/;
 const MCP_FALLBACK_RE = /\bMCP\b|web[- ]tool fallback|web search|web-search/i;
-
-// ── Per-skill checks ─────────────────────────────────────────────────
 
 function body(text: string): string {
   const m = text.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/);
@@ -85,9 +81,6 @@ function checkJudgment(dir: string, b: string): void {
     if (!FABRICATION_RULE_RE.test(rules)) fail(`${dir}: negative rules lack an anti-fabrication rule`);
     if (!GAP_RE.test(rules)) fail(`${dir}: negative rules lack a missing-evidence fallback`);
   }
-  // Schema-pressure (issue #5 check 2) is absorbed here: a slot-bearing
-  // Output Format marks the skill high-judgment, and the evidence-gap
-  // class above is exactly the "allows `not established`" requirement.
 }
 
 function checkMutation(dir: string, b: string): void {
@@ -117,8 +110,6 @@ function checkExternalServices(dir: string, b: string): void {
   }
 }
 
-// ── Main ─────────────────────────────────────────────────────────────
-
 function auditSkills(skillsDir: string): number {
   let count = 0;
   for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
@@ -138,5 +129,5 @@ function auditSkills(skillsDir: string): number {
 const count = auditSkills(values["skills-dir"]!);
 for (const f of findings) console.log(`${f.level}: ${f.msg}`);
 const failures = findings.filter((f) => f.level === "FAIL").length;
-console.log(`\nrisk-audit: ${count} skill(s), ${failures} failure(s), ${findings.length - failures} warning(s)`);
+console.log(`\nrisk-audit: ${count} library skill(s), ${failures} failure(s), ${findings.length - failures} warning(s)`);
 process.exit(failures > 0 ? 1 : 0);

@@ -21,11 +21,11 @@ jobs:
       - name: Behavior tests
         run: node --test "tests/*.test.mjs"
 
-      - name: Skill audit
-        run: node skills/skill-audit/scripts/audit.ts
+      - name: Library skill audit
+        run: node engine/skills/skill-audit/scripts/audit.ts
 
-      - name: Skill risk audit
-        run: node skills/skill-audit/scripts/risk-audit.ts
+      - name: Library skill risk audit
+        run: node engine/skills/skill-audit/scripts/risk-audit.ts
 
       - name: Index freshness
         run: |
