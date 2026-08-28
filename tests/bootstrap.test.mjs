@@ -12,22 +12,61 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (path) => readFileSync(join(ROOT, path), "utf8");
 
-test("bootstrap beginner path does not require prior skill knowledge", () => {
+test("repository URL alone is a bootstrap invocation, not a request for a summary", () => {
+  const readme = read("README.md");
+  const agents = read("AGENTS.md");
+  const skill = read("skills/skill-bootstrap/SKILL.md");
+
+  assert.match(readme, /If a user gave you this repository or its GitHub URL and did not give you a more specific task, \*\*begin the bootstrap process now\*\*/);
+  assert.match(readme, /Do not stop at a repository summary/);
+  assert.match(agents, /treat that as a request to \*\*begin the skill bootstrap process now\*\*/);
+  assert.match(agents, /Do not stop after describing, reviewing, or summarizing this repository/);
+  assert.match(skill, /that action is sufficient to trigger this skill/);
+  assert.match(skill, /Begin bootstrap\./);
+});
+
+test("bootstrap beginner path does not require prior skill knowledge or catalog shopping", () => {
   const doc = read("BOOTSTRAP.md");
   assert.match(doc, /You do not need to know how skills work\./);
-  assert.match(doc, /Read `BOOTSTRAP\.md` and help me figure out which skills would make you better at helping me\./);
-  assert.match(doc, /Do not guess about information you cannot see\./);
-  assert.match(doc, /smallest set of skills that actually makes your AI better for you/i);
+  assert.match(doc, /You do not need to know how to code\./);
+  assert.match(doc, /You do not need to choose from hundreds of files\./);
+  assert.match(doc, /Give your AI the GitHub link to this repository\. That is enough to start\./);
+  assert.match(doc, /The skills in this repository are not a shopping list/);
+  assert.match(doc, /smallest set of skills that makes your AI more dependable for you/i);
+});
+
+test("bootstrap uses accessible memory and history before asking the user to reconstruct their workflow", () => {
+  const readme = read("README.md");
+  const agents = read("AGENTS.md");
+  const skill = read("skills/skill-bootstrap/SKILL.md");
+
+  assert.match(readme, /If your AI can see useful memory or prior interactions, it should use them instead of making you explain everything again/);
+  assert.match(agents, /use that evidence before asking the user to explain themselves again/);
+  assert.match(skill, /begin with relevant interaction history and persistent memory before asking the user to restate how they work/);
+  assert.match(skill, /latent skill candidate/);
+});
+
+test("reference corpus is design evidence and custom skills may beat reuse", () => {
+  const readme = read("README.md");
+  const agents = read("AGENTS.md");
+  const skill = read("skills/skill-bootstrap/SKILL.md");
+
+  assert.match(readme, /ingredients and reference material/);
+  assert.match(readme, /Compare before creation\. User-fit before reuse\./);
+  assert.match(readme, /If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill/);
+  assert.match(agents, /Optimize for the user's actual workflow, not for reuse of the repository's existing skills/);
+  assert.match(skill, /CREATE does not mean "no related skill exists\."/);
+  assert.match(skill, /Design from the user's needs outward, not from the catalog inward/);
+  assert.match(skill, /Do not force a known skill into the architecture merely to increase reuse/);
 });
 
 test("bootstrap beginner path includes installation instead of abandoning the user with files", () => {
   const doc = read("BOOTSTRAP.md");
-  assert.match(doc, /either install them for me if you can do that safely, or give me simple step-by-step instructions/i);
-  assert.match(doc, /How do I install the skills when they are ready\?/);
   assert.match(doc, /You should not have to figure that out by yourself\./);
+  assert.match(doc, /The bootstrap must finish in one of three ways/);
   assert.match(doc, /An installation result/);
   assert.match(doc, /what you need to do next/);
-  assert.match(doc, /how you know the skill is working/);
+  assert.match(doc, /how you know the skills are working/);
 });
 
 test("bootstrap skill degrades honestly when history or tools are unavailable", () => {
@@ -43,7 +82,6 @@ test("bootstrap minimizes connected private-source access", () => {
   assert.match(skill, /Use the minimum evidence needed/);
   assert.match(skill, /Do \*\*not\*\* sweep unrelated connected private accounts/);
   assert.match(skill, /Access to a connector is capability, not consent to mine it for a profile/);
-  assert.match(skill, /Available but out of scope \/ not inspected/);
 });
 
 test("bootstrap compares before creating and preserves process authority", () => {
@@ -52,7 +90,8 @@ test("bootstrap compares before creating and preserves process authority", () =>
     assert.match(skill, new RegExp(`\\*\\*${disposition}\\*\\*`), `missing ${disposition} decision path`);
   }
   assert.match(skill, /Preserve user experience by default/);
-  assert.match(skill, /Prefer reuse over creation/);
+  assert.match(skill, /Compare before creation/);
+  assert.match(skill, /User-fit before reuse/);
   assert.match(skill, /proposal as authorization/i);
 });
 
