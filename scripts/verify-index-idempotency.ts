@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Prove generated catalog determinism in a fully materialized checkout.
+ * Prove generated catalog determinism and semantic coherence in a fully
+ * materialized checkout.
  *
  * The first generation is allowed to update stale checked-in output.
  * The second generation must produce byte-identical INDEX.md and index.json.
@@ -13,9 +14,10 @@ import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { validateCatalogInvariants } from "./lib/catalog-invariants.mjs";
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) {
-  console.log("verify-index-idempotency — regenerate the catalog twice and require byte-identical second-pass output\n\nUsage: node scripts/verify-index-idempotency.ts");
+  console.log("verify-index-idempotency — regenerate the catalog twice, require semantic schema-v2 invariants, and require byte-identical second-pass output\n\nUsage: node scripts/verify-index-idempotency.ts");
   process.exit(0);
 }
 
@@ -55,23 +57,11 @@ const firstJson = readFileSync(INDEX_JSON);
 const firstMd = readFileSync(INDEX_MD);
 const parsed = JSON.parse(firstJson.toString("utf8"));
 
-if (parsed.version !== 2) {
-  console.error(`FAIL: expected index schema version 2, found ${parsed.version ?? "missing"}`);
+const invariantErrors = validateCatalogInvariants(parsed);
+if (invariantErrors.length > 0) {
+  console.error("FAIL: generated catalog violates schema-v2 semantic invariants:");
+  for (const error of invariantErrors) console.error(`- ${error}`);
   process.exit(1);
-}
-
-for (const key of [
-  "localSkills",
-  "vendorSkills",
-  "totalIndexedSkillEntries",
-  "uniqueSkillNames",
-  "vendoredSources",
-  "registeredSources",
-]) {
-  if (!Number.isInteger(parsed.counts?.[key]) || parsed.counts[key] < 0) {
-    console.error(`FAIL: index.counts.${key} is missing or invalid`);
-    process.exit(1);
-  }
 }
 
 runGenerator("second-pass");
@@ -87,10 +77,11 @@ if (!jsonStable || !mdStable) {
   process.exit(1);
 }
 
-console.log("PASS: generated catalog is byte-identical on the second pass.");
+console.log("PASS: generated catalog satisfies semantic invariants and is byte-identical on the second pass.");
 console.log(JSON.stringify({
   version: parsed.version,
   generated: parsed.generated,
   counts: parsed.counts,
+  semanticInvariants: true,
   idempotent: true,
 }, null, 2));
