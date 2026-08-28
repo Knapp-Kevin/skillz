@@ -25,7 +25,7 @@ Maps user-touchable and governance-critical features to their implementation and
 | FX12 | Per-skill third-party provenance and attribution | `registry/skills/`, `docs/third-party-provenance.md`, `THIRD_PARTY_NOTICES.md` | **STATIC PASS / POLICY** |
 | FX13 | Exact-version verification and characterization state | `registry/verification/`, `scripts/lib/verification-registry.ts` | **STATIC PASS** |
 | FX14 | Controlled characterization taxonomy | `registry/taxonomy.yaml` | **STATIC PASS** |
-| FX15 | Fingerprint drift invalidation | `engine/skills/source-vetting/scripts/verify-characterization-integrity.ts` | **STATIC PASS / RUNTIME RECHECK IN PREFLIGHT** |
+| FX15 | Fingerprint drift invalidation | `engine/skills/source-vetting/scripts/verify-characterization-integrity.ts` | **STATIC PASS / RUNTIME RECHECK IN PREFLIGHT**: strict preflight mode also fails unavailable characterized targets after source materialization |
 | FX16 | Governed candidate shortlisting | `engine/skills/skill-bootstrap/scripts/select-candidates.ts` | **STATIC PASS**: selection fixtures prove eligible reuse, unverified evidence-only mode, blocked stale state, tag-aware ranking |
 | FX17 | Structural skill audit | `engine/skills/skill-audit/scripts/audit.ts` | **STATIC PASS / RUNTIME RECHECK IN PREFLIGHT** |
 | FX18 | Semantic risk audit | `engine/skills/skill-audit/scripts/risk-audit.ts` | **STATIC PASS / RUNTIME RECHECK IN PREFLIGHT** |
@@ -41,9 +41,10 @@ Maps user-touchable and governance-critical features to their implementation and
 | FX28 | Returning-user minimal refinement proof | R1 in `docs/evals/` | **BEHAVIORAL PENDING** |
 | FX29 | Returning-user no-change proof | R2 in `docs/evals/` | **BEHAVIORAL PENDING** |
 | FX30 | Automatic GitHub Actions budget protection | `.github/workflows/ci.yml` | **POLICY PASS**: manual-dispatch only |
+| FX31 | Exact alpha source-state proof | `scripts/verify-vendor-materialization.ts` | **STATIC PASS / RUNTIME PENDING ON CURRENT FULL CORPUS**: local Git fixtures cover clean exact pin, dirty superproject, missing submodule, wrong submodule HEAD, and dirty source content; preflight executes this before catalog generation |
 
 ## Alpha rule
 
-Static presence and contract tests are necessary but do not establish the complete user experience. Initial alpha remains unlocked until FX09/FX10/FX22 runtime proof succeeds and FX25-FX29 have actual isolated behavioral evidence.
+Static presence and contract tests are necessary but do not establish the complete user experience. Initial alpha remains unlocked until FX31 source-state proof and FX09/FX10/FX22 runtime proof succeed on the current fully materialized commit, and FX25-FX29 have actual isolated behavioral evidence.
 
 See `docs/alpha-lock.md`, `docs/initial-implementation.md`, and `docs/evals/run-initial-alpha.md`.

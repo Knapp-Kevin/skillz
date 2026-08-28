@@ -21,6 +21,9 @@ Alpha is locked when `skillz` can reliably synthesize and later refine a fitted 
 - [x] Bootstrap has a deterministic selector that consumes verification status and characterization tags directly.
 - [x] Default governed selection excludes unverified unchanged reuse and blocks stale/rejected/retired material; explicit unverified review is design-evidence only.
 - [x] Recursive local-skill discovery is integrated into index, audit, risk-audit, and sync tooling before category folders become canonical skill paths.
+- [x] Alpha preflight has an explicit vendored-source materialization gate that binds every vendored registry source to a clean initialized submodule at exactly the superproject gitlink SHA.
+- [x] Alpha preflight requires every characterized skill path to be available after materialization rather than silently accepting missing verification targets.
+- [ ] The exact vendored-source materialization gate has passed on the current commit in a fully materialized checkout.
 - [ ] Generated `INDEX.md` / `index.json` have been refreshed from the current fully materialized corpora and expose verification status, tags, source role, human category, and exact counts.
 - [ ] The refreshed generated index is proven deterministic/idempotent against the current vendored sources.
 - [ ] Representative end-to-end first-visit bootstrap evals demonstrate reliable custom-set synthesis from accessible user evidence.
