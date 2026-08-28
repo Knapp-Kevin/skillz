@@ -6,7 +6,7 @@
 |---|---|
 | **Last updated** | 2026-08-28 |
 | **Milestone** | Initial alpha |
-| **State** | Implementation foundation complete; execution proof pending |
+| **State** | Implementation foundation and proof hardening complete; external execution proof pending |
 | **Authoritative closure tracker** | GitHub Issue #15 |
 | **Automatic GitHub Actions** | Disabled; workflow is manual-dispatch only |
 
@@ -29,12 +29,16 @@ skillz/
 │   └── taxonomy.yaml                 controlled characterization vocabulary
 ├── scripts/
 │   ├── build-index.ts                schema-v2 catalog generator
-│   ├── verify-index-idempotency.ts   two-pass deterministic catalog proof
+│   ├── verify-vendor-materialization.ts exact source-state gate
+│   ├── verify-index-idempotency.ts   semantic + two-pass catalog proof
 │   ├── initial-alpha-preflight.ts    one-command runtime preflight
-│   └── render-alpha-scenario.ts      leak-safe journey fixture renderer
-├── docs/evals/                       alpha matrix, fixtures, runbook, evidence
+│   ├── render-alpha-scenario.ts      public-only treatment renderer
+│   └── verify-alpha-evaluator-bundle.mjs private rubric/fixture binding proof
+├── docs/evals/                       public matrix, v2 treatment fixtures, runbook, evidence
 └── INDEX.md / index.json             generated catalog; refresh pending
 ```
+
+The scenario-specific v2 evaluator rubric is intentionally **not** part of the repository. It must remain outside any treatment-agent-accessible surface and is bound to the public fixture by set ID and SHA-256 before scoring.
 
 ## Inventory boundaries
 
@@ -65,7 +69,7 @@ Do not substitute the July 4 count of 524 or the temporary `500+` README badge f
 
 Implemented:
 
-- README begins with human instructions.
+- README begins with human instructions;
 - first-visit and returning-user tracks are explicit;
 - direct browse by purpose exists under `skills/categories/`;
 - provenance, verification, curation, installation, and repository maps are linked from the front door.
@@ -86,29 +90,40 @@ Implemented:
 Implemented static/mechanical proof:
 
 - recursive local discovery shared by index, audit, risk-audit, and sync;
+- exact superproject + vendored-submodule materialization verifier;
 - schema-v2 index generator;
+- semantic catalog invariants plus two-pass idempotency verifier;
 - verification registry parser;
 - governed candidate selection fixture tests;
 - initial implementation contract tests;
-- five frozen synthetic alpha journey scenarios;
-- leak-safe scenario renderer and anti-answer-key tests;
-- two-pass catalog idempotency verifier;
+- rotated public-only v2 journey scenarios with neutral IDs;
+- public fixture tests that forbid evaluator answer-key fields;
+- public treatment renderer;
+- private evaluator-bundle verifier bound to public set ID, exact SHA-256, and complete scenario coverage;
 - one-command initial alpha preflight;
-- characterization fingerprint-integrity verifier.
+- strict characterization fingerprint-integrity verifier.
+
+Invalidated evidence architecture:
+
+- the original public v1 journey set used the identifiers A1/A2/A3/R1/R2 and committed evaluator-only expected decisions and scoring criteria;
+- those mappings remain recoverable from Git history, so that set is permanently invalid as blind behavioral evidence;
+- the v2 set rotates both scenario contexts and neutral IDs, while evaluator-only mappings remain outside the repository.
 
 Not yet established:
 
-- schema-v2 generated catalog from a fully materialized checkout;
+- exact source-state PASS on the current commit from a fully materialized checkout;
+- schema-v2 generated catalog from that checkout;
 - exact current corpus counts;
 - byte-identical materialized second-pass generation;
-- behavioral PASS for A1, A2, A3, R1, or R2;
+- verified private v2 evaluator bundle at execution time;
+- behavioral PASS for all five rotated v2 treatment scenarios;
 - final alpha lock.
 
 ## Runtime blocker
 
-This conversation's execution environment cannot resolve `github.com`, so it cannot materialize the pinned submodules locally. GitHub Actions are intentionally not being used as a workaround because the repository is protecting Actions budget.
+This conversation's execution environment cannot resolve `github.com`/`api.github.com`, so it cannot materialize the pinned submodules locally. GitHub Actions are intentionally not being used as a workaround because the repository is protecting Actions budget. A connected Hugging Face CPU Job was also tested and returned `402 Payment Required` for a trivial job.
 
-The remaining proof must run in a normal network-capable local checkout or equivalent development environment.
+The remaining full-corpus proof must run in a normal network-capable local checkout or equivalent development environment.
 
 ## Exact next action
 
@@ -125,12 +140,12 @@ Require the terminal state:
 READY FOR JOURNEY EVALUATION. This is not behavioral proof by itself.
 ```
 
-Then execute isolated A1, A2, A3, R1, and R2 through `scripts/render-alpha-scenario.ts` and record actual evidence under `docs/evals/results/`.
+Then verify the separately held private evaluator bundle with `scripts/verify-alpha-evaluator-bundle.mjs`, execute the five neutral v2 scenario IDs listed by `docs/evals/run-initial-alpha.md` in fresh treatment contexts, and record actual evidence under `docs/evals/results/`.
 
 ## Alpha status
 
 **NOT LOCKED.**
 
-The implementation architecture is substantially complete. Remaining gates are materialized catalog proof, five isolated journey proofs, exact-count/document reconciliation, and evidence-backed closure.
+The implementation and proof architecture are substantially complete. Remaining gates are materialized source/catalog proof, five genuinely blind v2 journey proofs, exact-count/document reconciliation, and evidence-backed closure.
 
 See `docs/alpha-lock.md`, `docs/initial-implementation.md`, `docs/evals/run-initial-alpha.md`, and Issue #15.
