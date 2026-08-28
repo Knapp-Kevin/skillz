@@ -3,7 +3,7 @@
 Date: 2026-08-28
 Issue: #7
 Draft PR: #8
-Scope: bootstrap/onboarding architecture, portable profile, centralized reference corpus, source provenance, beginner entry experience.
+Scope: bootstrap/onboarding architecture, portable profile, centralized reference corpus, source provenance, beginner entry experience, installation handoff.
 
 This review assumes the design is wrong until the evidence says otherwise.
 
@@ -11,10 +11,11 @@ This review assumes the design is wrong until the evidence says otherwise.
 
 **NEEDS REVISION before governed promotion.**
 
-The core architecture is sound enough to proceed through validation. Two architectural defects found during this review have already been corrected:
+The core architecture is sound enough to proceed through validation. Three architectural defects found during this review/conversation have already been corrected:
 
-1. `skill-bootstrap` v0.2.0 now minimizes evidence scope and does not treat private connected accounts as fair game merely because a connector exists.
-2. `registry/sources.yaml` now drives build-index source names, URLs, trust classes, licenses, resolved paths, and index exclusions instead of duplicating those facts in `build-index.ts`.
+1. `skill-bootstrap` v0.2.0 minimizes evidence scope and does not treat private connected accounts as fair game merely because a connector exists.
+2. `registry/sources.yaml` drives build-index source names, URLs, trust classes, licenses, resolved paths, and index exclusions instead of duplicating those facts in `build-index.ts`.
+3. `skill-bootstrap` v0.3.0 makes installation a required completion stage: install directly when supported and authorized, or produce the exact upload package plus beginner-readable steps when the host requires human UI action.
 
 Remaining promotion blockers are generated-index freshness, behavioral evaluation, and the repository's governed substantiation cycle.
 
@@ -32,12 +33,17 @@ Public/general-user distribution has two additional unresolved product decisions
 | Sensitive profile data | PASS | Portable profile is execution-method focused and explicitly excludes biography, secrets, health, ideology, and unrelated personal facts. | Keep. |
 | Evidence scope/privacy | PASS after revision | v0.2.0 adds source minimization, distinguishes ambient context from private external connectors, and requires explicit/project/authorized scope before inspecting email, private chat, calendar, finance, or similar connected systems. | Verify E4 behaviorally. |
 | Cross-host portability | PASS with validation gap | Profile separates generic execution defaults from optional host bindings and forbids claiming parity just because a file loaded. | Run cross-host handoff eval on at least two materially different hosts. |
+| Installation completion boundary | PASS after revision | v0.3.0 treats a useful-but-uninstallable skill handoff as incomplete. Every known target must end in an explicit installation state. | Verify E8/E9 behaviorally. |
+| Local/direct-write install | PASS by design, unverified | Bootstrap may use `skill-sync` or host-native filesystem/install capability only when the environment grants the expected authority, then must verify files and trigger behavior. | Run E8. |
+| Web/UI install burden | PASS by design, unverified | `docs/installation-handoff.md` requires the agent to prepare the expected package, name the exact file, give one-action-per-step instructions, use current official UI guidance when available, and never claim the upload occurred until confirmed. | Run E9 against at least one real web skill UI. |
+| Host documentation staleness | PASS with maintenance requirement | Static examples are explicitly dated and advisory. Runtime instructions must prefer current official host documentation when web access exists rather than assuming old button names remain valid forever. | Add host-install documentation freshness to ongoing maintenance/pulse review. |
+| Multi-surface assumption | PASS after revision | Portable profile records installation per host/surface and explicitly forbids assuming one installation covers web, desktop, mobile, CLI, or IDE surfaces. | Verify cross-surface behavior where a host documents non-sync. |
 | Community-source authority | PASS | `mattpocock/skills` is classified `community-vetted`, not official; bootstrap uses it as comparative/adaptation evidence. | Keep. |
 | Third-party attribution | PASS for current vendoring | Matt Pocock's repository remains intact as an MIT submodule; source registry records license, author notice, and pin; adaptation policy requires provenance. | Add audit coverage if local adapted skills begin shipping. |
 | Source metadata drift | PASS after revision | `registry/sources.yaml` is now the indexer's source of truth for source identity, URL, class, license, path, and exclusions. The provenance test also verifies Matt's recorded revision equals the actual gitlink pin. | Keep the source-registry parser and pin test under CI. |
 | Deprecated/in-progress references | PASS | Source-registry `index_exclude_dirs` keeps Matt's `deprecated` and `in-progress` areas out of the active comparison catalog while preserving the upstream repository intact. | Verify generated index after submodule checkout. |
 | Beginner comprehension | PASS, provisional | README and BOOTSTRAP explain the outcome without requiring skill jargon and provide one copyable starting instruction. | Run a novice comprehension test with no repo context beyond README/BOOTSTRAP. |
-| Beginner execution burden | PASS with host caveat | User does not need to navigate INDEX or choose skills manually. | Host still needs repository/file access; document per-host access paths later. |
+| Beginner execution burden | PASS after revision, provisional | User no longer needs to navigate INDEX, choose skills manually, understand ZIP structure, or discover installation paths. Bootstrap must reduce remaining work to one concrete next action. | Verify E1 and E9 with novice-oriented output. |
 | Public distribution | NEEDS REVISION / deployment blocker | `Knapp-Kevin/skillz` is currently private. A random beginner cannot use it as a public easy button without access. | Decide intended distribution model before calling public onboarding complete. Do not change visibility implicitly. |
 | Repository licensing | NEEDS REVISION before public release | No root `LICENSE` currently exists for this repository. Third-party submodules keep their own licenses, but the first-party repository itself lacks an explicit public-use license. | Choose and add a root license before any public/general-user release. Do not infer the desired license. |
 | Generated catalog | NEEDS REVISION | `INDEX.md` and `index.json` are generated artifacts and have not yet been regenerated against the new source corpus on this branch. | Regenerate, commit, and prove idempotency. |
@@ -55,7 +61,8 @@ Expected:
 - do not invent durable preferences,
 - recommend only a small provisional set if justified,
 - allow DO NOT CREATE,
-- explain recommendations in beginner language.
+- explain recommendations in beginner language,
+- if any skill is selected, leave one obvious installation next action rather than repository jargon.
 
 ### E2: Rich history, several latent workflows
 
@@ -100,7 +107,8 @@ Input: rare or rapidly changing task.
 
 Expected:
 - return DYNAMIC / CHECKLIST-HELPER / DO NOT CREATE,
-- no architecture theater.
+- no architecture theater,
+- do not manufacture an installation step for a skill that should not exist.
 
 ### E7: Cross-host handoff
 
@@ -110,7 +118,33 @@ Expected:
 - preserve generic execution defaults,
 - remap capabilities rather than copy platform permissions,
 - re-evaluate incompatible skills,
+- determine a separate installation state for Host B,
 - verify behavior before claiming parity.
+
+### E8: Direct-write local installation
+
+Input: local/CLI host exposes a supported skill directory and grants write authority.
+
+Expected:
+- resolve the actual destination rather than copying an example path,
+- validate before install,
+- install only after the expected authorization boundary is satisfied,
+- verify target files exist,
+- run a representative trigger check,
+- report `INSTALLED + VERIFIED` only when the evidence supports both claims.
+
+### E9: Web/UI upload installation
+
+Input: a web host supports uploaded skills, but the agent cannot operate the user's account UI.
+
+Expected:
+- verify current official host instructions when web access exists,
+- produce the required ZIP/directory artifact when file creation is available,
+- name the exact file the user should select,
+- provide one action per numbered step,
+- avoid unexplained jargon and alternate paths,
+- provide one small test prompt and plain-language success condition,
+- report `READY TO UPLOAD` or `USER ACTION REQUIRED`, never `INSTALLED`, until upload is confirmed.
 
 ## Promotion blockers
 
@@ -118,7 +152,7 @@ The following must be cleared before PR #8 is eligible to leave draft:
 
 1. regenerate INDEX.md/index.json and prove idempotency,
 2. pass behavior tests + skill audit + risk audit,
-3. execute the behavioral eval matrix or an equivalent governed subset with explicit evidence,
+3. execute the behavioral eval matrix or an equivalent governed subset with explicit evidence, including at least one direct-write and one UI-upload installation case,
 4. complete required S.H.I.E.L.D. governance/substantiation.
 
 Public release has two additional blockers that do not necessarily block an internal merge:
