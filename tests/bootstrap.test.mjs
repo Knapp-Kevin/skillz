@@ -55,6 +55,7 @@ test("community reference source preserves Matt Pocock provenance", () => {
   assert.match(sources, /id: mattpocock-skills/);
   assert.match(sources, /class: community-vetted/);
   assert.match(sources, /license: MIT/);
+  assert.match(sources, /index_exclude_dirs: deprecated,in-progress/);
   assert.match(modules, /https:\/\/github\.com\/mattpocock\/skills\.git/);
   assert.match(provenance, /Copyright \(c\) 2026 Matt Pocock/);
   assert.match(upstreamLicense, /MIT License/);
@@ -71,12 +72,15 @@ test("community reference source preserves Matt Pocock provenance", () => {
   assert.equal(recorded, gitlink.stdout.trim(), "recorded provenance revision must match the actual vendored submodule pin");
 });
 
-test("index generator exposes source trust and excludes non-active community skill areas", () => {
+test("index generator reads source trust and exclusions from the source registry", () => {
   const script = read("scripts/build-index.ts");
-  assert.match(script, /sourceClass: "community-vetted"/);
-  assert.match(script, /excludeDirs: \["deprecated", "in-progress"\]/);
+  assert.match(script, /function parseSourceRegistry/);
+  assert.match(script, /const sourceRecords = parseSourceRegistry\(\)/);
+  assert.match(script, /index_exclude_dirs/);
+  assert.match(script, /sourceClass: s\.class/);
   assert.match(script, /sourceRegistry: "registry\/sources\.yaml"/);
   assert.match(script, /bootstrap: "BOOTSTRAP\.md"/);
+  assert.doesNotMatch(script, /sourceClass:\s*"community-vetted"/, "community trust class must come from registry/sources.yaml, not a second hard-coded truth");
 });
 
 test("portable profile separates execution defaults from biography", () => {
