@@ -2,9 +2,23 @@
 
 This directory contains the locally maintained and directly imported portion of the `skillz` library.
 
+## Browse by purpose
+
+Start with [`categories/`](categories/) if you are browsing as a human.
+
+- [Planning & Productivity](categories/planning-productivity/)
+- [Writing & Communication](categories/writing-communication/)
+- [Research & Analysis](categories/research-analysis/)
+- [Software & Repositories](categories/software-repositories/)
+- [Agent Operations & Security](categories/agent-operations-security/)
+- [Monitoring & Intelligence](categories/monitoring-intelligence/)
+- [Business & Career](categories/business-career/)
+
+The category folders are currently a human navigation layer. Canonical skill directories remain directly under `skills/` while recursive discovery is integrated into index, audit, and synchronization tooling. Once that migration is verified, the category layout can become the canonical physical organization without breaking existing installs or links.
+
 ## Counting rule
 
-**Every user-facing skill directory under `skills/` counts, but `skills/` is not the entire library.**
+**Every user-facing skill under `skills/` counts, but `skills/` is not the entire library.**
 
 The complete usable library also includes approved indexed third-party skill references from pinned source corpora under [`vendor/`](../vendor/). Repository machinery under [`engine/skills/`](../engine/skills/) is the exception and does not count.
 
