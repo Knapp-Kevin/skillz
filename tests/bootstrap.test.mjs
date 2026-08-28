@@ -12,6 +12,21 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (path) => readFileSync(join(ROOT, path), "utf8");
 
+test("repository supports both direct skill-library use and bootstrap", () => {
+  const readme = read("README.md");
+  const agents = read("AGENTS.md");
+
+  assert.match(readme, /two equally valid ways to use it/i);
+  assert.match(readme, /Use it as a skill library/);
+  assert.match(readme, /Give the repository to your AI/);
+  assert.match(readme, /hundreds of useful skills and reference implementations/i);
+  assert.match(readme, /The library is real\. The bootstrap is extra\./);
+  assert.match(agents, /two valid operating modes/i);
+  assert.match(agents, /Direct skill-library mode/);
+  assert.match(agents, /Bootstrap mode/);
+  assert.match(agents, /The repository is both a skill library and a skill-building system/);
+});
+
 test("repository URL alone is a bootstrap invocation, not a request for a summary", () => {
   const readme = read("README.md");
   const agents = read("AGENTS.md");
@@ -51,10 +66,9 @@ test("reference corpus is design evidence and custom skills may beat reuse", () 
   const agents = read("AGENTS.md");
   const skill = read("skills/skill-bootstrap/SKILL.md");
 
-  assert.match(readme, /ingredients and reference material/);
   assert.match(readme, /Compare before creation\. User-fit before reuse\./);
   assert.match(readme, /If a custom skill better represents the person's real day-to-day work, the correct result is to build that custom skill/);
-  assert.match(agents, /Optimize for the user's actual workflow, not for reuse of the repository's existing skills/);
+  assert.match(agents, /For bootstrap requests, optimize for the user's actual workflow rather than maximizing reuse of existing skills/);
   assert.match(skill, /`CREATE` does not mean "no related skill exists\."/);
   assert.match(skill, /Design from the user's needs outward, not from the catalog inward/);
   assert.match(skill, /Do not force a known skill into the architecture merely to increase reuse/);
