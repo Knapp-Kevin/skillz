@@ -39,7 +39,7 @@ The useful distinctions are:
 - **local/imported**: maintained directly under `skills/`;
 - **indexed reference**: available through approved sources under `vendor/`;
 - **characterized**: has source provenance plus controlled tags/fingerprint;
-- **trusted-baseline**: Matt Pocock quality policy applies to the exact characterized skill;
+- **trusted-baseline**: exact characterized version is eligible under repository quality policy;
 - **verified**: structured skill-quality rubric passed;
 - **validated**: representative behavioral evidence also passed;
 - **unverified**: available/design evidence, not trusted unchanged by default;
