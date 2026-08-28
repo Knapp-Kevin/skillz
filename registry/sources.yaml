@@ -4,6 +4,9 @@
 # comparative skill discovery. Inclusion is not blanket trust.
 # Individual skills still require the evaluation/permission rules in
 # docs/evaluation-framework.md.
+#
+# `build-index.ts` consumes this registry for source names, URLs, trust class,
+# license metadata, resolved vendor paths, and optional index exclusions.
 
 version: 1
 
@@ -65,4 +68,5 @@ sources:
     license: MIT
     upstream_copyright: Copyright (c) 2026 Matt Pocock
     pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+    index_exclude_dirs: deprecated,in-progress
     rationale: High-value engineering and productivity skill patterns used for comparison, adaptation, supplementation, composition, and benchmarking; not treated as platform authority.
