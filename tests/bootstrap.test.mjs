@@ -4,6 +4,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -41,13 +42,25 @@ test("community reference source preserves Matt Pocock provenance", () => {
   const sources = read("registry/sources.yaml");
   const modules = read(".gitmodules");
   const provenance = read("docs/third-party-provenance.md");
+  const upstreamLicense = read("vendor/mattpocock-skills/LICENSE");
 
   assert.match(sources, /id: mattpocock-skills/);
   assert.match(sources, /class: community-vetted/);
   assert.match(sources, /license: MIT/);
-  assert.match(sources, /pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76/);
   assert.match(modules, /https:\/\/github\.com\/mattpocock\/skills\.git/);
   assert.match(provenance, /Copyright \(c\) 2026 Matt Pocock/);
+  assert.match(upstreamLicense, /MIT License/);
+  assert.match(upstreamLicense, /Copyright \(c\) 2026 Matt Pocock/);
+
+  const recorded = sources.match(/pinned_revision:\s*([0-9a-f]{40})/)?.[1];
+  assert.ok(recorded, "source registry must record a full pinned_revision");
+
+  const gitlink = spawnSync("git", ["rev-parse", "HEAD:vendor/mattpocock-skills"], {
+    cwd: ROOT,
+    encoding: "utf8",
+  });
+  assert.equal(gitlink.status, 0, `must resolve vendored gitlink: ${gitlink.stderr}`);
+  assert.equal(recorded, gitlink.stdout.trim(), "recorded provenance revision must match the actual vendored submodule pin");
 });
 
 test("index generator exposes source trust and excludes non-active community skill areas", () => {
