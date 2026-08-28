@@ -14,15 +14,15 @@ A large corpus is useful only when source identity, licensing, freshness, qualit
 
 Do not collapse these states into a single word like "curated."
 
-## Source defaults
+## Source and quality defaults
 
-Source identity does not establish individual skill quality.
+Source identity does not establish individual skill quality by itself.
 
-- Matt Pocock skills are the sole current `trusted-baseline` exception by explicit repository policy.
-- Every other skill-bearing source defaults to `unverified`, including official vendor repositories.
-- Normative specifications may be `not-applicable` because they are references rather than normal installable skills.
+Each registered source has an explicit quality default used by the repository's selection machinery. A source default may establish an initial quality posture, but individual skills still require exact-version fingerprinting and characterization before they are fully governed selection candidates.
 
-Matt skills still require fingerprints and characterization to participate as well-described selection candidates. A changed fingerprint invalidates prior characterization until refreshed.
+Normative specifications may use a non-skill quality state because they are references rather than normal installable skills.
+
+A changed fingerprint invalidates prior characterization until refreshed.
 
 ## Provenance companion
 
@@ -75,14 +75,14 @@ On refresh:
 3. recompute the canonical skill fingerprint;
 4. if the fingerprint changed, treat old tags/status/evidence as stale;
 5. re-check dependencies, license, scope, authority, and portability;
-6. re-run structured verification for material changes;
+6. re-run structured verification for material changes where required by policy;
 7. re-run behavioral validation when prior evidence may no longer apply;
 8. update tags if behavior or use changes;
 9. preserve prior history through git.
 
 ## Selection rule
 
-Direct trusted reuse prefers `trusted-baseline`, `verified`, or `validated` skills whose characterization matches the user's need.
+Direct trusted reuse prefers `trusted-baseline`, `verified`, or `validated` skills whose exact fingerprint matches and whose characterization matches the user's need.
 
 `unverified` material can inform design and may be verified on demand, but should not be silently installed as trusted unchanged material. `stale`, `rejected`, and `retired` material is excluded from default selection.
 

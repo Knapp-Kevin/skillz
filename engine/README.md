@@ -2,7 +2,7 @@
 
 This directory contains the machinery that operates the `skillz` repository.
 
-**Nothing under `engine/` counts as user-facing skill-library inventory.**
+**Nothing under `engine/` counts as skill-library inventory.** Engine procedures are repository infrastructure, not user-facing library skills.
 
 The procedures may use the Agent Skills format because that makes them explicit and composable. They are still repository infrastructure.
 

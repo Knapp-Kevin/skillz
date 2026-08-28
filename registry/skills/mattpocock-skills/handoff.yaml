@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: handoff
+display_name: Handoff
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/handoff/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: d28dfdc39beadc3142a33359b5cfa4765dcbd0bc
+upstream_last_updated_at: 2026-08-15T20:42:06Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/handoff/SKILL.md
+permission_tier: staging-write
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: no required sibling reference files; expects a host that can write a temporary handoff artifact
+import_eligibility: already-vendored
+rationale: Compact handoff procedure with explicit anti-duplication and sensitive-data redaction rules, plus a useful suggested-skills bridge for the next agent or session.

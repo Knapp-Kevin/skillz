@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: prototype
+display_name: Prototype
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/prototype/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-28
+last_checked_at: 2026-08-28
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/prototype/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: uses LOGIC.md or UI.md from the intact source depending on the prototype question
+import_eligibility: already-vendored
+rationale: Strong question-first prototyping model that explicitly keeps prototype code disposable, surfaces state, and captures validated decisions without allowing throwaway implementation to fossilize into production architecture.

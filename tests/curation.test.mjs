@@ -39,7 +39,7 @@ const verificationRequired = [
 
 test("curated third-party skills keep auditable provenance separate from quality state", () => {
   const files = yamlFiles(PROVENANCE);
-  assert.ok(files.length >= 16, `expected at least 16 provenance records, found ${files.length}`);
+  assert.ok(files.length >= 21, `expected at least 21 provenance records, found ${files.length}`);
   for (const file of files) {
     const text = readFileSync(file, "utf8");
     for (const key of provenanceRequired) assert.ok(field(text, key), `${file}: missing ${key}`);
@@ -50,27 +50,17 @@ test("curated third-party skills keep auditable provenance separate from quality
   }
 });
 
-test("source registry separates source role from individual verification default", () => {
+test("source registry keeps source role separate from individual quality state", () => {
   const sources = readFileSync(join(ROOT, "registry", "sources.yaml"), "utf8");
   assert.match(sources, /^version: 2$/m);
   assert.match(sources, /source_role:/);
-  assert.match(sources, /verification_default:/);
-  assert.match(sources, /id: mattpocock-skills[\s\S]*?verification_default: trusted-baseline/);
-
-  const blocks = sources.split(/\n\s*- id: /).slice(1);
-  for (const raw of blocks) {
-    const block = `id: ${raw}`;
-    const id = field(block, "id");
-    const qualityDefault = field(block, "verification_default");
-    if (id === "mattpocock-skills") assert.equal(qualityDefault, "trusted-baseline");
-    else if (id === "agentskills-spec") assert.equal(qualityDefault, "not-applicable");
-    else assert.equal(qualityDefault, "unverified", `${id}: only Matt may default trusted-baseline`);
-  }
+  assert.doesNotMatch(sources, /verification_default:/);
+  assert.match(sources, /A skill without an individual quality record is[\s\S]*treated as unverified/);
 });
 
 test("characterization is bound to exact Git blob fingerprints", () => {
   const files = yamlFiles(VERIFICATION);
-  assert.ok(files.length >= 16, `expected at least 16 verification records, found ${files.length}`);
+  assert.ok(files.length >= 21, `expected at least 21 verification records, found ${files.length}`);
   for (const file of files) {
     const text = readFileSync(file, "utf8");
     for (const key of verificationRequired) assert.ok(field(text, key), `${file}: missing ${key}`);
@@ -80,7 +70,7 @@ test("characterization is bound to exact Git blob fingerprints", () => {
   }
 });
 
-test("Addy characterized skills remain unverified until the new rubric is run", () => {
+test("characterized unverified sample stays untrusted until structured review", () => {
   const dir = join(VERIFICATION, "addyosmani-agent-skills");
   const files = yamlFiles(dir);
   assert.equal(files.length, 10);
@@ -91,18 +81,21 @@ test("Addy characterized skills remain unverified until the new rubric is run", 
   }
 });
 
-test("Matt characterized skills use trusted baseline without pretending behavioral validation", () => {
-  const dir = join(VERIFICATION, "mattpocock-skills");
-  const files = yamlFiles(dir);
-  assert.equal(files.length, 3);
+test("trusted-baseline records are fingerprinted without pretending behavioral validation", () => {
+  const files = yamlFiles(VERIFICATION).filter((file) => {
+    const text = readFileSync(file, "utf8");
+    return field(text, "verification_status") === "trusted-baseline";
+  });
+  assert.ok(files.length >= 8, `expected at least 8 trusted-baseline records, found ${files.length}`);
   for (const file of files) {
     const text = readFileSync(file, "utf8");
-    assert.equal(field(text, "verification_status"), "trusted-baseline");
+    assert.equal(field(text, "verification_basis"), "source-quality-policy-plus-integrity-review");
     assert.equal(field(text, "validation_status"), "not-run");
+    assert.match(field(text, "content_blob_sha"), /^[0-9a-f]{40}$/);
   }
 });
 
-test("first non-Matt verification sample earned structured verification only", () => {
+test("structured verification sample earned structured verification only", () => {
   for (const [source, skill] of [
     ["cline-skills", "review-team"],
     ["cloudflare-skills", "agents-sdk"],

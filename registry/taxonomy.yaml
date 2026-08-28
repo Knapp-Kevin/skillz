@@ -9,24 +9,36 @@ dimensions:
     - api-design
     - architecture
     - browser-testing
+    - business-operations
+    - career
     - cloud
     - code-review
+    - communication
     - context-management
     - debugging
+    - decision-support
     - deployment
     - documentation
+    - domain-modeling
     - evaluation
+    - handoff
     - implementation
     - memory
+    - monitoring
     - observability
     - orchestration
     - planning
+    - productivity
+    - prototyping
     - refactoring
+    - repository-maintenance
     - research
     - security
+    - skill-authoring
     - testing
     - ux
     - web-search
+    - writing
 
   lifecycle:
     - discovery
@@ -58,6 +70,7 @@ dimensions:
     - modularity
     - orchestration
     - production-oriented
+    - progressive-disclosure
     - reference-heavy
     - retrieval-first
     - retrieval-map

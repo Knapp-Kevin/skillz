@@ -34,8 +34,8 @@ The check performs no network calls. Missing or uninitialized submodules are rep
 
 ## Status meanings
 
-- `unverified`: characterized or discovered, but has not passed the skillz verification rubric.
-- `trusted-baseline`: quality is accepted by explicit source policy. Currently reserved for Matt Pocock skills. Integrity and characterization are still required.
+- `unverified`: characterized or discovered, but has not passed the repository's trusted-selection requirements.
+- `trusted-baseline`: the exact fingerprint is eligible under an established source-quality policy; integrity and characterization are still required.
 - `verified`: passed the structured quality/effectiveness review in [`../../docs/skill-verification.md`](../../docs/skill-verification.md). This is not behavioral validation.
 - `validated`: verified and supported by representative behavioral evidence showing improved outcomes.
 - `stale`: prior assessment is invalid because the canonical content changed or required evidence no longer matches.
@@ -44,7 +44,7 @@ The check performs no network calls. Missing or uninitialized submodules are rep
 
 ## Selection rule
 
-Bootstrap may use `trusted-baseline`, `verified`, or `validated` skills unchanged when they otherwise fit the user.
+Bootstrap may use `trusted-baseline`, `verified`, or `validated` skills unchanged when the exact fingerprint matches and the characterization fits the user.
 
 `unverified` skills remain valuable design evidence and may be verified on demand, but should not be silently installed as trusted material. `stale`, `rejected`, and `retired` skills are excluded from default direct selection.
 
