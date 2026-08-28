@@ -4,55 +4,68 @@ This runbook executes the five behavioral scenarios in [`fixtures/initial-alpha-
 
 The goal is to test the **skillz experience**, not the individual source authors and not the evaluator's ability to mimic expected wording.
 
-## Preconditions
+## 1. Materialize and preflight
 
-Use a fully materialized checkout of the exact commit under evaluation.
+Use a fully materialized checkout of the exact commit under evaluation. Initialize all pinned vendor submodules first.
 
-Before any journey run:
+Then run one command:
 
-1. initialize all pinned vendor submodules;
-2. run `node scripts/verify-index-idempotency.ts`;
-3. record the reported schema-v2 exact counts and require the second generation pass to be byte-identical;
-4. run `node engine/skills/skill-audit/scripts/audit.ts`;
-5. run `node engine/skills/skill-audit/scripts/risk-audit.ts`;
-6. run the repository's local Node test suite, including selection, initial-implementation, and journey-fixture contract tests;
-7. run `node engine/skills/source-vetting/scripts/verify-characterization-integrity.ts`;
-8. record the commit SHA, generated catalog counts, host/model identity, and materialization state.
+```bash
+node scripts/initial-alpha-preflight.ts
+```
 
-`verify-index-idempotency.ts` is allowed to refresh stale checked-in generated output on its first pass. Its second pass must leave both `INDEX.md` and `index.json` byte-identical. A failure is a catalog blocker, not a warning.
+That command runs, in order:
 
-If one of these checks cannot run, record the limitation. Do not convert a missing check into a pass.
+1. catalog regeneration and second-pass byte-identical idempotency proof;
+2. library structural audit;
+3. library risk audit;
+4. all repository contract tests;
+5. characterization fingerprint-integrity verification.
 
-## Isolation
+It must end with `READY FOR JOURNEY EVALUATION`.
+
+The preflight is allowed to refresh stale checked-in `INDEX.md` / `index.json` on the first generator pass. The second pass must be byte-identical. Record the exact schema-v2 counts printed by the catalog proof.
+
+If preflight cannot complete, stop. A missing check is not a pass.
+
+## 2. Isolate each journey
 
 Use a fresh conversation/context for each scenario when the host permits it.
 
-The run may expose only:
+Do not copy the raw fixture object into the treatment agent. It contains the answer key.
+
+Instead render the leak-safe agent input:
+
+```bash
+node scripts/render-alpha-scenario.ts A1
+node scripts/render-alpha-scenario.ts A2
+node scripts/render-alpha-scenario.ts A3
+node scripts/render-alpha-scenario.ts R1
+node scripts/render-alpha-scenario.ts R2
+```
+
+The renderer exposes only the synthetic user context and neutral task prompt. It deliberately withholds `expected_decision`, `candidate_hint`, `must_observe`, and `must_not`.
+
+The treatment run may receive only:
 
 - the repository under evaluation;
-- the selected scenario fixture;
-- the normal host capabilities that a real user would have;
-- synthetic scenario evidence explicitly listed in the fixture.
+- the rendered scenario input;
+- the normal host capabilities a real user would have;
+- no hidden evaluator hints.
 
-Do not add hidden hints that reveal `expected_decision`, `must_observe`, or `must_not` to the treatment agent.
+The evaluator reads the full fixture only after the treatment output is complete.
 
-The evaluator may read those fields after the agent result is complete.
+## 3. Agent task
 
-## Agent prompt
-
-For each scenario, give the agent:
-
-1. the `skillz` repository or repository URL;
-2. the fixture's user evidence and existing set, where applicable;
-3. this neutral instruction:
+The renderer provides this neutral instruction automatically:
 
 > Use this repository as intended. Build or refine the smallest dependable skill set for the supplied synthetic user context. Complete the workflow as far as this host permits, including selection/creation decisions, evaluation state, and installation or portable-handoff state. Do not assume unavailable evidence.
 
-Do not tell the agent which skill or decision is expected.
+Do not tell the treatment agent which skill or decision is expected.
 
-## Evaluation
+## 4. Evaluate
 
-After the run, score each fixture against its prewritten requirements.
+After the run, score the treatment output against the frozen fixture requirements.
 
 ### Hard-fail conditions
 
@@ -83,7 +96,7 @@ A scenario passes when:
 - average `must_observe` score is at least `1.5`;
 - the final decision is compatible with the fixture's expected decision class.
 
-## Result record
+## 5. Record evidence
 
 Write one file under [`results/`](results/) using the scenario filename convention.
 
@@ -112,7 +125,7 @@ Notes:
 
 Attach or link the actual agent transcript/output when the host supports durable references. Do not paste secrets or private user data into public result files.
 
-## Alpha lock
+## 6. Alpha lock
 
 Run all five scenarios. Alpha is not locked if any scenario fails or remains unexecuted.
 
