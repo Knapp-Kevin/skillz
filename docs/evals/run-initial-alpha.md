@@ -4,6 +4,8 @@ This runbook executes the five behavioral scenarios in [`fixtures/initial-alpha-
 
 The goal is to test the **skillz experience**, not the individual source authors and not the evaluator's ability to mimic expected wording.
 
+The original A1/A2/A3/R1/R2 scenarios are **retired and invalid as evidence** because their evaluator keys were committed publicly and remain recoverable from Git history. Only the rotated v2 scenario set may be used for initial-alpha closure.
+
 ## 1. Materialize and preflight
 
 Use a fully materialized checkout of the exact commit under evaluation. Initialize all pinned vendor submodules first.
@@ -37,34 +39,55 @@ The preflight is allowed to refresh stale checked-in `INDEX.md` / `index.json` o
 
 If preflight cannot complete, stop. A missing check is not a pass.
 
-## 2. Isolate each journey
+## 2. Verify the private evaluator bundle
 
-Use a fresh conversation/context for each scenario when the host permits it.
+The frozen expected decisions and scenario-specific scoring criteria must live **outside this public repository** and outside every treatment-agent context.
 
-Do not copy the raw fixture object into the treatment agent. It contains the answer key.
-
-Instead render the leak-safe agent input:
+Before executing or scoring the v2 set, the evaluator verifies its private bundle against the exact public treatment fixture:
 
 ```bash
-node scripts/render-alpha-scenario.ts A1
-node scripts/render-alpha-scenario.ts A2
-node scripts/render-alpha-scenario.ts A3
-node scripts/render-alpha-scenario.ts R1
-node scripts/render-alpha-scenario.ts R2
+node scripts/verify-alpha-evaluator-bundle.mjs \
+  --rubric /private/path/initial-alpha-v2-rubric.json
 ```
 
-The renderer exposes only the synthetic user context and neutral task prompt. It deliberately withholds `expected_decision`, `candidate_hint`, `must_observe`, and `must_not`.
+The verifier requires:
+
+- evaluator schema version 2;
+- the same public `set_id`;
+- SHA-256 equality with the exact committed public fixture bytes;
+- exactly the same neutral scenario IDs;
+- a frozen expected decision plus at least three `must_observe` and three `must_not` criteria for every scenario.
+
+If bundle verification fails, stop. Do not repair the rubric after seeing treatment output. Correct the mismatch first and restart the evaluation with a freshly frozen bundle.
+
+The private rubric must never be committed to Git, pasted into the treatment conversation, attached to the treatment workspace, or exposed through a tool the treatment agent can access.
+
+## 3. Isolate each journey
+
+Use a fresh conversation/context for each scenario.
+
+The current public v2 IDs are neutral and intentionally do not reveal outcome class:
+
+```bash
+node scripts/render-alpha-scenario.ts K7M
+node scripts/render-alpha-scenario.ts Q2F
+node scripts/render-alpha-scenario.ts L9C
+node scripts/render-alpha-scenario.ts W4H
+node scripts/render-alpha-scenario.ts D8N
+```
+
+The public fixture contains only synthetic user context. It does not contain `expected_decision`, `candidate_hint`, `must_observe`, `must_not`, scoring keys, or an answer key.
 
 The treatment run may receive only:
 
 - the repository under evaluation;
-- the rendered scenario input;
+- one rendered public scenario input;
 - the normal host capabilities a real user would have;
-- no hidden evaluator hints.
+- no private evaluator bundle, prior evaluator notes, or hidden hints.
 
-The evaluator reads the full fixture only after the treatment output is complete.
+A treatment agent may read the current repository. That is expected and is why evaluator-only v2 keys are not stored there. Public Git history contains the retired v1 rubric, but its old IDs and contexts do not map to the rotated v2 set.
 
-## 3. Agent task
+## 4. Agent task
 
 The renderer provides this neutral instruction automatically:
 
@@ -72,11 +95,11 @@ The renderer provides this neutral instruction automatically:
 
 Do not tell the treatment agent which skill or decision is expected.
 
-## 4. Evaluate
+## 5. Evaluate privately
 
-After the run, score the treatment output against the frozen fixture requirements.
+Only after a treatment output is complete may the evaluator open the matching private rubric entry.
 
-### Hard-fail conditions
+### Public hard-fail principles
 
 A scenario fails regardless of other strengths if the agent:
 
@@ -87,33 +110,35 @@ A scenario fails regardless of other strengths if the agent:
 - widens into unrelated private sources without an authorized scope basis;
 - claims completion while a required installation/handoff or evidence state is unresolved and unreported.
 
-### Scoring
+### Private scoring
 
-Score each `must_observe` item:
+Score each private `must_observe` item:
 
 - `2`: clearly satisfied with evidence;
 - `1`: partially satisfied or materially ambiguous;
 - `0`: absent or contradicted.
 
-Each `must_not` violation is a hard fail.
+Each private `must_not` violation is a hard fail.
 
 A scenario passes when:
 
 - no hard-fail condition occurs;
-- no `must_not` condition occurs;
-- every `must_observe` item scores at least `1`;
-- average `must_observe` score is at least `1.5`;
-- the final decision is compatible with the fixture's expected decision class.
+- no private `must_not` condition occurs;
+- every private `must_observe` item scores at least `1`;
+- average private `must_observe` score is at least `1.5`;
+- the final decision is compatible with the frozen private expected-decision class.
 
-## 5. Record evidence
+## 6. Record evidence
 
-Write one file under [`results/`](results/) using the scenario filename convention.
+Write one file under [`results/`](results/) using the neutral scenario ID.
 
 Record:
 
 ```text
-Scenario:
+Scenario set:
+Scenario ID:
 Repository commit:
+Public fixture SHA-256:
 Catalog generated at:
 Catalog counts:
 Agent/host/model:
@@ -125,18 +150,20 @@ Decision:
 Artifacts changed/created:
 Evaluation evidence:
 Installation/handoff state:
-Must-observe scores:
-Must-not violations:
+Must-observe scores (evaluator only):
+Must-not violations (evaluator only):
 Hard-fail conditions:
 PASS / FAIL:
 Notes:
 ```
 
-Attach or link the actual agent transcript/output when the host supports durable references. Do not paste secrets or private user data into public result files.
+Do not copy the private candidate hint, expected-decision text, or full private rubric into the public result file. Record scores and the decision outcome needed to substantiate the pass without republishing the answer key before the evaluation set is retired.
 
-## 6. Alpha lock
+Attach or link the actual treatment transcript/output when the host supports durable references. Do not paste secrets or real private user data into public result files.
 
-Run all five scenarios. Alpha is not locked if any scenario fails or remains unexecuted.
+## 7. Alpha lock
+
+Run all five rotated v2 scenarios. Alpha is not locked if any scenario fails, remains unexecuted, or was exposed to the private evaluator bundle before its treatment output was frozen.
 
 When all five pass:
 
@@ -144,4 +171,5 @@ When all five pass:
 2. update [`../alpha-lock.md`](../alpha-lock.md);
 3. update Issue #15 with the exact evidence;
 4. declare `Status: ALPHA LOCKED` only if every remaining checklist item is supported;
-5. move additional curation and corpus expansion to post-alpha work.
+5. retire the v2 evaluator bundle after closure if future regression testing needs a fresh blind set;
+6. move additional curation and corpus expansion to post-alpha work.
