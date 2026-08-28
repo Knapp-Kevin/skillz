@@ -35,18 +35,27 @@ const sinceDate = new Date(Date.now() - sinceDays * 24 * 60 * 60 * 1000);
 const sinceISO = sinceDate.toISOString();
 const sinceStr = sinceISO.split("T")[0];
 
+type SourceClass = "official" | "community-vetted" | "tracked";
+
+interface WatchEntry {
+  repo: string;
+  vendored: boolean;
+  sourceClass: SourceClass;
+}
+
 // GitHub repos on the watchlist. vendored: true means the repo is a
-// submodule under vendor/ and stale activity implies `git submodule
-// update --remote` + index regeneration.
-const WATCHLIST = [
-  { repo: "anthropics/skills", vendored: true },
-  { repo: "anthropics/knowledge-work-plugins", vendored: true },
-  { repo: "vercel-labs/agent-skills", vendored: true },
-  { repo: "microsoft/skills", vendored: true },
-  { repo: "microsoft/azure-skills", vendored: true },
-  { repo: "aws/agent-toolkit-for-aws", vendored: true },
-  { repo: "hashicorp/agent-skills", vendored: false },
-  { repo: "obra/superpowers", vendored: false },
+// pinned submodule under vendor/. Source class is visible because a
+// community-vetted reference is useful evidence, not platform authority.
+const WATCHLIST: WatchEntry[] = [
+  { repo: "anthropics/skills", vendored: true, sourceClass: "official" },
+  { repo: "anthropics/knowledge-work-plugins", vendored: true, sourceClass: "official" },
+  { repo: "vercel-labs/agent-skills", vendored: true, sourceClass: "official" },
+  { repo: "microsoft/skills", vendored: true, sourceClass: "official" },
+  { repo: "microsoft/azure-skills", vendored: true, sourceClass: "official" },
+  { repo: "aws/agent-toolkit-for-aws", vendored: true, sourceClass: "official" },
+  { repo: "mattpocock/skills", vendored: true, sourceClass: "community-vetted" },
+  { repo: "hashicorp/agent-skills", vendored: false, sourceClass: "tracked" },
+  { repo: "obra/superpowers", vendored: false, sourceClass: "tracked" },
 ];
 
 async function gh(path: string): Promise<any> {
@@ -67,13 +76,14 @@ async function gh(path: string): Promise<any> {
 interface RepoActivity {
   repo: string;
   vendored: boolean;
+  sourceClass: SourceClass;
   commitCount: number;
   commitSubjects: string[];
   latestRelease: string | null;
   releaseDate: string | null;
 }
 
-async function scan(entry: { repo: string; vendored: boolean }): Promise<RepoActivity> {
+async function scan(entry: WatchEntry): Promise<RepoActivity> {
   const [commits, release] = await Promise.all([
     gh(`/repos/${entry.repo}/commits?since=${sinceISO}&per_page=50`),
     gh(`/repos/${entry.repo}/releases/latest`),
@@ -82,6 +92,7 @@ async function scan(entry: { repo: string; vendored: boolean }): Promise<RepoAct
   return {
     repo: entry.repo,
     vendored: entry.vendored,
+    sourceClass: entry.sourceClass,
     commitCount: list.length,
     commitSubjects: list.slice(0, 8).map((c: any) => (c.commit?.message ?? "").split("\n")[0]),
     latestRelease: release?.tag_name ?? null,
@@ -96,7 +107,7 @@ async function main() {
 
   let out = `# Skills Pulse — ${sinceStr} to ${today}\n\n## Watchlist repo activity\n\n`;
   for (const r of results) {
-    const badge = r.vendored ? " (vendored)" : "";
+    const badge = r.vendored ? ` (vendored, ${r.sourceClass})` : ` (${r.sourceClass})`;
     out += `### ${r.repo}${badge}\n\n`;
     if (r.commitCount === 0) {
       out += `_No commits in window._`;
@@ -112,8 +123,11 @@ async function main() {
   const staleVendored = results.filter((r) => r.vendored && r.commitCount > 0);
   if (staleVendored.length > 0) {
     out += `## Vendored submodules with upstream activity\n\n`;
-    out += `Refresh and re-index:\n\n\`\`\`\ngit submodule update --remote\nnode scripts/build-index.ts\n\`\`\`\n\n`;
-    out += staleVendored.map((r) => `- ${r.repo}`).join("\n") + "\n";
+    out += `Review and refresh one source at a time per docs/vendor-freshness.md. Do not blanket-update all submodules.\n\n`;
+    for (const r of staleVendored) {
+      out += `- ${r.repo} (${r.sourceClass})\n`;
+    }
+    out += `\nAfter an approved pin bump, regenerate the index with:\n\n\`\`\`\nnode scripts/build-index.ts\n\`\`\`\n`;
   }
 
   console.log(out);

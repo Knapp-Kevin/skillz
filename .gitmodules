@@ -16,3 +16,6 @@
 [submodule "vendor/aws-agent-toolkit"]
 	path = vendor/aws-agent-toolkit
 	url = https://github.com/aws/agent-toolkit-for-aws.git
+[submodule "vendor/mattpocock-skills"]
+	path = vendor/mattpocock-skills
+	url = https://github.com/mattpocock/skills.git

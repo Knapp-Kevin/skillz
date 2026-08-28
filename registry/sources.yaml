@@ -1,0 +1,72 @@
+# Skill source registry
+#
+# This file classifies repositories that are allowed to participate in
+# comparative skill discovery. Inclusion is not blanket trust.
+# Individual skills still require the evaluation/permission rules in
+# docs/evaluation-framework.md.
+#
+# `build-index.ts` consumes this registry for source names, URLs, trust class,
+# license metadata, resolved vendor paths, and optional index exclusions.
+
+version: 1
+
+sources:
+  - id: anthropic-skills
+    name: Anthropic Skills
+    source: https://github.com/anthropics/skills
+    class: official
+    resolved_path: vendor/anthropic-skills
+    inclusion: vendored
+    rationale: First-party Anthropic skill implementations and authoring/tooling references.
+
+  - id: anthropic-knowledge-work-plugins
+    name: Anthropic Knowledge Work Plugins
+    source: https://github.com/anthropics/knowledge-work-plugins
+    class: official
+    resolved_path: vendor/knowledge-work-plugins
+    inclusion: vendored
+    rationale: First-party Anthropic knowledge-work plugin marketplace and skills.
+
+  - id: vercel-agent-skills
+    name: Vercel Agent Skills
+    source: https://github.com/vercel-labs/agent-skills
+    class: official
+    resolved_path: vendor/vercel-agent-skills
+    inclusion: vendored
+    rationale: First-party Vercel web/frontend engineering skill references.
+
+  - id: microsoft-skills
+    name: Microsoft Skills
+    source: https://github.com/microsoft/skills
+    class: official
+    resolved_path: vendor/microsoft-skills
+    inclusion: vendored
+    rationale: First-party Microsoft ecosystem skill references.
+
+  - id: microsoft-azure-skills
+    name: Microsoft Azure Skills
+    source: https://github.com/microsoft/azure-skills
+    class: official
+    resolved_path: vendor/azure-skills
+    inclusion: vendored
+    rationale: First-party Azure planning, deployment, diagnostics, and cloud skill references.
+
+  - id: aws-agent-toolkit
+    name: AWS Agent Toolkit
+    source: https://github.com/aws/agent-toolkit-for-aws
+    class: official
+    resolved_path: vendor/aws-agent-toolkit
+    inclusion: vendored
+    rationale: First-party AWS service and agent-development skill references.
+
+  - id: mattpocock-skills
+    name: Matt Pocock Skills
+    source: https://github.com/mattpocock/skills
+    class: community-vetted
+    resolved_path: vendor/mattpocock-skills
+    inclusion: vendored
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 Matt Pocock
+    pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+    index_exclude_dirs: deprecated,in-progress
+    rationale: High-value engineering and productivity skill patterns used for comparison, adaptation, supplementation, composition, and benchmarking; not treated as platform authority.

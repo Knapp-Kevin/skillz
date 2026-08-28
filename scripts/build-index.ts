@@ -2,18 +2,14 @@
 /**
  * build-index.ts — regenerates the skill index for this repo.
  *
- * Scans skills/<name>/SKILL.md frontmatter plus the vendored
- * knowledge-work-plugins marketplace, and writes:
+ * Scans first-party skills plus the vendored reference corpus declared in
+ * registry/sources.yaml, then writes:
  *   - index.json  (machine-readable registry for agents/tooling)
  *   - INDEX.md    (human/agent-readable table with relative links)
  *
  * Usage (Bun or Node 22.18+):
  *   node scripts/build-index.ts
  *   bun run scripts/build-index.ts
- *
- * Zero dependencies. The YAML handling is a minimal parser that covers
- * the frontmatter shapes used in this repo and in Anthropic's plugins
- * (scalars, >- folded blocks, one nested map level, simple lists).
  */
 
 import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -22,10 +18,58 @@ import { fileURLToPath } from "node:url";
 import { parseFrontmatter, truncate } from "./lib/frontmatter.ts";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
+const SOURCE_REGISTRY = join(ROOT, "registry", "sources.yaml");
 
 function relPosix(p: string): string {
   return relative(ROOT, p).split(sep).join("/");
 }
+
+function unquote(value: string): string {
+  return value.trim().replace(/^["']|["']$/g, "");
+}
+
+// ── Source registry ──────────────────────────────────────────────────
+
+interface SourceRecord {
+  id: string;
+  name: string;
+  source: string;
+  class: string;
+  resolved_path: string;
+  inclusion: string;
+  license?: string;
+  index_exclude_dirs?: string;
+}
+
+function parseSourceRegistry(): SourceRecord[] {
+  if (!existsSync(SOURCE_REGISTRY)) throw new Error("registry/sources.yaml is missing");
+  const lines = readFileSync(SOURCE_REGISTRY, "utf8").split(/\r?\n/);
+  const records: Record<string, string>[] = [];
+  let current: Record<string, string> | null = null;
+
+  for (const line of lines) {
+    const start = line.match(/^\s*-\s+id:\s*(.+?)\s*$/);
+    if (start) {
+      if (current) records.push(current);
+      current = { id: unquote(start[1]) };
+      continue;
+    }
+    if (!current) continue;
+    const field = line.match(/^\s{4}([\w_]+):\s*(.*?)\s*$/);
+    if (field) current[field[1]] = unquote(field[2]);
+  }
+  if (current) records.push(current);
+
+  return records.map((r) => {
+    for (const required of ["id", "name", "source", "class", "resolved_path", "inclusion"]) {
+      if (!r[required]) throw new Error(`registry/sources.yaml: ${r.id ?? "unknown"} missing ${required}`);
+    }
+    return r as unknown as SourceRecord;
+  });
+}
+
+const sourceRecords = parseSourceRegistry();
+const vendoredSources = sourceRecords.filter((s) => s.inclusion === "vendored");
 
 // ── Local skills ─────────────────────────────────────────────────────
 
@@ -74,23 +118,21 @@ function scanLocalSkills(): LocalSkill[] {
   return skills.sort((a, b) => a.name.localeCompare(b.name));
 }
 
-// ── Vendored knowledge-work-plugins ──────────────────────────────────
+// ── Anthropic knowledge-work marketplace ─────────────────────────────
 
 interface VendorSkill { name: string; description: string; skillFile: string; }
 interface VendorPlugin { name: string; displayName?: string; description: string; path: string; skills: VendorSkill[]; }
-
 interface ExternalPlugin { name: string; description: string; }
 
-function scanVendorPlugins(): { local: VendorPlugin[]; external: ExternalPlugin[] } {
-  const base = join(ROOT, "vendor", "knowledge-work-plugins");
+function scanVendorPlugins(base: string): { local: VendorPlugin[]; external: ExternalPlugin[] } {
   const marketplaceFile = join(base, ".claude-plugin", "marketplace.json");
   if (!existsSync(marketplaceFile)) return { local: [], external: [] };
   const marketplace = JSON.parse(readFileSync(marketplaceFile, "utf8"));
   const plugins: VendorPlugin[] = [];
   const external: ExternalPlugin[] = [];
+
   for (const p of marketplace.plugins ?? []) {
     if (typeof p.source !== "string") {
-      // Partner-built plugin hosted in an external repo; listed by name only.
       external.push({ name: p.name, description: p.description ?? "" });
       continue;
     }
@@ -118,23 +160,42 @@ function scanVendorPlugins(): { local: VendorPlugin[]; external: ExternalPlugin[
       skills: skills.sort((a, b) => a.name.localeCompare(b.name)),
     });
   }
+
   return {
     local: plugins.sort((a, b) => a.name.localeCompare(b.name)),
     external: external.sort((a, b) => a.name.localeCompare(b.name)),
   };
 }
 
-// ── Generic vendor trees (official skill repos with varied layouts) ──
+// ── Generic vendored reference trees ─────────────────────────────────
 
-interface GenericVendor { dir: string; label: string; source: string; }
+interface GenericVendor {
+  id: string;
+  dir: string;
+  label: string;
+  source: string;
+  sourceClass: string;
+  license?: string;
+  excludeDirs: string[];
+}
 
-const GENERIC_VENDORS: GenericVendor[] = [
-  { dir: "anthropic-skills", label: "Anthropic Skills", source: "https://github.com/anthropics/skills" },
-  { dir: "vercel-agent-skills", label: "Vercel Agent Skills", source: "https://github.com/vercel-labs/agent-skills" },
-  { dir: "microsoft-skills", label: "Microsoft Skills", source: "https://github.com/microsoft/skills" },
-  { dir: "azure-skills", label: "Microsoft Azure Skills", source: "https://github.com/microsoft/azure-skills" },
-  { dir: "aws-agent-toolkit", label: "AWS Agent Toolkit", source: "https://github.com/aws/agent-toolkit-for-aws" },
-];
+const knowledgeSource = vendoredSources.find((s) => s.resolved_path === "vendor/knowledge-work-plugins");
+if (!knowledgeSource) throw new Error("registry/sources.yaml must declare vendor/knowledge-work-plugins");
+
+const GENERIC_VENDORS: GenericVendor[] = vendoredSources
+  .filter((s) => s.id !== knowledgeSource.id)
+  .map((s) => ({
+    id: s.id,
+    dir: s.resolved_path.replace(/^vendor\//, ""),
+    label: s.name,
+    source: s.source,
+    sourceClass: s.class,
+    license: s.license,
+    excludeDirs: (s.index_exclude_dirs ?? "")
+      .split(",")
+      .map((v) => v.trim())
+      .filter(Boolean),
+  }));
 
 const SKIP_DIRS = new Set([".git", "node_modules", "docs-site", "tests", "template", "assets", "landing-page"]);
 
@@ -152,16 +213,24 @@ function findSkillFiles(dir: string, depth = 0): string[] {
   return found;
 }
 
-function scanVendorTree(vendorDir: string): { skills: VendorSkill[]; duplicatesDropped: number } {
-  const base = join(ROOT, "vendor", vendorDir);
-  if (!existsSync(base)) return { skills: [], duplicatesDropped: 0 };
-  // Some repos ship the same skill under multiple host layouts (e.g. AWS's
-  // skills/ vs plugins/). Dedupe by skill name, preferring canonical paths.
+function scanVendorTree(vendor: GenericVendor): { skills: VendorSkill[]; duplicatesDropped: number; excludedDropped: number } {
+  const base = join(ROOT, "vendor", vendor.dir);
+  if (!existsSync(base)) return { skills: [], duplicatesDropped: 0, excludedDropped: 0 };
+
   const rank = (p: string) => {
     const rel = relative(base, p).split(sep).join("/");
     return rel.startsWith("skills/") ? 0 : rel.startsWith("plugins/") ? 1 : 2;
   };
-  const files = findSkillFiles(base).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+
+  const discovered = findSkillFiles(base);
+  const files = discovered
+    .filter((file) => {
+      if (vendor.excludeDirs.length === 0) return true;
+      const segments = relative(base, file).split(sep);
+      return !segments.some((segment) => vendor.excludeDirs.includes(segment));
+    })
+    .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+
   const byName = new Map<string, VendorSkill>();
   let duplicatesDropped = 0;
   for (const file of files) {
@@ -174,28 +243,43 @@ function scanVendorTree(vendorDir: string): { skills: VendorSkill[]; duplicatesD
       skillFile: relPosix(file),
     });
   }
+
   return {
     skills: [...byName.values()].sort((a, b) => a.name.localeCompare(b.name)),
     duplicatesDropped,
+    excludedDropped: discovered.length - files.length,
   };
 }
 
 // ── Emit ─────────────────────────────────────────────────────────────
 
 const localSkills = scanLocalSkills();
-const { local: vendorPlugins, external: externalPlugins } = scanVendorPlugins();
-const genericVendorResults = GENERIC_VENDORS.map((v) => ({ ...v, ...scanVendorTree(v.dir) }));
+const knowledgeBase = join(ROOT, knowledgeSource.resolved_path);
+const { local: vendorPlugins, external: externalPlugins } = scanVendorPlugins(knowledgeBase);
+const genericVendorResults = GENERIC_VENDORS.map((v) => ({ ...v, ...scanVendorTree(v) }));
 
 const vendorIndex: Record<string, any> = {
-  "knowledge-work-plugins": {
-    source: "https://github.com/anthropics/knowledge-work-plugins",
+  [knowledgeSource.resolved_path.replace(/^vendor\//, "")]: {
+    sourceId: knowledgeSource.id,
+    label: knowledgeSource.name,
+    source: knowledgeSource.source,
+    sourceClass: knowledgeSource.class,
+    ...(knowledgeSource.license ? { license: knowledgeSource.license } : {}),
     install: "/plugin marketplace add anthropics/knowledge-work-plugins",
     plugins: vendorPlugins,
     externalPartnerPlugins: externalPlugins,
   },
 };
+
 for (const v of genericVendorResults) {
-  vendorIndex[v.dir] = { label: v.label, source: v.source, skills: v.skills };
+  vendorIndex[v.dir] = {
+    sourceId: v.id,
+    label: v.label,
+    source: v.source,
+    sourceClass: v.sourceClass,
+    ...(v.license ? { license: v.license } : {}),
+    skills: v.skills,
+  };
 }
 
 const index = {
@@ -203,13 +287,13 @@ const index = {
   generated: new Date().toISOString(),
   repo: "skillz",
   root: "https://github.com/Knapp-Kevin/skillz",
+  bootstrap: "BOOTSTRAP.md",
   skills: localSkills,
   registry: "registry/candidates.yaml",
+  sourceRegistry: "registry/sources.yaml",
   vendor: vendorIndex,
 };
 
-// Idempotent regeneration: keep the prior `generated` stamp when nothing
-// else changed, so `git diff --exit-code index.json` can verify freshness.
 const indexPath = join(ROOT, "index.json");
 const stripGenerated = (s: string) => s.replace(/"generated": "[^"]*"/, '"generated": ""');
 let serialized = JSON.stringify(index, null, 2) + "\n";
@@ -221,15 +305,19 @@ writeFileSync(indexPath, serialized);
 
 let md = `# Skill Index
 
-> Generated by \`scripts/build-index.ts\` — do not edit by hand.
-> Regenerate with \`node scripts/build-index.ts\` after adding or changing a skill.
+> New here? Start with [BOOTSTRAP.md](BOOTSTRAP.md). It helps an agent figure out which skills are actually useful before you choose anything manually.
+>
+> Generated by \`scripts/build-index.ts\`. Do not edit by hand.
+> Regenerate with \`node scripts/build-index.ts\` after adding or changing a skill or source.
 > Machine-readable version: [index.json](index.json)
+> Source trust/provenance registry: [registry/sources.yaml](registry/sources.yaml)
 
 ## How agents should use this
 
-1. Read this file (or \`index.json\`) to find a skill by name/description.
-2. Read the linked \`SKILL.md\` and follow its Execution Flow section.
-3. Scripts listed for a skill run with Bun or Node 22.18+, zero install, from the skill's directory.
+1. If the user does not already know which skills they need, run the bootstrap process first.
+2. Read this file (or \`index.json\`) to find a skill by name/description.
+3. Read the linked \`SKILL.md\` and follow its Execution Flow section.
+4. Scripts listed for a skill run with Bun or Node 22.18+, zero install, from the skill's directory.
 
 ## Local skills (\`skills/\`)
 
@@ -242,11 +330,7 @@ for (const s of localSkills) {
   md += `| [${s.name}](${s.skillFile}) | ${s.category ?? "—"} | ${truncate(s.description, 160)} | ${scripts} |\n`;
 }
 
-md += `\n## Vendored: [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (\`vendor/\`)
-
-Anthropic's official knowledge-work plugin marketplace, vendored as a git submodule.
-Install directly instead via \`/plugin marketplace add anthropics/knowledge-work-plugins\`.
-`;
+md += `\n## Vendored reference: [${knowledgeSource.name}](${knowledgeSource.source}) (\`${knowledgeSource.resolved_path}/\`)\n\nSource class: **${knowledgeSource.class}**. Anthropic's knowledge-work plugin marketplace, vendored as a git submodule.\nInstall directly instead via \`/plugin marketplace add anthropics/knowledge-work-plugins\`.\n`;
 
 for (const p of vendorPlugins) {
   md += `\n### ${p.displayName ?? p.name}\n\n${truncate(p.description, 220)}\n\n`;
@@ -261,26 +345,24 @@ for (const p of vendorPlugins) {
 }
 
 if (externalPlugins.length > 0) {
-  md += `\n### External partner plugins (hosted outside the submodule)
-
-Registered in the marketplace but sourced from partner repos — install via the marketplace command above, then \`/plugin install <name>@knowledge-work-plugins\`.
-
-| Plugin | Description |
-|--------|-------------|
-`;
+  md += `\n### External partner plugins (hosted outside the submodule)\n\nRegistered in the marketplace but sourced from partner repos. Install through the marketplace when appropriate.\n\n| Plugin | Description |\n|--------|-------------|\n`;
   for (const p of externalPlugins) {
     md += `| ${p.name} | ${truncate(p.description, 160)} |\n`;
   }
 }
 
 for (const v of genericVendorResults) {
-  md += `\n## Vendored: [${v.label}](${v.source}) (\`vendor/${v.dir}/\`)\n\n`;
+  md += `\n## Vendored reference: [${v.label}](${v.source}) (\`vendor/${v.dir}/\`)\n\n`;
+  md += `Source class: **${v.sourceClass}**`;
+  if (v.license) md += ` · License: **${v.license}**`;
+  md += `. Inclusion makes this source available for comparison; it does not grant blanket trust to every skill.\n\n`;
   if (v.skills.length === 0) {
     md += `_No SKILL.md files found (submodule not initialized?)._\n`;
     continue;
   }
   md += `${v.skills.length} skills`;
   if (v.duplicatesDropped > 0) md += ` (${v.duplicatesDropped} duplicate per-host copies deduped)`;
+  if (v.excludedDropped > 0) md += ` (${v.excludedDropped} excluded by source policy)`;
   md += `.\n\n| Skill | Description |\n|-------|-------------|\n`;
   for (const s of v.skills) {
     md += `| [${s.name}](${s.skillFile}) | ${truncate(s.description, 160)} |\n`;
@@ -291,9 +373,11 @@ writeFileSync(join(ROOT, "INDEX.md"), md);
 
 const vendorSkillCount = vendorPlugins.reduce((n, p) => n + p.skills.length, 0);
 const genericCount = genericVendorResults.reduce((n, v) => n + v.skills.length, 0);
+const officialCount = vendoredSources.filter((s) => s.class === "official").length;
+const communityCount = vendoredSources.filter((s) => s.class === "community-vetted").length;
 console.error(
   `[index] Wrote index.json + INDEX.md — ${localSkills.length} local skill(s), ` +
   `${vendorPlugins.length} vendored plugin(s) with ${vendorSkillCount} skill(s), ` +
   `${externalPlugins.length} external partner plugin(s), ` +
-  `${genericCount} skill(s) across ${genericVendorResults.length} official vendor repo(s).`
+  `${genericCount} generic vendored skill(s) across ${officialCount} official + ${communityCount} community-vetted source repo(s).`
 );
