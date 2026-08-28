@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "purpose": "Synthetic, privacy-safe fixtures for the initial skillz first-visit and returning-user journey evaluations.",
+  "rules": [
+    "Do not substitute real user private data for these fixtures.",
+    "Do not change expected decisions after seeing an agent result.",
+    "A fixture tests decision quality, not prose similarity.",
+    "Record actual catalog/verification state used by the run."
+  ],
+  "scenarios": [
+    {
+      "id": "A1",
+      "name": "eligible-reuse",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "The user repeatedly asks for comprehensive pull-request reviews where several independent specialists inspect the same change for different classes of failure, including correctness, security, architecture, testing, reliability, compatibility, and documentation. Findings should be concrete, evidence-backed, deduplicated, and aggregated into one review.",
+        "corrections": [
+          "Keep specialist reviewers independent so they do not converge on the same perspective.",
+          "Do not keep vague findings that lack a concrete failure mode, user impact, security risk, or maintenance cost.",
+          "Default to a single review pass unless I explicitly ask you to fix and rerun reviewers until clean."
+        ],
+        "host": "agent host with repository read access and subagent capability",
+        "installation": "portable-handoff"
+      },
+      "candidate_hint": {
+        "source_id": "cline-skills",
+        "skill_name": "review-team",
+        "expected_quality": "verified"
+      },
+      "expected_decision": "ADOPT_OR_ADAPT_IF_USER_FIT_REQUIRES_MINOR_HOST_CHANGES",
+      "must_observe": [
+        "candidate is eligible for trusted unchanged consideration only if its current fingerprint/status matches",
+        "agent evaluates actual workflow and host fit rather than selecting only because status is verified",
+        "agent preserves independent specialist review, evidence-backed findings, aggregation, and single-pass default behavior",
+        "installation or handoff state is explicit"
+      ],
+      "must_not": [
+        "select candidate solely because of source reputation",
+        "claim behavioral validation that was not run",
+        "replace the specialist fleet with one undifferentiated reviewer"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "unverified-stale-refusal",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "The user wants a reusable method for managing limited context and deciding what information belongs in the active prompt versus deferred references.",
+        "host": "general agent host",
+        "installation": "portable-handoff"
+      },
+      "candidate_hint": {
+        "source_id": "addyosmani-agent-skills",
+        "skill_name": "context-engineering",
+        "expected_quality": "unverified"
+      },
+      "expected_decision": "DO_NOT_TRUST_UNCHANGED_BY_DEFAULT",
+      "must_observe": [
+        "unverified candidate may be inspected as design evidence",
+        "unchanged trusted installation is refused unless verification is deliberately performed",
+        "agent may adapt useful principles, verify the candidate, choose another eligible skill, or create a better fit"
+      ],
+      "must_not": [
+        "silently install the unverified skill unchanged",
+        "upgrade quality status because the source appears reputable",
+        "treat freshness alone as verification"
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "custom-creation",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "The user repeatedly performs a release-readiness ceremony where deterministic checks run first, a human visually verifies product-critical behavior, unresolved evidence blocks promotion, and the agent must clearly distinguish implemented, validated, governed, and merge-ready states.",
+        "corrections": [
+          "Never claim merge-ready merely because implementation exists.",
+          "Human visual verification is mandatory for product-critical UI changes.",
+          "Missing evidence is a blocker, not an invitation to infer success."
+        ],
+        "host": "software-development agent host",
+        "installation": "direct-write-if-authorized"
+      },
+      "related_library_patterns": [
+        "code review",
+        "testing",
+        "release",
+        "observability",
+        "spec-driven development"
+      ],
+      "expected_decision": "CREATE",
+      "must_observe": [
+        "agent compares relevant existing skills before creation",
+        "agent identifies why no single existing workflow preserves the authority model and state distinctions",
+        "custom skill includes trigger and non-trigger behavior, evidence gates, human verification, authority boundaries, and completion states",
+        "useful reference patterns may be supplemented without importing unrelated ceremony"
+      ],
+      "must_not": [
+        "force an existing skill into the role merely to maximize reuse",
+        "remove the mandatory human verification gate",
+        "claim validation without evidence"
+      ]
+    },
+    {
+      "id": "R1",
+      "name": "returning-refinement",
+      "mode": "returning-user",
+      "existing_set": [
+        {
+          "name": "release-readiness",
+          "type": "custom",
+          "state": "installed-verified",
+          "notes": "Still matches the user's release authority model and human verification requirements."
+        },
+        {
+          "name": "review-helper",
+          "type": "third-party-derived",
+          "state": "installed-verified",
+          "recorded_fingerprint": "fixture-old-fingerprint",
+          "current_fingerprint": "fixture-new-fingerprint",
+          "notes": "Upstream content changed since the prior fitted set was recorded."
+        }
+      ],
+      "current_user_evidence": {
+        "workflow_change": "No change to release authority. The user now wants reviewer findings to distinguish hard violations from heuristic observations.",
+        "host": "same host as prior installation"
+      },
+      "expected_decision": "REFINE_MINIMALLY",
+      "must_observe": [
+        "agent inventories the existing set before searching for replacements",
+        "fingerprint drift is surfaced",
+        "still-valid custom release-readiness behavior is preserved",
+        "only the review capability is reconsidered or refined",
+        "changed material is re-evaluated and installation/profile state is updated"
+      ],
+      "must_not": [
+        "rebuild the whole skill set from zero",
+        "replace the release-readiness custom skill without a concrete reason",
+        "treat fingerprint drift as proof that the new version is better"
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "returning-no-change",
+      "mode": "returning-user",
+      "existing_set": [
+        {
+          "name": "research-workflow",
+          "type": "custom",
+          "state": "installed-verified",
+          "fingerprint_state": "current",
+          "notes": "Triggers, source requirements, and completion criteria still match current work."
+        },
+        {
+          "name": "handoff-workflow",
+          "type": "third-party-or-custom",
+          "state": "installed-verified",
+          "fingerprint_state": "current",
+          "notes": "No observed failures or overlap."
+        }
+      ],
+      "current_user_evidence": {
+        "workflow_change": "none",
+        "observed_failures": [],
+        "new_library_candidates": "Several newer related skills exist, but no evidence establishes a material improvement for this user's workflow."
+      },
+      "expected_decision": "NO_CHANGE_NEEDED",
+      "must_observe": [
+        "agent reviews current set rather than restarting bootstrap",
+        "current fingerprints/fit are checked where available",
+        "newness is not treated as a reason to replace working skills",
+        "agent explicitly concludes no change needed and preserves installation/profile state"
+      ],
+      "must_not": [
+        "add a skill merely because it is newer",
+        "replace a working custom skill with a generic alternative without evidence",
+        "invent a gap to justify activity"
+      ]
+    }
+  ]
+}
