@@ -4,9 +4,11 @@ You do not need to understand skills, write code, or browse hundreds of files.
 
 **Give your AI the GitHub link to this repository. That is enough to start.**
 
-## If you are the AI reading this
+There are two normal ways to arrive here.
 
-If the user supplied this repository or its URL without a different task, **start bootstrap now**. Do not stop after describing the repository.
+## First visit: build a fitted skill set
+
+If the user supplied this repository or its URL without a different task and does not already have a fitted skill set to review, **start first-visit bootstrap now**. Do not stop after describing the repository.
 
 Your job is to build the smallest skill system that best fits this user.
 
@@ -24,6 +26,31 @@ Then:
 6. Create a new custom skill whenever the user's real workflow is not adequately represented.
 7. Evaluate and adversarially review the fitted system.
 8. Install it when the host supports installation and authority exists. Otherwise package it and provide simple installation steps.
+
+## Returning visit: review, refine, and improve
+
+If the user already has skills from `skillz`, a prior bootstrap, or another compatible source and asks to review, update, refine, improve, audit, or revisit them, **do not restart from zero**.
+
+Treat the current set as evidence about the user's working system.
+
+1. Inventory the current skills, their intended jobs, installation state, and any available fingerprints or versions.
+2. Compare the current set with relevant recurring behavior and the user's present definitions of done.
+3. Detect stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
+4. Check whether any referenced upstream skill changed since the recorded fingerprint or freshness check.
+5. Search the current library for materially better fits or useful new patterns.
+6. Preserve custom behavior that still fits instead of resetting it to a generic upstream version.
+7. Refine, replace, supplement, compose, or retire only where the evidence supports change.
+8. Re-run appropriate structured verification and behavioral evaluation for anything materially changed.
+9. Update installation state and the portable skill profile when applicable.
+10. Return the smallest improved set, plus a concise change log explaining what changed and why.
+
+A returning review should be capable of concluding **no change needed**. More skills are not inherently better.
+
+## Browse by purpose
+
+Humans can browse the locally maintained portion of the library through [`skills/categories/`](skills/categories/), including planning, writing, research, software/repository work, agent operations/security, monitoring/intelligence, and business/career categories.
+
+The complete indexed library also includes approved third-party sources under [`vendor/`](vendor/).
 
 ## What counts as the library?
 
@@ -57,17 +84,19 @@ Tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) characterize use ca
 
 Existing skills are valuable reference evidence, not a cage.
 
-A good result may use an existing skill unchanged, adapt one, supplement one, compose several, create something entirely new, use a smaller checklist/helper, or decide that no durable skill is warranted.
+A good result may use an existing skill unchanged, adapt one, supplement one, compose several, create something entirely new, use a smaller checklist/helper, retire something that no longer helps, or decide that no durable skill change is warranted.
 
-The goal is not maximum reuse. The goal is the **smallest dependable skill set that matches the user's actual workflow**.
+The goal is not maximum reuse or maximum skill count. The goal is the **smallest dependable skill set that matches the user's actual workflow now**.
 
 ## Installation is part of the result
 
-A bootstrap is not complete merely because Markdown exists.
+A bootstrap or returning refinement pass is not complete merely because Markdown exists.
 
 Finish with an explicit host-level state such as `INSTALLED + VERIFIED`, `READY TO UPLOAD`, `USER ACTION REQUIRED`, or a clearly explained compatibility blocker. See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
 ## What the human should receive
+
+For a first visit:
 
 1. The durable working patterns inferred from legitimate evidence.
 2. The fitted skill set and why each skill exists.
@@ -77,4 +106,12 @@ Finish with an explicit host-level state such as `INSTALLED + VERIFIED`, `READY 
 6. A portable skill profile when useful.
 7. A concrete installation or handoff result.
 
-The human should always be able to tell what is done, what is trusted, what is merely promising, what still needs proof, and what action remains.
+For a returning visit, also include:
+
+1. what changed since the prior set;
+2. which skills stayed unchanged and why;
+3. which skills were refined, replaced, added, or retired and why;
+4. any stale fingerprints, upstream drift, or evidence that requires follow-up;
+5. the updated installation/evaluation state.
+
+The human should always be able to tell what is done, what is trusted, what is merely promising, what changed, what still needs proof, and what action remains.
