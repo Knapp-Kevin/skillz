@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: handoff
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/productivity/handoff/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2eb98a51b97bb5bac461a26ad14828eeac827909
+characterized_at: 2026-08-28
+last_verified_at: 2026-08-28
+verification_status: trusted-baseline
+verification_basis: matt-pocock-trusted-baseline-policy-plus-integrity-review
+validation_status: not-run
+tags:
+  use_case: [handoff, communication, context-management, documentation]
+  lifecycle: [maintenance]
+  characteristic: [context-efficient, synthesis, traceable, safety-bounded]
+  authority: [mutating]
+  portability: [high]
+notes: Quality accepted by Matt Pocock trusted-baseline policy. Characterization highlights compact continuation context, artifact referencing instead of duplication, sensitive-data redaction, and suggested next-session skills. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
