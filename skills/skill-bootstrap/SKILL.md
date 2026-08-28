@@ -1,52 +1,88 @@
 ---
 name: skill-bootstrap
 description: >-
-  Discover the smallest useful portable skill system for a user by inspecting
-  available history, memory, workspace evidence, recurring workflows, existing
-  skills, and the curated reference corpus, then adversarially validate and
-  install or hand off the proposed skill set. Use when the user asks to
-  "bootstrap my skills", "figure out what skills I need", "make my agent more
-  consistent", "port how I work to another agent", or when onboarding a user
-  who has little or no formal skill configuration.
+  Discover and build the smallest useful portable skill system for a user by
+  inspecting available history, memory, workspace evidence, recurring workflows,
+  existing skills, and the curated reference corpus, then adversarially validate
+  and install or hand off the resulting skills. Use when the user gives you this
+  repository or its URL without another task, asks to bootstrap or improve their
+  skills, wants an agent to become more consistent, or wants working methods to
+  transfer between agent hosts.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.3.0
+  version: 0.4.0
 ---
 
 # Skill Bootstrap
 
-Turn observed working behavior into a small, portable, evidence-backed skill layer that the user can actually install and use.
+Turn observed working behavior into the smallest portable, evidence-backed skill system that best fits the user and that the user can actually install and use.
 
-This is the front-door orchestration skill for the repository. It does not assume the user already understands skills, the repository layout, installation paths, packaging, or which capabilities should be formalized.
+This is the front-door orchestration skill for the repository.
+
+The repository is not primarily a skill storefront. Its local and third-party skills are a reference corpus, design library, and source of reusable implementations. The desired output is the **right skill system for the user**, which may reuse existing skills, materially adapt them, combine ideas from several references, or create skills that did not previously exist.
+
+## Default Entry Behavior
+
+If a user gives the agent this repository or its GitHub URL and does not provide a more specific task, that action is sufficient to trigger this skill.
+
+Begin bootstrap.
+
+Do **not** stop after:
+
+- summarizing the repository,
+- listing available skills,
+- praising or critiquing the repository,
+- telling the user to browse the index,
+- asking the user to choose from a catalog.
+
+A repository summary is appropriate only when the user explicitly asks for one.
 
 ## Purpose
 
-Identify where reusable skills would materially improve quality, reliability, efficiency, consistency, governance, or user alignment, then select, refine, adapt, compose, or propose the minimum coherent skill set that provides those benefits.
+Identify where reusable skills would materially improve quality, reliability, efficiency, consistency, governance, user alignment, or transferability.
 
-Then finish the job: install the selected skills when the host permits it and authority exists, or produce the exact package and beginner-readable installation steps when human action is required.
+Then build the minimum coherent skill system that provides those benefits.
 
-The goal is not maximum skill count.
+The final system may include:
+
+- existing local skills used unchanged,
+- official or community skills adopted with provenance,
+- existing skills refined,
+- reference skills adapted to the user's environment,
+- current skills supplemented with useful patterns from other sources,
+- separate skills composed together,
+- entirely new custom skills synthesized from the user's observed workflow and relevant reference patterns,
+- checklists/helpers when a formal skill would be excessive,
+- deliberately dynamic behavior when formalization would reduce quality.
+
+Then finish the job: validate the result and install the selected/custom skills when the host permits it and authority exists, or produce the exact package and beginner-readable installation steps when human action is required.
+
+The goal is not maximum reuse or maximum skill count.
+
+The goal is **best fit with the smallest useful system**.
 
 ## Trigger
 
 Use this skill when:
 
-- a user wants to bootstrap or improve their personal/organizational agent skill system,
+- the user gives you this repository or repository URL with no more specific task,
+- a user wants to bootstrap or improve their personal or organizational agent skill system,
 - a user wants working patterns to transfer between agent hosts,
 - an agent needs to infer latent skills from repeated behavior,
-- a user has many recurring corrections or workflows but has never formalized them,
-- an existing skill ecosystem needs a broad consolidation/re-evaluation pass.
+- a user has recurring corrections or workflows but has never formalized them,
+- the user's current agent memory/history appears to contain durable working methods that should become portable,
+- an existing skill ecosystem needs a broad consolidation or re-evaluation pass.
 
 ## Do Not Trigger
 
 Do not use this skill when:
 
 - the user already named one specific skill and only wants that skill executed,
+- the user explicitly asks only for a repository overview or catalog lookup,
 - the task is a one-off request with no meaningful reusable pattern,
-- the user only wants a catalog lookup,
 - repository/project rules prohibit broad profile discovery,
 - the available evidence is so narrow that a durable skill architecture would be mostly guesswork and the user did not ask for a provisional analysis.
 
@@ -54,36 +90,43 @@ Do not use this skill when:
 
 At least one evidence source must be available, such as:
 
-- current conversation
-- accessible conversation history
-- persistent memory exposed by the host
-- workspace/project instructions
-- repositories or project artifacts
-- tool invocation history
-- prior agent corrections
-- an existing skill/profile configuration
+- current conversation,
+- accessible conversation history,
+- persistent memory exposed by the host,
+- workspace/project instructions,
+- repositories or project artifacts,
+- tool invocation history,
+- prior agent corrections,
+- an existing skill/profile configuration.
 
 Unavailable sources are recorded as unavailable. They are never reconstructed from assumptions.
 
-The active host/surface should also be identified when installation is part of the requested outcome. If the host cannot be established, skill discovery may proceed, but installation status must be `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED` rather than guessed.
+When installation is part of the outcome, identify the active host/surface if possible. If it cannot be established, skill discovery may proceed, but installation status must be `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED` rather than guessed.
 
 ## Evidence Scope and Privacy
 
 Use the minimum evidence needed to identify stable execution patterns.
 
-The following ambient working context may be inspected when the host normally exposes it for the current task:
+### Prefer evidence the host already exposes
 
-- current conversation and directly relevant conversation history,
-- persistent memory already available to the agent for normal assistance,
-- current workspace/project instructions and artifacts,
+When available, begin with relevant interaction history and persistent memory before asking the user to restate how they work.
+
+Also use relevant ambient context such as:
+
+- current conversation,
+- workspace/project instructions and artifacts,
 - existing skill/profile configuration,
 - repository or tool history already in the active work context.
+
+The agent should not make the user manually reconstruct information that is already available through the normal host context.
+
+### Do not widen scope casually
 
 Do **not** sweep unrelated connected private accounts merely because a connector exists. Email, private chat, calendar, finance, personal cloud storage, or similar external sources require at least one clear scope basis:
 
 1. the user explicitly asks to include that source,
 2. the current project/task already authorizes and requires that source, or
-3. the relevant material has already been surfaced into the current working context by an authorized workflow.
+3. relevant material has already been surfaced into the current working context by an authorized workflow.
 
 Access to a connector is capability, not consent to mine it for a profile.
 
@@ -95,11 +138,12 @@ When a smaller evidence set is sufficient, prefer it. Record source categories a
 
 Discover authoritative local instructions first:
 
-1. repository/project governance or instruction files,
-2. workspace/operator profile if explicitly available,
-3. current user instructions,
-4. host capabilities and accessible evidence sources,
-5. current agent product and surface when installation is expected.
+1. current explicit user instruction,
+2. safety/security restrictions,
+3. repository/project governance or instruction files,
+4. workspace/operator profile if explicitly available,
+5. host capabilities and accessible evidence sources,
+6. current agent product and surface when installation is expected.
 
 Record what can and cannot be inspected.
 
@@ -107,23 +151,28 @@ For installation, record whether the current surface appears to be web, desktop,
 
 Do not ask the user to manually repeat information that is already accessible through the host.
 
-### 2. Build an evidence inventory
+### 2. Mine for latent skills
 
-Review the available in-scope recent work and tool/skill usage.
+Review the available in-scope interaction history, memory, recent work, instructions, and tool/skill usage.
 
-Look for:
+Look especially for patterns that the user may already have taught the agent without formalizing them:
 
-- existing skills repeatedly used across workflows,
-- repeated reasoning patterns,
+- instructions repeated across tasks,
+- corrections the user makes repeatedly,
+- recurring reasoning patterns,
 - repeated tool sequences,
 - manual reconstruction of the same procedure,
 - governance/security/validation rules repeatedly reintroduced,
 - recurring human verification points,
-- repeated corrections or dissatisfaction,
+- recurring definitions of "done",
+- repeated dissatisfaction caused by the same failure mode,
 - workflows where failure is costly,
+- existing skills repeatedly used across workflows,
 - overlapping or conflicting skills,
 - skills that are too generic for the actual workflow,
-- implicit procedures that behave like skills even though nobody named them as such.
+- implicit procedures that already behave like skills even though nobody named them as such.
+
+Treat a stable repeated procedure living only in memory/history as a **latent skill candidate**.
 
 For every finding, distinguish observed evidence from inference.
 
@@ -132,15 +181,19 @@ For every finding, distinguish observed evidence from inference.
 Classify every candidate as one of:
 
 - **SUFFICIENT** — existing skill is adequate.
-- **REFINE** — correct abstraction, inadequate implementation/guidance/tests/governance.
-- **ADOPT** — a repository/reference skill already solves the requirement.
-- **ADAPT** — an existing implementation should be customized for the environment.
-- **SUPPLEMENT** — keep the current skill but borrow a specific pattern that strengthens it.
+- **REFINE** — correct abstraction, inadequate implementation, guidance, tests, or governance.
+- **ADOPT** — an existing implementation already solves the requirement with good fit.
+- **ADAPT** — an existing implementation provides the best base but needs environmental or workflow changes.
+- **SUPPLEMENT** — keep the current/custom skill but borrow a specific pattern that strengthens it.
 - **COMPOSE** — use separate skills together rather than merging responsibilities.
-- **CREATE** — a stable reusable workflow has no adequate existing implementation.
+- **CREATE** — a custom skill is the best fit for a stable reusable workflow.
 - **CHECKLIST/HELPER** — formal skill would be excessive.
 - **DYNAMIC** — circumstances vary enough that formalization would reduce adaptability.
 - **DO NOT CREATE** — rare, trivial, volatile, redundant, or unjustified.
+
+`CREATE` does not mean "no related skill exists."
+
+`CREATE` is also correct when related skills exist but adapting them would preserve the wrong assumptions, UX, authority model, scope, terminology, or workflow shape.
 
 ### 4. Score candidate value
 
@@ -161,12 +214,14 @@ Score meaningful candidates 0-5 on:
 
 Also test:
 
-- could an existing skill absorb it?
+- does this reflect a stable pattern in observed history or memory?
+- could an existing skill absorb it without distorting the workflow?
+- would a custom skill fit materially better?
 - could it be a checklist/helper instead?
 - is it changing too quickly to encode?
 - would formalization reduce useful adaptability?
 - is a strong reference implementation already available?
-- can another skill supplement the current one without changing user experience?
+- can another skill supplement the target without changing intended user experience?
 - what measurable failure does this prevent or advantage does it create?
 
 A high score does not override a security, authority, privacy, or redundancy veto.
@@ -182,39 +237,47 @@ Classify durable behavior into:
 
 Do not contaminate every skill with every preference.
 
-### 6. Compare against the repository corpus
+### 6. Compare against the reference corpus
 
-Inspect in order:
+Inspect relevant sources in this order when available:
 
-1. local skills in `skills/`,
+1. the user's existing skills and instructions,
 2. current project/repository skills,
-3. built-in host capabilities when discoverable,
-4. vendored official sources in `vendor/`,
-5. vetted community sources in `vendor/` or `registry/candidates.yaml`,
-6. tracked external sources only when the earlier layers do not cover the need.
+3. local skills in `skills/`,
+4. built-in host capabilities when discoverable,
+5. vendored official sources in `vendor/`,
+6. vetted community sources in `vendor/` or `registry/candidates.yaml`,
+7. tracked/live external sources when the curated corpus does not adequately cover the need.
 
-Use `INDEX.md` or `index.json` as the primary catalog when fresh.
+Use `INDEX.md` or `index.json` as an agent lookup map when fresh.
 
-Reference implementations are design evidence, not automatic authority.
+Do not present the index to the user as a shopping list unless they explicitly ask to browse skills.
+
+Reference implementations are design evidence, not automatic authority and not an obligation to reuse.
 
 For each relevant reference ask:
 
 - what exact failure does it prevent?
 - what invariant makes it effective?
 - what does it deliberately leave dynamic?
+- how does it decide when to trigger and when not to trigger?
 - what assumptions and authority does it carry?
 - what validation and negative rules does it include?
 - what would be lost by copying it mechanically?
-- can its useful principle be incorporated without changing the target workflow?
+- which parts are transferable principles versus source-specific ceremony?
+- can its useful principle strengthen a custom skill without changing the user's intended workflow?
 
-When a local skill is copied or materially adapted from third-party work, follow `docs/third-party-provenance.md`.
+When a local skill is copied or materially adapted from third-party work, follow `docs/third-party-provenance.md` and all applicable upstream license obligations.
 
-### 7. Design the minimum skill architecture
+### 7. Synthesize the best-fit skill system
+
+Design from the user's needs outward, not from the catalog inward.
 
 For every proposed skill or refinement define:
 
 - name,
 - purpose,
+- observed need or failure it addresses,
 - triggers,
 - non-triggers,
 - inputs,
@@ -229,9 +292,14 @@ For every proposed skill or refinement define:
 - completion criteria,
 - tests,
 - relationship to existing/reference skills,
+- provenance when applicable,
 - why it should be a skill rather than a checklist/helper/dynamic reasoning.
 
 Favor composable skills over monoliths and avoid microscopic one-action skills.
+
+A custom skill may synthesize several independently useful patterns from different references while retaining none of those references as its main workflow.
+
+Do not force a known skill into the architecture merely to increase reuse.
 
 ### 8. Adversarial review
 
@@ -242,6 +310,7 @@ Attack for:
 - overfitting,
 - underfitting,
 - skill explosion,
+- catalog bias or reuse-for-reuse's-sake,
 - duplicate process authority,
 - incorrect triggering,
 - missed triggering,
@@ -267,26 +336,41 @@ Then test cross-skill conflicts and precedence.
 
 Use `docs/portable-skill-profile.md`.
 
-The profile contains durable execution methods and selected skills, not biography.
+The profile contains durable execution methods and selected/custom skills, not biography.
 
 Every profile claim derived from incomplete evidence must be marked as inference or provisional.
 
 Include installation targets for known hosts/surfaces so a future agent can distinguish "this skill belongs here" from "this skill is actually installed here."
 
-### 10. Plan or execute validation
+### 10. Create or refine the actual skill artifacts
 
-Where the host and permissions allow, use existing lifecycle skills:
+Where the current environment permits file creation, produce the actual skill files rather than stopping at recommendations.
 
-- `skill-eval` for controlled baseline/treatment testing,
-- `skill-forge` for convention-clean local skill scaffolding,
+Use existing lifecycle capabilities when useful:
+
+- `skill-forge` for convention-clean custom skill scaffolding,
 - `skill-audit` for structural and semantic-risk validation,
-- `skill-sync` for supported local host deployment.
+- direct adaptation with provenance when an upstream skill is the correct base.
 
-Do not claim those steps occurred unless they actually ran.
+If the environment cannot create files, output the complete skill artifacts in a form the user can save or upload.
 
-Mutating repository state, installing skills, or deploying to hosts requires the authority expected by the target environment.
+Do not claim an artifact exists unless it was actually created.
 
-### 11. Install or produce the installation handoff
+### 11. Validate behavior
+
+Where the host and evidence permit, use `skill-eval` for controlled baseline/treatment testing.
+
+For important custom or adapted skills:
+
+1. define representative tasks and success checks before treatment,
+2. observe baseline behavior without the skill when feasible,
+3. run the same task with the skill,
+4. compare behavioral improvement, failure rate, evidence quality, trigger accuracy, intervention burden, and relevant cost/context overhead,
+5. revise when the skill adds ceremony without measurable benefit.
+
+Do not claim validation occurred unless it actually ran.
+
+### 12. Install or produce the installation handoff
 
 Follow `docs/installation-handoff.md`.
 
@@ -320,11 +404,25 @@ For web/UI hosts, optimize the handoff for a novice: one action per numbered ste
 
 ## Decision Rules
 
-### Prefer reuse over creation
+### Compare before creation
 
-Do not create a new skill when an existing skill meets the requirement without material compromise.
+Inspect relevant existing solutions before designing another implementation of a solved mechanism.
 
-### Prefer supplementation over replacement
+This is a learning requirement, not a reuse quota.
+
+### User-fit before reuse
+
+Use or adapt an existing skill only when doing so produces a result at least as good as a clean custom design for the observed workflow.
+
+Do not distort the user's process to fit the corpus.
+
+### The corpus is reference material, not the deliverable
+
+The existence of hundreds of indexed skills does not make browsing or selecting from them the user experience.
+
+Agents perform the comparison work.
+
+### Prefer supplementation over unnecessary replacement
 
 If a user's current skill/process works but lacks one useful pattern, add the pattern rather than importing the reference author's entire workflow.
 
@@ -342,7 +440,7 @@ Repeated activity alone is not enough. A skill needs a stable abstraction and an
 
 ### Minimize evidence collection
 
-Do not widen source scope merely to improve confidence. If the current conversation, memory, workspace, and existing skill configuration are sufficient, do not inspect additional private connected systems.
+Do not widen source scope merely to improve confidence. If current conversation, relevant memory/history, workspace, and existing skill configuration are sufficient, do not inspect additional private connected systems.
 
 ### Installation is part of completion
 
@@ -378,8 +476,11 @@ A bootstrap is not validated because its architecture looks reasonable.
 
 At minimum test the resulting system against representative cases including:
 
+- repository-link-only invocation where the agent must begin rather than summarize,
 - beginner / no meaningful history,
 - rich history with several latent recurring workflows,
+- rich memory where no existing skill adequately fits and CREATE is the correct result,
+- a strong reference skill that contains useful patterns but the wrong overall workflow,
 - conflicting/overlapping existing skills,
 - connected private sources that are available but out of scope,
 - missing tools or connectors,
@@ -391,7 +492,7 @@ At minimum test the resulting system against representative cases including:
 
 Prefer controlled baseline-versus-treatment testing for high-value skill changes.
 
-Installation verification is separate from behavioral validation: the skill can be present but still trigger incorrectly.
+Installation verification is separate from behavioral validation: a skill can be present but still trigger incorrectly.
 
 ## Failure Handling
 
@@ -401,10 +502,23 @@ If a source is unavailable or out of scope:
 - continue with available in-scope evidence,
 - reduce confidence accordingly when it matters.
 
+If history or memory is unavailable:
+
+- say so,
+- do not make the user believe it was reviewed,
+- use the current conversation and other available evidence,
+- keep broad personal conclusions provisional.
+
 If the catalog/index is stale:
 
 - use source files directly when available,
 - mark catalog-derived conclusions provisional until regeneration.
+
+If the corpus does not contain a good fit:
+
+- do not stop with "no matching skill found",
+- use relevant references as design evidence,
+- create a custom skill when the observed need justifies one.
 
 If authority to mutate is missing:
 
@@ -446,25 +560,32 @@ If evidence does not justify a durable skill:
 - Never report a UI-required upload as completed unless the host actually confirms it.
 - Never silently enable workspace/org-wide sharing when installing a personal skill.
 - Never import a third-party procedure without preserving required provenance and license obligations.
+- Never force the user to select from the catalog when the agent can perform the comparison itself.
+- Never reject a justified custom skill merely because a vaguely related skill already exists.
 
 ## Completion Criteria
 
 Bootstrap may claim completion only when:
 
+- repository-link-only invocation, when applicable, actually progressed into discovery rather than ending in summary,
 - accessible, in-scope, out-of-scope, and unavailable evidence sources are identified where relevant,
-- major recurring patterns are inventoried,
+- relevant accessible memory/history was inspected when available or explicitly reported unavailable,
+- major recurring and latent patterns are inventoried,
 - candidates are classified and redundancy-checked,
-- relevant repository/reference skills were compared before new creation was recommended,
+- relevant repository/reference skills were compared before final design,
+- the final architecture is optimized for user fit rather than reuse count,
+- justified custom skills were created when the corpus did not fit,
 - surviving candidates passed an adversarial design review or unresolved failures are explicitly reported,
+- actual skill artifacts were produced where the environment permits,
 - a Portable User Skill Profile was produced or a concrete reason it should not yet be produced was documented,
-- validation status is explicit for every adopted/adapted/custom recommendation,
+- validation status is explicit for every adopted, adapted, supplemented, composed, or custom recommendation,
 - every known target host/surface has an explicit installation state,
 - any required upload/install artifact is identified by exact filename/path or the inability to create it is stated,
 - any remaining user action is expressed as simple numbered steps with one clear next action,
 - every installed skill has either been verified or is explicitly marked verification pending,
 - no external mutation is implied unless it actually occurred.
 
-A bootstrap that ends with useful skill files but no usable installation path is incomplete.
+A bootstrap that ends with a skill shopping list, useful skill files with no installation path, or a repository summary instead of beginning discovery is incomplete.
 
 ## Output Format
 
@@ -477,23 +598,23 @@ A bootstrap that ends with useful skill files but no usable installation path is
 - Partial: ...
 - Unavailable: ...
 
-## Usage findings
+## Latent working patterns found
 ...
 
 ## Skill decisions
-| Need | Current state | Reference | Decision | Benefit | Validation |
-|------|---------------|-----------|----------|---------|------------|
+| Need | Evidence | Best-fit design | References used | Decision | Validation |
+|------|----------|-----------------|-----------------|----------|------------|
 
-## Existing skills to refine
+## Existing skills retained or refined
 ...
 
-## New skills justified
+## Custom skills created
 ...
 
-## Do not create
+## Reference patterns borrowed
 ...
 
-## Comparative reference findings
+## Do not create / keep dynamic
 ...
 
 ## Adversarial findings
@@ -530,21 +651,29 @@ A bootstrap that ends with useful skill files but no usable installation path is
 
 ## Examples
 
-### Normal case
+### Repository-link-only case
 
-A user has months of accessible work showing repeated repository reviews, evidence-based issue creation, and recurring corrections about authority boundaries. Bootstrap identifies a stable repo-review skill, finds partial coverage in the existing corpus, recommends SUPPLEMENT rather than replacement, produces a profile carrying the evidence/approval defaults across hosts, then installs it directly on a local host or packages it for the user's actual target.
+The user sends only the `skillz` GitHub URL. The agent reads this repository, recognizes the URL as bootstrap invocation, inspects relevant accessible history/memory, and begins identifying latent workflows. It does not respond with a repository review or ask the user which skill they want.
+
+### Custom-skill case
+
+Accessible history shows that the user repeatedly performs a specialized daily workflow combining several tools, evidence rules, approval boundaries, and a particular completion test. No indexed skill fits the workflow. Several references contain strong individual patterns. Bootstrap uses those patterns as design evidence, creates a new custom skill around the user's actual workflow, records provenance where required, evaluates it, and installs or packages it.
+
+### Existing-skill case
+
+A user's observed workflow maps cleanly onto an existing skill with no material compromise. Bootstrap adopts the existing skill rather than recreating it, validates host compatibility, and installs or packages it.
 
 ### Web/UI installation case
 
 A user is working in a web application that supports skill upload but the agent cannot click the user's account UI. Bootstrap creates the required upload package, reports `READY TO UPLOAD`, gives the shortest current official UI path in numbered steps, names the exact file to select, and provides one test prompt. It does not call the skill installed until the upload actually occurs.
 
-### Edge case
+### No-history edge case
 
-A new user provides only one short conversation. Bootstrap inventories the current task, reports that history/memory are unavailable, suggests a small provisional set of catalog skills, and declines to infer a broad personal skill architecture until more evidence exists. Any selected skill still receives a concrete installation handoff for the known target host.
+A new user provides only the repository link and one short conversation. Bootstrap reports that broader history/memory are unavailable, uses the current conversation as provisional evidence, avoids inventing a broad personal skill architecture, and creates or recommends only what the evidence supports.
 
 ### Privacy edge case
 
-A host has email and calendar connectors, but the user only asks the agent to learn from their current workspace and interaction history. Bootstrap does not inspect email or calendar. It records those sources as available but out of scope and proceeds with the smaller evidence set.
+A host has email and calendar connectors, but the user only supplied the repository link. Bootstrap does not inspect email or calendar merely because they are connected. It uses normal ambient history/memory/workspace context and records the other sources as out of scope.
 
 ### Do not activate
 
