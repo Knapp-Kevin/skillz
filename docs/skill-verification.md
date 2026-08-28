@@ -2,26 +2,31 @@
 
 Source reputation and skill quality are separate facts.
 
-A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. For that reason, every non-Matt skill enters `skillz` as **unverified**.
+A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. Availability alone never establishes trusted unchanged-selection eligibility.
 
-Matt Pocock skills are the sole current `trusted-baseline` exception. That exception skips the requirement to prove baseline quality from scratch; it does **not** skip fingerprinting, characterization, tags, dependency review, or stale-on-change behavior.
+Every characterized skill receives an exact-version quality state according to the repository's quality policy.
 
 ## Quality lifecycle
 
 ```text
 discovered -> characterized -> unverified
-                           -> trusted-baseline   (Matt policy only)
-                           -> verified           (structured gate passed)
-verified -> validated                           (behavioral evidence passed)
-any assessed state -> stale                     (fingerprint/evidence drift)
+                           -> trusted-baseline
+                           -> verified
+verified -> validated
+any assessed state -> stale
 reviewed -> rejected | retired
 ```
+
+- `trusted-baseline` means the exact fingerprint is eligible under an established source-quality policy plus local integrity/characterization requirements.
+- `verified` means the exact fingerprint passed the structured quality gate below.
+- `validated` additionally requires representative behavioral evidence.
+- `unverified` remains useful as design/reference evidence but is not silently trusted for unchanged installation.
 
 `verified` and `validated` are intentionally different. Static review can establish that a skill is coherent, bounded, useful, and fit for consideration. It cannot prove that the skill improves model behavior. Behavioral evidence is required for `validated`.
 
 ## Hard-fail conditions
 
-A non-Matt skill cannot be promoted to `verified` while any of these are unresolved:
+A skill cannot be promoted to `verified` while any of these are unresolved:
 
 1. hidden or unbounded authority escalation;
 2. mutation or external side effects without a clear trigger/consent boundary;
@@ -81,7 +86,7 @@ Verification is attached to the exact canonical `SKILL.md` blob SHA. When that h
 1. mark the existing assessment stale in operational use;
 2. inspect the upstream delta and dependency changes;
 3. refresh provenance dates/revisions;
-4. re-run the structured rubric for material behavior changes;
+4. re-run the structured rubric for material behavior changes when required;
 5. re-run relevant behavioral validation when prior evidence could be invalidated;
 6. update tags if scope, authority, portability, or behavior changed;
 7. record the new fingerprint only after review.
@@ -90,7 +95,7 @@ No upstream source is auto-upgraded merely because a newer commit exists.
 
 ## Selection semantics
 
-- `trusted-baseline`, `verified`, `validated`: eligible for unchanged selection if tags and user fit match.
+- `trusted-baseline`, `verified`, `validated`: eligible for unchanged selection if fingerprint, tags, and user fit match.
 - `unverified`: design evidence only by default; verify before direct trusted installation.
 - `stale`, `rejected`, `retired`: excluded from normal selection.
 
