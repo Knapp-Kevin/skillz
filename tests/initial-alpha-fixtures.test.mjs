@@ -5,38 +5,55 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const FIXTURES = JSON.parse(readFileSync(join(ROOT, "docs", "evals", "fixtures", "initial-alpha-scenarios.json"), "utf8"));
-
+const FIXTURE_PATH = join(ROOT, "docs", "evals", "fixtures", "initial-alpha-scenarios.json");
+const FIXTURES = JSON.parse(readFileSync(FIXTURE_PATH, "utf8"));
 const byId = new Map(FIXTURES.scenarios.map((s) => [s.id, s]));
+const FORBIDDEN_EVALUATOR_KEYS = new Set([
+  "candidate_hint",
+  "expected_decision",
+  "must_observe",
+  "must_not",
+  "scoring",
+  "answer_key",
+]);
 
-test("initial alpha fixture set contains the five required journey decisions", () => {
-  assert.deepEqual([...byId.keys()].sort(), ["A1", "A2", "A3", "R1", "R2"]);
+function collectForbiddenKeys(value, path = "$", found = []) {
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => collectForbiddenKeys(item, `${path}[${index}]`, found));
+    return found;
+  }
+  if (!value || typeof value !== "object") return found;
+  for (const [key, child] of Object.entries(value)) {
+    if (FORBIDDEN_EVALUATOR_KEYS.has(key)) found.push(`${path}.${key}`);
+    collectForbiddenKeys(child, `${path}.${key}`, found);
+  }
+  return found;
+}
+
+test("public initial alpha fixture is v2 with neutral rotated scenario identifiers", () => {
+  assert.equal(FIXTURES.schema_version, 2);
+  assert.equal(FIXTURES.set_id, "initial-alpha-v2-2026-08-28");
+  assert.deepEqual([...byId.keys()].sort(), ["D8N", "K7M", "L9C", "Q2F", "W4H"]);
 });
 
-test("every journey fixture has frozen expected behavior before execution", () => {
+test("public fixture contains treatment context only and no evaluator answer keys", () => {
+  assert.deepEqual(collectForbiddenKeys(FIXTURES), []);
   for (const scenario of FIXTURES.scenarios) {
     assert.ok(scenario.name, `${scenario.id}: name missing`);
     assert.ok(["first-visit", "returning-user"].includes(scenario.mode), `${scenario.id}: invalid mode`);
-    assert.ok(scenario.expected_decision, `${scenario.id}: expected decision missing`);
-    assert.ok(Array.isArray(scenario.must_observe) && scenario.must_observe.length >= 3, `${scenario.id}: insufficient must_observe criteria`);
-    assert.ok(Array.isArray(scenario.must_not) && scenario.must_not.length >= 3, `${scenario.id}: insufficient must_not criteria`);
+    assert.ok(scenario.user_evidence || scenario.current_user_evidence, `${scenario.id}: synthetic user context missing`);
   }
 });
 
-test("first-visit fixtures cover eligible reuse refusal and creation", () => {
-  assert.match(byId.get("A1").expected_decision, /ADOPT|ADAPT/);
-  assert.match(byId.get("A2").expected_decision, /DO_NOT_TRUST_UNCHANGED/);
-  assert.equal(byId.get("A3").expected_decision, "CREATE");
+test("public fixture still covers three first visits and two returning reviews without encoding outcomes", () => {
+  const first = FIXTURES.scenarios.filter((scenario) => scenario.mode === "first-visit");
+  const returning = FIXTURES.scenarios.filter((scenario) => scenario.mode === "returning-user");
+  assert.equal(first.length, 3);
+  assert.equal(returning.length, 2);
+  assert.ok(returning.every((scenario) => Array.isArray(scenario.existing_set) && scenario.existing_set.length > 0));
 });
 
-test("returning fixtures require minimal refinement and an explicit no-op", () => {
-  assert.equal(byId.get("R1").expected_decision, "REFINE_MINIMALLY");
-  assert.equal(byId.get("R2").expected_decision, "NO_CHANGE_NEEDED");
-  assert.ok(byId.get("R1").must_not.some((v) => /rebuild the whole skill set/i.test(v)));
-  assert.ok(byId.get("R2").must_not.some((v) => /newer/i.test(v)));
-});
-
-test("fixtures do not contain real user secrets or account data", () => {
+test("public fixtures do not contain real user secrets or account data", () => {
   const text = JSON.stringify(FIXTURES);
   assert.doesNotMatch(text, /api[_-]?key|password|secret\s*=|bearer\s+[a-z0-9._-]+/i);
   assert.doesNotMatch(text, /@[a-z0-9.-]+\.[a-z]{2,}/i);

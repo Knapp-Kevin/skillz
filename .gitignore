@@ -3,6 +3,11 @@ node_modules/
 .DS_Store
 Thumbs.db
 .claude/settings.local.json
+
+# Evaluator-only alpha rubrics must remain outside treatment-accessible Git history.
+*initial-alpha-v2-private-rubric*.json
+*initial-alpha-v2-rubric*.json
+
 # qor:seed -- do not edit between markers
 .qor/session/
 # qor:seed/end

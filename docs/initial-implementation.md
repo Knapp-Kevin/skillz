@@ -43,10 +43,16 @@ Curation continues after alpha. It should not indefinitely postpone proving the 
 
 Alpha lock requires representative evidence for five decisions:
 
-1. **eligible reuse**: an appropriate governed library skill is selected unchanged;
+1. **eligible reuse or minimal adaptation**: an appropriate governed library skill is selected or minimally adapted because it actually fits;
 2. **unsafe or unproven reuse refusal**: unverified or stale material is not treated as trusted unchanged material;
 3. **custom creation**: a materially poor library fit causes creation rather than forced reuse;
 4. **returning refinement**: an existing set receives only a justified change while valid custom behavior is preserved;
 5. **returning no-op**: an existing set is correctly left unchanged when no material improvement is established.
+
+These five decisions must be demonstrated with a **blind treatment/evaluator split**. Public treatment fixtures may contain only synthetic user context and neutral scenario identifiers. Expected decisions, candidate hints, and scenario-specific scoring criteria must remain outside the public repository and outside the treatment-agent context until that treatment output is frozen.
+
+The evaluator-only rubric must be precommitted before treatment execution and fingerprint-bound to the exact public fixture. The repository provides `scripts/verify-alpha-evaluator-bundle.mjs` for that binding.
+
+The original public v1 A1/A2/A3/R1/R2 fixture set cannot satisfy this proof requirement because its evaluator mappings were committed publicly and remain recoverable from Git history. It is retained only as historical evidence of the superseded design.
 
 The exact live checklist is tracked in [Issue #15](https://github.com/Knapp-Kevin/skillz/issues/15) and [`docs/alpha-lock.md`](alpha-lock.md).
