@@ -46,6 +46,20 @@ Treat the current set as evidence about the user's working system.
 
 A returning review should be capable of concluding **no change needed**. More skills are not inherently better.
 
+## Governed candidate shortlisting
+
+When you have local execution access to a fully materialized copy of this repository, use the generated index and selector instead of manually eyeballing hundreds of third-party skills.
+
+1. Regenerate the catalog with `node scripts/build-index.ts` when `index.json` is stale or older than schema version 2.
+2. Translate the user's needs into controlled tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml).
+3. Run [`engine/skills/skill-bootstrap/scripts/select-candidates.ts`](engine/skills/skill-bootstrap/scripts/select-candidates.ts) with the relevant tag filters.
+4. By default the selector only returns exact-version candidates eligible for trusted unchanged consideration.
+5. Use `--include-unverified` only when you intentionally want unverified material as **design evidence**, not as trusted installation candidates.
+6. Never bypass `stale`, `rejected`, or `retired` exclusions merely to produce a result.
+7. Treat the shortlist as evidence. The final decision must still consider actual user fit and may be `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE` rather than unchanged reuse.
+
+If the selector reports that the generated index predates governed metadata, the correct response is to regenerate the index in an environment with the pinned source corpora materialized. Do not silently fall back to trusting filenames or source reputation.
+
 ## Browse by purpose
 
 Humans can browse the locally maintained portion of the library through [`skills/categories/`](skills/categories/), including planning, writing, research, software/repository work, agent operations/security, monitoring/intelligence, and business/career categories.

@@ -3,25 +3,19 @@
  * risk-audit — semantic risk filter for library skills (issue #5).
  *
  * Complements audit.ts's structural checks with deterministic risk-pattern
- * detection: missing negative rules in high-judgment skills, schema pressure
- * without a not-established fallback, mutating actions without approval
- * language, portable-skill operator/org specificity, and direct vendor-API
- * references without an MCP/web fallback.
+ * detection across recursively discovered library skills.
  *
  * Usage (Bun or Node 22.18+):
  *   node engine/skills/skill-audit/scripts/risk-audit.ts [--skills-dir <path>]
  *
  * Exit 0 = clean or warnings only. Exit 1 = one or more FAIL findings.
- * Posture: regex heuristics, not semantic proof. `move`/`update` are
- * WARN-class mutating verbs (too noisy for FAIL); the operator/org term
- * list is embedded because this tool is repo-bound — local specificity
- * here is intentional, per the adaptive-frameworks rule's meta-skill carve-out.
  */
 
 import { parseArgs } from "node:util";
-import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { discoverSkillDirs } from "../../../../scripts/lib/skill-discovery.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 
@@ -67,63 +61,59 @@ function outputFormatBlock(b: string): string {
   return m ? m[1] : "";
 }
 
-function checkJudgment(dir: string, b: string): void {
+function checkJudgment(name: string, b: string): void {
   const block = outputFormatBlock(b);
   const highJudgment = SLOT_RE.test(block);
   const hasRules = /## Negative rules/.test(b);
   if (highJudgment && !hasRules) {
-    fail(`${dir}: high-judgment output slots (${block.match(SLOT_RE)?.[0]}) but no "## Negative rules" section`);
+    fail(`${name}: high-judgment output slots (${block.match(SLOT_RE)?.[0]}) but no "## Negative rules" section`);
     return;
   }
   if (highJudgment && hasRules) {
     const rules = b.slice(b.indexOf("## Negative rules"));
-    if (!SECRET_RULE_RE.test(rules)) fail(`${dir}: negative rules lack a secret-handling rule`);
-    if (!FABRICATION_RULE_RE.test(rules)) fail(`${dir}: negative rules lack an anti-fabrication rule`);
-    if (!GAP_RE.test(rules)) fail(`${dir}: negative rules lack a missing-evidence fallback`);
+    if (!SECRET_RULE_RE.test(rules)) fail(`${name}: negative rules lack a secret-handling rule`);
+    if (!FABRICATION_RULE_RE.test(rules)) fail(`${name}: negative rules lack an anti-fabrication rule`);
+    if (!GAP_RE.test(rules)) fail(`${name}: negative rules lack a missing-evidence fallback`);
   }
 }
 
-function checkMutation(dir: string, b: string): void {
+function checkMutation(name: string, b: string): void {
   const failVerb = b.match(FAIL_VERB_RE);
   const warnVerb = b.match(WARN_VERB_RE);
   const approved = APPROVAL_RE.test(b);
   if (failVerb && !approved) {
-    fail(`${dir}: mutating action "${failVerb[0]}" with no approval/read-only language anywhere in the skill`);
+    fail(`${name}: mutating action "${failVerb[0]}" with no approval/read-only language anywhere in the skill`);
   } else if (warnVerb && !failVerb && !approved) {
-    warn(`${dir}: soft mutating verb "${warnVerb[0]}" with no approval/read-only language`);
+    warn(`${name}: soft mutating verb "${warnVerb[0]}" with no approval/read-only language`);
   }
 }
 
-function checkPortability(dir: string, b: string): void {
+function checkPortability(name: string, b: string): void {
   if (/repo-bound/i.test(b)) return;
   const abs = b.match(ABS_PATH_RE);
-  if (abs) warn(`${dir}: portable skill body contains an absolute path ("${abs[0].trim()}")`);
+  if (abs) warn(`${name}: portable skill body contains an absolute path ("${abs[0].trim()}")`);
   for (const term of RISK_TERMS) {
-    if (b.includes(term)) warn(`${dir}: portable skill body contains operator/org term "${term}"`);
+    if (b.includes(term)) warn(`${name}: portable skill body contains operator/org term "${term}"`);
   }
 }
 
-function checkExternalServices(dir: string, b: string): void {
+function checkExternalServices(name: string, b: string): void {
   const hit = b.match(VENDOR_API_RE);
   if (hit && !MCP_FALLBACK_RE.test(b)) {
-    warn(`${dir}: direct vendor API reference ("${hit[0]}") without an MCP or web-tool fallback`);
+    warn(`${name}: direct vendor API reference ("${hit[0]}") without an MCP or web-tool fallback`);
   }
 }
 
 function auditSkills(skillsDir: string): number {
-  let count = 0;
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const skillFile = join(skillsDir, entry.name, "SKILL.md");
-    if (!existsSync(skillFile)) continue;
-    count++;
-    const b = body(readFileSync(skillFile, "utf8"));
-    checkJudgment(entry.name, b);
-    checkMutation(entry.name, b);
-    checkPortability(entry.name, b);
-    checkExternalServices(entry.name, b);
+  const skills = discoverSkillDirs(skillsDir);
+  for (const skill of skills) {
+    const b = body(readFileSync(skill.skillFile, "utf8"));
+    checkJudgment(skill.name, b);
+    checkMutation(skill.name, b);
+    checkPortability(skill.name, b);
+    checkExternalServices(skill.name, b);
   }
-  return count;
+  return skills.length;
 }
 
 const count = auditSkills(values["skills-dir"]!);

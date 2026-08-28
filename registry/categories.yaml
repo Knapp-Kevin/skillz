@@ -1,0 +1,78 @@
+# Human browse categories for locally maintained/imported library skills.
+#
+# This registry is the canonical category assignment source. Category README
+# files are navigation surfaces; index generation and future physical category
+# migration should consume this map rather than infer purpose from filenames.
+
+version: 1
+
+categories:
+  planning-productivity:
+    label: Planning & Productivity
+    skills:
+      - daily-briefing
+      - decision-log
+      - inbox-triage
+      - learning-plan
+      - task-surface
+      - week-in-review
+
+  writing-communication:
+    label: Writing & Communication
+    skills:
+      - brief-writer
+      - deck-outline
+      - devlog-draft
+      - handoff-writer
+      - standup-writer
+
+  research-analysis:
+    label: Research & Analysis
+    skills:
+      - compare
+      - deep-dive
+      - fact-check
+      - paper-digest
+
+  software-repositories:
+    label: Software & Repositories
+    skills:
+      - repo-doctor
+      - repo-pulse
+      - todo-harvester
+
+  agent-operations-security:
+    label: Agent Operations & Security
+    skills:
+      - agent-home-doctor
+      - agent-postmortem
+      - mcp-vetting
+      - permissions-review
+
+  monitoring-intelligence:
+    label: Monitoring & Intelligence
+    skills:
+      - claude-pulse
+      - deepseek-pulse
+      - gemini-pulse
+      - github-pulse
+      - glm-pulse
+      - governance-pulse
+      - hf-pulse
+      - inference-pulse
+      - kimi-pulse
+      - llama-pulse
+      - mcp-pulse
+      - memory-pulse
+      - mistral-pulse
+      - openai-pulse
+      - perplexity-pulse
+      - qwen-pulse
+      - xai-pulse
+
+  business-career:
+    label: Business & Career
+    skills:
+      - career-radar
+      - finance-review
+      - smallbiz-ops

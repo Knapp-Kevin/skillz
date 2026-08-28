@@ -141,9 +141,10 @@ If the user supplied this repository or its GitHub URL without a more specific t
 5. Identify durable or latent working methods.
 6. Search the complete indexed user-facing library, including approved vendor sources.
 7. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
-8. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
-9. Create a custom skill when the user's real workflow is not adequately represented.
-10. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
+8. Use the governed candidate selector when the current generated catalog is available; otherwise degrade honestly and inspect the relevant records directly.
+9. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
+10. Create a custom skill when the user's real workflow is not adequately represented.
+11. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
 
 ### Returning-user mode
 
@@ -196,14 +197,14 @@ See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 | [`registry/skills/`](registry/skills/) | Per-skill provenance and attribution |
 | [`registry/verification/`](registry/verification/) | Hash-bound quality state, tags, and evidence |
 | [`engine/skills/`](engine/skills/) | Repository machinery, excluded from library counts |
-| [`docs/`](docs/) | Architecture, curation, evaluation, installation, and alpha criteria |
+| [`docs/README.md`](docs/README.md) | Documentation map, architecture, curation, evaluation, installation, and alpha criteria |
 | [`tests/`](tests/) | Behavior and contract tests |
 
 ## Alpha status
 
-Alpha is **not locked yet**. The curation and verification foundation is in place, but bootstrap selection still needs to consume verification and tags directly, the generated index needs a current deterministic refresh, and representative end-to-end fitted-set evaluations still need to demonstrate trusted reuse, stale or unverified rejection, custom creation, refinement, and installation or handoff.
+Alpha is **not locked yet**. Governed selection and recursive category-aware discovery are now implemented in the current initial-implementation slice. The remaining alpha-critical work is to regenerate the catalog from a fully materialized repository, prove deterministic/idempotent output and exact counts, and execute the five representative first-visit/returning-user journey evaluations.
 
-See [`docs/alpha-lock.md`](docs/alpha-lock.md) for the exact remaining gates.
+See [`docs/initial-implementation.md`](docs/initial-implementation.md) for the intended finish line, [`docs/alpha-lock.md`](docs/alpha-lock.md) for the live checklist, and [`docs/evals/initial-alpha-matrix.md`](docs/evals/initial-alpha-matrix.md) for the proof matrix. Broad skill acquisition and deeper corpus curation are post-alpha enrichment rather than blockers for the initial implementation.
 
 ## Validation and GitHub Actions
 

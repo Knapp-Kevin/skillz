@@ -31,11 +31,14 @@ If the user gives you this repository or its GitHub URL without another specific
 3. Inspect only relevant interaction history, persistent memory, workspace context, existing instructions/skills, recurring corrections, and tool patterns the host legitimately exposes.
 4. Identify durable working methods and latent skill candidates.
 5. Search and compare the complete indexed user-facing library, including approved vendor corpora.
-6. Use `registry/verification/` and `registry/taxonomy.yaml` to judge unchanged-reuse eligibility and fit.
-7. Reuse, adapt, supplement, or compose existing skills when that is genuinely the best fit.
-8. Create new custom skills when the user's workflow is not adequately represented, even when related references exist.
-9. Adversarially review and behaviorally evaluate the fitted skill system as appropriate.
-10. Install when authorized, or produce the correct portable artifact and shortest beginner-readable handoff.
+6. When local repository execution is available, use the governed selector in `engine/skills/skill-bootstrap/scripts/select-candidates.ts` with controlled tags from `registry/taxonomy.yaml`; do not substitute filename or source reputation for quality state.
+7. Treat `trusted-baseline`, `verified`, or `validated` matching fingerprints as eligible for unchanged consideration; surface `unverified` only as explicit design evidence and exclude `stale`, `rejected`, and `retired` from default selection.
+8. Reuse, adapt, supplement, or compose existing skills when that is genuinely the best fit.
+9. Create new custom skills when the user's workflow is not adequately represented, even when related references exist.
+10. Adversarially review and behaviorally evaluate the fitted skill system as appropriate.
+11. Install when authorized, or produce the correct portable artifact and shortest beginner-readable handoff.
+
+A governed shortlist is evidence, not a verdict. User fit still controls the final reuse/adapt/create decision.
 
 ### Returning-user refinement mode
 
@@ -45,7 +48,7 @@ If the user already has skills and asks to review, refine, update, improve, audi
 2. Compare the current set with present working patterns and definitions of done.
 3. Identify stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
 4. Check upstream freshness and fingerprint drift where records exist.
-5. Search the current library for materially better fits or useful new patterns.
+5. Search the current library for materially better fits or useful new patterns, using the governed selector when the version-2 generated index is available.
 6. Preserve valid custom behavior rather than replacing it merely because a generic upstream skill exists.
 7. Make the smallest justified changes: refine, replace, supplement, compose, add, or retire.
 8. Re-run structured verification and behavioral evaluation where material changes warrant it.

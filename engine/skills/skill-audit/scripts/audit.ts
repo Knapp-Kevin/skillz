@@ -7,8 +7,6 @@
  *   node engine/skills/skill-audit/scripts/audit.ts --skills-dir <path> --registry <path>
  *
  * Exit 0 = clean (warnings allowed). Exit 1 = one or more FAIL findings.
- * Registry parsing is a purpose-built block parser for candidates.yaml's
- * regular shape (see registry file header), not a general YAML parser.
  */
 
 import { parseArgs } from "node:util";
@@ -17,6 +15,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { parseFrontmatter } from "../../../../scripts/lib/frontmatter.ts";
+import { discoverSkillDirs } from "../../../../scripts/lib/skill-discovery.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 const STATUSES = ["adopted", "sandbox", "track", "rejected", "quarantined"];
@@ -43,25 +42,26 @@ const findings: Finding[] = [];
 const fail = (msg: string) => findings.push({ level: "FAIL", msg });
 const warn = (msg: string) => findings.push({ level: "WARN", msg });
 
-function checkSkillFile(dir: string, skillFile: string): void {
+function checkSkillFile(name: string, skillFile: string): void {
   const fm = parseFrontmatter(readFileSync(skillFile, "utf8"));
-  if (!fm) { fail(`${dir}: SKILL.md frontmatter does not parse`); return; }
-  if (fm.name !== dir) fail(`${dir}: frontmatter name "${fm.name}" != directory "${dir}"`);
+  if (!fm) { fail(`${name}: SKILL.md frontmatter does not parse`); return; }
+  if (fm.name !== name) fail(`${name}: frontmatter name "${fm.name}" != directory "${name}"`);
   const desc = typeof fm.description === "string" ? fm.description : "";
-  if (!desc.trim()) fail(`${dir}: description missing or empty`);
-  else if (!desc.includes("Use when")) fail(`${dir}: description lacks "Use when" trigger guidance`);
-  if (!fm.metadata?.version) fail(`${dir}: metadata.version missing`);
+  if (!desc.trim()) fail(`${name}: description missing or empty`);
+  else if (!desc.includes("Use when")) fail(`${name}: description lacks "Use when" trigger guidance`);
+  if (!fm.metadata?.version) fail(`${name}: metadata.version missing`);
 }
 
 function checkSkills(skillsDir: string): string[] {
   const skillFiles: string[] = [];
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const skillFile = join(skillsDir, entry.name, "SKILL.md");
-    if (!existsSync(skillFile)) { fail(`${entry.name}: no SKILL.md`); continue; }
-    checkSkillFile(entry.name, skillFile);
-    skillFiles.push(skillFile);
+  const names = new Set<string>();
+  for (const skill of discoverSkillDirs(skillsDir)) {
+    if (names.has(skill.name)) fail(`${skill.name}: duplicate local skill directory name`);
+    names.add(skill.name);
+    checkSkillFile(skill.name, skill.skillFile);
+    skillFiles.push(skill.skillFile);
   }
+  if (skillFiles.length === 0) fail(`no library skills discovered under ${skillsDir}`);
   return skillFiles;
 }
 
@@ -71,12 +71,11 @@ function checkHelp(file: string, label: string): void {
 }
 
 function checkScripts(skillsDir: string): void {
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const scriptsDir = join(skillsDir, entry.name, "scripts");
+  for (const skill of discoverSkillDirs(skillsDir)) {
+    const scriptsDir = join(skill.dir, "scripts");
     if (!existsSync(scriptsDir)) continue;
     for (const f of readdirSync(scriptsDir).filter((f) => f.endsWith(".ts"))) {
-      checkHelp(join(scriptsDir, f), `${entry.name}/scripts/${f}`);
+      checkHelp(join(scriptsDir, f), `${skill.relativeDir}/scripts/${f}`);
     }
   }
   const repoScripts = join(ROOT, "scripts");
@@ -86,18 +85,16 @@ function checkScripts(skillsDir: string): void {
 }
 
 function checkSources(skillsDir: string): void {
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const sources = join(skillsDir, entry.name, "sources.json");
+  for (const skill of discoverSkillDirs(skillsDir)) {
+    const sources = join(skill.dir, "sources.json");
     if (!existsSync(sources)) continue;
     try {
       JSON.parse(readFileSync(sources, "utf8"));
     } catch {
-      fail(`${entry.name}: sources.json does not parse as JSON`);
+      fail(`${skill.name}: sources.json does not parse as JSON`);
     }
-    const skillFile = join(skillsDir, entry.name, "SKILL.md");
-    if (existsSync(skillFile) && !readFileSync(skillFile, "utf8").includes("engine is unavailable")) {
-      fail(`${entry.name}: sources.json present but SKILL.md lacks the "engine is unavailable" fallback marker (LD-5)`);
+    if (!readFileSync(skill.skillFile, "utf8").includes("engine is unavailable")) {
+      fail(`${skill.name}: sources.json present but SKILL.md lacks the "engine is unavailable" fallback marker (LD-5)`);
     }
   }
 }
