@@ -1,69 +1,117 @@
 # Vendored-Source Freshness
 
-Seven skill reference ecosystems are currently vendored as pinned submodules and indexed into INDEX.md / index.json: six official sources and one community-vetted source. Pins go stale silently; this document keeps staleness visible and chosen rather than accidental.
+`skillz` currently carries **12 pinned third-party source corpora** under `vendor/`. Each gitlink records the exact upstream revision used by the repository. Two additional registered sources are reference/discovery-only and are not vendored corpora.
 
-## Posture
+A pin establishes reproducibility. It does **not** establish that upstream has not moved, nor does source freshness establish individual skill quality.
 
-- **CI validates the pinned state only.** `.github/workflows/ci.yml` checks out submodules recursively and proves the index regenerates cleanly against the pinned trees. CI never treats upstream drift as a blocking PR check.
-- **Drift detection is scheduled/manual**, through `skills-pulse` or an ad-hoc check.
-- **Refresh is reviewed, never automatic.** A pin bump lands only after a human has looked at what changed.
-- **Source class remains visible.** Official sources are authoritative references for their own platforms but are not blanket-trusted for write-tier operations. Community-vetted sources are included for comparative/supplemental value and never gain platform authority by being vendored.
-- **Provenance survives refresh.** License or attribution changes are review-significant. See `docs/third-party-provenance.md` and `registry/sources.yaml`.
+## Current posture
 
-## Refresh workflow
+- **Pins are exact.** `registry/sources.yaml`, `.gitmodules`, and the repository gitlinks identify the source and pinned revision.
+- **Automatic GitHub Actions are disabled.** The workflow is manual-dispatch only while Actions budget is protected. Do not describe absent automatic CI as a freshness failure.
+- **Upstream drift detection is manual or scheduled outside automatic PR CI.** It may be performed by ecosystem-intake tooling or an explicit review.
+- **Refresh is reviewed, never automatic.** A pin bump lands only after relevant upstream changes are inspected.
+- **Availability is separate from quality.** Updating a source pin never automatically promotes individual skills to a stronger quality state.
+- **Characterization is exact-version bound.** If a characterized skill's canonical `SKILL.md` fingerprint changes, its prior characterization must be treated as stale until refreshed.
+- **Provenance survives refresh.** License, authorship, notices, path, and relationship changes are review-significant. See `docs/third-party-provenance.md`, `registry/skills/`, and `THIRD_PARTY_NOTICES.md`.
 
-Run when skills-pulse flags upstream activity, or before any adoption/adaptation decision touching a vendored source.
+## Current pinned corpora
 
-1. **Check drift** (read-only):
+Pins below are the gitlinks present in the initial-alpha implementation tree.
 
-   ```bash
-   git submodule foreach --quiet 'echo "$name  pinned=$(git rev-parse --short HEAD)  upstream=$(git ls-remote origin HEAD | cut -c1-9)"'
-   ```
+| Source path | Pinned revision | Notes |
+|---|---|---|
+| `vendor/knowledge-work-plugins` | `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8` | pinned corpus |
+| `vendor/anthropic-skills` | `9d2f1ae187231d8199c64b5b762e1bdf2244733d` | pinned corpus |
+| `vendor/aws-agent-toolkit` | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | pinned corpus |
+| `vendor/azure-skills` | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | pinned corpus |
+| `vendor/vercel-agent-skills` | `f8a72b9603728bb92a217a879b7e62e43ad76c81` | pinned corpus |
+| `vendor/microsoft-skills` | `32cad4ee689c95c309e61aeefcbc6af356f1e6a7` | pinned corpus |
+| `vendor/mattpocock-skills` | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | pinned corpus; provenance records exist for characterized subset |
+| `vendor/addyosmani-agent-skills` | `f63ec56a3cc936408d792956ae583c3c96a825bd` | pinned corpus; provenance records exist for characterized subset |
+| `vendor/openhands-extensions` | `87959a7da3e75445647e77b2fbf5bf5b66fb037b` | pinned corpus |
+| `vendor/cline-skills` | `26378461e978f2b4e2e6d67b57121b86b2a79ba5` | pinned corpus; characterized/verified subset exists |
+| `vendor/cloudflare-skills` | `f96bff754e428838818017f75817f0f9428acd48` | pinned corpus; characterized/verified subset exists |
+| `vendor/google-agents-cli` | `ef7808f33fc3038112b69d4ad488ce33b72699b1` | pinned corpus; characterized/verified subset exists |
 
-2. **Refresh the drifted source** (one at a time, never blanket):
+The authoritative source URLs, source roles, classes, licenses, and inclusion modes live in `registry/sources.yaml`. Do not duplicate those fields here as independent truth.
 
-   ```bash
-   git submodule update --remote vendor/<source>
-   ```
+## Reference/discovery sources
 
-3. **Review upstream changes before anything else**:
+Registered sources that are not physically vendored are tracked in `registry/sources.yaml` with their appropriate source roles. They may inform discovery, specification compliance, or comparison without being silently counted as initialized local submodules.
 
-   ```bash
-   git -C vendor/<source> log --oneline --stat <old-pin>..HEAD
-   ```
+## Drift-check workflow
 
-   Classify the delta as:
+Run when source-intake tooling flags meaningful upstream activity, before adopting an unreviewed upstream change, or during an intentional source refresh.
 
-   - **docs-only**: README/prose churn
-   - **skill-content**: SKILL.md bodies added/changed
-   - **tooling**: scripts/CI/runtime behavior
-   - **security**: permission, credential, execution, or network posture changed
-   - **license/provenance**: licensing, authorship, notices, or redistribution conditions changed
+### 1. Check current pin versus upstream
 
-   If the review raises concerns, reset the pin and record why rather than normalizing the change because upstream shipped it.
+Read-only example:
 
-4. **Re-index**: `node scripts/build-index.ts`. INDEX.md/index.json must reflect the new pin in the same commit.
+```bash
+git submodule foreach --quiet 'echo "$name pinned=$(git rev-parse HEAD) upstream=$(git ls-remote origin HEAD | cut -f1)"'
+```
 
-5. **Registry check**: if the delta is skill-content, tooling, security, or license/provenance, re-read affected `registry/candidates.yaml` entries and the source entry in `registry/sources.yaml`. An upstream change can alter adoption rationale, permission tier, source class, or whether vendoring remains appropriate.
+A difference means **upstream moved**. It does not by itself mean refresh is desirable.
 
-6. **Derived-skill check**: if a local skill records the source as `copied`, `adapted`, or `inspired-by`, determine whether the upstream change invalidates assumptions or merits a re-evaluation. Do not automatically re-copy upstream changes into the local skill.
+### 2. Review one source at a time
 
-7. **Commit** the pin bump + regenerated index + any registry/provenance updates together, with the classification in the message. Update the table below.
+```bash
+git submodule update --remote vendor/<source>
+git -C vendor/<source> log --oneline --stat <old-pin>..HEAD
+```
 
-## Freshness table
+Classify relevant deltas as:
 
-Updated at every check or refresh.
+- documentation only;
+- skill content;
+- tooling/runtime;
+- security/authority;
+- license/provenance;
+- structural/dependency changes.
 
-| Source | Class | Pinned | Upstream (last checked) | Last checked | Last refreshed | Status |
-|--------|-------|--------|-------------------------|--------------|----------------|--------|
-| vendor/knowledge-work-plugins | official | ca3e3fb | ca3e3fb (2026-07-04) | 2026-07-04 | 2026-07-04 | current at last check |
-| vendor/anthropic-skills | official | 9d2f1ae | 9d2f1ae (2026-07-04) | 2026-07-04 | 2026-07-02 | current at last check |
-| vendor/vercel-agent-skills | official | f8a72b9 | f8a72b9 (2026-07-04) | 2026-07-04 | 2026-07-02 | current at last check |
-| vendor/microsoft-skills | official | 32cad4e | 32cad4e (2026-07-04) | 2026-07-04 | 2026-07-02 | current at last check |
-| vendor/azure-skills | official | 8f8c72b | 8f8c72b (2026-07-04) | 2026-07-04 | 2026-07-02 | current at last check |
-| vendor/aws-agent-toolkit | official | ff1481a | ff1481a (2026-07-04) | 2026-07-04 | 2026-07-02 | current at last check |
-| vendor/mattpocock-skills | community-vetted | 6654f6b | 6654f6b (2026-08-28) | 2026-08-28 | 2026-08-28 (initial vendoring) | current; MIT provenance recorded |
+If review raises concerns, restore the old pin and record the decision rather than normalizing upstream merely because it is newer.
 
-## Reporting contract (skills-pulse)
+### 3. Reconcile affected individual records
 
-Each skills-pulse run reports, per vendored source: source class, current pinned SHA, latest upstream SHA/release where detectable, refresh-needed verdict, and likely delta classification. For community-vetted sources, changes do not inherit trust from prior versions; material behavioral changes may require a new sandbox evaluation.
+For every characterized skill whose canonical content changed:
+
+1. compute/check the new canonical fingerprint;
+2. mark the old characterization stale until reviewed;
+3. refresh controlled tags if behavior/use case/authority/portability changed;
+4. rerun structured verification when required by the quality policy;
+5. do not retain behavioral-validation claims when the evidence no longer applies to the exact version.
+
+### 4. Reconcile provenance and dependencies
+
+Check:
+
+- source/path changes;
+- license or notice changes;
+- bundled references/scripts/assets required by the skill;
+- derived/imported local skills that may rely on old upstream assumptions.
+
+Do not copy a lone `SKILL.md` while omitting required shared resources.
+
+### 5. Regenerate the catalog
+
+With all intended submodules materialized:
+
+```bash
+node scripts/verify-index-idempotency.ts
+```
+
+The first pass may refresh stale `INDEX.md` / `index.json`. The second pass must be byte-identical.
+
+### 6. Commit one coherent refresh
+
+Land together when applicable:
+
+- gitlink change;
+- source/provenance/notice changes;
+- refreshed characterization/verification records;
+- regenerated catalog;
+- concise classification of what changed and why the refresh was accepted.
+
+## Initial-alpha note
+
+The exact current indexed skill count is intentionally pending the next fully materialized schema-v2 catalog generation. The source pins above are independently visible in the repository tree, but API-side path counts are **not** used as a substitute for the generator's deduplication/exclusion rules.
