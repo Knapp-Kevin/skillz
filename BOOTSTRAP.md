@@ -65,18 +65,16 @@ A vendor skill can be available and searchable without being verified. Availabil
 
 ## How skill quality works
 
-Matt Pocock is the only current source allowed to default to `trusted-baseline` quality. Individual Matt skills still need fingerprinting and characterization before they are fully governed selection candidates.
+Every characterized third-party skill receives an exact-version quality state under the repository's quality policy.
 
-Every other third-party skill starts `unverified`, even when it comes from an official vendor repository.
-
-Individually characterized skills have a companion under [`registry/verification/`](registry/verification/) bound to the exact canonical `SKILL.md` Git blob SHA.
-
-- `trusted-baseline`: quality accepted by the Matt source policy; no local behavioral-validation claim.
+- `trusted-baseline`: eligible under an established source-quality policy plus matching fingerprint and characterization.
 - `verified`: passed the structured skillz quality/effectiveness rubric.
 - `validated`: also has representative behavioral evidence.
 - `unverified`: useful as design evidence, but not silently trusted for unchanged installation.
 - `stale`: the underlying skill/evidence changed and must be reviewed again.
 - `rejected` / `retired`: excluded from normal selection.
+
+Individually characterized skills have a companion under [`registry/verification/`](registry/verification/) bound to the exact canonical `SKILL.md` Git blob SHA.
 
 Tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) characterize use case, lifecycle phase, workflow characteristics, authority, and portability. Use those dimensions to refine matching rather than selecting by name alone.
 
