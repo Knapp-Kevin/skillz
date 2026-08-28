@@ -16,7 +16,7 @@ See [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verificat
 
 ## Structured-verified sample
 
-These non-Matt skills passed the new structured quality gate. None currently claims local behavioral validation.
+These non-Matt skills passed the structured quality gate. None currently claims local behavioral validation.
 
 | Skill | Source | Status | Upstream updated | Key characterization | Provenance | Verification |
 |---|---|---|---:|---|---|---|
@@ -28,13 +28,18 @@ These non-Matt skills passed the new structured quality gate. None currently cla
 
 Source: [`mattpocock/skills`](https://github.com/mattpocock/skills), MIT, pinned at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
 
-Matt Pocock is the sole source-level trusted-quality exception. The entries below are also individually fingerprinted and characterized. Other Matt skills inherit source-quality confidence but are not yet fully characterized/tagged until they receive individual records.
+Matt Pocock is the sole source-level trusted-quality exception. The entries below are individually fingerprinted and characterized. Other Matt skills inherit source-quality confidence but are not yet fully characterized/tagged until they receive individual records.
 
 | Skill | Status | Upstream updated | Key characterization | Provenance | Verification |
 |---|---|---:|---|---|---|
 | [Codebase Design](vendor/mattpocock-skills/skills/engineering/codebase-design/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | architecture, planning/design, modularity, maintainability, high portability | [record](registry/skills/mattpocock-skills/codebase-design.yaml) | [record](registry/verification/mattpocock-skills/codebase-design.yaml) |
+| [Code Review](vendor/mattpocock-skills/skills/engineering/code-review/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | code-review, evaluation, spec-driven, orchestration, read-only | [record](registry/skills/mattpocock-skills/code-review.yaml) | [record](registry/verification/mattpocock-skills/code-review.yaml) |
 | [Diagnosing Bugs](vendor/mattpocock-skills/skills/engineering/diagnosing-bugs/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | debugging, hypothesis-driven, evidence-first, iterative, high portability | [record](registry/skills/mattpocock-skills/diagnosing-bugs.yaml) | [record](registry/verification/mattpocock-skills/diagnosing-bugs.yaml) |
+| [Domain Modeling](vendor/mattpocock-skills/skills/engineering/domain-modeling/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | domain-modeling, architecture, planning, traceable, mutating | [record](registry/skills/mattpocock-skills/domain-modeling.yaml) | [record](registry/verification/mattpocock-skills/domain-modeling.yaml) |
+| [Prototype](vendor/mattpocock-skills/skills/engineering/prototype/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | prototyping, UX, hypothesis-driven, visual-verification, mutating | [record](registry/skills/mattpocock-skills/prototype.yaml) | [record](registry/verification/mattpocock-skills/prototype.yaml) |
 | [Research](vendor/mattpocock-skills/skills/engineering/research/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | research, source-driven, evidence-first, synthesis, high portability | [record](registry/skills/mattpocock-skills/research.yaml) | [record](registry/verification/mattpocock-skills/research.yaml) |
+| [Handoff](vendor/mattpocock-skills/skills/productivity/handoff/SKILL.md) | **TRUSTED BASELINE** | 2026-08-15 | handoff, context-management, safety-bounded, high portability | [record](registry/skills/mattpocock-skills/handoff.yaml) | [record](registry/verification/mattpocock-skills/handoff.yaml) |
+| [Writing for Agents](vendor/mattpocock-skills/skills/productivity/writing-for-agents/SKILL.md) | **TRUSTED BASELINE** | 2026-08-19 | skill-authoring, agent-development, progressive-disclosure, context-efficient | [record](registry/skills/mattpocock-skills/writing-for-agents.yaml) | [record](registry/verification/mattpocock-skills/writing-for-agents.yaml) |
 
 ## Addy Osmani characterized, not yet verified
 
@@ -57,6 +62,6 @@ These ten skills were previously source-reviewed. Under the stricter policy they
 
 ## Registered source expansion
 
-The source registry now contains 14 sources. OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI are pinned vendored corpora. The Agent Skills repository is tracked as a normative specification. GitHub Awesome Copilot is tracked as a dynamic-discovery source rather than vendored wholesale.
+The source registry currently contains 14 sources. OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI are pinned vendored corpora. The Agent Skills repository is tracked as a normative specification. GitHub Awesome Copilot is tracked as a dynamic-discovery source rather than vendored wholesale.
 
 Source inclusion never grants non-Matt skills blanket verification.
