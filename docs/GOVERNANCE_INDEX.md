@@ -1,75 +1,104 @@
 # Governance Index
 
-**Last Reviewed**: 2026-07-03
+**Last reviewed:** 2026-08-28
 
-A single authoritative map of every governance artifact in this project, organized
-into six freshness tiers with explicit drift contracts. A stale entry here is
-itself a Tier 1 drift bug, so the index is self-policing. See
-`qor/references/doctrine-governance-index.md` for the model and contracts.
+This file maps the current control surfaces for `skillz`. Historical Qor-era plans, gate artifacts, and ledger records remain useful history, but they are no longer the live release or curation control plane.
 
-## Tier 1 — Canonical Source
+## Tier 1: current product state
 
-MUST be current at every cycle close. Drift signal: wrong version / wrong state / missing recent entries.
+These must agree before initial alpha can be locked.
 
-| Artifact | Path | Freshness marker |
-|----------|------|------------------|
-| Meta Ledger | `docs/META_LEDGER.md` | latest sealed entry |
-| System State | `docs/SYSTEM_STATE.md` | latest phase snapshot |
-| Concept | `docs/CONCEPT.md` | stable |
-| Architecture Plan | `docs/ARCHITECTURE_PLAN.md` | stable |
-| Backlog | `docs/BACKLOG.md` | open items current |
-| Feature Index | `docs/FEATURE_INDEX.md` | every feature has a test |
-| Changelog | `CHANGELOG.md` | latest release stamped |
-| README | `README.md` | badges current |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Human/AI front door | `README.md` | first-visit, returning-user, direct-library, current alpha status |
+| Agent contract | `AGENTS.md` | routing, quality, privacy, mutation boundaries |
+| Bootstrap/refinement guide | `BOOTSTRAP.md` | current executable user journeys |
+| System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, blockers |
+| Initial implementation boundary | `docs/initial-implementation.md` | what is and is not an alpha blocker |
+| Alpha lock checklist | `docs/alpha-lock.md` | every unchecked gate backed by missing evidence, never ceremony |
+| Roadmap | `ROADMAP.md` | current milestone first, post-alpha enrichment second |
+| Backlog | `docs/BACKLOG.md` | only current execution blockers in active section |
+| Feature index | `docs/FEATURE_INDEX.md` | implementation mapped to actual proof state |
 
-## Tier 2 — Doctrine & Policy
+## Tier 2: library identity and provenance
 
-Stable; changes are explicit doctrine events. Drift signal: rules contradict each other or operator memory.
+These define what is available and where it came from.
 
-| Artifact | Path |
-|----------|------|
-| _example_ | `qor/references/doctrine-*.md` |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Source registry | `registry/sources.yaml` | current source role, inclusion, exact pin/reference, license |
+| Skill provenance companions | `registry/skills/` | source/path/revision/freshness/relationship for characterized third-party skills |
+| Third-party notices | `THIRD_PARTY_NOTICES.md` | attribution/license notices track included third-party material |
+| Provenance policy | `docs/third-party-provenance.md` | copying/adaptation/attribution rules remain consistent with registry |
+| Curation policy | `docs/curation-policy.md` | availability, curation, verification, validation, refresh semantics |
 
-## Tier 3 — Active Initiative
+## Tier 3: quality and selection
 
-Live until close; ages out at substantiate. Drift signal: shipped feature still tracked as pending.
+These determine what can be trusted for selection, independent of source presence.
 
-| Artifact | Path | Opened |
-|----------|------|--------|
-| _example_ | `.qor/session/<id>` | [date] |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Verification registry | `registry/verification/` | record applies only to its exact canonical skill fingerprint |
+| Taxonomy | `registry/taxonomy.yaml` | controlled tags used consistently by characterization/selection |
+| Verification standard | `docs/skill-verification.md` | status meanings and structured rubric current |
+| Fingerprint integrity verifier | `engine/skills/source-vetting/scripts/verify-characterization-integrity.ts` | detects content drift before prior characterization is trusted |
+| Candidate selector | `engine/skills/skill-bootstrap/scripts/select-candidates.ts` | blocked states remain blocked; unverified unchanged reuse not silently trusted |
 
-## Tier 4 — Per-Plan Artifact
+A source can be present, reputable, and current while an individual skill remains `unverified`. Source identity does not silently upgrade individual skill quality.
 
-Live for plan duration; archived at substantiate. Drift signal: plan shipped but artifact still presents as open.
+## Tier 4: generated catalog and browsing
 
-| Artifact | Path | Plan |
-|----------|------|------|
-| _example_ | `docs/plan-*.md` | [slug] |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Human category registry | `registry/categories.yaml` | every local canonical skill has an intentional category assignment |
+| Category browse surface | `skills/categories/` | human navigation agrees with canonical category registry |
+| Machine catalog | `index.json` | schema-v2 generated truth after materialized refresh |
+| Human catalog | `INDEX.md` | generated from the same run as `index.json` |
+| Catalog generator | `scripts/build-index.ts` | deterministic against the same fully materialized repository state |
+| Idempotency proof | `scripts/verify-index-idempotency.ts` | second pass must be byte-identical |
 
-## Tier 5 — Reference Material
+**Current exception:** checked-in `INDEX.md` / `index.json` are stale schema-v1 output until the materialized alpha preflight runs. Do not treat the old generated counts as current truth.
 
-Informational, slow-drift. Drift signal: factual claims diverge from current code.
+## Tier 5: alpha behavioral evidence
 
-| Artifact | Path |
-|----------|------|
-| _example_ | `docs/*.md` reference docs |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Alpha scenario matrix | `docs/evals/initial-alpha-matrix.md` | five required journey classes remain stable through initial alpha |
+| Frozen fixtures | `docs/evals/fixtures/initial-alpha-scenarios.json` | expected decisions/criteria fixed before treatment execution |
+| Leak-safe renderer | `scripts/render-alpha-scenario.ts` | treatment input never exposes answer-key fields |
+| Runbook | `docs/evals/run-initial-alpha.md` | current preflight/isolation/scoring procedure |
+| Result evidence | `docs/evals/results/` | contains only actual executed evidence; absence means not proven |
 
-## Tier 6 — Archived
+Static tests are not substitutes for the five behavioral journey results.
 
-Frozen historical record. Drift signal: none (frozen).
+## Tier 6: operational safety
 
-| Archive | Path |
-|---------|------|
-| _example_ | `docs/archive/` |
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Structural audit | `engine/skills/skill-audit/scripts/audit.ts` | scans current recursive local skill layout |
+| Risk audit | `engine/skills/skill-audit/scripts/risk-audit.ts` | current semantic-risk rules |
+| Initial alpha preflight | `scripts/initial-alpha-preflight.ts` | catalog, audits, tests, fingerprint integrity all pass before journey execution |
+| Installation contract | `docs/installation-handoff.md` | explicit install/handoff states; no fabricated completion |
+| GitHub Actions workflow | `.github/workflows/ci.yml` | manual-dispatch only while Actions budget is protected |
 
-## How to add a governance artifact
+## Historical records
 
-1. Create the file in the same commit that registers it here.
-2. Add a row to the tier whose freshness contract matches the file's lifecycle.
-3. Refresh **Last Reviewed** above.
+The following may remain intentionally frozen and should not be read as live state unless a current document explicitly points to them:
 
-## How to retire a governance artifact
+- `.qor/gates/` session artifacts;
+- `docs/META_LEDGER.md` historical seals/events;
+- `docs/plan-qor-*.md` historical implementation plans;
+- older evaluation reports under `docs/evals/`;
+- git history for completed July build-series details.
 
-1. Move the file to the Tier 6 archive path.
-2. Move its row from its live tier to Tier 6 (or delete it if superseded).
-3. Refresh **Last Reviewed** above.
+Historical accuracy should be preserved. Historical documents do not override current Tier 1-6 control surfaces.
+
+## Drift rule
+
+When a current control surface changes:
+
+1. update every other current artifact whose factual state is affected;
+2. preserve provenance/history rather than rewriting old evidence;
+3. regenerate generated artifacts with their generator rather than hand-editing them;
+4. if exact evidence cannot be established, mark the state pending instead of guessing;
+5. do not claim alpha lock until the evidence directory and checklist support it.
