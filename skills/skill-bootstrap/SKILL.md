@@ -13,7 +13,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.1.0
+  version: 0.2.0
 ---
 
 # Skill Bootstrap
@@ -63,6 +63,28 @@ At least one evidence source must be available, such as:
 
 Unavailable sources are recorded as unavailable. They are never reconstructed from assumptions.
 
+## Evidence Scope and Privacy
+
+Use the minimum evidence needed to identify stable execution patterns.
+
+The following ambient working context may be inspected when the host normally exposes it for the current task:
+
+- current conversation and directly relevant conversation history,
+- persistent memory already available to the agent for normal assistance,
+- current workspace/project instructions and artifacts,
+- existing skill/profile configuration,
+- repository or tool history already in the active work context.
+
+Do **not** sweep unrelated connected private accounts merely because a connector exists. Email, private chat, calendar, finance, personal cloud storage, or similar external sources require at least one clear scope basis:
+
+1. the user explicitly asks to include that source,
+2. the current project/task already authorizes and requires that source, or
+3. the relevant material has already been surfaced into the current working context by an authorized workflow.
+
+Access to a connector is capability, not consent to mine it for a profile.
+
+When a smaller evidence set is sufficient, prefer it. Record source categories and availability in the output rather than copying private source content into the profile.
+
 ## Procedure
 
 ### 1. Bind to the environment
@@ -80,7 +102,7 @@ Do not ask the user to manually repeat information that is already accessible th
 
 ### 2. Build an evidence inventory
 
-Review the available recent work and tool/skill usage.
+Review the available in-scope recent work and tool/skill usage.
 
 Look for:
 
@@ -140,7 +162,7 @@ Also test:
 - can another skill supplement the current one without changing user experience?
 - what measurable failure does this prevent or advantage does it create?
 
-A high score does not override a security, authority, or redundancy veto.
+A high score does not override a security, authority, privacy, or redundancy veto.
 
 ### 5. Separate execution layers
 
@@ -219,6 +241,7 @@ Attack for:
 - hidden tool/permission assumptions,
 - connector/API failure,
 - partial evidence,
+- privacy overreach,
 - governance bypass,
 - proposal-versus-authorization confusion,
 - validation claims without proof,
@@ -276,11 +299,15 @@ Stars, installs, mentions, and reputation do not establish behavioral value or s
 
 Repeated activity alone is not enough. A skill needs a stable abstraction and an identifiable advantage or prevented failure.
 
+### Minimize evidence collection
+
+Do not widen source scope merely to improve confidence. If the current conversation, memory, workspace, and existing skill configuration are sufficient, do not inspect additional private connected systems.
+
 ## Tool Boundaries
 
 - Read-only discovery is the default.
-- Use connected history, memory, files, repositories, and tools only when the host exposes them and policy permits access.
-- Never claim inaccessible sources were reviewed.
+- Use connected history, memory, files, repositories, and tools only when the host exposes them, policy permits access, and the source is in scope under Evidence Scope and Privacy.
+- Never claim inaccessible or out-of-scope sources were reviewed.
 - Never request or reproduce credentials to improve the profile.
 - Installing dependencies, changing permissions, sending messages, publishing, pushing, deleting, or deploying are separate mutating actions and require appropriate authorization.
 
@@ -304,6 +331,7 @@ At minimum test the resulting system against representative cases including:
 - beginner / no meaningful history,
 - rich history with several latent recurring workflows,
 - conflicting/overlapping existing skills,
+- connected private sources that are available but out of scope,
 - missing tools or connectors,
 - a proposed mutation without approval,
 - a task where no skill should be created,
@@ -313,11 +341,11 @@ Prefer controlled baseline-versus-treatment testing for high-value skill changes
 
 ## Failure Handling
 
-If a source is unavailable:
+If a source is unavailable or out of scope:
 
-- record it as unavailable,
-- continue with available evidence,
-- reduce confidence accordingly.
+- record it as unavailable or not inspected,
+- continue with available in-scope evidence,
+- reduce confidence accordingly when it matters.
 
 If the catalog/index is stale:
 
@@ -339,6 +367,7 @@ If evidence does not justify a durable skill:
 - Required sections may be explicitly empty. Missing evidence is a finding, not a blank that needs invented content.
 - Mark inference as inference.
 - Never encode incidental sensitive/personal facts into the portable profile.
+- Never inspect unrelated connected private accounts solely because they are technically accessible.
 - Never treat a proposal as authorization to install, push, send, publish, deploy, change permissions, or mutate an external system.
 - Never import a third-party procedure without preserving required provenance and license obligations.
 
@@ -346,7 +375,7 @@ If evidence does not justify a durable skill:
 
 Bootstrap may claim completion only when:
 
-- accessible and inaccessible evidence sources are identified,
+- accessible, in-scope, out-of-scope, and unavailable evidence sources are identified where relevant,
 - major recurring patterns are inventoried,
 - candidates are classified and redundancy-checked,
 - relevant repository/reference skills were compared before new creation was recommended,
@@ -361,7 +390,8 @@ Bootstrap may claim completion only when:
 # Skill Bootstrap Result
 
 ## Evidence coverage
-- Available: ...
+- Available and inspected: ...
+- Available but out of scope / not inspected: ...
 - Partial: ...
 - Unavailable: ...
 
@@ -412,6 +442,10 @@ A user has months of accessible work showing repeated repository reviews, eviden
 ### Edge case
 
 A new user provides only one short conversation. Bootstrap inventories the current task, reports that history/memory are unavailable, suggests a small provisional set of catalog skills, and declines to infer a broad personal skill architecture until more evidence exists.
+
+### Privacy edge case
+
+A host has email and calendar connectors, but the user only asks the agent to learn from their current workspace and interaction history. Bootstrap does not inspect email or calendar. It records those sources as available but out of scope and proceeds with the smaller evidence set.
 
 ### Do not activate
 
