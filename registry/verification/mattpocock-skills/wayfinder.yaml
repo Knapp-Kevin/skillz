@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: wayfinder
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/wayfinder/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/wayfinder/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 812805b760baf328db0ebdef6f3807e381f97016
 characterized_at: 2026-08-29
