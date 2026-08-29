@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wayfinder
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/wayfinder/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 812805b760baf328db0ebdef6f3807e381f97016
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [planning, orchestration, decision-support]
+  lifecycle: [planning, design]
+  characteristic: [decomposition, orchestration, human-review, traceable, progressive-disclosure]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong destination-first scoping, explicit plan-not-do boundary, one-ticket-per-session rule, claim-before-work concurrency, tracker-visible blocking frontier, fog-of-war discipline, and out-of-scope handling. It creates/updates/closes tracker issues as part of the invoked planning workflow and relies on suite-specific composition plus tracker relationship support, so authority/portability are not maximal. Behavioral validation remains pending."
