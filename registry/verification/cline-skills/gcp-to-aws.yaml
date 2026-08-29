@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: gcp-to-aws
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/gcp-to-aws/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f985a4981494941987479fdb8a7e85ba30406b6a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [implementation, evaluation]
+  lifecycle: [discovery, implementation]
+  characteristic: [evidence-first, decomposition, source-driven, iterative, test-gated, risk-aware]
+  authority: [generate-only]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. This is a strong staged migration-analysis method: mandatory discovery and clarification, deterministic persisted state, explicit prerequisite validation, fail-closed handoff gates, re-entry rules, artifact validation, and structured generation of Terraform/scripts/docs without automatically deploying infrastructure. Limitations are large source-local dependencies and time-sensitive AWS/GCP service, model, and pricing mappings; those require freshness checks when material to a real migration. Exact pinned blob and June 18 revision confirmed. Behavioral validation remains pending.
