@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: grilling
+display_name: Grilling
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/grilling/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 85f83d3fde1d3a90d5c9a657f6998c79a6c37308
+upstream_last_updated_at: 2026-08-20T10:34:29Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/grilling/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: may dispatch subagents/tools for facts, but has no required bundled file dependency
+import_eligibility: already-vendored
+rationale: Strong decision-interview method that models prerequisites as a design tree, asks only the current frontier, separates agent-owned fact finding from user-owned decisions, and forbids acting before shared understanding.
