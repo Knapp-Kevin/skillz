@@ -3,14 +3,17 @@
 ![Library Corpus](https://img.shields.io/badge/indexed_library-500%2B-blue)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-14-8A2BE2)
-![Runtime](https://img.shields.io/badge/runtime-Bun_%7C_Node_22.18%2B-brightgreen)
+![Maintenance Runtime](https://img.shields.io/badge/maintenance_runtime-Bun_%7C_Node_22.18%2B-brightgreen)
+![Agent Use](https://img.shields.io/badge/agent_use-no_local_runtime_required-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 **A large reusable AI-skill library, plus an engine that can help you discover, build, install, review, and improve the skill set that fits the way you actually work.**
 
 You do not need to understand how agent skills work. You do not need to read hundreds of files. You can hand this repository to an AI and let it do the comparison work for you.
 
-> **AI agent?** Jump directly to [If you are an AI agent reading this](#if-you-are-an-ai-agent-reading-this). For the operating contract, read [`AGENTS.md`](AGENTS.md). For first-visit and returning-user workflows, read [`BOOTSTRAP.md`](BOOTSTRAP.md).
+> **AI agent?** Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md), then use [If you are an AI agent reading this](#if-you-are-an-ai-agent-reading-this). For the operating contract, read [`AGENTS.md`](AGENTS.md). For first-visit and returning-user workflows, read [`BOOTSTRAP.md`](BOOTSTRAP.md).
+>
+> **No shell, clone, Node, or local filesystem? That is supported.** If the agent can read this repository through GitHub, a connector, API, browser, or equivalent tool, it should use the connector-native path in [`AGENT_START_HERE.md`](AGENT_START_HERE.md) rather than stopping.
 
 ## Start here
 
@@ -130,21 +133,24 @@ See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy
 
 Humans come first in this README. Your operating contract starts here.
 
+**Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md) first.** It defines repository-native, connector/API/web, and minimal read-only paths. Do not treat missing local execution as a bootstrap blocker.
+
 ### First-visit mode
 
 If the user supplied this repository or its GitHub URL without a more specific task, begin bootstrap.
 
-1. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
-2. Read [`AGENTS.md`](AGENTS.md).
-3. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
-4. Use only relevant history, memory, workspace context, and instructions the host legitimately exposes.
-5. Identify durable or latent working methods.
-6. Search the complete indexed user-facing library, including approved vendor sources.
-7. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
-8. Use the governed candidate selector when the current generated catalog is available; otherwise degrade honestly and inspect the relevant records directly.
-9. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
-10. Create a custom skill when the user's real workflow is not adequately represented.
-11. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
+1. Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md).
+2. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
+3. Read [`AGENTS.md`](AGENTS.md).
+4. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) when accessible.
+5. Use only relevant history, memory, workspace context, and instructions the host legitimately exposes.
+6. Identify durable or latent working methods.
+7. Search the complete indexed user-facing library, including approved vendor sources, using local tools when available or connector-native record inspection when they are not.
+8. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
+9. Use the governed candidate selector when local execution and a current generated catalog are available; otherwise inspect the relevant registry/provenance records and exact pinned upstream files directly.
+10. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
+11. Create a custom skill when the user's real workflow is not adequately represented.
+12. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
 
 ### Returning-user mode
 
@@ -168,7 +174,8 @@ For third-party unchanged reuse:
 - prefer individually characterized records whose current fingerprint matches and whose status is `trusted-baseline`, `verified`, or `validated`;
 - treat `unverified` skills as design evidence until verified on demand;
 - exclude `stale`, `rejected`, and `retired` records from default selection;
-- require a locally bound fingerprint and characterization profile before treating a candidate as fully governed for selection.
+- require a locally or connector-established matching fingerprint before treating a candidate as fully governed for unchanged selection;
+- if exact fingerprint verification is unavailable on the current host, lower confidence and adapt/create rather than fabricating the match.
 
 A high-quality skill can still be the wrong fit. **Compare before creation. User-fit before reuse.**
 
@@ -189,11 +196,12 @@ See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
 | Area | Purpose |
 |---|---|
+| [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Zero-runtime capability routing for AI agents |
 | [`skills/`](skills/) | Local and directly imported user-facing skills |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
 | [`vendor/`](vendor/) | Pinned indexed third-party source corpora |
 | [`CURATED.md`](CURATED.md) | Characterized third-party shelf |
-| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, role, pin, license, and default quality state |
+| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, role, pin, and license |
 | [`registry/skills/`](registry/skills/) | Per-skill provenance and attribution |
 | [`registry/verification/`](registry/verification/) | Hash-bound quality state, tags, and evidence |
 | [`engine/skills/`](engine/skills/) | Repository machinery, excluded from library counts |
@@ -202,13 +210,15 @@ See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
 ## Alpha status
 
-Alpha is **not locked yet**. Governed selection and recursive category-aware discovery are now implemented in the current initial-implementation slice. The remaining alpha-critical work is to regenerate the catalog from a fully materialized repository, prove deterministic/idempotent output and exact counts, and execute the five representative first-visit/returning-user journey evaluations.
+Alpha is **not locked yet**. Governed selection and recursive category-aware discovery are implemented. Connector-native agent use is a supported path; local runtime is reserved for deterministic maintenance proof. The remaining alpha-critical work is to regenerate the catalog from a fully materialized repository, prove deterministic/idempotent output and exact counts, execute a connector-native portability smoke in a constrained host, and execute the five representative blind first-visit/returning-user journey evaluations.
 
 See [`docs/initial-implementation.md`](docs/initial-implementation.md) for the intended finish line, [`docs/alpha-lock.md`](docs/alpha-lock.md) for the live checklist, and [`docs/evals/initial-alpha-matrix.md`](docs/evals/initial-alpha-matrix.md) for the proof matrix. Broad skill acquisition and deeper corpus curation are post-alpha enrichment rather than blockers for the initial implementation.
 
 ## Validation and GitHub Actions
 
 Structural audits and risk checks prove repository conformance. They do not prove behavioral effectiveness.
+
+**Runtime requirements apply to maintenance tooling, not normal agent use.** An agent with repository read access must not stop solely because Node, Bun, Git, a shell, or initialized submodules are unavailable.
 
 Automatic GitHub Actions are currently disabled to protect the Actions budget. The workflow is manual-dispatch only. Do not treat an intentionally absent CI run as evidence of failure or success.
 
