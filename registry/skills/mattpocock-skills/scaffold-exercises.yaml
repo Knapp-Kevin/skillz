@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: scaffold-exercises
+display_name: Scaffold Exercises
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/misc/scaffold-exercises/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 62f43a18177be6ec82da242e59ffbc490a4c22ea
+upstream_last_updated_at: 2026-04-28T08:42:34Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
+permission_tier: staging-write
+portability: low
+review_status: curated-vendored
+dependency_status: source-specific
+dependencies: requires the source repository exercise layout, git, pnpm, and ai-hero-cli internal lint conventions; the final workflow also instructs a git commit
+import_eligibility: already-vendored
+rationale: Useful source-specific scaffolding pattern with concrete lint gates and structure rules, but it is tightly coupled to one course repository convention and includes an unconditional commit instruction that is inappropriate for unchanged general reuse.
