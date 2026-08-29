@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: migrate-to-shoehorn
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/misc/migrate-to-shoehorn/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ae4f965e204fc93cedbc4e2c306e92829d93f800
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [refactoring, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [compatibility-aware, safety-bounded, test-gated, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Explicitly limits shoehorn to test code, maps common assertion patterns to fromPartial/fromAny, and requires a typecheck. The workflow installs an external package and edits tests, so mutation is expected and should remain bounded to an explicit migration request. Exact pinned fingerprint confirmed; package dependency was separately checked during provenance characterization. Behavioral validation remains pending."
