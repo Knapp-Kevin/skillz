@@ -17,4 +17,4 @@ tags:
   characteristic: [tool-assisted, production-oriented]
   authority: [generate-only, mutating]
   portability: [low]
-notes: Hard fail: executable dependency graph is mutable and unpinned. Adapt with reviewed lockfiles/version pins and no implicit global install.
+notes: 'Hard fail: executable dependency graph is mutable and unpinned. Adapt with reviewed lockfiles/version pins and no implicit global install.'

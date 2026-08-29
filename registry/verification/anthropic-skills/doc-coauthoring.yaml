@@ -17,4 +17,4 @@ tags:
   characteristic: [iterative, human-review, synthesis]
   authority: [read-only, generate-only]
   portability: [low]
-notes: Hard fails: unresolved license and privacy scope broader than skillz policy. Adaptation can preserve the drafting/reader-testing workflow while narrowing evidence collection.
+notes: 'Hard fails: unresolved license and privacy scope broader than skillz policy. Adaptation can preserve the drafting/reader-testing workflow while narrowing evidence collection.'
