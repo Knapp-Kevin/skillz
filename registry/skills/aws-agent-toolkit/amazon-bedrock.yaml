@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: amazon-bedrock
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/amazon-bedrock/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+canonical_package_tree_sha: 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da
+freshness_state: current-at-registered-pin
+freshness_evidence: Exact canonical package tree at the registered 2026-07-03 source snapshot.
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/amazon-bedrock/SKILL.md
+permission_tier: host-controlled-aws-operation
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-aws-context-required
+import_eligibility: already-vendored
+rationale: Exact pinned AWS package reviewed as useful Bedrock prior art. Live limits, models, prices, and service details remain subject to current AWS documentation; the host retains all execution authority.
