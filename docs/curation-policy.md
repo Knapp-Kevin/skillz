@@ -2,17 +2,20 @@
 
 `skillz` is a library, not a dump.
 
-A large corpus is useful only when source identity, licensing, freshness, quality state, dependencies, and intended use can be distinguished. Curation therefore separates **availability**, **provenance**, **characterization**, **verification**, and **behavioral validation**.
+A large corpus is useful only when source identity, licensing, freshness, quality state, dependencies, intended use, and source-level context can be distinguished. Curation therefore separates **availability**, **provenance**, **characterization**, **verification**, **behavioral validation**, and **source reputation/adoption signals**.
 
-## Five separate questions
+## Separate questions
 
 1. **Available/indexed:** Can the library find and use this skill or source?
 2. **Provenance:** Where did it come from, under what license, and what exact upstream version was inspected?
 3. **Characterized:** What is it for, what assumptions/authority does it carry, and which controlled tags describe it?
 4. **Verified/trusted:** Has this exact version earned eligibility for trusted unchanged selection?
 5. **Validated:** Do representative behavioral cases show that it improves outcomes?
+6. **Source context:** What objective evidence exists about source visibility, maintenance, or adoption, and when was that evidence observed?
 
 Do not collapse these states into a single word like "curated."
+
+The normative companion-field and interpretation rules are in [`companion-metadata.md`](companion-metadata.md).
 
 ## Source and quality defaults
 
@@ -23,6 +26,8 @@ Registered sources describe provenance and repository role, not blanket skill qu
 Normative specifications may use a non-skill quality state because they are references rather than normal installable skills.
 
 A changed fingerprint invalidates prior characterization until refreshed.
+
+Source-level popularity and activity observations live separately in `registry/source-signals.yaml`. They are contextual evidence only. They never promote an individual skill to `trusted-baseline`, `verified`, or `validated`.
 
 ## Provenance companion
 
@@ -36,6 +41,10 @@ It records source repository/path/class, license, relationship, source snapshot,
 
 `upstream_last_updated_at` is the timestamp of the most recent upstream commit that changed the canonical skill file or material skill content. Repository activity is a separate signal.
 
+When establishable, `upstream_first_seen_at` may record the earliest known upstream commit that introduced the canonical skill or materially equivalent content. Do not substitute repository creation date for skill age.
+
+Skill-specific `usage_evidence` or `reception_evidence` may be recorded only when directly supported. Stars, forks, or repository age do not establish how long an individual skill has been used or how well it has been received.
+
 ## Verification companion
 
 Every characterized third-party skill must also have a record under:
@@ -47,6 +56,18 @@ registry/verification/<source-id>/<skill-name>.yaml
 This record binds quality status and tags to the exact canonical `SKILL.md` Git blob SHA.
 
 If the hash changes, the assessment is operationally stale until review is refreshed. See [`skill-verification.md`](skill-verification.md).
+
+## Source-level context
+
+Volatile source-level observations belong under:
+
+```text
+registry/source-signals.yaml
+```
+
+Permitted signals include repository creation/activity timestamps, stars, forks, meaningful subscriber/watcher counts, archive/disabled state, and other objective adoption or maintenance evidence. Every observation must include an observation timestamp and evidence surface.
+
+Agents use these signals after user fit, exact-version quality, operational fit, and skill freshness. Popularity is a weak contextual/tie-breaking signal, never a quality gate.
 
 ## Physical availability
 
@@ -78,12 +99,15 @@ On refresh:
 6. re-run structured verification for material changes where required by policy;
 7. re-run behavioral validation when prior evidence may no longer apply;
 8. update tags if behavior or use changes;
-9. preserve prior history through git.
+9. refresh source-level signals only when the source is re-reviewed or a current curation decision materially depends on them;
+10. preserve prior history through git.
 
 ## Selection rule
 
 Direct trusted reuse prefers `trusted-baseline`, `verified`, or `validated` skills whose exact fingerprint matches and whose characterization matches the user's need.
 
 `unverified` material can inform design and may be verified on demand, but should not be silently installed as trusted unchanged material. `stale`, `rejected`, and `retired` material is excluded from default selection.
+
+For selection reasoning, use this priority: **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**.
 
 Popularity and official branding are discovery/provenance signals, not competence certificates.
