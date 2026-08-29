@@ -83,7 +83,7 @@ The categorized folders under [`skills/categories/`](skills/categories/) are cur
 
 ### Indexed third-party library
 
-[`vendor/`](vendor/) contains pinned upstream source repositories. Approved indexed user-facing skills in those sources are part of the available library corpus and count.
+[`skills/sources/`](skills/sources/) contains pinned upstream source repositories. Approved indexed user-facing skills in those sources are part of the available library corpus and count.
 
 The repository historically recorded 524 vendor-indexed skills alongside 48 local skills. Current work has added sources rather than removed the historical corpus, so the library still contains **500+ available skills**. The exact current deduplicated total will be produced by the next deterministic index refresh rather than maintained by hand.
 
@@ -199,7 +199,7 @@ See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 | [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Zero-runtime capability routing for AI agents |
 | [`skills/`](skills/) | Local and directly imported user-facing skills |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
-| [`vendor/`](vendor/) | Pinned indexed third-party source corpora |
+| [`skills/sources/`](skills/sources/) | Pinned indexed third-party source corpora |
 | [`CURATED.md`](CURATED.md) | Characterized third-party shelf |
 | [`registry/sources.yaml`](registry/sources.yaml) | Source identity, role, pin, and license |
 | [`registry/skills/`](registry/skills/) | Per-skill provenance and attribution |
