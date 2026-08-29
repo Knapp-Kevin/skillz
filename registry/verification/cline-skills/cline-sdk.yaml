@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: cline-sdk
 source_id: cline-skills
 source_snapshot_revision: 4174dc764ab4fdc32d22950f1a5bfc0c61886101
-local_path: vendor/cline-skills/.vendor/sdk-skill/skill/cline-sdk/SKILL.md
+local_path: skills/sources/cline-skills/.vendor/sdk-skill/skill/cline-sdk/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7f7b0612df6947ba2fc20a94d81a39113529807e
 characterized_at: 2026-08-29
