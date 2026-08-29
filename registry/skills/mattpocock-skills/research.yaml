@@ -11,13 +11,13 @@ source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 upstream_revision: 321658273cb1d20b76026717d027d505790106d4
 upstream_last_updated_at: 2026-08-19T10:03:37Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
-availability: vendored
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
 local_path: vendor/mattpocock-skills/skills/engineering/research/SKILL.md
-permission_tier: read-only
-portability: high
-review_status: curated-vendored
-dependency_status: source-intact
-dependencies: satisfied by pinned vendored source
-import_eligibility: already-vendored
-rationale: High-signal evidence-gathering workflow that complements the repository's own research skills and provides an independent comparative implementation.
+permission_tier: mutating
+portability: low
+review_status: rejected-unchanged
+dependency_status: host-capability-required
+dependencies: background-agent capability with no documented fallback; repository write access for research artifact
+import_eligibility: reference-only-unless-adapted
+rationale: Primary-source and citation discipline are useful reference patterns, but the unchanged skill mandates background-agent execution, writes into the repository, and supplies no fallback or failure path when the host cannot spawn background agents. It is blocked from governed unchanged selection under the cross-agent portability contract.
