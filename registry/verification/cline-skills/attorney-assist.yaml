@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: attorney-assist
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: vendor/cline-skills/skills/attorney-assist/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 38de30c04ff53b47900f30c04fb16da6aec26453
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: unverified
+verification_basis: structured-static-review-dependency-unconfirmed
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [business-operations, communication, decision-support, handoff]
+  lifecycle: [operations]
+  characteristic: [evidence-first, human-review, safety-bounded, tool-assisted, traceable]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Excellent guardrails forbid fabricated entitlement, availability, booking, and confirmation data and stop on service failures. Booking follows explicit user slot selection. However, the workflow depends on a specific LegalZoom MCP server/tool contract that is not bundled or independently confirmed here, and it transmits sensitive conversation/legal context to an external professional service. Dependency confirmation and privacy-fit review are required before trusted unchanged selection. Behavioral validation remains pending."
