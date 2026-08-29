@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: data-analyst
+display_name: Data Analyst
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/data-analyst/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: d56dbaf795e99fdc46c89180373f5d6b53aacfb2
+upstream_last_updated_at: 2026-06-02T23:17:12Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/data-analyst/SKILL.md
+permission_tier: external-side-effect
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - clickhousectl CLI
+  - bundled authored data-analysis sub-skills
+  - bundled official ClickHouse agent skills/submodule
+  - host filesystem/artifact access for exports and plots
+  - ClickHouse credentials/environment
+import_eligibility: already-vendored
+rationale: Excellent elicitation-first and bounded-analysis methodology, but unchanged reuse intentionally hard-codes clickhousectl, ignores otherwise available ClickHouse MCP tools, auto-installs the CLI when absent, and can auto-provision a Cloud query credential on first use.
