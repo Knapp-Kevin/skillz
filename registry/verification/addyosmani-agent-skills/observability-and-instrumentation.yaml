@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/observability-and-instrumentat
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7d56593ec599cce0bae12aa46862884d0208cc59
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 18/20
 tags:
   use_case: [observability]
   lifecycle: [operations]
   characteristic: [evidence-first, instrumentation, production-oriented]
   authority: [mutating]
   portability: [high]
-notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong question-first instrumentation, structured logging, correlation IDs, secret/PII exclusions, bounded metric cardinality, vendor-neutral tracing, symptom-based alerting, and explicit verification of telemetry through induced failures and test-fired alerts. Runtime instrumentation and alert changes remain mutation-bearing work and inherit task authority. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
