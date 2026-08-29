@@ -1,63 +1,65 @@
-# Characterized Skill Shelf
+# Governed Skill Shelf
 
-This is the human-readable view of third-party skills that have received individual characterization. It is **not** a blanket endorsement list.
+This is the human-readable entry point to the individually reviewed third-party portion of `skillz`.
 
-The larger generated `INDEX.md` represents the available indexed library. This shelf adds provenance, exact-version quality state, tags, and freshness for a smaller reviewed subset.
+It is deliberately **not** a hand-maintained endorsement table. Exact quality state, fingerprints, tags, provenance, dependencies, authority, portability, and validation status live in the machine-readable companions under [`registry/verification/`](registry/verification/) and [`registry/skills/`](registry/skills/). Those records are authoritative.
 
-Status meanings:
+The repository also contains a much broader reference/discovery corpus under `vendor/` and registered tracked sources. That material is useful for comparison and component discovery, but source inclusion alone never makes an upstream skill governed trusted inventory.
 
-- **TRUSTED BASELINE**: the exact fingerprint is eligible under the repository's source-quality policy and local characterization requirements; behavioral validation is not implied.
-- **VERIFIED**: structured `skillz` verification passed for this exact fingerprint; behavioral validation is still separate.
-- **UNVERIFIED**: characterized and useful as design evidence, but not yet eligible for silent trusted unchanged selection.
-- **VALIDATED**: representative behavioral evidence also passed.
-- **STALE**: the skill changed after assessment and must be re-reviewed.
+## Current quality semantics
 
-See [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verification.md`](docs/skill-verification.md), [`registry/taxonomy.yaml`](registry/taxonomy.yaml), and [`registry/verification/`](registry/verification/).
+For an exact third-party skill version:
 
-## Structured-verified sample
+- **`verified`**: passed the current individual structured review and may be considered for unchanged reuse when its fingerprint, dependencies, license, authority, portability, and user fit all match.
+- **`validated`**: `verified` plus representative behavioral evidence.
+- **`unverified`**: design/reference evidence only. It is not eligible for trusted unchanged selection.
+- **`trusted-baseline`**: legacy schema compatibility only. It is blocked from current unchanged selection until replaced by an individual structured review.
+- **`stale`**: prior evidence no longer applies. Excluded from unchanged selection until refreshed or otherwise dispositioned.
+- **`rejected`**: reviewed and unsuitable unchanged. It may still contain useful patterns, but those patterns must be reconsidered within the reason for rejection rather than copied blindly.
+- **`retired`**: intentionally removed from new selection.
 
-These skills passed the structured quality gate. None currently claims local behavioral validation.
+`verified` and `validated` are the only current unchanged-reuse quality states.
 
-| Skill | Source | Status | Upstream updated | Key characterization | Provenance | Verification |
-|---|---|---|---:|---|---|---|
-| [Review Team](vendor/cline-skills/skills/review-team/SKILL.md) | Cline, Apache-2.0 | **VERIFIED** | 2026-05-17 | code-review, orchestration, evidence-first, human-review, mutating, medium portability | [record](registry/skills/cline-skills/review-team.yaml) | [record](registry/verification/cline-skills/review-team.yaml) |
-| [Agents SDK](vendor/cloudflare-skills/skills/agents-sdk/SKILL.md) | Cloudflare, Apache-2.0 | **VERIFIED** | 2026-04-15 | agent-development, retrieval-first, retrieval-map, mutating, medium portability | [record](registry/skills/cloudflare-skills/agents-sdk.yaml) | [record](registry/verification/cloudflare-skills/agents-sdk.yaml) |
-| [Google Agents CLI Eval](vendor/google-agents-cli/skills/google-agents-cli-eval/SKILL.md) | Google, Apache-2.0 | **VERIFIED** | 2026-08-28 | evaluation, metric-driven, holdout-aware, cost-bounded, external-side-effect, low portability | [record](registry/skills/google-agents-cli/google-agents-cli-eval.yaml) | [record](registry/verification/google-agents-cli/google-agents-cli-eval.yaml) |
+Behavioral validation is separate from structured review. A record with `validation_status: not-run` is making that limitation explicit, not quietly claiming validation.
 
-## Trusted-baseline characterized sample
+## What is governed inventory?
 
-The entries below are individually fingerprinted and characterized. Attribution is preserved because provenance is part of the library contract.
+A third-party skill becomes a governed selection candidate only when it has all of the following:
 
-| Skill | Source | Status | Upstream updated | Key characterization | Provenance | Verification |
-|---|---|---|---:|---|---|---|
-| [Codebase Design](vendor/mattpocock-skills/skills/engineering/codebase-design/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | architecture, planning/design, modularity, maintainability, high portability | [record](registry/skills/mattpocock-skills/codebase-design.yaml) | [record](registry/verification/mattpocock-skills/codebase-design.yaml) |
-| [Code Review](vendor/mattpocock-skills/skills/engineering/code-review/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | code-review, evaluation, spec-driven, orchestration, read-only | [record](registry/skills/mattpocock-skills/code-review.yaml) | [record](registry/verification/mattpocock-skills/code-review.yaml) |
-| [Diagnosing Bugs](vendor/mattpocock-skills/skills/engineering/diagnosing-bugs/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | debugging, hypothesis-driven, evidence-first, iterative, high portability | [record](registry/skills/mattpocock-skills/diagnosing-bugs.yaml) | [record](registry/verification/mattpocock-skills/diagnosing-bugs.yaml) |
-| [Domain Modeling](vendor/mattpocock-skills/skills/engineering/domain-modeling/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | domain-modeling, architecture, planning, traceable, mutating | [record](registry/skills/mattpocock-skills/domain-modeling.yaml) | [record](registry/verification/mattpocock-skills/domain-modeling.yaml) |
-| [Prototype](vendor/mattpocock-skills/skills/engineering/prototype/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | prototyping, UX, hypothesis-driven, visual-verification, mutating | [record](registry/skills/mattpocock-skills/prototype.yaml) | [record](registry/verification/mattpocock-skills/prototype.yaml) |
-| [Research](vendor/mattpocock-skills/skills/engineering/research/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | research, source-driven, evidence-first, synthesis, high portability | [record](registry/skills/mattpocock-skills/research.yaml) | [record](registry/verification/mattpocock-skills/research.yaml) |
-| [Handoff](vendor/mattpocock-skills/skills/productivity/handoff/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-15 | handoff, context-management, safety-bounded, high portability | [record](registry/skills/mattpocock-skills/handoff.yaml) | [record](registry/verification/mattpocock-skills/handoff.yaml) |
-| [Writing for Agents](vendor/mattpocock-skills/skills/productivity/writing-for-agents/SKILL.md) | Matt Pocock, MIT | **TRUSTED BASELINE** | 2026-08-19 | skill-authoring, agent-development, progressive-disclosure, context-efficient | [record](registry/skills/mattpocock-skills/writing-for-agents.yaml) | [record](registry/verification/mattpocock-skills/writing-for-agents.yaml) |
+1. exact source identity and canonical path;
+2. a pinned source/version identity;
+3. a fingerprint-bound verification companion;
+4. provenance and license information;
+5. dependency, authority, and portability characterization;
+6. controlled metadata tags;
+7. an individual structured review with a decisive quality state.
 
-## Characterized, not yet verified
+A registered source or vendored repository is therefore **reference corpus**, not blanket trusted inventory.
 
-These skills have provenance, fingerprints, and useful tags but remain **UNVERIFIED** until they pass the structured gate.
+This distinction is intentional. `skillz` can remain broad enough to discover useful ideas without pretending that publisher reputation or physical presence in `vendor/` is equivalent to verification.
 
-| Skill | Source | Status | Upstream updated | Key characterization | Provenance | Verification |
-|---|---|---|---:|---|---|---|
-| [API and Interface Design](vendor/addyosmani-agent-skills/skills/api-and-interface-design/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-13 | api-design, contract-first, compatibility-aware | [record](registry/skills/addyosmani-agent-skills/api-and-interface-design.yaml) | [record](registry/verification/addyosmani-agent-skills/api-and-interface-design.yaml) |
-| [Browser Testing with DevTools](vendor/addyosmani-agent-skills/skills/browser-testing-with-devtools/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-06-11 | browser-testing, visual-verification, external-side-effect | [record](registry/skills/addyosmani-agent-skills/browser-testing-with-devtools.yaml) | [record](registry/verification/addyosmani-agent-skills/browser-testing-with-devtools.yaml) |
-| [Code Review and Quality](vendor/addyosmani-agent-skills/skills/code-review-and-quality/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-07 | code-review, evidence-first, risk-aware | [record](registry/skills/addyosmani-agent-skills/code-review-and-quality.yaml) | [record](registry/verification/addyosmani-agent-skills/code-review-and-quality.yaml) |
-| [Code Simplification](vendor/addyosmani-agent-skills/skills/code-simplification/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-03-31 | refactoring, behavior-preserving, incremental | [record](registry/skills/addyosmani-agent-skills/code-simplification.yaml) | [record](registry/verification/addyosmani-agent-skills/code-simplification.yaml) |
-| [Context Engineering](vendor/addyosmani-agent-skills/skills/context-engineering/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-03-31 | context-management, context-efficient, evidence-first | [record](registry/skills/addyosmani-agent-skills/context-engineering.yaml) | [record](registry/verification/addyosmani-agent-skills/context-engineering.yaml) |
-| [Debugging and Error Recovery](vendor/addyosmani-agent-skills/skills/debugging-and-error-recovery/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-07-22 | debugging, hypothesis-driven, iterative | [record](registry/skills/addyosmani-agent-skills/debugging-and-error-recovery.yaml) | [record](registry/verification/addyosmani-agent-skills/debugging-and-error-recovery.yaml) |
-| [Incremental Implementation](vendor/addyosmani-agent-skills/skills/incremental-implementation/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-07 | implementation, incremental, test-gated | [record](registry/skills/addyosmani-agent-skills/incremental-implementation.yaml) | [record](registry/verification/addyosmani-agent-skills/incremental-implementation.yaml) |
-| [Observability and Instrumentation](vendor/addyosmani-agent-skills/skills/observability-and-instrumentation/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-07 | observability, instrumentation, production-oriented | [record](registry/skills/addyosmani-agent-skills/observability-and-instrumentation.yaml) | [record](registry/verification/addyosmani-agent-skills/observability-and-instrumentation.yaml) |
-| [Spec-Driven Development](vendor/addyosmani-agent-skills/skills/spec-driven-development/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-14 | planning/implementation, spec-driven, traceable | [record](registry/skills/addyosmani-agent-skills/spec-driven-development.yaml) | [record](registry/verification/addyosmani-agent-skills/spec-driven-development.yaml) |
-| [Test-Driven Development](vendor/addyosmani-agent-skills/skills/test-driven-development/SKILL.md) | Addy Osmani, MIT | **UNVERIFIED** | 2026-08-07 | testing, test-driven, iterative | [record](registry/skills/addyosmani-agent-skills/test-driven-development.yaml) | [record](registry/verification/addyosmani-agent-skills/test-driven-development.yaml) |
+## How agents should use the shelf
 
-## Registered source expansion
+1. Start from the user's capability requirement, not a filename.
+2. Find relevant material in `index.json`, local categories, tracked-source companions, or the reference corpus.
+3. Read the exact verification and provenance companions before unchanged third-party reuse.
+4. Use `verified` or `validated` material unchanged only when the exact version and operational fit match.
+5. Use other material only as bounded design evidence, honoring rejection/staleness reasons and license obligations.
+6. Extract useful mechanisms when appropriate rather than importing source-specific ceremony, commands, authority assumptions, or UX.
+7. Prefer the smallest coherent fitted system over maximum reuse or maximum skill count.
 
-The source registry currently contains 14 sources. OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI are pinned vendored corpora. The Agent Skills repository is tracked as a normative specification. GitHub Awesome Copilot is tracked as a dynamic-discovery source rather than vendored wholesale.
+See:
 
-Source inclusion alone never grants blanket verification.
+- [`docs/skill-verification.md`](docs/skill-verification.md) for the normative quality gate;
+- [`docs/curation-policy.md`](docs/curation-policy.md) for source and intake policy;
+- [`docs/companion-metadata.md`](docs/companion-metadata.md) for companion-field semantics;
+- [`registry/taxonomy.yaml`](registry/taxonomy.yaml) for controlled tags;
+- [`registry/sources.yaml`](registry/sources.yaml) for registered source roles;
+- [`registry/verification/`](registry/verification/) for exact-version quality records;
+- [`registry/skills/`](registry/skills/) for provenance records.
+
+## Why there is no duplicated status table here
+
+Earlier versions of this file copied individual statuses and source counts into Markdown. Those copies became stale while the underlying registry correctly advanced. That is precisely the kind of contradictory guidance that makes a passive repository harder for weaker agents to use.
+
+The registry is now the source of truth. Human-facing documentation explains the policy and navigation path instead of maintaining a second database badly, because humanity has already conducted that experiment often enough.
