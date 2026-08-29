@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-cloudformation
+display_name: AWS CloudFormation
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-cloudformation/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 9cec2ef98ba0f81a60cccef1e5ea1cfa720a6ff1
+upstream_last_updated_at: 2026-06-29T11:10:05Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/aws-agent-toolkit/skills/core-skills/aws-cloudformation/SKILL.md
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI plus cfn-lint, cfn-guard, CloudFormation APIs, and the source-intact references bundled with the skill
+import_eligibility: already-vendored
+rationale: Strong CloudFormation lifecycle guidance with explicit prompt-injection resistance, secure authoring defaults, layered validation, failure diagnosis, and template-versus-environment fault classification. Deployment/change-set and rollback operations require host authority and user-context checks.
