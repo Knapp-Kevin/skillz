@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: to-tickets
+display_name: To Tickets
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/to-tickets/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/to-tickets/SKILL.md
+permission_tier: staging-write
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: requires configured issue-tracker/triage vocabulary and optionally repository/domain context; supports local files or real trackers with native/fallback dependency edges
+import_eligibility: already-vendored
+rationale: Strong work-decomposition method that produces complete tracer-bullet vertical slices, explicit blockers, expand-contract handling for wide refactors, and a user approval gate before publishing.
