@@ -1,36 +1,36 @@
-[submodule "vendor/knowledge-work-plugins"]
-	path = vendor/knowledge-work-plugins
+[submodule "skills/sources/knowledge-work-plugins"]
+	path = skills/sources/knowledge-work-plugins
 	url = https://github.com/anthropics/knowledge-work-plugins.git
-[submodule "vendor/anthropic-skills"]
-	path = vendor/anthropic-skills
+[submodule "skills/sources/anthropic-skills"]
+	path = skills/sources/anthropic-skills
 	url = https://github.com/anthropics/skills.git
-[submodule "vendor/vercel-agent-skills"]
-	path = vendor/vercel-agent-skills
+[submodule "skills/sources/vercel-agent-skills"]
+	path = skills/sources/vercel-agent-skills
 	url = https://github.com/vercel-labs/agent-skills.git
-[submodule "vendor/microsoft-skills"]
-	path = vendor/microsoft-skills
+[submodule "skills/sources/microsoft-skills"]
+	path = skills/sources/microsoft-skills
 	url = https://github.com/microsoft/skills.git
-[submodule "vendor/azure-skills"]
-	path = vendor/azure-skills
+[submodule "skills/sources/azure-skills"]
+	path = skills/sources/azure-skills
 	url = https://github.com/microsoft/azure-skills.git
-[submodule "vendor/aws-agent-toolkit"]
-	path = vendor/aws-agent-toolkit
+[submodule "skills/sources/aws-agent-toolkit"]
+	path = skills/sources/aws-agent-toolkit
 	url = https://github.com/aws/agent-toolkit-for-aws.git
-[submodule "vendor/mattpocock-skills"]
-	path = vendor/mattpocock-skills
+[submodule "skills/sources/mattpocock-skills"]
+	path = skills/sources/mattpocock-skills
 	url = https://github.com/mattpocock/skills.git
-[submodule "vendor/addyosmani-agent-skills"]
-	path = vendor/addyosmani-agent-skills
+[submodule "skills/sources/addyosmani-agent-skills"]
+	path = skills/sources/addyosmani-agent-skills
 	url = https://github.com/addyosmani/agent-skills.git
-[submodule "vendor/openhands-extensions"]
-	path = vendor/openhands-extensions
+[submodule "skills/sources/openhands-extensions"]
+	path = skills/sources/openhands-extensions
 	url = https://github.com/OpenHands/extensions.git
-[submodule "vendor/cline-skills"]
-	path = vendor/cline-skills
+[submodule "skills/sources/cline-skills"]
+	path = skills/sources/cline-skills
 	url = https://github.com/cline/skills.git
-[submodule "vendor/cloudflare-skills"]
-	path = vendor/cloudflare-skills
+[submodule "skills/sources/cloudflare-skills"]
+	path = skills/sources/cloudflare-skills
 	url = https://github.com/cloudflare/skills.git
-[submodule "vendor/google-agents-cli"]
-	path = vendor/google-agents-cli
+[submodule "skills/sources/google-agents-cli"]
+	path = skills/sources/google-agents-cli
 	url = https://github.com/google/agents-cli.git
