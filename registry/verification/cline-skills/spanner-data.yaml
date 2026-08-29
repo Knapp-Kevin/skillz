@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: spanner-data
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/spanner-data/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 11d902423ec0c9872bb5f41d17dd5d7deb807206
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [data-analysis, implementation]
+  lifecycle: [operations, maintenance]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 1, authority 0, failure 1, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 1, effectiveness 1. The schema/graph discovery and DQL split are useful reference patterns, but execute_sql explicitly performs DML with no general confirmation or preview gate. The wrapper also invokes @toolbox-sdk/server@1.1.0 through npx --yes and loads host-specific environment material. Reject unchanged; retain for adaptation with read-only discovery separated from mutation and host-managed dependency execution. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
