@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: teamcity-cli
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/teamcity-cli/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4bb5505ad9cd06de418d59b0e80bc3718adc9aff
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [debugging, business-operations, implementation]
+  lifecycle: [operations, maintenance, implementation]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 0, failure 1, evidence 2, dependencies 1, portability 1, usefulness 2, adversarial resilience 1, effectiveness 1. The command reference and diagnostic workflows are useful and include good details such as branch verification, dry-run support, secure-token patterns, GitHub App preference over PATs, and validation-before-pipeline-push. Hard fail for unchanged reuse: the workflow directly instructs consequential mutations including build starts/cancels, project/job creation, queue approval/removal, parameter writes/deletes, connection/VCS changes, agent enable/disable/authorize/reboot/move, pipeline pushes/deletes, and raw REST calls without a general confirmation/authority gate. Retain read/diagnostic and command-accuracy components; adapt mutations behind explicit user authorization. Exact pinned blob and June 18 revision confirmed. Behavioral validation remains pending.
