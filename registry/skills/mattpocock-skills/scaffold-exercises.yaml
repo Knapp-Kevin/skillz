@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-04-28T08:42:34Z
 curated_at: 2026-08-29
 last_checked_at: 2026-08-29
 availability: vendored
-local_path: vendor/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
 permission_tier: staging-write
 portability: low
 review_status: curated-vendored
