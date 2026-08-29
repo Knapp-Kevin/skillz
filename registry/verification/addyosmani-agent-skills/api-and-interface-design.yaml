@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/api-and-interface-design/SKILL
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 820d6d981f90b7802e0ea8b75bb966a3d78b8d0f
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 19/20
 tags:
   use_case: [api-design]
   lifecycle: [planning, design]
   characteristic: [contract-first, compatibility-aware]
   authority: [generate-only]
   portability: [high]
-notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong contract-first guidance, boundary validation, error semantics, backward-compatibility discipline, and unusually concrete idempotency guidance covering atomic claims, payload reuse, in-flight duplicates, unknown outcomes, and retry-window retention. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
