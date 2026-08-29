@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: skill-creator
+display_name: Skill Creator
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/skill-creator/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: fd59a880ed5e4f897660b0372cfb0380859b62d2
+upstream_first_seen_at: 2026-06-18T23:39:25Z
+upstream_last_updated_at: 2026-06-18T23:39:25Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/skill-creator/SKILL.md
+permission_tier: workspace-mutation-and-host-subagents
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-host-dependent
+dependencies: Bundled agents, references, assets, Python evaluation/reporting/packaging scripts, filesystem workspace, and optional host subagent/browser capabilities; skill includes reduced-capability Claude.ai fallbacks
+import_eligibility: already-vendored
+rationale: Strong end-to-end skill creation and iterative evaluation method with explicit baseline comparisons, human review, anti-overfitting guidance, quantitative evidence, trigger evaluation, bundled dependencies, and reduced-capability fallbacks. Host assumptions limit portability but are honestly described and do not invalidate the method.
