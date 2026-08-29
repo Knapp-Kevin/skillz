@@ -1,0 +1,15 @@
+schema_version: 1
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+reviewed_at: 2026-08-29
+eligible_denominator: 72
+fingerprint_algorithm: git-tree-sha1
+fingerprint_scope: canonical skill package directory
+verification_basis: structured-static-review
+validation_status: not-run
+verified: 70
+rejected: 2
+rejected_unchanged:
+  aws-sdk-swift-usage: Absolute SDK-shape/declaration-order claims lack a controlling current-doc verification step, and examples normalize literal static credentials.
+  aws-transform: Unchanged workflow normalizes long-lived credential setup, unconditional self-update, curl-based installation, and broad IAM-policy attachment, exceeding a portable authority boundary.
+notes: Source summary only. Individual companion records bind each decisive state to the exact pinned skill-package tree. AWS branding and source inclusion do not determine the verdict.
