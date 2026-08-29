@@ -101,9 +101,9 @@ sources:
     source_role: vendored-corpus
     resolved_path: vendor/openhands-extensions
     inclusion: vendored
-    license: MIT
-    pinned_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037b
-    rationale: Active OpenHands public extension registry retained for comparison and individual curation.
+    license: MIXED
+    pinned_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037
+    rationale: Active OpenHands public extension registry retained for comparison and individual curation. The repository root is MIT, but extensions may ship their own terms, so per-skill licensing controls.
 
   - id: cline-skills
     name: Cline Skills
