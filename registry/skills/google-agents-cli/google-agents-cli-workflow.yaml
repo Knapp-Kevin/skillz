@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: google-agents-cli-workflow
+display_name: Google Agents CLI Workflow
+source_id: google-agents-cli
+source_repository: https://github.com/google/agents-cli
+source_path: skills/google-agents-cli-workflow/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+upstream_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+upstream_last_updated_at: 2026-08-28T12:27:42Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/google-agents-cli/skills/google-agents-cli-workflow/SKILL.md
+permission_tier: orchestrate-mutations-with-user-approved-spec-and-deployment-approval
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: agents-cli; related Google Agents CLI scaffold/code/eval/deploy skills; bundled brainstorming, commands, internals, spec-template, and terminology references
+import_eligibility: already-vendored
+rationale: Lifecycle orchestration skill separates discovery, specification, implementation, evaluation, and deployment; requires user-approved requirements/specification before implementation and explicit approval before deployment. Strong cross-skill routing and progressive disclosure are balanced by low portability outside the agents-cli ecosystem.
