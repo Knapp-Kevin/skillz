@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: metrics-review
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/product-management/skills/metrics-review/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 42416640d925635863da3738107973996d43b6a1
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [decision-support, business-operations]
+  lifecycle: [planning, verification]
+  characteristic: [metric-driven, evidence-first, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The scorecard, metric-definition, segmentation, target comparison, anomaly, known-event, and caveat structure is useful. Reject unchanged because it embeds universal-seeming product benchmarks and prescriptions such as DAU/MAU habit thresholds, 'faster is almost always better' activation guidance, and fixed stretch-OKR completion/grading expectations. It also moves too easily from correlation or coincident events to why a metric 'likely' changed. Extract the review structure while grounding benchmarks and causal claims in product-specific evidence. Exact pinned fingerprint confirmed. Behavioral validation not run."
