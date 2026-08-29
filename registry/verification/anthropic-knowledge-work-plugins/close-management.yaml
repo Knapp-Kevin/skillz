@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: close-management
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/finance/skills/close-management/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f302f6e3b02f31af03c0d32972174590ddad608c
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [business-operations, planning]
+  lifecycle: [planning, operations]
+  characteristic: [decomposition, orchestration, traceable, iterative]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. Useful month-end close sequencing, dependency and critical-path mapping, owner/status/blocker tracking, retrospectives, and process-improvement patterns with explicit qualified-finance review. The five-day and accelerated three-day calendars are presented as typical/target templates rather than universal requirements. Caveats: actual sequencing, controls, approvals, tax/revenue/consolidation steps, deadlines, and escalation consequences must be adapted to the organization's systems and control environment. Exact pinned fingerprint confirmed. Behavioral validation not run."
