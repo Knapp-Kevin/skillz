@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wizard
+display_name: Wizard
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/wizard/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/wizard/SKILL.md
+permission_tier: identity
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: relies on bundled template.sh, Bash, optional gh/shellcheck, local environment files, browser opening, and exact third-party setup documentation; template.sh is present at the pinned source
+import_eligibility: already-vendored
+rationale: Human-in-the-loop setup automation that scopes manual stages, refuses invented dashboard steps, uses hidden secret input and explicit irreversible-action confirmation, and statically verifies the generated wizard instead of running it autonomously.
