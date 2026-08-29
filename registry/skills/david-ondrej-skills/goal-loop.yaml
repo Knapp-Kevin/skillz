@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: goal-loop
+display_name: Goal Loop
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/goal-loop/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: plan-only
+portability: low
+review_status: curated-external
+dependency_status: source-intact-but-runtime-claims-diverge
+ dependencies: requires a host-specific persistent `/goal` implementation; current Claude Code, Codex, and Hermes implementations do not share one identical command/state/auth contract
+import_eligibility: reference-only-until-client-semantics-split
+rationale: The completion-contract pattern is useful, especially objective/constraints/validation/stop-condition and anti-reward-hacking guidance, but the canonical skill conflates distinct `/goal` implementations across Claude Code, Codex, and Hermes and contains current runtime/auth/control claims that are not portable as written.
