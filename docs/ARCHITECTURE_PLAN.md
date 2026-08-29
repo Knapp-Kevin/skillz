@@ -1,172 +1,174 @@
-# Architecture Plan
+# Architecture
 
-## Architectural objective
+## Objective
 
-Support two equally real uses without conflating them:
+Keep `skillz` as an entirely passive repository that helps an external AI agent discover, evaluate, adapt, compose, create, curate, and transfer reusable skills.
 
-1. a large, directly browsable reusable skill library;
-2. a self-starting engine that can discover, build, select, evaluate, install, and later refine a fitted skill set for a user.
+The repository must keep four things distinct:
 
-The architecture must keep **library inventory**, **repository machinery**, **source provenance**, and **quality evidence** distinct.
+1. **user-facing skill material**;
+2. **passive repository-curation instructions**;
+3. **source/provenance metadata**;
+4. **quality and behavioral evidence**.
 
-## System shape
+There is no execution layer inside the repository.
+
+## Repository shape
 
 ```text
-README.md / skills/categories/
-        │ human navigation
-        ▼
-INDEX.md / index.json                 generated human + machine catalog
-        ▲
-        │
-scripts/build-index.ts               schema-v2 deterministic generator
-        │
-        ├── skills/                   local/imported user-facing library
-        │   └── sources/              pinned third-party source corpora
-        ├── registry/categories.yaml  human category assignments
-        ├── registry/sources.yaml     source identity/role/pin/license
-        └── registry/verification/    exact-version quality + tags
-
-BOOTSTRAP.md / AGENTS.md
-        │
-        ▼
-engine/skills/skill-bootstrap/        first-visit + returning-user orchestration
-        │
-        ├── select-candidates.ts      governed exact-version shortlisting
-        ├── skill-forge              custom skill creation
-        ├── skill-eval               behavioral evaluation procedure
-        ├── skill-audit              structural/risk validation
-        ├── skill-sync               installation/portable handoff support
-        └── source-vetting           source + fingerprint integrity tooling
+skillz/
+├── README.md
+├── AGENT_START_HERE.md
+├── BOOTSTRAP.md
+├── AGENTS.md
+├── skills/
+│   ├── <local user-facing skills>/
+│   ├── categories/
+│   └── sources/                      intact pinned third-party corpora
+├── engine/skills/                    passive curation/bootstrap instructions
+├── registry/
+│   ├── sources.yaml
+│   ├── source-signals.yaml
+│   ├── categories.yaml
+│   ├── skills/                       provenance companions
+│   ├── verification/                 exact-version quality/tags/evidence
+│   └── taxonomy.yaml
+├── docs/
+├── CURATED.md
+├── INDEX.md                          passive catalog snapshot
+└── index.json                        passive machine-readable snapshot
 ```
 
 ## Inventory boundaries
 
 ### `skills/`
 
-Canonical local/imported **user-facing library skills**. These count as library inventory.
-
-Discovery is recursive so category folders may become canonical physical paths later without breaking audit, index, or sync behavior.
+The complete user-facing skill tree. These are the capabilities a user or external agent may reuse, adapt, extract from, compose, or learn from.
 
 ### `skills/sources/`
 
-Pinned third-party repositories represented by exact gitlinks. Approved indexed user-facing skills in these corpora are available library material and count toward the searchable corpus.
+Pinned third-party repositories retained intact so their shared references, dependencies, licensing, and exact upstream identity remain honest.
 
-Vendored presence does **not** imply individual quality verification.
+Presence here establishes availability/reference value, not individual quality.
 
 ### `engine/skills/`
 
-Skill-shaped procedures used to operate `skillz` itself. They do not count toward the user-facing library total.
+Passive instructions describing how an external agent should bootstrap, audit, evaluate, curate, transfer, or research skills and this repository.
 
-Current engine responsibilities include bootstrap, evaluation, creation, audit, synchronization, ecosystem intake, and source verification.
+These files do not execute and do not count toward the user-facing corpus.
 
 ### `registry/`
 
-Machine-readable governance and selection metadata. It does not contain executable product logic.
+Passive evidence and classification data.
 
-- `sources.yaml`: source identity, role, inclusion, pin, license;
-- `categories.yaml`: canonical local browse categories;
+- `sources.yaml`: source identity, role, pin, and license;
+- `source-signals.yaml`: timestamped source-level context;
+- `categories.yaml`: local browse/category assignments;
 - `skills/`: per-skill provenance companions;
-- `verification/`: exact-version quality state, fingerprints, tags, evidence;
-- `taxonomy.yaml`: controlled characterization vocabulary;
-- `candidates.yaml`: historical/current candidate intake data where still applicable.
+- `verification/`: exact-version quality status, tags, and evidence;
+- `taxonomy.yaml`: controlled characterization vocabulary.
 
 ## Load-bearing rules
 
-1. **The library and engine are different populations.** Engine mechanics never inflate skill-library counts.
-2. **Approved indexed vendor skills are library material.** A git submodule is not invisible merely because it is external source content.
-3. **Generated catalog files are derived, never hand-maintained.** `INDEX.md` and `index.json` come from `scripts/build-index.ts`.
-4. **Availability is not verification.** A skill may be searchable while remaining unverified for trusted unchanged reuse.
-5. **Quality evidence is exact-version evidence.** Characterization and verification bind to the canonical `SKILL.md` fingerprint.
-6. **Fingerprint drift invalidates prior characterization.** Changed content requires review before prior quality state is trusted.
-7. **Attribution remains attached to third-party work.** Source, author/project, license, path, revision, and material adaptation relationship are recorded as applicable.
-8. **Compare before creation. User-fit before reuse.** The corpus is design evidence, not a reuse quota.
-9. **Installation state is explicit.** The system distinguishes installed, verification-pending, ready-to-upload, user-action-required, and blocked states.
-10. **Returning users are refined, not reset.** Existing skills are evidence; valid custom behavior is preserved unless a concrete reason supports change.
-11. **Private access is scoped.** Connector availability is capability, not blanket permission to mine unrelated private data.
-12. **GitHub Actions are not an implicit runtime.** Automatic Actions are currently disabled/manual-only; local deterministic proof remains supported.
+1. **The repository is passive.** Any active behavior belongs to the external host agent.
+2. **User-facing and maintenance skill populations stay distinct.** Maintenance instructions never inflate corpus counts.
+3. **All user-facing skill material lives under `skills/`.**
+4. **Third-party sources remain intact when flattening would lose dependencies, identity, or licensing context.**
+5. **Availability is not verification.**
+6. **Quality evidence is version-specific.** Exact-version conclusions apply only to the recorded skill/fingerprint and supporting assumptions.
+7. **Attribution travels with third-party material.**
+8. **Compare before creation. User fit before reuse.**
+9. **Source popularity is context, not proof.**
+10. **Returning users are refined, not reset.**
+11. **Private access is scoped.** Connector capability is not blanket permission to mine unrelated data.
+12. **No repository-owned runtime, scripts, CI, test runner, scheduler, monitor, installer, or preflight process.**
 
-## Catalog architecture
+## Discovery and selection
 
-`build-index.ts` scans the fully materialized repository and emits schema-v2 catalog data including:
+Discovery and selection are reasoning tasks performed by the external agent.
 
-- local skill identity and human category;
-- indexed vendor skill identity and source;
-- source role/class/license metadata;
-- exact-version quality state when a verification record exists;
-- controlled characterization tags;
-- fingerprint metadata where characterized;
-- explicit local/vendor/entry/unique/source counts.
+The repository supplies:
 
-Cross-source skills with the same name may remain separate implementations. Duplicate copies inside one source are deduplicated according to generator policy.
+- user-facing skill text;
+- categories and tags;
+- provenance;
+- exact-version review state;
+- freshness evidence;
+- dependency/authority/portability context;
+- source reputation/adoption context where established.
 
-`verify-index-idempotency.ts` permits a stale first pass to refresh generated files, then requires the second pass to be byte-identical.
+The external agent uses those materials in this order:
 
-## Selection architecture
+**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-`engine/skills/skill-bootstrap/scripts/select-candidates.ts` is a deterministic **shortlisting** primitive, not the final decision-maker.
+The agent may choose `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST`, `DYNAMIC`, or `NO CHANGE`.
 
-Default unchanged-reuse eligibility:
+No deterministic selector inside this repository is required or desired.
 
-- eligible states: `trusted-baseline`, `verified`, `validated`;
-- blocked states: `stale`, `rejected`, `retired`;
-- `unverified`: excluded from trusted unchanged selection by default, optionally surfaced as design evidence only.
+## Catalogs
 
-Controlled tag overlap can rank eligible candidates, but the bootstrap agent must still decide whether actual user fit calls for `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or no formal skill.
+`INDEX.md` and `index.json` are passive navigation snapshots, not executable/generated truth that requires a repository runtime.
 
-## First-visit and returning-user orchestration
+When they drift from the live tree or registry, the external curating agent should reconcile them as ordinary static artifacts or rely on the live source/registry records until reconciliation is complete.
 
-The repository URL is sufficient invocation context for first-visit bootstrap when no more specific task is given.
+Do not introduce a generator merely to maintain the catalog.
 
-Bootstrap:
+## Static review
 
-1. binds to authoritative host/project instructions and legitimately accessible evidence;
-2. discovers durable working methods/latent skill candidates;
-3. compares needs against existing skills and governed corpus metadata;
-4. designs the smallest useful fitted system;
-5. adversarially reviews/evaluates as appropriate;
-6. installs when supported and authorized, otherwise produces a precise portable handoff.
+Static curation is performed by an external reviewing agent using the instructions under `engine/skills/` and the evidence it can legitimately inspect.
 
-Returning refinement begins by inventorying the current fitted set. It checks current fit, fingerprints, overlap, gaps, and newer candidates, then makes only justified changes. `NO CHANGE NEEDED` is a valid result.
+A source is statically complete when every eligible skill in the established denominator has adequate provenance/characterization and a decisive current review state under the repository's curation policy.
 
-## Proof architecture
+Static review may consider:
 
-### Mechanical/static
+- structure and trigger quality;
+- scope and redundancy;
+- dependencies;
+- authority and privacy boundaries;
+- portability;
+- source freshness;
+- licensing;
+- exact content identity when establishable;
+- controlled tags;
+- safety and failure handling.
 
-- recursive discovery shared across index/audit/risk/sync;
-- structural and semantic risk audits;
-- selection fixtures;
-- fingerprint-integrity checks;
-- initial implementation contract tests;
-- leak-safe alpha scenario renderer tests.
+## Behavioral validation
 
-### Materialized runtime
+Behavioral validation is separate from static review and is performed outside the repository by an external agent or evaluation environment.
 
-`node scripts/initial-alpha-preflight.ts` runs:
+The repository may store resulting evidence, but it does not execute the evaluation.
 
-1. two-pass catalog determinism;
-2. structural audit;
-3. risk audit;
-4. repository tests;
-5. characterization fingerprint integrity.
+Consequential/high-use skills should be prioritized after static corpus completion rather than attempting to behaviorally test every reference skill indiscriminately.
 
-### Behavioral
+## First-visit and returning-user use
 
-Initial alpha requires five isolated synthetic journey proofs:
+The repository URL is sufficient invocation context for first-visit discovery when no more specific task is given.
 
-- A1 eligible reuse/minimal adaptation;
-- A2 unverified/stale refusal;
-- A3 custom creation;
-- R1 returning minimal refinement;
-- R2 returning no-change.
+The external agent:
 
-Static tests do not substitute for these behavioral results.
+1. inspects legitimately available user context;
+2. identifies durable repeatable methods;
+3. compares them against the corpus;
+4. creates the smallest fitted skill set;
+5. adversarially reviews important changes;
+6. optionally performs external installation or validation only when its host supports and authorizes it.
 
-## Mutation boundaries
+Returning refinement begins with the existing fitted set and makes only justified changes. `NO CHANGE NEEDED` is valid.
 
-Repository inspection, comparison, characterization, and design are read-only by default.
+## Mutation boundary
 
-Writes, installation, publishing, permission changes, sending, or other external side effects require the authority expected by the destination environment. Dry-run or portable handoff is preferred when authority or installation support is not established.
+Reading, comparing, characterizing, and designing are read-only by default.
 
-## Historical governance
+Repository writes, installation, publishing, sending, permissions changes, or other external side effects require the authority expected by the host/destination. Those actions are performed by the external agent, never by `skillz` itself.
 
-`.qor/`, `docs/META_LEDGER.md`, and `docs/plan-qor-*.md` remain historical implementation evidence. They are not the current architecture control plane and do not override `README.md`, `AGENTS.md`, `BOOTSTRAP.md`, `docs/SYSTEM_STATE.md`, `docs/GOVERNANCE_INDEX.md`, or the current alpha checklist.
+## Historical material
+
+Older Qor-era gates, runtime-oriented plans, CI references, preflight records, and execution-oriented evaluation artifacts may remain as historical evidence where useful, but they are not current architecture and must not override the passive-repository contract in:
+
+- `README.md`;
+- `AGENT_START_HERE.md`;
+- `AGENTS.md`;
+- `BOOTSTRAP.md`;
+- `docs/CONCEPT.md`;
+- `docs/SYSTEM_STATE.md`;
+- this document.
