@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: grill-me
+display_name: Grill Me
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/grill-me/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: fcf0071560d32913c9d4f820e0d7ca467c881619
+upstream_last_updated_at: 2026-08-15T20:46:38Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/grill-me/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: delegates entirely to the grilling skill via a Claude-style Skill tool; dependency is present in the pinned source
+import_eligibility: already-vendored
+rationale: Convenience alias for invoking the fuller grilling workflow; useful within its native suite but too thin to establish standalone quality unchanged.
