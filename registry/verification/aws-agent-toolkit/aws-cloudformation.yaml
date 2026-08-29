@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: aws-cloudformation
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: vendor/aws-agent-toolkit/skills/core-skills/aws-cloudformation/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f597af79ff98108e2d6f4ccebae9bd3efd153653
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud-infrastructure, infrastructure-as-code, troubleshooting]
+  lifecycle: [design, implementation, validation, operations]
+  characteristic: [security-aware, reference-heavy, failure-diagnosis, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. Strong injection boundary, secure defaults, layered pre-deployment checks, and disciplined root-cause classification. The package invokes AWS CLI, cfn-lint, cfn-guard, change sets, and rollback-related operations, so unchanged use still requires AWS context, dependencies, credentials, and explicit host/user authority for mutations. Behavioral validation remains not-run.
