@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: xlsx
+display_name: XLSX
+source_id: anthropic-skills
+source_repository: https://github.com/anthropics/skills
+source_path: skills/xlsx/SKILL.md
+source_class: official
+license: Proprietary
+relationship: vendored-reference
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_revision: 4e6907a33c3c0c9ce7c1836980546aaba78a34b5
+upstream_last_updated_at: 2026-02-04T02:09:36Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
+local_path: vendor/anthropic-skills/skills/xlsx/SKILL.md
+permission_tier: file-mutation-on-explicit-user-request
+portability: low
+review_status: rejected-unchanged
+dependency_status: license-restricted
+dependencies: Anthropic-service-governed proprietary materials plus spreadsheet/OOXML tooling
+import_eligibility: reference-only-license-restricted
+rationale: Technically detailed spreadsheet workflow whose proprietary terms prohibit the reuse model required for normal skillz install/selection.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: doc-coauthoring
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/doc-coauthoring/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a5a69839ef4a161131d80b6daef10037a9686f4a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [documentation, writing, communication]
+  lifecycle: [planning, design, verification]
+  characteristic: [iterative, human-review, synthesis]
+  authority: [read-only, generate-only]
+  portability: [low]
+notes: 'Hard fails: unresolved license and privacy scope broader than skillz policy. Adaptation can preserve the drafting/reader-testing workflow while narrowing evidence collection.'

@@ -105,6 +105,25 @@ test("Vercel pinned corpus has complete individual review coverage", () => {
   assert.equal(statuses.filter((status) => status === "rejected").length, 3);
 });
 
+test("Anthropic pinned corpus has complete individual review coverage", () => {
+  const provenance = yamlFiles(join(PROVENANCE, "anthropic-skills"));
+  const verification = yamlFiles(join(VERIFICATION, "anthropic-skills"));
+  assert.equal(provenance.length, 17, `expected 17 Anthropic provenance records, found ${provenance.length}`);
+  assert.equal(verification.length, 17, `expected 17 Anthropic verification records, found ${verification.length}`);
+  const statuses = verification.map((file) => field(readFileSync(file, "utf8"), "verification_status"));
+  assert.equal(statuses.filter((status) => status === "verified").length, 10);
+  assert.equal(statuses.filter((status) => status === "rejected").length, 6);
+  assert.equal(statuses.filter((status) => status === "stale").length, 1);
+  for (const skill of ["docx", "pdf", "pptx", "xlsx"]) {
+    const text = readFileSync(join(VERIFICATION, "anthropic-skills", `${skill}.yaml`), "utf8");
+    assert.equal(field(text, "verification_status"), "rejected", `${skill} must remain excluded by its proprietary license`);
+  }
+  const claudeApi = readFileSync(join(VERIFICATION, "anthropic-skills", "claude-api.yaml"), "utf8");
+  assert.equal(field(claudeApi, "verification_status"), "stale");
+  const sources = readFileSync(join(ROOT, "registry", "sources.yaml"), "utf8");
+  assert.match(sources, /id: anthropic-skills[\s\S]*?pinned_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d/);
+});
+
 test("structured verification sample earned structured verification only", () => {
   for (const [source, skill] of [
     ["cline-skills", "review-team"],

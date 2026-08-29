@@ -17,6 +17,7 @@ sources:
     resolved_path: vendor/anthropic-skills
     inclusion: vendored
     license: MIXED
+    pinned_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
     rationale: First-party Anthropic skill implementations and authoring/tooling references. Per-skill terms must be checked because the repository contains mixed licensing.
 
   - id: anthropic-knowledge-work-plugins

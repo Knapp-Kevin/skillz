@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: doc-coauthoring
+display_name: Doc Coauthoring
+source_id: anthropic-skills
+source_repository: https://github.com/anthropics/skills
+source_path: skills/doc-coauthoring/SKILL.md
+source_class: official
+license: UNRESOLVED
+relationship: vendored-reference
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_revision: 00756142ab04c82a447693cf373c4e0c554d1005
+upstream_last_updated_at: 2025-12-04T17:01:46Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
+local_path: vendor/anthropic-skills/skills/doc-coauthoring/SKILL.md
+permission_tier: read-and-generate-with-connector-expansion
+portability: low
+review_status: rejected-unchanged
+dependency_status: license-unresolved-and-privacy-scope-too-broad
+dependencies: Artifact editing host plus optional organizational connectors/context
+import_eligibility: reference-only-unless-adapted-and-license-resolved
+rationale: Staged coauthoring is useful, but unchanged use encourages broad organizational/context collection beyond minimum necessary evidence and has unresolved per-skill licensing.

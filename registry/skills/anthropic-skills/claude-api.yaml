@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: claude-api
+display_name: Claude API
+source_id: anthropic-skills
+source_repository: https://github.com/anthropics/skills
+source_path: skills/claude-api/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_last_updated_at: 2026-07-01T18:11:23Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-stale
+local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
+permission_tier: read-only-and-generate-only
+portability: medium
+review_status: stale-current-docs-required
+dependency_status: material-current-documentation-drift
+dependencies: Bundled API/SDK references plus current Anthropic platform docs
+import_eligibility: reference-only-until-refreshed-and-reverified
+rationale: Strong provider/SDK reference design, but its July model defaults and feature assumptions have materially drifted from current official Anthropic docs.
