@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: sap-fiori-add-visual-filter
+display_name: SAP Fiori Add Visual Filter
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/sap-fiori-add-visual-filter/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 8930a0f729b190de76a35aff3000489caa76a744
+upstream_last_updated_at: 2026-06-18T23:37:10Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/sap-fiori-add-visual-filter/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - SAP Fiori Elements CAP or ABAP RAP project context
+  - project development/test tooling
+  - optional Fiori MCP guidance for metadata refresh
+import_eligibility: already-vendored
+rationale: Focused implementation skill with a hard input-confirmation gate, explicit CAP/RAP differences, common-failure guidance, and concrete verification steps using the target project's normal tooling.
