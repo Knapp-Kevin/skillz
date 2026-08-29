@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: implement
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/implement/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7a0b11f5f4fe9505ea5c7983c3083ba1bf754f69
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [implementation, testing, code-review]
+  lifecycle: [implementation, verification]
+  characteristic: [test-driven, test-gated, orchestration]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 1, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The workflow is deliberately compact but anchors implementation to a supplied spec/tickets, repeatedly typechecks/tests, delegates TDD/review, and makes its mutating intent clear from the implementation request and final commit. It assumes Git and suite-local /tdd and /code-review behavior and has only basic failure/stop guidance. Exact pinned fingerprint confirmed; behavioral validation remains pending."
