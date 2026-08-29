@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: customer-escalation
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/customer-support/skills/customer-escalation/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 069eae32c33e22a6efaf420f578c37ec64d9bc76
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [communication, business-operations, decision-support]
+  lifecycle: [operations]
+  characteristic: [evidence-first, risk-aware, traceable, human-review]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong escalation brief structure, quantified breadth/depth/duration/business impact, reproduction evidence, explicit target/ask/deadline, and continued ownership of customer communication. It offers rather than silently performs downstream posting or customer updates. Caveat: tier names, 3+ customer triggers, high-revenue signals, severity definitions, security routing, SLAs, and follow-up cadences are examples that must yield to the user's organization. Exact pinned fingerprint confirmed. Behavioral validation not run."
