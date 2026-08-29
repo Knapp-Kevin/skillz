@@ -7,120 +7,89 @@
 | **Last updated** | 2026-08-29 |
 | **Milestone** | Core implementation complete |
 | **State** | Governed curation mode |
-| **Repository type** | Passive instruction/reference repository |
-| **Evaluation model** | Semantic + adversarial probabilistic review |
-| **CI requirement** | None |
+| **Repository type** | Passive Markdown instruction/reference repository |
+| **Evaluation model** | Best-effort semantic + adversarial review |
+| **CI/runtime requirement** | None |
 
 ## Current architecture
 
 ```text
 skillz/
-├── README.md                         human front door + passive boundary
-├── AGENT_START_HERE.md               single agent routing entry
-├── BOOTSTRAP.md                      human-readable first/returning workflow
-├── AGENTS.md                         repository-wide agent contract
-├── skills/                           local user-facing skills
+├── README.md
+├── AGENT_START_HERE.md
+├── BOOTSTRAP.md
+├── AGENTS.md
+├── skills/                           first-party user-facing skills
 │   └── categories/                   human browse-by-purpose navigation
-├── engine/skills/
-│   ├── skill-bootstrap/              canonical normal user-flow instructions
-│   └── ...                           optional repository-maintenance helpers
-├── vendor/                           third-party reference corpora
+├── engine/skills/                    passive bootstrap/maintenance procedures
 ├── registry/
-│   ├── sources.yaml                  source identity/role/license
-│   ├── skills/                       third-party provenance companions
+│   ├── sources.yaml                  tracked upstream sources
+│   ├── skills/                       governed third-party provenance
 │   ├── verification/                 exact-version semantic quality records
-│   ├── local-verification.json       first-party individual reviews
+│   ├── local-verification.json       first-party structured reviews
 │   └── taxonomy.yaml                 controlled metadata vocabulary
-├── docs/evals/                       semantic/adversarial review records
-└── INDEX.md / index.json             browse/index snapshots
+└── docs/evals/                       semantic/adversarial review records
 ```
+
+There is no `vendor/`, `.gitmodules`, `scripts/`, `tests/`, `.agent/`, `.qor/`, or CI workflow in the current architecture.
 
 ## Inventory boundaries
 
-- **42 active local user-facing skills** are individually reviewed in `registry/local-verification.json`.
-- **7 engine skills** are repository/bootstrap machinery and do not count as user-facing inventory.
-- **17 registered sources** currently provide vendored, tracked, normative, or discovery material.
-- The broader reference corpus remains **500+** skills/patterns. Exact breadth can change as curation evolves and is not a completion gate.
+- 42 active local user-facing skills have individual structured reviews.
+- Engine procedures do not count as user-facing inventory.
+- 17 upstream sources are currently registered as tracked, normative, or discovery references.
+- External source breadth is reference context, not a completion metric.
 
 ## Quality model
 
-- Source identity and individual skill quality are separate concepts.
-- Broad source material is reference/design evidence unless an individual skill has a governed exact-version record.
+- Source identity and individual skill quality are separate.
+- Tracked upstream material is reference/design evidence unless an individual exact-version record says otherwise.
 - `verified` means structured semantic review passed.
-- `validated` means a verified exact version also received representative scenario/adversarial semantic review.
+- `validated` means representative scenario/adversarial semantic review was also recorded.
 - `unverified` and legacy `trusted-baseline` are not unchanged-reuse states.
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection.
-- Fingerprints identify which exact text was reviewed; they are bookkeeping, not executable proof.
+- Fingerprints identify which exact text was reviewed. They are bookkeeping, not executable proof.
 
-## User experience state
+## User-flow state
 
-### First visit
+The canonical bootstrap now provides:
 
-Implemented:
-
-- immediate route from repository link into bootstrap;
+- explicit route selection;
 - environment/authority binding;
 - minimum-relevant-evidence need discovery;
 - capability definition before skill-name search;
 - whole-skill and component discovery;
-- governed unchanged-reuse gate;
-- ADOPT/ADAPT/SUPPLEMENT/COMPOSE/CREATE/no-skill decision vocabulary;
-- component ledger and baggage removal;
+- exact-version reuse gating;
+- explicit reuse/adapt/supplement/compose/create/no-skill decisions;
 - smallest-coherent-system composition;
 - host-specific artifact/handoff adaptation;
 - semantic adversarial review;
-- explicit installation/handoff state.
+- returning-user minimal refinement and `NO CHANGE NEEDED`.
 
-### Returning user
+## Responsibility boundary
 
-Implemented:
+The repository is responsible for making its instructions, metadata, provenance, and curation evidence as clear and useful as reasonably possible.
 
-- starts from the existing fitted system;
-- preserves still-valid custom behavior;
-- limits work to materially affected capabilities;
-- prefers the smallest justified change;
-- explicitly permits `NO CHANGE NEEDED`.
-
-## Repository-maintenance boundary
-
-Optional scripts and engine helpers may assist maintainers with indexing, metadata, source inspection, or file operations. They are not a runtime, not CI, and not evidence that the semantic instruction architecture is correct.
-
-No user-flow or repository-completion criterion depends on executing them.
+It is **not** responsible for proving that arbitrary models of different capability levels will follow those instructions successfully. Multi-model benchmarks, success-rate targets, CI, runtime tests, and executable proof are not completion requirements.
 
 ## Evaluation state
 
-The current semantic adversarial review is recorded in:
-
-`docs/evals/share-ready-semantic-review.md`
+The current closeout adversarial review is recorded in `docs/evals/share-ready-semantic-review.md`.
 
 Result: **PASS — no unresolved material repository-level ambiguity identified after closeout corrections.**
-
-The review specifically challenged:
-
-- user work versus repository maintenance confusion;
-- filename-first selection;
-- famous-source trust shortcuts;
-- whole-skill-only reasoning;
-- component-governance loopholes;
-- endless evidence/search expansion;
-- host-format assumptions;
-- false executable-proof language;
-- returning-user churn;
-- constrained read-only/connector use;
-- minimal refinement and true no-op outcomes.
 
 ## Current mode
 
 **CURATION MODE.**
 
-Normal work from this point forward is:
+Future work is optional and occasional:
 
-1. discover promising sources or skills occasionally;
-2. independently decide whether they add meaningful value;
+1. discover promising sources or skills when useful;
+2. determine independently whether they add meaningful value;
 3. establish provenance/license/dependencies;
-4. score and characterize admitted skills;
+4. score and characterize selected skills;
 5. assign a decisive semantic quality state;
-6. retain unsuitable material only as clearly bounded reference/negative evidence when useful;
-7. revisit core bootstrap instructions only when real feedback or repeated semantic review exposes an architectural ambiguity.
+6. preserve useful negative/adaptation evidence where appropriate;
+7. revisit core bootstrap instructions only when real use exposes a genuine ambiguity.
 
-More skills broaden the ecosystem. They do not reopen core implementation.
+There is no standing implementation backlog.
