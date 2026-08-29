@@ -34,3 +34,12 @@
 [submodule "skills/sources/google-agents-cli"]
 	path = skills/sources/google-agents-cli
 	url = https://github.com/google/agents-cli.git
+[submodule "skills/sources/cole-medin-skills"]
+	path = skills/sources/cole-medin-skills
+	url = https://github.com/coleam00/skills.git
+[submodule "skills/sources/david-ondrej-skills"]
+	path = skills/sources/david-ondrej-skills
+	url = https://github.com/davidondrej/skills.git
+[submodule "skills/sources/sabrina-ramonov-recipes"]
+	path = skills/sources/sabrina-ramonov-recipes
+	url = https://github.com/SabrinaRamonov/learn-claude-code.git
