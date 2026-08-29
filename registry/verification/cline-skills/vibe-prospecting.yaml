@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vibe-prospecting
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/vibe-prospecting/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca05133b974007094f937c0816ba62b4df56f296
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [research, business-operations, productivity]
+  lifecycle: [discovery, operations]
+  characteristic: [tool-assisted, evidence-first, human-review, risk-aware, test-gated]
+  authority: [read-only, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 2, dependencies 0, portability 0, usefulness 2, adversarial resilience 1, effectiveness 2. Strong aspects include mandatory five-entity end-to-end sampling before scale, live schema inspection before tool calls, deduplication/session chaining, and explicit approval before full export. Unchanged reuse is rejected because the CLI path executes @vibeprospecting/vpai@latest, making behavior mutable outside the pinned skill fingerprint; Cowork mode hard-codes specific connector-registry tools/polling; and contact enrichment can include personal emails/phones without a portable minimum-necessary/data-minimization rule. Retain the sample-first and schema-first workflow as strong adaptation material. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
