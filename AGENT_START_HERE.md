@@ -21,13 +21,15 @@ For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.m
 
 ## 2. Do not invent host prerequisites
 
-Normal discovery, user-need analysis, comparison, custom synthesis, semantic review, and portable handoff do not require a local clone, shell, Git, Node/Bun, initialized submodules, writable filesystem, or CI.
+Normal discovery, user-need analysis, comparison, custom synthesis, semantic review, and portable handoff do not require a local clone, shell, Git, Node/Bun, writable filesystem, CI, or any repository-engine runtime.
 
 Use the capabilities the current host actually provides.
 
+This does **not** mean an individual user-facing skill cannot contain or require its own scripts, references, templates, fixtures, JSON, or other supporting components. Those belong to that skill package and must be evaluated according to the skill's own dependency/host requirements.
+
 ### Repository-native
 
-When a current local checkout or repository-native tooling exists, use it when helpful for reading current files, metadata, and user-target artifacts. Do not turn optional repository tooling into a prerequisite.
+When a current local checkout or repository-native tooling exists, use it when helpful for reading current files, metadata, and user-target artifacts. Do not turn optional repository-maintenance tooling into a prerequisite.
 
 ### Connector / API / web
 
@@ -38,7 +40,7 @@ For governed third-party candidates:
 1. read the verification companion for status, tags, source identity, and recorded fingerprint;
 2. read `registry/skills/` for provenance and canonical source path;
 3. resolve the registered source in `registry/sources.yaml`;
-4. fetch the exact upstream `SKILL.md` when possible;
+4. fetch the exact upstream skill package when possible, not only `SKILL.md` if supporting components affect behavior;
 5. compare an exposed content/blob identity when the host provides one;
 6. if exact identity cannot be established, lower confidence rather than fabricate certainty.
 
@@ -72,10 +74,12 @@ During FIRST_VISIT or RETURNING_USER work:
 
 - do not write new user skills into this repository's `skills/` directory by default;
 - do not use repo-bound `skill-forge` as the user's artifact generator;
-- do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, or any repository script;
+- do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, or any engine/repository-maintenance script or runtime;
 - do not treat the existence or absence of CI as evidence about whether bootstrap can succeed.
 
 Create/package the fitted skill system for the **user's active environment**. If direct creation or installation is impossible, provide a complete portable handoff.
+
+A selected user-facing skill may still legitimately use its own bundled components when the user's host supports them and the skill's authority/dependency requirements are acceptable.
 
 ## 5. Completion rule
 
