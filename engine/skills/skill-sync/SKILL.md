@@ -1,63 +1,66 @@
 ---
 name: skill-sync
 description: >-
-  Deploy this repository's portable skills to their consumers: junction into
-  the Claude Code user skills directory, copy to any local path, or emit
-  COREFORGE Synapse-style manifest.json bundles — dry-run by default with
-  drift reporting. Use when the user asks "sync the skills", "deploy skills
-  to Claude Code", "install the skills locally", "generate COREFORGE
-  manifests", or after skill-audit passes on new or changed skills.
+  Deploy portable user-facing skills from the skillz repository to supported
+  local consumer targets with dry-run drift reporting. Use only for repository-
+  maintenance deployment of skills already present in this repository.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Sync
   emoji: "🚀"
-  version: 1.0.0
+  version: 1.1.0
   repo-bound: true
 ---
 
 # Skill Sync
 
-One command deploys portable skills to any local consumer with visible drift. Repo-bound: this skill operates on this repository's tree and never deploys itself.
+**Repository-maintenance deployment helper only.**
+
+This deploys portable skills that already live in the `skillz` repository. It is not the universal installation adapter for a user's newly synthesized bootstrap package.
+
+For normal FIRST_VISIT or RETURNING_USER work, follow `engine/skills/skill-bootstrap/SKILL.md` and adapt/install the fitted artifacts using the active host's real installation mechanism.
 
 ## What This Does
 
-Runs `scripts/sync.ts`, which discovers portable skills (frontmatter without `repo-bound: true`) and reconciles them against targets:
+The repository sync script is:
 
-| Target | Flag | Mechanism |
-|--------|------|-----------|
-| Claude Code user skills | `--claude-user` | Directory junction at `<root>/<name>` (root defaults to `~/.claude/skills`, overridable via `--claude-user-root`) |
-| Any local directory | `--dest <path>` | Recursive copy; drift = any byte difference |
-| COREFORGE Synapse | `--coreforge <path>` | Per-skill `manifest.json` derived from frontmatter (skillId, version, entryPoint, runtime) plus SKILL.md and scripts |
-| Markdown host dirs of a target repo | `--hosts <targetRepo>` | Copies each portable skill to `<targetRepo>/.claude/skills/`, `.kilo/skills/`, and `.codex/skills/` (Qor-logic host-dir convention; Gemini excluded — TOML conversion, not copy) |
+```text
+engine/skills/skill-sync/scripts/sync.ts
+```
 
-**Dry-run by default** — prints `create` / `update` / `up-to-date` / `skip:repo-bound` per skill per target. Nothing is written without `--apply`.
+It discovers portable skills in this repository and can reconcile them against supported local targets such as Claude Code user skills, arbitrary local directories, COREFORGE-style bundles, or supported host directories.
+
+Dry-run is the default. Nothing should be written without the script's explicit apply mode.
 
 ## Execution Flow
 
-1. Run `skill-audit` first; do not deploy a failing tree.
-2. Dry-run to see planned actions:
+1. Confirm the route is `REPOSITORY_MAINTENANCE` and the source artifacts already belong to this repository.
+2. Validate the repository with:
 
+   ```text
+   node engine/skills/skill-audit/scripts/audit.ts
    ```
-   node skills/skill-sync/scripts/sync.ts --claude-user --dest D:\agents\skills
+
+3. Run a dry-run using the canonical script path, for example:
+
+   ```text
+   node engine/skills/skill-sync/scripts/sync.ts --claude-user --dest D:\\agents\\skills
    ```
 
-3. Review the action list. If it matches intent, re-run with `--apply`.
-4. Report per-target results. Junctions mean edits in this repo are live immediately; copies need re-sync (drift shows as `update` on the next dry-run).
-
-## Scheduling
-
-- **Claude Code:** run ad hoc after merging skill changes, or `/schedule` a weekly sync following the skills-pulse/skill-audit pair.
-- **Other agents:** dry-run output is safe to include in any automation report; gate `--apply` behind approval.
+4. Review the planned create/update/up-to-date/skip actions.
+5. Apply only when the requested destination and authority are established.
+6. Report actual per-target results.
 
 ## Output Format
 
-```
+```text
 [dry-run|apply] <target> <skill>: create|update|up-to-date|skip:repo-bound
 ```
 
-## Notes
+## Negative rules
 
-- Only local skills deploy; `vendor/` content is consumed via its own install channels (e.g., `/plugin marketplace add`).
-- Repo-bound skills (this one and skill-audit) are excluded by construction (LD-2).
-- Mutating targets outside the repo requires `--apply` — read-only by default per the repo's design rules.
+- Do not use legacy `skills/skill-sync/...` paths; the canonical path is under `engine/skills/skill-sync/`.
+- Do not make this helper a prerequisite for normal user bootstrap.
+- Do not infer that a host supports this repository's sync mechanism merely because the host supports skills generally.
+- Do not apply writes without the authority required by the target environment.
