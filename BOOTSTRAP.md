@@ -83,14 +83,14 @@ A stale generated index is a maintainer concern, not a reason to abandon a user 
 
 Humans can browse the locally maintained portion of the library through [`skills/categories/`](skills/categories/), including planning, writing, research, software/repository work, agent operations/security, monitoring/intelligence, and business/career categories.
 
-The complete indexed library also includes approved third-party sources under [`vendor/`](vendor/).
+The complete indexed library also includes approved third-party sources under [`skills/sources/`](skills/sources/).
 
 ## What counts as the library?
 
 The library includes:
 
 - user-facing skills under [`skills/`](skills/), and
-- approved indexed user-facing skills from pinned sources under [`vendor/`](vendor/).
+- approved indexed user-facing skills from pinned sources under [`skills/sources/`](skills/sources/).
 
 Repository machinery under [`engine/skills/`](engine/skills/) is excluded from the library count.
 
