@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: building-pydantic-ai-agents
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: vendor/cline-skills/skills/building-pydantic-ai-agents/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 75690b98ee388b9bf60716a8da87349c96769b03
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [agent-development, implementation, testing]
+  lifecycle: [design, implementation, verification]
+  characteristic: [context-efficient, progressive-disclosure, reference-heavy, test-driven, tool-routing]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong framework boundaries, task-family reference routing, deterministic TestModel guidance, progressive-disclosure advice, and explicit compatibility requirements. Provider/native-tool/MCP capabilities can incur external calls or side effects and must inherit the user's execution authority. Behavioral validation remains pending."

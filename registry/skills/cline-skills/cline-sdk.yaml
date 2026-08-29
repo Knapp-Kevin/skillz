@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cline-sdk
+display_name: Cline SDK
+source_id: cline-skills
+source_repository: https://github.com/cline/sdk-skill
+source_path: skill/cline-sdk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: nested-vendored-reference
+source_snapshot_revision: 4174dc764ab4fdc32d22950f1a5bfc0c61886101
+upstream_revision: 1336807078d2dea7cf3b0a5d91560ceb5e5702ca
+upstream_last_updated_at: 2026-05-13T07:53:42Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/.vendor/sdk-skill/skill/cline-sdk/SKILL.md
+permission_tier: mutate-and-execute-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: nested-source-intact
+dependencies: recursively materialized cline/sdk-skill nested vendor repository; Node.js 22+; @cline/sdk and task-specific provider/runtime configuration; bundled reference tree
+import_eligibility: already-vendored-via-nested-source
+rationale: Comprehensive Cline SDK guide with explicit package/runtime requirements, decision-tree routing, structured error guidance, lifecycle cleanup rules, and intact nested references for tools, providers, production, scheduling, and multi-agent behavior. Built-in execution and automation capabilities make authority highly task-dependent.

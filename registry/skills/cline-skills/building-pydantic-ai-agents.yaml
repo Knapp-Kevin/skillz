@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: building-pydantic-ai-agents
+display_name: Building Pydantic AI Agents
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/building-pydantic-ai-agents/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 973d4882e49dd95908bef6d66997c7bab5cd3c55
+upstream_last_updated_at: 2026-06-18T23:29:30Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/skills/building-pydantic-ai-agents/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Python 3.10+; Pydantic AI; task-specific model providers and optional Logfire/MCP/native-tool capabilities; bundled reference set
+import_eligibility: already-vendored
+rationale: Strong framework-specific agent-development guide with explicit trigger and non-trigger boundaries, progressive-disclosure routing, deterministic testing patterns, architecture guidance, and intact references. Provider calls and tool capabilities may create external effects, so execution authority remains task-dependent.

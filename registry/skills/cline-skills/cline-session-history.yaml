@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cline-session-history
+display_name: Cline Session History
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/cline-session-search/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_last_updated_at: 2026-07-15T21:28:15Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/skills/cline-session-search/SKILL.md
+permission_tier: read-local-history-and-export-on-explicit-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: bundled scripts/search_sessions.py; Python 3 standard library; local Cline session JSON/messages files and optional sessions.db
+import_eligibility: already-vendored
+rationale: Focused local session-history search workflow with explicit user-request triggers, a bundled search/export script, read-only SQLite access, useful filtering, and transcript controls. The frontmatter name is cline-session-history while the physical directory is cline-session-search; catalog quality lookup correctly follows the frontmatter identity. Session transcripts, thinking blocks, tool data, and exports can contain sensitive information, so use should remain narrowly scoped to the user's requested history operation.

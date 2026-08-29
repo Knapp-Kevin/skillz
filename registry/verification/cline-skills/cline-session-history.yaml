@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cline-session-history
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: vendor/cline-skills/skills/cline-session-search/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6665260a9a4660a7f705f9a9cc904e1a3c3dfeb6
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [context-management, research]
+  lifecycle: [discovery, operations]
+  characteristic: [retrieval-first, tool-assisted, evidence-first]
+  authority: [read-only, mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The bundled Python script reads local JSON history and opens SQLite read-only; export only occurs when explicitly requested and copies matching session data to a chosen directory. Full transcripts may expose sensitive user prompts, model thinking, tool inputs/results, and files, so queries and exports should remain minimum-scope. The physical directory is cline-session-search but catalog identity is the frontmatter name cline-session-history. Behavioral validation remains pending."
