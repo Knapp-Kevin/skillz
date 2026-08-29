@@ -1,64 +1,41 @@
 ---
 name: skill-forge
 description: >-
-  Scaffold a new skill in this repository: elicit name, triggers,
-  category, cadence, and deployment class; instantiate
-  docs/skill-template.md; then audit and reindex. Use when the user asks
-  "create a new skill", "scaffold a skill", "forge a skill", "add a
-  pulse skill", or wants a convention-clean skills/<name>/ starting point.
+  Guide an external agent in authoring a minimal convention-clean skill for
+  this repository. Use when the user asks to create, scaffold, forge, or add
+  a skill after comparison shows that a new or adapted skill is warranted.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Forge
   emoji: "⚒️"
-  version: 1.0.0
+  version: 1.1.0
   repo-bound: true
 ---
 
 # Skill Forge
 
-Scaffolds a new skill in this repository so it is born convention-clean:
-the template is instantiated, the audit passes, and the index is fresh in
-one pass. Repo-bound: this skill operates on this repository's tree and is
-never deployed by skill-sync.
+Guide the external host agent in creating or adapting a skill artifact in this repository. This file is passive instruction material: it does not scaffold files, run audits, regenerate catalogs, schedule work, or deploy anything by itself.
 
-## Execution Flow
+Prefer the smallest useful fitted behavior. Before creating a new skill, inspect relevant user context the host may legitimately access and compare existing first-party and reference-corpus material. An existing skill may be adopted, adapted, mined for one useful procedure, supplemented, composed with another skill, or rejected in favor of a custom artifact. Creation is not the default merely because no exact title match exists.
 
-1. **Elicit the spec.** Confirm with the user:
-   - **Name** — kebab-case; must not collide with an existing skill
-     (check `skills/` directories and `INDEX.md` before proceeding).
-   - **Description** — one sentence of what it does plus "Use when"
-     trigger phrases (skill-audit fails descriptions without them).
-   - **Category** — Productivity | Development | Research | Ops | Meta.
-   - **Cadence** — one-shot or recurring; recurring skills get a
-     `## Scheduling` section.
-   - **Deployment class** — portable, portable-with-fallback (it will
-     carry a `sources.json`), or repo-bound (`metadata.repo-bound: true`).
-2. **Instantiate.** Copy `docs/skill-template.md` into
-   `skills/<name>/SKILL.md` and fill every placeholder from the spec.
-3. **Pulse scaffolding.** If the skill is pulse-like, also scaffold
-   `skills/<name>/sources.json` (must parse as valid JSON — mirror
-   `skills/mcp-pulse/sources.json`) and include the standalone-fallback
-   marker sentence in the SKILL.md: "If the engine is unavailable (skill
-   deployed standalone), read `sources.json` beside this file and
-   fetch/search those sources directly with web tools."
-4. **Audit.** Run `node skills/skill-audit/scripts/audit.ts` from the
-   repo root and fix every FAIL finding until it exits 0.
-5. **Reindex.** Run `node scripts/build-index.ts` to regenerate
-   `INDEX.md` and `index.json`.
+## Authoring flow
 
-## Output Format
+1. **Establish the need.** State the durable repeatable method being preserved and why ordinary context, a project-local rule, or a lightweight checklist is insufficient.
+2. **Compare before creation.** Inspect relevant existing skills and evidence. Record whether the result is `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST`, `DYNAMIC`, or `NO CHANGE`.
+3. **Define the artifact.** For a new or materially adapted skill, establish a non-colliding kebab-case name, realistic triggers, intended use, dependencies, host capabilities, authority assumptions, portability boundaries, safe fallbacks, and truthful completion expectations.
+4. **Author minimally.** Use `docs/skill-template.md` as guidance when it remains consistent with current governance. Put user-facing first-party skill material under `skills/`. Keep repository-maintenance instructions under `engine/skills/` only when they are genuinely repository mechanics.
+5. **Review statically.** The external agent checks the artifact against current README/governance, `docs/curation-policy.md`, `docs/skill-verification.md`, and relevant controlled taxonomy. Resolve unsupported authority, unsafe side effects, hidden host assumptions, stale paths, and unnecessary complexity before treating the artifact as ready.
+6. **Maintain evidence and navigation.** When the artifact belongs to the governed corpus, update appropriate provenance/verification companions, navigation surfaces, and passive catalog snapshots directly as needed. Preserve truthful unknowns rather than inventing provenance, fingerprints, behavioral evidence, or source history.
 
-```
-# Skill Forge — <name>
-Files created: skills/<name>/SKILL.md [, skills/<name>/sources.json]
-Audit: exit 0 (N skills validated) | findings fixed: <list>
-Index delta: <new INDEX.md entry line>
-```
+## Passive boundary
 
-## Notes
+- Do not require or introduce repository-owned scripts, generators, CI, tests, schedulers, installers, synchronizers, preflight processes, runtimes, or background services.
+- Do not describe `skillz` as executing, auditing, deploying, validating, or regenerating anything. The external host agent performs any authorized action.
+- Do not modify intact third-party material under `skills/sources/` in place. Treat it as pinned reference/source evidence; create first-party adaptations separately when needed.
+- Do not manufacture behavioral validation. `verified` is structured static review of an exact version; `validated` requires representative behavioral evidence actually produced in an external environment.
+- Do not create a skill merely to increase corpus size. A smaller, clearer instruction or no change is preferable when it fits the need.
 
-- Never overwrite an existing skill — a name collision aborts the forge;
-  editing an existing skill is a different task.
-- Conventions are enforced mechanically by skill-audit; if the template
-  and the audit disagree, fix `docs/skill-template.md` first.
+## Completion report
+
+Report the decision (`ADOPT` / `ADAPT` / `EXTRACT` / `SUPPLEMENT` / `COMPOSE` / `CREATE` / `CHECKLIST` / `DYNAMIC` / `NO CHANGE`), files changed, provenance or verification evidence added or updated, portability/authority caveats, and remaining evidence gaps. Never claim an audit, execution, installation, deployment, or behavioral result that did not actually occur through the external host.
