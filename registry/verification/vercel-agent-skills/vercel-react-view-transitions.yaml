@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-react-view-transitions
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/react-view-transitions/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: dcecd8e3f356c73f340676cfcefb33539435e987
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, ux, architecture]
+  lifecycle: [design, implementation, verification]
+  characteristic: [compatibility-aware, reference-heavy, progressive-disclosure, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Detailed placement, nesting, navigation, Suspense, shared-element, accessibility, and reduced-motion guidance is bundled. Current React documentation still identifies ViewTransition as Canary/Experimental while documenting the same ViewTransition-class and addTransitionType model, so the experimental dependency is explicit rather than stale. Exact pinned fingerprint and references confirmed. Behavioral validation remains pending.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-optimize
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/vercel-optimize/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c8a6d6d7075b2cc3f7921da89de86e6926f78985
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [monitoring, observability, research, cloud]
+  lifecycle: [discovery, verification, operations, maintenance]
+  characteristic: [evidence-first, deterministic, cost-bounded, risk-aware, safety-bounded, traceable, tool-assisted, source-driven]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Metrics-first collection, project/scope disambiguation, explicit consent for degraded audits, deterministic candidate gates, bounded file access, version-aware citations, withheld recommendations, regeneration, secret-command prohibitions, and customer-output sanitization form a strong evidence loop. Low portability is explicit because the workflow depends on Vercel CLI/metrics and Observability Plus for full strength. Bundled scripts, libs, and references are present. Behavioral validation remains pending.

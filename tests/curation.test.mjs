@@ -95,6 +95,16 @@ test("Cloudflare pinned corpus has complete individual review coverage", () => {
   assert.equal(statuses.filter((status) => status === "rejected").length, 2);
 });
 
+test("Vercel pinned corpus has complete individual review coverage", () => {
+  const provenance = yamlFiles(join(PROVENANCE, "vercel-agent-skills"));
+  const verification = yamlFiles(join(VERIFICATION, "vercel-agent-skills"));
+  assert.equal(provenance.length, 9, `expected 9 Vercel provenance records, found ${provenance.length}`);
+  assert.equal(verification.length, 9, `expected 9 Vercel verification records, found ${verification.length}`);
+  const statuses = verification.map((file) => field(readFileSync(file, "utf8"), "verification_status"));
+  assert.equal(statuses.filter((status) => status === "verified").length, 6);
+  assert.equal(statuses.filter((status) => status === "rejected").length, 3);
+});
+
 test("structured verification sample earned structured verification only", () => {
   for (const [source, skill] of [
     ["cline-skills", "review-team"],

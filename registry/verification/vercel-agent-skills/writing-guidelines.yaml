@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: writing-guidelines
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/writing-guidelines/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 63facf310252a990d154bed12b3dcdd295ba771a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [writing, documentation, code-review]
+  lifecycle: [verification]
+  characteristic: [source-driven, retrieval-first, reference-heavy]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 1, authority 2, failure 0, evidence 1, dependencies 0, portability 1, usefulness 1, adversarial resilience 0, effectiveness 2. Hard fail: the governing writing handbook is intentionally fetched from an unpinned main-branch command.md on each invocation. That mutable instruction payload sits outside the recorded SKILL.md fingerprint and can alter review behavior without triggering stale detection. Reference-only unless adapted to integrity-bind the fetched rules before use. Exact pinned SKILL.md fingerprint confirmed. Behavioral validation remains pending.

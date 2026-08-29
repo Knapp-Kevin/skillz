@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-react-native-skills
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/react-native-skills/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 73401865dd7440a43c5243b107a3763e0d2f4aae
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, ux, architecture]
+  lifecycle: [design, implementation, verification]
+  characteristic: [reference-heavy, compatibility-aware, production-oriented, maintainability]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Clear React Native/Expo scope with a bundled detailed rule corpus covering list performance, animation, navigation, state, rendering, monorepos, and configuration. Some rules prescribe specific libraries or patterns and should remain context-dependent rather than absolute. Exact pinned fingerprint and rule tree confirmed. Behavioral validation remains pending.
