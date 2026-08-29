@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: triage
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/triage/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 37ddea1e3dcf8fb5be5b92e4e45f2c34b8e61d3e
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [repository-maintenance, planning, evaluation]
+  lifecycle: [planning, maintenance]
+  characteristic: [evidence-first, human-review, traceable, orchestration, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Excellent state-role model, mandatory AI disclosure for posted content, conflicting-state stop, codebase redundancy and prior-rejection checks, claim verification before elaboration, maintainer recommendation gate, and explicit confirmation before quick overrides. Tracker and suite-specific composition assumptions reduce portability. Behavioral validation remains pending."
