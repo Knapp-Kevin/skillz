@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: writing-for-agents
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/productivity/writing-for-agents/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/productivity/writing-for-agents/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a37608daf6e835e767deecfb498facecaaba82ba
 characterized_at: 2026-08-28
