@@ -12,12 +12,12 @@ upstream_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
 upstream_last_updated_at: 2026-07-01T18:11:23Z
 curated_at: 2026-08-29
 last_checked_at: 2026-08-29
-availability: vendored-stale
+availability: vendored
 local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
 permission_tier: read-only-and-generate-only
 portability: medium
-review_status: stale-current-docs-required
+review_status: rejected-unchanged-current-doc-drift
 dependency_status: material-current-documentation-drift
 dependencies: Bundled API/SDK references plus current Anthropic platform docs
-import_eligibility: reference-only-until-refreshed-and-reverified
-rationale: Strong provider/SDK reference design, but its July model defaults and feature assumptions have materially drifted from current official Anthropic docs.
+import_eligibility: design-evidence-only-until-refreshed-and-reverified
+rationale: Strong provider/SDK reference design, but the pinned July skill contains time-sensitive model defaults and feature assumptions that materially diverge from current official Anthropic migration guidance. Keep as reference/design evidence; do not reuse unchanged without refreshing current official documentation and re-verifying the adapted result.
