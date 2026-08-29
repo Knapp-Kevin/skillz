@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/engineering/codebase-design/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 3f63c8146dd2604b419c929e9876b90c30d410e9
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 16/20
 tags:
   use_case: [architecture]
   lifecycle: [planning, design]
   characteristic: [modularity, maintainability, decomposition]
   authority: [generate-only]
   portability: [high]
-notes: Exact version is fingerprinted and characterized under the repository quality policy. No local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Clear deep-module vocabulary, deletion test, seam discipline, interface-as-test-surface guidance, and concrete testability patterns. Primarily a design/reference skill rather than an evidence-producing workflow, so failure/effectiveness scoring is conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
