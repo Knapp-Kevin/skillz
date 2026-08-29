@@ -2,66 +2,85 @@
 
 Status: **NOT LOCKED**
 
-Alpha is locked when `skillz` can reliably synthesize and later refine a fitted skill set for a user without confusing source reputation, availability, characterization, verification, behavioral evidence, current user fit, or host tooling capability.
+Alpha is the narrower internal capability milestone. Share-ready repository completion is the stronger gate tracked by Issue #56.
 
-## Required before alpha lock
+Alpha is locked when `skillz` can reliably synthesize and later refine a fitted skill system without confusing source reputation, reference availability, exact-version quality, behavioral evidence, current user fit, authority, or host capability.
 
-- [x] Repository-link first-visit bootstrap entry contract exists.
-- [x] Returning-user review/refine entry contract exists.
-- [x] Human browse-by-purpose category navigation exists for the local library.
-- [x] Canonical machine-readable local category assignments exist.
+## Structural capability already established
+
+- [x] Repository-link first-visit bootstrap entry exists.
+- [x] Returning-user refinement path exists and preserves valid custom behavior.
 - [x] User-facing library and engine machinery are structurally separate.
-- [x] Approved indexed reference skills remain part of the usable library corpus.
-- [x] Third-party provenance, source pins, and licensing rules exist.
-- [x] Source role and individual skill quality are separate registry concepts.
-- [x] A missing individual quality record defaults to unverified for normal selection.
-- [x] Characterization taxonomy exists and covers engineering plus broader knowledge-work use cases.
-- [x] Verification records bind tags/status to exact skill content fingerprints.
-- [x] Offline drift detection can invalidate changed characterized skills.
-- [x] Bootstrap has a deterministic selector that consumes verification status and characterization tags directly when local execution is available.
-- [x] Connector/API/web hosts have a first-class zero-local-runtime path that can inspect registry/provenance records and exact pinned upstream skill content directly.
-- [x] Connector-native portability smoke passed in a constrained ChatGPT host: `diagnosing-bugs` verification/provenance were resolved and the exact pinned upstream Git blob SHA matched `061c25a524acaa93d4534e9e08a793c0a5fe45fd` without local Git, Node, submodules, or shell network access.
-- [x] Normal agent use explicitly does not require maintainer-grade local runtime; local Node/Bun/Git requirements are scoped to deterministic repository-maintenance proof.
-- [x] Default governed selection excludes unverified unchanged reuse and blocks stale/rejected/retired material; explicit unverified review is design-evidence only.
-- [x] Recursive local-skill discovery is integrated into index, audit, risk-audit, and sync tooling before category folders become canonical skill paths.
-- [x] Alpha preflight has an explicit vendored-source materialization gate that binds every vendored registry source to a clean initialized submodule at exactly the superproject gitlink SHA.
-- [x] Alpha preflight requires every characterized skill path to be available after materialization rather than silently accepting missing verification targets.
-- [x] Catalog proof rejects semantically incoherent schema-v2 output, including zero-skill vendored sources, source/count mismatch, impossible aggregate counts, duplicate source identities, and malformed catalog shapes.
-- [x] The original public v1 behavioral fixture set is explicitly retired because its expected decisions and scoring keys were committed publicly and remain recoverable from Git history.
-- [x] The rotated v2 public treatment fixture contains only synthetic user context, uses neutral scenario IDs, and mechanically forbids evaluator-only answer-key fields.
-- [x] A private evaluator-bundle verifier binds frozen evaluator criteria to the exact public v2 fixture by set ID, SHA-256, complete scenario coverage, and an evaluator-only location outside the treatment repository.
-- [ ] The exact vendored-source materialization gate has passed on the current commit in a fully materialized checkout.
-- [ ] Generated `INDEX.md` / `index.json` have been refreshed from the current fully materialized corpora and expose verification status, tags, source role, human category, and exact counts.
-- [ ] The refreshed generated index is proven semantically coherent and deterministic/idempotent against the current vendored sources.
-- [ ] The private v2 evaluator bundle has been verified against the exact committed public fixture from outside the treatment repository before treatment execution.
-- [ ] Three isolated v2 first-visit runs collectively demonstrate eligible reuse/minimal adaptation, refusal of unsafe or unproven unchanged reuse, and custom creation when reuse would distort the workflow.
-- [ ] Two isolated v2 returning-user runs collectively demonstrate minimal justified refinement and a correct no-change outcome.
-- [ ] Every treatment run is completed before its matching private evaluator criteria are opened.
-- [ ] Installation or portable handoff is demonstrated and truthfully reported for the resulting fitted set.
-- [ ] Changed material is re-evaluated and installation/profile state is updated where required.
-- [ ] No selected trusted corpus item has unresolved dependency or license ambiguity.
-- [ ] Documentation and generated counts agree with repository state.
+- [x] `skill-bootstrap` is the single canonical normal user-flow orchestrator.
+- [x] Normal bootstrap does not require maintainer-grade local runtime.
+- [x] Connector/API/web and minimal read-only paths are supported.
+- [x] Capability-first discovery, whole-skill comparison, component extraction, composition, custom creation, adversarial review, and host adaptation are explicit stages.
+- [x] Normal bootstrap explicitly must not mutate the `skillz` repository.
+- [x] Source role and individual skill quality are separate concepts.
+- [x] Exact-version verification records bind status/tags to canonical skill fingerprints.
+- [x] `verified` and `validated` are the only current unchanged-reuse quality states.
+- [x] Missing/unverified/legacy-baseline material is design evidence rather than silent trusted reuse.
+- [x] Stale/rejected/retired material is excluded from normal unchanged selection.
+- [x] Component borrowing is explicitly subject to provenance, licensing, dependency, rejection-reason, authority, and host-fit checks.
+- [x] Deterministic selector consumes governed status and controlled metadata.
+- [x] Offline fingerprint-drift detection exists.
+- [x] Vendored-source materialization and semantic catalog checks exist.
+- [x] Connector-native exact-version smoke has succeeded without local Git/Node/submodules.
+- [x] Share-ready governed-corpus verifier and one-command deterministic preflight exist.
+
+## Behavioral-evidence integrity
+
+Two earlier public treatment generations are invalid as blind closure evidence:
+
+- **v1** exposed evaluator answer-key material directly in the public repository.
+- **v2** used neutral IDs, but public Issue #15 later mapped those IDs to expected decision classes. That public mapping compromises blindness even though the fixture itself contained no evaluator fields.
+
+The active public treatment set is now:
+
+`docs/evals/fixtures/share-ready-scenarios-v3.json`
+
+Its neutral IDs must never be publicly mapped to expected decisions or scenario-specific scoring criteria while the set is active.
+
+The evaluator-only rubric must:
+
+- remain outside the repository and treatment workspace;
+- be frozen before treatment execution;
+- bind to the exact public v3 fixture bytes by set ID and SHA-256;
+- cover every scenario ID exactly once;
+- contain expected decisions and `must_observe` / `must_not` criteria privately;
+- be opened for a scenario only after that treatment output is frozen.
+
+The repository verifier is `scripts/verify-alpha-evaluator-bundle.mjs`.
+
+## Remaining alpha gate
+
+- [ ] Run `node scripts/share-ready-preflight.ts` in a fully materialized checkout of the exact candidate commit and record PASS.
+- [ ] Record exact regenerated schema-v2 catalog counts and byte-identical second-pass proof.
+- [ ] Create/freeze a new private evaluator bundle for `share-ready-v3-2026-08-29` outside the repository.
+- [ ] Verify that private bundle against the committed v3 fixture before treatment.
+- [ ] Run every v3 scenario in a fresh isolated treatment context.
+- [ ] Include both a strong model and at least one materially weaker/cheaper model across the proof set.
+- [ ] Demonstrate connector/API/read-only completion without local runtime.
+- [ ] Demonstrate whole-skill eligibility reasoning and refusal of unsafe/unproven unchanged reuse.
+- [ ] Demonstrate component extraction/composition without importing unnecessary source ceremony.
+- [ ] Demonstrate clean custom creation when corpus fit would distort the workflow.
+- [ ] Demonstrate truthful host-specific packaging/install or portable handoff.
+- [ ] Demonstrate returning-user minimal refinement.
+- [ ] Demonstrate a correct `NO CHANGE NEEDED` outcome.
+- [ ] No repeated failure remains attributable to repository ambiguity or broken/stale references.
 
 ## Invalid evidence
 
-The retired v1 scenario identifiers and their historical results, if any, cannot satisfy the behavioral alpha gate. Their evaluator mappings were public and therefore are not blind evidence.
+A run cannot satisfy alpha/share-ready behavioral proof if:
 
-A v2 run is also invalid if the treatment agent receives the private evaluator bundle, evaluator-only criteria, candidate hints, or prior scored treatment output before its own output is frozen.
+- its scenario ID has been publicly mapped to expected evaluator outcome;
+- treatment received private criteria, candidate hints, prior scored output, or evaluator notes before freezing its response;
+- the same context was used for treatment and evaluator material;
+- behavioral validation, fingerprint proof, installation, or inaccessible evidence was fabricated;
+- maintainer-preflight failure was hand-waved away as irrelevant.
 
-Failure to run maintainer-only Node/Git tooling in a constrained host is **not** evidence that normal agent use failed. Conversely, a connector-native user success does not substitute for the separate repository-wide deterministic catalog/preflight proof.
+Conversely, inability to run maintainer Node/Git tooling in a constrained host is not evidence that normal user bootstrap failed. Those are separate proof layers.
 
 ## After alpha lock
 
-Post-alpha work can focus primarily on enrichment rather than foundational semantics:
-
-- characterize more of the existing corpus;
-- verify more skills that require structured review;
-- add behavioral validation evidence;
-- add and retire sources;
-- refine tags and matching weights;
-- improve discovery and search;
-- tune custom-skill synthesis from real use;
-- expand returning-user refinement heuristics;
-- expand host installation adapters.
-
-Alpha lock is a capability threshold, not a declaration that the library is complete. A library that waits to become complete before shipping has discovered a very sophisticated way to never ship.
+Post-alpha work may broaden sources, add individual reviews/behavioral evidence, improve ranking/taxonomy, and add host adapters. Those are enrichment once the core fitted-skill-system experience is proven.
