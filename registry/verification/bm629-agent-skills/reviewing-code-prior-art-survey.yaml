@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: reviewing-code-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ace4bfa20c8c220b10fc48ff74e99ab5efc409c8
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [research, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, deterministic, human-review, test-gated, traceable, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The reviewer is explicitly independent and review-only, requires the producer's validator for deterministic conditions instead of recreating it, treats validator failure as a finding, requires a named condition plus concrete gap before revision, protects thin-but-honest results from false-revise, and emits exactly one machine-parseable verdict. It also handles delta artifacts without re-litigating inherited baseline material. The only deduction is portability because the reviewer is intentionally coupled to the producer package and its Python dependencies. Upstream testing is useful source evidence but no local behavioral validation was run."

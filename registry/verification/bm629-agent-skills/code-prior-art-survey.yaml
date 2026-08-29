@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: code-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: cff399a13d222e3e4884d0e7c94a525bcbe3339a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [research, evaluation]
+  lifecycle: [discovery, planning, verification]
+  characteristic: [evidence-first, deterministic, source-driven, retrieval-map, traceable, risk-aware, test-gated, tool-assisted]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The workflow makes coverage explicit at group-by-source level, requires exact query receipts and timestamps, distinguishes reached-zero from unreachable/partial, forbids popularity floors as exclusion, preserves negative/excluded vocabulary, treats cloned content as data, refuses to execute candidate repositories, and validates keyword-map/search/extract/synthesis artifacts with bundled deterministic contracts. The only deduction is portability: full effectiveness depends on a complete multi-file skill package, Python dependencies, and whatever live research surfaces the host can reach, although missing surfaces are explicitly degraded rather than hidden. Upstream commit notes report TDD and 71 passing tests for the synthesis addition, but those are upstream evidence only; no local behavioral validation was run here."
