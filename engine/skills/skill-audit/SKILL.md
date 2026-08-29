@@ -1,75 +1,94 @@
 ---
 name: skill-audit
 description: >-
-  Validate this repository's conventions mechanically: SKILL.md frontmatter
-  (name/directory match, trigger-bearing description, version), script
-  health (--help exit codes), intake-registry enums, and index freshness.
-  Use when the user asks "audit the skills repo", "validate the skills",
-  "lint the registry", before running skill-sync, or as a pre-commit check
-  after adding or editing any skill.
+  Review skillz repository skills and companion metadata for structural,
+  safety, provenance, and consistency problems using the host agent's own
+  inspection capabilities. Use when curating or auditing this repository.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Audit
   emoji: "🔍"
-  version: 1.1.0
+  version: 2.0.0
   repo-bound: true
 ---
 
 # Skill Audit
 
-Mechanical validation of the skillz repo. Drift is a failing exit code, not a code-review catch. Repo-bound: this skill operates on this repository's tree and is never deployed by skill-sync.
+This is a passive instruction set for an external agent reviewing `skillz`. It executes nothing and depends on no repository-owned script, test runner, CI job, or runtime.
 
-## What This Does
+## Purpose
 
-Runs `scripts/audit.ts`, which checks in order:
+Determine whether a skill and its companion records are coherent, useful, appropriately scoped, and honestly represented.
 
-1. **Skill conventions** — every `skills/<dir>/SKILL.md`: frontmatter parses, `name` matches the directory, `description` is non-empty and carries "Use when" trigger guidance, `metadata.version` present.
-2. **Script health** — every `skills/<dir>/scripts/*.ts` AND every repo-level `scripts/*.ts` answers `--help` with exit 0 (spawned, 30s timeout).
-3. **Pulse specs** — every `skills/<dir>/sources.json` parses as JSON, and any skill carrying one contains the `engine is unavailable` standalone-fallback marker in its SKILL.md (portable-with-fallback deployment class).
-4. **Registry lint** — every `registry/candidates.yaml` entry has a valid `status` and `permission_tier` (enums from `docs/evaluation-framework.md`), a non-empty `rationale`, and — for adopted entries — an existing `resolved_path`.
-5. **Index freshness** (WARN-only) — `INDEX.md` must be newer than every SKILL.md.
+## Review each skill
 
-Exit 0 = clean (warnings allowed); exit 1 = failures found. The summary line reports the validated-skill count.
+Check the following from the files and evidence you can legitimately inspect:
 
-A second script, `scripts/risk-audit.ts`, runs the **semantic risk layer** (issue #5): structure can be valid while the bottle still holds poison. Deterministic checks, same exit contract:
+1. **Identity**
+   - `SKILL.md` has a clear name and trigger-bearing description.
+   - The skill describes a reusable method rather than a one-off fact or preference.
+   - Scope is narrow enough to be coherent and broad enough to be worth preserving.
 
-1. **Negative-rules completeness (FAIL)** — any skill whose Output Format carries evidence/decision slots (`because`, `[reason]`, `rationale`, `root cause`, `verdict`) must have a `## Negative rules` section covering secret handling, anti-fabrication, and a missing-evidence fallback (template §Capability floor rule 8).
-2. **Mutating-action ambiguity (FAIL)** — send/push/delete/publish/deploy/create-issue/archive/enroll/pay/buy with no approval or read-only language anywhere in the skill; `move`/`update` are WARN-class (verb/noun ambiguity).
-3. **Portable specificity (WARN)** — absolute paths or operator/org terms in a portable skill body (repo-bound skills exempt; term list embedded — this tool is repo-bound, local specificity here is intentional).
-4. **External-service ambiguity (WARN)** — direct vendor API hosts or env-key requirements without an MCP or web-tool fallback mention.
+2. **Trigger quality**
+   - State when to use the skill.
+   - State meaningful non-triggers where over-activation would be harmful.
+   - Avoid host-specific trigger assumptions unless the skill is intentionally host-specific.
 
-It is a static risk filter, not an outcome evaluation — `skill-eval` owns behavioral proof.
+3. **Procedure quality**
+   - Steps are ordered and decision points are explicit.
+   - Required evidence is distinguished from inference.
+   - Missing information has a conservative fallback.
+   - The procedure does not rely on a repository-owned executable helper.
 
-## Execution Flow
+4. **Authority and safety**
+   - Read-only analysis is distinguished from mutation or external side effects.
+   - Recommendations are not treated as authorization.
+   - Sensitive data is minimized.
+   - The skill does not fabricate unavailable evidence or claim completion it cannot establish.
 
-1. Run from the repo root (either runtime works):
+5. **Portability**
+   - Host-specific tools are treated as capabilities of the external agent, not dependencies of `skillz` itself.
+   - When a capability is unavailable, the skill gives a reasonable fallback or truthfully reports the limitation.
 
-   ```
-   node skills/skill-audit/scripts/audit.ts
-   bun run skills/skill-audit/scripts/audit.ts
-   ```
+6. **Provenance and licensing**
+   - Third-party material has a source, canonical path, license, pinned revision, and relationship recorded where applicable.
+   - Exact-version conclusions are bound to the recorded fingerprint.
+   - A source's reputation never substitutes for individual skill review.
 
-2. For each FAIL finding, fix the named file and re-run until exit 0.
-3. If the only findings are index-staleness WARNs, run `node scripts/build-index.ts` and re-run.
-4. Report the final counts. Do not suppress findings; a convention worth breaking is a convention worth changing in `docs/skill-template.md` first.
+7. **Companion metadata**
+   - Provenance and verification companions agree on skill identity and source.
+   - Tags describe actual behavior and authority.
+   - Freshness dates and source signals are evidence-based.
+   - `verified`, `validated`, `rejected`, `stale`, and other states match the evidence rather than aspiration.
 
-## Scheduling
+8. **Redundancy and fit**
+   - Compare against nearby corpus skills before creating another implementation.
+   - Prefer adaptation, extraction, supplementation, or composition when that preserves the better workflow.
+   - Keep a distinct skill when merging would blur responsibilities or authority.
 
-- **Claude Code:** run ad hoc before commits, or `/schedule` a weekly repo-health run paired with skills-pulse.
-- **CI:** `node --test "tests/*.test.mjs"`, `node skills/skill-audit/scripts/audit.ts`, and `node skills/skill-audit/scripts/risk-audit.ts` are the repo's declared CI commands (`.github/workflows/ci.yml`).
+## Semantic risk review
 
-## Output Format
+Explicitly look for:
 
-```
-FAIL: <skill>: <violation>
-WARN: <message>
+- unsupported certainty;
+- missing negative rules;
+- mutation without an approval boundary;
+- unnecessary private-data access;
+- hidden external-service assumptions;
+- excessive ceremony;
+- source-specific terminology copied without need;
+- instructions that imply `skillz` itself executes, schedules, monitors, installs, or validates anything.
 
-skill-audit: N failure(s), M warning(s)
-```
+## Result
 
-## Notes
+For each reviewed skill, return one decisive state:
 
-- Validates structure and script health, not skill *quality* — that stays model judgment.
-- `vendor/` trees are never audited; official sources own their own conventions.
-- `--skills-dir` and `--registry` flags exist for test fixtures.
+- **PASS**: no material correction required;
+- **REVISE**: useful skill with a specific correctable defect;
+- **ADAPT**: reference is useful but should not be reused unchanged;
+- **MERGE/COMPOSE**: overlap is better handled with an existing skill relationship;
+- **REJECT**: unsuitable for normal unchanged reuse;
+- **RETIRE**: previously useful material should no longer be selected.
+
+Record the evidence and make the smallest justified static repository change. Do not create executable validation machinery to prove the audit. The external reviewing agent is responsible for performing the review.
