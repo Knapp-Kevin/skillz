@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: wizard
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/wizard/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/wizard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: c4294ad8298b9b95fc727496b1b802b1f7363fba
 characterized_at: 2026-08-29
