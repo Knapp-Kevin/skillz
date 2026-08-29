@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.7.0
+  version: 0.8.0
 ---
 
 # Skill Bootstrap
@@ -30,9 +30,11 @@ Unless the user explicitly asked to maintain `skillz` itself:
 
 - do not modify this repository;
 - do not use repo-bound `skill-forge` as the user's artifact generator;
-- do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, repository scripts, or CI;
-- do not assume a local clone, shell, Git, Node/Bun, initialized submodules, or writable filesystem;
+- do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, engine/repository-maintenance scripts, or CI;
+- do not assume a local clone, shell, Git, Node/Bun, or writable filesystem;
 - do not confuse the user's target skill location with this repository's `skills/` directory.
+
+This passive-engine boundary does **not** prohibit a selected user-facing skill from containing or using its own scripts, references, templates, fixtures, JSON, examples, or other supporting components. Those are part of the skill package and must be evaluated according to that skill's own dependency, authority, portability, and host requirements.
 
 ## Global stop rule
 
@@ -114,15 +116,16 @@ Search in this order when available:
 2. current project/repository skills;
 3. local user-facing `skills/`;
 4. built-in host capabilities;
-5. approved vendor/reference sources;
-6. individually governed tracked external skills;
+5. tracked upstream reference sources;
+6. individually governed external skills;
 7. live external sources only for a still-unmet material capability.
 
-The broad vendored/tracked corpus is **reference/discovery material**, not blanket trusted inventory.
+The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory.
 
 For each relevant candidate inspect:
 
 - **whole-skill fit**;
+- **skill-package completeness**, including supporting scripts/references/templates/fixtures when they materially affect behavior;
 - **component value** such as triggers, safeguards, decision gates, evidence rules, procedure fragments, failure handling, or abstractions.
 
 Stop when every material requirement has an adequate candidate path or a justified custom/dynamic/no-skill path.
@@ -139,7 +142,7 @@ Check, as far as the host can truthfully establish:
 - exact version/fingerprint;
 - semantic quality state;
 - license/attribution;
-- dependencies;
+- required supporting components and dependencies;
 - authority/side effects;
 - portability/host assumptions.
 
@@ -185,6 +188,8 @@ For every ADAPT, SUPPLEMENT, COMPOSE, or CREATE decision informed by a reference
 
 Omit source-specific commands, terminology, ceremony, interview flows, file layouts, UX, and authority assumptions that do not belong in the user's system.
 
+Do not discard a required skill-owned component merely because it is executable or non-Markdown. If it is necessary to the selected capability, either preserve it, adapt it deliberately with provenance, or choose another implementation.
+
 If a mechanism cannot be separated coherently from problematic assumptions, use an eligible whole skill or create an independently expressed implementation instead.
 
 **Output:** component ledger.
@@ -214,7 +219,7 @@ For each artifact define at minimum:
 - name/purpose;
 - triggers/non-triggers;
 - inputs/outputs;
-- required/optional tools;
+- required/optional tools and supporting components;
 - ordered procedure;
 - decision points;
 - authority/security/privacy boundaries;
@@ -223,7 +228,7 @@ For each artifact define at minimum:
 - completion criteria;
 - provenance/attribution when material was copied or adapted.
 
-Use host-specific packaging only when established. Otherwise produce portable Markdown preserving the semantic contract.
+Use host-specific packaging only when established. Otherwise produce portable Markdown preserving the semantic contract and clearly describe any supporting files the target skill requires.
 
 Do not use repo-bound `skill-forge` for normal user artifact creation.
 
@@ -233,7 +238,7 @@ Inability to write files is not inability to complete bootstrap. Produce complet
 
 ## S10 — Semantic adversarial review
 
-Read each important custom/adapted artifact as a literal or weaker model might.
+Read each important custom/adapted artifact as a literal reader might.
 
 Challenge it for:
 
@@ -255,7 +260,7 @@ Use at least three representative readings:
 2. **non-trigger** — should stay out of the way;
 3. **pressure/failure** — targets its highest-risk ambiguity or shortcut.
 
-This is semantic, probabilistic review of instructions. Do not describe it as runtime proof.
+This is semantic, probabilistic review of instructions. It is not a benchmark of model capability and must not be described as runtime proof.
 
 **Output:** `PASS`, `REVISE`, `MERGE`, `SPLIT`, or `DELETE` for each artifact, with material findings and remaining uncertainty.
 
@@ -291,7 +296,7 @@ A returning user starts from the fitted system already in use.
 3. Re-bind the current environment/authority.
 4. Identify only capabilities affected by changed needs, drift, overlap, failure, or a material gap.
 5. Re-run S3 through S11 only for affected capabilities.
-6. Preserve still-valid custom behavior.
+6. Preserve still-valid custom behavior and required supporting components.
 7. Search only where material improvement is plausible.
 8. Prefer the smallest justified change.
 9. `NO CHANGE NEEDED` is correct when no material improvement is established.
@@ -322,6 +327,7 @@ Do not end at recommendations if complete artifacts can be produced.
 - Search capabilities before filenames.
 - Treat broad source material as reference/discovery, not blanket trusted inventory.
 - Extract mechanisms without importing unnecessary ceremony.
+- Preserve required skill-owned components unless there is a specific reason to change them.
 - Component reuse does not bypass provenance, licensing, dependencies, authority, or rejection reasons.
 - `verified` and `validated` are the only current unchanged-reuse quality states.
 - Never fabricate identity, review state, installation, artifacts, or evidence.
