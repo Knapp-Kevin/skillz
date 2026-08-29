@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: second-brain-audit
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7a3e971c0d6b5b9defc1d28182ef9b302e0e9252
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [memory, context-management, repository-maintenance]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, risk-aware, human-review, tool-assisted, traceable]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The skill distinguishes current state from historical events, checks always-loaded claims against fresher evidence, separates contradiction from lack of evidence, warns that a zero-result scanner is not a clean bill of health, avoids bulk conversion, and requires a shown diff plus approval before restructuring. The optional scanner is read-only and present in the source. One point is withheld on authority because the later write-path phase instructs updating the agent instruction file without restating the earlier approval requirement as explicitly as the restructuring phase. Upstream commit notes report behavioral checks, but no local behavioral validation was run here."
