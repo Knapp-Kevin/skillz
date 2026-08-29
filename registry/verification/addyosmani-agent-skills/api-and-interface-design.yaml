@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: api-and-interface-design
 source_id: addyosmani-agent-skills
 source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
-local_path: vendor/addyosmani-agent-skills/skills/api-and-interface-design/SKILL.md
+local_path: skills/sources/addyosmani-agent-skills/skills/api-and-interface-design/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 820d6d981f90b7802e0ea8b75bb966a3d78b8d0f
 characterized_at: 2026-08-28
