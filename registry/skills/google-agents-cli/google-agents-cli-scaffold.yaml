@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: google-agents-cli-scaffold
+display_name: Google Agents CLI Scaffold
+source_id: google-agents-cli
+source_repository: https://github.com/google/agents-cli
+source_path: skills/google-agents-cli-scaffold/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+upstream_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+upstream_last_updated_at: 2026-08-28T12:27:42Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/google-agents-cli/skills/google-agents-cli-scaffold/SKILL.md
+permission_tier: mutate-project-files-after-explicit-user-confirmation
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: agents-cli; target project filesystem; language/deployment-specific scaffold templates and optional existing-project merge/backup paths
+import_eligibility: already-vendored
+rationale: Scaffold/enhancement workflow requires clarifying target/runtime choices, asks before commands, preserves existing work through backup/merge behavior, and explicitly forbids implicit git initialization or commit/push operations. Generated project changes remain scoped to the user's requested scaffold task.
