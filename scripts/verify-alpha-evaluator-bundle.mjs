@@ -11,12 +11,12 @@
  */
 
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { existsSync, readFileSync, realpathSync } from "node:fs";
+import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const ROOT = resolve(join(dirname(fileURLToPath(import.meta.url)), ".."));
 const PUBLIC_FIXTURE = join(ROOT, "docs", "evals", "fixtures", "initial-alpha-scenarios.json");
 
 const { values } = parseArgs({
@@ -31,9 +31,25 @@ if (values.help || !values.rubric) {
   process.exit(values.help ? 0 : 2);
 }
 
+function isInside(parent, candidate) {
+  const rel = relative(parent, candidate);
+  return rel === "" || (!rel.startsWith("..") && !isAbsolute(rel));
+}
+
 const rubricPath = resolve(values.rubric);
 if (!existsSync(rubricPath)) {
   console.error(`FAIL: private evaluator rubric not found: ${rubricPath}`);
+  process.exit(1);
+}
+
+// Check both the path the evaluator supplied and the filesystem-resolved path.
+// This rejects a rubric copied anywhere under the treatment repository and also
+// rejects an outside symlink that resolves back into it. A symlink stored inside
+// the repository is rejected by the lexical-path check even if it points out.
+const rootReal = realpathSync(ROOT);
+const rubricReal = realpathSync(rubricPath);
+if (isInside(ROOT, rubricPath) || isInside(rootReal, rubricReal)) {
+  console.error("FAIL: private evaluator rubric is inside the repository/treatment workspace; keep it on a separate evaluator-only path");
   process.exit(1);
 }
 
@@ -81,4 +97,5 @@ console.log(JSON.stringify({
   public_fixture_sha256: publicSha256,
   scenario_ids: [...publicIds].sort(),
   evaluator_bundle: "PRIVATE / VERIFIED",
+  rubric_location: "OUTSIDE REPOSITORY",
 }, null, 2));
