@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: aws-blocks
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-blocks/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_tree_sha: 3b99b8f25fa86e316a11edac229cd34bab5d215d
+fingerprint_scope: canonical-skill-package-directory
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, software-development]
+  lifecycle: [implementation, operations]
+  characteristic: [source-driven, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Verified exact pinned AWS Blocks package. The skill includes concrete authentication, secret-handling, least-privilege IAM, CORS, WAF/throttling, and logging safeguards. It also directs scaffolding and deployment commands with AWS-side effects, so host authorization is required. Installed-version AWS Blocks package documentation and current AWS documentation control live package behavior, versions, limits, and deployment details. Behavioral validation remains pending.
