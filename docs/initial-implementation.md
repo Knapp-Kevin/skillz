@@ -4,18 +4,22 @@ The initial implementation of `skillz` is intentionally scoped around the **user
 
 The product is ready for alpha lock when a person can arrive for the first time, hand the repository to an AI, receive a governed fitted skill set, install or hand it off correctly, and later return to review and refine that set without restarting from zero.
 
+That promise is host-portable. A normal user/agent flow must not depend on a local clone, shell, Git executable, Node/Bun runtime, initialized submodules, or GitHub Actions. Those capabilities belong to maintainer-grade deterministic repository verification.
+
 ## What must work before alpha lock
 
 ### First visit
 
 1. The human can understand what the repository does from the top of `README.md`.
 2. An AI agent can jump directly to its operating instructions.
-3. The agent can inspect only legitimately available evidence and infer durable skill opportunities.
-4. The agent can search the indexed library using category and governed quality metadata.
-5. The agent can distinguish unchanged reuse, adaptation, composition, supplementation, custom creation, and no-skill outcomes.
-6. Unverified material is design evidence by default, not silently trusted unchanged material.
-7. Selected or created skills are evaluated appropriately.
-8. The result ends in a concrete installation or portable-handoff state.
+3. A constrained agent with repository read access can proceed through a connector/API/web path when local execution is unavailable.
+4. The agent can inspect only legitimately available evidence and infer durable skill opportunities.
+5. The agent can search the library using category and governed quality metadata, either through local tooling or direct registry/provenance/upstream inspection.
+6. Where the host exposes exact content identity, the agent can compare a candidate's upstream Git blob/content SHA to its recorded fingerprint without local Git.
+7. The agent can distinguish unchanged reuse, adaptation, composition, supplementation, custom creation, and no-skill outcomes.
+8. Unverified material is design evidence by default, not silently trusted unchanged material.
+9. Selected or created skills are evaluated appropriately.
+10. The result ends in a concrete installation or portable-handoff state.
 
 ### Returning visit
 
@@ -25,6 +29,14 @@ The product is ready for alpha lock when a person can arrive for the first time,
 4. It makes the smallest justified change rather than maximizing novelty or skill count.
 5. It can correctly conclude that no change is needed.
 6. Materially changed skills are re-evaluated and installation/profile state is refreshed.
+
+## Maintainer proof is separate from normal use
+
+Repository-wide generated-catalog proof still requires a compatible maintainer environment because it validates all pinned corpora, generated counts, semantic invariants, and byte-identical regeneration together.
+
+Failure to run that maintainer proof on one constrained host does not mean normal `skillz` use is broken. Likewise, a successful connector-native user flow does not replace the separate repository-wide preflight.
+
+The connector-native portability smoke in [`evals/connector-native-smoke.md`](evals/connector-native-smoke.md) exists specifically to prove this boundary.
 
 ## What is not required before alpha lock
 
