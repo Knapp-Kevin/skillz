@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: improve-codebase-architecture
+display_name: Improve Codebase Architecture
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/improve-codebase-architecture/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture/SKILL.md
+permission_tier: staging-write
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: requires codebase-design, grilling, domain-modeling, HTML-REPORT.md, repository history/docs, subagents, local temp-file/browser opening, and CDN-backed report rendering; source-local dependencies are present
+import_eligibility: already-vendored
+rationale: Strong architecture-maintenance workflow that scopes by codebase heat, uses explicit deep-module vocabulary and deletion tests, visualizes candidates, and defers design until the user chooses a target.
