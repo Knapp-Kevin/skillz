@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: doc-coauthoring
 source_id: anthropic-skills
 source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/doc-coauthoring/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/doc-coauthoring/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a5a69839ef4a161131d80b6daef10037a9686f4a
 characterized_at: 2026-08-29
