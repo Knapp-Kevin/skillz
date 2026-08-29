@@ -4,7 +4,7 @@
  * `inclusion: vendored` is materialized at exactly the gitlink revision
  * recorded by the superproject.
  *
- * This is intentionally stricter than checking whether vendor/<name> exists.
+ * This is intentionally stricter than checking whether skills/sources/<name> exists.
  * An uninitialized submodule directory can still sit inside the parent Git
  * worktree, and dirty source content can change catalog output without
  * changing its recorded gitlink.
@@ -148,7 +148,7 @@ for (const source of parseVendoredSources()) {
     continue;
   }
 
-  // Without this check, `git -C vendor/empty rev-parse HEAD` can walk upward
+  // Without this check, `git -C skills/sources/empty rev-parse HEAD` can walk upward
   // into the superproject and falsely make an uninitialized submodule look valid.
   if (canonicalPath(subTop.stdout) !== canonicalPath(absolute)) {
     failures.push(`${source.id}: ${rel} is not initialized as its own Git worktree`);
