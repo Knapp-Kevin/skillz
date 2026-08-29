@@ -1,70 +1,60 @@
 # Backlog
 
-Current work is ordered by the initial-alpha finish line. Broad skill acquisition and refinement are intentionally post-alpha unless they expose a blocker in the first-visit or returning-user experience.
+Current work is corpus curation and passive documentation refinement. There is no runtime, CI, preflight, test-harness, generator, or execution backlog for `skillz`.
 
-## Active: required before initial alpha lock
+## Active
 
 | ID | Item | State | Completion evidence |
 |---|---|---|---|
-| A01 | Materialize all 12 pinned vendor submodules and run `node scripts/initial-alpha-preflight.ts` | BLOCKED BY CURRENT EXECUTION ENVIRONMENT | Clean exact source-state proof passes; schema-v2 semantic invariants pass; exact counts recorded; second catalog pass byte-identical; preflight ends `READY FOR JOURNEY EVALUATION` |
-| A02 | Verify the separately held private v2 evaluator bundle against the exact committed public treatment fixture | READY AFTER ISOLATION REPAIR MERGES | `verify-alpha-evaluator-bundle.mjs` passes set ID, public SHA-256, complete neutral scenario coverage, and frozen criteria structure |
-| A03 | Execute all three rotated v2 first-visit treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves eligible reuse/minimal adaptation, unsafe/unproven unchanged-reuse refusal, and custom creation; each treatment output frozen before private rubric entry is opened |
-| A04 | Execute both rotated v2 returning-user treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves minimal justified refinement and a correct no-change outcome while preserving valid existing behavior |
-| A05 | Privately score the five frozen treatment outputs and write public evidence records | READY AFTER A03-A04 | All five satisfy frozen private criteria with no hard fail; public result files record set ID, scenario ID, public fixture hash, scores/outcome, evidence, and truthful install/handoff state without republishing the active answer key |
-| A06 | Reconcile generated counts, README, alpha checklist, system state, and Issue #15 | READY AFTER A01-A05 | Generated index/README agree; five blind evidence records linked; current docs agree |
-| A07 | Declare initial implementation alpha locked | BLOCKED UNTIL A01-A06 | Every remaining alpha gate supported by actual materialized and blind behavioral evidence |
+| C01 | Finish unified `skills/` tree migration and passive-architecture cleanup | IN PROGRESS | PR #42; Issue #41 |
+| C02 | Sweep current first-party docs/maintenance skills for stale script/runtime/CI/preflight/old-path references | IN PROGRESS | Current authoritative docs agree on passive architecture |
+| C03 | Reconcile `INDEX.md` and `index.json` as passive catalog snapshots | TODO | Paths/counts agree with live tree and registry; no generator introduced |
+| C04 | Reconcile remaining public corpus counts/status claims | TODO | Public docs use established live denominators or mark uncertainty explicitly |
+| C05 | Establish full denominator for partially characterized Addy Osmani source | TODO | Every eligible skill accounted for |
+| C06 | Establish full denominator for Cline source | TODO | Every eligible skill accounted for |
+| C07 | Establish full denominator for OpenHands source | TODO | Every eligible skill accounted for |
+| C08 | Review AWS source | TODO | Every eligible skill has provenance, characterization/tags, and decisive static state |
+| C09 | Review Microsoft Skills source | TODO | Every eligible skill has provenance, characterization/tags, and decisive static state |
+| C10 | Review Azure Skills source | TODO | Every eligible skill has provenance, characterization/tags, and decisive static state |
+| C11 | Review Anthropic Knowledge Work source | TODO | Full eligible denominator established and statically curated |
+| C12 | Reconcile all registered-source denominators and static completion state | TODO | No silent skips; every eligible skill decisive |
+| C13 | Prioritize consequential/high-use skills for external behavioral validation | BLOCKED BY C12 | Validation tranche based on consequence/use, not indiscriminate testing |
 
-## Invalid / retired alpha work
+## Completed current-foundation work
 
-| Item | State | Reason |
-|---|---|---|
-| Original public A1/A2/A3/R1/R2 behavioral set | RETIRED / INVALID AS BLIND EVIDENCE | Expected decisions, candidate hints, and scoring criteria were committed publicly and remain recoverable from Git history. The renderer hid them from stdout but not from a repository-reading treatment agent. |
+- user-facing corpus physically unified under `skills/`;
+- pinned source corpora moved intact to `skills/sources/`;
+- internal maintenance instructions excluded from user-facing counts;
+- companion metadata contract established;
+- static-completion contract established;
+- Vercel characterized set reconciled;
+- Cloudflare characterized set reconciled;
+- Google Agents CLI characterized set reconciled;
+- OpenHands characterized subset reconciled;
+- Cline characterized subset reconciled;
+- Addy Osmani characterized subset reconciled;
+- Anthropic Skills 17/17 characterized/reviewed set reconciled;
+- Matt Pocock 29/29 reconciled;
+- repository-owned scripts, tests, workflows, and executable helper layers removed;
+- README/agent/bootstrap/concept/architecture/system-state/roadmap/governance docs restored to passive-repository identity;
+- hourly curation task updated so the external scheduled agent performs all active work.
 
-Do not execute the retired set for alpha closure. The current v2 public treatment fixture uses neutral scenario IDs, while evaluator-only mappings live in a private fingerprint-bound bundle outside the repository.
+## Curation rules
 
-## Post-alpha enrichment
+1. Work source by source.
+2. Establish denominators before claiming completion.
+3. Preserve exact source identity, pin, license, and shared dependencies.
+4. Keep provenance separate from quality state.
+5. Keep source popularity/reputation separate from individual skill quality.
+6. Record decisive rejection/retirement reasons rather than silently skipping unsuitable material.
+7. Prefer curation of existing skills over speculative discovery.
+8. Discovery should fill demonstrated gaps, not create an infinite candidate backlog.
+9. Static corpus completion comes before broad behavioral validation.
+10. Behavioral validation is performed externally; `skillz` only stores passive evidence.
+11. Never introduce repository-owned execution machinery to solve a documentation or curation problem.
 
-These are useful but **not blockers** for the initial implementation.
+## Historical backlog material
 
-| ID | Item | Area | Notes |
-|---|---|---|---|
-| P01 | Continue source discovery and corpus expansion | curation | Add sources only with correct source role, pin/freshness, license, and attribution |
-| P02 | Characterize more existing corpus skills | curation | Fingerprint + controlled tags + provenance before treating as fully characterized |
-| P03 | Structured verification of additional third-party skills | quality | Unverified remains design evidence until it earns stronger status |
-| P04 | Behavioral validation of high-value skills | evaluation | Use representative before/after evidence where practical |
-| P05 | Improve category navigation and direct-library browsing | human UX | Let categories evolve from real corpus growth without destabilizing skill IDs |
-| P06 | Refine selection taxonomy and weights from real usage | selection | Tags inform shortlisting; final user-fit judgment remains required |
-| P07 | Expand returning-user drift/overlap heuristics | refinement | Prefer smallest justified change; preserve `NO CHANGE NEEDED` outcome |
-| P08 | Add additional supported host installation adapters | portability | Only when host packaging/install behavior is established |
-| P09 | Revisit minimum-model/capability metadata where evidence supports it | quality | Historical B13; do not block alpha |
-| P10 | Consider additional host format conversion in skill-sync | portability | Historical B15; do not block alpha |
-| P11 | Revisit historical sandbox candidates when they are relevant | curation | Historical B17 and similar items; source reputation is not proof |
+Older alpha-lock, runtime, script, CI, generator, test-harness, and Qor-era backlog items are historical. Git history preserves them. They are not the current queue and must not be treated as prerequisites for corpus curation or normal `skillz` use.
 
-## Completed foundational work
-
-| ID | Item | Evidence |
-|---|---|---|
-| D01 | Separate user-facing library from repository engine machinery | `skills/`, `engine/skills/`, README/AGENTS boundary |
-| D02 | Human-first README with explicit AI-agent jump | `README.md` |
-| D03 | First-visit bootstrap route | `BOOTSTRAP.md`, `AGENTS.md`, `engine/skills/skill-bootstrap/` |
-| D04 | Returning-user refinement route | README/BOOTSTRAP/AGENTS contracts |
-| D05 | Human browse-by-purpose categories | `skills/categories/`, `registry/categories.yaml` |
-| D06 | Third-party provenance/attribution companion model | `registry/skills/`, `docs/third-party-provenance.md`, `THIRD_PARTY_NOTICES.md` |
-| D07 | Exact-version verification/fingerprint model | `registry/verification/`, `docs/skill-verification.md` |
-| D08 | Controlled characterization taxonomy | `registry/taxonomy.yaml` |
-| D09 | Source role + source pin/license registry | `registry/sources.yaml` |
-| D10 | Governed candidate selector | `engine/skills/skill-bootstrap/scripts/select-candidates.ts`, selection tests |
-| D11 | Recursive skill discovery across catalog/audit/risk/sync | `scripts/lib/skill-discovery.ts` and consumers |
-| D12 | Schema-v2 generated-catalog implementation | `scripts/build-index.ts` |
-| D13 | Semantic catalog invariants + two-pass idempotency verifier | `scripts/lib/catalog-invariants.mjs`, `scripts/verify-index-idempotency.ts` |
-| D14 | Exact vendored-source materialization proof in one-command alpha preflight | `scripts/verify-vendor-materialization.ts`, `scripts/initial-alpha-preflight.ts` |
-| D15 | Rotated public-only v2 treatment fixture | `docs/evals/fixtures/initial-alpha-scenarios.json` |
-| D16 | Public treatment renderer with neutral v2 IDs | `scripts/render-alpha-scenario.ts` + tests |
-| D17 | Private evaluator-bundle fingerprint verifier | `scripts/verify-alpha-evaluator-bundle.mjs` + tests |
-| D18 | Actions budget protection | `.github/workflows/ci.yml` manual-dispatch only |
-
-## Historical records
-
-The July 2026 build series and its B/D identifiers remain available in git history, historical plan documents, evaluation reports, and governance ledger artifacts. They are not the current implementation queue.
-
-For the authoritative finish line, use `docs/alpha-lock.md`, `docs/initial-implementation.md`, `docs/evals/run-initial-alpha.md`, and GitHub Issue #15.
+The current destination/scope authority is Wayfinder Issue #35, with Issue #41 / PR #42 as the active structural cleanup frontier.
