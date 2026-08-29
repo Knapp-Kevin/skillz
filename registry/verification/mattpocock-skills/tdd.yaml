@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: tdd
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/tdd/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8fc086710806190ee7c4baa32089cb877a75736a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [testing, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [test-driven, evidence-first, incremental, human-review]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Excellent public-seam discipline, explicit user confirmation before tests are written, independent expected-value guidance, red-before-green enforcement, and vertical tracer-bullet slicing. Bundled test/mocking references are intact. The main limitation is modest explicit handling for environmental/test-harness failures outside the loop itself. Behavioral validation remains pending."
