@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: triage-nda
+display_name: Triage NDA
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: legal/skills/triage-nda/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/legal/skills/triage-nda/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-vendored
+dependency_status: playbook-dependent
+dependencies: NDA text/file and preferably organization-specific NDA playbook/delegation policy; qualified legal review for reliance
+import_eligibility: already-vendored
+rationale: Detailed NDA screening framework with useful issue taxonomy and escalation categories, retained for adaptation because the exact skill can substitute generic market defaults when no organization playbook exists and then classify an NDA GREEN for signature with no counsel review required, exceeding a safe generic legal-assistance boundary.
