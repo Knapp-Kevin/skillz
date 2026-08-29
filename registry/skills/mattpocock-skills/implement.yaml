@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: implement
+display_name: Implement
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/implement/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 386d4ff719a7c420ad1454232d0436b01f1b8c17
+upstream_last_updated_at: 2026-07-08T13:18:36Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/implement/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: relies on the tdd and code-review skills plus repository typecheck/test commands and Git commit capability; named skill dependencies are present in the pinned source
+import_eligibility: already-vendored
+rationale: Compact implementation controller that keeps work spec/ticket-bound, exercises tests throughout, delegates review, and closes with a repository commit.
