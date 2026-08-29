@@ -2,94 +2,112 @@
 
 ## Why
 
-Make reusable AI-agent skills easy to discover and use without forcing people to become skill-library experts, while giving agents a governed way to build and later refine the smallest skill set that actually fits a user.
+People teach AI systems how they work through repeated instructions, corrections, workflows, preferences, safeguards, and definitions of done. Those useful working methods are often trapped in one agent, one conversation history, or one product.
 
-## Product shape
+`skillz` helps an external agent identify the durable repeatable parts of that collaboration and express them as portable skills.
 
-`skillz` has two first-class surfaces:
+## What `skillz` is
 
-1. **A large reusable skill library.** Humans and agents can browse, search, compare, inspect, install, adapt, or reference user-facing skills directly.
-2. **A bootstrap/refinement engine.** A user can hand the repository to an AI on a first visit, or return later with an existing fitted set, and let the agent perform the comparison, creation, verification, and installation/handoff work.
+`skillz` is an entirely passive repository containing:
 
-The library is the asset. Bootstrap and refinement are the accessibility and synthesis layer built on top of it.
+1. a large reusable user-facing skill corpus;
+2. instructions that teach an external agent how to discover durable user workflows;
+3. provenance, verification, tagging, freshness, and source-context evidence that helps the agent reason about reference material;
+4. passive guidance for adapting, extracting, composing, creating, curating, and transferring skills.
+
+The AI agent reading the repository performs the reasoning and any requested actions. `skillz` itself executes nothing.
+
+## What `skillz` is not
+
+It is not:
+
+- an application or service;
+- an agent runtime or framework;
+- a background observer;
+- a memory database or user-model service;
+- a scheduler or monitor;
+- an installer or synchronization daemon;
+- a CI/test system;
+- a vector database;
+- a self-modifying learning loop.
+
+Any active behavior belongs to the external host agent.
+
+## Core flow
+
+```text
+current agent experience
+        ↓
+inspect legitimately available user context
+        ↓
+identify durable repeatable methods
+        ↓
+compare with governed reference skills
+        ↓
+ADOPT / ADAPT / EXTRACT / SUPPLEMENT / COMPOSE / CREATE / NO CHANGE
+        ↓
+produce the smallest useful portable skill set
+```
+
+The corpus is design material, not a reuse quota.
 
 ## Human experience
 
 A person should not need to understand repository internals.
 
-- First visit: provide the repository, let the agent discover durable needs from legitimately accessible context, compare against the governed corpus, and build the smallest useful fitted set.
-- Returning visit: review the current fitted set, detect meaningful drift/gaps/overlap, preserve still-valid custom behavior, and make only justified changes.
-- Direct browse: use categories, the generated catalog, provenance, and quality metadata without running bootstrap.
+- **First visit:** give the repository to an AI. The agent identifies durable methods from legitimate context, compares them with the corpus, and creates the smallest useful fitted set.
+- **Returning visit:** the agent inventories the existing fitted set, detects meaningful drift/gaps/overlap, preserves still-valid custom behavior, and makes only justified changes.
+- **Direct browse:** a human or agent may inspect skills, categories, provenance, and review evidence directly.
 
 `NO CHANGE NEEDED` is a successful returning-user outcome.
 
-## AI-agent experience
+## Agent experience
 
-An agent should have an unmistakable entry route and deterministic boundaries:
+An agent should:
 
-- route direct-library, first-visit, returning-user, and repository-maintenance requests differently;
-- compare before creation;
+- distinguish direct-library, first-visit, returning-user, and repository-curation requests;
+- compare before creating;
 - prefer user fit over reuse for its own sake;
-- use exact-version quality/fingerprint metadata when considering unchanged third-party reuse;
-- treat unverified material as design evidence unless deliberately verified;
+- distinguish preferences and project rules from reusable methods;
+- inspect exact-version quality/fingerprint evidence when considering unchanged third-party reuse;
+- treat unverified material as design evidence by default;
 - create custom skills when existing material preserves the wrong assumptions, authority model, workflow, terminology, or UX;
-- finish with truthful installation or portable-handoff state;
-- never treat access to unrelated private connectors as permission to profile them.
+- preserve provenance and licensing when third-party material materially contributes;
+- never treat unrelated private connector access as permission to profile the user;
+- never claim execution, validation, installation, or evidence that did not occur through the external host.
 
 ## Inventory boundary
 
-- `skills/`: local/imported user-facing library skills.
-- approved indexed skills in `skills/sources/`: referenced user-facing library skills.
-- `engine/skills/`: repository-operating machinery; excluded from library inventory.
-- `registry/`: source, provenance, category, characterization, and exact-version quality metadata.
-
-The library can contain hundreds of available skills while only a smaller subset has individual characterization, verification, or behavioral validation.
+- `skills/`: complete user-facing skill tree.
+- `skills/sources/`: intact pinned third-party reference corpora within the user-facing tree.
+- `engine/skills/`: passive repository-curation instructions, excluded from user-facing corpus inventory.
+- `registry/`: passive source, provenance, characterization, and exact-version quality metadata.
+- `docs/`: passive explanatory, curation, portability, validation, and historical documentation.
 
 ## Quality model
 
 Availability and quality are separate.
 
-- provenance establishes where a skill came from;
-- characterization describes what it is useful for and its operating traits;
-- verification establishes structured exact-version quality evidence;
-- validation requires representative behavioral evidence;
-- fingerprint drift invalidates prior characterization until refreshed.
+- provenance establishes origin and obligations;
+- characterization describes purpose and operating traits;
+- verification establishes structured exact-version static evidence;
+- validation records representative behavioral evidence produced externally;
+- fingerprint or material assumption drift requires reconsideration;
+- source reputation is context, not automatic skill proof.
 
-Source reputation is discovery context, not automatic individual-skill proof.
+For selection use:
 
-## Scope
-
-### In scope
-
-- reusable user-facing skills across domains;
-- pinned and attributed third-party source corpora;
-- human browse/category surfaces;
-- generated human/machine catalogs;
-- provenance and exact-version quality metadata;
-- first-visit skill discovery/synthesis;
-- returning-user review/refinement;
-- custom skill creation, evaluation, audit, and installation/handoff machinery;
-- governed curation and ongoing corpus enrichment.
-
-### Out of scope for initial alpha
-
-- exhaustive verification of every available third-party skill;
-- exhaustive corpus growth;
-- proving every possible host installation adapter;
-- replacing the execution/runtime responsibilities of the user's chosen agent host;
-- using unrelated private data merely because a connector exists.
-
-Those boundaries may evolve after alpha, but they are not prerequisites for a useful initial product.
+**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
 ## Success criteria
 
-The initial product succeeds when:
+The repository succeeds when:
 
-1. a new user can give the repository to an AI and receive a dependable fitted skill set without shopping manually through hundreds of files;
-2. governed selection refuses stale or unverified material for silent trusted unchanged reuse;
-3. the agent can choose reuse, adaptation, composition, supplementation, or custom creation based on actual fit;
-4. installation or a precise portable handoff is part of completion;
-5. a returning user can improve an existing set without restarting from zero;
-6. the system can correctly preserve a working set when no change is justified;
-7. humans can still use the repository as a normal browsable skill library;
-8. third-party attribution, provenance, freshness, and quality evidence remain auditable.
+1. an external agent can understand the repository without mistaking it for software that must run;
+2. a new user can receive a fitted portable skill set without manually shopping through hundreds of files;
+3. the agent can correctly choose reuse, adaptation, extraction, supplementation, composition, custom creation, or no change;
+4. source provenance, licensing, freshness, dependencies, authority, portability, and quality evidence are legible enough to inform those choices;
+5. a returning user can refine an existing set without restarting from zero;
+6. the repository can be curated source by source until every eligible skill has a decisive static state;
+7. any behavioral validation or installation is performed externally and reported truthfully;
+8. the repository remains entirely passive.
