@@ -9,7 +9,7 @@ A large corpus is useful only when source identity, licensing, freshness, qualit
 ## Separate questions
 
 1. **Discovered:** Did the host agent find this source or skill through a legitimate discovery surface?
-2. **Admitted:** Has the source intentionally been represented in `skillz` as a corpus, reference source, standard, or tracked discovery source with clear identity and terms?
+2. **Admitted:** Has the source intentionally been represented in `skillz` as a corpus, reference source, standard, integrated subsystem, or tracked discovery source with clear identity and terms?
 3. **Available:** Is this exact skill or source material part of the corpus the agent may inspect?
 4. **Provenance:** Where did it come from, under what license, and what exact upstream version is represented?
 5. **Characterized:** What is it for, what assumptions and authority does it carry, and which controlled tags describe it?
@@ -52,7 +52,7 @@ source-vetting: identity + terms + relevance + role
       ↓
 admitted corpus/reference/tracked source
       ↓
-individual exact-version review
+individual exact-version review when the source is composable
       ↓
 user-fit decision: adopt / adapt / extract / compose / create / no change
 ```
@@ -62,10 +62,29 @@ A candidate may remain:
 - tracked for later review;
 - reference-only because redistribution is restricted or unclear;
 - a methodology source rather than a normal installable-skill corpus;
+- an integrated subsystem that should be recommended as a whole rather than decomposed;
 - rejected as a source;
-- admitted as a vendored corpus, imported source, external reference, normative standard, or dynamic-discovery surface.
+- admitted as a vendored corpus, imported source, external reference, normative standard, dynamic-discovery surface, or integrated-subsystem reference.
 
-Admission does not establish blanket skill quality. Every individual skill remains unverified for trusted unchanged reuse until exact-version review establishes a decisive state.
+Admission does not establish blanket skill quality. Every individual skill in a composable corpus remains unverified for trusted unchanged reuse until exact-version review establishes a decisive state.
+
+## Integrated subsystem references
+
+Some sources are intentionally **not compositional corpora**.
+
+An integrated subsystem is a product or governed prompt-logic system whose behavior depends on relationships among multiple skills, agents, policies, gates, shared state, runtime enforcement, doctrines, schemas, or other cross-component invariants.
+
+For these sources:
+
+- evaluate the subsystem as the unit being recommended;
+- recommend installation/adoption of the complete upstream subsystem when its capabilities and governance fit the user's need;
+- do **not** mine internal skills for isolated reuse, adaptation, extraction, or composition unless the upstream project explicitly defines that component as safely standalone;
+- do **not** imply that copied internal skills retain the subsystem's governance, policy, safety, or lifecycle guarantees;
+- preserve upstream installation, licensing, versioning, and operational boundaries rather than rebuilding an approximation inside `skillz`.
+
+`Qor-logic` is the canonical current example. Its governed software-development lifecycle depends on cross-skill delegation, phase gates, agents, doctrines, policy evaluation, ledgering, and runtime enforcement. If that governed SDLC is a fit, the host agent should recommend **Qor-logic wholesale** rather than reconstructing its logic from extracted skills.
+
+This does not make Qor-logic part of the `skillz` runtime. `skillz` merely records that the external host may recommend that separate product.
 
 ## Source and quality defaults
 
@@ -95,7 +114,7 @@ Skill-specific `usage_evidence` or `reception_evidence` may be recorded only whe
 
 ## Verification companion
 
-Every characterized third-party skill should also have a record under:
+Every characterized third-party skill in a composable source should also have a record under:
 
 ```text
 registry/verification/<source-id>/<skill-name>.yaml
@@ -104,6 +123,8 @@ registry/verification/<source-id>/<skill-name>.yaml
 This record binds quality status and controlled tags to an exact canonical skill version or content identity.
 
 If the canonical content changes, the previous assessment is stale for unchanged reuse until an external reviewing agent establishes a new current disposition. See [`skill-verification.md`](skill-verification.md).
+
+Integrated subsystem references are not flattened into per-skill selectable inventory merely to satisfy this companion convention. Their system-level recommendation boundary controls.
 
 ## Source-level context
 
@@ -124,7 +145,7 @@ A source or skill may be:
 - `vendored`: present inside an intact pinned upstream repository under `skills/sources/`;
 - `imported`: copied into this repository with required upstream obligations preserved;
 - `external`: tracked upstream because bringing it into the repository incompletely would be misleading or broken;
-- `tracked`: represented as a standard, dynamic-discovery surface, or candidate/reference source without being a selectable vendored corpus.
+- `tracked`: represented as a standard, dynamic-discovery surface, candidate/reference source, or integrated subsystem without being a selectable vendored corpus.
 
 Do not copy a standalone `SKILL.md` when it relies on shared references, templates, assets, hooks, code, or other files that are not also represented honestly.
 
@@ -165,6 +186,8 @@ Use this reasoning order:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-The external agent may `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, use a checklist/helper, keep behavior dynamic, or conclude `NO CHANGE`.
+For normal composable skill sources, the external agent may `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, use a checklist/helper, keep behavior dynamic, or conclude `NO CHANGE`.
+
+For an integrated subsystem source, the analogous decision is **RECOMMEND SYSTEM / DO NOT RECOMMEND SYSTEM**. Do not silently convert that product into a bag of independent skill ingredients.
 
 Popularity, discovery prominence, and official branding are discovery/provenance signals, not competence certificates.
