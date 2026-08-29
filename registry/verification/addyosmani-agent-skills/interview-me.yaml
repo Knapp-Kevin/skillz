@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: interview-me
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/interview-me/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: de5e3aff0c497e2d474e329cde447678632e082b
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [decision-support, planning]
+  lifecycle: [discovery, planning]
+  characteristic: [hypothesis-driven, iterative, human-review]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 2. Rejected for unchanged reuse, not discarded. The one-question-at-a-time hypothesis pattern and explicit out-of-scope restatement are useful, but the skill invents a ~95% confidence target, treats ordinary confirmations such as 'sounds good' or 'sure, let's go' as invalid, and can force additional questioning even when a host agent should proceed from sufficient context. Those interaction rules are too rigid to impose portably. Exact pinned fingerprint confirmed. Behavioral validation remains pending and is not required for this static rejection."
