@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: git-guardrails-claude-code
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/misc/git-guardrails-claude-code/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 58bcdd875b164093b95f436fa32a65c6cb5eb572
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [security, repository-maintenance]
+  lifecycle: [implementation, operations]
+  characteristic: [safety-bounded, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: "HARD FAIL: the skill represents the bundled hook as blocking dangerous Git operations, including all push variants, but the implementation only regex-matches selected command strings. Valid forms such as 'git -C . push' bypass the 'git push' pattern, so unchanged reuse would create a false security boundary. Rubric score is secondary to this hard fail. The skill may remain as design evidence for a safer parser/allowlist-based implementation; behavioral validation not run."
