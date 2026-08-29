@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: amazon-bedrock
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/amazon-bedrock/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_tree_sha: 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da
+fingerprint_scope: canonical-skill-package-directory
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud]
+  lifecycle: [implementation, operations]
+  characteristic: [source-driven, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Verified exact pinned AWS package. Current AWS documentation controls live models, limits, pricing, preview features, and exact commands. The quality verdict does not grant host authority to authenticate, install, deploy, mutate, or delete AWS resources. Behavioral validation remains pending.
