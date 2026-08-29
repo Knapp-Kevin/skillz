@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: to-questionnaire
+display_name: To Questionnaire
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/to-questionnaire/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/to-questionnaire/SKILL.md
+permission_tier: staging-write
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: no required bundled dependency; requires only a writable current directory for the Markdown handoff artifact
+import_eligibility: already-vendored
+rationale: Focused async-discovery workflow that interviews the user only about facts they can know, targets the recipient knowledge gap, prioritizes important questions, and verifies coverage against the requested decisions/facts.
