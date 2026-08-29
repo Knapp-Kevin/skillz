@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: save-to-spotify
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/save-to-spotify/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a769a3be1d0071110cf56318964eb428ea377210
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [productivity, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [human-review, tool-assisted, iterative, risk-aware, source-driven]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Strong user-control and production discipline: mandatory preference interview, explicit plan confirmation before work, approval before CLI installation, source-rights/noninfringement rules, segment/source integrity, incremental local saves, and post-upload READY verification. The requested purpose itself includes saving to Spotify, so the upload is within the user's stated authority rather than a surprise mutation. Main limitation is a large dependency surface spanning the Spotify CLI/auth, TTS, ffmpeg, image handling, and host file capabilities. Exact pinned blob and June 18 revision confirmed. Behavioral validation remains pending.
