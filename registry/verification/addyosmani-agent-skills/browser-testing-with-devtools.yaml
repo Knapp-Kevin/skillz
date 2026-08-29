@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/browser-testing-with-devtools/
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9864d2724e273e1164d62ab10b73590ae00fd6a8
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 19/20
 tags:
   use_case: [browser-testing]
   lifecycle: [verification]
   characteristic: [tool-assisted, visual-verification, evidence-first]
   authority: [external-side-effect]
   portability: [medium]
-notes: Characterized for selection research only. Browser/tool authority and security guidance must be checked during verification.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Requires Chrome DevTools MCP and therefore is not universally portable, but the dependency is explicit and its canonical source exists. Strong isolated-profile defaults, prompt-injection boundaries, credential restrictions, read-only JavaScript default, user confirmation for mutations, and rendered/console/network/accessibility evidence requirements. Exact pinned fingerprint confirmed. Behavioral validation remains pending."

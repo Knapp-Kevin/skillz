@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/debugging-and-error-recovery/S
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 03775802b244cddf2f58f6c54039f6e6ee8702f2
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 17/20
 tags:
   use_case: [debugging]
   lifecycle: [verification]
   characteristic: [hypothesis-driven, evidence-first, iterative]
   authority: [mutating]
   portability: [high]
-notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong stop-the-line, reproduce/localize/reduce/root-cause/regression-test workflow and explicit treatment of logs/errors as untrusted data. Safe-fallback examples can hide invariants if copied outside their stated context, so mutation/safety scoring is conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending."

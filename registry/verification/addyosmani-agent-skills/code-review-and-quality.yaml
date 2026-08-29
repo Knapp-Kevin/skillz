@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/code-review-and-quality/SKILL.
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7dfa56362fa65fff450ee5aa02393b85b9c26d85
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 18/20
 tags:
   use_case: [code-review]
   lifecycle: [verification]
   characteristic: [evidence-first, risk-aware, human-review]
   authority: [generate-only]
   portability: [high]
-notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. Strong five-axis review, tests-first inspection, severity labeling, verification-story checks, structural remedies, dependency review, and explicit anti-rubber-stamping guidance. Numeric sizing heuristics are intentionally advisory rather than universal gates. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
