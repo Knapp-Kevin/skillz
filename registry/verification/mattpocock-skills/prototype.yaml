@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/engineering/prototype/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a0044501fe0d385b4d8575b610188ede9b236ccf
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 16/20
 tags:
   use_case: [prototyping, ux, implementation, evaluation]
   lifecycle: [design, implementation, verification]
   characteristic: [hypothesis-driven, iterative, visual-verification, evidence-first]
   authority: [mutating]
   portability: [medium]
-notes: Characterization captures question-first throwaway prototyping, state visibility, and explicit separation from production code. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong question-first branching, explicit throwaway labeling, no-persistence default, visible-state requirement, and preservation of the prototype as evidence off main. Deliberately skips tests/polish for throwaway work and can create files/branches, so scope and repository authority must remain explicit. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
