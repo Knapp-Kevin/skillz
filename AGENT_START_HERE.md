@@ -2,65 +2,64 @@
 
 If you can read this repository, you can use `skillz`.
 
-`skillz` is intentionally passive. It is not an application, service, runtime, autonomous agent, memory system, or background process. The current AI agent is the execution environment. This repository provides instructions, governed reference skills, provenance, verification evidence, and optional maintainer utilities that help that agent discover and construct a fitted skill set for a user.
+`skillz` is entirely passive. It is not an application, service, runtime, autonomous agent, memory system, scheduler, validator, installer, or background process. The AI agent reading this repository is the active system.
 
-Normal skill discovery, first-visit bootstrap, returning-user refinement, comparison, custom-skill design, and portable handoff require only enough repository access to inspect the relevant instructions and skill material. A local clone, shell, Git executable, Node, Bun, initialized submodules, or GitHub Actions are not prerequisites.
+The repository contains instructions, skills, provenance, verification evidence, tags, source context, and reference material. Any reasoning, browsing, file manipulation, validation, installation, automation, or external action is performed by the host agent using capabilities and authority supplied outside this repository.
 
-Optional scripts in this repository exist for maintainers who want deterministic catalog generation, integrity checks, audits, and other repository-quality proofs. They do not constitute a `skillz` runtime.
+No repository-owned script, test runner, CI workflow, executable helper, or local runtime is required or expected.
 
-## Capability check
+## Access paths
 
-Use the strongest access path the current host actually supports.
+Use the strongest read/write access the host actually provides.
 
-### A. Repository-native path
+### Full repository access
 
-Use this when the host has a local checkout and can execute optional repository-maintenance tools.
+When the host can inspect and edit repository files directly:
 
 - read [`BOOTSTRAP.md`](BOOTSTRAP.md) and [`AGENTS.md`](AGENTS.md);
-- use `index.json`, the governed selector, audits, and other maintenance tools when available and current;
-- use local file creation/install capabilities when authorized.
+- inspect the relevant skills and companion metadata directly;
+- use the host's own GitHub, filesystem, search, browsing, or editing tools when needed;
+- make static repository changes when the user has authorized them.
 
-### B. Connector/API/web path
+The tools belong to the host. They are not part of `skillz`.
 
-Use this when the host can read GitHub or repository files through a connector, API, browser, or equivalent tool but cannot clone or execute local scripts.
+### Connector/API/web access
 
-This is a fully supported user path.
+When the host can read GitHub or repository files through a connector, API, browser, or equivalent tool:
 
 1. Read [`README.md`](README.md), [`BOOTSTRAP.md`](BOOTSTRAP.md), and [`AGENTS.md`](AGENTS.md).
-2. Route the request into direct-library, first-visit, or returning-user mode.
-3. Use [`skills/categories/`](skills/categories/) and local `SKILL.md` files for locally maintained capabilities.
-4. Use [`CURATED.md`](CURATED.md) and [`registry/verification/`](registry/verification/) to find individually characterized third-party candidates.
-5. Use [`registry/skills/`](registry/skills/) for provenance and [`registry/sources.yaml`](registry/sources.yaml) to resolve the upstream repository and pinned revision.
-6. When the connector can fetch an upstream file at an exact revision, inspect the canonical `SKILL.md` directly. If the tool exposes a Git blob/content SHA, compare it with `content_blob_sha` in the verification record before treating the exact version as fingerprint-matched.
-7. If exact fingerprint comparison is unavailable, do not fabricate it. Treat the candidate conservatively: use it as design evidence, adapt it with explicit uncertainty, choose another candidate with stronger evidence, or create a fitted custom skill.
-8. Compare user fit before reuse. A quality state is eligibility evidence, not a command to adopt.
-9. Create complete portable skill artifacts in the response or available artifact surface when the host cannot write/install files directly.
-10. Finish with an explicit installation/handoff state.
+2. Route the request into direct-library, first-visit, returning-user, or repository-curation mode.
+3. Use [`skills/`](skills/) for the user-facing corpus and [`skills/categories/`](skills/categories/) for human navigation.
+4. Use [`CURATED.md`](CURATED.md) and [`registry/verification/`](registry/verification/) to locate individually reviewed third-party candidates.
+5. Use [`registry/skills/`](registry/skills/) for provenance and [`registry/sources.yaml`](registry/sources.yaml) for source identity, license, and pinned revision.
+6. Inspect the exact referenced `SKILL.md` when possible. If the host exposes exact content identity, compare it with the recorded fingerprint before making an exact-version claim.
+7. If exact identity cannot be established, lower confidence rather than inventing a match.
+8. Compare user fit before reuse. Quality state is evidence, not a command to adopt.
+9. Create or edit complete static skill artifacts when the host supports repository writes.
+10. If installation or another external action is requested, perform it only through the host's normal capabilities and authority rules. That action is outside `skillz`.
 
-A stale generated index is not a reason to stop. In connector mode, inspect the relevant live registry/provenance records and exact pinned upstream files directly.
+### Minimal read-only access
 
-### C. Minimal read-only path
+When the host can read only part of the repository:
 
-Use this when the host can read repository documents but cannot inspect arbitrary files or upstream sources.
-
-- use the available local category pages and public characterized shelf as reference;
-- do not make exact-version verification claims you cannot establish;
-- prefer custom/adapted portable output over unsafe unchanged reuse;
+- use the available skills and companion records as reference;
+- do not make exact-version or verification claims that cannot be established;
+- prefer conservative adaptation or custom output over unsafe unchanged reuse;
 - state unavailable evidence explicitly;
-- still complete the user's workflow as far as the host permits.
+- still complete the user's request as far as the host permits.
 
-Only report `BLOCKED: REPOSITORY CONTENT NOT ACCESSIBLE` when the agent genuinely cannot read enough repository content to perform the requested task.
+Only report `BLOCKED: REPOSITORY CONTENT NOT ACCESSIBLE` when there is genuinely not enough readable material to proceed.
 
 ## First visit
 
-If the user gives you this repository or its URL without a narrower task, begin bootstrap. Do not merely summarize the repository.
+If the user gives you this repository or its URL without a narrower task, begin discovery rather than merely summarizing the repository.
 
 1. Inspect relevant evidence the host already exposes.
 2. Identify durable working methods and recurring failure-prevention rules.
-3. Search the library using the strongest capability path above.
-4. Reuse, adapt, supplement, compose, or create based on user fit and evidence quality.
-5. Adversarially review important new/adapted behavior.
-6. Install when the host supports it and authority exists. Otherwise provide a complete portable handoff.
+3. Search the skill corpus for relevant reference patterns.
+4. Reuse, adapt, extract, supplement, compose, or create based on user fit and evidence quality.
+5. Adversarially review important new or adapted behavior.
+6. Return the smallest useful fitted set with provenance and uncertainty made explicit.
 
 ## Returning user
 
@@ -70,15 +69,22 @@ Inventory the existing fitted set first. Check fit, drift, overlap, current evid
 
 Availability is not verification.
 
-- exact matching `trusted-baseline`, `verified`, or `validated` records may be considered for unchanged reuse;
+- exact matching `verified` or `validated` records may be considered for unchanged reuse when they genuinely fit;
 - `unverified` material is design evidence by default;
 - `stale`, `rejected`, and `retired` material is excluded from normal unchanged selection;
-- if the current host cannot establish an exact fingerprint, say so and lower confidence rather than inventing a match.
+- if the host cannot establish an exact fingerprint, say so and lower confidence rather than inventing a match.
 
-## Maintainer tooling boundary
+## Repository curation
 
-Repository-maintenance scripts may require Node, Bun, Git, initialized submodules, or a writable checkout. Those requirements apply only to the specific maintenance operation being performed.
+When the user asks to improve `skillz` itself, perform curation through the host agent:
 
-They are never a prerequisite for the host agent to read `skillz`, inspect the corpus, curate metadata, reason about user needs, adapt or create skills, or produce a portable fitted skill set.
+- inspect current files and source pins;
+- review skills source by source;
+- reconcile denominators;
+- update passive provenance, verification, tags, and source-context records;
+- improve or create static `SKILL.md` instructions;
+- remove stale documentation or misleading execution assumptions;
+- keep third-party pinned sources intact;
+- never introduce repository-owned execution machinery as a substitute for agent reasoning.
 
-**Compare before creation. User-fit before reuse. Smallest useful set over maximum skill count.**
+**Compare before creation. User fit before reuse. Smallest useful set over maximum skill count.**
