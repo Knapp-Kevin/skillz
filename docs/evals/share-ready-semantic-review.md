@@ -8,11 +8,11 @@ Confidence: **high, probabilistic**
 
 ## Evaluation boundary
 
-`skillz` is a passive instruction repository. This review evaluates the meaning, structure, consistency, and likely interpretation of the current Markdown instructions and governance metadata.
+`skillz` is a passive instruction/reference repository. This review evaluates the meaning, structure, consistency, provenance model, and likely interpretation of the current instructions and governance metadata.
 
-It is not CI, a runtime test, a deterministic benchmark, or proof that every probabilistic model will behave identically.
+It is not CI, a runtime test, a model benchmark, a behavioral success-rate study, or proof that arbitrary models will follow the instructions correctly.
 
-The review deliberately uses a **literal/weaker-model posture**: do not silently repair vague instructions with hidden knowledge of how the repository was intended to work.
+The repository's responsibility is best effort: make the route explicit, preserve useful skill packages and components, provide trustworthy metadata/provenance, bound authority, and remove avoidable ambiguity.
 
 Primary surfaces reviewed:
 
@@ -22,179 +22,188 @@ Primary surfaces reviewed:
 - `AGENTS.md`
 - `engine/README.md`
 - `engine/skills/skill-bootstrap/SKILL.md`
+- repository-maintenance engine procedures
 - `docs/skill-verification.md`
-- `registry/verification/README.md`
+- `docs/evaluation-framework.md`
+- `registry/verification/`
 - `registry/local-verification.json`
 
-## Cross-cutting adversarial findings
+## Cross-cutting findings
 
 ### 1. Normal user work versus repository maintenance
 
-**Attack:** A literal agent sees `skill-forge`, `skill-audit`, `skill-sync`, and other engine helpers and assumes it should invoke them while building the user's personal skill system.
+**Risk:** An agent sees repository-maintenance helpers and uses them while building the user's personal skill system.
 
 **Result:** PASS after correction.
 
-The front door and canonical bootstrap now identify one normal orchestrator and repeatedly state that normal bootstrap must not modify `skillz` or require repo-maintenance helpers.
+The front door and bootstrap identify one normal orchestrator and state that normal bootstrap must not modify `skillz` or depend on engine-maintenance machinery.
 
-### 2. Filename-first selection
+### 2. Passive engine versus active skill components
 
-**Attack:** The agent searches for skill names immediately and maps the first superficially similar result to the user's need.
-
-**Result:** PASS.
-
-S2 and S3 force durable-need discovery and capability definition before S4 search. S4 explicitly says capability/metadata before filename resemblance.
-
-### 3. Famous-source trust shortcut
-
-**Attack:** A skill from a famous or official source is treated as safe unchanged inventory merely because the source is admitted or vendored.
-
-**Result:** PASS.
-
-The repository consistently separates reference/discovery material from individually governed exact-version skills. S5 requires semantic quality state, identity, provenance, license, dependencies, authority, portability, and fit.
-
-### 4. Whole-skill-only thinking
-
-**Attack:** The agent believes its only choices are install a whole existing skill or create something from scratch.
+**Risk:** “Passive repository” is misread as “no user-facing skill may contain executable or structured supporting files.”
 
 **Result:** PASS after correction.
 
-S4 requires both whole-skill fit and component value. S7 makes component extraction explicit and records omitted source baggage.
+The current contract distinguishes the two explicitly:
 
-### 5. Component reuse as a governance loophole
+- the **engine/repository itself** has no runtime, CI, test harness, crawler, or required executable maintenance layer;
+- an individual **user-facing skill package** may legitimately include its own scripts, references, templates, fixtures, JSON, examples, or other components when those are part of the skill's authored capability.
 
-**Attack:** The agent borrows a useful-looking mechanism from a rejected/stale/unverified skill and ignores why the whole skill was excluded.
+Those components are preserved and evaluated as part of the skill package. They are not deleted merely because they are executable or non-Markdown.
 
-**Result:** PASS after correction.
+### 3. Capability-first discovery
 
-S5 explicitly says component reuse does not bypass provenance, licensing, dependencies, rejection reason, privacy, authority, cost, or host assumptions.
-
-### 6. Endless evidence collection and novelty search
-
-**Attack:** The agent mines every accessible user source or keeps searching external repositories because more context or more candidates seem inherently better.
-
-**Result:** PASS after correction.
-
-The global stop rule, S2 stop condition, and S4 stop condition make diminishing decision value the stopping criterion. Private connector access is explicitly not blanket consent to profile the user.
-
-### 7. Host-format assumption
-
-**Attack:** The agent assumes one product's skill directory, command syntax, or writable filesystem.
+**Risk:** The first superficially similar filename is selected before the user's actual need is understood.
 
 **Result:** PASS.
 
-S1 binds to the actual host and capabilities. S9 requires host-supported representation and falls back to portable Markdown. S11 distinguishes direct write, API install, UI upload, and portable handoff.
+The bootstrap requires durable-need discovery and capability definition before candidate search.
 
-### 8. False proof language
+### 4. Source reputation shortcut
 
-**Attack:** Semantic review is mislabeled as executable or deterministic behavioral proof.
-
-**Result:** PASS after closeout correction.
-
-Current quality documentation explicitly defines verification and validation as semantic/probabilistic review. CI, executable preflights, private evaluator machinery, and runtime proof are excluded from the repository-completion model.
-
-### 9. Returning-user churn
-
-**Attack:** A returning agent rebuilds the system from scratch or replaces valid custom behavior simply because newer references exist.
+**Risk:** Official or popular upstream material is treated as blanket trusted inventory.
 
 **Result:** PASS.
 
-The returning path treats the existing fitted system as primary evidence, limits re-analysis to materially affected capabilities, preserves valid custom behavior, and explicitly permits `NO CHANGE NEEDED`.
+Tracked upstream repositories are reference/discovery surfaces. Individually governed exact-version records establish stronger skill-level eligibility.
 
-## Representative scenario review
+### 5. Whole-skill-only thinking
 
-### Scenario A — strong existing method with an appropriate governed reference
+**Risk:** The only choices appear to be whole-skill adoption or custom creation.
 
-**Context:** A user repeatedly evaluates agent/configuration changes against predefined tasks and holdouts, defines success measures before review, preserves important regressions instead of hiding them in averages, and uses a cost ceiling.
+**Result:** PASS.
 
-**Expected semantic route:** FIRST_VISIT → durable evaluation need → capability requirements → candidate/reference comparison → exact-version governance check → ADOPT/ADAPT only if the governed reference actually preserves the user's holdout, regression, cost, and authority constraints.
+The bootstrap explicitly evaluates both whole-skill fit and reusable components, with composition/adaptation/supplementation paths.
 
-**Literal-model risk tested:** “verified means install it.”
+### 6. Component reuse as a governance loophole
 
-**Assessment:** PASS. S5 says verification is eligibility evidence; S6 still requires fit. The agent has an explicit ADAPT/CREATE path if a reference's authority or environment assumptions do not fit.
+**Risk:** A useful component is borrowed while provenance, license, dependencies, rejection reason, authority, privacy, cost, or host constraints are ignored.
 
-### Scenario B — attractive browser-QA reference with strict read-only authority
+**Result:** PASS.
 
-**Context:** A user expects real rendered desktop/mobile inspection, console/network/accessibility awareness, and visual evidence, but QA itself must remain read-only unless a fix is separately authorized.
+Component reuse remains governed by the constraints that materially apply to the component.
 
-**Expected semantic route:** capability-first QA requirements → inspect whole skills/components → reject or adapt any candidate whose mutation authority exceeds the requested read-only role → create/compose a fitted QA artifact if necessary.
+### 7. Endless evidence/search expansion
 
-**Literal-model risk tested:** importing a candidate's fix workflow because the testing workflow is otherwise useful.
+**Risk:** More context, more sources, and more skills are treated as inherently better.
 
-**Assessment:** PASS. Authority is bound in S1/S3/S5 and unnecessary source ceremony/authority is explicitly removable in S7.
+**Result:** PASS.
 
-### Scenario C — production migration with human approval gates
+The bootstrap stops evidence gathering and search when additional work is unlikely to change the next decision.
 
-**Context:** A production data migration requires schema comparison, representative dry-run reasoning, reconciliation, human spot-checking, rollback evidence, and explicit approval before production mutation.
+### 8. Host-format assumptions
 
-**Expected semantic route:** define the staged authority invariants first → search for reusable migration/reconciliation/approval mechanisms → COMPOSE/SUPPLEMENT/CREATE rather than forcing a monolithic skill → preserve explicit approval separation.
+**Risk:** One platform's file layout, command syntax, or writable filesystem is treated as universal.
 
-**Literal-model risk tested:** treating successful planning or dry-run reasoning as permission to execute.
+**Result:** PASS.
 
-**Assessment:** PASS. S3 requires safeguards and human judgment points; S5 checks authority; S8 resolves responsibility/precedence; S9 requires authority boundaries in the final artifact.
+The bootstrap binds to the actual host and supports direct write, API installation, UI upload, or portable handoff according to available capability and authority.
 
-### Scenario D — prior-art research on a connector/read-only host
+### 9. False proof language
 
-**Context:** The user wants prior-art search that distinguishes “zero results” from “source unreachable,” deep-reads promising candidates without executing them, and produces a concise implementation decision without importing a large research ceremony.
+**Risk:** Semantic review is converted into CI, runtime proof, model benchmarking, or success-rate commitments.
 
-**Expected semantic route:** FIRST_VISIT on connector/read-only host → define evidence and stop requirements → discover prior-art references/components → use governed material when exact identity is available or adapt conservatively when it is not → omit source-specific ceremony → portable handoff.
+**Result:** PASS after correction.
 
-**Literal-model risk tested:** stopping because there is no local runtime, or importing a reference's entire workflow.
+Current quality documentation defines verification and validation as semantic/probabilistic review. Model capability is outside repository responsibility.
 
-**Assessment:** PASS. S1 explicitly supports connector/read-only use; S4/S7 support component-level extraction; S9 portable Markdown fallback prevents filesystem dependence.
+### 10. Returning-user churn
 
-### Scenario E — returning user with one changed handoff requirement
+**Risk:** An existing fitted system is rebuilt because newer references exist.
 
-**Context:** Existing research behavior still fits. Handoff behavior must now distinguish established evidence, inference, and open questions.
+**Result:** PASS.
 
-**Expected semantic route:** RETURNING_USER → preserve research behavior → identify handoff as the only affected capability → re-run S3–S11 for that area → REFINE/SUPPLEMENT the handoff artifact only.
+The returning path preserves valid behavior, re-evaluates only affected capabilities, and explicitly allows `NO CHANGE NEEDED`.
 
-**Literal-model risk tested:** replacing the entire fitted system because one component changed.
+## Representative semantic scenarios
 
-**Assessment:** PASS. The returning path explicitly limits work to affected capabilities and preserves still-valid custom behavior.
+### Scenario A — governed reference fits the requirement
 
-### Scenario F — returning user with no material improvement
+A recurring user workflow has explicit safeguards and an exact-version governed reference appears relevant.
 
-**Context:** Existing debugging and decision skills remain current and fit the user's workflow. Newer references exist but provide no established material improvement.
+Expected route: define capability → inspect exact skill package and governance record → confirm actual fit → ADOPT only when the exact reviewed package, dependencies, authority, and host assumptions fit; otherwise ADAPT/COMPOSE/CREATE.
 
-**Expected semantic route:** RETURNING_USER → compare current fit and plausible gaps → stop when no material improvement is established → `NO CHANGE NEEDED`.
+**Assessment:** PASS.
 
-**Literal-model risk tested:** generating churn to demonstrate activity.
+### Scenario B — useful skill with supporting script
 
-**Assessment:** PASS. Both global stop rules and returning-user rules explicitly forbid change merely to produce visible change.
+A selected skill contains `SKILL.md` plus a TypeScript helper required to retrieve or process its source material.
+
+Expected route: treat both files as the skill package → characterize the script's dependency/authority/host requirements → preserve it when adopting unchanged or deliberately adapt/replace it when necessary.
+
+Incorrect route: delete the helper because “the repository is passive.”
+
+**Assessment:** PASS after explicit boundary correction.
+
+### Scenario C — useful component from an unsuitable whole skill
+
+A candidate has a strong evidence gate but the whole package has unacceptable authority assumptions.
+
+Expected route: exclude unchanged adoption → determine whether the evidence-gate mechanism can be independently expressed within provenance/license constraints → ADAPT/SUPPLEMENT only if safe and coherent.
+
+**Assessment:** PASS.
+
+### Scenario D — constrained host
+
+The agent can read repository/upstream material but cannot write files or use a local shell.
+
+Expected route: continue discovery/composition semantically → produce a complete portable package → report actual handoff state.
+
+**Assessment:** PASS.
+
+### Scenario E — returning user with one changed capability
+
+Most of the fitted system still works; one handoff requirement changed.
+
+Expected route: preserve the rest → re-evaluate only the affected capability → make the smallest justified change.
+
+**Assessment:** PASS.
+
+### Scenario F — no material improvement
+
+Existing skills still fit and new references add no established value.
+
+Expected route: stop and return `NO CHANGE NEEDED`.
+
+**Assessment:** PASS.
+
+## User-facing package integrity check
+
+A closeout tree comparison confirmed that the final architecture cleanup did **not** remove supporting components from user-facing skills.
+
+Only three local skill directories changed during the first-party hardening pass:
+
+1. `agent-home-doctor`
+2. `deck-outline`
+3. `finance-review`
+
+Each of those directories contained only `SKILL.md` both before and after the change. No supporting scripts, references, templates, fixtures, or other package components were removed.
+
+All other user-facing skill directory trees remained unchanged during the closeout architecture cleanup. `claude-pulse`, including its bundled `scripts/pulse.ts`, remains intact.
 
 ## First-party corpus review
 
-All 42 active local user-facing skills have individual exact-version records in `registry/local-verification.json` with:
+All 42 active local user-facing skills have structured records in `registry/local-verification.json` covering fingerprint, score, controlled tags, authority, portability, quality state, and material notes.
 
-- content fingerprint;
-- structured semantic score;
-- controlled use-case/lifecycle/characteristic tags;
-- authority;
-- portability;
-- quality state;
-- material review notes.
-
-The closeout review identified and corrected three concrete local problems before completion:
+Three content-level findings were corrected before closeout:
 
 1. `agent-home-doctor` had an overly broad approval interpretation for destructive cleanup;
 2. `deck-outline` depended on a rejected third-party presentation skill;
 3. `finance-review` depended on a rejected third-party spreadsheet skill.
 
-No first-party skill receives a trust exemption merely because it was authored locally.
+These were instruction/dependency corrections only. No legitimate supporting package components were removed.
 
-## Residual limitations
+## Accepted limitations
 
-These are accepted properties, not blockers:
-
-- Model behavior remains probabilistic. A model can ignore clear instructions.
-- Exact upstream identity may not be establishable in every host; the bootstrap explicitly requires lower confidence and conservative adaptation in that case.
-- The broad reference corpus contains material that has not been individually governed; its role is deliberately reference/design only until reviewed.
-- `validation_status: not-run` on an exact skill record means no separate scenario-level semantic validation was recorded beyond structured verification. It is not evidence of an unfinished runtime test.
+- Models remain probabilistic and may ignore clear instructions.
+- Exact upstream identity may not be establishable in every host; the bootstrap requires honest uncertainty and conservative handling in that case.
+- Tracked upstream material is broader than individually governed inventory by design.
+- `validation_status: not-run` on older review records means no separate scenario-level semantic validation was recorded. It is not an unfinished runtime or model benchmark requirement.
 
 ## Closeout judgment
 
-The current passive architecture is semantically coherent enough to move from implementation mode to **governed curation mode**.
+The current architecture is coherent enough to remain in **governed curation mode**.
 
-No unresolved material contradiction was found in the normal first-visit/returning-user route after the corrections above. The correct process no longer depends on a model inferring hidden relationships between repository maintenance, corpus trust, component reuse, host adaptation, or completion semantics.
+No unresolved material repository-level contradiction remains in the intended first-visit/returning-user route after the closeout corrections.
 
-Future changes to the bootstrap/front-door contract should receive another adversarial semantic review. Routine addition of new sources or skills does not reopen core implementation unless that curation exposes a genuine architectural ambiguity.
+Future work is discretionary curation: discover useful skills/sources, evaluate them carefully, preserve their complete relevant packages, and admit only differentiated value. Core implementation should be revisited only when real use exposes an actual documentation or architecture defect.
