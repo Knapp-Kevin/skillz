@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-cdk
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-cdk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+canonical_package_tree_sha: 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288
+freshness_state: current-at-registered-pin
+freshness_evidence: Exact canonical package tree at the registered 2026-07-03 source snapshot; pinned SKILL.md last-modified evidence is 2026-06-11.
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-cdk/SKILL.md
+permission_tier: host-controlled-aws-operation
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-aws-cdk-context-required
+import_eligibility: already-vendored
+rationale: Exact pinned AWS CDK package reviewed as strong authoring, deployment, safe-refactoring, drift, compliance, and troubleshooting guidance. It depends on AWS CDK/AWS CLI context and bundled references and can cause infrastructure mutation, replacement, cost, or deletion; the host must retain execution authority and should consult current AWS/CDK documentation for live CLI behavior and service details.
