@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: setup-pre-commit
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/misc/setup-pre-commit/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1b9708168263067adb4684d06ebb8f4ccfe9682c
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [repository-maintenance, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [compatibility-aware, test-gated, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The setup flow detects package managers, adapts absent scripts, and includes verification, but unchanged reuse unconditionally installs dependencies, writes config, stages all changed/created files, and commits. The final staging/commit step exceeds the minimum authority implied by merely asking to configure hooks and lacks a separate consent boundary, triggering the mutation hard-fail. Use as design/adaptation evidence, not unchanged governed selection. Exact pinned fingerprint confirmed."
