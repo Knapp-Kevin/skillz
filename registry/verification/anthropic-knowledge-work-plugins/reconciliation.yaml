@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: reconciliation
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/finance/skills/reconciliation/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5f212646c3827aa0d2b88137ade6829cb520ec03
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [business-operations, decision-support, documentation]
+  lifecycle: [verification, operations]
+  characteristic: [evidence-first, risk-aware, traceable, human-review]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong control-oriented reconciliation method: compares independent sources, separates timing/adjustment/investigation items, requires aging and root-cause follow-through, explicitly treats dollar thresholds as organization-specific examples, includes segregation/retention controls, and requires qualified financial review before sign-off. It does not autonomously post adjustments. Exact pinned fingerprint confirmed; behavioral validation not run."
