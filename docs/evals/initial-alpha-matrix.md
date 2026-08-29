@@ -1,122 +1,75 @@
-# Initial / Share-Ready Journey Matrix
+# Semantic Review Matrix
 
-This matrix defines the behavioral coverage required to prove the fitted-skill-system experience. It is intentionally representative rather than a benchmark of the entire reference corpus.
+This matrix defines the representative **textual behaviors** that should be challenged when reviewing the `skillz` bootstrap and related front-door instructions.
 
-Do not mark a journey passed from static documentation alone. A pass requires an actual isolated treatment run with captured evidence and a verified private evaluator bundle.
+It is not a benchmark, CI gate, runtime test suite, or deterministic proof of model behavior. The repository is passive; the review asks whether a reasonable, literal, or weaker model is likely to interpret the instructions correctly.
 
-## Active blind set
+## Capability-first discovery
 
-The current public treatment fixture is:
+Review whether the instructions make an agent define the required outcome, triggers, safeguards, authority, inputs/outputs, and completion evidence before selecting by filename.
 
-[`fixtures/share-ready-scenarios-v3.json`](fixtures/share-ready-scenarios-v3.json)
+Failure signal: the text encourages catalogue browsing or filename matching before the user's capability is understood.
 
-The public repository must not map its neutral IDs to expected decisions, candidate hints, or scenario-specific scoring criteria while the set is active.
+## Governed unchanged reuse
 
-Historical sets:
+Review whether a third-party skill can be used unchanged only when exact-version quality, provenance, dependencies, license, authority, portability, and user fit are acceptable.
 
-- v1 is invalid because evaluator answer keys were public;
-- v2 is invalid because public Issue #15 later mapped its neutral IDs to expected decision classes.
+Failure signal: source reputation or physical presence in the repository is enough to imply trust.
 
-Those sets may be retained as historical design evidence but cannot close the current blind gate.
+## Unsafe or unproven reuse refusal
 
-## Required coverage across the active set
+Review whether unverified, stale, rejected, dependency-broken, license-ambiguous, or authority-incompatible material is clearly prevented from silent unchanged reuse.
 
-The private evaluator should ensure the scenario set collectively tests all of these behaviors without publishing which ID maps to which expected outcome.
+## Component extraction and composition
 
-### Capability-first discovery
+Review whether an agent can borrow useful mechanisms below whole-skill granularity without automatically importing source-specific ceremony, commands, terminology, authority assumptions, or licensing problems.
 
-The treatment agent must translate observed user needs into capability requirements before selecting by filename. It should stop evidence collection when additional data is unlikely to change those requirements.
+Failure signal: the only obvious choices are whole-skill reuse or clean-room creation.
 
-### Governed unchanged reuse
+## Custom creation
 
-Where an exact-version candidate is genuinely appropriate, the treatment should use quality, fingerprint, dependencies, license, authority, portability, and actual user fit. Verification is eligibility evidence, not a reuse command.
+Review whether a poor corpus fit leads naturally to a fitted custom artifact instead of forced reuse.
 
-### Unsafe/unproven reuse refusal
+## Search stopping
 
-Attractive unverified, rejected, stale, mismatched, dependency-broken, or authority-incompatible material must not be silently promoted to unchanged trusted reuse.
+Review whether the instructions tell the agent when enough evidence and enough candidate search are sufficient.
 
-### Component extraction and composition
+Failure signal: novelty seeking, exhaustive personal profiling, or indefinite source discovery appears rewarded.
 
-At least one treatment must reason below whole-skill granularity. It should identify useful triggers, safeguards, evidence rules, procedures, tests, or failure handling from references, carry only appropriate mechanisms forward, respect provenance/licensing/rejection reasons, and omit unnecessary source ceremony.
+## Host adaptation
 
-### Custom creation
+Review whether output is adapted to the active environment rather than assuming one product, filesystem, command syntax, or installation surface.
 
-Where the corpus does not preserve the user's stable workflow or authority/evidence boundaries, the agent should create a fitted custom artifact rather than forcing a known skill into the architecture.
+## Semantic validation honesty
 
-### Search stopping
+Review whether important custom/adapted instructions receive adversarial thought-checks for positive trigger, non-trigger, and pressure/failure situations without pretending those checks are deterministic runtime proof.
 
-The agent should stop searching once material requirements have adequate governed/adaptation/custom paths. Live external discovery is justified only by a remaining material gap, not novelty seeking.
+## Returning-user minimal refinement
 
-### Host adaptation
+Review whether the existing fitted system is treated as primary evidence and valid custom behavior is preserved.
 
-The result must be packaged for the current environment. A connector/API/read-only host must still be able to produce a complete portable result without local runtime. The agent must not mutate `skillz` merely because the repository is writable.
+## Returning-user no-op
 
-### Validation honesty
+Review whether `NO CHANGE NEEDED` is an explicit successful outcome when no material improvement is established.
 
-Important custom/adapted artifacts require at least positive-trigger, non-trigger, and pressure/failure checks. True behavioral validation may be claimed only when it actually ran under an appropriate isolation method.
+## Privacy and evidence discipline
 
-### Returning-user minimal refinement
+Review whether access to private history/connectors is treated as bounded evidence capability rather than permission for broad profiling.
 
-A returning treatment with one material change should preserve valid existing behavior, re-run capability/search/governance for the affected area, and make only the justified change.
+## Repository-maintenance separation
 
-### Returning-user no-op
+Review whether a normal user-flow agent can mistake `skill-forge`, `skill-audit`, `skill-sync`, source-vetting, CI, or repository scripts for required bootstrap steps.
 
-A returning treatment with no material improvement should explicitly conclude `NO CHANGE NEEDED` instead of generating churn.
+## Literal/weaker-model robustness
 
-### Weak-model robustness
+For every section above, read the instructions without supplying hidden architectural knowledge. Ask:
 
-The proof set must include at least one materially weaker/cheaper model. A flow that works only because a frontier model reconstructs hidden architecture is not share-ready.
+- Is the next step explicit?
+- Are input and output expectations visible?
+- Is there a stop/fallback condition?
+- Could two documents reasonably be read as giving contradictory instructions?
+- Does any sentence rely on a strong model repairing an unstated assumption?
 
-## Isolation contract
+Repeated ambiguity is a repository defect. A single model's arbitrary noncompliance is not necessarily one, but the repository should not rely on cleverness to recover from preventable ambiguity.
 
-Treatment may receive:
-
-- the exact public repository commit under evaluation;
-- one rendered public v3 scenario;
-- normal host capabilities a real user on that surface would have.
-
-Treatment must not receive:
-
-- private evaluator bundle or rubric;
-- expected decision/class;
-- candidate hint;
-- scenario-specific `must_observe` / `must_not` criteria;
-- prior scored treatment output;
-- evaluator notes.
-
-The evaluator bundle must be frozen outside the repository and verified with:
-
-```bash
-node scripts/verify-alpha-evaluator-bundle.mjs --rubric /private/path/share-ready-v3-rubric.json
-```
-
-## Required result record
-
-Each executed scenario records:
-
-```text
-Scenario set:
-Scenario ID:
-Repository commit:
-Public fixture SHA-256:
-Date:
-Agent/host/model:
-Model tier/rationale:
-Isolation method:
-Available host capabilities:
-Evidence sources used:
-Capability requirements identified:
-Candidates/components considered:
-Governed selection state:
-Decision:
-Artifacts changed/created:
-Static adversarial checks:
-Behavioral validation evidence/status:
-Installation/handoff state:
-Failure classification, if any:
-Evaluator scores/results:
-PASS / FAIL:
-Notes:
-```
-
-Repeated failures at the same stage across models are presumed repository/design defects until evidence shows otherwise.
+See [`share-ready-semantic-review.md`](share-ready-semantic-review.md) for the current closeout review.
