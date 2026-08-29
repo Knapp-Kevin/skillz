@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: sandbox-next
+display_name: Sandbox Next
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/sandbox-next/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_last_updated_at: 2026-08-07T17:44:33Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/sandbox-next/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: external-current-docs-and-types-required
+dependencies: @cloudflare/sandbox@next and matching preview container image; current Sandbox 1.0 preview docs; installed preview types; bundled quick-reference/examples
+import_eligibility: already-vendored
+rationale: Strong preview-line Sandbox implementation gate that prevents stable/next API mixing, explains process and terminal lifetime semantics, keeps live credentials out of sandbox environment, retrieves current docs and types, and provides pre-ship checks.

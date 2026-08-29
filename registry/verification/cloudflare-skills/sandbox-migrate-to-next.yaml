@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sandbox-migrate-to-next
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/sandbox-migrate-to-next/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 745bcc5655dec3b690d6df4c31141a2b46a6d4c3
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 20/20
+tags:
+  use_case: [cloud, implementation, deployment, refactoring]
+  lifecycle: [implementation, verification, release]
+  characteristic: [compatibility-aware, retrieval-first, test-gated, human-review, safety-bounded, evidence-first, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are 2 in all ten dimensions. Exact package-line gate, explicit stop points for user decisions, no forced production cutover, immediate-rollout reasoning for incompatible protocols, secret handling, error distinctions, anti-invention rules, grep, type and smoke validation, and post-cutover checks form a complete migration control loop. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cloudflare
+display_name: Cloudflare Platform
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/cloudflare/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: 9c8c21bbfedcfce12e42e4a2c3de8e355959ee51
+upstream_last_updated_at: 2026-06-20T14:23:34Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/cloudflare/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-current-docs-required
+dependencies: Large bundled Cloudflare product reference tree; current Cloudflare docs/changelog; Workers types and Wrangler config schema where relevant
+import_eligibility: already-vendored
+rationale: Broad Cloudflare platform routing and retrieval skill. It adds useful product-selection decision trees and consistently tells agents to prefer current docs, types, and schema over embedded knowledge, but it is primarily a routing surface and therefore has lighter explicit authority, failure, and completion controls than task-specific operational skills.

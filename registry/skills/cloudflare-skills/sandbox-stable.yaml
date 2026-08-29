@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: sandbox-stable
+display_name: Sandbox Stable
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/sandbox-stable/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_last_updated_at: 2026-08-07T17:44:33Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/sandbox-stable/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: external-current-docs-and-types-required
+dependencies: Stable @cloudflare/sandbox package and matching stable container image; current Sandbox docs; installed stable types; Wrangler for deployment
+import_eligibility: already-vendored
+rationale: Strong stable-line Sandbox implementation gate that prevents preview API contamination, keeps migrations user-directed, protects live credentials, routes to current docs and types, and includes practical pre-ship and deprecation checks.

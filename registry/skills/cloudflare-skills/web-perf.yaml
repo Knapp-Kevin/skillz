@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: web-perf
+display_name: Web Performance
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/web-perf/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: 22a32f5f10eedd4428b26597406804ddf43b747d
+upstream_last_updated_at: 2026-04-01T15:54:14Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
+local_path: vendor/cloudflare-skills/skills/web-perf/SKILL.md
+permission_tier: external-observation-with-undisclosed-data-sharing
+portability: low
+review_status: rejected-unchanged
+dependency_status: required-host-capability-has-undisclosed-privacy-effects
+dependencies: Chrome DevTools MCP server and browser instance; web.dev, Chrome DevTools, and Lighthouse references; optional codebase access
+import_eligibility: reference-only-unless-adapted
+rationale: Useful evidence-driven performance-audit method, but unchanged use is blocked because the required Chrome DevTools MCP dependency can expose browser contents to the MCP client and has telemetry/CrUX data paths that the skill setup instructions do not disclose or bound. Adaptation must add an explicit privacy and telemetry consent boundary before governed selection.

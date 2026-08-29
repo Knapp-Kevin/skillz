@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cloudflare-email-service
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/cloudflare-email-service/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fb3565111a2ce94761e5ad6642d20d02e7707946
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, implementation, business-operations]
+  lifecycle: [implementation, operations]
+  characteristic: [retrieval-first, reference-heavy, production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Clear service boundaries, prerequisites, current-doc retrieval, secret handling, transactional-email scope, and useful bundled operational references. External sending and configuration authority is explicit in the task but not strongly confirmation-gated, so authority and evidence scores remain conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

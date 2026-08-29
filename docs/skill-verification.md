@@ -9,20 +9,19 @@ Every characterized skill receives an exact-version quality state according to t
 ## Quality lifecycle
 
 ```text
-discovered -> characterized -> unverified
-                           -> trusted-baseline
-                           -> verified
-verified -> validated
-any assessed state -> stale
+discovered -> characterized -> unverified -> verified -> validated
 reviewed -> rejected | retired
+any assessed state -> stale
 ```
 
-- `trusted-baseline` means the exact fingerprint is eligible under an established source-quality policy plus local integrity/characterization requirements.
 - `verified` means the exact fingerprint passed the structured quality gate below.
 - `validated` additionally requires representative behavioral evidence.
-- `unverified` remains useful as design/reference evidence but is not silently trusted for unchanged installation.
+- `unverified` remains useful as design/reference evidence while review is pending but is not silently trusted for unchanged installation.
+- `trusted-baseline` is retained in the schema vocabulary only for historical compatibility. It is not eligible for current unchanged selection and must be replaced by an individual structured review before a skill can satisfy the repository's completion standard.
 
 `verified` and `validated` are intentionally different. Static review can establish that a skill is coherent, bounded, useful, and fit for consideration. It cannot prove that the skill improves model behavior. Behavioral evidence is required for `validated`.
+
+The current curation finish line is stricter than the historical characterization model: every ingested user-facing skill must receive an individual structured review. A passing skill becomes `verified`; a failing unchanged skill becomes `rejected` or another explicit excluded state. No current characterized skill should remain indefinitely `unverified` or rely on source reputation as a shortcut.
 
 ## Hard-fail conditions
 
@@ -95,8 +94,9 @@ No upstream source is auto-upgraded merely because a newer commit exists.
 
 ## Selection semantics
 
-- `trusted-baseline`, `verified`, `validated`: eligible for unchanged selection if fingerprint, tags, and user fit match.
+- `verified`, `validated`: eligible for unchanged selection if fingerprint, tags, and user fit match.
 - `unverified`: design evidence only by default; verify before direct trusted installation.
+- `trusted-baseline`: legacy characterization only; blocked from unchanged selection until structured review replaces it.
 - `stale`, `rejected`, `retired`: excluded from normal selection.
 
 A high-quality skill may still be a bad fit for a particular user. Verification establishes eligibility, not inevitability.

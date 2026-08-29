@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: durable-objects
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/durable-objects/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b595f1c2182f3b7d6f944d7ba0ac59667fba78aa
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, architecture, implementation, testing]
+  lifecycle: [design, implementation, verification]
+  characteristic: [retrieval-first, production-oriented, test-driven, evidence-first, compatibility-aware]
+  authority: [mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 2, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Strong scope boundaries, storage and concurrency rules, anti-patterns, configuration guidance, and executable Vitest patterns; current docs are preferred over memory. Mutation is inherent to requested implementation work but approval and recovery behavior is not deeply specified. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

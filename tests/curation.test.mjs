@@ -70,29 +70,29 @@ test("characterization is bound to exact Git blob fingerprints", () => {
   }
 });
 
-test("characterized unverified sample stays untrusted until structured review", () => {
-  const dir = join(VERIFICATION, "addyosmani-agent-skills");
-  const files = yamlFiles(dir);
-  assert.equal(files.length, 10);
+test("current characterized records use decisive review states rather than limbo or source shortcuts", () => {
+  const allowed = new Set(["verified", "validated", "stale", "rejected", "retired"]);
+  const files = yamlFiles(VERIFICATION);
   for (const file of files) {
     const text = readFileSync(file, "utf8");
-    assert.equal(field(text, "verification_status"), "unverified");
-    assert.equal(field(text, "validation_status"), "not-run");
+    const status = field(text, "verification_status");
+    assert.ok(allowed.has(status), `${file}: current characterization must resolve to a structured reviewed state, got ${status}`);
+    assert.notEqual(status, "unverified", `${file}: characterized records may not remain in unverified limbo`);
+    assert.notEqual(status, "trusted-baseline", `${file}: source reputation may not substitute for structured review`);
+    if (status === "verified") {
+      assert.equal(field(text, "verification_basis"), "structured-static-review", `${file}: verified must be earned by structured review`);
+    }
   }
 });
 
-test("trusted-baseline records are fingerprinted without pretending behavioral validation", () => {
-  const files = yamlFiles(VERIFICATION).filter((file) => {
-    const text = readFileSync(file, "utf8");
-    return field(text, "verification_status") === "trusted-baseline";
-  });
-  assert.ok(files.length >= 8, `expected at least 8 trusted-baseline records, found ${files.length}`);
-  for (const file of files) {
-    const text = readFileSync(file, "utf8");
-    assert.equal(field(text, "verification_basis"), "source-quality-policy-plus-integrity-review");
-    assert.equal(field(text, "validation_status"), "not-run");
-    assert.match(field(text, "content_blob_sha"), /^[0-9a-f]{40}$/);
-  }
+test("Cloudflare pinned corpus has complete individual review coverage", () => {
+  const provenance = yamlFiles(join(PROVENANCE, "cloudflare-skills"));
+  const verification = yamlFiles(join(VERIFICATION, "cloudflare-skills"));
+  assert.equal(provenance.length, 13, `expected 13 Cloudflare provenance records, found ${provenance.length}`);
+  assert.equal(verification.length, 13, `expected 13 Cloudflare verification records, found ${verification.length}`);
+  const statuses = verification.map((file) => field(readFileSync(file, "utf8"), "verification_status"));
+  assert.equal(statuses.filter((status) => status === "verified").length, 11);
+  assert.equal(statuses.filter((status) => status === "rejected").length, 2);
 });
 
 test("structured verification sample earned structured verification only", () => {

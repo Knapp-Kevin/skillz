@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cloudflare-one
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/cloudflare-one/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 753ab60c176e82f11097caa958cd4646ecd67078
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [cloud, security, architecture, deployment]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [retrieval-first, evidence-first, human-review, production-oriented, risk-aware, safety-bounded, traceable]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Requires current docs for settings and semantics, gathers account, identity, network, and rollout context, inspects existing resources before proposing changes, and explicitly pilots risky Access, Gateway, TLS, DLP, routing, and device-policy changes with rollback thinking. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

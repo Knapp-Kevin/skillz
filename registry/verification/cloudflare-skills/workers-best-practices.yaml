@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: workers-best-practices
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/workers-best-practices/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bebd018cdcae1771eacdee30cfb96af3ad3bd936
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [code-review, implementation, security, cloud]
+  lifecycle: [implementation, verification]
+  characteristic: [retrieval-first, evidence-first, production-oriented, tool-assisted, compatibility-aware]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 2, evidence 2, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Requires latest best-practice docs and types retrieval, reads full files rather than diffs alone, validates config, bindings and types, flags concrete security and runtime anti-patterns, and asks for line or tool evidence. Mutation is appropriate only when the user requested authoring or fixes; the review path remains read-oriented. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

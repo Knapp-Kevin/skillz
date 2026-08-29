@@ -21,8 +21,8 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "..");
 const DEFAULT_INDEX = join(ROOT, "index.json");
-const ELIGIBLE = new Set(["trusted-baseline", "verified", "validated"]);
-const BLOCKED = new Set(["stale", "rejected", "retired"]);
+const ELIGIBLE = new Set(["verified", "validated"]);
+const BLOCKED = new Set(["trusted-baseline", "stale", "rejected", "retired"]);
 
 const { values } = parseArgs({
   options: {
@@ -109,7 +109,6 @@ function scoreCandidate(c: Candidate): Candidate {
   }
   if (c.verificationStatus === "validated") score += 4;
   else if (c.verificationStatus === "verified") score += 3;
-  else if (c.verificationStatus === "trusted-baseline") score += 2;
   else if (c.verificationStatus === "unverified") score -= 8;
   c.score = score;
   c.matched = matched;

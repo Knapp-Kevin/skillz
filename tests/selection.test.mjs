@@ -27,21 +27,23 @@ test("governed selector prefers eligible exact-version candidates", () => {
   assert.match(result.candidates[0].matched.join(" "), /use_case:debugging/);
 });
 
-test("unverified material is excluded from trusted unchanged selection by default", () => {
-  const { code, out, err } = run(["--use-case", "debugging"]);
+test("unverified, legacy baseline, and stale material are excluded from unchanged selection", () => {
+  const { code, out, err } = run(["--use-case", "debugging", "--limit", "10"]);
   assert.equal(code, 0, err);
   const names = JSON.parse(out).candidates.map((c) => c.name);
   assert.ok(!names.includes("unverified-debug"));
+  assert.ok(!names.includes("legacy-baseline-debug"));
   assert.ok(!names.includes("stale-debug"));
 });
 
-test("unverified material can be surfaced explicitly as design evidence", () => {
+test("unverified material can be surfaced explicitly as design evidence without reviving legacy baseline", () => {
   const { code, out, err } = run(["--use-case", "debugging", "--include-unverified", "--limit", "10"]);
   assert.equal(code, 0, err);
   const result = JSON.parse(out);
   const unverified = result.candidates.find((c) => c.name === "unverified-debug");
   assert.ok(unverified, "explicit review mode should surface unverified design evidence");
   assert.equal(unverified.selectionUse, "design-evidence-only");
+  assert.ok(!result.candidates.some((c) => c.name === "legacy-baseline-debug"), "legacy source-policy baseline stays blocked until structured review");
   assert.ok(!result.candidates.some((c) => c.name === "stale-debug"), "stale material stays blocked");
 });
 

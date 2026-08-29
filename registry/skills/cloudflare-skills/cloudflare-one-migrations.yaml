@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cloudflare-one-migrations
+display_name: Cloudflare One Migrations
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/cloudflare-one-migrations/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: e638d8c1be5f66f5e056c82b2e21ffa25db95e86
+upstream_last_updated_at: 2026-06-14T19:33:46Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/cloudflare-one-migrations/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: external-current-docs-and-source-export-required
+dependencies: Current Cloudflare One docs/API schemas; structured source-platform exports and current target-account inventory; Cloudflare account access for applied migrations
+import_eligibility: already-vendored
+rationale: High-discipline security migration workflow that inventories source rules, preserves unmapped and partial states, retrieves current target semantics, stages risky enforcement disabled or in audit/pilot scope, and requires validation and rollback planning rather than pretending every source construct has a one-to-one mapping.

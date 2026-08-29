@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cloudflare-one
+display_name: Cloudflare One
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/cloudflare-one/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: e638d8c1be5f66f5e056c82b2e21ffa25db95e86
+upstream_last_updated_at: 2026-06-14T19:33:46Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/cloudflare-one/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: external-current-docs-required
+dependencies: Current Cloudflare One docs/API schemas; target account/context for inspection or changes; identity, network, device, and rollout context relevant to the requested task
+import_eligibility: already-vendored
+rationale: Comprehensive Cloudflare One design, configuration, and review workflow that retrieves current product semantics, inspects existing state before changes, gathers rollout context, and stages risky policy changes to pilots with explicit validation and rollback considerations.
