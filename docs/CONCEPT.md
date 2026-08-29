@@ -39,7 +39,7 @@ An agent should have an unmistakable entry route and deterministic boundaries:
 ## Inventory boundary
 
 - `skills/`: local/imported user-facing library skills.
-- approved indexed skills in `vendor/`: referenced user-facing library skills.
+- approved indexed skills in `skills/sources/`: referenced user-facing library skills.
 - `engine/skills/`: repository-operating machinery; excluded from library inventory.
 - `registry/`: source, provenance, category, characterization, and exact-version quality metadata.
 
