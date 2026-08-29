@@ -18,7 +18,7 @@ Do not collapse these states into a single word like "curated."
 
 Source identity does not establish individual skill quality by itself.
 
-Each registered source has an explicit quality default used by the repository's selection machinery. A source default may establish an initial quality posture, but individual skills still require exact-version fingerprinting and characterization before they are fully governed selection candidates.
+Registered sources describe provenance and repository role, not blanket skill quality. A skill without an individual exact-version quality record is treated as `unverified` for normal selection. Individual skills require fingerprinting and characterization before they become governed selection candidates.
 
 Normative specifications may use a non-skill quality state because they are references rather than normal installable skills.
 
