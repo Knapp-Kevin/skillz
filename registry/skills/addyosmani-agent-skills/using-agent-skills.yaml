@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: using-agent-skills
+display_name: Using Agent Skills
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/using-agent-skills/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 91d4d07522de9577caf5d213e5bf1acc38fa3df2
+upstream_last_updated_at: 2026-08-07T11:27:44Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/using-agent-skills/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: source-corpus-and-host-context-dependent
+dependencies: Addy Osmani agent-skills corpus, project context, and host capabilities required by whichever downstream skill is selected
+import_eligibility: already-vendored
+rationale: Useful source-specific routing map and strong general principles around assumptions, confusion, simplicity, scope discipline, and verification, retained for adaptation rather than unchanged reuse because it turns a source's preferred full lifecycle into mandatory meta-governance and inherits unsafe assumptions from rejected downstream skills.
