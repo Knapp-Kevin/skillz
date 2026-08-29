@@ -7,7 +7,7 @@ This repository is both a user-facing skill library and a skill-building engine.
 ## Inventory boundary
 
 - `skills/`: local/imported user-facing skills. Count them.
-- approved indexed skill material under `vendor/`: referenced user-facing library skills. Count them.
+- approved indexed skill material under `skills/sources/`: referenced user-facing library skills. Count them.
 - `engine/skills/`: procedures that operate `skillz` itself. Do **not** count them.
 - `registry/skills/`: provenance for individually characterized third-party skills.
 - `registry/verification/`: hash-bound quality state and controlled tags.
