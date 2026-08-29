@@ -103,13 +103,13 @@ sources:
   - id: openhands-extensions
     name: OpenHands Extensions
     source: https://github.com/OpenHands/extensions
-    class: official-ecosystem
+    class: official
     source_role: vendored-corpus
     resolved_path: skills/sources/openhands-extensions
     inclusion: vendored
     license: MIXED
     pinned_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037b
-    rationale: Active OpenHands public extension registry retained for comparison and individual curation. The repository root is MIT, but extensions may ship their own terms, so per-skill licensing controls.
+    rationale: OpenHands-owned public extension registry retained for comparison and individual curation. The repository root is MIT, but extensions may ship their own terms, so per-skill licensing controls.
 
   - id: cline-skills
     name: Cline Skills
