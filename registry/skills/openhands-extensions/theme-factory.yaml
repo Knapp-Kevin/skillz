@@ -4,11 +4,12 @@ display_name: Theme Factory
 source_id: openhands-extensions
 source_repository: https://github.com/OpenHands/extensions
 source_path: skills/theme-factory/SKILL.md
-source_class: official-ecosystem
+source_class: official
 license: Apache-2.0
 relationship: vendored-reference
-source_snapshot_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037
+source_snapshot_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037b
 upstream_revision: d60396e2a1b1a3c0b56c91c920873e344e1bc3f7
+upstream_first_seen_at: 2026-01-09T18:58:39Z
 upstream_last_updated_at: 2026-01-09T18:58:39Z
 curated_at: 2026-08-29
 last_checked_at: 2026-08-29

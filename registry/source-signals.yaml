@@ -20,3 +20,17 @@ sources:
     archived: false
     disabled: false
     interpretation: High-visibility, heavily starred community source. Use as source-level adoption/attention context only; individual skills still require exact-version characterization and quality state.
+
+  - source_id: openhands-extensions
+    repository: https://github.com/OpenHands/extensions
+    observed_at: 2026-08-29T14:35:17Z
+    evidence: https://api.github.com/repos/OpenHands/extensions
+    repository_created_at: 2025-10-02T17:04:18Z
+    repository_updated_at: 2026-08-27T05:52:33Z
+    repository_pushed_at: 2026-08-26T10:41:52Z
+    github_stars: 52
+    github_forks: 15
+    github_subscribers: 7
+    archived: false
+    disabled: false
+    interpretation: OpenHands-owned source with recent maintenance activity. These source-level visibility and maintenance signals do not prove individual skill quality or unchanged-reuse eligibility.
