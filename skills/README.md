@@ -1,10 +1,10 @@
 # Local Skill Library
 
-This directory contains the locally maintained and directly imported portion of the `skillz` library.
+This directory contains the first-party/local user-facing portion of the `skillz` library.
 
 ## Browse by purpose
 
-Start with [`categories/`](categories/) if you are browsing as a human.
+Humans can start with [`categories/`](categories/):
 
 - [Planning & Productivity](categories/planning-productivity/)
 - [Writing & Communication](categories/writing-communication/)
@@ -14,36 +14,57 @@ Start with [`categories/`](categories/) if you are browsing as a human.
 - [Monitoring & Intelligence](categories/monitoring-intelligence/)
 - [Business & Career](categories/business-career/)
 
-The category folders are currently a human navigation layer. Canonical skill directories remain directly under `skills/` while recursive discovery is integrated into index, audit, and synchronization tooling. Once that migration is verified, the category layout can become the canonical physical organization without breaking existing installs or links.
+Category folders are a human navigation layer. Canonical active local skill content is the discovered `SKILL.md` material under `skills/`.
 
-## Counting rule
+## Counting boundary
 
-**Every user-facing skill under `skills/` counts, but `skills/` is not the entire library.**
+Every active user-facing local skill counts, but `skills/` is not the whole reference ecosystem.
 
-The complete usable library also includes approved indexed third-party skill references from pinned source corpora under [`vendor/`](../vendor/). Repository machinery under [`engine/skills/`](../engine/skills/) is the exception and does not count.
+The repository also carries approved vendored/tracked third-party reference material. Repository machinery under [`../engine/skills/`](../engine/skills/) does not count as user-facing inventory.
 
-When someone asks how many skills the repository has, report the indexed user-facing corpus, not merely the number of directories here.
+Broad third-party source presence means **referenceable**, not automatically **trusted unchanged**.
 
-## What belongs here
+## First-party quality records
 
-A capability belongs here when it makes sense for a user to install or use independently of maintaining `skillz`, even if the repository also happens to use it internally.
+Active local skills are not exempt from the same quality discipline applied to third-party work merely because we wrote them ourselves. Home-field advantage is not a verification method.
 
-Third-party skills directly imported here must preserve applicable licensing and provenance under [`../registry/skills/`](../registry/skills/).
+Their exact-version review manifest is:
 
-## Availability is not verification
+[`../registry/local-verification.json`](../registry/local-verification.json)
 
-Pinned vendor sources are part of the larger library corpus, but their individual skills do not inherit quality merely from repository inclusion.
+For every active local `SKILL.md`, that manifest records:
 
-The useful distinctions are:
+- exact Git blob fingerprint;
+- individual structured rubric score;
+- current quality state;
+- behavioral-validation status;
+- controlled use-case/lifecycle/characteristic tags;
+- authority and portability;
+- material review notes.
 
-- **local/imported**: maintained directly under `skills/`;
-- **indexed reference**: available through approved sources under `vendor/`;
-- **characterized**: has source provenance plus controlled tags/fingerprint;
-- **trusted-baseline**: exact characterized version is eligible under repository quality policy;
-- **verified**: structured skill-quality rubric passed;
-- **validated**: representative behavioral evidence also passed;
-- **unverified**: available/design evidence, not trusted unchanged by default;
-- **stale**: prior characterization no longer matches the current skill content;
-- **engine**: repository machinery under `engine/skills/`, excluded from library counts.
+`node scripts/verify-share-ready-corpus.ts` compares the manifest against every active local skill and fails when:
 
-See [`../docs/skill-verification.md`](../docs/skill-verification.md) and [`../registry/verification/README.md`](../registry/verification/README.md).
+- a local skill is missing an individual review;
+- a reviewed local skill no longer exists;
+- canonical content changed without a refreshed fingerprint/review;
+- an active local skill is below the current verified quality threshold;
+- controlled metadata is incomplete or invalid.
+
+Behavioral validation is separate. `validation_status: not-run` is an explicit limitation, not a euphemism for "probably fine."
+
+## Third-party quality states
+
+Individually governed third-party skills use provenance under [`../registry/skills/`](../registry/skills/) and exact-version quality records under [`../registry/verification/`](../registry/verification/).
+
+Current unchanged-reuse semantics are:
+
+- `verified`: exact version passed the structured review and may be considered when operational/user fit matches;
+- `validated`: `verified` plus representative behavioral evidence;
+- `unverified`: design/reference evidence only;
+- `trusted-baseline`: legacy schema compatibility only, not current unchanged-selection eligibility;
+- `stale`: prior exact-version evidence no longer applies;
+- `rejected` / `retired`: excluded from normal unchanged selection.
+
+A reference can still contribute a useful mechanism without becoming the final workflow. Material adaptation remains subject to provenance, licensing, dependency, authority, and rejection/staleness constraints.
+
+See [`../docs/skill-verification.md`](../docs/skill-verification.md), [`../docs/curation-policy.md`](../docs/curation-policy.md), and [`../registry/verification/README.md`](../registry/verification/README.md).
