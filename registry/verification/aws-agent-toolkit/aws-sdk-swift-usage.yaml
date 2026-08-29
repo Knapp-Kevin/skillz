@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: aws-sdk-swift-usage
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-sdk-swift-usage/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_tree_sha: b09094fc5e414983df038fe40a2d34c433ca2d14
+fingerprint_scope: canonical-skill-package-directory
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation]
+  characteristic: [reference-heavy, compatibility-aware]
+  authority: [generate-only]
+  portability: [medium]
+notes: Useful AWS SDK for Swift prior art, but unchanged reuse is blocked by brittle absolute API-shape and declaration-order claims without a controlling current-documentation verification step, plus literal static credential examples. Reference-only unless adapted and reverified. Exact package fingerprint includes bundled content at the registered pin; behavioral validation remains pending.
