@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: single-cell-rna-qc
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/bio-research/skills/single-cell-rna-qc/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 646169dc1b8f1258faf2cc94c463ee33b05f57ea
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [research, evaluation]
+  lifecycle: [verification]
+  characteristic: [tool-assisted, visual-verification, iterative, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. Strong reproducible QC workflow with configurable MAD-based filtering, before/after visualizations, preservation of the original dataset with QC annotations, modular non-filtering/custom alternatives, species/tissue caveats, permissive defaults, and explicit instruction to inspect whether filtering makes biological sense. Specialized Python dependencies and bundled scripts limit portability. Scientific review remains necessary for threshold choice, rare-population retention, gene-pattern assumptions, and downstream interpretation. Exact pinned fingerprint confirmed. Behavioral validation not run."
