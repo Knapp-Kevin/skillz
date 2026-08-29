@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: rules-check-drift
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f8de7f3e8caf651e7e80572addca3ef6a403eb75
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [repository-maintenance, context-management]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, incremental, maintainability, safety-bounded, context-efficient]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The workflow is advisory, limits itself to CLAUDE.md/AGENTS.md steering claims, checks them against git diff/status, and explicitly prefers no edit over context growth. It also separates false/stale rules from new durable invariants and requires explicit caller instruction before edits. One point is withheld on failure handling because the canonical skill does not spell out a clean stop/fallback when no rules file exists or when neither default diff range resolves. No local behavioral validation was run."
