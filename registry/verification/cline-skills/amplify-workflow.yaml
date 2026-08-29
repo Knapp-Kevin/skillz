@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: amplify-workflow
 source_id: cline-skills
 source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
-local_path: vendor/cline-skills/skills/amplify-workflow/SKILL.md
+local_path: skills/sources/cline-skills/skills/amplify-workflow/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 0f5780d57f58efaf18ee82707bd19c7d2deb78ae
 characterized_at: 2026-08-29
