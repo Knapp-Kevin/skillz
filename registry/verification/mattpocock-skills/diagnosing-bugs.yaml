@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/engineering/diagnosing-bugs/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 061c25a524acaa93d4534e9e08a793c0a5fe45fd
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 19/20
 tags:
   use_case: [debugging]
   lifecycle: [verification]
   characteristic: [hypothesis-driven, evidence-first, human-review, iterative]
   authority: [generate-only]
   portability: [high]
-notes: Exact version is fingerprinted and characterized under the repository quality policy. No local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Excellent red-capable feedback-loop gate, secret redaction, stop-when-no-repro behavior, minimization, falsifiable ranked hypotheses, one-variable instrumentation, regression proof, and mandatory cleanup. Production instrumentation requires permission. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
