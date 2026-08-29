@@ -49,16 +49,16 @@ function makeFixture(t) {
     "    source: https://example.test/sample",
     "    class: fixture",
     "    source_role: vendored-corpus",
-    "    resolved_path: vendor/sample",
+    "    resolved_path: skills/sources/sample",
     "    inclusion: vendored",
     "",
   ].join("\n"));
   git(parent, ["add", "registry/sources.yaml"]);
   git(parent, ["commit", "-qm", "registry"]);
-  git(parent, ["-c", "protocol.file.allow=always", "submodule", "add", "-q", source, "vendor/sample"]);
+  git(parent, ["-c", "protocol.file.allow=always", "submodule", "add", "-q", source, "skills/sources/sample"]);
   git(parent, ["commit", "-qam", "pin sample source"]);
 
-  return { base, source, parent, submodule: join(parent, "vendor", "sample") };
+  return { base, source, parent, submodule: join(parent, "skills", "sources", "sample") };
 }
 
 test("vendor materialization verifier accepts a clean superproject and initialized clean exact pin", (t) => {
