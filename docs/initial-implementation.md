@@ -1,80 +1,94 @@
-# Initial Implementation Finish Line
+# Core Implementation Completion
 
-The initial implementation of `skillz` is the **user + agent experience of building and refining a dependable fitted skill system**, not the accumulation of an arbitrary number of skills.
+Status: **CORE COMPLETE / CURATION MODE**
 
-The repository is passive. A normal user hands the repository to an agent; the agent uses legitimately available context and capabilities to discover durable needs, compare reference material, select or synthesize the smallest coherent system, validate it honestly, and install or hand it off in the format supported by the active host.
+The core implementation of `skillz` is the **user + agent experience of building and refining a dependable fitted skill system**, not the accumulation of an arbitrary number of skills.
 
-## What the core experience must do
+`skillz` is passive. It contains instructions, reference material, and governance metadata. The active agent reads those materials and does the work with capabilities legitimately available in its host.
+
+There is no repository-owned runtime to prove. Core completion is therefore based on semantic coherence, governed curation, and adversarial review of the instructions.
+
+## Core experience
 
 ### First visit
 
-1. Route directly into bootstrap instead of stopping at a repository summary.
-2. Bind to the active environment, evidence scope, privacy boundaries, authority, and installation capability.
-3. Infer durable user needs from minimum relevant evidence.
-4. Translate those needs into capability requirements before searching by skill name.
-5. Search the broad reference corpus and individually governed surface by capability/metadata.
-6. Distinguish whole-skill fit from useful components/patterns.
-7. Gate unchanged third-party reuse on current exact-version quality and operational fit.
-8. Choose explicitly among reuse, adaptation, supplementation, composition, clean custom creation, checklist/helper, dynamic behavior, or no skill.
-9. Compose the smallest coherent system without importing unnecessary reference ceremony.
-10. Produce real artifacts for the active environment.
-11. Adversarially test important custom/adapted behavior and report behavioral evidence honestly.
-12. End in a concrete installation or portable-handoff state.
+The canonical bootstrap must make it straightforward for an agent to:
+
+1. route into bootstrap rather than stop at a repository summary;
+2. bind to the active environment, evidence scope, privacy boundaries, authority, and installation capability;
+3. infer durable user needs from minimum relevant evidence;
+4. translate those needs into capability requirements before searching by skill name;
+5. search broad reference material and individually governed skills by capability/metadata;
+6. distinguish whole-skill fit from useful components/patterns;
+7. gate unchanged third-party reuse on exact-version quality and actual fit;
+8. choose explicitly among reuse, adaptation, supplementation, composition, clean custom creation, checklist/helper, dynamic behavior, or no skill;
+9. compose the smallest coherent system without importing unnecessary reference ceremony;
+10. produce complete artifacts for the active environment when possible, otherwise a truthful portable handoff;
+11. adversarially review important instructions and state uncertainty honestly.
 
 ### Returning visit
 
-1. Inventory the current fitted system rather than resetting it.
-2. Preserve still-valid custom behavior.
-3. Identify only material drift, gaps, conflicts, or changed needs.
-4. Re-run capability definition/search/governance for affected capabilities.
-5. Make the smallest justified change.
-6. Correctly return `NO CHANGE NEEDED` when evidence does not justify modification.
-7. Re-evaluate changed artifacts and refresh installation/handoff state.
+The returning path must:
 
-## Reference corpus versus governed individual skills
+1. inventory the current fitted system rather than reset it;
+2. preserve still-valid custom behavior;
+3. identify only material drift, gaps, conflicts, or changed needs;
+4. re-run capability definition and comparison only where change is plausible;
+5. make the smallest justified change;
+6. correctly return `NO CHANGE NEEDED` when evidence does not justify modification.
 
-The broad local/vendor/tracked corpus is useful discovery and design material. Physical presence or source reputation does not make every upstream skill trusted inventory.
+## Reference corpus versus governed skills
 
-An individually governed third-party skill has exact provenance, fingerprint, controlled metadata, dependency/authority/portability characterization, and a decisive structured review record.
+The broad local/vendor/tracked corpus is discovery and design material. Physical presence or source reputation does not make every upstream skill trusted inventory.
 
-Only exact `verified` or `validated` records are eligible for unchanged third-party consideration. Other material may still inform clean design or bounded adaptation under provenance/licensing and safety constraints.
+An individually governed third-party skill has exact provenance, content identity, controlled metadata, dependency/authority/portability characterization, and a decisive structured semantic review record.
 
-## Maintainer proof is separate from normal use
+Only exact `verified` or `validated` records are eligible for unchanged third-party consideration. Other material may still inform clean design or bounded adaptation under provenance, licensing, safety, and rejection-reason constraints.
 
-Normal agent use must not require a local clone, shell, Git executable, Node/Bun runtime, initialized submodules, writable `skillz` checkout, or GitHub Actions.
+First-party skills are subject to the same basic quality discipline. Their individual reviews live in `registry/local-verification.json`.
 
-Maintainer-grade repository proof does require a fully materialized checkout because it validates pinned source state, generated catalog semantics/counts, deterministic regeneration, audits, tests, and exact characterization fingerprints.
+## Evaluation model
 
-`node scripts/share-ready-preflight.ts` is the one-command deterministic closure gate before independent behavioral proof.
+The repository's evaluation surface is semantic and probabilistic.
 
-## Blind behavioral proof
+Useful review asks:
 
-Static contracts are necessary but insufficient. Completion requires isolated treatment runs proving that agents actually follow the intended process.
+- Would a literal agent know where to start?
+- Can a weaker model follow the ordered workflow without inferring hidden architecture?
+- Are input, output, stop, and fallback conditions clear enough at each stage?
+- Can an agent distinguish reference material from governed unchanged-reuse candidates?
+- Are component extraction and composition understandable without importing another source's ceremony?
+- Are authority, privacy, and installation claims bounded truthfully?
+- Can a returning agent preserve good behavior and decide not to change anything?
+- Do any documents contradict the bootstrap or use obsolete terminology?
 
-The original v1 fixture is invalid because evaluator keys were public. The v2 fixture is also invalid for blind closure because public Issue #15 later mapped its neutral IDs to expected decision classes.
+Representative scenarios and adversarial readings are recorded as review evidence. They improve confidence but do not pretend probabilistic model behavior can be deterministically proven.
 
-The current active treatment fixture is:
+See [`evals/share-ready-semantic-review.md`](evals/share-ready-semantic-review.md).
 
-`docs/evals/fixtures/share-ready-scenarios-v3.json`
+## Completion criteria
 
-Expected decisions, candidate hints, and scenario-specific scoring criteria must remain in a separately stored private evaluator bundle until each treatment response is frozen. `scripts/verify-alpha-evaluator-bundle.mjs` binds that private bundle to the exact public fixture.
+The repository is core-complete when:
 
-The proof set must collectively demonstrate:
+- the canonical passive bootstrap path is explicit and ordered;
+- normal user synthesis is unmistakably separated from repository maintenance;
+- every intentionally governed skill has adequate provenance/metadata and a decisive semantic quality state;
+- broad source material is clearly reference/design evidence unless individually governed;
+- active first-party user-facing skills have individual review records;
+- front-door and governance documentation agree on the same quality semantics;
+- semantic/adversarial review finds no unresolved repository-level ambiguity likely to materially derail the intended process.
 
-- appropriate governed whole-skill reuse when it truly fits;
-- refusal of unsafe/unproven unchanged reuse;
-- component extraction and composition without reference contamination;
-- custom creation when reuse would distort the workflow;
-- constrained connector/read-only success without local runtime;
-- host-specific packaging/handoff honesty;
-- returning-user minimal refinement;
-- returning-user no-op;
-- success by at least one materially weaker/cheaper model, not only a frontier model.
+No CI, executable preflight, application test harness, hidden evaluator bundle, or runtime proof is part of this definition.
 
-## Alpha versus share-ready
+## Curation mode
 
-Alpha lock is the narrower internal capability threshold tracked in [`alpha-lock.md`](alpha-lock.md) and Issue #15.
+After core completion, normal repository work is deliberately boring:
 
-Share-ready repository completion is stronger and is tracked by Issue #56. It additionally requires the intentionally governed corpus to be companion-complete and decisive, front-door documentation to agree with the engine, and no unresolved repeated failure attributable to repository ambiguity.
+1. occasionally discover promising new skills or source repositories;
+2. decide independently whether they add meaningful capability;
+3. source-vet and establish provenance/license/dependencies;
+4. individually score, tag, characterize, and disposition admitted skills;
+5. retain weak or unsafe material only as clearly bounded reference/negative evidence when useful;
+6. update the bootstrap only when real feedback or repeated semantic review reveals an actual instruction-design problem.
 
-Once share-ready is green, adding more sources and skills is enrichment rather than unfinished core functionality.
+New sources make the ecosystem broader. They do not reopen the question of whether the core repository works.
