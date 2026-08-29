@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: customer-research
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/customer-support/skills/customer-research/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: eaa5e9b99c6124f59752e7d780c2d21eff0dada6
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [research, business-operations, communication]
+  lifecycle: [discovery, verification]
+  characteristic: [retrieval-first, evidence-first, synthesis, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. Strong source-tiering, attribution, confidence labeling, contradiction handling, gaps/unknowns, freshness awareness, and explicit verification/escalation for roadmap, pricing, legal, security, compliance, and customer-specific commitments. Minor caveat: source-type confidence is a heuristic and official internal material should not be trusted solely by category; claim-level corroboration and customer-data minimization still depend on the host. Exact pinned fingerprint confirmed. Behavioral validation not run."
