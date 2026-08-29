@@ -1,293 +1,213 @@
 ---
 name: skill-bootstrap
 description: >-
-  Discover and build the smallest useful portable skill system for a user by
-  inspecting legitimate user evidence, translating needs into capabilities,
-  searching the governed and reference corpus, extracting safe reusable
-  components, composing or creating the best-fit artifacts, validating them,
-  and adapting the result to the active host. Use when the user gives you this
-  repository or its URL without another task, asks to bootstrap or improve
-  their skills, or wants working methods to transfer between agent hosts.
+  Build or refine the smallest dependable skill system for a user by discovering
+  durable needs, translating them into capabilities, comparing governed skills
+  and reference patterns, composing or creating the best fit, semantically
+  reviewing the result, and adapting it to the active host. Use for first-visit
+  or returning-user skill-system work.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.6.0
+  version: 0.7.0
 ---
 
 # Skill Bootstrap
 
 Build the **smallest dependable skill system that fits the user and the environment they are actually using**.
 
-This is the single canonical orchestrator for normal first-visit and returning-user skill-system work.
+This is the single canonical orchestrator for normal first-visit and returning-user work.
 
-`skillz` is passive. The active agent performs discovery, comparison, synthesis, validation, packaging, and handoff using capabilities it legitimately has.
+`skillz` is passive. The active agent reads these instructions and does the work with capabilities it legitimately has.
 
-## Hard boundary: user work is not repository maintenance
+## Hard boundary
 
-During normal bootstrap, **do not modify the `skillz` repository** unless the user explicitly asked to maintain or develop `skillz` itself.
+Normal user bootstrap is **not repository maintenance**.
 
-In particular:
+Unless the user explicitly asked to maintain `skillz` itself:
 
-- do not use repo-bound `skill-forge` as the default way to create the user's skills;
-- do not require repo-bound `skill-audit`, `skill-sync`, `skills-pulse`, or source-vetting procedures;
-- do not assume a local clone, shell, Git executable, Node/Bun, initialized submodules, writable repository, or GitHub Actions;
+- do not modify this repository;
+- do not use repo-bound `skill-forge` as the user's artifact generator;
+- do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, repository scripts, or CI;
+- do not assume a local clone, shell, Git, Node/Bun, initialized submodules, or writable filesystem;
 - do not confuse the user's target skill location with this repository's `skills/` directory.
 
-Repo-bound helpers under `engine/skills/` are maintainer tools. Normal bootstrap must remain possible through repository-native, connector/API/web, or read-only portable-handoff paths.
-
-## Default entry behavior
-
-If the user gives the agent this repository or its URL without a narrower task, begin bootstrap. Do not stop at a repository summary, catalog dump, or request that the user manually choose skills.
-
-If the user already has a fitted skill system and asks to review or improve it, use the returning-user path instead of rebuilding from zero.
-
-## Global stop rules
+## Global stop rule
 
 More evidence, more searching, and more skills are not inherently better.
 
-Stop expanding a stage when its additional work is unlikely to materially change the next decision.
+Stop a stage when additional work is unlikely to materially change the next decision.
 
-Specifically:
+## S0 — Route
 
-- stop evidence collection when the current evidence is sufficient to define stable capability requirements;
-- stop corpus search when adequate fit is established and no material requirement remains uncovered;
-- do not search live external sources for novelty after the governed/reference corpus already provides an adequate answer;
-- do not create a formal skill for a volatile, trivial, rare, or better-left-dynamic behavior;
-- do not continue refining merely to produce visible change for a returning user.
+Choose exactly one route:
 
-## Canonical state machine
+- `DIRECT_LIBRARY` — browse/search/compare/install a known skill; stop this bootstrap.
+- `FIRST_VISIT` — build a fitted skill system.
+- `RETURNING_USER` — review/refine an existing fitted system.
+- `REPOSITORY_MAINTENANCE` — change `skillz` itself; stop this bootstrap and use maintainer procedures.
 
-Follow the stages in order. Each stage has an input, required action, output, and fallback. The output becomes the next stage's input.
-
-### S0 — Route
-
-**Input:** user request and current context.
-
-**Action:** choose exactly one route:
-
-- `DIRECT_LIBRARY` — user named a skill or wants browse/search/compare/install help only;
-- `FIRST_VISIT` — user wants a fitted system and no existing fitted system is being reviewed;
-- `RETURNING_USER` — user already has a fitted system to review/refine;
-- `REPOSITORY_MAINTENANCE` — user explicitly wants to change `skillz` itself.
+If FIRST_VISIT and RETURNING_USER are both plausible, inspect accessible current skill/profile state. If a meaningful fitted set exists, use RETURNING_USER.
 
 **Output:** one route.
 
-**Fallback:** if FIRST_VISIT and RETURNING_USER both seem plausible, inspect accessible current skill/profile state. If a meaningful fitted set exists, use RETURNING_USER. Do not ask the user to resolve information the host can already inspect.
+## S1 — Bind to environment and authority
 
-Stop this skill for `DIRECT_LIBRARY` or `REPOSITORY_MAINTENANCE` and use the appropriate path instead.
+Establish, as far as the host permits:
 
-### S1 — Bind to environment and authority
-
-**Input:** routed bootstrap request.
-
-**Action:** establish, as far as the host permits:
-
-- current explicit user instruction;
-- applicable safety/security/project/workspace rules;
+- explicit user instruction;
+- applicable safety/security/project rules;
 - available and unavailable evidence sources;
 - read/write/tool capabilities;
-- current host and surface;
+- host/surface;
 - installation/packaging capability;
 - privacy, cost, and authority limits.
 
-Use the strongest capability path actually available:
+Use the strongest path actually available: repository-native, connector/API/web, or minimal read-only.
 
-1. repository-native;
-2. connector/API/web;
-3. minimal read-only.
+Unknown installation method does not block discovery. If still unknown at handoff, report that honestly.
 
-**Output:** environment record with `host`, `surface`, `read_capabilities`, `write_capabilities`, `evidence_available`, `evidence_unavailable`, `authority_limits`, and `installation_capability`.
+**Output:** environment/authority record.
 
-**Fallback:** an unknown installation method does not block discovery. If it remains unknown at handoff time, report `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED` rather than guessing.
+## S2 — Discover durable needs
 
-### S2 — Discover durable user needs
+Inspect the **minimum relevant evidence** needed to identify stable reusable patterns. Prefer already-exposed history, memory, workspace rules, existing skills, recurring corrections, repeated tool sequences, definitions of done, failure modes, and human-verification points.
 
-**Input:** environment record plus legitimate accessible evidence.
-
-**Action:** inspect the **minimum relevant evidence** needed to identify stable reusable patterns. Prefer already-exposed conversation history, persistent memory, workspace rules, existing skills, recurring corrections, repeated tool sequences, definitions of done, recurring failure modes, and repeated human-verification points.
-
-For each candidate need, record:
+For each candidate need record:
 
 - observed evidence;
 - inference, if any;
 - recurrence/stability;
-- failure/cost it prevents;
-- current workaround, if visible.
+- failure or cost it prevents.
 
-Do not sweep unrelated private connectors merely because they exist. Capability to access a private source is not consent to profile the user from it.
+Do not mine unrelated private connectors merely because they are accessible.
 
-**Stop condition:** stop collecting evidence when additional sources are unlikely to materially change the capability requirements. Do not build a comprehensive personal profile for the sake of feeling thorough.
+Stop when more evidence is unlikely to change the capability requirements. Mark thinly supported items `PROVISIONAL`; never invent unavailable history.
 
-**Output:** short list of durable need statements.
+**Output:** short durable-need list.
 
-**Fallback:** if evidence is thin, mark uncertain items `PROVISIONAL`. Never reconstruct unavailable history from assumptions.
+## S3 — Define capability requirements
 
-### S3 — Translate needs into capability requirements
-
-**Input:** durable need statements.
-
-**Action:** define what the fitted system must accomplish **before searching by skill name**.
-
-For each need define:
+Before searching by skill name, define for each need:
 
 - required outcome;
 - trigger and non-trigger conditions;
-- important invariants/safeguards;
-- required inputs/outputs;
+- safeguards/invariants;
+- inputs and outputs;
 - tool/authority needs;
 - human judgment points;
 - completion evidence.
 
+If the behavior is too volatile, trivial, or rare for a skill, classify it `DYNAMIC`, `CHECKLIST/HELPER`, or `DO_NOT_CREATE`.
+
 **Output:** capability requirements.
 
-**Fallback:** classify requirements that are too volatile or trivial to formalize as `DYNAMIC`, `CHECKLIST/HELPER`, or `DO_NOT_CREATE` rather than forcing a skill.
+## S4 — Discover skills and components
 
-### S4 — Discover candidate skills and components
-
-**Input:** capability requirements.
-
-**Action:** search by capability and controlled metadata, not filename resemblance alone.
+Search by capability and controlled metadata, not filename resemblance alone.
 
 Search in this order when available:
 
-1. user's existing skills and instructions;
+1. user's existing skills/instructions;
 2. current project/repository skills;
 3. local user-facing `skills/`;
 4. built-in host capabilities;
-5. approved indexed vendor/reference sources;
+5. approved vendor/reference sources;
 6. individually governed tracked external skills;
-7. live external sources only for a still-unmet material capability and only when current task scope permits it.
+7. live external sources only for a still-unmet material capability.
 
-The broad vendored/tracked corpus is **reference/discovery material**. It does not receive unchanged-reuse eligibility merely because it is present or comes from an official source.
+The broad vendored/tracked corpus is **reference/discovery material**, not blanket trusted inventory.
 
-Use controlled metadata such as use case, lifecycle, characteristics, authority, and portability to narrow candidates.
+For each relevant candidate inspect:
 
-For each relevant candidate inspect both:
+- **whole-skill fit**;
+- **component value** such as triggers, safeguards, decision gates, evidence rules, procedure fragments, failure handling, or abstractions.
 
-- **whole-skill fit** — could it be used substantially as written?
-- **component value** — are only its triggers, safeguards, procedure fragments, evidence rules, tests, failure handling, or abstractions useful?
+Stop when every material requirement has an adequate candidate path or a justified custom/dynamic/no-skill path.
 
-**Stop condition:** once every material requirement has an adequate candidate path or a justified CREATE/DYNAMIC/no-skill path, stop searching. Do not continue into external sources merely to maximize novelty.
+**Output:** capability-to-candidate/component map.
 
-When live external discovery is necessary, bound it to the unmet capability. Newly found material remains design evidence until its exact provenance/quality is governed well enough for stronger use.
+## S5 — Gate reuse and transferable material
 
-**Output:** candidate map linking requirements to whole-skill candidates and reusable components.
+### Unchanged third-party reuse
 
-**Fallback:** zero adequate candidates is valid. Continue toward custom creation instead of forcing reuse.
+Check, as far as the host can truthfully establish:
 
-### S5 — Gate eligibility and transferable material
-
-**Input:** candidate map.
-
-**Action A: unchanged third-party reuse.** Establish as much as the host can truthfully verify:
-
-- canonical source/provenance;
+- source/provenance;
 - exact version/fingerprint;
-- current quality state;
-- license/attribution obligations;
-- package/dependency completeness;
-- authority/side-effect level;
-- portability/environment assumptions.
+- semantic quality state;
+- license/attribution;
+- dependencies;
+- authority/side effects;
+- portability/host assumptions.
 
-Current unchanged-reuse rule:
+Rules:
 
-- `verified` or `validated` plus matching exact identity may be considered for unchanged reuse;
+- `verified` or `validated` plus matching exact identity may be considered unchanged;
 - `unverified` and legacy `trusted-baseline` are design evidence only;
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection;
-- when exact identity cannot be established, do not invent a match.
+- never invent an exact identity match.
 
-**Action B: component borrowing/adaptation.** A blocked whole skill may still contain useful ideas, but component reuse does not bypass governance. Before materially carrying source content or a mechanism forward, check:
+### Component borrowing
 
-- source and applicable license/attribution obligations;
-- dependency/package assumptions attached to the component;
-- whether the whole-skill rejection/staleness reason affects the component;
-- privacy, authority, cost, and side-effect assumptions;
-- host-specific assumptions;
-- whether an independently expressed clean implementation is safer than copying source-specific text/ceremony.
+A blocked whole skill may still contain a useful idea, but component reuse does not bypass governance. Check whether license/provenance, dependencies, rejection reason, authority, privacy, cost, or host assumptions affect the component.
 
-A general principle may inform clean custom design. Material copying or adaptation remains subject to provenance and license obligations.
+Prefer an independently expressed clean implementation when copying source-specific text or ceremony would create avoidable risk or baggage.
 
-**Output:** each whole-skill candidate marked `ELIGIBLE_UNCHANGED`, `ADAPTATION_EVIDENCE_ONLY`, or `EXCLUDED`, plus component-level constraints for anything that may be borrowed.
+**Output:** `ELIGIBLE_UNCHANGED`, `ADAPTATION_EVIDENCE_ONLY`, or `EXCLUDED` for whole-skill candidates, plus component constraints.
 
-**Fallback:** when proof is insufficient, prefer clean adaptation/custom synthesis or a better-established candidate.
+## S6 — Make the fit decision
 
-### S6 — Make the fit decision
+Choose one disposition for each meaningful requirement:
 
-**Input:** capability requirements plus gated candidates.
-
-**Action:** choose one explicit disposition for every meaningful requirement:
-
-- `SUFFICIENT` — existing user skill already does the job;
-- `REFINE` — existing user skill has the right abstraction but needs improvement;
-- `ADOPT` — eligible reference fits substantially unchanged;
-- `ADAPT` — reference is the best base but needs workflow/environment changes;
-- `SUPPLEMENT` — keep the user's workflow and borrow bounded mechanisms;
-- `COMPOSE` — separate skills should cooperate without being merged;
-- `CREATE` — clean custom skill is the best fit;
-- `CHECKLIST/HELPER` — formal skill is excessive;
-- `DYNAMIC` — preserve adaptive reasoning instead of encoding it;
-- `DO_NOT_CREATE` — rare, redundant, unstable, or unjustified.
+- `SUFFICIENT`
+- `REFINE`
+- `ADOPT`
+- `ADAPT`
+- `SUPPLEMENT`
+- `COMPOSE`
+- `CREATE`
+- `CHECKLIST/HELPER`
+- `DYNAMIC`
+- `DO_NOT_CREATE`
 
 Do not prefer reuse merely because reuse is available.
 
-**Output:** disposition map with a one-sentence reason per requirement.
+**Output:** disposition map with a short reason per requirement.
 
-### S7 — Extract transferable components
+## S7 — Extract transferable components
 
-**Input:** disposition map and gated references.
+For every ADAPT, SUPPLEMENT, COMPOSE, or CREATE decision informed by a reference, record:
 
-**Action:** for every ADAPT, SUPPLEMENT, COMPOSE, or CREATE decision informed by a reference, identify exactly what is worth carrying forward.
+`source -> useful mechanism -> constraints -> destination -> omitted baggage`
 
-Components may include:
+Omit source-specific commands, terminology, ceremony, interview flows, file layouts, UX, and authority assumptions that do not belong in the user's system.
 
-- trigger/non-trigger logic;
-- ordered procedure;
-- decision gates;
-- evidence requirements;
-- authority boundaries;
-- failure fallbacks;
-- validation tests;
-- output contract;
-- useful abstractions.
-
-For every material component record:
-
-`source -> exact mechanism/idea -> governance/license constraints -> destination -> omitted baggage`
-
-Explicitly omit unnecessary source-specific commands, terminology, ceremony, interview flows, file layouts, UX, or authority assumptions.
+If a mechanism cannot be separated coherently from problematic assumptions, use an eligible whole skill or create an independently expressed implementation instead.
 
 **Output:** component ledger.
 
-**Fallback:** if a useful mechanism cannot be separated safely/legal-coherently from source assumptions, either use the whole eligible skill as governed or create an independently expressed clean implementation.
+## S8 — Compose the smallest coherent system
 
-### S8 — Compose the smallest coherent system
-
-**Input:** disposition map plus component ledger.
-
-**Action:** design the fitted system and resolve:
+Resolve:
 
 - responsibility boundaries;
 - trigger overlap;
-- precedence;
-- conflicting instructions;
+- precedence/conflicts;
 - duplicate process authority;
 - shared dependencies;
-- universal/user-wide versus domain/project behavior;
+- user-wide versus project-specific behavior;
 - what should remain dynamic.
 
-Favor a few coherent composable skills over one omnibus skill or dozens of microscopic ones.
+Favor a few coherent composable skills over one omnibus skill or many microscopic skills.
 
-**Output:** final skill-system architecture.
+If proposed skills repeatedly override each other, redraw responsibilities before artifact creation.
 
-**Fallback:** if two proposed skills repeatedly override each other, merge or redraw responsibilities before artifact creation.
+**Output:** final fitted-system architecture.
 
-### S9 — Adapt/create artifacts for the active environment
-
-**Input:** final architecture plus environment record.
-
-**Action:** create actual user-facing artifacts in the representation supported by the target environment.
+## S9 — Create/adapt artifacts for the active host
 
 For each artifact define at minimum:
 
@@ -301,24 +221,22 @@ For each artifact define at minimum:
 - human-verification points;
 - failure handling;
 - completion criteria;
-- validation checks;
 - provenance/attribution when material was copied or adapted.
 
-Use the current host's packaging conventions only when established. Otherwise produce a portable Markdown artifact preserving the semantic contract.
+Use host-specific packaging only when established. Otherwise produce portable Markdown preserving the semantic contract.
 
-**Do not use repo-bound `skill-forge` for normal user artifact creation.** Write to the user's target workspace when authorized, use the active host's artifact surface, or provide complete portable artifacts.
+Do not use repo-bound `skill-forge` for normal user artifact creation.
 
-**Output:** complete artifacts plus target format/location.
+Inability to write files is not inability to complete bootstrap. Produce complete portable artifacts instead.
 
-**Fallback:** inability to write files is not inability to complete bootstrap. Produce exact portable artifacts and continue.
+**Output:** artifacts plus target format/location.
 
-### S10 — Adversarial review and validation
+## S10 — Semantic adversarial review
 
-**Input:** complete artifacts.
+Read each important custom/adapted artifact as a literal or weaker model might.
 
-**Action:** attack the fitted system for:
+Challenge it for:
 
-- overfitting/underfitting;
 - incorrect or missed triggers;
 - unnecessary ceremony;
 - hidden tool/dependency assumptions;
@@ -326,91 +244,72 @@ Use the current host's packaging conventions only when established. Otherwise pr
 - unsafe authority/cost;
 - duplicated process authority;
 - reference contamination;
-- missing evidence/failure handling;
+- missing failure handling;
 - cross-skill conflicts;
 - maintenance burden;
-- false completion or validation claims.
+- false completion or certainty claims.
 
-For every important custom/adapted artifact, perform at least a **static three-case check** even when isolated behavioral execution is unavailable:
+Use at least three representative readings:
 
-1. a positive trigger case;
-2. a non-trigger case;
-3. a pressure/failure case targeting its highest-risk behavior.
+1. **positive trigger** — should activate and guide correctly;
+2. **non-trigger** — should stay out of the way;
+3. **pressure/failure** — targets its highest-risk ambiguity or shortcut.
 
-When the host can provide genuinely isolated treatment evidence, predefine success checks and run behavioral comparison. Never convert a static thought experiment into a claim that behavioral validation ran.
+This is semantic, probabilistic review of instructions. Do not describe it as runtime proof.
 
-**Output:** `PASS`, `REVISE`, `MERGE`, `SPLIT`, or `DELETE` for each artifact, static case results, and truthful behavioral-validation status.
+**Output:** `PASS`, `REVISE`, `MERGE`, `SPLIT`, or `DELETE` for each artifact, with material findings and remaining uncertainty.
 
-**Fallback:** revise failures and repeat this stage. A security-relevant failure is not averaged away by stronger scores elsewhere.
+Revise material failures and review again. A serious safety/authority ambiguity is not averaged away by strong wording elsewhere.
 
-If a stage failed, classify the failure as one of:
+## S11 — Install or hand off
 
-- `REPOSITORY_AMBIGUITY`;
-- `BROKEN_OR_STALE_REFERENCE`;
-- `HOST_CAPABILITY_LIMITATION`;
-- `MISSING_EVIDENCE`;
-- `MODEL_NONCOMPLIANCE` after the instruction was otherwise clear.
+Determine the target's real installation/handoff mode from the active host:
 
-Repeated failures at the same step should be treated as repository/design evidence, not dismissed reflexively as model stupidity.
+- `DIRECT-WRITE`
+- `API-INSTALL`
+- `UI-UPLOAD`
+- `PORTABLE-HANDOFF`
 
-### S11 — Install or hand off
+Install only with both capability and authority. Otherwise provide the complete package and shortest correct handoff.
 
-**Input:** reviewed artifacts plus environment record.
+Finish each target with an explicit state such as:
 
-**Action:** determine one installation mode per target:
+- `INSTALLED + REVIEWED`
+- `READY TO UPLOAD`
+- `USER ACTION REQUIRED`
+- `BLOCKED: HOST DOES NOT SUPPORT SKILLS`
+- `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED`
 
-- `DIRECT-WRITE`;
-- `API-INSTALL`;
-- `UI-UPLOAD`;
-- `PORTABLE-HANDOFF`.
+**Output:** installation/handoff state, one representative trigger example, and what success should look like.
 
-Verify the host's current installation method from authoritative local/current official documentation when needed.
+## Returning-user path
 
-Install only with both capability and authority. Otherwise create the exact package and give the shortest correct beginner-readable handoff.
+A returning user starts from the fitted system already in use.
 
-Finish each target with one state:
-
-- `INSTALLED + VERIFIED`;
-- `INSTALLED, VERIFICATION PENDING`;
-- `READY TO UPLOAD`;
-- `USER ACTION REQUIRED`;
-- `BLOCKED: HOST DOES NOT SUPPORT SKILLS`;
-- `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED`.
-
-**Output:** installed state or portable package, one trigger smoke test, and what success looks like.
-
-Bootstrap is not complete until this state is explicit.
-
-## Returning-user flow
-
-A returning user starts from the current fitted system rather than pretending no prior work exists.
-
-1. Inventory the fitted set, versions/fingerprints, intended jobs, and installation state.
-2. Treat the existing system as primary evidence.
-3. Re-run S1 for the current environment.
+1. Inventory the current set, intended jobs, versions/fingerprints when available, and installation state.
+2. Treat that system as primary evidence.
+3. Re-bind the current environment/authority.
 4. Identify only capabilities affected by changed needs, drift, overlap, failure, or a material gap.
-5. For affected capabilities, re-run **S3 through S11**. Do not skip capability definition or capability-first search merely because an old skill already exists.
+5. Re-run S3 through S11 only for affected capabilities.
 6. Preserve still-valid custom behavior.
-7. Search only where a material improvement or missing capability is plausible.
+7. Search only where material improvement is plausible.
 8. Prefer the smallest justified change.
 9. `NO CHANGE NEEDED` is correct when no material improvement is established.
 
 ## Completion record
 
-At the end, report these fields without guessing:
+Report without guessing:
 
 ```text
 Route: FIRST_VISIT | RETURNING_USER
-Evidence used: <source categories, not copied private content>
-Evidence unavailable: <important unavailable categories>
-Needs found: <count + concise list>
+Evidence used: <source categories>
+Evidence unavailable: <material gaps>
+Needs found: <concise list>
 Decisions: <SUFFICIENT/REFINE/ADOPT/ADAPT/SUPPLEMENT/COMPOSE/CREATE/etc.>
-References/components used: <whole skills and/or mechanisms + provenance constraints>
-Artifacts produced: <names + target format/location>
-Static adversarial checks: <positive/non-trigger/pressure results>
-Behavioral validation: <performed evidence | not run + reason>
+References/components used: <sources/mechanisms + constraints>
+Artifacts produced: <names + format/location>
+Semantic adversarial review: <positive/non-trigger/pressure findings>
 Installation/handoff: <explicit state per target>
-Failure classification: <only if a material stage failed>
 Remaining uncertainty: <only material unresolved items>
 ```
 
@@ -418,16 +317,16 @@ Do not end at recommendations if complete artifacts can be produced.
 
 ## Non-negotiable rules
 
-- Compare before creation, but there is no reuse quota.
+- Compare before creation; there is no reuse quota.
 - Fit the user before fitting the corpus.
 - Search capabilities before filenames.
-- Treat the broad corpus as reference/discovery material, not blanket trusted inventory.
+- Treat broad source material as reference/discovery, not blanket trusted inventory.
 - Extract mechanisms without importing unnecessary ceremony.
-- Component reuse does not bypass provenance, licensing, dependency, authority, or rejection reasons.
+- Component reuse does not bypass provenance, licensing, dependencies, authority, or rejection reasons.
 - `verified` and `validated` are the only current unchanged-reuse quality states.
-- Never fabricate fingerprint, validation, installation, artifact, or evidence claims.
+- Never fabricate identity, review state, installation, artifacts, or evidence.
 - Do not mine unrelated private connectors.
 - Do not mutate `skillz` during normal user bootstrap.
-- Do not make maintainer runtime a user prerequisite.
+- Do not make repository-maintenance tooling a user prerequisite.
 - Stop evidence/search expansion when it is no longer decision-relevant.
 - Prefer the smallest coherent system over maximum skill count.
