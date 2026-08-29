@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ui5-typescript-conversion
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/ui5-typescript-conversion/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2e287c314a40278cc851587f9f8cb268eed66ea2
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [implementation, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [source-driven, test-gated, human-review, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 2, dependencies 0, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. The conversion guidance is detailed and disciplined: preserve comments/JSDoc, avoid weak casts, use framework-specific types, migrate incrementally, and follow a substantial bundled test-conversion reference. Unchanged reuse is rejected because the canonical SKILL.md requires adding dev dependencies but contains a literal unresolved {{dependencies}} placeholder, and the only bundled reference does not provide that missing dependency list. Adapt once dependency requirements are made explicit from authoritative project/UI5 context. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
