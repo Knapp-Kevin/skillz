@@ -1,124 +1,72 @@
 # Roadmap
 
-`skillz` is a reusable AI-skill library plus an engine for building and maintaining a fitted skill set for a person or team.
+`skillz` is a passive AI-skill reference and instruction repository whose core job is to help an existing agent build and refine the smallest useful fitted skill system for its user.
 
-The roadmap is organized around **user capability**, not raw skill count. The library can grow indefinitely. The initial implementation ends when the first-visit and returning-user experiences are proven reliable.
+## Current milestone: governed curation mode
 
-## Current milestone: initial alpha
+Status: **CORE IMPLEMENTATION COMPLETE**
 
-Status: **IMPLEMENTED, EXECUTION PROOF PENDING**
+The core architecture is now stable enough that routine work is curation rather than continued product construction.
 
-The foundational implementation and final proof-harness hardening are on `main` or the active alpha-isolation repair. The remaining work is deliberately narrow.
+### Ongoing curation
 
-### 1. Materialized catalog proof
-
-From a normal network-capable checkout with all pinned submodules initialized:
-
-1. run `node scripts/initial-alpha-preflight.ts`;
-2. require the exact source-state gate to prove a clean superproject plus all 12 initialized clean submodules at their superproject gitlink SHAs;
-3. regenerate schema-v2 `INDEX.md` and `index.json`;
-4. require semantic catalog invariants and byte-identical output on the second generator pass;
-5. record exact local, vendored, total-entry, unique-name, and source counts;
-6. reconcile README counts with generated truth.
-
-This proof is intentionally not replaced by an estimate from GitHub search or an automatic GitHub Actions run.
-
-### 2. Blind first-visit journey proof
-
-Execute the three rotated public-only v2 first-visit scenarios from `docs/evals/fixtures/initial-alpha-scenarios.json` through `scripts/render-alpha-scenario.ts` in fresh treatment contexts.
-
-Collectively, the three runs must demonstrate:
-
-- correct reuse or minimal adaptation of an eligible exact-version skill when it genuinely fits;
-- refusal to treat unverified or stale material as trusted unchanged reuse;
-- custom creation when forcing a library match would distort the user's stable workflow.
-
-The public repository does not reveal which neutral scenario maps to which outcome. Frozen evaluator-only mappings and scoring criteria remain in a private bundle fingerprint-bound to the public fixture.
-
-Each run must truthfully report evaluation and installation/handoff state.
-
-### 3. Blind returning-user journey proof
-
-Execute the two rotated public-only v2 returning-user scenarios in fresh treatment contexts.
-
-Collectively, the runs must demonstrate:
-
-- inventory-first minimal refinement when one real drift/gap exists while most fitted behavior remains valid;
-- an explicit **NO CHANGE NEEDED** outcome when newer material does not establish a meaningful improvement.
-
-The treatment agent must not receive the private evaluator mapping before its output is frozen.
-
-### 4. Alpha lock
-
-Alpha is locked only when:
-
-- materialized source/catalog preflight passes;
-- the private evaluator bundle verifies against the exact public v2 fixture before treatment execution;
-- all five rotated blind journey scenarios pass their frozen private criteria;
-- result evidence is recorded under `docs/evals/results/` without republishing the still-active answer key;
-- generated counts and public documentation agree;
-- `docs/alpha-lock.md` and Issue #15 are reconciled to the evidence.
-
-The original public v1 A1/A2/A3/R1/R2 set is retired and cannot satisfy the behavioral gate because its answer keys remain recoverable from Git history.
-
-See [`docs/initial-implementation.md`](docs/initial-implementation.md), [`docs/alpha-lock.md`](docs/alpha-lock.md), and [`docs/evals/run-initial-alpha.md`](docs/evals/run-initial-alpha.md).
-
-## Post-alpha: curation and refinement
-
-Once alpha is locked, ongoing work shifts primarily to library enrichment.
-
-### Corpus curation
-
-- discover high-value first-party, official, and community skills;
-- preserve source, author, license, path, exact revision, and skill-specific freshness;
-- characterize useful skills with controlled tags;
-- verify non-governed candidates before trusted unchanged reuse;
-- behaviorally validate important skills where representative evidence is practical;
-- retire, quarantine, or re-review skills when content fingerprints change.
-
-Broad corpus expansion is valuable, but it is **not** an initial-alpha blocker.
+- discover promising first-party, official, and community skill sources;
+- independently decide whether each source or skill adds meaningful value;
+- preserve source, author, license, path, exact revision/identity, and material dependencies;
+- assign controlled metadata, authority, portability, and semantic quality state;
+- verify individual skills before unchanged trusted reuse;
+- reject, retire, or retain only as bounded reference/negative evidence when appropriate;
+- refresh review when material content changes.
 
 ### Selection quality
 
-- refine taxonomy coverage from real bootstrap/refinement usage;
-- tune matching weights without turning tags into automatic authority;
-- improve duplicate/overlap detection across sources;
-- learn when composition, adaptation, supplementation, or custom creation beats unchanged reuse.
+- refine taxonomy only when real curation or user feedback exposes a useful distinction;
+- improve duplicate/overlap reasoning when the corpus actually creates ambiguity;
+- preserve capability-first search and user-fit-before-reuse;
+- improve composition/adaptation guidance only when real examples justify it.
 
 ### Returning-user refinement
 
-- improve drift and overlap diagnostics;
-- strengthen portable profile versioning;
-- make small-change and no-change decisions more evidence-driven;
-- expand safe upgrade/retirement guidance.
+- preserve smallest-change behavior;
+- keep `NO CHANGE NEEDED` as a first-class successful outcome;
+- improve drift/overlap guidance only when recurring semantic review or user feedback reveals a gap.
 
-### Installation portability
+### Host portability
 
-- add host adapters when there is a real supported installation surface;
-- keep portable skill identity separate from host packaging;
-- preserve explicit completion states rather than claiming installation that did not occur.
+- add or document host-specific packaging only when a real host surface requires it;
+- keep portable semantic skill identity separate from host packaging;
+- never make one product's installation model universal.
 
 ### Human library experience
 
 - evolve category navigation as the corpus grows;
-- improve direct links, browsing, filtering, and search;
-- keep the README human-first while preserving an unmistakable AI-agent entry route;
-- make provenance and quality state understandable without requiring users to understand repository internals.
+- improve browsing and explanation where it reduces user burden;
+- keep the README human-first and the AI entry route unmistakable;
+- keep provenance and quality state understandable without requiring users to understand repository internals.
+
+## Evaluation posture
+
+Repository evaluation is semantic and probabilistic. Review the Markdown instructions for clarity, authority, fit, contradiction, likely weaker-model interpretation, and adversarial failure modes.
+
+There is intentionally no CI or executable completion gate. Optional maintenance scripts may assist with bookkeeping, but they are not proof of repository correctness.
+
+See `docs/evals/share-ready-semantic-review.md`.
 
 ## Durable design rules
 
 1. **Compare before creation. User-fit before reuse.**
 2. **Smallest useful set over maximum skill count.**
 3. **Availability is not verification.**
-4. **Exact-version evidence matters.** Fingerprint drift invalidates prior characterization until reviewed.
+4. **Exact-version identity matters for reviewed third-party material.**
 5. **Attribution travels with third-party material.**
-6. **Engine machinery does not count as library inventory.**
-7. **Indexed approved vendor skills do count as available library corpus.**
-8. **Installation or a precise portable handoff is part of completion.**
+6. **Engine machinery does not count as user-facing library inventory.**
+7. **Broad source material is reference/discovery unless individually governed.**
+8. **Installation or a precise portable handoff is part of the user result.**
 9. **Returning users are refined, not reset.**
 10. **No-change is a valid outcome.**
-11. **Blind behavioral evidence requires evaluator isolation.** Public treatment context must not contain the active answer key.
+11. **Semantic review is honest about probabilistic model behavior.**
+12. **No CI/runtime proof layer should be introduced for repository completion.**
 
 ## Historical work
 
-The July 2026 pulse, research, daily-ops, repository-hygiene, and lifecycle-tooling build series is complete historical work. Its detailed record remains in git history, `docs/BACKLOG.md` completed entries, evaluation artifacts, and the historical governance ledger. It no longer defines the product roadmap.
+Older alpha/Qor plans, executable proof experiments, gate artifacts, and evaluation harnesses are historical context only. They do not define current architecture or completion criteria.
