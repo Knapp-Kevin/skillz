@@ -25,15 +25,22 @@ Normal discovery, user-need analysis, comparison, custom synthesis, semantic rev
 
 Use the capabilities the current host actually provides.
 
-This does **not** mean an individual user-facing skill cannot contain or require its own scripts, references, templates, fixtures, JSON, or other supporting components. Those belong to that skill package and must be evaluated according to the skill's own dependency/host requirements.
+This does **not** mean an individual user-facing skill cannot contain or require its own scripts, references, templates, fixtures, JSON, examples, or other supporting components. Those belong to that skill package and must be evaluated according to the skill's own dependency/host requirements.
 
 ### Repository-native
 
-When a current local checkout or repository-native tooling exists, use it when helpful for reading current files, metadata, and user-target artifacts. Do not turn optional repository-maintenance tooling into a prerequisite.
+When a current local checkout exists, the agent may inspect:
+
+- first-party skills under `skills/`;
+- pinned external reference corpora under `vendor/` when submodules are materialized;
+- governed per-skill provenance and semantic review records under `registry/`;
+- the living curation ledger in `CURATION_QUEUE.md`.
+
+Do not turn optional repository-maintenance tooling into a prerequisite.
 
 ### Connector / API / web
 
-When repository and upstream files can be read through a connector, API, browser, or equivalent surface, continue normally.
+When repository and upstream files can be read through a connector, API, browser, or equivalent surface, continue normally even if local submodules are unavailable.
 
 For governed third-party candidates:
 
@@ -54,9 +61,11 @@ When only repository guidance is accessible:
 - produce complete portable artifacts in the response or available artifact surface;
 - state material unavailable evidence explicitly.
 
-## 3. Quality rule
+## 3. Corpus and quality rule
 
 Availability is not verification, and source reputation is not individual skill proof.
+
+The repository intentionally exposes a broad 500+ reference surface. That breadth exists to improve discovery and prior-art comparison. It does not mean every visible external skill is trusted unchanged.
 
 For unchanged third-party reuse:
 
@@ -87,7 +96,7 @@ A normal bootstrap is complete when the agent has:
 
 1. identified durable needs from legitimate evidence;
 2. translated them into capability requirements;
-3. searched relevant whole skills and reusable components;
+3. searched relevant whole skills and reusable components across the available first-party, governed, pinned-reference, tracked, and live surfaces;
 4. gated unchanged reuse on available quality/provenance/identity evidence;
 5. chosen explicit fit decisions such as ADOPT, ADAPT, SUPPLEMENT, COMPOSE, CREATE, or DO NOT CREATE;
 6. produced the smallest coherent fitted system;
@@ -96,5 +105,7 @@ A normal bootstrap is complete when the agent has:
 9. ended with an explicit installation/handoff state.
 
 A returning-user run may correctly end with `NO CHANGE NEEDED`.
+
+For repository curation state, use [`CURATION_QUEUE.md`](CURATION_QUEUE.md). Core bootstrap completion and ongoing corpus enrichment are separate concerns.
 
 **Compare before creation. User-fit before reuse. Search capabilities before filenames. Smallest coherent system over maximum skill count.**
