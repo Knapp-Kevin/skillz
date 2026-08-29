@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: review-team
 source_id: cline-skills
 source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
-local_path: vendor/cline-skills/skills/review-team/SKILL.md
+local_path: skills/sources/cline-skills/skills/review-team/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: e43b7ac71bb2f04ca4fce0b58cb73b28f5e741ff
 characterized_at: 2026-08-28
