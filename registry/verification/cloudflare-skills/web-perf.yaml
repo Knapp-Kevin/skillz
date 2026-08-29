@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: web-perf
 source_id: cloudflare-skills
 source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
-local_path: vendor/cloudflare-skills/skills/web-perf/SKILL.md
+local_path: skills/sources/cloudflare-skills/skills/web-perf/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 0fb166e8e8cb12e42dff4a40905ee4d3d626fcda
 characterized_at: 2026-08-29
