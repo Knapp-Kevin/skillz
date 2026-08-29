@@ -5,6 +5,9 @@
 # Individual skill quality lives in registry/verification and is bound to an
 # exact skill fingerprint. A skill without an individual quality record is
 # treated as unverified for normal selection.
+#
+# The registry may also track discovery/reference sources that are not vendored.
+# Tracking a source does not establish blanket quality or corpus admission.
 
 version: 2
 
@@ -143,6 +146,17 @@ sources:
     license: Apache-2.0
     pinned_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
     rationale: First-party Google agent-development, evaluation, observability, and deployment skills.
+
+  - id: huggingface-skills
+    name: Hugging Face Skills
+    source: https://github.com/huggingface/skills
+    class: official
+    source_role: candidate-corpus
+    resolved_path: external/huggingface-skills
+    inclusion: tracked
+    license: Apache-2.0
+    pinned_revision: cead19e10754e773bad24fecef83cb64be24094e
+    rationale: Official Hugging Face standardized Agent Skills source accepted for selective deeper intake. The reviewed snapshot advertises 25 skills and cross-client support. Individual skills remain unverified for unchanged reuse until exact-version review establishes decisive states; the omnibus hf-cli skill requires stricter authority review.
 
   - id: agentskills-spec
     name: Agent Skills Specification
