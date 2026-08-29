@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: claude-api
 source_id: anthropic-skills
 source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/claude-api/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9a9407309936d7fd36858296374c246dc2c27e46
 characterized_at: 2026-08-29
