@@ -8,6 +8,15 @@ The repository contains instructions, skills, provenance, verification evidence,
 
 No repository-owned script, test runner, CI workflow, executable helper, or local runtime is required or expected.
 
+## Skill-location invariant
+
+Every `SKILL.md` owned by this repository belongs in one of two roots:
+
+- `skills/**` for user-facing, reusable, imported, adapted, or pinned-source skill material;
+- `engine/skills/**` only for repository-maintenance skills used to maintain or curate `skillz` itself.
+
+The current seven maintenance skills live under `engine/skills/`. Future repository-maintenance skills may also live there when genuinely warranted. No third skill root is valid.
+
 ## Access paths
 
 Use the strongest read/write access the host actually provides.
@@ -30,7 +39,7 @@ When the host can read GitHub or repository files through a connector, API, brow
 1. Read [`README.md`](README.md), [`BOOTSTRAP.md`](BOOTSTRAP.md), and [`AGENTS.md`](AGENTS.md).
 2. Route the request into direct-library, first-visit, returning-user, or repository-curation mode.
 3. Use [`skills/`](skills/) for the user-facing corpus and [`skills/categories/`](skills/categories/) for human navigation.
-4. Use [`CURATED.md`](CURATED.md) and [`registry/verification/`](registry/verification/) to locate individually reviewed third-party candidates.
+4. Use [`INDEX.md`](INDEX.md) as the passive inventory snapshot and [`registry/verification/`](registry/verification/) for exact-version quality evidence.
 5. Use [`registry/skills/`](registry/skills/) for provenance and [`registry/sources.yaml`](registry/sources.yaml) for source identity, license, and pinned revision.
 6. Inspect the exact referenced `SKILL.md` when possible. If the host exposes exact content identity, compare it with the recorded fingerprint before making an exact-version claim.
 7. If exact identity cannot be established, lower confidence rather than inventing a match.
@@ -82,7 +91,7 @@ When the user asks to improve `skillz` itself, perform curation through the host
 - review skills source by source;
 - reconcile denominators;
 - update passive provenance, verification, tags, and source-context records;
-- improve or create static `SKILL.md` instructions;
+- improve or create static `SKILL.md` instructions in the correct canonical root;
 - remove stale documentation or misleading execution assumptions;
 - keep third-party pinned sources intact;
 - never introduce repository-owned execution machinery as a substitute for agent reasoning.
