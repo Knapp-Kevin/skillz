@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: spanner-data
+display_name: Spanner Data
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/spanner-data/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: c66cdb66aa05a4de81ffc5d2c6473cdbd3e881fe
+upstream_last_updated_at: 2026-06-18T23:39:50Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/spanner-data/SKILL.md
+permission_tier: external-side-effect
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - Node.js
+  - bundled Spanner wrapper scripts
+  - '@toolbox-sdk/server@1.1.0 fetched/executed through npx --yes'
+  - host Google Cloud Spanner credentials/environment
+import_eligibility: already-vendored
+rationale: Useful Spanner schema-discovery and SQL reference material, but unchanged reuse exposes arbitrary DML execution through an implicit dependency wrapper without a general confirmation gate for mutations.
