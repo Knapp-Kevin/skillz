@@ -17,7 +17,7 @@ Source class affects trust and evaluation priority. It does not determine copyri
 
 ## Vendoring policy
 
-A repository may be included under `vendor/` when:
+A repository may be included under `skills/sources/` when:
 
 1. its license permits the intended use and redistribution pattern,
 2. its provenance is preserved,
