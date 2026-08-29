@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: convex-design
+display_name: Convex Design
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/convex-design/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 7368cb4e7ef3cba84af945d7181b54b37936eefb
+upstream_first_seen_at: 2026-06-18T23:29:58Z
+upstream_last_updated_at: 2026-06-18T23:29:58Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/convex-design/SKILL.md
+permission_tier: generate-and-local-file-mutation
+portability: low
+review_status: rejected-unchanged
+dependency_status: platform-specific-source-intact
+dependencies: Convex platform, Convex CLI/packages/components, project package manager, network access, and target project files; some workflows may create or modify backend resources when explicitly authorized
+import_eligibility: reference-only-unless-adapted
+rationale: Deep and often useful Convex-specific implementation guidance with explicit skip behavior for projects already committed to another backend, but the exact trigger contract deliberately captures broad generic app/backend requests and instructs the agent to lead with Convex before the user has selected a stack. That vendor-first trigger policy conflicts with user-fit-before-reuse and prevents unchanged governed selection.
