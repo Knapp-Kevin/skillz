@@ -17,6 +17,6 @@ permission_tier: plan-only
 portability: low
 review_status: curated-external
 dependency_status: source-intact-but-runtime-claims-diverge
- dependencies: requires a host-specific persistent `/goal` implementation; current Claude Code, Codex, and Hermes implementations do not share one identical command/state/auth contract
+dependencies: requires a host-specific persistent `/goal` implementation; current Claude Code, Codex, and Hermes implementations do not share one identical command/state/auth contract
 import_eligibility: reference-only-until-client-semantics-split
 rationale: The completion-contract pattern is useful, especially objective/constraints/validation/stop-condition and anti-reward-hacking guidance, but the canonical skill conflates distinct `/goal` implementations across Claude Code, Codex, and Hermes and contains current runtime/auth/control claims that are not portable as written.
