@@ -1,32 +1,32 @@
 # Semantic Evaluation Evidence
 
-This directory contains semantic and adversarial review material for the `skillz` user experience.
+This directory contains semantic and adversarial review records for `skillz` and selected skills.
 
-`skillz` is a passive instruction repository. Evaluation here means reading the instructions, challenging likely interpretations, and documenting ambiguity or confidence. It does not mean CI, runtime execution, hidden evaluator bundles, or deterministic model-behavior proof.
+`skillz` is passive. Evaluation here means reading instruction artifacts and complete skill packages, challenging likely interpretations, checking provenance/dependencies/authority, and documenting material ambiguity or confidence.
 
-## Current closeout review
+It does **not** mean CI, runtime execution by the repository, hidden evaluator bundles, multi-model benchmarking, success-rate targets, or proof that arbitrary models will follow the instructions correctly.
 
-Use these files together:
+## Current closeout record
 
-- [`initial-alpha-matrix.md`](initial-alpha-matrix.md) — representative review dimensions;
-- [`run-initial-alpha.md`](run-initial-alpha.md) — literal/weaker-model semantic review procedure;
-- [`share-ready-semantic-review.md`](share-ready-semantic-review.md) — current repository closeout findings.
+[`share-ready-semantic-review.md`](share-ready-semantic-review.md) is the current repository-level closeout review.
 
-The review covers:
+It covers:
 
-1. capability-first discovery;
-2. governed unchanged reuse;
-3. refusal of unsafe/unproven unchanged reuse;
-4. component extraction/composition;
-5. custom creation for poor corpus fit;
+1. user synthesis versus repository-maintenance routing;
+2. passive engine versus legitimate skill-owned supporting components;
+3. capability-first discovery;
+4. governed unchanged reuse;
+5. component extraction/composition;
 6. evidence/search stopping;
 7. host adaptation;
 8. privacy and authority boundaries;
-9. returning-user minimal refinement;
-10. returning-user `NO CHANGE NEEDED`;
-11. separation of user synthesis from repository maintenance;
-12. semantic review honesty.
+9. returning-user minimal refinement and `NO CHANGE NEEDED`;
+10. truthful semantic-review limits.
 
-Synthetic scenarios are written directly into the review record when useful. They are reasoning prompts, not executable fixtures.
+## Historical review records
 
-Future reviews can be added when the bootstrap/front-door contract changes materially or real user feedback exposes a repeated ambiguity.
+Older files in this directory record experiments and reviews performed while the repository was being developed. They may mention specific models, alpha procedures, smoke tests, or earlier evaluation methods.
+
+Those records are historical evidence only. They do not create current completion requirements or an obligation to repeat multi-model/model-tier evaluations.
+
+Future review records are warranted only when a material instruction change or real use exposes an ambiguity worth documenting. Routine curation does not require reopening repository-level evaluation.
