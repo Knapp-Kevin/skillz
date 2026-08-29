@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: google-agents-cli-workflow
 source_id: google-agents-cli
 source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
-local_path: vendor/google-agents-cli/skills/google-agents-cli-workflow/SKILL.md
+local_path: skills/sources/google-agents-cli/skills/google-agents-cli-workflow/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: b33bd1202885bbdaf17b5c50df0660ae01452b3a
 characterized_at: 2026-08-29
