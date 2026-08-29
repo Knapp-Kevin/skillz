@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: implement
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/implement/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/implement/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7a0b11f5f4fe9505ea5c7983c3083ba1bf754f69
 characterized_at: 2026-08-29
