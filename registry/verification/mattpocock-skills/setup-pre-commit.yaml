@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: setup-pre-commit
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/misc/setup-pre-commit/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/misc/setup-pre-commit/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 1b9708168263067adb4684d06ebb8f4ccfe9682c
 characterized_at: 2026-08-29
