@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-location-service
+display_name: Amazon Location Service
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/amazon-location-service/SKILL.md
+source_class: official
+license: MIT-0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: d02243e625a03bf890bcd09128b5a31a6255d20d
+upstream_last_updated_at: 2026-06-18T23:22:43Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/skills/amazon-location-service/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: six bundled reference files; AWS SDK/client packages as applicable; optional AWS documentation or AWS MCP access for detailed verification
+import_eligibility: already-vendored
+rationale: Strong AWS-specific geospatial integration guide with explicit trigger and non-trigger boundaries, intact reference material, version-aware API guidance, and useful mistake prevention. Mutating AWS integration, credential, tracking, and cost/privacy implications remain host- and task-dependent and require user-fit judgment.

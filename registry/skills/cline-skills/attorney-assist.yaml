@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: attorney-assist
+display_name: Attorney Assist
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/attorney-assist/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 750c522b69df264376d2752901485d9f35699a2f
+upstream_last_updated_at: 2026-06-18T23:29:06Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/skills/attorney-assist/SKILL.md
+permission_tier: external-side-effect-after-explicit-user-selection
+portability: low
+review_status: characterized-unverified
+dependency_status: external-service-unconfirmed
+dependencies: LegalZoom MCP server and named attorney consultation tools; active user entitlement; jurisdiction and availability data returned by the external service
+import_eligibility: already-vendored
+rationale: Strong anti-fabrication, failure-stop, user-choice, scheduling, and human-handoff discipline. The exact external LegalZoom MCP dependency and tool contract are not present in the vendored corpus and were not independently confirmed during this pass, so the skill remains unverified despite a strong static rubric score.

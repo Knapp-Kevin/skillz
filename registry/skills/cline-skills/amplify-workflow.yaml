@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amplify-workflow
+display_name: AWS Amplify Gen2 Workflow
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/amplify-workflow/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 035246d3c5539f17ec4fbf9296c604959c457b7b
+upstream_last_updated_at: 2026-06-18T23:28:34Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cline-skills/skills/amplify-workflow/SKILL.md
+permission_tier: mutate-and-deploy-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: bundled Amplify reference set; Node.js and npm; AWS credentials; npx ampx; framework or mobile platform tooling as applicable
+import_eligibility: already-vendored
+rationale: Detailed Amplify Gen2 workflow with precise trigger/skip rules, explicit prerequisites, platform and authentication clarification points, reference routing, verification fallbacks, and substantial security guidance. Deployment and cloud mutation remain external side effects that require an explicit matching user request.

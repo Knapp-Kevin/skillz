@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: amazon-location-service
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: vendor/cline-skills/skills/amazon-location-service/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2134915e0b2a7e33a890b7f27a2d4326ff240ef3
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [compatibility-aware, production-oriented, reference-heavy, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Clear AWS-only trigger exclusions and six intact references support direct use. Credential, API-key, geofencing/tracking, resource mutation, privacy, and cost boundaries are less explicit than the technical guidance, so user-fit and execution consent still matter. Behavioral validation remains pending."
