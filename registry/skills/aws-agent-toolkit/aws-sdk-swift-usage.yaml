@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-sdk-swift-usage
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-sdk-swift-usage/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+canonical_package_tree_sha: b09094fc5e414983df038fe40a2d34c433ca2d14
+freshness_state: current-at-registered-pin
+freshness_evidence: Exact canonical package tree at the registered 2026-07-03 source snapshot.
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-sdk-swift-usage/SKILL.md
+permission_tier: generate-code-no-external-action
+portability: medium
+review_status: rejected-unchanged
+dependency_status: current-aws-sdk-swift-docs-required
+import_eligibility: reference-only-unless-adapted
+rationale: Useful Swift examples, but unchanged reuse is blocked by absolute API-shape/declaration-order claims without a controlling current-documentation verification step and by literal static-credential examples. Retain as adaptation prior art.
