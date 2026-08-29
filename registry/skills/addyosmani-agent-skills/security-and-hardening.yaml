@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: security-and-hardening
+display_name: Security and Hardening
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/security-and-hardening/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: bb53a78bbae3d43c4313afda83e60c46cd5439da
+upstream_last_updated_at: 2026-08-14T18:49:36Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/security-and-hardening/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: ecosystem-and-threat-model-dependent
+dependencies: project trust-boundary context; language/framework/package-manager security capabilities; optional security tooling and skill-local security checklist
+import_eligibility: already-vendored
+rationale: Broad threat-model-first security workflow covering trust boundaries, authorization, injection, SSRF caveats, supply-chain hygiene, secret rotation, privacy minimization, and explicit ask-first boundaries for consequential changes.
