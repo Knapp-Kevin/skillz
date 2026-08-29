@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: web-design-guidelines
 source_id: vercel-agent-skills
 source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
-local_path: vendor/vercel-agent-skills/skills/web-design-guidelines/SKILL.md
+local_path: skills/sources/vercel-agent-skills/skills/web-design-guidelines/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: ceae92ab319216a68274168fba9b63b998b65997
 characterized_at: 2026-08-29
