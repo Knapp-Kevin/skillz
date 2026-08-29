@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: mintlify
+display_name: Mintlify
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/mintlify/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: adb1d2aa24285075d88f9d27b2925e81eaa66de2
+upstream_last_updated_at: 2026-06-18T23:35:56Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/mintlify/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - Mintlify project files for implementation tasks
+  - bundled component/config/navigation/API references
+  - optional Mintlify CLI for validation, preview, analytics, and project operations
+import_eligibility: already-vendored
+rationale: Strong progressive-disclosure documentation reference with existing-content review, project-style matching, accessibility requirements, broken-link/validation guidance, and clearly separated optional CLI operations.
