@@ -2,18 +2,20 @@
 
 `skillz` is a passive governed skill corpus, not an application or execution system.
 
-The repository records skills, source material, provenance, metadata, tags, quality decisions, and guidance. **Every active curation action is performed by the external agent interacting with the repository using capabilities supplied by its host.** `skillz` itself does not scan, verify, refresh, install, test, schedule, generate, or execute anything.
+The repository records skills, source material, provenance, metadata, tags, quality decisions, discovery guidance, and documentation. **Every active curation or discovery action is performed by the external agent interacting with the repository using capabilities supplied by its host.** `skillz` itself does not scan, crawl, verify, refresh, install, test, schedule, generate, or execute anything.
 
-A large corpus is useful only when source identity, licensing, freshness, quality state, dependencies, intended use, and source-level context remain distinguishable. Curation therefore separates **availability**, **provenance**, **characterization**, **verification**, **behavioral validation**, and **source reputation/adoption context**.
+A large corpus is useful only when source identity, licensing, freshness, quality state, dependencies, intended use, discovery status, and source-level context remain distinguishable. Curation therefore separates **discovery**, **source admission**, **availability**, **provenance**, **characterization**, **verification**, **behavioral validation**, and **source reputation/adoption context**.
 
 ## Separate questions
 
-1. **Available:** Is this skill or source part of the corpus the agent may inspect?
-2. **Provenance:** Where did it come from, under what license, and what exact upstream version is represented?
-3. **Characterized:** What is it for, what assumptions and authority does it carry, and which controlled tags describe it?
-4. **Verified:** Has this exact version passed the repository's structured static-review standard?
-5. **Validated:** Is representative behavioral evidence recorded showing that use of the skill improved the intended outcome?
-6. **Source context:** What objective evidence exists about source visibility, maintenance, or adoption, and when was that evidence observed?
+1. **Discovered:** Did the host agent find this source or skill through a legitimate discovery surface?
+2. **Admitted:** Has the source intentionally been represented in `skillz` as a corpus, reference source, standard, or tracked discovery source with clear identity and terms?
+3. **Available:** Is this exact skill or source material part of the corpus the agent may inspect?
+4. **Provenance:** Where did it come from, under what license, and what exact upstream version is represented?
+5. **Characterized:** What is it for, what assumptions and authority does it carry, and which controlled tags describe it?
+6. **Verified:** Has this exact version passed the repository's structured static-review standard?
+7. **Validated:** Is representative behavioral evidence recorded showing that use of the skill improved the intended outcome?
+8. **Source context:** What objective evidence exists about source visibility, maintenance, or adoption, and when was that evidence observed?
 
 Do not collapse these into a single word such as `curated`.
 
@@ -27,14 +29,49 @@ Governance is declarative.
 - Registries and companions store evidence and decisions.
 - Markdown skills instruct the external agent how to act.
 - Static catalog files are navigation snapshots.
-- No policy depends on a repository-owned script, test runner, CI workflow, runtime, scheduler, monitor, installer, or generator.
+- Discovery surfaces are places the host may intentionally inspect, not things `skillz` monitors.
+- No policy depends on a repository-owned script, test runner, CI workflow, runtime, scheduler, monitor, crawler, installer, or generator.
 - If an external agent lacks a capability needed to establish a fact, record the fact as unavailable or pending rather than manufacturing evidence.
+
+## Discovery surfaces and source admission
+
+A **discovery surface** is a public or connected place the host agent may inspect for useful skills, methods, creators, standards, or corpora. Examples include GitHub repositories and aggregators, Hugging Face skill ecosystems, creator-maintained skill collections, standards repositories, and other legitimately accessible public sources.
+
+Discovery may proceed in parallel with static review of already-admitted sources.
+
+Discovery alone establishes no quality state and no installation or reuse authority.
+
+The source lifecycle is:
+
+```text
+discovery surface
+      ↓
+candidate source
+      ↓
+source-vetting: identity + terms + relevance + role
+      ↓
+admitted corpus/reference/tracked source
+      ↓
+individual exact-version review
+      ↓
+user-fit decision: adopt / adapt / extract / compose / create / no change
+```
+
+A candidate may remain:
+
+- tracked for later review;
+- reference-only because redistribution is restricted or unclear;
+- a methodology source rather than a normal installable-skill corpus;
+- rejected as a source;
+- admitted as a vendored corpus, imported source, external reference, normative standard, or dynamic-discovery surface.
+
+Admission does not establish blanket skill quality. Every individual skill remains unverified for trusted unchanged reuse until exact-version review establishes a decisive state.
 
 ## Source and quality defaults
 
 Source identity does not establish individual skill quality.
 
-Registered sources describe provenance and corpus role, not blanket skill quality. A skill without an individual exact-version quality record is `unverified` for trusted unchanged selection.
+Registered sources describe provenance and corpus/discovery role, not blanket skill quality. A skill without an individual exact-version quality record is `unverified` for trusted unchanged selection.
 
 A changed canonical content identity invalidates the prior exact-version quality conclusion until an external agent reviews the changed version.
 
@@ -82,11 +119,12 @@ Use these signals only after user fit, exact-version quality, operational fit, a
 
 ## Physical availability
 
-A skill may be:
+A source or skill may be:
 
 - `vendored`: present inside an intact pinned upstream repository under `skills/sources/`;
 - `imported`: copied into this repository with required upstream obligations preserved;
-- `external`: tracked upstream because bringing it into the repository incompletely would be misleading or broken.
+- `external`: tracked upstream because bringing it into the repository incompletely would be misleading or broken;
+- `tracked`: represented as a standard, dynamic-discovery surface, or candidate/reference source without being a selectable vendored corpus.
 
 Do not copy a standalone `SKILL.md` when it relies on shared references, templates, assets, hooks, code, or other files that are not also represented honestly.
 
@@ -96,7 +134,7 @@ Third-party repositories may contain executable material of their own. Their pre
 
 The root MIT license applies only to first-party `skillz` material.
 
-Third-party material retains upstream obligations. Preserve required copyright, attribution, NOTICE, and license terms. Record copied/adapted relationships using [`third-party-provenance.md`](third-party-provenance.md). When terms are unclear, keep the material reference-only.
+Third-party material retains upstream obligations. Preserve required copyright, attribution, NOTICE, and license terms. Record copied/adapted relationships using [`third-party-provenance.md`](third-party-provenance.md). When terms are unclear or restrictive, keep the material reference-only until rights are resolved.
 
 ## Review and refresh rule
 
@@ -104,7 +142,7 @@ Upstream changes are evidence, not automatic upgrades.
 
 When an external agent intentionally reviews a source or skill update, it should:
 
-1. inspect the skill-specific upstream delta;
+1. inspect the source/skill-specific upstream delta;
 2. update source pin and provenance revision/date only when appropriate;
 3. establish the new canonical content identity when possible;
 4. treat prior tags/status/evidence as stale when material content changed;
@@ -115,7 +153,7 @@ When an external agent intentionally reviews a source or skill update, it should
 9. refresh source-level signals only when the source is being re-reviewed or a current decision materially benefits from fresh context;
 10. preserve prior history through Git rather than rewriting history.
 
-There is no automatic refresh process.
+There is no automatic refresh or discovery process.
 
 ## Selection rule
 
@@ -129,4 +167,4 @@ Use this reasoning order:
 
 The external agent may `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, use a checklist/helper, keep behavior dynamic, or conclude `NO CHANGE`.
 
-Popularity and official branding are discovery/provenance signals, not competence certificates.
+Popularity, discovery prominence, and official branding are discovery/provenance signals, not competence certificates.
