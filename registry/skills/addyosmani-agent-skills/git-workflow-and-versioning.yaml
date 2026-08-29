@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: git-workflow-and-versioning
+display_name: Git Workflow and Versioning
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/git-workflow-and-versioning/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: b61213f5340b6671208d56c1db7be6c4fcbd98ac
+upstream_last_updated_at: 2026-08-23T01:26:16Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/git-workflow-and-versioning/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-tool-dependent
+dependencies: git repository and git CLI; examples additionally assume Node/npm tooling and remote push/tag permissions
+import_eligibility: already-vendored
+rationale: Rich reference for atomic commits, scope summaries, worktrees, release tags, changelogs, and versioning, retained for adaptation rather than unchanged reuse because it includes destructive recovery commands and overly universal workflow prescriptions.
