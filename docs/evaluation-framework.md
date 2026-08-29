@@ -1,133 +1,130 @@
-# Skill evaluation framework
+# Skill Evaluation Framework
 
-How a skill gets from *discovered* to *allowed to influence an agent*. Decisions are recorded in [`registry/candidates.yaml`](../registry/candidates.yaml); source trust/provenance is recorded separately in [`registry/sources.yaml`](../registry/sources.yaml).
+`skillz` evaluates skills as **instruction artifacts and skill packages**, not as software deployed by this repository.
 
-The governing principle: **a skill is an untrusted dependency until reviewed, scoped, tested, and versioned.** The opportunity is not collecting skills. It is deciding which skills may influence an agent, under which conditions, with which permissions, and with what proof they improve outcomes.
+The repository is passive. It does not own a runtime, CI system, benchmark harness, model fleet, or behavioral-success metric. The evaluation goal is to give the acting agent the best available information about what a skill does, where it came from, what it requires, what authority it assumes, how portable it is, and whether its instructions are clear enough to be useful.
 
-## Source class is not adoption status
+The normative scoring standard is [`skill-verification.md`](skill-verification.md).
 
-Reference repositories may be:
+## Responsibility boundary
 
-- `official`: first-party source for the platform/vendor it describes
-- `community-vetted`: intentionally centralized because it provides strong comparative or supplemental value
-- `tracked`: useful discovery source not included as an active vendored corpus
-- `quarantined`: source or content unsuitable for normal influence without explicit review
+`skillz` owns best-effort quality of:
 
-Source class answers **where the skill came from and how much authority that source deserves**.
+- source and artifact provenance;
+- exact-version identity when recorded;
+- licensing and attribution context;
+- dependency and component awareness;
+- authority and side-effect characterization;
+- portability/host assumptions;
+- trigger/non-trigger clarity;
+- structured semantic review;
+- useful adversarial reading of likely failure modes;
+- decisive curation state.
 
-Candidate status answers **whether this particular skill has earned influence in this system**.
+`skillz` does **not** own or guarantee the capability of the model that later reads the material. Multi-model benchmarks, weaker-model targets, success-rate thresholds, token-cost comparisons, CI, sandbox execution, or baseline-versus-treatment experiments are not repository completion requirements.
 
-Do not confuse the two.
+## Source review and individual skill review are separate
 
-An official skill can still be unsafe for an operation or redundant with local governance. A community-vetted skill can be excellent comparative evidence without becoming platform authority.
+A tracked source answers: **is this upstream worth keeping as a discovery or prior-art reference?**
+
+An individual review answers: **is this exact skill version sufficiently understood and well-formed for a governed disposition?**
+
+An official, popular, or well-maintained source does not automatically promote every skill it contains.
+
+Likewise, a rejected whole skill can still contain a useful component or design pattern if that component can be reused within its license, provenance, dependency, authority, and safety constraints.
 
 ## Intake flow
 
+```text
+discovered
+  -> source vetting when the source is new
+  -> selective individual skill review
+  -> provenance + exact identity
+  -> structured semantic score
+  -> decisive state/disposition
+  -> optional stronger scenario/adversarial semantic validation
 ```
-discovered (skill-bootstrap / skills-pulse / longlist / ad-hoc)
-  → source classification (if source is new)
-  → registry entry (status: track)
-  → scored (rubric below)
-  → sandbox evaluation (isolated worktree or scratch project, before/after task comparison)
-  → adopted | rejected | quarantined
-```
 
-Every transition updates the registry entry. No skill is symlinked into a host, referenced as an authoritative operational dependency, or compiled for deployment without an `adopted` decision appropriate to that use.
+Do not bulk-promote an upstream repository merely because it was admitted as a tracked source.
 
-Vendored reference repositories are available for comparison. **Vendored does not mean automatically adopted.** Official repositories may be trusted as authoritative documentation/examples for their own platform, but individual high-impact skills still require permission and behavior review before operational use.
+## What to inspect
 
-### Model-tier rule for evals
+For each deliberately governed skill, inspect the **complete skill package**, not just `SKILL.md` in isolation when supporting material affects behavior.
 
-A "no effect" verdict measured only on a frontier model may be a ceiling effect, not a rejection ground. Instruction skills often encode behaviors weaker tiers omit. Sandbox evaluations of instruction-only skills should include a weaker-model arm when the intended deployment includes weaker models.
+That may include:
 
-## Comparative disposition vs adoption status
+- scripts or executable helpers;
+- references and examples;
+- templates;
+- fixtures;
+- `sources.json` or similar metadata;
+- dependency declarations;
+- bundled prompts/configuration;
+- other files required for the skill to function as authored.
 
-During bootstrap or design, a reference skill may receive a comparative disposition before any adoption decision:
+A skill-owned TypeScript/Python/shell helper is not repository engine code merely because it is executable. Preserve and evaluate legitimate skill components unless there is a specific reason to change them.
 
-- **ADOPT**: existing skill appears to fit and should proceed through normal evaluation/adoption.
-- **ADAPT**: use the source as the basis for a locally modified skill; preserve provenance.
-- **SUPPLEMENT**: borrow a specific proven pattern while keeping the target skill/process authoritative.
-- **COMPOSE**: keep skills separate and combine responsibilities explicitly.
-- **BENCHMARK**: use the reference only as a quality/evaluation comparator.
-- **REJECT**: do not incorporate it.
+## Review sequence
 
-These are design decisions, not registry statuses. An `ADAPT` recommendation still requires the resulting local skill to be evaluated.
+1. **Identity**
+   - canonical source/path;
+   - exact revision/fingerprint when applicable;
+   - authorship/provenance;
+   - license/terms.
+2. **Capability**
+   - what durable job the skill performs;
+   - triggers and important non-triggers;
+   - expected outputs/completion criteria.
+3. **Dependencies/components**
+   - required files, scripts, templates, services, tools, or host capabilities;
+   - whether those dependencies are complete and accurately described.
+4. **Authority and safety**
+   - read-only versus mutation;
+   - cost, credentials, external side effects, destructive actions, approvals;
+   - privacy/security boundaries.
+5. **Portability**
+   - universal mechanism versus host-specific assumptions;
+   - fallback or handoff behavior where relevant.
+6. **Usefulness/differentiation**
+   - whether it adds meaningful reusable capability rather than generic duplication.
+7. **Semantic quality**
+   - ordered procedure;
+   - failure handling;
+   - evidence discipline;
+   - ambiguity, scope creep, false certainty, or source-specific baggage.
+8. **Disposition**
+   - unchanged reuse candidate;
+   - adapt;
+   - supplement;
+   - compose;
+   - reference-only;
+   - reject/retire.
 
-## Scoring rubric (0–3 per criterion)
+## Semantic scenario review
 
-| Criterion | 0 | 3 |
-|---|---|---|
-| Relevance | No clear workflow | Critical recurring workflow |
-| Source trust | Unknown/random | Official or intentionally vetted with provenance |
-| Scope clarity | Vague | Clear trigger AND non-trigger conditions |
-| Version compatibility | Unknown | Explicitly compatible |
-| Determinism | Vague advice | Reproducible tests/checks |
-| Security posture | Unsafe/unknown | Sandboxed/read-only/safe |
-| Token efficiency | Bloated | Strong progressive disclosure |
-| Verifiability | No test path | Clear before/after eval |
-| Composability | Conflicts likely | Explicitly compatible with repo governance |
-| Drift risk | High | Actively reduces drift |
+Stronger review may examine representative situations such as:
 
-Rough bar: **< 15 reject, 15–21 sandbox, ≥ 22 adopt-track**. Any single 0 on Security posture or Composability forces quarantine/reject regardless of total.
+- a clear positive trigger;
+- an obvious non-trigger;
+- a pressure/failure situation targeting the most important ambiguity;
+- interaction with another skill or authority boundary;
+- a host where one optional capability is unavailable.
 
-## Statuses
+This is still semantic review. It asks whether the instructions provide a sensible path through those situations. It is not a claim that a particular model will perform perfectly.
 
-| Status | Meaning |
-|---|---|
-| `adopted` | Approved for the documented use; indexed/installable where applicable. |
-| `sandbox` | Promising; being tested in isolation before a decision. |
-| `track` | Signal worth watching; not adoption-ready. |
-| `rejected` | Vague, risky, obsolete, redundant, or behaviorally inferior. |
-| `quarantined` | Useful but dangerous without strict permissioning; never auto-loaded. |
+## Current quality vocabulary
 
-## Permission tiers
+- `verified`: exact version passed structured semantic review.
+- `validated`: verified plus representative scenario/adversarial semantic review.
+- `unverified`: useful reference/design evidence without the current structured gate.
+- `trusted-baseline`: legacy compatibility state only, not current unchanged-reuse eligibility.
+- `stale`: prior judgment should not be inherited silently after material change.
+- `rejected` / `retired`: excluded from normal unchanged selection.
 
-Every candidate is classified by the highest-impact action it can trigger. Only the first two tiers may run without explicit human approval unless a more authoritative environment policy says otherwise.
+See [`skill-verification.md`](skill-verification.md) for the rubric and thresholds.
 
-| Tier | Examples |
-|---|---|
-| `read-only` | Inventory, diagnostics, digests, scans |
-| `plan-only` | Recommendations, architecture plans, drafts |
-| `generate` | Code/config/doc generation into the working tree |
-| `staging-write` | Issues, PRs, staging deploys, scheduled drafts |
-| `production-write` | Production deploys, published releases, sent messages |
-| `identity` | RBAC, app registrations, credentials, agent identity |
-| `cost` | Spend-affecting changes |
-| `destructive` | Deletes, payments, irreversible external actions |
+## Curation principle
 
-## Security review checklist (before any adoption or material adaptation)
+The objective is not to maximize repository size or activity. It is to maintain enough high-quality, well-characterized material that an agent can compare alternatives intelligently and build a fitted system for the user.
 
-- Inspect all scripts and bundled resources.
-- Check for external network calls, secret handling, destructive file operations, and dependency installs.
-- Verify version compatibility; run in a sandbox first.
-- Record expected tool permissions in the registry entry.
-- Confirm the skill declares when it should be used AND when it must not be used.
-- Check for conflicts with repo-level rules (CLAUDE.md, AGENTS.md, Qor-logic doctrines, MCP policies).
-- Check `registry/sources.yaml` for source class and provenance.
-- If copied or materially adapted, preserve attribution/license requirements per `docs/third-party-provenance.md`.
-- If behavior came from a community-vetted source, ask whether it changes user-facing process or imports unnecessary author-specific assumptions.
-
-## Redundancy guard
-
-Before adopting, adapting, or creating, check in order:
-
-1. **Qor-logic** (`../Qor-logic/qor/skills/`) for anything gated/SDLC. If covered, reject with `covered_by` unless the proposed skill is clearly outside that authority.
-2. **Host built-ins** such as code review, security review, verification, or equivalent native capabilities.
-3. **Vendored official sources** in `INDEX.md`. Prefer the official implementation for platform-specific behavior unless evidence supports a local adaptation.
-4. **Vendored community-vetted sources** in `INDEX.md`. Use them as comparative/adaptation/supplemental evidence, not automatic authority.
-5. **This repo's library skills and ROADMAP**. If covered or planned here, refine/compose rather than adding a competing copy.
-6. **Tracked community sources** only when the previous layers do not adequately cover the need.
-
-Two skills that answer the same trigger without an explicit composition relationship are worse than one. They create conflicting process authority and bloat context.
-
-## Behavioral evaluation
-
-Use [`engine/skills/skill-eval/SKILL.md`](../engine/skills/skill-eval/SKILL.md) for controlled baseline-versus-treatment testing. `skill-eval` is repository machinery and does not count as library inventory.
-
-When evaluating an adaptation or supplement, prefer three arms when practical:
-
-1. target skill/process baseline
-2. reference skill or reference pattern alone when meaningful
-3. target skill/process plus the proposed adaptation/supplement
-
-Write success checks before seeing the outputs. A more elaborate result that does not measurably improve the target behavior is not an improvement.
+If a new source or skill adds no meaningful differentiated value, **doing nothing is a successful curation decision**.
