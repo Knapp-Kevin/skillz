@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: reviewing-code-prior-art-survey
+display_name: Reviewing Code Prior Art Survey
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-code-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+upstream_revision: 4789307598e478b2ca42c7b7299195625102bf1f
+upstream_last_updated_at: 2026-07-22T11:39:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: co-installed code-prior-art-survey producer package for validator, schemas and source registry; Python 3 with PyYAML and jsonschema; artifact plus relevant scope context and keyword map where applicable
+import_eligibility: eligible-only-with-producer-dependency
+rationale: Independent acceptance gate over prior-art artifacts. It reuses the producer's deterministic contracts without accepting the producer's self-check as proof, names condition-specific gaps, prevents false-revise on thin but honest search results, and cannot silently fix or re-author the artifact it judges.
