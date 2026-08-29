@@ -1,72 +1,49 @@
 # Roadmap
 
-`skillz` is a passive AI-skill reference and instruction repository whose core job is to help an existing agent build and refine the smallest useful fitted skill system for its user.
+`skillz` is a passive AI-skill instruction and reference repository. Core implementation is complete.
 
 ## Current milestone: governed curation mode
 
-Status: **CORE IMPLEMENTATION COMPLETE**
+There is no standing implementation backlog.
 
-The core architecture is now stable enough that routine work is curation rather than continued product construction.
+Future work is optional and occasional:
 
-### Ongoing curation
-
-- discover promising first-party, official, and community skill sources;
-- independently decide whether each source or skill adds meaningful value;
-- preserve source, author, license, path, exact revision/identity, and material dependencies;
-- assign controlled metadata, authority, portability, and semantic quality state;
-- verify individual skills before unchanged trusted reuse;
-- reject, retire, or retain only as bounded reference/negative evidence when appropriate;
-- refresh review when material content changes.
-
-### Selection quality
-
-- refine taxonomy only when real curation or user feedback exposes a useful distinction;
-- improve duplicate/overlap reasoning when the corpus actually creates ambiguity;
-- preserve capability-first search and user-fit-before-reuse;
-- improve composition/adaptation guidance only when real examples justify it.
-
-### Returning-user refinement
-
-- preserve smallest-change behavior;
-- keep `NO CHANGE NEEDED` as a first-class successful outcome;
-- improve drift/overlap guidance only when recurring semantic review or user feedback reveals a gap.
-
-### Host portability
-
-- add or document host-specific packaging only when a real host surface requires it;
-- keep portable semantic skill identity separate from host packaging;
-- never make one product's installation model universal.
-
-### Human library experience
-
-- evolve category navigation as the corpus grows;
-- improve browsing and explanation where it reduces user burden;
-- keep the README human-first and the AI entry route unmistakable;
-- keep provenance and quality state understandable without requiring users to understand repository internals.
+- discover promising first-party, official, or community skill sources when useful;
+- independently decide whether a source or individual skill adds differentiated value;
+- preserve provenance, author, license, path, exact revision/identity, dependencies, authority, and portability;
+- assign controlled metadata and a decisive semantic quality state;
+- reject, retire, adapt, compose, or retain as reference where appropriate;
+- refresh review when materially changed content is intentionally reconsidered.
 
 ## Evaluation posture
 
-Repository evaluation is semantic and probabilistic. Review the Markdown instructions for clarity, authority, fit, contradiction, likely weaker-model interpretation, and adversarial failure modes.
+Repository evaluation is best-effort semantic review of Markdown instructions and governance data.
 
-There is intentionally no CI or executable completion gate. Optional maintenance scripts may assist with bookkeeping, but they are not proof of repository correctness.
+The repository owns:
 
-See `docs/evals/share-ready-semantic-review.md`.
+- clarity and coherence of instructions;
+- useful provenance and metadata;
+- reasonable quality review of material it deliberately governs;
+- explicit boundaries between trusted unchanged reuse and reference evidence;
+- adversarial review for obvious ambiguity, overreach, contradiction, and misleading completion claims.
+
+The repository does **not** own or guarantee the capability of the model reading it. There is no requirement to benchmark multiple models, hit behavioral success metrics, prove weaker-model performance, run CI, execute tests, or maintain runtime machinery.
 
 ## Durable design rules
 
-1. **Compare before creation. User-fit before reuse.**
-2. **Smallest useful set over maximum skill count.**
-3. **Availability is not verification.**
-4. **Exact-version identity matters for reviewed third-party material.**
-5. **Attribution travels with third-party material.**
-6. **Engine machinery does not count as user-facing library inventory.**
-7. **Broad source material is reference/discovery unless individually governed.**
-8. **Installation or a precise portable handoff is part of the user result.**
-9. **Returning users are refined, not reset.**
-10. **No-change is a valid outcome.**
-11. **Semantic review is honest about probabilistic model behavior.**
-12. **No CI/runtime proof layer should be introduced for repository completion.**
+1. Compare before creation; user-fit before reuse.
+2. Prefer the smallest useful coherent set over maximum skill count.
+3. Availability and source reputation are not individual verification.
+4. Exact-version identity matters for reviewed third-party material.
+5. Attribution and licensing obligations travel with third-party material.
+6. Engine procedures do not count as user-facing library inventory.
+7. Tracked sources are reference/discovery surfaces unless individual skills are governed.
+8. Installation or precise portable handoff is part of the user result.
+9. Returning users are refined, not reset.
+10. `NO CHANGE NEEDED` is valid.
+11. Semantic review is probabilistic and honest about its limits.
+12. Do not reintroduce CI, scripts, tests, submodules, runtime proof, or perpetual completion gates.
 
-## Historical work
+## Future curation does not reopen core completion
 
-Older alpha/Qor plans, executable proof experiments, gate artifacts, and evaluation harnesses are historical context only. They do not define current architecture or completion criteria.
+Adding another good skill next month, next quarter, or next year broadens the ecosystem. It does not mean this repository was unfinished today.
