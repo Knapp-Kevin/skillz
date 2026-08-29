@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: rules-check-drift
+display_name: Rules Check Drift
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/rules-check-drift/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: git diff/status plus a repository CLAUDE.md or AGENTS.md when present
+import_eligibility: eligible-standalone
+rationale: Focused advisory drift check that treats agent rules as steering rather than documentation, grounds changes in git evidence, and explicitly minimizes context growth instead of rewarding rule-file expansion.

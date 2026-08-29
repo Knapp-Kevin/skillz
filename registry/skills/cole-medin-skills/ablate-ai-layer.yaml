@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: ablate-ai-layer
+display_name: Ablate AI Layer
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/ablate-ai-layer/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 4058e4a79a795c8984362a3840b5ec1e3a129801
+upstream_last_updated_at: 2026-08-04T22:47:29Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: cost
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: Python 3, git worktrees, bundled scripts/map_layer.py and scripts/run_ablation.py, bundled references/comparison.md, and either Claude Code CLI or a caller-supplied headless runner
+import_eligibility: reference-only-until-safety-fix
+rationale: Methodologically strong ablation experiment with multi-run control/treatment comparison, blind per-rule grading, explicit cost preview, and useful treatment of untested rules; unchanged reuse is blocked because the runner can modify the repository .gitignore while the skill repeatedly claims the working tree is never touched.

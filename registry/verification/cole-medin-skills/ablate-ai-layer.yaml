@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: ablate-ai-layer
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 358b6163a0d38a87fe4f58d74a5b86acbffbd86c
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [evaluation, context-management, repository-maintenance]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, metric-driven, holdout-aware, cost-bounded, human-review, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric before hard-fail enforcement: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The experiment design is unusually good: repeated control/treatment runs, isolated worktrees, dry-run cost/plan preview, blind per-rule grading, explicit untested/noise states, and weaker-model guidance. However bundled scripts/run_ablation.py appends `.ablation/` to the target repository's `.gitignore` when needed, directly contradicting repeated claims that the working tree is never modified. That is an undisclosed mutation relative to the stated safety boundary and triggers the verification hard fail. A caller-supplied `--runner` is also executed through a shell, which is acceptable only as an explicit expert escape hatch and reinforces the need for careful authority framing. Strong adaptation/benchmark evidence; reject unchanged until the working-tree mutation/claim mismatch is fixed and re-reviewed."
