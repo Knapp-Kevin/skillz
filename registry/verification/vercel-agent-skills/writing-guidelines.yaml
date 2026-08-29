@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: writing-guidelines
 source_id: vercel-agent-skills
 source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
-local_path: vendor/vercel-agent-skills/skills/writing-guidelines/SKILL.md
+local_path: skills/sources/vercel-agent-skills/skills/writing-guidelines/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 63facf310252a990d154bed12b3dcdd295ba771a
 characterized_at: 2026-08-29
