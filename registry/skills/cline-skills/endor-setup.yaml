@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: endor-setup
+display_name: Endor Setup
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/endor-setup/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 1c294e970c435d5a7480b53820dde75b4957d0e8
+upstream_last_updated_at: 2026-06-18T23:41:36Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/endor-setup/SKILL.md
+permission_tier: external-side-effect
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - endorctl or network access to install it
+  - Endor Labs account/namespace and authentication
+  - host shell with curl/checksum utilities and browser OAuth or API credentials
+  - access to the source tree being scanned
+import_eligibility: already-vendored
+rationale: Detailed Endor Labs installation/authentication/scan workflow with good non-transcript API-key guidance and checksum verification, retained as reference material; unchanged reuse is blocked by agent-initiated installation and other authority assumptions.
