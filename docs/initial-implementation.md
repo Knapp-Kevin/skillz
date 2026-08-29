@@ -1,70 +1,56 @@
-# Initial Implementation Finish Line
+# Historical Initial-Implementation Boundary
 
-The initial implementation of `skillz` is intentionally scoped around the **user and AI-agent experience**, not exhaustive library curation.
+> **Status: SUPERSEDED AS CURRENT GOVERNANCE**
+>
+> This document previously defined an execution-oriented alpha finish line with repository-owned proof, preflight, and evaluation machinery. That architecture is no longer current.
 
-The product is ready for alpha lock when a person can arrive for the first time, hand the repository to an AI, receive a governed fitted skill set, install or hand it off correctly, and later return to review and refine that set without restarting from zero.
+`skillz` is an entirely passive repository. The external AI agent reading it performs discovery, reasoning, curation, evaluation, installation, browsing, editing, or other active work through capabilities supplied by its host.
 
-That promise is host-portable. A normal user/agent flow must not depend on a local clone, shell, Git executable, Node/Bun runtime, initialized submodules, or GitHub Actions. Those capabilities belong to maintainer-grade deterministic repository verification.
+The historical implementation discussion remains recoverable in Git history. Do not treat removed scripts, tests, CI, runtime proof, catalog generators, or evaluator harnesses as current requirements.
 
-## What must work before alpha lock
+## Current foundation
 
-### First visit
+The useful foundation is the passive contract:
 
-1. The human can understand what the repository does from the top of `README.md`.
-2. An AI agent can jump directly to its operating instructions.
-3. A constrained agent with repository read access can proceed through a connector/API/web path when local execution is unavailable.
-4. The agent can inspect only legitimately available evidence and infer durable skill opportunities.
-5. The agent can search the library using category and governed quality metadata, either through local tooling or direct registry/provenance/upstream inspection.
-6. Where the host exposes exact content identity, the agent can compare a candidate's upstream Git blob/content SHA to its recorded fingerprint without local Git.
-7. The agent can distinguish unchanged reuse, adaptation, composition, supplementation, custom creation, and no-skill outcomes.
-8. Unverified material is design evidence by default, not silently trusted unchanged material.
-9. Selected or created skills are evaluated appropriately.
-10. The result ends in a concrete installation or portable-handoff state.
+1. a human can understand what `skillz` is from `README.md`;
+2. an external agent can enter through `AGENT_START_HERE.md` and `BOOTSTRAP.md`;
+3. the agent can inspect legitimately available user context and identify durable repeatable methods;
+4. all user-facing reference material lives under `skills/`, including pinned source corpora under `skills/sources/`;
+5. source provenance and individual skill quality are distinct;
+6. exact-version review state, tags, freshness, dependencies, authority, portability, and source context are available to inform selection where established;
+7. the agent can choose reuse, adaptation, extraction, supplementation, composition, custom creation, checklist, dynamic behavior, or no change;
+8. returning-user refinement starts from the existing fitted set rather than rebuilding from zero;
+9. any external behavioral evaluation or installation is performed by the host agent and reported truthfully;
+10. the repository itself remains passive.
 
-### Returning visit
+## Current finish line
 
-1. The agent inventories the existing fitted set instead of rebuilding from zero.
-2. It checks accessible fingerprints, freshness, quality state, overlap, gaps, and current user fit.
-3. It preserves custom behavior that still works.
-4. It makes the smallest justified change rather than maximizing novelty or skill count.
-5. It can correctly conclude that no change is needed.
-6. Materially changed skills are re-evaluated and installation/profile state is refreshed.
+Current production-readiness work is corpus-centered rather than runtime-centered:
 
-## Maintainer proof is separate from normal use
+- finish the unified `skills/` tree and passive documentation cleanup;
+- establish full eligible denominators source by source;
+- provide adequate provenance companions for eligible skills;
+- characterize dependencies, authority, portability, freshness, and intended use;
+- apply controlled tags consistently;
+- give every eligible skill a decisive current static state;
+- reconcile passive catalog/count snapshots with the live corpus;
+- keep source reputation/adoption signals contextual rather than using them as quality proof;
+- only after static corpus completion, behaviorally validate consequential/high-use skills through an external evaluation environment.
 
-Repository-wide generated-catalog proof still requires a compatible maintainer environment because it validates all pinned corpora, generated counts, semantic invariants, and byte-identical regeneration together.
+## Behavioral evidence
 
-Failure to run that maintainer proof on one constrained host does not mean normal `skillz` use is broken. Likewise, a successful connector-native user flow does not replace the separate repository-wide preflight.
+Representative behavioral evidence remains valuable. It simply does not require or justify an execution harness inside `skillz`.
 
-The connector-native portability smoke in [`evals/connector-native-smoke.md`](evals/connector-native-smoke.md) exists specifically to prove this boundary.
+An external evaluator may test questions such as:
 
-## What is not required before alpha lock
+- Does an eligible reference get reused or minimally adapted when it genuinely fits?
+- Does the agent refuse unsafe/unproven unchanged reuse?
+- Does a poor fit lead to custom creation rather than forced reuse?
+- Does a returning-user review make only justified changes?
+- Can the agent correctly conclude `NO CHANGE NEEDED`?
 
-The following remain important, but they are post-alpha enrichment:
+When actual evidence exists, store it passively and distinguish it from static review.
 
-- exhaustive characterization of the indexed corpus;
-- verification of every third-party skill;
-- adding every promising source repository;
-- large-scale behavioral benchmarking of the full library;
-- perfect taxonomy or ranking weights;
-- every possible host installation adapter.
+## Current authority
 
-Curation continues after alpha. It should not indefinitely postpone proving the core experience.
-
-## Proof requirement
-
-Alpha lock requires representative evidence for five decisions:
-
-1. **eligible reuse or minimal adaptation**: an appropriate governed library skill is selected or minimally adapted because it actually fits;
-2. **unsafe or unproven reuse refusal**: unverified or stale material is not treated as trusted unchanged material;
-3. **custom creation**: a materially poor library fit causes creation rather than forced reuse;
-4. **returning refinement**: an existing set receives only a justified change while valid custom behavior is preserved;
-5. **returning no-op**: an existing set is correctly left unchanged when no material improvement is established.
-
-These five decisions must be demonstrated with a **blind treatment/evaluator split**. Public treatment fixtures may contain only synthetic user context and neutral scenario identifiers. Expected decisions, candidate hints, and scenario-specific scoring criteria must remain outside the public repository and outside the treatment-agent context until that treatment output is frozen.
-
-The evaluator-only rubric must be precommitted before treatment execution and fingerprint-bound to the exact public fixture. The repository provides `scripts/verify-alpha-evaluator-bundle.mjs` for that binding.
-
-The original public v1 A1/A2/A3/R1/R2 fixture set cannot satisfy this proof requirement because its evaluator mappings were committed publicly and remain recoverable from Git history. It is retained only as historical evidence of the superseded design.
-
-The exact live checklist is tracked in [Issue #15](https://github.com/Knapp-Kevin/skillz/issues/15) and [`docs/alpha-lock.md`](alpha-lock.md).
+Use `README.md`, `AGENT_START_HERE.md`, `AGENTS.md`, `BOOTSTRAP.md`, `docs/CONCEPT.md`, `docs/ARCHITECTURE_PLAN.md`, `docs/SYSTEM_STATE.md`, `ROADMAP.md`, `docs/GOVERNANCE_INDEX.md`, and Wayfinder Issue #35 for current direction.
