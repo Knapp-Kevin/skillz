@@ -1,6 +1,6 @@
 # skillz Engine
 
-This directory contains the passive procedures that explain how to use or maintain `skillz`.
+This directory contains passive procedures that explain how to use or maintain `skillz`.
 
 **Nothing under `engine/` counts as user-facing skill-library inventory.**
 
@@ -10,53 +10,43 @@ For FIRST_VISIT and RETURNING_USER skill-system work, use:
 
 - [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md)
 
-That is the canonical procedure for discovering user needs, translating them into capabilities, searching whole skills and reusable components, making fit decisions, composing/customizing the smallest useful system, adapting it to the active host, validating it, and installing or handing it off.
+That is the canonical instruction set for discovering user needs, translating them into capabilities, searching whole skills and reusable components, making fit decisions, composing/customizing the smallest useful system, adapting it to the active host, semantically reviewing it, and installing or handing it off.
 
 A normal bootstrap agent should not choose among the other engine skills.
 
 ## Repository-maintenance helpers
 
-These operate the `skillz` repository or its curation/deployment lifecycle:
+Other engine procedures exist to help maintain or curate this repository, for example:
 
-- `skill-forge` — scaffold a new skill **into this repository's `skills/` tree**;
-- `skill-audit` — mechanically validate this repository;
-- `skill-sync` — deploy portable skills that already live in this repository;
-- `skills-pulse` — monitor/discover candidate sources for repository curation;
-- `source-vetting` — evaluate external source suitability and characterization integrity.
+- `skill-forge` — scaffold a new skill into this repository's `skills/` tree;
+- `skill-audit` — inspect repository skill structure;
+- `skill-sync` — help move portable skills already represented here;
+- `skills-pulse` — discover candidate sources for curation;
+- `source-vetting` — assess external source suitability and provenance.
 
-Use those only when the active task is `REPOSITORY_MAINTENANCE` or when a maintainer explicitly needs their evidence.
-
-`skill-eval` describes controlled behavioral evaluation mechanics. `skill-bootstrap` may apply the same evaluation principles when appropriate, but normal user bootstrap must not fail merely because the repo-bound evaluation machinery cannot execute.
+These are **optional maintainer conveniences**, not a runtime, not CI, and not repository-completion gates. Normal FIRST_VISIT or RETURNING_USER work must never depend on them.
 
 ## Critical boundary
 
-During normal FIRST_VISIT or RETURNING_USER work:
+During normal user work:
 
 - do not write the user's custom skills into this repository by default;
-- do not require Node/Bun, Git, shell access, initialized submodules, or GitHub Actions;
-- do not run repository audit/sync/forge procedures simply because they are visible;
+- do not require Node/Bun, Git, shell access, initialized submodules, or CI;
+- do not run repository-maintenance procedures simply because they are visible;
 - create/package artifacts for the user's actual host or provide a portable handoff.
 
 A writable `skillz` checkout is not permission to turn a user's bootstrap result into a repository change.
 
-## Verification integrity
+## Quality boundary
 
-Third-party characterization is bound to exact canonical skill content. Maintainers can run the offline drift checker at:
+The meaningful quality surface is semantic: whether instructions are coherent, safe, useful, and likely to be interpreted correctly.
 
-```text
-engine/skills/source-vetting/scripts/verify-characterization-integrity.ts
-```
+Exact fingerprints and metadata help identify which text was reviewed. They do not turn this passive repository into executable software or deterministic proof.
 
-with:
-
-```text
-node engine/skills/source-vetting/scripts/verify-characterization-integrity.ts
-```
-
-It performs no network calls. A real hash mismatch reports `STALE / REVERIFY REQUIRED`; missing uninitialized submodules are unavailable evidence rather than content drift.
+See [`../docs/skill-verification.md`](../docs/skill-verification.md) and [`../docs/evals/share-ready-semantic-review.md`](../docs/evals/share-ready-semantic-review.md).
 
 ## Placement rule
 
 A reusable capability belongs in [`../skills/`](../skills/) when a user could reasonably install and use it independently of maintaining `skillz`.
 
-A procedure belongs under `engine/` when its primary purpose is orchestrating `skillz` bootstrap or maintaining, curating, verifying, generating, validating, or deploying this repository.
+A procedure belongs under `engine/` when its primary purpose is orchestrating bootstrap or helping maintain/curate this repository.
