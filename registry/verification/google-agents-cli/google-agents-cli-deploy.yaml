@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: google-agents-cli-deploy
+source_id: google-agents-cli
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+local_path: vendor/google-agents-cli/skills/google-agents-cli-deploy/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e473814cd2e2cfe9e8cfeb24e972704756dc5184
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [deployment, infrastructure, agent-operations]
+  lifecycle: [deployment, operations]
+  characteristic: [production-oriented, human-review, rollback-aware, evidence-first, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Explicit target tradeoff discussion, dry-run, mandatory human approval before deployment, production Terraform guidance, secret/IAM controls, timeout recovery, rollback, CI/CD references, and deployed-agent testing. High cloud authority remains approval-gated. Exact pinned fingerprint confirmed. Behavioral validation remains pending."

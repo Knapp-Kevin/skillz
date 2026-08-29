@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: google-agents-cli-adk-code
+source_id: google-agents-cli
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+local_path: vendor/google-agents-cli/skills/google-agents-cli-adk-code/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 73dc82088f15c56ba35ebb9d9a817dacf4d326cf
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [agent-development, implementation]
+  lifecycle: [design, implementation]
+  characteristic: [progressive-disclosure, reference-heavy, tool-routing, safety-bounded]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Clear ADK Python trigger/non-trigger boundaries, scaffold/workflow prerequisites, intact bundled references, progressive-disclosure routing, and compatibility requirements. Code mutation remains task-scoped and the skill is coupled to agents-cli/Google ADK. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
