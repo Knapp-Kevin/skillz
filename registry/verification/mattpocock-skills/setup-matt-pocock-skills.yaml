@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: setup-matt-pocock-skills
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7f6f576e2e54e0d287cbb9731ebe0343f54e50cf
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [repository-maintenance, orchestration, documentation]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, compatibility-aware, progressive-disclosure, tool-routing]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong explore-before-edit behavior, recommended defaults, branch-specific questions, explicit preview before writes, and preservation of existing CLAUDE.md/AGENTS.md content. Bundled tracker/domain templates are present and multiple tracker modes are acknowledged. Evidence requirements are lighter than execution-focused skills, and the flow remains tied to repository/CLI conventions. Behavioral validation remains pending."
