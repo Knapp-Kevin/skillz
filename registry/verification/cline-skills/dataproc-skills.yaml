@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: dataproc-skills
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/dataproc-skills/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 66447de645d7bbb0c6349ce6b5cc1a1fb5934cea
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research, debugging, business-operations]
+  lifecycle: [operations, maintenance]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 1, procedure 2, authority 1, failure 1, evidence 2, dependencies 1, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. The exact pinned skill is narrower and safer than its source README summary: its bundled scripts only get/list Dataproc clusters and jobs. Hard fail for unchanged reuse: every script invokes `npx --yes @toolbox-sdk/server@1.1.0`, allowing automatic package retrieval/execution without an explicit dependency-install approval gate, and the wrappers load host-specific environment material. Retain the read-only Dataproc patterns, but adapt dependency acquisition/execution to the host authority model. Exact pinned blob and June 18 skill revision confirmed. Behavioral validation remains pending.
