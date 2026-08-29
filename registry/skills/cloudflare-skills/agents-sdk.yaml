@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-04-15T07:46:50Z
 curated_at: 2026-08-28
 last_checked_at: 2026-08-28
 availability: vendored
-local_path: vendor/cloudflare-skills/skills/agents-sdk/SKILL.md
+local_path: skills/sources/cloudflare-skills/skills/agents-sdk/SKILL.md
 permission_tier: mutating
 portability: medium
 review_status: verified-structured
