@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: pdf
 source_id: anthropic-skills
 source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/pdf/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/pdf/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d3e046a5ae107a6cb23cfb16c219837094ab35d3
 characterized_at: 2026-08-29
