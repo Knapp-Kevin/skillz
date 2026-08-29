@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ask-matt
+display_name: Ask Matt
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/ask-matt/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/ask-matt/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: router depends on the Matt Pocock engineering/productivity skill set, PHASE-BOUNDARIES.md, and Claude-style Skill-tool/context commands described by the intact source
+import_eligibility: already-vendored
+rationale: High-value workflow router that maps idea-to-ship, triage, debugging, architecture, context hygiene, and standalone tasks onto explicit skill flows while preserving phase boundaries.
