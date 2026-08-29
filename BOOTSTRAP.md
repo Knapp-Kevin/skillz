@@ -1,150 +1,150 @@
 # Make Your AI Better at Helping You
 
-You do not need to understand skills, write code, or browse hundreds of files.
+Give your AI the GitHub link to this repository. That is enough to start.
 
-**Give your AI the GitHub link to this repository. That is enough to start.**
+`skillz` is passive. It does not run bootstrap, select candidates, execute validation, or install anything. The AI agent reading these instructions performs the work using context and capabilities supplied by its own host.
 
-A local clone, shell, Git executable, Node/Bun runtime, initialized submodules, or GitHub Actions are **not required for normal bootstrap or refinement**. If the current host can read this repository through a connector, API, browser, or equivalent tool, use the connector-native path in [`AGENT_START_HERE.md`](AGENT_START_HERE.md) and continue.
+## First visit
 
-Local execution is useful for repository-maintainer duties such as deterministic catalog generation and alpha preflight. It is not a prerequisite for helping a user.
+If the user supplied this repository or its URL without a narrower task and does not already have a fitted skill set, begin discovery rather than merely summarizing the repository.
 
-There are two normal ways to arrive here.
+Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md), [`AGENTS.md`](AGENTS.md), and [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
 
-## First visit: build a fitted skill set
+### 1. Inspect relevant existing evidence
 
-If the user supplied this repository or its URL without a different task and does not already have a fitted skill set to review, **start first-visit bootstrap now**. Do not stop after describing the repository.
+Use only context the host legitimately exposes and that is relevant to the user's working methods, such as:
 
-Your job is to build the smallest skill system that best fits this user.
+- current conversation;
+- accessible interaction history or persistent memory;
+- recurring corrections;
+- workspace/project instructions;
+- existing skills;
+- repeated workflows or tool combinations;
+- definitions of done.
 
-Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md), [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md), and [`AGENTS.md`](AGENTS.md).
+Do not ask the user to reconstruct information already accessible. Do not invent inaccessible history. Do not mine unrelated private connectors merely because they are connected.
 
-Start with relevant evidence the host already exposes: interaction history, persistent memory, the current conversation, recurring corrections, workspace/project instructions, repeated tool combinations, existing skills, and definitions of "done." Do not make the user repeat accessible information. Do not invent inaccessible history or sweep unrelated private connectors.
+### 2. Identify durable working methods
 
-Then:
+Look for repeated procedures, reasoning patterns, safeguards, review sequences, failure-prevention rules, and human-verification points.
 
-1. Identify durable working methods and latent skills.
-2. Compare those needs against the complete library: local/imported skills plus approved indexed vendor skills.
-3. For third-party candidates, inspect provenance, controlled tags, authority, portability, freshness, fingerprint, and verification status.
-4. Prefer unchanged reuse only when the exact characterized version is eligible and genuinely fits.
-5. Adapt, supplement, or compose when that produces a better fit.
-6. Create a new custom skill whenever the user's real workflow is not adequately represented.
-7. Evaluate and adversarially review the fitted system.
-8. Install it when the host supports installation and authority exists. Otherwise package it or provide the shortest correct portable handoff.
+Separate:
 
-## Returning visit: review, refine, and improve
+- simple preferences/profile facts;
+- project-local rules;
+- stable reusable methods that merit a skill.
 
-If the user already has skills from `skillz`, a prior bootstrap, or another compatible source and asks to review, update, refine, improve, audit, or revisit them, **do not restart from zero**.
+### 3. Compare against the corpus
 
-Treat the current set as evidence about the user's working system.
+Inspect relevant user-facing material under [`skills/`](skills/), including pinned reference sources under [`skills/sources/`](skills/sources/).
 
-1. Inventory the current skills, their intended jobs, installation state, and available fingerprints or versions.
-2. Compare the current set with relevant recurring behavior and the user's present definitions of done.
-3. Detect stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
-4. Check whether any referenced upstream skill changed since the recorded fingerprint or freshness check.
-5. Search the current library for materially better fits or useful new patterns.
-6. Preserve custom behavior that still fits instead of resetting it to a generic upstream version.
-7. Refine, replace, supplement, compose, or retire only where evidence supports change.
-8. Re-run appropriate structured verification and behavioral evaluation for materially changed behavior.
-9. Update installation state and the portable skill profile when applicable.
-10. Return the smallest improved set plus a concise change log explaining what changed and why.
+Use passive companion evidence where available:
 
-A returning review should be capable of concluding **no change needed**. More skills are not inherently better.
+- [`registry/skills/`](registry/skills/) for provenance;
+- [`registry/verification/`](registry/verification/) for exact-version review state and tags;
+- [`registry/sources.yaml`](registry/sources.yaml) for source role, license, and pin;
+- [`registry/source-signals.yaml`](registry/source-signals.yaml) for source-level context.
 
-## Governed candidate shortlisting
+When exact content identity can be established through the host, compare it with the recorded fingerprint before making an exact-version claim. When it cannot, lower confidence rather than inventing a match.
 
-Use the strongest lookup path the host supports.
+### 4. Choose the right relationship
 
-### Local execution path
+For each need, choose among:
 
-When you have local execution access to a fully materialized copy of this repository:
+- **SUFFICIENT**: no change needed;
+- **ADOPT**: reuse an existing skill unchanged;
+- **ADAPT**: use an existing skill as the base but change it;
+- **EXTRACT**: take a useful pattern without adopting the source workflow;
+- **SUPPLEMENT**: strengthen an existing skill;
+- **COMPOSE**: use separate skills together;
+- **CREATE**: build a custom skill because it fits materially better;
+- **CHECKLIST**: formal skill would be excessive;
+- **DYNAMIC**: keep the behavior flexible;
+- **DO NOT CREATE**: evidence or value is insufficient.
 
-1. Regenerate the catalog with `node scripts/build-index.ts` when `index.json` is stale or older than schema version 2.
-2. Translate the user's needs into controlled tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml).
-3. Run [`engine/skills/skill-bootstrap/scripts/select-candidates.ts`](engine/skills/skill-bootstrap/scripts/select-candidates.ts) with relevant tag filters.
-4. By default the selector returns exact-version candidates eligible for trusted unchanged consideration.
-5. Use `--include-unverified` only when you intentionally want unverified material as **design evidence**.
-6. Never bypass `stale`, `rejected`, or `retired` exclusions merely to produce a result.
-7. Treat the shortlist as evidence. Final user fit still determines `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE`.
+The corpus is design material, not a reuse quota.
 
-### Connector/API/web path
+### 5. Build the smallest useful set
 
-When local execution is unavailable, **do not stop**.
+For every retained skill define:
 
-1. Use [`CURATED.md`](CURATED.md), local category pages, and `registry/verification/` to locate relevant characterized candidates.
-2. Read the verification companion for status, tags, source snapshot revision, and expected canonical content blob SHA.
-3. Read the provenance companion in `registry/skills/` to resolve the upstream repository and canonical source path.
-4. Fetch that upstream `SKILL.md` at the exact recorded snapshot revision through the connector/API/browser when possible.
-5. If the host exposes a Git blob/content SHA, compare it to `content_blob_sha` before calling the exact version fingerprint-matched.
-6. If exact identity cannot be established, lower confidence. Use the material as design evidence, adapt/create conservatively, or choose another candidate. Do not invent a match.
+- purpose;
+- triggers and non-triggers;
+- ordered procedure;
+- evidence requirements;
+- decision points;
+- authority/privacy boundaries;
+- failure handling;
+- completion criteria;
+- relationship to source/reference material;
+- provenance when applicable.
 
-A stale generated index is a maintainer concern, not a reason to abandon a user bootstrap when the relevant live records can be inspected directly.
+Avoid both giant monolithic skills and microscopic one-action skills.
 
-## Browse by purpose
+### 6. Adversarially review
 
-Humans can browse the locally maintained portion of the library through [`skills/categories/`](skills/categories/), including planning, writing, research, software/repository work, agent operations/security, monitoring/intelligence, and business/career categories.
+Challenge the fitted set for:
 
-The complete indexed library also includes approved third-party sources under [`skills/sources/`](skills/sources/).
+- overfitting;
+- unnecessary skill creation;
+- duplicated authority;
+- poor triggering;
+- hidden capability assumptions;
+- privacy overreach;
+- unsupported certainty;
+- copied ceremony or terminology that does not help the user;
+- unnecessary maintenance burden.
 
-## What counts as the library?
+Revise, merge, split, or delete as needed.
 
-The library includes:
+### 7. Create static artifacts
 
-- user-facing skills under [`skills/`](skills/), and
-- approved indexed user-facing skills from pinned sources under [`skills/sources/`](skills/sources/).
+When the external host can write files and the user has authorized repository changes, create or refine the actual Markdown skill artifacts and passive companion metadata.
 
-Repository machinery under [`engine/skills/`](engine/skills/) is excluded from the library count.
+When direct file creation is unavailable, provide complete portable artifacts for saving or handoff.
 
-A vendor skill can be available and searchable without being verified. Availability answers "can we find/use this as reference?" Verification answers "has this exact version earned trusted unchanged selection?"
+`skillz` itself does not perform the write.
 
-## How skill quality works
+### 8. Evaluate or install only through the host
 
-Every characterized third-party skill receives an exact-version quality state under the repository's quality policy.
+If behavioral evaluation, installation, upload, scheduling, or another external action is useful and authorized, the external host agent performs it with its own tools.
 
-- `trusted-baseline`: eligible under an established source-quality policy plus matching fingerprint and characterization.
-- `verified`: passed the structured skillz quality/effectiveness rubric.
-- `validated`: also has representative behavioral evidence.
-- `unverified`: useful as design evidence, but not silently trusted for unchanged installation.
-- `stale`: the underlying skill/evidence changed and must be reviewed again.
-- `rejected` / `retired`: excluded from normal selection.
+Never describe that action as something `skillz` executed.
 
-Individually characterized skills have a companion under [`registry/verification/`](registry/verification/) bound to the exact canonical `SKILL.md` Git blob SHA.
+## Returning visit
 
-Tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) characterize use case, lifecycle phase, workflow characteristics, authority, and portability. Use those dimensions to refine matching rather than selecting by name alone.
+Do not restart from zero.
 
-## Compare before creating. Fit the user before reusing.
+1. Inventory the current fitted skills and intended jobs.
+2. Compare them with current user behavior and accessible evidence.
+3. Identify meaningful drift, overlap, stale assumptions, or missing capabilities.
+4. Preserve custom behavior that still works.
+5. Search the corpus only where a real improvement opportunity exists.
+6. Make the smallest justified change.
+7. Permit **NO CHANGE NEEDED** as a successful outcome.
 
-Existing skills are valuable reference evidence, not a cage.
+## How to use quality metadata
 
-A good result may use an existing skill unchanged, adapt one, supplement one, compose several, create something entirely new, use a smaller checklist/helper, retire something that no longer helps, or decide that no durable skill change is warranted.
+For selection reasoning, use:
 
-The goal is not maximum reuse or maximum skill count. The goal is the **smallest dependable skill set that matches the user's actual workflow now**.
+**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-## Installation is part of the result
+- `verified`: structured static review passed for the recorded version;
+- `validated`: representative behavioral evidence also exists;
+- `unverified`: design/reference evidence by default;
+- `stale`, `rejected`, `retired`: exclude from normal unchanged reuse.
 
-A bootstrap or returning refinement pass is not complete merely because Markdown exists.
+Popularity, source reputation, stars, forks, or official branding are useful context only. They do not establish individual skill quality.
 
-Finish with an explicit host-level state such as `INSTALLED + VERIFIED`, `READY TO UPLOAD`, `USER ACTION REQUIRED`, or a clearly explained compatibility blocker. See [`docs/installation-handoff.md`](docs/installation-handoff.md).
+## Completion
 
-A host that cannot write files may still produce a complete portable artifact or exact handoff. Do not convert "cannot install here" into "cannot use skillz here."
+The user should be able to tell:
 
-## What the human should receive
+- which durable methods were identified;
+- which skills were reused, adapted, extracted from, composed, created, or left unchanged;
+- what evidence supports those decisions;
+- what remains uncertain;
+- what static artifacts now exist;
+- whether any external installation/action was actually performed by the host or remains a separate handoff.
 
-For a first visit:
-
-1. The durable working patterns inferred from legitimate evidence.
-2. The fitted skill set and why each skill exists.
-3. Which pieces were reused, adapted, composed, or newly created.
-4. The quality/evidence state of selected third-party skills.
-5. Evaluation results and remaining uncertainty.
-6. A portable skill profile when useful.
-7. A concrete installation or handoff result.
-
-For a returning visit, also include:
-
-1. what changed since the prior set;
-2. which skills stayed unchanged and why;
-3. which skills were refined, replaced, added, or retired and why;
-4. any stale fingerprints, upstream drift, or evidence that requires follow-up;
-5. the updated installation/evaluation state.
-
-The human should always be able to tell what is done, what is trusted, what is merely promising, what changed, what still needs proof, and what action remains.
+**Compare before creation. User fit before reuse. Smallest useful set over maximum skill count.**
