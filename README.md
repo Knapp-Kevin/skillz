@@ -1,136 +1,231 @@
 # 🛠️ skillz
 
-![Active Local Skills](https://img.shields.io/badge/active_local_skills-42-brightgreen)
-![Tracked Sources](https://img.shields.io/badge/tracked_sources-17-8A2BE2)
+![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
+![First-Party Skills](https://img.shields.io/badge/first--party_skills-42-brightgreen)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-101-8A2BE2)
+![Registered Sources](https://img.shields.io/badge/registered_sources-17-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Give this repository to an AI agent. It should discover which repeatable working methods would materially help you, compare relevant prior art, and build the smallest dependable skill system that fits you and the environment you are using.**
+**A large reusable AI-skill reference library plus a passive engine that helps an existing agent discover, compare, adapt, compose, create, review, and hand off the smallest dependable skill system that fits the user.**
 
-You do not need to understand agent-skill formats, clone external repositories, or manually shop through a giant catalog.
+You do not need to understand agent-skill formats or manually read hundreds of files. Give the repository to an AI agent and let it compare the relevant material against the way you actually work.
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the single canonical orchestrator.
+>
+> **No shell, clone, Node, or writable filesystem? That is supported.** Use whatever legitimate repository, connector, API, browser, memory, history, and artifact capabilities the current host actually exposes.
 
 ## What `skillz` is
 
-`skillz` is a **passive instruction and reference repository**. It contains:
+`skillz` is a **passive instruction, skill, curation, and reference repository**. It does not run an application, observe users, schedule jobs, execute agents, or act as a runtime. The host agent is the active system. `skillz` is the body of material it reads.
 
-1. first-party user-facing skills;
-2. tracked upstream skill sources and exact-version provenance;
-3. individual quality metadata for governed third-party skills;
-4. structured review metadata for the first-party library;
-5. bootstrap instructions that teach an active agent how to discover, adapt, compose, create, review, and hand off a fitted skill system.
+The repository provides four different things that should not be confused:
 
-The repository itself does not run an application, observe users, crawl sources, schedule work, execute agents, install anything, or provide a runtime. **The host agent is the active system. `skillz` is the resource it reads.**
+1. **First-party skills** maintained under [`skills/`](skills/).
+2. **A 500+ pinned reference corpus** under [`vendor/`](vendor/) drawn from 12 upstream ecosystems at exact revisions.
+3. **Governed third-party review records** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
+4. **A passive bootstrap engine** under [`engine/`](engine/) that teaches an agent how to turn user needs and prior art into a fitted skill system.
 
-There is intentionally no CI requirement, runtime preflight, test harness, or executable proof gate. The meaningful quality surface is semantic: provenance, metadata discipline, structured review, and adversarial reading of the instructions.
+There is intentionally no CI requirement, runtime preflight, executable proof gate, or repository-owned model benchmark. The meaningful quality surface is semantic: useful instructions, complete skill packages, provenance, licensing, metadata, individual review, and adversarial reading.
 
 ## Start here
 
-### First visit
+### First visit: build a fitted skill system
 
-Give your agent this repository or its URL. If you provide no narrower task, that is enough to begin bootstrap.
+The easiest path is simple:
 
-The canonical flow is:
+1. Give your AI this repository or its URL.
+2. Ask it to help build the repeatable skills that would make it more useful and dependable for you, or provide the repository with no narrower task.
+3. Bootstrap should inspect only enough legitimate history, memory, instructions, existing skills, recurring corrections, and workflows to identify durable needs.
+4. It should translate those needs into capabilities **before** searching by filenames.
+5. It should compare first-party skills, governed third-party records, the pinned reference corpus, relevant tracked sources, and useful components or patterns.
+6. It should choose explicitly among reuse, refinement, adaptation, supplementation, composition, clean custom creation, a lightweight helper/checklist, dynamic behavior, or no new skill.
+7. It should create the smallest coherent fitted system for the host actually being used.
+8. It should semantically review important instructions for ambiguity, overreach, unsafe authority, missing evidence, unnecessary ceremony, and false completion claims.
+9. It should install when the host supports that and the user has authorized it, otherwise provide a complete portable handoff.
 
-1. bind to the actual host, tools, authority, privacy limits, and available evidence;
-2. inspect only enough relevant context to identify durable user needs;
-3. translate those needs into capability requirements before searching by skill name;
-4. inspect the local library, governed records, and relevant upstream references for whole skills and useful components;
-5. distinguish exact-version governed reuse from reference/design evidence;
-6. choose among `SUFFICIENT`, `REFINE`, `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST/HELPER`, `DYNAMIC`, or `DO NOT CREATE`;
-7. extract useful mechanisms without automatically importing another author's ceremony, terminology, commands, UX, or authority model;
-8. compose the smallest coherent system;
-9. create artifacts in the representation supported by the current host;
-10. adversarially review the result semantically;
-11. install when the host can and the user has authorized it, otherwise produce a complete portable handoff.
+See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable route and [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) for the canonical agent procedure.
 
-See [`BOOTSTRAP.md`](BOOTSTRAP.md) and the canonical [`skill-bootstrap`](engine/skills/skill-bootstrap/SKILL.md).
+### Returning visit: refine instead of reset
 
-### Returning visit
+Start from the user's existing fitted system.
 
-Start from the user's existing fitted system. Preserve still-valid custom behavior, identify only material drift/gaps/conflicts, re-evaluate affected capabilities, and make the smallest justified change.
+A returning review should:
 
-**`NO CHANGE NEEDED` is a correct outcome.**
+1. inventory the current skills and the jobs they are meant to perform;
+2. preserve custom behavior that still fits;
+3. identify only material drift, gaps, conflicts, or changed needs;
+4. check whether better reference material or governed skills now exist where change is plausible;
+5. refine, supplement, replace, retire, or add only what is justified;
+6. make the smallest useful change.
 
-## Library and reference model
+**`NO CHANGE NEEDED` is a correct result.** The goal is not infinite accumulation. It is the smallest useful set that still fits.
 
-### First-party library
+## Browse the library yourself
 
-The active local user-facing library lives under [`skills/`](skills/). Humans can browse it by purpose through [`skills/categories/`](skills/categories/).
+You can use `skillz` as a normal skill/reference library without running bootstrap.
 
-All 42 active local skills have structured semantic review records in [`registry/local-verification.json`](registry/local-verification.json), including fingerprint, score, controlled tags, authority, portability, quality state, and material notes.
+### First-party skills by purpose
 
-### Tracked upstream sources
+| Category | Typical coverage |
+|---|---|
+| [Planning & Productivity](skills/categories/planning-productivity/) | decisions, task coordination, learning, review, recurring personal workflows |
+| [Writing & Communication](skills/categories/writing-communication/) | briefs, decks, handoffs, standups, devlogs |
+| [Research & Analysis](skills/categories/research-analysis/) | comparisons, deep research, fact checking, paper review |
+| [Software & Repositories](skills/categories/software-repositories/) | repository health, repo monitoring, maintenance workflows |
+| [Agent Operations & Security](skills/categories/agent-operations-security/) | agent environment health, postmortems, MCP vetting, permissions |
+| [Monitoring & Intelligence](skills/categories/monitoring-intelligence/) | model, platform, protocol, governance, and ecosystem scans |
+| [Business & Career](skills/categories/business-career/) | career scanning, finance review, small-business operations |
 
-External corpora are **not copied or mounted into this repository**. [`registry/sources.yaml`](registry/sources.yaml) records their canonical upstream locations, roles, licensing context, and pinned revisions where established.
+### Pinned external reference corpus
 
-A tracked source is a discovery/prior-art surface. Source reputation, popularity, or official branding never grants blanket skill quality.
+[`vendor/`](vendor/) contains **12 upstream corpora pinned to exact revisions**. Together with the first-party library, this restores the broad **500+ skill/reference surface** that existed before the repository cleanup.
+
+The pinned corpus currently includes reference material from:
+
+- Anthropic Skills
+- Anthropic Knowledge Work Plugins
+- Vercel Agent Skills
+- Microsoft Skills
+- Microsoft Azure Skills
+- AWS Agent Toolkit
+- Matt Pocock Skills
+- Addy Osmani Agent Skills
+- OpenHands Extensions
+- Cline Skills
+- Cloudflare Skills
+- Google Agents CLI
+
+These are **reference corpora, not blanket endorsements**. Physical availability makes them discoverable. It does not make every skill safe, current, portable, or appropriate for unchanged reuse.
 
 ### Governed third-party skills
 
-When an individual external skill is deliberately reviewed, its records live under:
+Individual third-party skills receive stronger treatment only when reviewed and recorded separately:
 
-- [`registry/skills/`](registry/skills/) for provenance and canonical source identity;
-- [`registry/verification/`](registry/verification/) for exact-version semantic quality and controlled metadata.
+- [`registry/skills/`](registry/skills/) records provenance and canonical source identity.
+- [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-A governed record may establish stronger eligibility for that exact skill version. It does not promote the rest of its source repository by association.
+There are currently **101 persisted exact-version third-party verification companion files** across the governed shelf. Historical source-level curation also records broader review work for several corpora. Where that work is not yet represented one-for-one in current companions, the curation queue treats reconciliation as ongoing enrichment rather than pretending the evidence never existed or that the work is finished.
 
-## Quality states
+See [`CURATED.md`](CURATED.md) for the governed shelf and [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living enrichment ledger.
 
-The normative rubric is [`docs/skill-verification.md`](docs/skill-verification.md).
+## What counts as a skill here?
+
+### First-party library
+
+[`skills/`](skills/) contains **42 active first-party user-facing skills**. All 42 have individual structured semantic review records in [`registry/local-verification.json`](registry/local-verification.json).
+
+A skill package is not required to be Markdown-only. It may legitimately include scripts, templates, references, fixtures, JSON, examples, or other supporting components. Those components belong to the skill and are part of what should be reviewed and preserved.
+
+### Pinned reference material
+
+The external corpora under [`vendor/`](vendor/) are available prior art. Their presence means an agent can inspect them locally when the checkout includes submodules, while connector/API/web-capable hosts can still resolve the registered upstream source directly.
+
+### Engine machinery does not count
+
+[`engine/skills/`](engine/skills/) contains repository/bootstrap procedures. Those do not count as user-facing library inventory.
+
+The passive boundary applies to the **engine**, not to the contents of individual skills. The engine is Markdown instruction. User-facing skills may contain whatever legitimate components they need.
+
+## Availability is not verification
+
+A skill being present in the 500+ reference corpus does not automatically make it governed unchanged-reuse material.
+
+Current quality states are defined in [`docs/skill-verification.md`](docs/skill-verification.md):
 
 - **`verified`**: the exact version passed the structured semantic quality gate.
 - **`validated`**: `verified` plus representative scenario/adversarial semantic review.
 - **`unverified`**: reference/design evidence only.
-- **`trusted-baseline`**: legacy schema state only, not current unchanged-selection eligibility.
-- **`stale`**: prior review should not be silently inherited by changed content/evidence.
+- **`trusted-baseline`**: legacy characterization only, not current unchanged-reuse eligibility.
+- **`stale`**: the previous review should not be silently inherited by changed material or evidence.
 - **`rejected` / `retired`**: excluded from normal unchanged selection.
 
-Even `verified` or `validated` material still has to fit the user, host, authority boundary, dependencies, and licensing obligations.
+Even a verified skill still has to fit the user, host, dependencies, authority boundary, licensing obligations, and intended workflow.
 
 ## Components can be more useful than whole skills
 
-Bootstrap reasons below whole-skill granularity. A reference may contribute trigger logic, decision gates, evidence requirements, procedure fragments, safeguards, failure handling, authority boundaries, output contracts, or useful abstractions.
+Bootstrap reasons below whole-skill granularity.
 
-Borrowing a component does **not** bypass provenance, licensing, dependency, rejection/staleness reasons, privacy, authority, cost, or host assumptions. Keep the useful mechanism and discard source-specific baggage that does not fit.
+A reference may contribute only one useful mechanism, such as:
 
-## Evaluation model
+- trigger or non-trigger logic;
+- evidence requirements;
+- decision gates;
+- authority safeguards;
+- procedure fragments;
+- failure handling;
+- output contracts;
+- review heuristics;
+- useful abstractions.
 
-Because `skillz` is passive, evaluation is textual and probabilistic:
+The correct answer may be to extract one strong component and discard the source-specific ceremony around it. Component reuse still has to respect provenance, licensing, dependencies, rejection reasons, privacy, authority, cost, and host assumptions.
 
-- structured semantic review of governed skills;
-- adversarial review of bootstrap/front-door instructions;
-- trigger, non-trigger, and pressure scenarios;
-- literal/weaker-model readings for ambiguity, contradictory sequencing, hidden assumptions, overreach, or false-completion opportunities.
+## Curation mode
 
-The current closeout review is recorded in [`docs/evals/share-ready-semantic-review.md`](docs/evals/share-ready-semantic-review.md).
+The repository's **core implementation is complete**. That does not mean every interesting skill on the internet has been evaluated, nor should it.
 
-This cannot guarantee deterministic model behavior. It can make the intended path explicit enough that repeated misinterpretation is useful evidence of a documentation defect.
+Ongoing work is enrichment:
 
-## Core status: complete, curation mode
+1. reconcile prior review evidence where historical source-level results are broader than current persisted companions;
+2. continue reviewing already admitted corpora;
+3. discover promising new public skill sources;
+4. source-vet them independently;
+5. evaluate only material that adds useful coverage or distinctive mechanisms;
+6. record provenance, exact identity, metadata, authority, portability, dependencies, score, and disposition;
+7. preserve useful rejected material as bounded negative/adaptation evidence when appropriate.
 
-Core functionality is complete when:
+The current queue lives in [`CURATION_QUEUE.md`](CURATION_QUEUE.md). It includes remaining admitted-source work plus active discovery candidates such as Hugging Face Skills, Selamy Labs, Hypergiant, and other promising repositories.
 
-- one explicit bootstrap route exists;
-- user synthesis is clearly separated from repository maintenance;
-- first-party skills have individual review metadata;
-- governed external skills have exact provenance and decisive semantic quality records;
-- unreviewed upstream material is clearly reference-only;
-- front-door and engine documentation agree on workflow and quality semantics;
-- adversarial semantic review finds no unresolved material repository-level ambiguity.
+Future curation broadens the ecosystem. It does **not** reopen whether the passive bootstrap architecture itself is complete.
 
-That boundary is now satisfied. Ongoing work is **curation**:
+## Evaluation responsibility
 
-1. occasionally discover promising new skills or sources;
-2. source-vet them;
-3. admit only differentiated value;
-4. evaluate selected skills individually;
-5. record provenance, exact version, metadata, score, authority, portability, and disposition;
-6. reject, adapt, compose, or retain as reference anything that does not meet unchanged-reuse standards;
-7. revisit the bootstrap only when real feedback exposes an actual ambiguity.
+`skillz` owns the quality of the material it provides, not the competence of every model that may read it.
 
-More skills broaden the ecosystem. They are not unfinished core implementation.
+We make a best effort to provide:
+
+- clear, ordered instructions;
+- complete skill packages;
+- useful provenance and licensing context;
+- disciplined metadata;
+- individual semantic quality review where governed;
+- adversarial review for ambiguity, overreach, contradiction, or misleading completion claims.
+
+We do **not** require multi-model benchmarking, deterministic behavioral proof, CI, runtime tests, or arbitrary success metrics. Model behavior is probabilistic. A sufficiently weak or noncompliant model may still fail to follow clear instructions; that alone is not a repository defect.
+
+The current repository-level semantic closeout review is recorded in [`docs/evals/share-ready-semantic-review.md`](docs/evals/share-ready-semantic-review.md).
+
+## If you are an AI agent reading this
+
+Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md) first.
+
+For FIRST_VISIT or RETURNING_USER work:
+
+1. use the canonical bootstrap;
+2. bind to the actual host and authority available;
+3. identify capabilities before filenames;
+4. search the first-party library, governed records, pinned reference corpus, and relevant tracked sources;
+5. treat availability and source reputation as context, not individual proof;
+6. use verified/validated unchanged only when exact identity and fit are established;
+7. adapt, supplement, compose, create, or abstain when that is a better fit;
+8. preserve useful skill-owned components;
+9. package for the user's host, not for this repository;
+10. state installation/handoff and uncertainty truthfully.
+
+Do not mutate `skillz` merely because the checkout is writable. User work and repository maintenance are separate routes.
+
+## Installation is part of the user result
+
+A fitted system should end with an explicit state such as:
+
+- `INSTALLED + VERIFIED`
+- `INSTALLED, VERIFICATION PENDING`
+- `READY TO UPLOAD`
+- `USER ACTION REQUIRED`
+- `BLOCKED: HOST DOES NOT SUPPORT SKILLS`
+- `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED`
+
+See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
 ## Repository map
 
@@ -139,21 +234,23 @@ More skills broaden the ecosystem. They are not unfinished core implementation.
 | [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Agent routing and capability floor |
 | [`BOOTSTRAP.md`](BOOTSTRAP.md) | Human-readable first/returning workflow |
 | [`AGENTS.md`](AGENTS.md) | Repository-wide agent contract |
-| [`engine/skills/skill-bootstrap/`](engine/skills/skill-bootstrap/) | Canonical normal user-flow instructions |
-| [`engine/skills/`](engine/skills/) | Passive repository-maintenance procedures, excluded from user-facing counts |
-| [`skills/`](skills/) | Active local user-facing skills |
+| [`skills/`](skills/) | 42 first-party user-facing skill packages |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
-| [`registry/local-verification.json`](registry/local-verification.json) | First-party semantic review records |
-| [`registry/sources.yaml`](registry/sources.yaml) | Tracked source identity, roles, pins, licenses |
+| [`vendor/`](vendor/) | 12 pinned external reference corpora, 500+ broad skill/reference surface |
+| [`CURATED.md`](CURATED.md) | Governed third-party shelf and quality semantics |
+| [`CURATION_QUEUE.md`](CURATION_QUEUE.md) | Ongoing source/skill discovery, reconciliation, and evaluation ledger |
+| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, roles, exact pins, licenses, local reference paths |
+| [`registry/local-verification.json`](registry/local-verification.json) | First-party individual review records |
 | [`registry/skills/`](registry/skills/) | Third-party per-skill provenance |
 | [`registry/verification/`](registry/verification/) | Third-party exact-version semantic quality records |
-| [`CURATED.md`](CURATED.md) | Governed third-party navigation and curation policy |
-| [`docs/evals/`](docs/evals/) | Semantic/adversarial review records |
+| [`engine/skills/skill-bootstrap/`](engine/skills/skill-bootstrap/) | Canonical normal user-flow instructions |
+| [`engine/skills/`](engine/skills/) | Passive repository-maintenance procedures, excluded from user-facing counts |
+| [`docs/`](docs/) | Architecture, provenance, semantic evaluation, installation, and historical context |
 
 ## Licensing and attribution
 
 First-party content is licensed under the [MIT License](LICENSE).
 
-Third-party material retains applicable upstream obligations. Tracking a source or reviewing a skill does not relicense it.
+Third-party repositories and materially derived content retain their applicable upstream obligations. The root MIT license does not relicense pinned reference corpora or separately identified third-party material.
 
 See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
