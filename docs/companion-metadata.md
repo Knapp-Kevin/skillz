@@ -1,8 +1,8 @@
 # Skill Companion Metadata Contract
 
-`skillz` uses companion metadata to help a host agent understand a skill without pretending that popularity, age, or source branding proves the skill is good.
+`skillz` uses passive companion metadata to help an external host agent understand a skill without pretending that popularity, age, source branding, or inclusion proves the skill is good.
 
-The contract deliberately separates **skill-specific facts**, **exact-version quality evidence**, and **source-level context** so agents can reason from evidence without copying volatile repository metrics into hundreds of files.
+The repository does not compute or refresh this metadata by itself. An external reviewing agent reads source evidence, makes the judgment, and records the result. The contract deliberately separates **skill-specific facts**, **exact-version quality evidence**, and **source-level context** so agents can reason from evidence without duplicating volatile repository metrics across hundreds of files.
 
 ## 1. Per-skill provenance companion
 
@@ -14,7 +14,7 @@ registry/skills/<source-id>/<skill-name>.yaml
 
 This file answers: **what is this skill, where did it come from, what does it depend on, and what is it useful for?**
 
-### Required when establishable
+### Expected fields when establishable
 
 - `schema_version`
 - `skill_name`
@@ -32,7 +32,7 @@ This file answers: **what is this skill, where did it come from, what does it de
 - `last_checked_at`
 - `availability`
 - `local_path` when vendored/imported
-- `permission_tier`
+- `permission_tier` or equivalent authority context
 - `portability`
 - `review_status`
 - `dependency_status`
@@ -42,13 +42,13 @@ This file answers: **what is this skill, where did it come from, what does it de
 
 ### Optional evidence-backed enrichment
 
-Use these fields only when the evidence can be established without guessing:
+Use these only when the evidence can be established without guessing:
 
 - `upstream_first_seen_at`: earliest known upstream commit that introduced the canonical skill or materially equivalent skill content.
-- `usage_evidence`: explicit evidence that the skill itself is used in practice, with source and observation date. Repository age or stars alone do not establish usage duration.
-- `reception_evidence`: skill-specific public feedback, references, adoption notes, or maintained examples when directly attributable to this skill.
+- `usage_evidence`: explicit evidence that the skill itself is used in practice, with source and observation date.
+- `reception_evidence`: skill-specific public feedback, references, adoption notes, or maintained examples directly attributable to this skill.
 
-Do not infer `upstream_first_seen_at`, usage duration, or reception from repository creation date.
+Do not infer skill age, usage duration, or reception from repository creation date, stars, forks, or source reputation.
 
 ## 2. Exact-version verification companion
 
@@ -62,15 +62,17 @@ This file answers: **what quality state applies to this exact canonical skill ve
 
 It owns:
 
-- canonical content fingerprint and fingerprint algorithm;
+- canonical content identity/fingerprint and the method used to establish it;
 - characterization and verification timestamps;
 - `verification_status` and its basis;
 - `validation_status` and behavioral evidence references;
 - structured review/rubric result where applicable;
 - controlled tags;
-- review notes.
+- review notes and material limitations.
 
-Verification metadata must remain separate from source popularity and branding. A source can be famous while an individual skill is unsafe, stale, redundant, or a poor fit.
+Verification metadata must remain separate from source popularity and branding. A source can be famous while an individual skill is unsafe, stale, redundant, dependency-broken, or simply a poor fit.
+
+An exact Git blob SHA is preferred when the source host exposes one reliably. Another content fingerprint may be recorded when needed, but the reviewing agent must identify how it was established. If exact identity cannot be established, do not invent it.
 
 ## 3. Source-level context snapshot
 
@@ -86,41 +88,50 @@ Permitted source signals include:
 
 - repository creation date;
 - most recent repository push/activity timestamp;
-- GitHub stars;
-- GitHub forks;
-- GitHub subscribers/watchers when the API exposes a meaningful count;
+- stars;
+- forks;
+- subscribers/watchers when the source exposes a meaningful count;
 - archived/disabled state;
+- official/community status;
 - other objective adoption or maintenance signals when the source and observation date are recorded.
 
-Every snapshot must include `observed_at` and the evidence URL/API surface used. Metrics are historical observations, not timeless facts.
+Every snapshot must include `observed_at` and the evidence surface used. Metrics are historical observations, not timeless facts.
 
 ## 4. How an agent should use the metadata
 
-When deciding whether to `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, extract from, reject, or `CREATE`, reason in this order:
+When deciding whether to `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, reject, use a checklist/helper, keep behavior dynamic, or make `NO CHANGE`, reason in this order:
 
 1. **User fit.** Does the skill actually match the user's durable workflow, authority model, terminology, constraints, and definition of done?
-2. **Exact-version quality.** Is the fingerprint current, and is the skill `trusted-baseline`, `verified`, `validated`, `unverified`, `stale`, `rejected`, or `retired`?
+2. **Exact-version quality.** Is the exact content identity current, and what decisive quality state applies?
 3. **Operational fit.** Are dependencies intact? Is the authority level appropriate? Is the skill portable to the current host?
-4. **Freshness.** When did the skill itself last materially change? Has its fingerprint or dependency context drifted?
+4. **Freshness.** When did the skill itself last materially change? Has its content or dependency context drifted?
 5. **Provenance and source context.** Who maintains it, under what license, and what objective source-level adoption/maintenance signals exist?
 
-Source popularity may increase confidence that a source is visible, maintained, or broadly examined. It must **never** override poor user fit, an unsafe authority model, stale exact-version evidence, missing dependencies, or an unverified skill.
+Source popularity may increase confidence that a source is visible, maintained, or broadly examined. It must **never** override poor user fit, unsafe authority, stale exact-version evidence, missing dependencies, licensing restrictions, or an unverified/rejected skill.
 
-A large star count is not a quality state. An official source is not an individual-skill verification. A new or low-star source is not automatically low quality.
+A large star count is not a quality state. An official source is not individual-skill verification. A new or low-star source is not automatically low quality.
 
-## 5. Refresh rules
+## 5. Update rules
 
-- Refresh per-skill provenance when the skill is re-reviewed, its canonical content changes, or its dependency/licensing context changes.
-- Refresh exact-version verification whenever the canonical fingerprint changes before trusting prior quality state.
-- Refresh source-level signals when a source is re-reviewed or when a material curation decision depends on current source reputation/activity. Routine hourly refresh of popularity metrics is unnecessary.
-- Preserve prior observations through Git history rather than pretending volatile metrics never changed.
+There is no repository-owned metadata refresh process.
+
+When an external agent intentionally reviews a skill or source:
+
+- update per-skill provenance when the skill is re-reviewed, its canonical content changes, or its dependency/licensing context changes;
+- update exact-version verification when the canonical content identity changes before trusting prior quality state;
+- update source-level signals when a source is re-reviewed or when a material curation decision benefits from current reputation/activity context;
+- preserve prior observations through Git history rather than pretending volatile facts never changed;
+- leave unavailable facts unknown instead of filling them with estimates.
+
+Routine hourly refresh of popularity metrics is unnecessary. The hourly curation task may improve records, but the task is external to `skillz`; the repository itself remains passive.
 
 ## 6. Completeness rule
 
 A characterized third-party skill is companion-complete when:
 
-1. its provenance companion contains all required fields that can be established from the source;
+1. its provenance companion contains the material facts that can be established from the source;
 2. unknown or unavailable facts are omitted or explicitly marked unknown rather than guessed;
-3. its exact-version verification companion exists and binds to the canonical content fingerprint;
+3. its exact-version verification companion exists and binds the quality decision to an established content identity;
 4. source-level context, if used in reasoning, is available through `registry/source-signals.yaml` with an observation timestamp;
-5. the reviewing agent can distinguish skill quality from source reputation without ambiguity.
+5. the reviewing agent can distinguish individual skill quality from source reputation without ambiguity;
+6. the records are understandable without executing repository-owned code.
