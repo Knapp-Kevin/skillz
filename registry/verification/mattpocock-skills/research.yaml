@@ -15,6 +15,6 @@ tags:
   use_case: [research]
   lifecycle: [discovery]
   characteristic: [source-driven, evidence-first, synthesis]
-  authority: [read-only]
-  portability: [high]
+  authority: [mutating]
+  portability: [low]
 notes: "Rubric: trigger precision 2, procedural clarity 1, authority and safety 1, failure handling 0, evidence discipline 2, dependency coherence 1, portability honesty 0, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. Primary-source and per-claim citation requirements are sound, but the unchanged skill hard-requires a background-agent capability with no fallback, immediately writes results into the repository, defines no failure/recovery path, and does not disclose its host dependency despite being presented as a reusable research skill. This is incompatible with skillz's cross-agent portability contract. Retain as reference only or adapt before reuse."
