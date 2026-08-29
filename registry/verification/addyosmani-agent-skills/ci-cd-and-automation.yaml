@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ci-cd-and-automation
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/ci-cd-and-automation/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 118456fcb10225c030769a4fee7815b9c536b0ce
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [deployment, repository-maintenance, testing]
+  lifecycle: [implementation, verification, release]
+  characteristic: [test-gated, risk-aware, production-oriented]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rejected for unchanged reuse at the pinned version. The skill contains valuable quality-gate, rollback, feature-flag, staged-rollout, and CI-optimization patterns, but presents several preferences as universal requirements: no gate may be skipped, every PR/push-to-main follows the illustrated gate set, npm audit and a sub-10-minute pipeline are treated as completion criteria, and examples assume GitHub Actions plus a Node/npm toolchain with optional Vercel deployment. Those assumptions can create unnecessary cost or inappropriate mutation in repositories with different risk, budget, platform, or release policies. Retain as adaptation/reference evidence; tailor gates and external actions to the host repository before reuse. Exact pinned fingerprint confirmed. Behavioral validation remains pending and is not required for this static rejection."
