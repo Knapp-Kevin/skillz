@@ -112,9 +112,9 @@ sources:
     source_role: vendored-corpus
     resolved_path: vendor/cline-skills
     inclusion: vendored
-    license: Apache-2.0
+    license: MIXED
     pinned_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
-    rationale: Cline's first-party skill collection, useful for reviewer orchestration, skill authoring, search, frontend, and specialized workflow patterns.
+    rationale: Cline's first-party skill collection, useful for reviewer orchestration, skill authoring, search, frontend, and specialized workflow patterns. The repository root is Apache-2.0, but individual skills may declare different terms, so per-skill licensing controls.
 
   - id: cloudflare-skills
     name: Cloudflare Skills
