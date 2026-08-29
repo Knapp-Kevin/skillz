@@ -4,6 +4,10 @@ You do not need to understand skills, write code, or browse hundreds of files.
 
 **Give your AI the GitHub link to this repository. That is enough to start.**
 
+A local clone, shell, Git executable, Node/Bun runtime, initialized submodules, or GitHub Actions are **not required for normal bootstrap or refinement**. If the current host can read this repository through a connector, API, browser, or equivalent tool, use the connector-native path in [`AGENT_START_HERE.md`](AGENT_START_HERE.md) and continue.
+
+Local execution is useful for repository-maintainer duties such as deterministic catalog generation and alpha preflight. It is not a prerequisite for helping a user.
+
 There are two normal ways to arrive here.
 
 ## First visit: build a fitted skill set
@@ -12,20 +16,20 @@ If the user supplied this repository or its URL without a different task and doe
 
 Your job is to build the smallest skill system that best fits this user.
 
-Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) for the detailed procedure and [`AGENTS.md`](AGENTS.md) for the repository contract.
+Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md), [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md), and [`AGENTS.md`](AGENTS.md).
 
 Start with relevant evidence the host already exposes: interaction history, persistent memory, the current conversation, recurring corrections, workspace/project instructions, repeated tool combinations, existing skills, and definitions of "done." Do not make the user repeat accessible information. Do not invent inaccessible history or sweep unrelated private connectors.
 
 Then:
 
 1. Identify durable working methods and latent skills.
-2. Compare those needs against the complete indexed library: local/imported skills plus approved indexed vendor skills.
+2. Compare those needs against the complete library: local/imported skills plus approved indexed vendor skills.
 3. For third-party candidates, inspect provenance, controlled tags, authority, portability, freshness, fingerprint, and verification status.
 4. Prefer unchanged reuse only when the exact characterized version is eligible and genuinely fits.
 5. Adapt, supplement, or compose when that produces a better fit.
 6. Create a new custom skill whenever the user's real workflow is not adequately represented.
 7. Evaluate and adversarially review the fitted system.
-8. Install it when the host supports installation and authority exists. Otherwise package it and provide simple installation steps.
+8. Install it when the host supports installation and authority exists. Otherwise package it or provide the shortest correct portable handoff.
 
 ## Returning visit: review, refine, and improve
 
@@ -33,32 +37,47 @@ If the user already has skills from `skillz`, a prior bootstrap, or another comp
 
 Treat the current set as evidence about the user's working system.
 
-1. Inventory the current skills, their intended jobs, installation state, and any available fingerprints or versions.
+1. Inventory the current skills, their intended jobs, installation state, and available fingerprints or versions.
 2. Compare the current set with relevant recurring behavior and the user's present definitions of done.
 3. Detect stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
 4. Check whether any referenced upstream skill changed since the recorded fingerprint or freshness check.
 5. Search the current library for materially better fits or useful new patterns.
 6. Preserve custom behavior that still fits instead of resetting it to a generic upstream version.
-7. Refine, replace, supplement, compose, or retire only where the evidence supports change.
-8. Re-run appropriate structured verification and behavioral evaluation for anything materially changed.
+7. Refine, replace, supplement, compose, or retire only where evidence supports change.
+8. Re-run appropriate structured verification and behavioral evaluation for materially changed behavior.
 9. Update installation state and the portable skill profile when applicable.
-10. Return the smallest improved set, plus a concise change log explaining what changed and why.
+10. Return the smallest improved set plus a concise change log explaining what changed and why.
 
 A returning review should be capable of concluding **no change needed**. More skills are not inherently better.
 
 ## Governed candidate shortlisting
 
-When you have local execution access to a fully materialized copy of this repository, use the generated index and selector instead of manually eyeballing hundreds of third-party skills.
+Use the strongest lookup path the host supports.
+
+### Local execution path
+
+When you have local execution access to a fully materialized copy of this repository:
 
 1. Regenerate the catalog with `node scripts/build-index.ts` when `index.json` is stale or older than schema version 2.
 2. Translate the user's needs into controlled tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml).
-3. Run [`engine/skills/skill-bootstrap/scripts/select-candidates.ts`](engine/skills/skill-bootstrap/scripts/select-candidates.ts) with the relevant tag filters.
-4. By default the selector only returns exact-version candidates eligible for trusted unchanged consideration.
-5. Use `--include-unverified` only when you intentionally want unverified material as **design evidence**, not as trusted installation candidates.
+3. Run [`engine/skills/skill-bootstrap/scripts/select-candidates.ts`](engine/skills/skill-bootstrap/scripts/select-candidates.ts) with relevant tag filters.
+4. By default the selector returns exact-version candidates eligible for trusted unchanged consideration.
+5. Use `--include-unverified` only when you intentionally want unverified material as **design evidence**.
 6. Never bypass `stale`, `rejected`, or `retired` exclusions merely to produce a result.
-7. Treat the shortlist as evidence. The final decision must still consider actual user fit and may be `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE` rather than unchanged reuse.
+7. Treat the shortlist as evidence. Final user fit still determines `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE`.
 
-If the selector reports that the generated index predates governed metadata, the correct response is to regenerate the index in an environment with the pinned source corpora materialized. Do not silently fall back to trusting filenames or source reputation.
+### Connector/API/web path
+
+When local execution is unavailable, **do not stop**.
+
+1. Use [`CURATED.md`](CURATED.md), local category pages, and `registry/verification/` to locate relevant characterized candidates.
+2. Read the verification companion for status, tags, source snapshot revision, and expected canonical content blob SHA.
+3. Read the provenance companion in `registry/skills/` to resolve the upstream repository and canonical source path.
+4. Fetch that upstream `SKILL.md` at the exact recorded snapshot revision through the connector/API/browser when possible.
+5. If the host exposes a Git blob/content SHA, compare it to `content_blob_sha` before calling the exact version fingerprint-matched.
+6. If exact identity cannot be established, lower confidence. Use the material as design evidence, adapt/create conservatively, or choose another candidate. Do not invent a match.
+
+A stale generated index is a maintainer concern, not a reason to abandon a user bootstrap when the relevant live records can be inspected directly.
 
 ## Browse by purpose
 
@@ -105,6 +124,8 @@ The goal is not maximum reuse or maximum skill count. The goal is the **smallest
 A bootstrap or returning refinement pass is not complete merely because Markdown exists.
 
 Finish with an explicit host-level state such as `INSTALLED + VERIFIED`, `READY TO UPLOAD`, `USER ACTION REQUIRED`, or a clearly explained compatibility blocker. See [`docs/installation-handoff.md`](docs/installation-handoff.md).
+
+A host that cannot write files may still produce a complete portable artifact or exact handoff. Do not convert "cannot install here" into "cannot use skillz here."
 
 ## What the human should receive
 

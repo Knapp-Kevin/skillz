@@ -2,7 +2,7 @@
 
 Status: **NOT LOCKED**
 
-Alpha is locked when `skillz` can reliably synthesize and later refine a fitted skill set for a user without confusing source reputation, availability, characterization, verification, behavioral evidence, or current user fit.
+Alpha is locked when `skillz` can reliably synthesize and later refine a fitted skill set for a user without confusing source reputation, availability, characterization, verification, behavioral evidence, current user fit, or host tooling capability.
 
 ## Required before alpha lock
 
@@ -18,7 +18,10 @@ Alpha is locked when `skillz` can reliably synthesize and later refine a fitted 
 - [x] Characterization taxonomy exists and covers engineering plus broader knowledge-work use cases.
 - [x] Verification records bind tags/status to exact skill content fingerprints.
 - [x] Offline drift detection can invalidate changed characterized skills.
-- [x] Bootstrap has a deterministic selector that consumes verification status and characterization tags directly.
+- [x] Bootstrap has a deterministic selector that consumes verification status and characterization tags directly when local execution is available.
+- [x] Connector/API/web hosts have a first-class zero-local-runtime path that can inspect registry/provenance records and exact pinned upstream skill content directly.
+- [x] Connector-native portability smoke passed in a constrained ChatGPT host: `diagnosing-bugs` verification/provenance were resolved and the exact pinned upstream Git blob SHA matched `061c25a524acaa93d4534e9e08a793c0a5fe45fd` without local Git, Node, submodules, or shell network access.
+- [x] Normal agent use explicitly does not require maintainer-grade local runtime; local Node/Bun/Git requirements are scoped to deterministic repository-maintenance proof.
 - [x] Default governed selection excludes unverified unchanged reuse and blocks stale/rejected/retired material; explicit unverified review is design-evidence only.
 - [x] Recursive local-skill discovery is integrated into index, audit, risk-audit, and sync tooling before category folders become canonical skill paths.
 - [x] Alpha preflight has an explicit vendored-source materialization gate that binds every vendored registry source to a clean initialized submodule at exactly the superproject gitlink SHA.
@@ -26,11 +29,11 @@ Alpha is locked when `skillz` can reliably synthesize and later refine a fitted 
 - [x] Catalog proof rejects semantically incoherent schema-v2 output, including zero-skill vendored sources, source/count mismatch, impossible aggregate counts, duplicate source identities, and malformed catalog shapes.
 - [x] The original public v1 behavioral fixture set is explicitly retired because its expected decisions and scoring keys were committed publicly and remain recoverable from Git history.
 - [x] The rotated v2 public treatment fixture contains only synthetic user context, uses neutral scenario IDs, and mechanically forbids evaluator-only answer-key fields.
-- [x] A private evaluator-bundle verifier binds frozen evaluator criteria to the exact public v2 fixture by set ID, SHA-256, and complete scenario coverage without committing the rubric.
+- [x] A private evaluator-bundle verifier binds frozen evaluator criteria to the exact public v2 fixture by set ID, SHA-256, complete scenario coverage, and an evaluator-only location outside the treatment repository.
 - [ ] The exact vendored-source materialization gate has passed on the current commit in a fully materialized checkout.
 - [ ] Generated `INDEX.md` / `index.json` have been refreshed from the current fully materialized corpora and expose verification status, tags, source role, human category, and exact counts.
 - [ ] The refreshed generated index is proven semantically coherent and deterministic/idempotent against the current vendored sources.
-- [ ] The private v2 evaluator bundle has been verified against the exact committed public fixture before treatment execution.
+- [ ] The private v2 evaluator bundle has been verified against the exact committed public fixture from outside the treatment repository before treatment execution.
 - [ ] Three isolated v2 first-visit runs collectively demonstrate eligible reuse/minimal adaptation, refusal of unsafe or unproven unchanged reuse, and custom creation when reuse would distort the workflow.
 - [ ] Two isolated v2 returning-user runs collectively demonstrate minimal justified refinement and a correct no-change outcome.
 - [ ] Every treatment run is completed before its matching private evaluator criteria are opened.
@@ -44,6 +47,8 @@ Alpha is locked when `skillz` can reliably synthesize and later refine a fitted 
 The retired v1 scenario identifiers and their historical results, if any, cannot satisfy the behavioral alpha gate. Their evaluator mappings were public and therefore are not blind evidence.
 
 A v2 run is also invalid if the treatment agent receives the private evaluator bundle, evaluator-only criteria, candidate hints, or prior scored treatment output before its own output is frozen.
+
+Failure to run maintainer-only Node/Git tooling in a constrained host is **not** evidence that normal agent use failed. Conversely, a connector-native user success does not substitute for the separate repository-wide deterministic catalog/preflight proof.
 
 ## After alpha lock
 
