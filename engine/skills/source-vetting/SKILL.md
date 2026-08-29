@@ -1,63 +1,72 @@
 ---
 name: source-vetting
 description: >-
-  Evaluate the trustworthiness of a repo, vendor, dataset, or skill before
-  adoption: provenance, activity authenticity, license, security posture,
-  and community standing, mapped to a registry verdict. Use when the user
-  asks "vet this repo", "can we trust this", "should we adopt X", "check
-  this dependency before we use it", or a pulse skill surfaces a candidate.
+  Evaluate whether an external skill source is worth tracking as prior art or
+  discovery material by reviewing provenance, licensing, maintenance signals,
+  package structure, safety concerns, and differentiated value. Use for curation.
 metadata:
   author: frostwulf.zo.computer
   category: Research
   display-name: Source Vetting
   emoji: "🛡️"
-  version: 1.1.1
+  version: 2.0.0
+  repo-bound: true
 ---
 
 # Source Vetting
 
-A trust evaluation that treats every candidate as an untrusted dependency until reviewed, per `docs/evaluation-framework.md`. The output is a per-dimension report plus a ready-to-paste registry entry, so vetting ends in a recorded decision rather than a vague impression.
+**Repository-curation procedure only.**
 
-## Execution Flow
+A source-level decision answers whether an upstream repository is useful enough to track. It does **not** verify every skill inside that source and does not grant blanket unchanged-reuse eligibility.
 
-1. **Provenance.** Who maintains it: named individuals or an org, their track record on prior projects, backing (vendor, foundation, solo). Search for the maintainers beyond the repo itself — talks, other repos, employer.
-2. **Activity authenticity.** Distinguish real development from star-farming: commit patterns (steady vs a bulk import plus README churn), issue and PR responsiveness, whether contributors beyond the owner exist, release cadence vs announcement cadence. Sudden star spikes with thin commit history are a red flag.
-3. **License and terms.** Identify the license and any terms-of-service constraints; flag copyleft implications, dataset usage restrictions, and license changes in the project's history.
-4. **Security posture.** What it does at install and runtime: install scripts, network calls, credential or token handling, destructive file operations, dependency tree risk. For a skill, inspect bundled scripts and resources per the security review checklist in `docs/evaluation-framework.md`.
-5. **Community standing.** Independent adoption signals: who depends on it, practitioner reports outside the project's own channels, known incidents or CVEs.
-6. **Verdict.** Map findings to a registry status (`adopted` / `sandbox` / `track` / `rejected` / `quarantined`) and a permission tier (`read-only` through `destructive`) as defined in `docs/evaluation-framework.md`. Anything that mutates external state without an approval gate is at best quarantined; an unsafe security posture forces quarantine or rejection regardless of other strengths.
+## Procedure
 
-## Output Format
+1. Establish source identity:
+   - canonical repository or publisher;
+   - maintainer/organization;
+   - current revision when relevant;
+   - root and per-skill licensing model;
+   - whether the source is authoritative, official ecosystem material, community-maintained, aggregated, or normative specification material.
+2. Inspect enough of the repository structure to understand:
+   - what kinds of skills/components it contains;
+   - whether skill packages include scripts, references, templates, fixtures, dependencies, or other supporting material;
+   - whether provenance and licensing are clear at the package level;
+   - whether the corpus is curated, generated, mirrored, aggregated, or mixed.
+3. Review maintenance/authenticity signals when they materially affect confidence:
+   - meaningful commit/release activity;
+   - named maintainers or accountable organization;
+   - issue/PR quality where useful;
+   - suspicious bulk imports, mirrors, or provenance gaps.
+4. Review security/authority characteristics of representative material without executing candidate code merely to vet the source.
+5. Compare the source with what `skillz` already tracks. Favor differentiated value over another large pile of generic prompts wearing a new logo.
+6. Decide the source role:
+   - `tracked-corpus` for useful upstream prior art worth revisiting;
+   - `normative-spec` for standards/specification authority;
+   - `dynamic-discovery` for broad fast-moving discovery surfaces;
+   - `reference-only` when useful context does not justify normal individual intake;
+   - `do-not-track` when value, provenance, licensing, or quality is insufficient.
+7. If tracking is justified, record canonical source identity, role, licensing context, rationale, and a pinned revision when one has actually been established.
+8. Identify only a small number of individual skills/components worth separate semantic review. Do not bulk-promote the corpus.
 
-```
-# Source Vetting — [candidate] ([date])
-## Provenance
-## Activity authenticity
-## License & terms
-## Security posture
-## Community standing
-## Verdict: [status] / [permission_tier] (confidence)
-## Recommended registry entry (YAML, ready to paste into registry/candidates.yaml)
-- id: [kebab-case]
-  name: [display name]
-  source: [URL]
-  category: [...]
-  status: [adopted|sandbox|track|rejected|quarantined]
-  permission_tier: [read-only|plan-only|generate|staging-write|production-write|identity|cost|destructive]
-  rationale: [one line]
+## Output
+
+```text
+Source: <canonical source>
+Maintainer/publisher: <identity>
+Source class: <official / official-ecosystem / community-vetted / aggregated / normative / other>
+License model: <root + per-skill caveats>
+Revision: <exact revision if established>
+Differentiated value: <what this source adds>
+Material risks/ambiguities: <only meaningful findings>
+Recommended source role: tracked-corpus | normative-spec | dynamic-discovery | reference-only | do-not-track
+Individual follow-up candidates: <small selective list or none>
 ```
 
 ## Negative rules
 
-These override the dimension checklist. Confidence must trace to signals actually gathered.
-
-- **Never reproduce secret-shaped strings** found while inspecting a candidate (tokens, keys, credentials in its code, issues, or CI logs) — type + short prefix only; a leaked credential in a candidate is a security-posture finding, and flagging probable exposure is part of the verdict.
-- **Never simulate a missing signal.** Absent activity data, unverifiable provenance, or an unreadable license lowers confidence — it is never estimated, assumed, or filled from memory.
-- **Never fabricate stars, downloads, or dates** — every figure cites where it was read, with the read date.
-- **An empty dimension stays visibly empty** in the output; the verdict line must acknowledge it.
-
-## Notes
-
-- Read-only: this skill investigates and recommends; it never clones-and-runs candidate code, installs anything, or writes the registry entry itself — a human pastes it after review.
-- Check the redundancy guard before recommending adoption: Qor-logic, Claude Code built-ins, vendored official repos, and this repo's roadmap, in that order.
-- "No evidence found" on a dimension is a finding that lowers confidence, not a pass.
+- Never equate source admission with individual skill verification.
+- Never require a local clone, submodule, vendored copy, repository script, CI job, or runtime execution.
+- Never discard or penalize a skill package merely because it legitimately contains its own scripts or other supporting components; evaluate those components as part of the package when the individual skill is reviewed.
+- Never fabricate stars, dates, licenses, revisions, maintainer identity, or security evidence.
+- Never bulk-ingest a repository simply because it is official, popular, large, or easy to enumerate.
+- If a signal cannot be established, record the uncertainty instead of inventing confidence.
