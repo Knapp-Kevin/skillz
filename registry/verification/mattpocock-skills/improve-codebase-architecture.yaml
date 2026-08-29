@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: improve-codebase-architecture
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a578dd0a34ad0a8886abe7e7642b100106ba86d6
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [architecture, refactoring, ux]
+  lifecycle: [design, maintenance]
+  characteristic: [maintainability, modularity, visual-verification, orchestration, human-review]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong YAGNI scoping, hot-spot exploration, deletion-test discipline, explicit recommendation strengths, ADR awareness, and a user choice gate before interface design. Local doc updates are disclosed but can occur inline after selection; the HTML/CDN/browser/subagent and suite-skill assumptions materially reduce portability. Exact source dependencies are present. Behavioral validation remains pending."
