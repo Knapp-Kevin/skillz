@@ -11,33 +11,29 @@ metadata:
   category: Productivity
   display-name: Finance Review
   emoji: "💰"
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Finance Review
 
-Turn a folder of operator-provided statement exports (CSV/XLSX) into a monthly digest a human can act on: where money went by category, how that compares to last month, anomalies worth a second look with the exact rows that triggered them, and known charges coming up. This skill never touches an account — it only reads files the operator has already exported and dropped.
+Turn operator-provided statement exports (CSV/XLSX) into a monthly digest a human can act on: where money went by category, how that compares with the prior month, anomalies worth a second look with exact evidence rows, and known charges likely to recur. This skill never touches an account. It reads only files the operator deliberately supplies for this review.
 
 ## Execution Flow
 
-1. **Inventory the provided files.** List the CSV/XLSX files in the folder the operator names. If files are missing for the period (an account's export absent, a month gap), ask for them — never fetch, connect to, or log into anything to fill the gap.
-2. **Parse and normalize.** Read each export; unify date, merchant, and amount columns. For heavy lifting (large XLSX workbooks, multi-sheet exports, formula cells), use the vendored xlsx skill's mechanics rather than hand-parsing.
-3. **Categorize.** Assign each transaction a category. Reuse the prior digest's category mapping when one exists; put genuinely ambiguous merchants in an "uncategorized" bucket and ask, rather than guessing.
-4. **Compare to prior month.** Compute per-category totals and deltas vs the previous digest or previous month's rows. Call out the two or three moves that matter, not every fluctuation.
-5. **Hunt anomalies.** Flag new merchants never seen before, likely duplicate charges (same merchant, same amount, close dates), and size outliers vs that merchant's history. Every flag must cite the evidence row(s) verbatim.
-6. **Project known charges.** From recurring patterns in the data, list charges expected in the coming month with expected amounts.
-7. **Present** in the Output Format below, ending with questions only the operator can answer.
-
-## Scheduling
-
-- **Claude Code:** create a monthly `/schedule` routine that reminds the operator to drop fresh exports into the folder, then runs this skill on them.
-- The reminder matters: the skill can only be as current as the exports it is handed.
+1. **Inventory the provided files.** List the CSV/XLSX files in the folder or artifact set the operator identifies. If files are missing for the period, report the gap and ask for the missing export. Never connect to an account or log in somewhere to fill it.
+2. **Resolve a safe parsing capability.** Use the active host's available spreadsheet/file tools when they can read the supplied format without mutating the source. A local CSV/XLSX parser is also acceptable when already available. Do not route automatically to a vendored spreadsheet skill merely because one exists in the reference corpus. If the host cannot safely parse a required file, report that file as `UNREADABLE IN THIS HOST` and do not invent its rows.
+3. **Parse and normalize.** Unify date, merchant, and amount fields while retaining the original row identity/source file so every downstream claim can trace back to source data.
+4. **Categorize.** Reuse the prior digest's category mapping when one exists. Put genuinely ambiguous merchants in `uncategorized` and ask rather than guessing.
+5. **Compare with the prior month.** Compute per-category totals and deltas from the available rows. Call out the two or three moves that matter, not every fluctuation.
+6. **Hunt anomalies.** Flag new merchants, likely duplicate charges (same merchant/amount near each other), and size outliers versus that merchant's observed history. Every flag cites the source row(s).
+7. **Project known charges conservatively.** From recurring patterns in the supplied data, list likely charges in the coming month. Label amount/date as an estimate unless the data establishes a fixed schedule.
+8. **Present** in the Output Format below, ending with questions only the operator can answer.
 
 ## Output Format
 
-```
+```text
 # Finance Review — [month]
-**Files reviewed:** [list] · **Missing:** [list or none]
+**Files reviewed:** [list] · **Missing/unreadable:** [list or none]
 
 ## Summary
 [3-5 sentences: total in/out, biggest category moves, headline anomaly.]
@@ -47,17 +43,25 @@ Turn a folder of operator-provided statement exports (CSV/XLSX) into a monthly d
 |----------|-----------:|------------:|------:|------|
 
 ## Anomalies
-- [flag type: new merchant / duplicate / outlier] — [evidence row(s), verbatim]
+- [new merchant / duplicate / outlier] — [source file + exact row evidence]
 
 ## Upcoming known charges
-- [merchant] ~[amount] around [date]
+- [merchant] ~[amount] around [date] — [evidence / confidence]
 
 ## Questions for you
 - [ambiguous merchant / unexplained anomaly needing operator input]
 ```
 
+## Negative rules
+
+- Read-only, absolutely: never initiate transactions, connect to financial accounts, or fetch statements from an account.
+- Never invent or interpolate missing statement rows to make totals look complete.
+- An anomalies claim without exact source-row evidence is not an anomaly finding.
+- Do not expose full account numbers or credential-like values found in exports; minimize or redact sensitive identifiers in the report.
+- A recurring-pattern projection is an estimate unless a supplied statement/source establishes the schedule.
+
 ## Notes
 
-- Read-only, absolutely: NEVER initiates transactions, connects to accounts, or fetches statements. All data arrives as files the operator provides.
-- Anomalies without evidence rows are rumors — every flag quotes the row that triggered it.
-- Sending the digest anywhere (email, Slack) is draft-only: prepare and show it, send nothing without explicit approval.
+- File-format support is a host capability, not a reason to import an unrelated vendor workflow.
+- Sending the digest anywhere is a separate action and requires the user's explicit authorization.
+- Behavioral validation remains separate from this skill's static safety/quality contract.
