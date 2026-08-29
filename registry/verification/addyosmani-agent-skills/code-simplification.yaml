@@ -6,14 +6,15 @@ local_path: vendor/addyosmani-agent-skills/skills/code-simplification/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 239b2848489511de30d9e63b0bd183adc4b01347
 characterized_at: 2026-08-28
-last_verified_at: not-run
-verification_status: unverified
-verification_basis: pending-structured-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 18/20
 tags:
   use_case: [refactoring]
   lifecycle: [maintenance]
   characteristic: [behavior-preserving, incremental]
   authority: [mutating]
   portability: [high]
-notes: Characterized for selection research only. Must pass the non-Matt verification rubric before trusted direct reuse.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong behavior-preservation rule, project-convention check, Chesterton's Fence, scope discipline, incremental testing, and explicit separation of refactors from feature changes. Heuristic line-count thresholds are advisory rather than proof. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
