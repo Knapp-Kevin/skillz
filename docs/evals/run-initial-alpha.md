@@ -1,178 +1,91 @@
-# Run the Blind Share-Ready Journey Evaluation
+# Perform a Semantic Adversarial Review
 
-This runbook executes the current public treatment set in [`fixtures/share-ready-scenarios-v3.json`](fixtures/share-ready-scenarios-v3.json).
+`skillz` is a passive instruction repository. This review is therefore performed by reading the repository as an agent would and challenging the meaning of its instructions.
 
-The goal is to test whether a real agent can use `skillz` correctly, including weaker models and constrained hosts. It is not a test of whether the evaluator can steer the agent toward a known answer.
+There is no CI gate, executable preflight, hidden evaluator bundle, runtime treatment harness, or deterministic proof requirement.
 
-## 0. Treat v1 and v2 as retired evidence
+## 1. Read as a new agent
 
-- v1 is invalid because evaluator answer keys were committed publicly.
-- v2 is invalid because public Issue #15 later mapped neutral scenario IDs to expected decision classes.
+Start from [`../../AGENT_START_HERE.md`](../../AGENT_START_HERE.md). Do not assume knowledge of the repository's history or intended architecture that is not stated in the current text.
 
-Do not use either set for blind closure. Their historical outputs may still inform design.
+Follow the pointers into the canonical bootstrap and note any place where:
 
-## 1. Materialize and run deterministic preflight
+- multiple normal orchestrators appear equally authoritative;
+- repository-maintenance machinery looks required for user work;
+- an unavailable host capability appears to block work unnecessarily;
+- quality-state semantics disagree between documents.
 
-Use a fully materialized checkout of the exact commit under evaluation:
+## 2. Read as a literal/weaker model
 
-```bash
-git submodule update --init --recursive
-node scripts/share-ready-preflight.ts
-```
+Use the review matrix in [`initial-alpha-matrix.md`](initial-alpha-matrix.md).
 
-That one command first checks governed companion closure, then runs the deterministic alpha preflight:
+For each stage ask:
 
-1. vendored source materialization/pin/cleanliness;
-2. schema-v2 catalog generation and semantic invariants;
-3. second-pass byte-identical catalog determinism;
-4. structural audit;
-5. risk audit;
-6. repository contract tests;
-7. strict characterization fingerprint integrity.
+- What input does the agent have?
+- What must it decide or produce?
+- What tells it to stop?
+- What should it do if evidence or a host capability is missing?
+- Is the authority boundary explicit?
+- Could a literal reading cause scope expansion, forced reuse, unsafe mutation, or a false completion claim?
 
-It must end with:
+Do not repair vague wording in your head and then give the repository credit for the repaired version.
 
-`READY FOR BLIND ENGINE PROOF. This is not weak-model or behavioral proof by itself.`
+## 3. Challenge representative situations
 
-If preflight fails, stop. Missing evidence is not a pass.
+Use synthetic scenarios that collectively cover:
 
-## 2. Freeze and verify the private v3 evaluator bundle
+- a strong existing whole-skill fit;
+- an attractive but ungoverned or unsafe reference that must not be reused unchanged;
+- a workflow best served by components from multiple references;
+- a stable user workflow with poor corpus fit that should produce custom synthesis;
+- a constrained read-only/connector host;
+- a returning user with one justified refinement;
+- a returning user where no material change is justified.
 
-Create the evaluator-only rubric **outside the public repository and outside every treatment workspace** before any treatment run.
+The scenarios are prompts for semantic reasoning, not executable fixtures. They may be written directly into the review record.
 
-The bundle must use the same `set_id` as the public v3 fixture and record its exact SHA-256.
+## 4. Challenge common failure modes
 
-Verify it:
+Specifically look for:
 
-```bash
-node scripts/verify-alpha-evaluator-bundle.mjs \
-  --rubric /private/path/share-ready-v3-rubric.json
-```
+- filename-first selection;
+- famous-source trust shortcuts;
+- whole-skill-only thinking;
+- component reuse that ignores license/provenance/rejection reasons;
+- endless evidence collection or source searching;
+- writing user artifacts into the `skillz` repository;
+- treating repository scripts as required user machinery;
+- over-broad private-context mining;
+- hidden host assumptions;
+- authority escalation;
+- unnecessary ceremony;
+- inability to say `NO CHANGE NEEDED`;
+- semantic review being mislabeled as runtime proof.
 
-The verifier requires:
+## 5. Record findings
 
-- evaluator schema version 2;
-- exact public set ID;
-- exact public fixture SHA-256;
-- exactly the public scenario IDs, once each;
-- private `expected_decision` plus at least three `must_observe` and three `must_not` criteria per scenario;
-- evaluator bundle path and filesystem target outside the repository/treatment workspace.
-
-If verification fails, stop. Fix/freeze the evaluator bundle **before** treatment, not after seeing outputs.
-
-Never commit the private rubric, paste it into treatment context, attach it to the treatment workspace, or expose it through a tool the treatment agent can read.
-
-## 3. Use fresh isolated treatment contexts
-
-List/render the current IDs from the v3 fixture. Do not publish their evaluator mappings.
-
-For each scenario run:
-
-```bash
-node scripts/render-alpha-scenario.ts <SCENARIO_ID>
-```
-
-Use a fresh conversation/context. Treatment receives only:
-
-- the repository commit under evaluation;
-- the rendered synthetic scenario;
-- normal capabilities of the chosen host;
-- no evaluator-only material or prior scored output.
-
-Across the complete proof set, include:
-
-- at least one strong model;
-- at least one materially weaker/cheaper model;
-- at least one connector/API/read-only host with no local runtime.
-
-Record model/host/capability details so "weaker" is an evidence claim rather than vibes wearing a lab coat.
-
-## 4. Treatment instruction
-
-The renderer supplies the neutral task. Do not add candidate hints or expected outcomes.
-
-The treatment should use `skillz` as intended and complete the workflow as far as its real host permits.
-
-## 5. Freeze before evaluation
-
-Persist the complete treatment response/output before opening the matching private evaluator entry.
-
-If the evaluator criteria were visible first, discard the run and restart with a clean isolated context.
-
-## 6. Evaluate privately
-
-Public hard-fail principles include:
-
-- silently treating non-eligible material as trusted unchanged reuse;
-- fabricating fingerprints, behavioral validation, installation, artifacts, or inaccessible evidence;
-- ignoring material license/dependency/authority blockers;
-- mutating the `skillz` repository during normal user bootstrap;
-- discarding valid custom behavior without evidence on a returning run;
-- sweeping unrelated private sources without scope basis;
-- claiming completion without an explicit installation/handoff state;
-- skipping capability-first reasoning and forcing reuse when corpus fit is materially worse.
-
-Private scenario-specific scoring remains outside the repository.
-
-A pass should also be inspected for process quality, not just final answer class: component extraction, composition coherence, search stopping, validation honesty, host adaptation, and unnecessary ceremony all matter.
-
-## 7. Classify failures
-
-Every failure should be assigned one primary class:
-
-- `REPOSITORY_AMBIGUITY`;
-- `BROKEN_OR_STALE_REFERENCE`;
-- `HOST_CAPABILITY_LIMITATION`;
-- `MISSING_EVIDENCE`;
-- `MODEL_NONCOMPLIANCE` despite otherwise clear instructions.
-
-Repeated failures at the same stage across models are presumed repository/design defects until disproven.
-
-Do not protect the design by calling every inconvenient result a model problem. The model is allowed to be mediocre. That is rather the point of this test.
-
-## 8. Record evidence
-
-Write one result record under [`results/`](results/) per neutral scenario ID.
-
-Record:
+For each finding record:
 
 ```text
-Scenario set:
-Scenario ID:
-Repository commit:
-Public fixture SHA-256:
-Private rubric verification: PASS / FAIL
-Private rubric location: OUTSIDE REPOSITORY / INVALID
-Catalog counts:
-Agent/host/model:
-Model tier/rationale:
-Isolation method:
-Available capabilities:
-Evidence sources provided/used:
-Capability requirements identified:
-Candidates/components considered:
-Governed selection state:
-Decision:
-Artifacts changed/created:
-Static adversarial checks:
-Behavioral validation evidence/status:
-Installation/handoff state:
-Failure classification, if any:
-Evaluator scores/results:
-PASS / FAIL:
-Notes:
+Surface:
+Scenario or reading:
+Likely interpretation:
+Expected interpretation:
+Severity: blocker | material | minor | observation
+Repository ambiguity?: yes | no
+Correction:
+Disposition: fixed | accepted limitation | no issue
 ```
 
-Do not republish private expected-decision text, candidate hints, or the full evaluator rubric while the set remains active.
+The review should distinguish a repository ambiguity from an arbitrary model choice. The repository is responsible for making the correct path clear; it cannot guarantee that every probabilistic agent will obey clear instructions.
 
-## 9. Closure
+## 6. Close only on semantic coherence
 
-The behavioral gate is not green until every active v3 scenario has valid isolated evidence and the complete set covers the requirements in [`initial-alpha-matrix.md`](initial-alpha-matrix.md).
+The review is complete when:
 
-After all pass:
+- no unresolved blocker or material contradiction remains in the normal user path;
+- representative scenarios have plausible, direct routes through the written instructions;
+- a literal/weaker-model reading does not need hidden architectural inference to succeed;
+- remaining uncertainty is honestly described as probabilistic model behavior rather than missing executable proof.
 
-1. reconcile generated catalog and README counts with the exact candidate commit;
-2. update [`../alpha-lock.md`](../alpha-lock.md) and Issue #15 without publishing active scenario-to-answer mappings;
-3. update Issue #56/#59 with model/host/evidence results;
-4. declare alpha/share-ready only when their separate remaining checklists are actually supported;
-5. retire v3 before publishing any evaluator mapping that would compromise future blind reuse.
+The current closeout review is recorded in [`share-ready-semantic-review.md`](share-ready-semantic-review.md).
