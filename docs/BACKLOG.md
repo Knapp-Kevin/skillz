@@ -1,70 +1,56 @@
 # Backlog
 
-Current work is ordered by the initial-alpha finish line. Broad skill acquisition and refinement are intentionally post-alpha unless they expose a blocker in the first-visit or returning-user experience.
+Status: **CURATION MODE**
 
-## Active: required before initial alpha lock
+Core implementation is complete. There is no outstanding CI, runtime, preflight, treatment-harness, or deterministic proof task required before normal curation continues.
 
-| ID | Item | State | Completion evidence |
-|---|---|---|---|
-| A01 | Materialize all 12 pinned vendor submodules and run `node scripts/initial-alpha-preflight.ts` | BLOCKED BY CURRENT EXECUTION ENVIRONMENT | Clean exact source-state proof passes; schema-v2 semantic invariants pass; exact counts recorded; second catalog pass byte-identical; preflight ends `READY FOR JOURNEY EVALUATION` |
-| A02 | Verify the separately held private v2 evaluator bundle against the exact committed public treatment fixture | READY AFTER ISOLATION REPAIR MERGES | `verify-alpha-evaluator-bundle.mjs` passes set ID, public SHA-256, complete neutral scenario coverage, and frozen criteria structure |
-| A03 | Execute all three rotated v2 first-visit treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves eligible reuse/minimal adaptation, unsafe/unproven unchanged-reuse refusal, and custom creation; each treatment output frozen before private rubric entry is opened |
-| A04 | Execute both rotated v2 returning-user treatment scenarios in fresh contexts | READY AFTER A01-A02 | Collectively proves minimal justified refinement and a correct no-change outcome while preserving valid existing behavior |
-| A05 | Privately score the five frozen treatment outputs and write public evidence records | READY AFTER A03-A04 | All five satisfy frozen private criteria with no hard fail; public result files record set ID, scenario ID, public fixture hash, scores/outcome, evidence, and truthful install/handoff state without republishing the active answer key |
-| A06 | Reconcile generated counts, README, alpha checklist, system state, and Issue #15 | READY AFTER A01-A05 | Generated index/README agree; five blind evidence records linked; current docs agree |
-| A07 | Declare initial implementation alpha locked | BLOCKED UNTIL A01-A06 | Every remaining alpha gate supported by actual materialized and blind behavioral evidence |
-
-## Invalid / retired alpha work
-
-| Item | State | Reason |
-|---|---|---|
-| Original public A1/A2/A3/R1/R2 behavioral set | RETIRED / INVALID AS BLIND EVIDENCE | Expected decisions, candidate hints, and scoring criteria were committed publicly and remain recoverable from Git history. The renderer hid them from stdout but not from a repository-reading treatment agent. |
-
-Do not execute the retired set for alpha closure. The current v2 public treatment fixture uses neutral scenario IDs, while evaluator-only mappings live in a private fingerprint-bound bundle outside the repository.
-
-## Post-alpha enrichment
-
-These are useful but **not blockers** for the initial implementation.
+## Active curation work
 
 | ID | Item | Area | Notes |
 |---|---|---|---|
-| P01 | Continue source discovery and corpus expansion | curation | Add sources only with correct source role, pin/freshness, license, and attribution |
-| P02 | Characterize more existing corpus skills | curation | Fingerprint + controlled tags + provenance before treating as fully characterized |
-| P03 | Structured verification of additional third-party skills | quality | Unverified remains design evidence until it earns stronger status |
-| P04 | Behavioral validation of high-value skills | evaluation | Use representative before/after evidence where practical |
-| P05 | Improve category navigation and direct-library browsing | human UX | Let categories evolve from real corpus growth without destabilizing skill IDs |
-| P06 | Refine selection taxonomy and weights from real usage | selection | Tags inform shortlisting; final user-fit judgment remains required |
-| P07 | Expand returning-user drift/overlap heuristics | refinement | Prefer smallest justified change; preserve `NO CHANGE NEEDED` outcome |
-| P08 | Add additional supported host installation adapters | portability | Only when host packaging/install behavior is established |
-| P09 | Revisit minimum-model/capability metadata where evidence supports it | quality | Historical B13; do not block alpha |
-| P10 | Consider additional host format conversion in skill-sync | portability | Historical B15; do not block alpha |
-| P11 | Revisit historical sandbox candidates when they are relevant | curation | Historical B17 and similar items; source reputation is not proof |
+| C01 | Continue selective source discovery | curation | New sources are seeds for review, not automatic admissions |
+| C02 | Evaluate high-value skills from admitted/tracked sources | quality | Assign provenance, score, controlled tags, authority, portability, and decisive semantic disposition |
+| C03 | Continue Hugging Face selective intake | curation | Review exact skills rather than treating the source as blanket trusted inventory |
+| C04 | Source-vet Selamy Labs | curation | Prioritize differentiated governance/loop/artifact mechanisms; reject redundant ceremony |
+| C05 | Source-vet Hypergiant | curation | Prioritize differentiated architecture/onboarding/persona/workflow mechanisms |
+| C06 | Improve category/navigation only when corpus growth justifies it | human UX | Avoid structural churn for its own sake |
+| C07 | Refresh semantic review when bootstrap/front-door behavior changes materially | evaluation | Literal/weaker-model adversarial reading, not executable proof |
 
-## Completed foundational work
+## Completed core work
 
 | ID | Item | Evidence |
 |---|---|---|
 | D01 | Separate user-facing library from repository engine machinery | `skills/`, `engine/skills/`, README/AGENTS boundary |
 | D02 | Human-first README with explicit AI-agent jump | `README.md` |
-| D03 | First-visit bootstrap route | `BOOTSTRAP.md`, `AGENTS.md`, `engine/skills/skill-bootstrap/` |
-| D04 | Returning-user refinement route | README/BOOTSTRAP/AGENTS contracts |
-| D05 | Human browse-by-purpose categories | `skills/categories/`, `registry/categories.yaml` |
-| D06 | Third-party provenance/attribution companion model | `registry/skills/`, `docs/third-party-provenance.md`, `THIRD_PARTY_NOTICES.md` |
-| D07 | Exact-version verification/fingerprint model | `registry/verification/`, `docs/skill-verification.md` |
-| D08 | Controlled characterization taxonomy | `registry/taxonomy.yaml` |
-| D09 | Source role + source pin/license registry | `registry/sources.yaml` |
-| D10 | Governed candidate selector | `engine/skills/skill-bootstrap/scripts/select-candidates.ts`, selection tests |
-| D11 | Recursive skill discovery across catalog/audit/risk/sync | `scripts/lib/skill-discovery.ts` and consumers |
-| D12 | Schema-v2 generated-catalog implementation | `scripts/build-index.ts` |
-| D13 | Semantic catalog invariants + two-pass idempotency verifier | `scripts/lib/catalog-invariants.mjs`, `scripts/verify-index-idempotency.ts` |
-| D14 | Exact vendored-source materialization proof in one-command alpha preflight | `scripts/verify-vendor-materialization.ts`, `scripts/initial-alpha-preflight.ts` |
-| D15 | Rotated public-only v2 treatment fixture | `docs/evals/fixtures/initial-alpha-scenarios.json` |
-| D16 | Public treatment renderer with neutral v2 IDs | `scripts/render-alpha-scenario.ts` + tests |
-| D17 | Private evaluator-bundle fingerprint verifier | `scripts/verify-alpha-evaluator-bundle.mjs` + tests |
-| D18 | Actions budget protection | `.github/workflows/ci.yml` manual-dispatch only |
+| D03 | Single canonical first-visit/returning-user orchestrator | `engine/skills/skill-bootstrap/SKILL.md` |
+| D04 | Capability-first discovery before filename search | bootstrap S2-S4 |
+| D05 | Whole-skill plus component-level reasoning | bootstrap S4-S7 |
+| D06 | Explicit ADOPT/ADAPT/SUPPLEMENT/COMPOSE/CREATE/no-skill decisions | bootstrap S6 |
+| D07 | Host adaptation and portable handoff | bootstrap S9-S11 |
+| D08 | Returning-user smallest-change and no-op behavior | bootstrap returning-user path |
+| D09 | Third-party provenance/attribution companion model | `registry/skills/`, provenance docs |
+| D10 | Exact-version semantic verification model | `registry/verification/`, `docs/skill-verification.md` |
+| D11 | Controlled characterization taxonomy | `registry/taxonomy.yaml` |
+| D12 | First-party quality review | `registry/local-verification.json` covers 42 active local skills |
+| D13 | Repair local dependency/authority defects discovered during review | `agent-home-doctor`, `deck-outline`, `finance-review` |
+| D14 | Reference corpus separated from governed unchanged-selection surface | README, bootstrap, CURATED, registry docs |
+| D15 | Semantic adversarial closeout review | `docs/evals/share-ready-semantic-review.md` |
+| D16 | Remove CI and executable completion-proof architecture | no `.github/workflows/ci.yml`; current docs explicitly reject CI/runtime gates |
+
+## Curation rule
+
+A new skill/source does not reopen core implementation merely because it exists.
+
+Admission is deliberate:
+
+1. determine whether it adds meaningful capability;
+2. establish source/provenance/license/dependencies;
+3. inspect the exact skill text;
+4. score it with the current semantic rubric;
+5. assign controlled metadata, authority, and portability;
+6. choose a decisive state;
+7. preserve useful negative/adaptation evidence when unchanged use is inappropriate.
 
 ## Historical records
 
-The July 2026 build series and its B/D identifiers remain available in git history, historical plan documents, evaluation reports, and governance ledger artifacts. They are not the current implementation queue.
-
-For the authoritative finish line, use `docs/alpha-lock.md`, `docs/initial-implementation.md`, `docs/evals/run-initial-alpha.md`, and GitHub Issue #15.
+Older alpha/Qor backlogs, executable proof tasks, and gate artifacts remain available in Git history or historical documents. They are not current work and must not be treated as completion requirements.
