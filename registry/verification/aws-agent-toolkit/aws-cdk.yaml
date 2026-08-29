@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: aws-cdk
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-cdk/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_tree_sha: 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288
+fingerprint_scope: canonical-skill-package-directory
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [cloud, architecture, implementation, debugging, deployment]
+  lifecycle: [planning, implementation, verification, release, operations]
+  characteristic: [source-driven, risk-aware, evidence-first, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact pinned AWS CDK package reviewed at 19/20: trigger 2, procedure 2, authority/safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness 2, adversarial resilience 2, effectiveness design 2. It has precise CDK/non-CDK boundaries, requires diff-before-deploy, warns about logical-ID replacement and stateful-resource loss, supplies rollback/credential/troubleshooting paths, and preserves detailed bundled references. The authority dimension is constrained because bootstrap, import, refactor, deploy, rollback, drift, and destroy-adjacent guidance can mutate AWS infrastructure and incur cost or data loss; host authorization remains mandatory. Current AWS/CDK documentation controls live CLI versions, flags, limits, and service behavior. Behavioral validation remains pending.
