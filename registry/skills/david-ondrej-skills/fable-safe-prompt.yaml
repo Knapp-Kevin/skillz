@@ -17,6 +17,6 @@ permission_tier: generate
 portability: low
 review_status: curated-external
 dependency_status: source-intact
- dependencies: assumes a specific named model/provider safety-routing behavior and macOS `pbcopy` for its required clipboard step
+dependencies: assumes a specific named model/provider safety-routing behavior and macOS `pbcopy` for its required clipboard step
 import_eligibility: not-eligible
 rationale: The skill is explicitly designed to rewrite cyber, bio/chem, and reasoning-related prompts to reduce the chance that model safety classifiers trigger. That safety-evasion objective is incompatible with governed unchanged reuse regardless of whether individual examples are benign.
