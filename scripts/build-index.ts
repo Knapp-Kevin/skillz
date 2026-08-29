@@ -130,36 +130,48 @@ function scanLocalSkills(): LocalSkill[] {
   const root = join(ROOT, "skills");
   const skills: LocalSkill[] = [];
 
-  for (const discovered of discoverSkillDirs(root)) {
-    const fm = parseFrontmatter(readFileSync(discovered.skillFile, "utf8"));
-    if (!fm?.name) {
-      console.error(`[index] WARN: ${relPosix(discovered.skillFile)} has no parsable frontmatter name; skipped`);
-      continue;
+  // Third-party source corpora also live under skills/, but they remain a
+  // distinct governed population. Exclude the sources subtree from the local
+  // scan so source skills are not double-counted as first-party/local skills.
+  const localRoots = readdirSync(root, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && entry.name !== "sources")
+    .map((entry) => join(root, entry.name));
+
+  for (const localRoot of localRoots) {
+    for (const discovered of discoverSkillDirs(localRoot)) {
+      const fm = parseFrontmatter(readFileSync(discovered.skillFile, "utf8"));
+      if (!fm?.name) {
+        console.error(`[index] WARN: ${relPosix(discovered.skillFile)} has no parsable frontmatter name; skipped`);
+        continue;
+      }
+      if (fm.name !== discovered.name) {
+        console.error(`[index] WARN: frontmatter name "${fm.name}" != directory "${discovered.name}"`);
+      }
+
+      const scriptsDir = join(discovered.dir, "scripts");
+      const scripts = existsSync(scriptsDir)
+        ? readdirSync(scriptsDir).map((f) => relPosix(join(scriptsDir, f)))
+        : [];
+
+      const structuralPath = relative(root, discovered.dir).split(sep).join("/");
+      const structuralParts = structuralPath.split("/").filter(Boolean);
+      const structuralCategoryPath = structuralParts.slice(0, -1).join("/");
+      const structuralCategory = structuralCategoryPath
+        ? { id: structuralCategoryPath, label: structuralCategoryPath }
+        : undefined;
+      const category = categoryBySkill.get(fm.name) ?? structuralCategory;
+
+      skills.push({
+        name: fm.name,
+        displayName: fm.metadata?.["display-name"],
+        description: fm.description ?? "",
+        category,
+        version: fm.metadata?.version,
+        path: relPosix(discovered.dir),
+        skillFile: relPosix(discovered.skillFile),
+        scripts,
+      });
     }
-    if (fm.name !== discovered.name) {
-      console.error(`[index] WARN: frontmatter name "${fm.name}" != directory "${discovered.name}"`);
-    }
-
-    const scriptsDir = join(discovered.dir, "scripts");
-    const scripts = existsSync(scriptsDir)
-      ? readdirSync(scriptsDir).map((f) => relPosix(join(scriptsDir, f)))
-      : [];
-
-    const structuralCategory = discovered.categoryPath
-      ? { id: discovered.categoryPath, label: discovered.categoryPath }
-      : undefined;
-    const category = categoryBySkill.get(fm.name) ?? structuralCategory;
-
-    skills.push({
-      name: fm.name,
-      displayName: fm.metadata?.["display-name"],
-      description: fm.description ?? "",
-      category,
-      version: fm.metadata?.version,
-      path: relPosix(discovered.dir),
-      skillFile: relPosix(discovered.skillFile),
-      scripts,
-    });
   }
 
   const discoveredNames = new Set(skills.map((s) => s.name));
@@ -279,14 +291,14 @@ interface GenericVendor {
   excludeDirs: string[];
 }
 
-const knowledgeSource = vendoredSources.find((s) => s.resolved_path === "vendor/knowledge-work-plugins");
-if (!knowledgeSource) throw new Error("registry/sources.yaml must declare vendor/knowledge-work-plugins");
+const knowledgeSource = vendoredSources.find((s) => s.id === "anthropic-knowledge-work-plugins");
+if (!knowledgeSource) throw new Error("registry/sources.yaml must declare anthropic-knowledge-work-plugins");
 
 const GENERIC_VENDORS: GenericVendor[] = vendoredSources
   .filter((s) => s.id !== knowledgeSource.id)
   .map((s) => ({
     id: s.id,
-    dir: s.resolved_path.replace(/^vendor\//, ""),
+    dir: s.resolved_path,
     label: s.name,
     source: s.source,
     sourceClass: s.class,
@@ -315,7 +327,7 @@ function findSkillFiles(dir: string, depth = 0): string[] {
 }
 
 function scanVendorTree(vendor: GenericVendor): { skills: VendorSkill[]; duplicatesDropped: number; excludedDropped: number } {
-  const base = join(ROOT, "vendor", vendor.dir);
+  const base = join(ROOT, vendor.dir);
   if (!existsSync(base)) return { skills: [], duplicatesDropped: 0, excludedDropped: 0 };
 
   const rank = (p: string) => {
@@ -378,12 +390,13 @@ const counts = {
 };
 
 const vendorIndex: Record<string, any> = {
-  [knowledgeSource.resolved_path.replace(/^vendor\//, "")]: {
+  [knowledgeSource.id]: {
     sourceId: knowledgeSource.id,
     label: knowledgeSource.name,
     source: knowledgeSource.source,
     sourceClass: knowledgeSource.class,
     sourceRole: knowledgeSource.source_role,
+    resolvedPath: knowledgeSource.resolved_path,
     ...(knowledgeSource.license ? { license: knowledgeSource.license } : {}),
     install: "/plugin marketplace add anthropics/knowledge-work-plugins",
     plugins: vendorPlugins,
@@ -392,12 +405,13 @@ const vendorIndex: Record<string, any> = {
 };
 
 for (const v of genericVendorResults) {
-  vendorIndex[v.dir] = {
+  vendorIndex[v.id] = {
     sourceId: v.id,
     label: v.label,
     source: v.source,
     sourceClass: v.sourceClass,
     sourceRole: v.sourceRole,
+    resolvedPath: v.dir,
     ...(v.license ? { license: v.license } : {}),
     skills: v.skills,
   };
@@ -440,19 +454,19 @@ md += `## Library counts\n\n`;
 md += `- **${counts.totalIndexedSkillEntries}** indexed skill entries\n`;
 md += `- **${counts.uniqueSkillNames}** unique skill names across sources\n`;
 md += `- **${counts.localSkills}** locally maintained/imported skills\n`;
-md += `- **${counts.vendorSkills}** indexed skills from pinned vendor corpora\n`;
-md += `- **${counts.registeredSources}** registered sources (${counts.vendoredSources} vendored)\n\n`;
-md += `Cross-source skills with the same name are retained as separate implementations; duplicate copies inside a single vendored source are deduplicated by name.\n\n`;
+md += `- **${counts.vendorSkills}** indexed skills from pinned source corpora\n`;
+md += `- **${counts.registeredSources}** registered sources (${counts.vendoredSources} pinned source corpora)\n\n`;
+md += `Cross-source skills with the same name are retained as separate implementations; duplicate copies inside one pinned source are deduplicated by name.\n\n`;
 md += `## Quality states\n\n`;
 md += `A skill can be available without being trusted for unchanged reuse. Exact-version states are \`unverified\`, \`trusted-baseline\`, \`verified\`, \`validated\`, \`stale\`, \`rejected\`, or \`retired\`. See [docs/skill-verification.md](docs/skill-verification.md).\n\n`;
-md += `## Local library (\`skills/\`)\n\n`;
+md += `## Local library (\`skills/\`, excluding \`skills/sources/\`)\n\n`;
 md += `| Skill | Human category | Description | Scripts |\n|---|---|---|---|\n`;
 for (const s of localSkills) {
   const scripts = s.scripts.map((p) => `[${p.split("/").pop()}](${p})`).join(", ") || "—";
   md += `| [${s.name}](${s.skillFile}) | ${s.category?.label ?? "—"} | ${truncate(s.description, 150)} | ${scripts} |\n`;
 }
 
-md += `\n## Vendored source: [${knowledgeSource.name}](${knowledgeSource.source})\n\n`;
+md += `\n## Pinned source: [${knowledgeSource.name}](${knowledgeSource.source})\n\n`;
 md += `Source class: **${knowledgeSource.class}** · Role: **${knowledgeSource.source_role}**`;
 if (knowledgeSource.license) md += ` · License: **${knowledgeSource.license}**`;
 md += `.\n\n`;
@@ -478,12 +492,12 @@ if (externalPlugins.length) {
 }
 
 for (const v of genericVendorResults) {
-  md += `## Vendored source: [${v.label}](${v.source})\n\n`;
+  md += `## Pinned source: [${v.label}](${v.source})\n\n`;
   md += `Source class: **${v.sourceClass}** · Role: **${v.sourceRole}**`;
   if (v.license) md += ` · License: **${v.license}**`;
   md += `. Availability does not imply trusted unchanged-selection eligibility.\n\n`;
   if (!v.skills.length) {
-    md += `_No indexed SKILL.md files found. The submodule may not be initialized._\n\n`;
+    md += `_No indexed SKILL.md files found. The source submodule may not be initialized._\n\n`;
     continue;
   }
   md += `${v.skills.length} indexed skills`;
