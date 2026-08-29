@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: google-agents-cli-adk-code
 source_id: google-agents-cli
 source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
-local_path: vendor/google-agents-cli/skills/google-agents-cli-adk-code/SKILL.md
+local_path: skills/sources/google-agents-cli/skills/google-agents-cli-adk-code/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 73dc82088f15c56ba35ebb9d9a817dacf4d326cf
 characterized_at: 2026-08-29
