@@ -48,3 +48,17 @@ sources:
     archived: false
     disabled: false
     interpretation: Cline-owned first-party skill source with a relatively small public-repository audience at observation time. Ownership, visibility, and activity are source context only and do not establish individual-skill quality; exact-version verification remains controlling.
+
+  - source_id: anthropic-knowledge-work-plugins
+    repository: https://github.com/anthropics/knowledge-work-plugins
+    observed_at: 2026-08-29T16:34:14Z
+    evidence: https://api.github.com/repos/anthropics/knowledge-work-plugins
+    repository_created_at: 2026-01-23T20:11:54Z
+    repository_updated_at: 2026-08-29T16:34:14Z
+    repository_pushed_at: 2026-08-29T07:28:04Z
+    github_stars: 23735
+    github_forks: 2866
+    github_subscribers: 168
+    archived: false
+    disabled: false
+    interpretation: Anthropic-owned first-party knowledge-work plugin corpus with substantial public visibility and active maintenance. These source-level signals provide provenance/adoption context only; they do not override per-skill exact-version review, privacy, authority, portability, or user-fit findings.
