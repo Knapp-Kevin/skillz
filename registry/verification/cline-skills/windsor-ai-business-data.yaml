@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: windsor-ai-business-data
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/windsor-ai-business-data/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca2dfc25d4f7112303289322bb12fb7bb6d88bae
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [data-analysis, business-operations, reporting]
+  lifecycle: [discovery, operations]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 1, procedure 2, authority 0, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. The discover → explore → understand → query sequence is clear and schema-aware. Unchanged reuse is rejected because the trigger claims essentially any business-data need, while get_data can retrieve CRM, ecommerce, finance, customer, and other account-backed records without a portable minimum-necessary rule, row/field scope limit, or confirmation boundary for sensitive/broad extraction. Retain the staged schema-discovery pattern and adapt with explicit data-minimization/scope controls. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
