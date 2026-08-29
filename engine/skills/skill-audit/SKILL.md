@@ -1,79 +1,44 @@
 ---
 name: skill-audit
 description: >-
-  Validate the skillz repository's own conventions, script health, registry
-  structure, and index freshness. Use only for repository-maintenance work such
-  as validating skillz before commit, merge, reindex, or repository deployment.
+  Review the skillz repository's own instruction clarity, metadata consistency,
+  passive-resource boundary, source/provenance records, and stale references.
+  Use only for repository-maintenance review of skillz itself.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Audit
   emoji: "🔍"
-  version: 1.2.0
+  version: 2.0.0
   repo-bound: true
 ---
 
 # Skill Audit
 
-**Repository-maintenance helper only.**
+**Repository-maintenance procedure only.**
 
-This validates the `skillz` repository itself. It is not a prerequisite for normal FIRST_VISIT or RETURNING_USER bootstrap and should not be imposed on connector/API/read-only users.
+`skillz` is passive. This procedure tells the host agent how to inspect the repository semantically. It does not execute a test suite, prove model behavior, or require a runtime.
 
-## What This Does
+## Review flow
 
-Runs the repository audit at:
-
-```text
-engine/skills/skill-audit/scripts/audit.ts
-```
-
-It checks local user-facing skill conventions, script health, pulse/source fallback structure, registry lint, and index freshness. The semantic risk layer is at:
-
-```text
-engine/skills/skill-audit/scripts/risk-audit.ts
-```
-
-These are deterministic repository-maintenance checks. They do not establish that a skill improves user behavior; behavioral evidence is a separate concern.
-
-## Execution Flow
-
-Run from the repository root:
-
-```text
-node engine/skills/skill-audit/scripts/audit.ts
-```
-
-or, where Bun is the active runtime:
-
-```text
-bun run engine/skills/skill-audit/scripts/audit.ts
-```
-
-For the semantic risk layer:
-
-```text
-node engine/skills/skill-audit/scripts/risk-audit.ts
-```
-
-Then:
-
-1. fix every FAIL finding;
-2. if index freshness is the only warning, regenerate with `node scripts/build-index.ts`;
-3. re-run until the intended checks pass;
-4. report actual results only.
-
-## Output Format
-
-```text
-FAIL: <skill>: <violation>
-WARN: <message>
-
-skill-audit: N library skill(s), X failure(s), Y warning(s)
-```
+1. Confirm the task is `REPOSITORY_MAINTENANCE`.
+2. Inspect the current front-door contract: `README.md`, `AGENT_START_HERE.md`, `BOOTSTRAP.md`, `AGENTS.md`, and `engine/skills/skill-bootstrap/SKILL.md`.
+3. Check that all current instructions agree on:
+   - passive repository identity;
+   - one canonical normal-user orchestrator;
+   - user work versus repository-maintenance boundaries;
+   - current quality-state semantics;
+   - capability-first discovery and component reasoning;
+   - truthful host adaptation and handoff.
+4. Inspect affected local skills and governed third-party records for complete provenance, metadata, authority, portability, licensing/dependency context, score, and decisive disposition.
+5. Look for stale paths, deleted folders, obsolete runtime/CI/test language, contradictory counts, or old terminology that could mislead an agent.
+6. Read important changed instructions adversarially for likely overreach, ambiguity, false certainty, or needless ceremony.
+7. Correct material findings directly when authorized.
+8. Report only unresolved material findings. If none remain, report `PASS` as a semantic review judgment.
 
 ## Negative rules
 
-- Do not use this as evidence that a skill is behaviorally effective.
-- Do not require this helper for normal user bootstrap.
-- Do not use legacy `skills/skill-audit/...` paths; the canonical path is under `engine/skills/skill-audit/`.
-- Do not suppress findings merely to obtain exit 0.
+- Do not introduce CI, executable tests, scripts, preflights, or runtime proof as repository-completion requirements.
+- Do not claim the repository can guarantee that an arbitrary model will follow instructions correctly.
+- Do not make this maintenance procedure a prerequisite for normal first-visit or returning-user bootstrap.
+- Do not treat source reputation or repository authorship as proof of individual skill quality.
