@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: code-prior-art-survey
+display_name: Code Prior Art Survey
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/code-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+upstream_revision: 4789307598e478b2ca42c7b7299195625102bf1f
+upstream_last_updated_at: 2026-07-22T11:39:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: complete skill folder required; Python 3 with PyYAML and jsonschema for deterministic validators; bundled references, schemas, scripts and source registry; live repository/package/catalog/code-search/research capabilities as available, with explicit degraded/unreachable recording when absent
+import_eligibility: eligible-with-complete-skill-folder
+rationale: Differentiated evidence-first prior-art workflow that converts scope into typed search vocabulary, records exact coverage rather than equating silence with zero results, distinguishes unreachable and partial sources, deep-reads candidates without executing them, and gates every produced artifact with bundled schemas and deterministic validators.
