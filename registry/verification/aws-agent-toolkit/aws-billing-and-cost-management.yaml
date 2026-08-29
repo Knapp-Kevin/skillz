@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: aws-billing-and-cost-management
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-billing-and-cost-management/SKILL.md
+fingerprint_algorithm: git-tree-sha1
+content_tree_sha: 78db779f94238b6b7fec6d25cbe9986a03ad2a01
+fingerprint_scope: canonical-skill-package-directory
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud]
+  lifecycle: [planning, operations]
+  characteristic: [source-driven, evidence-first, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: Verified exact pinned package. Billing and pricing are freshness-sensitive; current AWS billing evidence controls live conclusions. Behavioral validation remains pending.
