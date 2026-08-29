@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: prototype
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/prototype/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/prototype/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a0044501fe0d385b4d8575b610188ede9b236ccf
 characterized_at: 2026-08-28
