@@ -71,8 +71,8 @@ The unified-tree branch has reconciled characterized companion records and estab
 - OpenHands Extensions: exact pinned denominator 1/1; companion fingerprint matches the pinned skill; rejected unchanged;
 - Anthropic Skills: exact pinned denominator 17/17; all companions reconciled; 10 verified / 7 rejected;
 - Matt Pocock Skills: exact eligible denominator 29/29; all companions reconciled;
-- Cline Skills: pinned README publishes 36 first-class skills; all 36 now have provenance + exact-version review companions and decisive static states: 19 verified / 17 rejected unchanged, plus one additional unlisted/internal `cline-session-history` skill characterized separately;
-- Addy Osmani Agent Skills: exact pinned `skills/` tree contains 24 first-class skills; 16/24 currently have provenance + exact-version review companions and decisive static states. The latest tranche added four verified skills and two rejected-for-unchanged-reuse skills.
+- Cline Skills: pinned README publishes 36 first-class skills; all 36 have provenance + exact-version review companions and decisive static states: 19 verified / 17 rejected unchanged, plus one additional unlisted/internal `cline-session-history` skill characterized separately;
+- Addy Osmani Agent Skills: exact pinned denominator 24/24; all 24 have provenance + exact-version review companions, controlled tags, dependency/authority/portability characterization, and decisive static states. Final closure tranche: four verified and four rejected unchanged.
 
 These figures distinguish complete source denominators from partial review coverage. A reconciled characterized subset is not the same thing as a statically complete source.
 
@@ -83,11 +83,10 @@ PR #42 remains the active structural frontier until its passive-repository recon
 1. finish the remaining current first-party maintenance/documentation sweep for stale execution and legacy physical-path assumptions;
 2. reconcile `INDEX.md` and `index.json` as passive static snapshots once the underlying paths and companion metadata are internally consistent;
 3. reconcile remaining public counts/status wording to live curated truth;
-4. complete Addy Osmani's remaining 8 first-class skill reviews;
-5. review untouched/unfinished registered sources such as AWS, Microsoft, Azure, and Anthropic Knowledge Work;
-6. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
-7. keep source-level reputation/context separate from individual skill quality;
-8. only after static corpus completion, prioritize consequential skills for external behavioral validation.
+4. establish exact denominators and complete static review for the remaining registered source families: Anthropic Knowledge Work, AWS, Microsoft, and Azure;
+5. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
+6. keep source-level reputation/context separate from individual skill quality;
+7. only after static corpus completion, prioritize consequential skills for external behavioral validation.
 
 ## Passive-repository invariant
 
@@ -107,13 +106,13 @@ A skill may instruct the **external host agent** to use tools or perform actions
 
 ## Current next action
 
-Advance PR #42 with the smallest remaining reconciliation unit:
+Advance PR #42 with the smallest remaining reconciliation unit while continuing non-conflicting corpus work:
 
 1. finish the passive first-party maintenance/documentation sweep;
 2. reconcile the passive catalog snapshots only after path and companion consistency is established;
 3. reconcile remaining public status/count surfaces;
 4. review the final PR diff for accidental loss of passive reference/history material;
 5. merge PR #42 when those gates are satisfied;
-6. continue source-by-source static curation with Addy Osmani's remaining 8 first-class skills.
+6. continue source-by-source static curation with Anthropic Knowledge Work, then the remaining AWS/Microsoft/Azure families unless evidence establishes a better ordering.
 
 Wayfinder Issue #35 remains the destination/scope map. External reviewer feedback remains evidence to evaluate, not an instruction to implement.
