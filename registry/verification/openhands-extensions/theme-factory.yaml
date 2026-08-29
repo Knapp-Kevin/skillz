@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: theme-factory
 source_id: openhands-extensions
 source_snapshot_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037
-local_path: vendor/openhands-extensions/skills/theme-factory/SKILL.md
+local_path: skills/sources/openhands-extensions/skills/theme-factory/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 90dfceaf2ecdc191a4dcfb0069768a9560638998
 characterized_at: 2026-08-29
