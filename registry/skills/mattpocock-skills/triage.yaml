@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: triage
+display_name: Triage
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/triage/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/triage/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: relies on configured tracker and label mappings plus bundled AGENT-BRIEF.md and OUT-OF-SCOPE.md; optionally composes grilling/domain-modeling and repository verification tools; bundled references are present
+import_eligibility: already-vendored
+rationale: Mature issue/PR triage state machine with explicit AI disclosure, conflict detection, codebase redundancy/prior-rejection checks, verification-before-grilling, maintainer decision gates, and durable agent briefs.
