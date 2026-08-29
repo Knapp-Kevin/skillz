@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: grill-with-docs
+display_name: Grill With Docs
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/grill-with-docs/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 447ca70872026d5b79d6073a546dac082117fed7
+upstream_last_updated_at: 2026-08-15T20:48:40Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/grill-with-docs/SKILL.md
+permission_tier: staging-write
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: delegates entirely to the grilling and domain-modeling skills through a Claude-style Skill tool; those dependencies are present in the pinned source
+import_eligibility: already-vendored
+rationale: Convenience composition wrapper for combining the interview primitive with persistent domain documentation; useful in its native suite but too thin to establish strong standalone behavior unchanged.
