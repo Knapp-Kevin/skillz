@@ -1,201 +1,217 @@
 # 🛠️ skillz
 
-![Library Corpus](https://img.shields.io/badge/indexed_library-500%2B-blue)
+![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
+![Active Local Skills](https://img.shields.io/badge/active_local_skills-42-brightgreen)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-17-8A2BE2)
-![Maintenance Runtime](https://img.shields.io/badge/maintenance_runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![Agent Use](https://img.shields.io/badge/agent_use-no_local_runtime_required-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A large reusable AI-skill library, plus an engine that can help you discover, build, install, review, and improve the skill set that fits the way you actually work.**
+**Give this repository to an AI agent. It should discover which repeatable working methods would actually help you, compare the available skill ecosystem, and build the smallest dependable skill system that fits you and the environment you are using.**
 
-You do not need to understand how agent skills work. You do not need to read hundreds of files. You can hand this repository to an AI and let it do the comparison work for you.
+You do not need to understand agent-skill formats, browse hundreds of files, clone the repository, or choose from a giant catalog yourself.
 
-> **AI agent?** Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md), then use [If you are an AI agent reading this](#if-you-are-an-ai-agent-reading-this). For the operating contract, read [`AGENTS.md`](AGENTS.md). For first-visit and returning-user workflows, read [`BOOTSTRAP.md`](BOOTSTRAP.md).
+> **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the single canonical orchestrator.
 >
-> **No shell, clone, Node, or local filesystem? That is supported.** If the agent can read this repository through GitHub, a connector, API, browser, or equivalent tool, it should use the connector-native path in [`AGENT_START_HERE.md`](AGENT_START_HERE.md) rather than stopping.
+> **No shell, Node, Git, clone, or writable filesystem? That is supported.** Normal bootstrap can operate through repository-native, connector/API/web, or minimal read-only capability paths.
+
+## What `skillz` is
+
+`skillz` is a **passive repository** containing:
+
+1. a broad reference/discovery corpus of reusable agent skills and patterns;
+2. exact-version quality/provenance metadata for individually governed skills;
+3. first-party user-facing skills with exact-version structured reviews;
+4. a bootstrap engine that teaches an active agent how to discover, adapt, compose, create, validate, and hand off a fitted skill system.
+
+The repository itself does not watch users, run an application, schedule autonomous work, or maintain a background runtime. The agent the user already has does the work with capabilities it legitimately possesses.
+
+The product is therefore **not the largest possible skill catalog**. The product is the fitted-skill-system process.
 
 ## Start here
 
-### First visit: build your skill set
+### First visit
 
-If this is your first time here, the easiest path is simple:
+Give your agent this repository or its URL. If you do not provide a narrower task, that is enough to begin bootstrap.
 
-1. Give your AI the URL to this repository.
-2. Ask it to help build the skills that would make it more useful and dependable for you, or simply provide the repository with no more specific task.
-3. The bootstrap process should inspect only the relevant history, memory, instructions, existing skills, recurring corrections, and workflows the current host legitimately exposes.
-4. It should compare your needs against this library, reuse good existing skills when they genuinely fit, and create custom skills when they do not.
-5. It should evaluate the fitted set and install it when the host supports installation, or give you the shortest correct handoff when it does not.
+The agent should:
 
-Start with [`BOOTSTRAP.md`](BOOTSTRAP.md) if you want to see exactly what the AI is being asked to do.
+1. bind to its actual host, tools, authority, privacy limits, and available evidence;
+2. inspect only the minimum relevant context needed to identify stable user needs;
+3. translate those needs into capability requirements before searching by skill name;
+4. search the local/reference corpus for whole skills and useful components;
+5. distinguish governed exact-version reuse from reference/design evidence;
+6. choose among `SUFFICIENT`, `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST/HELPER`, `DYNAMIC`, or `DO NOT CREATE`;
+7. extract useful mechanisms without automatically importing another author's ceremony, commands, terminology, UX, or authority model;
+8. compose the smallest coherent system;
+9. create the actual artifacts in the format supported by the current host;
+10. adversarially review important behavior and report validation honestly;
+11. install when capable and authorized, or produce a complete portable handoff.
 
-### Returning visit: review, refine, and improve
+See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable workflow and [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) for the executable agent contract.
 
-If you already have skills from an earlier visit, come back with the repository URL and your current skill set or accessible installed-skill context.
+### Returning visit
 
-A returning review should:
+If you already have a fitted skill system, bootstrap starts from that system instead of pretending prior work never happened.
 
-1. identify the skills you already have and the jobs they are meant to perform;
-2. detect stale, overlapping, weak, unused, or missing capabilities;
-3. check whether better or newer library skills now exist;
-4. compare current skill fingerprints and upstream freshness where available;
-5. refine, replace, supplement, or retire skills only when there is a concrete reason;
-6. preserve custom behavior that still matches how you work;
-7. re-evaluate changed skills and update installation state.
+The agent should preserve still-valid custom behavior, identify only material drift/gaps/conflicts, re-evaluate affected capabilities, make the smallest justified change, and allow **`NO CHANGE NEEDED`** as a correct result.
 
-The goal is not to keep adding skills forever. The goal is to keep the **smallest useful set** current, reliable, and fitted to you.
+## The corpus has two different trust layers
+
+### 1. Reference and discovery corpus
+
+The repository includes local skills plus pinned/tracked third-party corpora. This broad material exists so an agent can discover prior art, compare methods, and extract useful patterns.
+
+**Availability is not verification.**
+
+A skill does not become trusted merely because:
+
+- it exists under `vendor/`;
+- its publisher is famous or official;
+- its repository is popular;
+- its source was admitted to the registry;
+- a neighboring skill from the same source passed review.
+
+Broad source material without an individual exact-version quality record is reference/design evidence only.
+
+### 2. Governed exact-version skills
+
+An individually governed third-party skill has:
+
+- exact provenance and canonical source path;
+- source snapshot/version identity;
+- license/attribution information;
+- dependency/package characterization;
+- authority and portability characterization;
+- controlled metadata tags;
+- exact canonical content fingerprint;
+- individual structured review and decisive quality state.
+
+Those records live under:
+
+- [`registry/skills/`](registry/skills/) for provenance;
+- [`registry/verification/`](registry/verification/) for exact-version quality.
+
+Tracked external skills can participate without copying entire upstream repositories into `vendor/`.
+
+## First-party skills are reviewed too
+
+The 42 active local skills under [`skills/`](skills/) do not receive a quality exemption because this repository authored them.
+
+Their exact-version structured reviews live in:
+
+[`registry/local-verification.json`](registry/local-verification.json)
+
+That manifest records, per active local skill:
+
+- Git blob fingerprint;
+- structured 20-point rubric score;
+- quality state;
+- behavioral-validation status;
+- controlled use-case/lifecycle/characteristic tags;
+- authority and portability;
+- material review notes.
+
+`node scripts/verify-share-ready-corpus.ts` is designed to fail if an active local skill is added, removed, or changed without a matching current review.
+
+During the current adversarial closeout, that local review found and repaired three real defects before certification:
+
+- `deck-outline` no longer depends on a rejected vendored presentation skill;
+- `finance-review` no longer depends on a rejected vendored spreadsheet skill;
+- `agent-home-doctor` now requires explicit approval of the exact cleanup plan before destructive mutation.
+
+That is the point of the process. First-party confidence is not evidence either.
+
+## Quality states
+
+The normative rubric is [`docs/skill-verification.md`](docs/skill-verification.md).
+
+For exact third-party skill versions:
+
+- **`verified`**: passed the current individual structured quality gate;
+- **`validated`**: `verified` plus representative behavioral evidence;
+- **`unverified`**: design/reference evidence only;
+- **`trusted-baseline`**: legacy schema state only, not current unchanged-selection eligibility;
+- **`stale`**: prior evidence no longer matches current content/evidence;
+- **`rejected`** / **`retired`**: excluded from normal unchanged selection.
+
+Only `verified` and `validated` are current unchanged-reuse quality states, and even those still require matching fingerprint, dependencies, license, authority, portability, and actual user fit.
+
+`validation_status: not-run` means exactly what it says. Static quality review, upstream tests, source reputation, or a high score do not magically turn into behavioral validation.
+
+## Components can be more useful than whole skills
+
+Bootstrap explicitly reasons below whole-skill granularity.
+
+A reference may contribute:
+
+- trigger/non-trigger logic;
+- decision gates;
+- evidence requirements;
+- procedure fragments;
+- failure handling;
+- authority boundaries;
+- validation tests;
+- output contracts;
+- useful abstractions.
+
+Borrowing a component does **not** bypass provenance, license, dependency, rejection/staleness reasons, privacy, authority, cost, or host assumptions.
+
+The goal is to keep the useful mechanism and leave behind source-specific baggage that does not fit the user.
 
 ## Browse the library yourself
 
-You can also use `skillz` as a normal skill library without running bootstrap.
-
-### Browse local skills by purpose
+Humans can browse local skills by purpose under [`skills/categories/`](skills/categories/):
 
 | Category | Examples |
 |---|---|
-| [Planning & Productivity](skills/categories/planning-productivity/) | brief daily work, decisions, task coordination, learning, weekly review |
+| [Planning & Productivity](skills/categories/planning-productivity/) | daily work, decisions, task coordination, learning, weekly review |
 | [Writing & Communication](skills/categories/writing-communication/) | briefs, deck outlines, handoffs, standups, devlogs |
 | [Research & Analysis](skills/categories/research-analysis/) | comparisons, deep research, fact checking, paper review |
 | [Software & Repositories](skills/categories/software-repositories/) | repository health, repo monitoring, TODO maintenance |
 | [Agent Operations & Security](skills/categories/agent-operations-security/) | agent environment health, postmortems, MCP vetting, permissions |
-| [Monitoring & Intelligence](skills/categories/monitoring-intelligence/) | model, platform, protocol, governance, and ecosystem scans |
+| [Monitoring & Intelligence](skills/categories/monitoring-intelligence/) | model, platform, protocol, governance, ecosystem scans |
 | [Business & Career](skills/categories/business-career/) | career scanning, finance review, small-business operations |
 
-See [`skills/categories/`](skills/categories/) for the full categorized local browse surface.
+Generated indexes:
 
-For the complete indexed library, including approved third-party source corpora, use:
+- [`INDEX.md`](INDEX.md): human-readable generated catalog;
+- [`index.json`](index.json): machine-readable generated catalog.
 
-- [`INDEX.md`](INDEX.md) for the generated human-readable catalog;
-- [`index.json`](index.json) for machine-readable lookup;
-- [`CURATED.md`](CURATED.md) for individually characterized and reviewed third-party skills;
-- [`registry/verification/`](registry/verification/) for quality state, fingerprints, and tags;
-- [`registry/skills/`](registry/skills/) for provenance and attribution.
+These generated files must be refreshed and deterministically proven from a fully materialized checkout before the current share-ready candidate is declared complete. Connector-capable agents should not treat a stale generated index as a reason to stop normal user work; they can inspect current registry/provenance records directly.
 
-The generated index covers local/imported skills and approved vendored corpora. Individually characterized tracked external sources extend the governed selection surface through their exact registry companions without being falsely counted as vendored/indexed inventory.
+## Registered sources
 
-## What counts as a library skill?
-
-### Local and directly imported skills
-
-[`skills/`](skills/) contains user-facing skills maintained or deliberately imported in this repository. They count.
-
-The categorized folders under [`skills/categories/`](skills/categories/) are currently a human navigation layer while recursive category-aware discovery is integrated into the repository tooling. Canonical skill paths remain stable during that compatibility transition.
-
-### Indexed third-party library
-
-[`vendor/`](vendor/) contains pinned upstream source repositories. Approved indexed user-facing skills in those sources are part of the available library corpus and count.
-
-The repository historically recorded 524 vendor-indexed skills alongside 48 local skills. Current work has added sources rather than removed the historical corpus, so the library still contains **500+ available skills**. The exact current deduplicated total will be produced by the next deterministic index refresh rather than maintained by hand.
-
-### Governed tracked external sources
-
-[`registry/sources.yaml`](registry/sources.yaml) may also register external corpora that are intentionally tracked at exact snapshots rather than vendored wholesale. Source admission alone does **not** make every upstream skill trusted inventory.
-
-A tracked external skill becomes a governed unchanged-selection candidate only when it has:
-
-- exact provenance under [`registry/skills/`](registry/skills/);
-- a fingerprint-bound quality companion under [`registry/verification/`](registry/verification/);
-- a current `verified` or `validated` state; and
-- a fingerprint that can be matched to the recorded canonical upstream content.
-
-Connector/API/web-capable hosts can fetch that exact upstream file when relevant. This lets `skillz` use valuable external material without copying whole repositories into `vendor/` merely to make them discoverable.
-
-### Engine machinery does not count
-
-[`engine/skills/`](engine/skills/) contains bootstrap, forge, evaluation, audit, synchronization, ecosystem scanning, and source-vetting procedures used to operate `skillz` itself. These do **not** count as library inventory.
-
-The boundary test is straightforward: would this capability make sense for someone to install independently of maintaining this repository? If yes, it can be library material. If its purpose is operating `skillz`, it is engine machinery.
-
-## Quality is separate from availability
-
-A skill being present in the library does not automatically mean it has been verified for quality.
-
-The current quality lifecycle is:
-
-```text
-available/indexed -> characterized -> unverified -> verified -> validated
-                                      \-> stale | rejected | retired
-```
-
-The rules are version-specific:
-
-- `verified` means an exact skill version passed the current individual structured quality and effectiveness rubric in [`docs/skill-verification.md`](docs/skill-verification.md).
-- `validated` is stronger. It requires representative behavioral evidence showing the skill improves outcomes.
-- `unverified` means the skill may be useful as reference or design evidence but has not earned trusted unchanged selection.
-- `trusted-baseline` is retained only as a legacy characterization/schema state. It is **not eligible for current unchanged selection** until replaced by an individual structured review.
-- `stale` means the canonical skill changed after characterization or the supporting evidence no longer matches.
-- `rejected` and `retired` are excluded from normal selection.
-
-Each individually characterized third-party skill has provenance under [`registry/skills/`](registry/skills/) and quality metadata under [`registry/verification/`](registry/verification/). Verification records bind to the exact canonical `SKILL.md` Git blob SHA. A hash change makes the previous characterization stale until it is reviewed again.
-
-Tags come from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) and describe use case, lifecycle phase, workflow characteristics, authority level, and portability. Those tags are intended to help both humans and bootstrap choose by capability rather than by filename alone.
-
-## Current curation state
-
-There are currently **17 registered sources**:
+The source registry currently contains **17 sources**:
 
 - 12 pinned vendored corpora;
-- 3 tracked external corpora admitted for selective exact-version curation: Cole Medin Skills, David Ondrej Skills, and Bhushan Modi Agent Skills;
-- 1 normative specification source, the Agent Skills specification;
-- 1 tracked dynamic-discovery source, GitHub Awesome Copilot.
+- 3 selectively curated tracked external corpora;
+- 1 normative Agent Skills specification source;
+- 1 dynamic-discovery source.
 
-The individually characterized shelf contains exact-version records with decisive `verified` and `rejected` results alongside legacy records still awaiting migration to the current individual-review standard. No record claims local behavioral validation unless actual evaluation evidence exists.
+Adding more sources is useful enrichment, not part of the definition of core completion once the fitted-skill process and governed corpus gates are proven.
 
-See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verification.md`](docs/skill-verification.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+See [`registry/sources.yaml`](registry/sources.yaml) and [`docs/curation-policy.md`](docs/curation-policy.md).
 
-## If you are an AI agent reading this
+## Agent operating rules
 
-Humans come first in this README. Your operating contract starts here.
+For normal first-visit or returning-user work:
 
-**Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md) first.** It defines repository-native, connector/API/web, and minimal read-only paths. Do not treat missing local execution as a bootstrap blocker.
+- read [`AGENT_START_HERE.md`](AGENT_START_HERE.md);
+- use [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) as the canonical orchestrator;
+- search capabilities before filenames;
+- stop collecting evidence when more evidence is unlikely to change capability requirements;
+- stop searching when all material requirements have an adequate governed/adaptation/custom path;
+- do not mutate the `skillz` repository while building the user's skill system;
+- do not default to repo-bound `skill-forge`, `skill-audit`, or `skill-sync` during normal user work;
+- never fabricate fingerprints, validation, installation, artifacts, or inaccessible evidence;
+- finish with an explicit installation/handoff state.
 
-### First-visit mode
-
-If the user supplied this repository or its GitHub URL without a more specific task, begin bootstrap.
-
-1. Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md).
-2. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
-3. Read [`AGENTS.md`](AGENTS.md).
-4. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) when accessible.
-5. Use only relevant history, memory, workspace context, and instructions the host legitimately exposes.
-6. Identify durable or latent working methods.
-7. Search the complete governed surface: the indexed user-facing library plus individually characterized tracked external sources when they add relevant coverage.
-8. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
-9. Use the governed candidate selector when local execution and a current generated catalog are available; otherwise inspect the relevant registry/provenance records and exact pinned upstream files directly.
-10. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
-11. Create a custom skill when the user's real workflow is not adequately represented.
-12. Evaluate the fitted set and install it when authorized, or produce the shortest correct installation handoff.
-
-### Returning-user mode
-
-If the user already has an installed or previously generated skill set and asks to review, update, refine, improve, audit, or revisit it:
-
-1. inventory the current skill set and its intended jobs;
-2. compare current fingerprints, versions, provenance, and available evidence where accessible;
-3. identify stale, duplicated, conflicting, underperforming, or missing capabilities;
-4. search the current governed surface for materially better fits;
-5. preserve still-valid custom behavior instead of resetting to generic defaults;
-6. refine the smallest necessary set;
-7. re-run appropriate verification or behavioral evaluation for changed skills;
-8. update installation or portable-handoff state.
-
-For direct browse, search, compare, or install requests, use library mode rather than forcing bootstrap.
-
-## Selection safety
-
-For third-party unchanged reuse:
-
-- prefer individually characterized records whose current fingerprint matches and whose status is `verified` or `validated`;
-- treat `unverified` and legacy `trusted-baseline` skills as design evidence until a current individual structured review is completed;
-- exclude `stale`, `rejected`, and `retired` records from default selection;
-- require a locally or connector-established matching fingerprint before treating a candidate as fully governed for unchanged selection;
-- if exact fingerprint verification is unavailable on the current host, lower confidence and adapt/create rather than fabricating the match.
-
-A high-quality skill can still be the wrong fit. **Compare before creation. User-fit before reuse.**
+Repository-maintenance tasks are different. They may legitimately use the repo-bound engine helpers and maintainer runtime.
 
 ## Installation is part of completion
 
-A fitted skill system should finish with an explicit host-level state such as:
+Each target host/surface finishes in one explicit state such as:
 
 - `INSTALLED + VERIFIED`
 - `INSTALLED, VERIFICATION PENDING`
@@ -206,40 +222,93 @@ A fitted skill system should finish with an explicit host-level state such as:
 
 See [`docs/installation-handoff.md`](docs/installation-handoff.md).
 
+## Deterministic maintenance proof
+
+Normal users do not need Node/Git/submodules. Maintainers do.
+
+The current deterministic share-ready gate is:
+
+```bash
+git submodule update --init --recursive
+node scripts/share-ready-preflight.ts
+```
+
+It checks:
+
+1. exact-version coverage/metadata for all active first-party skills;
+2. decisive metadata/provenance closure for individually governed third-party skills;
+3. exact vendored source materialization/pins;
+4. schema-v2 catalog generation and semantic invariants;
+5. byte-identical second-pass catalog generation;
+6. structural and semantic-risk audits;
+7. repository contract tests;
+8. strict characterization fingerprint integrity.
+
+Passing that command means **ready for blind engine proof**, not that behavioral proof magically happened.
+
+Automatic GitHub Actions remain manual-dispatch only to protect Actions budget.
+
+## Adversarial / blind engine proof
+
+The repository has already retired two earlier treatment sets as invalid blind evidence:
+
+- v1 exposed evaluator answer-key material publicly;
+- v2 used neutral IDs but those IDs were later publicly mapped to expected decision classes.
+
+The active v3 public fixture is under [`docs/evals/fixtures/`](docs/evals/fixtures/). Active scenario IDs must not be publicly mapped to expected outcomes while the set is in use.
+
+The remaining behavioral gate requires:
+
+- a private evaluator bundle frozen outside the repository and bound to the exact public fixture;
+- fresh isolated treatment contexts;
+- at least one strong model;
+- at least one materially weaker/cheaper model;
+- a constrained connector/API/read-only host;
+- demonstrated governed reuse/refusal, component extraction/composition, custom synthesis, host adaptation, returning-user minimal change, and returning-user no-op;
+- classification of failures as repository ambiguity, broken/stale reference, host limitation, missing evidence, or model noncompliance.
+
+Repeated failure at the same stage across models is presumed repository/design evidence until shown otherwise.
+
+See [`docs/alpha-lock.md`](docs/alpha-lock.md), [`docs/evals/initial-alpha-matrix.md`](docs/evals/initial-alpha-matrix.md), and [`docs/evals/run-initial-alpha.md`](docs/evals/run-initial-alpha.md).
+
+## Current completion status
+
+The architecture and static closeout work are near completion, but the repository is **not yet honestly declared share-ready**.
+
+Remaining evidence gates are deliberately concrete:
+
+1. run `scripts/share-ready-preflight.ts` in a fully materialized network-capable checkout of the exact candidate commit and refresh generated catalog/counts;
+2. freeze/verify the private v3 evaluator bundle outside the repository;
+3. run the isolated strong-model, weaker-model, and constrained-host treatment proof with no active answer leakage.
+
+Issue [#56](https://github.com/Knapp-Kevin/skillz/issues/56) is the share-ready completion map. Issue [#59](https://github.com/Knapp-Kevin/skillz/issues/59) is the blind engine-proof gate.
+
+Once those are green, new skill/source intake becomes ecosystem enrichment rather than unfinished core work.
+
 ## Repository map
 
 | Area | Purpose |
 |---|---|
-| [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Zero-runtime capability routing for AI agents |
-| [`skills/`](skills/) | Local and directly imported user-facing skills |
+| [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Agent routing and capability floor |
+| [`BOOTSTRAP.md`](BOOTSTRAP.md) | Human-readable first/returning workflow |
+| [`AGENTS.md`](AGENTS.md) | Repository-wide agent contract |
+| [`engine/skills/skill-bootstrap/`](engine/skills/skill-bootstrap/) | Canonical normal user-flow engine |
+| [`engine/skills/`](engine/skills/) | Repo engine/maintenance procedures, excluded from user-facing counts |
+| [`skills/`](skills/) | Active local user-facing skills |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
-| [`vendor/`](vendor/) | Pinned indexed third-party source corpora |
-| [`CURATED.md`](CURATED.md) | Characterized third-party shelf |
-| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, role, pin, and license |
-| [`registry/skills/`](registry/skills/) | Per-skill provenance and attribution |
-| [`registry/verification/`](registry/verification/) | Hash-bound quality state, tags, and evidence |
-| [`engine/skills/`](engine/skills/) | Repository machinery, excluded from library counts |
-| [`docs/README.md`](docs/README.md) | Documentation map, architecture, curation, evaluation, installation, and alpha criteria |
-| [`tests/`](tests/) | Behavior and contract tests |
-
-## Alpha status
-
-Alpha is **not locked yet**. Governed selection and recursive category-aware discovery are implemented. Connector-native agent use is a supported path; local runtime is reserved for deterministic maintenance proof. The remaining alpha-critical work is to regenerate the catalog from a fully materialized repository, prove deterministic/idempotent output and exact counts, execute a connector-native portability smoke in a constrained host, and execute the five representative blind first-visit/returning-user journey evaluations.
-
-See [`docs/initial-implementation.md`](docs/initial-implementation.md) for the intended finish line, [`docs/alpha-lock.md`](docs/alpha-lock.md) for the live checklist, and [`docs/evals/initial-alpha-matrix.md`](docs/evals/initial-alpha-matrix.md) for the proof matrix. Broad skill acquisition and deeper corpus curation are post-alpha enrichment rather than blockers for the initial implementation.
-
-## Validation and GitHub Actions
-
-Structural audits and risk checks prove repository conformance. They do not prove behavioral effectiveness.
-
-**Runtime requirements apply to maintenance tooling, not normal agent use.** An agent with repository read access must not stop solely because Node, Bun, Git, a shell, or initialized submodules are unavailable.
-
-Automatic GitHub Actions are currently disabled to protect the Actions budget. The workflow is manual-dispatch only. Do not treat an intentionally absent CI run as evidence of failure or success.
+| [`registry/local-verification.json`](registry/local-verification.json) | Exact-version first-party skill reviews |
+| [`vendor/`](vendor/) | Pinned third-party reference corpora |
+| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, roles, pins, licenses |
+| [`registry/skills/`](registry/skills/) | Third-party per-skill provenance |
+| [`registry/verification/`](registry/verification/) | Third-party exact-version quality/tags/evidence |
+| [`CURATED.md`](CURATED.md) | Governed third-party shelf/navigation policy |
+| [`docs/`](docs/) | Architecture, curation, evaluation, installation, closeout docs |
+| [`tests/`](tests/) | Contract/fixture tests |
 
 ## Licensing and attribution
 
 First-party content is licensed under the [MIT License](LICENSE).
 
-Third-party repositories and materially derived content retain their applicable upstream license obligations. The root MIT license does not relicense vendored or otherwise identified third-party material.
+Third-party repositories and materially derived content retain applicable upstream obligations. The root MIT license does not relicense vendored or otherwise identified third-party material.
 
 See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
