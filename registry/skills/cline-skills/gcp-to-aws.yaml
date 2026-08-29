@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: gcp-to-aws
+display_name: GCP to AWS
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/gcp-to-aws/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 32b58c778467018de601df18c8870fc96b45d6b7
+upstream_last_updated_at: 2026-06-18T23:34:55Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/gcp-to-aws/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - user-provided GCP Terraform, application code, and/or billing exports
+  - host file read/write capability
+  - bundled migration reference and data files
+  - current AWS/GCP service, model, and pricing knowledge for time-sensitive recommendations
+  - optional Terraform/provider tooling for artifact validation
+import_eligibility: already-vendored
+rationale: Detailed migration-analysis and artifact-generation method with mandatory clarification, persisted state validation, fail-closed handoff gates, and no automatic infrastructure deployment; service/model mappings remain time-sensitive.
