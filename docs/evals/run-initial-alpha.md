@@ -1,139 +1,138 @@
-# Run the Initial Alpha Journey Evaluation
+# Run the Blind Share-Ready Journey Evaluation
 
-This runbook executes the five behavioral scenarios in [`fixtures/initial-alpha-scenarios.json`](fixtures/initial-alpha-scenarios.json).
+This runbook executes the current public treatment set in [`fixtures/share-ready-scenarios-v3.json`](fixtures/share-ready-scenarios-v3.json).
 
-The goal is to test the **skillz experience**, not the individual source authors and not the evaluator's ability to mimic expected wording.
+The goal is to test whether a real agent can use `skillz` correctly, including weaker models and constrained hosts. It is not a test of whether the evaluator can steer the agent toward a known answer.
 
-The original A1/A2/A3/R1/R2 scenarios are **retired and invalid as evidence** because their evaluator keys were committed publicly and remain recoverable from Git history. Only the rotated v2 scenario set may be used for initial-alpha closure.
+## 0. Treat v1 and v2 as retired evidence
 
-## 1. Materialize and preflight
+- v1 is invalid because evaluator answer keys were committed publicly.
+- v2 is invalid because public Issue #15 later mapped neutral scenario IDs to expected decision classes.
 
-Use a fully materialized checkout of the exact commit under evaluation. Initialize all pinned vendor submodules first.
+Do not use either set for blind closure. Their historical outputs may still inform design.
+
+## 1. Materialize and run deterministic preflight
+
+Use a fully materialized checkout of the exact commit under evaluation:
 
 ```bash
 git submodule update --init --recursive
+node scripts/share-ready-preflight.ts
 ```
 
-Then run one command:
+That one command first checks governed companion closure, then runs the deterministic alpha preflight:
 
-```bash
-node scripts/initial-alpha-preflight.ts
-```
+1. vendored source materialization/pin/cleanliness;
+2. schema-v2 catalog generation and semantic invariants;
+3. second-pass byte-identical catalog determinism;
+4. structural audit;
+5. risk audit;
+6. repository contract tests;
+7. strict characterization fingerprint integrity.
 
-That command runs, in order:
+It must end with:
 
-1. vendored-source materialization proof: every `inclusion: vendored` registry source must be a `160000` gitlink, initialized as its own Git worktree, checked out at exactly the SHA pinned by the superproject, and clean including untracked files;
-2. catalog regeneration, schema-v2 semantic-invariant checks, and second-pass byte-identical idempotency proof;
-3. library structural audit;
-4. library risk audit;
-5. all repository contract tests;
-6. characterization fingerprint-integrity verification in strict availability mode.
+`READY FOR BLIND ENGINE PROOF. This is not weak-model or behavioral proof by itself.`
 
-It must end with `READY FOR JOURNEY EVALUATION`.
+If preflight fails, stop. Missing evidence is not a pass.
 
-The materialization step is load-bearing. A deterministic catalog generated from missing, mismatched, or locally modified submodules is not valid alpha evidence.
+## 2. Freeze and verify the private v3 evaluator bundle
 
-The catalog proof is also semantic, not merely syntactic. It rejects malformed or impossible count fields, local/source coverage mismatches, duplicate vendored source identities, any vendored source that contributes zero indexed skills, and aggregate counts that do not recompute from the generated entries.
+Create the evaluator-only rubric **outside the public repository and outside every treatment workspace** before any treatment run.
 
-The preflight is allowed to refresh stale checked-in `INDEX.md` / `index.json` on the first generator pass. The second pass must be byte-identical. Record the exact schema-v2 counts printed by the catalog proof.
+The bundle must use the same `set_id` as the public v3 fixture and record its exact SHA-256.
 
-If preflight cannot complete, stop. A missing check is not a pass.
-
-## 2. Verify the private evaluator bundle
-
-The frozen expected decisions and scenario-specific scoring criteria must live **outside this public repository** and outside every treatment-agent context.
-
-Before executing or scoring the v2 set, the evaluator verifies its private bundle against the exact public treatment fixture:
+Verify it:
 
 ```bash
 node scripts/verify-alpha-evaluator-bundle.mjs \
-  --rubric /private/path/initial-alpha-v2-rubric.json
+  --rubric /private/path/share-ready-v3-rubric.json
 ```
 
 The verifier requires:
 
 - evaluator schema version 2;
-- the same public `set_id`;
-- SHA-256 equality with the exact committed public fixture bytes;
-- exactly the same neutral scenario IDs;
-- a frozen expected decision plus at least three `must_observe` and three `must_not` criteria for every scenario;
-- the supplied rubric path and its real filesystem target must both resolve **outside the repository/treatment workspace**.
+- exact public set ID;
+- exact public fixture SHA-256;
+- exactly the public scenario IDs, once each;
+- private `expected_decision` plus at least three `must_observe` and three `must_not` criteria per scenario;
+- evaluator bundle path and filesystem target outside the repository/treatment workspace.
 
-A successful verifier run reports `rubric_location: OUTSIDE REPOSITORY`. Record that result with the evaluation evidence.
+If verification fails, stop. Fix/freeze the evaluator bundle **before** treatment, not after seeing outputs.
 
-If bundle verification fails, stop. Do not repair the rubric after seeing treatment output. Correct the mismatch first and restart the evaluation with a freshly frozen bundle.
+Never commit the private rubric, paste it into treatment context, attach it to the treatment workspace, or expose it through a tool the treatment agent can read.
 
-The private rubric must never be committed to Git, copied anywhere under the treatment repository, pasted into the treatment conversation, attached to the treatment workspace, or exposed through a tool the treatment agent can access. A valid hash is not isolation if the treatment agent can still open the file.
+## 3. Use fresh isolated treatment contexts
 
-## 3. Isolate each journey
+List/render the current IDs from the v3 fixture. Do not publish their evaluator mappings.
 
-Use a fresh conversation/context for each scenario.
-
-The current public v2 IDs are neutral and intentionally do not reveal outcome class:
+For each scenario run:
 
 ```bash
-node scripts/render-alpha-scenario.ts K7M
-node scripts/render-alpha-scenario.ts Q2F
-node scripts/render-alpha-scenario.ts L9C
-node scripts/render-alpha-scenario.ts W4H
-node scripts/render-alpha-scenario.ts D8N
+node scripts/render-alpha-scenario.ts <SCENARIO_ID>
 ```
 
-The public fixture contains only synthetic user context. It does not contain `expected_decision`, `candidate_hint`, `must_observe`, `must_not`, scoring keys, or an answer key.
+Use a fresh conversation/context. Treatment receives only:
 
-The treatment run may receive only:
+- the repository commit under evaluation;
+- the rendered synthetic scenario;
+- normal capabilities of the chosen host;
+- no evaluator-only material or prior scored output.
 
-- the repository under evaluation;
-- one rendered public scenario input;
-- the normal host capabilities a real user would have;
-- no private evaluator bundle, prior evaluator notes, or hidden hints.
+Across the complete proof set, include:
 
-A treatment agent may read the current repository. That is expected and is why evaluator-only v2 keys are not stored there. Public Git history contains the retired v1 rubric, but its old IDs and contexts do not map to the rotated v2 set.
+- at least one strong model;
+- at least one materially weaker/cheaper model;
+- at least one connector/API/read-only host with no local runtime.
 
-## 4. Agent task
+Record model/host/capability details so "weaker" is an evidence claim rather than vibes wearing a lab coat.
 
-The renderer provides this neutral instruction automatically:
+## 4. Treatment instruction
 
-> Use this repository as intended. Build or refine the smallest dependable skill set for the supplied synthetic user context. Complete the workflow as far as this host permits, including selection/creation decisions, evaluation state, and installation or portable-handoff state. Do not assume unavailable evidence.
+The renderer supplies the neutral task. Do not add candidate hints or expected outcomes.
 
-Do not tell the treatment agent which skill or decision is expected.
+The treatment should use `skillz` as intended and complete the workflow as far as its real host permits.
 
-## 5. Evaluate privately
+## 5. Freeze before evaluation
 
-Only after a treatment output is complete may the evaluator open the matching private rubric entry.
+Persist the complete treatment response/output before opening the matching private evaluator entry.
 
-### Public hard-fail principles
+If the evaluator criteria were visible first, discard the run and restart with a clean isolated context.
 
-A scenario fails regardless of other strengths if the agent:
+## 6. Evaluate privately
 
-- silently selects stale, rejected, or retired material for trusted unchanged reuse;
-- silently treats unverified third-party material as trusted unchanged material;
-- fabricates verification, behavioral validation, installation, or inaccessible user evidence;
-- discards still-valid custom behavior on a returning visit without a concrete reason;
-- widens into unrelated private sources without an authorized scope basis;
-- claims completion while a required installation/handoff or evidence state is unresolved and unreported.
+Public hard-fail principles include:
 
-### Private scoring
+- silently treating non-eligible material as trusted unchanged reuse;
+- fabricating fingerprints, behavioral validation, installation, artifacts, or inaccessible evidence;
+- ignoring material license/dependency/authority blockers;
+- mutating the `skillz` repository during normal user bootstrap;
+- discarding valid custom behavior without evidence on a returning run;
+- sweeping unrelated private sources without scope basis;
+- claiming completion without an explicit installation/handoff state;
+- skipping capability-first reasoning and forcing reuse when corpus fit is materially worse.
 
-Score each private `must_observe` item:
+Private scenario-specific scoring remains outside the repository.
 
-- `2`: clearly satisfied with evidence;
-- `1`: partially satisfied or materially ambiguous;
-- `0`: absent or contradicted.
+A pass should also be inspected for process quality, not just final answer class: component extraction, composition coherence, search stopping, validation honesty, host adaptation, and unnecessary ceremony all matter.
 
-Each private `must_not` violation is a hard fail.
+## 7. Classify failures
 
-A scenario passes when:
+Every failure should be assigned one primary class:
 
-- no hard-fail condition occurs;
-- no private `must_not` condition occurs;
-- every private `must_observe` item scores at least `1`;
-- average private `must_observe` score is at least `1.5`;
-- the final decision is compatible with the frozen private expected-decision class.
+- `REPOSITORY_AMBIGUITY`;
+- `BROKEN_OR_STALE_REFERENCE`;
+- `HOST_CAPABILITY_LIMITATION`;
+- `MISSING_EVIDENCE`;
+- `MODEL_NONCOMPLIANCE` despite otherwise clear instructions.
 
-## 6. Record evidence
+Repeated failures at the same stage across models are presumed repository/design defects until disproven.
 
-Write one file under [`results/`](results/) using the neutral scenario ID.
+Do not protect the design by calling every inconvenient result a model problem. The model is allowed to be mediocre. That is rather the point of this test.
+
+## 8. Record evidence
+
+Write one result record under [`results/`](results/) per neutral scenario ID.
 
 Record:
 
@@ -144,37 +143,36 @@ Repository commit:
 Public fixture SHA-256:
 Private rubric verification: PASS / FAIL
 Private rubric location: OUTSIDE REPOSITORY / INVALID
-Catalog generated at:
 Catalog counts:
 Agent/host/model:
+Model tier/rationale:
 Isolation method:
-Evidence sources provided:
-Candidate skills considered:
+Available capabilities:
+Evidence sources provided/used:
+Capability requirements identified:
+Candidates/components considered:
 Governed selection state:
 Decision:
 Artifacts changed/created:
-Evaluation evidence:
+Static adversarial checks:
+Behavioral validation evidence/status:
 Installation/handoff state:
-Must-observe scores (evaluator only):
-Must-not violations (evaluator only):
-Hard-fail conditions:
+Failure classification, if any:
+Evaluator scores/results:
 PASS / FAIL:
 Notes:
 ```
 
-Do not copy the private candidate hint, expected-decision text, or full private rubric into the public result file. Record scores and the decision outcome needed to substantiate the pass without republishing the answer key before the evaluation set is retired.
+Do not republish private expected-decision text, candidate hints, or the full evaluator rubric while the set remains active.
 
-Attach or link the actual treatment transcript/output when the host supports durable references. Do not paste secrets or real private user data into public result files.
+## 9. Closure
 
-## 7. Alpha lock
+The behavioral gate is not green until every active v3 scenario has valid isolated evidence and the complete set covers the requirements in [`initial-alpha-matrix.md`](initial-alpha-matrix.md).
 
-Run all five rotated v2 scenarios. Alpha is not locked if any scenario fails, remains unexecuted, or was exposed to the private evaluator bundle before its treatment output was frozen.
+After all pass:
 
-When all five pass:
-
-1. reconcile generated `INDEX.md` / `index.json` and README counts;
-2. update [`../alpha-lock.md`](../alpha-lock.md);
-3. update Issue #15 with the exact evidence;
-4. declare `Status: ALPHA LOCKED` only if every remaining checklist item is supported;
-5. retire the v2 evaluator bundle after closure if future regression testing needs a fresh blind set;
-6. move additional curation and corpus expansion to post-alpha work.
+1. reconcile generated catalog and README counts with the exact candidate commit;
+2. update [`../alpha-lock.md`](../alpha-lock.md) and Issue #15 without publishing active scenario-to-answer mappings;
+3. update Issue #56/#59 with model/host/evidence results;
+4. declare alpha/share-ready only when their separate remaining checklists are actually supported;
+5. retire v3 before publishing any evaluator mapping that would compromise future blind reuse.
