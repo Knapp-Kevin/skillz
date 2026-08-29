@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: to-tickets
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/to-tickets/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e868c831fcfb1e124e010bcdf84a429ec879160f
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [planning, orchestration, implementation]
+  lifecycle: [planning]
+  characteristic: [decomposition, incremental, human-review, traceable]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong vertical-slice and blocker semantics, explicit expand-contract handling for wide refactors, per-ticket acceptance criteria, user approval before publishing, and tracker-agnostic fallback behavior. The main limitation is modest explicit recovery guidance if tracker publication partially fails. Behavioral validation remains pending."
