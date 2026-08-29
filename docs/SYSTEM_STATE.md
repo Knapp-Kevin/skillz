@@ -94,7 +94,7 @@ Statically complete:
 
 In progress:
 
-- AWS Agent Toolkit: exact pinned denominator **72** (14 core + 58 specialized). All 72 skill entry points have been inspected against pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`; skill-specific freshness/fingerprint/provenance companion closure remains before static completion can be claimed.
+- AWS Agent Toolkit: exact pinned denominator **72** (14 core + 58 specialized). All 72 canonical skill entry points have been inspected against pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`, with source-level static disposition **70 verified / 2 rejected unchanged**. Exact per-skill provenance and verification companion pairs currently exist for **4/72** skills (`amazon-bedrock`, `aws-billing-and-cost-management`, `aws-sdk-swift-usage`, and `aws-transform`); **68/72** still require companion population before the source can be called statically complete. Package fingerprints use canonical skill-package Git tree SHA-1 identity, including bundled references/assets/scripts. The two rejected unchanged skills are `aws-sdk-swift-usage` and `aws-transform`.
 - Microsoft Skills: pending full denominator/static review.
 - Microsoft Azure Skills: pending full denominator/static review.
 
@@ -109,7 +109,7 @@ Discovery is performed intentionally by the external host agent. No automated mo
 
 ## Remaining frontier
 
-1. finish AWS exact-version companion closure;
+1. finish AWS exact-version companion closure (4/72 populated; 68 remaining);
 2. complete Microsoft Skills;
 3. complete Microsoft Azure Skills;
 4. continue governed discovery/source-vetting in parallel, admitting sources only when identity, licensing, source role, and relevance justify it;
