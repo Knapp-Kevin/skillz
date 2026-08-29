@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: customer-research
+display_name: Customer Research
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: customer-support/skills/customer-research/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/customer-support/skills/customer-research/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-retrieval-dependent
+dependencies: available customer/support/internal/external sources supplied by the host; can degrade to user-provided context plus web research
+import_eligibility: already-vendored
+rationale: Strong multi-source research method with explicit source attribution, confidence, contradiction handling, authority ordering, gaps, and escalation for roadmap, legal, security, pricing, or customer-specific commitments. Useful unchanged where the host can access relevant sources and preserve customer-data boundaries.
