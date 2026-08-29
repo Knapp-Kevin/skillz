@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: ci-cd-and-automation
+display_name: CI/CD and Automation
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/ci-cd-and-automation/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: fea75b16472ba87e8c11f13a9e000c3ffdb2d1f5
+upstream_last_updated_at: 2026-03-31T20:41:45Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/ci-cd-and-automation/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-tool-dependent
+dependencies: project CI/deployment stack; examples assume GitHub Actions, Node/npm, and optional Vercel/Playwright/database tooling
+import_eligibility: already-vendored
+rationale: Broad CI/CD reference with useful quality-gate, rollback, staged-rollout, and pipeline-optimization patterns, retained for adaptation rather than unchanged reuse because several defaults are overly universal and ecosystem-specific.
