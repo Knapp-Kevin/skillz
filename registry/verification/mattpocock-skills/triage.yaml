@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: triage
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/triage/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/triage/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 37ddea1e3dcf8fb5be5b92e4e45f2c34b8e61d3e
 characterized_at: 2026-08-29
