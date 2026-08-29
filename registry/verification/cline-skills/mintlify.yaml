@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: mintlify
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/mintlify/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4f651005dd1f55d49b474a891ec6b42ee29a5dbf
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [implementation, documentation]
+  lifecycle: [implementation, verification, maintenance]
+  characteristic: [source-driven, human-review, test-gated, risk-aware]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Strong progressive-disclosure documentation workflow: inspect docs.json first, search before creating, match existing page style, require alt text, and provide strict validation/broken-link/accessibility checks. The root also documents install/config/update/project CLI operations, so hosts should treat those as separately authorized operational options rather than automatic steps. Exact pinned fingerprint and June 18 revision confirmed; time-sensitive CLI/config details should be rechecked when materially relied upon. Behavioral validation remains pending.
