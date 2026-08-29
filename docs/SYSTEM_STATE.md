@@ -5,7 +5,7 @@
 | Attribute | Value |
 |---|---|
 | **Last updated** | 2026-08-29 |
-| **Active work** | Corpus curation, provenance/verification completion, organization, and documentation reconciliation |
+| **Active work** | PR #42 passive-repository reconciliation, followed by corpus curation, provenance/verification completion, organization, and documentation reconciliation |
 | **Architecture** | Entirely passive repository; external agent is the active system |
 | **Wayfinder map** | GitHub Issue #35 |
 | **Active structure work** | GitHub Issue #41 / PR #42 |
@@ -63,29 +63,31 @@ For selection use:
 
 ## Current curation progress
 
-The unified-tree branch has reconciled characterized companion records for:
+The unified-tree branch has reconciled characterized companion records and established these current source states:
 
-- Vercel Agent Skills: 9/9;
-- Cloudflare Skills: 13/13;
-- Google Agents CLI: 7/7;
-- OpenHands characterized subset: 1/1;
-- Cline characterized subset: 7/7;
-- Addy Osmani characterized subset: 10/10;
-- Anthropic Skills: 17/17;
-- Matt Pocock Skills: 29/29.
+- Vercel Agent Skills: exact pinned denominator 9/9; all provenance + verification companions reconciled; 6 verified / 3 rejected;
+- Cloudflare Skills: exact pinned denominator 13/13; all companions reconciled; 11 verified / 2 rejected;
+- Google Agents CLI: exact pinned denominator 7/7; all companions reconciled; all 7 verified;
+- OpenHands Extensions: exact pinned denominator 1/1; companion fingerprint matches the pinned skill; rejected unchanged;
+- Anthropic Skills: exact pinned denominator 17/17; all companions reconciled; 10 verified / 7 rejected;
+- Matt Pocock Skills: exact eligible denominator 29/29; all companions reconciled;
+- Cline Skills: pinned README publishes 36 first-class skills; 15/36 first-class skills currently have provenance + exact-version review companions, plus one additional unlisted/internal `cline-session-history` skill;
+- Addy Osmani Agent Skills: exact pinned `skills/` tree contains 24 first-class skills; 10/24 currently have provenance + exact-version review companions.
 
-These figures describe the characterized/reconciled subset discussed in the active curation work. They do not imply that every registered source has had its full eligible denominator completed.
+These figures distinguish complete source denominators from partial review coverage. A reconciled characterized subset is not the same thing as a statically complete source.
 
 ## Remaining corpus frontier
 
-Primary work remains static corpus curation, not architecture expansion:
+PR #42 remains the active structural frontier until its passive-repository reconciliation is complete and merged. Within that constraint, primary work remains static corpus curation rather than architecture expansion:
 
-1. reconcile denominators for partially characterized sources such as Addy, Cline, and OpenHands where the full pinned-tree denominator has not yet been established;
-2. review untouched/unfinished registered sources such as AWS, Microsoft, Azure, and Anthropic Knowledge Work;
-3. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
-4. keep source-level reputation/context separate from individual skill quality;
-5. reconcile passive catalog/documentation snapshots with live curated truth;
-6. only after static corpus completion, prioritize consequential skills for external behavioral validation.
+1. finish the remaining current first-party maintenance/documentation sweep for stale execution and legacy physical-path assumptions;
+2. reconcile `INDEX.md` and `index.json` as passive static snapshots once the underlying paths and companion metadata are internally consistent;
+3. reconcile remaining public counts/status wording to live curated truth;
+4. complete Cline's remaining 21 first-class skill reviews and Addy Osmani's remaining 14;
+5. review untouched/unfinished registered sources such as AWS, Microsoft, Azure, and Anthropic Knowledge Work;
+6. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
+7. keep source-level reputation/context separate from individual skill quality;
+8. only after static corpus completion, prioritize consequential skills for external behavioral validation.
 
 ## Passive-repository invariant
 
@@ -105,13 +107,13 @@ A skill may instruct the **external host agent** to use tools or perform actions
 
 ## Current next action
 
-Continue the curation pass using the external agent:
+Advance PR #42 with the smallest remaining reconciliation unit:
 
-1. finish passive documentation reconciliation;
-2. reconcile the next incomplete source denominator;
-3. review its eligible skills one by one;
-4. record provenance, exact-version quality state, tags, and relevant context;
-5. make the smallest justified static repository changes;
-6. repeat source by source.
+1. finish the passive first-party maintenance/documentation sweep;
+2. reconcile the passive catalog snapshots only after path and companion consistency is established;
+3. reconcile remaining public status/count surfaces;
+4. review the final PR diff for accidental loss of passive reference/history material;
+5. merge PR #42 when those gates are satisfied;
+6. resume source-by-source static curation, starting with Cline's remaining first-class skills.
 
 Wayfinder Issue #35 remains the destination/scope map. External reviewer feedback remains evidence to evaluate, not an instruction to implement.
