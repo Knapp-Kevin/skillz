@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: fable-safe-prompt
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 70aab185c867e02d5906e6f1a65f1452b57e5192
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case: [security, writing]
+  lifecycle: [implementation]
+  characteristic: [tool-assisted]
+  authority: [generate-only]
+  portability: [low]
+notes: "Rubric before hard-fail enforcement: trigger precision 2, procedural clarity 1, authority and safety 0, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 0, usefulness/differentiation 0, adversarial resilience 0, effectiveness design 1. The skill's stated purpose is to change prompts so cyber, bio/chem, and reasoning-extraction safety classifiers are less likely to trigger or route/refuse the request. That is safety-control evasion, not a governed workflow improvement, and is a hard rejection for normal influence. It additionally depends on model-specific undocumented classifier behavior and a macOS clipboard command while presenting the procedure as broadly usable. Preserve only as negative curation evidence; do not adapt its evasion method into library skills."
