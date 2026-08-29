@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: oracledb
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/oracledb/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 68c2697c456f54cfcb57f5ec1d75bc9dea764e21
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [debugging, data-analysis, implementation]
+  lifecycle: [operations, maintenance, verification]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [mutating, destructive, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 1, authority 0, failure 1, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 0, effectiveness 1. Monitoring and query-plan helpers are useful Oracle operational reference material, but the root skill exposes execute_sql as unrestricted execution of any SQL statement with no read/write/destructive classification or confirmation gate. The wrapper also invokes @toolbox-sdk/server@1.1.0 through npx --yes and consumes host Oracle credential/environment state. Reject unchanged; adapt into read-only diagnostics plus separately gated mutation paths. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
