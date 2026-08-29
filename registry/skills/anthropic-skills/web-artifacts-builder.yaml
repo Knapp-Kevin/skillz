@@ -13,7 +13,7 @@ upstream_last_updated_at: 2025-12-01T18:05:36Z
 curated_at: 2026-08-29
 last_checked_at: 2026-08-29
 availability: vendored-reference-only
-local_path: vendor/anthropic-skills/skills/web-artifacts-builder/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/web-artifacts-builder/SKILL.md
 permission_tier: local-project-mutation-and-package-install
 portability: low
 review_status: rejected-unchanged
