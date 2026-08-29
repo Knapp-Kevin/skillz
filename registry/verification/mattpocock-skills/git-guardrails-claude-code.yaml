@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: git-guardrails-claude-code
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/misc/git-guardrails-claude-code/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/misc/git-guardrails-claude-code/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 58bcdd875b164093b95f436fa32a65c6cb5eb572
 characterized_at: 2026-08-29
