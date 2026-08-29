@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-billing-and-cost-management
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-billing-and-cost-management/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+canonical_package_tree_sha: 78db779f94238b6b7fec6d25cbe9986a03ad2a01
+freshness_state: current-at-registered-pin
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-billing-and-cost-management/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-aws-context-required
+dependencies: Pinned package plus AWS billing/cost APIs and current AWS documentation.
+import_eligibility: already-vendored
+rationale: Verified exact pinned package. Pricing and billing behavior remain freshness-sensitive and current AWS evidence controls live decisions.
