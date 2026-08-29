@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: to-questionnaire
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/productivity/to-questionnaire/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: dadd0c00d6a350acaa15bb9ca1b96b20ead684ca
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [communication, decision-support, documentation]
+  lifecycle: [planning]
+  characteristic: [human-review, progressive-disclosure, context-efficient, traceable]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Excellent separation between questions the user can answer and the knowledge gap owned by the recipient, explicit completion criteria for each phase, important-first ordering, and a coverage check before completion. It creates a local Markdown artifact as requested and has modest explicit handling for incomplete user input/file-write failures. Behavioral validation remains pending."
