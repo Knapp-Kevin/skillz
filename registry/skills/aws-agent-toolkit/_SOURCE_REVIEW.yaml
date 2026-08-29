@@ -1,0 +1,21 @@
+schema_version: 1
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+source_snapshot_date: 2026-07-03T15:35:04Z
+reviewed_at: 2026-08-29
+eligible_denominator: 72
+core_skills: 14
+specialized_skills: 58
+content_review_complete: true
+verification_summary:
+  verified: 70
+  rejected: 2
+  rejected_unchanged:
+    - aws-transform
+    - aws-sdk-swift-usage
+fingerprint_method: git-tree-sha1
+fingerprint_scope: canonical skill package directory, including SKILL.md plus bundled references/assets/scripts
+freshness_method: exact package identity at the registered pin, supplemented with skill-specific last-touch commit evidence where established
+validation_status: not-run
+notes: All 72 canonical skill entry points under skills/core-skills and skills/specialized-skills were inspected against the registered source pin. Duplicate plugin copies are excluded from the denominator. AWS-specific live limits, prices, preview features, versions, and command details remain subject to current AWS documentation at time of use. Third-party executable material remains upstream reference/dependency content; it does not create a skillz runtime.
