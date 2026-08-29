@@ -34,3 +34,17 @@ sources:
     archived: false
     disabled: false
     interpretation: OpenHands-owned source with recent maintenance activity. These source-level visibility and maintenance signals do not prove individual skill quality or unchanged-reuse eligibility.
+
+  - source_id: cline-skills
+    repository: https://github.com/cline/skills
+    observed_at: 2026-08-29T15:00:00Z
+    evidence: https://api.github.com/repos/cline/skills
+    repository_created_at: 2026-05-17T05:16:40Z
+    repository_updated_at: 2026-08-21T03:28:52Z
+    repository_pushed_at: 2026-07-21T10:39:55Z
+    github_stars: 22
+    github_forks: 3
+    github_subscribers: 1
+    archived: false
+    disabled: false
+    interpretation: Cline-owned first-party skill source with a relatively small public-repository audience at observation time. Ownership, visibility, and activity are source context only and do not establish individual-skill quality; exact-version verification remains controlling.
