@@ -1,54 +1,53 @@
 # skillz Documentation
 
-Use this directory for current architecture, operating policy, provenance, semantic evaluation, installation, lifecycle, and historical records.
-
 ## Current status
 
 **Core implementation is complete. The repository is in governed curation mode.**
 
-`skillz` is passive. Its meaningful quality surface is the clarity and likely interpretation of its instructions and metadata. There is no CI gate, application runtime, executable preflight, or deterministic model-behavior proof required for repository completion.
+`skillz` is passive. Its quality surface is semantic: instruction clarity, complete skill packages, provenance, metadata, authority/dependency characterization, and best-effort adversarial review.
 
-## Start here
+There is no CI gate, application runtime, executable preflight, model benchmark, or deterministic behavioral proof required for repository completion.
 
-- [`SYSTEM_STATE.md`](SYSTEM_STATE.md) — current architecture, inventory boundaries, and curation-mode state.
-- [`initial-implementation.md`](initial-implementation.md) — core completion definition.
-- [`alpha-lock.md`](alpha-lock.md) — historical alpha milestone.
-- [`../ROADMAP.md`](../ROADMAP.md) — current curation-oriented roadmap.
-- [`BACKLOG.md`](BACKLOG.md) — remaining curation/documentation work.
-- [`GOVERNANCE_INDEX.md`](GOVERNANCE_INDEX.md) — current control surfaces.
+## Current architecture and workflow
 
-## Semantic evaluation
+- [`SYSTEM_STATE.md`](SYSTEM_STATE.md) — current architecture and curation-mode state.
+- [`initial-implementation.md`](initial-implementation.md) — core completion boundary and responsibility model.
+- [`../AGENT_START_HERE.md`](../AGENT_START_HERE.md) — agent routing.
+- [`../BOOTSTRAP.md`](../BOOTSTRAP.md) — first-visit and returning-user workflow.
+- [`../engine/skills/skill-bootstrap/SKILL.md`](../engine/skills/skill-bootstrap/SKILL.md) — canonical normal-user orchestrator.
+- [`../ROADMAP.md`](../ROADMAP.md) — intentionally quiet curation-oriented roadmap.
+- [`BACKLOG.md`](BACKLOG.md) — currently empty implementation backlog.
 
-- [`evals/initial-alpha-matrix.md`](evals/initial-alpha-matrix.md) — representative semantic/adversarial review dimensions.
-- [`evals/run-initial-alpha.md`](evals/run-initial-alpha.md) — how to perform a literal/weaker-model semantic review.
-- [`evals/share-ready-semantic-review.md`](evals/share-ready-semantic-review.md) — current closeout review and findings.
+## Curation and quality
 
-These are reading/reasoning artifacts. They are not an executable test harness.
-
-## Library curation and quality
-
-- [`curation-policy.md`](curation-policy.md) — availability, provenance, characterization, verification, validation, and refresh policy.
-- [`skill-verification.md`](skill-verification.md) — exact-version semantic quality standard.
+- [`curation-policy.md`](curation-policy.md) — curation policy.
+- [`skill-verification.md`](skill-verification.md) — normative exact-version semantic quality standard.
+- [`evaluation-framework.md`](evaluation-framework.md) — current passive semantic evaluation model.
 - [`third-party-provenance.md`](third-party-provenance.md) — attribution and derived-work requirements.
-- [`vendor-freshness.md`](vendor-freshness.md) — source freshness concepts and historical source checks.
+- [`companion-metadata.md`](companion-metadata.md) — governed metadata concepts.
 
-Related metadata surfaces live under `../registry/`:
+Related registry surfaces:
 
-- `sources.yaml` — source identity, role, pin, license;
-- `categories.yaml` — canonical local human categories;
-- `skills/` — per-skill provenance companions;
-- `verification/` — fingerprint-bound semantic quality state and tags;
-- `local-verification.json` — individual first-party reviews;
-- `taxonomy.yaml` — controlled characterization vocabulary.
+- `../registry/sources.yaml` — tracked upstream source identity, role, pin, and license context;
+- `../registry/skills/` — governed third-party provenance;
+- `../registry/verification/` — governed third-party semantic quality records;
+- `../registry/local-verification.json` — first-party review records;
+- `../registry/taxonomy.yaml` — controlled characterization vocabulary.
 
-## Fitted skill systems and installation
+## Semantic review evidence
+
+- [`evals/share-ready-semantic-review.md`](evals/share-ready-semantic-review.md) — current repository closeout review.
+- [`evals/README.md`](evals/README.md) — distinction between current and historical evaluation records.
+
+A skill package may include its own scripts, references, templates, fixtures, JSON, examples, or other supporting components. Those are part of the skill and should be preserved/evaluated accordingly. The **engine** is passive; that does not mean all user-facing skills must be Markdown-only.
+
+## Installation and fitted systems
 
 - [`portable-skill-profile.md`](portable-skill-profile.md) — portable representation of a fitted skill system.
-- [`installation-handoff.md`](installation-handoff.md) — installation modes, authority boundaries, and completion states.
-- [`evaluation-framework.md`](evaluation-framework.md) — general review principles.
+- [`installation-handoff.md`](installation-handoff.md) — installation/handoff modes and authority boundaries.
 
 ## Historical material
 
-Older Qor-era plans, gate artifacts, ledgers, and prior evaluation experiments are historical records. They may explain how the repository evolved, but they do **not** define current completion criteria or create CI/runtime requirements.
+Older alpha, Qor-era, model-specific, feature-index, ledger, and prior evaluation documents explain how the repository evolved. They do not define current completion criteria.
 
-When historical and current files disagree, follow the current README, bootstrap, verification standard, system state, and semantic closeout review.
+When historical and current material disagree, follow the root README, `AGENT_START_HERE.md`, `BOOTSTRAP.md`, the canonical bootstrap skill, `skill-verification.md`, `SYSTEM_STATE.md`, and the current semantic closeout review.
