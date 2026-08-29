@@ -1,63 +1,57 @@
 ---
 name: skill-sync
 description: >-
-  Deploy this repository's portable skills to their consumers: junction into
-  the Claude Code user skills directory, copy to any local path, or emit
-  COREFORGE Synapse-style manifest.json bundles — dry-run by default with
-  drift reporting. Use when the user asks "sync the skills", "deploy skills
-  to Claude Code", "install the skills locally", "generate COREFORGE
-  manifests", or after skill-audit passes on new or changed skills.
+  Prepare and transfer selected portable skills to another agent host using
+  only the external host agent's available installation or file capabilities.
+  Use when a user asks to install, copy, upload, package, or hand off a fitted
+  skill set to another supported agent environment.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
-  display-name: Skill Sync
+  display-name: Skill Transfer
   emoji: "🚀"
-  version: 1.0.0
+  version: 2.0.0
   repo-bound: true
 ---
 
-# Skill Sync
+# Skill Transfer
 
-One command deploys portable skills to any local consumer with visible drift. Repo-bound: this skill operates on this repository's tree and never deploys itself.
+This is a passive instruction set. `skillz` does not synchronize, install, copy, junction, package, or deploy anything itself.
 
-## What This Does
+The external agent may perform those actions only when its host provides the necessary capability and the user has authorized the mutation.
 
-Runs `scripts/sync.ts`, which discovers portable skills (frontmatter without `repo-bound: true`) and reconciles them against targets:
+## Procedure
 
-| Target | Flag | Mechanism |
-|--------|------|-----------|
-| Claude Code user skills | `--claude-user` | Directory junction at `<root>/<name>` (root defaults to `~/.claude/skills`, overridable via `--claude-user-root`) |
-| Any local directory | `--dest <path>` | Recursive copy; drift = any byte difference |
-| COREFORGE Synapse | `--coreforge <path>` | Per-skill `manifest.json` derived from frontmatter (skillId, version, entryPoint, runtime) plus SKILL.md and scripts |
-| Markdown host dirs of a target repo | `--hosts <targetRepo>` | Copies each portable skill to `<targetRepo>/.claude/skills/`, `.kilo/skills/`, and `.codex/skills/` (Qor-logic host-dir convention; Gemini excluded — TOML conversion, not copy) |
+1. Identify the exact skill artifacts to transfer.
+2. Confirm they are intended for user-facing use rather than repository-maintenance instructions.
+3. Identify the destination host and the installation/packaging mechanism from authoritative host information when available.
+4. Compare the source skill format with the destination format.
+5. Preserve skill identity, instructions, provenance, and any material license obligations.
+6. If adaptation is needed for the host, keep host packaging separate from the portable behavioral source of truth.
+7. Before mutation, present or internally verify the intended destination and files.
+8. Use the external host's own write/upload/API capabilities only when authorized.
+9. Verify the resulting destination state when the host makes that possible.
+10. Report one truthful completion state.
 
-**Dry-run by default** — prints `create` / `update` / `up-to-date` / `skip:repo-bound` per skill per target. Nothing is written without `--apply`.
+## Completion states
 
-## Execution Flow
+Use a state such as:
 
-1. Run `skill-audit` first; do not deploy a failing tree.
-2. Dry-run to see planned actions:
+- `INSTALLED + VERIFIED`
+- `INSTALLED, VERIFICATION PENDING`
+- `READY TO UPLOAD`
+- `USER ACTION REQUIRED`
+- `BLOCKED: HOST DOES NOT SUPPORT SKILLS`
+- `BLOCKED: INSTALLATION METHOD NOT ESTABLISHED`
 
-   ```
-   node skills/skill-sync/scripts/sync.ts --claude-user --dest D:\agents\skills
-   ```
+Do not claim installation merely because the skill artifact exists in `skillz`.
 
-3. Review the action list. If it matches intent, re-run with `--apply`.
-4. Report per-target results. Junctions mean edits in this repo are live immediately; copies need re-sync (drift shows as `update` on the next dry-run).
+## Boundaries
 
-## Scheduling
+- No destination mutation without the authority normally required by the external host.
+- Do not assume two surfaces of the same product share installed skills.
+- Do not invent filesystem paths, upload formats, APIs, or product capabilities.
+- Third-party source material under `skills/sources/` retains its upstream identity and license obligations.
+- When direct unchanged reuse is unsuitable, create an adapted portable skill rather than mutating the pinned reference source.
 
-- **Claude Code:** run ad hoc after merging skill changes, or `/schedule` a weekly sync following the skills-pulse/skill-audit pair.
-- **Other agents:** dry-run output is safe to include in any automation report; gate `--apply` behind approval.
-
-## Output Format
-
-```
-[dry-run|apply] <target> <skill>: create|update|up-to-date|skip:repo-bound
-```
-
-## Notes
-
-- Only local skills deploy; `vendor/` content is consumed via its own install channels (e.g., `/plugin marketplace add`).
-- Repo-bound skills (this one and skill-audit) are excluded by construction (LD-2).
-- Mutating targets outside the repo requires `--apply` — read-only by default per the repo's design rules.
+The repository supplies instructions and artifacts. All active transfer behavior belongs to the external agent.
