@@ -1,117 +1,92 @@
-# Vendored-Source Freshness
+# Pinned Source Freshness
 
-`skillz` currently carries **12 pinned third-party source corpora** under `vendor/`. Each gitlink records the exact upstream revision used by the repository. Two additional registered sources are reference/discovery-only and are not vendored corpora.
+`skillz` includes pinned third-party source corpora under `skills/sources/`.
 
-A pin establishes reproducibility. It does **not** establish that upstream has not moved, nor does source freshness establish individual skill quality.
+A pin establishes the exact source revision represented by the repository. It does **not** establish that upstream has not moved, that the newer upstream version is better, or that every skill inside the source is individually trustworthy.
 
-## Current posture
+This is a passive review policy. `skillz` does not poll upstream repositories, run freshness checks, update submodules, schedule scans, or execute a refresh workflow. An external agent may inspect upstream state when the user or an authorized curation task calls for it.
 
-- **Pins are exact.** `registry/sources.yaml`, `.gitmodules`, and the repository gitlinks identify the source and pinned revision.
-- **Automatic GitHub Actions are disabled.** The workflow is manual-dispatch only while Actions budget is protected. Do not describe absent automatic CI as a freshness failure.
-- **Upstream drift detection is manual or scheduled outside automatic PR CI.** It may be performed by ecosystem-intake tooling or an explicit review.
-- **Refresh is reviewed, never automatic.** A pin bump lands only after relevant upstream changes are inspected.
-- **Availability is separate from quality.** Updating a source pin never automatically promotes individual skills to a stronger quality state.
-- **Characterization is exact-version bound.** If a characterized skill's canonical `SKILL.md` fingerprint changes, its prior characterization must be treated as stale until refreshed.
-- **Provenance survives refresh.** License, authorship, notices, path, and relationship changes are review-significant. See `docs/third-party-provenance.md`, `registry/skills/`, and `THIRD_PARTY_NOTICES.md`.
+## Authoritative source state
 
-## Current pinned corpora
+Do not duplicate mutable source pins in this document.
 
-Pins below are the gitlinks present in the initial-alpha implementation tree.
+The current source identity, role, class, license, inclusion mode, local path, and pinned/reference revision belong in:
 
-| Source path | Pinned revision | Notes |
-|---|---|---|
-| `vendor/knowledge-work-plugins` | `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8` | pinned corpus |
-| `vendor/anthropic-skills` | `9d2f1ae187231d8199c64b5b762e1bdf2244733d` | pinned corpus |
-| `vendor/aws-agent-toolkit` | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | pinned corpus |
-| `vendor/azure-skills` | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | pinned corpus |
-| `vendor/vercel-agent-skills` | `f8a72b9603728bb92a217a879b7e62e43ad76c81` | pinned corpus |
-| `vendor/microsoft-skills` | `32cad4ee689c95c309e61aeefcbc6af356f1e6a7` | pinned corpus |
-| `vendor/mattpocock-skills` | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | pinned corpus; provenance records exist for characterized subset |
-| `vendor/addyosmani-agent-skills` | `f63ec56a3cc936408d792956ae583c3c96a825bd` | pinned corpus; provenance records exist for characterized subset |
-| `vendor/openhands-extensions` | `87959a7da3e75445647e77b2fbf5bf5b66fb037b` | pinned corpus |
-| `vendor/cline-skills` | `26378461e978f2b4e2e6d67b57121b86b2a79ba5` | pinned corpus; characterized/verified subset exists |
-| `vendor/cloudflare-skills` | `f96bff754e428838818017f75817f0f9428acd48` | pinned corpus; characterized/verified subset exists |
-| `vendor/google-agents-cli` | `ef7808f33fc3038112b69d4ad488ce33b72699b1` | pinned corpus; characterized/verified subset exists |
+- `.gitmodules` for included git submodules;
+- `registry/sources.yaml` for governed source metadata;
+- `registry/skills/` for skill-specific provenance;
+- `registry/verification/` for exact-version individual quality decisions;
+- `registry/source-signals.yaml` for timestamped source-level activity/adoption context.
 
-The authoritative source URLs, source roles, classes, licenses, and inclusion modes live in `registry/sources.yaml`. Do not duplicate those fields here as independent truth.
+When these disagree, investigate and reconcile the records. Do not choose whichever value looks most convenient.
 
-## Reference/discovery sources
+## Freshness principles
 
-Registered sources that are not physically vendored are tracked in `registry/sources.yaml` with their appropriate source roles. They may inform discovery, specification compliance, or comparison without being silently counted as initialized local submodules.
+- **Pins are exact-version evidence.** They identify what source revision is currently represented.
+- **Newer is not automatically better.** Upstream movement is a reason to inspect, not a command to update.
+- **Source freshness is not skill quality.** A newly refreshed official source can still contain rejected or unverified individual skills.
+- **Individual quality is version-bound.** When material skill content changes, prior exact-version review no longer proves the changed version.
+- **Provenance survives review.** License, authorship, notices, source path, dependencies, and relationship changes remain material facts.
+- **Popularity is contextual.** Stars, forks, and activity may inform discovery or source context but do not prove an individual skill is good.
+- **No automatic refresh exists.** Every source change incorporated into the corpus should be an intentional external-agent decision.
 
-## Drift-check workflow
+## External-agent review method
 
-Run when source-intake tooling flags meaningful upstream activity, before adopting an unreviewed upstream change, or during an intentional source refresh.
+When an external agent has a reason to examine source freshness:
 
-### 1. Check current pin versus upstream
+1. Read the current governed source record and represented revision.
+2. Inspect the upstream source using capabilities legitimately available in the host.
+3. Determine whether upstream materially changed since the represented revision.
+4. Classify relevant change as one or more of:
+   - documentation;
+   - skill content;
+   - dependency/shared-resource;
+   - tooling supplied by the upstream source;
+   - security/authority;
+   - license/provenance;
+   - structural/path change.
+5. Decide whether the current pin should remain, whether the newer revision should be represented, or whether more evidence is needed.
+6. If represented skill content changes, identify affected characterized skills and treat prior exact-version quality evidence conservatively.
+7. Reconcile source/provenance/verification/source-signal records only where facts changed.
+8. Reconcile static navigation snapshots when their paths, counts, or descriptions became stale.
+9. Record the reason for accepting, rejecting, or deferring the source change.
 
-Read-only example:
+If the host cannot establish upstream state, record freshness as unavailable or not checked. Do not invent a comparison.
 
-```bash
-git submodule foreach --quiet 'echo "$name pinned=$(git rev-parse HEAD) upstream=$(git ls-remote origin HEAD | cut -f1)"'
-```
+## One source at a time
 
-A difference means **upstream moved**. It does not by itself mean refresh is desirable.
+Prefer reviewing one source independently rather than updating many sources merely because they all have newer commits.
 
-### 2. Review one source at a time
+This keeps evidence attributable and makes it possible to answer:
 
-```bash
-git submodule update --remote vendor/<source>
-git -C vendor/<source> log --oneline --stat <old-pin>..HEAD
-```
+- what changed;
+- which skills were affected;
+- whether dependencies or licensing changed;
+- why the new revision was accepted or rejected;
+- which exact-version quality records need reconsideration.
 
-Classify relevant deltas as:
+## Changed individual skills
 
-- documentation only;
-- skill content;
-- tooling/runtime;
-- security/authority;
-- license/provenance;
-- structural/dependency changes.
+For every characterized skill whose canonical content materially changed, the external agent should:
 
-If review raises concerns, restore the old pin and record the decision rather than normalizing upstream merely because it is newer.
+1. establish the new exact content identity when possible;
+2. inspect the relevant delta and dependencies;
+3. update skill-specific provenance/freshness evidence;
+4. treat the prior quality conclusion as stale for unchanged reuse until review is complete;
+5. apply the structured verification standard to the changed version;
+6. revisit behavioral evidence only when previous evidence may no longer apply;
+7. preserve rejection or limitation reasons when they remain true.
 
-### 3. Reconcile affected individual records
+## Shared resources and dependencies
 
-For every characterized skill whose canonical content changed:
+Do not reason about a `SKILL.md` in isolation when it depends on shared references, templates, assets, hooks, packages, scripts supplied by the upstream project, or host-specific capabilities.
 
-1. compute/check the new canonical fingerprint;
-2. mark the old characterization stale until reviewed;
-3. refresh controlled tags if behavior/use case/authority/portability changed;
-4. rerun structured verification when required by the quality policy;
-5. do not retain behavioral-validation claims when the evidence no longer applies to the exact version.
+Those dependencies may be important to the skill's usefulness or safety even though `skillz` itself executes none of them.
 
-### 4. Reconcile provenance and dependencies
+## Catalog reconciliation
 
-Check:
+`INDEX.md` and `index.json` are passive navigation snapshots. When source review changes paths, inclusion, counts, names, or quality summaries, an external agent may update those snapshots directly from the evidence available to it.
 
-- source/path changes;
-- license or notice changes;
-- bundled references/scripts/assets required by the skill;
-- derived/imported local skills that may rely on old upstream assumptions.
+There is no required generator, idempotency script, materialization preflight, or CI gate.
 
-Do not copy a lone `SKILL.md` while omitting required shared resources.
-
-### 5. Regenerate the catalog
-
-With all intended submodules materialized:
-
-```bash
-node scripts/verify-index-idempotency.ts
-```
-
-The first pass may refresh stale `INDEX.md` / `index.json`. The second pass must be byte-identical.
-
-### 6. Commit one coherent refresh
-
-Land together when applicable:
-
-- gitlink change;
-- source/provenance/notice changes;
-- refreshed characterization/verification records;
-- regenerated catalog;
-- concise classification of what changed and why the refresh was accepted.
-
-## Initial-alpha note
-
-The exact current indexed skill count is intentionally pending the next fully materialized schema-v2 catalog generation. The source pins above are independently visible in the repository tree, but API-side path counts are **not** used as a substitute for the generator's deduplication/exclusion rules.
+If an exact corpus count cannot be established from the accessible evidence, use an explicitly approximate or pending count rather than claiming false precision.
