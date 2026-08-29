@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: frontend-design
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/frontend-design/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: decdff43d05908b4c1fc2cfd2d80fc5743440934
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [ux, implementation, refactoring]
+  lifecycle: [design, implementation, verification]
+  characteristic: [iterative, visual-verification, human-review, compatibility-aware]
+  authority: [generate-only, mutating]
+  portability: [high]
+notes: Accessibility and visual-review requirements materially improve ordinary UI generation. Behavioral validation remains pending.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: claude-api
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9a9407309936d7fd36858296374c246dc2c27e46
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: stale
+verification_basis: structured-static-review-plus-freshness-check
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [api-design, agent-development, implementation]
+  lifecycle: [discovery, implementation, maintenance]
+  characteristic: [reference-heavy, retrieval-first, source-driven, compatibility-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: Structurally strong, but current Anthropic docs have moved beyond the pinned model defaults and thinking/feature assumptions. Marked stale; behavioral validation remains pending.

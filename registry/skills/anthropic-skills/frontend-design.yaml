@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: frontend-design
+display_name: Frontend Design
+source_id: anthropic-skills
+source_repository: https://github.com/anthropics/skills
+source_path: skills/frontend-design/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_revision: 2235be7c60b551f5de82ade908fd3816455afcda
+upstream_last_updated_at: 2026-06-09T19:33:41Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/anthropic-skills/skills/frontend-design/SKILL.md
+permission_tier: generate-and-local-file-mutation
+portability: high
+review_status: verified-structured
+dependency_status: host-rendering-capabilities-optional
+dependencies: Frontend codebase plus optional rendering/screenshot capability
+import_eligibility: already-vendored
+rationale: Strong UI guidance with responsiveness, accessibility, keyboard focus, reduced motion, and iterative visual critique.

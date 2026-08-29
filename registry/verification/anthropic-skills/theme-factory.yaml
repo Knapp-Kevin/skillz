@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: theme-factory
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/theme-factory/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 90dfceaf2ecdc191a4dcfb0069768a9560638998
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [ux, documentation]
+  lifecycle: [design, implementation]
+  characteristic: [human-review, progressive-disclosure, source-driven]
+  authority: [generate-only]
+  portability: [high]
+notes: Clear user-selection authority boundary and locally auditable theme definitions; behavioral validation remains pending.

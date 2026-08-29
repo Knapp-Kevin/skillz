@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: mcp-builder
+display_name: MCP Builder
+source_id: anthropic-skills
+source_repository: https://github.com/anthropics/skills
+source_path: skills/mcp-builder/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+upstream_revision: ef740771ac901e03fbca3ce4e1c453a96010f30a
+upstream_last_updated_at: 2025-12-01T18:05:36Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/anthropic-skills/skills/mcp-builder/SKILL.md
+permission_tier: generate-and-local-test
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-current-sdk-docs-required
+dependencies: Bundled MCP references plus current MCP SDK/spec docs and local test toolchain
+import_eligibility: already-vendored
+rationale: Structured MCP research, implementation, testing, and evaluation with explicit tool annotations and read-only eval guidance.

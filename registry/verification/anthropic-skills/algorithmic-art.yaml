@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: algorithmic-art
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/algorithmic-art/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 634f6fa42e4e697fa6afd293acd7fb8246574876
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [prototyping, ux]
+  lifecycle: [design, implementation, verification]
+  characteristic: [deterministic, iterative, human-review, visual-verification, tool-assisted]
+  authority: [generate-only]
+  portability: [medium]
+notes: Seeded randomness and original-work boundaries provide reproducible, bounded design guidance; behavioral validation remains pending.

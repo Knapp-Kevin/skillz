@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: pptx
+source_id: anthropic-skills
+source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+local_path: vendor/anthropic-skills/skills/pptx/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: df5000e17ef60ecf400e65bfcd3c58ff88b604c3
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, implementation, ux]
+  lifecycle: [design, implementation, verification]
+  characteristic: [tool-assisted, visual-verification, compatibility-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Technical design scores well, but licensing is a hard fail. Reference-only; no behavioral validation claimed.
