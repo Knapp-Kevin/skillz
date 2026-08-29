@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: linear-sdk-scripting
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/linear-sdk-scripting/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0d8529663483ef8f7e6e1568e3bf67c1bbf0d6a3
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, business-operations, productivity]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [tool-assisted, source-driven, human-review, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 0, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. The workflow has useful exact-SDK lookup discipline, mutation confirmation, and explicit consent before persisting a credential. Hard fail: when auth is genuinely missing it instructs the agent to ask the user to paste a personal Linear API key into the conversation, then provides shell-profile persistence commands. That can expose a credential in chat/tool transcripts even though the skill later says never to print it back. Reference-only unless adapted to secure credential acquisition and non-transcript secret handling. Exact pinned fingerprint and June 2 current auth-flow revision confirmed. Behavioral validation remains pending.
