@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: search-strategy
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/enterprise-search/skills/search-strategy/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d42cddb978e6188bf5fd31af04c55bfd80bb4554
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, web-search, context-management]
+  lifecycle: [discovery]
+  characteristic: [decomposition, retrieval-first, tool-routing, synthesis]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. Excellent query decomposition, semantic-vs-keyword choice, source-specific query generation, ambiguity handling, broadening, fallback, source authority, merge/rank/deduplicate concepts. Reject unchanged because fixed ranking weights and source hierarchies are presented as defaults without calibration evidence, connector syntax is host-specific, and 'always execute searches across sources in parallel, never sequentially' ignores rate limits, costs, dependencies, privacy, and hosts where staged retrieval is preferable. Adapt the strategy while making ranking and execution policy host- and task-dependent. Exact pinned fingerprint confirmed. Behavioral validation not run."
