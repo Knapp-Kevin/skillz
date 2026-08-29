@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: git-workflow-and-versioning
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/git-workflow-and-versioning/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c64f9f2697b0e4a65978c5fab80327da56ad6069
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [repository-maintenance, deployment]
+  lifecycle: [implementation, release, maintenance]
+  characteristic: [incremental, traceable, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rejected for unchanged reuse at the pinned version. The skill has strong atomic-commit, worktree, scope-summary, tag, changelog, and consumer-impact patterns, but the generic 'always' trigger and several hard preferences exceed safe portable guidance. Most importantly, the save-point pattern recommends `git reset --hard HEAD` after a failed increment, which can destroy unrelated uncommitted work; release examples push tags to a remote; pre-commit checks assume npm/TypeScript; line-count targets and trunk/squash preferences are presented too categorically; and grep-based secret detection is not a sufficient safety check. Retain as reference/adaptation evidence, but require repository-specific workflow and explicit authority boundaries before reuse. Exact pinned fingerprint confirmed. Behavioral validation remains pending and is not required for this static rejection."
