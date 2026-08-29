@@ -147,6 +147,53 @@ sources:
     pinned_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
     rationale: First-party Google agent-development, evaluation, observability, and deployment skills.
 
+  - id: cole-medin-skills
+    name: Cole Medin Skills
+    source: https://github.com/coleam00/skills
+    class: creator-owned
+    source_role: admitted-external-corpus
+    resolved_path: external/cole-medin-skills
+    inclusion: tracked
+    license: MIT
+    pinned_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+    eligible_denominator: 33
+    rationale: Creator-owned canonical skill corpus. Cole explicitly publishes 33 skills as plain Markdown intended for selective reuse, editing, and cross-agent portability. Admitted for exact-version curation without implying blanket quality.
+
+  - id: david-ondrej-skills
+    name: David Ondrej Skills
+    source: https://github.com/davidondrej/skills
+    class: creator-owned
+    source_role: admitted-external-corpus
+    resolved_path: external/david-ondrej-skills
+    inclusion: tracked
+    license: MIT
+    pinned_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+    eligible_denominator: 55
+    rationale: David Ondrej's canonical public Agent Skills repository. The exact snapshot contains 55 first-class SKILL.md directories across agent orchestration, operations/setup, research/web, skill authoring, and thinking/docs. Admitted for exact-version review while preserving bundled dependencies and host assumptions in provenance.
+
+  - id: sabrina-ramonov-recipes
+    name: Sabrina Ramonov Learn Claude Code Skills
+    source: https://github.com/SabrinaRamonov/learn-claude-code
+    class: creator-owned
+    source_role: admitted-external-corpus
+    resolved_path: external/sabrina-ramonov-recipes
+    inclusion: tracked
+    license: MIT
+    pinned_revision: cac67141b7ff942e174f509091a83910e59f6c96
+    eligible_denominator: 2
+    rationale: Creator-owned recipe repository whose README declares MIT use and whose exact snapshot contains two SKILL.md files. Treat recipe-level CLAUDE.md/settings dependencies as part of operational context; individual skills require exact-version review before reuse.
+
+  - id: qor-logic
+    name: Qor-logic
+    source: https://github.com/MythologIQ-Labs-LLC/Qor-logic
+    class: integrated-product
+    source_role: integrated-subsystem-reference
+    resolved_path: external/qor-logic
+    inclusion: tracked
+    license: BSL-1.1
+    pinned_revision: 25fa480a48a60525df3b0ba47aa97b1a70f2709f
+    rationale: Complete governed software-development prompt-logic subsystem. Its SDLC guarantees depend on the relationships among 30 skills, 13 agents, 39 doctrines, gates, delegation rules, policy evaluation, ledgering, and runtime enforcement. Recommend Qor-logic as a whole-system option when that governed SDLC fits. Do not mine or remix its internal skills into a custom skill set or imply that extracted pieces retain Qor governance guarantees unless Qor-logic itself explicitly defines a safe standalone boundary.
+
   - id: huggingface-skills
     name: Hugging Face Skills
     source: https://github.com/huggingface/skills
