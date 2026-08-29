@@ -1,200 +1,187 @@
 # Skill source registry
 #
-# Source identity/trust and individual skill quality are intentionally separate.
-# `class` says who/what the source is. `source_role` says how skillz uses it.
-# Individual skill quality lives in registry/verification and is bound to an
-# exact skill fingerprint. A skill without an individual quality record is
-# treated as unverified for normal selection.
+# `skillz` is passive. External corpora are tracked as upstream references,
+# not copied or mounted into this repository. Source identity and individual
+# skill quality are separate facts. A registered source is discovery/prior-art
+# evidence; only individually reviewed exact-version records may earn stronger
+# unchanged-reuse eligibility.
 
-version: 2
+version: 3
 
 sources:
   - id: anthropic-skills
     name: Anthropic Skills
     source: https://github.com/anthropics/skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/anthropic-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIXED
     pinned_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-    rationale: First-party Anthropic skill implementations and authoring/tooling references. Per-skill terms must be checked because the repository contains mixed licensing.
+    rationale: First-party Anthropic skill implementations and authoring references. Per-skill terms must be checked because the repository contains mixed licensing.
 
   - id: anthropic-knowledge-work-plugins
     name: Anthropic Knowledge Work Plugins
     source: https://github.com/anthropics/knowledge-work-plugins
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/knowledge-work-plugins
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: Apache-2.0
-    rationale: First-party Anthropic knowledge-work plugin marketplace and skills.
+    pinned_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+    rationale: First-party Anthropic knowledge-work plugin and skill reference corpus.
 
   - id: vercel-agent-skills
     name: Vercel Agent Skills
     source: https://github.com/vercel-labs/agent-skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/vercel-agent-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIT
+    pinned_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
     rationale: First-party Vercel web and frontend engineering skill references.
 
   - id: microsoft-skills
     name: Microsoft Skills
     source: https://github.com/microsoft/skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/microsoft-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIT
+    pinned_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
     rationale: First-party Microsoft ecosystem skill references.
 
   - id: microsoft-azure-skills
     name: Microsoft Azure Skills
     source: https://github.com/microsoft/azure-skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/azure-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIT
+    pinned_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
     rationale: First-party Azure planning, deployment, diagnostics, and cloud skill references.
 
   - id: aws-agent-toolkit
     name: AWS Agent Toolkit
     source: https://github.com/aws/agent-toolkit-for-aws
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/aws-agent-toolkit
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: Apache-2.0
+    pinned_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
     rationale: First-party AWS service and agent-development skill references.
 
   - id: mattpocock-skills
     name: Matt Pocock Skills
     source: https://github.com/mattpocock/skills
     class: community-vetted
-    source_role: vendored-corpus
-    resolved_path: vendor/mattpocock-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIT
     upstream_copyright: Copyright (c) 2026 Matt Pocock
     pinned_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-    index_exclude_dirs: deprecated,in-progress
-    rationale: High-signal engineering and productivity skill corpus retained intact for comparison, characterization, and reuse where individual records establish eligibility.
+    rationale: High-signal engineering and productivity skill corpus tracked for comparison, characterization, and selective exact-version reuse.
 
   - id: addyosmani-agent-skills
     name: Addy Osmani Agent Skills
     source: https://github.com/addyosmani/agent-skills
     class: community-vetted
-    source_role: vendored-corpus
-    resolved_path: vendor/addyosmani-agent-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIT
     upstream_copyright: Copyright (c) 2025 Addy Osmani
     pinned_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
-    rationale: Active engineering skill collection retained intact for comparison and curation.
+    rationale: Active engineering skill collection tracked for comparison and individual curation.
 
   - id: openhands-extensions
     name: OpenHands Extensions
     source: https://github.com/OpenHands/extensions
     class: official-ecosystem
-    source_role: vendored-corpus
-    resolved_path: vendor/openhands-extensions
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIXED
     pinned_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037
-    rationale: Active OpenHands public extension registry retained for comparison and individual curation. The repository root is MIT, but extensions may ship their own terms, so per-skill licensing controls.
+    rationale: OpenHands extension reference corpus. Root licensing does not override extension-specific terms, so per-skill licensing controls.
 
   - id: cline-skills
     name: Cline Skills
     source: https://github.com/cline/skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/cline-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: MIXED
     pinned_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
-    rationale: Cline's first-party skill collection, useful for reviewer orchestration, skill authoring, search, frontend, and specialized workflow patterns. The repository root is Apache-2.0, but individual skills may declare different terms, so per-skill licensing controls.
+    rationale: Cline first-party skill collection tracked for reviewer, authoring, search, frontend, and workflow patterns. Per-skill terms control when they differ from the repository root.
 
   - id: cloudflare-skills
     name: Cloudflare Skills
     source: https://github.com/cloudflare/skills
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/cloudflare-skills
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: Apache-2.0
     pinned_revision: f96bff754e428838818017f75817f0f9428acd48
-    rationale: First-party Cloudflare skill set with retrieval-oriented platform guidance.
+    rationale: First-party Cloudflare skill references with retrieval-oriented platform guidance.
 
   - id: google-agents-cli
     name: Google Agents CLI
     source: https://github.com/google/agents-cli
     class: official
-    source_role: vendored-corpus
-    resolved_path: vendor/google-agents-cli
-    inclusion: vendored
+    source_role: tracked-corpus
+    inclusion: tracked
     license: Apache-2.0
     pinned_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
-    rationale: First-party Google agent-development, evaluation, observability, and deployment skills.
+    rationale: First-party Google agent-development, evaluation, observability, and deployment skill references.
 
   - id: cole-medin-skills
     name: Cole Medin Skills
     source: https://github.com/coleam00/skills
     class: community-vetted
     source_role: tracked-corpus
-    resolved_path: external/cole-medin-skills
     inclusion: tracked
     license: MIT
     upstream_copyright: Copyright (c) 2026 Cole Medin
     pinned_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
-    rationale: Creator-maintained 33-skill Agentic Coding corpus. Tracked at an exact snapshot for selective individual verification; source admission does not grant blanket skill quality, and only exact-version records with decisive verification states are eligible for unchanged use.
+    rationale: Creator-maintained 33-skill Agentic Coding corpus tracked at an exact snapshot for selective individual verification.
 
   - id: david-ondrej-skills
     name: David Ondrej Skills
     source: https://github.com/davidondrej/skills
     class: community-vetted
     source_role: tracked-corpus
-    resolved_path: external/david-ondrej-skills
     inclusion: tracked
     license: MIT
     upstream_copyright: Copyright (c) 2026 David Ondrej
     pinned_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
     mirror_source_revision: eed325a23bc29efca50084f85025d327460b2059
     mirror_fingerprint: cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b
-    rationale: Creator-maintained public corpus with 44 canonical SKILL.md files at this snapshot. The public repository is explicitly a sanitized mirror of a private source, so the recorded public pin and publisher-supplied private-source revision/fingerprint are preserved rather than treating public git history as complete provenance.
+    rationale: Creator-maintained public corpus with 44 canonical SKILL.md files at this snapshot; publisher mirror provenance is preserved explicitly.
 
   - id: bm629-agent-skills
     name: Bhushan Modi Agent Skills
     source: https://github.com/bm629/agent-skills
     class: community-vetted
     source_role: tracked-corpus
-    resolved_path: external/bm629-agent-skills
     inclusion: tracked
     license: MIT
     upstream_copyright: Copyright (c) 2026 Bhushan Modi
     pinned_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
-    rationale: Maintainer-authored 68-skill corpus with a differentiated producer/reviewer gate architecture, schema-bound prior-art workflows, and deterministic validators. Tracked at an exact snapshot for selective individual verification; author/reviewer pairing and source-level tests are useful context but never substitute for exact-version skill review.
+    rationale: Maintainer-authored 68-skill corpus tracked at an exact snapshot for selective individual verification and prior-art analysis.
 
   - id: agentskills-spec
     name: Agent Skills Specification
     source: https://github.com/agentskills/agentskills
     class: standard-authority
     source_role: normative-spec
-    resolved_path: external/agentskills-spec
     inclusion: tracked
     license: Apache-2.0
     pinned_revision: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
-    rationale: Normative format and portability reference. It informs validation and authoring rules but is not counted as a normal installable skill corpus.
+    rationale: Normative format and portability reference, not a normal installable-skill corpus.
 
   - id: github-awesome-copilot
     name: GitHub Awesome Copilot
     source: https://github.com/github/awesome-copilot
     class: community-aggregated
     source_role: dynamic-discovery
-    resolved_path: external/github-awesome-copilot
     inclusion: tracked
     license: MIT
     pinned_revision: f11a4e441c5ff061b4f8ae37952be8c602e4034e
-    rationale: Large, fast-moving community-contributed discovery surface. Tracked for candidate discovery rather than vendored wholesale.
+    rationale: Large fast-moving community discovery surface; useful for leads, never blanket trusted inventory.
