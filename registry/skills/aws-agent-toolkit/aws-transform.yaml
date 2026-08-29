@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-transform
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/migration-and-modernization-skills/aws-transform/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+canonical_package_tree_sha: 19d719b83327293bcd98072b8e93e7774f4122c3
+freshness_state: current-at-registered-pin
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored-reference-only
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/migration-and-modernization-skills/aws-transform/SKILL.md
+permission_tier: mutating-external-side-effect
+portability: low
+review_status: rejected-unchanged
+dependency_status: source-intact-aws-context-required
+dependencies: AWS Transform CLI, AWS credentials/IAM, optional CDK and remote AWS infrastructure.
+import_eligibility: reference-only-unless-adapted
+rationale: Reject unchanged: long-lived credential setup, unconditional update/install behavior, remote-script installation, and broad IAM attachment exceed a portable host-authority boundary. Retain transformation patterns as adaptation prior art.
