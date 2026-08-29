@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ask-matt
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/ask-matt/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ae8eb9b211972d9ae584b41d0f1439c644494fc7
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [orchestration, planning, productivity]
+  lifecycle: [planning]
+  characteristic: [tool-routing, orchestration, context-efficient, progressive-disclosure]
+  authority: [read-only]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong explicit routing map and phase-boundary discipline, with all named production-skill dependencies present at the pinned source. It is intentionally tied to Claude-style Skill-tool, /clear, and /compact semantics, and it offers limited evidence/failure machinery because it is a router rather than an execution workflow. Behavioral validation remains pending."
