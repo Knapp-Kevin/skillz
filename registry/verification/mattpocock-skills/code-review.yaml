@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/engineering/code-review/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: e28d7acbf7b3bb4d7817b7eb5d9c105af03f6ec4
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 17/20
 tags:
   use_case: [code-review, evaluation]
   lifecycle: [verification]
   characteristic: [evidence-first, spec-driven, human-review, orchestration, traceable]
   authority: [read-only]
   portability: [medium]
-notes: Two-axis review structure and dependencies were inspected, and the exact canonical skill file is fingerprinted. No local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong two-axis Standards/Spec separation, fixed-point validation, explicit no-spec handling, evidence citation, and no cross-axis reranking. Requires subagent orchestration and repository issue-tracker setup, reducing portability, and does not deeply address adversarial instruction content in specs/issues. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
