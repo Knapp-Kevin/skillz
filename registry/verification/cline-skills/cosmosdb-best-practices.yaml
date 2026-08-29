@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cosmosdb-best-practices
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/cosmosdb-best-practices/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bf53f98d0c0890b6d0bfdddb45cf86e9b6434bde
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [implementation, architecture, code-review, refactoring]
+  lifecycle: [design, implementation, verification, maintenance]
+  characteristic: [reference-heavy, progressive-disclosure, compatibility-aware, production-oriented, maintainability]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. The skill is a large structured engineering reference rather than an operational control surface. It separates 73+ rules by concern and instructs the agent to load only relevant material, covering partitioning, modeling, queries, SDKs, indexes, throughput, distribution, monitoring, common patterns, and vector search. Guidance remains context-dependent and should not substitute for workload measurements or current Azure documentation where exact service limits matter. Exact pinned fingerprint, MIT skill-level license, and bundled rule corpus confirmed. Behavioral validation remains pending.
