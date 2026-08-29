@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wait-what
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/productivity/wait-what/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f8854f1b4527bca90378baf5430557172136a1bf
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [communication, productivity]
+  lifecycle: [maintenance]
+  characteristic: [context-efficient, compatibility-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 1, authority and safety 2, failure handling 0, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. The behavior is harmless and useful as a native interaction shortcut, but the canonical artifact is a single rephrasing instruction with no failure behavior, evidence discipline, or meaningful adversarial resilience. Keep as design evidence/shortcut; below the 15/20 unchanged-selection threshold."
