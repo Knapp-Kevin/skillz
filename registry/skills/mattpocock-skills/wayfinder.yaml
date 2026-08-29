@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wayfinder
+display_name: Wayfinder
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/engineering/wayfinder/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/engineering/wayfinder/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: requires configured issue-tracker wayfinding operations and composes research, prototype, grilling, and domain-modeling; depends on tracker child/blocking/assignment semantics or documented fallbacks
+import_eligibility: already-vendored
+rationale: Sophisticated multi-session planning method that separates decisions from deliverables, models a visible frontier and fog of war, uses claims for concurrency, and stops planning once the route to the destination is clear.
