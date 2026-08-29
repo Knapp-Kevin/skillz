@@ -24,6 +24,23 @@
           }
         },
         {
+          "name": "legacy-baseline-debug",
+          "description": "Legacy source-policy characterization without structured review",
+          "skillFile": "vendor/fixture/legacy-baseline-debug/SKILL.md",
+          "quality": {
+            "characterized": true,
+            "verificationStatus": "trusted-baseline",
+            "validationStatus": "not-run",
+            "tags": {
+              "use_case": ["debugging"],
+              "lifecycle": ["verification"],
+              "characteristic": ["evidence-first"],
+              "authority": ["read-only"],
+              "portability": ["high"]
+            }
+          }
+        },
+        {
           "name": "unverified-debug",
           "description": "Promising but unverified debugging workflow",
           "skillFile": "vendor/fixture/unverified-debug/SKILL.md",

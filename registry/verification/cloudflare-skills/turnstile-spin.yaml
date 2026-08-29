@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: turnstile-spin
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/turnstile-spin/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 57188f97bbbcf2e4ac498c73b19cfe3022b9d8a7
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 20/20
+tags:
+  use_case: [security, implementation, testing, deployment]
+  lifecycle: [planning, implementation, verification, release]
+  characteristic: [deterministic, tool-assisted, human-review, safety-bounded, evidence-first, test-gated, risk-aware, traceable]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are 2 in all ten dimensions. Confirmation precedes irreversible steps; tokens and secrets stay out of chat and argv where possible; project-local credential-bearing executables are forbidden; repository and API text is untrusted; Siteverify fails closed; successful live request plus replay rejection are required; inability to run the protected backend must be reported as pending rather than success. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

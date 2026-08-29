@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sandbox-next
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/sandbox-next/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6384327710feced81e896501510bd76dd57770ff
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, implementation, testing, deployment]
+  lifecycle: [implementation, verification, release]
+  characteristic: [compatibility-aware, retrieval-first, retrieval-map, safety-bounded, production-oriented, test-gated]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Strong stable-versus-preview gate, explicit process lifetime and error semantics, no live secrets in sandbox env, anti-invention constraints, and current-doc and type retrieval. Pre-ship checks are useful but less complete than the dedicated migration skill full validation loop. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

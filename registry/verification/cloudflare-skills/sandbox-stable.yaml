@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sandbox-stable
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/sandbox-stable/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8faf22bf1a77afdcfbf419e7de49762b9fff7d7f
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, implementation, testing, deployment]
+  lifecycle: [implementation, verification, release]
+  characteristic: [compatibility-aware, retrieval-first, retrieval-map, safety-bounded, production-oriented, test-gated]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Explicit stable-versus-preview gate, refusal to force migration, stable API contract, secret handling, current-doc and type retrieval, and pre-ship and deprecation checks make unchanged use dependable within the Cloudflare Sandbox ecosystem. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cloudflare-one-migrations
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/cloudflare-one-migrations/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 53c770fb2cad0339cccffbc85b68b2b9810dbcb4
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [cloud, security, planning, deployment]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [retrieval-first, evidence-first, traceable, incremental, human-review, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Strong migration mapping, source-rule accounting, explicit partial and unmapped outcomes, current-doc retrieval, pilot and audit-mode defaults, validation, rollback, and rejection of unsafe broad allow-all shortcuts. Portability is honestly low because the workflow depends on Cloudflare One and source-platform exports. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

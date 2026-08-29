@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cloudflare
+source_id: cloudflare-skills
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+local_path: vendor/cloudflare-skills/skills/cloudflare/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2c7da21964ab4168422c5775ec8eeb469c89b1f7
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, architecture, implementation, deployment]
+  lifecycle: [discovery, design, implementation, operations]
+  characteristic: [retrieval-first, retrieval-map, tool-routing, reference-heavy]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Rubric scores are trigger 1, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Strong retrieval bias and product-routing decision trees across a large intact reference corpus. The trigger is intentionally broad and the skill delegates most authority, failure, and evidence handling to downstream task-specific guidance, so it clears the gate only narrowly. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

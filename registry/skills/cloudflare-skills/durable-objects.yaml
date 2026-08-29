@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: durable-objects
+display_name: Durable Objects
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/durable-objects/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: d3113039790f64e052ff80f351190da65e9b7510
+upstream_last_updated_at: 2026-03-03T15:30:51Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/durable-objects/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-current-docs-required
+dependencies: Bundled Durable Objects rules/testing/Workers references; current Durable Objects docs/API; Wrangler configuration and @cloudflare/vitest-pool-workers for implementation/testing
+import_eligibility: already-vendored
+rationale: Focused Durable Objects authoring and review skill with clear use and non-use boundaries, current-doc retrieval, concurrency/storage anti-patterns, migration/config guidance, and concrete testing patterns. It is Cloudflare-specific and less explicit about approval and recovery than the strongest operational skills.

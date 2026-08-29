@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: turnstile-spin
+display_name: Turnstile Spin
+source_id: cloudflare-skills
+source_repository: https://github.com/cloudflare/skills
+source_path: skills/turnstile-spin/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+upstream_revision: 30553f89ae1ef1e3c2917cd09d72dac992bb4e9a
+upstream_last_updated_at: 2026-07-24T18:42:33Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/cloudflare-skills/skills/turnstile-spin/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-toolchain-required
+dependencies: Bundled Turnstile scripts/references; curl, python3, and jq where invoked; Cloudflare Turnstile API token/account context; approved external Wrangler binary when required; existing customer backend for Siteverify
+import_eligibility: already-vendored
+rationale: Highly governed end-to-end Turnstile integration workflow with explicit user confirmations, safe credential handling, prompt-injection-resistant treatment of repository and API text, irreversible-action boundaries, fail-closed verification, and real success/replay testing before completion claims.
