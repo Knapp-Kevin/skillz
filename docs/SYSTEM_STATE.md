@@ -5,9 +5,11 @@
 | Attribute | Value |
 |---|---|
 | **Last updated** | 2026-08-29 |
-| **Active work** | PR #42 passive-repository reconciliation, followed by corpus curation, provenance/verification completion, organization, and documentation reconciliation |
+| **Active work** | PR #42 passive-repository reconciliation, admitted-source static completion, governed discovery/source-vetting, and documentation/catalog reconciliation |
 | **Architecture** | Entirely passive repository; external agent is the active system |
+| **Purpose** | Accumulate reusable skill knowledge so the viewing agent can construct the smallest useful custom skill set for the user |
 | **Wayfinder map** | GitHub Issue #35 |
+| **Source queue** | GitHub Issue #27 |
 | **Active structure work** | GitHub Issue #41 / PR #42 |
 
 ## Repository model
@@ -18,12 +20,12 @@ skillz/
 ├── AGENT_START_HERE.md               passive agent entry instructions
 ├── BOOTSTRAP.md                      first-visit + returning-user method
 ├── AGENTS.md                         agent operating boundaries
-├── skills/                           complete user-facing skill tree
+├── skills/                           complete admitted user-facing skill tree
 │   ├── categories/                   human navigation
 │   └── sources/                      pinned third-party reference corpora
-├── engine/skills/                    passive repository-curation instructions
+├── engine/skills/                    passive repository-curation/use instructions
 ├── registry/
-│   ├── sources.yaml                  source identity, role, pin, license
+│   ├── sources.yaml                  admitted/reference/discovery source identity + role
 │   ├── source-signals.yaml           timestamped source-level context
 │   ├── categories.yaml               local category assignments
 │   ├── skills/                       per-skill provenance companions
@@ -33,21 +35,36 @@ skillz/
 └── INDEX.md / index.json             passive catalog snapshots
 ```
 
-There is no repository runtime, CI workflow, test runner, preflight process, executable helper layer, scheduler, monitor, installer, or background service.
+There is no repository runtime, CI workflow, test runner, preflight process, executable helper layer, scheduler, monitor, crawler, installer, or background service.
 
 Any active behavior is performed by the external agent reading the repository using capabilities supplied by its host.
 
+## Knowledge and source model
+
+`skillz` is not merely an installable-skill shelf. It accumulates complete skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, source-specific knowledge, provenance, exact-version quality evidence, and portability/freshness context.
+
+The host agent combines that accumulated knowledge with relevant user context and may adopt, adapt, extract, supplement, compose, create, use a checklist, keep behavior dynamic, or make no change.
+
+The source lifecycle is:
+
+**discovery surface → candidate source → admitted corpus/reference → exact-version skill review → user-fit decision**
+
+Discovery/source-vetting may proceed in parallel with admitted-source curation. Discovery does not establish individual quality, trust, or installation authority.
+
 ## Inventory boundaries
 
-- User-facing skills belong under `skills/`.
+- User-facing admitted skills belong under `skills/`.
 - Pinned third-party repositories under `skills/sources/` are user-facing reference corpus material.
-- Passive maintenance instructions under `engine/skills/` explain how an external agent should curate `skillz`; they do not count toward user-facing corpus totals.
+- Passive maintenance/use instructions under `engine/skills/` do not count toward user-facing corpus totals.
+- Tracked discovery surfaces and standards may live only in the source registry and issue queue without being vendored or counted as admitted skill inventory.
 - Registry and documentation files are evidence/instruction surfaces, not executable product logic.
 
-Current public corpus counts should be treated as provisional when older catalog snapshots disagree with the live tree. The curation effort should reconcile exact denominators and static companion records source by source rather than relying on a generator or runtime proof.
+Current public corpus counts should be treated as provisional when older catalog snapshots disagree with the live tree. Exact denominators and static companion records control.
 
 ## Quality and provenance model
 
+- Discovery is not admission.
+- Admission is not verification.
 - Source identity and individual skill quality are separate.
 - Missing individual quality evidence does not become trusted merely because a source is reputable.
 - Verification conclusions apply to the exact recorded skill version/fingerprint.
@@ -61,33 +78,47 @@ For selection use:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-## Current curation progress
+## Current admitted-source curation progress
 
-The unified-tree branch has reconciled characterized companion records and established these current source states:
+Statically complete:
 
-- Vercel Agent Skills: exact pinned denominator 9/9; all provenance + verification companions reconciled; 6 verified / 3 rejected;
-- Cloudflare Skills: exact pinned denominator 13/13; all companions reconciled; 11 verified / 2 rejected;
-- Google Agents CLI: exact pinned denominator 7/7; all companions reconciled; all 7 verified;
-- OpenHands Extensions: exact pinned denominator 1/1; companion fingerprint matches the pinned skill; rejected unchanged;
-- Anthropic Skills: exact pinned denominator 17/17; all companions reconciled; 10 verified / 7 rejected;
-- Matt Pocock Skills: exact eligible denominator 29/29; all companions reconciled;
-- Cline Skills: pinned README publishes 36 first-class skills; all 36 have provenance + exact-version review companions and decisive static states: 19 verified / 17 rejected unchanged, plus one additional unlisted/internal `cline-session-history` skill characterized separately;
-- Addy Osmani Agent Skills: exact pinned denominator 24/24; all 24 have provenance + exact-version review companions, controlled tags, dependency/authority/portability characterization, and decisive static states;
-- Anthropic Knowledge Work Plugins: exact pinned denominator 74 first-class skills across 11 published plugin `skills/` roots; all 74 now have provenance + exact-version review companions, skill-specific freshness, controlled tags, dependency/authority/portability characterization, and decisive static states: 36 verified / 38 rejected unchanged. Duplicate skill names (`start` and `competitive-brief`) use path-qualified companion filenames so distinct source paths cannot overwrite one another. Behavioral validation remains not-run.
+- Vercel Agent Skills: 9/9; 6 verified / 3 rejected;
+- Cloudflare Skills: 13/13; 11 verified / 2 rejected;
+- Google Agents CLI: 7/7; all verified;
+- OpenHands Extensions: 1/1; rejected unchanged;
+- Anthropic Skills: 17/17; 10 verified / 7 rejected;
+- Anthropic Knowledge Work Plugins: 74/74; 36 verified / 38 rejected unchanged;
+- Matt Pocock Skills: 29/29;
+- Cline Skills: 36/36 published first-class skills; 19 verified / 17 rejected unchanged, plus one separately characterized internal/unlisted skill;
+- Addy Osmani Agent Skills: 24/24 with decisive exact-version states.
 
-These figures distinguish complete source denominators from partial review coverage. A reconciled characterized subset is not the same thing as a statically complete source.
+In progress:
 
-## Remaining corpus frontier
+- AWS Agent Toolkit: exact pinned denominator **72** (14 core + 58 specialized). All 72 skill entry points have been inspected against pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`; skill-specific freshness/fingerprint/provenance companion closure remains before static completion can be claimed.
+- Microsoft Skills: pending full denominator/static review.
+- Microsoft Azure Skills: pending full denominator/static review.
 
-PR #42 remains the active structural frontier until its passive-repository reconciliation is complete and merged. Within that constraint, primary work remains static corpus curation rather than architecture expansion:
+## Active discovery/source-vetting
 
-1. finish the remaining current first-party maintenance/documentation sweep for stale execution and legacy physical-path assumptions;
-2. reconcile `INDEX.md` and `index.json` as passive static snapshots once the underlying paths and companion metadata are internally consistent;
-3. reconcile remaining public counts/status wording to live curated truth;
-4. establish exact denominators and complete static review for AWS, Microsoft, and Azure, then reconcile any remaining registered-source gaps;
-5. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
-6. keep source-level reputation/context separate from individual skill quality;
-7. only after static corpus completion, prioritize consequential skills for external behavioral validation.
+- Hugging Face Skills is now a tracked official candidate source at reviewed snapshot `cead19e10754e773bad24fecef83cb64be24094e`; root Apache-2.0; selective deeper intake accepted. Individual skills remain unverified until reviewed.
+- GitHub Awesome Copilot remains a registered dynamic-discovery surface, not a trusted wholesale corpus.
+- Agent Skills Specification remains a registered normative portability/format reference.
+- Creator/source candidates tracked in Issue #27 include Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sabrina Ramonov, Sean Kochel/upstream recommendations, and Chase AI+ restricted-reference material.
+
+Discovery is performed intentionally by the external host agent. No automated monitoring/intake service exists or is desired.
+
+## Remaining frontier
+
+1. finish AWS exact-version companion closure;
+2. complete Microsoft Skills;
+3. complete Microsoft Azure Skills;
+4. continue governed discovery/source-vetting in parallel, admitting sources only when identity, licensing, source role, and relevance justify it;
+5. reconcile first-party user-facing skill denominator and any residual registered-source gaps;
+6. finish current first-party maintenance/documentation sweep for stale execution and legacy physical-path assumptions;
+7. reconcile `INDEX.md` and `index.json` as passive static snapshots;
+8. reconcile README/governance/public count surfaces to live truth;
+9. review PR #42 final diff and merge when the passive tree is internally consistent;
+10. only after static corpus completion, prioritize consequential/high-use skills for external behavioral validation.
 
 ## Passive-repository invariant
 
@@ -96,24 +127,13 @@ Current first-party files must not instruct `skillz` itself to:
 - run code;
 - start a process;
 - schedule work;
-- monitor a source;
+- monitor or crawl a source;
 - execute tests;
 - install or synchronize skills;
-- fetch network data;
+- fetch network data autonomously;
 - validate itself through a runtime;
 - depend on CI or a local command.
 
 A skill may instruct the **external host agent** to use tools or perform actions when the user's request and authority permit. That activity belongs to the host, not to this repository.
-
-## Current next action
-
-Advance PR #42 with the smallest remaining reconciliation unit while continuing non-conflicting corpus work:
-
-1. finish the passive first-party maintenance/documentation sweep;
-2. reconcile the passive catalog snapshots only after path and companion consistency is established;
-3. reconcile remaining public status/count surfaces;
-4. review the final PR diff for accidental loss of passive reference/history material;
-5. merge PR #42 when those gates are satisfied;
-6. continue source-by-source static curation with AWS, Microsoft, and Azure, then close any remaining registered-source gaps unless evidence establishes a better ordering.
 
 Wayfinder Issue #35 remains the destination/scope map. External reviewer feedback remains evidence to evaluate, not an instruction to implement.
