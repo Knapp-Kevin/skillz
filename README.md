@@ -2,7 +2,7 @@
 
 ![Library Corpus](https://img.shields.io/badge/indexed_library-500%2B-blue)
 ![Engine Skills](https://img.shields.io/badge/engine_skills-7-lightgrey)
-![Registered Sources](https://img.shields.io/badge/registered_sources-14-8A2BE2)
+![Registered Sources](https://img.shields.io/badge/registered_sources-17-8A2BE2)
 ![Maintenance Runtime](https://img.shields.io/badge/maintenance_runtime-Bun_%7C_Node_22.18%2B-brightgreen)
 ![Agent Use](https://img.shields.io/badge/agent_use-no_local_runtime_required-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -71,7 +71,7 @@ For the complete indexed library, including approved third-party source corpora,
 - [`registry/verification/`](registry/verification/) for quality state, fingerprints, and tags;
 - [`registry/skills/`](registry/skills/) for provenance and attribution.
 
-The library is the whole approved indexed user-facing corpus, not merely the directories directly under `skills/`.
+The generated index covers local/imported skills and approved vendored corpora. Individually characterized tracked external sources extend the governed selection surface through their exact registry companions without being falsely counted as vendored/indexed inventory.
 
 ## What counts as a library skill?
 
@@ -87,6 +87,19 @@ The categorized folders under [`skills/categories/`](skills/categories/) are cur
 
 The repository historically recorded 524 vendor-indexed skills alongside 48 local skills. Current work has added sources rather than removed the historical corpus, so the library still contains **500+ available skills**. The exact current deduplicated total will be produced by the next deterministic index refresh rather than maintained by hand.
 
+### Governed tracked external sources
+
+[`registry/sources.yaml`](registry/sources.yaml) may also register external corpora that are intentionally tracked at exact snapshots rather than vendored wholesale. Source admission alone does **not** make every upstream skill trusted inventory.
+
+A tracked external skill becomes a governed unchanged-selection candidate only when it has:
+
+- exact provenance under [`registry/skills/`](registry/skills/);
+- a fingerprint-bound quality companion under [`registry/verification/`](registry/verification/);
+- a current `verified` or `validated` state; and
+- a fingerprint that can be matched to the recorded canonical upstream content.
+
+Connector/API/web-capable hosts can fetch that exact upstream file when relevant. This lets `skillz` use valuable external material without copying whole repositories into `vendor/` merely to make them discoverable.
+
 ### Engine machinery does not count
 
 [`engine/skills/`](engine/skills/) contains bootstrap, forge, evaluation, audit, synchronization, ecosystem scanning, and source-vetting procedures used to operate `skillz` itself. These do **not** count as library inventory.
@@ -97,19 +110,19 @@ The boundary test is straightforward: would this capability make sense for someo
 
 A skill being present in the library does not automatically mean it has been verified for quality.
 
-The quality lifecycle is:
+The current quality lifecycle is:
 
 ```text
-available/indexed -> characterized -> unverified | trusted-baseline | verified -> validated
-                                             \-> stale | rejected | retired
+available/indexed -> characterized -> unverified -> verified -> validated
+                                      \-> stale | rejected | retired
 ```
 
 The rules are version-specific:
 
-- `trusted-baseline` means the exact characterized version is eligible under the repository's source-quality policy and has a matching integrity fingerprint.
-- `verified` means an exact skill version passed the structured quality and effectiveness rubric in [`docs/skill-verification.md`](docs/skill-verification.md).
+- `verified` means an exact skill version passed the current individual structured quality and effectiveness rubric in [`docs/skill-verification.md`](docs/skill-verification.md).
 - `validated` is stronger. It requires representative behavioral evidence showing the skill improves outcomes.
 - `unverified` means the skill may be useful as reference or design evidence but has not earned trusted unchanged selection.
+- `trusted-baseline` is retained only as a legacy characterization/schema state. It is **not eligible for current unchanged selection** until replaced by an individual structured review.
 - `stale` means the canonical skill changed after characterization or the supporting evidence no longer matches.
 - `rejected` and `retired` are excluded from normal selection.
 
@@ -119,13 +132,14 @@ Tags come from [`registry/taxonomy.yaml`](registry/taxonomy.yaml) and describe u
 
 ## Current curation state
 
-There are currently **14 registered sources**:
+There are currently **17 registered sources**:
 
 - 12 pinned vendored corpora;
+- 3 tracked external corpora admitted for selective exact-version curation: Cole Medin Skills, David Ondrej Skills, and Bhushan Modi Agent Skills;
 - 1 normative specification source, the Agent Skills specification;
 - 1 tracked dynamic-discovery source, GitHub Awesome Copilot.
 
-The individually characterized shelf includes exact-version records across multiple sources, with a mixture of `trusted-baseline`, `verified`, and deliberately `unverified` states. No record claims local behavioral validation unless actual evaluation evidence exists.
+The individually characterized shelf contains exact-version records with decisive `verified` and `rejected` results alongside legacy records still awaiting migration to the current individual-review standard. No record claims local behavioral validation unless actual evaluation evidence exists.
 
 See [`CURATED.md`](CURATED.md), [`docs/curation-policy.md`](docs/curation-policy.md), [`docs/skill-verification.md`](docs/skill-verification.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
@@ -145,7 +159,7 @@ If the user supplied this repository or its GitHub URL without a more specific t
 4. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) when accessible.
 5. Use only relevant history, memory, workspace context, and instructions the host legitimately exposes.
 6. Identify durable or latent working methods.
-7. Search the complete indexed user-facing library, including approved vendor sources, using local tools when available or connector-native record inspection when they are not.
+7. Search the complete governed surface: the indexed user-facing library plus individually characterized tracked external sources when they add relevant coverage.
 8. Consult provenance, verification state, tags, authority, portability, and freshness before unchanged reuse.
 9. Use the governed candidate selector when local execution and a current generated catalog are available; otherwise inspect the relevant registry/provenance records and exact pinned upstream files directly.
 10. Reuse, refine, adapt, supplement, or compose when that genuinely fits.
@@ -159,7 +173,7 @@ If the user already has an installed or previously generated skill set and asks 
 1. inventory the current skill set and its intended jobs;
 2. compare current fingerprints, versions, provenance, and available evidence where accessible;
 3. identify stale, duplicated, conflicting, underperforming, or missing capabilities;
-4. search the current library for materially better fits;
+4. search the current governed surface for materially better fits;
 5. preserve still-valid custom behavior instead of resetting to generic defaults;
 6. refine the smallest necessary set;
 7. re-run appropriate verification or behavioral evaluation for changed skills;
@@ -171,8 +185,8 @@ For direct browse, search, compare, or install requests, use library mode rather
 
 For third-party unchanged reuse:
 
-- prefer individually characterized records whose current fingerprint matches and whose status is `trusted-baseline`, `verified`, or `validated`;
-- treat `unverified` skills as design evidence until verified on demand;
+- prefer individually characterized records whose current fingerprint matches and whose status is `verified` or `validated`;
+- treat `unverified` and legacy `trusted-baseline` skills as design evidence until a current individual structured review is completed;
 - exclude `stale`, `rejected`, and `retired` records from default selection;
 - require a locally or connector-established matching fingerprint before treating a candidate as fully governed for unchanged selection;
 - if exact fingerprint verification is unavailable on the current host, lower confidence and adapt/create rather than fabricating the match.
