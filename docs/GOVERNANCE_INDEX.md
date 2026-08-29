@@ -23,6 +23,19 @@ Current first-party governance must not require or imply a repository-owned:
 
 Third-party pinned source repositories may contain code or tooling of their own. Preserving that upstream material as reference content does not make it part of a `skillz` runtime.
 
+## Skill-location invariant
+
+Every `SKILL.md` physically owned by this repository must live under exactly one of these roots:
+
+1. **`skills/**`** for user-facing, reusable, imported, adapted, or pinned-source skill material.
+2. **`engine/skills/**`** only for repository-maintenance skills whose purpose is maintaining or curating `skillz` itself.
+
+The current seven repository-maintenance skills belong under `engine/skills/`. Future repository-maintenance skills may also be created there when genuinely warranted.
+
+No third skill root is valid.
+
+Repository-maintenance skills are formatted as skills because an external agent uses them as procedures, but they are excluded from user-facing/custom-skill inventory counts.
+
 ## Purpose boundary
 
 `skillz` accumulates reusable skill knowledge so the host agent can construct the smallest useful custom skill set for the user.
@@ -30,6 +43,8 @@ Third-party pinned source repositories may contain code or tooling of their own.
 That accumulated knowledge may include complete skills, procedures, safeguards, anti-patterns, rejected examples, provenance, quality evidence, creator methods, standards, and source-specific prior art.
 
 The repository does not mechanically choose or install a user skill set. The host agent reasons over relevant user context and the accumulated corpus, then may `ADOPT`, `ADAPT`, `EXTRACT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, use a checklist, keep behavior dynamic, or conclude `NO CHANGE`.
+
+Integrated subsystem references are different. When a source such as Qor-logic is valuable specifically because of system-level governance and cross-component invariants, the host chooses `RECOMMEND SYSTEM` or `DO NOT RECOMMEND SYSTEM`; it does not mine that subsystem for independent custom-skill ingredients unless the upstream product explicitly defines a safe standalone boundary.
 
 ## Authority and precedence
 
@@ -43,9 +58,9 @@ When current documents disagree, resolve them in this order:
 6. `docs/CONCEPT.md`, `docs/ARCHITECTURE_PLAN.md`, `docs/SYSTEM_STATE.md`, and `ROADMAP.md`;
 7. active Wayfinder decisions/issues;
 8. passive registries and companion evidence for the specific source/skill being evaluated;
-9. historical implementation/evaluation material.
+9. historical information recoverable from Git history.
 
-A lower-precedence historical document never reintroduces repository-owned execution.
+A lower-precedence historical record never reintroduces repository-owned execution.
 
 ## Source lifecycle
 
@@ -54,7 +69,7 @@ Governance distinguishes four states that must not be collapsed:
 1. **Discovery surface**: a public or connected place the host agent may inspect for useful skills, methods, creators, standards, or corpora.
 2. **Candidate source**: discovered material with enough provenance, licensing, and relevance evidence to justify deeper source-vetting.
 3. **Admitted corpus/reference source**: intentionally represented material with clear identity, terms, source role, and snapshot/reference evidence.
-4. **Individually reviewed skill**: an exact skill version with provenance, characterization, controlled tags, and decisive static quality state.
+4. **Individually reviewed skill**: an exact skill version with provenance, characterization, controlled tags, and decisive static quality state when the source is composable.
 
 Discovery may proceed in parallel with static review of already-admitted sources. Discovery does **not** grant trust, verification, installation authority, or automatic corpus admission.
 
@@ -65,8 +80,8 @@ Discovery may proceed in parallel with static review of already-admitted sources
 | Artifact | Path | Governance role |
 |---|---|---|
 | Human/agent front door | `README.md` | passive identity, purpose, accumulated-knowledge model, inventory boundary, core rules |
-| Agent entry | `AGENT_START_HERE.md` | external-agent access paths and passive-repository invariant |
-| Agent contract | `AGENTS.md` | routing, privacy, curation, quality, and mutation boundaries |
+| Agent entry | `AGENT_START_HERE.md` | external-agent access paths, skill-location invariant, and passive-repository invariant |
+| Agent contract | `AGENTS.md` | routing, privacy, curation, quality, mutation, and location boundaries |
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | first-visit and returning-user discovery method |
 | Concept | `docs/CONCEPT.md` | why the repository exists and what it is/is not |
 | Architecture | `docs/ARCHITECTURE_PLAN.md` | passive repository structure and boundaries |
@@ -75,13 +90,14 @@ Discovery may proceed in parallel with static review of already-admitted sources
 | Wayfinder map | GitHub Issue #35 | destination, boundaries, decisions, fog, current frontier |
 | Source queue | GitHub Issue #27 | admitted-source completion plus discovery/source-vetting queue |
 
-All Tier 1 surfaces must agree on the passive-repository invariant.
+All Tier 1 surfaces must agree on the passive-repository invariant and canonical skill roots.
 
 ## Tier 2: corpus identity, provenance, and source context
 
 | Artifact | Path | Governance role |
 |---|---|---|
-| User-facing corpus | `skills/` | all admitted user-facing skill material lives under this tree |
+| User-facing corpus | `skills/` | all user-facing/reusable skill material lives under this tree |
+| Repository-maintenance skills | `engine/skills/` | maintenance-only exception; excluded from user-facing counts |
 | Pinned source corpora | `skills/sources/` | intact upstream identity, dependencies, license, and revision preserved |
 | Source registry | `registry/sources.yaml` | admitted/reference/discovery source identity, role, license, and pin/reference |
 | Source signals | `registry/source-signals.yaml` | timestamped source-level visibility/maintenance context only |
@@ -90,7 +106,7 @@ All Tier 1 surfaces must agree on the passive-repository invariant.
 | Provenance policy | `docs/third-party-provenance.md` | copying/adaptation/attribution rules |
 | Pinned-source freshness | `docs/vendor-freshness.md` | passive external-agent review method for upstream evidence |
 | Companion metadata | `docs/companion-metadata.md` | normative evidence split and interpretation order |
-| Curation policy | `docs/curation-policy.md` | discovery, admission, availability, characterization, verification, validation, source-context semantics |
+| Curation policy | `docs/curation-policy.md` | discovery, admission, integrated-subsystem handling, characterization, verification, validation, source-context semantics |
 
 Source reputation, source freshness, discovery relevance, and individual skill quality remain separate facts.
 
@@ -101,7 +117,6 @@ Source reputation, source freshness, discovery relevance, and individual skill q
 | Verification registry | `registry/verification/` | exact-version quality state and controlled tags |
 | Taxonomy | `registry/taxonomy.yaml` | controlled characterization vocabulary |
 | Verification standard | `docs/skill-verification.md` | external-agent structured static-review rubric/status meanings |
-| Reviewed shelf | `CURATED.md` | human-readable view that should agree with current companion records |
 | Audit instructions | `engine/skills/skill-audit/SKILL.md` | passive external-agent review procedure |
 | Source-vetting instructions | `engine/skills/source-vetting/SKILL.md` | passive source/provenance/trust/admission review procedure |
 
@@ -131,19 +146,17 @@ None of these files performs its procedure by existing in the repository.
 | Artifact | Path | Governance role |
 |---|---|---|
 | Human category registry | `registry/categories.yaml` | intentional category assignment for canonical local skills |
-| Category browse surface | `skills/categories/` | human navigation that should agree with the live skill tree |
-| Human catalog snapshot | `INDEX.md` | passive convenience snapshot; reconcile when it drifts |
-| Machine catalog snapshot | `index.json` | passive convenience snapshot; reconcile when it drifts |
+| Category browse surface | `skills/categories/` | human navigation that should agree with the live local skill tree |
+| Human catalog snapshot | `INDEX.md` | passive hand-maintained snapshot; reconcile when it drifts |
+| Machine catalog snapshot | `index.json` | passive hand-maintained machine snapshot; reconcile when it drifts |
 
 Catalog snapshots are not runtime truth. Live skill files plus current registry/companion evidence control when snapshots disagree.
 
-## Historical execution-oriented records
+## Historical material
 
-Older files may describe Qor gates, CI, tests, scripts, preflight, generated catalog proofs, alpha-lock harnesses, or treatment/evaluator execution systems.
+Git history is the archive for superseded execution-era architecture, Qor phase plans, alpha-lock machinery, obsolete generated catalogs, and similar artifacts that no longer help a viewing agent use the current passive repository.
 
-They are historical unless explicitly re-established by higher-precedence current governance. Current architecture does not include those mechanisms.
-
-Historical accuracy may be preserved, but historical documents never override the passive-repository invariant.
+Do not keep obsolete files in the live tree merely to prove that they once existed. Preserve a historical file physically only when it still provides useful evidence or context that is not better represented by current governance and Git history.
 
 ## Drift rule
 
@@ -155,4 +168,5 @@ When a current control surface changes:
 4. update passive catalog snapshots directly when useful, using the external agent;
 5. if exact evidence cannot be established, mark it unavailable/pending rather than guessing;
 6. do not introduce executable machinery merely to discover, prove, validate, generate, or maintain documentation;
-7. treat any current first-party claim that `skillz` itself runs, schedules, scans, crawls, tests, fetches, monitors, validates, installs, synchronizes, generates, or executes as architecture drift.
+7. treat any current first-party claim that `skillz` itself runs, schedules, scans, crawls, tests, fetches, monitors, validates, installs, synchronizes, generates, or executes as architecture drift;
+8. treat any `SKILL.md` outside `skills/**` or `engine/skills/**` as path drift, and any non-maintenance skill under `engine/skills/**` as classification drift.
