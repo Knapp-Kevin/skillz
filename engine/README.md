@@ -1,39 +1,33 @@
-# skillz Engine
+# Passive Repository-Curation Instructions
 
-This directory contains the machinery that operates the `skillz` repository.
+Nothing under `engine/` is an execution engine.
 
-**Nothing under `engine/` counts as skill-library inventory.** Engine procedures are repository infrastructure, not user-facing library skills.
+This directory contains **passive Agent Skills-format instructions** that teach an external AI agent how to curate, bootstrap from, evaluate, transfer, research, and maintain the `skillz` repository.
 
-The procedures may use the Agent Skills format because that makes them explicit and composable. They are still repository infrastructure.
+The directory name is retained for repository continuity, but it must not be interpreted as a runtime, service, process, framework, or executable subsystem.
 
-## Engine skills
+**Nothing under `engine/` counts as user-facing skill-library inventory.**
 
-- `skill-bootstrap`: discover and assemble a fitted user skill system
-- `skill-forge`: author new skills
-- `skill-eval`: behaviorally evaluate skills
-- `skill-audit`: validate library structure and semantic risk
-- `skill-sync`: install/deploy library skills to supported local targets
-- `skills-pulse`: monitor the skill ecosystem for candidates
-- `source-vetting`: evaluate source suitability and verification integrity
+## Maintenance instruction skills
 
-## Verification integrity
+- `skill-bootstrap`: identify durable user workflows and build the smallest fitted skill set;
+- `skill-forge`: author or adapt static skill artifacts;
+- `skill-eval`: guide external behavioral evaluation and evidence recording;
+- `skill-audit`: guide structural, semantic, provenance, and safety review;
+- `skill-sync`: guide external host transfer/installation when authorized;
+- `skills-pulse`: guide limited external discovery of relevant source changes/candidates;
+- `source-vetting`: guide source and candidate trust/provenance review.
 
-Third-party characterization is bound to exact canonical skill content. The offline drift checker lives at:
-
-```text
-engine/skills/source-vetting/scripts/verify-characterization-integrity.ts
-```
-
-Run it deliberately with:
-
-```bash
-node engine/skills/source-vetting/scripts/verify-characterization-integrity.ts
-```
-
-It performs no network calls. A real hash mismatch reports `STALE / REVERIFY REQUIRED`; missing uninitialized submodules are reported as unavailable rather than misclassified as content drift.
+These files execute nothing. Any GitHub access, web research, file editing, behavioral evaluation, installation, scheduling, or other action is performed by the external host agent using its own capabilities.
 
 ## Boundary test
 
-A capability belongs in `engine/skills/` when its primary purpose is maintaining, curating, generating, validating, or deploying the `skillz` system itself.
+A skill belongs under `engine/skills/` when its primary purpose is telling an external agent how to curate or use the `skillz` repository itself.
 
-A capability belongs in [`../skills/`](../skills/) when it makes sense for a user to install independently of maintaining this repository.
+A skill belongs under [`../skills/`](../skills/) when it represents a reusable user-facing capability that makes sense independently of maintaining this repository.
+
+## Passive invariant
+
+Current files under `engine/` must not require or reference repository-owned scripts, CI, test runners, schedulers, monitors, installers, runtimes, generators, or preflight commands.
+
+If such a reference is found, treat it as stale architecture and rewrite the instruction so the external agent performs the reasoning/action directly through its host.
