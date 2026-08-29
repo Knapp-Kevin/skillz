@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: audit-support
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/finance/skills/audit-support/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6480bcddb2d01d8c7ed1730a803f0df5065a0f23
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [business-operations, verification]
+  lifecycle: [verification]
+  characteristic: [evidence-first, risk-aware, human-review, reference-heavy]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 1. Useful workpaper structure, evidence standards, control-type distinctions, exception documentation, and remediation concepts. Reject unchanged because it embeds prescriptive sample-size tables and outdated significant-account/significant-deficiency concepts, including 'more than remote' and 'more than inconsequential' language that does not match current PCAOB AS 2201 framing around reasonable possibility, magnitude, and importance to oversight. Sampling and deficiency conclusions must follow current authoritative standards and the applicable audit methodology. Exact pinned fingerprint confirmed. Behavioral validation not run."
