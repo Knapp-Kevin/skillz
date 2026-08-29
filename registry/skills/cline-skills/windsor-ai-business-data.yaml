@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: windsor-ai-business-data
+display_name: Windsor.ai Business Data
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/windsor-ai-business-data/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: cb7e54d88bd57ba0b27bf32be79030d82a487c3b
+upstream_last_updated_at: 2026-06-18T23:41:53Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/windsor-ai-business-data/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - Windsor.ai MCP tools/service access
+  - connected third-party business-data accounts
+import_eligibility: already-vendored
+rationale: Clear discover-explore-understand-query workflow for connector-backed business data, retained as reference material; unchanged reuse is blocked by an overly broad trigger and missing portable minimum-necessary/scope controls for CRM, ecommerce, finance, and customer-level data retrieval.
