@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: teach
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/productivity/teach/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c679eeccd48ca720c8196e5d9a9e58223abf213b
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [learning, research, productivity]
+  lifecycle: [planning, implementation, maintenance]
+  characteristic: [source-driven, stateful, progressive-disclosure, human-review, context-efficient]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong mission grounding, explicit primary-source preference, persistent learning records, retrieval/spacing/interleaving principles, reusable lesson assets, and confirmation before mission changes. It assumes a writable persistent workspace and HTML/browser-oriented lesson delivery, and operational recovery for failed external research is only lightly specified. Behavioral validation remains pending."
