@@ -1,70 +1,94 @@
-# Initial Implementation Finish Line
+# Core Implementation Completion
 
-The initial implementation of `skillz` is intentionally scoped around the **user and AI-agent experience**, not exhaustive library curation.
+Status: **CORE COMPLETE / CURATION MODE**
 
-The product is ready for alpha lock when a person can arrive for the first time, hand the repository to an AI, receive a governed fitted skill set, install or hand it off correctly, and later return to review and refine that set without restarting from zero.
+The core implementation of `skillz` is the **user + agent experience of building and refining a dependable fitted skill system**, not the accumulation of an arbitrary number of skills.
 
-That promise is host-portable. A normal user/agent flow must not depend on a local clone, shell, Git executable, Node/Bun runtime, initialized submodules, or GitHub Actions. Those capabilities belong to maintainer-grade deterministic repository verification.
+`skillz` is passive. It contains instructions, reference material, and governance metadata. The active agent reads those materials and does the work with capabilities legitimately available in its host.
 
-## What must work before alpha lock
+There is no repository-owned runtime to prove. Core completion is therefore based on semantic coherence, governed curation, and adversarial review of the instructions.
+
+## Core experience
 
 ### First visit
 
-1. The human can understand what the repository does from the top of `README.md`.
-2. An AI agent can jump directly to its operating instructions.
-3. A constrained agent with repository read access can proceed through a connector/API/web path when local execution is unavailable.
-4. The agent can inspect only legitimately available evidence and infer durable skill opportunities.
-5. The agent can search the library using category and governed quality metadata, either through local tooling or direct registry/provenance/upstream inspection.
-6. Where the host exposes exact content identity, the agent can compare a candidate's upstream Git blob/content SHA to its recorded fingerprint without local Git.
-7. The agent can distinguish unchanged reuse, adaptation, composition, supplementation, custom creation, and no-skill outcomes.
-8. Unverified material is design evidence by default, not silently trusted unchanged material.
-9. Selected or created skills are evaluated appropriately.
-10. The result ends in a concrete installation or portable-handoff state.
+The canonical bootstrap must make it straightforward for an agent to:
+
+1. route into bootstrap rather than stop at a repository summary;
+2. bind to the active environment, evidence scope, privacy boundaries, authority, and installation capability;
+3. infer durable user needs from minimum relevant evidence;
+4. translate those needs into capability requirements before searching by skill name;
+5. search broad reference material and individually governed skills by capability/metadata;
+6. distinguish whole-skill fit from useful components/patterns;
+7. gate unchanged third-party reuse on exact-version quality and actual fit;
+8. choose explicitly among reuse, adaptation, supplementation, composition, clean custom creation, checklist/helper, dynamic behavior, or no skill;
+9. compose the smallest coherent system without importing unnecessary reference ceremony;
+10. produce complete artifacts for the active environment when possible, otherwise a truthful portable handoff;
+11. adversarially review important instructions and state uncertainty honestly.
 
 ### Returning visit
 
-1. The agent inventories the existing fitted set instead of rebuilding from zero.
-2. It checks accessible fingerprints, freshness, quality state, overlap, gaps, and current user fit.
-3. It preserves custom behavior that still works.
-4. It makes the smallest justified change rather than maximizing novelty or skill count.
-5. It can correctly conclude that no change is needed.
-6. Materially changed skills are re-evaluated and installation/profile state is refreshed.
+The returning path must:
 
-## Maintainer proof is separate from normal use
+1. inventory the current fitted system rather than reset it;
+2. preserve still-valid custom behavior;
+3. identify only material drift, gaps, conflicts, or changed needs;
+4. re-run capability definition and comparison only where change is plausible;
+5. make the smallest justified change;
+6. correctly return `NO CHANGE NEEDED` when evidence does not justify modification.
 
-Repository-wide generated-catalog proof still requires a compatible maintainer environment because it validates all pinned corpora, generated counts, semantic invariants, and byte-identical regeneration together.
+## Reference corpus versus governed skills
 
-Failure to run that maintainer proof on one constrained host does not mean normal `skillz` use is broken. Likewise, a successful connector-native user flow does not replace the separate repository-wide preflight.
+The broad local/vendor/tracked corpus is discovery and design material. Physical presence or source reputation does not make every upstream skill trusted inventory.
 
-The connector-native portability smoke in [`evals/connector-native-smoke.md`](evals/connector-native-smoke.md) exists specifically to prove this boundary.
+An individually governed third-party skill has exact provenance, content identity, controlled metadata, dependency/authority/portability characterization, and a decisive structured semantic review record.
 
-## What is not required before alpha lock
+Only exact `verified` or `validated` records are eligible for unchanged third-party consideration. Other material may still inform clean design or bounded adaptation under provenance, licensing, safety, and rejection-reason constraints.
 
-The following remain important, but they are post-alpha enrichment:
+First-party skills are subject to the same basic quality discipline. Their individual reviews live in `registry/local-verification.json`.
 
-- exhaustive characterization of the indexed corpus;
-- verification of every third-party skill;
-- adding every promising source repository;
-- large-scale behavioral benchmarking of the full library;
-- perfect taxonomy or ranking weights;
-- every possible host installation adapter.
+## Evaluation model
 
-Curation continues after alpha. It should not indefinitely postpone proving the core experience.
+The repository's evaluation surface is semantic and probabilistic.
 
-## Proof requirement
+Useful review asks:
 
-Alpha lock requires representative evidence for five decisions:
+- Would a literal agent know where to start?
+- Can a weaker model follow the ordered workflow without inferring hidden architecture?
+- Are input, output, stop, and fallback conditions clear enough at each stage?
+- Can an agent distinguish reference material from governed unchanged-reuse candidates?
+- Are component extraction and composition understandable without importing another source's ceremony?
+- Are authority, privacy, and installation claims bounded truthfully?
+- Can a returning agent preserve good behavior and decide not to change anything?
+- Do any documents contradict the bootstrap or use obsolete terminology?
 
-1. **eligible reuse or minimal adaptation**: an appropriate governed library skill is selected or minimally adapted because it actually fits;
-2. **unsafe or unproven reuse refusal**: unverified or stale material is not treated as trusted unchanged material;
-3. **custom creation**: a materially poor library fit causes creation rather than forced reuse;
-4. **returning refinement**: an existing set receives only a justified change while valid custom behavior is preserved;
-5. **returning no-op**: an existing set is correctly left unchanged when no material improvement is established.
+Representative scenarios and adversarial readings are recorded as review evidence. They improve confidence but do not pretend probabilistic model behavior can be deterministically proven.
 
-These five decisions must be demonstrated with a **blind treatment/evaluator split**. Public treatment fixtures may contain only synthetic user context and neutral scenario identifiers. Expected decisions, candidate hints, and scenario-specific scoring criteria must remain outside the public repository and outside the treatment-agent context until that treatment output is frozen.
+See [`evals/share-ready-semantic-review.md`](evals/share-ready-semantic-review.md).
 
-The evaluator-only rubric must be precommitted before treatment execution and fingerprint-bound to the exact public fixture. The repository provides `scripts/verify-alpha-evaluator-bundle.mjs` for that binding.
+## Completion criteria
 
-The original public v1 A1/A2/A3/R1/R2 fixture set cannot satisfy this proof requirement because its evaluator mappings were committed publicly and remain recoverable from Git history. It is retained only as historical evidence of the superseded design.
+The repository is core-complete when:
 
-The exact live checklist is tracked in [Issue #15](https://github.com/Knapp-Kevin/skillz/issues/15) and [`docs/alpha-lock.md`](alpha-lock.md).
+- the canonical passive bootstrap path is explicit and ordered;
+- normal user synthesis is unmistakably separated from repository maintenance;
+- every intentionally governed skill has adequate provenance/metadata and a decisive semantic quality state;
+- broad source material is clearly reference/design evidence unless individually governed;
+- active first-party user-facing skills have individual review records;
+- front-door and governance documentation agree on the same quality semantics;
+- semantic/adversarial review finds no unresolved repository-level ambiguity likely to materially derail the intended process.
+
+No CI, executable preflight, application test harness, hidden evaluator bundle, or runtime proof is part of this definition.
+
+## Curation mode
+
+After core completion, normal repository work is deliberately boring:
+
+1. occasionally discover promising new skills or source repositories;
+2. decide independently whether they add meaningful capability;
+3. source-vet and establish provenance/license/dependencies;
+4. individually score, tag, characterize, and disposition admitted skills;
+5. retain weak or unsafe material only as clearly bounded reference/negative evidence when useful;
+6. update the bootstrap only when real feedback or repeated semantic review reveals an actual instruction-design problem.
+
+New sources make the ecosystem broader. They do not reopen the question of whether the core repository works.

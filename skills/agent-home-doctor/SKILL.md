@@ -13,51 +13,59 @@ metadata:
   category: Meta
   display-name: Agent Home Doctor
   emoji: "🩺"
-  version: 1.1.0
+  version: 1.2.0
 ---
 
 # Agent Home Doctor
 
-An adaptive framework: agent CLI vendors change their extension surfaces and storage layouts across updates and never migrate or clean up — the home directory is where that churn fossilizes. This skill ships the *pathology library* and the *tiered remediation discipline*; the specific directory layout, retention policy, and migration rules bind at runtime.
+An adaptive audit and cleanup framework for agent CLI home directories. Vendor layouts change; the durable mechanism is a pathology library plus evidence-backed, tiered remediation. The specific directory layout, retention policy, and migration rules bind at runtime.
 
 ## Execution Flow
 
-1. **Bind.** Enumerate **ALL dot-directories in the profile root** — never a hardcoded name list (a hardcoded list is the unwarranted-specificity sin and will miss homes; verified failure mode 2026-07-04). Classify each discovered dir: agent CLI home, toolchain/package cache, app data, or unknown. Read the operator's conventions from profile/memory (retention days, deprecated-prefix migration maps like a legacy→successor rename, never-touch additions). Absent a policy, default retention 30 days and propose recording the choices.
-2. **Inventory.** Top-level size/count map (`dirs` with recursive sums), then per-offender drilldowns. Establish the never-touch set FIRST: credentials/keys, memory/notes dirs, user-authored content (custom skills/commands/hooks), active session state, anything the operator marks.
-3. **Diagnose against the pathology library** — check each:
-   - **Unbounded history**: transcript/session/edit-history dirs with entries older than retention (`file-history/`, `projects/`, `sessions/`); check whether the CLI has a retention setting that's unset.
-   - **Uncleaned temp**: `tmp/`, `.tmp/`, `paste-cache/`, sandbox scratch — anything regenerable.
-   - **Surface-generation duplication**: the same content loaded via multiple extension mechanisms (flat vs categorized copies — hash-verify; agents mirrored as commands; collections installed locally that are also available via plugins/vendored sources). Note the per-session context cost, not just disk.
-   - **Dead config references**: settings entries pointing at files that no longer exist (verify each path).
-   - **Deprecated-prefix remnants**: apply the bound migration map (e.g., legacy-prefixed skills/subagents/permissions whose successors exist).
-   - **Stale backups**: `.bak` files (diff before judging) and dated backup dirs from old updates.
-4. **Remediate in tiers**, reporting reclaim per tier:
-   - **Tier 0 (execute on general approval)**: delete aged temp/history beyond retention, cleared caches, diffed-stale `.bak`s.
-   - **Tier 1 (config)**: pin retention settings explicitly; remove verified-dead config references.
-   - **Tier 2 (reversible only)**: MOVE duplicates and deprecated remnants into a dated `backups/dedupe-<date>/` dir — never delete; hash-verify before moving anything claimed as a duplicate.
-   - **Tier 3 (report only)**: third-party applications squatting in the dir, plugin/marketplace review, anything whose ownership is unclear.
-5. **Report**: per-dir before/after, files moved (with backup path), config diffs, and what will now stop loading into sessions. Propose recording new conventions discovered (e.g., a migration map) to the operator's profile/memory.
+1. **Bind.** Enumerate dot-directories in the relevant profile root instead of relying on a hardcoded vendor list. Classify each discovered directory as agent CLI home, toolchain/package cache, app data, or unknown. Read operator retention/migration/never-touch conventions when available. If no retention policy exists, propose 30 days as a starting point but do not turn that proposal into deletion authority.
+2. **Inventory.** Build a top-level size/count map, then drill into offenders. Establish the never-touch set first: credentials/keys, memory/notes, user-authored skills/commands/hooks, active session state, downloaded model caches, and anything the operator marks.
+3. **Diagnose against the pathology library:**
+   - unbounded transcript/session/edit history beyond the bound/proposed retention period;
+   - regenerable temp/cache material;
+   - extension-surface duplication, hash-verified before any duplicate claim;
+   - dead config references, path-verified;
+   - deprecated-prefix remnants under an established migration map;
+   - stale backups, diffed before classification.
+4. **Prepare a remediation plan before mutation.** List the exact paths/actions, evidence, estimated reclaim, and tier. Show this plan to the operator. **No deletion, config edit, or move happens until the operator explicitly approves that plan or named items from it.** A request to "audit" is not approval to clean.
+5. **Remediate only the approved items:**
+   - **Tier 0 (delete only after explicit plan approval):** aged temp/history beyond the approved retention rule, confirmed regenerable caches, diffed-stale backups.
+   - **Tier 1 (config edit only after explicit plan approval):** pin retention settings; remove verified-dead config references.
+   - **Tier 2 (reversible move only after explicit plan approval):** move hash-verified duplicates/deprecated remnants into a dated backup directory; never delete them in the same operation.
+   - **Tier 3 (report only):** third-party applications, plugin/marketplace changes, unknown ownership, credentials, model caches, or anything whose safe disposition is uncertain.
+6. **Verify every mutation.** Re-list affected source/destination paths, re-count backup destinations after moves, and confirm reclaimed space rather than assuming commands succeeded.
+7. **Report** before/after evidence, approved actions actually executed, backup locations, config diffs, failed/blocked actions, and any convention worth recording for future runs.
 
 ## Output Format
 
-```
+```text
 # Agent home audit: <dir> — <date>
-## Inventory (top offenders)
+## Inventory
 ## Findings (by pathology, with evidence)
-## Executed
-- Tier 0: <deleted, MB reclaimed>
-- Tier 1: <config changes>
-- Tier 2: <moved to backups/..., reversible>
-## Report-only (needs your call)
-## Context-cost impact (what stops loading per session)
+## Proposed remediation (approval required)
+| Tier | Exact path/action | Evidence | Reclaim | Risk/reversibility |
+## Approved + executed
+- <action> — verified by <post-action check>
+## Blocked / report-only
+## Context-cost impact
 ```
+
+## Negative rules
+
+- Never delete, edit configuration, or move files on the basis of an audit request alone. Show the exact remediation plan first and require explicit approval.
+- The never-touch set is absolute unless the user separately changes that policy: credentials, memory/notes, user-authored content, active sessions, and downloaded model caches.
+- Duplicate claims require content/hash evidence. Similar names are not evidence.
+- Never kill processes, take ownership, or weaken permissions merely to force cleanup.
+- A failed move/delete remains failed until source and destination state proves otherwise.
+- If ownership or regenerability is uncertain, demote the item to Tier 3 report-only.
 
 ## Notes
 
-- The never-touch set is absolute: credentials, memory/notes, user-authored content, active sessions, and **downloaded model caches** (e.g., `~/.cache/huggingface`, whisper models) — large but intentional; report, never delete by default.
-- Duplication claims require hash verification; "looks the same" is not evidence.
-- Tier 2 is moves-to-backup by definition — deletion of moved content is a later, separate operator decision.
-- **Locked directories**: fall back to copy-to-backup-then-clear-contents; leave the held husk and note it (frees on process exit/reboot). Never take ownership or kill processes to force a move.
-- **Verify nesting before claiming moves**: a recursive listing flattens hierarchy — confirm what is top-level vs nested, and re-count the backup destination after every move (verified failure mode 2026-07-04: a "moved" batch that never landed).
-- **Third-party apps squatting in a CLI home** (e.g., a 5.6GB IDE living inside `~/.gemini`): report the uninstall lever, never delete app data yourself.
-- Cross-CLI: run per home dir; the pathology library is vendor-agnostic even though every layout differs.
+- Locked directories: when an approved move cannot proceed, report the lock. Copy-to-backup-then-clear is itself a distinct mutating plan and requires approval; do not silently substitute it.
+- Recursive listings can obscure nesting. Confirm top-level versus nested paths before proposing a move.
+- Third-party applications living inside an agent home are report-only. Recommend the application's normal uninstall path rather than deleting its data.
+- Run per home directory. The pathology library is vendor-agnostic; the filesystem assumptions are not.

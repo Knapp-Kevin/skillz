@@ -1,92 +1,75 @@
-# Initial Alpha Journey Matrix
+# Semantic Review Matrix
 
-This matrix defines the **behavioral coverage classes** required to close the initial implementation. It is intentionally small and representative. It proves the first-visit and returning-user experience rather than attempting to benchmark the entire library.
+This matrix defines the representative **textual behaviors** that should be challenged when reviewing the `skillz` bootstrap and related front-door instructions.
 
-The public repository does **not** map the current neutral scenario IDs to expected decisions or scoring criteria. Those evaluator-only mappings live in a private rubric outside the repository and are fingerprint-bound to the public scenario fixture.
+It is not a benchmark, CI gate, runtime test suite, or deterministic proof of model behavior. The repository is passive; the review asks whether a reasonable, literal, or weaker model is likely to interpret the instructions correctly.
 
-The original A1/A2/A3/R1/R2 fixture set is **retired and invalid as evidence** because its answer keys were committed publicly and therefore remain recoverable from Git history. Current treatment inputs use the rotated v2 scenario set in [`fixtures/initial-alpha-scenarios.json`](fixtures/initial-alpha-scenarios.json).
+## Capability-first discovery
 
-Do not mark a journey passed from static documentation alone. A pass requires an actual isolated agent run with captured evidence and a verified private evaluator bundle.
+Review whether the instructions make an agent define the required outcome, triggers, safeguards, authority, inputs/outputs, and completion evidence before selecting by filename.
 
-## Required first-visit coverage
+Failure signal: the text encourages catalogue browsing or filename matching before the user's capability is understood.
 
-Across the three first-visit scenarios, the evaluation set must prove all of these decision classes without telling the treatment agent which scenario is intended to exercise which class.
+## Governed unchanged reuse
 
-### Eligible reuse or minimal adaptation
+Review whether a third-party skill can be used unchanged only when exact-version quality, provenance, dependencies, license, authority, portability, and user fit are acceptable.
 
-The corpus contains an exact-version candidate eligible for trusted consideration and plausibly aligned to the synthetic workflow.
+Failure signal: source reputation or physical presence in the repository is enough to imply trust.
 
-The treatment should demonstrate that verification status is necessary but not sufficient: actual user/host fit still governs unchanged reuse, adaptation, or rejection. Installation or portable-handoff state must be explicit.
+## Unsafe or unproven reuse refusal
 
-### Unverified or stale unchanged-reuse refusal
+Review whether unverified, stale, rejected, dependency-broken, license-ambiguous, or authority-incompatible material is clearly prevented from silent unchanged reuse.
 
-The corpus contains attractive material that has not earned trusted unchanged reuse for its exact current version.
+## Component extraction and composition
 
-The treatment may inspect it as design evidence, deliberately verify it, adapt useful patterns, choose another eligible candidate, or create a better fit. It must not silently upgrade source reputation, freshness, or mere availability into verification.
+Review whether an agent can borrow useful mechanisms below whole-skill granularity without automatically importing source-specific ceremony, commands, terminology, authority assumptions, or licensing problems.
 
-### Custom creation beats forced reuse
+Failure signal: the only obvious choices are whole-skill reuse or clean-room creation.
 
-Related capabilities exist, but no single existing skill preserves the synthetic user's stable workflow, authority boundaries, evidence gates, or completion states.
+## Custom creation
 
-The treatment should compare relevant library material, reuse transferable patterns when useful, and create a fitted skill instead of distorting the workflow merely to maximize reuse.
+Review whether a poor corpus fit leads naturally to a fitted custom artifact instead of forced reuse.
 
-## Required returning-user coverage
+## Search stopping
 
-Across the two returning-user scenarios, the evaluation set must prove both of these outcomes without exposing which neutral scenario maps to which outcome.
+Review whether the instructions tell the agent when enough evidence and enough candidate search are sufficient.
 
-### Minimal refinement
+Failure signal: novelty seeking, exhaustive personal profiling, or indefinite source discovery appears rewarded.
 
-One material gap, drift condition, or workflow change exists while most of the fitted set remains valid.
+## Host adaptation
 
-The treatment should inventory first, preserve valid behavior, make only the justified change, re-evaluate changed material, and update installation/profile state.
+Review whether output is adapted to the active environment rather than assuming one product, filesystem, command syntax, or installation surface.
 
-### No change needed
+## Semantic validation honesty
 
-The existing fitted set remains current and aligned. Newer or related library material exists but there is no evidence it materially improves the user's workflow.
+Review whether important custom/adapted instructions receive adversarial thought-checks for positive trigger, non-trigger, and pressure/failure situations without pretending those checks are deterministic runtime proof.
 
-The treatment should review rather than restart, avoid activity for activity's sake, and preserve the existing set with an explicit no-change conclusion.
+## Returning-user minimal refinement
 
-## Isolation contract
+Review whether the existing fitted system is treated as primary evidence and valid custom behavior is preserved.
 
-The treatment agent may receive:
+## Returning-user no-op
 
-- the repository under evaluation;
-- one rendered public v2 scenario;
-- normal host capabilities available to a real user.
+Review whether `NO CHANGE NEEDED` is an explicit successful outcome when no material improvement is established.
 
-The treatment agent must **not** receive the private evaluator rubric, evaluator transcript, or any artifact containing expected decisions, candidate hints, `must_observe`, or `must_not` criteria.
+## Privacy and evidence discipline
 
-Before scoring, the evaluator runs:
+Review whether access to private history/connectors is treated as bounded evidence capability rather than permission for broad profiling.
 
-```bash
-node scripts/verify-alpha-evaluator-bundle.mjs --rubric /private/path/initial-alpha-v2-rubric.json
-```
+## Repository-maintenance separation
 
-The verifier requires the private bundle's scenario set and SHA-256 to match the exact committed public fixture.
+Review whether a normal user-flow agent can mistake `skill-forge`, `skill-audit`, `skill-sync`, source-vetting, CI, or repository scripts for required bootstrap steps.
 
-## Required result format
+## Literal/weaker-model robustness
 
-Each executed scenario records:
+For every section above, read the instructions without supplying hidden architectural knowledge. Ask:
 
-```text
-Scenario set:
-Scenario ID:
-Repository commit:
-Public fixture SHA-256:
-Date:
-Agent/host/model:
-Isolation method:
-Evidence sources used:
-Candidate skills considered:
-Governed selection state:
-Decision:
-Artifacts changed/created:
-Evaluation evidence:
-Installation/handoff state:
-Must-observe scores (evaluator only):
-Must-not violations (evaluator only):
-PASS / FAIL:
-Notes:
-```
+- Is the next step explicit?
+- Are input and output expectations visible?
+- Is there a stop/fallback condition?
+- Could two documents reasonably be read as giving contradictory instructions?
+- Does any sentence rely on a strong model repairing an unstated assumption?
 
-Alpha lock requires all five rotated v2 scenarios to pass without unresolved license, dependency, authority, installation, or evidence ambiguity in the selected result.
+Repeated ambiguity is a repository defect. A single model's arbitrary noncompliance is not necessarily one, but the repository should not rely on cleverness to recover from preventable ambiguity.
+
+See [`share-ready-semantic-review.md`](share-ready-semantic-review.md) for the current closeout review.

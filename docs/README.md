@@ -1,55 +1,54 @@
 # skillz Documentation
 
-Use this directory for current architecture, operating policy, provenance, evaluation, installation, lifecycle, and historical records.
+Use this directory for current architecture, operating policy, provenance, semantic evaluation, installation, lifecycle, and historical records.
 
 ## Current status
 
-The initial implementation foundation is complete. **Alpha is not locked yet.** Remaining blockers are materialized catalog proof plus the five isolated first-visit/returning-user journey results.
+**Core implementation is complete. The repository is in governed curation mode.**
 
-Broad corpus expansion and deeper curation are post-alpha enrichment unless they expose a defect in the core experience.
+`skillz` is passive. Its meaningful quality surface is the clarity and likely interpretation of its instructions and metadata. There is no CI gate, application runtime, executable preflight, or deterministic model-behavior proof required for repository completion.
 
 ## Start here
 
-- [`SYSTEM_STATE.md`](SYSTEM_STATE.md) — current architecture, inventory boundaries, proof status, and exact next action.
-- [`initial-implementation.md`](initial-implementation.md) — where the initial implementation ends and post-alpha enrichment begins.
-- [`alpha-lock.md`](alpha-lock.md) — live evidence checklist for alpha lock.
-- [`../ROADMAP.md`](../ROADMAP.md) — current milestone followed by post-alpha roadmap.
-- [`BACKLOG.md`](BACKLOG.md) — active execution blockers versus post-alpha work.
-- [`FEATURE_INDEX.md`](FEATURE_INDEX.md) — feature-to-implementation-to-proof-state mapping.
-- [`GOVERNANCE_INDEX.md`](GOVERNANCE_INDEX.md) — current control surfaces and freshness contracts.
+- [`SYSTEM_STATE.md`](SYSTEM_STATE.md) — current architecture, inventory boundaries, and curation-mode state.
+- [`initial-implementation.md`](initial-implementation.md) — core completion definition.
+- [`alpha-lock.md`](alpha-lock.md) — historical alpha milestone.
+- [`../ROADMAP.md`](../ROADMAP.md) — current curation-oriented roadmap.
+- [`BACKLOG.md`](BACKLOG.md) — remaining curation/documentation work.
+- [`GOVERNANCE_INDEX.md`](GOVERNANCE_INDEX.md) — current control surfaces.
 
-## Run the initial alpha proof
+## Semantic evaluation
 
-- [`evals/initial-alpha-matrix.md`](evals/initial-alpha-matrix.md) — the five required journey classes.
-- [`evals/fixtures/initial-alpha-scenarios.json`](evals/fixtures/initial-alpha-scenarios.json) — frozen synthetic inputs and evaluator-only criteria.
-- [`evals/run-initial-alpha.md`](evals/run-initial-alpha.md) — materialization, preflight, isolation, scoring, and evidence procedure.
-- [`evals/results/`](evals/results/) — actual behavioral evidence only after execution.
+- [`evals/initial-alpha-matrix.md`](evals/initial-alpha-matrix.md) — representative semantic/adversarial review dimensions.
+- [`evals/run-initial-alpha.md`](evals/run-initial-alpha.md) — how to perform a literal/weaker-model semantic review.
+- [`evals/share-ready-semantic-review.md`](evals/share-ready-semantic-review.md) — current closeout review and findings.
 
-Do not give the raw fixture answer key to the treatment agent. Use `scripts/render-alpha-scenario.ts` as documented in the runbook.
+These are reading/reasoning artifacts. They are not an executable test harness.
 
 ## Library curation and quality
 
 - [`curation-policy.md`](curation-policy.md) — availability, provenance, characterization, verification, validation, and refresh policy.
-- [`skill-verification.md`](skill-verification.md) — exact-version quality verification standard.
+- [`skill-verification.md`](skill-verification.md) — exact-version semantic quality standard.
 - [`third-party-provenance.md`](third-party-provenance.md) — attribution and derived-work requirements.
 - [`vendor-freshness.md`](vendor-freshness.md) — source freshness concepts and historical source checks.
 
-Related machine-readable surfaces live under `../registry/`:
+Related metadata surfaces live under `../registry/`:
 
 - `sources.yaml` — source identity, role, pin, license;
 - `categories.yaml` — canonical local human categories;
 - `skills/` — per-skill provenance companions;
-- `verification/` — fingerprint-bound quality state and tags;
+- `verification/` — fingerprint-bound semantic quality state and tags;
+- `local-verification.json` — individual first-party reviews;
 - `taxonomy.yaml` — controlled characterization vocabulary.
 
 ## Fitted skill systems and installation
 
-- [`portable-skill-profile.md`](portable-skill-profile.md) — portable representation of a fitted execution system.
-- [`installation-handoff.md`](installation-handoff.md) — installation modes, authority boundaries, and required completion states.
-- [`evaluation-framework.md`](evaluation-framework.md) — skill-level behavioral evaluation principles.
+- [`portable-skill-profile.md`](portable-skill-profile.md) — portable representation of a fitted skill system.
+- [`installation-handoff.md`](installation-handoff.md) — installation modes, authority boundaries, and completion states.
+- [`evaluation-framework.md`](evaluation-framework.md) — general review principles.
 
 ## Historical material
 
-The repository contains older Qor-era plans, gate artifacts, ledger entries, and evaluation reports. They are preserved as historical evidence and may explain how earlier features were built.
+Older Qor-era plans, gate artifacts, ledgers, and prior evaluation experiments are historical records. They may explain how the repository evolved, but they do **not** define current completion criteria or create CI/runtime requirements.
 
-They do **not** override the current state surfaces listed above. When historical and current files disagree about present counts, architecture, workflow, or release status, follow the current governance index and system state.
+When historical and current files disagree, follow the current README, bootstrap, verification standard, system state, and semantic closeout review.

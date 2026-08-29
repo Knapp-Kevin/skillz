@@ -1,151 +1,95 @@
 # System State
 
-## Snapshot metadata
+## Snapshot
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-08-28 |
-| **Milestone** | Initial alpha |
-| **State** | Implementation foundation and proof hardening complete; external execution proof pending |
-| **Authoritative closure tracker** | GitHub Issue #15 |
-| **Automatic GitHub Actions** | Disabled; workflow is manual-dispatch only |
+| **Last updated** | 2026-08-29 |
+| **Milestone** | Core implementation complete |
+| **State** | Governed curation mode |
+| **Repository type** | Passive Markdown instruction/reference repository |
+| **Evaluation model** | Best-effort semantic + adversarial review |
+| **CI/runtime requirement** | None |
 
 ## Current architecture
 
 ```text
 skillz/
-├── README.md                         human-first front door + AI jump
-├── BOOTSTRAP.md                      first-visit + returning-user workflow
-├── AGENTS.md                         agent operating contract
-├── skills/                           local/imported user-facing library skills
+├── README.md
+├── AGENT_START_HERE.md
+├── BOOTSTRAP.md
+├── AGENTS.md
+├── skills/                           first-party user-facing skills
 │   └── categories/                   human browse-by-purpose navigation
-├── engine/skills/                    repository machinery, excluded from library count
-├── vendor/                           12 exact-revision pinned source corpora
+├── engine/skills/                    passive bootstrap/maintenance procedures
 ├── registry/
-│   ├── sources.yaml                  source identity, role, pin, license
-│   ├── categories.yaml               canonical local category assignments
-│   ├── skills/                       per-skill provenance companions
-│   ├── verification/                 exact-version quality state + tags
-│   └── taxonomy.yaml                 controlled characterization vocabulary
-├── scripts/
-│   ├── build-index.ts                schema-v2 catalog generator
-│   ├── verify-vendor-materialization.ts exact source-state gate
-│   ├── verify-index-idempotency.ts   semantic + two-pass catalog proof
-│   ├── initial-alpha-preflight.ts    one-command runtime preflight
-│   ├── render-alpha-scenario.ts      public-only treatment renderer
-│   └── verify-alpha-evaluator-bundle.mjs private rubric/fixture binding proof
-├── docs/evals/                       public matrix, v2 treatment fixtures, runbook, evidence
-└── INDEX.md / index.json             generated catalog; refresh pending
+│   ├── sources.yaml                  tracked upstream sources
+│   ├── skills/                       governed third-party provenance
+│   ├── verification/                 exact-version semantic quality records
+│   ├── local-verification.json       first-party structured reviews
+│   └── taxonomy.yaml                 controlled metadata vocabulary
+└── docs/evals/                       semantic/adversarial review records
 ```
 
-The scenario-specific v2 evaluator rubric is intentionally **not** part of the repository. It must remain outside any treatment-agent-accessible surface and is bound to the public fixture by set ID and SHA-256 before scoring.
+There is no `vendor/`, `.gitmodules`, `scripts/`, `tests/`, `.agent/`, `.qor/`, or CI workflow in the current architecture.
 
 ## Inventory boundaries
 
-| Population | Current state |
-|---|---|
-| Local/imported user-facing skills | 42 canonical local library skills |
-| Engine skills | 7 repository-operating skills; excluded from library inventory |
-| Vendored source corpora | 12 pinned git submodules |
-| Registered sources | 14 total: 12 vendored plus 2 reference/discovery sources |
-| Total usable indexed library | **500+ conservatively; exact current deduplicated count pending schema-v2 materialized regeneration** |
+- 42 active local user-facing skills have individual structured reviews.
+- Engine procedures do not count as user-facing inventory.
+- 17 upstream sources are currently registered as tracked, normative, or discovery references.
+- External source breadth is reference context, not a completion metric.
 
-Do not substitute the July 4 count of 524 or the temporary `500+` README badge for the next exact generated count.
+## Quality model
 
-## Quality and provenance state
+- Source identity and individual skill quality are separate.
+- Tracked upstream material is reference/design evidence unless an individual exact-version record says otherwise.
+- `verified` means structured semantic review passed.
+- `validated` means representative scenario/adversarial semantic review was also recorded.
+- `unverified` and legacy `trusted-baseline` are not unchanged-reuse states.
+- `stale`, `rejected`, and `retired` are excluded from normal unchanged selection.
+- Fingerprints identify which exact text was reviewed. They are bookkeeping, not executable proof.
 
-- Source identity and individual skill quality are separate concepts.
-- Missing individual quality metadata defaults to `unverified` for trusted unchanged selection.
-- Characterization/quality records are bound to exact canonical `SKILL.md` Git blob fingerprints.
-- A changed fingerprint makes the prior characterization stale until refreshed.
-- `verified` means structured review passed.
-- `validated` requires representative behavioral evidence.
-- `stale`, `rejected`, and `retired` material is excluded from default governed selection.
-- Third-party source, author/project, license, revision, path, freshness, and relationship are preserved in registry/notices as applicable.
+## User-flow state
 
-## User experience state
+The canonical bootstrap now provides:
 
-### Human
+- explicit route selection;
+- environment/authority binding;
+- minimum-relevant-evidence need discovery;
+- capability definition before skill-name search;
+- whole-skill and component discovery;
+- exact-version reuse gating;
+- explicit reuse/adapt/supplement/compose/create/no-skill decisions;
+- smallest-coherent-system composition;
+- host-specific artifact/handoff adaptation;
+- semantic adversarial review;
+- returning-user minimal refinement and `NO CHANGE NEEDED`.
 
-Implemented:
+## Responsibility boundary
 
-- README begins with human instructions;
-- first-visit and returning-user tracks are explicit;
-- direct browse by purpose exists under `skills/categories/`;
-- provenance, verification, curation, installation, and repository maps are linked from the front door.
+The repository is responsible for making its instructions, metadata, provenance, and curation evidence as clear and useful as reasonably possible.
 
-### AI agent
+It is **not** responsible for proving that arbitrary models of different capability levels will follow those instructions successfully. Multi-model benchmarks, success-rate targets, CI, runtime tests, and executable proof are not completion requirements.
 
-Implemented:
+## Evaluation state
 
-- immediate README jump to agent-specific instructions;
-- direct-library, first-visit, returning-user, and repository-maintenance routing;
-- verification-aware candidate selector;
-- user-fit-before-reuse and compare-before-creation doctrine;
-- explicit install/handoff completion states;
-- privacy boundary that connector availability is not consent to profile unrelated private data.
+The current closeout adversarial review is recorded in `docs/evals/share-ready-semantic-review.md`.
 
-## Verification surfaces
+Result: **PASS — no unresolved material repository-level ambiguity identified after closeout corrections.**
 
-Implemented static/mechanical proof:
+## Current mode
 
-- recursive local discovery shared by index, audit, risk-audit, and sync;
-- exact superproject + vendored-submodule materialization verifier;
-- schema-v2 index generator;
-- semantic catalog invariants plus two-pass idempotency verifier;
-- verification registry parser;
-- governed candidate selection fixture tests;
-- initial implementation contract tests;
-- rotated public-only v2 journey scenarios with neutral IDs;
-- public fixture tests that forbid evaluator answer-key fields;
-- public treatment renderer;
-- private evaluator-bundle verifier bound to public set ID, exact SHA-256, and complete scenario coverage;
-- one-command initial alpha preflight;
-- strict characterization fingerprint-integrity verifier.
+**CURATION MODE.**
 
-Invalidated evidence architecture:
+Future work is optional and occasional:
 
-- the original public v1 journey set used the identifiers A1/A2/A3/R1/R2 and committed evaluator-only expected decisions and scoring criteria;
-- those mappings remain recoverable from Git history, so that set is permanently invalid as blind behavioral evidence;
-- the v2 set rotates both scenario contexts and neutral IDs, while evaluator-only mappings remain outside the repository.
+1. discover promising sources or skills when useful;
+2. determine independently whether they add meaningful value;
+3. establish provenance/license/dependencies;
+4. score and characterize selected skills;
+5. assign a decisive semantic quality state;
+6. preserve useful negative/adaptation evidence where appropriate;
+7. revisit core bootstrap instructions only when real use exposes a genuine ambiguity.
 
-Not yet established:
-
-- exact source-state PASS on the current commit from a fully materialized checkout;
-- schema-v2 generated catalog from that checkout;
-- exact current corpus counts;
-- byte-identical materialized second-pass generation;
-- verified private v2 evaluator bundle at execution time;
-- behavioral PASS for all five rotated v2 treatment scenarios;
-- final alpha lock.
-
-## Runtime blocker
-
-This conversation's execution environment cannot resolve `github.com`/`api.github.com`, so it cannot materialize the pinned submodules locally. GitHub Actions are intentionally not being used as a workaround because the repository is protecting Actions budget. A connected Hugging Face CPU Job was also tested and returned `402 Payment Required` for a trivial job.
-
-The remaining full-corpus proof must run in a normal network-capable local checkout or equivalent development environment.
-
-## Exact next action
-
-```bash
-git clone --recurse-submodules https://github.com/Knapp-Kevin/skillz.git
-cd skillz
-git submodule update --init --recursive
-node scripts/initial-alpha-preflight.ts
-```
-
-Require the terminal state:
-
-```text
-READY FOR JOURNEY EVALUATION. This is not behavioral proof by itself.
-```
-
-Then verify the separately held private evaluator bundle with `scripts/verify-alpha-evaluator-bundle.mjs`, execute the five neutral v2 scenario IDs listed by `docs/evals/run-initial-alpha.md` in fresh treatment contexts, and record actual evidence under `docs/evals/results/`.
-
-## Alpha status
-
-**NOT LOCKED.**
-
-The implementation and proof architecture are substantially complete. Remaining gates are materialized source/catalog proof, five genuinely blind v2 journey proofs, exact-count/document reconciliation, and evidence-backed closure.
-
-See `docs/alpha-lock.md`, `docs/initial-implementation.md`, `docs/evals/run-initial-alpha.md`, and Issue #15.
+There is no standing implementation backlog.

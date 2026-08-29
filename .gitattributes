@@ -1,13 +1,4 @@
-# Governance artifacts are cryptographically sealed over their bytes.
-# Pin line endings so autocrlf checkouts cannot drift working-tree bytes
-# away from sealed hashes (Chain Integrity Note, 2026-07-04).
-docs/*.md text eol=lf
-docs/**/*.md text eol=lf
-.qor/** text eol=lf
-skills/**/SKILL.md text eol=lf
-skills/**/sources.json text eol=lf
-registry/*.yaml text eol=lf
-scripts/** text eol=lf
-tests/** text eol=lf
 *.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
 *.json text eol=lf
