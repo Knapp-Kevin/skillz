@@ -1,64 +1,65 @@
 ---
 name: skill-forge
 description: >-
-  Scaffold a new skill in this repository: elicit name, triggers,
-  category, cadence, and deployment class; instantiate
-  docs/skill-template.md; then audit and reindex. Use when the user asks
-  "create a new skill", "scaffold a skill", "forge a skill", "add a
-  pulse skill", or wants a convention-clean skills/<name>/ starting point.
+  Scaffold a new user-facing skill inside the skillz repository, then run
+  repository audits and reindexing. Use only when maintaining skillz itself and
+  the user explicitly wants to add a skill to this repository's skills/ tree.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Forge
   emoji: "⚒️"
-  version: 1.0.0
+  version: 1.1.0
   repo-bound: true
 ---
 
 # Skill Forge
 
-Scaffolds a new skill in this repository so it is born convention-clean:
-the template is instantiated, the audit passes, and the index is fresh in
-one pass. Repo-bound: this skill operates on this repository's tree and is
-never deployed by skill-sync.
+**Repository-maintenance helper only.**
+
+This skill scaffolds a new user-facing skill **inside the `skillz` repository**. It is not the normal artifact-creation mechanism for `skill-bootstrap`, and it must not be used merely because a bootstrap user needs a custom skill.
+
+Use this only when the active route is `REPOSITORY_MAINTENANCE` and the user explicitly intends the new skill to become part of this repository's `skills/` tree.
+
+For normal FIRST_VISIT or RETURNING_USER synthesis, follow `engine/skills/skill-bootstrap/SKILL.md` and create/package artifacts for the user's target environment instead.
 
 ## Execution Flow
 
-1. **Elicit the spec.** Confirm with the user:
-   - **Name** — kebab-case; must not collide with an existing skill
-     (check `skills/` directories and `INDEX.md` before proceeding).
-   - **Description** — one sentence of what it does plus "Use when"
-     trigger phrases (skill-audit fails descriptions without them).
-   - **Category** — Productivity | Development | Research | Ops | Meta.
-   - **Cadence** — one-shot or recurring; recurring skills get a
-     `## Scheduling` section.
-   - **Deployment class** — portable, portable-with-fallback (it will
-     carry a `sources.json`), or repo-bound (`metadata.repo-bound: true`).
-2. **Instantiate.** Copy `docs/skill-template.md` into
-   `skills/<name>/SKILL.md` and fill every placeholder from the spec.
-3. **Pulse scaffolding.** If the skill is pulse-like, also scaffold
-   `skills/<name>/sources.json` (must parse as valid JSON — mirror
-   `skills/mcp-pulse/sources.json`) and include the standalone-fallback
-   marker sentence in the SKILL.md: "If the engine is unavailable (skill
-   deployed standalone), read `sources.json` beside this file and
-   fetch/search those sources directly with web tools."
-4. **Audit.** Run `node skills/skill-audit/scripts/audit.ts` from the
-   repo root and fix every FAIL finding until it exits 0.
-5. **Reindex.** Run `node scripts/build-index.ts` to regenerate
-   `INDEX.md` and `index.json`.
+1. Confirm this is repository-maintenance work and that the intended destination is this repository's `skills/` tree.
+2. Confirm the spec:
+   - **Name** — kebab-case; must not collide with an existing skill.
+   - **Description** — one sentence describing the capability plus `Use when` trigger guidance.
+   - **Category** — use the current repository category model.
+   - **Cadence** — one-shot or recurring when scheduling semantics are actually needed.
+   - **Deployment class** — portable, portable-with-fallback, or repo-bound.
+3. Instantiate `docs/skill-template.md` into `skills/<name>/SKILL.md` and fill every required field.
+4. If the skill needs standalone source fallback, add the appropriate `sources.json` and fallback contract.
+5. Run the repository audit from the repository root:
+
+   ```text
+   node engine/skills/skill-audit/scripts/audit.ts
+   ```
+
+6. Fix every FAIL finding.
+7. Regenerate the repository index:
+
+   ```text
+   node scripts/build-index.ts
+   ```
 
 ## Output Format
 
-```
+```text
 # Skill Forge — <name>
+Route: REPOSITORY_MAINTENANCE
 Files created: skills/<name>/SKILL.md [, skills/<name>/sources.json]
-Audit: exit 0 (N skills validated) | findings fixed: <list>
-Index delta: <new INDEX.md entry line>
+Audit: exit 0 | findings fixed: <list>
+Index: regenerated
 ```
 
-## Notes
+## Negative rules
 
-- Never overwrite an existing skill — a name collision aborts the forge;
-  editing an existing skill is a different task.
-- Conventions are enforced mechanically by skill-audit; if the template
-  and the audit disagree, fix `docs/skill-template.md` first.
+- Never use this helper to write a bootstrap user's personal/custom skills into `skillz` by default.
+- Never overwrite an existing skill; a name collision aborts the forge.
+- Never claim audit/index success unless those commands actually ran.
+- If the template and audit disagree, correct the repository convention rather than silently bypassing the check.
