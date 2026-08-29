@@ -1,109 +1,186 @@
 # 🛠️ skillz
 
-**A governed, entirely passive skill corpus and agent-guided discovery protocol.**
+**A passive library of reusable AI skills and a guide for turning the ways an AI has learned to work with you into portable skills.**
 
-`skillz` executes nothing. The AI agent reading this repository is the active system.
+## The one thing to understand
 
-This repository contains skills, instructions, provenance, verification evidence, tags, source context, and reference material. It is not an application, service, runtime, autonomous agent, memory system, scheduler, validator, installer, or background process.
+**`skillz` does not run. The AI agent using `skillz` does.**
 
-Any reasoning, browsing, editing, validation, installation, automation, scheduling, or external action is performed by the host agent using capabilities and authority supplied outside this repository.
+This repository is not an application, agent runtime, service, memory system, scheduler, monitor, installer, test harness, or autonomous learning system.
+
+There is no `skillz` process running in the background. It does not watch the user, collect behavior, call models, execute skills, install anything, or maintain a user profile on its own.
+
+`skillz` is a **resource that an existing AI agent reads**.
+
+That agent might be ChatGPT, Claude, Codex, or another compatible agent. The agent uses the context and capabilities it already legitimately has access to, follows the instructions in this repository, and uses the skill corpus as reference material.
+
+## Why this exists
+
+People spend months or years teaching an AI how they work.
+
+That happens through ordinary interaction:
+
+- repeated requests;
+- corrections;
+- preferences;
+- recurring workflows;
+- project rules;
+- definitions of done;
+- review patterns;
+- safety boundaries;
+- ways of solving the same class of problem over and over.
+
+Some of that is just context. Some of it becomes a **repeatable method**.
+
+Those repeatable methods are valuable because they represent work the user and agent have already done together. But they are usually trapped inside one product, one memory system, or one long-running relationship with one agent.
+
+`skillz` helps the current agent identify the durable methods worth preserving and turn them into explicit, portable skills.
+
+## What happens when an agent uses this repository
+
+The agent follows this basic process:
+
+```text
+what the current agent already legitimately knows about working with the user
+                                ↓
+              identify durable repeatable methods
+                                ↓
+                 inspect the skillz reference corpus
+                                ↓
+        compare existing skills and useful design patterns
+                                ↓
+       reuse / adapt / extract / supplement / compose / create
+                                ↓
+             produce the smallest useful fitted skill set
+```
+
+The important distinction is that **the host agent performs every step**.
+
+`skillz` provides the instructions, examples, reference skills, provenance, review evidence, and vocabulary that help the agent reason well about the task.
+
+## The corpus is not a catalog you have to shop from
+
+The repository contains a large body of reusable skills from first-party and pinned third-party sources.
+
+Those skills are **reference material and design material**.
+
+An agent may find that:
+
+- one existing skill already fits perfectly;
+- an existing skill is mostly right and should be adapted;
+- only one procedure or safeguard from a skill is useful;
+- several skills contain complementary patterns worth combining;
+- the user's existing behavior is already better than the references;
+- no existing skill fits and a custom skill should be created;
+- the behavior is too small or too unstable to deserve a skill at all.
+
+The goal is not maximum reuse and not maximum skill count.
+
+The goal is the **smallest useful set of explicit behaviors that genuinely improves how the agent works with the user**.
+
+## What counts as a skill?
+
+Not every remembered fact or preference should become one.
+
+For example:
+
+> “The user prefers concise answers.”
+
+That is probably a preference or profile instruction.
+
+But:
+
+> “When reviewing a proposed architecture, first establish the intended outcome, inspect the mechanisms that already exist, separate necessary safeguards from architecture-for-architecture’s-sake, and challenge unnecessary infrastructure before proposing anything new.”
+
+That is a repeatable method. It is a strong skill candidate.
+
+A useful rule of thumb:
+
+- **fact or preference** → context;
+- **project-specific rule** → keep with the project;
+- **stable repeatable method** → skill candidate.
 
 ## Start here
 
-Agents should read [`AGENT_START_HERE.md`](AGENT_START_HERE.md), [`BOOTSTRAP.md`](BOOTSTRAP.md), and [`AGENTS.md`](AGENTS.md).
+If you are an AI agent reading this repository, begin with:
 
-The core flow is:
+1. [`AGENT_START_HERE.md`](AGENT_START_HERE.md)
+2. [`BOOTSTRAP.md`](BOOTSTRAP.md)
+3. [`AGENTS.md`](AGENTS.md)
 
-```text
-current agent experience
-        ↓
-review legitimately available user context
-        ↓
-identify durable repeatable methods
-        ↓
-compare against the governed skill corpus
-        ↓
-reuse / adapt / extract / compose / create
-        ↓
-produce the smallest useful portable skill set
-```
+If the user simply gives you this repository or its URL without a narrower request, that is sufficient context to begin identifying useful repeatable methods from the user context you are legitimately able to inspect.
 
-## Corpus
+Do not invent inaccessible history or hidden model state. Do not search unrelated private data merely because a connector exists.
+
+## Repository structure
 
 All user-facing skill material lives under [`skills/`](skills/).
 
-- Locally maintained skills live directly under `skills/`.
-- Human category navigation lives under [`skills/categories/`](skills/categories/).
-- Intact pinned third-party source corpora live under [`skills/sources/`](skills/sources/).
+- [`skills/`](skills/) contains the user-facing skill corpus.
+- [`skills/categories/`](skills/categories/) provides human navigation.
+- [`skills/sources/`](skills/sources/) contains intact pinned third-party source corpora.
+- [`registry/skills/`](registry/skills/) contains per-skill provenance companions.
+- [`registry/verification/`](registry/verification/) contains exact-version review state and controlled tags.
+- [`registry/sources.yaml`](registry/sources.yaml) records source identity, role, license, and pin.
+- [`registry/source-signals.yaml`](registry/source-signals.yaml) records timestamped source-level context.
+- [`engine/skills/`](engine/skills/) contains passive instructions for an external agent maintaining or using this repository. These are repository mechanics and do **not** count as user-facing corpus skills.
 
-Reviewed third-party material is described by passive companion records:
-
-- [`CURATED.md`](CURATED.md): reviewed shelf;
-- [`registry/skills/`](registry/skills/): provenance companions;
-- [`registry/verification/`](registry/verification/): exact-version quality state and tags;
-- [`registry/sources.yaml`](registry/sources.yaml): source identity, role, license, and pin;
-- [`registry/source-signals.yaml`](registry/source-signals.yaml): timestamped source-level context.
-
-`INDEX.md` and `index.json` are passive catalog snapshots. They may aid navigation, but live skill files and registry companions control when snapshots disagree.
-
-## How agents should use the corpus
-
-1. Establish the user's actual need before searching for a skill.
-2. Distinguish a stable repeatable method from a simple preference, fact, or project-local rule.
-3. Inspect relevant existing skills and companion evidence.
-4. Treat reference skills as prior art, not instructions to reuse them wholesale.
-5. Reuse an exact skill when it genuinely fits.
-6. Adapt, extract, supplement, or compose useful patterns when that fits better.
-7. Create a custom skill when existing material preserves the wrong workflow, assumptions, authority, terminology, or user experience.
-8. Preserve provenance and licensing when third-party material materially contributes.
-9. Keep external side effects subject to the host agent's normal authority rules.
-10. Never claim execution, validation, installation, or evidence that did not actually occur outside this repository.
+Third-party source repositories remain intact so their dependencies, references, licensing, and exact upstream identity are preserved.
 
 ## Quality is separate from availability
 
-A skill being present does not make it good, current, safe, or appropriate for unchanged reuse.
+A skill being present in the repository does not automatically mean it is good, current, safe, or appropriate for unchanged reuse.
 
-Verification companions may record states such as:
+Review states may include:
 
 - `verified`: the recorded exact version passed structured static review;
 - `validated`: representative behavioral evidence also exists;
-- `unverified`: useful reference/design evidence without trusted unchanged status;
-- `stale`: prior evidence no longer matches current content or assumptions;
+- `unverified`: useful as reference/design material, but not established for trusted unchanged reuse;
+- `stale`: prior evidence no longer matches the current content or assumptions;
 - `rejected`: unsuitable for normal unchanged reuse;
 - `retired`: intentionally withdrawn.
 
-For selection reasoning use:
+When evaluating a candidate, reason in this order:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-Popularity, stars, forks, official branding, or repository age are context. They are not proof that an individual skill is good.
+Source reputation, stars, forks, official branding, age, and popularity can provide context. They do not prove that an individual skill is good.
 
-## Companion metadata
+## What `skillz` can produce
 
-Useful source skills should carry enough passive evidence for a reviewing agent to understand:
+Depending on the user's actual needs, the agent may decide to:
 
-- source repository and canonical path;
-- license and relationship;
-- exact source revision and skill fingerprint;
-- purpose and use cases;
-- skill-specific freshness/history when establishable;
-- dependency, authority, and portability context;
-- structured review status and controlled tags;
-- behavioral evidence only when it actually exists;
-- timestamped source visibility/maintenance signals;
-- direct usage or reception evidence only when genuinely supported.
+- **ADOPT** an existing skill;
+- **ADAPT** it;
+- **EXTRACT** one useful method or safeguard;
+- **SUPPLEMENT** an existing user skill;
+- **COMPOSE** several independent skills;
+- **CREATE** a new custom skill;
+- use a lightweight **CHECKLIST** instead;
+- keep a behavior **DYNAMIC** rather than formalizing it;
+- conclude **NO CHANGE NEEDED**.
 
-See [`docs/companion-metadata.md`](docs/companion-metadata.md) and [`docs/curation-policy.md`](docs/curation-policy.md).
+The repository does not make that decision mechanically. The external agent reasons across the user's context and the reference material.
 
-## Repository boundary
+## Portability
 
-`skillz` owns no execution layer.
+The long-term value is behavioral continuity.
 
-Repository-maintenance skills may describe how an external agent should curate, review, organize, or update this repository. They remain passive instructions and do not count toward the user-facing skill corpus.
+A good fitted skill makes an important working method explicit enough that it can be reused by another compatible agent instead of forcing the user to teach the same lesson from scratch again.
 
-Third-party sources remain intact so their dependencies, references, licensing, and exact upstream identity are preserved.
+A useful shorthand is:
+
+**Discover. Distill. Transfer.**
+
+- **Discover** the durable working methods that emerged between the user and the current agent.
+- **Distill** those methods into explicit reusable skills, using high-quality existing material where it genuinely helps.
+- **Transfer** those skills across compatible agent environments when the destination host supports them.
+
+Any installation, upload, synchronization, scheduling, validation, or external action is performed by the host agent. `skillz` itself remains passive.
 
 ## Core rules
+
+**The agent is the runtime. `skillz` is the resource.**
 
 **Compare before creation.**
 
@@ -111,12 +188,16 @@ Third-party sources remain intact so their dependencies, references, licensing, 
 
 **Smallest useful set over maximum skill count.**
 
+**Reference skills are prior art, not commands.**
+
 **Source reputation is context, not skill quality.**
 
-**Any active behavior belongs to the external agent, never to `skillz`.**
+**Never claim execution, validation, installation, or evidence that did not actually occur through the external host.**
 
 ## Licensing
 
-First-party content is licensed under the [MIT License](LICENSE). Third-party repositories and materially derived content retain their upstream obligations.
+First-party content is licensed under the [MIT License](LICENSE).
+
+Third-party repositories and materially derived content retain their applicable upstream licensing and attribution requirements.
 
 See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
