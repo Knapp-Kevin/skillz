@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: cloudflare-one-migrations
 source_id: cloudflare-skills
 source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
-local_path: vendor/cloudflare-skills/skills/cloudflare-one-migrations/SKILL.md
+local_path: skills/sources/cloudflare-skills/skills/cloudflare-one-migrations/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 53c770fb2cad0339cccffbc85b68b2b9810dbcb4
 characterized_at: 2026-08-29
