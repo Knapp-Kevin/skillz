@@ -1,75 +1,79 @@
 ---
 name: skill-audit
 description: >-
-  Validate this repository's conventions mechanically: SKILL.md frontmatter
-  (name/directory match, trigger-bearing description, version), script
-  health (--help exit codes), intake-registry enums, and index freshness.
-  Use when the user asks "audit the skills repo", "validate the skills",
-  "lint the registry", before running skill-sync, or as a pre-commit check
-  after adding or editing any skill.
+  Validate the skillz repository's own conventions, script health, registry
+  structure, and index freshness. Use only for repository-maintenance work such
+  as validating skillz before commit, merge, reindex, or repository deployment.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Audit
   emoji: "🔍"
-  version: 1.1.0
+  version: 1.2.0
   repo-bound: true
 ---
 
 # Skill Audit
 
-Mechanical validation of the skillz repo. Drift is a failing exit code, not a code-review catch. Repo-bound: this skill operates on this repository's tree and is never deployed by skill-sync.
+**Repository-maintenance helper only.**
+
+This validates the `skillz` repository itself. It is not a prerequisite for normal FIRST_VISIT or RETURNING_USER bootstrap and should not be imposed on connector/API/read-only users.
 
 ## What This Does
 
-Runs `scripts/audit.ts`, which checks in order:
+Runs the repository audit at:
 
-1. **Skill conventions** — every `skills/<dir>/SKILL.md`: frontmatter parses, `name` matches the directory, `description` is non-empty and carries "Use when" trigger guidance, `metadata.version` present.
-2. **Script health** — every `skills/<dir>/scripts/*.ts` AND every repo-level `scripts/*.ts` answers `--help` with exit 0 (spawned, 30s timeout).
-3. **Pulse specs** — every `skills/<dir>/sources.json` parses as JSON, and any skill carrying one contains the `engine is unavailable` standalone-fallback marker in its SKILL.md (portable-with-fallback deployment class).
-4. **Registry lint** — every `registry/candidates.yaml` entry has a valid `status` and `permission_tier` (enums from `docs/evaluation-framework.md`), a non-empty `rationale`, and — for adopted entries — an existing `resolved_path`.
-5. **Index freshness** (WARN-only) — `INDEX.md` must be newer than every SKILL.md.
+```text
+engine/skills/skill-audit/scripts/audit.ts
+```
 
-Exit 0 = clean (warnings allowed); exit 1 = failures found. The summary line reports the validated-skill count.
+It checks local user-facing skill conventions, script health, pulse/source fallback structure, registry lint, and index freshness. The semantic risk layer is at:
 
-A second script, `scripts/risk-audit.ts`, runs the **semantic risk layer** (issue #5): structure can be valid while the bottle still holds poison. Deterministic checks, same exit contract:
+```text
+engine/skills/skill-audit/scripts/risk-audit.ts
+```
 
-1. **Negative-rules completeness (FAIL)** — any skill whose Output Format carries evidence/decision slots (`because`, `[reason]`, `rationale`, `root cause`, `verdict`) must have a `## Negative rules` section covering secret handling, anti-fabrication, and a missing-evidence fallback (template §Capability floor rule 8).
-2. **Mutating-action ambiguity (FAIL)** — send/push/delete/publish/deploy/create-issue/archive/enroll/pay/buy with no approval or read-only language anywhere in the skill; `move`/`update` are WARN-class (verb/noun ambiguity).
-3. **Portable specificity (WARN)** — absolute paths or operator/org terms in a portable skill body (repo-bound skills exempt; term list embedded — this tool is repo-bound, local specificity here is intentional).
-4. **External-service ambiguity (WARN)** — direct vendor API hosts or env-key requirements without an MCP or web-tool fallback mention.
-
-It is a static risk filter, not an outcome evaluation — `skill-eval` owns behavioral proof.
+These are deterministic repository-maintenance checks. They do not establish that a skill improves user behavior; behavioral evidence is a separate concern.
 
 ## Execution Flow
 
-1. Run from the repo root (either runtime works):
+Run from the repository root:
 
-   ```
-   node skills/skill-audit/scripts/audit.ts
-   bun run skills/skill-audit/scripts/audit.ts
-   ```
+```text
+node engine/skills/skill-audit/scripts/audit.ts
+```
 
-2. For each FAIL finding, fix the named file and re-run until exit 0.
-3. If the only findings are index-staleness WARNs, run `node scripts/build-index.ts` and re-run.
-4. Report the final counts. Do not suppress findings; a convention worth breaking is a convention worth changing in `docs/skill-template.md` first.
+or, where Bun is the active runtime:
 
-## Scheduling
+```text
+bun run engine/skills/skill-audit/scripts/audit.ts
+```
 
-- **Claude Code:** run ad hoc before commits, or `/schedule` a weekly repo-health run paired with skills-pulse.
-- **CI:** `node --test "tests/*.test.mjs"`, `node skills/skill-audit/scripts/audit.ts`, and `node skills/skill-audit/scripts/risk-audit.ts` are the repo's declared CI commands (`.github/workflows/ci.yml`).
+For the semantic risk layer:
+
+```text
+node engine/skills/skill-audit/scripts/risk-audit.ts
+```
+
+Then:
+
+1. fix every FAIL finding;
+2. if index freshness is the only warning, regenerate with `node scripts/build-index.ts`;
+3. re-run until the intended checks pass;
+4. report actual results only.
 
 ## Output Format
 
-```
+```text
 FAIL: <skill>: <violation>
 WARN: <message>
 
-skill-audit: N failure(s), M warning(s)
+skill-audit: N library skill(s), X failure(s), Y warning(s)
 ```
 
-## Notes
+## Negative rules
 
-- Validates structure and script health, not skill *quality* — that stays model judgment.
-- `vendor/` trees are never audited; official sources own their own conventions.
-- `--skills-dir` and `--registry` flags exist for test fixtures.
+- Do not use this as evidence that a skill is behaviorally effective.
+- Do not require this helper for normal user bootstrap.
+- Do not use legacy `skills/skill-audit/...` paths; the canonical path is under `engine/skills/skill-audit/`.
+- Do not suppress findings merely to obtain exit 0.
