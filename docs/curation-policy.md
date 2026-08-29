@@ -73,7 +73,7 @@ Agents use these signals after user fit, exact-version quality, operational fit,
 
 A skill may be:
 
-- `vendored`: present inside an intact pinned upstream repository under `vendor/`;
+- `vendored`: present inside an intact pinned upstream repository under `skills/sources/`;
 - `imported`: copied into this repository with required upstream obligations preserved;
 - `external`: individually tracked upstream because bringing it in incompletely would be misleading or broken.
 
