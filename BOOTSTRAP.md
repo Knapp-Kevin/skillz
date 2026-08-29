@@ -23,13 +23,14 @@ Start with relevant evidence the host already exposes: interaction history, pers
 Then:
 
 1. Identify durable working methods and latent skills.
-2. Compare those needs against the complete library: local/imported skills plus approved indexed vendor skills.
+2. Compare those needs against the complete governed search surface: local/imported skills, approved indexed vendor skills, and individually characterized tracked external skills whose exact source records are available.
 3. For third-party candidates, inspect provenance, controlled tags, authority, portability, freshness, fingerprint, and verification status.
-4. Prefer unchanged reuse only when the exact characterized version is eligible and genuinely fits.
-5. Adapt, supplement, or compose when that produces a better fit.
-6. Create a new custom skill whenever the user's real workflow is not adequately represented.
-7. Evaluate and adversarially review the fitted system.
-8. Install it when the host supports installation and authority exists. Otherwise package it or provide the shortest correct portable handoff.
+4. Prefer unchanged reuse only when the exact characterized version is `verified` or `validated`, its fingerprint matches, and it genuinely fits.
+5. Treat `unverified` and legacy `trusted-baseline` records as design evidence until a current individual structured review is completed.
+6. Adapt, supplement, or compose when that produces a better fit.
+7. Create a new custom skill whenever the user's real workflow is not adequately represented.
+8. Evaluate and adversarially review the fitted system.
+9. Install it when the host supports installation and authority exists. Otherwise package it or provide the shortest correct portable handoff.
 
 ## Returning visit: review, refine, and improve
 
@@ -41,7 +42,7 @@ Treat the current set as evidence about the user's working system.
 2. Compare the current set with relevant recurring behavior and the user's present definitions of done.
 3. Detect stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
 4. Check whether any referenced upstream skill changed since the recorded fingerprint or freshness check.
-5. Search the current library for materially better fits or useful new patterns.
+5. Search the current governed surface for materially better fits or useful new patterns, including exact-version tracked external records when indexed material is inadequate.
 6. Preserve custom behavior that still fits instead of resetting it to a generic upstream version.
 7. Refine, replace, supplement, compose, or retire only where evidence supports change.
 8. Re-run appropriate structured verification and behavioral evaluation for materially changed behavior.
@@ -61,16 +62,17 @@ When you have local execution access to a fully materialized copy of this reposi
 1. Regenerate the catalog with `node scripts/build-index.ts` when `index.json` is stale or older than schema version 2.
 2. Translate the user's needs into controlled tags from [`registry/taxonomy.yaml`](registry/taxonomy.yaml).
 3. Run [`engine/skills/skill-bootstrap/scripts/select-candidates.ts`](engine/skills/skill-bootstrap/scripts/select-candidates.ts) with relevant tag filters.
-4. By default the selector returns exact-version candidates eligible for trusted unchanged consideration.
+4. By default the selector returns indexed exact-version candidates eligible for trusted unchanged consideration under the current verification policy.
 5. Use `--include-unverified` only when you intentionally want unverified material as **design evidence**.
 6. Never bypass `stale`, `rejected`, or `retired` exclusions merely to produce a result.
-7. Treat the shortlist as evidence. Final user fit still determines `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE`.
+7. For tracked external sources that are intentionally not part of the generated vendor index, inspect their exact provenance and verification companions through `registry/skills/` and `registry/verification/` instead of assuming the generated selector is exhaustive.
+8. Treat every shortlist as evidence. Final user fit still determines `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or `DO NOT CREATE`.
 
 ### Connector/API/web path
 
 When local execution is unavailable, **do not stop**.
 
-1. Use [`CURATED.md`](CURATED.md), local category pages, and `registry/verification/` to locate relevant characterized candidates.
+1. Use [`CURATED.md`](CURATED.md), local category pages, `registry/verification/`, and registered tracked-source companions to locate relevant characterized candidates.
 2. Read the verification companion for status, tags, source snapshot revision, and expected canonical content blob SHA.
 3. Read the provenance companion in `registry/skills/` to resolve the upstream repository and canonical source path.
 4. Fetch that upstream `SKILL.md` at the exact recorded snapshot revision through the connector/API/browser when possible.
@@ -83,27 +85,29 @@ A stale generated index is a maintainer concern, not a reason to abandon a user 
 
 Humans can browse the locally maintained portion of the library through [`skills/categories/`](skills/categories/), including planning, writing, research, software/repository work, agent operations/security, monitoring/intelligence, and business/career categories.
 
-The complete indexed library also includes approved third-party sources under [`vendor/`](vendor/).
+The complete indexed library also includes approved third-party sources under [`vendor/`](vendor/). Individually characterized tracked external sources remain outside that generated vendor index but are available to governed selection through their exact-version registry companions.
 
 ## What counts as the library?
 
-The library includes:
+The indexed library includes:
 
 - user-facing skills under [`skills/`](skills/), and
 - approved indexed user-facing skills from pinned sources under [`vendor/`](vendor/).
 
+In addition, `registry/sources.yaml` may register **tracked external corpora** that are intentionally not vendored wholesale. An individual tracked external skill becomes a governed selection candidate only after it has provenance under `registry/skills/`, an exact fingerprint-bound companion under `registry/verification/`, and a decisive current quality state. Tracked source admission by itself does not add every upstream skill to trusted library inventory.
+
 Repository machinery under [`engine/skills/`](engine/skills/) is excluded from the library count.
 
-A vendor skill can be available and searchable without being verified. Availability answers "can we find/use this as reference?" Verification answers "has this exact version earned trusted unchanged selection?"
+A third-party skill can be available as reference without being verified. Availability answers "can we find/use this as reference?" Verification answers "has this exact version earned trusted unchanged selection?"
 
 ## How skill quality works
 
 Every characterized third-party skill receives an exact-version quality state under the repository's quality policy.
 
-- `trusted-baseline`: eligible under an established source-quality policy plus matching fingerprint and characterization.
-- `verified`: passed the structured skillz quality/effectiveness rubric.
-- `validated`: also has representative behavioral evidence.
+- `verified`: passed the current individual structured skillz quality/effectiveness rubric and is eligible for unchanged selection when fingerprint and user fit match.
+- `validated`: also has representative behavioral evidence and is the strongest quality state.
 - `unverified`: useful as design evidence, but not silently trusted for unchanged installation.
+- `trusted-baseline`: legacy characterization retained for historical/schema compatibility; **not eligible for current unchanged selection** until replaced by an individual structured review.
 - `stale`: the underlying skill/evidence changed and must be reviewed again.
 - `rejected` / `retired`: excluded from normal selection.
 
