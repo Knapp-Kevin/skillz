@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * Verify that a private evaluator-only rubric is bound to the exact public
- * alpha treatment fixture committed in this repository.
+ * Verify that a private evaluator-only rubric is bound to the exact current
+ * public share-ready treatment fixture committed in this repository.
  *
  * The private rubric must remain outside the public repository and outside the
- * treatment-agent context.
+ * treatment-agent context. Publicly mapping scenario IDs to expected decisions
+ * invalidates the treatment set and requires another rotation.
  *
  * Usage:
  *   node scripts/verify-alpha-evaluator-bundle.mjs --rubric /private/path/rubric.json
@@ -17,7 +18,7 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 
 const ROOT = resolve(join(dirname(fileURLToPath(import.meta.url)), ".."));
-const PUBLIC_FIXTURE = join(ROOT, "docs", "evals", "fixtures", "initial-alpha-scenarios.json");
+const PUBLIC_FIXTURE = join(ROOT, "docs", "evals", "fixtures", "share-ready-scenarios-v3.json");
 
 const { values } = parseArgs({
   options: {
@@ -27,7 +28,7 @@ const { values } = parseArgs({
 });
 
 if (values.help || !values.rubric) {
-  console.log("verify-alpha-evaluator-bundle — bind a private evaluator rubric to the exact public alpha scenario set\n\nUsage: node scripts/verify-alpha-evaluator-bundle.mjs --rubric <private-rubric.json>");
+  console.log("verify-alpha-evaluator-bundle — bind a private evaluator rubric to the exact current public share-ready scenario set\n\nUsage: node scripts/verify-alpha-evaluator-bundle.mjs --rubric <private-rubric.json>");
   process.exit(values.help ? 0 : 2);
 }
 
@@ -42,10 +43,6 @@ if (!existsSync(rubricPath)) {
   process.exit(1);
 }
 
-// Check both the path the evaluator supplied and the filesystem-resolved path.
-// This rejects a rubric copied anywhere under the treatment repository and also
-// rejects an outside symlink that resolves back into it. A symlink stored inside
-// the repository is rejected by the lexical-path check even if it points out.
 const rootReal = realpathSync(ROOT);
 const rubricReal = realpathSync(rubricPath);
 if (isInside(ROOT, rubricPath) || isInside(rootReal, rubricReal)) {
@@ -86,7 +83,7 @@ for (const id of publicIds) {
 if (privateIds.size !== publicIds.size) errors.push(`scenario count mismatch: public=${publicIds.size} private=${privateIds.size}`);
 
 if (errors.length > 0) {
-  console.error("FAIL: private evaluator bundle does not match the frozen public alpha scenario set:");
+  console.error("FAIL: private evaluator bundle does not match the frozen public share-ready scenario set:");
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
