@@ -18,8 +18,8 @@ Then:
 
 1. inspect the minimum relevant accessible evidence needed to identify durable working patterns;
 2. translate those patterns into capability requirements before searching by skill name;
-3. compare existing user/project skills, the local library, governed third-party records, and relevant tracked upstream references;
-4. inspect both whole-skill fit and reusable components;
+3. compare existing user/project skills, the local library, governed third-party records, the pinned 500+ reference corpus when available, and relevant tracked upstream references;
+4. inspect both whole-skill fit and reusable components, including required scripts, templates, references, fixtures, or other package material;
 5. gate unchanged third-party reuse on exact-version quality, provenance, licensing, dependencies, authority, portability, identity confidence, and user fit;
 6. choose explicitly among reuse, refinement, adaptation, supplementation, composition, custom creation, helper/checklist, dynamic handling, or no skill;
 7. compose the smallest coherent system;
@@ -33,7 +33,7 @@ Do not rebuild from zero.
 
 1. inventory the existing fitted system and the jobs its pieces perform;
 2. identify only material drift, overlap, conflict, changed need, or missing capability;
-3. preserve custom behavior that still fits;
+3. preserve custom behavior and skill-owned supporting components that still fit;
 4. re-evaluate only affected capabilities;
 5. make the smallest justified change;
 6. review changed instructions semantically again;
@@ -41,9 +41,11 @@ Do not rebuild from zero.
 
 **`NO CHANGE NEEDED` is a correct result.**
 
-## Governed selection
+## Reference corpus and governed selection
 
-Tracked source repositories are prior-art and discovery references. They are not copied into `skillz`, and source admission does not create blanket trust.
+`vendor/` contains pinned upstream reference corpora. Other sources may remain tracked upstream through `registry/sources.yaml`.
+
+Both are prior-art and discovery surfaces. **Availability does not create blanket trust.** A reference can be valuable for comparison, component extraction, or adaptation even when it has not earned unchanged-reuse eligibility.
 
 An unchanged third-party skill is eligible for consideration only when its individual exact-version state is `verified` or `validated` and the remaining provenance, license, dependency, authority, portability, identity, and fit conditions are acceptable.
 
@@ -58,10 +60,16 @@ A blocked whole skill may still contain a useful idea. Component reuse does not 
 
 The quality model is defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
-- `verified` means the exact text passed structured semantic review.
-- `validated` means the verified text also received representative scenario/adversarial semantic review.
+- `verified` means the exact skill/package version passed structured semantic review.
+- `validated` means the verified material also received representative scenario/adversarial semantic review.
 
-These are best-effort judgments about instruction quality. They are not guarantees about the capability or compliance of any particular model.
+These are best-effort judgments about instruction and package quality. They are not guarantees about the capability or compliance of any particular model.
+
+## Curation state
+
+Core bootstrap functionality is complete. Skill discovery and evaluation continue as ongoing enrichment.
+
+See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living evidence ledger showing completed source-level review depth, current per-skill companions, reconciliation work, admitted sources still under evaluation, and future discovery candidates.
 
 ## The result
 
