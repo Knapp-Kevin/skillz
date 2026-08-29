@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: tdd
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/tdd/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/tdd/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8fc086710806190ee7c4baa32089cb877a75736a
 characterized_at: 2026-08-29
