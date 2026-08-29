@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: desktop-commander-overview
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/desktop-commander-overview/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7fc41024bfcb4a014ecad06459c2c5faf1a4fadc
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [implementation, debugging, productivity]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [tool-assisted, human-review, risk-aware, iterative]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. Strong operational overview with explicit confirmation guidance for production-impacting SSH commands, deploys, restarts, migrations, and other environment-changing actions; allowed-directory boundaries; safer exact-block edits; and verification-oriented search/edit workflows. Low portability is inherent because the skill depends on Desktop Commander MCP, but the authority boundary is explicit rather than assumed. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
