@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: google-agents-cli-publish
+source_id: google-agents-cli
+source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
+local_path: vendor/google-agents-cli/skills/google-agents-cli-publish/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5c9e6c59a1473f65d859d321cea06ab4f3728595
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [publishing, agent-operations, registry-management]
+  lifecycle: [deployment, operations]
+  characteristic: [tool-assisted, idempotent, production-oriented, traceable]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Covers explicit publish/list/get/update/delete registry operations, permission requirements, idempotency, and troubleshooting. Consequential mutations are tied to user-requested operations rather than implied by inspection intent, but delete/update authority and Google Cloud coupling keep the score conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
