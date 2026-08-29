@@ -7,7 +7,7 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9a9407309936d7fd36858296374c246dc2c27e46
 characterized_at: 2026-08-29
 last_verified_at: 2026-08-29
-verification_status: stale
+verification_status: rejected
 verification_basis: structured-static-review-plus-freshness-check
 validation_status: not-run
 rubric_score: 17/20
@@ -17,4 +17,4 @@ tags:
   characteristic: [reference-heavy, retrieval-first, source-driven, compatibility-aware]
   authority: [read-only, generate-only]
   portability: [medium]
-notes: Structurally strong, but current Anthropic docs have moved beyond the pinned model defaults and thinking/feature assumptions. Marked stale; behavioral validation remains pending.
+notes: "Rejected for unchanged reuse at the pinned version because material provider facts have drifted. The pinned skill defaults to Claude Opus 4.8 plus explicit adaptive-thinking configuration, while current Anthropic migration guidance documents newer Claude Fable 5 / Mythos 5 and Claude Opus 5 behavior, including changed thinking defaults and migration requirements. Structurally strong and still useful as design/reference evidence, but time-sensitive provider guidance must be refreshed from current official Anthropic documentation before reuse or adaptation. Behavioral validation remains pending and is not required for this static rejection."
