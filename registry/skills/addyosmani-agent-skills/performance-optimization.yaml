@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: performance-optimization
+display_name: Performance Optimization
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/performance-optimization/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: bfc9e32ddfd67d65f44b576f45c715787a553274
+upstream_last_updated_at: 2026-08-27T18:52:22Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/performance-optimization/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-observability-and-stack-dependent
+dependencies: profiling or measurement capability appropriate to the stack; browser/database/APM tools vary by project; skill-local performance checklist for deeper guidance
+import_eligibility: already-vendored
+rationale: Strong measure-identify-fix-verify-guard discipline across frontend, backend, database, cache, and bundle performance, with explicit revert-on-no-gain behavior and useful warnings against cache correctness failures.
