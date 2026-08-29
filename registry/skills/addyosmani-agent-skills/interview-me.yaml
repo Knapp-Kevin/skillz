@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: interview-me
+display_name: Interview Me
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/interview-me/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: c4ad44928cd535fcfee1972988f97309d4cebf9f
+upstream_last_updated_at: 2026-05-20T18:39:35Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/interview-me/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: interactive-host-dependent
+dependencies: live responsive user; optional filesystem write capability for persisted intent documents
+import_eligibility: already-vendored
+rationale: Valuable intent-extraction patterns, especially one-question-at-a-time clarification, explicit hypotheses, and out-of-scope restatement, retained as adaptation material because the exact skill makes arbitrary confidence thresholds and explicit-confirmation ceremony mandatory.
