@@ -151,6 +151,20 @@ sources:
     pinned_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
     rationale: Creator-maintained 33-skill Agentic Coding corpus. Tracked at an exact snapshot for selective individual verification; source admission does not grant blanket skill quality, and only exact-version records with decisive verification states are eligible for unchanged use.
 
+  - id: david-ondrej-skills
+    name: David Ondrej Skills
+    source: https://github.com/davidondrej/skills
+    class: community-vetted
+    source_role: tracked-corpus
+    resolved_path: external/david-ondrej-skills
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 David Ondrej
+    pinned_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+    mirror_source_revision: eed325a23bc29efca50084f85025d327460b2059
+    mirror_fingerprint: cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b
+    rationale: Creator-maintained public corpus with 44 canonical SKILL.md files at this snapshot. The public repository is explicitly a sanitized mirror of a private source, so the recorded public pin and publisher-supplied private-source revision/fingerprint are preserved rather than treating public git history as complete provenance.
+
   - id: agentskills-spec
     name: Agent Skills Specification
     source: https://github.com/agentskills/agentskills

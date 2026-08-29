@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: effective-agent-skills
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: cbd6634fcd974a75dde3681b98c2bdaa7e413a71
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [skill-authoring, agent-development, context-management]
+  lifecycle: [design, implementation, verification]
+  characteristic: [progressive-disclosure, context-efficient, safety-bounded, test-gated]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 2, effectiveness design 2. Strong authoring workflow, anti-patterns, validation loops, weak-model testing, and third-party security checklist. Limits: it overlaps more authoritative skill-authoring references already in the corpus; several implementation claims are generalized across clients (for example progressive-disclosure mechanics and session snapshot behavior); and quantitative/adoption assertions such as '40+ products' and '95% description issue' are uncited and time-sensitive despite the skill warning against time-sensitive content. These caveats reduce portability/evidence scores but do not create a hard fail for its role as a reference guide. No local behavioral validation was run."
