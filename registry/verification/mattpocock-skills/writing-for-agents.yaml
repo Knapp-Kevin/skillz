@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/productivity/writing-for-agents/SKIL
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a37608daf6e835e767deecfb498facecaaba82ba
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 17/20
 tags:
   use_case: [skill-authoring, agent-development, writing, documentation, context-management]
   lifecycle: [design, implementation, maintenance]
   characteristic: [context-efficient, progressive-disclosure, maintainability, contract-first]
   authority: [generate-only]
   portability: [high]
-notes: Characterization highlights trigger/pointer quality, information hierarchy, completion criteria, progressive disclosure, pruning, and single-source-of-truth discipline. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong context-pointer model, progressive-disclosure hierarchy, completion-criterion design, co-location and single-source-of-truth discipline, and explicit pruning of stale/no-op instructions. Several claims about attention, negation, and pretrained leading words are design hypotheses rather than independently established guarantees, so evidence scoring is conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending."

@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/productivity/handoff/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 2eb98a51b97bb5bac461a26ad14828eeac827909
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
 validation_status: not-run
+rubric_score: 15/20
 tags:
   use_case: [handoff, communication, context-management, documentation]
   lifecycle: [maintenance]
   characteristic: [context-efficient, synthesis, traceable, safety-bounded]
   authority: [mutating]
   portability: [high]
-notes: Characterization highlights compact continuation context, artifact referencing instead of duplication, sensitive-data redaction, and suggested next-session skills. Exact canonical skill file is fingerprinted; no local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Compact and useful handoff contract with temp-directory isolation, reference-not-duplicate discipline, sensitive-data redaction, and next-session skill suggestions. It has almost no explicit failure/recovery behavior, so it only just clears the static threshold. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
