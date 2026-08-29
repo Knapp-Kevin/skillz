@@ -165,6 +165,18 @@ sources:
     mirror_fingerprint: cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b
     rationale: Creator-maintained public corpus with 44 canonical SKILL.md files at this snapshot. The public repository is explicitly a sanitized mirror of a private source, so the recorded public pin and publisher-supplied private-source revision/fingerprint are preserved rather than treating public git history as complete provenance.
 
+  - id: bm629-agent-skills
+    name: Bhushan Modi Agent Skills
+    source: https://github.com/bm629/agent-skills
+    class: community-vetted
+    source_role: tracked-corpus
+    resolved_path: external/bm629-agent-skills
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 Bhushan Modi
+    pinned_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+    rationale: Maintainer-authored 68-skill corpus with a differentiated producer/reviewer gate architecture, schema-bound prior-art workflows, and deterministic validators. Tracked at an exact snapshot for selective individual verification; author/reviewer pairing and source-level tests are useful context but never substitute for exact-version skill review.
+
   - id: agentskills-spec
     name: Agent Skills Specification
     source: https://github.com/agentskills/agentskills
