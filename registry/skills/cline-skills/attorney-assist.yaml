@@ -16,8 +16,8 @@ availability: vendored
 local_path: vendor/cline-skills/skills/attorney-assist/SKILL.md
 permission_tier: external-side-effect-after-explicit-user-selection
 portability: low
-review_status: characterized-unverified
-dependency_status: external-service-unconfirmed
-dependencies: LegalZoom MCP server and named attorney consultation tools; active user entitlement; jurisdiction and availability data returned by the external service
+review_status: verified-structured
+dependency_status: external-service-confirmed
+dependencies: LegalZoom HTTP MCP server confirmed from legalzoom/claude-plugins; named attorney consultation tools; active user entitlement; jurisdiction and availability data returned by the external service
 import_eligibility: already-vendored
-rationale: Strong anti-fabrication, failure-stop, user-choice, scheduling, and human-handoff discipline. The exact external LegalZoom MCP dependency and tool contract are not present in the vendored corpus and were not independently confirmed during this pass, so the skill remains unverified despite a strong static rubric score.
+rationale: Strong anti-fabrication, failure-stop, user-choice, scheduling, and human-handoff discipline. The LegalZoom public plugin independently confirms the required MCP service and attorney-assist contract. Because the workflow sends sensitive conversation and legal context to an external professional service, actual use still requires explicit user intent and minimum-necessary disclosure.

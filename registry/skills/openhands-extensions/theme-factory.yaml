@@ -12,12 +12,12 @@ upstream_revision: d60396e2a1b1a3c0b56c91c920873e344e1bc3f7
 upstream_last_updated_at: 2026-01-09T18:58:39Z
 curated_at: 2026-08-29
 last_checked_at: 2026-08-29
-availability: vendored
+availability: vendored-reference-only
 local_path: vendor/openhands-extensions/skills/theme-factory/SKILL.md
 permission_tier: mutate-after-explicit-theme-selection
 portability: medium
-review_status: characterized-unverified
+review_status: rejected-unchanged
 dependency_status: source-intact
 dependencies: theme-showcase.pdf; ten theme definition files under skills/theme-factory/themes; host capability to display PDF and mutate the target artifact
-import_eligibility: already-vendored
-rationale: Useful visual-theme workflow with explicit user selection before mutation and intact bundled theme assets. Static review found weak failure handling, soft rather than measurable readability checks, and implicit host assumptions, so unchanged trusted reuse is not yet warranted.
+import_eligibility: reference-only-unless-adapted
+rationale: Useful visual-theme reference with explicit user selection and intact bundled assets, but the exact upstream skill remains below the structured verification threshold because failure handling is absent, host/display/font assumptions are implicit, and readability verification is qualitative. It is blocked from governed unchanged selection; a future adapted local skill may reuse the patterns if it independently clears verification.

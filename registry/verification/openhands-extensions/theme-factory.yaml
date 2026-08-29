@@ -7,7 +7,7 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 90dfceaf2ecdc191a4dcfb0069768a9560638998
 characterized_at: 2026-08-29
 last_verified_at: 2026-08-29
-verification_status: unverified
+verification_status: rejected
 verification_basis: structured-static-review-below-threshold
 validation_status: not-run
 rubric_score: 14/20
@@ -17,4 +17,4 @@ tags:
   characteristic: [human-review, safety-bounded, visual-verification]
   authority: [mutating]
   portability: [medium]
-notes: "Rubric: trigger precision 1, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Bundled showcase and all ten theme files are present, and preset application waits for explicit user selection. The skill does not define failure paths for unavailable display/edit capabilities or missing fonts, and contrast/readability verification is qualitative rather than evidence-bound. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 1, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Bundled showcase and all ten theme files are present, and preset application waits for explicit user selection. The exact unchanged upstream version remains below the 15/20 verification threshold because it defines no failure path for unavailable display/edit capabilities or missing fonts and treats contrast/readability as a qualitative instruction rather than evidence-bound verification. Rejected means blocked from governed unchanged selection, not that the visual patterns cannot be used as reference material or adapted into a stronger local skill later."
