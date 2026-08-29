@@ -6,14 +6,15 @@ local_path: vendor/mattpocock-skills/skills/engineering/research/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: fecee97e9457ba039678d2fcf1b1bc9fca78307d
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: trusted-baseline
-verification_basis: source-quality-policy-plus-integrity-review
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-below-threshold
 validation_status: not-run
+rubric_score: 10/20
 tags:
   use_case: [research]
   lifecycle: [discovery]
   characteristic: [source-driven, evidence-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: Exact version is fingerprinted and characterized under the repository quality policy. No local behavioral validation claimed.
+notes: "Rubric: trigger precision 2, procedural clarity 1, authority and safety 1, failure handling 0, evidence discipline 2, dependency coherence 1, portability honesty 0, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. Primary-source and per-claim citation requirements are sound, but the unchanged skill hard-requires a background-agent capability with no fallback, immediately writes results into the repository, defines no failure/recovery path, and does not disclose its host dependency despite being presented as a reusable research skill. This is incompatible with skillz's cross-agent portability contract. Retain as reference only or adapt before reuse."
