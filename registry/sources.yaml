@@ -139,6 +139,18 @@ sources:
     pinned_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
     rationale: First-party Google agent-development, evaluation, observability, and deployment skills.
 
+  - id: cole-medin-skills
+    name: Cole Medin Skills
+    source: https://github.com/coleam00/skills
+    class: community-vetted
+    source_role: tracked-corpus
+    resolved_path: external/cole-medin-skills
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 Cole Medin
+    pinned_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+    rationale: Creator-maintained 33-skill Agentic Coding corpus. Tracked at an exact snapshot for selective individual verification; source admission does not grant blanket skill quality, and only exact-version records with decisive verification states are eligible for unchanged use.
+
   - id: agentskills-spec
     name: Agent Skills Specification
     source: https://github.com/agentskills/agentskills
