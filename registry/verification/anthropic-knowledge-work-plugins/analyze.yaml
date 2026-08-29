@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: analyze
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/data/skills/analyze/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 31ce9c58dd4de3038643750373de5b71a2494fa2
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [evaluation, research]
+  lifecycle: [verification]
+  characteristic: [evidence-first, traceable, source-driven]
+  authority: [read-only]
+  portability: [medium]
+notes: "Verified. Strong question framing, metric-definition, validation, reproducibility, and caveat discipline. Exact fingerprint confirmed; behavioral validation not run."

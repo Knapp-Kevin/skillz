@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: daily-briefing
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/sales/skills/daily-briefing/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4fa2246a596f9b2954b291e1c1ad8d3959547a0d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [productivity, decision-support]
+  lifecycle: [operations]
+  characteristic: [retrieval-first, metric-driven, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: "Rejected unchanged. It pulls connected sales data automatically and hard-codes urgency thresholds such as deal size and inactivity windows. Briefing format is useful, but prioritization must be organization-specific. Exact fingerprint confirmed; behavioral validation not run."

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: campaign-plan
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/marketing/skills/campaign-plan/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 087001892894890bf7fd84e0c9f999e0a68831ab
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [planning, business-operations]
+  lifecycle: [planning]
+  characteristic: [metric-driven, reference-heavy, risk-aware]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Rejected unchanged. Useful campaign decomposition is mixed with generic budget allocations, cadences, and production timelines that require organization/channel-specific evidence rather than universal defaults. Exact fingerprint confirmed; behavioral validation not run."

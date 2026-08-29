@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: create-an-asset
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/sales/skills/create-an-asset/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 68206db0112e4c759aa09ea2986c707034602470
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [implementation]
+  characteristic: [retrieval-first, risk-aware, tool-assisted]
+  authority: [generate-only]
+  portability: [low]
+notes: "Rejected unchanged. The workflow can infer the seller company from user email, persist seller context, extensively profile prospects, and create customer-facing ROI/business-case values. Stronger explicit data, persistence, and factual-claim boundaries are required. Exact fingerprint confirmed; behavioral validation not run."

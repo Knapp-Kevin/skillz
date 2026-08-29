@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: forecast
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/sales/skills/forecast/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d11834bb0bb7d6cde3e34e8186eabd2574697785
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [decision-support, business-operations]
+  lifecycle: [planning, operations]
+  characteristic: [metric-driven, risk-aware, reference-heavy]
+  authority: [generate-only]
+  portability: [low]
+notes: "Rejected unchanged. Hard-coded stage probabilities, '3x pipeline' health guidance, and generic activity assumptions substitute universal sales heuristics for organization-specific historical evidence. Exact fingerprint confirmed; behavioral validation not run."

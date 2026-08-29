@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vendor-check
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/legal/skills/vendor-check/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d21d7465d061ec1158fa807603bc090915d9f2d0
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [decision-support, research]
+  lifecycle: [verification]
+  characteristic: [retrieval-first, risk-aware, source-driven]
+  authority: [read-only]
+  portability: [low]
+notes: "Rejected unchanged. It defaults to searching broadly across connected systems and makes legal inferences about missing agreements and surviving obligations. Completeness disclosure is useful, but access and legal-authority boundaries need adaptation. Exact fingerprint confirmed; behavioral validation not run."

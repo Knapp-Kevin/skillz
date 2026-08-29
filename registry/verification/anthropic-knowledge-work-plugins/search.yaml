@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: search
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/enterprise-search/skills/search/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5a0dab2218f7100ff0508d286a847df2f5974aed
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [research, web-search]
+  lifecycle: [discovery]
+  characteristic: [retrieval-first, tool-routing, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rejected unchanged. The skill directs search across all connected sources and mandates parallel execution without a least-necessary-source gate. Query decomposition remains useful adaptation material. Exact fingerprint confirmed; behavioral validation not run."

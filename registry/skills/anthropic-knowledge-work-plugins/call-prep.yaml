@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: call-prep
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: sales/skills/call-prep/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 7c35640e492acda9dfbd18c05d88e32776036b51
+upstream_last_updated_at: 2026-01-29T22:36:17Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/sales/skills/call-prep/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-source-reviewed
+dependency_status: multi-source-sales-context
+dependencies: [Optional CRM, email, chat, transcript, calendar, and public web context]
+import_eligibility: already-vendored
+rationale: Call-preparation structure retained; unchanged reuse rejected because it defaults to broad internal and public person/prospect profiling without least-necessary data boundaries.
