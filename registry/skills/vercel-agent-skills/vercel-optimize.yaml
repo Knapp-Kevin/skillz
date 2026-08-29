@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: vercel-optimize
+display_name: Vercel Optimize
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/vercel-optimize/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: 583754a2b2d022e61396b14dc46db5f20c3c1d2b
+upstream_last_updated_at: 2026-05-27T01:39:35Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/vercel-optimize/SKILL.md
+permission_tier: read-mostly-external-observation-with-explicit-scope-and-consent-gates
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-vercel-metrics-and-toolchain-required
+dependencies: Bundled scripts, libraries, references, and citation library; Vercel CLI v53+; linked/authenticated Vercel project; Node.js 20+; Observability Plus for strongest route-level evidence
+import_eligibility: already-vendored
+rationale: Strong observability-first optimization workflow with deterministic candidate gates, exact project/scope resolution, explicit limited-audit consent, secret-command prohibitions, bounded source inspection, version-aware citation controls, withheld unsafe recommendations, reproducible run directories, and verification/regeneration stages. Platform dependence is explicit and substantial.

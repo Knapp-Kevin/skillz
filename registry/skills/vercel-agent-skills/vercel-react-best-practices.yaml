@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: vercel-react-best-practices
+display_name: Vercel React Best Practices
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/react-best-practices/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: 805687f34e8c10b420e3d11335a0ca2c3c90d992
+upstream_last_updated_at: 2026-04-14T11:00:18Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/react-best-practices/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-framework-version-aware
+dependencies: Bundled 70-rule corpus and AGENTS.md; React/Next.js project and version context; relevant framework/library availability for individual rules
+import_eligibility: already-vendored
+rationale: Broad but well-organized React/Next.js performance guidance with priority categories, bundled detailed rules, security-aware server guidance, and explicit engineering scope. Individual recommendations remain context-dependent and the skill does not itself require measurements before every optimization, so evidence and failure-handling scores remain conservative.

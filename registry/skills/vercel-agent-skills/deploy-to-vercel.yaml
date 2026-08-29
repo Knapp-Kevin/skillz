@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: deploy-to-vercel
+display_name: Deploy to Vercel
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/deploy-to-vercel/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: aed32ad7664596a5bbb7263659acdbe461f8929c
+upstream_last_updated_at: 2026-03-06T14:32:23Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/deploy-to-vercel/SKILL.md
+permission_tier: external-side-effect-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-vercel-tooling-required
+dependencies: Vercel CLI or bundled deployment fallback resources; git when using push deployment; Vercel account/team context or no-auth claim flow; network access
+import_eligibility: already-vendored
+rationale: Deployment-specific workflow with preview-by-default behavior, explicit production intent, safe preflight state checks, team-scope handling, confirmation before git push, host-specific fallbacks, and troubleshooting. Automatic CLI installation and project linking are consequential host/account mutations, so authority is scored conservatively even though they occur inside an explicit deploy request.

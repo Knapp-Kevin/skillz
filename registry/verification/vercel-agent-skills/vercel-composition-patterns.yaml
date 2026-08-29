@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-composition-patterns
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/composition-patterns/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d07025bf943345bc1cf15eb923594f889ff881f0
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [architecture, refactoring, implementation]
+  lifecycle: [design, implementation, verification]
+  characteristic: [maintainability, modularity, compatibility-aware, reference-heavy]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Clear React component-architecture trigger and bundled detailed rules; React 19-only advice is explicitly gated. Several patterns are opinionated defaults rather than measured requirements, and the skill has limited failure/evidence control. Exact pinned fingerprint and bundled rule tree confirmed. Behavioral validation remains pending.

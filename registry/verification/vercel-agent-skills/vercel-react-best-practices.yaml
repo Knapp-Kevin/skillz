@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-react-best-practices
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/react-best-practices/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 237988de4a66dd8a71d30a2c24ebe1a86b58d04e
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, code-review, refactoring]
+  lifecycle: [implementation, verification, maintenance]
+  characteristic: [reference-heavy, compatibility-aware, maintainability, production-oriented]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Seventy prioritized React/Next.js performance rules are bundled with detailed examples and references, including security-aware server guidance. The skill is broad and does not require profiling evidence before every optimization, so it is verified as a strong reference method rather than a universal performance mandate. Exact pinned fingerprint and rule corpus confirmed. Behavioral validation remains pending.

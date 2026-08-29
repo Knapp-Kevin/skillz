@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: vercel-cli-with-tokens
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/vercel-cli-with-tokens/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 814423d0c40f56853e0f4f2f64d03a02266dadf4
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [deployment, cloud, repository-maintenance, business-operations]
+  lifecycle: [implementation, release, operations, maintenance]
+  characteristic: [tool-assisted, production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 0, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 0, effectiveness 2. Hard fail: the skill warns against exposing tokens in argv but then instructs the agent to print VERCEL_TOKEN, grep token-bearing .env lines, export values from visible grep output, and ask the user to provide a token. Those steps can expose credentials in tool or chat transcripts. It also includes paid/destructive plan operations. Reference-only unless adapted to non-echoing secret presence checks, secure credential acquisition, and tighter consequential-action boundaries. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

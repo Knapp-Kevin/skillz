@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: vercel-react-native-skills
+display_name: Vercel React Native Skills
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/react-native-skills/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: 757ccb42a20478be6b7284088978070358b52d5e
+upstream_last_updated_at: 2026-01-27T00:48:33Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/react-native-skills/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-framework-and-library-aware
+dependencies: Bundled AGENTS.md and rules tree; React Native/Expo project context; optional libraries named by individual rules such as FlashList, Reanimated, expo-image, and platform-native APIs
+import_eligibility: already-vendored
+rationale: Structured React Native/Expo performance and UI guidance with bundled detailed rules and explicit mobile scope. Several recommendations are intentionally opinionated library choices rather than universal requirements, so the skill is verified as bounded engineering guidance with portability and evidence limitations recorded.

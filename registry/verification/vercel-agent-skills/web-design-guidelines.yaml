@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: web-design-guidelines
+source_id: vercel-agent-skills
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+local_path: vendor/vercel-agent-skills/skills/web-design-guidelines/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ceae92ab319216a68274168fba9b63b998b65997
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [ux, code-review, testing]
+  lifecycle: [verification]
+  characteristic: [source-driven, retrieval-first, reference-heavy]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 1, authority 2, failure 0, evidence 1, dependencies 0, portability 1, usefulness 1, adversarial resilience 0, effectiveness 2. Hard fail: the effective review rules are fetched from an unpinned main-branch command.md on every invocation. The local SKILL.md fingerprint therefore cannot detect changes to the instructions that actually govern behavior, and the fetched text is treated as executable guidance without an integrity boundary. Reference-only unless adapted to pin, hash, or otherwise verify the remote guideline payload before use. Behavioral validation remains pending.

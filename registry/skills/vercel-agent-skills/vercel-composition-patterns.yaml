@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: vercel-composition-patterns
+display_name: Vercel Composition Patterns
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/composition-patterns/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: a5343bd997c4cc4d8bf2ca61021bdc74b4d6c9d5
+upstream_last_updated_at: 2026-01-28T16:23:54Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/composition-patterns/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact-framework-version-aware
+dependencies: Bundled AGENTS.md and rules tree; React version context, especially React 19 guidance
+import_eligibility: already-vendored
+rationale: Focused React component-architecture guidance with clear activation scope, bundled rule references, explicit React 19 gating, and useful composition patterns. It is intentionally opinionated and does not provide deep failure or evidence gates, so unchanged use is appropriate as bounded engineering guidance rather than universal law.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: vercel-react-view-transitions
+display_name: Vercel React View Transitions
+source_id: vercel-agent-skills
+source_repository: https://github.com/vercel-labs/agent-skills
+source_path: skills/react-view-transitions/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
+upstream_revision: 1a5a9a0edbb0eccc72403ffbcf53bc4bb5b1b778
+upstream_last_updated_at: 2026-04-02T21:18:06Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/vercel-agent-skills/skills/react-view-transitions/SKILL.md
+permission_tier: mutate-on-explicit-user-request
+portability: low
+review_status: verified-structured
+dependency_status: source-intact-react-canary-aware
+dependencies: Bundled implementation, pattern, CSS, and Next.js references; React Canary/Experimental ViewTransition APIs outside supported Next.js integration; browser View Transition support
+import_eligibility: already-vendored
+rationale: Detailed implementation workflow with explicit animation-purpose guidance, graceful browser fallback, placement and nesting caveats, reduced-motion requirement, bundled recipes, and current React Canary API alignment. Portability is low because the feature remains Canary/Experimental and framework/browser support must be checked.
