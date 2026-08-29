@@ -18,9 +18,9 @@ skillz/
 ├── BOOTSTRAP.md                      first-visit + returning-user workflow
 ├── AGENTS.md                         agent operating contract
 ├── skills/                           local/imported user-facing library skills
-│   └── categories/                   human browse-by-purpose navigation
+│   ├── categories/                   human browse-by-purpose navigation
+│   └── sources/                      12 exact-revision pinned source corpora
 ├── engine/skills/                    repository machinery, excluded from library count
-├── vendor/                           12 exact-revision pinned source corpora
 ├── registry/
 │   ├── sources.yaml                  source identity, role, pin, license
 │   ├── categories.yaml               canonical local category assignments
