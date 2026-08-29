@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: teach
+display_name: Teach
+source_id: mattpocock-skills
+source_repository: https://github.com/mattpocock/skills
+source_path: skills/productivity/teach/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+upstream_revision: 321658273cb1d20b76026717d027d505790106d4
+upstream_last_updated_at: 2026-08-19T10:03:37Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: vendor/mattpocock-skills/skills/productivity/teach/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies: relies on bundled mission/resource/learning-record formats, local HTML/file authoring, external research, and a persistent teaching workspace; referenced format files are present at the pinned source
+import_eligibility: already-vendored
+rationale: Stateful teaching workflow grounded in a learner mission, high-quality sources, retrieval practice, spacing, reusable lesson assets, explicit learning records, and zone-of-proximal-development sequencing.
