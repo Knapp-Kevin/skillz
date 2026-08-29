@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: source-driven-development
+display_name: Source-Driven Development
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/source-driven-development/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 6681f80a1141b07377272649d9a3b2b041551d00
+upstream_last_updated_at: 2026-07-21T12:49:51Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/source-driven-development/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-retrieval-dependent
+dependencies: access to dependency manifests/project context plus official documentation retrieval capability; implementation tooling supplied by host when code changes are requested
+import_eligibility: already-vendored
+rationale: High-value freshness discipline that identifies exact framework versions, retrieves authoritative current documentation, treats retrieved content as untrusted data, surfaces conflicts, cites decisions, and labels unverified patterns rather than inventing certainty.
