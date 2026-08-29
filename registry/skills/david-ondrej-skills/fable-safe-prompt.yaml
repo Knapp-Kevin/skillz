@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: fable-safe-prompt
+display_name: Fable Safe Prompt
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/fable-safe-prompt/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_revision: 8494ccd6e704f4f8aca9d42c7b2604a5879af7bb
+upstream_last_updated_at: 2026-08-19T21:04:38Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: generate
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+ dependencies: assumes a specific named model/provider safety-routing behavior and macOS `pbcopy` for its required clipboard step
+import_eligibility: not-eligible
+rationale: The skill is explicitly designed to rewrite cyber, bio/chem, and reasoning-related prompts to reduce the chance that model safety classifiers trigger. That safety-evasion objective is incompatible with governed unchanged reuse regardless of whether individual examples are benign.
