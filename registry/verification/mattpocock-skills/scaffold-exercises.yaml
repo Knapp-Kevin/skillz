@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: scaffold-exercises
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d87df28e7d8abb4e57ecc6e47d71c274d16054c7
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [implementation, productivity]
+  lifecycle: [implementation, verification]
+  characteristic: [deterministic, test-gated, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The directory/lint procedure is concrete and potentially useful as design evidence, but the skill is tightly coupled to ai-hero-cli course conventions and instructs a git commit as part of normal completion without a distinct consent/authority boundary. That triggers the mutation hard-fail for unchanged governed reuse. Preserve as reference/adaptation material rather than selecting unchanged. Exact pinned fingerprint confirmed."
