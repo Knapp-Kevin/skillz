@@ -21,7 +21,7 @@ INDEX.md / index.json                 generated human + machine catalog
 scripts/build-index.ts               schema-v2 deterministic generator
         │
         ├── skills/                   local/imported user-facing library
-        ├── vendor/                   pinned third-party source corpora
+        │   └── sources/              pinned third-party source corpora
         ├── registry/categories.yaml  human category assignments
         ├── registry/sources.yaml     source identity/role/pin/license
         └── registry/verification/    exact-version quality + tags
@@ -47,7 +47,7 @@ Canonical local/imported **user-facing library skills**. These count as library 
 
 Discovery is recursive so category folders may become canonical physical paths later without breaking audit, index, or sync behavior.
 
-### `vendor/`
+### `skills/sources/`
 
 Pinned third-party repositories represented by exact gitlinks. Approved indexed user-facing skills in these corpora are available library material and count toward the searchable corpus.
 
