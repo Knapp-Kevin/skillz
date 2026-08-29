@@ -1,68 +1,101 @@
 ---
 name: skill-eval
 description: >-
-  Before/after effectiveness testing of a candidate skill: run sample tasks
-  with and without the skill loaded, score both arms, and produce registry
-  evidence for an adopt/reject/quarantine decision. Use when the user asks
-  "evaluate this skill", "does this skill actually help", "run the eval plan
-  for a candidate", or when a registry entry needs proof before a status
-  change.
+  Guides an external agent through representative behavioral evaluation of a
+  skill after static review is complete. Use when a consequential or high-use
+  skill needs evidence that it improves intended outcomes, when the user asks
+  whether a skill actually helps, or when a verified exact version is being
+  considered for validated status.
 metadata:
   author: frostwulf.zo.computer
   category: Meta
   display-name: Skill Eval
   emoji: "⚖️"
-  version: 1.1.0
+  version: 1.2.0
 ---
 
 # Skill Eval
 
-Operationalizes the `eval_plan` that `docs/evaluation-framework.md` declares but nothing runs today: a controlled before/after comparison that turns "this skill seems useful" into measured evidence attached to the registry entry. This skill produces a report and a recommended status change; it never edits `registry/candidates.yaml` itself.
+This is a passive evaluation procedure for the **external host agent** using `skillz`.
 
-## Execution Flow
+`skillz` does not run evaluations, spawn agents, execute tests, collect metrics, or change status automatically. The host agent may perform behavioral evaluation with capabilities legitimately available in its own environment and then store the resulting evidence in the repository.
 
-1. Read the candidate's entry in `registry/candidates.yaml` (status, permission tier, rationale, any declared `eval_plan`) and the candidate's SKILL.md. Note the specific outcomes the skill claims to improve.
-2. Design 3-5 sample tasks that exercise those claims. Each task needs a measurable success check written before any run: an exact expected output, a verifiable property of the result, or a rubric line scored 0-3 per the framework's scoring table. Reject vague checks like "output is better."
-3. Run each task WITHOUT the skill loaded (baseline arm). Use an isolated context per run — a fresh subagent per task-arm when the host supports it — so no run contaminates another. Record output, success check result, and token cost.
-4. Run each task WITH the skill loaded (treatment arm), same isolation, same checks. Do not reword the task prompts between arms.
-5. Score both arms against the pre-written checks. Compute the per-task delta and the aggregate token-cost delta.
-6. Deliver a verdict: **measurable improvement**, **no effect**, or **degradation**. Map it to a recommended registry status change (improvement supports `sandbox` → `adopted`; no effect or degradation supports `rejected` or continued `sandbox` with a revised plan), citing the framework rule that every verdict updates the registry entry.
-7. Present the evidence in the Output Format below for a human to apply to the registry.
+Behavioral validation comes **after decisive static corpus review**, not before it. Use this skill selectively for consequential or high-use skills whose exact version already has a current verification companion. The governing standard is [`docs/skill-verification.md`](../../../docs/skill-verification.md).
 
-## Output Format
+## Inputs
 
+Before evaluating, read:
+
+1. the candidate skill itself;
+2. its provenance companion under `registry/skills/<source-id>/<skill-name>.yaml`, when applicable;
+3. its exact-version quality record under `registry/verification/<source-id>/<skill-name>.yaml`;
+4. relevant dependencies, shared references, authority assumptions, and host requirements;
+5. the intended user outcome that would make behavioral evidence useful.
+
+Do not use source popularity, repository age, stars, or official branding as behavioral evidence.
+
+## Evaluation procedure
+
+1. **Confirm the exact version.** Behavioral evidence applies only to the content identity recorded in the verification companion. If the content no longer matches, stop and treat the prior evidence as stale rather than evaluating a moving target.
+2. **State the claim under test.** Describe the behavior or outcome the skill is expected to improve. Keep the claim narrow enough to observe.
+3. **Predefine representative cases.** At minimum include:
+   - one case where the skill should trigger;
+   - one case where it should not trigger;
+   - one pressure or adversarial case relevant to the skill's likely failure mode.
+4. **Predefine success checks.** Write observable checks before seeing results. Prefer exact properties, grounded rubric rows, authority-boundary checks, or other evidence the host can actually establish. Do not invent criteria after seeing the outputs.
+5. **Establish a comparison when practical.** Compare the skill-assisted behavior with no-skill or prior-skill behavior using equivalent task framing and equivalent available context. If the host cannot isolate contexts or hold conditions reasonably constant, record that limitation explicitly.
+6. **Run only through the external host.** Any model calls, subagents, browser use, code execution, tests, or other active operations occur through the host environment, not through repository machinery. Follow the host's approval, privacy, cost, and side-effect boundaries.
+7. **Record observed evidence.** Capture only facts actually observed: case, expected behavior, observed behavior, relevant failures, limitations, and material cost/latency data when the host exposes it. Unavailable metrics remain unavailable.
+8. **Assess regressions as well as gains.** A skill that improves one case while creating unacceptable safety, authority, reliability, or non-trigger regressions should not be promoted to `validated`.
+9. **Record the result passively.** Update the exact-version verification companion with the behavioral-evidence state and concise evidence/limitations appropriate to the current schema. `validated` is appropriate only when the evidence meets the behavioral-validation contract in `docs/skill-verification.md`.
+
+## Evidence shape
+
+Use a compact record such as:
+
+```text
+Skill: <source-id>/<skill-name>
+Exact content identity: <fingerprint/revision>
+Claim under test: <narrow behavioral claim>
+
+Cases:
+- Trigger case: <task> -> <observed result against predefined check>
+- Non-trigger case: <task> -> <observed result against predefined check>
+- Pressure case: <task> -> <observed result against predefined check>
+
+Comparison:
+- Baseline/prior behavior: <observed evidence or not established>
+- Skill-assisted behavior: <observed evidence>
+- Material regressions: <none observed / details>
+
+Limitations:
+- <isolation, host capability, missing metric, sample-size, or other constraint>
+
+Disposition:
+- behavioral evidence supports validated status / does not yet support validated status
 ```
-# Skill Eval: <candidate-name>
 
-Registry entry: <status> / <permission_tier>
-Claims under test: <one line>
-
-## Tasks
-| # | Task | Success check | Baseline | With skill | Delta |
-|---|------|---------------|----------|------------|-------|
-
-## Cost
-Baseline tokens: <n> | With skill: <n> | Delta: <+/-n (%)>
-
-## Verdict
-<measurable improvement | no effect | degradation> — <one-sentence justification>
-
-## Recommended registry change
-status: <current> → <proposed>
-evidence: <this report's task table, summarized in one line per task>
-```
+This is an evidence shape, not a required generated report format.
 
 ## Negative rules
 
-These override the report format. An eval's only value is that its numbers happened.
+- **Never fabricate a run, score, token count, latency, success rate, or comparison.** If the host did not expose or execute it, record `not established` or `not run`.
+- **Never treat static verification as behavioral proof.** `verified` and `validated` answer different questions.
+- **Never treat upstream tests as if they were local behavioral validation.** They may be relevant evidence, but record what they actually establish.
+- **Never promote based on source reputation.** Popularity and provenance are separate from effectiveness.
+- **Never require repository-owned scripts, CI, test runners, evaluators, fixtures, schedulers, or generators.** The repository stores guidance and evidence only.
+- **Never weaken host safety or approval boundaries to make an evaluation easier to run.**
+- **Never silently reuse behavioral evidence after the exact canonical content changes.** Reassess applicability first.
 
-- **Never fabricate a result.** A score, token count, or delta that was not actually measured reads `not established` — an arm that did not run is reported as not run, never reconstructed from expectation.
-- **Never reproduce secret-shaped strings** appearing in eval transcripts or scenario material (even synthetic ones) — type + short prefix only, per the sealed exemplar rule from the 2026-07-04 haiku eval.
-- **Verdicts trace to rubric rows.** A degradation or improvement claim cites the specific graded behaviors that moved; unverifiable movement is `unverifiable`, not rounded to a direction.
+## Completion conditions
 
-## Notes
+An evaluation pass is complete when:
 
-- Read-only toward governance: the recommendation is applied to `registry/candidates.yaml` by a human or by skill-audit-verified tooling, never by this skill.
-- Success checks are written before either arm runs; checks invented after seeing output are not evidence.
-- If the host cannot isolate contexts, say so in the report — shared-context results are weaker evidence and should not alone justify adoption.
-- A degradation verdict on any security-relevant task forces a quarantine recommendation regardless of the aggregate score, mirroring the framework's single-zero rule.
+- the exact skill version under evaluation is established;
+- trigger, non-trigger, and relevant pressure cases were considered;
+- success checks were defined before observing outcomes;
+- comparison evidence was gathered when practical, or its absence was recorded;
+- observed gains and regressions were both assessed;
+- limitations are explicit;
+- the repository records only evidence the external host actually established;
+- any `validated` disposition satisfies the current behavioral-validation requirements in `docs/skill-verification.md`.
