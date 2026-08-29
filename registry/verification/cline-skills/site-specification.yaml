@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: site-specification
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/site-specification/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 676fcb83e19c4dc1019a0ae49142751bb458841d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, research]
+  lifecycle: [discovery, implementation]
+  characteristic: [human-review, decomposition, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 1, evidence 1, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 1. Portable site-brief extraction method that permits only reasonably inferable fields, uses supplied images/documents as additional evidence when available, and requires presenting the inferred specification for user confirmation before downstream design. Caveat: site-type defaults and font recommendations can overgeneralize from sparse prompts, so the confirmation step is essential and current font availability should be checked when implementation depends on it. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.
