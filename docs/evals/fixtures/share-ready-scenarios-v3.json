@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "set_id": "share-ready-v3-2026-08-29",
+  "purpose": "Public privacy-safe treatment inputs for blind skillz engine evaluation. Expected decisions, candidate hints, and scenario-specific scoring criteria must remain outside the public repository and outside treatment-agent context until each treatment output is frozen.",
+  "rules": [
+    "Do not substitute real user private data for these synthetic scenarios.",
+    "Treatment agents may receive this fixture and the public repository, but must not receive evaluator-only criteria or prior scored outputs.",
+    "Scenario identifiers are neutral and must not be publicly mapped to expected decisions.",
+    "Use a fresh isolated context for each treatment run.",
+    "Record exact repository commit, model/host, available capabilities, and installation or handoff state.",
+    "Freeze treatment output before opening its matching private evaluator entry."
+  ],
+  "scenarios": [
+    {
+      "id": "M4R",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "Before rolling out an agent configuration, the user repeatedly compares alternatives on a fixed task set plus holdout tasks that cannot be used for tuning. Success metrics are defined before the run, failed cases are retained, important regressions cannot be hidden by aggregate averages, and each evaluation has a cost ceiling.",
+        "corrections": [
+          "Never tune on holdout tasks.",
+          "Surface important regressions even when the average improves.",
+          "Evaluation must not write to production systems unless the target is an explicitly isolated sandbox."
+        ],
+        "host": "software-development agent host with repository read/write and shell capability",
+        "installation": "portable-handoff"
+      }
+    },
+    {
+      "id": "T8V",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "The user repeatedly verifies web changes on desktop and mobile by exercising a real rendered browser, checking console and network failures, inspecting responsive behavior, and preserving visual evidence for product-critical regressions.",
+        "corrections": [
+          "QA is read-only unless I separately authorize a fix.",
+          "A page loading successfully is not enough if console, network, accessibility, or visual behavior is broken.",
+          "Do not claim a visual pass without inspecting rendered output."
+        ],
+        "host": "browser-capable development agent host",
+        "installation": "portable-handoff"
+      }
+    },
+    {
+      "id": "C3J",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "Before a production data migration, the user requires a schema diff, a dry-run transformation on representative samples, count or checksum reconciliation, a human spot-check of user-visible migrated records, and a demonstrated rollback path. Planning, dry-run verification, human verification, approval, and execution are separate states.",
+        "corrections": [
+          "A successful dry run is not permission to execute production writes.",
+          "Missing rollback evidence blocks cutover.",
+          "Human spot-checking is mandatory before approval.",
+          "Production mutation requires explicit approval even when deterministic checks pass."
+        ],
+        "host": "development agent host with database tooling",
+        "installation": "direct-write-if-authorized"
+      }
+    },
+    {
+      "id": "H6P",
+      "mode": "first-visit",
+      "user_evidence": {
+        "recurring_pattern": "For unfamiliar technical mechanisms, the user first surveys prior art across several source types, distinguishes a source that returned zero results from a source that could not be reached, deep-reads only the strongest candidates without executing them, then turns the evidence into a short implementation decision with explicit constraints, open questions, and stop conditions. The user does not want a giant research workflow attached to every implementation task.",
+        "corrections": [
+          "Do not call an unreachable search surface a zero-result search.",
+          "Do not install or execute candidate repositories just to inspect them.",
+          "Keep the implementation decision concise once the evidence is sufficient.",
+          "Do not replace my normal implementation workflow with a new ceremony just because a reference skill has one."
+        ],
+        "host": "connector/API-only agent host with repository read access but no local runtime or writable filesystem",
+        "installation": "portable-handoff"
+      }
+    },
+    {
+      "id": "N2K",
+      "mode": "returning-user",
+      "existing_set": [
+        {
+          "name": "research-briefing",
+          "type": "custom",
+          "state": "installed-verified",
+          "fingerprint_state": "current",
+          "notes": "Still matches source-quality, contradiction-tracking, and citation requirements."
+        },
+        {
+          "name": "handoff-workflow",
+          "type": "third-party-derived",
+          "state": "installed-verified",
+          "recorded_fingerprint": "fixture-v3-old-handoff",
+          "current_fingerprint": "fixture-v3-new-handoff",
+          "notes": "The underlying handoff material changed since the fitted set was recorded."
+        }
+      ],
+      "current_user_evidence": {
+        "workflow_change": "Research behavior has not changed. Handoffs must now label important statements as EVIDENCE, INFERENCE, or OPEN QUESTION so the next agent can distinguish established facts from interpretation.",
+        "host": "same host as the prior installation"
+      }
+    },
+    {
+      "id": "Z7Q",
+      "mode": "returning-user",
+      "existing_set": [
+        {
+          "name": "debugging-workflow",
+          "type": "third-party-or-custom",
+          "state": "installed-verified",
+          "fingerprint_state": "current",
+          "notes": "Hypothesis-driven debugging, reproduction, and evidence capture still match current work."
+        },
+        {
+          "name": "decision-brief",
+          "type": "custom",
+          "state": "installed-verified",
+          "fingerprint_state": "current",
+          "notes": "Decision framing, alternatives, risks, and recommendation format still fit."
+        }
+      ],
+      "current_user_evidence": {
+        "workflow_change": "none",
+        "observed_failures": [],
+        "new_library_candidates": "Several newer related references are available, but current evidence does not establish a material improvement for either workflow."
+      }
+    }
+  ]
+}
