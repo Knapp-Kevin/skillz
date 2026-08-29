@@ -73,7 +73,7 @@ The unified-tree branch has reconciled characterized companion records and estab
 - Matt Pocock Skills: exact eligible denominator 29/29; all companions reconciled;
 - Cline Skills: pinned README publishes 36 first-class skills; all 36 have provenance + exact-version review companions and decisive static states: 19 verified / 17 rejected unchanged, plus one additional unlisted/internal `cline-session-history` skill characterized separately;
 - Addy Osmani Agent Skills: exact pinned denominator 24/24; all 24 have provenance + exact-version review companions, controlled tags, dependency/authority/portability characterization, and decisive static states;
-- Anthropic Knowledge Work Plugins: exact pinned denominator 74 first-class skills across 11 published plugin `skills/` roots; 12/74 currently have provenance + exact-version review companions and decisive static states, with 6 verified and 6 rejected unchanged. Latest tranche: `write-spec` verified 18/20, `reconciliation` verified 18/20, `task-management` rejected unchanged 13/20, `ticket-triage` rejected unchanged 13/20, `triage-nda` rejected unchanged 12/20, and `seo-audit` rejected unchanged 11/20. Earlier tranche: `review-contract` verified 18/20, `scientific-problem-selection` verified 18/20, `journal-entry` verified 17/20, `sql-queries` verified 16/20, `draft-outreach` rejected unchanged 14/20, and `memory-management` rejected unchanged 11/20.
+- Anthropic Knowledge Work Plugins: exact pinned denominator 74 first-class skills across 11 published plugin `skills/` roots; 36/74 currently have provenance + exact-version review companions and decisive static states, with 17 verified and 19 rejected unchanged. The latest tranche verified `call-summary` 17/20, `knowledge-synthesis` 18/20, `single-cell-rna-qc` 16/20, and `close-management` 16/20; it rejected unchanged `statistical-analysis` 13/20 and `cowork-plugin-customizer` 14/20. This source remains partially reviewed rather than statically complete.
 
 These figures distinguish complete source denominators from partial review coverage. A reconciled characterized subset is not the same thing as a statically complete source.
 
@@ -84,7 +84,7 @@ PR #42 remains the active structural frontier until its passive-repository recon
 1. finish the remaining current first-party maintenance/documentation sweep for stale execution and legacy physical-path assumptions;
 2. reconcile `INDEX.md` and `index.json` as passive static snapshots once the underlying paths and companion metadata are internally consistent;
 3. reconcile remaining public counts/status wording to live curated truth;
-4. continue Anthropic Knowledge Work Plugins from 12/74 to 74/74, then establish exact denominators and complete static review for AWS, Microsoft, and Azure;
+4. continue Anthropic Knowledge Work Plugins from 36/74 to 74/74, then establish exact denominators and complete static review for AWS, Microsoft, and Azure;
 5. ensure every eligible skill has decisive provenance, exact-version review state, controlled tags, and dependency/authority/portability characterization;
 6. keep source-level reputation/context separate from individual skill quality;
 7. only after static corpus completion, prioritize consequential skills for external behavioral validation.
@@ -114,6 +114,6 @@ Advance PR #42 with the smallest remaining reconciliation unit while continuing 
 3. reconcile remaining public status/count surfaces;
 4. review the final PR diff for accidental loss of passive reference/history material;
 5. merge PR #42 when those gates are satisfied;
-6. continue source-by-source static curation with Anthropic Knowledge Work Plugins at 12/74, then the remaining AWS/Microsoft/Azure families unless evidence establishes a better ordering.
+6. continue source-by-source static curation with Anthropic Knowledge Work Plugins at 36/74, then the remaining AWS/Microsoft/Azure families unless evidence establishes a better ordering.
 
 Wayfinder Issue #35 remains the destination/scope map. External reviewer feedback remains evidence to evaluate, not an instruction to implement.
