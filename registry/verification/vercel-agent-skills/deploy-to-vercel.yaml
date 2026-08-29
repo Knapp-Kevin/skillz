@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: deploy-to-vercel
 source_id: vercel-agent-skills
 source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
-local_path: vendor/vercel-agent-skills/skills/deploy-to-vercel/SKILL.md
+local_path: skills/sources/vercel-agent-skills/skills/deploy-to-vercel/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a0251ce89a7636230be9c5b989a81e1a54a52a96
 characterized_at: 2026-08-29
