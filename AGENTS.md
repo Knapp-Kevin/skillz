@@ -1,111 +1,102 @@
 # Agent Entry Contract
 
-This repository is both a user-facing skill library and a skill-building engine.
+`skillz` is an entirely passive repository of skills, instructions, provenance, verification evidence, tags, and reference material.
 
-**If you can read this repository, begin by reading [`AGENT_START_HERE.md`](AGENT_START_HERE.md). Missing local execution is not a normal-use blocker.**
+The external AI agent reading the repository is the active system. `skillz` owns no runtime, scheduler, validator, installer, monitor, test runner, CI process, or executable maintenance layer.
+
+Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md) first.
 
 ## Inventory boundary
 
-- `skills/`: local/imported user-facing skills. Count them.
-- approved indexed skill material under `skills/sources/`: referenced user-facing library skills. Count them.
-- `engine/skills/`: procedures that operate `skillz` itself. Do **not** count them.
-- `registry/skills/`: provenance for individually characterized third-party skills.
-- `registry/verification/`: hash-bound quality state and controlled tags.
+- `skills/`: the complete user-facing skill tree. Count user-facing skills here, including pinned source corpora under `skills/sources/`.
+- `engine/skills/`: passive repository-maintenance instructions for an external agent. Do **not** count them as user-facing corpus inventory.
+- `registry/skills/`: provenance companions for individually characterized third-party skills.
+- `registry/verification/`: exact-version quality state and controlled tags.
+- `registry/sources.yaml`: source identity, role, license, and pin.
 
-Availability and quality are separate. A vendored skill can be part of the searchable library while still being unverified.
+Availability and quality are separate. Presence in a source corpus does not establish individual skill quality.
 
-## Capability routing comes first
-
-Do not assume local shell, Git, Node/Bun, initialized submodules, or writable filesystem access.
-
-Use one of the capability paths in [`AGENT_START_HERE.md`](AGENT_START_HERE.md):
-
-- **repository-native** when local tooling exists;
-- **connector/API/web** when repository files and upstream sources are readable through tools;
-- **minimal read-only** when only part of the repository can be inspected.
-
-Normal direct-library use, first-visit bootstrap, returning-user refinement, custom-skill design, and portable handoff must not fail solely because maintainer tooling cannot run.
-
-## Route the user before doing work
-
-There are four valid entry modes.
+## Route the request
 
 ### Direct library mode
 
-If the user asks to browse, search, compare, inspect, install, adapt, or use a known skill, treat `skillz` as a normal library. Do not force full bootstrap.
-
-Humans may browse the local library by purpose under `skills/categories/`. For third-party unchanged reuse, consult provenance and verification metadata when available.
+If the user asks to browse, compare, inspect, adapt, or use a known skill, work directly with the relevant corpus material. Do not force full bootstrap.
 
 ### First-visit bootstrap mode
 
-If the user gives you this repository or its GitHub URL without another specific task and does not present an existing fitted skill set to review, **begin first-visit bootstrap now**. Do not stop at a repository summary.
+If the user gives you this repository or its URL without a narrower task and does not present an existing fitted skill set, begin first-visit discovery.
 
-1. Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md).
-2. Read [`BOOTSTRAP.md`](BOOTSTRAP.md).
-3. Read [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) when accessible.
-4. Inspect only relevant interaction history, persistent memory, workspace context, existing instructions/skills, recurring corrections, and tool patterns the host legitimately exposes.
-5. Identify durable working methods and latent skill candidates.
-6. Search and compare the complete user-facing library, including approved vendor corpora, using local tooling when available or direct connector-native record inspection when it is not.
-7. For a connector-native third-party candidate, read its verification companion, provenance companion, source snapshot revision, and exact upstream canonical `SKILL.md`; compare connector-exposed Git blob/content SHA with the recorded fingerprint when possible.
-8. Treat matching `trusted-baseline`, `verified`, or `validated` records as eligible for unchanged consideration; surface `unverified` as design evidence and exclude `stale`, `rejected`, and `retired` from default selection.
-9. If exact identity cannot be established on the current host, lower confidence rather than fabricating a match.
-10. Reuse, adapt, supplement, or compose existing skills when that is genuinely the best fit.
-11. Create custom skills when the user's workflow is not adequately represented, even when related references exist.
-12. Adversarially review and behaviorally evaluate the fitted skill system as appropriate.
-13. Install when authorized, or produce the correct portable artifact and shortest beginner-readable handoff.
-
-A governed shortlist or quality state is evidence, not a verdict. User fit controls the final reuse/adapt/create decision.
+1. Read [`BOOTSTRAP.md`](BOOTSTRAP.md) and [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md).
+2. Inspect only relevant history, memory, workspace context, instructions, existing skills, recurring corrections, and workflow evidence the host legitimately exposes.
+3. Identify stable repeatable methods rather than simple preferences or one-off facts.
+4. Compare those methods against relevant material under `skills/`.
+5. For third-party candidates, inspect provenance, verification status, exact version/fingerprint when establishable, dependencies, authority, portability, and freshness.
+6. Treat weakly evidenced or unverified material as design evidence rather than silently trusted unchanged material.
+7. Reuse, adapt, extract, supplement, compose, create, or deliberately make no skill change based on actual fit.
+8. Adversarially review consequential new or adapted behavior.
+9. Return the smallest useful fitted set.
+10. Any installation or external action, if requested, is performed only by the host agent using its own capabilities and authority rules.
 
 ### Returning-user refinement mode
 
-If the user already has skills and asks to review, refine, update, improve, audit, revisit, or optimize the set, **do not restart from zero**.
+If the user already has a fitted set, do not restart from zero.
 
-1. Inventory the current skills, intended jobs, installation state, versions, and accessible fingerprints.
-2. Compare the current set with present working patterns and definitions of done.
-3. Identify stale, overlapping, conflicting, unused, underperforming, over-broad, or missing capabilities.
-4. Check upstream freshness and fingerprint drift where records exist and the host can establish them.
-5. Search the current library for materially better fits or useful new patterns.
-6. Preserve valid custom behavior rather than replacing it merely because a generic upstream skill exists.
-7. Make the smallest justified changes: refine, replace, supplement, compose, add, or retire.
-8. Re-run structured verification and behavioral evaluation where material changes warrant it.
-9. Update installation state and portable profile records when applicable.
-10. Return a concise change log plus the updated smallest useful skill set.
+1. Inventory the current skills and intended jobs.
+2. Compare them with current working patterns and available evidence.
+3. Identify meaningful drift, overlap, conflict, stale assumptions, or gaps.
+4. Preserve still-valid custom behavior.
+5. Search the corpus for materially better references only where a real need exists.
+6. Make the smallest justified change.
+7. Permit **NO CHANGE NEEDED** as a successful result.
 
-A returning review may correctly conclude that no changes are needed.
+### Repository-curation mode
 
-### Repository-maintenance mode
+If the user asks to improve `skillz` itself, curate the passive repository using the external host agent's tools.
 
-If the user is explicitly asking to improve `skillz` itself, use the repository engine and governance processes. This is the mode where local Node/Bun, Git, materialized submodules, generated-index checks, audits, and alpha preflight may legitimately become requirements.
+- inspect current files and pinned sources;
+- review existing skills source by source;
+- reconcile source denominators;
+- update provenance, verification, tags, source context, and documentation;
+- improve static `SKILL.md` instructions;
+- preserve third-party source integrity and licensing;
+- remove stale or misleading references;
+- do not create repository-owned scripts, CI, runtimes, preflight commands, background monitors, or other execution machinery.
 
-Do not transfer those maintenance prerequisites onto normal library/bootstrap users.
+The agent may use GitHub, web, filesystem, search, or other tools supplied by its host while doing this work. Those tools are external to `skillz`.
 
 ## Third-party quality rule
 
 Source reputation does not equal individual skill verification.
 
-- Every characterized skill receives an exact-version quality state under the repository's quality policy.
-- An individual characterization record applies only to its recorded Git blob SHA.
-- If the current blob hash changes, treat prior characterization as `stale` until refreshed.
-- `trusted-baseline` means the exact version is eligible under an established source-quality policy plus matching fingerprint and characterization.
-- `verified` means the structured rubric passed.
-- `validated` additionally requires representative behavioral evidence.
+- Characterization applies to the recorded exact skill version.
+- If content or supporting assumptions materially change, reconsider the prior conclusion.
+- `verified` means the recorded exact version passed structured static review.
+- `validated` requires actual representative behavioral evidence in addition to static review.
+- `unverified` material is design/reference evidence by default.
+- `stale`, `rejected`, and `retired` material is excluded from normal unchanged selection.
 
-For unchanged trusted selection, prefer an individually characterized record with a matching fingerprint and status `trusted-baseline`, `verified`, or `validated`.
+When exact identity cannot be established, lower confidence rather than fabricating a match.
 
-`unverified` material may inform design or be verified on demand, but do not silently install it as trusted unchanged material. Exclude `stale`, `rejected`, and `retired` material from default selection.
-
-If exact fingerprint verification is unavailable on the current host, state that explicitly and choose a conservative path rather than treating the candidate as exact-version proven.
+Use source reputation, stars, forks, maintenance activity, and official status as context only. They never upgrade an individual skill automatically.
 
 ## Core doctrine
 
-**Compare before creation. User-fit before reuse. Smallest useful set over maximum skill count.**
+**Compare before creation. User fit before reuse. Smallest useful set over maximum skill count.**
 
-A reference can contribute triggers, safeguards, procedures, tests, abstractions, and failure handling without becoming the user's final workflow. Create a custom skill when that better matches the user's actual method. Preserve still-valid custom behavior on returning visits.
+A reference may contribute triggers, safeguards, procedures, abstractions, decision rules, or failure handling without becoming the user's final workflow.
 
 ## Memory and privacy
 
-Use relevant memory/history before asking the user to repeat accessible information. Never invent inaccessible history. Access to a private connector is capability, not consent to mine it for a profile.
+Use relevant memory/history the host legitimately exposes before asking the user to reconstruct accessible information. Never invent inaccessible history. Access to a private connector is capability, not consent to mine unrelated data.
 
 ## Mutation boundary
 
-Discovery and design are read-only by default. Installing skills, writing outside the active workspace, changing permissions, publishing, sending, or causing external side effects requires the authority expected by the target environment. A recommendation is not authorization.
+Discovery and design are read-only by default. Repository writes, skill installation, publishing, sending, permission changes, or other side effects require the authority expected by the external host and destination.
+
+A recommendation is not authorization.
+
+## Passive-repository invariant
+
+No instruction in this repository should imply that `skillz` itself executes, schedules, observes, validates, installs, synchronizes, fetches, or monitors anything.
+
+If such language appears in a current first-party file, treat it as documentation drift and correct it.
