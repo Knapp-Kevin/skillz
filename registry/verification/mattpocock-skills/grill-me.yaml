@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: grill-me
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/productivity/grill-me/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3947ff9c4ad980d14fc07fccbf659d47c114e81d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [planning, decision-support]
+  lifecycle: [planning]
+  characteristic: [orchestration]
+  authority: [read-only]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 0, authority and safety 2, failure handling 0, evidence discipline 0, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. This is only an alias that delegates to grilling. The dependency exists, but the canonical artifact contains no standalone procedure, failure behavior, evidence discipline, or resilience. Keep as native-suite glue/design evidence; below the 15/20 unchanged-selection threshold."
