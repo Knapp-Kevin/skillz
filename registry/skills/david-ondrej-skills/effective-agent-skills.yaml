@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: effective-agent-skills
+display_name: Effective Agent Skills
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/skill-authoring/effective-agent-skills/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_revision: 6f96a51130dcaec58104e929d3d86be41ce67551
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: no required runtime dependencies; several examples and portability claims are client-specific and must be checked against target host behavior
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Comprehensive skill-authoring reference with strong routing, progressive-disclosure, determinism, validation, weak-model testing, and security guidance. It overlaps official authoring references and includes several generalized client-behavior claims, so it is useful but should not displace more authoritative platform-specific guidance.
