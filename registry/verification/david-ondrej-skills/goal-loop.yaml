@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: goal-loop
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 90bcadd0a78cbffd0a81c1811dea04081e3c0bab
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review-plus-current-client-doc-check
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [orchestration, planning]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [orchestration, test-gated, risk-aware, cost-bounded]
+  authority: [generate-only]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 0, dependency coherence 1, portability honesty 0, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. The completion-contract pattern is useful, including explicit validation, stop conditions, scope controls, and anti-reward-hacking language. Unchanged reuse fails because runtime facts are presented as one cross-client contract even though current implementations differ materially. Current Claude Code documentation supports `/goal` but documents different controls/surfaces and does not support several universal claims made here; Codex and Hermes expose their own goal semantics. The skill also says subscription auth is required and API-key auth does not work as a universal requirement, which is not a portable client invariant. Treat the contract-writing ideas as adaptation evidence; split runtime-specific guidance by host before reconsidering unchanged verification."
