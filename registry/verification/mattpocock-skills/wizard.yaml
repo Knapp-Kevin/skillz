@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wizard
+source_id: mattpocock-skills
+source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+local_path: vendor/mattpocock-skills/skills/engineering/wizard/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c4294ad8298b9b95fc727496b1b802b1f7363fba
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [implementation, deployment, security]
+  lifecycle: [implementation, operations]
+  characteristic: [human-review, safety-bounded, tool-assisted, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong boundary that reserves the skill for genuinely human-only steps, requires current docs rather than invented UI instructions, hides secret entry, confirms irreversible actions, and forbids autonomous end-to-end execution. Static verification checks captured values and CI secret names. Bash/gh/browser assumptions reduce portability and runtime-error recovery is modest. Behavioral validation remains pending."
