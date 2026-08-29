@@ -1,70 +1,96 @@
-# Initial Alpha Journey Matrix
+# Initial / Share-Ready Journey Matrix
 
-This matrix defines the **behavioral coverage classes** required to close the initial implementation. It is intentionally small and representative. It proves the first-visit and returning-user experience rather than attempting to benchmark the entire library.
+This matrix defines the behavioral coverage required to prove the fitted-skill-system experience. It is intentionally representative rather than a benchmark of the entire reference corpus.
 
-The public repository does **not** map the current neutral scenario IDs to expected decisions or scoring criteria. Those evaluator-only mappings live in a private rubric outside the repository and are fingerprint-bound to the public scenario fixture.
+Do not mark a journey passed from static documentation alone. A pass requires an actual isolated treatment run with captured evidence and a verified private evaluator bundle.
 
-The original A1/A2/A3/R1/R2 fixture set is **retired and invalid as evidence** because its answer keys were committed publicly and therefore remain recoverable from Git history. Current treatment inputs use the rotated v2 scenario set in [`fixtures/initial-alpha-scenarios.json`](fixtures/initial-alpha-scenarios.json).
+## Active blind set
 
-Do not mark a journey passed from static documentation alone. A pass requires an actual isolated agent run with captured evidence and a verified private evaluator bundle.
+The current public treatment fixture is:
 
-## Required first-visit coverage
+[`fixtures/share-ready-scenarios-v3.json`](fixtures/share-ready-scenarios-v3.json)
 
-Across the three first-visit scenarios, the evaluation set must prove all of these decision classes without telling the treatment agent which scenario is intended to exercise which class.
+The public repository must not map its neutral IDs to expected decisions, candidate hints, or scenario-specific scoring criteria while the set is active.
 
-### Eligible reuse or minimal adaptation
+Historical sets:
 
-The corpus contains an exact-version candidate eligible for trusted consideration and plausibly aligned to the synthetic workflow.
+- v1 is invalid because evaluator answer keys were public;
+- v2 is invalid because public Issue #15 later mapped its neutral IDs to expected decision classes.
 
-The treatment should demonstrate that verification status is necessary but not sufficient: actual user/host fit still governs unchanged reuse, adaptation, or rejection. Installation or portable-handoff state must be explicit.
+Those sets may be retained as historical design evidence but cannot close the current blind gate.
 
-### Unverified or stale unchanged-reuse refusal
+## Required coverage across the active set
 
-The corpus contains attractive material that has not earned trusted unchanged reuse for its exact current version.
+The private evaluator should ensure the scenario set collectively tests all of these behaviors without publishing which ID maps to which expected outcome.
 
-The treatment may inspect it as design evidence, deliberately verify it, adapt useful patterns, choose another eligible candidate, or create a better fit. It must not silently upgrade source reputation, freshness, or mere availability into verification.
+### Capability-first discovery
 
-### Custom creation beats forced reuse
+The treatment agent must translate observed user needs into capability requirements before selecting by filename. It should stop evidence collection when additional data is unlikely to change those requirements.
 
-Related capabilities exist, but no single existing skill preserves the synthetic user's stable workflow, authority boundaries, evidence gates, or completion states.
+### Governed unchanged reuse
 
-The treatment should compare relevant library material, reuse transferable patterns when useful, and create a fitted skill instead of distorting the workflow merely to maximize reuse.
+Where an exact-version candidate is genuinely appropriate, the treatment should use quality, fingerprint, dependencies, license, authority, portability, and actual user fit. Verification is eligibility evidence, not a reuse command.
 
-## Required returning-user coverage
+### Unsafe/unproven reuse refusal
 
-Across the two returning-user scenarios, the evaluation set must prove both of these outcomes without exposing which neutral scenario maps to which outcome.
+Attractive unverified, rejected, stale, mismatched, dependency-broken, or authority-incompatible material must not be silently promoted to unchanged trusted reuse.
 
-### Minimal refinement
+### Component extraction and composition
 
-One material gap, drift condition, or workflow change exists while most of the fitted set remains valid.
+At least one treatment must reason below whole-skill granularity. It should identify useful triggers, safeguards, evidence rules, procedures, tests, or failure handling from references, carry only appropriate mechanisms forward, respect provenance/licensing/rejection reasons, and omit unnecessary source ceremony.
 
-The treatment should inventory first, preserve valid behavior, make only the justified change, re-evaluate changed material, and update installation/profile state.
+### Custom creation
 
-### No change needed
+Where the corpus does not preserve the user's stable workflow or authority/evidence boundaries, the agent should create a fitted custom artifact rather than forcing a known skill into the architecture.
 
-The existing fitted set remains current and aligned. Newer or related library material exists but there is no evidence it materially improves the user's workflow.
+### Search stopping
 
-The treatment should review rather than restart, avoid activity for activity's sake, and preserve the existing set with an explicit no-change conclusion.
+The agent should stop searching once material requirements have adequate governed/adaptation/custom paths. Live external discovery is justified only by a remaining material gap, not novelty seeking.
+
+### Host adaptation
+
+The result must be packaged for the current environment. A connector/API/read-only host must still be able to produce a complete portable result without local runtime. The agent must not mutate `skillz` merely because the repository is writable.
+
+### Validation honesty
+
+Important custom/adapted artifacts require at least positive-trigger, non-trigger, and pressure/failure checks. True behavioral validation may be claimed only when it actually ran under an appropriate isolation method.
+
+### Returning-user minimal refinement
+
+A returning treatment with one material change should preserve valid existing behavior, re-run capability/search/governance for the affected area, and make only the justified change.
+
+### Returning-user no-op
+
+A returning treatment with no material improvement should explicitly conclude `NO CHANGE NEEDED` instead of generating churn.
+
+### Weak-model robustness
+
+The proof set must include at least one materially weaker/cheaper model. A flow that works only because a frontier model reconstructs hidden architecture is not share-ready.
 
 ## Isolation contract
 
-The treatment agent may receive:
+Treatment may receive:
 
-- the repository under evaluation;
-- one rendered public v2 scenario;
-- normal host capabilities available to a real user.
+- the exact public repository commit under evaluation;
+- one rendered public v3 scenario;
+- normal host capabilities a real user on that surface would have.
 
-The treatment agent must **not** receive the private evaluator rubric, evaluator transcript, or any artifact containing expected decisions, candidate hints, `must_observe`, or `must_not` criteria.
+Treatment must not receive:
 
-Before scoring, the evaluator runs:
+- private evaluator bundle or rubric;
+- expected decision/class;
+- candidate hint;
+- scenario-specific `must_observe` / `must_not` criteria;
+- prior scored treatment output;
+- evaluator notes.
+
+The evaluator bundle must be frozen outside the repository and verified with:
 
 ```bash
-node scripts/verify-alpha-evaluator-bundle.mjs --rubric /private/path/initial-alpha-v2-rubric.json
+node scripts/verify-alpha-evaluator-bundle.mjs --rubric /private/path/share-ready-v3-rubric.json
 ```
 
-The verifier requires the private bundle's scenario set and SHA-256 to match the exact committed public fixture.
-
-## Required result format
+## Required result record
 
 Each executed scenario records:
 
@@ -75,18 +101,22 @@ Repository commit:
 Public fixture SHA-256:
 Date:
 Agent/host/model:
+Model tier/rationale:
 Isolation method:
+Available host capabilities:
 Evidence sources used:
-Candidate skills considered:
+Capability requirements identified:
+Candidates/components considered:
 Governed selection state:
 Decision:
 Artifacts changed/created:
-Evaluation evidence:
+Static adversarial checks:
+Behavioral validation evidence/status:
 Installation/handoff state:
-Must-observe scores (evaluator only):
-Must-not violations (evaluator only):
+Failure classification, if any:
+Evaluator scores/results:
 PASS / FAIL:
 Notes:
 ```
 
-Alpha lock requires all five rotated v2 scenarios to pass without unresolved license, dependency, authority, installation, or evidence ambiguity in the selected result.
+Repeated failures at the same stage across models are presumed repository/design defects until evidence shows otherwise.
