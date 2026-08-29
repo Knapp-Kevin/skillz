@@ -1,124 +1,145 @@
 # Roadmap
 
-`skillz` is a reusable AI-skill library plus an engine for building and maintaining a fitted skill set for a person or team.
+`skillz` is an entirely passive skill corpus and agent-guided discovery protocol. The external agent is the active system.
 
-The roadmap is organized around **user capability**, not raw skill count. The library can grow indefinitely. The initial implementation ends when the first-visit and returning-user experiences are proven reliable.
+The roadmap is therefore about **corpus quality, evidence, organization, portability, and usefulness**, not building software to operate the repository.
 
-## Current milestone: initial alpha
+## Current milestone: production-ready corpus foundation
 
-Status: **IMPLEMENTED, EXECUTION PROOF PENDING**
+Status: **ACTIVE CURATION**
 
-The foundational implementation and final proof-harness hardening are on `main` or the active alpha-isolation repair. The remaining work is deliberately narrow.
+The immediate goal is to make the existing corpus coherent, fully attributable, decisively reviewed, well tagged, and easy for an external agent to reason over.
 
-### 1. Materialized catalog proof
+### 1. Complete the unified user-facing tree
 
-From a normal network-capable checkout with all pinned submodules initialized:
+- keep every user-facing skill under `skills/`;
+- keep pinned third-party repositories intact under `skills/sources/`;
+- keep passive repository-maintenance instructions separate from user-facing corpus counts;
+- remove stale references to the old top-level `vendor/` layout;
+- preserve exact pins, licensing, and source identity.
 
-1. run `node scripts/initial-alpha-preflight.ts`;
-2. require the exact source-state gate to prove a clean superproject plus all 12 initialized clean submodules at their superproject gitlink SHAs;
-3. regenerate schema-v2 `INDEX.md` and `index.json`;
-4. require semantic catalog invariants and byte-identical output on the second generator pass;
-5. record exact local, vendored, total-entry, unique-name, and source counts;
-6. reconcile README counts with generated truth.
+### 2. Finish static corpus curation
 
-This proof is intentionally not replaced by an estimate from GitHub search or an automatic GitHub Actions run.
+Work source by source rather than expanding architecture.
 
-### 2. Blind first-visit journey proof
+For every registered source:
 
-Execute the three rotated public-only v2 first-visit scenarios from `docs/evals/fixtures/initial-alpha-scenarios.json` through `scripts/render-alpha-scenario.ts` in fresh treatment contexts.
+1. establish the full eligible denominator;
+2. identify every eligible `SKILL.md` or equivalent skill entry;
+3. create/maintain provenance companions;
+4. bind exact-version conclusions to the skill content identity when establishable;
+5. record dependency, authority, portability, and freshness context;
+6. apply controlled tags;
+7. assign a decisive current static disposition;
+8. record rejection/retirement reasons rather than silently omitting unsuitable material.
 
-Collectively, the three runs must demonstrate:
+A source is not complete because some of its skills were sampled.
 
-- correct reuse or minimal adaptation of an eligible exact-version skill when it genuinely fits;
-- refusal to treat unverified or stale material as trusted unchanged reuse;
-- custom creation when forcing a library match would distort the user's stable workflow.
+### 3. Complete companion metadata
 
-The public repository does not reveal which neutral scenario maps to which outcome. Frozen evaluator-only mappings and scoring criteria remain in a private bundle fingerprint-bound to the public fixture.
+Per-skill provenance should support reasoning about:
 
-Each run must truthfully report evaluation and installation/handoff state.
+- source repository and canonical path;
+- license and relationship;
+- source pin/revision;
+- skill-specific freshness and earliest-known history where establishable;
+- dependencies and shared references;
+- authority/side-effect assumptions;
+- portability;
+- intended use;
+- rationale for inclusion or rejection.
 
-### 3. Blind returning-user journey proof
+Exact-version verification companions should carry:
 
-Execute the two rotated public-only v2 returning-user scenarios in fresh treatment contexts.
+- content identity/fingerprint where establishable;
+- structured review state;
+- controlled tags;
+- evidence/rationale;
+- behavioral-validation state.
 
-Collectively, the runs must demonstrate:
+Volatile source-level context belongs separately in `registry/source-signals.yaml`, with observation timestamps. Stars, forks, activity, reputation, and official status are context, not proof of individual skill quality.
 
-- inventory-first minimal refinement when one real drift/gap exists while most fitted behavior remains valid;
-- an explicit **NO CHANGE NEEDED** outcome when newer material does not establish a meaningful improvement.
+### 4. Make agent interpretation unambiguous
 
-The treatment agent must not receive the private evaluator mapping before its output is frozen.
+Current documentation and passive maintenance skills must consistently teach:
 
-### 4. Alpha lock
+**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-Alpha is locked only when:
+Agents should understand that they may:
 
-- materialized source/catalog preflight passes;
-- the private evaluator bundle verifies against the exact public v2 fixture before treatment execution;
-- all five rotated blind journey scenarios pass their frozen private criteria;
-- result evidence is recorded under `docs/evals/results/` without republishing the still-active answer key;
-- generated counts and public documentation agree;
-- `docs/alpha-lock.md` and Issue #15 are reconciled to the evidence.
+- adopt;
+- adapt;
+- extract;
+- supplement;
+- compose;
+- create;
+- use a checklist;
+- keep behavior dynamic;
+- make no change.
 
-The original public v1 A1/A2/A3/R1/R2 set is retired and cannot satisfy the behavioral gate because its answer keys remain recoverable from Git history.
+The corpus is prior art and design material, not a mandate to maximize reuse.
 
-See [`docs/initial-implementation.md`](docs/initial-implementation.md), [`docs/alpha-lock.md`](docs/alpha-lock.md), and [`docs/evals/run-initial-alpha.md`](docs/evals/run-initial-alpha.md).
+### 5. Reconcile passive navigation surfaces
 
-## Post-alpha: curation and refinement
+`CURATED.md`, `INDEX.md`, `index.json`, category pages, registry records, and public documentation should agree with the live corpus.
 
-Once alpha is locked, ongoing work shifts primarily to library enrichment.
+These are passive static artifacts. An external curating agent updates them when needed. Do not introduce a repository-owned generator or runtime merely to maintain them.
 
-### Corpus curation
+### 6. Behavioral validation after static completion
 
-- discover high-value first-party, official, and community skills;
-- preserve source, author, license, path, exact revision, and skill-specific freshness;
-- characterize useful skills with controlled tags;
-- verify non-governed candidates before trusted unchanged reuse;
-- behaviorally validate important skills where representative evidence is practical;
-- retire, quarantine, or re-review skills when content fingerprints change.
+Once the static corpus is complete, prioritize consequential/high-use skills for representative behavioral validation.
 
-Broad corpus expansion is valuable, but it is **not** an initial-alpha blocker.
+Validation is performed externally by an agent/evaluation environment. `skillz` may store the evidence but does not execute the evaluation.
 
-### Selection quality
+Prioritize skills where poor behavior has meaningful cost, authority, security, or workflow consequences rather than attempting to behaviorally test every reference skill indiscriminately.
 
-- refine taxonomy coverage from real bootstrap/refinement usage;
-- tune matching weights without turning tags into automatic authority;
-- improve duplicate/overlap detection across sources;
-- learn when composition, adaptation, supplementation, or custom creation beats unchanged reuse.
+### 7. Ongoing limited discovery
 
-### Returning-user refinement
+Discovery remains useful, but it should not outrun curation.
 
-- improve drift and overlap diagnostics;
-- strengthen portable profile versioning;
-- make small-change and no-change decisions more evidence-driven;
-- expand safe upgrade/retirement guidance.
+- inspect new sources when they fill a demonstrated gap;
+- re-check existing source freshness when a decision depends on it;
+- avoid speculative source accumulation;
+- compare before adding;
+- preserve source role, license, pin, and provenance from intake onward.
 
-### Installation portability
+## Returning-user and portability refinement
 
-- add host adapters when there is a real supported installation surface;
-- keep portable skill identity separate from host packaging;
-- preserve explicit completion states rather than claiming installation that did not occur.
+After the corpus foundation is healthy:
 
-### Human library experience
+- improve passive guidance for identifying drift and overlap in fitted sets;
+- improve composition/adaptation guidance from real use;
+- refine portable skill profile documentation;
+- document host-specific packaging only when a real host surface requires it;
+- keep installation/external actions explicitly outside the repository and under the host agent's authority.
 
-- evolve category navigation as the corpus grows;
-- improve direct links, browsing, filtering, and search;
-- keep the README human-first while preserving an unmistakable AI-agent entry route;
-- make provenance and quality state understandable without requiring users to understand repository internals.
+## Human browsing
 
-## Durable design rules
+Continue improving direct readability without turning `skillz` into an application:
 
-1. **Compare before creation. User-fit before reuse.**
-2. **Smallest useful set over maximum skill count.**
-3. **Availability is not verification.**
-4. **Exact-version evidence matters.** Fingerprint drift invalidates prior characterization until reviewed.
-5. **Attribution travels with third-party material.**
-6. **Engine machinery does not count as library inventory.**
-7. **Indexed approved vendor skills do count as available library corpus.**
-8. **Installation or a precise portable handoff is part of completion.**
-9. **Returning users are refined, not reset.**
-10. **No-change is a valid outcome.**
-11. **Blind behavioral evidence requires evaluator isolation.** Public treatment context must not contain the active answer key.
+- clearer category navigation;
+- better static indexes and source summaries;
+- visible provenance and quality state;
+- clear distinction between source reputation and skill quality;
+- concise companion explanations that help both humans and agents.
 
-## Historical work
+## Durable rules
 
-The July 2026 pulse, research, daily-ops, repository-hygiene, and lifecycle-tooling build series is complete historical work. Its detailed record remains in git history, `docs/BACKLOG.md` completed entries, evaluation artifacts, and the historical governance ledger. It no longer defines the product roadmap.
+1. **`skillz` is passive. The host agent is active.**
+2. **Compare before creation. User fit before reuse.**
+3. **Smallest useful set over maximum skill count.**
+4. **Availability is not verification.**
+5. **Exact-version evidence matters.**
+6. **Attribution travels with third-party material.**
+7. **Source popularity is context, not competence proof.**
+8. **User-facing skills live under `skills/`.**
+9. **Maintenance instructions do not count as user-facing inventory.**
+10. **Returning users are refined, not reset.**
+11. **No-change is a valid outcome.**
+12. **No repository-owned scripts, CI, runtime, scheduler, monitor, installer, or preflight system.**
+
+## Historical material
+
+Older runtime-oriented plans, alpha preflight work, CI/test artifacts, Qor-era records, and execution-harness documents are historical evidence only. They do not define the current architecture or roadmap.
+
+Current truth is controlled by `README.md`, `AGENT_START_HERE.md`, `AGENTS.md`, `BOOTSTRAP.md`, `docs/CONCEPT.md`, `docs/ARCHITECTURE_PLAN.md`, `docs/SYSTEM_STATE.md`, and the active Wayfinder map.
