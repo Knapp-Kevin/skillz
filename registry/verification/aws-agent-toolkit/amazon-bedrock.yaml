@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-bedrock
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [generative-ai, rag, agent-development, cloud-infrastructure, troubleshooting]
+  lifecycle: [design, implementation, validation, deployment, operations]
+  characteristic: [security-aware, reference-heavy, cost-aware, failure-diagnosis, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. Strong scope and non-use boundaries, mandatory reference-file routing for fast-changing APIs, least-privilege IAM and Secrets Manager guidance, explicit untrusted-input handling, CloudTrail and PII logging cautions, maxTokens/quota safeguards, cost attribution guidance, dependency checks, execution previews, stop/abort respect, and destructive-operation confirmation. Authority and portability remain constrained because many workflows create, configure, invoke, deploy, or mutate Bedrock/AgentCore resources and depend on AWS credentials, regional service access, recent CLI/SDK behavior, and source-intact references. Behavioral validation remains not-run.
