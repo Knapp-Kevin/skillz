@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-observability
+display_name: AWS Observability
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-observability/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: f2feb0605635bdbeb47d289e9b8c4fe3e3ddb620
+upstream_last_updated_at: 2026-06-30T09:40:14Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-observability
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Amazon CloudWatch, X-Ray, CloudTrail, Synthetics, Application Signals, AWS Distro for OpenTelemetry, AWS CLI or AWS MCP server for direct operational use, IAM permissions, platform/language-specific instrumentation guidance, and current AWS documentation for volatile runtime versions, quotas, feature matrices, and production-sensitive values
+import_eligibility: exact-version-reference
+rationale: High-value AWS observability reference covering Application Signals onboarding, CloudWatch logs/metrics/alarms/dashboards, X-Ray and ADOT tracing, CloudTrail auditing, synthetics, and platform/language-specific instrumentation. The skill explicitly routes volatile runtime, quota, and feature-matrix facts to current AWS documentation. Operational use is mutating because onboarding instrumentation, configuring collectors, alarms, dashboards, canaries, IAM, and related telemetry resources changes workloads or AWS state. The pinned package remains passive reference material; any operational action belongs to the external host agent under current user authority.
