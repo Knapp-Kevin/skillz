@@ -21,7 +21,7 @@ The repository owns no runtime, scripts, tests, CI workflows, schedulers, monito
 
 The repository provides four distinct surfaces:
 
-1. **42 first-party user-facing skills** under [`skills/`](skills/) as maintained corpus/reference material.
+1. **43 first-party user-facing skills** under [`skills/`](skills/) as maintained corpus/reference material.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed third-party evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
@@ -53,7 +53,7 @@ See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable route and [`engine/ski
 
 [`skills/`](skills/) contains **42 active first-party user-facing skills**, each with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification.json).
 
-Structured semantic review is not a substitute for provenance. The first-party provenance gap has been reconciled (2026-08-30): **42/42 standalone first-party provenance companions** now exist under [`registry/skills/local-skills/`](registry/skills/local-skills/), truthfully identifying the repository as source with review facts carried from `registry/local-verification.json`.
+Structured semantic review is not a substitute for provenance. The first-party provenance gap has been reconciled (2026-08-30): **43/43 standalone first-party provenance companions** now exist under [`registry/skills/local-skills/`](registry/skills/local-skills/), truthfully identifying the repository as source with review facts carried from `registry/local-verification.json` (43 after the `automation-receipts` admission via issue #72).
 
 Browse by purpose through [`skills/categories/`](skills/categories/):
 
@@ -138,7 +138,7 @@ See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living curation ledger and 
 | [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Agent routing and capability floor |
 | [`BOOTSTRAP.md`](BOOTSTRAP.md) | Human-readable first/returning workflow |
 | [`AGENTS.md`](AGENTS.md) | Repository-wide agent contract |
-| [`skills/`](skills/) | 42 first-party user-facing skill packages |
+| [`skills/`](skills/) | 43 first-party user-facing skill packages |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
 | [`skills/sources/`](skills/sources/) | 12 intact exact-revision external reference corpora |
 | [`CURATED.md`](CURATED.md) | Governed third-party shelf and quality semantics |

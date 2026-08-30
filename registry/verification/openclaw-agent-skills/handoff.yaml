@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: handoff
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 50054b4079bcc25492e27cae7b72ea748a853cc9
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [handoff, context-management]
+  lifecycle: [implementation, maintenance]
+  characteristic: [context-efficient, evidence-first, deterministic, traceable, safety-bounded]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1 (clipboard fallback handled; ambiguous-task inference has only a mild quality bar), evidence discipline 2 (explicit no-invented-facts rule), dependency coherence 2 (clipboard tools enumerated with print fallback), portability honesty 2 (anti-path-leakage via portable anchors), usefulness 2 (delegation-prompt anti-leakage is differentiated), adversarial resilience 2 (quoting hazards, no brain-dump), effectiveness 2. Doc-only. Adjacent prior art for the memory-continuity lane, not a substitute for session-end capture/recall."

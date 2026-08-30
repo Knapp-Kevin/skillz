@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: handoff
+display_name: Handoff
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/handoff/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+upstream_revision: ca7ab8711fe9ceec7c52f637d97eb3c71771a397
+upstream_last_updated_at: 2026-06-14T04:34:36Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: external
+permission_tier: mutating
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: Optional clipboard utility (pbcopy, wl-copy, xclip, or clip.exe) with print fallback; doc-only otherwise
+import_eligibility: eligible-standalone
+rationale: "Delegation-prompt authoring with portable anchors, anti-path-leakage, and review-first framing. Corrects the issue #71 framing: this is task delegation, adjacent to but not covering the cross-session memory-continuity gap."

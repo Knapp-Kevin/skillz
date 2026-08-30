@@ -178,6 +178,46 @@ sources:
     upstream_copyright: Copyright (c) 2026 Bhushan Modi
     pinned_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
     rationale: Maintainer-authored 68-skill corpus tracked at an exact snapshot for selective individual verification and prior-art analysis.
+  - id: openclaw-agent-skills
+    name: OpenClaw Agent Skills
+    source: https://github.com/openclaw/agent-skills
+    class: official-ecosystem
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    pinned_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+    rationale: Official OpenClaw collection (8 skills, active) tracked at an exact snapshot for selective individual curation; admitted via issue #71 with the handoff skill individually reviewed.
+
+  - id: archieindian-superpowers
+    name: archieindian openclaw-superpowers
+    source: https://github.com/archieindian/openclaw-superpowers
+    class: community-vetted
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 openclaw-superpowers contributors
+    pinned_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+    rationale: Community OpenClaw superpowers corpus (56 skills) tracked at an exact snapshot; the LICENSE file is standard MIT despite GitHub API license detection returning Other. Admitted via issue #70 with the secrets-hygiene skill individually reviewed.
+
+  - id: openclaw-agent-skills
+    name: OpenClaw Agent Skills
+    source: https://github.com/openclaw/agent-skills
+    class: official-ecosystem
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    pinned_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+    rationale: Canonical OpenClaw agent-skills collection tracked at an exact snapshot for selective individual curation.
+
+  - id: archieindian-superpowers
+    name: Archie Indian OpenClaw Superpowers
+    source: https://github.com/archieindian/openclaw-superpowers
+    class: community-vetted
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    pinned_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+    rationale: Community OpenClaw superpowers corpus (56 skills) tracked for selective curation; LICENSE read at pinned revision is standard MIT despite API NOASSERTION detection.
 
   - id: agentskills-spec
     name: Agent Skills Specification

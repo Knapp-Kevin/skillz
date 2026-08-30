@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: automation-receipts
+display_name: "Automation Receipts"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/automation-receipts/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 61a561d218e7f801f6434d090aff26bbea23fae0
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/automation-receipts/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Durable-receipt verification protocol filling the automation-verification lane gap established in issues #69 and #72: schedule intent is not execution evidence; claims about automation status require named receipts before representation."

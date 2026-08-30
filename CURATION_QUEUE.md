@@ -8,11 +8,11 @@ It is not an implementation backlog and it does not reopen core completion.
 
 ## What this ledger proves
 
-`skillz` is not a 42-skill repository with a few bookmarks attached.
+`skillz` is not a 43-skill repository with a few bookmarks attached.
 
 Current depth includes:
 
-- **42 first-party user-facing skills**, each with structured local semantic review metadata;
+- **43 first-party user-facing skills**, each with structured local semantic review metadata;
 - **12 pinned upstream reference corpora** exposed under `skills/sources/`;
 - a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
 - **120 currently persisted exact-version third-party verification companion files**;
@@ -55,10 +55,10 @@ Issue #66 is the active corpus-wide provenance-completeness audit.
 
 Current reconciled state (2026-08-30):
 
-- governed first-party denominator: **42** active user-facing skills;
-- structured semantic review records: **42/42** in `registry/local-verification.json`;
-- standalone first-party provenance companions under `registry/skills/local-skills/`: **42/42**;
-- therefore the first-party family is companion-complete under the mandatory provenance contract.
+- governed first-party denominator: **43** active user-facing skills (42 historical + `automation-receipts` admitted 2026-08-30 via issue #72);
+- structured semantic review records: **43/43** in `registry/local-verification.json`;
+- standalone first-party provenance companions under `registry/skills/local-skills/`: **43/43**;
+- therefore the first-party family remains companion-complete under the mandatory provenance contract.
 
 Reconciliation method (evidence-preserving, no invented facts): each provenance companion identifies the repository itself as source (`source_id: local-skills`, `relationship: first-party`, `source_class: first-party`, MIT), with `curated_at` taken from repository history (the first-party corpus landed 2026-08-30), `source_snapshot_revision` bound to the reconciliation commit, review facts carried from `registry/local-verification.json` (`review_status: verified-structured`), upstream fields omitted as not applicable to first-party origin, and unknown facts recorded as unknown. No script, CI gate, scanner, or repository runtime is required or desired.
 
@@ -134,6 +134,20 @@ These were already identified as unfinished enrichment work. They are not core b
 - Historical tracker recorded a denominator of **55**.
 - Action: reconcile that denominator discrepancy before making any completion claim.
 - Persisted selective reviews already include `effective-agent-skills`, `goal-loop`, and `fable-safe-prompt`.
+
+### OpenClaw Agent Skills
+
+- Pinned reference: `6cd3366b10e2a8c5608265f692acf9f5da2b2448` (MIT, official-ecosystem, tracked-corpus)
+- Denominator: **8** skills.
+- Persisted selective review: `handoff` (verified 19/20; delegation-prompt authoring with portable anchors — adjacent to, not covering, cross-session memory continuity; issue #71).
+- Remaining skills (`agent-transcript`, `session-viewer` adjacency noted) await selective review where differentiated.
+
+### Archie Indian OpenClaw Superpowers
+
+- Pinned reference: `a95a59d221d44b89d4fc27a52934e24fb2060ddb` (MIT read at revision; API reports NOASSERTION due to header detection only)
+- Denominator: **56** skills.
+- Persisted selective review: `secrets-hygiene` (verified 18/20; credential inventory/rotation-flagging audit, reference-only until openclaw paths are generalized; issue #70).
+- Continue selective review only where skills add differentiated mechanisms.
 
 ### Sabrina Ramonov Learn Claude Code Skills
 

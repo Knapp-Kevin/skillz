@@ -8,7 +8,7 @@
 
 There is no CI gate, application runtime, executable preflight, model benchmark, or deterministic behavioral proof required for repository completion.
 
-The repository still intentionally carries a large reference surface: 42 first-party skills plus 12 pinned external corpora contributing to a 500+ skill/reference library. The breadth is visible prior art; individual unchanged-reuse trust is narrower and governed separately.
+The repository still intentionally carries a large reference surface: 43 first-party skills plus 12 pinned external corpora contributing to a 500+ skill/reference library. The breadth is visible prior art; individual unchanged-reuse trust is narrower and governed separately.
 
 ## Current architecture and workflow
 

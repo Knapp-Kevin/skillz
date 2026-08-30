@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: automation-receipts
+source_id: local-skills
+local_path: "skills/automation-receipts/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1d6c076f2888a0d6c8b2be1552717b96e14a341b
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [monitoring, security]
+  lifecycle: [verification, operations]
+  characteristic: [evidence-first, deterministic, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: "Durable-receipt verification protocol: seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) checked before representing any automation status claim; missing receipts downgrade the claim to unsubstantiated; failed exit behind a completion claim is recorded as a contradiction. Authored as first-party admission via issue #72; fill for the automation-verification lane gap established in issue #69."

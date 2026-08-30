@@ -58,7 +58,7 @@ For new third-party discoveries, the definitive lifecycle begins with an evaluat
 
 The candidate issue is the pre-admission evidence workspace. Do not persist a newly discovered candidate as governed corpus material or finalize provenance/verification companions before the issue establishes a justified admission result.
 
-Every governed user-facing skill, including existing first-party skills, must satisfy the provenance contract. Existing presence, authorship, prior semantic review, catalog inclusion, or historical age does not waive that requirement. Missing provenance is a blocking corpus-completeness defect. The active provenance audit is issue #66; the first-party family was reconciled 2026-08-30 with 42/42 standalone provenance companions under `registry/skills/local-skills/`, authored from repository history and current review evidence without inventing unavailable facts.
+Every governed user-facing skill, including existing first-party skills, must satisfy the provenance contract. Existing presence, authorship, prior semantic review, catalog inclusion, or historical age does not waive that requirement. Missing provenance is a blocking corpus-completeness defect. The active provenance audit is issue #66; the first-party family was reconciled 2026-08-30 with 42/42 standalone provenance companions (43/43 after the same-day `automation-receipts` admission via issue #72) under `registry/skills/local-skills/`, authored from repository history and current review evidence without inventing unavailable facts.
 
 A user-derived skill created during normal bootstrap is not a repository-admission candidate by implication. Repository admission requires a separate explicit maintainer decision and governed curation path.
 
