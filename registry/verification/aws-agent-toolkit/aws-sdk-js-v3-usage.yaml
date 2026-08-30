@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-sdk-js-v3-usage
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 62ae8b88569e68b87ed62072dc17867e795781d3
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [aws-sdk, javascript, typescript, service-integration, application-development]
+  lifecycle: [design, implementation, troubleshooting, optimization]
+  characteristic: [security-aware, dependency-aware, performance-aware, reference-routed, version-sensitive, cloud-specific]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 62ae8b88569e68b87ed62072dc17867e795781d3 and includes SKILL.md plus 11 references covering clients, credentials, DynamoDB, effective practices, error handling, Lambda, performance, S3, schemas, SigV4a, and TypeScript. Strong static evidence includes explicit credential-provider guidance rather than embedded secrets; AssumeRole, OIDC, SSO, ECS/EC2 and custom-chain coverage; warnings about unread response streams exhausting sockets; paginator and retry/error patterns; Lambda client reuse; package-root import discipline; S3/DynamoDB helpers; and performance/middleware guidance. Authority is mutating because examples and procedures can invoke AWS service APIs, including create/update operations, under the external host's credentials. Portability is medium because SDK design and JavaScript patterns transfer conceptually while concrete APIs and packages are AWS-specific. Freshness is the principal weakness: the pinned skill embeds exact Node.js compatibility thresholds for specific SDK versions and other library behavior that can change, without a general instruction to verify volatile version facts against current upstream documentation. External agents should therefore confirm compatibility/version claims before consequential use. Behavioral validation remains not-run.
