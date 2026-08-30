@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-sdk-swift-usage
+display_name: AWS SDK for Swift Usage
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-sdk-swift-usage/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 4f7d96810b7302b1e0942d61ad11c695522a5d52
+upstream_last_updated_at: 2026-05-04T14:45:31Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-sdk-swift-usage
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Swift toolchain and aws-sdk-swift packages appropriate to the application, AWS credentials and IAM permissions appropriate to selected service operations, network access to AWS service endpoints, and current aws-sdk-swift/service documentation for version-sensitive configuration and API claims
+import_eligibility: exact-version-reference
+rationale: Focused AWS SDK for Swift reference covering async entry points, service client configuration, model namespaces, credential resolvers, waiters, pagination, presigned URLs, and common S3 operations. Operational authority is mutating because the documented SDK procedures can invoke AWS service APIs, including resource and object writes, according to the external host agent's credentials and user authority. Portability is medium because Swift async/error-handling patterns transfer conceptually while concrete client/configuration types, credential providers, and service semantics are AWS-specific. Several emphatic claims about deprecated configuration classes, declaration-order requirements, region requirements, resolver APIs, and generated service-client source paths are version-sensitive; consequential use should confirm them against current aws-sdk-swift and AWS documentation. The pinned package remains passive reference material and performs no operations itself.
