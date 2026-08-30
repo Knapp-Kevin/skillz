@@ -20,20 +20,26 @@ Category folders are a human navigation layer. Canonical active local skill cont
 
 Every active user-facing local skill counts, but `skills/` is not the whole reference ecosystem.
 
-The repository also carries approved vendored/tracked third-party reference material. Repository machinery under [`../engine/skills/`](../engine/skills/) does not count as user-facing inventory.
+The repository also carries approved pinned/tracked third-party reference material under [`sources/`](sources/). Repository-maintenance instructions under [`../engine/skills/`](../engine/skills/) do not count as user-facing inventory.
 
 Broad third-party source presence means **referenceable**, not automatically **trusted unchanged**.
 
-## First-party quality records
+## First-party quality and provenance records
 
-Active local skills are not exempt from the same quality discipline applied to third-party work merely because we wrote them ourselves. Home-field advantage is not a verification method.
+Active local skills are not exempt from the same evidence discipline applied to third-party work merely because we wrote them ourselves. Home-field advantage is not a verification method.
 
-Their exact-version review manifest is:
+Their structured review manifest is:
 
 [`../registry/local-verification.json`](../registry/local-verification.json)
 
-For every active local `SKILL.md`, that manifest records:
+Their mandatory provenance companions are under:
 
+[`../registry/skills/local-skills/`](../registry/skills/local-skills/)
+
+Together, those passive records establish, where applicable:
+
+- canonical repository/path identity;
+- provenance and first-party relationship;
 - exact Git blob fingerprint;
 - individual structured rubric score;
 - current quality state;
@@ -42,13 +48,7 @@ For every active local `SKILL.md`, that manifest records:
 - authority and portability;
 - material review notes.
 
-`node scripts/verify-share-ready-corpus.ts` compares the manifest against every active local skill and fails when:
-
-- a local skill is missing an individual review;
-- a reviewed local skill no longer exists;
-- canonical content changed without a refreshed fingerprint/review;
-- an active local skill is below the current verified quality threshold;
-- controlled metadata is incomplete or invalid.
+Completeness is checked by the external host agent during repository curation by comparing the live skill corpus with those records. `skillz` owns no verification script, CI gate, test runner, preflight process, or background enforcement mechanism.
 
 Behavioral validation is separate. `validation_status: not-run` is an explicit limitation, not a euphemism for "probably fine."
 
