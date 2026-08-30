@@ -3,7 +3,7 @@
   "source_id": "local-skills",
   "source_class": "first-party",
   "license": "MIT",
-  "reviewed_at": "2026-08-29",
+  "reviewed_at": "2026-08-30",
   "verification_basis": "individual-structured-static-review",
   "rubric": "docs/skill-verification.md",
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
@@ -56,12 +56,12 @@
       "skill_name": "claude-pulse",
       "local_path": "skills/claude-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "70b02dfaba09af9c5301fd64c7909b1b2d7ad2e8",
+      "content_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {"use_case":["monitoring","research"],"lifecycle":["discovery","maintenance"],"characteristic":["source-driven","retrieval-first","synthesis","tool-assisted"],"authority":["read-only"],"portability":["medium"]},
-      "notes": "Good official-first monitoring and fallback design; some source/runtime details are vendor-specific and require current-source checking at execution time."
+      "rubric_score": "18/20",
+      "tags": {"use_case":["monitoring","research"],"lifecycle":["discovery","maintenance"],"characteristic":["source-driven","retrieval-first","synthesis","risk-aware"],"authority":["read-only"],"portability":["high"]},
+      "notes": "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth."
     },
     {
       "skill_name": "compare",
