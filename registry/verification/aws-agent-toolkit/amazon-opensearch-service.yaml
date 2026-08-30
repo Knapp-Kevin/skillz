@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-opensearch-service
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 142c7fcd6a901e024a60bb56e0369474167bd7bc
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [architecture, cloud, migration, search, observability, security]
+  lifecycle: [design, implementation, migration, verification, operations]
+  characteristic: [production-oriented, risk-aware, source-driven, reference-heavy]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 142c7fcd6a901e024a60bb56e0369474167bd7bc and includes SKILL.md, reusable assessment/report assets, and a large reference set spanning migration assessment, provisioning, vector and semantic search, log analytics, trace analytics, sizing, security, observability, compatibility, and troubleshooting. Strong static evidence includes capability routing, explicit credential-leakage prohibitions, refusal to invent dollar estimates, concrete migration and sizing workflows, query examples, security/FGAC/encryption references, operational troubleshooting, and explicit separation of model/embedding responsibilities. Authority is mutating because the procedures provision, upgrade, configure, migrate, ingest into, query, and troubleshoot live AOS/AOSS resources using the external host's credentials and tools. Portability is medium because search/migration/observability concepts transfer while the concrete operational surface is AWS- and OpenSearch-specific. The score is held at 17/20 because the package is unusually broad, depends on many volatile service/version/instance/quota assumptions, requires a host-specific current_time tool for its report-header convention, and recommends optional AWS MCP/CLI/awscurl operational tooling. External agents should verify current OpenSearch/AWS service capabilities, engine/version support, instance families, quotas, pricing-related assumptions, and migration-tool availability before consequential use. Bundled references/assets remain upstream source material and do not constitute repository-owned execution machinery. Behavioral validation remains not-run.
