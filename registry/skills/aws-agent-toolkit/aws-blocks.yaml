@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-blocks
+display_name: AWS Blocks
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-blocks/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: external-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 079d861023d3889f303d9f7be15d4e4b9924a8a1
+upstream_last_updated_at: 2026-06-17T11:19:07Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Node.js/npm and the @aws-blocks package family; installed-version package READMEs for authoritative APIs and workflow details; AWS credentials and IAM authority for sandbox/deploy operations; CDK-backed AWS resources for deployed environments; optional Amplify Gen 2 integration when detected
+import_eligibility: exact-version-reference
+rationale: Focused AWS Blocks application-development guidance with explicit trigger boundaries, installed-version documentation routing, local-without-AWS development support, and unusually concrete production safeguards for authentication, secret storage, schema validation, least-privilege IAM, FileBucket access, CORS, cross-domain cookies, monitoring, WAF/throttling, and sensitive logging. Scaffolding, sandbox, and deploy workflows can create files and cloud resources, so operational use requires current host/user authority and cost awareness.
