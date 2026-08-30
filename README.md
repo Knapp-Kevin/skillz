@@ -1,32 +1,30 @@
 # 🛠️ skillz
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
-![First-Party Skills](https://img.shields.io/badge/first--party_skills-42-brightgreen)
+![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-120-8A2BE2)
-![Registered Sources](https://img.shields.io/badge/registered_sources-17-6f42c1)
+![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A passive skill knowledge resource for AI agents.** `skillz` accumulates reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, tags, source context, and catalog snapshots so an external host agent can construct the smallest useful skill set for the user.
+**A passive skill knowledge resource for AI agents.** `skillz` accumulates reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, tags, source context, catalog snapshots, and instructions so an external host agent can construct the smallest useful skill set for the user.
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure.
 
-> **Normal-use boundary:** skills created, adapted, composed, or refined for a user belong in that user's active AI/agent environment or in a portable handoff. They are **not written back into this repository** unless the user has explicitly requested repository maintenance/curation.
+> **Normal-use boundary:** skills created, adapted, composed, or refined for a user belong in that user's active AI/agent environment or in a portable handoff. They are **not written back into this repository** unless the user explicitly requested repository maintenance/curation.
 
 ## What `skillz` is
 
 `skillz` is entirely passive. The external host agent is the active system.
 
-The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. Any browsing, evaluation, installation, file mutation, external action, or behavioral validation is performed by the host agent using capabilities and authority it already possesses.
+The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. Browsing, evaluation, installation, file mutation, external action, and behavioral validation are performed by the host agent using capabilities and authority it already possesses.
 
 The repository provides four distinct surfaces:
 
 1. **43 first-party user-facing skills** under [`skills/`](skills/) as maintained corpus/reference material.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
-3. **Governed third-party evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
+3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
-
-The repository's `skills/` directory is not the destination for newly derived user skills during normal use.
 
 Third-party skill packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those belong to the upstream package. Preserve intact pinned sources and do not treat their tooling as repository-owned execution machinery.
 
@@ -41,31 +39,17 @@ Give the repository to an AI agent and ask it to help build or refine repeatable
 5. choose explicitly among ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECKLIST, DYNAMIC behavior, or NO CHANGE;
 6. preserve authority, privacy, dependency, portability, and licensing boundaries;
 7. produce the smallest coherent fitted system rather than maximizing reuse;
-8. create/install fitted artifacts in the user's active host when supported and authorized, otherwise provide a complete portable handoff. Do not use this repository as the target environment.
+8. create/install fitted artifacts in the user's active host when supported and authorized, otherwise provide a complete portable handoff.
 
 `NO CHANGE NEEDED` is a correct result. The corpus is accumulated knowledge and design material, not a reuse quota.
-
-See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable route and [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) for the canonical agent procedure.
 
 ## Corpus layout
 
 ### First-party skills
 
-[`skills/`](skills/) contains **42 active first-party user-facing skills**, each with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification.json).
+[`skills/`](skills/) contains **43 active first-party user-facing skills**. Structured semantic review evidence lives in [`registry/local-verification.json`](registry/local-verification.json), and mandatory first-party provenance companions live under [`registry/skills/local-skills/`](registry/skills/local-skills/).
 
-Structured semantic review is not a substitute for provenance. The first-party provenance gap has been reconciled (2026-08-30): **43/43 standalone first-party provenance companions** now exist under [`registry/skills/local-skills/`](registry/skills/local-skills/), truthfully identifying the repository as source with review facts carried from `registry/local-verification.json` (43 after the `automation-receipts` admission via issue #72).
-
-Browse by purpose through [`skills/categories/`](skills/categories/):
-
-| Category | Typical coverage |
-|---|---|
-| Planning & Productivity | decisions, coordination, learning, recurring workflows |
-| Writing & Communication | briefs, decks, handoffs, standups, devlogs |
-| Research & Analysis | comparisons, deep research, fact checking, paper review |
-| Software & Repositories | repository health and maintenance workflows |
-| Agent Operations & Security | environment health, postmortems, permissions, MCP vetting |
-| Monitoring & Intelligence | model, platform, protocol, governance, and ecosystem research |
-| Business & Career | career, finance, and small-business workflows |
+The first-party family is currently **43/43 provenance-complete** after the `automation-receipts` admission through issue #72. Category navigation is governed by [`registry/categories.yaml`](registry/categories.yaml) and surfaced under [`skills/categories/`](skills/categories/).
 
 ### Pinned source corpora
 
@@ -86,7 +70,7 @@ Browse by purpose through [`skills/categories/`](skills/categories/):
 
 These corpora are available prior art, not blanket endorsements. Physical presence, official branding, stars, forks, or repository age do not prove individual skill quality.
 
-Exact source identity, role, license/terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). Volatile source-level signals belong separately in [`registry/source-signals.yaml`](registry/source-signals.yaml).
+Exact source identity, role, license/terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry currently contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles. Volatile source-level signals belong separately in [`registry/source-signals.yaml`](registry/source-signals.yaml).
 
 ### Governed third-party evidence
 
@@ -104,32 +88,36 @@ Current quality semantics are defined in [`docs/skill-verification.md`](docs/ski
 - **`unverified`**: reference/design evidence only.
 - **`trusted-baseline`**: legacy characterization only, not current unchanged-reuse eligibility.
 - **`stale`**: prior review cannot be silently inherited by changed material.
-- **`rejected` / `retired`**: excluded from normal unchanged selection, but may remain useful bounded prior art.
+- **`rejected` / `retired`**: excluded from normal unchanged selection, while remaining useful bounded prior art when appropriate.
 
 A composable admitted source is statically complete only when its exact eligible denominator is established and every in-scope skill has current provenance, exact identity/fingerprint when establishable, freshness, license/terms, dependency/authority/portability characterization, controlled tags, structured review evidence, and a decisive current disposition.
 
-Every governed user-facing skill must satisfy the provenance and exact-version companion contract. Missing provenance is a corpus-completeness defect, not an invitation to infer facts or create repository-owned enforcement machinery.
-
 Static completion comes before broad behavioral validation. `skillz` does not own an evaluator, benchmark, test harness, scenario runner, or behavioral runtime. External agents/environments may later produce behavioral evidence for consequential or high-use skills, and that evidence may be stored passively here.
+
+## Discovery and admission
+
+Discovery is intentionally separate from admission and quality.
+
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
+
+New third-party discoveries use the issue-first workflow in [`docs/candidate-intake.md`](docs/candidate-intake.md). Intentional discovery inputs are documented in [`docs/discovery-surfaces.md`](docs/discovery-surfaces.md), including the connected Creator Technical Resource Catalog. Discovery-surface scores, labels, recommendations, or creator attributions are intelligence only and must be resolved independently to canonical upstream evidence before admission.
 
 ## Current curation state
 
-Core passive architecture is complete. Ongoing work is corpus enrichment and reconciliation.
+Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
-Current admitted-source priority:
+Current priorities:
 
-1. finish AWS Agent Toolkit exact-version companion closure;
+1. finish AWS Agent Toolkit current-standard companion reconciliation;
 2. complete Microsoft Skills;
 3. complete Microsoft Azure Skills;
-4. continue remaining admitted creator/registered-source curation.
+4. continue remaining admitted creator/registered-source curation;
+5. continue governed discovery/source-vetting through issue-first intake;
+6. keep current governance, source registry, category navigation, and passive catalog snapshots aligned with live corpus truth.
 
-AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **20/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. The remaining AWS work is evidence reconciliation first, not automatic re-review.
+AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **20/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. Remaining AWS work is evidence reconciliation first, not automatic re-review.
 
-Governed discovery/source-vetting may proceed in parallel. Discovery never grants quality, trust, redistribution authority, installation authority, or automatic admission. [`docs/discovery-surfaces.md`](docs/discovery-surfaces.md) records intentional discovery inputs, including the connected Creator Technical Resource Catalog, without treating those surfaces as provenance or quality evidence.
-
-The corpus-wide provenance audit also remains active so existing first-party and third-party governed records meet the same mandatory evidence standard rather than receiving legacy exceptions.
-
-See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living curation ledger and [`CURATED.md`](CURATED.md) for the governed shelf.
+The Tier-4 passive catalog snapshots `INDEX.md` and `index.json` are currently absent from `main` despite being referenced by governance. That is a known documentation/catalog drift item to restore as static snapshots without introducing a generator.
 
 ## Repository map
 
@@ -143,13 +131,12 @@ See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living curation ledger and 
 | [`skills/sources/`](skills/sources/) | 12 intact exact-revision external reference corpora |
 | [`CURATED.md`](CURATED.md) | Governed third-party shelf and quality semantics |
 | [`CURATION_QUEUE.md`](CURATION_QUEUE.md) | Admitted-source and discovery/source-vetting ledger |
-| [`registry/sources.yaml`](registry/sources.yaml) | Source identity, roles, exact pins, licenses, canonical paths |
+| [`registry/sources.yaml`](registry/sources.yaml) | 19 unique source identities, roles, pins, licenses, and canonical paths |
 | [`registry/source-signals.yaml`](registry/source-signals.yaml) | Timestamped volatile source-level context |
-| [`registry/local-verification.json`](registry/local-verification.json) | First-party individual structured semantic review records; provenance reconciliation remains separate |
-| [`registry/skills/`](registry/skills/) | Per-skill provenance companions; mandatory for governed user-facing skill completeness |
+| [`registry/local-verification.json`](registry/local-verification.json) | First-party individual structured semantic review records |
+| [`registry/skills/`](registry/skills/) | Mandatory per-skill provenance companions |
 | [`registry/verification/`](registry/verification/) | Third-party exact-version semantic review evidence |
 | [`engine/skills/`](engine/skills/) | Passive repository-use/curation procedures, excluded from user-facing counts |
-| [`docs/`](docs/) | Architecture, provenance, curation, evaluation evidence, and historical context |
 | [`docs/GOVERNANCE_INDEX.md`](docs/GOVERNANCE_INDEX.md) | Current governance precedence and control-surface map |
 | [`docs/SYSTEM_STATE.md`](docs/SYSTEM_STATE.md) | Current live corpus and architecture snapshot |
 
