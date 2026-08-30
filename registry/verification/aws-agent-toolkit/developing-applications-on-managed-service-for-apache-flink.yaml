@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: developing-applications-on-managed-service-for-apache-flink
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d25d5b3e35634d1af706264856c4748770c8b20f
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, deployment, debugging, data]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA d25d5b3e35634d1af706264856c4748770c8b20f and contains SKILL.md plus 25 reference documents spanning MSF architecture/constraints, Flink 2.x migration, resource and scaling decisions, pricing, lifecycle, first-fault isolation, checkpointing, job-graph design/anti-patterns, monitoring/logging, Kinesis/EFO, Iceberg, CDC, IaC/deployment, dependencies/environment, serialization, and state. Strong static evidence includes an explicit MSF-specific trigger boundary; mandatory routing to focused references instead of generic Flink recall; separation of service-level checkpoint/parallelism/runtime configuration from application code; stable UID and state-migration guidance; failure-aware Kinesis sink examples; dead-letter/error handling; two-phase deployment guidance; first-fault isolation; monitoring and operational anti-patterns; and broad connector/state/deployment coverage. Authority is mutating because the skill directs the external host toward compile/test and AWS lifecycle, deployment, scaling, snapshot, configuration, and troubleshooting actions when tools are available. Portability is low because behavior is tightly coupled to Amazon Managed Service for Apache Flink, AWS service identifiers, KPU semantics, IAM, CloudWatch, VPC/S3, and AWS-specific connector/deployment behavior. The score is held at 17/20 because the package is extremely broad and contains many volatile claims, including supported Flink versions, KPU quotas and resource dimensions, application quotas, checkpoint limits/defaults, connector APIs, pricing inputs, service identifiers, deployment constraints, and migration compatibility. The skill strongly prefers its pinned references over general documentation but does not establish a universal current-documentation freshness gate before consequential action. Before high-impact use, an external agent should verify current MSF/Flink runtime support, quotas, pricing, connector APIs, service configuration semantics, and migration constraints against current authoritative documentation. Behavioral validation remains not-run.
