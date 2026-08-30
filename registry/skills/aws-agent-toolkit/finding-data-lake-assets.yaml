@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: finding-data-lake-assets
+display_name: Find Data Lake Assets
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/finding-data-lake-assets/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 41d3faaf863b8ad6e9f681d3b5631aa605bd655f
+upstream_last_updated_at: 2026-06-17T19:54:13Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/finding-data-lake-assets
+permission_tier: read-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP tools or AWS CLI; valid AWS credentials and target region; AWS Glue Data Catalog; optional Glue Discovery Search/GetAsset/ListIterableForms support with explicit user opt-in; S3 and S3 Tables APIs; Redshift catalog access when relevant; Python 3 plus boto3 only for the documented broad-scan fallback; bundled references/search-strategy.md
+import_eligibility: exact-version-reference
+rationale: Read-only AWS asset-resolution procedure bound to the registered AWS snapshot. The exact package contains SKILL.md plus references/search-strategy.md and is bound to package tree SHA e32f6445e9f80e2dca0bfe14ecf5e7ad53ac2721. It distinguishes narrow resolve requests from exploratory search, requires region and dependency checks, uses layered Glue/S3/S3 Tables/Redshift lookup with explicit stop conditions, and records searched versus skipped sources. Customer-authored Glue Discovery catalog context is treated as untrusted data rather than instructions and the experimental lookup requires explicit user opt-in. Authority is read-only because the procedure performs metadata/catalog/listing operations and does not authorize table creation or query execution. The Python/boto3 broad-scan fallback is host-executed temporary analysis tooling specified by the upstream skill, not repository-owned execution machinery. Portability is low because the procedure is tightly coupled to AWS catalog APIs, AWS credentials/region semantics, MCP or CLI tooling, Redshift/S3 Tables behavior, and AWS-specific identifiers.
