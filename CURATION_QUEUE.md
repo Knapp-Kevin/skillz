@@ -13,13 +13,13 @@ It is not an implementation backlog and it does not reopen core completion.
 Current depth includes:
 
 - **42 first-party user-facing skills**, each with structured local semantic review metadata;
-- **12 pinned upstream reference corpora** exposed under `vendor/`;
+- **12 pinned upstream reference corpora** exposed under `skills/sources/`;
 - a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
-- **101 currently persisted exact-version third-party verification companion files**;
+- **106 currently persisted exact-version third-party verification companion files**;
 - historical source-level curation records documenting **at least 210 reviewed external skill entry points** across nine corpora;
 - additional partially reviewed admitted corpora and active discovery candidates.
 
-The difference between the 101 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
+The difference between the 106 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
 
 ## Curation model
 
@@ -63,7 +63,7 @@ That is **210 reviewed published/eligible entry points** across those nine corpo
 
 ### Evidence reconciliation lane
 
-Current `registry/verification/` contains 101 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
+Current `registry/verification/` contains 106 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
 
 Do **not** automatically redo those reviews from scratch. First locate and reconcile the prior evidence into the current provenance/verification model where it is still trustworthy and identity-compatible. Re-review only where exact content identity, licensing, dependencies, or the prior decision cannot be established honestly.
 
@@ -83,6 +83,7 @@ These were already identified as unfinished enrichment work. They are not core b
 - Pinned reference: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
 - Historical denominator: **72** skill entry points, 14 core + 58 specialized.
 - Prior work: all 72 entry points were inspected against the registered pin.
+- Current exact companion closure: **6/72** persisted provenance + verification pairs on `main`.
 - Remaining work: reconcile/complete exact provenance, freshness/content identity, licensing/dependency/authority metadata, and decisive per-skill companion records before claiming source-level curation closure.
 
 ### Microsoft Skills
@@ -109,7 +110,7 @@ These were already identified as unfinished enrichment work. They are not core b
 - Public pinned mirror: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`
 - Publisher private-source revision: `eed325a23bc29efca50084f85025d327460b2059`
 - Mirror fingerprint: `cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b`
-- Current source registry describes **44 canonical `SKILL.md` files** at the public snapshot.
+- Current curation evidence describes **44 canonical `SKILL.md` files** at the public snapshot.
 - Historical tracker recorded a denominator of **55**.
 - Action: reconcile that denominator discrepancy before making any completion claim.
 - Persisted selective reviews already include `effective-agent-skills`, `goal-loop`, and `fable-safe-prompt`.
