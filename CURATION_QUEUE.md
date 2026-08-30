@@ -15,11 +15,11 @@ Current depth includes:
 - **42 first-party user-facing skills**, each with structured local semantic review metadata;
 - **12 pinned upstream reference corpora** exposed under `skills/sources/`;
 - a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
-- **110 currently persisted exact-version third-party verification companion files**;
+- **112 currently persisted exact-version third-party verification companion files**;
 - historical source-level curation records documenting **at least 210 reviewed external skill entry points** across nine corpora;
 - additional partially reviewed admitted corpora and active discovery candidates.
 
-The difference between the 110 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
+The difference between the 112 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
 
 ## Curation model
 
@@ -63,7 +63,7 @@ That is **210 reviewed published/eligible entry points** across those nine corpo
 
 ### Evidence reconciliation lane
 
-Current `registry/verification/` contains 110 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
+Current `registry/verification/` contains 112 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
 
 Do **not** automatically redo those reviews from scratch. First locate and reconcile the prior evidence into the current provenance/verification model where it is still trustworthy and identity-compatible. Re-review only where exact content identity, licensing, dependencies, or the prior decision cannot be established honestly.
 
@@ -83,7 +83,7 @@ These were already identified as unfinished enrichment work. They are not core b
 - Pinned reference: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
 - Historical denominator: **72** skill entry points, 14 core + 58 specialized.
 - Prior work: all 72 entry points were inspected against the registered pin.
-- Current exact companion closure: **10/72** persisted provenance + verification pairs on `main`.
+- Current exact companion closure: **12/72** persisted provenance + verification pairs on `main`.
 - Remaining work: reconcile/complete exact provenance, freshness/content identity, licensing/dependency/authority metadata, and decisive per-skill companion records before claiming source-level curation closure.
 
 ### Microsoft Skills
