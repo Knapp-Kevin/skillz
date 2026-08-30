@@ -12,6 +12,14 @@ A candidate issue is required before a newly discovered third-party skill or sou
 
 The issue-first rule governs **new admission**, not whether provenance is optional. Provenance is mandatory for every governed user-facing skill, including existing skills. Newly discovered candidates accumulate pre-admission provenance evidence in the issue first; after admission, finalized provenance and verification companions are persisted with the exact admitted identity.
 
+## Governed discovery inputs
+
+Use `docs/discovery-surfaces.md` to guide intentional discovery. High-signal discovery inputs should be inspected before broad undirected searching when they are relevant to the capability gap being investigated.
+
+The connected Google Drive **Creator Technical Resource Catalog** is an intentional internal discovery surface. It may identify candidate repositories, creators, standards, methods, capability clusters, duplication risks, and trust/burden questions. It is **not** itself provenance or verification evidence for the candidate material it references.
+
+Before opening or resolving a candidate issue from any discovery surface, independently resolve the candidate to its canonical upstream source. Catalog scores, source reputation, popularity, creator attribution, discovery metadata, or another system's verification label must not be copied into `skillz` as if they established exact-version quality.
+
 ## What belongs in the issue
 
 The issue is the pre-admission evidence workspace. Establish, when applicable:
