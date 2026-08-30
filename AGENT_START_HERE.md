@@ -97,7 +97,7 @@ For unchanged third-party reuse:
 
 During FIRST_VISIT or RETURNING_USER work:
 
-- do not write new user skills into this repository's `skills/` directory by default;
+- do not write new user skills into this repository's `skills/` directory;
 - do not use repo-bound `skill-forge` as the user's artifact generator;
 - do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, or any engine/repository-maintenance script or runtime;
 - do not treat the existence or absence of CI as evidence about whether bootstrap can succeed.
