@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-sdk-python-usage
+display_name: AWS SDK for Python Usage
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-sdk-python-usage/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 4f7d96810b7302b1e0942d61ad11c695522a5d52
+upstream_last_updated_at: 2026-05-04T14:45:31Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-sdk-python-usage
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Python environment, boto3 and botocore versions appropriate to the application, AWS credentials and IAM permissions appropriate to selected service operations, network access to AWS service endpoints, and current boto3/botocore/AWS service documentation for version-sensitive API and behavior claims
+import_eligibility: exact-version-reference
+rationale: High-value AWS SDK for Python reference covering clients and resources, sessions and credentials, actionable error handling, script structure, pagination, waiters, client configuration, logging, S3, and DynamoDB patterns. Operational authority is mutating because boto3/botocore procedures can invoke arbitrary AWS service operations, including resource creation or modification, according to the external host agent's credentials and user authority. Portability is medium because Python engineering patterns transfer conceptually while concrete SDK interfaces, credentials, service semantics, and examples are AWS-specific. SDK behavior and service/resource coverage can change over time, so consequential use should confirm volatile claims against current upstream documentation; the pinned package remains passive reference material and performs no operations itself.
