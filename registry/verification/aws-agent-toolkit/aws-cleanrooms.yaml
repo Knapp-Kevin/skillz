@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-cleanrooms
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2a92787a1f614fb3813f50037a544925d510fcc0
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, debugging, observability, security]
+  lifecycle: [verification, operations]
+  characteristic: [production-oriented, risk-aware, source-driven, reference-heavy]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 2a92787a1f614fb3813f50037a544925d510fcc0 and contains SKILL.md plus permission-debugging and custom-model-logging-debugging references. Strong static evidence includes mandatory credential/account/region checks, explicit diagnostic classification before fixes, full IAM policy and trust inspection, explicit-Deny awareness, iam:PassRole scoping, S3/KMS/Lake Formation and cross-account checks, Clean Rooms ML privacy/logging diagnostics, continued multi-layer diagnosis after finding an initial likely cause, and least-privilege/security warnings before remediation. Authority is mutating because the procedures ultimately provide policy/configuration fixes and CLI commands capable of changing live AWS access or logging configuration when executed by an authorized external host. Portability is low because the package is specifically coupled to AWS Clean Rooms, Clean Rooms ML, AWS CLI, IAM, S3, KMS, Glue, Lake Formation, and CloudWatch. The score is held at 17/20 because detailed dependent-action lists, managed-policy behavior, API fields, service-role requirements, and logging semantics are volatile; the skill only routes some non-Glue cases to current documentation rather than imposing a general freshness gate. External agents should verify current AWS Clean Rooms/Clean Rooms ML IAM requirements, API fields, managed-policy behavior, and service documentation before consequential permission changes. Behavioral validation remains not-run.
