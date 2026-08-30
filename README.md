@@ -11,6 +11,8 @@
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure.
 
+> **Normal-use boundary:** skills created, adapted, composed, or refined for a user belong in that user's active AI/agent environment or in a portable handoff. They are **not written back into this repository** unless the user has explicitly requested repository maintenance/curation.
+
 ## What `skillz` is
 
 `skillz` is entirely passive. The external host agent is the active system.
@@ -19,10 +21,12 @@ The repository owns no runtime, scripts, tests, CI workflows, schedulers, monito
 
 The repository provides four distinct surfaces:
 
-1. **42 first-party user-facing skills** under [`skills/`](skills/).
+1. **42 first-party user-facing skills** under [`skills/`](skills/) as maintained corpus/reference material.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed third-party evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
+
+The repository's `skills/` directory is not the destination for newly derived user skills during normal use.
 
 Third-party skill packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those belong to the upstream package. Preserve intact pinned sources and do not treat their tooling as repository-owned execution machinery.
 
@@ -37,7 +41,7 @@ Give the repository to an AI agent and ask it to help build or refine repeatable
 5. choose explicitly among ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECKLIST, DYNAMIC behavior, or NO CHANGE;
 6. preserve authority, privacy, dependency, portability, and licensing boundaries;
 7. produce the smallest coherent fitted system rather than maximizing reuse;
-8. install only when the host supports it and the user has authorized it, otherwise provide a complete handoff.
+8. create/install fitted artifacts in the user's active host when supported and authorized, otherwise provide a complete portable handoff. Do not use this repository as the target environment.
 
 `NO CHANGE NEEDED` is a correct result. The corpus is accumulated knowledge and design material, not a reuse quota.
 

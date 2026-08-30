@@ -8,6 +8,14 @@ You do not need to understand skills, write code, clone repositories, or browse 
 
 There is no CI, runtime, test harness, or executable proof requirement.
 
+## Where generated skills go
+
+Normal use of `skillz` does **not** add newly derived skills back into this repository.
+
+When the host agent decides to `CREATE`, `ADAPT`, `COMPOSE`, or `REFINE` a skill for the user, the result belongs in the user's active AI/agent environment or in a portable package the user can install elsewhere. The repository remains a read-only knowledge and reference source during that work.
+
+The repository's own `skills/` directory is maintained corpus material, not the output folder for every skill a connected agent generates. Repository mutation happens only when the user explicitly requests `skillz` maintenance/curation and that work follows the repository's maintainer governance.
+
 ## First visit
 
 If the user provides this repository with no narrower task and has no fitted skill system to review, begin first-visit bootstrap.
@@ -77,4 +85,4 @@ A good result may adopt an existing skill, refine one, adapt one, supplement one
 
 The goal is the **smallest dependable skill system that matches the user's actual workflow and environment**.
 
-Finish with complete artifacts or a complete portable package and an explicit handoff state such as `INSTALLED`, `READY TO UPLOAD`, `USER ACTION REQUIRED`, or a specific compatibility blocker.
+Finish with complete artifacts or a complete portable package for the user's environment and an explicit handoff state such as `INSTALLED`, `READY TO UPLOAD`, `USER ACTION REQUIRED`, or a specific compatibility blocker.

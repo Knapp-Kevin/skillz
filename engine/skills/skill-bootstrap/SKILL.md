@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.8.0
+  version: 0.8.1
 ---
 
 # Skill Bootstrap
@@ -26,13 +26,23 @@ This is the single canonical orchestrator for normal first-visit and returning-u
 
 Normal user bootstrap is **not repository maintenance**.
 
-Unless the user explicitly asked to maintain `skillz` itself:
+During `FIRST_VISIT` and `RETURNING_USER`, treat `skillz` as a **read-only knowledge source**. Every fitted artifact belongs to the user's active host/environment or to a portable handoff package.
+
+Unless the user explicitly asked to maintain `skillz` itself and the request has been routed as `REPOSITORY_MAINTENANCE`:
 
 - do not modify this repository;
+- do not create, adapt, compose, refine, install, or save user-derived skills under `skills/`, `engine/skills/`, `registry/`, or any other repository path;
+- interpret `CREATE`, `ADAPT`, `COMPOSE`, `REFINE`, and similar dispositions as actions on the **user's system**, never as repository-admission instructions;
 - do not use repo-bound `skill-forge` as the user's artifact generator;
 - do not require `skill-audit`, `skill-sync`, `skills-pulse`, source-vetting, engine/repository-maintenance scripts, or CI;
 - do not assume a local clone, shell, Git, Node/Bun, or writable filesystem;
-- do not confuse the user's target skill location with this repository's `skills/` directory.
+- do not confuse the user's target skill location with this repository's `skills/` directory;
+- do not treat write access to this repository as authorization to mutate it;
+- do not promote a useful user-generated skill into a repository candidate automatically.
+
+If the user says “create this skill” during normal bootstrap, create it for the user's active agent/host when supported and authorized, otherwise produce a complete portable handoff. **Do not write it back into `skillz`.**
+
+Repository admission is separate maintainer work with separate governance.
 
 This passive-engine boundary does **not** prohibit a selected user-facing skill from containing or using its own scripts, references, templates, fixtures, JSON, examples, or other supporting components. Those are part of the skill package and must be evaluated according to that skill's own dependency, authority, portability, and host requirements.
 
@@ -52,6 +62,8 @@ Choose exactly one route:
 - `REPOSITORY_MAINTENANCE` — change `skillz` itself; stop this bootstrap and use maintainer procedures.
 
 If FIRST_VISIT and RETURNING_USER are both plausible, inspect accessible current skill/profile state. If a meaningful fitted set exists, use RETURNING_USER.
+
+Only `REPOSITORY_MAINTENANCE` may target `skillz` repository files for mutation.
 
 **Output:** one route.
 
@@ -114,13 +126,13 @@ Search in this order when available:
 
 1. user's existing skills/instructions;
 2. current project/repository skills;
-3. local user-facing `skills/`;
+3. local user-facing `skills/` corpus as read-only reference material;
 4. built-in host capabilities;
 5. tracked upstream reference sources;
 6. individually governed external skills;
 7. live external sources only for a still-unmet material capability.
 
-The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory.
+The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory and not a destination for generated user artifacts.
 
 For each relevant candidate inspect:
 
@@ -176,6 +188,8 @@ Choose one disposition for each meaningful requirement:
 - `DYNAMIC`
 - `DO_NOT_CREATE`
 
+These are **user-system dispositions** during normal bootstrap. They do not authorize repository mutation or repository admission.
+
 Do not prefer reuse merely because reuse is available.
 
 **Output:** disposition map with a short reason per requirement.
@@ -185,6 +199,8 @@ Do not prefer reuse merely because reuse is available.
 For every ADAPT, SUPPLEMENT, COMPOSE, or CREATE decision informed by a reference, record:
 
 `source -> useful mechanism -> constraints -> destination -> omitted baggage`
+
+The `destination` is the user's active environment or portable handoff unless the request was explicitly routed as repository maintenance.
 
 Omit source-specific commands, terminology, ceremony, interview flows, file layouts, UX, and authority assumptions that do not belong in the user's system.
 
@@ -214,6 +230,8 @@ If proposed skills repeatedly override each other, redraw responsibilities befor
 
 ## S9 — Create/adapt artifacts for the active host
 
+**Destination rule:** create or adapt artifacts for the user's active host/environment. Never use the `skillz` repository as the output destination during normal bootstrap.
+
 For each artifact define at minimum:
 
 - name/purpose;
@@ -234,7 +252,7 @@ Do not use repo-bound `skill-forge` for normal user artifact creation.
 
 Inability to write files is not inability to complete bootstrap. Produce complete portable artifacts instead.
 
-**Output:** artifacts plus target format/location.
+**Output:** artifacts plus target format/location outside `skillz` unless explicitly in `REPOSITORY_MAINTENANCE`.
 
 ## S10 — Semantic adversarial review
 
@@ -277,6 +295,8 @@ Determine the target's real installation/handoff mode from the active host:
 
 Install only with both capability and authority. Otherwise provide the complete package and shortest correct handoff.
 
+The installation target is the user's host/environment, never `skillz` during normal bootstrap.
+
 Finish each target with an explicit state such as:
 
 - `INSTALLED + REVIEWED`
@@ -312,7 +332,7 @@ Evidence unavailable: <material gaps>
 Needs found: <concise list>
 Decisions: <SUFFICIENT/REFINE/ADOPT/ADAPT/SUPPLEMENT/COMPOSE/CREATE/etc.>
 References/components used: <sources/mechanisms + constraints>
-Artifacts produced: <names + format/location>
+Artifacts produced: <names + format/location in user/host environment or portable handoff>
 Semantic adversarial review: <positive/non-trigger/pressure findings>
 Installation/handoff: <explicit state per target>
 Remaining uncertainty: <only material unresolved items>
@@ -332,7 +352,8 @@ Do not end at recommendations if complete artifacts can be produced.
 - `verified` and `validated` are the only current unchanged-reuse quality states.
 - Never fabricate identity, review state, installation, artifacts, or evidence.
 - Do not mine unrelated private connectors.
-- Do not mutate `skillz` during normal user bootstrap.
+- During normal bootstrap, `skillz` is read-only and never the destination for generated or adapted user skills.
+- Only explicit `REPOSITORY_MAINTENANCE` may authorize repository mutation.
 - Do not make repository-maintenance tooling a user prerequisite.
 - Stop evidence/search expansion when it is no longer decision-relevant.
 - Prefer the smallest coherent system over maximum skill count.
