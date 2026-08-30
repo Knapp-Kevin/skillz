@@ -1,8 +1,8 @@
 # Human browse categories for locally maintained/imported library skills.
 #
 # This registry is the canonical category assignment source. Category README
-# files are navigation surfaces; index generation and future physical category
-# migration should consume this map rather than infer purpose from filenames.
+# files are passive navigation surfaces; external host agents reconcile them
+# directly from this map when repository maintenance is authorized.
 
 version: 1
 
@@ -46,6 +46,7 @@ categories:
     skills:
       - agent-home-doctor
       - agent-postmortem
+      - automation-receipts
       - mcp-vetting
       - permissions-review
 
