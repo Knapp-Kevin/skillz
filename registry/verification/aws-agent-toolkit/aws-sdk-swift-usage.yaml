@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-sdk-swift-usage
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b09094fc5e414983df038fe40a2d34c433ca2d14
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [compatibility-aware, source-driven, risk-aware]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA b09094fc5e414983df038fe40a2d34c433ca2d14 and contains one SKILL.md file. Strong static evidence includes async client construction patterns, explicit service-client/model namespaces, credential resolver examples, waiter and paginator usage, presigned URL guidance, and concrete S3 read/write examples. Authority is mutating because the procedures can invoke AWS service APIs and include object writes under the external host's credentials. Portability is medium because Swift concurrency and client-configuration ideas transfer conceptually while the APIs are specific to aws-sdk-swift and AWS. The principal weakness is freshness: the skill makes emphatic version-sensitive claims about deprecated configuration classes, parameter declaration order, region requirements, resolver types, and generated source layout without a general freshness gate. Static credential construction is shown as an API example; external agents should prefer normal credential-provider chains unless a bounded use case genuinely requires explicit credentials and must never embed real secrets in source. Consequential use should verify current aws-sdk-swift APIs and AWS service behavior before adoption. Behavioral validation remains not-run.
