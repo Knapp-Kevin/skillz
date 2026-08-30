@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-sdk-js-v3-usage
+display_name: AWS SDK for JavaScript v3 Usage
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-sdk-js-v3-usage/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 4f7d96810b7302b1e0942d61ad11c695522a5d52
+upstream_last_updated_at: 2026-05-04T14:45:31Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-sdk-js-v3-usage
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Node.js or browser JavaScript/TypeScript environment as applicable, AWS SDK for JavaScript v3 @aws-sdk/* and @smithy/* packages, AWS credentials and IAM permissions appropriate to the selected service operations, network access to AWS service endpoints, and current AWS SDK documentation/package metadata for version-sensitive runtime requirements and API behavior
+import_eligibility: exact-version-reference
+rationale: High-value AWS SDK for JavaScript v3 reference covering modular clients, credentials, streaming responses, pagination, DynamoDB DocumentClient, S3 helpers, error handling, middleware, performance, Lambda reuse, TypeScript narrowing, SigV4a, schemas, and service-specific patterns. Operational authority is mutating because SDK procedures can invoke arbitrary AWS service operations, including resource creation or modification, according to the external host agent's credentials and user authority. Portability is medium because the JavaScript/TypeScript engineering patterns transfer conceptually, while concrete packages, credentials, service semantics, and examples are AWS-specific. Exact SDK and Node.js compatibility thresholds are version-sensitive and must be confirmed against current upstream documentation before consequential use; the pinned package remains passive reference material and performs no operations itself.
