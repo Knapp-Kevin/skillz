@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-billing-and-cost-management
+display_name: AWS Billing and Cost Management
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-billing-and-cost-management/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: external-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI and valid AWS credentials for Cost Explorer, Budgets, Billing, Compute Optimizer, Cost Optimization Hub, Savings Plans, Reserved Instances, CUR/Athena, and related APIs; optional AWS MCP server; calculator or scripting capability for deterministic arithmetic; and source-intact reference files bundled with the skill
+import_eligibility: exact-version-reference
+rationale: Strong AWS cost-analysis and optimization guidance with explicit current-date checks, deterministic-calculation requirements, API-specific gotchas, billing-view scoping, troubleshooting, and source-intact deep references. Many workflows are read-oriented, but budget creation, Compute Optimizer enrollment, commitment decisions, and other account-level cost-management actions can mutate configuration or create financial commitments, so use requires current credentials, cost awareness, and explicit host/user authority.
