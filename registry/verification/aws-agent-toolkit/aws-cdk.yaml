@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-cdk
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [cloud-infrastructure, infrastructure-as-code, troubleshooting]
+  lifecycle: [design, implementation, validation, operations]
+  characteristic: [security-aware, reference-heavy, failure-diagnosis, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. Strong trigger and non-trigger boundaries, diff-before-deploy discipline, stateful-resource and logical-ID replacement warnings, staged cross-stack-reference removal, rollback guidance, OIDC and permissions-boundary security guidance, and coherent source-intact references. Authority is the constrained dimension because bootstrap, deploy, import, refactor, drift, rollback, and destroy-related workflows can mutate infrastructure, incur cost, or cause data loss and therefore require credentials plus explicit host/user authority. Behavioral validation remains not-run.
