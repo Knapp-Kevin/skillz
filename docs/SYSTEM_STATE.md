@@ -10,7 +10,7 @@
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 42 |
-| **Persisted third-party review companions** | 118 |
+| **Persisted third-party review companions** | 119 |
 | **Pinned external corpora** | 12 |
 | **Registered sources** | 17 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
@@ -52,8 +52,8 @@ Pinned third-party repositories may contain their own code or tooling. They rema
 - 42 active first-party user-facing skills have individual structured semantic reviews.
 - Under the mandatory provenance contract, those semantic reviews do not substitute for provenance companions. The active provenance audit currently establishes **0/42 standalone first-party provenance companions** under `registry/skills/`; this is an explicit corpus-completeness defect to reconcile, not a reason to infer missing history.
 - 12 pinned external corpora provide the broad 500+ reference surface.
-- 118 current exact-version third-party verification companion files are persisted.
-- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 18/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`amazon-bedrock`, `amazon-opensearch-service`, `aws-billing-and-cost-management`, `aws-blocks`, `aws-cdk`, `aws-cleanrooms`, `aws-cloudformation`, `aws-containers`, `aws-iam`, `aws-messaging-and-streaming`, `aws-observability`, `aws-sdk-js-v3-usage`, `aws-sdk-python-usage`, `aws-sdk-swift-usage`, `aws-secrets-manager`, `aws-serverless`, `connecting-to-data-source`, and `developing-applications-on-managed-service-for-apache-flink`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
+- 119 current exact-version third-party verification companion files are persisted.
+- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; **19/72** currently have persisted exact-version provenance + verification companion pairs on `main`. The latest reconciliation is `exploring-data-catalog`, bound to the registered AWS pin with a decisive current state of `verified` and behavioral evidence `not-run`. The remaining companion closure is active evidence reconciliation work, not evidence that prior review disappeared.
 - Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
 - `engine/skills/` procedures do not count as user-facing inventory.
 - 17 upstream sources are registered across pinned reference, tracked corpus, normative, and discovery roles.
@@ -65,6 +65,8 @@ The repository distinguishes:
 **discovery surface → candidate issue/source → source-vetting → admitted corpus/reference/tracked source → individual exact-version review → user-fit decision**
 
 Newly discovered third-party candidates use the issue-first intake workflow before admission. The candidate issue is the pre-admission evidence workspace; finalized provenance and verification companions are persisted only after an admission decision is justified.
+
+Intentional discovery surfaces are documented in `docs/discovery-surfaces.md`. The connected Creator Technical Resource Catalog is discovery intelligence only; its rows, scores, or verification labels are not `skillz` provenance or individual quality evidence.
 
 Discovery does not grant trust, quality, redistribution authority, installation authority, or automatic admission. Source popularity, official branding, repository age, stars, forks, and activity are source context only and do not prove individual skill quality.
 
@@ -96,7 +98,7 @@ Static corpus completion comes before broad behavioral validation. `skillz` owns
 
 ## Current curation priority
 
-1. Finish AWS Agent Toolkit exact-version companion closure.
+1. Finish AWS Agent Toolkit current-standard companion reconciliation, preserving the prior 72/72 review evidence and re-reviewing only genuine evidence gaps.
 2. Reconcile the mandatory provenance-completeness audit, including the known 0/42 standalone first-party provenance gap.
 3. Complete Microsoft Skills.
 4. Complete Microsoft Azure Skills.
