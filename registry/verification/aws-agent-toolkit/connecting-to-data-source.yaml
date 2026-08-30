@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: connecting-to-data-source
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: af4c577873ceabf3cd9b0b90470754ad1e51d8e8
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, deployment, debugging, security]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA af4c577873ceabf3cd9b0b90470754ad1e51d8e8 and contains SKILL.md plus seven references covering BigQuery, credential security, discovery, JDBC, network setup, Snowflake, and troubleshooting. Strong static evidence includes a narrow trigger/exclusion boundary; checking existing connections before creation; requiring user-provided source hints instead of guessing; explicit region/identity checks; Secrets Manager and supported IAM database-auth preference; prohibition on plaintext credentials in chat/logs; confirmation before creating a new secret; prohibition on credential rotation without confirmation; explicit network/IAM diagnostics; and two-stage connection verification that distinguishes an API connectivity test from engine-level use. Authority is mutating because the instructions direct the external host to execute AWS commands and may create secrets/connections or require IAM, network, crawler, connector, or smoke-test changes. Portability is low because behavior is tightly bound to AWS Glue, AWS MCP/CLI, account/network topology, and source-specific AWS connection semantics. The score is held at 16/20 because the procedure says commands MUST be executed when tooling is available without a general confirmation gate for connection/network mutations, and several exact service claims are freshness-sensitive, including Glue connection-type behavior, IAM database-auth support, network endpoint requirements, engine compatibility, API fields, and token lifetime behavior. The skill has no general current-documentation freshness gate. Before consequential use, an external agent should verify current AWS Glue connection types, IAM/auth support, VPC requirements, API fields, and engine-specific behavior against current AWS documentation. Behavioral validation remains not-run.
