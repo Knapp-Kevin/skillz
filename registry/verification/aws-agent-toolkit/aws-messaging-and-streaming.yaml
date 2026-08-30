@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-messaging-and-streaming
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d38d5cf4c211899e6b379eea880923496329e9e4
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [messaging-architecture, streaming-architecture, service-selection, integration-troubleshooting]
+  lifecycle: [design, implementation, deployment, operations, troubleshooting]
+  characteristic: [security-aware, freshness-aware, reference-routed, integration-focused, cloud-specific]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package contains a single SKILL.md and is bound to tree SHA d38d5cf4c211899e6b379eea880923496329e9e4. Strong safeguards include explicit routing to service-specific skills or official AWS documentation for volatile limits, versions, alarm settings, thresholds, and uncertain behavior; Secrets Manager guidance for broker/Kafka credentials; customer-managed KMS guidance; least-privilege secret access; explicit DLQ queue-policy requirements; and aws:SourceArn/aws:SourceAccount confused-deputy protections for service-principal resource policies. The skill also captures useful integration-specific failure modes such as SQS system attributes, SNS-to-Firehose delimiter behavior, and DLQ policy omissions. Authority is mutating because operational guidance includes SetQueueAttributes, PutTargets, redrive/DLQ setup, resource-policy changes, encryption configuration, and related AWS service changes. Portability is medium because the decision patterns are broadly useful but the concrete procedures and semantics are AWS-specific. Behavioral validation remains not-run.
