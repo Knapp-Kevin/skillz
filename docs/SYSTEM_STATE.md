@@ -10,7 +10,7 @@
 | **Repository type** | Passive instruction/reference repository |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 42 |
-| **Persisted third-party review companions** | 101 |
+| **Persisted third-party review companions** | 102 |
 | **Pinned external corpora** | 12 |
 | **Registered sources** | 17 |
 | **Evaluation model** | Best-effort semantic + adversarial review |
@@ -48,7 +48,8 @@ The existence of pinned Git submodules does **not** make the engine active. They
 
 - 42 active first-party user-facing skills have individual structured semantic reviews.
 - 12 pinned external corpora restore the broad 500+ reference surface.
-- 101 current exact-version third-party verification companion files are persisted.
+- 102 current exact-version third-party verification companion files are persisted.
+- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 2/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`aws-cdk` and `aws-cloudformation`). The remaining companion closure is an active reconciliation lane, not evidence that the other prior dispositions disappeared.
 - Historical source-level curation records document at least 210 reviewed external entry points across nine corpora.
 - The gap between historical source-level evidence and current one-file companions is an explicit reconciliation lane in `CURATION_QUEUE.md`.
 - Engine procedures do not count as user-facing inventory.
