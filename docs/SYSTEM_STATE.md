@@ -5,16 +5,16 @@
 | Attribute | Value |
 |---|---|
 | **Last updated** | 2026-08-29 |
-| **Milestone** | Core implementation complete |
+| **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
-| **Repository type** | Passive instruction/reference repository |
+| **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 42 |
 | **Persisted third-party review companions** | 102 |
 | **Pinned external corpora** | 12 |
 | **Registered sources** | 17 |
-| **Evaluation model** | Best-effort semantic + adversarial review |
-| **CI/runtime requirement** | None |
+| **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
+| **Repository runtime/CI requirement** | None |
 
 ## Current architecture
 
@@ -26,91 +26,77 @@ skillz/
 ├── AGENTS.md
 ├── CURATED.md
 ├── CURATION_QUEUE.md                 living curation evidence ledger
-├── skills/                           42 first-party user-facing skill packages
-│   └── categories/                   human browse-by-purpose navigation
-├── vendor/                           12 exact-revision external reference corpora
-├── .gitmodules                       pins the external reference corpora
-├── engine/skills/                    passive bootstrap/maintenance procedures
+├── skills/                           first-party user-facing skill packages
+│   ├── categories/                   human browse-by-purpose navigation
+│   └── sources/                      12 intact exact-revision third-party corpora
+├── .gitmodules                       exact source gitlink locations
+├── engine/skills/                    passive repository-use/curation procedures
 ├── registry/
 │   ├── sources.yaml                  source roles, paths, licenses, exact pins
-│   ├── skills/                       governed third-party provenance
-│   ├── verification/                 exact-version semantic quality records
+│   ├── source-signals.yaml           volatile source-level context
+│   ├── skills/                       third-party provenance companions
+│   ├── verification/                 exact-version semantic review companions
 │   ├── local-verification.json       first-party structured reviews
 │   └── taxonomy.yaml                 controlled metadata vocabulary
-└── docs/evals/                       semantic/adversarial review records
+└── docs/                             governance, provenance, curation, evidence, history
 ```
 
-There is no repository CI workflow, root runtime, root `scripts/` execution layer, root `tests/` gate, `.agent/`, or `.qor/` runtime machinery.
+The canonical physical boundary is now reflected in the live tree: user-facing first-party material is under `skills/`, intact pinned third-party corpora are under `skills/sources/<source-id>/`, and repository-use/curation instructions are under `engine/skills/` and excluded from user-facing counts.
 
-The existence of pinned Git submodules does **not** make the engine active. They are static reference material at exact upstream revisions. Normal agent use does not require them to be materialized locally because the same registered sources may be read through repository/API/web capabilities.
+There is no repository-owned runtime, root scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service.
+
+Pinned third-party repositories may contain their own code or tooling. They remain intact reference sources and are not repository-owned execution machinery.
 
 ## Inventory boundaries
 
 - 42 active first-party user-facing skills have individual structured semantic reviews.
-- 12 pinned external corpora restore the broad 500+ reference surface.
+- 12 pinned external corpora provide the broad 500+ reference surface.
 - 102 current exact-version third-party verification companion files are persisted.
-- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 2/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`aws-cdk` and `aws-cloudformation`). The remaining companion closure is an active reconciliation lane, not evidence that the other prior dispositions disappeared.
-- Historical source-level curation records document at least 210 reviewed external entry points across nine corpora.
-- The gap between historical source-level evidence and current one-file companions is an explicit reconciliation lane in `CURATION_QUEUE.md`.
-- Engine procedures do not count as user-facing inventory.
+- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 2/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`aws-cdk` and `aws-cloudformation`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
+- Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
+- `engine/skills/` procedures do not count as user-facing inventory.
 - 17 upstream sources are registered across pinned reference, tracked corpus, normative, and discovery roles.
+
+## Source lifecycle
+
+The repository distinguishes:
+
+**discovery surface → candidate source → source-vetting → admitted corpus/reference/tracked source → individual exact-version review → user-fit decision**
+
+Discovery does not grant trust, quality, redistribution authority, installation authority, or automatic admission. Source popularity, official branding, repository age, stars, forks, and activity are source context only and do not prove individual skill quality.
 
 ## Quality model
 
 - Source identity and individual skill quality are separate.
-- Pinned/tracked material is reference/design evidence unless an individual exact-version record establishes stronger eligibility.
-- `verified` means structured semantic review passed.
-- `validated` means representative scenario/adversarial semantic review was also recorded.
+- Pinned/tracked material is reference/design evidence unless an exact-version record establishes stronger eligibility.
+- `verified` means structured semantic review passed for the exact bound material.
+- `validated` means representative external scenario/adversarial evidence was also recorded.
 - `unverified` and legacy `trusted-baseline` are not unchanged-reuse states.
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection.
-- Fingerprints identify which exact material was reviewed. They are bookkeeping/provenance evidence, not executable proof.
-- Skill-owned scripts, references, templates, fixtures, examples, JSON, assets, or other components remain legitimate parts of a skill package.
+- Fingerprints identify reviewed material. They are provenance/bookkeeping evidence, not executable proof.
+- Static source completion requires an exact eligible denominator and a decisive current state for every in-scope skill.
 
-## User-flow state
+Interpret candidates in this order:
 
-The canonical bootstrap provides:
+**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-- explicit route selection;
-- environment/authority binding;
-- minimum-relevant-evidence need discovery;
-- capability definition before skill-name search;
-- first-party, governed, pinned-reference, tracked, and live discovery surfaces;
-- whole-skill and component discovery;
-- exact-version unchanged-reuse gating;
-- explicit reuse/adapt/supplement/compose/create/no-skill decisions;
-- smallest-coherent-system composition;
-- host-specific artifact/handoff adaptation;
-- semantic adversarial review;
-- returning-user minimal refinement and `NO CHANGE NEEDED`.
+The host agent may ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, use a CHECKLIST, keep behavior DYNAMIC, or make NO CHANGE.
 
 ## Responsibility boundary
 
-The repository is responsible for making its instructions, skill packages, metadata, provenance, and curation evidence as clear and useful as reasonably possible.
+`skillz` is responsible for the clarity and usefulness of its skills, procedures, source material, provenance, metadata, exact-version review evidence, safeguards, negative examples, and documentation.
 
-It is **not** responsible for proving that arbitrary models of different capability levels will follow those instructions successfully. Multi-model benchmarks, success-rate targets, CI, runtime tests, and executable proof are not completion requirements.
+The external host agent is responsible for active work such as browsing, discovery, evaluation, installation, file mutation, external actions, and any behavioral validation, subject to the user's authority and the host environment's capabilities.
 
-## Evaluation state
+Static corpus completion comes before broad behavioral validation. `skillz` owns no evaluator, benchmark, test harness, scenario runner, or behavioral-validation runtime. Later external behavioral evidence may be stored passively in the repository when it is useful.
 
-The current repository-level closeout review is recorded in `docs/evals/share-ready-semantic-review.md`.
+## Current curation priority
 
-Result: **PASS — no unresolved material core-architecture ambiguity identified after closeout corrections.**
+1. Finish AWS Agent Toolkit exact-version companion closure.
+2. Complete Microsoft Skills.
+3. Complete Microsoft Azure Skills.
+4. Continue remaining admitted creator/registered-source curation.
+5. Continue governed discovery/source-vetting in parallel when evidence supports useful source candidates.
+6. Keep README, governance, catalog snapshots, source registry, and public counts aligned with material corpus changes.
 
-Corpus enrichment remains ongoing by design. That is tracked separately in `CURATION_QUEUE.md`.
-
-## Current mode
-
-**CURATION MODE.**
-
-Future work is optional and occasional:
-
-1. reconcile prior review evidence where useful;
-2. continue admitted-source evaluation;
-3. discover promising sources or skills;
-4. determine independently whether they add meaningful value;
-5. establish provenance/license/dependencies/required components;
-6. score and characterize selected skills;
-7. assign a decisive semantic quality state;
-8. preserve useful negative/adaptation evidence where appropriate;
-9. revisit core bootstrap instructions only when real use exposes a genuine ambiguity.
-
-There is no standing core implementation backlog. The living curation queue is the intended long-term work surface.
+The current living work surface is `CURATION_QUEUE.md`. Closed historical Wayfinder/issues/PRs remain evidence, not active execution plans.
