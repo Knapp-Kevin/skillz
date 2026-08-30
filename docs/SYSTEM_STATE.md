@@ -24,22 +24,24 @@ skillz/
 ├── AGENT_START_HERE.md
 ├── BOOTSTRAP.md
 ├── AGENTS.md
+├── INDEX.md                         passive human catalog snapshot
+├── index.json                       passive machine catalog snapshot
 ├── CURATED.md
-├── CURATION_QUEUE.md                 living curation evidence ledger
-├── skills/                           43 first-party user-facing skill packages
-│   ├── categories/                   human browse-by-purpose navigation
-│   └── sources/                      12 intact exact-revision third-party corpora
-├── .gitmodules                       exact source gitlink locations
-├── engine/skills/                    passive repository-use/curation procedures
+├── CURATION_QUEUE.md                living curation evidence ledger
+├── skills/                          43 first-party user-facing skill packages
+│   ├── categories/                  human browse-by-purpose navigation
+│   └── sources/                     12 intact exact-revision third-party corpora
+├── .gitmodules                      exact source gitlink locations
+├── engine/skills/                   passive repository-use/curation procedures
 ├── registry/
-│   ├── sources.yaml                  19 unique source identities/roles/pins
-│   ├── source-signals.yaml           volatile source-level context
-│   ├── skills/                       mandatory per-skill provenance companions
-│   ├── verification/                 exact-version semantic review companions
-│   ├── local-verification.json       first-party structured reviews
-│   ├── categories.yaml               canonical first-party category assignments
-│   └── taxonomy.yaml                 controlled metadata vocabulary
-└── docs/                             governance, provenance, curation, evidence, history
+│   ├── sources.yaml                 19 unique source identities/roles/pins
+│   ├── source-signals.yaml          volatile source-level context
+│   ├── skills/                      mandatory per-skill provenance companions
+│   ├── verification/                exact-version semantic review companions
+│   ├── local-verification.json      first-party structured reviews
+│   ├── categories.yaml              canonical first-party category assignments
+│   └── taxonomy.yaml                controlled metadata vocabulary
+└── docs/                            governance, provenance, curation, evidence, history
 ```
 
 The canonical physical boundary is reflected in the live tree: user-facing first-party material is under `skills/`, intact pinned third-party corpora are under `skills/sources/<source-id>/`, and repository-use/curation instructions are under `engine/skills/` and excluded from user-facing counts.
@@ -89,20 +91,20 @@ Interpret candidates in this order:
 
 The host agent may ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, use a CHECKLIST, keep behavior DYNAMIC, or make NO CHANGE.
 
-## Current drift and reconciliation
+## Current reconciliation status
 
-The current first-party `skills/README.md` has been corrected to remove a stale claim that a repository-owned Node verification script enforces readiness. Completeness is instead checked by the external host agent against the passive review/provenance records.
-
-The Tier-4 governance contract still names `INDEX.md` and `index.json` as passive catalog snapshots, but both files are currently absent from `main`. This is a live catalog-surface gap. Restore them as hand-maintained static snapshots only; do not reintroduce a generator, preflight, or executable refresh path.
+- The current first-party `skills/README.md` no longer claims a repository-owned Node verification script enforces readiness. Completeness is checked by the external host agent against passive review/provenance records.
+- `registry/sources.yaml` has been deduplicated to 19 unique source identities.
+- First-party category accounting is 43/43 and includes `automation-receipts` under Agent Operations & Security.
+- Tier-4 catalog surfaces `INDEX.md` and `index.json` are restored as hand-maintained passive snapshots. They have no generator, preflight, or executable refresh contract.
 
 ## Current curation priority
 
-1. Restore/reconcile `INDEX.md` and `index.json` as passive static catalog snapshots so Tier-4 governance matches the live tree.
-2. Continue AWS Agent Toolkit current-standard companion reconciliation, preserving the prior 72/72 review evidence and re-reviewing only genuine evidence gaps.
-3. Complete Microsoft Skills.
-4. Complete Microsoft Azure Skills.
-5. Continue remaining admitted creator/registered-source curation.
-6. Continue governed discovery/source-vetting in parallel when evidence supports useful source candidates.
-7. Keep README, governance, category navigation, source registry, catalog snapshots, and public counts aligned with material corpus changes.
+1. Continue AWS Agent Toolkit current-standard companion reconciliation, preserving the prior 72/72 review evidence and re-reviewing only genuine evidence gaps.
+2. Complete Microsoft Skills.
+3. Complete Microsoft Azure Skills.
+4. Continue remaining admitted creator/registered-source curation.
+5. Continue governed discovery/source-vetting in parallel when evidence supports useful source candidates.
+6. Keep README, governance, category navigation, source registry, catalog snapshots, and public counts aligned with material corpus changes.
 
 The current living work surface is `CURATION_QUEUE.md` plus open provenance audit issue #66. Closed historical Wayfinder/issues/PRs remain evidence, not active execution plans.
