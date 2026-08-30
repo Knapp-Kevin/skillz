@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: developing-applications-on-managed-service-for-apache-flink
+display_name: Develop Applications on Managed Service for Apache Flink
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/developing-applications-on-managed-service-for-apache-flink/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 7cd875e7e48b45469d66afe3988ed3cc9b144546
+upstream_last_updated_at: 2026-06-12T11:49:55Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/developing-applications-on-managed-service-for-apache-flink
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Apache Flink and Amazon Managed Service for Apache Flink; Java/Maven for application development; AWS MCP tools or AWS CLI/shell when host execution is available; valid AWS credentials, account, and region; CloudWatch; IAM; S3; VPC/network configuration; service-specific sources and sinks such as Kinesis, Kafka/MSK, Iceberg/Glue/S3 Tables, and CDC systems when selected; the complete bundled reference set for version migration, KPU/resource sizing, checkpointing, application lifecycle, deployment, monitoring/logging, connectors, serialization, state, and troubleshooting
+import_eligibility: exact-version-reference
+rationale: Comprehensive AWS-specific Flink/MSF development and operations package bound to package tree SHA d25d5b3e35634d1af706264856c4748770c8b20f at the registered AWS snapshot. The package contains SKILL.md plus 25 reference documents covering architecture and constraints, Flink 2.x migration, KPU/resource optimization, scaling and pricing, lifecycle and first-fault isolation, checkpointing, job-graph architecture and anti-patterns, monitoring/logging, Kinesis/EFO, Iceberg, CDC, IaC/deployment, dependency and environment setup, serialization, and state management. It explicitly distinguishes MSF service-level configuration from application code, preserves stable operator UIDs/state migration concerns, routes consequential tasks to focused references, and documents operational failure modes. Authority is mutating because the documented host workflow can compile, deploy, update, scale, snapshot, start/stop, and otherwise operate AWS resources through external tools. Portability is low because the package is intentionally coupled to Amazon Managed Service for Apache Flink, AWS service identifiers, KPU semantics, IAM/CloudWatch/VPC/S3, and AWS-specific connectors and deployment behavior. Numerous service quotas, runtime versions, connector APIs, pricing assumptions, and service constraints are freshness-sensitive; an external agent should verify consequential volatile claims against current AWS and Flink documentation before acting. Bundled upstream references remain intact source material, not repository-owned execution machinery.
