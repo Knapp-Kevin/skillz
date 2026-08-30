@@ -136,6 +136,20 @@ Before materially carrying a component into a user-facing artifact, check:
 
 Useful principles can inform a clean custom design. Material copied or adapted from third-party work must preserve applicable provenance and license obligations.
 
+## Substrate boundary
+
+Host-environment substrates are not skills. A substrate is machinery an environment provides as infrastructure — for example Continuum, the memory layer of the Zo computer environment, or any runtime supplying persistence, scheduling, or recall as a service. This repository never admits, implements, ports, or mirrors a substrate.
+
+What is allowed:
+
+- **Lessons may be derived.** A substrate's proven discipline (for example, a write–recall–guidance–evaluate–reinforce–decay cycle, or an evidence-gated trust model) may inform skill content under the same conditions as third-party mechanisms in [Component reuse and adaptation](#component-reuse-and-adaptation).
+- **The derived skill must be substrate-agnostic.** It expresses a portable procedure that runs in any comparable agent environment: doc-only by default, with no references to substrate-private paths, IPC tokens, hosts, schemas, or infrastructure, and no assumption that the substrate itself is present.
+- **Provenance states the boundary.** A first-party skill derived from substrate lessons records in its companion rationale both the derivation source and that the skill expresses the lesson, not the substrate.
+
+Defining line: a skill teaches an agent a procedure; a substrate is machinery the environment provides. If removing the host environment would leave the artifact useless, it is a substrate integration, not a skill.
+
+Current instance: the memory-continuity lane (issue #71) is closed with no admissible wild prior art. Any future first-party derivation there is a substrate-agnostic continuity procedure — never an implementation of Continuum.
+
 ## Physical availability
 
 A source/skill may be:
