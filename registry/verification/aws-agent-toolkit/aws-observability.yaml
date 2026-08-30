@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-observability
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 11eea317a047624076348e95f11a7fca96723dff
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [observability, monitoring, telemetry, application-signals, troubleshooting]
+  lifecycle: [design, implementation, deployment, operations, troubleshooting]
+  characteristic: [security-aware, freshness-aware, reference-routed, instrumentation-focused, cloud-specific]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 11eea317a047624076348e95f11a7fca96723dff and includes SKILL.md, two reusable assets, service references, and 16 platform/language Application Signals guides. Strong static evidence includes explicit warning that runtime versions, quota values, and feature matrices may change and must be confirmed against current AWS documentation when precision matters; clear routing by user need; broad troubleshooting coverage; and separation between logs, metrics, traces, auditing, synthetics, and onboarding concerns. The package depends on AWS service semantics and, for direct operations, AWS CLI or the AWS MCP server plus appropriate IAM authority. Authority is mutating because the procedures can enable instrumentation and Application Signals, alter workload configuration, configure ADOT collectors, alarms, dashboards, canaries, IAM, and related observability resources. Portability is medium because observability patterns transfer conceptually, while concrete procedures are AWS-, platform-, and runtime-specific. Behavioral validation remains not-run.
