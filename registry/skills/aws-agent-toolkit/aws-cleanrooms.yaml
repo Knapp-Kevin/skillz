@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-cleanrooms
+display_name: AWS Clean Rooms
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/aws-cleanrooms/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/aws-cleanrooms
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Clean Rooms and Clean Rooms ML; AWS CLI and valid AWS credentials; IAM; S3; KMS when SSE-KMS is used; AWS Glue and Lake Formation for Glue/S3-backed sources; CloudWatch Logs; current AWS documentation/search for non-Glue data sources and changing permission requirements
+import_eligibility: exact-version-reference
+rationale: Focused troubleshooting package for AWS Clean Rooms permission failures and Clean Rooms ML custom-model log publishing. The exact package contains SKILL.md plus two diagnostic references and is bound to tree SHA 2a92787a1f614fb3813f50037a544925d510fcc0 at the registered AWS snapshot. It requires a full diagnostic chain before proposing permission fixes, checks explicit denies and cross-account trust, distinguishes IAM/S3/KMS/Lake Formation layers, restricts iam:PassRole guidance to cleanrooms.amazonaws.com, and warns about security implications while recommending least privilege. Authority is mutating because the documented resolution path can culminate in IAM, bucket, key, Lake Formation, ML configuration, or logging changes through the external host. Portability is low because the procedures and command surface are tightly bound to AWS Clean Rooms APIs, IAM semantics, AWS CLI, and related AWS services. Bundled references remain intact upstream material rather than repository-owned execution machinery.
