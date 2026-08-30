@@ -19,6 +19,22 @@ Choose exactly one route:
 
 For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md`.
 
+### Destination invariant
+
+For `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER`, this repository is **read-only reference material**.
+
+Any skill the agent creates, adapts, composes, refines, packages, or installs for the user belongs in the **user's active agent/host environment** or in a **portable handoff artifact**. It does **not** belong in this repository.
+
+In particular:
+
+- `CREATE` never means “add a new directory under `skillz/skills/`” during normal use;
+- `ADAPT`, `COMPOSE`, `REFINE`, and installation never target repository files during normal use;
+- `skills/` is a maintained corpus and reference surface, not the output folder for newly derived user skills;
+- write access to the repository does not grant permission to use it as the destination;
+- a useful user-generated skill does not become a repository-admission candidate automatically.
+
+Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation, and that work follows repository-maintainer governance rather than normal bootstrap.
+
 ## 2. Do not invent host prerequisites
 
 Normal discovery, user-need analysis, comparison, custom synthesis, semantic review, and portable handoff do not require a local clone, shell, Git, Node/Bun, writable filesystem, CI, or any repository-engine runtime.
@@ -101,7 +117,7 @@ A normal bootstrap is complete when the agent has:
 5. chosen explicit fit decisions such as ADOPT, ADAPT, SUPPLEMENT, COMPOSE, CREATE, or DO NOT CREATE;
 6. produced the smallest coherent fitted system;
 7. adversarially reviewed important instructions for likely misinterpretation, overreach, or failure;
-8. created complete artifacts or a complete portable package;
+8. created complete artifacts or a complete portable package **for the user/host, not for this repository**;
 9. ended with an explicit installation/handoff state.
 
 A returning-user run may correctly end with `NO CHANGE NEEDED`.
