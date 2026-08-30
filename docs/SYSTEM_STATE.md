@@ -4,13 +4,13 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-08-29 |
+| **Last updated** | 2026-08-30 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 42 |
-| **Persisted third-party review companions** | 103 |
+| **Persisted third-party review companions** | 104 |
 | **Pinned external corpora** | 12 |
 | **Registered sources** | 17 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
@@ -51,8 +51,8 @@ Pinned third-party repositories may contain their own code or tooling. They rema
 
 - 42 active first-party user-facing skills have individual structured semantic reviews.
 - 12 pinned external corpora provide the broad 500+ reference surface.
-- 103 current exact-version third-party verification companion files are persisted.
-- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 3/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`amazon-bedrock`, `aws-cdk`, and `aws-cloudformation`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
+- 104 current exact-version third-party verification companion files are persisted.
+- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 4/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`amazon-bedrock`, `aws-billing-and-cost-management`, `aws-cdk`, and `aws-cloudformation`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
 - Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
 - `engine/skills/` procedures do not count as user-facing inventory.
 - 17 upstream sources are registered across pinned reference, tracked corpus, normative, and discovery roles.
