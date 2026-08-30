@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: finding-data-lake-assets
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e32f6445e9f80e2dca0bfe14ecf5e7ad53ac2721
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, research, debugging]
+  lifecycle: [discovery, analysis, verification, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy, tool-routing]
+  authority: [read-only]
+  portability: [low]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA e32f6445e9f80e2dca0bfe14ecf5e7ad53ac2721 and contains SKILL.md plus references/search-strategy.md. Strong static evidence includes narrow trigger and explicit exclusions; mandatory target-region acquisition; ambiguity confirmation and abort support; dependency and identity checks; a layered search strategy that stops early rather than enumerating everything; explicit searched/skipped-source reporting; objective confidence gates; reverse lookup before content inspection for S3 paths; a last-resort broad-scan fallback only after narrower mechanisms fail; and strong prompt-injection defenses for customer-authored Glue Discovery context, including treating catalog text as untrusted data, shell-quoting user values, ARN validation, objective short-circuit rules, and filtering sensitive/raw catalog text from output. The experimental Glue Discovery step is gated on CLI-model availability and explicit user opt-in. Authority is read-only because the procedure searches metadata/catalog surfaces and does not authorize table creation or data-query execution. Portability is low because it depends heavily on AWS Glue, S3/S3 Tables, Redshift, AWS credential/region semantics, AWS MCP or CLI tooling, and AWS-specific identifiers. The score is held at 17/20 because several service/API claims are freshness-sensitive, especially experimental Glue Discovery operations, SearchTables coverage, S3 Tables federation behavior, Redshift catalog details, and CLI parameter semantics; the broad-scan fallback also asks the host to create and run a temporary Python/boto3 script, which is operationally reasonable but adds host/tool assumptions and must remain external-host activity rather than repository machinery. Behavioral validation remains not-run.
