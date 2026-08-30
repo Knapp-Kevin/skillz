@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-containers
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 97f3fce0aeb70143e00b7cbde743f24a45673e1b
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [container-deployment, container-operations, container-debugging, infrastructure-guidance]
+  lifecycle: [design, implementation, deployment, operations, troubleshooting]
+  characteristic: [security-aware, operationally-detailed, reference-routed, rollback-aware, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin, including SKILL.md plus ten bundled reference documents. Strong scope boundaries and operational detail cover ECS, Fargate, ECR, ECS Exec, deployment strategies, scaling, networking, logging, and troubleshooting. Safeguards include explicit execution-role versus task-role separation, secret-injection constraints, private-subnet endpoint requirements, lifecycle-policy preview before ECR cleanup, deployment circuit-breaker rollback, health-check grace periods, zero-downtime deployment constraints, and explicit blocking log mode for guaranteed audit/compliance delivery. Authority is mutating because the documented workflows can create repositories, task definitions, services, load balancers, scaling configuration, VPC-related dependencies, deployments, and cloud cost. Portability is medium because practical use depends on AWS-specific services and often AWS CLI, credentials, Docker, Session Manager, CDK, or equivalent host capabilities. Behavioral validation remains not-run.
