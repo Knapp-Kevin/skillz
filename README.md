@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-42-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-111-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-112-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-17-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -87,7 +87,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **111 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **112 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
