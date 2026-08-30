@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-42-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-116-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-117-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-17-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -53,6 +53,8 @@ See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable route and [`engine/ski
 
 [`skills/`](skills/) contains **42 active first-party user-facing skills**, each with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification.json).
 
+Structured semantic review is not a substitute for provenance. Under the mandatory companion-completeness standard, the first-party family still requires explicit provenance reconciliation. The open provenance audit currently records **0/42 standalone first-party provenance companions**; do not describe the first-party family as provenance-complete until that gap is reconciled with truthful evidence.
+
 Browse by purpose through [`skills/categories/`](skills/categories/):
 
 | Category | Typical coverage |
@@ -91,7 +93,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **116 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **117 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -105,6 +107,8 @@ Current quality semantics are defined in [`docs/skill-verification.md`](docs/ski
 - **`rejected` / `retired`**: excluded from normal unchanged selection, but may remain useful bounded prior art.
 
 A composable admitted source is statically complete only when its exact eligible denominator is established and every in-scope skill has current provenance, exact identity/fingerprint when establishable, freshness, license/terms, dependency/authority/portability characterization, controlled tags, structured review evidence, and a decisive current disposition.
+
+Every governed user-facing skill must satisfy the provenance and exact-version companion contract. Missing provenance is a corpus-completeness defect, not an invitation to infer facts or create repository-owned enforcement machinery.
 
 Static completion comes before broad behavioral validation. `skillz` does not own an evaluator, benchmark, test harness, scenario runner, or behavioral runtime. External agents/environments may later produce behavioral evidence for consequential or high-use skills, and that evidence may be stored passively here.
 
@@ -120,6 +124,8 @@ Current admitted-source priority:
 4. continue remaining admitted creator/registered-source curation.
 
 Governed discovery/source-vetting may proceed in parallel. Discovery never grants quality, trust, redistribution authority, installation authority, or automatic admission.
+
+The corpus-wide provenance audit also remains active so existing first-party and third-party governed records meet the same mandatory evidence standard rather than receiving legacy exceptions.
 
 See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living curation ledger and [`CURATED.md`](CURATED.md) for the governed shelf.
 
@@ -137,8 +143,8 @@ See [`CURATION_QUEUE.md`](CURATION_QUEUE.md) for the living curation ledger and 
 | [`CURATION_QUEUE.md`](CURATION_QUEUE.md) | Admitted-source and discovery/source-vetting ledger |
 | [`registry/sources.yaml`](registry/sources.yaml) | Source identity, roles, exact pins, licenses, canonical paths |
 | [`registry/source-signals.yaml`](registry/source-signals.yaml) | Timestamped volatile source-level context |
-| [`registry/local-verification.json`](registry/local-verification.json) | First-party individual review records |
-| [`registry/skills/`](registry/skills/) | Third-party per-skill provenance |
+| [`registry/local-verification.json`](registry/local-verification.json) | First-party individual structured semantic review records; provenance reconciliation remains separate |
+| [`registry/skills/`](registry/skills/) | Per-skill provenance companions; mandatory for governed user-facing skill completeness |
 | [`registry/verification/`](registry/verification/) | Third-party exact-version semantic review evidence |
 | [`engine/skills/`](engine/skills/) | Passive repository-use/curation procedures, excluded from user-facing counts |
 | [`docs/`](docs/) | Architecture, provenance, curation, evaluation evidence, and historical context |
