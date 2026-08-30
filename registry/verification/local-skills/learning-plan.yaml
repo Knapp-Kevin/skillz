@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: learning-plan
+source_id: local-skills
+local_path: "skills/learning-plan/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a544118bd121b354aec330f9a565a338868dd53e
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [planning, research, productivity]
+  lifecycle: [planning]
+  characteristic: [source-driven, evidence-first, test-gated, human-review]
+  authority: [generate-only]
+  portability: [high]
+notes: "Strong real-source verification, demonstrable checkpoints, and explicit slip protocol; schedule creation remains approval-gated and separate."

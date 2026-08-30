@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: inbox-triage
+source_id: local-skills
+local_path: "skills/inbox-triage/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c265af7280a9819ae1fc80292ba24a77c2b28ccd
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [productivity, communication]
+  lifecycle: [operations]
+  characteristic: [decomposition, tool-routing, human-review, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."

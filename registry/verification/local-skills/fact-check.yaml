@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: fact-check
+source_id: local-skills
+local_path: "skills/fact-check/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e58dea59671c8a7c537e27403d6f52e466bf8d86
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "20/20"
+tags:
+  use_case: [research, decision-support, web-search]
+  lifecycle: [verification]
+  characteristic: [evidence-first, decomposition, source-driven, traceable, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."

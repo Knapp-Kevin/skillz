@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: decision-log
+source_id: local-skills
+local_path: "skills/decision-log/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 56e5c574c295546c9e654a9e6a14a9814136f2f4
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [decision-support, documentation]
+  lifecycle: [planning, maintenance]
+  characteristic: [evidence-first, traceable, human-review, risk-aware]
+  authority: [mutating]
+  portability: [medium]
+notes: "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: brief-writer
+source_id: local-skills
+local_path: "skills/brief-writer/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0eb629e92e53a03c26df0ebef15662e1888c25b0
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [decision-support, writing, communication]
+  lifecycle: [planning]
+  characteristic: [evidence-first, context-efficient, human-review, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured."

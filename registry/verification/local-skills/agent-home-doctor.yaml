@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agent-home-doctor
+source_id: local-skills
+local_path: "skills/agent-home-doctor/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d8b41939deec81ef67b96398ae54afee72075459
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "20/20"
+tags:
+  use_case: [repository-maintenance, security]
+  lifecycle: [maintenance]
+  characteristic: [evidence-first, risk-aware, safety-bounded, human-review, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: "Strong evidence-backed cleanup workflow after hardening: exact remediation plans require explicit approval before deletion, config edits, or moves; uncertainty is report-only."

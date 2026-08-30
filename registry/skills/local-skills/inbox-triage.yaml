@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: inbox-triage
+display_name: "Inbox Triage"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/inbox-triage/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/inbox-triage/SKILL.md
+permission_tier: read-only
+portability: medium
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: handoff-writer
+source_id: local-skills
+local_path: "skills/handoff-writer/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8a789ea0dd3b1c89ccac9d50727b06007abcf5c1
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "20/20"
+tags:
+  use_case: [handoff, documentation, communication]
+  lifecycle: [release, maintenance]
+  characteristic: [evidence-first, traceable, context-efficient, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."

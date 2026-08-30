@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: devlog-draft
+source_id: local-skills
+local_path: "skills/devlog-draft/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 073f18ba2c2f7de21015cd072741c395335e9f2e
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [writing, communication, documentation]
+  lifecycle: [planning]
+  characteristic: [evidence-first, traceable, synthesis, human-review]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."

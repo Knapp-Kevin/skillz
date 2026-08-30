@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: week-in-review
+source_id: local-skills
+local_path: "skills/week-in-review/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: cd6671df6042d5a864850f6362d0947d61eb7357
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [productivity, planning]
+  lifecycle: [operations]
+  characteristic: [evidence-first, synthesis, traceable, tool-routing]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."

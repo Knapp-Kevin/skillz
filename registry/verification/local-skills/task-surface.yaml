@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: task-surface
+source_id: local-skills
+local_path: "skills/task-surface/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 97f1ba0b23f3f70da1e39504a1966a3cebd79398
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [productivity, planning, orchestration]
+  lifecycle: [planning, operations]
+  characteristic: [contract-first, orchestration, human-review, traceable, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."

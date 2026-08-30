@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: deck-outline
+display_name: "Deck Outline"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/deck-outline/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/deck-outline/SKILL.md
+permission_tier: generate-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill."

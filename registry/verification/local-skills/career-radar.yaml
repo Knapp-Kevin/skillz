@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: career-radar
+source_id: local-skills
+local_path: "skills/career-radar/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a17f9b53b9ed22c2cd4f715effd73ec7585a316b
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "18/20"
+tags:
+  use_case: [career, research, monitoring]
+  lifecycle: [discovery]
+  characteristic: [retrieval-first, source-driven, synthesis, evidence-first]
+  authority: [read-only]
+  portability: [medium]
+notes: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."

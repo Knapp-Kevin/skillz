@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: week-in-review
+display_name: "Week in Review"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/week-in-review/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/week-in-review/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: compare
+display_name: "Compare"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/compare/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/compare/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."

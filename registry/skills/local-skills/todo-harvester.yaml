@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: todo-harvester
+display_name: "TODO Harvester"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/todo-harvester/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/todo-harvester/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Strong read-only debt-marker triage using blame age plus surrounding-code verification before stale classification; output stays proposal-only."

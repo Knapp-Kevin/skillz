@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: repo-pulse
+source_id: local-skills
+local_path: "skills/repo-pulse/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8d78a04e0993069bc3ecc283c756e420969a88d1
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [monitoring, repository-maintenance]
+  lifecycle: [operations, maintenance]
+  characteristic: [evidence-first, tool-assisted, synthesis, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."

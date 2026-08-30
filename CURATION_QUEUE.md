@@ -53,14 +53,14 @@ Missing provenance is a corpus-completeness defect, not an optional metadata imp
 
 Issue #66 is the active corpus-wide provenance-completeness audit.
 
-A current first-party audit finding establishes:
+Current reconciled state (2026-08-30):
 
 - governed first-party denominator: **42** active user-facing skills;
 - structured semantic review records: **42/42** in `registry/local-verification.json`;
-- standalone first-party provenance companions under `registry/skills/`: **0/42**;
-- therefore the first-party family must not be described as provenance-complete yet.
+- standalone first-party provenance companions under `registry/skills/local-skills/`: **42/42**;
+- therefore the first-party family is companion-complete under the mandatory provenance contract.
 
-The semantic review records remain valid evidence for what they actually establish. They do not substitute for provenance under the current mandatory companion contract. Reconcile the gap from repository history and current evidence without inventing authorship dates, source history, or other unavailable facts. No script, CI gate, scanner, or repository runtime is required or desired.
+Reconciliation method (evidence-preserving, no invented facts): each provenance companion identifies the repository itself as source (`source_id: local-skills`, `relationship: first-party`, `source_class: first-party`, MIT), with `curated_at` taken from repository history (the first-party corpus landed 2026-08-30), `source_snapshot_revision` bound to the reconciliation commit, review facts carried from `registry/local-verification.json` (`review_status: verified-structured`), upstream fields omitted as not applicable to first-party origin, and unknown facts recorded as unknown. No script, CI gate, scanner, or repository runtime is required or desired.
 
 ## Completed source-level review evidence
 

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: mcp-vetting
+source_id: local-skills
+local_path: "skills/mcp-vetting/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 806e79f593446ad15938249898e15230208f2d81
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [security, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, risk-aware, source-driven, traceable, human-review]
+  authority: [read-only]
+  portability: [high]
+notes: "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."

@@ -50,7 +50,7 @@ Pinned third-party repositories may contain their own code or tooling. They rema
 ## Inventory boundaries
 
 - 42 active first-party user-facing skills have individual structured semantic reviews.
-- Under the mandatory provenance contract, those semantic reviews do not substitute for provenance companions. The active provenance audit currently establishes **0/42 standalone first-party provenance companions** under `registry/skills/`; this is an explicit corpus-completeness defect to reconcile, not a reason to infer missing history.
+- Under the mandatory provenance contract, those semantic reviews do not substitute for provenance companions. The active provenance audit recorded a 0/42 standalone first-party gap, reconciled 2026-08-30: **42/42 first-party provenance companions** now exist under `registry/skills/local-skills/`, authored from repository history and current review evidence, not inferred history.
 - 12 pinned external corpora provide the broad 500+ reference surface.
 - 120 current exact-version third-party verification companion files are persisted.
 - AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; **20/72** currently have persisted exact-version provenance + verification companion pairs on `main`. The latest reconciliation is `finding-data-lake-assets`, bound to package tree SHA `e32f6445e9f80e2dca0bfe14ecf5e7ad53ac2721` at the registered AWS pin, with decisive current state `verified` at 17/20 and behavioral evidence `not-run`. The remaining companion closure is active evidence reconciliation work, not evidence that prior review disappeared.
@@ -99,7 +99,7 @@ Static corpus completion comes before broad behavioral validation. `skillz` owns
 ## Current curation priority
 
 1. Finish AWS Agent Toolkit current-standard companion reconciliation, preserving the prior 72/72 review evidence and re-reviewing only genuine evidence gaps.
-2. Reconcile the mandatory provenance-completeness audit, including the known 0/42 standalone first-party provenance gap.
+2. First-party provenance reconciliation (42/42) is complete; remaining audit work is third-party companion closure (AWS and later sources).
 3. Complete Microsoft Skills.
 4. Complete Microsoft Azure Skills.
 5. Continue remaining admitted creator/registered-source curation.

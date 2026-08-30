@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: daily-briefing
+source_id: local-skills
+local_path: "skills/daily-briefing/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 64ee4849a7a06860d8f6ddbd23ae5d42591ffee1
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [productivity, planning]
+  lifecycle: [operations]
+  characteristic: [synthesis, tool-routing, context-efficient, evidence-first]
+  authority: [read-only]
+  portability: [medium]
+notes: "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."

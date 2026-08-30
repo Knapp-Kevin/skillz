@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: mcp-pulse
+source_id: local-skills
+local_path: "skills/mcp-pulse/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [monitoring, security, research]
+  lifecycle: [discovery, maintenance]
+  characteristic: [source-driven, risk-aware, synthesis, retrieval-first]
+  authority: [read-only]
+  portability: [medium]
+notes: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."

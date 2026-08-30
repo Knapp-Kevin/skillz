@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: inference-pulse
+source_id: local-skills
+local_path: "skills/inference-pulse/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bc90e5248c04c408c8c5a44bea62b1d66a7fb143
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [monitoring, research]
+  lifecycle: [discovery, maintenance]
+  characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
+  authority: [read-only]
+  portability: [medium]
+notes: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."

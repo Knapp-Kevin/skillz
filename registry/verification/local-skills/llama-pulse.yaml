@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: llama-pulse
+source_id: local-skills
+local_path: "skills/llama-pulse/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "16/20"
+tags:
+  use_case: [monitoring, research]
+  lifecycle: [discovery, maintenance]
+  characteristic: [source-driven, retrieval-first, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."

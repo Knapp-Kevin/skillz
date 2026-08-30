@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: compare
+source_id: local-skills
+local_path: "skills/compare/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b933a8266b8eda18807de9b9717436c54af0362d
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [decision-support, research, evaluation]
+  lifecycle: [planning, verification]
+  characteristic: [evidence-first, metric-driven, human-review, source-driven, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: standup-writer
+source_id: local-skills
+local_path: "skills/standup-writer/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a1cd8678794c90bbaf4f5f2a70d469576ec4b633
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "17/20"
+tags:
+  use_case: [productivity, communication]
+  lifecycle: [operations]
+  characteristic: [evidence-first, synthesis, traceable, tool-routing]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: gemini-pulse
+source_id: local-skills
+local_path: "skills/gemini-pulse/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80
+characterized_at: 2026-08-30
+reviewed_at: 2026-08-30
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "16/20"
+tags:
+  use_case: [monitoring, research]
+  lifecycle: [discovery, maintenance]
+  characteristic: [source-driven, retrieval-first, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."

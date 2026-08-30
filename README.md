@@ -53,7 +53,7 @@ See [`BOOTSTRAP.md`](BOOTSTRAP.md) for the human-readable route and [`engine/ski
 
 [`skills/`](skills/) contains **42 active first-party user-facing skills**, each with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification.json).
 
-Structured semantic review is not a substitute for provenance. Under the mandatory companion-completeness standard, the first-party family still requires explicit provenance reconciliation. The open provenance audit currently records **0/42 standalone first-party provenance companions**; do not describe the first-party family as provenance-complete until that gap is reconciled with truthful evidence.
+Structured semantic review is not a substitute for provenance. The first-party provenance gap has been reconciled (2026-08-30): **42/42 standalone first-party provenance companions** now exist under [`registry/skills/local-skills/`](registry/skills/local-skills/), truthfully identifying the repository as source with review facts carried from `registry/local-verification.json`.
 
 Browse by purpose through [`skills/categories/`](skills/categories/):
 

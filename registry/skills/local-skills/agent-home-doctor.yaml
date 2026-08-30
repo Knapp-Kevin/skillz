@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agent-home-doctor
+display_name: "Agent Home Doctor"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/agent-home-doctor/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: in-repo
+local_path: skills/agent-home-doctor/SKILL.md
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: "None beyond the host agent conversation runtime"
+import_eligibility: eligible-standalone
+rationale: "Strong evidence-backed cleanup workflow after hardening: exact remediation plans require explicit approval before deletion, config edits, or moves; uncertainty is report-only."
