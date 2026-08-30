@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-blocks
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3b99b8f25fa86e316a11edac229cd34bab5d215d
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [full-stack-development, application-scaffolding, api-development, cloud-application-development]
+  lifecycle: [design, implementation, local-development, deployment, operations]
+  characteristic: [security-aware, version-specific, reference-routed, infrastructure-from-code, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. Strong trigger scope and concise AWS Blocks architecture guidance, with installed-version package READMEs explicitly treated as authoritative for detailed APIs. Security guidance is concrete and unusually useful: authentication is required for non-public methods, secrets belong in secret AppSettings rather than hardcoded values or .env files, user data requires schemas, wildcard IAM and CORS are discouraged, FileBucket public access is constrained, cross-domain cookie settings are explicit, WAF/throttling and monitoring are recommended, and logging guidance warns that serialization safety does not equal secret redaction. Authority is mutating because scaffolding writes project files and sandbox/deploy workflows can create or modify AWS resources and incur cost. Portability is medium because the skill depends on Node/npm, @aws-blocks packages, installed-version documentation, and AWS/CDK semantics for deployed environments. Behavioral validation remains not-run.
