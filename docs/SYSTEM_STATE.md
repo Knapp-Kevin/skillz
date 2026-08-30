@@ -4,13 +4,13 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-08-30 |
+| **Last updated** | 2026-08-31 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 42 |
-| **Persisted third-party review companions** | 117 |
+| **Persisted third-party review companions** | 118 |
 | **Pinned external corpora** | 12 |
 | **Registered sources** | 17 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
@@ -52,8 +52,8 @@ Pinned third-party repositories may contain their own code or tooling. They rema
 - 42 active first-party user-facing skills have individual structured semantic reviews.
 - Under the mandatory provenance contract, those semantic reviews do not substitute for provenance companions. The active provenance audit currently establishes **0/42 standalone first-party provenance companions** under `registry/skills/`; this is an explicit corpus-completeness defect to reconcile, not a reason to infer missing history.
 - 12 pinned external corpora provide the broad 500+ reference surface.
-- 117 current exact-version third-party verification companion files are persisted.
-- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 17/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`amazon-bedrock`, `amazon-opensearch-service`, `aws-billing-and-cost-management`, `aws-blocks`, `aws-cdk`, `aws-cleanrooms`, `aws-cloudformation`, `aws-containers`, `aws-iam`, `aws-messaging-and-streaming`, `aws-observability`, `aws-sdk-js-v3-usage`, `aws-sdk-python-usage`, `aws-sdk-swift-usage`, `aws-secrets-manager`, `aws-serverless`, and `connecting-to-data-source`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
+- 118 current exact-version third-party verification companion files are persisted.
+- AWS Agent Toolkit has an established eligible denominator of 72 skills and a prior full-pass disposition of 70 verified / 2 rejected; 18/72 currently have persisted exact-version provenance + verification companion pairs on `main` (`amazon-bedrock`, `amazon-opensearch-service`, `aws-billing-and-cost-management`, `aws-blocks`, `aws-cdk`, `aws-cleanrooms`, `aws-cloudformation`, `aws-containers`, `aws-iam`, `aws-messaging-and-streaming`, `aws-observability`, `aws-sdk-js-v3-usage`, `aws-sdk-python-usage`, `aws-sdk-swift-usage`, `aws-secrets-manager`, `aws-serverless`, `connecting-to-data-source`, and `developing-applications-on-managed-service-for-apache-flink`). The remaining companion closure is active reconciliation work, not evidence that prior review disappeared.
 - Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
 - `engine/skills/` procedures do not count as user-facing inventory.
 - 17 upstream sources are registered across pinned reference, tracked corpus, normative, and discovery roles.
