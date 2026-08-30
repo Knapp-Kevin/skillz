@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-cdk
+display_name: AWS CDK
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/core-skills/aws-cdk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: external-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: f5ba81082aafe865ffe947ceabc574a7a0353e57
+upstream_last_updated_at: 2026-06-11T09:06:12Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CDK CLI, AWS CLI/credentials, TypeScript or Python project tooling as applicable, CloudFormation APIs, and the source-intact references bundled with the skill
+import_eligibility: exact-version-reference
+rationale: Strong CDK authoring and operations guidance with explicit non-use boundaries, diff-before-deploy discipline, replacement/data-loss warnings, rollback recovery, least-privilege/security guidance, and source-intact troubleshooting references. Bootstrap, deploy, import, refactor, drift, rollback, and destroy-related operations require host authority, credentials, cost awareness, and user-context checks.
