@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-opensearch-service
+display_name: Amazon OpenSearch Service
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/amazon-opensearch-service/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 3a11a355f996cc46a59249ae245e5f29ceed8b66
+upstream_last_updated_at: 2026-06-19T06:38:52Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/amazon-opensearch-service
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Amazon OpenSearch Service and OpenSearch Serverless; AWS CLI for control-plane operations; awscurl or equivalent SigV4-capable HTTP client for data-plane calls; optional AWS MCP server; Amazon Bedrock or SageMaker for embedding/model workflows; OpenTelemetry and Data Prepper for trace analytics; OpenSearch Ingestion for pipelines; current AWS/OpenSearch documentation for service capabilities, instance families, quotas, engine/version support, pricing, migration tooling, and feature behavior
+import_eligibility: exact-version-reference
+rationale: Unified OpenSearch guidance spanning migration, provisioning, vector/semantic/hybrid search, log analytics, and trace analytics. The package contains extensive operational references and reusable report/assets, with strong safeguards against credential leakage and unsupported cost estimates plus explicit routing across distinct capabilities. Authority is mutating because documented procedures provision, upgrade, configure, migrate, query, and troubleshoot live OpenSearch resources using the external host's credentials. Portability is medium because search, observability, migration, and sizing concepts transfer while the concrete control plane, service tiers, migration tooling, IAM/security model, and many operational examples are AWS-specific. Exact package identity is preserved at the pinned source tree; bundled assets and references remain intact upstream material rather than repository-owned execution machinery.
