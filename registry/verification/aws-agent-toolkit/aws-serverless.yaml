@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-serverless
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5148dca2f4aee68e6fc7b95807279396332c5cb3
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [architecture, cloud, deployment, debugging, observability, security]
+  lifecycle: [design, implementation, verification, release, operations]
+  characteristic: [production-oriented, risk-aware, source-driven, reference-heavy]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 5148dca2f4aee68e6fc7b95807279396332c5cb3 and includes SKILL.md, a Powertools handler template, and nine focused reference documents covering architecture, Lambda, API Gateway, event sources, orchestration, concurrency, deployment, production readiness, and troubleshooting. Strong static evidence includes an explicit freshness warning for runtime versions, quotas, and feature matrices; routing to the most specific reference; least-privilege execution-role guidance; Secrets Manager/SSM handling instead of plaintext environment secrets; input validation; DLQs/on-failure destinations; partial batch failure handling; idempotency; concurrency controls; rollout/rollback safeguards; observability requirements; and concrete anti-patterns for recursive triggers and unsafe integration patterns. Authority is mutating because the procedures build, deploy, configure, debug, and optimize live AWS resources using the external host's credentials and tool access. Portability is medium because serverless design and reliability patterns transfer well while the concrete implementation surface is deeply AWS-specific. External agents should verify volatile quotas, runtime support, service capabilities, and pricing/feature assumptions against current AWS documentation before consequential use. Bundled templates and reference material remain upstream source artifacts and do not constitute repository-owned runtime machinery. Behavioral validation remains not-run.
