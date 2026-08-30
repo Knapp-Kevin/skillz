@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-42-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-118-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-119-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-17-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -93,7 +93,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **118 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **119 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -123,7 +123,9 @@ Current admitted-source priority:
 3. complete Microsoft Azure Skills;
 4. continue remaining admitted creator/registered-source curation.
 
-Governed discovery/source-vetting may proceed in parallel. Discovery never grants quality, trust, redistribution authority, installation authority, or automatic admission.
+AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **19/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. The remaining AWS work is evidence reconciliation first, not automatic re-review.
+
+Governed discovery/source-vetting may proceed in parallel. Discovery never grants quality, trust, redistribution authority, installation authority, or automatic admission. [`docs/discovery-surfaces.md`](docs/discovery-surfaces.md) records intentional discovery inputs, including the connected Creator Technical Resource Catalog, without treating those surfaces as provenance or quality evidence.
 
 The corpus-wide provenance audit also remains active so existing first-party and third-party governed records meet the same mandatory evidence standard rather than receiving legacy exceptions.
 
