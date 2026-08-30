@@ -1,6 +1,6 @@
 # Governance Index
 
-**Last reviewed:** 2026-08-30
+**Last reviewed:** 2026-08-31
 
 This file maps the current control surfaces for `skillz`.
 
@@ -32,14 +32,15 @@ The canonical physical boundary is:
 
 The live tree now reflects this boundary. Legacy top-level `vendor/...` source paths have been reconciled into `skills/sources/<source-id>/`; historical references may remain only where clearly non-authoritative.
 
-## Tier 2: source identity, admission, and provenance
+## Tier 2: source identity, admission, provenance, and discovery
 
-These define where material came from and how `skillz` is allowed to use it. They do not prove individual skill quality.
+These define where material came from, how candidates are found, and how `skillz` is allowed to use them. They do not prove individual skill quality.
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
 | Source registry | `registry/sources.yaml` | third-party source identity, role, inclusion, exact pin/reference, license/terms, canonical physical path where locally admitted |
 | Source context/signals | `registry/source-signals.yaml` | timestamped volatile source-level context kept separate from skill quality |
+| Governed discovery surfaces | `docs/discovery-surfaces.md` | intentional lead-generation inputs and promotion rules; discovery intelligence never substitutes for canonical provenance or exact-version quality evidence |
 | Skill provenance companions | `registry/skills/` | mandatory per-skill provenance for every governed user-facing skill; source/path/revision/freshness/license/relationship facts are recorded truthfully and unknowns remain unknown |
 | Candidate intake policy | `docs/candidate-intake.md` | definitive issue-first pre-admission workflow for newly discovered third-party candidates |
 | Candidate evaluation issue template | `.github/ISSUE_TEMPLATE/skill-candidate-evaluation.md` | required evidence shape for new candidate evaluation issues |
@@ -48,6 +49,8 @@ These define where material came from and how `skillz` is allowed to use it. The
 | Curation policy | `docs/curation-policy.md` | discovery, admission, static review, refresh, rejection, retirement, and provenance-completeness semantics |
 
 Discovery surface, candidate source, admitted source, and individually verified skill are distinct states. Discovery never grants trust, redistribution authority, or unchanged-reuse eligibility.
+
+The connected Creator Technical Resource Catalog is an intentional internal discovery surface documented in `docs/discovery-surfaces.md`. Its rows, scores, verification labels, creator attributions, and recommendations are discovery intelligence only. Any lead promoted from that catalog must still be resolved independently to its canonical upstream source, terms, exact identity, package boundary, and issue-scoped evaluation evidence.
 
 For new third-party discoveries, the definitive lifecycle begins with an evaluation issue before corpus admission:
 
@@ -74,6 +77,8 @@ These determine what the external host agent may treat as reviewed evidence.
 A source can be official, reputable, popular, current, and locally present while an individual skill remains unverified. Popularity and reputation are context, not proof.
 
 Static source completion requires an established eligible denominator and a decisive current state for every in-scope skill, plus truthful provenance for every governed record. Active `unverified`, `stale`, and legacy `trusted-baseline` do not satisfy completion. Rejected or retired material may remain useful bounded prior art.
+
+For historically reviewed admitted corpora, current-standard companion reconciliation must begin by checking existing companions and recoverable prior evidence. Re-review only genuine evidence gaps; do not erase or duplicate trustworthy prior work merely because the storage contract became stricter.
 
 ## Tier 4: passive catalog and browsing surfaces
 
@@ -128,4 +133,6 @@ When a current control surface changes:
 7. treat any current first-party claim that `skillz` runs, executes, schedules, monitors, crawls, installs, fetches, synchronizes, generates, tests, validates, or operates something as architecture/documentation drift;
 8. treat any normal-use instruction that makes `skillz` the destination for a user-derived skill, or implies that `CREATE` means repository admission, as architecture/documentation drift;
 9. treat any governed user-facing skill lacking truthful provenance evidence as corpus-completeness drift;
-10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review and a justified admission decision as admission-process drift.
+10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review and a justified admission decision as admission-process drift;
+11. treat any discovery-surface score, verification label, creator attribution, or recommendation copied into governed provenance/quality evidence without independent canonical-source verification as evidence-process drift;
+12. treat unnecessary re-review of historically reviewed exact material, when compatible prior evidence can be recovered, as curation-process drift.
