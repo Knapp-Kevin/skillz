@@ -1,6 +1,6 @@
 # Skill Companion Metadata Contract
 
-`skillz` uses companion metadata so an agent can reason about third-party skills without pretending that source branding, popularity, or physical presence proves quality.
+`skillz` uses companion metadata so an agent can reason about skills without pretending that source branding, popularity, physical presence, or familiarity proves identity or quality.
 
 The contract separates **provenance and operational facts**, **exact-version quality evidence**, and **source-level context**.
 
@@ -13,6 +13,10 @@ registry/skills/<source-id>/<skill-name>.yaml
 ```
 
 This file answers: **what is this skill, where did it come from, what does it depend on, what authority does it carry, and under what terms may it be used?**
+
+A provenance companion is **mandatory for every governed user-facing skill**. A skill without provenance is incomplete corpus material and must not be represented as companion-complete, verified inventory, regardless of whether it is first-party, imported, vendored/pinned, adapted, or externally referenced.
+
+For first-party skills, provenance must truthfully identify the repository as the source/relationship and record the applicable local identity and review facts rather than inventing an upstream publisher. For third-party or adapted material, preserve canonical source identity and applicable license/attribution obligations.
 
 Required when establishable:
 
@@ -31,7 +35,7 @@ Required when establishable:
 - `curated_at`
 - `last_checked_at`
 - `availability`
-- `local_path` when vendored/imported
+- `local_path` when physically present in the governed repository
 - `permission_tier`
 - `portability`
 - `review_status`
@@ -42,7 +46,7 @@ Required when establishable:
 
 Optional evidence-backed fields include `upstream_first_seen_at`, `usage_evidence`, and `reception_evidence`.
 
-Do not infer skill age, usage duration, or reception from repository age, stars, or general source reputation.
+Do not infer skill age, usage duration, or reception from repository age, stars, or general source reputation. Unknown facts are recorded as unknown or omitted where the schema permits; they are never guessed merely to satisfy completeness theater.
 
 ## 2. Exact-version verification companion
 
@@ -54,7 +58,7 @@ registry/verification/<source-id>/<skill-name>.yaml
 
 This file answers: **what quality state applies to this exact canonical skill content?**
 
-It owns:
+Every governed user-facing skill must have a verification companion before it is represented as statically complete. The record owns:
 
 - fingerprint algorithm and canonical content hash;
 - characterization/review timestamps;
@@ -129,14 +133,18 @@ Do not use "we only borrowed a component" as a magical exemption from licensing,
 
 ## 7. Completeness rule
 
-An individually governed third-party skill is companion-complete when:
+A governed user-facing skill is companion-complete only when:
 
-1. its provenance companion contains all establishable required facts;
+1. its provenance companion exists and contains all establishable required facts;
 2. unknown/unavailable facts are explicit rather than guessed;
-3. its verification companion binds to canonical content;
+3. its verification companion exists and binds to canonical content;
 4. controlled metadata is present;
 5. structured review has a decisive quality state;
 6. behavioral validation status is explicit, including `not-run` when appropriate;
 7. an agent can distinguish exact-version quality from source reputation without ambiguity.
 
-A broad vendored or tracked source without per-skill companions remains reference/discovery corpus. It is not silently promoted to governed trusted inventory.
+**Missing provenance is a blocking completeness defect.** Such a skill may remain visible as historical/reference material while being repaired, but it must not be counted as provenance-complete, verification-complete, or statically complete governed inventory.
+
+This rule applies to existing skills as well as future admissions. Legacy presence does not waive the contract.
+
+A broad pinned or tracked source without per-skill companions remains reference/discovery corpus. It is not silently promoted to governed trusted inventory.
