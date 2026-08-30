@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-iam
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5da0a0c41f57fbf7470deb7970a5f403ab40997d
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [iam-policy-design, iam-role-management, least-privilege, authorization-troubleshooting]
+  lifecycle: [design, implementation, deployment, operations, troubleshooting]
+  characteristic: [security-critical, least-privilege, reference-routed, freshness-aware, escalation-aware]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin, covering SKILL.md plus four bundled reference documents. Strong safeguards include explicit official-document freshness checks, ForAllValues/ForAnyValue condition-key safety, confused-deputy protection, scoped iam:PassRole guidance, explicit privilege-escalation warnings, role/trust-policy hygiene, and separation between deterministic source-code analysis and service-reference fallback. Authority is mutating because operational workflows can create or alter IAM roles, policies, credentials, trust relationships, and related AWS authorization state; policy upload is explicitly gated on user confirmation. Portability is medium because practical use is AWS-specific and supported-language source-code policy generation mandates uv/uvx plus iam-policy-autopilot, while fallback paths require service-reference query capability or curl/jq. The upstream instruction invokes iam-policy-autopilot@latest rather than a pinned tool version, so an external host should verify that dependency at use time; this does not create repository-owned execution. Behavioral validation remains not-run.
