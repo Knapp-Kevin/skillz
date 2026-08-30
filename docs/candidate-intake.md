@@ -10,6 +10,8 @@ This policy refines the discovery and curation lifecycle in `docs/curation-polic
 
 A candidate issue is required before a newly discovered third-party skill or source family is admitted to the governed corpus.
 
+The issue-first rule governs **new admission**, not whether provenance is optional. Provenance is mandatory for every governed user-facing skill, including existing skills. Newly discovered candidates accumulate pre-admission provenance evidence in the issue first; after admission, finalized provenance and verification companions are persisted with the exact admitted identity.
+
 ## What belongs in the issue
 
 The issue is the pre-admission evidence workspace. Establish, when applicable:
@@ -52,9 +54,23 @@ Before the issue reaches a justified admission result:
 - do not create final provenance or verification companions that imply admission or review completion;
 - do not count the candidate in governed corpus totals.
 
-After admission is justified, persist only the material appropriate to the decision and bind provenance/verification metadata to the **exact evaluated identity**. If source material remains external or reference-only, metadata must say so truthfully.
+After admission is justified, persist only the material appropriate to the decision and bind provenance/verification metadata to the **exact evaluated identity**. A newly admitted governed skill is not complete until those companions exist. If source material remains external or reference-only, metadata must say so truthfully.
 
 Rejection is a valid result. Preserve the reason so later agents do not repeatedly rediscover the same defect or duplication problem.
+
+## Existing-corpus rule
+
+Existing governed user-facing skills are held to the same provenance and exact-version metadata contract. Historical presence, prior scoring, first-party authorship, or inclusion in a catalog does not waive provenance requirements.
+
+When an existing governed skill lacks required provenance or exact-version metadata:
+
+1. record the gap as corpus incompleteness;
+2. establish or repair the missing evidence from authoritative repository/upstream history;
+3. do not invent unavailable facts;
+4. do not count the record as companion-complete or statically complete until repaired;
+5. preserve the correction through normal repository history.
+
+This is passive governance enforcement. It requires no repository-owned scanner, CI job, script, test runner, or background process. The external agent checks the contract during curation and records the resulting evidence.
 
 ## Source-family issues versus individual-skill issues
 
