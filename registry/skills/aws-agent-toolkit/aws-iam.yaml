@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-iam
+display_name: AWS IAM
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-iam/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 8dc8e0632c16fb626466d8bd26ef92a5de113a4e
+upstream_last_updated_at: 2026-06-30T14:54:21Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-iam
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS IAM, STS, Organizations, and service-authorization semantics; official AWS documentation for freshness checks; AWS MCP, CLI, or SDK for operational workflows; uv/uvx plus iam-policy-autopilot for supported-language source-code policy generation; curl and jq or an equivalent service-reference query capability for fallback policy generation; four bundled reference documents
+import_eligibility: exact-version-reference
+rationale: High-value IAM correction and workflow reference covering policy evaluation edge cases, trust policies, STS, Organizations, SAML/MFA, least-privilege policy generation, service roles, confused-deputy protection, iam:PassRole escalation risk, and condition-key safety. It explicitly requires current official-document verification for volatile IAM facts. Operational use can create or modify roles, policies, credentials, trust relationships, and other authorization state, and the policy-generation workflow may install or invoke external tooling, so use requires current host/user authority. The pinned source itself remains passive reference material; its unpinned iam-policy-autopilot@latest instruction is an operational dependency to evaluate at use time, not repository-owned execution.
