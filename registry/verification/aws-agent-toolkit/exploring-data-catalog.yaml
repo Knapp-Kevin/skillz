@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: exploring-data-catalog
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cf16547d48f062075c8204a793bb92052c35333e
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, research, debugging, security]
+  lifecycle: [discovery, analysis, verification, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy, tool-routing]
+  authority: [read-only]
+  portability: [low]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA cf16547d48f062075c8204a793bb92052c35333e and contains SKILL.md plus references/discovery-checklist.md. Strong static evidence includes a narrow inventory/audit trigger with explicit exclusions for specific-data search, query execution, and table creation; mandatory region acquisition and scope confirmation; explicit abort support; complete pagination requirements; AWS identity/tool checks; a separately gated experimental Glue Discovery context lookup requiring both CLI-model availability and explicit user opt-in; mandatory treatment of customer-authored catalog context as untrusted data rather than instructions; shell-quoting and ARN validation guidance; output filtering to avoid echoing raw potentially sensitive catalog descriptions/forms; explicit prohibition on Athena query execution; and clear routing across Glue, S3 Tables, Redshift-federated, and remote Iceberg catalogs. Authority is read-only because the procedure inventories metadata and analyzes catalog structure without authorizing writes. Portability is low because it depends heavily on AWS Glue/S3 Tables semantics, AWS MCP or CLI, credentials, regions, and service-specific APIs. The score is held at 17/20 because several operational claims are freshness-sensitive, especially experimental Glue Discovery operation availability and schemas, get-catalogs behavior, S3 Tables/Glue registration semantics, federated catalog fields, and CLI/API parameter behavior. The bundled checklist also describes profiling and completeness analysis that may require data access beyond the core metadata-only inventory unless the host keeps the read-only/no-query boundary explicit. Before consequential use, an external agent should verify current AWS Glue Discovery, catalog, and S3 Tables API behavior against authoritative AWS documentation. Behavioral validation remains not-run.
