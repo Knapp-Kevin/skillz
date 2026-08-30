@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-sdk-python-usage
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b5a86516c050d6ff82d964d2e1105c34095e4ad6
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [aws-sdk, python, boto3, botocore, service-integration, application-development]
+  lifecycle: [design, implementation, troubleshooting, optimization]
+  characteristic: [security-aware, dependency-aware, reference-routed, version-sensitive, cloud-specific]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA b5a86516c050d6ff82d964d2e1105c34095e4ad6 and includes SKILL.md plus seven references covering configuration, credentials, DynamoDB, error handling, pagination, S3, and waiters. Strong static evidence includes session/profile guidance instead of embedded credentials; client reuse; actionable exception handling with typed client exceptions and correct botocore ClientError import; paginator and waiter patterns; explicit retry, timeout, and connection-pool configuration; separation of main/exit behavior from business logic; and mandatory routing to dedicated S3 and DynamoDB references for service-specific work. Authority is mutating because examples and procedures can invoke AWS service APIs, including create/update/delete operations, under the external host's credentials. Portability is medium because Python structure and error-handling patterns transfer conceptually while boto3/botocore interfaces and AWS service semantics are provider-specific. Freshness is the principal weakness: statements about resource-interface coverage, thread safety, SDK behavior, and service-specific APIs can change and the skill does not provide a general freshness check. External agents should confirm consequential version-sensitive claims against current boto3/botocore and AWS service documentation. Behavioral validation remains not-run.
