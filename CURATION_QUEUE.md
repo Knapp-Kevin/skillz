@@ -15,11 +15,11 @@ Current depth includes:
 - **42 first-party user-facing skills**, each with structured local semantic review metadata;
 - **12 pinned upstream reference corpora** exposed under `skills/sources/`;
 - a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
-- **118 currently persisted exact-version third-party verification companion files**;
+- **119 currently persisted exact-version third-party verification companion files**;
 - historical source-level curation records documenting **at least 210 reviewed external skill entry points** across nine corpora;
 - additional partially reviewed admitted corpora and active discovery candidates.
 
-The difference between the 118 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
+The difference between the 119 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
 
 ## Curation model
 
@@ -28,6 +28,8 @@ The lifecycle is:
 **discovery surface → candidate issue/source → source-vetting for identity/terms/relevance/role → admitted corpus/reference/tracked source when justified → individual exact-version review → user-fit decision**
 
 New third-party discoveries use the issue-first intake workflow. The candidate issue is the pre-admission evidence workspace; candidate material is not persisted as governed corpus inventory until the issue establishes a justified admission result. Finalized provenance and verification companions must bind to the exact evaluated identity.
+
+Intentional discovery inputs are documented in [`docs/discovery-surfaces.md`](docs/discovery-surfaces.md). The connected Creator Technical Resource Catalog is useful lead-generation and gap-analysis intelligence, but its scores, verification labels, creator attributions, and summaries are not `skillz` provenance or individual quality evidence. Resolve every promoted lead to its canonical upstream source before issue-scoped evaluation.
 
 Discovery does not grant quality, trust, redistribution authority, installation authority, or automatic corpus admission. Source reputation never grants blanket skill quality. A source may be excellent while individual skills are unsuitable unchanged. Conversely, a rejected whole skill may still contain a useful mechanism worth extracting with attribution and licensing respected.
 
@@ -80,7 +82,7 @@ That is **210 reviewed published/eligible entry points** across those nine corpo
 
 ### Evidence reconciliation lane
 
-Current `registry/verification/` contains 118 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
+Current `registry/verification/` contains 119 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
 
 Do **not** automatically redo those reviews from scratch. First locate and reconcile the prior evidence into the current provenance/verification model where it is still trustworthy and identity-compatible. Re-review only where exact content identity, licensing, dependencies, or the prior decision cannot be established honestly.
 
@@ -99,10 +101,10 @@ These were already identified as unfinished enrichment work. They are not core b
 
 - Pinned reference: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
 - Historical denominator: **72** skill entry points, 14 core + 58 specialized.
-- Prior work: all 72 entry points were inspected against the registered pin.
-- Current exact companion closure: **18/72** persisted provenance + verification pairs on `main`.
-- Latest reconciled specialized skill: `developing-applications-on-managed-service-for-apache-flink`, package tree `d25d5b3e35634d1af706264856c4748770c8b20f`, decisive state `verified` at 17/20, behavioral evidence `not-run`.
-- Remaining work: reconcile/complete exact provenance, freshness/content identity, licensing/dependency/authority metadata, and decisive per-skill companion records before claiming source-level curation closure.
+- Prior work: all 72 entry points were inspected against the registered pin, with a prior full-pass disposition of 70 verified / 2 rejected.
+- Current exact companion closure: **19/72** persisted provenance + verification pairs on `main`.
+- Latest reconciled specialized skill: `exploring-data-catalog`, bound to the registered pin with a decisive current state of `verified`; behavioral evidence remains `not-run`.
+- Remaining work: **53** current-standard companion gaps. Search for compatible prior evidence and existing companions before any re-review. Re-review only when exact content identity, licensing, dependencies, authority, freshness, or prior decisive evidence cannot be recovered truthfully.
 
 ### Microsoft Skills
 
@@ -178,7 +180,8 @@ Keep as discovery candidates until source-vetted and issue-scoped:
 - `Emmraan/agent-skills` — very large aggregate with provenance and duplication complexity;
 - `luckys/agent-skills` — likely high generic overlap; do not bulk-admit;
 - GitHub Awesome Copilot — registered dynamic discovery surface, never blanket trusted;
-- Agent Skills Specification — normative format/portability reference, not normal installable inventory.
+- Agent Skills Specification — normative format/portability reference, not normal installable inventory;
+- connected Creator Technical Resource Catalog — internal governed discovery intelligence for identifying leads and corpus gaps, never a canonical source or verification authority.
 
 New candidates should be queued as evaluation issues before corpus admission. Discovery/source-vetting issues #62 through #65 are examples of that pre-admission workflow; they do not themselves grant admission.
 
@@ -200,7 +203,8 @@ Those records are useful prior art. They should be re-checked for current proven
 8. **Keep the engine passive.** Curation is performed by whichever agent/human is doing the work; this repository does not crawl, poll, schedule, or execute itself.
 9. **No model-performance obligation.** Review the instructions and skill material as well as practical; do not turn curation into arbitrary multi-model benchmarking.
 10. **Use issue-first intake for new discoveries.** Accumulate pre-admission evidence on the evaluation issue; persist governed skill/source material and finalized companions only after a justified admission decision.
-11. **Update this ledger when meaningful work lands.** The ledger should make the depth and frontier of the repository legible to the next reader.
+11. **Search before re-reviewing.** For historically reviewed admitted corpora, check current companions and recoverable prior evidence first. Re-review only genuine evidence gaps.
+12. **Update this ledger when meaningful work lands.** The ledger should make the depth and frontier of the repository legible to the next reader.
 
 ## Current posture
 
