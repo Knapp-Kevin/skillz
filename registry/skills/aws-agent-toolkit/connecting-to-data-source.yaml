@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: connecting-to-data-source
+display_name: Connect to Data Source
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/connecting-to-data-source/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/connecting-to-data-source
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP tools or AWS CLI; valid AWS credentials and target region; AWS Glue connections and network configuration; AWS Secrets Manager and IAM; RDS/Aurora/Redshift discovery where applicable; VPC subnets/security groups/routing and S3 connectivity for private sources; Snowflake or BigQuery source credentials/configuration when selected; Glue ETL, Athena federated connectors, or Glue Crawlers for engine-level verification
+import_eligibility: exact-version-reference
+rationale: Focused AWS Glue connection creation and troubleshooting package for JDBC databases, Redshift, Snowflake, and BigQuery. The exact package contains SKILL.md plus seven references for BigQuery, credential security, discovery, JDBC, network setup, Snowflake, and troubleshooting, and is bound to tree SHA af4c577873ceabf3cd9b0b90470754ad1e51d8e8 at the registered AWS snapshot. It separates connection registration from data movement, inspects existing connections before creation, requires user-provided connection hints rather than guessing, prefers Secrets Manager or supported IAM database authentication, prohibits plaintext credentials in chat/logs, requires confirmation before creating a new secret, and prohibits credential rotation without confirmation. Authority is mutating because the documented host workflow can create Secrets Manager material and Glue connections and can require VPC/security/IAM changes or smoke-test jobs. Portability is low because the procedure is tightly coupled to AWS Glue, AWS account/network semantics, source-specific connection types, and AWS tooling. Bundled references remain intact upstream material rather than repository-owned execution machinery.
