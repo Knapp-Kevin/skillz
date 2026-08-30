@@ -2,7 +2,6 @@ schema_version: 1
 skill_name: aws-cloudformation
 source_id: aws-agent-toolkit
 source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
-local_path: vendor/aws-agent-toolkit/skills/core-skills/aws-cloudformation/SKILL.md
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: f597af79ff98108e2d6f4ccebae9bd3efd153653
 characterized_at: 2026-08-29
