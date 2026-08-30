@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-billing-and-cost-management
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 78db779f94238b6b7fec6d25cbe9986a03ad2a01
+characterized_at: 2026-08-30
+last_verified_at: 2026-08-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cost-analysis, cost-optimization, budgeting, pricing, cloud-finance]
+  lifecycle: [analysis, planning, operations, optimization]
+  characteristic: [cost-aware, deterministic-calculation, reference-heavy, failure-diagnosis, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact package-tree review at the registered AWS pin. Strong scope and trigger coverage, mandatory current-date checks for time-bounded billing APIs, explicit deterministic-calculation requirements instead of model arithmetic, API-specific correctness traps, billing-view scoping, optimization workflows, and troubleshooting guidance. Authority is mixed in practice but classified mutating because budget creation, Compute Optimizer enrollment, commitment-oriented workflows, and related account changes can alter AWS configuration or create financial consequences. Portability is medium because the guidance depends on AWS CLI/API semantics, valid credentials, optional AWS MCP capabilities, calculator or scripting support, and the source-intact reference package. Behavioral validation remains not-run.
