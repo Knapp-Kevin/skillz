@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-messaging-and-streaming
+display_name: AWS Messaging & Streaming Services
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-messaging-and-streaming/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-messaging-and-streaming
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Amazon SQS, SNS, EventBridge, MQ, Kinesis Data Streams, Data Firehose, Managed Service for Apache Flink, and MSK semantics; service-specific AWS skills or official AWS documentation for volatile numbers, limits, versions, alarm guidance, and configuration details; AWS IAM, KMS, Secrets Manager, CloudWatch, and CloudTrail context for secure operational use
+import_eligibility: exact-version-reference
+rationale: High-value AWS messaging and streaming decision/reference skill covering workload-pattern selection, service boundaries, delivery and replay semantics, integration gotchas, credential handling, encryption, DLQ policy requirements, confused-deputy protections, and explicit freshness routing to service-specific skills or official AWS documentation. Operational use is mutating because the documented procedures include queue attributes, targets, DLQ/redrive configuration, resource policies, encryption, broker/stream configuration, and related AWS state changes. The pinned source remains passive reference material; any operational action belongs to the external host agent under current user authority.
