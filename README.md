@@ -117,7 +117,7 @@ Current priorities:
 
 AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **20/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. Remaining AWS work is evidence reconciliation first, not automatic re-review.
 
-The Tier-4 passive catalog snapshots `INDEX.md` and `index.json` are currently absent from `main` despite being referenced by governance. That is a known documentation/catalog drift item to restore as static snapshots without introducing a generator.
+The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
 ## Repository map
 
@@ -129,6 +129,8 @@ The Tier-4 passive catalog snapshots `INDEX.md` and `index.json` are currently a
 | [`skills/`](skills/) | 43 first-party user-facing skill packages |
 | [`skills/categories/`](skills/categories/) | Human browse-by-purpose navigation |
 | [`skills/sources/`](skills/sources/) | 12 intact exact-revision external reference corpora |
+| [`INDEX.md`](INDEX.md) | Hand-maintained human catalog snapshot |
+| [`index.json`](index.json) | Hand-maintained machine catalog snapshot |
 | [`CURATED.md`](CURATED.md) | Governed third-party shelf and quality semantics |
 | [`CURATION_QUEUE.md`](CURATION_QUEUE.md) | Admitted-source and discovery/source-vetting ledger |
 | [`registry/sources.yaml`](registry/sources.yaml) | 19 unique source identities, roles, pins, licenses, and canonical paths |
