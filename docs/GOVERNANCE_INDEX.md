@@ -1,6 +1,6 @@
 # Governance Index
 
-**Last reviewed:** 2026-08-29
+**Last reviewed:** 2026-08-30
 
 This file maps the current control surfaces for `skillz`.
 
@@ -28,7 +28,7 @@ The canonical physical boundary is:
 - intact admitted pinned third-party corpora under `skills/sources/<source-id>/`;
 - passive repository-maintenance instructions under `engine/skills/`, excluded from user-facing corpus counts.
 
-**Known live-tree drift:** current `main` still contains legacy `vendor/...` submodule paths and matching registry/README references. Those paths are not canonical architecture. They require passive structural reconciliation; their presence must not be interpreted as re-establishing top-level `vendor/` as the intended layout.
+The live tree now reflects this boundary. Legacy top-level `vendor/...` source paths have been reconciled into `skills/sources/<source-id>/`; historical references may remain only where clearly non-authoritative.
 
 ## Tier 2: source identity, admission, and provenance
 
