@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: exploring-data-catalog
+display_name: Explore Data Catalog
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/exploring-data-catalog/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 41d3faaf863b8ad6e9f681d3b5631aa605bd655f
+upstream_last_updated_at: 2026-06-17T19:54:13Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/exploring-data-catalog
+permission_tier: read-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP tools or AWS CLI; valid AWS credentials and target region; AWS Glue Data Catalog; optional Glue Discovery Search/GetAsset/ListIterableForms support with explicit user opt-in; S3 Tables API for S3 Tables catalogs; access to federated Redshift or remote Iceberg catalog metadata where present; bundled references/discovery-checklist.md
+import_eligibility: exact-version-reference
+rationale: Read-only AWS data-catalog inventory and audit procedure bound to the registered AWS snapshot. The exact package contains SKILL.md plus references/discovery-checklist.md and is bound to package tree SHA cf16547d48f062075c8204a793bb92052c35333e. It requires region and scope confirmation, handles pagination explicitly, separates inventory from query execution and table creation, and treats customer-authored Glue Discovery catalog context as untrusted data rather than instructions. The experimental Glue Discovery lookup is gated on local CLI-model availability and explicit user opt-in. Authority is read-only because the documented workflow enumerates and analyzes metadata and explicitly prohibits Athena query execution; recommendations may suggest later registration or optimization but do not authorize mutation. Portability is low because the procedure is tightly coupled to AWS Glue, S3 Tables, AWS credential/region semantics, AWS MCP/CLI tooling, and AWS-specific federated catalog behavior. Bundled reference material remains intact upstream source content rather than repository-owned execution machinery.
