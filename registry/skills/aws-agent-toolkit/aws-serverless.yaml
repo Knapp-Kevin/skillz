@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-serverless
+display_name: AWS Serverless
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-serverless/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 847f477649252b98f8fb828bbfeaf109b57b8cac
+upstream_last_updated_at: 2026-06-22T16:04:59Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-serverless
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Lambda; API Gateway; Step Functions; EventBridge; DynamoDB; SQS; SNS; S3; Kinesis; SAM and/or AWS CDK for deployment examples; CloudWatch/X-Ray/Powertools for production observability; AWS CLI or AWS MCP server when the external host performs live operations; current AWS documentation for runtime versions, quotas, feature matrices, and service behavior
+import_eligibility: exact-version-reference
+rationale: Broad serverless architecture, deployment, debugging, reliability, security, observability, and production-readiness guidance for AWS workloads. The package explicitly warns that runtime versions, quotas, and feature matrices are volatile and directs the external host to current AWS documentation when precision matters. Strong safeguards include least-privilege execution roles, secret-manager/SSM handling instead of plaintext environment secrets, idempotency, DLQs/on-failure destinations, partial batch failure handling, reserved concurrency, rollout/rollback controls, input validation, and concrete anti-patterns. Authority is mutating because the documented workflows build, deploy, configure, and troubleshoot live AWS resources under the external host's credentials. Portability is medium because architectural patterns transfer broadly while service names, SAM/CDK constructs, quotas, and operational procedures are AWS-specific. The bundled Powertools handler and reference files are intact upstream source material, not repository-owned execution machinery.
