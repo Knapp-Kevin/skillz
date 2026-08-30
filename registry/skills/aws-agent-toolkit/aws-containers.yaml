@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-containers
+display_name: AWS Containers
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-containers/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-30
+last_checked_at: 2026-08-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-containers
+permission_tier: mutating
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI v2 and AWS credentials for operational workflows; Docker for image workflows; Session Manager plugin for ECS Exec; AWS ECS, Fargate, ECR, IAM, networking, CloudWatch, and load-balancing semantics; optional CDK and AWS MCP depending on host workflow; ten bundled reference documents for deeper procedures
+import_eligibility: exact-version-reference
+rationale: Detailed ECS, Fargate, ECR, ECS Exec, scaling, logging, deployment, and troubleshooting guidance with explicit non-Kubernetes and non-CI/CD boundaries. It contains strong operational safeguards around role separation, secret injection, private networking, lifecycle-policy preview, rollback, health checks, zero-downtime deployment, and logging guarantees. Many documented commands create or modify cloud resources, services, repositories, task definitions, scaling policy, and deployment state, so operational use requires current host/user authority, credentials, and cost awareness.
