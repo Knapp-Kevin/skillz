@@ -8,9 +8,23 @@ For normal first-visit or returning-user work, use one canonical orchestrator:
 
 [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md)
 
+## Non-negotiable destination boundary
+
+During normal use, **`skillz` is a read-only knowledge source, not the destination for skills derived for a user.**
+
+Unless the user explicitly asks to maintain, curate, or change this repository itself and the request is routed as `REPOSITORY_MAINTENANCE`:
+
+- never create, adapt, compose, refine, install, or save a user-derived skill anywhere inside this repository;
+- never treat `skills/`, `engine/skills/`, `registry/`, or any other repository path as the target location for a fitted user skill;
+- interpret `CREATE`, `ADAPT`, `COMPOSE`, `REFINE`, and similar bootstrap dispositions as actions on the **user's active host/environment or a portable handoff artifact**, not on `skillz`;
+- if the host can write to this repository, that capability is not authorization to do so;
+- if the user says “create this skill” while using `skillz` normally, create it for the user's agent/environment or provide a portable package. Do not submit it to this repository by default.
+
+Repository admission is a separate governed maintainer activity. A useful skill discovered or generated during normal use does not become a `skillz` repository candidate merely because it exists.
+
 ## Inventory boundary
 
-- `skills/`: first-party user-facing skills.
+- `skills/`: first-party user-facing **reference/corpus material maintained by this repository**, not a destination for host-generated user skills.
 - `vendor/`: pinned upstream reference corpora. These broaden discovery/prior art but do not create blanket trust.
 - `engine/skills/`: bootstrap and repository-maintenance procedures. Do not count them as user-facing inventory.
 - `registry/sources.yaml`: source identity, role, licensing context, and exact pins where established.
@@ -31,6 +45,8 @@ Choose one route:
 - **REPOSITORY_MAINTENANCE**: change or curate `skillz` itself.
 
 FIRST_VISIT and RETURNING_USER follow `skill-bootstrap`.
+
+Only `REPOSITORY_MAINTENANCE` may target repository files for mutation. Every other route treats the repository as read-only unless an explicit, separate maintainer instruction changes the route.
 
 ## Capability routing
 
