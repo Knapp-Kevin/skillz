@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-chat-java
+display_name: Microsoft Azure Communication Chat for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-chat-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-chat-java
+permission_tier: consequential-chat-message-participant-history-and-presence
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact-version-inconsistent
+dependencies: Java/JDK and Maven or Gradle; top-level com.azure:azure-communication-chat 1.6.0 while bundled examples specify 1.6.4; azure-communication-common; Azure Communication Services endpoint and user access token; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA b58604b7161eec1bf999295046a4fced6f9d4507 and SKILL.md blob 22e9dd0e2e8cbcfc5ce26c59d14b4b5c4a8ce0c9. Useful Java chat guidance covers threads, messages, participants, history sharing, read receipts and typing notifications. Rejected unchanged because normal examples create/delete threads, send/update/delete external messages, add/remove participants, expose prior message history, and publish read/typing state without distinct communication, participant/history/privacy and destructive-action authorization boundaries. Examples print message content, sender identifiers and receipt identity data. Bundled examples also specify chat SDK 1.6.4 while the top-level skill specifies 1.6.0. Preserve as adaptation/reference evidence with explicit send, participant/history, presence/privacy and deletion gates.
