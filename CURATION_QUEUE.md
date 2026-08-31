@@ -1,236 +1,137 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for the ongoing curation side of `skillz`.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository architecture is core-complete and entirely passive. Curation is performed by the external host agent under explicit repository-maintenance authority.
 
-The repository's passive bootstrap architecture is shareable and core-complete. **Curation is intentionally never "finished."** New skills, sources, techniques, and useful components will continue to appear. This document records what has already been examined, what evidence exists, what still needs reconciliation or individual review, and which discovery surfaces are worth revisiting.
+## Current governed depth
 
-It is not an implementation backlog and it does not reopen core completion.
+- **43** first-party user-facing skills.
+- **43/43** first-party provenance-complete.
+- **12** pinned upstream reference corpora under `skills/sources/`.
+- **19** unique registered source identities.
+- **128** persisted exact-version third-party verification companions.
+- Broad **500+** first-party + pinned external reference surface.
+- Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
 
-## What this ledger proves
+Historical review evidence and current per-skill companion completeness are different accounting layers. Prior work is evidence to reconcile, not permission to invent missing records or to redo trustworthy work from scratch.
 
-`skillz` is not a 43-skill repository with a few bookmarks attached.
+## Curation and admission model
 
-Current depth includes:
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
 
-- **43 first-party user-facing skills**, each with structured local semantic review metadata;
-- **12 pinned upstream reference corpora** exposed under `skills/sources/`;
-- a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
-- **121 currently persisted exact-version third-party verification companion files**;
-- historical source-level curation records documenting **at least 210 reviewed external skill entry points** across nine corpora;
-- additional partially reviewed admitted corpora and active discovery candidates.
+New third-party discoveries use the issue-first workflow in `docs/candidate-intake.md`. Intentional discovery inputs are documented in `docs/discovery-surfaces.md`, including the connected Creator Technical Resource Catalog. Discovery intelligence never substitutes for canonical upstream provenance, exact identity, license/terms, or individual quality evidence.
 
-The difference between the 121 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
+Every governed user-facing skill must retain truthful provenance and exact-version evidence appropriate to its relationship. Missing provenance is a corpus-completeness defect.
 
-## Curation model
+## Mandatory provenance status
 
-The lifecycle is:
+Issue #66 is the corpus-wide provenance-completeness audit.
 
-**discovery surface → candidate issue/source → source-vetting for identity/terms/relevance/role → admitted corpus/reference/tracked source when justified → individual exact-version review → user-fit decision**
+- First-party denominator: **43**.
+- First-party structured semantic reviews: **43/43**.
+- First-party standalone provenance companions: **43/43** under `registry/skills/local-skills/`.
+- No repository-owned scanner, script, CI gate, or runtime enforces this. The external host agent checks and records the contract during curation.
 
-New third-party discoveries use the issue-first intake workflow. The candidate issue is the pre-admission evidence workspace; candidate material is not persisted as governed corpus inventory until the issue establishes a justified admission result. Finalized provenance and verification companions must bind to the exact evaluated identity.
-
-Intentional discovery inputs are documented in [`docs/discovery-surfaces.md`](docs/discovery-surfaces.md). The connected Creator Technical Resource Catalog is useful lead-generation and gap-analysis intelligence, but its scores, verification labels, creator attributions, and summaries are not `skillz` provenance or individual quality evidence. Resolve every promoted lead to its canonical upstream source before issue-scoped evaluation.
-
-Discovery does not grant quality, trust, redistribution authority, installation authority, or automatic corpus admission. Source reputation never grants blanket skill quality. A source may be excellent while individual skills are unsuitable unchanged. Conversely, a rejected whole skill may still contain a useful mechanism worth extracting with attribution and licensing respected.
-
-For each deliberately governed skill, retain truthful provenance and exact-version evidence. Prefer to retain:
-
-- source and author/publisher identity;
-- canonical path;
-- exact revision or other content identity;
-- license and attribution context;
-- dependencies and required components;
-- authority and side-effect profile;
-- portability/host assumptions;
-- controlled tags;
-- semantic score and findings;
-- decisive disposition;
-- notes on useful components even when unchanged reuse is rejected.
-
-Missing provenance is a corpus-completeness defect, not an optional metadata improvement.
-
-## Mandatory provenance reconciliation
-
-Issue #66 is the active corpus-wide provenance-completeness audit.
-
-Current reconciled state (2026-08-30):
-
-- governed first-party denominator: **43** active user-facing skills (42 historical + `automation-receipts` admitted 2026-08-30 via issue #72);
-- structured semantic review records: **43/43** in `registry/local-verification.json`;
-- standalone first-party provenance companions under `registry/skills/local-skills/`: **43/43**;
-- therefore the first-party family remains companion-complete under the mandatory provenance contract.
-
-Reconciliation method (evidence-preserving, no invented facts): each provenance companion identifies the repository itself as source (`source_id: local-skills`, `relationship: first-party`, `source_class: first-party`, MIT), with `curated_at` taken from repository history (the first-party corpus landed 2026-08-30), `source_snapshot_revision` bound to the reconciliation commit, review facts carried from `registry/local-verification.json` (`review_status: verified-structured`), upstream fields omitted as not applicable to first-party origin, and unknown facts recorded as unknown. No script, CI gate, scanner, or repository runtime is required or desired.
-
-## Completed source-level review evidence
-
-The previous curation tracker recorded the following source denominators as reviewed to decisive static states. These are preserved as historical curation evidence even where current one-file companion coverage still needs reconciliation.
+## Completed historical source-level review evidence
 
 | Source | Historical reviewed denominator | Recorded result/state |
 |---|---:|---|
-| Anthropic Skills | 17 / 17 | Complete; 10 verified, 7 rejected |
-| Anthropic Knowledge Work Plugins | 74 / 74 | Complete; 36 verified, 38 rejected unchanged |
+| Anthropic Skills | 17 / 17 | 10 verified, 7 rejected |
+| Anthropic Knowledge Work Plugins | 74 / 74 | 36 verified, 38 rejected unchanged |
 | Matt Pocock Skills | 29 / 29 | Complete |
-| OpenHands Extensions | 1 / 1 | Complete; `theme-factory` rejected unchanged |
-| Vercel Agent Skills | 9 / 9 | Complete; 6 verified, 3 rejected |
-| Cloudflare Skills | 13 / 13 | Complete; 11 verified, 2 rejected |
-| Google Agents CLI | 7 / 7 | Complete; all verified |
-| Cline Skills | 36 / 36 | Complete; 19 verified, 17 rejected unchanged, plus one separately characterized internal/unlisted skill |
+| OpenHands Extensions | 1 / 1 | `theme-factory` rejected unchanged |
+| Vercel Agent Skills | 9 / 9 | 6 verified, 3 rejected |
+| Cloudflare Skills | 13 / 13 | 11 verified, 2 rejected |
+| Google Agents CLI | 7 / 7 | All verified |
+| Cline Skills | 36 / 36 | 19 verified, 17 rejected unchanged, plus one separately characterized internal/unlisted skill |
 | Addy Osmani Agent Skills | 24 / 24 | Complete with decisive exact-version static states |
 
-That is **210 reviewed published/eligible entry points** across those nine corpora before counting the separately characterized Cline internal skill or later selective reviews.
+These **210** published/eligible entry points remain evidence even where the newer one-file companion representation is not yet one-for-one complete. Search and reconcile prior evidence before re-reviewing.
 
-### Evidence reconciliation lane
-
-Current `registry/verification/` contains 121 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
-
-Do **not** automatically redo those reviews from scratch. First locate and reconcile the prior evidence into the current provenance/verification model where it is still trustworthy and identity-compatible. Re-review only where exact content identity, licensing, dependencies, or the prior decision cannot be established honestly.
-
-High-value reconciliation targets include:
-
-- Anthropic Knowledge Work Plugins 74/74 historical review evidence;
-- Cline 36/36 historical review evidence versus the smaller current companion shelf;
-- Addy Osmani 24/24 historical review evidence versus the smaller current companion shelf;
-- any completed Vercel/Cloudflare/Google/Matt records not represented one-for-one today.
-
-## Admitted sources still under evaluation
-
-These were already identified as unfinished enrichment work. They are not core blockers.
+## Active admitted-source curation
 
 ### AWS Agent Toolkit
 
-- Pinned reference: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
-- Historical denominator: **72** skill entry points, 14 core + 58 specialized.
-- Prior work: all 72 entry points were inspected against the registered pin, with a prior full-pass disposition of 70 verified / 2 rejected.
-- Current exact companion closure: **21/72** persisted provenance + verification pairs on `main`.
-- Latest reconciled specialized skill: `ingesting-into-data-lake`, package tree `d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6`, decisive state `verified` at 15/20, behavioral evidence `not-run`, authority `mutating`, portability `low`.
-- Current review note: the skill has useful scope/dependency checks, verifies source connections, asks for target clarification before creating/writing tables, and mandates post-load validation. It can also create/run Glue jobs, write/migrate data, create recurring triggers, and configure monitoring. Its instruction to explain each command is transparency, not a universal confirmation boundary, so host authority policy must govern consequential writes and scheduling.
-- Remaining work: **51** current-standard companion gaps. Search for compatible prior evidence and existing companions before any re-review. Re-review only when exact content identity, licensing, dependencies, authority, freshness, or prior decisive evidence cannot be recovered truthfully.
+- Registered pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
+- Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
+- Historical inspection: **72/72**.
+- Prior full-pass disposition: **70 verified / 2 rejected**.
+- Current-standard provenance + verification companion completeness: **28/72**.
+- Remaining current-standard gaps: **44**.
+
+Latest sequential batch closed seven genuine companion gaps after confirming each pair was absent:
+
+| Skill | Exact package tree | Current state | Score | Authority | Portability |
+|---|---|---|---:|---|---|
+| `managing-amazon-msk` | `b16afcc92da29d85d0e610d38a1c49b20e5e32e8` | verified | 16/20 | mutating | low |
+| `migrate-to-msk` | `a4e9b51d24f59d5bfc0bbb7bf234a2d096163911` | verified | 17/20 | mutating | low |
+| `querying-data-lake` | `a619aa25a608b7efac3d5439b1e9c5a0d303defc` | verified | 18/20 | mutating | low |
+| `amazon-aurora-mysql` | `0e3f93d02d0bff4d76ae31f425527441989717e1` | verified | 18/20 | mutating | low |
+| `amazon-aurora-postgresql` | `eb9414ad02354efaa482cb24003af763030ec00d` | verified | 18/20 | mutating | low |
+| `amazon-documentdb` | `4fc95aee114b9b6911dcdfc1d41a9715c3df4e62` | verified | 16/20 | mutating | low |
+| `amazon-elasticache` | `7ab33b79df92988e90fe25e9318fe748c7d15149` | verified | 17/20 | mutating | low |
+
+Behavioral evidence is `not-run` for this static batch. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
+
+**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta.
 
 ### Microsoft Skills
 
-- Pinned reference: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
-- Status: full source review remains pending.
-- Priority: favor differentiated Microsoft/M365/Foundry/developer-platform capabilities; avoid duplicating stronger existing material merely because it is official.
+- Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Full source review remains pending after AWS current-standard closure.
+- Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than official-brand duplication.
 
 ### Microsoft Azure Skills
 
-- Pinned reference: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
-- Status: full source review remains pending.
-- Priority: distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
+- Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Full source review remains pending after Microsoft Skills.
+- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
 
-### Cole Medin Skills
+### Other admitted/tracked sources
 
-- Pinned reference: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`
-- Denominator: **33** skills.
-- Persisted selective reviews already include `second-brain-audit`, `rules-check-drift`, and `ablate-ai-layer`.
-- Continue only where remaining skills add differentiated mechanisms or useful negative evidence.
+- **Cole Medin Skills**: pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`; denominator 33; selective reviews include `second-brain-audit`, `rules-check-drift`, `ablate-ai-layer`.
+- **David Ondrej Skills**: public pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`; current evidence describes 44 canonical `SKILL.md` files while a historical tracker recorded 55. Reconcile denominator before completion claims.
+- **OpenClaw Agent Skills**: pin `6cd3366b10e2a8c5608265f692acf9f5da2b2448`; denominator 8; selective `handoff` review exists.
+- **Archie Indian OpenClaw Superpowers**: pin `a95a59d221d44b89d4fc27a52934e24fb2060ddb`; denominator 56; selective `secrets-hygiene` review exists.
+- **Sabrina Ramonov Learn Claude Code Skills**: historical denominator 2, but canonical source identity/pin/license must be recovered before further work.
 
-### David Ondrej Skills
+## Evidence-reconciliation lane after AWS
 
-- Public pinned mirror: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`
-- Publisher private-source revision: `eed325a23bc29efca50084f85025d327460b2059`
-- Mirror fingerprint: `cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b`
-- Current curation evidence describes **44 canonical `SKILL.md` files** at the public snapshot.
-- Historical tracker recorded a denominator of **55**.
-- Action: reconcile that denominator discrepancy before making any completion claim.
-- Persisted selective reviews already include `effective-agent-skills`, `goal-loop`, and `fable-safe-prompt`.
+Historically completed corpora with broader prior review evidence than their current one-file companion shelf should be reconciled without automatic re-review. High-value targets include Anthropic Knowledge Work Plugins, Cline, Addy Osmani, and any completed Vercel/Cloudflare/Google/Matt records not represented one-for-one today.
 
-### OpenClaw Agent Skills
+## Discovery/source-vetting frontier
 
-- Pinned reference: `6cd3366b10e2a8c5608265f692acf9f5da2b2448` (MIT, official-ecosystem, tracked-corpus)
-- Denominator: **8** skills.
-- Persisted selective review: `handoff` (verified 19/20; delegation-prompt authoring with portable anchors — adjacent to, not covering, cross-session memory continuity; issue #71).
-- Remaining skills (`agent-transcript`, `session-viewer` adjacency noted) await selective review where differentiated.
+Discovery proceeds in parallel but does not interrupt admitted-source completion merely to increase issue counts.
 
-### Archie Indian OpenClaw Superpowers
+Current useful surfaces/candidates include:
 
-- Pinned reference: `a95a59d221d44b89d4fc27a52934e24fb2060ddb` (MIT read at revision; API reports NOASSERTION due to header detection only)
-- Denominator: **56** skills.
-- Persisted selective review: `secrets-hygiene` (verified 18/20; credential inventory/rotation-flagging audit, reference-only until openclaw paths are generalized; issue #70).
-- Continue selective review only where skills add differentiated mechanisms.
+- Hugging Face Skills, previously source-vetted for selective intake at recorded snapshot `cead19e10754e773bad24fecef83cb64be24094e`;
+- Selamy Labs Agent Skills;
+- Hypergiant Agent Skills;
+- BCGov Agent Skills;
+- GitHub Awesome Copilot as registered dynamic discovery;
+- Agent Skills Specification as normative format/portability reference;
+- Creator Technical Resource Catalog in connected Google Drive as internal governed discovery intelligence;
+- candidate evaluation issues #62 through #65.
 
-### Sabrina Ramonov Learn Claude Code Skills
+New discoveries are queued as issues before admission. Restricted or unclear-license material remains reference-only unless terms later support a different relationship.
 
-- Historical tracker says this creator-owned corpus was admitted with a denominator of **2** and remained under individual review.
-- Current source registry does not expose an equivalent source entry.
-- Action: recover canonical source identity, exact pin, license, and prior admission evidence before continuing. Do not infer or fabricate it.
+## Working rules
 
-## Active discovery and source-vetting frontier
-
-These are promising discovery surfaces, not trusted inventory.
-
-### Hugging Face Skills
-
-- Official source: `huggingface/skills`.
-- Previously source-vetted for selective deeper intake.
-- Reviewed snapshot recorded as `cead19e10754e773bad24fecef83cb64be24094e`.
-- Root license: Apache-2.0.
-- README at review time advertised roughly **25 standardized Agent Skills**.
-- `hf-cli` was specifically left preliminary because it combines read/discovery operations with credentials, uploads, jobs, scheduling, webhooks, endpoint mutation, extension installation, and token-display capability.
-
-### Selamy Labs Agent Skills
-
-- Candidate: `selamy-labs/agent-skills`.
-- Last reviewed pin: `3dac515634d086e9b3f20541f568c84effdf0298`.
-- Distinctive candidates identified: `connector-readiness`, `verify-real-artifact`, `grounded-generation`, `adaptive-loop-budgeting`, `process-aware-done`, `ephemeral-workspace-lifecycle`, `stakeholder-knowledge-projection`, `lean-on-oss-standards`, `iac-not-ad-hoc`, `data-connector-building`, `instrumented-service-scaffold`, `agentic-coding-loop`, `loop-governance-and-learning`, `product-feedback-loop`, `reddit-research`, `yield-on-wait`.
-- Main risk: redundancy with existing local/governance material. Distinct value must beat duplication.
-
-### Hypergiant Agent Skills
-
-- Candidate: `gohypergiant/agent-skills`.
-- Last reviewed pin: `459a846a65544cf311164059f2ea4623ec443b02`.
-- Root license: Apache-2.0.
-- Historical README denominator: **23** skill directories.
-- Strongest areas to inspect: architecture documentation/synthesis, constraints, onboarding, persona/review, QRSPI workflow patterns.
-- React/Next/TypeScript/security material is likely high-duplication unless it clearly improves on existing sources.
-
-### Additional discovery surfaces
-
-Keep as discovery candidates until source-vetted and issue-scoped:
-
-- `bcgov/agent-skills` — public-sector source with explicit skill validation discipline;
-- `devantler-tech/agent-skills` — interesting pointer/index approach that preserves upstream identity;
-- `JayRHa/AgentSkills` — broad advertised corpus, source audit required;
-- `Emmraan/agent-skills` — very large aggregate with provenance and duplication complexity;
-- `luckys/agent-skills` — likely high generic overlap; do not bulk-admit;
-- GitHub Awesome Copilot — registered dynamic discovery surface, never blanket trusted;
-- Agent Skills Specification — normative format/portability reference, not normal installable inventory;
-- connected Creator Technical Resource Catalog — internal governed discovery intelligence for identifying leads and corpus gaps, never a canonical source or verification authority.
-
-New candidates should be queued as evaluation issues before corpus admission. Discovery/source-vetting issues #62 through #65 are examples of that pre-admission workflow; they do not themselves grant admission.
-### First-party derivation candidates
-
-- `session-continuity-receipts` — first-party derivation candidate (issue #74). Cross-session memory continuity has no admissible wild prior art (ClawHub continuity candidates failed provenance, issue #71; verified `handoff` covers delegation prompts, not continuity). Derived per the codified substrate boundary (`docs/curation-policy.md`): doc-only, portable, Continuum canonical-cycle lessons without substrate-private paths or schemas. Admission follows the automation-receipts lane pattern (issue #72): semantic review + provenance companion + verification companion + local-verification record, through explicit maintenance.
-
-
-## Legacy candidate intelligence
-
-[`registry/candidates.yaml`](registry/candidates.yaml) and [`docs/agent-skills-longlist.md`](docs/agent-skills-longlist.md) preserve additional historical candidate decisions and discovery intelligence, including tracked or rejected material such as agent configuration linting, verification loops, AI regression testing, HashiCorp skills, learning-resource indices, context-compression tooling, codebase-understanding projects, local-training ecosystems, and minimalism/process-rule candidates.
-
-Those records are useful prior art. They should be re-checked for current provenance and fit before promotion because some were created under older repository assumptions.
-
-## Working rules for future curation
-
-1. **Do not chase counts.** Add coverage or differentiated mechanisms, not inventory theater.
-2. **Do not erase negative evidence.** A well-explained rejection prevents future agents from rediscovering the same problem.
-3. **Preserve complete skill packages.** Scripts, references, templates, fixtures, examples, and other required components are part of a skill when the upstream skill owns them.
-4. **Evaluate independently.** Official branding, stars, popularity, reviewer comments, and prior recommendations are inputs, not conclusions.
-5. **Require truthful provenance.** Every governed user-facing skill must satisfy the current provenance contract; pins and fingerprints make decisions inspectable, while unknown facts stay unknown.
-6. **Separate availability from trust.** The 500+ reference corpus is broad prior art; unchanged reuse deserves stronger individual evidence.
-7. **Extract mechanisms when whole-skill reuse is wrong.** Useful ideas can survive a rejection without importing unsafe authority or source-specific ceremony.
-8. **Keep the engine passive.** Curation is performed by whichever agent/human is doing the work; this repository does not crawl, poll, schedule, or execute itself.
-9. **No model-performance obligation.** Review the instructions and skill material as well as practical; do not turn curation into arbitrary multi-model benchmarking.
-10. **Use issue-first intake for new discoveries.** Accumulate pre-admission evidence on the evaluation issue; persist governed skill/source material and finalized companions only after a justified admission decision.
-11. **Search before re-reviewing.** For historically reviewed admitted corpora, check current companions and recoverable prior evidence first. Re-review only genuine evidence gaps.
-12. **Update this ledger when meaningful work lands.** The ledger should make the depth and frontier of the repository legible to the next reader.
+1. **Finish the admitted corpus.** Sequential curation is the default until current-standard gaps are closed.
+2. **Do not lower the bar for throughput.** Every unit still gets duplication checking, exact identity, provenance, license/terms, package/dependency context, authority, portability, freshness, controlled tags, decisive static state, and explicit behavioral-evidence status.
+3. **Search before re-reviewing.** Recover compatible prior evidence first.
+4. **Do not erase negative evidence.** Rejection and retirement reasons prevent repeated mistakes.
+5. **Preserve complete packages.** Upstream scripts/references/assets/templates remain package context, not repository runtime.
+6. **Keep discovery separate from admission.** Popularity and catalog reputation are context, never proof.
+7. **Keep `skillz` passive.** No repository-owned runtime, scripts, tests, CI, scheduler, monitor, crawler, installer, synchronizer, preflight, generator, background service, vector database, or autonomous observer.
+8. **Keep public accounting synchronized.** README, System State, this ledger, `INDEX.md`, and `index.json` must agree after each material batch.
 
 ## Current posture
 
-**Core:** shareable and complete.
+**Core:** complete and passive.
 
-**Corpus:** broad, pinned, and intentionally larger than the fully governed shelf.
+**First-party:** 43/43 provenance-complete.
 
-**Curation:** active indefinitely, with prior evidence to reconcile, a mandatory provenance-completeness audit in progress, and promising sources still to evaluate.
+**AWS:** 72/72 historically inspected; 28/72 current-standard companion-complete; 44 gaps remain.
 
-That is the intended steady state.
+**Next:** continue the AWS database-family gap scan and curation sequentially, then proceed through the remaining AWS specialized families until current-standard AWS closure is 72/72.
