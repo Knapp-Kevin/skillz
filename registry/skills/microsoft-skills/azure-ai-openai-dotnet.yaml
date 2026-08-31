@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-openai-dotnet
+display_name: Microsoft Azure OpenAI for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-ai-openai-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-ai-openai-dotnet
+permission_tier: consequential-external-service-and-data-transmission
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.AI.OpenAI; OpenAI; Azure.Identity; authenticated Azure OpenAI or OpenAI service; model deployments; optional Azure AI Search and Azure.Search.Documents; local audio/image/file access for relevant examples
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 38bd23798e46c5c010737ecabfcf2bc8d8033d9a and SKILL.md blob 4c15f34a6a12e0a7d1f198ce5a61508168c51d54. The skill provides useful .NET guidance for chat completions, streaming, structured outputs, reasoning models, Azure AI Search RAG, embeddings, image generation, audio transcription and speech generation, and function/tool calling. Unchanged adoption fails the current authority/data-handling rule because its primary examples directly send prompts, document/search-derived content, audio, image-generation requests, and other user/application data to metered external AI services without a distinct affirmative cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. Function calls are surfaced rather than executed by the example, and the best-practices section tells the host to validate tool arguments, which is useful safety evidence but does not cure the external-service authorization gap. Secret handling is comparatively sound: examples use environment variables, placeholders, DefaultAzureCredential, and managed identity rather than soliciting real secret values conversationally. Preserve as adaptation/reference evidence with explicit cost, data-governance, and external-service authorization gates before operational use.
