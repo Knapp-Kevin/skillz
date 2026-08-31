@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: rds-db2
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8c875037cc000e02e89c2f742b52a0f0b3e4d220
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, implementation, deployment, security, decision-support]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [evidence-first, production-oriented, reference-heavy, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful evidence includes highly specific managed-Db2 constraints; credential handling through managed mechanisms rather than pasted secrets; focused sub-skill routing; exact RDSADMIN restore sequencing; cross-region mounted-replica prerequisites; explicit z/OS DMS/CDC and schema-conversion limitations; Secrets Manager rotation diagnosis; BYOK, Kerberos, audit, minimum-IAM and colocation guidance; and explicit alternatives for unsupported managed-service operations. Rejected unchanged because the top-level execution workflow proceeds from parameter/dependency collection into exact provisioning, replica, KMS, option-group, migration and operational commands without a distinct explicit authorization gate for consequential mutations. Dependency abort and parameter confirmation cannot be treated as consent to create or alter billable/security-sensitive resources. This material remains useful adaptation/reference evidence. Service capabilities, Db2/JDBC versions, migration tooling, licensing, instance availability, RDSADMIN procedures and IAM requirements are freshness-sensitive. Behavioral validation remains not-run.
