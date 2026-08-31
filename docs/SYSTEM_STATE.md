@@ -11,16 +11,16 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 212 |
+| **Persisted third-party review companions** | 218 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 40 / 189 |
-| **Microsoft Skills current-standard gaps** | 149 |
+| **Microsoft Skills current-standard companions** | 46 / 189 |
+| **Microsoft Skills current-standard gaps** | 143 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
-| **Microsoft Java direct-package companions** | 7 / 26 |
+| **Microsoft Java direct-package companions** | 13 / 26 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -34,13 +34,13 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **212 exact-version third-party verification companions** are persisted.
+- **218 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **40/189** have current-standard provenance + verification companions and **149** remain.
+- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **46/189** have current-standard provenance + verification companions and **143** remain.
 - The direct `.github/plugins/azure-sdk-dotnet/skills/` slice contains **29** packages and is **29/29 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-java/skills/` slice contains **26** packages and is **7/26 current-standard companion-complete** after the first coherent `azure-ai-*` tranche.
+- The direct `.github/plugins/azure-sdk-java/skills/` slice contains **26** packages and is **13/26 current-standard companion-complete** after the first AI and service/communication tranches.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -53,37 +53,38 @@ The final AWS tranche preserved useful negative evidence rather than rubber-stam
 
 Microsoft Skills is the active admitted-source frontier. The denominator is **189** independently front-mattered `SKILL.md` entry points at the exact registered pin; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain dependencies of their parent package.
 
-Current progress is **40/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages and the complete direct `.NET` SDK plugin slice. Java is now the active coherent plugin/language family at **7/26**.
+Current progress is **46/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages and the complete direct `.NET` SDK plugin slice. Java is the active coherent plugin/language family at **13/26**.
 
 ### .NET direct plugin slice — CURRENT-STANDARD COMPLETE
 
-All **29/29 direct `.github/plugins/azure-sdk-dotnet/skills/` packages** now have exact-version provenance + verification companions at registered Microsoft pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+All **29/29 direct `.github/plugins/azure-sdk-dotnet/skills/` packages** have exact-version provenance + verification companions at registered Microsoft pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 
-The prior management-plane tranche reconciled fifteen packages, all rejected unchanged with scores from **11/20 to 14/20**, preserving specific resource, cost, secret, network, identity, data, dependency, destructive-action and freshness findings rather than applying a family-level verdict.
-
-The closing five direct packages are likewise individually resolved:
-
-- `azure-search-documents-dotnet` — rejected unchanged, **13/20**. Useful full-text/vector/semantic/hybrid search guidance, but normal index mutation, document CRUD and query/embedding/indexed-content transmission lack distinct mutation, data-governance and cost gates. Integrated vectorization can also route text to Azure OpenAI.
-- `azure-security-keyvault-keys-dotnet` — rejected unchanged, **12/20**. Useful key-management/cryptography guidance, but key creation/rotation/policy mutation, delete-and-purge, decrypt/sign/unwrap and local backup-file handling lack distinct key-lifecycle, destructive, crypto-use and secret-file authorization gates.
-- `azure-servicebus-dotnet` — rejected unchanged, **13/20**. Useful enterprise messaging guidance, but send/settlement, background processors, session-state mutation, messaging-entity CRUD and cross-entity transactions lack distinct data/message-state/background/resource/cost gates.
-- `m365-agents-dotnet` — rejected unchanged, **13/20**. Useful Microsoft 365 Agents SDK hosting/routing/authentication prior art, but normal handlers send external activities, the Copilot Studio client starts conversations and transmits prompts, and error handling deletes conversation state without distinct communication/data/state authorization boundaries.
-- `microsoft-azure-webjobs-extensions-authentication-events-dotnet` — rejected unchanged, **11/20**. Useful Entra Authentication Events prior art, but normal examples alter issued-token claims, block sign-up, modify identity attributes, transmit user IDs to an external profile service, and send OTP secrets with phone numbers to external messaging providers without mandatory identity/token, PII/privacy, OTP and external-message gates; examples also log user identifiers and phone numbers.
-
-Every direct `.NET` package retains exact tree/blob identity, exact source revision/date, dependencies, portability, current authority classification, controlled taxonomy tags, decisive static state and `validation_status: not-run`. Completion means decisive current evidence for every package, not universal approval.
+The management-plane and closing tranches preserve package-specific resource, cost, secret, network, identity, data, dependency, destructive-action, message-state and freshness findings rather than applying a family-level verdict. Every direct `.NET` package retains exact tree/blob identity, exact source revision/date, dependencies, portability, current authority classification, controlled taxonomy tags, decisive static state and `validation_status: not-run`. Completion means decisive current evidence for every package, not universal approval.
 
 ### Java plugin slice — ACTIVE
 
-The direct Java plugin has an exact denominator of **26** packages. The first coherent `azure-ai-*` tranche is now **7/26 current-standard companion-complete** at the registered Microsoft pin. All seven packages were reviewed as complete packages, including bundled example references where present, and all share the skill-specific Java auth-hardening revision `e7ee58fc1fa669841e06f8d27359e0533d148394` dated 2026-04-29 while retaining their individual package-tree and `SKILL.md` fingerprints.
+The direct Java plugin has an exact denominator of **26** packages and is now **13/26 current-standard companion-complete** at the registered Microsoft pin.
 
-- `azure-ai-agents-persistent-java` — rejected unchanged, **14/20**. Remote agent/thread/run/file/vector-store mutation, local-file upload, metered execution, and downstream function/tool effects lack distinct authority gates.
-- `azure-ai-anomalydetector-java` — rejected unchanged, **13/20**. Time-series transmission, SAS-backed multivariate training/inference, model lifecycle and deletion lack data, cost and destructive-action boundaries.
-- `azure-ai-contentsafety-java` — rejected unchanged, **12/20**. Text/image moderation sends content to an external metered service and mutates blocklist state without privacy/data, mutation and cost gates; the top-level SDK version also conflicts with its bundled examples.
-- `azure-ai-formrecognizer-java` — rejected unchanged, **12/20**. Document Intelligence can transmit local files and sensitive IDs/invoices/receipts/tax/insurance documents and create/delete custom models/classifiers without mandatory sensitive-data, lifecycle and cost gates; implementation guidance is version-sensitive.
-- `azure-ai-projects-java` — rejected unchanged, **13/20**. Foundry dataset/index mutation, local-file upload, credential-bearing connection access and external evaluation operations lack distinct resource, credential, data and cost authorization.
-- `azure-ai-vision-imageanalysis-java` — rejected unchanged, **13/20**. Local images/document images and remote URLs are sent to an external metered service; OCR and people detection increase personal/sensitive-data exposure without a mandatory privacy/data boundary.
-- `azure-ai-voicelive-java` — rejected unchanged, **12/20**. Metered live sessions, transcription, microphone capture, continuous audio transmission and function execution lack recording/privacy, cost, external-service and tool-action authorization gates.
+The first coherent `azure-ai-*` tranche resolved seven packages:
 
-The concurrent first two Java records were reconciled rather than duplicated. Their exact evidence was preserved, while non-controlled taxonomy values introduced by the concurrent pass were normalized to the existing `registry/taxonomy.yaml` vocabulary. Behavioral validation remains `not-run` for all seven because no separate representative external scenario/adversarial evidence has been recorded.
+- `azure-ai-agents-persistent-java` — rejected unchanged, **14/20**.
+- `azure-ai-anomalydetector-java` — rejected unchanged, **13/20**.
+- `azure-ai-contentsafety-java` — rejected unchanged, **12/20**.
+- `azure-ai-formrecognizer-java` — rejected unchanged, **12/20**.
+- `azure-ai-projects-java` — rejected unchanged, **13/20**.
+- `azure-ai-vision-imageanalysis-java` — rejected unchanged, **13/20**.
+- `azure-ai-voicelive-java` — rejected unchanged, **12/20**.
+
+The second source-ordered service/communication tranche resolves six more:
+
+- `azure-appconfiguration-java` — rejected unchanged, **13/20**. Configuration CRUD, feature flags, targeting, secret references, read-only state and snapshot lifecycle mutate consequential production/release state without a distinct affirmative authorization boundary; examples also surface configuration values and user identifiers.
+- `azure-communication-callautomation-java` — rejected unchanged, **11/20**. Outbound/inbound calls, TTS, speech/DTMF capture, recording/download, participant mutation, transfers and hang-up lack mandatory call-action, recording/privacy and data boundaries; bundled examples specify SDK 1.5.2 while the top-level skill specifies 1.6.0.
+- `azure-communication-callingserver-java` — rejected for unchanged selection, **15/20**, with provenance `retired-superseded`. The package correctly marks itself deprecated and migration-only, but embeds legacy recording operations and contains a broken sibling reference. Preserve as reference-only migration evidence.
+- `azure-communication-chat-java` — rejected unchanged, **12/20**. Thread/message CRUD, participant/history changes, read receipts and typing notifications lack explicit communication/privacy/action gates; bundled examples specify 1.6.4 while the top-level skill specifies 1.6.0.
+- `azure-communication-common-java` — rejected unchanged, **14/20**. Useful credential/identifier guidance is undermined by an example logging the first 20 access-token characters, identifier-bearing query-string refresh code, and routine identifier logging without a mandatory privacy/credential boundary.
+- `azure-communication-sms-java` — rejected unchanged, **11/20**. Single/bulk/marketing/OTP sends, retries, delivery-report PII and OTP secret handling lack recipient-consent, purpose, privacy, authentication-secret and metered-cost authorization boundaries.
+
+App Configuration, Call Automation and SMS bind the Java auth-hardening revision `e7ee58fc1fa669841e06f8d27359e0533d148394` dated 2026-04-29. Calling Server, Chat and Communication Common bind the metadata-conformance revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` dated 2026-04-02. Each package retains its own exact package-tree and `SKILL.md` fingerprints. Behavioral validation remains `not-run` unless separate representative external scenario/adversarial evidence is recorded.
 
 ## Source lifecycle
 
@@ -101,7 +102,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent plugin/language batches against the exact **189-entry** denominator, with the remaining **19 Java direct packages** next after the first 7/26 tranche.
+1. Continue Microsoft Skills in coherent plugin/language batches against the exact **189-entry** denominator, with the remaining **13 Java direct packages** next after the current 13/26 state.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
 4. Continue admitted/tracked creator-source curation and denominator reconciliation.
