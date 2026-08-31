@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: ingesting-into-data-lake
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, data-engineering, migration, operations]
+  lifecycle: [implementation, migration, verification, operations]
+  characteristic: [production-oriented, reference-heavy, tool-routing, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6 and contains SKILL.md plus a broad source-specific and cross-cutting references package. Strong static evidence includes precise triggers and exclusions; explicit dependency/region/identity checks; required verification that source connections already exist; delegation to sibling skills instead of silently expanding scope; target inventory awareness; an explicit user clarification gate before creating or writing tables; mandatory post-load validation using row counts, null checks, and sample rows; source-specific ingestion paths; migration/error guidance; and operational testing/monitoring material. Authority is materially mutating: the skill can upload/write data, create and run Glue jobs, migrate or overwrite table data, create recurring Glue triggers, and configure CloudWatch monitoring. The score is held at 15/20 because the top-level instruction requires explanation before commands but does not establish a universal explicit confirmation boundary for every downstream mutation, especially recurring scheduling/trigger creation and monitoring changes. Several concrete service/version/configuration claims are also freshness-sensitive, including Glue 5.1+, S3 Tables/Iceberg catalog semantics, Athena/CTAS behavior, connector options, cron syntax, and service-specific IAM requirements. Hosts should therefore apply current AWS documentation and their own authority policy before consequential writes or schedules. Behavioral validation remains not-run.
