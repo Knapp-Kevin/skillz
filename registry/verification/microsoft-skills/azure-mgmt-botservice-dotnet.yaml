@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 14/20
 tags:
-  use_case: [cloud, implementation, agents]
+  use_case: [cloud, implementation, agent-development]
   lifecycle: [implementation, operations]
-  characteristic: [production-oriented, management-plane, channel-integrated]
-  authority: [external-side-effect, resource-mutation, credential-mutation, cost-bearing]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Useful Azure Bot resource and channel-management guidance covers bot CRUD plus Direct Line, Teams, Web Chat and additional channel types. Rejected unchanged because normal workflows create/update/delete cloud bot resources and public/external channels and regenerate Direct Line keys without distinct affirmative resource, channel-publication, cost or credential-rotation authorization. Credential guidance otherwise recommends Key Vault and managed identity. Preserve as adaptation/reference evidence with explicit mutation/channel/credential gates. Behavioral validation is not-run.
