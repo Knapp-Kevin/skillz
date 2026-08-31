@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-elasticache
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7ab33b79df92988e90fe25e9318fe748c7d15149
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, architecture, monitoring, security]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [cost-bounded, human-review, production-oriented, progressive-disclosure, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA 7ab33b79df92988e90fe25e9318fe748c7d15149 and contains SKILL.md, assets, a substantial routed reference hierarchy, and bundled utility scripts. Strong static evidence includes semantic sub-skill routing; explicit cross-sub-skill state ownership and stale-state warning; source-priority/freshness rules that forbid inventing prices or version constraints; input validation before writes; VPC/TLS/authentication safeguards; explicit loading of destructive-action safety material; architecture/runtime-specific references; tagging; and clear engine/deployment/vector-search constraints. The score is held at 17/20 because the skill is broad and execution-capable across cache creation, migration, configuration, and data-plane integration, while many pinned product truths are highly volatile. Current AWS documentation should be checked for engine/version ladders, vector-search support, serverless capabilities, pricing claims, IAM support, ports, instance/service limits, and migration constraints. Workspace requirements.json is host-side state created by the external agent, not skillz runtime. Bundled scripts/assets remain upstream package components. Behavioral validation remains not-run.
