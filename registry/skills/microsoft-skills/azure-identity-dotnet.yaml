@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-identity-dotnet
+display_name: Microsoft Azure Identity for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-identity-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-identity-dotnet
+permission_tier: host-authorized-local-and-authentication
+portability: medium
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: .NET SDK plus Azure.Identity; optional Microsoft.Extensions.Azure and Azure.Identity.Broker; authenticated Azure/Entra context varies by credential type
+import_eligibility: eligible-with-host-fit
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA a77d4ff49b15f776a2daad5f4a59fa6561c94414 and SKILL.md blob a851ddfc4dc0fc76cdb9fb45f0604c16d4d59f82. The skill is implementation guidance for Microsoft Entra ID authentication through Azure.Identity in .NET, covering DefaultAzureCredential, managed identity, service principals, certificates, credential chains, sovereign clouds, diagnostics, reuse, retries, and error handling. Secret-bearing examples use placeholders and environment/file-based credential paths rather than requesting actual secret values in conversational context. Package installation mutates the host project/environment and authentication acquires tokens, so use remains subject to explicit host authority and target-environment policy. Product/API details are freshness-sensitive and should be checked against current Azure SDK documentation before implementation.
