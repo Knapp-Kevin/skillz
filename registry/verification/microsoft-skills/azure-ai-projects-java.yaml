@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-projects-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7476d650fa39aa40ca73da5587a56531b652c6cd
+skill_md_blob_sha: a28cc004322d021cafc17518c27755a28c1141cc
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, evaluation, implementation, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Azure AI Foundry Java guidance covers connections, deployments, datasets, indexes and evaluations. Rejected unchanged because normal and bundled examples create/update indexes, upload/create/update/delete datasets, access connection credentials, and expose external OpenAI evaluation operations without distinct affirmative resource, credential-access, local-file/data-transmission and metered-service authorization boundaries. Behavioral validation is not-run.
