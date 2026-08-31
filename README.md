@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-153-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-163-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **153 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **163 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -115,7 +115,7 @@ Current priorities:
 5. continue governed discovery/source-vetting through issue-first intake;
 6. keep current governance, source registry, category navigation, and passive catalog snapshots aligned with live corpus truth.
 
-AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **53/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. Remaining AWS work is evidence reconciliation first, not automatic re-review. The AWS database, EC2, migration/modernization, networking/content-delivery, and operations specialized families are now fully reconciled at the current standard.
+AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **63/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. Remaining AWS work is evidence reconciliation first, not automatic re-review. The AWS database, EC2, migration/modernization, networking/content-delivery, operations, security/identity, and serverless specialized families are now fully reconciled at the current standard.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
@@ -148,4 +148,4 @@ First-party content is licensed under the [MIT License](LICENSE).
 
 Third-party repositories and materially derived content retain their applicable upstream obligations. The root MIT license does not relicense pinned source corpora or separately identified third-party material.
 
-See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md`).
