@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-callingserver-java
+display_name: Microsoft Azure Communication CallingServer for Java (Deprecated)
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-callingserver-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source-deprecated
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-callingserver-java
+permission_tier: consequential-legacy-call-recording
+portability: low
+review_status: retired-superseded
+dependency_status: deprecated-broken-reference
+dependencies: Java/JDK and Maven or Gradle; deprecated com.azure:azure-communication-callingserver 1.0.0-beta.5; replacement com.azure:azure-communication-callautomation 1.6.0; ACS connection string; references/examples.md; intended sibling Call Automation skill reference is path-invalid as written
+import_eligibility: reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 276440fcfee1858c728b0db63898d52e578ce86b and SKILL.md blob c2bde1986d3ace215f6a28e923e5399326a9882e. The package explicitly declares itself deprecated, limits use to legacy maintenance, and directs new development to Call Automation, which is strong scope/deprecation hygiene. It is nevertheless not eligible for unchanged adoption because it embeds legacy recording lifecycle operations without a recording-consent boundary, the upstream SDK is superseded, and references/examples.md points to ../callautomation/SKILL.md even though the sibling package is named azure-communication-callautomation-java. Preserve only as migration/reference evidence.
