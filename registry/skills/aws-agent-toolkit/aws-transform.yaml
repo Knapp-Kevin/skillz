@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-transform
+display_name: AWS Transform (ATX)
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/migration-and-modernization-skills/aws-transform/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 415283deced73a93a6f30cd5e03b54b65aef4d79
+upstream_last_updated_at: 2026-06-17T06:07:46Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/migration-and-modernization-skills/aws-transform
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI and valid AWS credentials; AWS Transform ATX CLI; local git/file-system access; transformation definitions; optional AWS CDK, Batch/Fargate, Lambda, S3, KMS, Secrets Manager and CloudWatch for remote execution; git credentials for private repositories; bundled reference documents and runtime-fetched AWS Transform remote-infrastructure sample repository
+import_eligibility: reference-only
+rationale: AWS Transform modernization package bound to registered AWS pin and exact package tree SHA 19d719b83327293bcd98072b8e93e7774f4122c3. It has meaningful consent and privacy controls: waits for a user goal and explicit repository targets before inspection, discloses telemetry and opt-out information, asks consent before attaching AWSTransformCustomFullAccess, requires user confirmation of transformation plans, treats remote infrastructure deployment as consent-bound, and prevents secrets from being pasted into chat. However, it mandates `atx update` unconditionally at the start of every session and explicitly says not to ask the user whether to update. That mutates host-installed tooling/transformation definitions outside a user authorization boundary. The package can also modify local repositories and provision remote AWS execution infrastructure, so the forced updater is material rather than cosmetic. Retain as useful modernization/reference evidence but reject unchanged under the current mutation-consent standard. Portability is low because it depends on ATX, AWS credentials/services, OS support, git/repository access and optional CDK/remote infrastructure. CLI behavior, transformation definitions, permissions, remote-infrastructure details, concurrency limits and supported platforms are freshness-sensitive.
