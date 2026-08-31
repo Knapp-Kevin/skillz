@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: querying-aws-cloudwatch
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ff34d53794e8f703a088f527c4361305dcac772d
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, observability, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded, reference-heavy]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Query mechanisms are strong: live schema lookup before SQL, workgroup/output confirmation, no-backfill warning, sensitive-log handling, narrow access guidance and fit routing. Rejected unchanged because configure/grant paths create the S3 Tables integration, associate log sources and mutate Lake Formation permissions without a distinct affirmative authorization gate. Retain the query core as adaptation/reference evidence. Behavioral validation remains not-run; supported sources, schemas, retention, pricing and APIs are freshness-sensitive.
