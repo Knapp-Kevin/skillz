@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-arizeaiobservabilityeval-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 87d564bcece7e8f237f84d118cf2f540c0aa922f
+skill_md_blob_sha: 7a820d75e857d1140484b0fe93301bf232f19109
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, observability, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [management-plane, marketplace-integrated, external-service-integrated]
+  authority: [external-side-effect, resource-mutation, data-transmission, cost-bearing]
+  portability: [low]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Coherent Arize AI ARM CRUD guidance is rejected unchanged because the normal create flow provisions a Marketplace-linked external partner organization, supplies commercial offer/term identifiers and administrator contact data, and supports updates/deletion without distinct affirmative marketplace, cost, resource, PII/data, or deletion authorization. Portability is low because the procedure is specific to Azure Marketplace and the Arize partner resource model. Preserve as adaptation/reference evidence with explicit commercial-subscription, contact-data, resource mutation and deletion gates. Behavioral validation is not-run.
