@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-callautomation-java
+display_name: Microsoft Azure Communication Call Automation for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-callautomation-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-callautomation-java
+permission_tier: consequential-call-recording-speech-participant-and-external-communication
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact-version-inconsistent
+dependencies: Java/JDK and Maven or Gradle; top-level com.azure:azure-communication-callautomation 1.6.0 while bundled examples specify 1.5.2; Azure Communication Services endpoint; connection string or Entra credential; callback/webhook endpoint; optional Cognitive Services; local filesystem for recording downloads; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 5b42ac2158632a3e14fad272ec0510864f459ed2 and SKILL.md blob 75b1857c6d21a89385b07a2c39b0643704be00d4. Rejected unchanged because examples originate and answer PSTN/ACS calls, play TTS/audio, collect DTMF and speech, start/pause/resume/stop recordings, download recordings locally, add/remove participants, transfer and terminate calls, and expose call/DTMF identifiers without mandatory communication, recording-consent, speech/data, participant, destructive-action and metered-service authorization boundaries. Bundled examples also pin 1.5.2 while the top-level skill pins 1.6.0. Preserve as adaptation/reference evidence after explicit call/recording/privacy/action gates and dependency reconciliation.
