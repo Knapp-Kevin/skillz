@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: deploying-custom-domain-rest-api
+display_name: Deploy Custom Domain REST API
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/deploying-custom-domain-rest-api/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 9e9560f9c47129db5c9370960c4b589d2897eb83
+upstream_last_updated_at: 2026-06-18T13:52:08Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/deploying-custom-domain-rest-api
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI, Python, sed and Node.js; configured AWS identity; ACM, Route 53, IAM, Lambda, API Gateway and CloudWatch Logs; bundled authorizer/function/DNS/validation scripts
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 3d2ecacf1abfe8cfb6661ff04cba16558cd4c1c6. The package is a detailed end-to-end Regional API/custom-domain build with certificate validation, IAM roles, Lambda functions, request authorizer, TLS 1.2, scoped Lambda permissions, access logging, base-path mapping, Route 53 aliasing and final validation. It is rejected unchanged because it performs a large consequential mutation sequence including certificate request/DNS validation records, IAM roles, Lambda deployment, API deployment, custom-domain creation and DNS cutover without a distinct explicit authorization gate for the plan. It also ships hardcoded demo authorization values and only warns that they are unsuitable for production. The user may abort at any point, but absence of refusal is not affirmative authorization. Retain as adaptation/reference material. Runtime versions, ACM/API Gateway/Route 53 behavior and DNS propagation assumptions are freshness-sensitive.
