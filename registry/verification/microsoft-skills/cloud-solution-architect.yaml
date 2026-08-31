@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: cloud-solution-architect
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cf94add87e80c754b41298fe08dc16cd9b442531
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [architecture, cloud, decision-support, planning, security]
+  lifecycle: [planning, design, verification]
+  characteristic: [production-oriented, reference-heavy, risk-aware, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Strong Azure architecture synthesis covers requirements, architecture styles, cloud design patterns, service-selection tradeoffs, performance antipatterns, mission-critical design, Well-Architected pillars, and ADR documentation. The workflow is advisory/read-only: it discusses deployment, identity, networking, monitoring, remediation, and infrastructure mechanisms but does not instruct the host to perform consequential mutations, so implementation remains behind the host's separate authorization boundary. It avoids requesting actual secrets in conversational context. Product-specific recommendations are freshness-sensitive and should be checked against current Azure documentation when used. Behavioral validation is not-run; no representative external scenario/adversarial execution evidence is claimed.
