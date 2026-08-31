@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aurora-dsql
+display_name: Aurora DSQL
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/aurora-dsql/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: a2611e121cfa9aa481abe1e08e4694fbb5afaeaa
+upstream_last_updated_at: 2026-06-30T12:54:52Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/aurora-dsql
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Aurora DSQL; AWS CLI v2 and IAM auth-token generation; psql 14+; language-specific Aurora DSQL connectors for application code; optional AWS MCP for service documentation/API calls; bundled shell scripts and extensive references for safe SQL, access control, migrations, connectivity and query-plan analysis
+import_eligibility: exact-version-reference
+rationale: Exact pinned Aurora DSQL package at tree SHA 254a60139d64cdc667f97566caafa5e181a3118c. The skill is a broad operational and development reference covering cluster lifecycle, IAM-authenticated connectivity, schema/DDL, MySQL migration, multi-tenant design and query-plan analysis. It strongly prefers canonical DSQL connectors, scoped IAM tokens, parameterized/safe SQL construction and mandatory reference loading before sensitive operations. Authority is mutating because it supports cluster creation and database writes/DDL. Portability is low because its procedures depend on Aurora DSQL semantics, AWS IAM/CLI behavior, psql, AWS service limits and DSQL-specific connector packages. Exact service limits and connector versions are explicitly freshness-sensitive and should be verified when consequential.
