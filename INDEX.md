@@ -20,9 +20,9 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 120 |
+| Persisted third-party exact-version reviews | 121 |
 | AWS historical reviewed denominator | 72 / 72 |
-| AWS current-standard companion-complete | 20 / 72 |
+| AWS current-standard companion-complete | 21 / 72 |
 
 ## First-party skills by purpose
 
