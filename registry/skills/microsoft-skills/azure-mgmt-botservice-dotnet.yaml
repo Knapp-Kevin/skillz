@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-botservice-dotnet
+display_name: Microsoft Azure Bot Service Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-botservice-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-botservice-dotnet
+permission_tier: consequential-cloud-channel-credential-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.BotService; Azure.Identity; authenticated Azure subscription/resource group; existing Microsoft app identity for bot registration; target bot endpoint; optional channel-specific external-service configuration and credentials
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 35acc4dd431bfb75320c3f00b9bb47b0f86c43c8 and SKILL.md blob 8549e745271e52eb7e03a2d71a124899f06d2999. The package provides useful bot resource/channel management guidance across Direct Line, Teams, Web Chat and other channel types. Unchanged adoption fails the current authority rule because it creates/updates/deletes cloud bot resources and externally reachable channels and regenerates Direct Line keys without a distinct affirmative resource/channel/credential authorization boundary. Credential hygiene guidance is otherwise reasonable and recommends Key Vault/managed identity. Preserve as adaptation/reference evidence with explicit resource, channel publication, cost and credential-rotation gates.
