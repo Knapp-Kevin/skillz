@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-applicationinsights-dotnet
+display_name: Microsoft Application Insights Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-applicationinsights-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-applicationinsights-dotnet
+permission_tier: consequential-cloud-observability-secret-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.ApplicationInsights; Azure.Identity; authenticated Azure subscription/resource group; Log Analytics workspace for workspace-based components; target URLs/test credentials for availability tests; optional linked storage; workbook/KQL content
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 97d0a70bf390fa9ba763eacc544c441e7a64fd5f and SKILL.md blob 97279bfcc7736acd9e3d3772e118bdf9a52fb0b5. The package contains useful Application Insights ARM guidance for components, API keys, availability tests, workbooks, storage links, retention and sampling. Unchanged adoption fails current authority/secret rules because it provisions and deletes billable observability resources and recurring web tests without an affirmative action/cost gate, retrieves and prints the component connection string and instrumentation key, creates an API key and prints the one-time secret, and embeds a login-test credential placeholder into a remote multi-step test configuration without a mandatory approved credential/data-handling path. Preserve as adaptation/reference evidence with resource/cost, secret-access, synthetic-test and credential-handling gates.
