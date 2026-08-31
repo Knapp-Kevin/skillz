@@ -14,7 +14,7 @@ rubric_score: 13/20
 tags:
   use_case: [cloud, observability, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [production-oriented, management-plane, external-service-integrated]
-  authority: [external-side-effect, resource-mutation, secret-access, data-transmission, cost-bearing]
+  characteristic: [production-oriented, instrumentation, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Useful Application Insights ARM patterns cover components, API keys, availability tests, workbooks, linked storage, retention and sampling. Rejected unchanged because normal workflows create/update/delete billable resources and recurring synthetic tests without affirmative authorization; retrieve and print connection strings/instrumentation keys; create and print a one-time API-key secret; and place a login-test credential placeholder into a remote multi-step test configuration without a mandatory secure credential/data-handling path. Preserve as adaptation/reference evidence with explicit resource/cost, secret-access, synthetic-test, and credential-handling gates. Behavioral validation is not-run.
