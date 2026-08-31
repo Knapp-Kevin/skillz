@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: troubleshooting-s3-files
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6848c5b4eeff962f1d541c7a8f1c1a44c854ef33
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, debugging, operations]
+  lifecycle: [verification, operations]
+  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong diagnostic mechanisms cover mount/network/IAM/synchronization/conflict/performance/KMS/DNS failures and distinguish S3 Files from adjacent AWS file products. Rejected unchanged because remediation includes host installation and AWS security-group/IAM/VPC changes while confirmation on write commands is only SHOULD rather than mandatory. Retain as adaptation/reference evidence. Behavioral validation remains not-run; S3 Files availability, client versions, quotas, IAM and synchronization behavior are freshness-sensitive.
