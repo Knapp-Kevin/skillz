@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 150 |
+| **Persisted third-party review companions** | 153 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
-| **AWS current-standard companion complete** | 50 / 72 |
-| **AWS current-standard gaps** | 22 |
+| **AWS current-standard companion complete** | 53 / 72 |
+| **AWS current-standard gaps** | 19 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -53,20 +53,21 @@ The canonical physical boundary is reflected in the live tree. `skillz` owns no 
 
 - **43 active first-party user-facing skills** have structured semantic review records and **43/43 provenance companions** under `registry/skills/local-skills/`.
 - **12 pinned external corpora** provide the broad 500+ reference surface.
-- **150 current exact-version third-party verification companion files** are persisted.
+- **153 current exact-version third-party verification companion files** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
-- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **50/72** now have current-standard per-skill provenance + verification companion pairs; **22** reconciliation gaps remain.
+- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **53/72** now have current-standard per-skill provenance + verification companion pairs; **19** reconciliation gaps remain.
 - Historical source-level evidence remains valid for what it establishes. Companion reconciliation searches existing records and recoverable prior evidence before performing a fresh exact-version review.
 - `engine/skills/` procedures do not count as user-facing inventory.
 
 ## Sequential AWS curation progress
 
-The current high-throughput reconciliation pass preserves the registered AWS pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` and has now completed four specialized families at the current standard:
+The current high-throughput reconciliation pass preserves the registered AWS pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` and has now completed five specialized families at the current standard:
 
 - **Database skills:** 11/11 companion-complete. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where their mutation procedures lack a sufficient explicit consent boundary; other records retain their actual verified/rejected dispositions.
 - **EC2 skills:** 3/3 companion-complete. `creating-ec2-image-builder-pipeline` is rejected unchanged for compulsory resource mutation without a pre-mutation authorization gate; the EC2 launch and instance-profile packages are verified because they establish meaningful user confirmation boundaries.
 - **Migration and modernization:** 2/2 companion-complete. `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent; `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
 - **Networking and content delivery:** 10/10 companion-complete. `enabling-lambda-vpc-internet-access` is verified because it presents all planned resources and current-cost implications and requires explicit approval before any billable mutation. The other nine packages are rejected unchanged where representative mutating procedures lack a distinct authorization gate for consequential DNS, routing, security-control, subscription, or network-infrastructure changes.
+- **Operations:** 3/3 companion-complete. `setting-up-cloudtrail-multi-region` and `setting-up-cloudwatch-alarm-notifications` are rejected unchanged because they perform consequential infrastructure/external-notification changes without a sufficient explicit authorization boundary. `troubleshooting-application-failures` is verified as an evidence-first, read-only diagnostic workflow that queries logs and recommends rather than executes remediation.
 
 All exact-version records retain package tree identity, source revision/freshness, dependencies, authority, portability, controlled taxonomy tags, decisive static state, and behavioral status. Behavioral validation remains `not-run` unless representative external evidence actually exists.
 
@@ -95,7 +96,7 @@ Interpret candidates in this order:
 
 ## Current curation priority
 
-1. Continue AWS Agent Toolkit sequential reconciliation through the remaining **22** gaps, checking live companions before every unit.
+1. Continue AWS Agent Toolkit sequential reconciliation through the remaining **19** gaps, checking live companions before every unit.
 2. Complete Microsoft Skills.
 3. Complete Microsoft Azure Skills.
 4. Continue remaining admitted creator/registered-source curation to the same mandatory standard.
