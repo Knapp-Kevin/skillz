@@ -11,11 +11,11 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 128 |
+| **Persisted third-party review companions** | 131 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
-| **AWS current-standard companion complete** | 28 / 72 |
+| **AWS current-standard companion complete** | 31 / 72 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -54,15 +54,15 @@ There is no repository-owned runtime, root scripts layer, tests gate, CI workflo
 
 - **43 active first-party user-facing skills** have structured semantic review records and **43/43 provenance companions** under `registry/skills/local-skills/`.
 - **12 pinned external corpora** provide the broad 500+ reference surface.
-- **128 current exact-version third-party verification companion files** are persisted.
+- **131 current exact-version third-party verification companion files** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
-- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **28/72** now have current-standard per-skill provenance + verification companion pairs; **44** reconciliation gaps remain.
+- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **31/72** now have current-standard per-skill provenance + verification companion pairs; **41** reconciliation gaps remain.
 - Historical source-level curation evidence remains valid for what it establishes. Companion reconciliation searches existing records and recoverable historical evidence before performing a fresh exact-version review.
 - `engine/skills/` procedures do not count as user-facing inventory.
 
 ## Latest sequential AWS reconciliation batch
 
-This batch closed seven genuine companion gaps without changing the registered AWS source pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`:
+This batch closed ten genuine companion gaps without changing the registered AWS source pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`:
 
 | Skill | Exact package tree | State | Score | Authority | Portability |
 |---|---|---|---:|---|---|
@@ -73,8 +73,11 @@ This batch closed seven genuine companion gaps without changing the registered A
 | `amazon-aurora-postgresql` | `eb9414ad02354efaa482cb24003af763030ec00d` | verified | 18/20 | mutating | low |
 | `amazon-documentdb` | `4fc95aee114b9b6911dcdfc1d41a9715c3df4e62` | verified | 16/20 | mutating | low |
 | `amazon-elasticache` | `7ab33b79df92988e90fe25e9318fe748c7d15149` | verified | 17/20 | mutating | low |
+| `amazon-keyspaces` | `a20b245aecdf8532d6c04e0b760cc2932833b4c8` | verified | 15/20 | mutating | low |
+| `aurora-dsql` | `254a60139d64cdc667f97566caafa5e181a3118c` | verified | 16/20 | mutating | low |
+| `creating-amazon-aurora-db-cluster-with-instances` | `8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5` | rejected | 13/20 | mutating | low |
 
-Behavioral evidence remains `not-run` for this static curation batch. The reviews preserve upstream scripts/assets/references as package dependencies rather than treating them as `skillz` runtime.
+The Aurora cluster-creation package is intentionally rejected unchanged because its procedure performs consequential cloud-resource creation without a distinct user-confirmation boundary for those mutations. Its Secrets Manager, sequencing and verification mechanisms remain useful prior art. Behavioral evidence remains `not-run` for this static curation batch. Upstream scripts/assets/references remain package dependencies, not `skillz` runtime.
 
 ## Source lifecycle
 
@@ -104,7 +107,7 @@ Interpret candidates in this order:
 
 ## Current curation priority
 
-1. Continue AWS Agent Toolkit current-standard companion reconciliation sequentially until the remaining 44 gaps are closed, preserving historical evidence and avoiding duplicate review.
+1. Continue AWS Agent Toolkit current-standard companion reconciliation sequentially until the remaining 41 gaps are closed, preserving historical evidence and avoiding duplicate review.
 2. Complete Microsoft Skills.
 3. Complete Microsoft Azure Skills.
 4. Continue remaining admitted creator/registered-source curation to the same mandatory standard.
