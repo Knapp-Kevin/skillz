@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: launching-ec2-instance-with-best-practices
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 73282bc12f3061da6dc9554d013651858595ecda
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, deployment, implementation, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [cost-bounded, human-review, production-oriented, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes a pre-mutation confirmation of the full proposed defaults and reasoning; separate network-topology confirmation; current AMI and instance-offering verification; private-by-default networking; SSM-first access; refusal to inspect or retain SSH private-key material; least-privilege IAM guidance; encrypted gp3 storage; hardened security groups; comprehensive tagging; and post-launch verification. Authority remains mutating because the workflow creates and changes IAM, network-security and EC2 resources, but the package establishes a meaningful user confirmation boundary before resource creation. The score is held at 18/20 because instance/pricing/free-tier/AMI/performance recommendations and several exact defaults are volatile, while EC2 launch remains consequential even with strong safeguards. Current AWS evidence should be used for prices, instance availability and AMI/version facts. Behavioral validation remains not-run.
