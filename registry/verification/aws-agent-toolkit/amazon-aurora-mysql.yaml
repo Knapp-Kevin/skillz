@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-aurora-mysql
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0e3f93d02d0bff4d76ae31f425527441989717e1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, decision-support, security]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [deterministic, human-review, production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA 0e3f93d02d0bff4d76ae31f425527441989717e1 and includes SKILL.md, a substantial reference set, and three bundled analysis scripts. Strong static evidence includes explicit sub-skill routing and required reference loading; universal confirmation before create/modify operations; risk briefing plus confirmation for higher-impact changes; a hard block tier for deletion, failover/switchover, major-version mutation, password management, network-security changes, public database exposure, financial commitments, reboots, and other production-impacting actions; mandatory safer alternatives after refusals; credential-safety guidance; prohibition on fabricated API/pricing/version results; and deterministic scripts for ACU sizing, I/O-Optimized analysis, and commitment pricing when inputs are available. The score is held at 18/20 because the package is broad and several exact pricing, ACU, instance-family, engine-version, feature-compatibility, storage-transition, and upgrade claims are volatile. Current AWS documentation and live account evidence should be used before consequential decisions. Bundled scripts are upstream skill components, not skillz-owned runtime. Behavioral validation remains not-run.
