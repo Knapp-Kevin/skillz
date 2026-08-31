@@ -20,10 +20,10 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 131 |
+| Persisted third-party exact-version reviews | 140 |
 | AWS historical reviewed denominator | 72 / 72 |
-| AWS current-standard companion-complete | 31 / 72 |
-| AWS current-standard gaps | 41 |
+| AWS current-standard companion-complete | 40 / 72 |
+| AWS current-standard gaps | 32 |
 
 ## First-party skills by purpose
 
@@ -127,6 +127,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS accounting deliberately separates **72/72 historical inspection** from **31/72 current-standard companion completeness**. Remaining AWS work is evidence reconciliation first, fresh review only for genuine unresolved evidence/identity gaps.
+AWS accounting deliberately separates **72/72 historical inspection** from **40/72 current-standard companion completeness**. Database, EC2, and migration/modernization specialized families are now fully reconciled. Remaining AWS work is evidence reconciliation first, fresh review only for genuine unresolved evidence/identity gaps.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
