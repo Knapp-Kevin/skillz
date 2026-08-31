@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: connecting-vpcs-with-peering
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0ee1e3d9a95d1f7b7df244f996a00d2ac2bd7e96
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, architecture, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include single-pass parameter collection, VPC existence and CIDR-overlap checks, cross-account/manual-acceptance handling, route-conflict checks, active-state verification, DNS configuration checks and security-group least-exposure guidance. Rejected unchanged under the current hard-fail mutation-consent rule because the procedure mandates creation/acceptance of VPC peering plus DNS-option and route-table mutations after inputs are collected, without a distinct explicit user authorization gate covering those consequential network changes. Behavioral validation remains not-run. Peering quotas, cross-region/account behavior and DNS semantics are freshness-sensitive.
