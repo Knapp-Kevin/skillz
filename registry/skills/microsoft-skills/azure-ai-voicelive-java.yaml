@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-java
+display_name: Microsoft Azure AI Voice Live for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-voicelive-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-voicelive-java
+permission_tier: consequential-live-audio-recording-tool-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-voicelive 1.0.0-beta.2; azure-identity; Reactor Core 3.6.0 in bundled examples; authenticated Azure Voice Live endpoint or API key; local microphone/audio devices for live-stream examples; applicable external APIs for function tools; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA ac2032a229e8853b9d4957a9d9146ca958eaeed4 and SKILL.md blob 584b13e150584b12741a775389b6dab1bdfa82f1. The package provides useful Java real-time voice guidance, but unchanged adoption fails current consent/data/tool/cost rules because normal and bundled examples start metered external AI sessions, stream user audio, configure transcription, actively capture microphone audio for thirty seconds, and execute function-call handlers without mandatory recording/privacy, external-service, metered-cost and tool-action authorization gates. Credential examples use environment variables and Azure credential objects rather than soliciting secrets. Preserve as adaptation/reference evidence with explicit recording consent, live-audio transmission, session-cost and function-execution boundaries.
