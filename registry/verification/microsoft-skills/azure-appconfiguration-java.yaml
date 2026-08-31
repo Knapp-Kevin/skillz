@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-appconfiguration-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 869a8ab74ba9a470461a6c9948a8d018d1efe36b
+skill_md_blob_sha: a27cd0325fe6fba6009923912c5174ee364bd2c5
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful App Configuration guidance covers settings, feature flags, secret references, read-only state, snapshots, ETags and authentication. Rejected unchanged because normal workflows create/update/delete production configuration, mutate rollout targeting and read-only/release state, change secret references, and expose configuration values or identifiers without a mandatory affirmative configuration/privacy/secret-reference authorization boundary. ETag concurrency is positive safety evidence but does not authorize the underlying mutation. Behavioral validation is not-run.
