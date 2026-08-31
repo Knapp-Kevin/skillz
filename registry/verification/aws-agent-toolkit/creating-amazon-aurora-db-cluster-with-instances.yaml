@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: creating-amazon-aurora-db-cluster-with-instances
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include managed-password creation through Secrets Manager, credential/permission checks, encrypted-storage defaults, ordered cluster-then-instance provisioning, bounded status monitoring, final association checks and explicit refusal to expose the generated password. Rejected unchanged under the current hard-fail rule because the procedure proceeds from parameter/dependency gathering into create-db-cluster and create-db-instance without an explicit consent boundary for those consequential mutations. The only proceed/abort prompt is tied to missing dependencies, which cannot be treated as authorization to create billable cloud resources. This package remains useful adaptation/reference evidence. Behavioral validation remains not-run.
