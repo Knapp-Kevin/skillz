@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **172** persisted exact-version third-party verification companions.
+- **173** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -65,11 +65,14 @@ Representative authority findings from the final tranche:
 
 Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates and examples remain intact package dependencies rather than `skillz` execution machinery.
 
-### Microsoft Skills — ACTIVE NEXT FRONTIER
+### Microsoft Skills — ACTIVE FRONTIER
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- First action: establish the exact eligible denominator from the pinned source and reconcile any existing provenance/verification companions before creating new records.
-- Work source-family-by-source-family with the same exact identity, license, dependency, authority, portability, freshness, controlled-tag and decisive-state standard.
+- Current-standard provenance + verification companions persisted: **1**.
+- Exact eligible denominator: **reconciliation in progress; no percentage claimed yet**.
+- First completed unit: `applicationinsights-web-ts`, package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`, last package-path update `2026-04-23T17:15:18Z`.
+- `applicationinsights-web-ts` is `rejected` unchanged under the current authority/privacy rule. Its main setup initializes browser telemetry before first user interaction and enables automatic collection without making consent or approved data handling a mandatory precondition. Later consent/PII guidance is useful but optional, so retain the package as adaptation/reference evidence with a mandatory consent/data-governance gate. Behavioral validation is `not-run`.
+- Continue denominator reconciliation from the exact pinned tree and check both companion paths before every unit.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -118,4 +121,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active next frontier:** Microsoft Skills exact-denominator and companion reconciliation, with Microsoft Azure Skills immediately behind it. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now with **1** current-standard companion pair persisted while exact denominator reconciliation continues. Microsoft Azure Skills follows. Discovery and issue/PR hygiene continue in parallel.
