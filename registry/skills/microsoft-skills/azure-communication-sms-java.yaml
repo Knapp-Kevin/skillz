@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-sms-java
+display_name: Microsoft Azure Communication SMS for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-sms-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-sms-java
+permission_tier: consequential-sms-otp-marketing-pii-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-communication-sms 1.2.0; optional azure-identity; ACS endpoint/connection string/access key; provisioned sender phone number; Event Grid for delivery reports; local in-memory OTP store in bundled example; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA d4bea547144aea210f1dcb782658f947847d72a6 and SKILL.md blob d2dfd5056562193e7cbda6be6c7fd6c6faecdfe8. Rejected unchanged because examples send single, bulk, marketing and OTP SMS messages, retry failed sends, expose recipient phone numbers in logs/delivery reports, and store/handle OTP secrets without mandatory recipient-consent, message-purpose, PII/privacy, authentication-secret and metered-cost authorization boundaries. The top-level skill demonstrates a literal verification code and bulk marketing campaign; bundled examples generate/store OTPs in memory and tag/log phone-number context. Preserve as adaptation/reference evidence with explicit send/consent, OTP-secret, PII/logging, retry and cost gates.
