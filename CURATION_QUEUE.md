@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **215** persisted exact-version third-party verification companions.
+- **216** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -63,10 +63,10 @@ Behavioral evidence remains `not-run` unless representative external evaluation 
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **43/189**.
-- Remaining current-standard gaps: **146**.
+- Current-standard provenance + verification companions persisted: **44/189**.
+- Remaining current-standard gaps: **145**.
 - The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-java/skills/` slice has an exact denominator of **26** and is **10/26 current-standard companion-complete**.
+- The direct `.github/plugins/azure-sdk-java/skills/` slice has an exact denominator of **26** and is **11/26 current-standard companion-complete**.
 
 Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and the complete direct `.NET` SDK slice. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
@@ -74,7 +74,7 @@ The direct `.NET` slice closed at 29/29 with decisive exact-version evidence for
 
 #### Java plugin slice — ACTIVE
 
-The Java slice is now **10/26** current-standard companion-complete. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where the pinned history differs; each record retains its own package-tree, skill-blob, source revision, and freshness identity.
+The Java slice is now **11/26** current-standard companion-complete. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where the pinned history differs; each record retains its own package-tree, skill-blob, source revision, and freshness identity.
 
 | Skill | State | Score | Decisive unchanged-adoption blockers / disposition basis |
 |---|---|---:|---|
@@ -88,11 +88,12 @@ The Java slice is now **10/26** current-standard companion-complete. All reviewe
 | `azure-appconfiguration-java` | rejected | 13/20 | Production configuration, feature targeting, secret-reference metadata, read-only protection and snapshot transitions without distinct configuration, targeting, sensitive-metadata and destructive/state-transition gates. |
 | `azure-communication-callautomation-java` | rejected | 11/20 | PSTN call initiation/answering, speech/DTMF processing, recording/download, transfer, participant changes and termination without mandatory telephony, consent/privacy, cost and destructive-action boundaries; top-level SDK 1.6.0 conflicts with bundled examples at 1.5.2. |
 | `azure-communication-callingserver-java` | retired | 14/20 | Microsoft explicitly marks CallingServer deprecated and directs new development to Call Automation. Preserve only for migration/legacy maintenance; legacy recording control lacks a distinct participant-consent/privacy gate. |
+| `azure-communication-chat-java` | rejected | 12/20 | Thread/message creation and deletion, participant changes, history sharing, read/typing privacy signals, and external message/user-metadata transmission lack distinct communication, participant, privacy/data, destructive-action and service-use gates; top-level SDK 1.6.0 conflicts with bundled examples at 1.6.4. |
 
-Behavioral validation is `not-run` for all ten because no separate representative external scenario/adversarial evidence has been recorded.
+Behavioral validation is `not-run` for all eleven because no separate representative external scenario/adversarial evidence has been recorded.
 
 - Denominator accounting is closed at the exact registered pin. The unit is an independently front-mattered `SKILL.md` entry point. The count includes 129 language-SDK plugin entries; real canonical `.github/skills` packages; 28 Azure-plugin top-level packages; 10 Deep Wiki entries; 5 Microsoft 365 Agents Toolkit top-level entries; and 6 additional nested skill entry points (`microsoft-foundry/finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, `models/deploy-model/preset`, and `teams-app-developer/slack-to-teams`). Duplicate exposure paths are de-duplicated by skill identity, `.github/skills` symlink mirrors and plugin symlink aliases do not create additional units, and ordinary workflow/reference `.md` files remain part of their parent package. The upstream README's conflicting 174/175 headlines are not used as denominator evidence.
-- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **16 Java direct packages** are the next coherent Microsoft tranche before moving to the next plugin/language family.
+- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **15 Java direct packages** are the next coherent Microsoft tranche before moving to the next plugin/language family.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -141,4 +142,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **43/189** current-standard companion-complete with **146** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **10/26** complete with **16** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **44/189** current-standard companion-complete with **145** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **11/26** complete with **15** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
