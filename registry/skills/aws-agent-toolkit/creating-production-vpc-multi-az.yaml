@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: creating-production-vpc-multi-az
+display_name: Creating a Production Multi-AZ VPC
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/creating-production-vpc-multi-az/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/creating-production-vpc-multi-az
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; managed AWS credentials; Amazon VPC/EC2 networking, Availability Zones, subnets, Internet Gateways, NAT Gateways, Elastic IPs, route tables, security groups, IAM, CloudWatch Logs and VPC Flow Logs; bundled production-VPC procedure reference
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 0a4bcb33ed8cbf2c38768eea13ac6d2200e59446. Strong static mechanisms include AZ validation, explicit internet-wide CIDR warnings, multi-AZ subnet topology, per-AZ NAT design, tiered security groups, VPC Flow Logs, tagging, post-provision verification and cost disclosure. Rejected unchanged because the procedure proceeds from parameter acquisition directly into a large sequence of consequential billable/security mutations including VPC, subnets, Internet/NAT gateways, Elastic IPs, routes, security groups, IAM and logging resources without a distinct explicit authorization gate covering the proposed infrastructure plan and spend. An explicit request for 0.0.0.0/0 is narrowly scoped to exposure and does not authorize the broader build. Portability is low and AWS networking/cost/quota details are freshness-sensitive.
