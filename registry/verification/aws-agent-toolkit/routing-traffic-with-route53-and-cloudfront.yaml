@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: routing-traffic-with-route53-and-cloudfront
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d90bbc41109b0667dbc79be2165d8e6399190b14
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include distribution/CNAME prerequisite checks, ACM us-east-1 handling, preservation of existing distribution configuration, public hosted-zone validation, dual-stack alias creation and propagation verification. Rejected unchanged under the current hard-fail mutation-consent rule because certificate request, DNS validation writes, CloudFront distribution mutation and Route 53 UPSERTs are performed without a distinct explicit approval gate for those consequential routing/service changes. Hosted-zone creation has a user-choice gate, but it does not authorize the other mutations. Behavioral validation remains not-run.
