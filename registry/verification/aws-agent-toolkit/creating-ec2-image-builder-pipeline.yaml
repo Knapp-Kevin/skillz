@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: creating-ec2-image-builder-pipeline
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1d5acab602162d9049f0f592134eab24dbce29f6
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, traceable]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include sequential verified execution, exact API-returned ARN reuse, optional-ECR least privilege, per-operation success reporting, build-status observation, cleanup instructions and cost disclosure. Rejected unchanged because the procedure explicitly mandates executing every pipeline step and forbids skipping steps, while creating IAM identities, Image Builder resources, cross-region AMI distribution, starting a billable build and creating an EC2 launch template without a distinct explicit authorization boundary before those mutations. Failure confirmation and missing-tool proceed/abort prompts are not consent to create resources. The package remains useful adaptation/reference evidence. AMI resolution, managed policies, pricing/cost, build timing and service API behavior are freshness-sensitive. Behavioral validation remains not-run.
