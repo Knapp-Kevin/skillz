@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: shieldadvanced
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3ef03839bc64199197448d2a6a1d8ab944ff71e9
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, security, decision-support, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes decide-before-subscribe guidance, lower-cost alternatives, explicit billing-family semantics, auto-renewal/support-only cancellation warnings, required resource protection after subscription, least-privilege controls, audit/encryption guidance and coverage verification. Rejected unchanged under the current hard-fail mutation-consent rule because the subscription procedure warns about the paid auto-renewing commitment but then invokes create-subscription without a distinct explicit user authorization gate accepting that commitment. Warning is not consent. Behavioral validation remains not-run. Pricing, subscription terms, resource eligibility and Shield/WAF capabilities are freshness-sensitive.
