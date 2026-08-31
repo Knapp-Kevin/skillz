@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-callingserver-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 276440fcfee1858c728b0db63898d52e578ce86b
+skill_md_blob_sha: c2bde1986d3ace215f6a28e923e5399326a9882e
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: retired
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, communication, migration]
+  lifecycle: [maintenance, migration]
+  characteristic: [deprecated, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. Microsoft explicitly marks Azure Communication CallingServer as deprecated and directs new development to Call Automation, making retirement the truthful decisive state rather than current unchanged eligibility. The package remains useful for recognizing legacy dependencies, mapping renamed classes, and migrating existing CallingServer code. The legacy recording example starts, pauses, resumes and stops external call recording without a mandatory participant-consent/privacy authorization boundary, while client creation relies on a connection-string placeholder rather than the hardened identity patterns used by newer packages. Retain as bounded migration/reference evidence only. Behavioral validation is not-run.
