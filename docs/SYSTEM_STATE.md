@@ -11,98 +11,64 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 163 |
+| **Persisted third-party review companions** | 172 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
-| **AWS current-standard companion complete** | 63 / 72 |
-| **AWS current-standard gaps** | 9 |
+| **AWS current-standard companion complete** | 72 / 72 |
+| **AWS current-standard gaps** | 0 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
 ## Current architecture
 
-```text
-skillz/
-├── README.md
-├── AGENT_START_HERE.md
-├── BOOTSTRAP.md
-├── AGENTS.md
-├── INDEX.md                         passive human catalog snapshot
-├── index.json                       passive machine catalog snapshot
-├── CURATED.md
-├── CURATION_QUEUE.md                living curation evidence ledger
-├── skills/                          43 first-party user-facing skill packages
-│   ├── categories/                  human browse-by-purpose navigation
-│   └── sources/                     12 intact exact-revision third-party corpora
-├── engine/skills/                   passive repository-use/curation procedures
-├── registry/
-│   ├── sources.yaml                 19 unique source identities/roles/pins
-│   ├── source-signals.yaml          volatile source-level context
-│   ├── skills/                      mandatory per-skill provenance companions
-│   ├── verification/                exact-version semantic review companions
-│   ├── local-verification.json      first-party structured reviews
-│   ├── categories.yaml              canonical first-party category assignments
-│   └── taxonomy.yaml                controlled metadata vocabulary
-└── docs/                            governance, provenance, curation, evidence, history
-```
+The canonical physical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance and exact-version evidence live under `registry/`.
 
-The canonical physical boundary is reflected in the live tree. `skillz` owns no runtime, root scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Pinned third-party repositories may contain their own code or tooling; those remain intact upstream package components rather than repository-owned execution machinery.
+`skillz` owns no runtime, scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Tooling inside pinned third-party repositories remains upstream package material, not repository-owned execution machinery.
 
 ## Inventory boundaries
 
-- **43 active first-party user-facing skills** have structured semantic review records and **43/43 provenance companions** under `registry/skills/local-skills/`.
-- **12 pinned external corpora** provide the broad 500+ reference surface.
-- **163 current exact-version third-party verification companion files** are persisted.
+- **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
+- **12 pinned external corpora** provide the broad reference surface.
+- **172 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
-- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **63/72** now have current-standard per-skill provenance + verification companion pairs; **9** reconciliation gaps remain.
-- Historical source-level evidence remains valid for what it establishes. Companion reconciliation searches existing records and recoverable prior evidence before performing a fresh exact-version review.
-- `engine/skills/` procedures do not count as user-facing inventory.
+- AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
+- AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
+- Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
-## Sequential AWS curation progress
+## AWS curation completion
 
-The current high-throughput reconciliation pass preserves the registered AWS pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` and has now completed seven specialized families at the current standard:
+The sequential reconciliation campaign completed every AWS core and specialized package at the registered pin. Fully reconciled specialized families include analytics, database, EC2, migration/modernization, networking/content-delivery, operations, security/identity, serverless, storage, system-table, and web/mobile.
 
-- **Database skills:** 11/11 companion-complete. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where their mutation procedures lack a sufficient explicit consent boundary; other records retain their actual verified/rejected dispositions.
-- **EC2 skills:** 3/3 companion-complete. `creating-ec2-image-builder-pipeline` is rejected unchanged for compulsory resource mutation without a pre-mutation authorization gate; the EC2 launch and instance-profile packages are verified because they establish meaningful user confirmation boundaries.
-- **Migration and modernization:** 2/2 companion-complete. `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent; `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
-- **Networking and content delivery:** 10/10 companion-complete. `enabling-lambda-vpc-internet-access` is verified because it presents all planned resources and current-cost implications and requires explicit approval before any billable mutation. The other nine packages are rejected unchanged where representative mutating procedures lack a distinct authorization gate for consequential DNS, routing, security-control, subscription, or network-infrastructure changes.
-- **Operations:** 3/3 companion-complete. `setting-up-cloudtrail-multi-region` and `setting-up-cloudwatch-alarm-notifications` are rejected unchanged because they perform consequential infrastructure/external-notification changes without a sufficient explicit authorization boundary. `troubleshooting-application-failures` is verified as an evidence-first, read-only diagnostic workflow that queries logs and recommends rather than executes remediation.
-- **Security and identity:** 1/1 companion-complete. `creating-secrets-using-best-practices` is rejected unchanged because it permits actual secret values to be supplied in conversational context and then creates KMS, Secrets Manager, IAM, rotation, CloudTrail, CloudWatch and related resources without a distinct plan authorization gate.
-- **Serverless:** 9/9 companion-complete. `aws-lambda-durable-functions`, `aws-lambda-managed-instances`, `aws-lambda-microvms`, `connecting-lambda-to-dynamodb`, and `debugging-lambda-timeouts` retain verified structured states where their authority boundaries are acceptable. `connecting-lambda-to-api-gateway`, `creating-api-gateway-stage`, `deploying-custom-domain-rest-api`, and `processing-s3-uploads-with-step-functions` are rejected unchanged because their consequential deployment/resource mutations lack a distinct affirmative authorization gate for the plan.
+The final nine gaps were five storage skills, three system-table skills, and `aws-amplify`. Current-standard review preserved useful negative evidence rather than rubber-stamping completion:
 
-All exact-version records retain package tree identity, source revision/freshness, dependencies, authority, portability, controlled taxonomy tags, decisive static state, and behavioral status. Behavioral validation remains `not-run` unless representative external evidence actually exists.
+- storage packages with useful diagnostics/design guidance were rejected unchanged when mutation/remediation paths lacked mandatory affirmative authorization;
+- system-table packages retained strong SQL/query guidance but were rejected unchanged because their configure/grant modes mutate integrations or permissions without a distinct approval gate;
+- `aws-amplify` was rejected unchanged because deployment paths create apps, IAM roles/policies, backend resources, domains and release jobs without a distinct infrastructure/cost authorization boundary, and one CI example exposes a GitHub token through a command argument.
+
+All AWS verification companions explicitly distinguish structured static review from behavioral evidence; behavioral validation remains `not-run` unless representative external evidence actually exists.
 
 ## Source lifecycle
 
-The repository distinguishes:
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
 
-**discovery surface → candidate issue/source → source-vetting → admitted corpus/reference/tracked source → individual exact-version review → user-fit decision**
-
-New third-party candidates use issue-first intake. The connected Creator Technical Resource Catalog is discovery intelligence only; its rows, scores, verification labels, creator attributions, and recommendations are not `skillz` provenance or individual quality evidence.
+New third-party discoveries use issue-first intake. Discovery surfaces, including the connected Creator Technical Resource Catalog, provide leads only. Their scores, labels, creator attributions, popularity, and recommendations do not establish `skillz` provenance or individual quality.
 
 ## Quality model
 
-- Source identity and individual skill quality are separate.
-- Every governed user-facing skill must have truthful provenance and applicable exact-version review evidence before being described as companion-complete.
-- `verified` means structured semantic review passed for the exact bound material.
-- `validated` means representative external scenario/adversarial evidence was also recorded.
-- `unverified` and legacy `trusted-baseline` are not unchanged-reuse states.
-- `stale`, `rejected`, and `retired` are excluded from normal unchanged selection.
-- Fingerprints identify reviewed material. They are provenance/bookkeeping evidence, not executable proof.
-- Static source completion requires an exact eligible denominator and a decisive current state for every in-scope skill.
+Every governed user-facing skill must retain truthful provenance and applicable exact-version evidence before being called companion-complete. `verified` means the exact material passed structured static semantic review. `validated` additionally requires representative external scenario/adversarial evidence. `stale`, `rejected`, and `retired` are excluded from normal unchanged reuse while remaining useful evidence where appropriate.
 
-Interpret candidates in this order:
+Interpret candidate material in this order:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
 ## Current curation priority
 
-1. Continue AWS Agent Toolkit sequential reconciliation through the remaining **9** gaps, checking live companions before every unit.
-2. Complete Microsoft Skills.
-3. Complete Microsoft Azure Skills.
-4. Continue remaining admitted creator/registered-source curation to the same mandatory standard.
-5. Continue governed discovery/source-vetting in parallel when evidence supports useful candidates.
-6. Keep README, governance, category navigation, source registry, catalog snapshots, and public counts aligned after each material batch.
+1. Complete Microsoft Skills at its registered pin, establishing the exact eligible denominator before completion claims.
+2. Complete Microsoft Azure Skills.
+3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
+4. Continue admitted/tracked creator-source curation and denominator reconciliation.
+5. Continue governed discovery/source-vetting through issue-first intake and omission recovery.
+6. Keep README, this System State, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
-The current living work surface is `CURATION_QUEUE.md` plus provenance audit issue #66. Closed historical Wayfinder/issues/PRs remain evidence, not active execution plans.
+The current living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
