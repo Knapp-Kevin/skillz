@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: rds-oracle
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f209347769fdd7223cd2a21f6a9ac269d4be1e9b
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [cloud, debugging, implementation, security, decision-support]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [human-review, production-oriented, progressive-disclosure, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes a universal explicit-confirmation boundary before create/modify operations; distinct downtime warnings for higher-impact changes; hard refusal/assessment redirection for deletion, backup destruction, failover, major-version upgrade, reboot, replica promotion and public-access enablement; required private networking and managed credential handling; scoped KMS and Secrets Manager guidance; precise RDS-Oracle-specific constraints such as no RDS Proxy; focused sub-skill routing; and bundled diagnostic tooling. The score is 19/20 because the authority and safety model is unusually explicit and operationally useful. It is held below perfect because Oracle/RDS version families, driver/tool support, option-group behavior, Kerberos/CMAN assumptions and service-specific networking details remain freshness-sensitive. Current AWS and Oracle documentation should be checked for consequential or version-specific use. Bundled scripts are upstream package components, not skillz-owned runtime. Behavioral validation remains not-run.
