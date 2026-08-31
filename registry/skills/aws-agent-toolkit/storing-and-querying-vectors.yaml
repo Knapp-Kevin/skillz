@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: storing-and-querying-vectors
+display_name: Store and Query Vectors
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/storage-skills/storing-and-querying-vectors/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/storage-skills/storing-and-querying-vectors
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with configured AWS identity; Amazon S3 Vectors, optional Bedrock embeddings and KMS; bundled limits/patterns and metadata-filtering references; optional OpenSearch integration
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 7b783a4689b151518e98395ec2d6c745973ba53d. Strong mechanisms include fit routing away from unsuitable sustained-QPS/hybrid-search workloads, existing-index reuse checks, immutable index-parameter confirmation, explicit embedding-model choice, dimension consistency, retry/backoff, metadata permission guidance and destructive-recreate confirmation. Rejected unchanged because the standard creation flow can create a vector bucket and index and write vectors after name/parameter confirmation without a distinct affirmative authorization gate for the consequential resource/data mutation plan. Retain as adaptation/reference material. S3 Vectors limits, regional availability, latency, Bedrock models, IAM/KMS requirements and API behavior are freshness-sensitive.
