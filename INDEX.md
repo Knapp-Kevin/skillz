@@ -20,11 +20,11 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 180 |
+| Persisted third-party exact-version reviews | 181 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 8 / denominator reconciliation in progress |
+| Microsoft Skills current-standard companions | 9 / denominator reconciliation in progress |
 
 ## First-party skills by purpose
 
@@ -120,6 +120,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. It currently has **8** current-standard exact-version companion pairs persisted at the registered pin. `applicationinsights-web-ts`, nested `azure-ai-document-intelligence-dotnet`, nested `azure-ai-agents-persistent-dotnet`, and nested `azure-ai-openai-dotnet` are rejected unchanged under the current privacy/authorization, data-governance, and consequential-action rules; `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and nested `azure-identity-dotnet` are verified by structured static review. `azure-ai-openai-dotnet` remains useful SDK/reference material for chat, embeddings, RAG, image/audio, and tool-call patterns, but its normal examples directly invoke metered external AI services and transmit application/user data without a distinct affirmative cost/data-transmission gate. The exact Microsoft eligible denominator is still being reconciled across canonical packages, plugin-hosted skills, nested skills and symlink mirrors, so no completion percentage is claimed. Microsoft Azure Skills follows.
+Microsoft Skills is the active admitted-source frontier. It currently has **9** current-standard exact-version companion pairs persisted at the registered pin. `applicationinsights-web-ts`, nested `azure-ai-document-intelligence-dotnet`, nested `azure-ai-agents-persistent-dotnet`, nested `azure-ai-openai-dotnet`, and nested `azure-ai-projects-dotnet` are rejected unchanged under the current privacy/authorization, data-governance, credential-access, and consequential-action rules; `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and nested `azure-identity-dotnet` are verified by structured static review. `azure-ai-projects-dotnet` remains useful SDK/reference material for Foundry project clients, agents, connections, deployments, datasets, indexes, evaluations, and Azure OpenAI access, but its normal workflows create/delete remote resources, upload data, invoke metered services, and expose credential-bearing connection retrieval without distinct affirmative authorization gates. The exact Microsoft eligible denominator is still being reconciled across canonical packages, plugin-hosted skills, nested skills and symlink mirrors, so no completion percentage is claimed. Microsoft Azure Skills follows.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
