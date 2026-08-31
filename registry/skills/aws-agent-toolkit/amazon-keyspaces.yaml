@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-keyspaces
+display_name: Amazon Keyspaces
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/amazon-keyspaces/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 3151b58551a4218ebe1190f4622fdc8b212c7e07
+upstream_last_updated_at: 2026-06-16T12:09:34Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/amazon-keyspaces
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Keyspaces control plane and CQL semantics; AWS credentials and target region; AWS CLI or AWS MCP execution path; CloudWatch, CloudTrail, IAM/Application Auto Scaling, KMS, CDC and PITR where applicable; Node.js 18+ plus bundled TypeScript analysis scripts for some pricing/compatibility workflows; bundled references and assets
+import_eligibility: exact-version-reference
+rationale: Exact pinned Amazon Keyspaces package at tree SHA a20b245aecdf8532d6c04e0b760cc2932833b4c8. The skill combines planning, compatibility, pricing, migration and operational procedures with consequential control-plane mutations. It has unusually explicit confirmation boundaries for create/modify work, separate warn-before-execute operations, a refuse list for irreversible or high-risk actions, tagging requirements, parameter/context constraints, and post-mutation observability guidance. Portability is low because the procedure is deeply coupled to Amazon Keyspaces, AWS IAM/CLI/MCP semantics, regional feature/pricing data, and bundled TypeScript/reference assets. Hosts should treat inline pricing and feature matrices as freshness-sensitive and should not equate the skill's simulated-script presentation mode with actual behavioral execution evidence.
