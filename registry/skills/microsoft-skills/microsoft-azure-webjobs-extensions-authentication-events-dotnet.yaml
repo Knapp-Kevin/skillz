@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: microsoft-azure-webjobs-extensions-authentication-events-dotnet
+display_name: Microsoft Entra Authentication Events for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet
+permission_tier: consequential-identity-token-attribute-otp-and-external-message
+portability: low
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents; Azure Functions; Microsoft Entra custom authentication extensions; Entra app registration and CustomAuthenticationExtension.Receive.Payload scope; Microsoft Graph User.Read where configured; external user-profile API for enrichment example; external SMS/email/push provider for OTP delivery; Application Insights when monitoring is enabled
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 15a35dcb0638dad179c9bbc5fe10a7587a27dee7 and SKILL.md blob a90ab71b73b33f9953ba9f95a556b451849ff4ba. The package provides valuable Microsoft Entra custom-authentication-extension guidance, but unchanged adoption fails several hard authority and privacy boundaries. Normal examples alter claims during token issuance, can block user sign-up, modify submitted identity attributes before persistence, transmit user IDs to an external profile API, and send a one-time authentication secret together with a phone number to an external messaging provider. Examples also log user identifiers and phone numbers. None of those identity, token, PII, OTP, external-message, or authentication-state effects is protected by a distinct affirmative authorization and approved-data-handling boundary. Preserve as adaptation/reference evidence only with explicit identity/token mutation, PII/privacy, OTP-secret handling, external lookup/message, and logging gates before operational use.
