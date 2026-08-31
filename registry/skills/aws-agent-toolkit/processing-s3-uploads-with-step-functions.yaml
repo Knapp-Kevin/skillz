@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: processing-s3-uploads-with-step-functions
+display_name: Process S3 Uploads with Step Functions
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/processing-s3-uploads-with-step-functions/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 9e9560f9c47129db5c9370960c4b589d2897eb83
+upstream_last_updated_at: 2026-06-18T13:52:08Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/processing-s3-uploads-with-step-functions
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI, Python 3.12 and Docker; configured AWS identity; EC2/VPC, ECR, ECS/Fargate, IAM, Lambda, S3, Step Functions, EventBridge, SQS, CloudWatch Logs/Alarms and optional KMS; bundled scripts and IAM/ECS references
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA dd4458ed38501418f41816b7a98b392c0050d691. The package provides a detailed event-driven architecture with scoped roles, container packaging, S3 encryption, Step Functions routing, EventBridge DLQ, CloudWatch alarms, security-group egress tightening, validation and troubleshooting. It is rejected unchanged because it creates and configures a broad, billable infrastructure set including security groups, ECR, IAM, Lambda, log groups/KMS, ECS/Fargate, S3, Step Functions, EventBridge, SQS and alarms without a distinct explicit authorization gate for the complete mutation/cost plan. Required parameter confirmation and the ability to abort do not constitute affirmative authorization. Retain as adaptation/reference material. Runtime versions, pricing, network behavior, service limits and API details are freshness-sensitive.
