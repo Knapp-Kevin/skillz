@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-sms-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d4bea547144aea210f1dcb782658f947847d72a6
+skill_md_blob_sha: d2dfd5056562193e7cbda6be6c7fd6c6faecdfe8
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, communication, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Rejected unchanged because normal and bundled examples send single, bulk, marketing and OTP SMS, retry sends, expose recipient phone numbers in logs/delivery reports, and handle OTP secrets without mandatory recipient-consent, message-purpose, PII/privacy, authentication-secret and metered-cost authorization boundaries. Behavioral validation is not-run.
