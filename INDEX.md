@@ -2,7 +2,7 @@
 
 **Snapshot date:** 2026-08-31
 
-This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs any discovery, comparison, evaluation, or reconciliation.
+This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, or reconciliation.
 
 Canonical sources for this snapshot:
 
@@ -20,15 +20,14 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 163 |
+| Persisted third-party exact-version reviews | 172 |
 | AWS historical reviewed denominator | 72 / 72 |
-| AWS current-standard companion-complete | 63 / 72 |
-| AWS current-standard gaps | 9 |
+| AWS current-standard companion-complete | 72 / 72 |
+| AWS current-standard gaps | 0 |
 
 ## First-party skills by purpose
 
 ### Planning & Productivity
-
 - `daily-briefing`
 - `decision-log`
 - `inbox-triage`
@@ -37,7 +36,6 @@ Canonical sources for this snapshot:
 - `week-in-review`
 
 ### Writing & Communication
-
 - `brief-writer`
 - `deck-outline`
 - `devlog-draft`
@@ -45,20 +43,17 @@ Canonical sources for this snapshot:
 - `standup-writer`
 
 ### Research & Analysis
-
 - `compare`
 - `deep-dive`
 - `fact-check`
 - `paper-digest`
 
 ### Software & Repositories
-
 - `repo-doctor`
 - `repo-pulse`
 - `todo-harvester`
 
 ### Agent Operations & Security
-
 - `agent-home-doctor`
 - `agent-postmortem`
 - `automation-receipts`
@@ -66,7 +61,6 @@ Canonical sources for this snapshot:
 - `permissions-review`
 
 ### Monitoring & Intelligence
-
 - `claude-pulse`
 - `deepseek-pulse`
 - `gemini-pulse`
@@ -86,7 +80,6 @@ Canonical sources for this snapshot:
 - `xai-pulse`
 
 ### Business & Career
-
 - `career-radar`
 - `finance-review`
 - `smallbiz-ops`
@@ -94,7 +87,6 @@ Canonical sources for this snapshot:
 ## Registered source roles
 
 ### Pinned reference corpora
-
 1. `anthropic-skills`
 2. `anthropic-knowledge-work-plugins`
 3. `vercel-agent-skills`
@@ -109,7 +101,6 @@ Canonical sources for this snapshot:
 12. `google-agents-cli`
 
 ### Tracked corpora
-
 - `cole-medin-skills`
 - `david-ondrej-skills`
 - `bm629-agent-skills`
@@ -117,7 +108,6 @@ Canonical sources for this snapshot:
 - `archieindian-superpowers`
 
 ### Normative / discovery references
-
 - `agentskills-spec` — normative specification
 - `github-awesome-copilot` — dynamic discovery surface
 
@@ -127,6 +117,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS accounting deliberately separates **72/72 historical inspection** from **63/72 current-standard companion completeness**. Database, EC2, migration/modernization, networking/content-delivery, operations, security/identity, and serverless specialized families are now fully reconciled. Remaining AWS work is evidence reconciliation first, fresh review only for genuine unresolved evidence/identity gaps.
+AWS accounting is now fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
+
+The active admitted-source frontier is Microsoft Skills, followed by Microsoft Azure Skills.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
