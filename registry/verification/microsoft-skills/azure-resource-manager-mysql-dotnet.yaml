@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-resource-manager-mysql-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e0816f9a38d4d5d2fc8012d59fb1a08f7ab0921d
+skill_md_blob_sha: 0be21fefd35b57a803ca6ac43ba2a82c062e2454
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Useful MySQL Flexible Server management guidance is rejected unchanged because the core workflow embeds a literal administrator password, provisions billable compute/storage/high availability, creates databases and permissive firewall rules including an Azure-wide 0.0.0.0 rule, changes configurations and Entra administrators, performs point-in-time restore, stop/start/restart with failover, scaling and deletion, and repeats a literal password in a connection string without distinct authorization. Preserve only as adaptation/reference evidence after replacing literal credentials and adding explicit resource/cost, firewall/network, identity, restore/failover, scale and deletion gates. Behavioral validation is not-run.
