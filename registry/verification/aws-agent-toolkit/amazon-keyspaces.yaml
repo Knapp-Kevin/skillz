@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-keyspaces
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a20b245aecdf8532d6c04e0b760cc2932833b4c8
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, decision-support, implementation, operations]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes explicit confirmation before creates/modifies; separate warning treatment for higher-impact capacity switching and restores; refusal/redirect rules for irreversible deletes, CDC disablement, irreversible client timestamps and region-addition changes; mandatory tagging; live-context and credential constraints; post-mutation CloudTrail/CloudWatch guidance; and structured routing across pricing, compatibility and migration workflows. Authority remains mutating because the skill can create keyspaces/tables/types, alter capacity/TTL/PITR/encryption/CDC/auto-scaling, restore tables and tag resources. The score is held at 15/20 because pricing, service feature support, regional availability and IAM details are freshness-sensitive, and the instruction to simulate bundled script output when shell execution is unavailable can blur the distinction between actually executed analysis and reconstructed static output. Behavioral validation has not been run.
