@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 14/20
 tags:
-  use_case: [cloud, implementation, operations]
+  use_case: [cloud, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [production-oriented, management-plane, capacity-management]
-  authority: [external-side-effect, resource-mutation, identity-mutation, cost-bearing]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Strong Fabric capacity-management reference material covers provisioning, scaling, administrators, suspend/resume, deletion, name availability and SKU discovery. Rejected unchanged because normal workflows create billable compute capacity, change capacity size and administrators, alter running/billing state, and delete resources without distinct affirmative action/cost/identity gates. The explicit idle-billing warning is useful evidence but is not authorization. Preserve as adaptation/reference evidence with capacity-cost, administrator, scaling/state and deletion approval boundaries. Behavioral validation is not-run.
