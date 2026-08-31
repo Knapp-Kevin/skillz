@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventhub-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 61210008d0cda928fe40b6463925443054d79f7b
+skill_md_blob_sha: 11c2a85610791e40b99dec976b422fe326e4fc9c
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [event-streaming, messaging, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, external-service-integrated, long-running]
+  authority: [external-side-effect, data-transmission, cost-bearing, resource-mutation, checkpoint-mutation, background-send]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.Messaging.EventHubs guidance for .NET across immediate and buffered producers, production EventProcessorClient receiving, partition routing, checkpointing, ASP.NET Core integration, batching, retries, and client disposal. It is rejected unchanged under the current authority/data-handling rule because normal workflows transmit application event payloads to a metered external service, buffered producers can send asynchronously after enqueue, the production receiver calls BlobContainerClient.CreateIfNotExistsAsync and writes checkpoints through UpdateCheckpointAsync, and the processor can remain active indefinitely until cancelled, without distinct affirmative data-transmission/cost/resource-mutation/background-send authorization boundaries or a mandatory approved-data-handling prerequisite. Credential guidance is comparatively strong through DefaultAzureCredential/managed identity and environment-variable based connection strings rather than conversationally solicited secrets. Adaptation should preserve the streaming/partition/checkpoint guidance while adding explicit send/background-send, checkpoint-storage mutation, cost, data-governance, and long-running processing authorization gates before operational use. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.

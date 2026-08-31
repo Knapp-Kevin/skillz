@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 183 |
+| **Persisted third-party review companions** | 184 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 11 / 189 |
-| **Microsoft Skills current-standard gaps** | 178 |
+| **Microsoft Skills current-standard companions** | 12 / 189 |
+| **Microsoft Skills current-standard gaps** | 177 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -32,11 +32,11 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **183 exact-version third-party verification companions** are persisted.
+- **184 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **11/189** have current-standard provenance + verification companions and **178** remain.
+- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **12/189** have current-standard provenance + verification companions and **177** remain.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -53,7 +53,7 @@ All AWS verification companions explicitly distinguish structured static review 
 
 ## Microsoft Skills curation
 
-Eleven current-standard Microsoft units are now persisted at the registered pin:
+Twelve current-standard Microsoft units are now persisted at the registered pin:
 
 - `applicationinsights-web-ts`, package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`, is decisively `rejected` for unchanged adoption because its primary browser setup enables telemetry before first user interaction without making consent or approved data handling a mandatory precondition. The package retains useful privacy, PII-scrubbing, observability and GenAI tracing guidance as adaptation/reference evidence. Behavioral validation is `not-run`.
 - `skill-creator`, package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, is `verified` by structured static review at 18/20. It provides strong skill-authoring guidance around concise context, progressive disclosure, current-documentation verification, credential hygiene, lifecycle cleanup and portable package structure. Its bundled Python helpers mutate local skill/package files only when deliberately invoked by an authorized host and remain upstream package tooling, not `skillz` runtime. Behavioral validation is `not-run`.
@@ -66,6 +66,7 @@ Eleven current-standard Microsoft units are now persisted at the registered pin:
 - `azure-ai-projects-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `2dabc3855c1b4ea3c8bf6f855ccf310c9e36eccd`, is `rejected` unchanged by structured static review at 14/20. It contains useful Azure AI Foundry/.NET guidance for project clients, persistent/versioned agents, connections, deployments, datasets, indexes, evaluations, Azure OpenAI access, authentication and tool integrations. Its normal workflows create and delete remote agents/threads, create agent versions, upload/delete datasets, create/update/delete indexes, run evaluations, and invoke metered AI/search services without distinct resource/cost/data-transmission authorization boundaries. The connection example also exposes `includeCredentials: true` without a separate credential-access authorization gate. Credential setup otherwise uses placeholders, environment variables, DefaultAzureCredential and managed identity. Preserve as adaptation/reference evidence with explicit mutation, cost, data-governance, credential-access and external-service authorization gates. Behavioral validation is `not-run`.
 - `azure-ai-voicelive-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `5569dda3e6dba27f9101b32be55992a6f62443c9`, is `rejected` unchanged by structured static review at 14/20. It provides useful real-time Voice Live guidance across session setup, authenticated WebSocket communication, text/audio modalities, voices/models, VAD, event handling, function-call integration, audio configuration and disposal. The core workflow starts a metered external AI session and transmits user audio/text without a distinct affirmative cost/data-transmission authorization boundary or mandatory recording/privacy/data-governance prerequisite. Its function-calling example also tells the host to call an external weather service without a separate action approval gate. Credential examples use placeholders/environment variables, DefaultAzureCredential and managed-identity guidance. Preserve as adaptation/reference evidence with explicit recording/privacy, cost, external-service, data-governance and function/tool authorization gates. Behavioral validation is `not-run`.
 - `azure-eventgrid-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `482dbcdcc9a1108a63e53395c16d08ac5b3fef22`, is `rejected` unchanged by structured static review at 14/20. It provides useful Event Grid guidance across topics/domains, namespace pull delivery, CloudEvents/EventGridEvent schemas, Entra/key/SAS authentication, publishing, receive/acknowledge/release/reject flows, parsing, system events, Azure Functions triggers, error handling and regional failover. Normal workflows publish event payloads and mutate external broker state through acknowledgement, release and rejection without a distinct affirmative side-effect/cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. The failover pattern can resend event batches to a secondary region. Credential guidance is comparatively strong through managed-identity/DefaultAzureCredential recommendations and placeholder key examples. Preserve as adaptation/reference evidence with explicit publish/message-state, cost, data-governance and cross-region failover authorization gates. Behavioral validation is `not-run`.
+- `azure-eventhub-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `61210008d0cda928fe40b6463925443054d79f7b`, is `rejected` unchanged by structured static review at 14/20. It provides useful Event Hubs guidance across immediate and buffered producers, production EventProcessorClient receiving, partition routing, checkpointing, ASP.NET Core integration, batching, retries and disposal. Normal workflows transmit application event payloads to a metered external service; buffered producers can send asynchronously after enqueue; the production receiver calls `BlobContainerClient.CreateIfNotExistsAsync()` and writes checkpoints through `UpdateCheckpointAsync()`; and processing can remain active indefinitely until cancelled, all without distinct affirmative data-transmission/cost/resource-mutation/background-send authorization boundaries or a mandatory approved-data-handling prerequisite. Credential guidance is comparatively strong through DefaultAzureCredential/managed identity and environment-variable based connection strings. Preserve as adaptation/reference evidence with explicit send/background-send, checkpoint-storage mutation, cost, data-governance and long-running processing authorization gates. Behavioral validation is `not-run`.
 
 The Microsoft source's exact eligible denominator is **189**. The accounting unit is an independently front-mattered `SKILL.md` entry point at the registered pin. The pinned topology contributes 129 language-SDK plugin entries; 13 real canonical `.github/skills` packages with duplicate exposure de-duplicated; 28 Azure-plugin top-level packages with the duplicate `entra-agent-id` exposure de-duplicated; 10 Deep Wiki entries; 5 Microsoft 365 Agents Toolkit top-level entries; and 6 additional nested skill entry points: `microsoft-foundry/finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, `models/deploy-model/preset`, and `teams-app-developer/slack-to-teams`. Symlink mirrors and duplicate exposure paths do not create additional units, and ordinary workflow/reference `.md` files remain dependencies of their parent skill. The upstream README's inconsistent 174/175 counts are therefore not used as corpus truth.
 

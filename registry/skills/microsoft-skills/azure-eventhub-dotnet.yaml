@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventhub-dotnet
+display_name: Microsoft Azure Event Hubs for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-eventhub-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-eventhub-dotnet
+permission_tier: consequential-external-streaming-data-storage-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.Messaging.EventHubs; Azure.Messaging.EventHubs.Processor; Azure.Identity; Azure.Storage.Blobs for EventProcessorClient checkpointing; authenticated Event Hubs namespace/hub; Blob checkpoint container/storage account; applicable Event Hubs and Storage RBAC or connection-string credentials
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 61210008d0cda928fe40b6463925443054d79f7b and SKILL.md blob 11c2a85610791e40b99dec976b422fe326e4fc9c. The skill provides useful .NET guidance for high-throughput Event Hubs producers, buffered producers, production EventProcessorClient receiving, partition routing, checkpoint strategy, ASP.NET Core integration, retries, batching, and disposal. Unchanged adoption fails the current authority/data-handling rule because normal workflows transmit application event payloads to an external metered service, the buffered producer can send asynchronously after enqueue, the production receiver creates the Blob checkpoint container when absent and writes checkpoint state, and processing can run indefinitely until cancelled, all without distinct affirmative data-transmission/cost/resource-mutation/background-send authorization boundaries or a mandatory approved-data-handling prerequisite. Credential guidance is comparatively strong through DefaultAzureCredential/managed identity and environment-variable based connection strings. Preserve as adaptation/reference evidence with explicit send/background-send, checkpoint-storage mutation, cost, data-governance, and long-running processing authorization gates before operational use.
