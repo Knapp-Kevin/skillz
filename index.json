@@ -7,11 +7,11 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 153,
+    "persisted_third_party_exact_version_reviews": 163,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
-    "aws_current_standard_companion_complete": 53,
-    "aws_current_standard_gaps": 19
+    "aws_current_standard_companion_complete": 63,
+    "aws_current_standard_gaps": 9
   },
   "first_party_categories": {
     "planning-productivity": ["daily-briefing", "decision-log", "inbox-triage", "learning-plan", "task-surface", "week-in-review"],
