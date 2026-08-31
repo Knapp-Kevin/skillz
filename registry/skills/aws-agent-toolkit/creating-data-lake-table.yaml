@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: creating-data-lake-table
+display_name: Create Data Lake Table
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/storage-skills/creating-data-lake-table/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/storage-skills/creating-data-lake-table
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with configured AWS identity; Amazon S3 Tables, Glue Data Catalog, Athena, IAM and optional KMS/Lake Formation; bundled access-control, best-practices, Athena DDL and Glue ETL references; sibling data-lake discovery/ingestion/query skills
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 414d75850c7a44da8e2cff2b0a24bb62ac5028db. Strong mechanisms include existing-table/bucket/namespace checks, stop-and-delegate rules for ambiguous or conflicting assets, schema confirmation, least-privilege access guidance, explicit refusal to auto-create IAM roles and post-create verification. Rejected unchanged because the normal creation path can create an S3 Tables bucket, namespace, Glue federated catalog and Iceberg table after parameter/schema/bucket-selection steps without a distinct affirmative authorization gate for the consequential mutation plan. Confirmation for schema or recreation conflicts does not authorize the full creation sequence. Retain as adaptation/reference material. S3 Tables, Iceberg, Glue/Athena integration, partition transforms, IAM/KMS requirements and service behavior are freshness-sensitive.
