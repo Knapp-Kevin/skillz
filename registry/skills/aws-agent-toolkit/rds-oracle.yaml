@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: rds-oracle
+display_name: Amazon RDS for Oracle Connectivity
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/rds-oracle/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: a2ceb14a7b5795997f6dd0ed0496f1abd95bc135
+upstream_last_updated_at: 2026-07-02T12:08:31Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/rds-oracle
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI v2 or AWS MCP and managed AWS credentials; Amazon RDS for Oracle, EC2/VPC/security groups/Transit Gateway/peering, SSM, Secrets Manager, CloudWatch and KMS as applicable; Oracle language drivers and client tooling; AWS Managed Microsoft AD/Kerberos where used; Oracle CMAN/Enterprise Edition BYOL for proxy workflows; bundled diagnostics scripts and focused networking/auth/runtime/encryption/client/troubleshooting references
+import_eligibility: exact-version-reference
+rationale: RDS for Oracle connectivity and operations package bound to registered AWS pin and exact package tree SHA f209347769fdd7223cd2a21f6a9ac269d4be1e9b. The skill has an unusually explicit authority model: it requires explicit user confirmation before every create/modify operation, adds downtime warnings before higher-impact confirmed mutations, and refuses deletion, failover, major-version upgrade, reboot, replica promotion and public-access enablement while offering assessment/change-control alternatives. Security guidance requires private access, Secrets Manager, encryption, scoped KMS policies and audit logging; it also corrects important Oracle-on-RDS misconceptions such as lack of RDS Proxy support. Focused routing and bundled diagnostics keep connection/network/runtime troubleshooting grounded in package references. Authority remains mutating because confirmed provisioning/configuration is supported. Portability is low because the material depends deeply on RDS Oracle, Oracle drivers/client/CMAN licensing, AWS networking/identity and bundled tooling. Oracle/RDS version families, driver support, service constraints, Kerberos behavior, instance capabilities and option-group details are freshness-sensitive and require current authoritative verification before consequential use.
