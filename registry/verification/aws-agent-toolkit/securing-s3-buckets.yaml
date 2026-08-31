@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: securing-s3-buckets
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 71eaab6372c6763e792deff8cd6ab6880a21b352
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, security, operations]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded, evidence-oriented]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong safeguards include a read-only audit mode, policy backup/merge/validation before replacement, least-privilege encryption guidance, issue classification and post-remediation verification. Rejected unchanged because consequential write workflows do not universally require affirmative action approval: bucket/region confirmation is mandatory but command display/wait-for-confirmation is only SHOULD. Thus new-bucket security, remediation, encryption and monitoring mutations can proceed without a hard authorization boundary. Retain as adaptation/reference evidence. Behavioral validation remains not-run; S3 defaults, KMS, Config, GuardDuty, CloudTrail and pricing behavior are freshness-sensitive.
