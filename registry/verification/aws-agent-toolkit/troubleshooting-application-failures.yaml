@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: troubleshooting-application-failures
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f519cd0e9b2f2c37e773508572bcf567802aa083
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, debugging, observability]
+  lifecycle: [discovery, verification, operations]
+  characteristic: [evidence-first, hypothesis-driven, production-oriented, reference-heavy, tool-assisted]
+  authority: [read-only]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes user confirmation of relevant log groups before analysis, validation of actual log availability, AWS-response-derived time windows, explicit read/query operations, query-completion checks, evidence-based error categorization and prioritization, and clear separation between root-cause recommendations and execution. The procedure does not perform the recommended remediations. Verified unchanged as a read-only diagnostic workflow. Behavioral validation remains not-run. CloudWatch Logs query syntax, quotas, retention and service naming conventions are freshness-sensitive.
