@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-maps-search-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4d9a9dcd4d8143792c0f2a377c156524b901e981
+skill_md_blob_sha: 79897e10e8bd32128b9b6641087b7a0bf14f7507
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [location-services, geospatial, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, external-service-integrated, privacy-sensitive]
+  authority: [external-side-effect, data-transmission, cost-bearing, credential-issuance, local-file-write]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure Maps guidance for .NET across geocoding, reverse geocoding, routing, route matrices, route ranges, map rendering, IP geolocation, weather, authentication, rate-limit handling, and SAS construction. It is rejected unchanged under the current authority/data-handling rule because normal examples transmit addresses, coordinates, route origins/destinations, IP addresses, and related location context to a metered external service without a distinct affirmative data-transmission/cost authorization boundary or mandatory approved location/privacy handling prerequisite. The SAS example requests an account SAS token through Azure Resource Manager without a separate credential-issuance authorization boundary, and the map-tile example writes to the local filesystem. Credential guidance otherwise uses environment variables, placeholders, DefaultAzureCredential, and managed identity rather than conversationally solicited secrets. Adaptation should preserve the geospatial SDK/query guidance while adding explicit location/privacy, cost, credential-issuance, and local-write authorization gates before operational use. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
