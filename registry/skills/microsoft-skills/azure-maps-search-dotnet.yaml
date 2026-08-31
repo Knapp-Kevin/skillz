@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-maps-search-dotnet
+display_name: Microsoft Azure Maps for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-maps-search-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-maps-search-dotnet
+permission_tier: consequential-external-location-data-cost-and-credential-issuance
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.Maps.Search; optional Azure.Maps.Routing, Azure.Maps.Rendering, Azure.Maps.Geolocation, Azure.Maps.Weather, Azure.ResourceManager.Maps; Azure.Identity; authenticated Azure Maps account; subscription key, Entra identity, or SAS credential; network access to Azure Maps; local filesystem for the map-tile save example
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 4d9a9dcd4d8143792c0f2a377c156524b901e981 and SKILL.md blob 79897e10e8bd32128b9b6641087b7a0bf14f7507. The skill provides useful .NET guidance across geocoding, reverse geocoding, routing, route matrices, isochrones, rendering, map tiles, IP geolocation, weather, authentication, rate-limit handling, and Azure Maps SAS construction. Unchanged adoption fails the current authority/data-handling rule because normal examples transmit addresses, geographic coordinates, route origins/destinations, IP addresses, and related location context to a metered external service without a distinct affirmative data-transmission/cost authorization boundary or mandatory approved location/privacy handling prerequisite. The SAS example also requests an account SAS token through Azure Resource Manager without a separate credential-issuance authorization boundary, while the rendering example writes a map tile to the local filesystem. Credential examples otherwise use environment variables, placeholders, DefaultAzureCredential, and managed identity guidance rather than soliciting real secrets conversationally. Preserve as adaptation/reference evidence with explicit location/privacy, cost, credential-issuance, and local-write authorization gates before operational use.
