@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-elasticache
+display_name: Amazon ElastiCache
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/amazon-elasticache/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 81f4ca47b8acef3bf20ce82f1f039759e5c5faf1
+upstream_last_updated_at: 2026-06-09T13:01:39Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/amazon-elasticache
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI/SDK/CloudFormation/CDK and valid AWS credentials/region; Amazon ElastiCache Valkey/Redis OSS/Memcached and CloudWatch; VPC/security-group/TLS/RBAC/IAM context; valkey-py and runtime-specific integrations; .elasticache/requirements.json workspace state; bundled references, assets, and scripts including input validation and price calculation
+import_eligibility: exact-version-reference
+rationale: ElastiCache architecture, provisioning, data-modeling, GenAI/vector, monitoring, migration, and cost/security package bound to the registered AWS snapshot and exact package tree SHA 7ab33b79df92988e90fe25e9318fe748c7d15149. It routes ambiguous requests through explicit sub-skills, maintains a defined cross-sub-skill state contract, prefers local evidence then current AWS documentation, requires freshness disclaimers for pricing/version/features, validates user inputs before write operations, warns on stale cached state, and contains explicit safety material for VPC/TLS/authentication and destructive actions. Authority is mutating because setup/migration workflows create and modify caches, infrastructure, authentication, and deployment state. Portability is low because the material is deeply coupled to ElastiCache, Valkey/Redis/Memcached semantics, AWS networking/identity, AWS pricing/features, workspace state, and bundled scripts/assets. Numerous product truths in the pinned package such as engine/version ladders, vector-search support, serverless capabilities, pricing percentages, IAM support, deployment timing, ports, and service constraints are volatile and must be verified against current AWS documentation before consequential use.
