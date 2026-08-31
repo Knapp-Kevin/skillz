@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-agents-persistent-java
+display_name: Microsoft Azure AI Agents Persistent for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-agents-persistent-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-agents-persistent-java
+permission_tier: consequential-external-service-and-resource-mutation
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java; Maven; com.azure:azure-ai-agents-persistent; azure-identity; authenticated Azure AI project; model deployment; optional code-interpreter, function tools, local files, vector-store resources, and external APIs
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA a4c692537c1bf669d70f8fe56a5f43f6d65fc76f and SKILL.md blob 6345044117d177e1aa06a392c54d70e0850cd5e9. The package provides useful Java guidance for persistent-agent CRUD, threads, messages, runs, streaming, function calling, code interpreter, file upload/search, vector stores, authentication, error handling, and async usage. Unchanged adoption fails the current hard authority rule because normal procedures create, update, and delete remote agents and threads, create runs/messages, upload local files and create vector stores, and execute function/tool calls without distinct affirmative authorization boundaries for resource mutation, data transmission, cost, local-file access, or external side effects. Secret examples use environment variables, placeholders, DefaultAzureCredential, and managed-identity guidance rather than soliciting actual secret values conversationally. Preserve as adaptation/reference evidence with explicit resource, cost, data, local-file, and tool-action authorization gates before operational use.
