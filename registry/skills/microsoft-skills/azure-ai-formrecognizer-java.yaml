@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-formrecognizer-java
+display_name: Microsoft Azure AI Document Intelligence for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-formrecognizer-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-formrecognizer-java
+permission_tier: consequential-sensitive-document-model-classifier-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact-version-sensitive
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-documentintelligence 1.0.0 in the package example while the skill text identifies 1.0.7 as latest GA; azure-identity; authenticated Azure Document Intelligence endpoint; optional API key; local filesystem access for document upload; Blob SAS training sources for custom models/classifiers; microsoft-docs MCP lookup instructed before implementation; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 87ed30f519f37b28d0e05f2391d2729c47b94be6 and SKILL.md blob 9ebbe26711148505aa6b53738036f058fb523f2c. The package provides useful current-generation Document Intelligence migration and SDK guidance, but unchanged adoption fails current privacy/authority rules because local files and documents including IDs, invoices, receipts, tax forms and health-insurance cards can be transmitted to an external AI service, while custom models and classifiers are built and models deleted without mandatory data-governance, model-mutation and cost authorization gates. Bundled examples print extracted identity/document fields, increasing data-handling sensitivity. The package also pins 1.0.0 while its text says latest GA is 1.0.7 and instructs a current-doc lookup, so exact implementation remains freshness-sensitive. Preserve as adaptation/reference evidence with explicit sensitive-document, model/classifier lifecycle and metered-service boundaries.
