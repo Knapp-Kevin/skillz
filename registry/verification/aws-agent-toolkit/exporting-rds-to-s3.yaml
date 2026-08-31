@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: exporting-rds-to-s3
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 12260f68d015ba4c10be09bb431f8da62864d915
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, migration, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful static mechanisms include single-pass parameter collection; database/engine/snapshot eligibility checks; confirmation before selecting the latest existing snapshot; confused-deputy protections on the RDS export trust role; scoped S3/KMS permission guidance; encryption and cross-region cost warnings; export status monitoring; and post-export verification. Rejected unchanged under the current hard-fail mutation-consent rule because the procedure can create a new snapshot, S3 prefix, IAM role/policy, KMS policy relationship and export task without a distinct explicit authorization gate for those consequential operations. Confirming required input values or choosing a snapshot does not authorize unrelated billable/security mutations. The material remains useful adaptation/reference evidence. Supported engines, export/KMS behavior, cross-region constraints, timing/storage estimates and service limitations are freshness-sensitive. Behavioral validation remains not-run.
