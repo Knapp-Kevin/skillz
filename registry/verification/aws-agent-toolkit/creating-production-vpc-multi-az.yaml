@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: creating-production-vpc-multi-az
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0a4bcb33ed8cbf2c38768eea13ac6d2200e59446
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, architecture, deployment, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include AZ validation, automatic subnet planning, explicit warning before internet-wide CIDRs, multi-AZ NAT topology, tiered security groups, VPC Flow Logs, consistent tagging, final infrastructure verification and cost disclosure. Rejected unchanged under the current hard-fail mutation-consent rule because the procedure mandates a broad sequence of billable/security mutations after input collection without a distinct explicit approval gate for the proposed infrastructure plan and spend. Behavioral validation remains not-run. NAT pricing, quotas, AZ availability and AWS networking behavior require current evidence.
