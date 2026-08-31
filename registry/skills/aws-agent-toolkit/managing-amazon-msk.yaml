@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: managing-amazon-msk
+display_name: Managing Amazon MSK
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/managing-amazon-msk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: d6e363b44aa4d2adbddedc503e950df460bfb3f4
+upstream_last_updated_at: 2026-06-23T13:06:06Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/managing-amazon-msk
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS CLI/shell; valid AWS credentials and region; Amazon MSK Provisioned Standard or Express clusters; CloudWatch metrics/alarms/dashboards; Kafka client configuration and authentication; EBS for Standard brokers; bundled seven reference documents and scripts/msk_sizing.py for sizing/cost workflows
+import_eligibility: exact-version-reference
+rationale: Amazon MSK Provisioned operations guidance bound to the registered AWS snapshot and exact package tree SHA b16afcc92da29d85d0e610d38a1c49b20e5e32e8. The package contains SKILL.md, seven focused reference documents, and the upstream msk_sizing.py utility. It distinguishes Standard from Express broker behavior, gives strong failure-avoidance warnings around under-replicated partitions and maintenance, routes sizing through a deterministic package script, and covers client tuning, monitoring, storage, performance, lag, maintenance, configuration, and cost. Authority is mutating because workflows include broker-storage expansion, cluster configuration, CloudWatch alarm/dashboard creation, upgrades, and other operational changes. Portability is low because the material depends heavily on Amazon MSK, AWS/Kafka metrics, AWS tooling, broker-type semantics, Kafka client behavior, and bundled upstream tooling. Several concrete quotas, instance families, metric thresholds, pricing assumptions, Kafka versions, and Standard-versus-Express behaviors are freshness-sensitive and should be checked against current AWS documentation before consequential use. The upstream skill contains important safety warnings but does not provide one universal explicit confirmation gate before every mutation, so the host must apply its own authority policy.
