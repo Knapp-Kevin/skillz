@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-identity-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a77d4ff49b15f776a2daad5f4a59fa6561c94414
+skill_md_blob_sha: a851ddfc4dc0fc76cdb9fb45f0604c16d4d59f82
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [security, cloud, implementation]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The skill provides focused Azure.Identity guidance for .NET, including DefaultAzureCredential, managed identity, service principals, certificate credentials, custom credential chains, sovereign clouds, retry behavior, diagnostics, thread safety, and error handling. Secret-bearing examples use placeholders and external environment/file paths rather than instructing the user to disclose real credentials into conversational context. The procedure does include package-install commands, which mutate the host project/environment, and authentication flows that obtain tokens or access authenticated services; these actions therefore require the external host to preserve appropriate authorization and environment policy. The skill does not instruct infrastructure creation, RBAC changes, subscription changes, money-bearing operations, or secret rotation. Deducted points reflect freshness-sensitive Azure SDK APIs, dependence on .NET/Azure authentication context, and the absence of an explicit action-authorization statement around package installation/authenticated access. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
