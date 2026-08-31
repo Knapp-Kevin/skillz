@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [cloud, observability, machine-learning]
+  use_case: [cloud, observability, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [management-plane, marketplace-integrated, preview, external-service-integrated]
-  authority: [external-side-effect, resource-mutation, identity-mutation, data-transmission, cost-bearing]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [low]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Useful W&B Azure Marketplace provisioning, SSO, identity and lifecycle guidance is rejected unchanged because the normal path creates a pay-as-you-go external partner instance using administrator PII, changes identity/SSO and resource state, and deletes resources without distinct commercial/resource/identity/data authorization. The ARM package is prerelease at this pin, adding freshness sensitivity. Follow-on W&B integration requires an external API key and sends experiment metrics to the partner service. Preserve as adaptation/reference evidence with marketplace/cost, PII, SSO/identity, external-data and lifecycle gates. Behavioral validation is not-run.
