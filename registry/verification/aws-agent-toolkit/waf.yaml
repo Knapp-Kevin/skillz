@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: waf
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c2f6c9a8867d803cd6b6880203d83291ad42cfe1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes immutable WAF scope/Region correctness, least-privilege temporary credentials, Count-before-Block tuning, required ACL association verification, sensitive-log redaction/encryption, forwarded-header anti-spoofing and differentiated routing across managed rules, rate limiting, Bot Control and Fraud Control. Rejected unchanged under the current hard-fail mutation-consent rule because the entry-point procedure creates and associates a web ACL after parameter/design selection without a distinct explicit user authorization gate for changing the application's traffic-filtering security control. Default-action selection is design input, not execution consent. Behavioral validation remains not-run. WAF pricing, managed-rule behavior and supported-resource capabilities are freshness-sensitive.
