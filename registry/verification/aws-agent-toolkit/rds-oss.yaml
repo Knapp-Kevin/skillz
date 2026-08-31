@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: rds-oss
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 925e34fdde6ced10dc8c97cc3343c066003ffc00
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, decision-support, implementation, planning]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [cost-bounded, evidence-first, production-oriented, reference-heavy, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful evidence includes clean RDS-versus-Aurora separation; current engine-version discovery instead of stale lists; production defaults for encryption, private access, Multi-AZ, backups, Secrets Manager and deletion protection; no-fabrication rules; focused upgrade/pricing/proxy/Blue-Green workflow references; and explicit advisory-only boundaries for upgrades, purchases, switchovers and proxy creation. Rejected unchanged because the instance-creation path directly permits `create-db-instance` and instructs the host to execute production provisioning without a distinct explicit user-confirmation boundary immediately before the consequential billable mutation. A request for a production-ready design is not sufficient authorization to create the live resource. The material remains high-value adaptation/reference evidence. Engine versions/support dates, pricing, commitment terms, proxy/Blue-Green behavior and service limits are freshness-sensitive. Behavioral validation remains not-run.
