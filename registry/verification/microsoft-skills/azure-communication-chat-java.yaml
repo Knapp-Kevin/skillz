@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-chat-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b58604b7161eec1bf999295046a4fced6f9d4507
+skill_md_blob_sha: 22e9dd0e2e8cbcfc5ce26c59d14b4b5c4a8ce0c9
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, communication, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Java chat guidance covers thread/message CRUD, participants, history sharing, read receipts, typing notifications, pagination and async usage. Rejected unchanged because it sends/edits/deletes messages, creates/deletes threads, changes participants and shared history, and publishes read/typing state without mandatory communication, privacy/history and destructive-action authorization boundaries. Examples surface message content and participant/read-receipt identifiers. Bundled examples specify SDK 1.6.4 while the top-level skill specifies 1.6.0. Behavioral validation is not-run.
