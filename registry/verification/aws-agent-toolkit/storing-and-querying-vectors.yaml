@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: storing-and-querying-vectors
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7b783a4689b151518e98395ec2d6c745973ba53d
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, implementation, architecture]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include workload-fit routing, reuse checks, immutable-parameter confirmation, explicit embedding-model selection, dimension consistency, rate-limit retry guidance and destructive-recreate confirmation. Rejected unchanged because bucket/index creation and vector writes lack a distinct affirmative authorization boundary for the overall consequential resource/data mutation plan. Retain as adaptation/reference evidence. Behavioral validation remains not-run; S3 Vectors limits, regional availability, latency, embedding models and IAM/KMS behavior are freshness-sensitive.
