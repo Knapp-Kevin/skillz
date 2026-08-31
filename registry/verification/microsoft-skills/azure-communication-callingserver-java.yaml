@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-callingserver-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 276440fcfee1858c728b0db63898d52e578ce86b
+skill_md_blob_sha: c2bde1986d3ace215f6a28e923e5399326a9882e
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, communication, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Strongly scoped as deprecated legacy-maintenance/migration guidance and explicitly directs new projects to Call Automation. Rejected for unchanged adoption because the underlying CallingServer SDK is superseded, legacy recording operations remain consequential without a recording-consent boundary, and the bundled migration guide contains a broken relative link to ../callautomation/SKILL.md rather than the actual sibling azure-communication-callautomation-java package. Preserve as reference-only migration evidence. Behavioral validation is not-run.
