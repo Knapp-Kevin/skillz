@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: launching-ec2-instance-with-best-practices
+display_name: Launch EC2 Instance with Best Practices
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/ec2-skills/launching-ec2-instance-with-best-practices/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 7aa3f36af9449bf8fe9f0b5cbd690ca5e2eaa508
+upstream_last_updated_at: 2026-07-02T11:09:11Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/ec2-skills/launching-ec2-instance-with-best-practices
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI and valid managed credentials/region; EC2, IAM, VPC/subnets/security groups, EBS/KMS, SSM, CloudWatch and tagging; current AMI and instance-type offerings; optional SSH key-pair handling; bundled launch procedure
+import_eligibility: exact-version-reference
+rationale: EC2 instance-launch package bound to the registered AWS pin and exact package tree SHA 73282bc12f3061da6dc9554d013651858595ecda. It requires the external agent to collect required workload/region inputs, derive secure/cost-aware defaults, present all proposed defaults and reasoning to the user for confirmation before proceeding, separately confirm selected network topology, verify current AMIs and instance-type availability, prefer SSM over SSH, avoid handling private key contents, apply least privilege to instance roles, encrypt gp3 storage, harden security groups, tag resources, and verify the launched instance. The confirmation boundary occurs before resource creation and the user can override defaults. Authority is mutating because the workflow creates IAM/security-group/key/EC2 resources. Portability is low due deep AWS EC2/IAM/VPC/SSM/CloudWatch coupling. Exact instance families, prices, free-tier status, AMI recommendations, monitoring costs, performance claims and service behavior are freshness-sensitive and should be checked live before consequential use.
