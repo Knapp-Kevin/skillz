@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: connecting-lambda-to-dynamodb
+display_name: Connect Lambda to DynamoDB
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/connecting-lambda-to-dynamodb/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/connecting-lambda-to-dynamodb
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI and fs_write capabilities; configured AWS identity; Lambda, DynamoDB Streams, IAM and CloudWatch Logs; local Lambda deployment package generation; bundled lambda-dynamodb-connection reference procedure
+import_eligibility: exact-version-reference
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 10baad456594507d16b877ac64518103d2bc89a6. The procedure has a genuine pre-mutation authorization boundary: it presents every resource to be created, target region and relationship, waits for explicit user confirmation, forbids creating anything without approval and aborts on decline. It then creates the IAM role, Lambda function, DynamoDB table with streams and event-source mapping, with validation and troubleshooting. Static quality is strong but portability is low and the use of the broad AWSLambdaDynamoDBExecutionRole managed policy is less precise than a resource-scoped custom policy. Runtime versions, managed-policy semantics, stream behavior and service limits are freshness-sensitive.
