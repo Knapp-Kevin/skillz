@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 13114aaaa55d03f8e9d0f450b1af0fc9a7dd053f
+skill_md_blob_sha: d9a4e8f157e635c0962744d019f9d3e4d02d58ec
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, evaluation, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful content-moderation guidance covers text/image harm analysis, severity handling and custom blocklists. Rejected unchanged because content and local images are transmitted to a metered external service and blocklist state is mutated without distinct privacy/data, moderation-state and cost authorization gates. The top-level dependency is 1.1.0-beta.1 while bundled examples specify 1.0.16, creating version-inconsistent implementation guidance. Behavioral validation is not-run.
