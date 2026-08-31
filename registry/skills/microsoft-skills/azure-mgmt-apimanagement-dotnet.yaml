@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-dotnet
+display_name: Microsoft Azure API Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apimanagement-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apimanagement-dotnet
+permission_tier: consequential-cloud-resource-identity-secret-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: broken-required-reference
+dependencies: .NET SDK; Azure.ResourceManager.ApiManagement; Azure.Identity; authenticated Azure subscription/resource group; API Management service hierarchy; optional storage account/managed identity for backup; references/service-management.md; references/apis-operations.md; references/products-subscriptions.md; advertised but missing references/policies.md
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 6a3ef007b414bbd0cc2e23fd2d0c5dbcd318c33d and SKILL.md blob ed3fe2bfa8e016f675066eca950debeafaf056ba. The package provides broad APIM management guidance for service/API/product/subscription/policy/user/group/backend/gateway operations, backup/restore, networking, identities, and versioning. Unchanged adoption fails multiple current hard gates: normal workflows create, update and delete paid management-plane resources without action authorization; subscription secrets are retrieved and printed in plaintext and keys can be regenerated; a sample user password is embedded literally; policies, networking, private-endpoint approval and backup/restore are consequential mutations; and SKILL.md advertises references/policies.md although that required package file is absent at the exact pin. Preserve only as adaptation/reference evidence after repairing the dependency and adding explicit resource/cost/secret/credential/network/policy authorization boundaries.
