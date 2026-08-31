@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: troubleshooting-s3-files
+display_name: Troubleshoot S3 Files
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/storage-skills/troubleshooting-s3-files/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/storage-skills/troubleshooting-s3-files
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI v2 with s3files support, amazon-efs-utils/S3 Files mount client and host/network tools; Amazon S3 Files, EC2/VPC/security groups, IAM, CloudWatch and KMS as applicable
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 6848c5b4eeff962f1d541c7a8f1c1a44c854ef33. Useful mechanisms include symptom classification, explicit distinction from Mountpoint/File Gateway/File Cache, least-privilege IAM guidance, synchronization/conflict diagnostics, CloudWatch evidence and network/KMS troubleshooting. Rejected unchanged because remediation includes package installation, security-group ingress, IAM repair/delete-recreate guidance and VPC DNS mutations while confirmation of write commands is only a SHOULD requirement, not a mandatory authorization gate. Retain as adaptation/reference material; read-only diagnostic portions remain useful. S3 Files availability, client versions, IAM semantics, quotas and synchronization behavior are freshness-sensitive.
