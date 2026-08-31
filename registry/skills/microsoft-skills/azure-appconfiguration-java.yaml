@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-appconfiguration-java
+display_name: Microsoft Azure App Configuration for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-appconfiguration-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-appconfiguration-java
+permission_tier: consequential-configuration-feature-secret-reference-and-release-state
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-data-appconfiguration 1.8.0; optional azure-identity; authenticated Azure App Configuration store; connection string or Entra credential; optional Key Vault secret references; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 869a8ab74ba9a470461a6c9948a8d018d1efe36b and SKILL.md blob a27cd0325fe6fba6009923912c5174ee364bd2c5. Useful Java guidance covers configuration CRUD, feature flags, secret references, read-only protection, snapshots, ETag concurrency and Entra authentication. Rejected unchanged because normal examples create, overwrite and delete production configuration, alter feature rollouts and targeting, change secret references, clear/set read-only state, and create/archive/recover snapshots without a distinct affirmative configuration/release authorization boundary. Examples also print configuration values and secret-reference URIs, and targeted rollout examples contain user email identifiers. Conditional ETags reduce concurrency risk but do not authorize mutation. Preserve as adaptation/reference evidence with explicit configuration, rollout, privacy and secret-reference gates.
