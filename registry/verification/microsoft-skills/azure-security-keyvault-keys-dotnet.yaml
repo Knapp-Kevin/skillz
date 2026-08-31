@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-security-keyvault-keys-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6a9a7395f14b97c73fd882e6e1ae1d4e8ffff10b
+skill_md_blob_sha: c9ca1f8736980cf682b5ac1306d327442d3260d0
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Strong Key Vault guidance covers key creation, properties, delete/recover/purge, backup/restore, encryption/decryption, wrap/unwrap, sign/verify, key resolution and rotation policies. Rejected unchanged because the same normal procedure creates and rotates cryptographic keys, changes rotation policies, deletes and irreversibly purges keys, decrypts/signs/unwraps with remote key material, and writes key backups to local files without distinct affirmative authorization boundaries for key lifecycle, destructive purge, cryptographic use or backup-file handling. Managed identity, HSM, soft-delete and least-operation guidance are useful safeguards but do not satisfy those missing approval gates. Behavioral validation is not-run.
