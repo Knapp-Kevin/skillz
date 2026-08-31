@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: querying-data-lake
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a619aa25a608b7efac3d5439b1e9c5a0d303defc
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, research, decision-support]
+  lifecycle: [discovery, verification, operations]
+  characteristic: [cost-bounded, evidence-first, human-review, production-oriented, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA a619aa25a608b7efac3d5439b1e9c5a0d303defc and contains SKILL.md plus query-patterns and workgroup-selection references. Strong static evidence includes mandatory region and credential checks; required workgroup selection and output-location confirmation; explicit presentation of selected execution context; no silent workgroup escalation; delegation of fuzzy asset resolution to the dedicated sibling skill; classification of SQL before execution; explicit confirmation for destructive or uncertain statements; warnings for Redshift-federated and cross-catalog queries; cost/data-scanned/duration reporting; LIMIT guidance for exploratory queries; and an explicit prohibition on generic shell execution when Athena MCP/CLI capture is available. Authority remains mutating because the skill permits confirmed DDL/DML operations. The score is held below perfect because Athena/federated-catalog behavior, Redshift/S3 Tables addressing, costs, SQL support, and workgroup semantics are service-sensitive and can drift. Hosts should verify current AWS behavior for consequential writes or expensive queries. Behavioral validation remains not-run.
