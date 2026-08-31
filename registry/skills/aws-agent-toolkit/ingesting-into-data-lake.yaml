@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ingesting-into-data-lake
+display_name: Ingest into Data Lake
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/ingesting-into-data-lake/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/ingesting-into-data-lake
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP tools or AWS CLI; valid AWS credentials and target region; AWS Glue Data Catalog and Glue ETL; S3 and S3 Tables or standard Iceberg/raw Parquet target; source-specific JDBC/Snowflake/BigQuery/DynamoDB access as applicable; Athena for CTAS/simple-load paths; CloudWatch and Glue Triggers/MWAA for recurring pipelines; neighboring skills connecting-to-data-source, creating-data-lake-table, finding-data-lake-assets, exploring-data-catalog, and querying-data-lake; bundled source-specific and cross-cutting reference documents
+import_eligibility: exact-version-reference
+rationale: AWS data-lake ingestion procedure bound to the registered AWS snapshot and exact package tree SHA d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6. The package contains SKILL.md plus a substantial references directory covering local/S3/JDBC/Snowflake/BigQuery/DynamoDB ingestion, catalog migration, Glue job configuration and scripts, Iceberg/S3 Tables configuration, validation, incremental loading, scheduling, schema/type handling, Athena/CTAS patterns, troubleshooting, and performance. It has clear trigger exclusions and delegates connection creation, table creation, asset resolution, catalog exploration, and querying to sibling skills. The workflow requires target region/identity checks, verifies required connections before ingest, asks the user to clarify target database/table/format before creating or writing tables, and requires post-load row-count/null/sample validation. Authority is mutating because the procedure may upload/write data, create and execute Glue jobs, migrate tables, create recurring triggers, and configure monitoring. Portability is low because behavior depends heavily on AWS Glue, S3/S3 Tables, Iceberg, Athena, AWS credential/region semantics, AWS MCP or CLI tooling, and source-specific cloud/database connectors. The upstream instruction to explain each command is useful transparency but is not itself a universal explicit confirmation gate for every later mutation or recurring schedule, so hosts should apply their own authority policy before consequential writes or scheduling.
