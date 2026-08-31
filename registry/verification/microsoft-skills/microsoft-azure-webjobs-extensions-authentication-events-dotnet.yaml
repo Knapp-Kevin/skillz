@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: microsoft-azure-webjobs-extensions-authentication-events-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 15a35dcb0638dad179c9bbc5fe10a7587a27dee7
+skill_md_blob_sha: a90ab71b73b33f9953ba9f95a556b451849ff4ba
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Microsoft Entra Authentication Events guidance covers token enrichment, attribute-collection customization and validation, custom OTP delivery, Azure Functions hosting and extension configuration. Rejected unchanged because normal examples alter issued-token claims, can block sign-up, modify identity attributes before saving, transmit user IDs to an external profile service, and send OTP authentication secrets plus phone numbers to external messaging providers without distinct affirmative identity/token, PII/privacy, OTP-secret and external-message authorization gates. Examples also log user IDs and phone numbers. Preserve as adaptation/reference evidence only after adding explicit authentication-state, data-handling, external-lookup/message and sensitive-logging boundaries. Behavioral validation is not-run.
