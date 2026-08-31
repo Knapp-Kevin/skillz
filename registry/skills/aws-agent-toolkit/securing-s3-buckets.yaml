@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: securing-s3-buckets
+display_name: Secure S3 Buckets
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/storage-skills/securing-s3-buckets/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/storage-skills/securing-s3-buckets
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI and configured AWS identity; Amazon S3, IAM, KMS, CloudTrail, GuardDuty, AWS Config and CloudWatch as applicable; bundled IAM, audit, encryption, remediation and workflow references
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 71eaab6372c6763e792deff8cd6ab6880a21b352. Strong safeguards include a strictly read-only audit workflow, existing-policy retrieval/backup/merge/JSON-validation rules before put-bucket-policy, least-privilege/KMS guidance, post-remediation rechecks, and recommendations to display write commands before execution. Rejected unchanged because the package's mutating workflows require only bucket/region confirmation and make pre-write command approval a SHOULD rather than a mandatory authorization boundary. The secure-new-bucket, remediation, encryption and monitoring workflows can therefore perform consequential S3/IAM/KMS/GuardDuty/CloudTrail/Config changes without guaranteed affirmative action consent. Retain as adaptation/reference material; the audit workflow remains especially useful. S3 defaults, KMS behavior, Config/GuardDuty/CloudTrail semantics and pricing are freshness-sensitive.
