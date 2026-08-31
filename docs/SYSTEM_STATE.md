@@ -17,7 +17,8 @@
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 9 / denominator reconciliation in progress |
+| **Microsoft Skills current-standard companions** | 9 / 189 |
+| **Microsoft Skills current-standard gaps** | 180 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,7 +36,7 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has **9** current-standard provenance + verification pairs at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; the exact family denominator is still being reconciled, so no completion percentage is claimed.
+- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **9/189** have current-standard provenance + verification companions and **180** remain.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -64,7 +65,7 @@ Nine current-standard Microsoft units are now persisted at the registered pin:
 - `azure-ai-openai-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `38bd23798e46c5c010737ecabfcf2bc8d8033d9a`, is `rejected` unchanged by structured static review at 14/20. The package contains useful Azure OpenAI/.NET guidance for chat, streaming, structured outputs, reasoning models, Azure AI Search RAG, embeddings, image generation, audio, authentication, error handling and tool-call surfacing. Its primary examples directly invoke metered external AI services and transmit prompts, search-derived content, audio, image-generation requests and other application/user data without a distinct affirmative cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. Function calls are surfaced rather than executed and the skill recommends validating tool arguments, which is useful safety evidence but does not authorize the external service calls themselves. Credential examples use environment variables, placeholders, DefaultAzureCredential and managed identity rather than soliciting actual secrets. Preserve as adaptation/reference evidence with explicit cost, data-governance and external-service authorization gates. Behavioral validation is `not-run`.
 - `azure-ai-projects-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `2dabc3855c1b4ea3c8bf6f855ccf310c9e36eccd`, is `rejected` unchanged by structured static review at 14/20. It contains useful Azure AI Foundry/.NET guidance for project clients, persistent/versioned agents, connections, deployments, datasets, indexes, evaluations, Azure OpenAI access, authentication and tool integrations. Its normal workflows create and delete remote agents/threads, create agent versions, upload/delete datasets, create/update/delete indexes, run evaluations, and invoke metered AI/search services without distinct resource/cost/data-transmission authorization boundaries. The connection example also exposes `includeCredentials: true` without a separate credential-access authorization gate. Credential setup otherwise uses placeholders, environment variables, DefaultAzureCredential and managed identity. Preserve as adaptation/reference evidence with explicit mutation, cost, data-governance, credential-access and external-service authorization gates. Behavioral validation is `not-run`.
 
-The Microsoft source's exact eligible denominator remains under reconciliation because the pinned tree mixes canonical packages, language-plugin packages, nested skills and symlinked mirrors. At the pin, `.github/skills` contains 13 direct canonical directories plus 9 symlink mirrors into plugin-hosted packages; those mirrors must not be double-counted. The nested .NET reconciliations confirm that independently nested plugin skills are first-class review units rather than aliases. The bounded `.github/plugins/azure-sdk-dotnet/skills/` slice contains 29 direct package directories, five of which now have current-standard companions. Upstream catalog headline counts are therefore not treated as a proven denominator.
+The Microsoft source's exact eligible denominator is **189**. The accounting unit is an independently front-mattered `SKILL.md` entry point at the registered pin. The pinned topology contributes 129 language-SDK plugin entries; 13 real canonical `.github/skills` packages with duplicate exposure de-duplicated; 28 Azure-plugin top-level packages with the duplicate `entra-agent-id` exposure de-duplicated; 10 Deep Wiki entries; 5 Microsoft 365 Agents Toolkit top-level entries; and 6 additional nested skill entry points: `microsoft-foundry/finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, `models/deploy-model/preset`, and `teams-app-developer/slack-to-teams`. Symlink mirrors and duplicate exposure paths do not create additional units, and ordinary workflow/reference `.md` files remain dependencies of their parent skill. The upstream README's inconsistent 174/175 counts are therefore not used as corpus truth.
 
 ## Source lifecycle
 
@@ -82,7 +83,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Complete Microsoft Skills at its registered pin, establishing the exact eligible denominator before completion claims.
+1. Complete Microsoft Skills at its registered pin against the exact **189-entry** denominator.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
 4. Continue admitted/tracked creator-source curation and denominator reconciliation.

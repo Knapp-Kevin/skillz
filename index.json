@@ -13,7 +13,8 @@
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
     "microsoft_skills_current_standard_companions": 9,
-    "microsoft_skills_eligible_denominator": null
+    "microsoft_skills_eligible_denominator": 189,
+    "microsoft_skills_current_standard_gaps": 180
   },
   "first_party_categories": {
     "planning-productivity": ["daily-briefing", "decision-log", "inbox-triage", "learning-plan", "task-surface", "week-in-review"],
