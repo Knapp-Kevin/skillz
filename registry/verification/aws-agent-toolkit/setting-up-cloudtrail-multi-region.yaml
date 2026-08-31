@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: setting-up-cloudtrail-multi-region
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 435e05bc03480c56c2a7032e6cab026295ca1d77
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, security, observability, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, evidence-first, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include multi-region coverage, source-account/source-ARN S3 policy conditions, log-file validation, encryption/lifecycle controls, explicit cost warnings, verification and practical security-analysis queries. Rejected unchanged under the current hard-fail mutation-consent rule because the workflow mandates S3, CloudWatch, IAM and CloudTrail resource creation and defaults paid Insights on without a distinct explicit approval gate for the proposed infrastructure and cost. Behavioral validation remains not-run. CloudTrail pricing, event delivery and regional behavior are freshness-sensitive.
