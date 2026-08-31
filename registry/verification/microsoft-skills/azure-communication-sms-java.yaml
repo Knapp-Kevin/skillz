@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-sms-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d4bea547144aea210f1dcb782658f947847d72a6
+skill_md_blob_sha: d2dfd5056562193e7cbda6be6c7fd6c6faecdfe8
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, communication, notifications, authentication]
+  lifecycle: [development, integration, operations]
+  characteristic: [reference-heavy, privacy-sensitive, cost-bearing]
+  authority: [external-side-effect, communication-bearing, data-bearing]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful prior art for ACS SMS clients, synchronous and asynchronous sends, bulk delivery, delivery reports, retry/error handling, and OTP flows, but unchanged use is rejected because sending single, bulk marketing, and OTP messages is presented as ordinary execution without distinct recipient-consent, external-communication, message-content, campaign, privacy/data, or cost authorization gates. Examples print recipient phone numbers and message identifiers, use phone numbers in correlation tags, and the OTP sample stores OTP secrets in process memory and logs the recipient number after sending without explicit sensitive-data retention/logging guidance. Authentication examples are comparatively better: connection strings and access keys are placeholders or environment-backed and Entra/managed identity is documented. Behavioral validation is not-run.
