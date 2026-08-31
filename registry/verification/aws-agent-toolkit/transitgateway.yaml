@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: transitgateway
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8be9f11202144145c5fffd4751f89a013a886ada
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, architecture, security, implementation]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes segmentation-first design, CIDR-overlap hard stops, per-AZ attachment requirements, dedicated-subnet guidance, VPC-side route completeness, ephemeral least-privilege credential rules, encrypted flow/audit logging and explicit central-router blast-radius warnings. Rejected unchanged under the current hard-fail mutation-consent rule because the hub-creation procedure creates the transit gateway, flow logs, attachments and VPC route changes without a distinct explicit authorization gate for those consequential billable/network mutations. Segmentation selection is a design choice, not execution consent. Behavioral validation remains not-run. Transit Gateway pricing, quotas and routing semantics are freshness-sensitive.
