@@ -20,12 +20,14 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 206 |
+| Persisted third-party exact-version reviews | 212 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 34 / 189 |
-| Microsoft Skills current-standard gaps | 155 |
+| Microsoft Skills current-standard companions | 40 / 189 |
+| Microsoft Skills current-standard gaps | 149 |
+| Microsoft .NET direct-package companions | 29 / 29 |
+| Microsoft Java direct-package companions | 7 / 26 |
 
 ## First-party skills by purpose
 
@@ -121,8 +123,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **34/189** currently have current-standard provenance + verification companions, leaving **155** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
+Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **40/189** currently have current-standard provenance + verification companions, leaving **149** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
 
-The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The next coherent language-family frontier is Java. `azure-ai-agents-persistent-java` is the first Java package reconciled under the current standard and is `rejected` unchanged at 14/20 because its normal persistent-agent workflow mutates remote agents/threads, invokes metered runs, uploads local files, creates vector stores, and executes downstream function/tool calls without distinct resource, cost, data, local-file, and action authorization gates. Its SDK and authentication guidance remains useful adaptation/reference evidence.
+The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **7/26 current-standard companion-complete** after the first coherent `azure-ai-*` tranche. Persistent Agents, Anomaly Detector, Content Safety, Document Intelligence, AI Projects, Image Analysis, and Voice Live all retain decisive exact-version rejected-unchanged evidence, with scores from 12/20 to 14/20 and package-specific authority, privacy/data, mutation, external-service, dependency, and cost findings. Their SDK material remains available for bounded adaptation/reference use. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.

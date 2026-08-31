@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ac2032a229e8853b9d4957a9d9146ca958eaeed4
+skill_md_blob_sha: 584b13e150584b12741a775389b6dab1bdfa82f1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, communication, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Java Voice Live guidance covers WebSocket sessions, bidirectional audio, VAD, transcription, voice selection, streaming, interruption handling and function calling. Rejected unchanged because examples start metered external AI sessions, transmit live user audio, enable transcription, actively capture microphone audio for thirty seconds, and execute function-call handlers without mandatory recording/privacy, external-service, cost and tool-action authorization boundaries. Behavioral validation is not-run.

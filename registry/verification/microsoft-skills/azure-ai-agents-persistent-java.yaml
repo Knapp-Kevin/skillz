@@ -14,7 +14,7 @@ rubric_score: 14/20
 tags:
   use_case: [agent-development, cloud, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [production-oriented, reference-heavy, tool-integrated]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
   authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure AI Agents Persistent guidance for Java, including agent CRUD, threads, messages, runs, streaming, code interpreter, function tools, file upload/search, vector stores, authentication, async usage, error handling, and complete application structure. It is rejected unchanged under the current hard-fail authority rule because its primary workflow creates remote agents, threads, messages, and runs; updates and deletes agents/threads; uploads local files; creates vector stores; and executes function/tool calls without distinct affirmative authorization boundaries appropriate to resource mutation, metered external-service use, data transmission, local-file access, and downstream tool effects. The function-call example directly invokes executeFunction(name, arguments) and submits outputs without a separate action-approval step. Credential examples use environment variables, placeholders, DefaultAzureCredential, requireEnvVars, and managed identity rather than asking for real secret values conversationally. Adaptation should preserve the SDK guidance while adding explicit resource/cost/data/local-file/tool authorization gates. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
