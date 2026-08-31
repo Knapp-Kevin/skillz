@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-175-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-176-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **175 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **176 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -117,7 +117,7 @@ Current priorities:
 
 AWS Agent Toolkit is **72/72 historically inspected and 72/72 reconciled to the current mandatory per-skill provenance + verification companion standard** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. No AWS current-standard companion gaps remain. Negative dispositions remain preserved where unchanged upstream procedures fail the current authority or secret-handling standard; completion therefore means decisive current evidence, not universal endorsement.
 
-Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **3 exact-version provenance + verification companion pairs are persisted**. `applicationinsights-web-ts` is rejected unchanged under the privacy/authorization rule, while `skill-creator` and `cloud-solution-architect` are verified by structured static review at 18/20. The pinned `.github/skills` tree contains 13 direct canonical directories and 9 symlink mirrors into plugin-hosted packages; independently nested plugin skills still require reconciliation before a truthful family-wide eligible denominator can be declared, so no completion percentage is claimed yet.
+Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **4 exact-version provenance + verification companion pairs are persisted**. `applicationinsights-web-ts` is rejected unchanged under the privacy/authorization rule, while `skill-creator`, `cloud-solution-architect`, and `copilot-sdk` are verified by structured static review. The pinned `.github/skills` tree contains 13 direct canonical directories and 9 symlink mirrors into plugin-hosted packages; independently nested plugin skills still require reconciliation before a truthful family-wide eligible denominator can be declared, so no completion percentage is claimed yet.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
