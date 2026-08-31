@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-vision-imageanalysis-java
+display_name: Microsoft Azure AI Vision Image Analysis for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-vision-imageanalysis-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-vision-imageanalysis-java
+permission_tier: consequential-image-ocr-person-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-vision-imageanalysis 1.1.0-beta.1; azure-identity; authenticated Azure AI Vision endpoint or API key; local filesystem access for image/document examples; externally hosted image URLs; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 86f720a7dbed3474b6e4da1d7593db81f9715145 and SKILL.md blob 5ec2d2d5592e6a71ec707b03b4a5d64643b5a491. The package provides useful Java image-analysis guidance for captioning, OCR, objects, people, tags and smart cropping, but unchanged adoption fails current data-handling/cost rules because local images and document images can be transmitted to an external metered service and remote URLs can be submitted for analysis without a mandatory approved-data/privacy boundary. People detection and OCR increase the likelihood of personal or sensitive content. Credential examples use environment variables and Azure credential objects rather than soliciting secrets. Preserve as adaptation/reference evidence with explicit image/privacy, local-file transmission and metered-service authorization gates.
