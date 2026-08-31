@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: querying-aws-s3
+display_name: Query AWS S3 System Tables
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/system-table-skills/querying-aws-s3/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 41d3faaf863b8ad6e9f681d3b5631aa605bd655f
+upstream_last_updated_at: 2026-06-17T19:54:13Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/system-table-skills/querying-aws-s3
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI and configured AWS identity; S3 Metadata, S3 Storage Lens, S3 Tables, Athena, Glue, IAM and optional KMS; target S3 buckets and metadata system tables
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA bd942552b303cf65e2623b5e437122772d4fcb33. The query core is well structured with system-table routing, current-state/status checks, encrypted Athena output requirements, read-only table semantics, sensitive requester/IP handling and targeted SQL examples. Rejected unchanged because the package also includes enable/setup paths that create bucket metadata configuration, enable Storage Lens table export and create Glue federated catalog integration without a distinct affirmative authorization gate. Retain the query workflows as adaptation/reference evidence. S3 Metadata/Storage Lens schemas, latency/backfill timing, integration semantics, pricing and APIs are freshness-sensitive.
