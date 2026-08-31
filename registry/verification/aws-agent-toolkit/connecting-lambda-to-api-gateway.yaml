@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: connecting-lambda-to-api-gateway
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 37fd366b778dd51cb687853930c887634cbe9f15
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation, deployment]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include existence checks, explicit authorization-type configuration, CORS handling, scoped Lambda invoke permission, deployment verification, troubleshooting and production-hardening guidance. Rejected unchanged because the procedure creates API Gateway resources, methods, integrations, Lambda permissions and a deployment after parameter confirmation without a distinct explicit user-authorization gate for the consequential mutation set. NONE-auth warnings and missing-tool proceed/abort prompts are not action consent. Retain as adaptation/reference evidence. Behavioral validation remains not-run; API Gateway/Lambda service behavior, limits and security recommendations are freshness-sensitive.
