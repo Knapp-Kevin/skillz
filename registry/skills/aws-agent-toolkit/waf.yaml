@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: waf
+display_name: AWS WAF
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/waf/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 6a67aa25f30b51761b58179f129debe126a0caf7
+upstream_last_updated_at: 2026-07-03T15:32:55Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/waf
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with ephemeral least-privilege credentials; AWS WAFv2, CloudFront/regional protected resources, CloudWatch/CloudTrail, encrypted logging destinations, managed rules, Bot/Fraud Control and related task references
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA c2f6c9a8867d803cd6b6880203d83291ad42cfe1. Strong mechanisms include immutable scope/Region handling, least-privilege temporary credentials, Count-before-Block tuning, mandatory association verification, sensitive-log redaction/encryption, spoofed-header defenses and clear routing among managed rules, rate limiting, Bot Control and Fraud Control. Rejected unchanged because the entry-point procedure asks for web ACL parameters and derives scope, then creates and associates the security control without a distinct explicit authorization gate for that consequential traffic-filtering mutation. Deliberately choosing a default action is an important design decision, but it does not by itself authorize execution. Portability is low and WAF capabilities, pricing, managed-rule behavior and protected-resource support require current AWS evidence.
