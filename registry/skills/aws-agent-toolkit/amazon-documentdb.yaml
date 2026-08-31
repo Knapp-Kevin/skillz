@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-documentdb
+display_name: Amazon DocumentDB
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/amazon-documentdb/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 8bd8a8db2dbfc22a288c34a802db4bf69ffdfe27
+upstream_last_updated_at: 2026-06-19T07:26:29Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/amazon-documentdb
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS CLI v2 and shell; valid AWS credentials and region; Amazon DocumentDB/RDS, DMS, CloudWatch, Secrets Manager, VPC/security-group/KMS services as applicable; mongosh/SSH/git/curl and amazon-documentdb-tools for workflow-specific operations; Python 3 for bundled review/analysis scripts; bundled connection, schema, compatibility, migration, performance, Well-Architected, and upgrade references
+import_eligibility: exact-version-reference
+rationale: End-to-end Amazon DocumentDB package bound to the registered AWS snapshot and exact package tree SHA 4fc95aee114b9b6911dcdfc1d41a9715c3df4e62. It covers connection, schema/vector design, MongoDB compatibility, DMS migration, performance, Well-Architected review, major-version planning, and cost/security guidance. It contains explicit refusal boundaries for destructive cluster deletion, failover, direct major-version mutation, and reboot; prevents wildcard IAM and 0.0.0.0/0 examples; requires parameter validation, workflow routing, and current-documentation checks for regional instance classes and volatile MongoDB compatibility. Authority is mutating because the skill is explicitly an executor for cluster creation, AWS/DMS operations, indexes, migrations, and other live changes. Portability is low because it depends deeply on DocumentDB, DMS, AWS networking/identity, MongoDB-compatible client tooling, and bundled references/scripts. A notable caveat is that the top-level creation example includes an inline master-password form before recommending managed Secrets Manager credentials for production; hosts should prefer managed-secret/IAM-safe flows and avoid exposing plaintext secrets. Engine versions, serverless defaults, feature/operator compatibility, instance availability, pricing, limits, and migration/upgrade semantics are freshness-sensitive and require current AWS evidence before consequential use.
