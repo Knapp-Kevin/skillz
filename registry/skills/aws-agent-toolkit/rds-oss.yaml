@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: rds-oss
+display_name: RDS OSS Advisor
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/rds-oss/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: aea59f3570608a77c0b32c2ee1beee06222bad57
+upstream_last_updated_at: 2026-07-02T17:29:28Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/rds-oss
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI or AWS MCP and managed AWS credentials; RDS MySQL/MariaDB/PostgreSQL, CloudWatch, Secrets Manager, KMS and SSM where applicable; engine-specific clients/precheck hosts; bundled upgrade, commitment-pricing, proxy, Blue/Green and dependency references plus analysis scripts
+import_eligibility: reference-only
+rationale: RDS open-source-engine advisor bound to registered AWS pin and exact package tree SHA 925e34fdde6ced10dc8c97cc3343c066003ffc00. It contains strong RDS-versus-Aurora boundary guidance, current-version discovery instead of hardcoded upgrade paths, managed-password requirements, private-access/encryption/Multi-AZ/deletion-protection defaults, no-fabrication rules, explicit refusal to execute upgrades/purchases/switchovers/proxy creation, and focused references for upgrades, commitments, proxy evaluation and Blue/Green. However, new instance provisioning is explicitly an execution path: the skill performs `create-db-instance` with extensive production defaults and says those defaults apply without asking when the user says production-ready. There is no distinct explicit user-authorization boundary immediately before creating the billable database resource. That fails the current mutation-consent standard even though many non-creation workflows are safely advisory. The package is retained as high-value adaptation/reference evidence but rejected unchanged. Portability is low because it is tightly coupled to RDS engine/service semantics and AWS tooling. Engine versions, support dates, pricing, DSP/RI rules, Performance Insights behavior, proxy/Blue-Green compatibility and service limits are freshness-sensitive and require current authoritative evidence.
