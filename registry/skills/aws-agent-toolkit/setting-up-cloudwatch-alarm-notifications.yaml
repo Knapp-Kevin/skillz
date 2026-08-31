@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: setting-up-cloudwatch-alarm-notifications
+display_name: Setting Up CloudWatch Alarm Notifications
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/operations-skills/setting-up-cloudwatch-alarm-notifications/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/operations-skills/setting-up-cloudwatch-alarm-notifications
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; CloudWatch alarms, SNS topics/subscriptions/policies/encryption and notification endpoints including email/SMS/webhook/Lambda/SQS; bundled alarm-notification procedure
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 8b19ae185f986da60aaf1cfc8659cfe137f6f950. Useful mechanisms include alarm existence/configuration checks, SNS encryption, preserving existing alarm settings, email-confirmation handling, endpoint validation and post-change verification. Rejected unchanged because after showing the current alarm configuration it creates an SNS topic, changes policies/encryption, creates subscriptions, rewrites alarm actions and deliberately forces ALARM/OK state changes for testing without a distinct explicit authorization gate for those external notifications and monitoring mutations. Displaying configuration for confirmation is not permission to mutate or send test notifications. Portability is low and SNS/SMS pricing, regional support and CloudWatch alarm semantics require current AWS evidence.
