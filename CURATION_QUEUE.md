@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **128** persisted exact-version third-party verification companions.
+- **131** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
 
@@ -55,10 +55,10 @@ These **210** published/eligible entry points remain evidence even where the new
 - Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
 - Historical inspection: **72/72**.
 - Prior full-pass disposition: **70 verified / 2 rejected**.
-- Current-standard provenance + verification companion completeness: **28/72**.
-- Remaining current-standard gaps: **44**.
+- Current-standard provenance + verification companion completeness: **31/72**.
+- Remaining current-standard gaps: **41**.
 
-Latest sequential batch closed seven genuine companion gaps after confirming each pair was absent:
+Latest sequential batch closed ten genuine companion gaps after confirming each pair was absent:
 
 | Skill | Exact package tree | Current state | Score | Authority | Portability |
 |---|---|---|---:|---|---|
@@ -69,6 +69,11 @@ Latest sequential batch closed seven genuine companion gaps after confirming eac
 | `amazon-aurora-postgresql` | `eb9414ad02354efaa482cb24003af763030ec00d` | verified | 18/20 | mutating | low |
 | `amazon-documentdb` | `4fc95aee114b9b6911dcdfc1d41a9715c3df4e62` | verified | 16/20 | mutating | low |
 | `amazon-elasticache` | `7ab33b79df92988e90fe25e9318fe748c7d15149` | verified | 17/20 | mutating | low |
+| `amazon-keyspaces` | `a20b245aecdf8532d6c04e0b760cc2932833b4c8` | verified | 15/20 | mutating | low |
+| `aurora-dsql` | `254a60139d64cdc667f97566caafa5e181a3118c` | verified | 16/20 | mutating | low |
+| `creating-amazon-aurora-db-cluster-with-instances` | `8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5` | rejected | 13/20 | mutating | low |
+
+`creating-amazon-aurora-db-cluster-with-instances` remains useful prior art for Secrets Manager password handling, ordered cluster/instance provisioning and final verification, but is rejected unchanged because its procedure performs consequential billable resource creation without a distinct user-confirmation boundary for those mutations.
 
 Behavioral evidence is `not-run` for this static batch. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
 
@@ -132,6 +137,6 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **First-party:** 43/43 provenance-complete.
 
-**AWS:** 72/72 historically inspected; 28/72 current-standard companion-complete; 44 gaps remain.
+**AWS:** 72/72 historically inspected; 31/72 current-standard companion-complete; 41 gaps remain.
 
 **Next:** continue the AWS database-family gap scan and curation sequentially, then proceed through the remaining AWS specialized families until current-standard AWS closure is 72/72.
