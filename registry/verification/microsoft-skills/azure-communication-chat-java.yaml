@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-chat-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b58604b7161eec1bf999295046a4fced6f9d4507
+skill_md_blob_sha: 22e9dd0e2e8cbcfc5ce26c59d14b4b5c4a8ce0c9
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, communication, chat]
+  lifecycle: [development, integration]
+  characteristic: [reference-heavy, version-sensitive]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful prior art for Azure Communication Services Chat thread/message/participant/read-receipt/typing-notification patterns, but unchanged use is rejected because ordinary examples create and delete threads, send/update/delete messages, add/remove participants, share historical messages with newly added participants, emit read receipts and typing signals, and transmit user/message metadata to an external service without distinct communication, participant-membership, history-sharing, privacy/data, destructive-action, or service-use authorization gates. Token examples are placeholders and do not request live secrets, but the package assumes caller-supplied user access tokens without stronger token-governance guidance. Freshness is internally inconsistent: SKILL.md specifies azure-communication-chat 1.6.0 while bundled examples specify 1.6.4 and azure-communication-common 1.3.8. Behavioral validation is not-run.
