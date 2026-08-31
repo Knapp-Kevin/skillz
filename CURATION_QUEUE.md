@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **205** persisted exact-version third-party verification companions.
+- **206** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -57,58 +57,35 @@ Search and reconcile this prior evidence before fresh re-review.
 
 The sequential campaign reconciled every core and specialized package, including analytics, database, EC2, migration/modernization, networking/content delivery, operations, security/identity, serverless, storage, system-table, and web/mobile. Completion preserves decisive negative states rather than converting everything to approval. Rejected packages remain reference/adaptation evidence when useful.
 
-Representative authority findings from the final tranche:
-
-- Storage packages retained valuable diagnostics and safety mechanisms but were rejected unchanged where create/remediate paths lacked a mandatory affirmative mutation gate.
-- The three system-table packages contain useful read/query cores but also configuration/access-grant paths that mutate integrations or permissions without plan authorization, so the unchanged packages are rejected.
-- `aws-amplify` contains strong Gen2/framework/deployment guidance but is rejected unchanged because deployment paths create apps, IAM roles/policies, resources, domains and release jobs without a distinct infrastructure/cost approval boundary; one example also passes a GitHub auth token in a command argument.
-
 Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates and examples remain intact package dependencies rather than `skillz` execution machinery.
 
 ### Microsoft Skills — ACTIVE FRONTIER
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **33/189**.
-- Remaining current-standard gaps: **156**.
-- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is now **29/29 current-standard companion-complete**.
+- Current-standard provenance + verification companions persisted: **34/189**.
+- Remaining current-standard gaps: **155**.
+- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**.
+- Java is the active coherent language-family frontier.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and the earlier `.NET` SDK packages for Azure Identity, Document Intelligence, persistent agents, Azure OpenAI, Azure AI Projects, Voice Live, Event Grid, Event Hubs, and Maps Search. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
+Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and the complete direct `.NET` SDK slice. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
-The first direct `.NET` management-plane tranche added fifteen exact-version companion pairs, all decisively `rejected` unchanged after complete package/reference review rather than name-based inference:
+The direct `.NET` slice closed at 29/29 with decisive exact-version evidence for every package. Negative dispositions remain differentiated across resource/cost mutation, secret and credential handling, identity/token operations, message and background-processing effects, data transmission, local-file access, destructive actions, and dependency defects. Completion means decisive current evidence, not universal approval.
 
-| Skill | Score | Principal unchanged-adoption blockers |
-|---|---:|---|
-| `azure-mgmt-apicenter-dotnet` | 14/20 | Cloud resource/cost mutation and local API-spec transmission lack affirmative authorization gates. |
-| `azure-mgmt-apimanagement-dotnet` | 12/20 | Consequential APIM mutation, subscription-key handling, and a missing required `references/policies.md` dependency. |
-| `azure-mgmt-applicationinsights-dotnet` | 13/20 | Resource/test/workbook mutation plus connection-string/API-key retrieval and output. |
-| `azure-mgmt-arizeaiobservabilityeval-dotnet` | 13/20 | Marketplace-backed organization/resource creation and user/contact data transmission without approval gates. |
-| `azure-mgmt-botservice-dotnet` | 14/20 | Bot/channel mutation and DirectLine key regeneration without explicit authorization. |
-| `azure-mgmt-fabric-dotnet` | 14/20 | Billable Fabric capacity creation, resizing, suspension/resumption and admin changes. |
-| `azure-mgmt-mongodbatlas-dotnet` | 13/20 | Marketplace-linked organization creation with billing/admin identity data. |
-| `azure-mgmt-weightsandbiases-dotnet` | 13/20 | Preview Marketplace-backed W&B resource creation with billing/admin identity data. |
-| `azure-resource-manager-cosmosdb-dotnet` | 13/20 | Billable/destructive resource, failover and throughput mutation plus master-key/connection-string retrieval and output. |
-| `azure-resource-manager-durabletask-dotnet` | 14/20 | Billable scheduler/task-hub creation, scaling and deletion lack an affirmative resource/cost gate. |
-| `azure-resource-manager-mysql-dotnet` | 12/20 | Literal administrator passwords, permissive Azure-wide firewall example, restore/restart/delete/scale operations. |
-| `azure-resource-manager-playwright-dotnet` | 14/20 | Workspace creation/update/deletion and local-auth enablement lack a distinct resource/cost authorization boundary. |
-| `azure-resource-manager-postgresql-dotnet` | 12/20 | Literal administrator passwords, permissive firewall example, restore/replica/failover/delete/scale operations. |
-| `azure-resource-manager-redis-dotnet` | 12/20 | Access-key retrieval/regeneration/output plus import/export, reboot, firewall and billable resource mutation. |
-| `azure-resource-manager-sql-dotnet` | 11/20 | Literal admin passwords, firewall/private-endpoint mutation, credential-bearing import/export, TDE disable, destructive database/pool flows. |
+#### Java plugin slice — ACTIVE
 
-The final five direct `.NET` packages close the slice at 29/29:
+`azure-ai-agents-persistent-java` is the first Java package reconciled after `.NET` completion.
 
-| Skill | Score | Principal unchanged-adoption blockers |
-|---|---:|---|
-| `azure-search-documents-dotnet` | 13/20 | Index creation/update, document CRUD, and query/embedding/indexed-content transmission lack distinct mutation/data/cost gates; integrated vectorization can route text to Azure OpenAI. |
-| `azure-security-keyvault-keys-dotnet` | 12/20 | Key creation/rotation/policy changes, delete-and-purge, cryptographic use, and local key-backup handling lack explicit key-lifecycle/destructive/crypto/file authorization. |
-| `azure-servicebus-dotnet` | 13/20 | Message send/settlement, background processors, session-state mutation, messaging-entity CRUD, and cross-entity transactions lack separate data/message-state/background/resource/cost gates. |
-| `m365-agents-dotnet` | 13/20 | Outbound agent activities, Copilot Studio conversation/prompt transmission, and conversation-state deletion lack distinct communication/data/state authorization boundaries. |
-| `microsoft-azure-webjobs-extensions-authentication-events-dotnet` | 11/20 | Token-claim mutation, sign-up blocking, identity-attribute modification, external user-profile lookup, OTP-secret delivery, and sensitive identifier logging lack mandatory identity/privacy/OTP/external-message gates. |
+- Package tree: `a4c692537c1bf669d70f8fe56a5f43f6d65fc76f`.
+- `SKILL.md` blob: `6345044117d177e1aa06a392c54d70e0850cd5e9`.
+- Latest package-path revision at the registered pin: `e7ee58fc1fa669841e06f8d27359e0533d148394`, 2026-04-29.
+- Decisive state: `rejected` unchanged, **14/20**.
+- Behavioral validation: `not-run`.
 
-All 29 direct `.NET` packages bind exact package-tree/SKILL fingerprints and truthful skill-specific freshness. Behavioral validation remains `not-run`. Controlled tag fields use only `registry/taxonomy.yaml`; finer risk distinctions live in permission tiers, dependencies and review notes.
+The package provides useful Java SDK guidance for persistent-agent CRUD, threads, messages, runs, streaming, code interpreter, function tools, file upload/search, vector stores, authentication, async usage, error handling, and application structure. Unchanged adoption fails the current hard authority rule because normal examples create/update/delete remote agents and threads, create runs/messages, upload local files, create vector stores, and execute function/tool calls without distinct affirmative resource, cost, data-transmission, local-file, or downstream-action authorization boundaries. Credential examples use environment variables, placeholders, `DefaultAzureCredential`, `requireEnvVars`, and managed identity rather than requesting actual secret values conversationally. Preserve as adaptation/reference evidence with explicit authorization gates before operational use.
 
 - Denominator accounting is closed at the exact registered pin. The unit is an independently front-mattered `SKILL.md` entry point. The count includes 129 language-SDK plugin entries; real canonical `.github/skills` packages; 28 Azure-plugin top-level packages; 10 Deep Wiki entries; 5 Microsoft 365 Agents Toolkit top-level entries; and 6 additional nested skill entry points (`microsoft-foundry/finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, `models/deploy-model/preset`, and `teams-app-developer/slack-to-teams`). Duplicate exposure paths are de-duplicated by skill identity, `.github/skills` symlink mirrors and plugin symlink aliases do not create additional units, and ordinary workflow/reference `.md` files remain part of their parent package. The upstream README's conflicting 174/175 headlines are not used as denominator evidence.
-- Continue sequential review from the pinned tree and check both companion paths before every unit. With `.NET` complete, move to the next coherent Microsoft plugin/language family rather than cherry-picking isolated filenames.
+- Continue sequential review from the pinned tree and check both companion paths before every unit. Continue Java as the next coherent family rather than cherry-picking isolated filenames.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -157,4 +134,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **33/189** current-standard companion-complete with **156** gaps. The direct `.NET` plugin slice is **29/29 complete**. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **34/189** current-standard companion-complete with **155** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is now active. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
