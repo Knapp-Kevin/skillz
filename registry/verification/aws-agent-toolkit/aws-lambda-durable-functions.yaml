@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-lambda-durable-functions
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: fbb78fd31d3da138a4a2d04740d578bf69e8e40d
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, architecture, implementation, debugging]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, safety-bounded, test-driven, tool-routing]
+  authority: [generate-only]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static mechanisms include replay determinism rules, durable-operation nesting constraints, step isolation for nondeterminism and side effects, qualified-ARN invocation, checkpoint-sensitive data handling, saga/error patterns, named-operation replay testing, deployment/IAM guidance and execution troubleshooting. Verified unchanged as generate-only/reference material because the package provides implementation and deployment examples without requiring autonomous cloud mutation. Behavioral validation remains not-run. Lambda durable execution APIs, SDKs, runtime versions, limits and IAM requirements are freshness-sensitive.
