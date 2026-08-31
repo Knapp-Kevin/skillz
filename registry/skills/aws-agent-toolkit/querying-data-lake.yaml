@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: querying-data-lake
+display_name: Query Data Lake
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/querying-data-lake/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/querying-data-lake
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS Athena CLI; valid AWS credentials and target region; Athena workgroups and configured S3 output location; Glue/S3 Tables/Redshift or other federated catalogs as applicable; sibling finding-data-lake-assets and exploring-data-catalog skills for resolution/catalog routing; bundled query-patterns and workgroup-selection references
+import_eligibility: exact-version-reference
+rationale: Athena data-lake query procedure bound to the registered AWS snapshot and exact package tree SHA a619aa25a608b7efac3d5439b1e9c5a0d303defc. The package contains SKILL.md plus two focused references. It establishes region, credential, workgroup, target-asset, output-location, and statement-classification gates before execution; requires explicit confirmation for INSERT/UPDATE/DELETE/DROP/ALTER/CREATE/TRUNCATE/MERGE and treats uncertain statements as destructive; prohibits silent workgroup escalation; reports scan/cost/duration; and delegates fuzzy asset resolution rather than broad-scanning catalogs. Authority is mutating because the accepted statement set includes data/schema-changing SQL even though normal SELECT/SHOW/DESCRIBE/EXPLAIN use is read-oriented. Portability is low because behavior depends on Athena, AWS workgroups/output semantics, AWS credentials/tooling, and AWS-specific federated catalog addressing. Federated-catalog behavior, query costs, service limits, SQL support, and catalog semantics are freshness-sensitive and should be checked against current AWS documentation when consequential.
