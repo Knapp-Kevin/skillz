@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventgrid-dotnet
+display_name: Microsoft Azure Event Grid for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-eventgrid-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-eventgrid-dotnet
+permission_tier: consequential-external-messaging-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.Messaging.EventGrid; optional Azure.Messaging.EventGrid.Namespaces and Microsoft.Azure.Messaging.EventGrid.CloudNativeCloudEvents; Azure.Identity for Entra authentication; authenticated Event Grid topic/domain/namespace; optional Azure Functions Event Grid trigger packages; applicable RBAC, access key, or SAS credentials
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 482dbcdcc9a1108a63e53395c16d08ac5b3fef22 and SKILL.md blob 3156848ee9bf82dc7f0aabd71934e19574113601. The skill provides useful .NET guidance for Event Grid publishing and pull delivery, CloudEvents/EventGridEvent schemas, Entra/key/SAS authentication, parsing, system events, Azure Functions triggers, retries, dead-letter handling, and failover patterns. Unchanged adoption fails the current authority/data-handling rule because normal examples publish event payloads to external Azure topics/domains/namespaces and acknowledge, release, or reject received events, changing external message state, without a distinct affirmative side-effect/cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. The failover pattern can also resend event batches to a secondary region. Credential guidance is comparatively strong through managed-identity/DefaultAzureCredential recommendations and placeholder key examples. Preserve as adaptation/reference evidence with explicit publish/message-state, cost, data-governance, and cross-region failover authorization gates before operational use.
