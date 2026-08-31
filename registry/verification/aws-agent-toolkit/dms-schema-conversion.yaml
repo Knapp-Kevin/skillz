@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: dms-schema-conversion
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2e1b5f3ef40011f79fc7495445cca086ff0e15ed
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, implementation, decision-support]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [evidence-first, human-review, production-oriented, reference-heavy, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes mandatory current-documentation reads for changing DMS selection/transformation rules; explicit region selection; explicit project reuse/create choice; customer permission before new migration-project setup; post-import schema confirmation; explicit action menus; scoped conversion/assessment requests; live-target apply offered only as a selected post-conversion action; confirmation before overwrite-extension-pack; and deliberate separation of assessment, conversion, tree navigation and cleanup. Authority remains mutating because project creation, metadata imports/conversions, S3 exports and live-target schema application are supported, but consequential actions have meaningful user selection boundaries. The score is held at 18/20 because DMS API capabilities, supported engine combinations, waiters, selection-rule syntax and metadata semantics are volatile and because setup/cleanup references remain operationally consequential. Current AWS documentation should be checked before live migrations. Behavioral validation remains not-run.
