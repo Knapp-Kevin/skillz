@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-documentdb
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4fc95aee114b9b6911dcdfc1d41a9715c3df4e62
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, migration, security, decision-support]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [evidence-first, production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA 4fc95aee114b9b6911dcdfc1d41a9715c3df4e62 and contains SKILL.md plus substantial workflow references and bundled scripts. Strong evidence includes explicit workflow routing; refusal of destructive deletion, failover, direct major-version upgrade, and reboot; no wildcard-IAM or open-security-group examples; credential/tool availability checks; parameter validation; current-documentation routing for regional instance classes and MongoDB compatibility; required post-change/diagnostic verification patterns; and security guidance around Secrets Manager, VPC, TLS, IAM, and encryption. The score is held at 16/20 because the skill is intentionally execution-heavy across cluster creation, DMS migration, indexes, and live database operations, and its top-level self-contained creation example includes a plaintext password CLI form before recommending managed Secrets Manager credentials for production. Hosts should avoid exposing plaintext credentials and apply explicit authority controls to all consequential operations. Serverless defaults, engine versions, operator compatibility, instance availability, pricing, limits, and upgrade/migration semantics are volatile and require current AWS evidence. Bundled tooling remains upstream package content, not skillz runtime. Behavioral validation remains not-run.
