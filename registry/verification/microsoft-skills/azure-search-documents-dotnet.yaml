@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-search-documents-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 49ed94e58508e30be14b5e531d53a243c821de6c
+skill_md_blob_sha: 074a1981b319b9c93327188a3dcbd5ca84888b85
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation, research]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Strong Azure AI Search prior art covers index construction, document CRUD, full-text/faceted/autocomplete search, vector search, semantic ranking and hybrid search. Rejected unchanged because primary workflows create/update indexes, upload/merge/upsert/delete documents, and transmit queries, embeddings and indexed content to a metered external service without distinct affirmative mutation, data-governance and cost gates. Integrated vectorization may also transmit text to Azure OpenAI. Credential guidance favors DefaultAzureCredential while allowing environment-based API keys. Preserve as adaptation/reference evidence with explicit index/document mutation and external data/cost authorization gates. Behavioral validation is not-run.

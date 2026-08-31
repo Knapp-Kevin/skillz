@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-servicebus-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2bfd232583ad2850a49c787169e16782f87bc1d7
+skill_md_blob_sha: 00c292ca53d47563837745e1952110982f949e77
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, communication, implementation, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, orchestration, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Strong Service Bus guidance covers send/receive, safe batching, settlement, processors, sessions, dead-letter queues, topics/subscriptions, administration and cross-entity transactions. Rejected unchanged because the normal procedure transmits message payloads, completes/abandons/defers/dead-letters broker state, starts background processors, mutates session state, creates/updates/deletes messaging entities and performs transactional cross-entity effects without distinct affirmative data-transmission, message-state, background-processing, resource-mutation and cost gates. Credential guidance favors DefaultAzureCredential while retaining connection-string alternatives. Preserve as adaptation/reference evidence with explicit send, settlement, processor and administration authorization boundaries. Behavioral validation is not-run.

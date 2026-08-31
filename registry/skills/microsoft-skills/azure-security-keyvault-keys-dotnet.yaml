@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-security-keyvault-keys-dotnet
+display_name: Microsoft Azure Key Vault Keys for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-security-keyvault-keys-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-security-keyvault-keys-dotnet
+permission_tier: consequential-cryptographic-key-lifecycle-secret-material-and-local-file
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.Security.KeyVault.Keys; Azure.Identity; authenticated Azure Key Vault or Managed HSM; Key Vault RBAC appropriate to management or crypto operations; local filesystem access for key backup/restore examples
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 6a9a7395f14b97c73fd882e6e1ae1d4e8ffff10b and SKILL.md blob c9ca1f8736980cf682b5ac1306d327442d3260d0. The package is valuable Key Vault key-management and cryptography prior art, but unchanged adoption fails hard authority boundaries: normal examples create and rotate keys, update policies, delete and immediately purge keys, recover/restore keys, perform decrypt/sign/unwrap operations, and write or read key-backup bytes on the local filesystem without distinct affirmative authorization gates for key lifecycle, destructive purge, cryptographic use or local secret-material handling. Credential guidance favors managed identity and placeholders, and soft-delete is recommended, but those safeguards do not authorize the demonstrated consequential operations. Preserve as adaptation/reference evidence with explicit key-lifecycle, cryptographic-operation, purge/destructive and backup-file authorization gates.
