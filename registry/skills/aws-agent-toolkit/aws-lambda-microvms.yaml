@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-lambda-microvms
+display_name: AWS Lambda MicroVMs
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/aws-lambda-microvms/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 1eaaf169fc8a6f43ae83ef6d419147dcfe02efcb
+upstream_last_updated_at: 2026-07-03T14:30:13Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/aws-lambda-microvms
+permission_tier: generate-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Lambda MicroVMs, S3 build artifacts, IAM build/execution roles, managed MicroVM base images, network connectors, auth tokens, CloudTrail, AWS CLI and optional shell/WebSocket clients; bundled lifecycle, snapshot, networking, IAM/security and troubleshooting references
+import_eligibility: exact-version-reference
+rationale: Exact pinned AWS package bound to tree SHA a9d59dbfbe0f23678270f8b2dbf3c228368ca086. Strong mechanisms include explicit workload-fit boundaries, regional-availability checks, image/runtime lifecycle separation, short-lived port-scoped auth tokens, confused-deputy guidance, snapshot uniqueness and secret-rotation warnings, VPC egress isolation, least-privilege roles, explicit warnings around shell tokens and additional OS capabilities, and freshness routing for soft quotas. The package presents CLI examples and operational patterns but does not mandate autonomous cloud execution, so generate-only authority is appropriate. The score is bounded by the service's novelty and rapidly changing API, quotas and endpoint semantics; all consequential use requires current AWS confirmation. Portability is low because the mechanics are Lambda MicroVM-specific.
