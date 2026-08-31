@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: processing-s3-uploads-with-step-functions
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: dd4458ed38501418f41816b7a98b392c0050d691
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, architecture, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include scoped IAM roles, S3 encryption, explicit egress tightening, EventBridge DLQ, failure alarms, file-size routing, end-to-end validation and troubleshooting. Rejected unchanged because the procedure creates a broad billable infrastructure stack across EC2/VPC, ECR, IAM, Lambda, KMS/Logs, ECS/Fargate, S3, Step Functions, EventBridge and SQS without a distinct explicit user-authorization boundary for the overall resource/cost plan. Required parameter collection and abort language are not affirmative consent. Retain as adaptation/reference evidence. Behavioral validation remains not-run; runtime, pricing, quotas, networking and service APIs are freshness-sensitive.
