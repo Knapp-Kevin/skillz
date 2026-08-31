@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: connecting-lambda-to-api-gateway
+display_name: Connect Lambda to API Gateway
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/connecting-lambda-to-api-gateway/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/connecting-lambda-to-api-gateway
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI capability and configured AWS identity; existing Lambda function; API Gateway REST APIs; Lambda invoke permissions; optional CloudWatch logging, WAF, API keys, authorizers and CORS; bundled lambda-gateway-api reference procedure
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 37fd366b778dd51cb687853930c887634cbe9f15. The package provides a useful end-to-end Lambda proxy integration procedure with function-existence checks, authorization choices, CORS, invocation permission scoping, deployment verification and production-hardening guidance. It is rejected unchanged because after parameter acquisition it directly creates an API, resources, methods, integrations, Lambda permissions and a deployment without a distinct explicit authorization gate for those consequential cloud mutations. The warning for NONE authorization and the missing-tool proceed/abort prompt do not authorize resource creation. Retain as adaptation/reference material. API Gateway/Lambda behavior, service limits, logging configuration and security recommendations are freshness-sensitive.
