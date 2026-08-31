@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-205-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-206-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **205 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **206 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -117,9 +117,9 @@ Current priorities:
 
 AWS Agent Toolkit is **72/72 historically inspected and 72/72 reconciled to the current mandatory per-skill provenance + verification companion standard** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. No AWS current-standard companion gaps remain. Negative dispositions remain preserved where unchanged upstream procedures fail the current authority or secret-handling standard; completion therefore means decisive current evidence, not universal endorsement.
 
-Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **33/189 exact-version provenance + verification companion pairs are persisted**, leaving **156 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
+Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **34/189 exact-version provenance + verification companion pairs are persisted**, leaving **155 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
 
-The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is now **29/29 current-standard companion-complete**. The closing five packages are all decisively rejected unchanged after complete package review: Azure AI Search Documents (13/20), Key Vault Keys (12/20), Service Bus (13/20), Microsoft 365 Agents SDK (13/20), and Microsoft Entra Authentication Events (11/20). Their differentiated blockers include unapproved index/document mutation and data transmission, cryptographic-key lifecycle/purge operations, message settlement/background processing/resource CRUD, outbound agent communication and conversation-state mutation, and direct token/identity/OTP effects involving sensitive authentication data. Their useful SDK, architecture, and operational material remains bounded adaptation/reference evidence.
+The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**. Java is now the active coherent language-family frontier; `azure-ai-agents-persistent-java` is the first Java package reconciled under the current standard and is rejected unchanged at 14/20 because its normal workflow mutates remote agent/thread state, invokes metered runs, uploads local files, creates vector stores, and executes downstream tool/function actions without distinct authority gates. Its SDK and credential-handling material remains useful adaptation/reference evidence.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
