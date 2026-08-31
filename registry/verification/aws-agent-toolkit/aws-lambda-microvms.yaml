@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-lambda-microvms
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a9d59dbfbe0f23678270f8b2dbf3c228368ca086
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, architecture, implementation, security]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, progressive-disclosure]
+  authority: [generate-only]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes explicit workload-fit boundaries, regional-availability checks, image/runtime lifecycle separation, short-lived port-scoped auth tokens, confused-deputy controls, snapshot uniqueness/secret-rotation guidance, VPC egress isolation, least-privilege roles and explicit shell-token/additional-capability cautions. Verified unchanged as generate-only/reference material because CLI examples are guidance rather than mandatory autonomous execution. Behavioral validation remains not-run. The service is new and its API, quotas, limits, endpoint formats and managed images are highly freshness-sensitive.
