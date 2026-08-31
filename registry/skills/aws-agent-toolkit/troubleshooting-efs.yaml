@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: troubleshooting-efs
+display_name: Troubleshoot EFS
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/storage-skills/troubleshooting-efs/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/storage-skills/troubleshooting-efs
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI, amazon-efs-utils or NFS client utilities, host shell/network tools; Amazon EFS, EC2/VPC/security groups, IAM/POSIX, CloudWatch and KMS as applicable
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA eed46ff1bb476cf5acae18ac4e4182531a94b1af. The package provides useful symptom classification, EFS/NFS/network/IAM/POSIX/performance/KMS/DNS diagnostics, read-only dependency checks and concrete evidence commands. It is rejected unchanged because remediation commands include package installation, security-group ingress, EFS throughput-mode changes and VPC DNS mutation while command display and confirmation are only SHOULD requirements rather than a mandatory authorization gate. Retain as adaptation/reference material; read-only diagnostic sections remain useful. EFS limits, performance semantics, client behavior and AWS APIs are freshness-sensitive.
