@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: migrate-to-msk
+display_name: Migrate to Amazon MSK Express
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/analytics-skills/migrate-to-msk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 61b60c88285cf2bec0d1b69b0beb883b4f901d23
+upstream_last_updated_at: 2026-07-02T11:11:57Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/analytics-skills/migrate-to-msk
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: local file access to IaC/cluster artifacts; uv/Python for bundled compatibility.py, sizing.py, and simulation_load_test_config.py processors; AWS-published MSK Sizing/Pricing workbook downloaded at assessment time; optional AWS documentation MCP; Amazon MSK Express and MSK Replicator knowledge; AWS account/credentials for optional simulation; CloudFormation simulation-stack.yaml, EC2/SSM/CloudWatch/VPC/MSK resources; four bundled reference documents and simulation asset
+import_eligibility: exact-version-reference
+rationale: Self-managed Kafka to Amazon MSK Express migration procedure bound to the registered AWS snapshot and exact package tree SHA a4e9b51d24f59d5bfc0bbb7bf234a2d096163911. The package contains SKILL.md, four substantial references, three deterministic Python processors, and a static simulation CloudFormation asset. It strongly separates discovery, assessment, and optional simulation; requires discovery reference/template loading; explicitly stops after discovery until customer confirmation; forbids speculative compatibility/cost conclusions before real assessment artifacts exist; and treats assessment processors as offline file operations. Phase 3 is materially mutating because it can deploy temporary VPC, MSK Express, EC2/SSM, CloudWatch, and load-test resources, so the overall authority tier is mutating despite read/generate-only earlier phases. Security guidance covers TLS, KMS, IAM authentication, Secrets Manager, private networking, CloudTrail, alarms, and sensitive artifact handling. Portability is low because the flow is tightly coupled to Amazon MSK Express, AWS-published sizing artifacts, AWS deployment services, Kafka/MSK constraints, and bundled scripts/assets. Supported Kafka versions, quotas, pricing workbook behavior, authentication support, MSK Replicator constraints, and simulation resource assumptions are freshness-sensitive and require current AWS verification before consequential migration or deployment decisions.
