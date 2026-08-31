@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-aurora-mysql
+display_name: Amazon Aurora MySQL
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/amazon-aurora-mysql/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: a9d1c70fe7442a97678e82b62c7c61bcb0deeaea
+upstream_last_updated_at: 2026-06-15T07:14:26Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/amazon-aurora-mysql
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS CLI/SDK; valid AWS credentials and region; Amazon Aurora MySQL/RDS APIs and CloudWatch; VPC/subnet/security-group/KMS/parameter-group context for creation; Secrets Manager or IAM database authentication for credentials; bundled Aurora sub-skill references and acu_calculator.py, io_optimized_analyzer.py, and commitment_pricing_analyzer.py
+import_eligibility: exact-version-reference
+rationale: Aurora MySQL operations and decision-support package bound to the registered AWS snapshot and exact package tree SHA 0e3f93d02d0bff4d76ae31f425527441989717e1. The package contains SKILL.md, a broad reference set, and three deterministic analysis scripts. It routes creation, serverless sizing, I/O-Optimized evaluation, commitment pricing, and upgrade planning to focused references; requires explicit confirmation before mutations; escalates higher-impact changes to risk-then-confirm; and blocks irreversible, credential, network-security, public-exposure, major-version, financial-commitment, reboot, and failover operations with safer alternatives. It prohibits fabrication of API/pricing/version results and long-lived credential handling. Authority is mutating because confirmed cluster/instance creation and configuration changes are supported. Portability is low because behavior is tightly coupled to Aurora MySQL/RDS, AWS networking and identity, AWS pricing/instance/ACU semantics, and bundled package tooling. Pricing, ACU behavior, instance classes, engine versions, feature compatibility, I/O thresholds, and service constraints are freshness-sensitive and should be checked against current AWS documentation before consequential use.
