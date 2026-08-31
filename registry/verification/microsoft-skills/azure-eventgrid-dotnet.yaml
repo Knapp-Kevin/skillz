@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventgrid-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 482dbcdcc9a1108a63e53395c16d08ac5b3fef22
+skill_md_blob_sha: 3156848ee9bf82dc7f0aabd71934e19574113601
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [event-driven-architecture, messaging, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, external-service-integrated]
+  authority: [external-side-effect, data-transmission, cost-bearing, message-state-mutation]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.Messaging.EventGrid guidance for .NET across topics/domains, namespace pull delivery, CloudEvents/EventGridEvent schemas, authentication, publishing, receive/acknowledge/release/reject flows, parsing, system events, Azure Functions triggers, error handling, and regional failover. It is rejected unchanged under the current authority/data-handling rule because normal examples publish event payloads to external Azure services and mutate broker state through acknowledgement, release, and rejection without a distinct affirmative side-effect/cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. The failover pattern can resend event batches to a secondary region. Credential guidance is comparatively strong: managed identity/DefaultAzureCredential are preferred and key/SAS examples use placeholders or derived tokens rather than soliciting real secrets conversationally. Adaptation should preserve the SDK/event-schema guidance while adding explicit publish/message-state, cost, data-governance, and cross-region failover authorization gates before operational use. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
