@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aurora-dsql
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 254a60139d64cdc667f97566caafa5e181a3118c
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, implementation, security, debugging]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes canonical connector guidance instead of ad-hoc credential handling; scoped IAM-token use; mandatory access-control and authentication references; explicit safe-SQL construction for untrusted identifiers and tenant isolation; DDL/migration-specific reference routing; service-limit freshness warnings; and preference for bundled connection/lifecycle scripts with interpretable behavior. Authority is mutating because the skill covers cluster creation, SQL writes, DDL, role/grant setup and migrations. The score is held at 16/20 because the package has a large execution surface, includes lifecycle scripts and numerous service-specific defaults, and exact DSQL limits/connector versions are freshness-sensitive. Behavioral validation remains not-run.
