@@ -10,9 +10,12 @@
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
-| **Persisted third-party review companions** | 121 |
+| **First-party provenance complete** | 43 / 43 |
+| **Persisted third-party review companions** | 128 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
+| **AWS historical review** | 72 / 72 |
+| **AWS current-standard companion complete** | 28 / 72 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -31,7 +34,6 @@ skillz/
 ├── skills/                          43 first-party user-facing skill packages
 │   ├── categories/                  human browse-by-purpose navigation
 │   └── sources/                     12 intact exact-revision third-party corpora
-├── .gitmodules                      exact source gitlink locations
 ├── engine/skills/                   passive repository-use/curation procedures
 ├── registry/
 │   ├── sources.yaml                 19 unique source identities/roles/pins
@@ -44,23 +46,35 @@ skillz/
 └── docs/                            governance, provenance, curation, evidence, history
 ```
 
-The canonical physical boundary is reflected in the live tree: user-facing first-party material is under `skills/`, intact pinned third-party corpora are under `skills/sources/<source-id>/`, and repository-use/curation instructions are under `engine/skills/` and excluded from user-facing counts.
+The canonical physical boundary is reflected in the live tree: user-facing first-party material is under `skills/`, intact pinned third-party corpora are under `skills/sources/<source-id>/`, and passive repository-use/curation instructions are under `engine/skills/` and excluded from user-facing counts.
 
-There is no repository-owned runtime, root scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service.
-
-Pinned third-party repositories may contain their own code or tooling. They remain intact reference sources and are not repository-owned execution machinery.
+There is no repository-owned runtime, root scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Pinned third-party repositories may contain their own code or tooling; those remain intact upstream package components and are not repository-owned execution machinery.
 
 ## Inventory boundaries
 
-- **43 active first-party user-facing skills** have structured semantic review records and **43/43 first-party provenance companions** under `registry/skills/local-skills/` after the `automation-receipts` admission via issue #72.
-- `automation-receipts` is classified under Agent Operations & Security in `registry/categories.yaml`; first-party category accounting therefore matches the 43-skill denominator.
+- **43 active first-party user-facing skills** have structured semantic review records and **43/43 provenance companions** under `registry/skills/local-skills/`.
 - **12 pinned external corpora** provide the broad 500+ reference surface.
-- **121 current exact-version third-party verification companion files** are persisted.
-- `registry/sources.yaml` contains **19 unique source identities** after removing duplicate entries for `openclaw-agent-skills` and `archieindian-superpowers`. Source counts refer to unique IDs, not YAML row accidents.
-- AWS Agent Toolkit has an established eligible denominator of **72** skills and a prior full-pass disposition of **70 verified / 2 rejected**; **21/72** currently have persisted exact-version provenance + verification companion pairs on `main`. The remaining 51 are evidence-reconciliation gaps, not unreviewed-by-definition skills.
-- Latest AWS reconciliation: `ingesting-into-data-lake`, exact package tree `d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6`, preserved decisive state `verified`, current structured score 15/20, behavioral evidence `not-run`, mutating authority, low portability. Its upstream workflow has meaningful validation and target-clarification gates but no universal explicit confirmation boundary for every downstream write/schedule, so hosts must apply their own authority policy.
-- Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
+- **128 current exact-version third-party verification companion files** are persisted.
+- `registry/sources.yaml` contains **19 unique source identities**.
+- AWS Agent Toolkit has an established eligible denominator of **72 skills** and prior full-pass evidence of **70 verified / 2 rejected**. All 72 were historically inspected at the registered pin. **28/72** now have current-standard per-skill provenance + verification companion pairs; **44** reconciliation gaps remain.
+- Historical source-level curation evidence remains valid for what it establishes. Companion reconciliation searches existing records and recoverable historical evidence before performing a fresh exact-version review.
 - `engine/skills/` procedures do not count as user-facing inventory.
+
+## Latest sequential AWS reconciliation batch
+
+This batch closed seven genuine companion gaps without changing the registered AWS source pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`:
+
+| Skill | Exact package tree | State | Score | Authority | Portability |
+|---|---|---|---:|---|---|
+| `managing-amazon-msk` | `b16afcc92da29d85d0e610d38a1c49b20e5e32e8` | verified | 16/20 | mutating | low |
+| `migrate-to-msk` | `a4e9b51d24f59d5bfc0bbb7bf234a2d096163911` | verified | 17/20 | mutating | low |
+| `querying-data-lake` | `a619aa25a608b7efac3d5439b1e9c5a0d303defc` | verified | 18/20 | mutating | low |
+| `amazon-aurora-mysql` | `0e3f93d02d0bff4d76ae31f425527441989717e1` | verified | 18/20 | mutating | low |
+| `amazon-aurora-postgresql` | `eb9414ad02354efaa482cb24003af763030ec00d` | verified | 18/20 | mutating | low |
+| `amazon-documentdb` | `4fc95aee114b9b6911dcdfc1d41a9715c3df4e62` | verified | 16/20 | mutating | low |
+| `amazon-elasticache` | `7ab33b79df92988e90fe25e9318fe748c7d15149` | verified | 17/20 | mutating | low |
+
+Behavioral evidence remains `not-run` for this static curation batch. The reviews preserve upstream scripts/assets/references as package dependencies rather than treating them as `skillz` runtime.
 
 ## Source lifecycle
 
@@ -68,11 +82,9 @@ The repository distinguishes:
 
 **discovery surface → candidate issue/source → source-vetting → admitted corpus/reference/tracked source → individual exact-version review → user-fit decision**
 
-Newly discovered third-party candidates use the issue-first intake workflow before admission. The candidate issue is the pre-admission evidence workspace; finalized provenance and verification companions are persisted only after an admission decision is justified.
+Newly discovered third-party candidates use the issue-first intake workflow before admission. The candidate issue is the pre-admission evidence workspace; finalized provenance and verification companions are persisted only after a justified admission decision.
 
 Intentional discovery surfaces are documented in `docs/discovery-surfaces.md`. The connected Creator Technical Resource Catalog is discovery intelligence only; its rows, scores, verification labels, creator attributions, and recommendations are not `skillz` provenance or individual quality evidence.
-
-Discovery does not grant trust, quality, redistribution authority, installation authority, or automatic admission. Source popularity, official branding, repository age, stars, forks, and activity are source context only and do not prove individual skill quality.
 
 ## Quality model
 
@@ -90,23 +102,13 @@ Interpret candidates in this order:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-The host agent may ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, use a CHECKLIST, keep behavior DYNAMIC, or make NO CHANGE.
-
-## Current reconciliation status
-
-- The current first-party `skills/README.md` no longer claims a repository-owned Node verification script enforces readiness. Completeness is checked by the external host agent against passive review/provenance records.
-- `registry/sources.yaml` has been deduplicated to 19 unique source identities.
-- First-party category accounting is 43/43 and includes `automation-receipts` under Agent Operations & Security.
-- Tier-4 catalog surfaces `INDEX.md` and `index.json` are restored as hand-maintained passive snapshots. They have no generator, preflight, or executable refresh contract.
-- Concurrent policy work at commit `8ec6b323323dfa2e2b42345cfcf87935f88cb74f` codified that host-environment substrates are infrastructure, not skills; portable lessons may inform substrate-agnostic skills with truthful provenance. This is compatible with the passive repository boundary and was preserved.
-
 ## Current curation priority
 
-1. Continue AWS Agent Toolkit current-standard companion reconciliation, preserving the prior 72/72 review evidence and re-reviewing only genuine evidence gaps.
+1. Continue AWS Agent Toolkit current-standard companion reconciliation sequentially until the remaining 44 gaps are closed, preserving historical evidence and avoiding duplicate review.
 2. Complete Microsoft Skills.
 3. Complete Microsoft Azure Skills.
-4. Continue remaining admitted creator/registered-source curation.
-5. Continue governed discovery/source-vetting in parallel when evidence supports useful source candidates.
+4. Continue remaining admitted creator/registered-source curation to the same mandatory standard.
+5. Continue governed discovery/source-vetting in parallel when evidence supports useful candidates.
 6. Keep README, governance, category navigation, source registry, catalog snapshots, and public counts aligned with material corpus changes.
 
-The current living work surface is `CURATION_QUEUE.md` plus open provenance audit issue #66. Closed historical Wayfinder/issues/PRs remain evidence, not active execution plans.
+The current living work surface is `CURATION_QUEUE.md` plus provenance audit issue #66. Closed historical Wayfinder/issues/PRs remain evidence, not active execution plans.
