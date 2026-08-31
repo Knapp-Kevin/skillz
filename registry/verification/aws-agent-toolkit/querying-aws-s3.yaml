@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: querying-aws-s3
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: bd942552b303cf65e2623b5e437122772d4fcb33
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, observability, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded, reference-heavy]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong query mechanisms include configuration-status checks, system-table routing, encrypted Athena output requirements, read-only semantics and sensitive requester/IP handling. Rejected unchanged because setup paths enable bucket metadata tracking, Storage Lens table exports and Glue catalog integration without a distinct affirmative authorization gate. Retain the query core as adaptation/reference evidence. Behavioral validation remains not-run; S3 Metadata/Storage Lens schemas, timing, pricing and APIs are freshness-sensitive.
