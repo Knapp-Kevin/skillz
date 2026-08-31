@@ -11,15 +11,15 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 200 |
+| **Persisted third-party review companions** | 205 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 28 / 189 |
-| **Microsoft Skills current-standard gaps** | 161 |
-| **Microsoft .NET direct-package companions** | 24 / 29 |
+| **Microsoft Skills current-standard companions** | 33 / 189 |
+| **Microsoft Skills current-standard gaps** | 156 |
+| **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -33,12 +33,12 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **200 exact-version third-party verification companions** are persisted.
+- **205 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **28/189** have current-standard provenance + verification companions and **161** remain.
-- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice contains **29** packages and is **24/29** current-standard companion-complete.
+- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **33/189** have current-standard provenance + verification companions and **156** remain.
+- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice contains **29** packages and is **29/29 current-standard companion-complete**.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -51,31 +51,23 @@ The final AWS tranche preserved useful negative evidence rather than rubber-stam
 
 Microsoft Skills is the active admitted-source frontier. The denominator is **189** independently front-mattered `SKILL.md` entry points at the exact registered pin; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain dependencies of their parent package.
 
-Current progress is **28/189** current-standard companion-complete. Previously reconciled units include the root/cross-language and initial .NET SDK packages for Application Insights web telemetry, skill authoring, architecture, Copilot SDK, Azure Identity, Document Intelligence, persistent agents, Azure OpenAI, Azure AI Projects, Voice Live, Event Grid, Event Hubs and Maps Search.
+Current progress is **33/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages and the complete direct `.NET` SDK plugin slice.
 
-### .NET management-plane batch
+### .NET direct plugin slice — CURRENT-STANDARD COMPLETE
 
-The latest batch reconciles all **15 direct .NET management-plane packages** in one governed tranche:
+All **29/29 direct `.github/plugins/azure-sdk-dotnet/skills/` packages** now have exact-version provenance + verification companions at registered Microsoft pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 
-- `azure-mgmt-apicenter-dotnet` — rejected unchanged, **14/20**.
-- `azure-mgmt-apimanagement-dotnet` — rejected unchanged, **12/20**; adds plaintext subscription-key output, key regeneration, literal password example, and a missing required `references/policies.md` dependency.
-- `azure-mgmt-applicationinsights-dotnet` — rejected unchanged, **13/20**; adds secret output and recurring synthetic-test mutation.
-- `azure-mgmt-arizeaiobservabilityeval-dotnet` — rejected unchanged, **13/20**; Marketplace/commercial and administrator-PII mutation.
-- `azure-mgmt-botservice-dotnet` — rejected unchanged, **14/20**; bot/channel publication and Direct Line key rotation.
-- `azure-mgmt-fabric-dotnet` — rejected unchanged, **14/20**; billable capacity creation/scaling/state/admin mutation.
-- `azure-mgmt-mongodbatlas-dotnet` — rejected unchanged, **13/20**; Marketplace organization/billing and administrator-PII mutation.
-- `azure-mgmt-weightsandbiases-dotnet` — rejected unchanged, **13/20**; prerelease Marketplace/SSO/PII/resource workflow plus external experiment-data integration.
-- `azure-resource-manager-cosmosdb-dotnet` — rejected unchanged, **13/20**; billable resource mutation, master-key/connection-string output and rotation, failover/network/throughput mutation, and destructive stored-procedure prior art.
-- `azure-resource-manager-durabletask-dotnet` — rejected unchanged, **14/20**; scheduler/task-hub/capacity/network/retention lifecycle mutation without affirmative authorization.
-- `azure-resource-manager-mysql-dotnet` — rejected unchanged, **12/20**; literal administrator password, permissive Azure-wide firewall example, restore/failover/scale/delete mutations.
-- `azure-resource-manager-playwright-dotnet` — rejected unchanged, **14/20**; billable testing workspace creation/deletion, local-auth enablement and external test-service setup.
-- `azure-resource-manager-postgresql-dotnet` — rejected unchanged, **12/20**; literal administrator password, permissive firewall example, restore/replica/failover/scale/delete mutations.
-- `azure-resource-manager-redis-dotnet` — rejected unchanged, **12/20**; access-key output/rotation, firewall/maintenance/import-export/reboot mutation, and key-bearing data-plane connection construction.
-- `azure-resource-manager-sql-dotnet` — rejected unchanged, **11/20**; literal administrator credentials plus broad server/database/pool/network/private-endpoint/backup/import-export/encryption/security/destructive mutations.
+The prior management-plane tranche reconciled fifteen packages, all rejected unchanged with scores from **11/20 to 14/20**, preserving specific resource, cost, secret, network, identity, data, dependency, destructive-action and freshness findings rather than applying a family-level verdict.
 
-Every package retains exact tree/blob identity, exact source revision/date, dependencies, portability, current authority classification, controlled taxonomy tags, decisive static state, and `validation_status: not-run`. The recurring rejection reason is consequential cloud-resource or cost mutation without a mandatory affirmative authorization boundary, but the individual records preserve each package's additional secret, network, data, identity, dependency, destructive-action, or freshness defects. Useful SDK and operational material remains available as adaptation/reference evidence.
+The closing five direct packages are likewise individually resolved:
 
-The direct `.NET` slice is now **24/29** complete. Five non-management packages remain and should be reconciled as the next coherent `.NET` batch before moving to the next Microsoft language/plugin family.
+- `azure-search-documents-dotnet` — rejected unchanged, **13/20**. Useful full-text/vector/semantic/hybrid search guidance, but normal index mutation, document CRUD and query/embedding/indexed-content transmission lack distinct mutation, data-governance and cost gates. Integrated vectorization can also route text to Azure OpenAI.
+- `azure-security-keyvault-keys-dotnet` — rejected unchanged, **12/20**. Useful key-management/cryptography guidance, but key creation/rotation/policy mutation, delete-and-purge, decrypt/sign/unwrap and local backup-file handling lack distinct key-lifecycle, destructive, crypto-use and secret-file authorization gates.
+- `azure-servicebus-dotnet` — rejected unchanged, **13/20**. Useful enterprise messaging guidance, but send/settlement, background processors, session-state mutation, messaging-entity CRUD and cross-entity transactions lack distinct data/message-state/background/resource/cost gates.
+- `m365-agents-dotnet` — rejected unchanged, **13/20**. Useful Microsoft 365 Agents SDK hosting/routing/authentication prior art, but normal handlers send external activities, the Copilot Studio client starts conversations and transmits prompts, and error handling deletes conversation state without distinct communication/data/state authorization boundaries.
+- `microsoft-azure-webjobs-extensions-authentication-events-dotnet` — rejected unchanged, **11/20**. Useful Entra Authentication Events prior art, but normal examples alter issued-token claims, block sign-up, modify identity attributes, transmit user IDs to an external profile service, and send OTP secrets with phone numbers to external messaging providers without mandatory identity/token, PII/privacy, OTP and external-message gates; examples also log user identifiers and phone numbers.
+
+Every direct `.NET` package retains exact tree/blob identity, exact source revision/date, dependencies, portability, current authority classification, controlled taxonomy tags, decisive static state and `validation_status: not-run`. Completion means decisive current evidence for every package, not universal approval.
 
 ## Source lifecycle
 
@@ -93,12 +85,11 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Complete the remaining five direct Microsoft .NET packages, bringing that slice to 29/29.
-2. Continue Microsoft Skills in coherent plugin/language batches against the exact 189-entry denominator.
-3. Complete Microsoft Azure Skills.
-4. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
-5. Continue admitted/tracked creator-source curation and denominator reconciliation.
-6. Continue governed discovery/source-vetting through issue-first intake and omission recovery.
-7. Keep README, this System State, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+1. Continue Microsoft Skills in coherent plugin/language batches against the exact **189-entry** denominator.
+2. Complete Microsoft Azure Skills.
+3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
+4. Continue admitted/tracked creator-source curation and denominator reconciliation.
+5. Continue governed discovery/source-vetting through issue-first intake and omission recovery.
+6. Keep README, this System State, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The current living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
