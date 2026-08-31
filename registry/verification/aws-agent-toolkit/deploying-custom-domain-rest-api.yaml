@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: deploying-custom-domain-rest-api
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3d2ecacf1abfe8cfb6661ff04cba16558cd4c1c6
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include certificate validation, scoped Lambda invoke permissions, TLS 1.2, access logging, deployment verification and explicit warning that bundled demo authorization values are not production credentials. Rejected unchanged because it creates ACM/DNS, IAM, Lambda, API Gateway, custom-domain and Route 53 resources without a distinct affirmative authorization gate for the consequential plan; the ability to abort is not equivalent to consent. Hardcoded demo authorization values further reduce safe unchanged reuse. Retain as adaptation/reference evidence. Behavioral validation remains not-run and service/runtime/DNS assumptions are freshness-sensitive.
