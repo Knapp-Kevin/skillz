@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [cloud, database, implementation]
+  use_case: [cloud, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [management-plane, marketplace-integrated, external-service-integrated]
-  authority: [external-side-effect, resource-mutation, data-transmission, cost-bearing]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [low]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Coherent Azure-side MongoDB Atlas organization-management guidance is rejected unchanged because the normal create path establishes a Marketplace-linked partner organization and billing relationship using commercial offer/term identifiers and administrator contact/identity data, and subsequent workflows update admin data/tags or delete the organization without affirmative marketplace, cost, PII/data, mutation or deletion authorization. The scope limitation against direct cluster/database management is clear and useful. Preserve as adaptation/reference evidence with explicit commercial-subscription, contact-data and lifecycle gates. Behavioral validation is not-run.
