@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: shieldadvanced
+display_name: AWS Shield Advanced
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/shieldadvanced/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: 2026-07-03T15:35:04Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/shieldadvanced
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with managed AWS credentials; AWS Shield Advanced, WAF, Route 53 health checks, CloudFront/load balancers/Elastic IP/Global Accelerator resources, CloudTrail, CloudWatch, SNS and KMS; focused subscription, protection, mitigation, health, SRT, event and protection-group references
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 3ef03839bc64199197448d2a6a1d8ab944ff71e9. Strong domain mechanisms include a decide-before-subscribe posture, lower-cost Shield Standard plus WAF alternatives, explicit explanation that subscription alone protects nothing, consolidated-billing semantics, auto-renewal and support-only cancellation warnings, least-privilege controls, audit/encryption guidance, and post-subscription protection verification. Rejected unchanged because the subscription procedure warns the customer about the paid auto-renewing commitment but then calls create-subscription without a distinct explicit authorization gate confirming the customer accepts that commitment. A warning before action is not equivalent to consent to enter a paid term. Authority remains mutating because subscription/protection/configuration actions are supported. Portability is low and pricing, subscription terms, supported resources and Shield/WAF capabilities require current AWS evidence.
