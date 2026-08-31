@@ -148,4 +148,4 @@ First-party content is licensed under the [MIT License](LICENSE).
 
 Third-party repositories and materially derived content retain their applicable upstream obligations. The root MIT license does not relicense pinned source corpora or separately identified third-party material.
 
-See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md`).
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
