@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5569dda3e6dba27f9101b32be55992a6f62443c9
+skill_md_blob_sha: 82e101da3649c7f560fff5ac2f96f7e75268e6e1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [agent-development, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, tool-assisted]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.AI.VoiceLive guidance for .NET across authenticated real-time sessions, bidirectional WebSocket events, text/audio modalities, model and voice selection, turn detection, audio formats, error handling, and function-call integration. It is rejected unchanged under the current authority/data-handling rule because the core workflow starts a metered external AI session and transmits user audio/text to Azure without a distinct affirmative cost/data-transmission authorization boundary or mandatory recording/privacy/data-governance prerequisite. Its function-calling example also instructs the host to call an external weather service and return the result without a separate function/tool action approval gate. Credential examples use placeholders, environment variables, DefaultAzureCredential, and managed-identity guidance rather than asking for real secret values conversationally. Adaptation should preserve the SDK/session guidance while adding explicit recording/privacy, external-service, cost, data-governance, and function/tool authorization gates before operational use. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
