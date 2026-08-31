@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-lambda-managed-instances
+display_name: AWS Lambda Managed Instances
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/aws-lambda-managed-instances/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 907d6a211251db23d9e58e500a9b1c122d632676
+upstream_last_updated_at: 2026-06-08T14:44:31Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/aws-lambda-managed-instances
+permission_tier: generate-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Lambda Managed Instances/capacity providers, EC2/VPC networking, IAM execution/operator roles, CloudWatch, AWS CLI, SAM/CDK and current AWS pricing/instance availability; bundled cost, configuration, thread-safety, migration, infrastructure and troubleshooting references
+import_eligibility: exact-version-reference
+rationale: Exact pinned AWS package bound to tree SHA 7df96da81f6a20670128f6b572a7f0e2f0d30273. Strong mechanisms include mandatory workload and cost assessment before recommendation, explicit LMI-vs-standard-Lambda tradeoffs, concurrency/thread-safety review by runtime, MaxVCpuCount cost ceilings, three-AZ resilience guidance, least-privilege operator-role conditions, gradual weighted-alias cutover and non-production validation. The infrastructure reference provides manual CLI and IaC examples rather than directing the host to autonomously execute them, so generate-only authority is appropriate. The score is bounded by highly volatile product limits, pricing, scaling claims and regional/instance availability that must be checked against current AWS documentation. Portability is low because the capability is specific to Lambda Managed Instances.
