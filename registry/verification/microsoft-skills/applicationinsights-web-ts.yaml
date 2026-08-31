@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: applicationinsights-web-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cb03b364b8f9dcb5fc2ee9662758a1f949c23102
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, monitoring, observability]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, instrumentation, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Strong guidance covers browser RUM, framework integration, telemetry initializers, PII/secret scrubbing, distributed tracing, click analytics and OpenTelemetry GenAI semantic conventions. Rejected unchanged under the current hard authority rule because its primary setup path directs early browser telemetry initialization and automatic page/dependency collection without requiring user consent or an approved data-handling policy before telemetry leaves the client. Consent gating appears later as optional privacy guidance rather than as a mandatory authorization boundary, and click/user-context examples add consequential privacy scope. Retain as adaptation/reference evidence with a required consent/data-governance gate. Behavioral validation remains not-run; package APIs, browser privacy behavior and OTel GenAI conventions are freshness-sensitive.
