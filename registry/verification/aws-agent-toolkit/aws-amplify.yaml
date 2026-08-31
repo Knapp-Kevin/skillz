@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-amplify
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 659d33648afb2138c762e0acdbcb4a4229342457
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, implementation, deployment]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong material includes Gen2 detection/routing, framework-specific integration, generated-output hygiene, authentication choice prompts, secret-storage guidance, deployment validation and detailed version-specific pitfalls. Rejected unchanged because deployment paths create Amplify apps, IAM roles/policies, branches, backend resources, custom domains and release jobs without a distinct affirmative authorization gate for the infrastructure/cost plan. The create-app example passes a GitHub auth token as a command argument, and starter publicApiKey authorization requires deliberate contextual review. Retain as adaptation/reference evidence. Behavioral validation remains not-run; Amplify runtimes, APIs, managed policies, framework support and limits are highly freshness-sensitive.
