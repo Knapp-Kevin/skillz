@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cloud-solution-architect
+display_name: Microsoft Cloud Solution Architect
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/cloud-solution-architect/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/cloud-solution-architect
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Markdown skill package with bundled references covering Azure design patterns, technology choices, best practices, and mission-critical architecture; recommendations depend on current Azure Architecture Center and service documentation for freshness-sensitive product details
+import_eligibility: eligible-with-host-fit
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA cf94add87e80c754b41298fe08dc16cd9b442531 and SKILL.md blob 7db4c335fff4c73300a5b17b8d847acc919e72b0. The package is primarily advisory architecture and review guidance: requirements elicitation, architecture-style selection, technology tradeoffs, design patterns, Well-Architected review, and ADR documentation. It names consequential deployment, identity, networking, monitoring, remediation, and infrastructure mechanisms as design considerations but does not itself instruct the host to execute those mutations. Any later implementation remains separately subject to host authorization. No instruction solicits actual secret values into conversational context. Freshness matters for Azure service capabilities, product naming, pricing/cost assumptions, and Well-Architected guidance.
