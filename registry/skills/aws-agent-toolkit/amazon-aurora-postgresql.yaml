@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: amazon-aurora-postgresql
+display_name: Amazon Aurora PostgreSQL
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/amazon-aurora-postgresql/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: a9d1c70fe7442a97678e82b62c7c61bcb0deeaea
+upstream_last_updated_at: 2026-06-15T07:14:26Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/amazon-aurora-postgresql
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS CLI/SDK; valid AWS credentials and region; Amazon Aurora PostgreSQL/RDS APIs and CloudWatch; express-configuration or VPC/subnet/security-group/KMS/parameter-group context as applicable; IAM database authentication and Secrets Manager for credential-safe flows; bundled sub-skill references and analysis scripts for ACU sizing, I/O-Optimized analysis, and commitment pricing
+import_eligibility: exact-version-reference
+rationale: Aurora PostgreSQL operations and decision-support package bound to the registered AWS snapshot and exact package tree SHA eb9414ad02354efaa482cb24003af763030ec00d. The package contains SKILL.md, a substantial focused-reference set, and bundled analysis scripts. It routes express/full creation, serverless sizing, I/O-Optimized evaluation, commitment pricing, and upgrade planning through explicit sub-skills; requires confirmation before all create/modify mutations; escalates high-impact operations to risk-then-confirm; and blocks deletion, failover/switchover, direct major-version changes, password management, network-security changes, public database exposure, financial commitments, and reboots with safer alternatives. Express configuration is explicitly distinguished from full VPC configuration and uses IAM-only authentication rather than master-password workarounds. Authority is mutating because confirmed provisioning and configuration changes are supported. Portability is low because behavior depends on Aurora PostgreSQL/RDS, express-configuration semantics, AWS identity/networking, pricing/ACU/engine behavior, and bundled package tooling. Pricing, ACU limits, express capabilities, engine versions, instance classes, storage-transition constraints, authentication behavior, and upgrade guidance are freshness-sensitive and require current AWS verification before consequential use.
