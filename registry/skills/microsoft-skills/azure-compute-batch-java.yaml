@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-compute-batch-java
+display_name: Microsoft Azure Batch for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-compute-batch-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-compute-batch-java
+permission_tier: consequential-cloud-compute-execution
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-compute-batch 1.0.0-beta.5; com.azure:azure-identity 1.14.2 in bundled examples; Azure Batch account/endpoint and subscription; configured pool or permission to create/resize pools; Entra credential or shared account key; optional Storage SAS URLs for resource/output files; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 84c4838dbba5893e78a5ea42565ea35feddbcd1c, SKILL.md blob 5fc31081115f4710a9b2b961b6662253b0232318, and bundled examples blob 6fd6cb199376ae28c16c35b113cc9e352852b158. The package is useful Azure Batch prior art for pool, job, task, node, schedule, autoscale, output, and authentication patterns. Unchanged adoption is rejected because ordinary examples create/resize/autoscale/delete compute pools, create/update/terminate/delete jobs, submit arbitrary command lines and large task collections, reboot nodes, create recurring schedules, and can execute pool/task startup commands with ADMIN elevation without distinct infrastructure, cost, command-execution, privilege, destructive-action, or scheduling authorization gates. Bundled examples also place SAS-bearing Storage URLs directly in task resource/output configuration, requiring stronger secret/data handling. Entra ID and managed identity guidance is comparatively sound and shared-key credentials are environment-backed. Preserve as adaptation/reference material with explicit compute-cost, command/privilege, destructive-state, schedule, SAS-secret, and data-egress authority boundaries.
