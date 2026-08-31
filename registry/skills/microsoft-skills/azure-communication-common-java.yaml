@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-common-java
+display_name: Microsoft Azure Communication Common for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-common-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-common-java
+permission_tier: consequential-authentication-token-and-identity-data
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+import_eligibility: adaptation-reference-only
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-communication-common 1.4.0; optional azure-identity and ACS Chat dependencies; ACS user access tokens; external token-refresh endpoint in bundled examples; Teams Phone Extensibility scope; references/examples.md
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 7a6a66c205648ad69cda647462d102993115180a and SKILL.md blob b7b13710db6b54f823a5af8dbae652a427b1e776. The package contains useful credential-refresh and identifier guidance and explicitly advises against exposing full tokens. Rejected unchanged because the top-level token-access example nevertheless logs the first 20 characters of an access token, bundled refresh code sends userId in a URL query string, and examples routinely print phone/ACS/Teams identifiers without a mandatory sensitive-identifier/logging boundary. Proactive refresh also invokes an external token service automatically and therefore requires host-controlled credential/network authority. Preserve as adaptation/reference evidence after removing token-fragment logging, avoiding identifier-bearing query strings, and defining explicit credential/privacy/network boundaries.
