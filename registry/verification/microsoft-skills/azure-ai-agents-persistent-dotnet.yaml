@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-agents-persistent-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 62d6ee2d1e7ffe649e6bae74b9235d061b852376
+skill_md_blob_sha: 9c9bd87a4bf852157158e2c658218762cfd2130c
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [agent-development, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, tool-integrated]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.AI.Agents.Persistent guidance for .NET, including agent CRUD, threads, messages, runs, streaming, function calling, file search, vector stores, Bing grounding, Azure AI Search, OpenAPI, Azure Functions, MCP, SharePoint, and Fabric tools. It is rejected unchanged under the current hard-fail authority rule because its primary workflow creates remote agents, threads, messages, runs, uploaded files, and vector stores; executes function/tool calls; reaches external search/data/tool services; and deletes remote resources during cleanup without a distinct affirmative authorization boundary appropriate to each consequential action. The function-calling example executes the requested function and submits outputs with toolApprovals: null, so tool availability or procedure flow is not action authorization. Credential examples use environment variables, placeholders, DefaultAzureCredential, and managed identity rather than asking for real secret values conversationally. Adaptation should preserve the SDK guidance while requiring explicit resource/cost/data/tool authorization before mutation or external access. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
