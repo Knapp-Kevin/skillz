@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6a3ef007b414bbd0cc2e23fd2d0c5dbcd318c33d
+skill_md_blob_sha: ed3fe2bfa8e016f675066eca950debeafaf056ba
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, governance]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, management-plane, reference-heavy]
+  authority: [external-side-effect, resource-mutation, secret-access, credential-mutation, network-mutation, cost-bearing]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Strong breadth across APIM service/API/product/subscription/policy/user/group/backend/gateway management, backup/restore and networking is outweighed by unresolved hard fails. The workflow performs pervasive resource mutations without affirmative action authorization; retrieves and prints subscription primary/secondary secrets; regenerates subscription keys; includes a literal example user password; approves private-endpoint connections and changes policies/network/resource state; and advertises references/policies.md although that required file is absent from the pinned package. Dependency coherence therefore also fails. Preserve as adaptation/reference evidence only after repairing the missing reference and adding explicit resource, cost, network, policy, credential and secret-access boundaries. Behavioral validation is not-run.
