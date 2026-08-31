@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: debugging-lambda-timeouts
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0b5c7ec0264a041242a7c815f0304969413fc92b
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, debugging, observability]
+  lifecycle: [verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, evidence-oriented, safety-bounded]
+  authority: [read-only]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Verified unchanged because the workflow remains diagnostic and evidence-driven: configuration, metrics, CloudWatch Logs Insights, dependencies, cold starts and optional user-provided code are analyzed before recommendations are produced, with no prescribed cloud mutation. Time-range handling and query-result completion checks reduce false conclusions. Behavioral validation remains not-run; Lambda limits, CloudWatch metric/query behavior and service semantics are freshness-sensitive.
