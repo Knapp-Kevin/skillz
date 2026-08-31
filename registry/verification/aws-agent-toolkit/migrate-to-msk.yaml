@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: migrate-to-msk
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a4e9b51d24f59d5bfc0bbb7bf234a2d096163911
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, planning, deployment, evaluation]
+  lifecycle: [discovery, planning, verification, operations]
+  characteristic: [deterministic, evidence-first, human-review, production-oriented, reference-heavy, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA a4e9b51d24f59d5bfc0bbb7bf234a2d096163911 and includes SKILL.md, four references, three bundled Python processors, and a static simulation CloudFormation asset. Strong evidence includes crisp self-managed-Kafka-to-Express scope; explicit phase routing; a discovery stop requiring customer confirmation before assessment; prohibition on fabricated compatibility, sizing, or cost results; deterministic file-based compatibility/sizing processors; exact response templates and verdict vocabulary; optional simulation separated from assessment; and detailed security controls for encryption, IAM, Secrets Manager, private networking, CloudTrail, alarms, and sensitive artifacts. The score is held at 17/20 because Phase 3 can provision and exercise substantial AWS infrastructure and therefore depends on host authority/approval controls beyond the static skill text. In addition, the pinned package encodes volatile Express-supported Kafka versions, configuration bounds, quotas, connection/throughput limits, authentication capabilities, pricing-workbook behavior, and migration-service assumptions. Those facts require current AWS verification before consequential migration or deployment decisions. Bundled scripts/assets are upstream skill components, not skillz-owned runtime. Behavioral validation remains not-run.
