@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-anomalydetector-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b3e4d266af84eb18450c25a7d8c050824f9e5baa
+skill_md_blob_sha: 1720bde7863898eca16efd3be18d3e072f57bcf1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, evaluation, implementation, monitoring]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful anomaly-detection prior art covers univariate batch/streaming detection, change points, multivariate training and inference. Rejected unchanged because time-series data is transmitted to a metered external AI service, multivariate workflows train/delete remote models, and SAS-addressed Blob datasets are used for training/inference without distinct data-governance, model-lifecycle and cost authorization gates. Behavioral validation is not-run.
