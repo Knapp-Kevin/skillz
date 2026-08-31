@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-fabric-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: fb958f3071a3896afd1340cf879eabd417ff6e91
+skill_md_blob_sha: 19e5a3918fdf9d5c978a5181025a2f6a2c342645
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, implementation, operations]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, management-plane, capacity-management]
+  authority: [external-side-effect, resource-mutation, identity-mutation, cost-bearing]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Strong Fabric capacity-management reference material covers provisioning, scaling, administrators, suspend/resume, deletion, name availability and SKU discovery. Rejected unchanged because normal workflows create billable compute capacity, change capacity size and administrators, alter running/billing state, and delete resources without distinct affirmative action/cost/identity gates. The explicit idle-billing warning is useful evidence but is not authorization. Preserve as adaptation/reference evidence with capacity-cost, administrator, scaling/state and deletion approval boundaries. Behavioral validation is not-run.
