@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-163-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-172-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **163 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **172 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -108,14 +108,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 Current priorities:
 
-1. finish AWS Agent Toolkit current-standard companion reconciliation;
-2. complete Microsoft Skills;
-3. complete Microsoft Azure Skills;
+1. complete Microsoft Skills;
+2. complete Microsoft Azure Skills;
+3. reconcile historically completed external corpora to one-file current companions where still incomplete;
 4. continue remaining admitted creator/registered-source curation;
 5. continue governed discovery/source-vetting through issue-first intake;
 6. keep current governance, source registry, category navigation, and passive catalog snapshots aligned with live corpus truth.
 
-AWS Agent Toolkit is **72/72 historically inspected** at the registered pin and **63/72 reconciled to the current mandatory per-skill provenance + verification companion standard**. Remaining AWS work is evidence reconciliation first, not automatic re-review. The AWS database, EC2, migration/modernization, networking/content-delivery, operations, security/identity, and serverless specialized families are now fully reconciled at the current standard.
+AWS Agent Toolkit is **72/72 historically inspected and 72/72 reconciled to the current mandatory per-skill provenance + verification companion standard** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. No AWS current-standard companion gaps remain. Negative dispositions remain preserved where unchanged upstream procedures fail the current authority or secret-handling standard; completion therefore means decisive current evidence, not universal endorsement.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
