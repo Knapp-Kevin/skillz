@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-anomalydetector-java
+display_name: Microsoft Azure AI Anomaly Detector for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-anomalydetector-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-anomalydetector-java
+permission_tier: consequential-time-series-model-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-anomalydetector 3.0.0-beta.6; azure-identity; authenticated Azure Anomaly Detector endpoint; API key or Entra credential; Blob SAS-backed training/inference datasets for multivariate workflows; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA b3e4d266af84eb18450c25a7d8c050824f9e5baa and SKILL.md blob 1720bde7863898eca16efd3be18d3e072f57bcf1. The package provides useful univariate and multivariate time-series analysis guidance, but unchanged adoption fails current authority/data-handling rules because detection transmits time-series data to a metered external AI service while multivariate workflows train and delete remote models and consume SAS-addressed Blob datasets without distinct data-governance, model-mutation, credential-bearing data-source and cost authorization gates. Preserve as adaptation/reference evidence with explicit data transmission, model lifecycle and metered-service boundaries.
