@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: rds-db2
+display_name: Amazon RDS for Db2
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/rds-db2/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: cbdc61a29707dc97989d5d11a2b53ad584781e78
+upstream_last_updated_at: 2026-06-24T09:22:04Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/rds-db2
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI v2 and valid IAM-role/instance-profile credentials; RDS for Db2 and AWS identity/networking/KMS/S3/SSM/Secrets Manager services; Db2 client tooling and bundled shell helpers; Python 3 for migration/mainframe workflows; openssl/jq for BYOK; realmd/sssd/adcli/krb5 tooling for Kerberos; JDK and Db2 JDBC driver where applicable; bundled assets, references, and scripts
+import_eligibility: reference-only
+rationale: RDS for Db2 lifecycle package bound to registered AWS pin and exact package tree SHA 8c875037cc000e02e89c2f742b52a0f0b3e4d220. It has excellent RDS-managed Db2 specificity: no unfenced C/COBOL procedures, RDSADMIN signatures, Secrets Manager rotation diagnosis, z/OS CDC/tooling constraints, cross-region mounted-replica prerequisites, restore procedure sequencing, BYOK/Kerberos/audit/IAM guidance, focused reference routing, credential-safety rules, and explicit unsupported-operation alternatives. It also distinguishes runtime-generated artifacts from shipped skill content. However, the top-level procedure collects parameters and then directs the agent to execute exact provisioning, replica, KMS, option-group, migration, and operational commands without a distinct general user-authorization boundary for those consequential mutations. Dependency abort rights and parameter collection do not constitute consent to create or modify billable/security-sensitive resources. The package is therefore useful reference/adaptation evidence but rejected unchanged under the current mutation-consent standard. Portability is low because it depends deeply on RDS for Db2, IBM Db2 tooling/licensing, AWS services, and bundled helpers. Driver versions, service capabilities, migration support, licensing, instance classes, IAM requirements and RDSADMIN behavior are freshness-sensitive and require current authoritative verification.
