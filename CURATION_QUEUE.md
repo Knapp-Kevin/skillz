@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **173** persisted exact-version third-party verification companions.
+- **174** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -68,11 +68,12 @@ Behavioral evidence remains `not-run` unless representative external evaluation 
 ### Microsoft Skills — ACTIVE FRONTIER
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- Current-standard provenance + verification companions persisted: **1**.
+- Current-standard provenance + verification companions persisted: **2**.
 - Exact eligible denominator: **reconciliation in progress; no percentage claimed yet**.
-- First completed unit: `applicationinsights-web-ts`, package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`, last package-path update `2026-04-23T17:15:18Z`.
-- `applicationinsights-web-ts` is `rejected` unchanged under the current authority/privacy rule. Its main setup initializes browser telemetry before first user interaction and enables automatic collection without making consent or approved data handling a mandatory precondition. Later consent/PII guidance is useful but optional, so retain the package as adaptation/reference evidence with a mandatory consent/data-governance gate. Behavioral validation is `not-run`.
+- `applicationinsights-web-ts`: package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`; `rejected` unchanged because browser telemetry is initialized before user interaction without mandatory consent/data-governance authorization. Retain as adaptation/reference evidence. Behavioral validation is `not-run`.
+- `skill-creator`: package tree `44744c928eba10e9e69272a6bab0859b79c480c5`; `verified` 18/20 by structured static review. Strong on concise authoring, progressive disclosure, exact SDK source context, current-documentation checks, credential hygiene and lifecycle cleanup. Bundled Python helpers perform local skill/package file operations only when invoked by an authorized host and remain upstream source tooling. Behavioral validation is `not-run`.
 - Continue denominator reconciliation from the exact pinned tree and check both companion paths before every unit.
+- The pinned tree contains canonical directories, plugin-hosted skills, nested skill packages and symlink mirrors; do not treat upstream headline catalog counts as an established eligible denominator until these relationships are reconciled.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -121,4 +122,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now with **1** current-standard companion pair persisted while exact denominator reconciliation continues. Microsoft Azure Skills follows. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now with **2** current-standard companion pairs persisted while exact denominator reconciliation continues. Microsoft Azure Skills follows. Discovery and issue/PR hygiene continue in parallel.
