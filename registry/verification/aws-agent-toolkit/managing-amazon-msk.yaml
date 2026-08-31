@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: managing-amazon-msk
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b16afcc92da29d85d0e610d38a1c49b20e5e32e8
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, monitoring, observability]
+  lifecycle: [verification, operations, maintenance]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-routing, metric-driven]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA b16afcc92da29d85d0e610d38a1c49b20e5e32e8 and contains SKILL.md, seven focused references, and scripts/msk_sizing.py. Strong static evidence includes explicit exclusion of MSK Connect/Serverless/Replicator; mandatory broker-type determination before applying Standard-versus-Express guidance; concrete data-loss/outage warnings around UnderReplicatedPartitions, partition reassignment, and maintenance; routing of specialized tasks to focused references; deterministic sizing/cost calculation through the bundled script; client-authentication and tuning guidance; and operational troubleshooting across performance, lag, storage, monitoring, and maintenance. The score is held at 16/20 because the skill can directly drive consequential cluster changes such as EBS expansion, configuration, alarms/dashboards, upgrades, and maintenance operations without one universal explicit confirmation boundary before every mutation. Several exact metric thresholds, instance families, quotas, throughput ceilings, Kafka versions, pricing assumptions, maintenance semantics, and Standard/Express differences are volatile. Current AWS documentation should therefore be checked before consequential decisions. The bundled script is intact upstream skill tooling and does not constitute skillz-owned execution machinery. Behavioral validation remains not-run.
