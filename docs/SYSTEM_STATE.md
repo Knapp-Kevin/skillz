@@ -10,7 +10,7 @@
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
-| **Persisted third-party review companions** | 120 |
+| **Persisted third-party review companions** | 121 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
@@ -55,9 +55,10 @@ Pinned third-party repositories may contain their own code or tooling. They rema
 - **43 active first-party user-facing skills** have structured semantic review records and **43/43 first-party provenance companions** under `registry/skills/local-skills/` after the `automation-receipts` admission via issue #72.
 - `automation-receipts` is classified under Agent Operations & Security in `registry/categories.yaml`; first-party category accounting therefore matches the 43-skill denominator.
 - **12 pinned external corpora** provide the broad 500+ reference surface.
-- **120 current exact-version third-party verification companion files** are persisted.
+- **121 current exact-version third-party verification companion files** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities** after removing duplicate entries for `openclaw-agent-skills` and `archieindian-superpowers`. Source counts refer to unique IDs, not YAML row accidents.
-- AWS Agent Toolkit has an established eligible denominator of **72** skills and a prior full-pass disposition of **70 verified / 2 rejected**; **20/72** currently have persisted exact-version provenance + verification companion pairs on `main`. The remaining 52 are evidence-reconciliation gaps, not unreviewed-by-definition skills.
+- AWS Agent Toolkit has an established eligible denominator of **72** skills and a prior full-pass disposition of **70 verified / 2 rejected**; **21/72** currently have persisted exact-version provenance + verification companion pairs on `main`. The remaining 51 are evidence-reconciliation gaps, not unreviewed-by-definition skills.
+- Latest AWS reconciliation: `ingesting-into-data-lake`, exact package tree `d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6`, preserved decisive state `verified`, current structured score 15/20, behavioral evidence `not-run`, mutating authority, low portability. Its upstream workflow has meaningful validation and target-clarification gates but no universal explicit confirmation boundary for every downstream write/schedule, so hosts must apply their own authority policy.
 - Historical source-level curation records document broader review work across multiple corpora; one-file companion reconciliation remains an explicit curation lane where needed.
 - `engine/skills/` procedures do not count as user-facing inventory.
 
@@ -97,6 +98,7 @@ The host agent may ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, use a CHE
 - `registry/sources.yaml` has been deduplicated to 19 unique source identities.
 - First-party category accounting is 43/43 and includes `automation-receipts` under Agent Operations & Security.
 - Tier-4 catalog surfaces `INDEX.md` and `index.json` are restored as hand-maintained passive snapshots. They have no generator, preflight, or executable refresh contract.
+- Concurrent policy work at commit `8ec6b323323dfa2e2b42345cfcf87935f88cb74f` codified that host-environment substrates are infrastructure, not skills; portable lessons may inform substrate-agnostic skills with truthful provenance. This is compatible with the passive repository boundary and was preserved.
 
 ## Current curation priority
 
