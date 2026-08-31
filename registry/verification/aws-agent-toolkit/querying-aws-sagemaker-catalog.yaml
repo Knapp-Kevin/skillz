@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: querying-aws-sagemaker-catalog
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 43c2466d8273ab986787caa07c03085f9f7da46d
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, observability, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded, reference-heavy]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong query mechanisms include mandatory snapshot-time filtering, workgroup/output confirmation, read-only catalog analytics, sensitive metadata handling and narrow Lake Formation/KMS guidance. Rejected unchanged because enable and access-grant paths mutate DataZone export configuration and Lake Formation permissions without a distinct affirmative authorization gate. Retain the query core as adaptation/reference evidence. Behavioral validation remains not-run; export timing, service naming, schemas, pricing and APIs are freshness-sensitive.
