@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: troubleshooting-efs
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: eed46ff1bb476cf5acae18ac4e4182531a94b1af
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, debugging, operations]
+  lifecycle: [verification, operations]
+  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong diagnostic structure covers NFS client state, security groups, IAM/POSIX, throughput, KMS and VPC DNS with concrete evidence commands. Rejected unchanged because remediation includes host package installation and AWS security-group, throughput and VPC-DNS mutations while pre-write confirmation is only SHOULD rather than mandatory. Retain as adaptation/reference evidence; diagnostic portions are particularly useful. Behavioral validation remains not-run and EFS/client/service semantics are freshness-sensitive.
