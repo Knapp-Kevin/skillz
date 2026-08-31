@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: setting-up-ec2-instance-profiles
+display_name: Set Up EC2 Instance Profiles
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/ec2-skills/setting-up-ec2-instance-profiles/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/ec2-skills/setting-up-ec2-instance-profiles
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI and valid managed credentials/region; EC2 and IAM instance-profile APIs; target EC2 instance; service/resource ARNs for least-privilege policy construction; IMDSv2 and AWS SDK/CLI for verification; bundled setup procedure
+import_eligibility: exact-version-reference
+rationale: EC2 instance-profile package bound to the registered AWS pin and exact package tree SHA 0873a68481f12e575b07be67b376ba00bd81fb43. It requires confirmation before replacing an existing instance profile, asks whether to reuse or create the IAM role, presents current permissions for review, requires user confirmation or modification of proposed least-privilege permissions before role/policy creation, rejects FullAccess guidance, confirms trust relationships, uses IMDSv2 for verification, and explicitly removes the need for hardcoded credentials. Existing-profile replacement and permission changes therefore have explicit human decision points before consequential mutations. Authority remains mutating because IAM roles/policies/profiles and EC2 associations are created or changed. Portability is low because behavior is specific to AWS IAM/EC2/IMDSv2. Managed policy names, service permission requirements, propagation behavior and SDK/service details are freshness-sensitive and should be verified when consequential.
