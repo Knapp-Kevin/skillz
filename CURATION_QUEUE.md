@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for ongoing `skillz` corpus curation. The repository architecture is core-complete and entirely passive. Curation is performed by the external host agent under explicit repository-maintenance authority.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority.
 
 ## Current governed depth
 
@@ -8,17 +8,15 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **163** persisted exact-version third-party verification companions.
+- **172** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
-- Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
-
-Historical review evidence and current per-skill companion completeness are different accounting layers. Prior work is evidence to reconcile, not permission to invent missing records or to redo trustworthy work from scratch.
+- Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
 ## Curation and admission model
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
 
-New third-party discoveries use the issue-first workflow in `docs/candidate-intake.md`. Intentional discovery inputs are documented in `docs/discovery-surfaces.md`, including the connected Creator Technical Resource Catalog. Discovery intelligence never substitutes for canonical upstream provenance, exact identity, license/terms, or individual quality evidence.
+New third-party discoveries use the issue-first workflow in `docs/candidate-intake.md`. Intentional discovery inputs are documented in `docs/discovery-surfaces.md`, including the connected Creator Technical Resource Catalog. Discovery intelligence never substitutes for canonical upstream identity, license/terms, exact version, or individual quality evidence.
 
 Every governed user-facing skill must retain truthful provenance and exact-version evidence appropriate to its relationship. Missing provenance is a corpus-completeness defect.
 
@@ -29,7 +27,7 @@ Issue #66 is the corpus-wide provenance-completeness audit.
 - First-party denominator: **43**.
 - First-party structured semantic reviews: **43/43**.
 - First-party standalone provenance companions: **43/43** under `registry/skills/local-skills/`.
-- No repository-owned scanner, script, CI gate, or runtime enforces this. The external host agent checks and records the contract during curation.
+- Enforcement is documentary/evidentiary through external-agent curation, not repository-owned scripts, CI, scanners, or runtime.
 
 ## Completed historical source-level review evidence
 
@@ -45,54 +43,50 @@ Issue #66 is the corpus-wide provenance-completeness audit.
 | Cline Skills | 36 / 36 | 19 verified, 17 rejected unchanged, plus one separately characterized internal/unlisted skill |
 | Addy Osmani Agent Skills | 24 / 24 | Complete with decisive exact-version static states |
 
-These **210** published/eligible entry points remain evidence even where the newer one-file companion representation is not yet one-for-one complete. Search and reconcile prior evidence before re-reviewing.
+Search and reconcile this prior evidence before fresh re-review.
 
-## Active admitted-source curation
+## Admitted-source curation
 
-### AWS Agent Toolkit
+### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 
 - Registered pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
+- Exact eligible denominator: **72**.
 - Historical inspection: **72/72**.
-- Prior full-pass disposition: **70 verified / 2 rejected**.
-- Current-standard provenance + verification companion completeness: **63/72**.
-- Remaining current-standard gaps: **9**.
+- Current-standard provenance + verification companion completeness: **72/72**.
+- Remaining current-standard gaps: **0**.
 
-The current sequential curation pass has fully reconciled seven AWS specialized families at the current standard:
+The sequential campaign reconciled every core and specialized package, including analytics, database, EC2, migration/modernization, networking/content delivery, operations, security/identity, serverless, storage, system-table, and web/mobile. Completion preserves decisive negative states rather than converting everything to approval. Rejected packages remain reference/adaptation evidence when useful.
 
-- **Database skills: 11/11.** Current decisions include verified and rejected records. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where live mutation is not protected by a sufficient explicit authorization boundary.
-- **EC2 skills: 3/3.** `creating-ec2-image-builder-pipeline` is rejected unchanged because its procedure mandates resource creation and build execution without a pre-mutation consent gate. `launching-ec2-instance-with-best-practices` and `setting-up-ec2-instance-profiles` are verified because their workflows establish meaningful user confirmation before consequential changes.
-- **Migration and modernization: 2/2.** `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent. `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
-- **Networking and content delivery: 10/10.** `enabling-lambda-vpc-internet-access` is verified because it inventories current topology, presents proposed resources and cost implications, waits for explicit user approval, and aborts to alternatives if approval is declined. The other nine packages are rejected unchanged where mutating procedures lack a distinct authorization gate for consequential infrastructure, DNS, traffic-filtering, subscription, or routing changes.
-- **Operations: 3/3.** `setting-up-cloudtrail-multi-region` and `setting-up-cloudwatch-alarm-notifications` are rejected unchanged for consequential infrastructure/external-notification changes without sufficient explicit authorization. `troubleshooting-application-failures` is verified as an evidence-first read-only diagnostic workflow.
-- **Security and identity: 1/1.** `creating-secrets-using-best-practices` is rejected unchanged because it permits actual secret values in conversational context and then creates KMS, Secrets Manager, IAM, rotation, CloudTrail, CloudWatch and related resources without a distinct plan-authorization gate.
-- **Serverless: 9/9.** `aws-lambda-durable-functions`, `aws-lambda-managed-instances`, `aws-lambda-microvms`, `connecting-lambda-to-dynamodb`, and `debugging-lambda-timeouts` are verified at their exact pins where the authority model is acceptable. `connecting-lambda-to-api-gateway`, `creating-api-gateway-stage`, `deploying-custom-domain-rest-api`, and `processing-s3-uploads-with-step-functions` are rejected unchanged because their deployment/resource mutations lack a distinct affirmative plan-authorization boundary. All remain useful adaptation/reference evidence where rejected.
+Representative authority findings from the final tranche:
 
-Earlier analytics/core reconciliation remains preserved. Behavioral evidence is `not-run` unless representative external evaluation has actually occurred. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
+- Storage packages retained valuable diagnostics and safety mechanisms but were rejected unchanged where create/remediate paths lacked a mandatory affirmative mutation gate.
+- The three system-table packages contain useful read/query cores but also configuration/access-grant paths that mutate integrations or permissions without plan authorization, so the unchanged packages are rejected.
+- `aws-amplify` contains strong Gen2/framework/deployment guidance but is rejected unchanged because deployment paths create apps, IAM roles/policies, resources, domains and release jobs without a distinct infrastructure/cost approval boundary; one example also passes a GitHub auth token in a command argument.
 
-**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta.
+Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates and examples remain intact package dependencies rather than `skillz` execution machinery.
 
-### Microsoft Skills
+### Microsoft Skills — ACTIVE NEXT FRONTIER
 
-- Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- Full source review remains pending after AWS current-standard closure.
-- Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than official-brand duplication.
+- Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- First action: establish the exact eligible denominator from the pinned source and reconcile any existing provenance/verification companions before creating new records.
+- Work source-family-by-source-family with the same exact identity, license, dependency, authority, portability, freshness, controlled-tag and decisive-state standard.
+- Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
-### Microsoft Azure Skills
+### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
-- Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Full source review remains pending after Microsoft Skills.
-- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
+- Registered pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Establish the exact eligible denominator before completion claims.
+- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity and other higher-authority operations.
 
 ### Other admitted/tracked sources
 
-- **Cole Medin Skills**: pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`; denominator 33; selective reviews include `second-brain-audit`, `rules-check-drift`, `ablate-ai-layer`.
+- **Cole Medin Skills**: pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`; denominator 33; selective reviews exist.
 - **David Ondrej Skills**: public pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`; current evidence describes 44 canonical `SKILL.md` files while a historical tracker recorded 55. Reconcile denominator before completion claims.
 - **OpenClaw Agent Skills**: pin `6cd3366b10e2a8c5608265f692acf9f5da2b2448`; denominator 8; selective `handoff` review exists.
 - **Archie Indian OpenClaw Superpowers**: pin `a95a59d221d44b89d4fc27a52934e24fb2060ddb`; denominator 56; selective `secrets-hygiene` review exists.
-- **Sabrina Ramonov Learn Claude Code Skills**: historical denominator 2, but canonical source identity/pin/license must be recovered before further work.
+- **Sabrina Ramonov Learn Claude Code Skills**: historical denominator 2; canonical source identity/pin/license must be recovered before further work.
 
-## Evidence-reconciliation lane after AWS
+## Evidence-reconciliation lane
 
 Historically completed corpora with broader prior review evidence than their current one-file companion shelf should be reconciled without automatic re-review. High-value targets include Anthropic Knowledge Work Plugins, Cline, Addy Osmani, and any completed Vercel/Cloudflare/Google/Matt records not represented one-for-one today.
 
@@ -100,20 +94,21 @@ Historically completed corpora with broader prior review evidence than their cur
 
 Discovery proceeds in parallel but does not interrupt admitted-source completion merely to increase issue counts.
 
-Current useful surfaces/candidates include Hugging Face Skills, Selamy Labs Agent Skills, Hypergiant Agent Skills, BCGov Agent Skills, GitHub Awesome Copilot, Agent Skills Specification, the connected Creator Technical Resource Catalog, and candidate evaluation issues #62 through #65.
+Current intentional surfaces/candidates include Hugging Face Skills, Selamy Labs Agent Skills, Hypergiant Agent Skills, BCGov Agent Skills, GitHub Awesome Copilot, Agent Skills Specification, the connected Creator Technical Resource Catalog, and open candidate-evaluation issues.
 
-New discoveries are queued as issues before admission. Restricted or unclear-license material remains reference-only unless terms later support a different relationship.
+New discoveries are queued as issues before admission. Restricted or unclear-license material remains reference-only unless terms later support a different relationship. Popularity and creator reputation are omission/context signals only.
 
 ## Working rules
 
-1. **Finish the admitted corpus.** Sequential curation is the default until current-standard gaps are closed.
-2. **Do not lower the bar for throughput.** Every unit still gets duplication checking, exact identity, provenance, license/terms, package/dependency context, authority, portability, freshness, controlled tags, decisive static state, and explicit behavioral-evidence status.
+1. **Finish the admitted corpus.** Sequential curation remains the default.
+2. **Do not lower the bar for throughput.** Every unit gets duplication checking, exact identity, provenance, license/terms, dependency context, authority, portability, freshness, controlled tags, decisive static state and explicit behavioral-evidence status.
 3. **Search before re-reviewing.** Recover compatible prior evidence first.
-4. **Do not erase negative evidence.** Rejection and retirement reasons prevent repeated mistakes.
-5. **Preserve complete packages.** Upstream scripts/references/assets/templates remain package context, not repository runtime.
-6. **Keep discovery separate from admission.** Popularity and catalog reputation are context, never proof.
+4. **Do not erase negative evidence.** Rejection/retirement reasons prevent repeated mistakes.
+5. **Preserve complete upstream packages.** Their tooling is source context, not repository runtime.
+6. **Keep discovery separate from admission.** Discovery intelligence is not proof.
 7. **Keep `skillz` passive.** No repository-owned runtime, scripts, tests, CI, scheduler, monitor, crawler, installer, synchronizer, preflight, generator, background service, vector database, or autonomous observer.
 8. **Keep public accounting synchronized.** README, System State, this ledger, `INDEX.md`, and `index.json` must agree after each material batch.
+9. **Keep issues/PRs honest.** Every open item should have an active, blocked/waiting, superseded, or completed disposition rather than indefinite stale status.
 
 ## Current posture
 
@@ -121,6 +116,6 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **First-party:** 43/43 provenance-complete.
 
-**AWS:** 72/72 historically inspected; 63/72 current-standard companion-complete; 9 gaps remain.
+**AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Next:** continue sequentially through storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
+**Active next frontier:** Microsoft Skills exact-denominator and companion reconciliation, with Microsoft Azure Skills immediately behind it. Discovery and issue/PR hygiene continue in parallel.
