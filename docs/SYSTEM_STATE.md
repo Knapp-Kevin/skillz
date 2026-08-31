@@ -11,13 +11,13 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 178 |
+| **Persisted third-party review companions** | 179 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 6 / denominator reconciliation in progress |
+| **Microsoft Skills current-standard companions** | 7 / denominator reconciliation in progress |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -31,11 +31,11 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **178 exact-version third-party verification companions** are persisted.
+- **179 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has **6** current-standard provenance + verification pairs at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; the exact family denominator is still being reconciled, so no completion percentage is claimed.
+- Microsoft Skills has **7** current-standard provenance + verification pairs at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; the exact family denominator is still being reconciled, so no completion percentage is claimed.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -52,7 +52,7 @@ All AWS verification companions explicitly distinguish structured static review 
 
 ## Microsoft Skills curation
 
-Six current-standard Microsoft units are now persisted at the registered pin:
+Seven current-standard Microsoft units are now persisted at the registered pin:
 
 - `applicationinsights-web-ts`, package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`, is decisively `rejected` for unchanged adoption because its primary browser setup enables telemetry before first user interaction without making consent or approved data handling a mandatory precondition. The package retains useful privacy, PII-scrubbing, observability and GenAI tracing guidance as adaptation/reference evidence. Behavioral validation is `not-run`.
 - `skill-creator`, package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, is `verified` by structured static review at 18/20. It provides strong skill-authoring guidance around concise context, progressive disclosure, current-documentation verification, credential hygiene, lifecycle cleanup and portable package structure. Its bundled Python helpers mutate local skill/package files only when deliberately invoked by an authorized host and remain upstream package tooling, not `skillz` runtime. Behavioral validation is `not-run`.
@@ -60,6 +60,7 @@ Six current-standard Microsoft units are now persisted at the registered pin:
 - `copilot-sdk`, package tree `dbdf15d9f078af5a2996a8b9a3bf719e80330aed`, is `verified` by structured static review at 17/20. It provides cross-language Copilot SDK guidance for sessions, streaming, custom tools, hooks, MCP integration, authentication, BYOK, persistence and deployment. Its pre-tool hook exposes explicit `allow` / `deny` / `ask` permission decisions and post-tool redaction support. Consequential effects arise only through host-defined tools, MCP servers, deployment code or application behavior and remain subject to the host application's authorization model. Behavioral validation is `not-run`.
 - `azure-identity-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `a77d4ff49b15f776a2daad5f4a59fa6561c94414`, is `verified` by structured static review at 17/20. It provides focused Azure.Identity guidance for .NET across DefaultAzureCredential, managed identity, service principals, certificate credentials, sovereign clouds, diagnostics and error handling. Secret-bearing examples use placeholders and external environment/file paths rather than soliciting real credentials into conversation. Package installation and authenticated token/service access remain host-authorized actions. Behavioral validation is `not-run`.
 - `azure-ai-document-intelligence-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `17be5880febf72e104b84d32e626197693d90e3b`, is `rejected` unchanged by structured static review at 14/20. The package contains useful document-analysis, prebuilt-model, custom-model/classifier, authentication and diagnostics guidance, but its primary workflows create custom models/classifiers and delete models without a distinct affirmative authorization gate. It also demonstrates sending potentially sensitive invoices, receipts, identity documents, tax forms, health-insurance cards and arbitrary documents to an external service without making approved data handling/privacy authorization a mandatory prerequisite. Secret examples use placeholders/environment variables. Preserve as adaptation/reference evidence with explicit mutation/cost and data-governance gates added before operational use. Behavioral validation is `not-run`.
+- `azure-ai-agents-persistent-dotnet`, nested under the `azure-sdk-dotnet` plugin, package tree `62d6ee2d1e7ffe649e6bae74b9235d061b852376`, is `rejected` unchanged by structured static review at 14/20. It contains useful persistent-agent SDK guidance across agent CRUD, threads, messages, runs, streaming, function calling, file search, vector stores, Bing grounding, Azure AI Search, OpenAPI, Azure Functions, MCP, SharePoint and Fabric. The primary procedure creates and deletes remote agents, threads, files and vector stores and invokes external/function/tool paths without a distinct affirmative authorization gate; the function-calling example submits outputs with `toolApprovals: null`. Secret examples use placeholders, environment variables and Azure credential objects rather than soliciting actual secrets. Preserve as adaptation/reference evidence with explicit resource/cost/data/tool authorization gates. Behavioral validation is `not-run`.
 
 The Microsoft source's exact eligible denominator remains under reconciliation because the pinned tree mixes canonical packages, language-plugin packages, nested skills and symlinked mirrors. At the pin, `.github/skills` contains 13 direct canonical directories plus 9 symlink mirrors into plugin-hosted packages; those mirrors must not be double-counted. The nested .NET reconciliations confirm that independently nested plugin skills are first-class review units rather than aliases. Upstream catalog headline counts are therefore not treated as a proven denominator.
 
