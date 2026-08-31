@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: configuring-vpc-endpoints-for-private-aws-service-access
+display_name: Configuring VPC Endpoints for Private AWS Service Access
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/configuring-vpc-endpoints-for-private-aws-service-access/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/configuring-vpc-endpoints-for-private-aws-service-access
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; managed AWS credentials; Amazon VPC, EC2 networking, PrivateLink, route tables, security groups, DNS, S3/DynamoDB gateway endpoints and interface-endpoint-capable AWS services; bundled procedure reference
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 94ab274fb3503595c22fb491767572173146ba01. The procedure contains useful parameter validation, duplicate-endpoint detection, existing-endpoint handling, endpoint-type classification, post-create availability checks and connectivity guidance. It is rejected unchanged because after collecting and confirming parameters it requires creation of security groups, ingress rules, gateway/interface endpoints and endpoint-policy mutations without a distinct explicit authorization gate covering those consequential billable/network-security changes. Asking whether to proceed despite missing tooling and asking how to handle pre-existing endpoints are not sufficient authorization for new mutations. Portability is low because behavior is tightly coupled to AWS VPC/PrivateLink semantics and the upstream call_aws tool contract. Service endpoint support, regional availability, DNS behavior and endpoint pricing are freshness-sensitive and require current AWS evidence before consequential use.
