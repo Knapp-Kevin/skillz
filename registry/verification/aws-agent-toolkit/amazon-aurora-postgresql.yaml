@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: amazon-aurora-postgresql
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: eb9414ad02354efaa482cb24003af763030ec00d
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, decision-support, security]
+  lifecycle: [planning, implementation, verification, operations, maintenance]
+  characteristic: [deterministic, human-review, production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. The package is bound to tree SHA eb9414ad02354efaa482cb24003af763030ec00d and includes SKILL.md, a substantial reference set, and bundled analysis scripts. Strong static evidence includes express-versus-full routing with explicit disqualifiers; required reference loading; confirmation before every create/modify mutation; risk briefing plus confirmation for higher-impact changes; a hard refusal tier for destructive, production-impacting, credential, network-security, public-exposure, major-upgrade, reboot, and financial-commitment actions; safer alternatives after blocks; IAM-only authentication semantics for express clusters; prohibition on fabricated API/pricing/version evidence; and deterministic analysis tooling. The score is held at 18/20 because express-configuration behavior, pricing, ACUs, supported versions, instance families, I/O transition rules, authentication, and upgrade compatibility are volatile service facts. Current AWS documentation and live account evidence should be checked before consequential decisions. Bundled scripts are upstream skill components, not skillz-owned runtime. Behavioral validation remains not-run.
