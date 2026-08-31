@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 12/20
 tags:
-  use_case: [cloud, implementation, governance]
+  use_case: [cloud, implementation, security]
   lifecycle: [implementation, operations]
-  characteristic: [production-oriented, management-plane, reference-heavy]
-  authority: [external-side-effect, resource-mutation, secret-access, credential-mutation, network-mutation, cost-bearing]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin. Strong breadth across APIM service/API/product/subscription/policy/user/group/backend/gateway management, backup/restore and networking is outweighed by unresolved hard fails. The workflow performs pervasive resource mutations without affirmative action authorization; retrieves and prints subscription primary/secondary secrets; regenerates subscription keys; includes a literal example user password; approves private-endpoint connections and changes policies/network/resource state; and advertises references/policies.md although that required file is absent from the pinned package. Dependency coherence therefore also fails. Preserve as adaptation/reference evidence only after repairing the missing reference and adding explicit resource, cost, network, policy, credential and secret-access boundaries. Behavioral validation is not-run.
