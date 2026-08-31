@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: debugging-lambda-timeouts
+display_name: Debug Lambda Timeouts
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/debugging-lambda-timeouts/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/debugging-lambda-timeouts
+permission_tier: read-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI and read permissions for Lambda, CloudWatch Metrics/Logs and related service configuration; optional Lambda source code supplied by the user; bundled lambda-timeout-debugging procedure
+import_eligibility: exact-version-reference
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 0b5c7ec0264a041242a7c815f0304969413fc92b. The procedure stays diagnostic: it retrieves configuration, metrics, log streams and Logs Insights results, correlates cold starts/dependencies, optionally analyzes user-provided code and produces prioritized recommendations without applying configuration changes. It includes bounded time-window handling, explicit query completion checks and evidence-driven root-cause reporting. Portability is low because the workflow is tightly coupled to Lambda and CloudWatch. Metric names, limits, query syntax and service behavior are freshness-sensitive.
