@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: connecting-lambda-to-dynamodb
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 10baad456594507d16b877ac64518103d2bc89a6
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, implementation, deployment]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded, test-driven]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Verified unchanged because the procedure explicitly enumerates all planned resources and region, waits for affirmative user approval, forbids any resource creation without that approval and aborts on decline. It then provides deterministic IAM/Lambda/DynamoDB Streams/event-source-mapping creation plus end-to-end validation and troubleshooting. Score is bounded by broad managed-policy use, host/tool coupling and freshness-sensitive runtime, IAM, stream and service-limit assumptions. Behavioral validation remains not-run.
