@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: creating-api-gateway-stage
+display_name: Create API Gateway Stage
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/creating-api-gateway-stage/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/creating-api-gateway-stage
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS call_aws/AWS CLI and configured AWS identity; API Gateway REST API/deployment; IAM, CloudWatch Logs, X-Ray and optional WAF; bundled create-api-gateway-stage reference procedure
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 227d5d909d3d510602d2ec83381240cd81ba5221. The package contains substantial stage-hardening guidance including log retention, throttling, X-Ray, WAF, authorization options, Secrets Manager guidance and post-configuration validation. It is rejected unchanged because after parameter acquisition it creates or modifies IAM roles, API Gateway account settings, log groups, retention, the stage, throttling, method logging and a WAF ACL/association without a distinct explicit authorization gate for the mutation set. Informing the customer before each operation is transparency, not consent. Retain as adaptation/reference material. API Gateway/WAF pricing, service behavior, patch paths and managed policies are freshness-sensitive.
