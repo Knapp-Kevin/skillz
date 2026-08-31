@@ -20,10 +20,11 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 172 |
+| Persisted third-party exact-version reviews | 173 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
+| Microsoft Skills current-standard companions | 1 / denominator reconciliation in progress |
 
 ## First-party skills by purpose
 
@@ -117,8 +118,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS accounting is now fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
+AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-The active admitted-source frontier is Microsoft Skills, followed by Microsoft Azure Skills.
+Microsoft Skills is the active admitted-source frontier. It currently has **1** current-standard exact-version companion pair persisted at the registered pin; its exact eligible denominator is still being reconciled, so no completion percentage is claimed. Microsoft Azure Skills follows.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
