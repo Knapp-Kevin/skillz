@@ -15,11 +15,11 @@ Current depth includes:
 - **43 first-party user-facing skills**, each with structured local semantic review metadata;
 - **12 pinned upstream reference corpora** exposed under `skills/sources/`;
 - a broad **500+ skill/reference surface** across the first-party and pinned external corpus;
-- **120 currently persisted exact-version third-party verification companion files**;
+- **121 currently persisted exact-version third-party verification companion files**;
 - historical source-level curation records documenting **at least 210 reviewed external skill entry points** across nine corpora;
 - additional partially reviewed admitted corpora and active discovery candidates.
 
-The difference between the 120 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
+The difference between the 121 persisted companion files and the broader historical review count is itself tracked here. Prior work is evidence to reconcile, not permission to invent missing records or pretend it never happened.
 
 ## Curation model
 
@@ -82,7 +82,7 @@ That is **210 reviewed published/eligible entry points** across those nine corpo
 
 ### Evidence reconciliation lane
 
-Current `registry/verification/` contains 120 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
+Current `registry/verification/` contains 121 persisted exact-version third-party companion files. Some historically completed source reviews therefore have broader source-level evidence than the present per-skill companion layout exposes.
 
 Do **not** automatically redo those reviews from scratch. First locate and reconcile the prior evidence into the current provenance/verification model where it is still trustworthy and identity-compatible. Re-review only where exact content identity, licensing, dependencies, or the prior decision cannot be established honestly.
 
@@ -102,9 +102,10 @@ These were already identified as unfinished enrichment work. They are not core b
 - Pinned reference: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
 - Historical denominator: **72** skill entry points, 14 core + 58 specialized.
 - Prior work: all 72 entry points were inspected against the registered pin, with a prior full-pass disposition of 70 verified / 2 rejected.
-- Current exact companion closure: **20/72** persisted provenance + verification pairs on `main`.
-- Latest reconciled specialized skill: `finding-data-lake-assets`, package tree `e32f6445e9f80e2dca0bfe14ecf5e7ad53ac2721`, decisive state `verified` at 17/20, behavioral evidence `not-run`.
-- Remaining work: **52** current-standard companion gaps. Search for compatible prior evidence and existing companions before any re-review. Re-review only when exact content identity, licensing, dependencies, authority, freshness, or prior decisive evidence cannot be recovered truthfully.
+- Current exact companion closure: **21/72** persisted provenance + verification pairs on `main`.
+- Latest reconciled specialized skill: `ingesting-into-data-lake`, package tree `d2938ee80db56f45b8f5e7cd2e6fe6abdfeb39d6`, decisive state `verified` at 15/20, behavioral evidence `not-run`, authority `mutating`, portability `low`.
+- Current review note: the skill has useful scope/dependency checks, verifies source connections, asks for target clarification before creating/writing tables, and mandates post-load validation. It can also create/run Glue jobs, write/migrate data, create recurring triggers, and configure monitoring. Its instruction to explain each command is transparency, not a universal confirmation boundary, so host authority policy must govern consequential writes and scheduling.
+- Remaining work: **51** current-standard companion gaps. Search for compatible prior evidence and existing companions before any re-review. Re-review only when exact content identity, licensing, dependencies, authority, freshness, or prior decisive evidence cannot be recovered truthfully.
 
 ### Microsoft Skills
 
