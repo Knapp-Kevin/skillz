@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-214-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-215-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **214 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **215 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -117,9 +117,9 @@ Current priorities:
 
 AWS Agent Toolkit is **72/72 historically inspected and 72/72 reconciled to the current mandatory per-skill provenance + verification companion standard** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. No AWS current-standard companion gaps remain. Negative dispositions remain preserved where unchanged upstream procedures fail the current authority or secret-handling standard; completion therefore means decisive current evidence, not universal endorsement.
 
-Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **42/189 exact-version provenance + verification companion pairs are persisted**, leaving **147 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
+Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **43/189 exact-version provenance + verification companion pairs are persisted**, leaving **146 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
 
-The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**. The direct Java plugin slice has an exact **26-package** denominator and is now **9/26 current-standard companion-complete**. The seven `azure-ai-*` packages, `azure-appconfiguration-java`, and `azure-communication-callautomation-java` each retain exact package identity and differentiated rejected-unchanged findings. App Configuration is rejected unchanged for production configuration, feature-targeting, secret-reference, read-only and snapshot mutations without distinct authority gates. Call Automation is rejected unchanged for PSTN call initiation/answering, speech/DTMF transmission, recording, transfer, participant control and termination without mandatory telephony, consent/privacy, cost and destructive-action boundaries; its top-level SDK version also differs from the bundled examples. Their SDK and implementation material remains available as adaptation/reference evidence. Behavioral validation remains `not-run` unless representative external evidence is actually recorded.
+The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**. The direct Java plugin slice has an exact **26-package** denominator and is now **10/26 current-standard companion-complete**. The seven `azure-ai-*` packages, `azure-appconfiguration-java`, and `azure-communication-callautomation-java` retain exact package identity and differentiated rejected-unchanged findings. `azure-communication-callingserver-java` is retired from normal unchanged selection because Microsoft explicitly marks the CallingServer SDK deprecated and directs new development to Call Automation; it remains useful migration and legacy-maintenance reference evidence. Behavioral validation remains `not-run` unless representative external evidence is actually recorded.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
