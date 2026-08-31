@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-common-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7a6a66c205648ad69cda647462d102993115180a
+skill_md_blob_sha: b7b13710db6b54f823a5af8dbae652a427b1e776
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, communication, authentication, identity]
+  lifecycle: [development, integration]
+  characteristic: [reference-heavy, security-sensitive]
+  authority: [credential-bearing, identity-sensitive, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful prior art for ACS user credentials, proactive token refresh, identifiers, cloud environments, and Entra authentication, but unchanged use is rejected because token and identity handling lacks a distinct sensitive-data authorization boundary. SKILL.md prints ACS, phone, Teams, and unknown identifier values and demonstrates logging the first 20 characters of an access token despite warning not to expose tokens. Bundled examples fetch a token using userId in a GET query string, cache per-user CommunicationTokenCredential instances, and demonstrate the TeamsExtension.ManageCalls scope without explicit least-privilege or consequential-call authorization guidance. Placeholders, proactive refresh, credential disposal, and the instruction never to log full tokens are positive controls but insufficient for unchanged reuse. Behavioral validation is not-run.
