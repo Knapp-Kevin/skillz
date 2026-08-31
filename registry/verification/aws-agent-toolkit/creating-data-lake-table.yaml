@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: creating-data-lake-table
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 414d75850c7a44da8e2cff2b0a24bb62ac5028db
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, architecture, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include asset-existence checks, stop/delegate rules for ambiguity, schema confirmation, least-privilege access guidance, refusal to auto-create IAM roles and post-create verification. Rejected unchanged because the normal path creates S3 Tables bucket/namespace, optional Glue catalog integration and the Iceberg table without a distinct affirmative authorization boundary for the complete mutation set. Schema/recreation confirmations are narrower decisions, not plan authorization. Retain as adaptation/reference evidence. Behavioral validation remains not-run; S3 Tables/Iceberg/Glue/Athena APIs and service constraints are freshness-sensitive.
