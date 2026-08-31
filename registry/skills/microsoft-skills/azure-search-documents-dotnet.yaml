@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-search-documents-dotnet
+display_name: Microsoft Azure AI Search Documents for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-search-documents-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-search-documents-dotnet
+permission_tier: consequential-search-index-document-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.Search.Documents; Azure.Identity; authenticated Azure AI Search service and index; applicable Search RBAC or API key; vector embeddings or integrated Azure OpenAI vectorizer when used; references/vector-search.md; references/semantic-search.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 49ed94e58508e30be14b5e531d53a243c821de6c and SKILL.md blob 074a1981b319b9c93327188a3dcbd5ca84888b85. The package provides strong Azure AI Search guidance for full-text, semantic, vector and hybrid search, but unchanged adoption fails the current authority/data-handling rule because its normal workflows create or update indexes, upload/merge/upsert/delete indexed documents, and transmit queries, embeddings and indexed content to a metered external service without distinct affirmative mutation, data-transmission and cost authorization gates. Integrated vectorization can additionally route text through Azure OpenAI. Preserve as adaptation/reference evidence with explicit index/document mutation, external-data and metered-service authorization boundaries before operational use.
