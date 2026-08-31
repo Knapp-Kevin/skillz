@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **140** persisted exact-version third-party verification companions.
+- **150** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
 
@@ -55,18 +55,19 @@ These **210** published/eligible entry points remain evidence even where the new
 - Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
 - Historical inspection: **72/72**.
 - Prior full-pass disposition: **70 verified / 2 rejected**.
-- Current-standard provenance + verification companion completeness: **40/72**.
-- Remaining current-standard gaps: **32**.
+- Current-standard provenance + verification companion completeness: **50/72**.
+- Remaining current-standard gaps: **22**.
 
-The current sequential curation pass has fully reconciled three AWS specialized families at the current standard:
+The current sequential curation pass has fully reconciled four AWS specialized families at the current standard:
 
 - **Database skills: 11/11.** Current decisions include verified and rejected records. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where live mutation is not protected by a sufficient explicit authorization boundary.
 - **EC2 skills: 3/3.** `creating-ec2-image-builder-pipeline` is rejected unchanged because its procedure mandates resource creation and build execution without a pre-mutation consent gate. `launching-ec2-instance-with-best-practices` and `setting-up-ec2-instance-profiles` are verified because their workflows establish meaningful user confirmation before consequential changes.
 - **Migration and modernization: 2/2.** `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent. `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
+- **Networking and content delivery: 10/10.** `enabling-lambda-vpc-internet-access` is verified at 18/20 because it inventories the current topology, presents all proposed resources and cost implications, waits for explicit user approval, and aborts to lower-cost alternatives if approval is declined. `configuring-vpc-endpoints-for-private-aws-service-access`, `connecting-vpcs-with-peering`, `creating-production-vpc-multi-az`, `directconnect`, `route53`, `routing-traffic-with-route53-and-cloudfront`, `shieldadvanced`, `transitgateway`, and `waf` are rejected unchanged because representative mutating procedures lack a distinct authorization gate for consequential infrastructure, DNS, traffic-filtering, or paid-subscription changes. Their useful domain mechanisms remain adaptation/reference evidence.
 
 Earlier analytics/core reconciliation remains preserved. Behavioral evidence is `not-run` unless representative external evaluation has actually occurred. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
 
-**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta. The next family is networking and content delivery, whose pinned directory exposes ten candidate packages to gap-check.
+**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta.
 
 ### Microsoft Skills
 
@@ -117,6 +118,6 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **First-party:** 43/43 provenance-complete.
 
-**AWS:** 72/72 historically inspected; 40/72 current-standard companion-complete; 32 gaps remain.
+**AWS:** 72/72 historically inspected; 50/72 current-standard companion-complete; 22 gaps remain.
 
-**Next:** continue with the AWS networking/content-delivery family, then proceed sequentially through operations, security/identity, serverless, storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
+**Next:** continue sequentially through operations, security/identity, serverless, storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
