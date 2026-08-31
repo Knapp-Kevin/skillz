@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: enabling-lambda-vpc-internet-access
+display_name: Enabling Lambda VPC Internet Access
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/enabling-lambda-vpc-internet-access/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/enabling-lambda-vpc-internet-access
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; managed AWS credentials; AWS Lambda, VPC/EC2 networking, Internet/NAT gateways, Elastic IPs, subnets, route tables and security groups; bundled Lambda VPC internet-access procedure reference
+import_eligibility: exact-version-reference
+rationale: Exact pinned AWS package bound to tree SHA aeeb93a185086fc2a816c95022dc4077f2153c73. The workflow first inspects the existing Lambda/VPC topology, plans only the missing NAT path, then requires an explicit user approval gate that lists all proposed billable resources, current pricing references, target VPC/AZ and affected function before creating anything. It aborts if approval is declined and suggests VPC endpoints as a lower-cost alternative. After approval it avoids duplicate gateways, verifies each infrastructure step, limits inbound changes, recommends narrower outbound rules and preserves the distinction between planning and mutation. Authority remains mutating because confirmed NAT/subnet/route/security-group changes are supported. Portability is low because the workflow is tightly bound to AWS Lambda and VPC networking. NAT/EIP pricing and VPC behavior are freshness-sensitive and require current AWS evidence.
