@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-transform
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 19d719b83327293bcd98072b8e93e7774f4122c3
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, refactoring, implementation, deployment]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [human-review, production-oriented, reference-heavy, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Valuable static mechanisms include waiting for explicit repository targets before inspection; transformation-definition matching rather than raw menu dumping; plan confirmation; telemetry disclosure and opt-out; consent before attaching AWS Transform IAM access; private-repository credential handling through Secrets Manager without asking users to paste tokens/keys into chat; and separation of local from remote execution. Rejected unchanged because the package mandates an unconditional `atx update` every session and explicitly forbids asking the user whether to update. That is an unconsented mutation of host tooling/transformation definitions. The skill also modifies local repositories and may provision substantial AWS Batch/Fargate infrastructure, making the missing authority boundary consequential. The material remains useful adaptation/reference evidence. ATX behavior, transformation definitions, permissions, concurrency/platform support and remote-infrastructure assumptions are freshness-sensitive. Behavioral validation remains not-run.
