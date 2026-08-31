@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: directconnect
+display_name: AWS Direct Connect
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/directconnect/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: bd2266f5b3f669ff763d9161a858ddcc8b444d00
+upstream_last_updated_at: 2026-07-03T14:54:22Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/directconnect
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with ephemeral managed credentials; AWS Direct Connect connections, virtual interfaces, BGP, Direct Connect gateways, Transit Gateway/virtual private gateways, CloudWatch/CloudTrail/KMS and related on-premises router/colocation configuration; eight focused procedure references
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 430158f244ef5583a04a448e6589911d7a3bc60a. The router and references contain strong domain-specific mechanisms: deliberate connection-model routing, immutable VIF-type and MTU decision warnings, BGP MD5 secret handling, least-privilege IAM constraints, encryption warnings, route-leak cautions, cross-account handshakes, resiliency/failover distinctions and verification after configuration. Rejected unchanged because mutating procedures can create Direct Connect virtual interfaces and other network resources once task parameters are collected and certain parameter choices are confirmed, but there is no distinct explicit authorization gate for the consequential infrastructure mutation itself. Confirming an MTU or public-prefix ownership is not authorization to create a VIF. Portability is low because the package is deeply bound to AWS Direct Connect and physical/on-premises networking. Port speeds, quotas, pricing, supported features, BGP constraints and encryption capabilities require current AWS evidence.
