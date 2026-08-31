@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **131** persisted exact-version third-party verification companions.
+- **140** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
 
@@ -55,29 +55,18 @@ These **210** published/eligible entry points remain evidence even where the new
 - Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
 - Historical inspection: **72/72**.
 - Prior full-pass disposition: **70 verified / 2 rejected**.
-- Current-standard provenance + verification companion completeness: **31/72**.
-- Remaining current-standard gaps: **41**.
+- Current-standard provenance + verification companion completeness: **40/72**.
+- Remaining current-standard gaps: **32**.
 
-Latest sequential batch closed ten genuine companion gaps after confirming each pair was absent:
+The current sequential curation pass has fully reconciled three AWS specialized families at the current standard:
 
-| Skill | Exact package tree | Current state | Score | Authority | Portability |
-|---|---|---|---:|---|---|
-| `managing-amazon-msk` | `b16afcc92da29d85d0e610d38a1c49b20e5e32e8` | verified | 16/20 | mutating | low |
-| `migrate-to-msk` | `a4e9b51d24f59d5bfc0bbb7bf234a2d096163911` | verified | 17/20 | mutating | low |
-| `querying-data-lake` | `a619aa25a608b7efac3d5439b1e9c5a0d303defc` | verified | 18/20 | mutating | low |
-| `amazon-aurora-mysql` | `0e3f93d02d0bff4d76ae31f425527441989717e1` | verified | 18/20 | mutating | low |
-| `amazon-aurora-postgresql` | `eb9414ad02354efaa482cb24003af763030ec00d` | verified | 18/20 | mutating | low |
-| `amazon-documentdb` | `4fc95aee114b9b6911dcdfc1d41a9715c3df4e62` | verified | 16/20 | mutating | low |
-| `amazon-elasticache` | `7ab33b79df92988e90fe25e9318fe748c7d15149` | verified | 17/20 | mutating | low |
-| `amazon-keyspaces` | `a20b245aecdf8532d6c04e0b760cc2932833b4c8` | verified | 15/20 | mutating | low |
-| `aurora-dsql` | `254a60139d64cdc667f97566caafa5e181a3118c` | verified | 16/20 | mutating | low |
-| `creating-amazon-aurora-db-cluster-with-instances` | `8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5` | rejected | 13/20 | mutating | low |
+- **Database skills: 11/11.** Current decisions include verified and rejected records. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where live mutation is not protected by a sufficient explicit authorization boundary.
+- **EC2 skills: 3/3.** `creating-ec2-image-builder-pipeline` is rejected unchanged because its procedure mandates resource creation and build execution without a pre-mutation consent gate. `launching-ec2-instance-with-best-practices` and `setting-up-ec2-instance-profiles` are verified because their workflows establish meaningful user confirmation before consequential changes.
+- **Migration and modernization: 2/2.** `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent. `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
 
-`creating-amazon-aurora-db-cluster-with-instances` remains useful prior art for Secrets Manager password handling, ordered cluster/instance provisioning and final verification, but is rejected unchanged because its procedure performs consequential billable resource creation without a distinct user-confirmation boundary for those mutations.
+Earlier analytics/core reconciliation remains preserved. Behavioral evidence is `not-run` unless representative external evaluation has actually occurred. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
 
-Behavioral evidence is `not-run` for this static batch. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
-
-**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta.
+**AWS continuation rule:** work sequentially and repeatedly until 72/72 current-standard completeness. Before every unit, check both companion paths and recoverable historical evidence. Create or refresh records only for a genuine current-standard gap or identity/evidence delta. The next family is networking and content delivery, whose pinned directory exposes ten candidate packages to gap-check.
 
 ### Microsoft Skills
 
@@ -107,16 +96,7 @@ Historically completed corpora with broader prior review evidence than their cur
 
 Discovery proceeds in parallel but does not interrupt admitted-source completion merely to increase issue counts.
 
-Current useful surfaces/candidates include:
-
-- Hugging Face Skills, previously source-vetted for selective intake at recorded snapshot `cead19e10754e773bad24fecef83cb64be24094e`;
-- Selamy Labs Agent Skills;
-- Hypergiant Agent Skills;
-- BCGov Agent Skills;
-- GitHub Awesome Copilot as registered dynamic discovery;
-- Agent Skills Specification as normative format/portability reference;
-- Creator Technical Resource Catalog in connected Google Drive as internal governed discovery intelligence;
-- candidate evaluation issues #62 through #65.
+Current useful surfaces/candidates include Hugging Face Skills, Selamy Labs Agent Skills, Hypergiant Agent Skills, BCGov Agent Skills, GitHub Awesome Copilot, Agent Skills Specification, the connected Creator Technical Resource Catalog, and candidate evaluation issues #62 through #65.
 
 New discoveries are queued as issues before admission. Restricted or unclear-license material remains reference-only unless terms later support a different relationship.
 
@@ -137,6 +117,6 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **First-party:** 43/43 provenance-complete.
 
-**AWS:** 72/72 historically inspected; 31/72 current-standard companion-complete; 41 gaps remain.
+**AWS:** 72/72 historically inspected; 40/72 current-standard companion-complete; 32 gaps remain.
 
-**Next:** continue the AWS database-family gap scan and curation sequentially, then proceed through the remaining AWS specialized families until current-standard AWS closure is 72/72.
+**Next:** continue with the AWS networking/content-delivery family, then proceed sequentially through operations, security/identity, serverless, storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
