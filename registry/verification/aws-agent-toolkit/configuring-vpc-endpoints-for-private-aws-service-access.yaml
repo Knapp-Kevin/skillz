@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: configuring-vpc-endpoints-for-private-aws-service-access
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 94ab274fb3503595c22fb491767572173146ba01
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include single-pass parameter collection, VPC/subnet validation, duplicate endpoint checks, explicit handling choices for existing endpoints, endpoint-type classification, policy syntax validation, availability verification and connectivity-testing guidance. Rejected unchanged under the current hard-fail mutation-consent rule because the procedure mandates creation of security groups and ingress rules plus gateway/interface endpoints and endpoint-policy changes once inputs are collected, without a distinct explicit authorization gate for those consequential billable and network-security mutations. Existing-endpoint handling choices do not authorize creation of new infrastructure. Service availability, PrivateLink support, DNS behavior, endpoint policy semantics and pricing are freshness-sensitive. Behavioral validation remains not-run.
