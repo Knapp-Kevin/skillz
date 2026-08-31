@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: exporting-rds-to-s3
+display_name: Export RDS/Aurora to S3
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/exporting-rds-to-s3/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 7aa3f36af9449bf8fe9f0b5cbd690ca5e2eaa508
+upstream_last_updated_at: 2026-07-02T11:09:11Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/exporting-rds-to-s3
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP call_aws/AWS CLI and valid credentials/region; Amazon RDS/Aurora snapshots; S3 bucket/prefix; IAM roles/policies; KMS keys; optional snapshot creation; bundled export-rds-to-s3 reference procedure
+import_eligibility: reference-only
+rationale: RDS/Aurora snapshot-to-S3 export package bound to registered AWS pin and exact package tree SHA 12260f68d015ba4c10be09bb431f8da62864d915. The package has strong parameter gathering, engine/support checks, snapshot-state validation, confused-deputy protections in IAM trust policy, encryption guidance, export monitoring and post-export verification. However, its procedure can create snapshots, S3 prefixes, IAM roles/policies, KMS-related policy changes and export tasks after confirming parameter values without a distinct general user-authorization boundary for those consequential mutations. Input confirmation is not equivalent to consent to create billable/security-sensitive resources. The package is therefore retained as useful prior art but not eligible unchanged under the current mutation-consent standard. Portability is low because it is tightly coupled to RDS/Aurora snapshot export, S3, IAM and KMS. Supported engines, export limitations, cross-region behavior, timing estimates, Parquet compression assumptions, KMS behavior and service constraints are freshness-sensitive and require current AWS documentation.
