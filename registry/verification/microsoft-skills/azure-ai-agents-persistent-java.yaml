@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-agents-persistent-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a4c692537c1bf669d70f8fe56a5f43f6d65fc76f
+skill_md_blob_sha: 6345044117d177e1aa06a392c54d70e0850cd5e9
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [agent-development, cloud, implementation, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, orchestration, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful persistent-agent guidance covers agent/thread/message/run lifecycle, streaming, files, vector stores, code interpreter and function tools. Rejected unchanged because examples create/update/delete remote agent resources, upload local files and documents, invoke metered model runs, execute function calls and submit tool outputs without distinct affirmative resource, data/file, cost and external-tool authorization gates. Behavioral validation is not-run.
