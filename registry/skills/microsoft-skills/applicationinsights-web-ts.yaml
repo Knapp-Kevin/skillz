@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: applicationinsights-web-ts
+display_name: Application Insights JavaScript SDK (Web) for TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/applicationinsights-web-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: a6112cc80b23abf65813d6b091947b666bc70a98
+upstream_last_updated_at: 2026-04-23T17:15:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/applicationinsights-web-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: TypeScript/JavaScript web application; @microsoft/applicationinsights-web and optional Microsoft Application Insights framework/click-analysis plugins; Azure Application Insights ingestion resource and connection string; optional Microsoft Learn MCP for current API lookup; browser fetch/XHR, cookies, W3C trace context and OpenTelemetry GenAI semantic conventions; bundled references for framework extensions, configuration and agent traces
+import_eligibility: reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA cb03b364b8f9dcb5fc2ee9662758a1f949c23102 and SKILL.md blob e1bfcc76ab8e76060350426a04115dc33de8bbd4. The material is technically strong on browser RUM, telemetry enrichment/filtering, distributed tracing, framework integration, GenAI trace semantics, PII cautions and secret scrubbing. Rejected unchanged because the primary setup path instructs initializing telemetry before first user interaction and enables page/dependency collection without making user consent or an approved telemetry/data-handling policy a mandatory authorization boundary. Later cookie/privacy guidance shows how to gate telemetry on consent, but it is optional rather than a precondition. The skill also recommends client-side user/session identifiers and click analytics, making privacy authority consequential. Retain for adaptation/reference with a mandatory consent/data-governance gate. SDK APIs, package versions, browser privacy behavior and OTel GenAI semantic conventions are freshness-sensitive.
