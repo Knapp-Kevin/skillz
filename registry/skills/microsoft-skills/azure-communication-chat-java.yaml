@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-communication-chat-java
+display_name: Microsoft Azure Communication Chat for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-communication-chat-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-communication-chat-java
+permission_tier: consequential-external-communication-and-participant-control
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-communication-chat; com.azure:azure-communication-common; authenticated Azure Communication Services endpoint; per-user CommunicationTokenCredential; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA b58604b7161eec1bf999295046a4fced6f9d4507, SKILL.md blob 22e9dd0e2e8cbcfc5ce26c59d14b4b5c4a8ce0c9, and bundled examples blob b28ece1f80541d5eac5a825e4acd524a387550be. The package is useful Azure Communication Services Chat prior art for thread, message, participant, read-receipt, typing-notification, pagination, and async patterns, but unchanged adoption is rejected because normal examples create/delete threads, send/update/delete external messages, add/remove participants, share prior message history, expose read/typing signals, and transmit message/user metadata without distinct communication, participant-membership, history-sharing, privacy/data, destructive-action, or external-service authorization boundaries. Token examples use placeholders rather than soliciting live secrets, but the package assumes caller-supplied user access tokens and does not establish token-governance guidance. Freshness is also internally inconsistent: top-level SKILL.md pins azure-communication-chat 1.6.0 while bundled examples use 1.6.4 plus azure-communication-common 1.3.8. Preserve as adaptation/reference material, not unchanged execution guidance.
