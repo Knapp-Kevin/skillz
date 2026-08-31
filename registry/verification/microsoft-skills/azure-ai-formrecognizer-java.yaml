@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-formrecognizer-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 87ed30f519f37b28d0e05f2391d2729c47b94be6
+skill_md_blob_sha: 9ebbe26711148505aa6b53738036f058fb523f2c
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Document Intelligence guidance covers current-generation migration, prebuilt analysis, local-file and URL analysis, custom models, classifiers and administration. Rejected unchanged because local files and potentially sensitive documents including IDs, invoices, receipts, tax forms and health-insurance cards can be transmitted to an external metered service without a mandatory approved-data-handling boundary, while custom models/classifiers are built and models deleted without distinct lifecycle/cost authorization. Bundled examples print extracted identity and document fields. The skill also pins 1.0.0 while identifying 1.0.7 as latest GA and instructing a current-doc lookup, so implementation is version-sensitive. Behavioral validation is not-run.
