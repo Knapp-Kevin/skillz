@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: dms-schema-conversion
+display_name: DMS Schema Conversion
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/migration-and-modernization-skills/dms-schema-conversion/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 49ca75209219a89ac43690d6ca0a59d976933ee8
+upstream_last_updated_at: 2026-06-25T13:42:27Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/migration-and-modernization-skills/dms-schema-conversion
+permission_tier: mutating
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS MCP server or AWS CLI/shell; valid AWS credentials and explicitly selected region; AWS DMS Schema Conversion migration projects and metadata-model APIs; source/target database connectivity; S3 report/script export; bundled setup, action-item, schema-operation and troubleshooting references; current linked AWS DMS documentation for selection/transformation rules and engine-specific behavior
+import_eligibility: exact-version-reference
+rationale: DMS Schema Conversion lifecycle package bound to registered AWS pin and exact package tree SHA 2e1b5f3ef40011f79fc7495445cca086ff0e15ed. It explicitly requires current linked AWS documentation before acting on vendor/API-specific rules, asks the customer to select region rather than inferring one, confirms reuse versus creation of migration projects, asks permission before creating a new project, shows imported schemas for connection confirmation, and routes each conversion/assessment/tree/cleanup action through explicit customer selection. Applying converted DDL to a live target appears only as a user-selected post-conversion action, and overwrite behavior requires confirmation. These boundaries support a verified state despite mutating capability. Portability is low because the workflow depends heavily on AWS DMS Schema Conversion APIs, migration-project semantics, S3, AWS credentials and engine-specific metadata rules. DMS API behavior, supported engine combinations, metadata-model semantics, waiters and selection/transformation rules are freshness-sensitive and should be verified against current documentation before consequential use.
