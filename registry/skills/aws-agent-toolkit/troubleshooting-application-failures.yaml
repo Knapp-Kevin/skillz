@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: troubleshooting-application-failures
+display_name: Troubleshooting Application Failures
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/operations-skills/troubleshooting-application-failures/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/operations-skills/troubleshooting-application-failures
+permission_tier: read-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; CloudWatch Logs log groups/streams and Logs Insights queries; application-specific log naming and retention; bundled troubleshooting procedure
+import_eligibility: exact-version-reference
+rationale: Exact pinned AWS package bound to tree SHA f519cd0e9b2f2c37e773508572bcf567802aa083. The workflow is diagnostic rather than mutating: it discovers candidate log groups, requires the user to confirm relevance before analysis, validates available streams and time ranges, derives query timestamps from observed AWS data, runs read/query operations, waits for actual results, categorizes evidence, and produces prioritized root-cause recommendations and rollback guidance. It does not execute the recommended remediations. The evidence-first separation between observed logs, inferred root causes and proposed actions is strong. Portability is low because execution depends on AWS CloudWatch Logs and naming/retention conventions, while the analytical method itself is broadly reusable. Behavioral validation remains separate from static verification.
