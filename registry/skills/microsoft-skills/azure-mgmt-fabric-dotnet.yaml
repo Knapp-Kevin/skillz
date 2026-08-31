@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-fabric-dotnet
+display_name: Microsoft Fabric Capacity Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-fabric-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-fabric-dotnet
+permission_tier: consequential-cloud-capacity-identity-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.Fabric; Azure.Identity; authenticated Azure subscription/resource group; Microsoft Fabric capacity entitlement/quota; valid capacity administrator identities; region/SKU availability
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA fb958f3071a3896afd1340cf879eabd417ff6e91 and SKILL.md blob 19e5a3918fdf9d5c978a5181025a2f6a2c342645. The package is useful for Fabric capacity provisioning, scaling, suspend/resume, administrator changes, deletion and SKU discovery. Unchanged adoption fails the current authority/cost rule because the normal path creates billable capacity, scales SKU, changes capacity administrators, suspends/resumes compute and deletes resources without distinct affirmative resource/cost/identity authorization. The text usefully warns that active capacity bills even when idle, but warning is not consent. Preserve as adaptation/reference evidence with explicit capacity-cost, administrator, scale/state and deletion gates.

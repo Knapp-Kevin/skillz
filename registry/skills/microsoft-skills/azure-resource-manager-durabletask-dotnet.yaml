@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-durabletask-dotnet
+display_name: Microsoft Durable Task Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-durabletask-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-durabletask-dotnet
+permission_tier: consequential-cloud-orchestration-resource-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.DurableTask; Azure.Identity; authenticated Azure subscription/resource group; Durable Task Scheduler SKU/quota/region availability; optional IP allowlist/network policy; downstream Durable Task data-plane clients/workers for execution
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 7891cd49733687e3c08c0034b15c709d2ffca41e and SKILL.md blob 79e685dca8daf9df66c987fbd01525ce34699434. The package clearly separates management from data plane and provides useful scheduler/task-hub/retention guidance. Unchanged adoption fails the current authority/cost rule because normal workflows create Dedicated or Consumption schedulers, task hubs and retention policies, scale capacity/IP allowlists, and delete hubs/schedulers without a distinct affirmative resource/cost/network/deletion authorization boundary. Credential guidance is sound and no secret values are solicited. Preserve as adaptation/reference evidence with explicit scheduler-cost, network, retention and lifecycle gates.

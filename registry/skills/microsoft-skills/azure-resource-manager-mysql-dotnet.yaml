@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-mysql-dotnet
+display_name: Microsoft MySQL Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-mysql-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-mysql-dotnet
+permission_tier: consequential-database-resource-secret-network-identity-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.MySql; Azure.Identity; authenticated Azure subscription/resource group; MySQL Flexible Server quota/SKU/region; network/firewall context; Entra administrator identity; backup/restore source state; optional MySqlConnector for data-plane connections
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA e0816f9a38d4d5d2fc8012d59fb1a08f7ab0921d and SKILL.md blob 0be21fefd35b57a803ca6ac43ba2a82c062e2454. Useful MySQL Flexible Server management guidance is rejected unchanged because the core create path embeds a literal administrator password, creates billable compute/storage/HA resources, and later workflows create databases, open firewall access including the Azure-wide 0.0.0.0 rule, change server configuration and Entra administrators, restore/stop/start/restart/fail over/scale/delete servers, and repeat the literal password in a connection string without distinct resource/cost/network/identity/credential authorization. Preserve as adaptation/reference evidence only after replacing literal credentials and adding explicit mutation, firewall, failover, restore, scale and deletion gates.

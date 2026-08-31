@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-cosmosdb-dotnet
+display_name: Microsoft Cosmos DB Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-cosmosdb-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-cosmosdb-dotnet
+permission_tier: consequential-database-resource-secret-network-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.CosmosDB; Azure.Identity; authenticated Azure subscription/resource group; Cosmos account/database/container hierarchy; references/account-management.md; references/sql-resources.md; references/throughput.md; optional network/storage/monitoring context
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA ae77139599d20bf57a395beb84a68190b5e4382e and SKILL.md blob 3318c2734fa2a69f00d526073fad9b49426d5ef1. The package provides extensive Cosmos DB management guidance across accounts, databases, containers, indexes, TTL, throughput, failover, networking, backup, stored procedures/triggers/UDFs and multiple APIs. Unchanged adoption fails because it creates/scales/deletes billable database resources without approval, retrieves and prints master keys and connection strings, regenerates keys, changes failover/network/firewall/throughput state, and includes a stored-procedure example that bulk-deletes documents. Preserve as adaptation/reference evidence with explicit resource/cost, secret-access/rotation, network/failover, throughput and destructive-data gates.

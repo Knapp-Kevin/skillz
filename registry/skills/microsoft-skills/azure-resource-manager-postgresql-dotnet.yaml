@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-postgresql-dotnet
+display_name: Microsoft PostgreSQL Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-postgresql-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-postgresql-dotnet
+permission_tier: consequential-database-resource-secret-network-identity-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.PostgreSql; Azure.Identity; authenticated Azure subscription/resource group; PostgreSQL Flexible Server quota/SKU/region; network/firewall context; Entra administrator identity; backup/restore/replica source state; optional Npgsql for data-plane connections
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 0eb8cd54476d9d72fffb81b24285c708b10af293 and SKILL.md blob 05ba9fa8774836eb038e7cafe5cb0118c08f3a9a. Useful PostgreSQL Flexible Server management guidance is rejected unchanged because the core create path embeds a literal administrator password, creates billable compute/storage/HA resources, and later workflows create databases, open firewall access including the Azure-wide 0.0.0.0 rule, change configurations and Entra administrators, restore and replicate servers, stop/start/restart with failover, scale and delete resources, and repeat literal credentials in connection examples without distinct resource/cost/network/identity/credential authorization. Preserve only as adaptation/reference evidence after replacing literal credentials and adding explicit mutation, firewall, restore/replica/failover, scale and deletion gates.
