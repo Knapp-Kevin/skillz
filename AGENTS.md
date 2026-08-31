@@ -25,7 +25,7 @@ Repository admission is a separate governed maintainer activity. A useful skill 
 ## Inventory boundary
 
 - `skills/`: first-party user-facing **reference/corpus material maintained by this repository**, not a destination for host-generated user skills.
-- `vendor/`: pinned upstream reference corpora. These broaden discovery/prior art but do not create blanket trust.
+- `skills/sources/<source-id>/`: intact pinned upstream reference corpora. These broaden discovery/prior art but do not create blanket trust.
 - `engine/skills/`: bootstrap and repository-maintenance procedures. Do not count them as user-facing inventory.
 - `registry/sources.yaml`: source identity, role, licensing context, and exact pins where established.
 - `registry/skills/`: exact provenance for individually governed third-party skills.
@@ -50,9 +50,9 @@ Only `REPOSITORY_MAINTENANCE` may target repository files for mutation. Every ot
 
 ## Capability routing
 
-Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized submodules, or repository scripts for normal user work.
+Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, or repository scripts for normal user work.
 
-When `vendor/` is materialized, use it as local reference material. When it is not, resolve the same registered upstream sources through whatever legitimate repository/API/web capability the host has.
+When `skills/sources/<source-id>/` is available in the host, use the applicable pinned corpus as local reference material. When a pinned corpus is not locally materialized or accessible through the current host, resolve the same registered upstream source through whatever legitimate repository/API/web capability the host has, preserving the registered source identity and exact pin when the task depends on exact-version evidence.
 
 ## Third-party reuse rule
 
