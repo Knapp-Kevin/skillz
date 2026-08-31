@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: creating-amazon-aurora-db-cluster-with-instances
+display_name: Creating Amazon Aurora DB Cluster with Instances
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/database-skills/creating-amazon-aurora-db-cluster-with-instances/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/database-skills/creating-amazon-aurora-db-cluster-with-instances
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Amazon Aurora/RDS; AWS credentials and region; AWS RDS and Secrets Manager permissions; AWS MCP call_aws execution path; bundled cluster-creation reference procedure
+import_eligibility: reference-only
+rationale: Exact pinned Aurora cluster-creation package at tree SHA 8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5. The procedure correctly uses Secrets Manager managed passwords, identity checks, encryption defaults, sequential cluster/instance provisioning and final status verification. It is nevertheless rejected for unchanged reuse under the current verification standard because the core workflow performs consequential create operations without a clear explicit user-confirmation boundary immediately before mutation. The dependency check asks whether to proceed when tooling is missing, but that is not consent for resource creation. The package remains useful prior art for Secrets Manager handling, sequencing and verification.
