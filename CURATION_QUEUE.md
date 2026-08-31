@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **153** persisted exact-version third-party verification companions.
+- **163** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level evidence for at least **210 reviewed published/eligible external entry points** across nine completed corpora, plus later AWS and selective-source work.
 
@@ -55,16 +55,18 @@ These **210** published/eligible entry points remain evidence even where the new
 - Eligible denominator: **72** skills, historically recorded as 14 core + 58 specialized.
 - Historical inspection: **72/72**.
 - Prior full-pass disposition: **70 verified / 2 rejected**.
-- Current-standard provenance + verification companion completeness: **53/72**.
-- Remaining current-standard gaps: **19**.
+- Current-standard provenance + verification companion completeness: **63/72**.
+- Remaining current-standard gaps: **9**.
 
-The current sequential curation pass has fully reconciled five AWS specialized families at the current standard:
+The current sequential curation pass has fully reconciled seven AWS specialized families at the current standard:
 
 - **Database skills: 11/11.** Current decisions include verified and rejected records. `exporting-rds-to-s3`, `rds-db2`, `rds-oss`, and `creating-amazon-aurora-db-cluster-with-instances` are rejected unchanged where live mutation is not protected by a sufficient explicit authorization boundary.
 - **EC2 skills: 3/3.** `creating-ec2-image-builder-pipeline` is rejected unchanged because its procedure mandates resource creation and build execution without a pre-mutation consent gate. `launching-ec2-instance-with-best-practices` and `setting-up-ec2-instance-profiles` are verified because their workflows establish meaningful user confirmation before consequential changes.
 - **Migration and modernization: 2/2.** `aws-transform` is rejected unchanged because it mandates an unconditional `atx update` without user consent. `dms-schema-conversion` is verified because project creation, action selection, live-target application, and overwrite behavior are explicitly user-gated.
-- **Networking and content delivery: 10/10.** `enabling-lambda-vpc-internet-access` is verified at 18/20 because it inventories the current topology, presents all proposed resources and cost implications, waits for explicit user approval, and aborts to lower-cost alternatives if approval is declined. The other nine packages are rejected unchanged because representative mutating procedures lack a distinct authorization gate for consequential infrastructure, DNS, traffic-filtering, or paid-subscription changes. Their useful domain mechanisms remain adaptation/reference evidence.
-- **Operations: 3/3.** `setting-up-cloudtrail-multi-region` is rejected unchanged because it creates a multi-service logging stack and defaults paid CloudTrail Insights on without a distinct plan/cost approval gate. `setting-up-cloudwatch-alarm-notifications` is rejected unchanged because it creates SNS resources, changes alarm actions and deliberately forces ALARM/OK transitions that can notify real external endpoints without explicit action approval. `troubleshooting-application-failures` is verified at 18/20 as an evidence-first read-only diagnostic workflow that confirms log scope, queries observed data, waits for real results, and recommends rather than executes remediation.
+- **Networking and content delivery: 10/10.** `enabling-lambda-vpc-internet-access` is verified because it inventories current topology, presents proposed resources and cost implications, waits for explicit user approval, and aborts to alternatives if approval is declined. The other nine packages are rejected unchanged where mutating procedures lack a distinct authorization gate for consequential infrastructure, DNS, traffic-filtering, subscription, or routing changes.
+- **Operations: 3/3.** `setting-up-cloudtrail-multi-region` and `setting-up-cloudwatch-alarm-notifications` are rejected unchanged for consequential infrastructure/external-notification changes without sufficient explicit authorization. `troubleshooting-application-failures` is verified as an evidence-first read-only diagnostic workflow.
+- **Security and identity: 1/1.** `creating-secrets-using-best-practices` is rejected unchanged because it permits actual secret values in conversational context and then creates KMS, Secrets Manager, IAM, rotation, CloudTrail, CloudWatch and related resources without a distinct plan-authorization gate.
+- **Serverless: 9/9.** `aws-lambda-durable-functions`, `aws-lambda-managed-instances`, `aws-lambda-microvms`, `connecting-lambda-to-dynamodb`, and `debugging-lambda-timeouts` are verified at their exact pins where the authority model is acceptable. `connecting-lambda-to-api-gateway`, `creating-api-gateway-stage`, `deploying-custom-domain-rest-api`, and `processing-s3-uploads-with-step-functions` are rejected unchanged because their deployment/resource mutations lack a distinct affirmative plan-authorization boundary. All remain useful adaptation/reference evidence where rejected.
 
 Earlier analytics/core reconciliation remains preserved. Behavioral evidence is `not-run` unless representative external evaluation has actually occurred. Upstream scripts, assets, references, and templates remain intact package dependencies rather than `skillz` execution machinery.
 
@@ -119,6 +121,6 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **First-party:** 43/43 provenance-complete.
 
-**AWS:** 72/72 historically inspected; 53/72 current-standard companion-complete; 19 gaps remain.
+**AWS:** 72/72 historically inspected; 63/72 current-standard companion-complete; 9 gaps remain.
 
-**Next:** continue sequentially through security/identity, serverless, storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
+**Next:** continue sequentially through storage, system-table, web/mobile, and any remaining analytics gaps until AWS reaches 72/72 current-standard completeness.
