@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-playwright-dotnet
+display_name: Microsoft Playwright Testing Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-playwright-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-playwright-dotnet
+permission_tier: consequential-testing-resource-auth-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.Playwright; Azure.Identity; authenticated Azure subscription/resource group; Playwright Testing workspace quota/region; optional Azure.Developer.MicrosoftPlaywrightTesting.NUnit or Azure.Developer.Playwright for test execution; external test-service data-plane URI
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 982606adb8bcbcff01af1a0338ac6c5e44aa0edd and SKILL.md blob f213a2efdca47803023f4ae490c76ef3f671599c. The package usefully distinguishes workspace management from browser-test execution and covers create/list/update/quota/delete workflows. Unchanged adoption fails the current authority/cost rule because it creates and deletes a cloud testing workspace, enables local authentication by default in the example, mutates workspace metadata, and configures downstream external test execution without a distinct affirmative resource/cost/authentication/external-service authorization boundary. Preserve as adaptation/reference evidence with explicit workspace, cost, local-auth and test-service gates.

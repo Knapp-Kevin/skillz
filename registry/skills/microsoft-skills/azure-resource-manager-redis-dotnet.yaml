@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-manager-redis-dotnet
+display_name: Microsoft Redis Resource Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-redis-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-redis-dotnet
+permission_tier: consequential-cache-resource-secret-network-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.ResourceManager.Redis; Azure.Identity; authenticated Azure subscription/resource group; Redis SKU/quota/region; optional firewall/network and blob storage/SAS context for import-export; optional StackExchange.Redis for data plane
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 761c421a38337a78693190a8f69bfe267a586406 and SKILL.md blob 339db649fa6bda62a6960a585ce334b1617b82f0. The package provides useful Redis provisioning, scaling, firewall, patch schedule, import/export and lifecycle guidance. Unchanged adoption fails multiple authority/secret gates because it creates/scales/deletes billable caches, retrieves and prints primary/secondary access keys, regenerates and prints a new key, mutates firewall and maintenance state, imports/exports data using blob/SAS locations, force-reboots nodes, and constructs a data-plane connection string embedding the primary key without distinct resource/cost/secret/network/data/reboot authorization. Preserve as adaptation/reference evidence with explicit resource, secret-access/rotation, firewall, import-export/data and reboot gates.

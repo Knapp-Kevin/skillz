@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-resource-manager-sql-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 02e74e01786d668b7d51f8a9592bdb5dc05e401e
+skill_md_blob_sha: 6eff090401b0b48fb47ecddbdf36554da8fb8ddf
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Extensive Azure SQL management prior art covers servers, databases, elastic pools, firewall/VNet/private-endpoint configuration, backup/restore/copy, retention, import/export, auditing, encryption and security policy. Rejected unchanged because server and password-update examples embed literal administrator passwords; workflows create/scale/copy/restore/rename/delete billable resources; firewall and private-endpoint approval mutate network access; import/export and auditing carry storage-account keys and SQL credentials; TDE can be disabled; pool cleanup deletes databases; and none of these consequential operations has a distinct affirmative authorization boundary. Preserve as adaptation/reference evidence only after replacing literal credentials and adding explicit resource/cost, network/private-endpoint, credential/key, backup/restore/import-export, encryption/security and destructive-action gates. Behavioral validation is not-run.

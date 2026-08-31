@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-resource-manager-playwright-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 982606adb8bcbcff01af1a0338ac6c5e44aa0edd
+skill_md_blob_sha: f213a2efdca47803023f4ae490c76ef3f671599c
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, testing, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package clearly distinguishes Playwright workspace management from browser-test execution and provides useful create/list/update/quota/delete guidance. Rejected unchanged because the normal path creates and deletes a cloud testing workspace, enables local authentication in the example, mutates workspace state, and configures downstream external test execution without a distinct affirmative resource, cost, authentication or external-service authorization boundary. Preserve as adaptation/reference evidence with explicit workspace, cost, local-auth and test-service gates. Behavioral validation is not-run.

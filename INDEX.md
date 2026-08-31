@@ -20,12 +20,12 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 185 |
+| Persisted third-party exact-version reviews | 200 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 13 / 189 |
-| Microsoft Skills current-standard gaps | 176 |
+| Microsoft Skills current-standard companions | 28 / 189 |
+| Microsoft Skills current-standard gaps | 161 |
 
 ## First-party skills by purpose
 
@@ -121,8 +121,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **13/189** currently have current-standard provenance + verification companions, leaving **176** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
+Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **28/189** currently have current-standard provenance + verification companions, leaving **161** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
 
-`applicationinsights-web-ts`, nested `azure-ai-document-intelligence-dotnet`, nested `azure-ai-agents-persistent-dotnet`, nested `azure-ai-openai-dotnet`, nested `azure-ai-projects-dotnet`, nested `azure-ai-voicelive-dotnet`, nested `azure-eventgrid-dotnet`, nested `azure-eventhub-dotnet`, and nested `azure-maps-search-dotnet` are rejected unchanged under the current privacy/authorization, data-governance, credential-access/issuance, cost, recording/audio-data, external-message-state, background-send, storage-mutation, location-data, and consequential-action rules; `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and nested `azure-identity-dotnet` are verified by structured static review. `azure-maps-search-dotnet` remains useful geospatial SDK/reference material for geocoding, routing, rendering, IP geolocation, weather, rate limits, and authentication, but normal examples transmit addresses, coordinates, route data, and IP addresses to a metered external service without mandatory location/privacy and cost authorization; its SAS example also issues an account credential through ARM, and the map-tile example writes locally. Microsoft Azure Skills follows after this 189-entry frontier is reconciled.
+The latest batch reconciles all **15 direct .NET management-plane packages** in the current tranche: API Center, API Management, Application Insights management, Arize AI Observability, Bot Service, Fabric, MongoDB Atlas, Weights & Biases, Cosmos DB resource management, Durable Task, MySQL, Playwright Testing resource management, PostgreSQL, Redis, and SQL. Every exact package is decisively `rejected` unchanged, with individual scores ranging from **11/20 to 14/20**. The recurring blocker is unapproved cloud-resource/cost mutation, but several packages add materially stronger defects including plaintext or literal credentials, permissive network examples, secret retrieval/rotation, destructive database/failover/reboot/security actions, Marketplace/PII flows, or a broken required reference. Their useful SDK and architectural guidance remains available as adaptation/reference evidence. The direct `.NET` plugin slice is now **24/29** current-standard companion-complete; five non-management packages remain in that slice.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.

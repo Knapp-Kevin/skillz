@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-weightsandbiases-dotnet
+display_name: Microsoft Weights and Biases Azure Management for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-weightsandbiases-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-weightsandbiases-dotnet
+permission_tier: consequential-marketplace-resource-identity-and-cost
+portability: low
+review_status: rejected-unchanged-structured
+dependency_status: preview-source-intact
+dependencies: .NET SDK; prerelease Azure.ResourceManager.WeightsAndBiases; Azure.Identity; authenticated Azure subscription/resource group; Azure Marketplace W&B offer/plan; administrator contact data; Entra SSO application/domain configuration; W&B service/account; optional Python wandb SDK/API key for post-provisioning experiment tracking
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 8f2587380047b7bed88ee6a35c0aeae040342709 and SKILL.md blob 07adf059989627086c55e5aaa94d2057022b1c2d. The package provides useful Azure Marketplace W&B provisioning, SSO, identity and lifecycle guidance, but unchanged adoption fails because it creates a pay-as-you-go Marketplace instance using administrator PII, enables managed identity/SSO, updates and deletes resources without affirmative commercial/resource/identity/data authorization. The management SDK is also prerelease at this pin, increasing freshness sensitivity. The follow-on W&B integration requires an external API key and transmits experiment metrics to the partner service. Preserve as adaptation/reference evidence with marketplace/cost, PII, SSO/identity, external-data and lifecycle gates.

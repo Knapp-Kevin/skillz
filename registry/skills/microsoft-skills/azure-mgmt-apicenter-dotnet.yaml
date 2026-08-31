@@ -1,6 +1,6 @@
 schema_version: 1
 skill_name: azure-mgmt-apicenter-dotnet
-display_name: Microsoft Azure API Center Management for .NET
+display_name: Microsoft Azure API Center for .NET
 source_id: microsoft-skills
 source_repository: https://github.com/microsoft/skills
 source_path: .github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apicenter-dotnet/SKILL.md
@@ -14,10 +14,10 @@ curated_at: 2026-08-31
 last_checked_at: 2026-08-31
 availability: pinned-source
 local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apicenter-dotnet
-permission_tier: consequential-cloud-resource-mutation-data-transmission-and-cost
+permission_tier: consequential-cloud-resource-governance-data-and-cost
 portability: medium
 review_status: rejected-unchanged-structured
 dependency_status: source-intact
-dependencies: .NET SDK; Azure.ResourceManager.ApiCenter; Azure.Identity; authenticated Azure subscription and resource group; API Center service permissions; network access to Azure Resource Manager; local filesystem read access for OpenAPI specification import example
+dependencies: .NET SDK; Azure.ResourceManager.ApiCenter; Azure.Identity; authenticated Azure subscription and resource group; API Center service/workspace hierarchy; local API specification file for import workflows; applicable Azure RBAC and metered resource availability
 import_eligibility: adaptation-reference-only
-rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 267b94e36949f787a72d3c9f2e0b1f1e88ba2615 and SKILL.md blob c67b575cbc92644e4ef78a7cad695a2944f545bc. The skill provides useful Azure API Center management guidance for .NET across service/workspace/API/version/definition/environment/deployment/metadata-schema hierarchy, specification import/export, discovery, authentication, lifecycle metadata, and error handling. Unchanged adoption fails the current authority/data-handling rule because the core workflow creates or updates Azure API Center services, workspaces, APIs, versions, definitions, environments, deployments, and metadata schemas and imports API specifications without a distinct affirmative cloud-resource/cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. The import example reads a local OpenAPI file and transmits its contents to Azure. Credential guidance is comparatively strong through DefaultAzureCredential, managed identity, environment variables, and placeholders rather than conversationally solicited secrets. Preserve as adaptation/reference evidence with explicit infrastructure mutation, cost, local-read, and specification/data-transmission authorization gates before operational use.
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 267b94e36949f787a72d3c9f2e0b1f1e88ba2615 and SKILL.md blob c67b575cbc92644e4ef78a7cad695a2944f545bc. The package provides useful .NET guidance for Azure API Center inventory/governance across services, workspaces, APIs, versions, definitions, environments, deployments, metadata schemas, discovery, and specification import/export. Unchanged adoption fails the current authority/data-handling rule because the core workflow directly creates or updates paid Azure management-plane resources throughout the hierarchy, activates deployment records, assigns managed identity, and reads then uploads local API specifications without distinct affirmative resource/cost/data-transmission authorization gates or a mandatory approved-data-handling prerequisite. Error handling is present and credential guidance uses DefaultAzureCredential/managed identity, but those strengths do not authorize the mutations. Preserve as adaptation/reference evidence with explicit management-plane mutation, cost, identity, and API-spec data-governance gates before operational use.
