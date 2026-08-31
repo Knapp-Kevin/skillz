@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-amplify
+display_name: AWS Amplify Gen2
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/web-and-mobile-development/aws-amplify/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 7898a91483218173d096db3de6892c2dc545d160
+upstream_last_updated_at: 2026-06-23T05:39:48Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/web-and-mobile-development/aws-amplify
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Node.js/npm and Amplify Gen2 ampx tooling; configured AWS identity; Amplify Hosting, Cognito, AppSync/DynamoDB, S3, Lambda/API Gateway, Bedrock, IAM/SSM and framework-specific frontend/mobile SDKs; Git/GitHub for hosted deployment; bundled feature/framework/deployment references
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA 659d33648afb2138c762e0acdbcb4a4229342457. The package contains extensive version-specific Gen2 routing, framework integration, auth/data/storage/function/AI guidance, generated-output hygiene, deployment validation, secure-secret alternatives and strong warnings around framework-specific pitfalls. Rejected unchanged because its deployment workflows directly create Amplify apps, IAM roles with AmplifyBackendDeployFullAccess, branches, backend resources, domains and release jobs without a distinct affirmative authorization boundary for the infrastructure/cost plan. The CI/CD example also passes a GitHub auth token into a command argument, and the default publicApiKey data authorization is acceptable for starter material but requires deliberate review before consequential use. Retain as adaptation/reference material. Amplify APIs, runtimes, framework support, generated outputs, managed policies, limits and hosting behavior are highly freshness-sensitive.
