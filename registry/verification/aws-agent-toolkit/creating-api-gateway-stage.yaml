@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: creating-api-gateway-stage
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 227d5d909d3d510602d2ec83381240cd81ba5221
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [deterministic, production-oriented, reference-heavy, safety-bounded]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Useful mechanisms include log retention, throttling, X-Ray, WAF, authorization options, Secrets Manager guidance and final configuration checks. Rejected unchanged because it creates/modifies IAM roles, account settings, log groups, API stage settings, WAF and throttling without a distinct explicit pre-mutation user authorization gate. Per-step notification is not consent. Behavioral validation remains not-run; WAF/API Gateway pricing, service limits, patch paths and managed-policy semantics are freshness-sensitive.
