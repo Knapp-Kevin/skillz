@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: directconnect
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 430158f244ef5583a04a448e6589911d7a3bc60a
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, architecture, security, implementation]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes task routing, immutable VIF-type and MTU warnings, BGP secret handling, least-privilege IAM constraints, explicit encryption posture, cross-account handling, resiliency distinctions, route-leak warnings and post-change BGP/state verification. Rejected unchanged under the current hard-fail mutation-consent rule because mutating procedures create virtual interfaces and related Direct Connect resources without a distinct explicit user authorization gate for the infrastructure mutation itself. Parameter-choice confirmations are narrower than action authorization. Behavioral validation remains not-run. Direct Connect capabilities, quotas, pricing, port-speed support and BGP/encryption semantics are freshness-sensitive.
