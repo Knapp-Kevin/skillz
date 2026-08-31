@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: skill-creator
+display_name: Microsoft Skill Creator
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/skill-creator/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 178d9730909101c93949a2ea364058345a6fae9e
+upstream_last_updated_at: 2026-06-19T23:26:22Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/skill-creator
+permission_tier: local-write
+portability: high
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: Markdown skill package; bundled references/azure-sdk-patterns.md, references/output-patterns.md, references/workflows.md; optional bundled Python helper scripts init_skill.py, package_skill.py, and quick_validate.py; SDK/API skill authoring additionally depends on user-supplied package/documentation/repository context and current Microsoft documentation lookup where applicable
+import_eligibility: eligible-with-host-fit
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 44744c928eba10e9e69272a6bab0859b79c480c5 and SKILL.md blob 8377383735afeb36e4b55a9937876b427785db9e. The package provides strong skill-authoring discipline around concise context, progressive disclosure, explicit SDK source context, current-documentation checks, credential hygiene, client lifecycle management, and portable package structure. Its bundled Python helpers mutate only local skill/package files when deliberately invoked by an authorized host; they are upstream package tooling and not skillz-owned runtime. No instruction requires conversational disclosure of real secret values. Freshness matters for Azure SDK/authentication conventions and host skill-format expectations.
