@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: route53
+display_name: Amazon Route 53
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/route53/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: b1bbbfbbe26dbba7f8f177911ecb588a56a8293f
+upstream_last_updated_at: 2026-07-03T14:16:27Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/route53
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI with ephemeral managed credentials; Amazon Route 53 hosted zones, records, health checks, DNS Firewall, Profiles, Resolver, Global Resolver, CloudTrail/CloudWatch/KMS and related VPC/RAM/Firewall Manager services; focused task references
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 23f0d97a4b262fc758f023d12407cd1ba34f9862. The router contains strong Route 53 domain knowledge, focused task routing, least-privilege and encrypted-DNS guidance, DNS-security constraints, apex/alias/TXT handling, propagation verification and explicit separation of diagnostic versus mutating DNS Firewall work. Rejected unchanged because at least the public-record procedure moves from parameter acquisition and zone validation directly to UPSERT of DNS records without a distinct explicit user authorization gate for that consequential external routing mutation. Confirming that a hosted zone is public is a state check, not approval to change DNS. Portability is low because procedures are deeply coupled to Route 53 APIs and AWS DNS semantics. Alias support, Resolver/Global Resolver features, pricing and quotas require current AWS evidence.
