@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-projects-dotnet
+display_name: Microsoft Azure AI Projects for .NET
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-dotnet/skills/azure-ai-projects-dotnet/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 073741f2fc5628b22e8a5f8b56fb3878c418ecb6
+upstream_last_updated_at: 2026-05-05T00:22:24Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-dotnet/skills/azure-ai-projects-dotnet
+permission_tier: consequential-cloud-resource-data-and-external-service
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: .NET SDK; Azure.AI.Projects; Azure.Identity; authenticated Azure AI Foundry project; optional Azure.AI.Projects.OpenAI and Azure.AI.Agents.Persistent; project connections, model deployments, datasets, indexes, evaluation services, and external tool/search services as applicable
+import_eligibility: adaptation-reference-only
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 2dabc3855c1b4ea3c8bf6f855ccf310c9e36eccd and SKILL.md blob 80428335ae9036992bc1fda54594380a1c122b18. The skill provides useful .NET guidance for Azure AI Foundry project clients, persistent and versioned agents, connections, deployments, datasets, indexes, evaluations, Azure OpenAI access, authentication, and tool surfaces. Unchanged adoption fails the current authority/data-handling rule because primary workflows create and delete remote agents/threads, create agent versions, upload and delete datasets, create/update and delete indexes, run evaluations, invoke metered model/search services, and expose a credential-bearing connection retrieval option without a distinct affirmative resource/cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. Secret examples otherwise use environment variables, placeholders, DefaultAzureCredential, and managed identity rather than soliciting real secret values conversationally. Preserve as adaptation/reference evidence with explicit mutation, cost, data-governance, credential-access, and external-service authorization gates before operational use.
