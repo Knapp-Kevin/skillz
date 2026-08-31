@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: setting-up-ec2-instance-profiles
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0873a68481f12e575b07be67b376ba00bd81fb43
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [human-review, production-oriented, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes explicit confirmation before replacing an attached profile; explicit role reuse/create choice; review of existing trust/policies; required confirmation of least-privilege permissions before proceeding; prohibition on FullAccess recommendations; resource-scoped custom policy preference; verification after each IAM/profile/association mutation; IMDSv2-only credential testing; and guidance to remove hardcoded credentials. Authority remains mutating because IAM roles, policies, instance profiles and EC2 associations are changed, but consequential replacement and permission decisions have meaningful user approval points. The score is held at 18/20 because IAM managed-policy names, propagation characteristics, service permission requirements and SDK/service examples can drift, and IAM changes remain security-sensitive. Current AWS documentation should be checked for consequential permission decisions. Behavioral validation remains not-run.
