@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-openai-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 38bd23798e46c5c010737ecabfcf2bc8d8033d9a
+skill_md_blob_sha: 4c15f34a6a12e0a7d1f198ce5a61508168c51d54
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [ai-development, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, external-service-integrated]
+  authority: [external-side-effect, data-transmission, cost-bearing]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.AI.OpenAI guidance for .NET, including chat completions, streaming, structured outputs, reasoning models, Azure AI Search RAG, embeddings, image generation, audio transcription/text-to-speech, authentication, error handling, and function/tool calling. It is rejected unchanged under the current authority/data-handling rule because its primary examples directly invoke metered external AI services and transmit prompts, search-derived content, audio, image-generation requests, and other user/application data without a distinct affirmative cost/data-transmission authorization boundary or mandatory approved-data-handling prerequisite. The function-calling example only surfaces requested tool calls and the best-practices section says to validate tool arguments before execution, which is useful safety evidence but does not authorize the external service calls themselves. Credential examples use environment variables, placeholders, DefaultAzureCredential, and managed identity rather than asking for real secret values conversationally. Adaptation should preserve the SDK/API guidance while adding explicit cost, data-governance, and external-service authorization gates before operational use. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
