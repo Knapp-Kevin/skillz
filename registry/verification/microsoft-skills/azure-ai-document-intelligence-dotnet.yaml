@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-document-intelligence-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 17be5880febf72e104b84d32e626197693d90e3b
+skill_md_blob_sha: 249ebfabf8eef0e94a39079d3968434a56eab4ef
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [document-processing, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, privacy-sensitive]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. The package provides useful Azure.AI.DocumentIntelligence guidance for .NET, including prebuilt invoice/receipt/layout/ID analysis, custom models and classifiers, authentication, confidence handling, diagnostics, and long-running operations. It is rejected unchanged under the current hard-fail authority rule because its primary workflows include BuildDocumentModelAsync, BuildClassifierAsync, and DeleteModelAsync without a distinct affirmative authorization boundary appropriate to creating or deleting Azure-side resources. It also demonstrates transmission of potentially sensitive invoices, receipts, identity documents, tax forms, health-insurance cards, and arbitrary documents to an external service without making approved data handling/privacy authorization a mandatory precondition. API-key and SAS examples use placeholders/environment variables rather than asking for actual secret values conversationally, which is preserved as positive evidence. Adaptation should retain the technical guidance while adding explicit mutation/cost authorization and document-data governance gates. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
