@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-communication-common-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7a6a66c205648ad69cda647462d102993115180a
+skill_md_blob_sha: b7b13710db6b54f823a5af8dbae652a427b1e776
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [communication, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful shared ACS credential, identifier, token-refresh and Entra guidance. Rejected unchanged because an example logs the first 20 characters of an access token despite warning not to expose tokens, bundled refresh code sends userId in a query string, and identifier examples print phone/ACS/Teams identifiers without a mandatory privacy/logging boundary. Proactive token refresh also performs automatic external network calls and must remain host-authorized. Behavioral validation is not-run.
