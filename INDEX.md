@@ -20,12 +20,12 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 181 |
+| Persisted third-party exact-version reviews | 182 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 9 / 189 |
-| Microsoft Skills current-standard gaps | 180 |
+| Microsoft Skills current-standard companions | 10 / 189 |
+| Microsoft Skills current-standard gaps | 179 |
 
 ## First-party skills by purpose
 
@@ -121,8 +121,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **9/189** currently have current-standard provenance + verification companions, leaving **180** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
+Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **10/189** currently have current-standard provenance + verification companions, leaving **179** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
 
-`applicationinsights-web-ts`, nested `azure-ai-document-intelligence-dotnet`, nested `azure-ai-agents-persistent-dotnet`, nested `azure-ai-openai-dotnet`, and nested `azure-ai-projects-dotnet` are rejected unchanged under the current privacy/authorization, data-governance, credential-access, and consequential-action rules; `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and nested `azure-identity-dotnet` are verified by structured static review. Microsoft Azure Skills follows after this 189-entry frontier is reconciled.
+`applicationinsights-web-ts`, nested `azure-ai-document-intelligence-dotnet`, nested `azure-ai-agents-persistent-dotnet`, nested `azure-ai-openai-dotnet`, nested `azure-ai-projects-dotnet`, and nested `azure-ai-voicelive-dotnet` are rejected unchanged under the current privacy/authorization, data-governance, credential-access, cost, recording/audio-data, and consequential-action rules; `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and nested `azure-identity-dotnet` are verified by structured static review. Microsoft Azure Skills follows after this 189-entry frontier is reconciled.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
