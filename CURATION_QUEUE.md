@@ -199,6 +199,10 @@ Keep as discovery candidates until source-vetted and issue-scoped:
 - connected Creator Technical Resource Catalog — internal governed discovery intelligence for identifying leads and corpus gaps, never a canonical source or verification authority.
 
 New candidates should be queued as evaluation issues before corpus admission. Discovery/source-vetting issues #62 through #65 are examples of that pre-admission workflow; they do not themselves grant admission.
+### First-party derivation candidates
+
+- `session-continuity-receipts` — first-party derivation candidate (issue #74). Cross-session memory continuity has no admissible wild prior art (ClawHub continuity candidates failed provenance, issue #71; verified `handoff` covers delegation prompts, not continuity). Derived per the codified substrate boundary (`docs/curation-policy.md`): doc-only, portable, Continuum canonical-cycle lessons without substrate-private paths or schemas. Admission follows the automation-receipts lane pattern (issue #72): semantic review + provenance companion + verification companion + local-verification record, through explicit maintenance.
+
 
 ## Legacy candidate intelligence
 
