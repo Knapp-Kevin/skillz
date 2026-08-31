@@ -20,9 +20,10 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 121 |
+| Persisted third-party exact-version reviews | 128 |
 | AWS historical reviewed denominator | 72 / 72 |
-| AWS current-standard companion-complete | 21 / 72 |
+| AWS current-standard companion-complete | 28 / 72 |
+| AWS current-standard gaps | 44 |
 
 ## First-party skills by purpose
 
@@ -122,8 +123,10 @@ Canonical sources for this snapshot:
 
 ## Interpretation
 
-Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use the exact-version companion evidence and apply the repository interpretation order:
+Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use the exact-version companion evidence and apply:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
+
+AWS accounting deliberately separates **72/72 historical inspection** from **28/72 current-standard companion completeness**. Remaining AWS work is evidence reconciliation first, fresh review only for genuine unresolved evidence/identity gaps.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
