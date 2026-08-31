@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-java
+display_name: Microsoft Azure AI Content Safety for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-contentsafety-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-contentsafety-java
+permission_tier: consequential-content-media-moderation-blocklist-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact-version-inconsistent
+dependencies: Java/JDK and Maven or Gradle; top-level com.azure:azure-ai-contentsafety 1.1.0-beta.1 while bundled examples specify 1.0.16; azure-identity; authenticated Azure Content Safety endpoint; API key or Entra credential; local filesystem access for image examples; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 13114aaaa55d03f8e9d0f450b1af0fc9a7dd053f and SKILL.md blob d9a4e8f157e635c0962744d019f9d3e4d02d58ec. The package provides useful Content Safety analysis and moderation prior art, but unchanged adoption fails current authority/data-handling rules because text and local or remote images are transmitted to a metered external moderation service and blocklists/items are created, updated, removed and deleted without distinct data/privacy, moderation-state mutation and cost authorization gates. The top-level dependency specifies 1.1.0-beta.1 while the bundled examples specify 1.0.16, so the intact package also contains version-inconsistent implementation guidance. Preserve as adaptation/reference evidence after resolving the SDK version and adding explicit content-transmission, moderation-state and cost boundaries.
