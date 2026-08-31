@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-agents-persistent-java
+display_name: Microsoft Azure AI Persistent Agents for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-agents-persistent-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-agents-persistent-java
+permission_tier: consequential-agent-resource-file-tool-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-agents-persistent 1.0.0-beta.1; azure-identity; authenticated Azure AI project endpoint and model deployment; local filesystem access for file-upload examples; applicable external APIs for function tools; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA a4c692537c1bf669d70f8fe56a5f43f6d65fc76f and SKILL.md blob 6345044117d177e1aa06a392c54d70e0850cd5e9. The package provides useful Java persistent-agent SDK guidance, but unchanged adoption fails current authority/data-handling rules because normal and bundled examples create/update/delete agents, threads, files and vector stores, upload local files, invoke metered model runs, execute function tools and submit outputs without distinct affirmative resource, file/data, cost and external-tool authorization gates. Credential guidance uses environment variables and Azure credential objects rather than soliciting secrets. Preserve as adaptation/reference evidence with explicit remote-resource, local-file transmission, metered-run and tool-execution boundaries.
