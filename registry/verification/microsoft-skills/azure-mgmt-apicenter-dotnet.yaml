@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-apicenter-dotnet
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 267b94e36949f787a72d3c9f2e0b1f1e88ba2615
+skill_md_blob_sha: c67b575cbc92644e4ef78a7cad695a2944f545bc
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, implementation, governance]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, management-plane, external-service-integrated]
+  authority: [external-side-effect, resource-mutation, data-transmission, cost-bearing]
+  portability: [medium]
+notes: Exact package-tree review at the registered Microsoft Skills pin. Useful Azure API Center guidance spans services, workspaces, APIs, versions, definitions, environments, deployments, metadata schemas, discovery, and specification import/export. Rejected unchanged because the primary workflow directly creates or updates Azure management-plane resources, activates deployment records, assigns managed identity, and reads then uploads local API specifications without distinct affirmative resource/cost/data-transmission authorization gates or a mandatory approved-data-handling prerequisite. Credential guidance uses DefaultAzureCredential/managed identity and the package is internally coherent, but those strengths do not authorize the mutations. Preserve as adaptation/reference evidence with explicit management-plane mutation, cost, identity, and API-spec data-governance gates. Behavioral validation is not-run.
