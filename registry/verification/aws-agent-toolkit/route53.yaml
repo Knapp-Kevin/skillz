@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: route53
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 23f0d97a4b262fc758f023d12407cd1ba34f9862
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, architecture, security, implementation]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static mechanisms include task routing across records, traffic steering, health checks, DNS Firewall, Profiles and Resolver; least-privilege/ephemeral-credential guidance; encrypted DNS/query-log guidance; apex/alias/TXT correctness; DNS Firewall scope constraints; and propagation/state verification. Rejected unchanged under the current hard-fail mutation-consent rule because the public-record procedure performs Route 53 UPSERT mutations after parameter/state validation without a distinct explicit authorization gate for changing DNS. Hosted-zone validation is not mutation approval. Behavioral validation remains not-run. Route 53 features, alias-target support, quotas and pricing are freshness-sensitive.
