@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: setting-up-cloudtrail-multi-region
+display_name: Setting Up CloudTrail Multi-Region
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/operations-skills/setting-up-cloudtrail-multi-region/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/operations-skills/setting-up-cloudtrail-multi-region
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; CloudTrail, S3, CloudWatch Logs, IAM, KMS, event selectors, Insights, tagging and cost monitoring; bundled CloudTrail multi-region procedure and knowledge base
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 435e05bc03480c56c2a7032e6cab026295ca1d77. Useful mechanisms include multi-region coverage, source-account/source-ARN bucket-policy conditions, log-file validation, least-privilege guidance, encryption and lifecycle controls, optional data events, explicit cost warnings, status verification and analysis queries. Rejected unchanged because the procedure mandates sequential creation of S3, CloudWatch, IAM and CloudTrail resources and defaults CloudTrail Insights on, while offering cost warnings but no distinct explicit approval gate for the proposed billable/security mutations. Asking whether to continue when tooling is missing does not authorize the infrastructure build. Portability is low and CloudTrail pricing, event semantics, regional delivery behavior and service capabilities require current AWS evidence.
