@@ -14,7 +14,7 @@ rubric_score: 13/20
 tags:
   use_case: [cloud, observability, implementation]
   lifecycle: [implementation, operations]
-  characteristic: [management-plane, marketplace-integrated, external-service-integrated]
-  authority: [external-side-effect, resource-mutation, data-transmission, cost-bearing]
+  characteristic: [production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [low]
 notes: Exact package-tree review at the registered Microsoft Skills pin. Coherent Arize AI ARM CRUD guidance is rejected unchanged because the normal create flow provisions a Marketplace-linked external partner organization, supplies commercial offer/term identifiers and administrator contact data, and supports updates/deletion without distinct affirmative marketplace, cost, resource, PII/data, or deletion authorization. Portability is low because the procedure is specific to Azure Marketplace and the Arize partner resource model. Preserve as adaptation/reference evidence with explicit commercial-subscription, contact-data, resource mutation and deletion gates. Behavioral validation is not-run.
