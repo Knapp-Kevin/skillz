@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **175** persisted exact-version third-party verification companions.
+- **176** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -68,11 +68,12 @@ Behavioral evidence remains `not-run` unless representative external evaluation 
 ### Microsoft Skills — ACTIVE FRONTIER
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- Current-standard provenance + verification companions persisted: **3**.
+- Current-standard provenance + verification companions persisted: **4**.
 - Exact eligible denominator: **reconciliation in progress; no percentage claimed yet**.
 - `applicationinsights-web-ts`: package tree `cb03b364b8f9dcb5fc2ee9662758a1f949c23102`; `rejected` unchanged because browser telemetry is initialized before user interaction without mandatory consent/data-governance authorization. Retain as adaptation/reference evidence. Behavioral validation is `not-run`.
 - `skill-creator`: package tree `44744c928eba10e9e69272a6bab0859b79c480c5`; `verified` 18/20 by structured static review. Strong on concise authoring, progressive disclosure, exact SDK source context, current-documentation checks, credential hygiene and lifecycle cleanup. Bundled Python helpers perform local skill/package file operations only when invoked by an authorized host and remain upstream source tooling. Behavioral validation is `not-run`.
 - `cloud-solution-architect`: package tree `cf94add87e80c754b41298fe08dc16cd9b442531`; `verified` 18/20 by structured static review. Strong advisory coverage of Azure architecture principles, design patterns, technology tradeoffs, mission-critical design, Well-Architected review and ADR capture. Consequential cloud operations are referenced as architecture considerations rather than executed by the workflow, so implementation remains behind separate host authorization. Behavioral validation is `not-run`.
+- `copilot-sdk`: package tree `dbdf15d9f078af5a2996a8b9a3bf719e80330aed`; `verified` 17/20 by structured static review. Strong cross-language SDK coverage for sessions, streaming, custom tools, hooks, MCP, authentication, BYOK, persistence, agents/skills and deployment. The pre-tool hook exposes `allow` / `deny` / `ask` permission decisions and post-tool redaction. Consequential behavior is delegated to host-defined tools, MCP servers or application/deployment code and remains subject to the host application's authorization model. Behavioral validation is `not-run`.
 - Continue denominator reconciliation from the exact pinned tree and check both companion paths before every unit.
 - The pinned `.github/skills` tree contains **13 direct canonical directories plus 9 symlink mirrors**. The mirrors resolve into plugin-hosted packages and must not be double-counted; independently nested plugin skills still require reconciliation before the final eligible denominator can be declared.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
@@ -123,4 +124,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now with **3** current-standard companion pairs persisted while exact denominator reconciliation continues. Microsoft Azure Skills follows. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now with **4** current-standard companion pairs persisted while exact denominator reconciliation continues. Microsoft Azure Skills follows. Discovery and issue/PR hygiene continue in parallel.
