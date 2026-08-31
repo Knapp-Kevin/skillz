@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-anomalydetector-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b3e4d266af84eb18450c25a7d8c050824f9e5baa
+skill_md_blob_sha: 1720bde7863898eca16efd3be18d3e072f57bcf1
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [analytics, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, data-intensive]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact full-package review at the registered Microsoft Skills pin, including references/examples.md. The package provides useful Java Anomaly Detector SDK guidance for univariate batch/streaming detection, change-point detection, multivariate model training and inference, model listing/deletion, authentication, errors, and a complete metrics application. It is rejected unchanged under the current hard-fail authority rule because its primary workflows transmit time-series/application data to a metered external AI service; multivariate flows train remote models from Azure Blob SAS data and run remote inference; and model management includes deletion, all without distinct affirmative data-governance, cost, model-resource, or destructive-action authorization boundaries. SAS-bearing data-source examples also deserve explicit secret-bearing URL handling rather than routine inline treatment. Credential examples otherwise use environment variables, placeholders, DefaultAzureCredential, requireEnvVars, and managed identity rather than asking for real secret values conversationally. Adaptation should preserve the analytical SDK guidance while adding explicit data/cost/model-lifecycle/destructive-action/SAS handling gates. Behavioral validation is not-run; no representative external scenario/adversarial evidence is claimed.
