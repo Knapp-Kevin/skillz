@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-vision-imageanalysis-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 86f720a7dbed3474b6e4da1d7593db81f9715145
+skill_md_blob_sha: 5ec2d2d5592e6a71ec707b03b4a5d64643b5a491
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful Azure AI Vision Java guidance covers captioning, OCR, object and people detection, tags, smart cropping, dense captions and async/parallel analysis. Rejected unchanged because local images/document images and remote image URLs can be sent to an external metered AI service without a mandatory approved-data/privacy and cost boundary. OCR and people detection increase personal/sensitive-data exposure risk. Behavioral validation is not-run.
