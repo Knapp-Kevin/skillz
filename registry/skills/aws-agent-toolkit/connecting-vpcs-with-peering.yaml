@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: connecting-vpcs-with-peering
+display_name: Connecting VPCs with Peering
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/connecting-vpcs-with-peering/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/connecting-vpcs-with-peering
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream call_aws execution path; managed AWS credentials; Amazon VPC, EC2 peering, route tables, DNS and security groups across one or more AWS regions/accounts; bundled peering procedure reference
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA 0ee1e3d9a95d1f7b7df244f996a00d2ac2bd7e96. The procedure has useful CIDR-overlap detection, existing-route conflict checks, cross-account acceptance distinctions, active-state verification, DNS handling and security-group least-exposure guidance. It is rejected unchanged because after parameter acquisition it mandates creation and acceptance of a peering connection, DNS option changes, and route-table mutations without a distinct explicit authorization gate covering those consequential network changes. Asking whether to continue when tooling is missing and displaying VPC details for confirmation do not amount to authorization to mutate infrastructure. Portability is low because the workflow is AWS VPC/EC2-specific and coupled to call_aws. Peering quotas, cross-region/account semantics, DNS behavior and service constraints require current AWS verification.
