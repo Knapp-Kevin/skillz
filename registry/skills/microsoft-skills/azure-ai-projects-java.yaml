@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-projects-java
+display_name: Microsoft Azure AI Projects for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-ai-projects-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-ai-projects-java
+permission_tier: consequential-project-dataset-index-credential-data-and-cost
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-ai-projects 1.0.0-beta.1; azure-identity; authenticated Azure AI Foundry project endpoint; optional Azure AI Search connections and indexes; local filesystem access for dataset-upload examples; OpenAI evaluation APIs exposed through the SDK; references/examples.md
+import_eligibility: adaptation-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 7476d650fa39aa40ca73da5587a56531b652c6cd and SKILL.md blob a28cc004322d021cafc17518c27755a28c1141cc. The package provides useful Java Foundry project guidance across connections, deployments, datasets, indexes and evaluations, but unchanged adoption fails current authority/data-handling rules because examples create/update indexes, upload/create/update/delete datasets, access connection credentials, and invoke external evaluation services without distinct resource, credential, local-file/data-transmission and cost authorization boundaries. Credential setup otherwise uses Azure credential objects and environment configuration rather than soliciting secrets. Preserve as adaptation/reference evidence with explicit mutation, credential-access, dataset transmission and metered-service gates.
