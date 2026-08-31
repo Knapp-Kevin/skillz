@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: copilot-sdk
+display_name: Microsoft GitHub Copilot SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/copilot-sdk/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/copilot-sdk
+permission_tier: host-authorized-tools
+portability: medium-high
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: GitHub Copilot CLI plus language-specific Copilot SDK package; optional MCP servers, BYOK providers, custom tools, hooks, and host runtime dependencies vary by implementation
+import_eligibility: eligible-with-host-fit
+rationale: Exact package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA dbdf15d9f078af5a2996a8b9a3bf719e80330aed and SKILL.md blob 79f42cd0aef9a7a660f96668bc547d998e2485b4. The skill is implementation guidance for applications that embed GitHub Copilot through the SDK. It covers sessions, streaming, custom tools, hooks, MCP servers, authentication, BYOK, persistence, agents, skills, and deployment patterns. It explicitly exposes pre-tool permission decisions including allow, deny, and ask, plus post-tool redaction hooks. Consequential side effects arise only through host-defined tools, MCP servers, deployment code, or application behavior and remain subject to the host application's authorization model. Credential examples primarily use environment variables or stored authentication rather than asking the user to disclose actual secrets in conversational context. Product APIs, package versions, models, and preview behavior are freshness-sensitive and should be checked against current GitHub Copilot SDK documentation before implementation.
