@@ -20,14 +20,14 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 216 |
+| Persisted third-party exact-version reviews | 218 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 44 / 189 |
-| Microsoft Skills current-standard gaps | 145 |
+| Microsoft Skills current-standard companions | 46 / 189 |
+| Microsoft Skills current-standard gaps | 143 |
 | Microsoft .NET direct-package companions | 29 / 29 |
-| Microsoft Java direct-package companions | 11 / 26 |
+| Microsoft Java direct-package companions | 13 / 26 |
 
 ## First-party skills by purpose
 
@@ -123,8 +123,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **44/189** currently have current-standard provenance + verification companions, leaving **145** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
+Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **46/189** currently have current-standard provenance + verification companions, leaving **143** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
 
-The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **11/26 current-standard companion-complete**. The reviewed Java tranche now includes the seven `azure-ai-*` packages, App Configuration, Communication Call Automation, deprecated CallingServer, and Communication Chat. Communication Chat is rejected unchanged because external message/thread mutation, participant changes, message-history sharing, read/typing privacy signals, and destructive operations lack distinct authority boundaries; its top-level dependency at 1.6.0 also conflicts with bundled examples at 1.6.4. CallingServer is retired from normal unchanged selection because Microsoft explicitly directs new development to Call Automation; it remains bounded migration/legacy-maintenance reference material. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
+The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **13/26 current-standard companion-complete**. The reviewed Java tranche now includes the seven `azure-ai-*` packages, App Configuration, Communication Call Automation, deprecated CallingServer, Communication Chat, Communication Common, and Communication SMS. Communication SMS is rejected unchanged because ordinary single, bulk-marketing and OTP sends lack distinct recipient-consent, external-communication, privacy/data, campaign and cost authority boundaries; examples also log recipient phone numbers and use phone numbers in correlation tags without an explicit sensitive-data policy. CallingServer is retired from normal unchanged selection because Microsoft explicitly directs new development to Call Automation. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
