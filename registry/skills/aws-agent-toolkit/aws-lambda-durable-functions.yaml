@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aws-lambda-durable-functions
+display_name: AWS Lambda Durable Functions
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/serverless-skills/aws-lambda-durable-functions/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 084c4e5a74ecea8006b7d8d4ed36eb061cc515e7
+upstream_last_updated_at: 2026-06-08T14:18:31Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/serverless-skills/aws-lambda-durable-functions
+permission_tier: generate-only
+portability: low
+review_status: verified-structured
+dependency_status: source-intact
+dependencies: AWS Lambda durable execution, AWS durable execution SDKs for JavaScript/Python, Lambda IAM policies, CloudWatch Logs, optional KMS, CloudFormation/CDK/SAM and AWS CLI; bundled replay, step, wait, concurrency, error, testing, IaC and troubleshooting references
+import_eligibility: exact-version-reference
+rationale: Exact pinned AWS package bound to tree SHA fbb78fd31d3da138a4a2d04740d578bf69e8e40d. Strong differentiated mechanisms include replay determinism rules, mandatory step boundaries for nondeterminism/side effects, qualified-ARN invocation, child-context guidance, checkpoint-sensitive data handling, saga/error patterns, replay-aware logging, named-operation testing and multi-IaC deployment examples. The package provides code and deployment commands as guidance but does not prescribe autonomous cloud execution, so generate-only authority is appropriate. The score is bounded by rapid service/API evolution and several concrete runtime/version assumptions that require current AWS evidence before deployment. Portability is low because the semantics are specific to Lambda durable execution.
