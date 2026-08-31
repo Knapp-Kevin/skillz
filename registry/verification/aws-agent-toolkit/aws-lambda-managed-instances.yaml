@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: aws-lambda-managed-instances
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7df96da81f6a20670128f6b572a7f0e2f0d30273
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, architecture, decision-support, implementation]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [production-oriented, cost-bounded, risk-aware, reference-heavy, progressive-disclosure]
+  authority: [generate-only]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static mechanisms include cost comparison before recommendation, explicit standard-Lambda tradeoffs, runtime-specific concurrency/thread-safety checks, cost ceilings, three-AZ resilience guidance, scoped operator-role permissions, non-production validation and weighted-alias cutover. Verified unchanged as generate-only/reference material because infrastructure commands are presented as manual/IaC guidance rather than mandatory autonomous mutation. Behavioral validation remains not-run. LMI pricing, limits, scaling behavior, runtime support, regional availability and instance offerings are highly freshness-sensitive.
