@@ -11,12 +11,13 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 172 |
+| **Persisted third-party review companions** | 173 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
+| **Microsoft Skills current-standard companions** | 1 / denominator reconciliation in progress |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -30,10 +31,11 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **172 exact-version third-party verification companions** are persisted.
+- **173 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
+- Microsoft Skills has **1** current-standard provenance + verification pair at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; the exact family denominator is still being reconciled, so no completion percentage is claimed.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -47,6 +49,10 @@ The final nine gaps were five storage skills, three system-table skills, and `aw
 - `aws-amplify` was rejected unchanged because deployment paths create apps, IAM roles/policies, backend resources, domains and release jobs without a distinct infrastructure/cost authorization boundary, and one CI example exposes a GitHub token through a command argument.
 
 All AWS verification companions explicitly distinguish structured static review from behavioral evidence; behavioral validation remains `not-run` unless representative external evidence actually exists.
+
+## Microsoft Skills curation
+
+The first current-standard Microsoft unit is `applicationinsights-web-ts`. It is bound to package tree SHA `cb03b364b8f9dcb5fc2ee9662758a1f949c23102` at the registered source pin. Its static review is decisively `rejected` for unchanged adoption because the primary browser setup enables telemetry before first user interaction without making consent or approved data handling a mandatory precondition. The package retains useful privacy, PII-scrubbing, observability and GenAI tracing guidance as adaptation/reference evidence. Behavioral validation is `not-run`.
 
 ## Source lifecycle
 
