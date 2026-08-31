@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: routing-traffic-with-route53-and-cloudfront
+display_name: Routing Traffic with Route 53 and CloudFront
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/networking-and-content-delivery-skills/routing-traffic-with-route53-and-cloudfront/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/networking-and-content-delivery-skills/routing-traffic-with-route53-and-cloudfront
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS CLI through the upstream aws_api_call_aws execution path; Amazon CloudFront, Route 53, ACM, public hosted zones, DNS validation and distribution configuration; bundled cross-service routing procedure
+import_eligibility: adaptation-reference-only
+rationale: Exact pinned AWS package bound to tree SHA d90bbc41109b0667dbc79be2165d8e6399190b14. Useful mechanisms include distribution validation, CNAME prerequisites, ACM-region correctness, preservation of existing CloudFront configuration, public-zone checks, IPv4/IPv6 alias handling and propagation verification. Rejected unchanged because the procedure requests an ACM certificate, writes DNS validation records, updates the CloudFront distribution and UPSERTs Route 53 records without a distinct explicit authorization gate for those consequential traffic-routing and external-service mutations. It asks permission only when a hosted zone itself must be created, which is too narrow. Portability is low and CloudFront/Route53/ACM behavior is freshness-sensitive.
