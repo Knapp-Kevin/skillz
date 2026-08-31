@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: querying-aws-cloudwatch
+display_name: Query AWS CloudWatch System Tables
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: skills/specialized-skills/system-table-skills/querying-aws-cloudwatch/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 41d3faaf863b8ad6e9f681d3b5631aa605bd655f
+upstream_last_updated_at: 2026-06-17T19:54:13Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/specialized-skills/system-table-skills/querying-aws-cloudwatch
+permission_tier: mutating
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: AWS MCP or AWS CLI and configured AWS identity; CloudWatch Logs, S3 Tables, Athena, Glue, Lake Formation, IAM and optional KMS; exported AWS vended log sources
+import_eligibility: reference-only
+rationale: Exact package-tree reconciliation at the registered AWS pin, bound to tree SHA ff34d53794e8f703a088f527c4361305dcac772d. The query guidance is strong: it routes away from unsuitable use cases, requires live schema discovery before SQL, confirms workgroup/output context, warns about no backfill, treats log data as sensitive and recommends narrow Lake Formation/KMS controls. However the package also includes configure and permission-grant paths that create the CloudWatch-to-S3-Tables integration, associate log sources and grant Lake Formation permissions without a distinct affirmative authorization gate. Therefore the whole unchanged package is mutating and rejected under the current authority standard, despite its read-only query core. Retain as adaptation/reference material. Supported sources, schemas, integration pricing, retention semantics and APIs are freshness-sensitive.
