@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: enabling-lambda-vpc-internet-access
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: aeeb93a185086fc2a816c95022dc4077f2153c73
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, architecture, implementation, security]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [production-oriented, evidence-first, risk-aware, safety-bounded, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: Exact package-tree reconciliation at the registered AWS pin. Strong static evidence includes current-topology inspection, a bounded NAT implementation plan, explicit cost/resource disclosure and a hard approval gate before any billable infrastructure creation, abort/alternative behavior when approval is declined, duplicate-infrastructure checks, post-change verification, and conservative security-group handling. Verified unchanged under the current mutation-consent standard because the authorization gate explicitly covers the planned resources and spend before mutation. Behavioral validation remains not-run. NAT Gateway and public IPv4 pricing plus AWS VPC behavior are freshness-sensitive.
