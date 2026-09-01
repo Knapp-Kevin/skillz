@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-identity-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3b21b1a4c9189a1b1ad32f411194375f7d8ebf3f
+skill_md_blob_sha: ffe26b990c0cfbbae77a19345024c45d2ed0c608
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, authentication, identity, credential-management]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, security-sensitive, version-inconsistent, version-sensitive]
+  authority: [credential-access, identity-sensitive, secret-reading, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Identity Java prior art for DefaultAzureCredential, managed/workload identity, service principals, certificates, environment credentials, browser/device-code authentication, custom credential chains, sovereign-cloud authority hosts, and Azure SDK client integration. Unchanged use is rejected because credential selection and authentication are security-sensitive while the package broadly recommends DefaultAzureCredential without a mandatory production chain-hardening or intended-identity verification step; it enables account-identifier/verbose authentication logging without an explicit redaction boundary; and bundled examples include literal PFX password text plus credential-backed Key Vault secret retrieval without a distinct secret-access authorization boundary. Positive controls include managed identity for production, environment-backed client secrets, placeholders in most examples, and stated least-privilege guidance. The main skill pins azure-identity 1.15.0 while bundled examples use direct dependency 1.18.2 or Azure SDK BOM 1.2.29, a concrete version-consistency defect. Behavioral validation is not-run.
