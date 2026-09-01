@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-exporter-java
+display_name: Microsoft Azure Monitor OpenTelemetry Exporter for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-monitor-opentelemetry-exporter-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-monitor-opentelemetry-exporter-java
+permission_tier: external-telemetry-transmission
+portability: medium
+review_status: retired-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; deprecated com.azure:azure-monitor-opentelemetry-exporter 1.0.0-beta.x; recommended azure-monitor-opentelemetry-autoconfigure uses LATEST in SKILL.md while bundled migration examples use 1.0.0; OpenTelemetry SDK; Azure Monitor/Application Insights connection string; references/examples.md
+import_eligibility: migration-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1fb82a6bf0c567a8263c6dcf63d72010aab761c2, SKILL.md blob 2be5ec33b16457816e0737dcc99007560fea74d5, and bundled examples blob 0c6065ccc15d8b72d9ee077ce2d297768ab08468. Microsoft explicitly marks azure-monitor-opentelemetry-exporter deprecated and directs migration to azure-monitor-opentelemetry-autoconfigure, so retirement is the truthful decisive state rather than unchanged-reuse eligibility. The material remains useful migration and instrumentation prior art for traces, metrics, span processors, exception recording, and semantic conventions. Unchanged use is additionally unsuitable because ordinary examples export telemetry to an external service without a distinct telemetry-data/privacy/classification boundary, demonstrate potentially identifying business attributes such as order.id and customer.tier, and recommend an unpinned LATEST autoconfigure dependency while bundled examples use 1.0.0. Preserve as bounded migration/reference evidence with explicit telemetry redaction/classification, destination authority, secret handling, and pinned dependency controls.
