@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8e2c48a446597c749edca8381cb7d2dd112eed64
+skill_md_blob_sha: 1a3f3aa129ef79ff45c6d0fc25160971d9c62a6c
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [agent-development, cloud, communication, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [orchestration, production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [low]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled API, examples, and model references. The material is technically rich for real-time bidirectional audio, VAD, transcription, interruption, remote conversation-item mutation, function calling, MCP events, multimodal text/audio, voices, avatars, and async WebSocket lifecycle. Unchanged adoption is rejected because normal use streams live/recorded audio and transcripts to an external AI service, mutates remote session/conversation state, can execute function/MCP tool calls, emits synthesized audio/avatar responses, and incurs service cost without distinct participant consent/recording-law, sensitive-audio disclosure, retention, tool-action authorization/argument-validation, MCP approval, communication/output, conversation-mutation, or budget boundaries. Examples also use local audio file I/O and a legacy API-key path. Dependency installation is unpinned. Behavioral validation is not-run.
