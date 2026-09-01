@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-vision-imageanalysis-py
+display_name: Microsoft Azure AI Vision Image Analysis Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-vision-imageanalysis-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-vision-imageanalysis-py
+permission_tier: external-ai-image-and-ocr-processing
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-vision-imageanalysis; azure-identity; Azure AI Vision resource; Entra credentials or legacy Vision API key; image URLs or local image files
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 736165f45cb6167b177b2e2231a682554924282d and SKILL.md blob ba1393b7cac8d834c1f9e099e5346b1afab2a604. The package is useful prior art for captions, dense captions, tags, object detection, OCR, people detection, smart cropping, URL/local-file analysis, Entra-first authentication, async use, error handling, and deterministic client cleanup. Unchanged use is rejected because ordinary workflows disclose images, image URLs, OCR-bearing content, and potentially personal/identity/location-sensitive visual data to an external AI service and incur service cost without distinct image classification, privacy/consent, disclosure/external-processing, or budget authorization boundaries. Local-file examples read image content from disk. Installation is unpinned. Preserve intact as adaptation/reference material with approved image-data handling, participant/privacy authority where people are present, OCR-output handling, external-processing approval, cost controls, secure credential custody, and pinned dependency identity.
