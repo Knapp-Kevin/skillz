@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-data-tables-java
+display_name: Microsoft Azure Data Tables for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-data-tables-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-data-tables-java
+permission_tier: consequential-cloud-data-mutation
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-data-tables 12.6.0-beta.1; optional com.azure:azure-identity 1.18.2 in bundled examples; Azure Table Storage or Cosmos DB Table API account/endpoint and credential; table/entity read-write permissions; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 4d98d21fd0b6b40b852a7d84adbdc54e0b398bad, SKILL.md blob 0fbad66ba89446a1481d848c0aa2ed8df0efa897, and bundled examples blob b1b70c81f3e73eb6c06f4a2770297aaa30c666b1. The package is useful Azure Tables Java prior art for client construction, partition/row-key design, CRUD, queries, optimistic concurrency, transactions, async patterns, and authentication. Unchanged adoption is rejected because normal examples create and delete tables, create/update/upsert/delete entities, submit mixed mutation transactions, enumerate tables/entities, and print entity properties without distinct data-access, mutation, destructive-action, privacy/logging, or external-service authorization gates. Connection-string, shared-key, and SAS authentication are presented alongside stronger Entra/managed-identity guidance and need explicit least-privilege and secret-governance framing. The package pins a beta azure-data-tables dependency, so suitability should be rechecked before reuse. Preserve as adaptation/reference material with explicit data-scope, write/destructive, privacy/logging, credential, and dependency-stability boundaries.
