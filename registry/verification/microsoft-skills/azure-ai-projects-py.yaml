@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-projects-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 53d560d95d7f0c865ab8852fc32be027c1c27f99
+skill_md_blob_sha: 83a80c385301e88f89e67e9a192085f4302994c2
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [ai-agents, foundry-projects, evaluations, datasets, indexes, model-deployments, memory]
+  lifecycle: [development, evaluation, deployment-preparation, operations]
+  characteristic: [data-sensitive, cost-sensitive, code-execution, network-capable, persistent-service-state, mutable-cloud-resources]
+  authority: [external-service-access, cloud-resource-mutation, data-disclosure, code-execution, network-access, persistent-state-mutation]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Foundry SDK prior art for AIProjectClient lifecycle, Entra-first authentication, agent/version/thread/run flows, connections/deployments/datasets/indexes, evaluations, memory stores, OpenAI-compatible access, and broad tool integration. Unchanged adoption is rejected because ordinary examples create persistent agents, versions, threads, runs, memory stores and evaluations without distinct operation/lifecycle approval; enable Code Interpreter, File Search, Bing grounding, Azure AI Search, Function, OpenAPI, MCP, Memory Search and SharePoint tooling without per-tool network/data/side-effect boundaries; transmit prompts, files, conversation content and evaluation datasets to external services without explicit classification/disclosure authority; and may incur model/evaluation cost without budget/quota approval. The bundled run_batch_evaluation.py loads arbitrary local JSONL, submits those records to Azure/OpenAI evaluation services, creates persistent evaluation objects and runs, polls service state, and uses unconstrained DefaultAzureCredential rather than the stronger production constraint documented in the main skill. Reproducibility is also weakened by unpinned pip installation despite bundled API documentation naming v2.0.0b4. Positive controls include environment-backed endpoint/model configuration, strong production credential guidance in the main skill, context-manager lifecycle guidance, agent cleanup advice, versioning, and explicit service-operation enumeration. Behavioral validation is not-run.
