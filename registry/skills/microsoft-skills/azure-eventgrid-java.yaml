@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventgrid-java
+display_name: Microsoft Azure Event Grid for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-eventgrid-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-eventgrid-java
+permission_tier: consequential-external-event-messaging
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-messaging-eventgrid 4.27.0 in SKILL.md versus 4.32.0-beta.1 in bundled examples; optional com.azure:azure-identity 1.18.2; Azure Event Grid topic/domain or namespace endpoint and credential; publish/receive permissions; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 46ee0d19d1b62cd236e6cf0dd95d9c2507728fb5, SKILL.md blob 75586f26f80854bd65a750a06de00ceb6ff3eb38, and bundled examples blob 4188b9ca4b56de7c53f54bd6df2b3d5d1665cc5f. The package is useful Azure Event Grid Java prior art for EventGridEvent and CloudEvent publishing, batching, asynchronous publishing, webhook/event parsing, namespace receive flows, acknowledgement/reject/release semantics, schema handling, and authentication. Unchanged adoption is rejected because ordinary examples publish application and user-bearing event payloads to an external event service and mutate delivery state through acknowledge, reject, and release operations without distinct external-communication, event-data/privacy, delivery-state, or service/cost authorization gates. API-key examples use placeholders/environment variables and the main skill includes stronger DefaultAzureCredential/managed-identity guidance, but explicit least-privilege and sensitive-event-data boundaries are absent. The top-level skill pins azure-messaging-eventgrid 4.27.0 while bundled examples use 4.32.0-beta.1, creating a concrete version-consistency and stability defect. Preserve as adaptation/reference material with explicit event-publishing, data-classification/privacy, delivery-state, credential, cost, and dependency-version boundaries.
