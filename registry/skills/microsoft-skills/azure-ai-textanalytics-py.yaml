@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-textanalytics-py
+display_name: Microsoft Azure AI Text Analytics Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py
+permission_tier: external-ai-data-processing
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-textanalytics; azure-identity; Azure AI Language resource; optional legacy API-key credential
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA bc61d52e96da645ccf3d906086f4f4edd00545de and SKILL.md blob dc9d0d92b4770e4d4c1e3cb44f58878898510396. The package is useful prior art for sentiment analysis, entity recognition, key phrases, language detection, PII recognition, healthcare NLP, batch actions, async usage, Entra-first authentication, and deterministic client lifecycle. Unchanged use is rejected because ordinary examples transmit arbitrary text, explicit PII, and healthcare/medication information to an external Azure AI service without a distinct data-classification, privacy, consent, disclosure, or regulated-data authority boundary; examples print raw recognized entity text and even detected PII values, undermining the redaction benefit; and installation is unpinned, weakening reproducibility. Preserve intact as adaptation/reference material with explicit data-transmission authorization, sensitive-output redaction, healthcare/PII handling constraints, retention/logging boundaries, and pinned dependency identity.
