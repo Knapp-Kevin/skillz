@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-transcription-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 31060aa7cce2f85a2ba92f048e199530f5e82b0d
+skill_md_blob_sha: a6fd15e733a567c832962e5c4dc71998cc2ebcde
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [speech-to-text, transcription, diarization, subtitles]
+  lifecycle: [development, analysis, operations]
+  characteristic: [data-sensitive, privacy-sensitive, external-ai-service, cost-sensitive, streaming]
+  authority: [external-service-access, data-disclosure, local-file-read, persistent-service-state]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Transcription prior art for batch and real-time speech-to-text, diarization, timestamps, language selection, streaming backpressure, and deterministic client/session cleanup. Unchanged adoption is rejected because normal examples transmit meeting or other audio to an external AI service without distinct participant-consent, recording-law, data-classification, disclosure, retention, or regulated-data authority gates; batch transcription creates a remote job from externally hosted content URLs and may incur service cost without separate operation/budget approval; streaming reads local audio and sends it externally; authentication depends on a subscription key because DefaultAzureCredential is unsupported; and dependency installation is unpinned. Positive controls include environment-backed endpoint/key configuration, context-managed clients, explicit session cleanup, language selection, backpressure guidance, and separation of sync/async call paths. Behavioral validation is not-run.
