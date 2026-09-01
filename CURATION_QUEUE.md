@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **233** persisted exact-version third-party verification companions.
+- **235** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -61,13 +61,13 @@ The sequential campaign reconciled every core and specialized package. Completio
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **61/189**.
-- Remaining current-standard gaps: **128**.
+- Current-standard provenance + verification companions persisted: **63/189**.
+- Remaining current-standard gaps: **126**.
 - Direct `.github/plugins/azure-sdk-dotnet/skills/` slice: **29/29 current-standard companion-complete**.
 - Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, **26/26 current-standard companion-complete**.
-- Direct `.github/plugins/azure-sdk-python/skills/` slice: exact denominator **40**, **2/40 current-standard companion-complete**.
+- Direct `.github/plugins/azure-sdk-python/skills/` slice: exact denominator **40**, **4/40 current-standard companion-complete**.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, the complete direct Java SDK slice, and the first two direct Python packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
+Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, the complete direct Java SDK slice, and the first four direct Python packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
 #### Java plugin slice — CURRENT-STANDARD COMPLETE
 
@@ -77,7 +77,7 @@ The tranche closes with `azure-security-keyvault-keys-java`, `azure-security-key
 
 #### Python plugin slice — ACTIVE
 
-The direct Python slice has an exact 40-package denominator. `agent-framework-azure-ai-py` and `azure-ai-contentsafety-py` are now companion-complete at the registered pin. Both are rejected unchanged for different reasons: the former crosses persistent-agent, hosted-tool, code-execution, external-search, upload, and persistent-state authority boundaries; the latter transmits potentially sensitive moderation inputs externally, permits remote-image retrieval, mutates persistent blocklists, and recommends logging moderation results without sufficient redaction/retention boundaries. Behavioral evidence remains `not-run` for both.
+The direct Python slice has an exact 40-package denominator. `agent-framework-azure-ai-py`, `azure-ai-contentsafety-py`, `azure-ai-contentunderstanding-py`, and `azure-ai-language-conversations-py` are now companion-complete at the registered pin. Each retains differentiated negative evidence rather than inheriting source-level approval. The fourth unit, Language Conversations, is rejected unchanged because arbitrary conversation text crosses an external-service privacy/transmission boundary without a distinct authority gate, dependency guidance requires an unreproducible `latest` SDK, and the pinned canonical skill terminates mid-example with an unclosed code fence. Behavioral evidence remains `not-run`.
 
 - Denominator accounting is closed at the exact registered pin. The unit count includes language SDK plugin entries; real canonical `.github/skills` packages; Azure plugin packages; Deep Wiki; Microsoft 365 Agents Toolkit; and independently front-mattered nested skill entry points. Duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package.
 - Continue source-ordered review from the pinned tree and check both companion paths before every unit.
@@ -129,4 +129,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **61/189** current-standard companion-complete with **128** gaps. The direct `.NET` plugin slice is **29/29 complete**, the direct Java plugin slice is **26/26 complete**, and the direct Python plugin slice is **2/40**. Continue source-ordered through Python. Microsoft Azure Skills follows after Microsoft Skills. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **63/189** current-standard companion-complete with **126** gaps. The direct `.NET` plugin slice is **29/29 complete**, the direct Java plugin slice is **26/26 complete**, and the direct Python plugin slice is **4/40**. Continue source-ordered through Python. Microsoft Azure Skills follows after Microsoft Skills. Discovery and issue/PR hygiene continue in parallel.
