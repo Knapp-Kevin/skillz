@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cosmos-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 11dfaafad2fac0ca15d3b328d0ae76f8338da917
+skill_md_blob_sha: 21a14dce1c668ef29e3267b262be6123533eb92e
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, database, nosql, data-access]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, data-bearing, cost-bearing, version-sensitive]
+  authority: [external-side-effect, data-mutating, destructive]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Cosmos DB Java prior art for client creation, partition keys, consistency, CRUD, SQL queries, paging, async flows, request-unit visibility, and authentication. Unchanged use is rejected because examples create/delete databases and containers, create/replace/upsert/delete records, perform broad queries, consume metered RUs, and print user/item data without distinct data-access, mutation, destructive-action, privacy/logging, or cost authorization boundaries. The top-level Maven example uses LATEST rather than an exact SDK version. Positive controls include environment-backed key examples, DefaultAzureCredential in bundled examples, parameterized-query examples, and explicit RU visibility. Behavioral validation is not-run.
