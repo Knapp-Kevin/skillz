@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-security-keyvault-keys-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1bedbdd6834c29fe29dcb3b6834d5ddec89b068a
+skill_md_blob_sha: 632c3607d93b81d7625969555520be8d873ee2d7
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, security, cryptography, key-management]
+  lifecycle: [operations, security, maintenance]
+  characteristic: [reference-heavy, destructive-capable, sensitive-material, side-effectful]
+  authority: [credential-access, external-service-access, cryptographic-key-management, destructive-action, sensitive-data-read, sensitive-data-write]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package provides useful Key Vault and Managed HSM Java prior art for key creation, retrieval, listing, rotation, encrypt/decrypt, sign/verify, wrap/unwrap, backup/restore, import, recovery, and HSM-backed key use. Unchanged adoption is rejected because examples exercise consequential cryptographic and lifecycle authority without distinct authorization gates: they create and mutate keys, change permitted operations and rotation policy, permanently purge deleted keys, import private key material, write backup blobs to local storage, decrypt and print plaintext, and perform signing/wrapping operations. Bundled examples also construct unconstrained DefaultAzureCredential while the top-level skill provides stronger production requireEnvVars guidance. Positive controls include pinned SDK versions, placeholders, least-privilege guidance, HSM recommendations, soft-delete guidance, automatic rotation guidance, and explicit production credential-chain constraints in SKILL.md. Behavioral validation is not-run.
