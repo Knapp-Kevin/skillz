@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventgrid-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 46ee0d19d1b62cd236e6cf0dd95d9c2507728fb5
+skill_md_blob_sha: 75586f26f80854bd65a750a06de00ceb6ff3eb38
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, eventing, pub-sub, messaging]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, data-bearing, version-inconsistent, version-sensitive]
+  authority: [external-side-effect, data-transmitting, state-mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Event Grid Java prior art for EventGridEvent/CloudEvent publishing, batch and async patterns, webhook/event parsing, namespace receive flows, acknowledge/reject/release delivery semantics, schema handling, and authentication. Unchanged use is rejected because ordinary examples publish application and user-bearing event payloads to an external service and mutate delivery state through acknowledge, reject, and release operations without distinct external-communication, event-data/privacy, delivery-state, service-use, or cost authorization boundaries. API-key examples use placeholders or environment variables and the main skill includes stronger DefaultAzureCredential plus managed-identity patterns, but explicit least-privilege and sensitive-event-data controls are absent. The main skill pins azure-messaging-eventgrid 4.27.0 while bundled examples use 4.32.0-beta.1, a concrete version-consistency/stability defect. Behavioral validation is not-run.
