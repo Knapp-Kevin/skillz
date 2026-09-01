@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-py
+display_name: Microsoft Azure AI Content Safety Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-contentsafety-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-contentsafety-py
+permission_tier: external-content-analysis-and-blocklist-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-contentsafety; azure-identity; Azure AI Content Safety resource/endpoint; optional legacy API key; local image files or remote image URLs; optional mutable text blocklists
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 5cb38eecdb5ba01a6ac68b7c38803f622195f008 and SKILL.md blob f48d8a11589e972787c9907e5698119fe61cdfd8. The package is useful prior art for text/image harm classification, severity handling, blocklists, production-constrained Azure credential use, and deterministic client lifecycle. Unchanged use is rejected because ordinary examples send arbitrary text and image content to an external service without a distinct data-classification/privacy/transmission authority boundary; image-by-URL analysis delegates retrieval of a remote resource without an explicit network/trust boundary; blocklist examples create or mutate persistent moderation state without a separate mutation/approval boundary; and the best-practice recommendation to log analysis results lacks redaction/retention guidance even though moderation outputs can be sensitive. Preserve as adaptation/reference material with explicit per-call data-classification and disclosure authority, external-fetch restrictions, blocklist mutation approval, audit-log minimization/redaction and retention policy, cost/service-use authority, and intended-identity verification.
