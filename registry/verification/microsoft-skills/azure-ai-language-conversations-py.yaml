@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-language-conversations-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5f16d5df768d377afae4741ad297c989fa119fb7
+skill_md_blob_sha: 74a373cb7fbf503416d1b3769c2e7d50a569f963
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [conversation-analysis, nlp, intent-classification, entity-extraction, cloud]
+  lifecycle: [development, integration]
+  characteristic: [privacy-sensitive, network-capable, reference-light, structurally-incomplete]
+  authority: [external-service-access, data-disclosure]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful CLU prior art for ConversationAnalysisClient payloads, intent/entity analysis, Entra-first authentication, production credential-chain constraints, context-managed client lifecycle, and requests with isLoggingEnabled false. Unchanged adoption is rejected because ordinary examples transmit arbitrary conversation text to Azure AI Language without a distinct data-classification/privacy/transmission authority gate, the system guidance requires the latest SDK rather than reproducible dependency versioning, and the canonical pinned SKILL.md terminates in the Basic Conversation Analysis example immediately after printing the top intent, without closing the Markdown code fence or completing the promised example set. Positive controls include environment-backed endpoint/project/deployment values, explicit avoidance of API keys for new code, production-safe AZURE_TOKEN_CREDENTIALS guidance, context-manager cleanup, and disabled service logging in the sample payload. Behavioral validation is not-run.
