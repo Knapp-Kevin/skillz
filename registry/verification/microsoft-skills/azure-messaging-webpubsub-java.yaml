@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-messaging-webpubsub-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 55e1ef74b4d923403871dd5486bafc6d0cae199a
+skill_md_blob_sha: b8b8a3fe22a62ad01c34ddff759dad55aa0c5e14
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, real-time-messaging, websocket, notifications]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, communication-sensitive, access-control-sensitive, token-sensitive]
+  authority: [external-communication, membership-mutation, connection-termination, permission-mutation, credential-access, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Web PubSub Java prior art for broadcast and targeted messaging, group/user/connection administration, client access-token issuance, permission management, asynchronous operations, and chat-service patterns. Unchanged use is rejected because normal examples send user/application content externally, mutate group membership, terminate individual/user/group connections, grant and revoke SEND_TO_GROUP permission, and issue bearer-capable client access URLs without distinct communication, membership, destructive-connection, access-control, token-secret, privacy/data, or service-cost authorization boundaries. Both the main skill and bundled complete application print token.getUrl()/the WebSocket access URL, creating a concrete credential-disclosure risk. Positive controls include placeholders, environment-backed connection strings in bundled examples, a production-restricted DefaultAzureCredential pattern, token-expiration guidance, least-role guidance, and hub isolation. Behavioral validation is not-run.
