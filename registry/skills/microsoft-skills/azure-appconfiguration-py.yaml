@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-appconfiguration-py
+display_name: Microsoft Azure App Configuration Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-appconfiguration-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-appconfiguration-py
+permission_tier: external-configuration-and-feature-state-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-appconfiguration; azure-identity; Azure App Configuration store; Entra credentials
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA d1c5d69df9fb386eb27d2b26503ff2ceea7728f5 and SKILL.md blob 9fe7feb9863c970d079423025959856f70f56e87. The package is useful prior art for labeled settings, feature flags, reads/lists, configuration writes/deletes, read-only locking, snapshots, Entra-first authentication, async use, and client cleanup. Unchanged use is rejected because ordinary workflows can create, overwrite, delete, lock/unlock centralized configuration, enable or disable feature behavior, and create persistent snapshots that may affect production applications without distinct change-scope, environment, mutation, feature-rollout, destructive-action, unlock, rollback, or approval boundaries. The guidance recommends production read-only settings and snapshots, but those safeguards do not substitute for authorization before mutations. Installation is unpinned. Preserve intact as adaptation/reference material with explicit environment/change authority, scoped key/label selection, feature-rollout approval, delete/unlock confirmation, rollback expectations, least-privilege identity, and pinned dependency identity.
