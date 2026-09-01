@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-exporter-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1fb82a6bf0c567a8263c6dcf63d72010aab761c2
+skill_md_blob_sha: 2be5ec33b16457816e0737dcc99007560fea74d5
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: retired
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, observability, telemetry, migration]
+  lifecycle: [maintenance, migration, operations]
+  characteristic: [deprecated, reference-heavy, data-sensitive, dependency-version-sensitive]
+  authority: [external-data-transmission, credential-access, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. Microsoft explicitly marks azure-monitor-opentelemetry-exporter deprecated and instructs migration to azure-monitor-opentelemetry-autoconfigure, so retired is the correct decisive state. The package remains useful migration/reference material for OpenTelemetry traces, metrics, span processors, semantic conventions, exception recording, and Azure Monitor/Application Insights wiring. Unchanged use is additionally unsuitable because examples export telemetry to an external service without a distinct telemetry-data/privacy/classification authorization boundary and demonstrate attributes such as order.id and customer.tier that may become identifying or sensitive production telemetry. Dependency guidance is non-reproducible/inconsistent: SKILL.md recommends azure-monitor-opentelemetry-autoconfigure LATEST while bundled migration examples use 1.0.0. Positive controls include environment-variable connection-string guidance, placeholder explicit credentials, strong deprecation/migration messaging, scoped span cleanup, and exception recording. Behavioral validation is not-run.
