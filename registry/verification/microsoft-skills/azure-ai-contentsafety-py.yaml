@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5cb38eecdb5ba01a6ac68b7c38803f622195f008
+skill_md_blob_sha: f48d8a11589e972787c9907e5698119fe61cdfd8
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [content-moderation, cloud, safety, text-analysis, image-analysis]
+  lifecycle: [development, operations, integration]
+  characteristic: [reference-heavy, privacy-sensitive, network-capable, persistent-state-capable, side-effectful]
+  authority: [external-service-access, data-disclosure, network-access, persistent-state-write]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Content Safety Python prior art for text/image classification, severity handling, blocklists, constrained production credentials, and client lifecycle. Unchanged adoption is rejected because ordinary examples transmit arbitrary text and image content to Azure without a distinct data-classification/privacy/transmission authority gate, permit service-side retrieval of remote image URLs without an explicit network/trust boundary, create or mutate persistent blocklist state without separate approval, and recommend logging moderation analysis results without redaction or retention constraints. Positive controls include production-constrained DefaultAzureCredential guidance, environment-backed legacy API keys, deterministic context-manager cleanup, placeholders, and explicit legacy-key framing. Behavioral validation is not-run.
