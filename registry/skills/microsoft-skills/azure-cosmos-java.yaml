@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cosmos-java
+display_name: Microsoft Azure Cosmos DB for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-cosmos-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-cosmos-java
+permission_tier: consequential-cloud-data-mutation
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven or Gradle; com.azure:azure-cosmos with top-level guidance using LATEST or Azure SDK BOM; optional com.azure:azure-identity in bundled examples; Azure Cosmos DB account/endpoint and credential; database/container/item read-write permissions; request-unit capacity; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 11dfaafad2fac0ca15d3b328d0ae76f8338da917, SKILL.md blob 21a14dce1c668ef29e3267b262be6123533eb92e, and bundled examples blob dd58f7121e5a41e464084bd6ca50fc0b770a3c47. The package is useful Azure Cosmos DB Java prior art for client construction, partitioning, consistency, CRUD, querying, paging, async patterns, request-unit awareness, and authentication. Unchanged adoption is rejected because normal examples create and delete databases and containers, create/replace/upsert/delete records, issue broad queries, consume metered request units, and print user/item data without distinct data-access, mutation, destructive-action, privacy, or cost authorization gates. The top-level dependency also uses LATEST rather than an exact SDK version. Environment-backed key use and DefaultAzureCredential guidance are useful positive patterns, but shared-key handling needs stronger least-privilege and secret-governance framing. Preserve as adaptation/reference material with explicit data-scope, write/destructive, privacy/logging, request-unit cost, credential, and dependency-version boundaries.
