@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-query-java
+display_name: Microsoft Azure Monitor Query SDK for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-monitor-query-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-monitor-query-java
+permission_tier: sensitive-observability-data-read
+portability: medium
+review_status: retired-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; deprecated com.azure:azure-monitor-query 1.5.9; recommended replacements com.azure:azure-monitor-query-logs and com.azure:azure-monitor-query-metrics; azure-identity; Log Analytics workspace or Azure resource; TokenCredential with appropriate permissions; references/examples.md
+import_eligibility: migration-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 5a8c8f952a2e64ad8ade693b6ec964818191e55f, SKILL.md blob 4f9d8cfec9d6a166cd5bd18fc91fabc53dc7f343, and bundled examples blob acaa03ad8363e7c627907873d66cfc9d7c68b731. Microsoft explicitly marks azure-monitor-query deprecated and directs migration to azure-monitor-query-logs and azure-monitor-query-metrics, so retirement is the truthful decisive state rather than unchanged-reuse eligibility. The material remains useful migration and query prior art for Kusto/Log Analytics queries, Azure resource metrics, batch queries, time ranges, async patterns, result mapping, and partial-failure handling. Unchanged use is additionally unsuitable because ordinary examples read and print operational telemetry and workspace/resource data without a distinct data-access, privacy/classification, output/redaction, or query-scope authority boundary, and bundled examples use unconstrained DefaultAzureCredentialBuilder construction while the top-level skill adds production requireEnvVars guidance. Preserve as bounded migration/reference evidence with explicit observability-data authorization, least-data query scope, output redaction, intended-identity verification, and replacement-package pinning.
