@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-ingestion-java
+display_name: Microsoft Azure Monitor Ingestion for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-monitor-ingestion-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-monitor-ingestion-java
+permission_tier: external-data-transmission-and-metered-service
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-monitor-ingestion 1.2.11 in SKILL.md; bundled examples use azure-monitor-ingestion 1.2.14 and azure-identity 1.15.3 or Azure SDK BOM 1.2.29; Azure Monitor Data Collection Endpoint, Data Collection Rule, Log Analytics workspace/table, Azure Identity credentials; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 99ffd5484dfa60d3c5c38d0bd22b3d2861d8a624, SKILL.md blob fdafd0a6c66489ff4096732c092c8e17671527e7, and bundled examples blob cde2a20e304986978f3ac3be8d4527924368528b. The package is useful Azure Monitor Logs Ingestion prior art for DCE/DCR routing, synchronous and asynchronous uploads, batching, concurrency, partial-failure handling, and production credential-chain restriction. Unchanged adoption is rejected because ordinary examples upload arbitrary application/log records to an external metered service without a distinct log-content/privacy/data-classification or service-cost authorization boundary. Bundled partial-failure handling iterates failed log objects and prints them, which can disclose the very log payloads being handled. The bundled examples also instantiate unrestricted DefaultAzureCredential while the top-level skill uses requireEnvVars for production, and the direct SDK dependency differs between the top-level skill (1.2.11) and bundled examples (1.2.14). Preserve as adaptation/reference material with explicit log-data classification/redaction, destination/routing, external-service/cost, retry/error-output, and credential-chain controls.
