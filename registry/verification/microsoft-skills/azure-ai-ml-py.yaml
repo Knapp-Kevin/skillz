@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-ml-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ae7411d24137b2d0b4a8e44067ba085912115076
+skill_md_blob_sha: 64ae23817a4661484e10a2e28eb89ba99c7f4afa
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [machine-learning, model-management, data-assets, training-jobs, pipelines, cloud]
+  lifecycle: [development, training, deployment-preparation, operations]
+  characteristic: [cost-sensitive, data-sensitive, code-execution, network-capable, mutable-cloud-resources]
+  authority: [external-service-access, cloud-resource-mutation, compute-provisioning, data-disclosure, code-execution]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure ML SDK v2 prior art for MLClient setup, Entra-first authentication, context-managed lifecycle, workspace and asset enumeration, data/model versioning, compute scale-down, jobs, pipelines, environments, and tagging. Unchanged adoption is rejected because ordinary examples create or mutate Azure ML workspaces, data assets, models, compute clusters, environments, jobs, and pipelines without distinct authorization and resource-lifecycle gates; compute creation and job/pipeline submission can incur material cloud cost without budget/quota approval; jobs submit local code and referenced training data to external compute without explicit code/data-classification authority; model registration can upload local model material; and reproducibility is weakened by unpinned `pip install azure-ai-ml` guidance plus an AzureML environment reference ending in `@latest`. Positive controls include environment-backed subscription/resource/workspace identifiers, production-safe credential-chain guidance, context-manager cleanup, versioning recommendations, idle scale-down, and tagging/cost-tracking guidance. Behavioral validation is not-run.
