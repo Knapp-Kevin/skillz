@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-containerregistry-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 73bdb987bf73d524b40ac93c3ea0c3533dd75ba3
+skill_md_blob_sha: e1a8305ccac4d5e8d44e852038907cd516f1f74d
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file package review at the registered Microsoft Skills pin. Useful material covers repository, tag and manifest inspection; Entra-first authentication; context-managed clients; artifact download; repository/manifest property controls; and cleanup of untagged manifests. Unchanged adoption is rejected because normal workflows can alter registry write/delete policy, delete entire repositories, manifests and tags, and automate image deletion without distinct registry/environment scope, mutation, destructive-action, retention, rollback, or approval boundaries. Artifact download writes layers to local storage. Positive safeguards include managed identity guidance and locking production images, but they do not establish action authorization. Installation is unpinned. Behavioral validation is not-run.
