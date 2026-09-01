@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-messaging-webpubsub-java
+display_name: Microsoft Azure Web PubSub for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-messaging-webpubsub-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-messaging-webpubsub-java
+permission_tier: external-communication-and-access-control
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-messaging-webpubsub 1.5.0; Azure Web PubSub resource/hub; Azure Identity or connection-string/access-key credentials; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 55e1ef74b4d923403871dd5486bafc6d0cae199a, SKILL.md blob b8b8a3fe22a62ad01c34ddff759dad55aa0c5e14, and bundled examples blob f240cfa7aedcb70f660354b9ccef86c8073c251e. The package is useful Azure Web PubSub Java prior art for broadcast, group/user/connection messaging, connection/group administration, client access-token issuance, permission management, async operations, and chat-service patterns. Unchanged adoption is rejected because ordinary examples send user/application messages externally, add/remove users and connections from groups, close user/group connections, grant/revoke send permissions, and issue bearer-capable client access URLs without distinct communication, membership, destructive-connection, access-control, token-secret, privacy/data, or service-cost authorization boundaries. The main skill prints token.getUrl(), and the bundled complete application likewise prints a WebSocket access URL, creating a concrete credential-disclosure risk. Positive guidance includes placeholders, environment-backed connection strings in bundled examples, production credential-chain restriction, token expiration, least-role guidance, and hub isolation. Preserve as adaptation/reference material with explicit recipient/message-data, group-membership, connection-termination, permission-change, token-output/redaction, credential-source, privacy, and cost boundaries.
