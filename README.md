@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-218-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-226-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -49,7 +49,7 @@ Give the repository to an AI agent and ask it to help build or refine repeatable
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**. Structured semantic review evidence lives in [`registry/local-verification.json`](registry/local-verification.json), and mandatory first-party provenance companions live under [`registry/skills/local-skills/`](registry/skills/local-skills/).
 
-The first-party family is currently **43/43 provenance-complete** after the `automation-receipts` admission through issue #72. Category navigation is governed by [`registry/categories.yaml`](registry/categories.yaml) and surfaced under [`skills/categories/`](skills/categories/).
+The first-party family is **43/43 provenance-complete**. Category navigation is governed by [`registry/categories.yaml`](registry/categories.yaml) and surfaced under [`skills/categories/`](skills/categories/).
 
 ### Pinned source corpora
 
@@ -77,7 +77,7 @@ Exact source identity, role, license/terms, and pins live in [`registry/sources.
 - [`registry/skills/`](registry/skills/) records per-skill provenance and canonical source identity.
 - [`registry/verification/`](registry/verification/) records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
-There are currently **218 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
+There are currently **226 persisted exact-version third-party verification companions**. Historical source-level review work is broader than the current one-file companion shelf for some admitted corpora, so reconciliation remains ongoing rather than being silently treated as either complete or lost.
 
 ## Quality states
 
@@ -117,9 +117,9 @@ Current priorities:
 
 AWS Agent Toolkit is **72/72 historically inspected and 72/72 reconciled to the current mandatory per-skill provenance + verification companion standard** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. No AWS current-standard companion gaps remain. Negative dispositions remain preserved where unchanged upstream procedures fail the current authority or secret-handling standard; completion therefore means decisive current evidence, not universal endorsement.
 
-Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **46/189 exact-version provenance + verification companion pairs are persisted**, leaving **143 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
+Microsoft Skills curation is active at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`: **54/189 exact-version provenance + verification companion pairs are persisted**, leaving **135 current-standard gaps**. The denominator is derived from independently front-mattered `SKILL.md` entry points in the exact pinned Git topology, not from the upstream README's inconsistent 174/175 headline counts. It includes language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package rather than separate review units.
 
-The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**. The direct Java plugin slice has an exact **26-package** denominator and is now **13/26 current-standard companion-complete**. The reviewed Java tranche includes the seven `azure-ai-*` packages, `azure-appconfiguration-java`, `azure-communication-callautomation-java`, deprecated `azure-communication-callingserver-java`, `azure-communication-chat-java`, `azure-communication-common-java`, and `azure-communication-sms-java`, each with exact package identity and differentiated findings. `azure-communication-sms-java` is rejected unchanged because normal single, bulk-marketing, and OTP sends lack distinct recipient-consent, external-communication, privacy/data, campaign, and cost authority boundaries; examples also log recipient phone numbers and use phone numbers in tags without an explicit sensitive-data policy. CallingServer remains retired from normal unchanged selection because Microsoft explicitly directs new development to Call Automation. Behavioral validation remains `not-run` unless representative external evidence is actually recorded.
+The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**. The direct Java plugin slice has an exact **26-package** denominator and is now **21/26 current-standard companion-complete**. The reviewed Java frontier is sequentially complete through `azure-monitor-ingestion-java`; each package has exact package identity and differentiated findings. The latest unit is rejected unchanged at **12/20** because normal ingestion examples transmit arbitrary logs to an external metered service without distinct log-data/privacy/classification or cost authority boundaries, bundled failure handling can print failed log objects, and its dependency guidance conflicts between `azure-monitor-ingestion` 1.2.11 in the main skill and 1.2.14 in bundled examples. Behavioral validation remains `not-run` unless representative external evidence is actually recorded.
 
 The Tier-4 passive catalog surfaces are present as [`INDEX.md`](INDEX.md) and [`index.json`](index.json). They are hand-maintained snapshots of current governed corpus truth and carry no generator, preflight, or executable refresh contract.
 
