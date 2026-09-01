@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-contentunderstanding-py
+display_name: Microsoft Azure AI Content Understanding Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-contentunderstanding-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-contentunderstanding-py
+permission_tier: external-multimodal-analysis-and-analyzer-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-contentunderstanding; azure-identity; Azure AI Content Understanding resource/endpoint; Entra credential; document/image/audio/video inputs reachable by URL; optional persistent custom analyzers
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1d31c9ef35cd6fe44cb05bee04bb268df7656824 and SKILL.md blob 1998fba384207417789f37846f85548defd1f7b9. The package is useful prior art for multimodal document/image/audio/video extraction, long-running analysis, prebuilt analyzers, custom schemas, async use, production-constrained Azure credentials, and deterministic client lifecycle. Unchanged use is rejected because ordinary examples send potentially sensitive documents, images, audio, and video to an external AI service without a distinct data-classification/privacy/transmission authority boundary; URL inputs delegate retrieval of remote resources without an explicit network/trust boundary; examples print extracted document text, transcripts, frame descriptions, and invoice fields without output-redaction or disclosure constraints; and analyzer examples create/delete persistent service-side configuration without a separate mutation/approval boundary. Several ordinary snippets also instantiate unconstrained DefaultAzureCredential despite stronger production guidance at the top of the skill. Preserve as adaptation/reference material with explicit per-input data authority, remote-fetch restrictions, output minimization/redaction, analyzer mutation approval, cost/service-use authority, and intended-identity verification.
