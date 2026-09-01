@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: agent-framework-azure-ai-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d4ba91752ddd62b9cae2d77e8275dc5a8d75685e
+skill_md_blob_sha: 04a975fec1379266430f07bc789bae7acd579185
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [agents, cloud, tool-use, retrieval]
+  lifecycle: [development, operations, integration]
+  characteristic: [reference-heavy, persistent-state, code-execution-capable, network-capable, side-effectful]
+  authority: [external-service-access, agent-creation, code-execution, network-access, data-upload, persistent-state-write, external-tool-use]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references for hosted tools, MCP, threads, and advanced patterns. The package provides useful Microsoft Agent Framework Azure AI Python prior art for persistent agents, async provider lifecycle, function tools, hosted code/file/web tools, MCP, structured output, streaming, and conversation threads. Unchanged adoption is rejected because ordinary examples create persistent service-side agents and threads, invoke hosted code execution and web search, connect external MCP services, upload files and create vector stores, and print results or persistent conversation identifiers without distinct authorization gates for agent creation, external tool/network use, data upload/classification, code execution, persistent-state lifecycle, disclosure, or metered service use. Positive controls include production-constrained DefaultAzureCredential guidance, avoidance of static API keys, deterministic async cleanup, and placeholders. The package also depends on pre-release agent-framework packages, which reduces reproducibility and freshness stability. Behavioral validation is not-run.
