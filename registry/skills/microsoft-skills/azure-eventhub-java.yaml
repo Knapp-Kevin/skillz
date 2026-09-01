@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventhub-java
+display_name: Microsoft Azure Event Hubs for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-eventhub-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-08-31
+last_checked_at: 2026-08-31
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-eventhub-java
+permission_tier: consequential-external-streaming-data
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-messaging-eventhubs 5.19.0 and checkpointstore-blob 1.20.0 in SKILL.md versus 5.21.0 and 1.21.0 in bundled examples; optional com.azure:azure-identity 1.18.2; Azure Event Hubs namespace/hub and producer/consumer permissions; Azure Blob Storage container and permissions for checkpointing; references/examples.md
+import_eligibility: adapt-or-extract-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 83b03c95ba3346a76ad291867fb3a4c9803dc545, SKILL.md blob 9399c5d62cc5d5b395e65ad0fc5aaa780e03242e, and bundled examples blob 0592023e4628a41cf7150e344c37b1d99f41f88e. The package is useful Azure Event Hubs Java prior art for producers, consumers, batching, partition routing, EventProcessorClient, checkpointing, async streams, event positions, and authentication. Unchanged adoption is rejected because ordinary examples publish application or user-bearing event payloads to an external metered service, read and print event bodies, start background processors, and mutate durable checkpoint state without distinct external-communication, event-data/privacy, background-processing, checkpoint-state, or service/cost authorization boundaries. Connection-string examples use placeholders and the main skill provides stronger DefaultAzureCredential/managed-identity guidance, but explicit least-privilege, data-classification, logging/redaction, retention, and checkpoint-governance boundaries are absent. The top-level skill pins azure-messaging-eventhubs 5.19.0 and checkpointstore-blob 1.20.0 while bundled examples use 5.21.0 and 1.21.0, creating a concrete version-consistency defect. Preserve as adaptation/reference material with explicit data, communication, background-processing, state, credential, cost, and dependency-version boundaries.
