@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventhub-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 83b03c95ba3346a76ad291867fb3a4c9803dc545
+skill_md_blob_sha: 9399c5d62cc5d5b395e65ad0fc5aaa780e03242e
+characterized_at: 2026-08-31
+last_verified_at: 2026-08-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, event-streaming, ingestion, messaging]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, data-bearing, background-processing, version-inconsistent, version-sensitive]
+  authority: [external-side-effect, data-transmitting, data-reading, state-mutating, background-processing]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Event Hubs Java prior art for producer/consumer clients, batching, partition routing, EventProcessorClient, checkpointing, async receiving, event positions, and authentication. Unchanged use is rejected because ordinary examples publish application or user-bearing events to an external metered service, read and print event bodies, start background processors, and mutate durable checkpoint state without distinct external-communication, event-data/privacy, background-processing, checkpoint-state, service-use, or cost authorization boundaries. Connection-string examples use placeholders and the main skill includes stronger DefaultAzureCredential plus managed-identity patterns, but explicit least-privilege, data-classification, logging/redaction, retention, and checkpoint-governance controls are absent. The main skill pins azure-messaging-eventhubs 5.19.0 and checkpointstore-blob 1.20.0 while bundled examples use 5.21.0 and 1.21.0, a concrete version-consistency defect. Behavioral validation is not-run.
