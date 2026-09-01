@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-textanalytics-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: bc61d52e96da645ccf3d906086f4f4edd00545de
+skill_md_blob_sha: dc9d0d92b4770e4d4c1e3cb44f58878898510396
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [text-analytics, sentiment-analysis, entity-recognition, pii-detection, healthcare-nlp, language-detection]
+  lifecycle: [development, analysis, operations]
+  characteristic: [data-sensitive, privacy-sensitive, regulated-data-capable, external-ai-service]
+  authority: [external-service-access, data-disclosure]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Language prior art for sentiment and opinion mining, named entities, key phrases, language detection, PII recognition/redaction, healthcare entities, batch actions, async operation, constrained production credentials, and deterministic client cleanup. Unchanged adoption is rejected because ordinary examples send arbitrary text, explicit SSN/email PII, and healthcare/medication content to an external service without distinct data-classification, privacy, consent, disclosure, or regulated-data authority gates. The PII example prints each detected raw PII entity after showing redacted text, and entity/healthcare examples print source-derived sensitive content without output-redaction or retention constraints. Dependency installation is unpinned. Positive controls include Entra-first authentication, production credential-chain constraints, context-manager lifecycle guidance, environment-backed endpoints/keys, and explicit preference against API-key authentication. Behavioral validation is not-run.
