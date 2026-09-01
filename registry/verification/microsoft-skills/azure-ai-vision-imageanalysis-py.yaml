@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-vision-imageanalysis-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 736165f45cb6167b177b2e2231a682554924282d
+skill_md_blob_sha: ba1393b7cac8d834c1f9e099e5346b1afab2a604
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, documentation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful material covers captions, dense captions, tags, object detection, OCR, people detection, smart cropping, URL/local-file analysis, Entra-first authentication, async operation, error handling, and client cleanup. Unchanged adoption is rejected because routine analysis transmits images or image references to an external AI service, may process people and OCR-derived sensitive content, and incurs service cost without distinct data classification, privacy/consent, external-processing/disclosure, output-handling, or budget authorization boundaries. Local-file examples read image bytes from disk and a legacy API-key path remains available through environment variables. Dependency installation is unpinned. Behavioral validation is not-run.
