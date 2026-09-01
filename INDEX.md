@@ -20,14 +20,14 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 227 |
+| Persisted third-party exact-version reviews | 228 |
 | AWS historical reviewed denominator | 72 / 72 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 55 / 189 |
-| Microsoft Skills current-standard gaps | 134 |
+| Microsoft Skills current-standard companions | 56 / 189 |
+| Microsoft Skills current-standard gaps | 133 |
 | Microsoft .NET direct-package companions | 29 / 29 |
-| Microsoft Java direct-package companions | 22 / 26 |
+| Microsoft Java direct-package companions | 23 / 26 |
 
 ## First-party skills by purpose
 
@@ -123,8 +123,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **55/189** currently have current-standard provenance + verification companions, leaving **134** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
+Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **56/189** currently have current-standard provenance + verification companions, leaving **133** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
 
-The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **22/26 current-standard companion-complete**. The current Java frontier is complete through `azure-monitor-opentelemetry-exporter-java`. The latest unit is retired at **13/20** because Microsoft explicitly marks `azure-monitor-opentelemetry-exporter` deprecated and directs migration to `azure-monitor-opentelemetry-autoconfigure`. It remains useful migration and instrumentation prior art, but ordinary examples export potentially sensitive telemetry externally without a distinct telemetry-data/privacy/classification authority boundary, demonstrate business attributes such as `order.id` and `customer.tier`, and replacement dependency guidance conflicts between `LATEST` in `SKILL.md` and `1.0.0` in bundled examples. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
+The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **23/26 current-standard companion-complete**. The current Java frontier is complete through `azure-monitor-query-java`. The latest unit is retired at **13/20** because Microsoft explicitly marks `azure-monitor-query` deprecated and directs migration to `azure-monitor-query-logs` and `azure-monitor-query-metrics`. It remains useful migration and observability-query prior art, but ordinary examples read and print operational telemetry and workspace/resource data without distinct data-access, privacy/classification, output-redaction, or query-scope authority boundaries. Bundled examples also use unconstrained `DefaultAzureCredential` construction despite stronger production credential guidance in the main skill. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
 
 This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
