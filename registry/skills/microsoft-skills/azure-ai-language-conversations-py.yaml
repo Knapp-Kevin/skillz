@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-language-conversations-py
+display_name: Microsoft Azure AI Language Conversations Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-language-conversations-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-language-conversations-py
+permission_tier: external-conversation-analysis
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-language-conversations; azure-identity; Azure AI Language resource/endpoint; Entra credential or legacy AzureKeyCredential; CLU project and deployment
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 5f16d5df768d377afae4741ad297c989fa119fb7 and SKILL.md blob 74a373cb7fbf503416d1b3769c2e7d50a569f963. The package is useful prior art for CLU payload structure, intent/entity analysis, Entra-first authentication, production credential-chain constraints, context-managed clients, and logging-disabled requests. Unchanged use is rejected because ordinary examples send arbitrary conversation text to an external Azure AI service without a distinct data-classification/privacy/transmission authority boundary; the guidance says to use the latest SDK rather than a reproducible version constraint; and the pinned canonical SKILL.md ends mid-example after printing the top intent, leaving the Markdown code fence and example structurally incomplete. Preserve as adaptation/reference material with explicit per-input data authority, service-use/cost approval where consequential, pinned dependency guidance, output-disclosure constraints, and a repaired complete example.
