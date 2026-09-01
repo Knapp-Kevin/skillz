@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-appconfiguration-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d1c5d69df9fb386eb27d2b26503ff2ceea7728f5
+skill_md_blob_sha: 9fe7feb9863c970d079423025959856f70f56e87
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. Useful material covers labeled settings, feature flags, reads/lists, setting create/update/delete, read-only locking/unlocking, snapshots, Entra-first authentication, async operation, and client cleanup. Unchanged adoption is rejected because normal workflows can alter centralized configuration and feature behavior, delete settings, remove read-only protection, and create persistent snapshots without distinct environment/change-scope, mutation, feature-rollout, destructive-action, unlock, rollback, or approval boundaries. Positive safeguards include labels, production read-only guidance, snapshots, Entra ID preference, and context-managed clients, but they do not establish action authorization. Dependency installation is unpinned. Behavioral validation is not-run.
