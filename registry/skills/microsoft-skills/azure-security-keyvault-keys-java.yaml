@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-security-keyvault-keys-java
+display_name: Microsoft Azure Key Vault Keys SDK for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-security-keyvault-keys-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-security-keyvault-keys-java
+permission_tier: cryptographic-key-management
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-security-keyvault-keys 4.9.0; azure-identity (bundled examples pin 1.14.0); Azure Key Vault or Managed HSM; TokenCredential with key-management and cryptographic permissions; references/examples.md
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1bedbdd6834c29fe29dcb3b6834d5ddec89b068a, SKILL.md blob 632c3607d93b81d7625969555520be8d873ee2d7, and bundled examples blob c1857a699ebaae38750fb0e28d75cea4558561cf. The package is useful prior art for Key Vault/Managed HSM key creation, retrieval, listing, rotation, cryptographic operations, backup/restore, import, and recovery. Unchanged use is rejected because ordinary examples create and mutate cryptographic keys, alter allowed operations and rotation policy, permanently purge keys, import private key material, back up key material to a local file, decrypt and print plaintext, and perform signing/wrapping operations without distinct key-management, destructive-action, sensitive-material, cryptographic-operation, data-output, or external-service authorization boundaries. The top-level skill improves production DefaultAzureCredential handling with requireEnvVars and recommends least privilege, HSM keys, soft delete, and rotation, but bundled examples fall back to unconstrained DefaultAzureCredentialBuilder construction. Preserve as adaptation/reference material with explicit per-operation authority, key-material handling controls, purge confirmation, backup-storage controls, output redaction, intended-identity verification, and environment-specific policy review.
