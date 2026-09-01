@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-py
+display_name: Microsoft Azure AI Voice Live Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-voicelive-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-voicelive-py
+permission_tier: external-ai-realtime-audio-tool-and-conversation-mutation
+portability: low
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-voicelive; aiohttp; azure-identity; Azure AI Voice Live endpoint/model; Entra credentials or legacy Cognitive Services API key; microphone/audio or audio files; optional function/MCP tools; optional avatar/WebRTC integration
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 8e2c48a446597c749edca8381cb7d2dd112eed64 and SKILL.md blob 1a3f3aa129ef79ff45c6d0fc25160971d9c62a6c. Review includes bundled api-reference.md, examples.md, and models.md. The package is rich prior art for bidirectional WebSocket audio, VAD, transcription, interruption, conversation-item mutation, function calling, MCP events, multimodal text/audio, Azure/custom voices, avatars, and async lifecycle handling. Unchanged use is rejected because normal flows transmit live or recorded audio, transcripts, prompts, and conversation state to an external AI service, may execute function or MCP tool calls, mutate remote conversation/session state, emit synthesized audio/avatar output, and incur service cost without distinct participant consent/recording-law, sensitive-audio disclosure, retention, tool-action authorization, communication/output, conversation-mutation, or budget boundaries. The examples also include legacy API-key authentication and local audio file I/O. Installation is unpinned. Preserve intact only as adaptation/reference material with explicit recording consent, privacy/retention policy, scoped tool authority and argument validation, MCP approval policy, output/communication controls, cost limits, secure credential custody, and pinned dependency/model identity.
