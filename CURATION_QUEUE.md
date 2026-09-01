@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **218** persisted exact-version third-party verification companions.
+- **226** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -55,59 +55,65 @@ Search and reconcile this prior evidence before fresh re-review.
 - Current-standard provenance + verification companion completeness: **72/72**.
 - Remaining current-standard gaps: **0**.
 
-The sequential campaign reconciled every core and specialized package, including analytics, database, EC2, migration/modernization, networking/content delivery, operations, security/identity, serverless, storage, system-table, and web/mobile. Completion preserves decisive negative states rather than converting everything to approval. Rejected packages remain reference/adaptation evidence when useful.
-
-Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates and examples remain intact package dependencies rather than `skillz` execution machinery.
+The sequential campaign reconciled every core and specialized package. Completion preserves decisive negative states rather than converting everything to approval. Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates, and examples remain intact package dependencies rather than `skillz` execution machinery.
 
 ### Microsoft Skills — ACTIVE FRONTIER
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **46/189**.
-- Remaining current-standard gaps: **143**.
-- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice is **29/29 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-java/skills/` slice has an exact denominator of **26** and is **13/26 current-standard companion-complete**.
+- Current-standard provenance + verification companions persisted: **54/189**.
+- Remaining current-standard gaps: **135**.
+- Direct `.github/plugins/azure-sdk-dotnet/skills/` slice: **29/29 current-standard companion-complete**.
+- Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, now **21/26 current-standard companion-complete**.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, and the complete direct `.NET` SDK slice. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
-
-The direct `.NET` slice closed at 29/29 with decisive exact-version evidence for every package. Negative dispositions remain differentiated across resource/cost mutation, secret and credential handling, identity/token operations, message and background-processing effects, data transmission, local-file access, destructive actions, and dependency defects. Completion means decisive current evidence, not universal approval.
+Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, and the first 21 Java direct packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
 #### Java plugin slice — ACTIVE
 
-The Java slice is now **13/26** current-standard companion-complete. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where the pinned history differs; each record retains its own package-tree, skill-blob, source revision, and freshness identity.
+The Java slice is sequentially complete through `azure-monitor-ingestion-java`. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where pinned history differs; every record retains its own package-tree, skill-blob, source revision, freshness, dependency, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence state.
 
-| Skill | State | Score | Decisive unchanged-adoption blockers / disposition basis |
-|---|---|---:|---|
-| `azure-ai-agents-persistent-java` | rejected | 14/20 | Remote agent/thread/run/file/vector-store mutation, local-file upload, metered execution, downstream function/tool effects without distinct authority gates. |
-| `azure-ai-anomalydetector-java` | rejected | 13/20 | Time-series transmission, SAS-backed model training/inference, model deletion and metered external-service use without data/cost/lifecycle gates. |
-| `azure-ai-contentsafety-java` | rejected | 12/20 | Text/image transmission plus blocklist mutation without privacy/data/cost gates; top-level and bundled example SDK versions conflict. |
-| `azure-ai-formrecognizer-java` | rejected | 12/20 | Sensitive document transmission and custom model/classifier lifecycle mutation without mandatory data/privacy/cost boundaries; version-sensitive guidance. |
-| `azure-ai-projects-java` | rejected | 13/20 | Dataset/index mutation, local-file upload, connection credential access and external evaluation operations without distinct authorization. |
-| `azure-ai-vision-imageanalysis-java` | rejected | 13/20 | Local/remote image transmission, OCR and people detection without mandatory privacy/data and metered-service boundaries. |
-| `azure-ai-voicelive-java` | rejected | 12/20 | Live audio sessions, transcription, microphone capture and function execution without recording/privacy/cost/tool-action gates. |
-| `azure-appconfiguration-java` | rejected | 13/20 | Production configuration, feature targeting, secret-reference metadata, read-only protection and snapshot transitions without distinct configuration, targeting, sensitive-metadata and destructive/state-transition gates. |
-| `azure-communication-callautomation-java` | rejected | 11/20 | PSTN call initiation/answering, speech/DTMF processing, recording/download, transfer, participant changes and termination without mandatory telephony, consent/privacy, cost and destructive-action boundaries; top-level SDK 1.6.0 conflicts with bundled examples at 1.5.2. |
-| `azure-communication-callingserver-java` | retired | 14/20 | Microsoft explicitly marks CallingServer deprecated and directs new development to Call Automation. Preserve only for migration/legacy maintenance; legacy recording control lacks a distinct participant-consent/privacy gate. |
-| `azure-communication-chat-java` | rejected | 12/20 | Thread/message creation and deletion, participant changes, history sharing, read/typing privacy signals, and external message/user-metadata transmission lack distinct communication, participant, privacy/data, destructive-action and service-use gates; top-level SDK 1.6.0 conflicts with bundled examples at 1.6.4. |
-| `azure-communication-common-java` | rejected | 12/20 | Token and identity handling lacks a distinct sensitive-data boundary; examples print identifiers, log a token prefix, place `userId` in a token-fetch query, and demonstrate a consequential Teams call-management scope without explicit least-privilege guidance. |
-| `azure-communication-sms-java` | rejected | 11/20 | Single, bulk-marketing and OTP sends lack distinct recipient-consent, communication, campaign, privacy/data and cost gates; examples log phone numbers/message IDs, use phone numbers in tags, and retain OTP secrets in process memory without explicit handling guidance. |
+The current 21 reviewed packages are:
 
-Behavioral validation is `not-run` for all thirteen because no separate representative external scenario/adversarial evidence has been recorded.
+1. `azure-ai-agents-persistent-java`
+2. `azure-ai-anomalydetector-java`
+3. `azure-ai-contentsafety-java`
+4. `azure-ai-formrecognizer-java`
+5. `azure-ai-projects-java`
+6. `azure-ai-vision-imageanalysis-java`
+7. `azure-ai-voicelive-java`
+8. `azure-appconfiguration-java`
+9. `azure-communication-callautomation-java`
+10. `azure-communication-callingserver-java`
+11. `azure-communication-chat-java`
+12. `azure-communication-common-java`
+13. `azure-communication-sms-java`
+14. `azure-compute-batch-java`
+15. `azure-cosmos-java`
+16. `azure-data-tables-java`
+17. `azure-eventgrid-java`
+18. `azure-eventhub-java`
+19. `azure-identity-java`
+20. `azure-messaging-webpubsub-java`
+21. `azure-monitor-ingestion-java`
 
-- Denominator accounting is closed at the exact registered pin. The unit is an independently front-mattered `SKILL.md` entry point. The count includes 129 language-SDK plugin entries; real canonical `.github/skills` packages; 28 Azure-plugin top-level packages; 10 Deep Wiki entries; 5 Microsoft 365 Agents Toolkit top-level entries; and 6 additional nested skill entry points (`microsoft-foundry/finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, `models/deploy-model/preset`, and `teams-app-developer/slack-to-teams`). Duplicate exposure paths are de-duplicated by skill identity, `.github/skills` symlink mirrors and plugin symlink aliases do not create additional units, and ordinary workflow/reference `.md` files remain part of their parent package. The upstream README's conflicting 174/175 headlines are not used as denominator evidence.
-- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **13 Java direct packages** are the next coherent Microsoft tranche before moving to the next plugin/language family.
+`azure-communication-callingserver-java` is retired because Microsoft explicitly directs new development to Call Automation. The other reviewed Java packages currently carry differentiated rejected-unchanged states where exact review found authority, privacy/data, external-service, cost, credential, destructive-action, dependency, or freshness defects.
+
+The latest unit, `azure-monitor-ingestion-java`, is rejected unchanged at **12/20**. Exact identity: package tree `99ffd5484dfa60d3c5c38d0bd22b3d2861d8a624`, `SKILL.md` blob `fdafd0a6c66489ff4096732c092c8e17671527e7`, bundled `references/examples.md` blob `cde2a20e304986978f3ac3be8d4527924368528b`, latest package-path revision `e7ee58fc1fa669841e06f8d27359e0533d148394` dated 2026-04-29. Normal examples transmit arbitrary logs to an external metered service without distinct log-data/privacy/classification or cost authority boundaries; bundled failure handling can print failed log objects; bundled credential construction is less constrained than the top-level production guidance; and direct SDK guidance conflicts between `azure-monitor-ingestion` 1.2.11 in `SKILL.md` and 1.2.14 in bundled examples. Behavioral validation is `not-run`.
+
+- Denominator accounting is closed at the exact registered pin. The unit is an independently front-mattered `SKILL.md` entry point. The count includes language SDK plugin entries; real canonical `.github/skills` packages; Azure plugin packages; Deep Wiki; Microsoft 365 Agents Toolkit; and independently front-mattered nested skill entry points. Duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package.
+- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **5 Java direct packages** are the next coherent Microsoft tranche.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
 - Registered pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Establish the exact eligible denominator before completion claims.
-- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity and other higher-authority operations.
+- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
 
 ### Other admitted/tracked sources
 
 - **Cole Medin Skills**: pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`; denominator 33; selective reviews exist.
-- **David Ondrej Skills**: public pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`; current evidence describes 44 canonical `SKILL.md` files while a historical tracker recorded 55. Reconcile denominator before completion claims.
+- **David Ondrej Skills**: public pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`; denominator discrepancy remains to reconcile before completion can be claimed.
 - **OpenClaw Agent Skills**: pin `6cd3366b10e2a8c5608265f692acf9f5da2b2448`; denominator 8; selective `handoff` review exists.
 - **Archie Indian OpenClaw Superpowers**: pin `a95a59d221d44b89d4fc27a52934e24fb2060ddb`; denominator 56; selective `secrets-hygiene` review exists.
 - **Sabrina Ramonov Learn Claude Code Skills**: historical denominator 2; canonical source identity/pin/license must be recovered before further work.
@@ -127,7 +133,7 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 ## Working rules
 
 1. **Finish the admitted corpus.** Sequential curation remains the default.
-2. **Do not lower the bar for throughput.** Every unit gets duplication checking, exact identity, provenance, license/terms, dependency context, authority, portability, freshness, controlled tags, decisive static state and explicit behavioral-evidence status.
+2. **Do not lower the bar for throughput.** Every unit gets duplication checking, exact identity, provenance, license/terms, dependency context, authority, portability, freshness, controlled tags, decisive static state, and explicit behavioral-evidence status.
 3. **Search before re-reviewing.** Recover compatible prior evidence first.
 4. **Do not erase negative evidence.** Rejection/retirement reasons prevent repeated mistakes.
 5. **Preserve complete upstream packages.** Their tooling is source context, not repository runtime.
@@ -144,4 +150,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **46/189** current-standard companion-complete with **143** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **13/26** complete with **13** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **54/189** current-standard companion-complete with **135** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **21/26** complete with **5** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
