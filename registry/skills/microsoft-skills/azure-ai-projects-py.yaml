@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-projects-py
+display_name: Microsoft Azure AI Projects Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-projects-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-projects-py
+permission_tier: external-ai-and-persistent-resource-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-projects; azure-identity; Azure AI Foundry project; model deployment; optional azure-ai-agents/OpenAI clients; bundled references and run_batch_evaluation.py
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 53d560d95d7f0c865ab8852fc32be027c1c27f99 and SKILL.md blob 83a80c385301e88f89e67e9a192085f4302994c2. The package is useful Foundry prior art for AIProjectClient lifecycle, agent/version/thread/run patterns, connections/deployments/datasets/indexes, evaluations, memory stores, tool integration, and constrained production credentials. Unchanged use is rejected because ordinary examples create persistent agents, versions, threads, runs, memory stores, evaluations, datasets/indexes and other service-side resources; invoke code execution, file search, web/Bing grounding, OpenAPI/MCP and memory tooling; transmit prompts, files, evaluation datasets and potentially sensitive conversation material to external services; and can incur model/evaluation cost without distinct operation, data-classification, disclosure, tool/network, persistence, deletion, or budget authority gates. The bundled batch-evaluation script loads arbitrary local JSONL and submits its contents to Azure/OpenAI evaluation services, creates persistent evaluation objects/runs, polls the service, and uses unconstrained DefaultAzureCredential. Installation is also not reproducibly pinned despite a reference claiming an API surface for v2.0.0b4. Preserve intact as adaptation/reference material with per-operation authority, data and tool boundaries, lifecycle cleanup, cost approval, constrained credentials, and pinned dependency identities.
