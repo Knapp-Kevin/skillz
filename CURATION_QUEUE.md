@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **244** persisted exact-version third-party verification companions.
+- **246** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -61,13 +61,13 @@ The sequential campaign reconciled every core and specialized package. Completio
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **72/189**.
-- Remaining current-standard gaps: **117**.
+- Current-standard provenance + verification companions persisted: **74/189**.
+- Remaining current-standard gaps: **115**.
 - Direct `.github/plugins/azure-sdk-dotnet/skills/` slice: **29/29 current-standard companion-complete**.
 - Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, **26/26 current-standard companion-complete**.
-- Direct `.github/plugins/azure-sdk-python/skills/` slice: exact denominator **40**, **13/40 current-standard companion-complete**.
+- Direct `.github/plugins/azure-sdk-python/skills/` slice: exact denominator **40**, **15/40 current-standard companion-complete**.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, the complete direct Java SDK slice, and the first thirteen direct Python packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
+Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, the complete direct Java SDK slice, and the first fifteen direct Python packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
 #### Java plugin slice — CURRENT-STANDARD COMPLETE
 
@@ -77,9 +77,14 @@ The tranche closes with `azure-security-keyvault-keys-java`, `azure-security-key
 
 #### Python plugin slice — ACTIVE
 
-The direct Python slice has an exact 40-package denominator. Current-standard companions are now present for `agent-framework-azure-ai-py`, `azure-ai-contentsafety-py`, `azure-ai-contentunderstanding-py`, `azure-ai-language-conversations-py`, `azure-ai-ml-py`, `azure-ai-projects-py`, `azure-ai-textanalytics-py`, `azure-ai-transcription-py`, `azure-ai-translation-document-py`, `azure-ai-translation-text-py`, `azure-ai-vision-imageanalysis-py`, `azure-ai-voicelive-py`, and `azure-appconfiguration-py`.
+The direct Python slice has an exact 40-package denominator. Current-standard companions are now present source-order through `azure-cosmos-db-py`, including `agent-framework-azure-ai-py`, `azure-ai-contentsafety-py`, `azure-ai-contentunderstanding-py`, `azure-ai-language-conversations-py`, `azure-ai-ml-py`, `azure-ai-projects-py`, `azure-ai-textanalytics-py`, `azure-ai-transcription-py`, `azure-ai-translation-document-py`, `azure-ai-translation-text-py`, `azure-ai-vision-imageanalysis-py`, `azure-ai-voicelive-py`, `azure-appconfiguration-py`, `azure-containerregistry-py`, and `azure-cosmos-db-py`.
 
 Latest tranche dispositions, all with behavioral evidence `not-run`:
+
+- `azure-containerregistry-py` — **rejected unchanged, 12/20**. Useful ACR guidance covers Entra-first authentication, repository/tag/manifest inspection, artifact download, property controls, and cleanup. Unchanged use can alter registry write/delete policy, delete repositories/manifests/tags, and automate deletion of old untagged images without distinct registry/environment scope, mutation, destructive-action, retention, rollback, or approval boundaries. Artifact download also writes local files.
+- `azure-cosmos-db-py` — **rejected unchanged, 11/20**. Complete-package review includes five references and three Python templates. The package has useful RBAC-first authentication, partition-key, parameterized-query, typed service-layer, testing, and graceful-degradation patterns, but unchanged use creates, updates, and deletes durable application data without a distinct tenant/workspace data-authorization, destructive-action, retention, rollback, or approval boundary. The package also contains inconsistent sync-versus-async guidance and broad exception/traceback logging that needs secret/privacy-safe adaptation.
+
+Earlier current-tranche dispositions include:
 
 - `azure-ai-translation-text-py` — **rejected unchanged, 13/20**. Strong translation/transliteration/dictionary and Entra-first guidance, but routine use sends text to an external AI service and incurs cost without distinct data-classification, disclosure/external-processing, or budget authority.
 - `azure-ai-vision-imageanalysis-py` — **rejected unchanged, 12/20**. Useful caption/OCR/object/people/smart-crop guidance, but routine image processing can disclose visual, OCR, and personal data externally without explicit privacy/consent/data-handling or budget authority.
@@ -87,7 +92,7 @@ Latest tranche dispositions, all with behavioral evidence `not-run`:
 - `azure-appconfiguration-py` — **rejected unchanged, 12/20**. Useful settings/feature-flag/snapshot guidance, but can create/update/delete configuration, change feature behavior, remove read-only protection, and create persistent snapshots without a distinct approved environment/change/destructive-action boundary.
 
 - Denominator accounting is closed at the exact registered pin. The unit count includes language SDK plugin entries; real canonical `.github/skills` packages; Azure plugin packages; Deep Wiki; Microsoft 365 Agents Toolkit; and independently front-mattered nested skill entry points. Duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package.
-- Continue source-ordered review from the pinned tree and check both companion paths before every unit. The next direct Python package is `azure-containerregistry-py`.
+- Continue source-ordered review from the pinned tree and check both companion paths before every unit. The next direct Python package is `azure-cosmos-py`.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -136,4 +141,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **72/189** current-standard companion-complete with **117** gaps. The direct `.NET` plugin slice is **29/29 complete**, the direct Java plugin slice is **26/26 complete**, and the direct Python plugin slice is **13/40**. Continue source-ordered through Python. Microsoft Azure Skills follows after Microsoft Skills. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **74/189** current-standard companion-complete with **115** gaps. The direct `.NET` plugin slice is **29/29 complete**, the direct Java plugin slice is **26/26 complete**, and the direct Python plugin slice is **15/40**. Continue source-ordered through Python. Microsoft Azure Skills follows after Microsoft Skills. Discovery and issue/PR hygiene continue in parallel.
