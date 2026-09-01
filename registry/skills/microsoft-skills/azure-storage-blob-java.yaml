@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage-blob-java
+display_name: Microsoft Azure Storage Blob SDK for Java
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-java/skills/azure-storage-blob-java/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7ee58fc1fa669841e06f8d27359e0533d148394
+upstream_last_updated_at: 2026-04-29T07:41:43Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-java/skills/azure-storage-blob-java
+permission_tier: cloud-storage-data-management
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Java/JDK and Maven; com.azure:azure-storage-blob 12.33.0; Azure Identity when using Entra ID; Azure Blob Storage account; SAS/shared-key/connection-string or TokenCredential authentication; references/examples.md
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 546766fa052b52e814f86f445b686f9bd04364fa, SKILL.md blob 9202207d800886e1fbe56673a54f7f77b723e114, and bundled examples blob 47f2f6ba61f60ca0305eadcdf482450d48a14d64. The package is useful prior art for Blob Storage clients, container lifecycle, uploads/downloads, streaming, listing, copy, metadata, leases, SAS generation, and error handling. Unchanged use is rejected because ordinary examples create and delete containers, upload/overwrite/delete blobs, list and download data, mutate metadata and headers, acquire leases, copy blobs, and generate SAS credentials without distinct data-access, mutation, destructive-action, credential-generation, privacy/classification, cost, or external-service authorization boundaries. Bundled examples also recommend unconstrained DefaultAzureCredential and shared-key authentication while the top-level skill provides stronger production requireEnvVars guidance. Preserve as adaptation/reference material with explicit storage-scope authority, overwrite/delete confirmation, data-classification controls, SAS minimization and non-disclosure, least-privilege Entra ID authentication, intended-identity verification, cost awareness, and download/output handling policy.
