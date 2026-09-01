@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-transcription-py
+display_name: Microsoft Azure AI Transcription Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-transcription-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: bdc66e4618eb2f277d013192820aa042039372e0
+upstream_last_updated_at: 2026-05-08T21:27:39Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-transcription-py
+permission_tier: external-ai-and-sensitive-audio-processing
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-transcription; Azure AI Transcription resource; subscription key; local audio files or remotely hosted audio URLs
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 31060aa7cce2f85a2ba92f048e199530f5e82b0d and SKILL.md blob a6fd15e733a567c832962e5c4dc71998cc2ebcde. The package is useful prior art for batch and real-time speech-to-text, diarization, timestamps, language selection, streaming backpressure, and deterministic client/session cleanup. Unchanged use is rejected because normal examples transmit meeting or other audio to an external AI service without a distinct consent, recording-law, data-classification, disclosure, retention, or regulated-data boundary; batch transcription creates a remote job from externally retrievable content URLs and can incur service cost without separate operation/budget authority; streaming reads a local audio file and sends it externally; authentication requires a long-lived subscription key rather than identity-based credentials; and installation is unpinned. Preserve intact as adaptation/reference material with explicit recording/participant consent, sensitive-audio classification and disclosure authority, remote-URL trust controls, job lifecycle/cost approval, key-handling safeguards, transcript-output controls, and pinned dependency identity.
