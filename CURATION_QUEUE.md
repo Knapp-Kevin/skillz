@@ -8,7 +8,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43/43** first-party provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **227** persisted exact-version third-party verification companions.
+- **228** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 - Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
 
@@ -61,18 +61,18 @@ The sequential campaign reconciled every core and specialized package. Completio
 
 - Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **55/189**.
-- Remaining current-standard gaps: **134**.
+- Current-standard provenance + verification companions persisted: **56/189**.
+- Remaining current-standard gaps: **133**.
 - Direct `.github/plugins/azure-sdk-dotnet/skills/` slice: **29/29 current-standard companion-complete**.
-- Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, now **22/26 current-standard companion-complete**.
+- Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, now **23/26 current-standard companion-complete**.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, and the first 22 Java direct packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
+Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, and the first 23 Java direct packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
 
 #### Java plugin slice — ACTIVE
 
-The Java slice is sequentially complete through `azure-monitor-opentelemetry-exporter-java`. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where pinned history differs; every record retains its own package-tree, skill-blob, source revision, freshness, dependency, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence state.
+The Java slice is sequentially complete through `azure-monitor-query-java`. All reviewed packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where pinned history differs; every record retains its own package-tree, skill-blob, source revision, freshness, dependency, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence state.
 
-The current 22 reviewed packages are:
+The current 23 reviewed packages are:
 
 1. `azure-ai-agents-persistent-java`
 2. `azure-ai-anomalydetector-java`
@@ -96,13 +96,14 @@ The current 22 reviewed packages are:
 20. `azure-messaging-webpubsub-java`
 21. `azure-monitor-ingestion-java`
 22. `azure-monitor-opentelemetry-exporter-java`
+23. `azure-monitor-query-java`
 
-`azure-communication-callingserver-java` and `azure-monitor-opentelemetry-exporter-java` are retired because Microsoft explicitly marks their legacy SDK/package surfaces deprecated and directs migration to newer supported replacements. Other reviewed Java packages carry differentiated rejected-unchanged states where exact review found authority, privacy/data, external-service, cost, credential, destructive-action, dependency, or freshness defects.
+`azure-communication-callingserver-java`, `azure-monitor-opentelemetry-exporter-java`, and `azure-monitor-query-java` are retired because Microsoft explicitly marks their legacy SDK/package surfaces deprecated and directs migration to newer supported replacements. Other reviewed Java packages carry differentiated rejected-unchanged states where exact review found authority, privacy/data, external-service, cost, credential, destructive-action, dependency, or freshness defects.
 
-The latest unit, `azure-monitor-opentelemetry-exporter-java`, is retired at **13/20**. Exact identity: package tree `1fb82a6bf0c567a8263c6dcf63d72010aab761c2`, `SKILL.md` blob `2be5ec33b16457816e0737dcc99007560fea74d5`, bundled `references/examples.md` blob `0c6065ccc15d8b72d9ee077ce2d297768ab08468`, latest package-path revision `e1f9cce11758d305e6c77683fe34ccc394586291` dated 2026-04-20. Microsoft explicitly directs migration from the deprecated exporter package to `azure-monitor-opentelemetry-autoconfigure`. The material remains useful migration and instrumentation prior art, but ordinary examples export telemetry externally without a distinct telemetry-data/privacy/classification authority boundary, demonstrate potentially identifying business attributes such as `order.id` and `customer.tier`, and replacement dependency guidance conflicts between `LATEST` in `SKILL.md` and `1.0.0` in bundled examples. Behavioral validation is `not-run`.
+The latest unit, `azure-monitor-query-java`, is retired at **13/20**. Exact identity: package tree `5a8c8f952a2e64ad8ade693b6ec964818191e55f`, `SKILL.md` blob `4f9d8cfec9d6a166cd5bd18fc91fabc53dc7f343`, bundled `references/examples.md` blob `acaa03ad8363e7c627907873d66cfc9d7c68b731`, latest package-path revision `e7ee58fc1fa669841e06f8d27359e0533d148394` dated 2026-04-29. Microsoft explicitly directs migration from deprecated `azure-monitor-query` to `azure-monitor-query-logs` and `azure-monitor-query-metrics`. The material remains useful migration and observability-query prior art, but ordinary examples read and print operational telemetry and workspace/resource data without distinct data-access, privacy/classification, output-redaction, or query-scope authority boundaries. Bundled examples also use unconstrained `DefaultAzureCredential` construction despite stronger production credential guidance in the main skill. Behavioral validation is `not-run`.
 
 - Denominator accounting is closed at the exact registered pin. The unit is an independently front-mattered `SKILL.md` entry point. The count includes language SDK plugin entries; real canonical `.github/skills` packages; Azure plugin packages; Deep Wiki; Microsoft 365 Agents Toolkit; and independently front-mattered nested skill entry points. Duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package.
-- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **4 Java direct packages** are the next coherent Microsoft tranche.
+- Continue sequential review from the pinned tree and check both companion paths before every unit. The remaining **3 Java direct packages** are `azure-security-keyvault-keys-java`, `azure-security-keyvault-secrets-java`, and `azure-storage-blob-java`.
 - Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
@@ -151,4 +152,4 @@ New discoveries are queued as issues before admission. Restricted or unclear-lic
 
 **AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
 
-**Active frontier:** Microsoft Skills, now **55/189** current-standard companion-complete with **134** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **22/26** complete with **4** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
+**Active frontier:** Microsoft Skills, now **56/189** current-standard companion-complete with **133** gaps. The direct `.NET` plugin slice is **29/29 complete** and Java is **23/26** complete with **3** direct Java packages remaining. Microsoft Azure Skills follows after the Microsoft Skills frontier. Discovery and issue/PR hygiene continue in parallel.
