@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-ingestion-java
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 99ffd5484dfa60d3c5c38d0bd22b3d2861d8a624
+skill_md_blob_sha: fdafd0a6c66489ff4096732c092c8e17671527e7
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, observability, log-ingestion, telemetry]
+  lifecycle: [development, deployment, operations]
+  characteristic: [reference-heavy, data-sensitive, cost-sensitive, dependency-version-sensitive]
+  authority: [external-data-transmission, credential-access, metered-service-use, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Monitor Logs Ingestion Java prior art for DCE/DCR routing, synchronous and asynchronous upload, batching, concurrency, partial-failure handling, and production credential-chain restriction. Unchanged use is rejected because normal examples transmit arbitrary application/log records to Azure Monitor without a distinct log-content/privacy/data-classification or service-cost authorization boundary. Bundled error handling iterates failed log objects and prints them, creating a concrete sensitive-log disclosure risk, and bundled client creation uses unrestricted DefaultAzureCredential while the top-level skill uses requireEnvVars for production. Dependency guidance is inconsistent: SKILL.md specifies azure-monitor-ingestion 1.2.11 while bundled examples specify 1.2.14 plus azure-identity 1.15.3 or Azure SDK BOM 1.2.29. Positive controls include placeholders, production requireEnvVars guidance, managed-identity guidance, batching, partial-failure handling, and client reuse. Behavioral validation is not-run.
