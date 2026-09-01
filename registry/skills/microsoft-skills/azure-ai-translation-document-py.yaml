@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-translation-document-py
+display_name: Microsoft Azure AI Document Translation Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-translation-document-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-translation-document-py
+permission_tier: external-ai-document-processing-and-storage-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-translation-document; azure-identity; Azure AI Translator resource; Azure Blob Storage source/target containers; SAS URLs or Entra credentials; local documents for single-document translation
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 64b1396db764d8690a4526128c4d37c64d649629 and SKILL.md blob 07379f43a72014ebb5472b2a612b7b9a75dfe42c. The package is useful prior art for batch document translation, format preservation, multi-language targets, glossary use, status/error inspection, cancellation, async operation, Entra-first authentication, and deterministic client cleanup. Unchanged use is rejected because normal workflows disclose document contents and storage URLs to an external AI service, create persistent remote translation jobs, write translated artifacts to Azure Blob Storage, may expose SAS-bearing URLs through environment/configuration surfaces, can cancel remote operations, and incur service/storage cost without distinct data-classification, disclosure, storage-write, job-lifecycle, cancellation, or budget authorization boundaries. Single-document translation also reads local files and writes translated files locally. Installation is unpinned. Preserve intact as adaptation/reference material with explicit document sensitivity/classification checks, approved external-processing authority, storage target/write authority, SAS-secret handling, job/cost approval, cancellation authority, output retention controls, and pinned dependency identity.

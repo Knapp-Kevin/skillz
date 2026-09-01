@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-translation-document-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 64b1396db764d8690a4526128c4d37c64d649629
+skill_md_blob_sha: 07379f43a72014ebb5472b2a612b7b9a75dfe42c
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation, documentation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware, reference-heavy]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Document Translation prior art for batch and single-document translation, format preservation, multiple targets, glossaries, status/error inspection, cancellation, async operation, Entra-first authentication, and deterministic client cleanup. Unchanged adoption is rejected because ordinary workflows transmit document contents to an external AI service, create persistent remote translation jobs, write translated output to Azure Blob Storage, use SAS-bearing source/target/glossary URLs, may cancel active remote jobs, and can incur translation/storage cost without distinct document-classification, disclosure, storage-write, job-lifecycle, cancellation, or budget authorization boundaries. Single-document translation also reads and writes local files. Dependency installation is unpinned. Positive controls include preference for DefaultAzureCredential/managed identity, production credential-chain constraints, minimal SAS permission guidance, context-managed clients, async credential cleanup, supported-format checks, and document-level error inspection. Behavioral validation is not-run.
