@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-ml-py
+display_name: Microsoft Azure Machine Learning Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-ml-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-ai-ml-py
+permission_tier: cloud-resource-and-compute-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-ai-ml; azure-identity; Azure subscription/resource group/ML workspace; Azure Machine Learning compute, storage/datastores, environments, jobs, pipelines, models, and data assets
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA ae7411d24137b2d0b4a8e44067ba085912115076 and SKILL.md blob 64ae23817a4661484e10a2e28eb89ba99c7f4afa. The package is useful Azure ML SDK v2 prior art for MLClient lifecycle, Entra-first authentication, data/model asset versioning, compute scale-down, jobs, pipelines, environments, and resource organization. Unchanged use is rejected because ordinary examples create or mutate workspaces, datasets, models, compute clusters, environments, jobs, and pipelines without distinct authorization, cost/budget, data-classification, code-execution, or resource-lifecycle approval boundaries; job examples submit local code and external-service compute workloads; model registration can upload local model material; and dependency/environment guidance is not reproducibly pinned (`pip install azure-ai-ml` and an environment reference ending in `@latest`). Preserve as adaptation/reference material with explicit per-operation authority, cost and quota approval, data/model/code handling constraints, destructive/lifecycle controls, and pinned dependency/environment identities.
