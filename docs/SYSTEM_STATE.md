@@ -11,16 +11,16 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 226 |
+| **Persisted third-party review companions** | 227 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 54 / 189 |
-| **Microsoft Skills current-standard gaps** | 135 |
+| **Microsoft Skills current-standard companions** | 55 / 189 |
+| **Microsoft Skills current-standard gaps** | 134 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
-| **Microsoft Java direct-package companions** | 21 / 26 |
+| **Microsoft Java direct-package companions** | 22 / 26 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -34,13 +34,13 @@ The canonical physical boundary is stable: user-facing material lives under `ski
 
 - **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
 - **12 pinned external corpora** provide the broad reference surface.
-- **226 exact-version third-party verification companions** are persisted.
+- **227 exact-version third-party verification companions** are persisted.
 - `registry/sources.yaml` contains **19 unique source identities**.
 - AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
 - AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **54/189** have current-standard provenance + verification companions and **135** remain.
+- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **55/189** have current-standard provenance + verification companions and **134** remain.
 - The direct `.github/plugins/azure-sdk-dotnet/skills/` slice contains **29** packages and is **29/29 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-java/skills/` slice contains **26** packages and is **21/26 current-standard companion-complete**.
+- The direct `.github/plugins/azure-sdk-java/skills/` slice contains **26** packages and is **22/26 current-standard companion-complete**.
 - Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
 
 ## AWS curation completion
@@ -53,7 +53,7 @@ The final AWS tranche preserved useful negative evidence rather than rubber-stam
 
 Microsoft Skills is the active admitted-source frontier. The denominator is **189** independently front-mattered `SKILL.md` entry points at the exact registered pin; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain dependencies of their parent package.
 
-Current progress is **54/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages, the complete direct `.NET` SDK plugin slice, and the first **21/26** direct Java packages.
+Current progress is **55/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages, the complete direct `.NET` SDK plugin slice, and the first **22/26** direct Java packages.
 
 ### .NET direct plugin slice — CURRENT-STANDARD COMPLETE
 
@@ -63,11 +63,11 @@ Every direct `.NET` package retains exact tree/blob identity, exact source revis
 
 ### Java plugin slice — ACTIVE
 
-The direct Java plugin has an exact denominator of **26** packages and is now **21/26 current-standard companion-complete** at the registered Microsoft pin. Each reviewed Java package retains its own exact package-tree, `SKILL.md` fingerprint, source-path revision/freshness evidence, dependencies, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence status.
+The direct Java plugin has an exact denominator of **26** packages and is now **22/26 current-standard companion-complete** at the registered Microsoft pin. Each reviewed Java package retains its own exact package-tree, `SKILL.md` fingerprint, source-path revision/freshness evidence, dependencies, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence status.
 
-The reviewed frontier is sequentially complete through `azure-monitor-ingestion-java`. Current decisive states include one retired legacy package (`azure-communication-callingserver-java`) and rejected-unchanged packages where exact-version review found authority, privacy/data, credential, cost, destructive-action, dependency, or freshness defects. Recent units after the original communication tranche include Azure Batch, Cosmos DB, Data Tables, Event Grid, Event Hubs, Azure Identity, Web PubSub, and Azure Monitor Ingestion.
+The reviewed frontier is sequentially complete through `azure-monitor-opentelemetry-exporter-java`. Current decisive states include retired deprecated packages and rejected-unchanged packages where exact-version review found authority, privacy/data, credential, cost, destructive-action, dependency, or freshness defects.
 
-`azure-monitor-ingestion-java` is rejected unchanged at **12/20**. It is useful prior art for DCE/DCR routing, sync/async uploads, batching, concurrency, partial failures, and production credential-chain restriction, but normal examples upload arbitrary log records to an external metered service without a distinct log-data/privacy/classification or cost authority boundary. Bundled failure handling can print failed log objects, creating a concrete sensitive-log disclosure risk. Dependency guidance also conflicts between `azure-monitor-ingestion` **1.2.11** in the top-level skill and **1.2.14** in bundled examples; bundled examples use unrestricted `DefaultAzureCredential` while the top-level skill applies `requireEnvVars` production hardening.
+`azure-monitor-opentelemetry-exporter-java` is retired at **13/20**. Microsoft explicitly marks the package deprecated and directs migration to `azure-monitor-opentelemetry-autoconfigure`, making retirement the truthful current state. It remains useful migration/reference material for traces, metrics, span processors, exception recording, semantic conventions, and Application Insights wiring. Ordinary examples export telemetry externally without a distinct telemetry-data/privacy/classification authorization boundary, demonstrate potentially identifying business attributes such as `order.id` and `customer.tier`, and use non-reproducible/inconsistent replacement dependency guidance (`LATEST` in `SKILL.md` versus `1.0.0` in bundled examples).
 
 Behavioral validation remains `not-run` for the Java tranche unless separate representative external scenario/adversarial evidence is actually recorded.
 
@@ -87,7 +87,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent plugin/language batches against the exact **189-entry** denominator, with the remaining **5 Java direct packages** next after the current 21/26 tranche.
+1. Continue Microsoft Skills in coherent plugin/language batches against the exact **189-entry** denominator, with the remaining **4 Java direct packages** next after the current 22/26 tranche.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
 4. Continue admitted/tracked creator-source curation and denominator reconciliation.
