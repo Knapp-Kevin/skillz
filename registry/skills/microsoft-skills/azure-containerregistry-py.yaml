@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-containerregistry-py
+display_name: Microsoft Azure Container Registry Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-containerregistry-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-containerregistry-py
+permission_tier: external-container-registry-artifact-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-containerregistry; azure-identity; Azure Container Registry; Entra credentials
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA 73bdb987bf73d524b40ac93c3ea0c3533dd75ba3 and SKILL.md blob e1a8305ccac4d5e8d44e852038907cd516f1f74d. The skill is useful prior art for repository/tag/manifest inspection, Entra-first authentication, context-managed clients, artifact download, immutable production-image guidance, and cleanup patterns. Unchanged use is rejected because normal workflows can change repository/manifest write-delete policy, delete repositories, manifests and tags, and automate deletion of old untagged images without distinct registry/environment scope, mutation, destructive-action, rollback, or approval boundaries. Download examples also write artifact layers to local storage. Production safeguards such as can_delete=False recommendations do not substitute for authorization, and dependency installation is unpinned. Preserve intact as adaptation/reference material with explicit registry scope, change approval, destructive confirmation, retention policy, rollback/recovery expectations, least-privilege identity, and pinned dependency identity.

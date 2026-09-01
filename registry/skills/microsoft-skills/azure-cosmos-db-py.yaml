@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cosmos-db-py
+display_name: Microsoft Azure Cosmos DB Python Service Implementation
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-cosmos-db-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-cosmos-db-py
+permission_tier: external-database-data-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-cosmos; azure-identity; FastAPI/Starlette; Pydantic; pytest; Azure Cosmos DB or emulator; bundled references and templates
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 77bdd7486a9195478b4d1663fb36e1b29c42f6b6 and SKILL.md blob 9fcb9385f93da33da00cd2354df18948c5113956. The package includes five references and three Python templates in addition to SKILL.md. It contains useful prior art for RBAC-first authentication, emulator isolation, parameterized queries, partition-key design, service-layer separation, testing, graceful degradation, connection lifecycle, and typed CRUD. Unchanged use is rejected because its normal patterns create, update, query, and delete durable application data without a distinct data-scope, tenant/workspace authorization, mutation, destructive-action, retention, rollback, or approval boundary. The main skill says partition-key access must match user authorization, but the bundled service examples accept workspace_id and author_id as parameters and perform writes/deletes without establishing the calling authorization contract. The package also contains inconsistent sync-versus-async guidance and recommends broad exception logging with traceback output, which requires adaptation before production use. Dependency installation is unpinned. Preserve intact as adaptation/reference material with explicit caller authorization, tenant/data classification, delete/retention/restore policy, concurrency/idempotency expectations, secret-safe logging, consistent async client architecture, least-privilege Cosmos RBAC, and pinned dependencies.

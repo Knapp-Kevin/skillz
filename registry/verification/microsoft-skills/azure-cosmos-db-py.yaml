@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cosmos-db-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 77bdd7486a9195478b4d1663fb36e1b29c42f6b6
+skill_md_blob_sha: 9fcb9385f93da33da00cd2354df18948c5113956
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, test-driven]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including five references and three Python templates. Useful material covers RBAC-first authentication, emulator isolation, parameterized queries, partition-key strategy, typed service layers, testing, graceful degradation, connection lifecycle and CRUD. Unchanged adoption is rejected because normal workflows create, update and delete durable application data without a distinct data-scope, tenant/workspace authorization, mutation, destructive-action, retention, rollback or approval boundary. Although the skill states partition-key access must match user authorization, bundled service examples accept workspace_id/author_id and perform writes/deletes without establishing the caller authorization contract. The package also contains inconsistent sync-versus-async guidance and broad exception/traceback logging that needs secret/privacy-safe adaptation. Installation is unpinned. Behavioral validation is not-run.
