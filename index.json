@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-08-31",
+  "snapshot_date": "2026-09-01",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 43,
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 223,
+    "persisted_third_party_exact_version_reviews": 224,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
-    "microsoft_skills_current_standard_companions": 51,
+    "microsoft_skills_current_standard_companions": 52,
     "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 138,
+    "microsoft_skills_current_standard_gaps": 137,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
-    "microsoft_java_direct_package_companions": 18,
+    "microsoft_java_direct_package_companions": 19,
     "microsoft_java_direct_package_denominator": 26
   },
   "first_party_categories": {
