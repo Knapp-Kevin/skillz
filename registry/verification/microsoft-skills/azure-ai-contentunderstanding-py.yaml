@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-contentunderstanding-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1d31c9ef35cd6fe44cb05bee04bb268df7656824
+skill_md_blob_sha: 1998fba384207417789f37846f85548defd1f7b9
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [content-analysis, cloud, document-analysis, image-analysis, audio-analysis, video-analysis]
+  lifecycle: [development, operations, integration]
+  characteristic: [reference-heavy, privacy-sensitive, network-capable, persistent-state-capable, side-effectful]
+  authority: [external-service-access, data-disclosure, network-access, persistent-state-write]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Content Understanding Python prior art for multimodal extraction, long-running operations, prebuilt/custom analyzers, async use, production-constrained credentials, and deterministic client cleanup. Unchanged adoption is rejected because ordinary examples transmit potentially sensitive documents, images, audio, and video to Azure without a distinct data-classification/privacy/transmission authority gate, permit service-side retrieval of remote URLs without an explicit network/trust boundary, print extracted document text/transcripts/frame descriptions/invoice fields without redaction or disclosure constraints, and create/delete persistent custom analyzers without separate approval. Ordinary snippets also use unconstrained DefaultAzureCredential despite stronger top-level production guidance. Positive controls include environment-backed endpoints, explicit preference for Entra credentials over keys, production credential-chain guidance, context-manager cleanup, placeholders, and acknowledgement that long-running media analysis can take minutes. Behavioral validation is not-run.
