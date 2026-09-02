@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **281** persisted exact-version third-party verification companions.
+- **282** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **109/189**.
-- Remaining gaps: **80**.
+- Current-standard companions: **110/189**.
+- Remaining gaps: **79**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **2/25** complete.
+- Direct TypeScript: **3/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator. `applicationinsights-web-ts` was already current-standard companion-complete; the first genuine gap was therefore `azure-ai-contentsafety-ts`.
 
@@ -49,10 +49,11 @@ Current TypeScript decisive states:
 
 - `applicationinsights-web-ts` — **rejected unchanged, 16/20**. Browser telemetry can leave the client before mandatory user-consent/data-governance authorization; retain telemetry/privacy mechanics for adaptation.
 - `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**. Text/image moderation can disclose sensitive content externally; remote-image analysis lacks a trusted-source boundary; blocklist mutation/deletion lacks action-specific authority; recommended moderation logging lacks minimization/redaction/retention controls.
+- `azure-ai-document-intelligence-ts` — **rejected unchanged, 11/20**. Document analysis can disclose identity, health-insurance, tax, banking, invoice, receipt, address, birth-date, document-number, and other sensitive content externally; remote-document analysis lacks a trusted-source boundary; custom training uses a credential-bearing storage SAS URL without a secure external credential path; and model/classifier build, compose, and delete operations lack action-specific training, destructive-action, rollback, and budget authority.
 
-Both retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All three retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** `azure-ai-document-intelligence-ts`, then continue the registered-pin TypeScript tree source-order in coherent batches.
+**Next:** `azure-ai-projects-ts`, then continue the registered-pin TypeScript tree source-order in coherent batches.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -89,5 +90,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **109/189**, **80 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **2/25**.  
-**Next:** `azure-ai-document-intelligence-ts` in the registered-pin TypeScript tree.
+**Microsoft Skills:** **110/189**, **79 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **3/25**.  
+**Next:** `azure-ai-projects-ts` in the registered-pin TypeScript tree.
