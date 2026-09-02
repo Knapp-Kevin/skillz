@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: m365-agents-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 160c753348c6709974d2d3ae1b6d6b8bf7df146c
+skill_md_blob_sha: 743e9ac137dc5a5427436a270982824fcb3b2ace
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case:
+    - agent-development
+    - implementation
+  lifecycle:
+    - implementation
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - external-side-effect
+  portability:
+    - low
+notes: >-
+  Complete-package review covered the one-file SKILL.md package at the registered pin. The material offers useful Microsoft 365 Agents SDK hosting, routing, JWT middleware, OAuth, streaming, Graph, Azure OpenAI, and Copilot Studio patterns. Unchanged use is rejected because examples send user-facing communications, obtain and use identity tokens, read profile data, transmit content to external AI/service endpoints, and offer a client-secret .env configuration path without explicit tenant, audience, communication, identity/data-access, disclosure, privacy, or secure credential-custody authorization. Unpinned package installation is an additional reproducibility concern. Preserve the SDK architecture only through adaptation with explicit host authority and data/secret boundaries. No separate behavioral/adversarial evidence was run.

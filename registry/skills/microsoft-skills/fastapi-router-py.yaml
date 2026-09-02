@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: fastapi-router-py
+display_name: FastAPI Router (Python)
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/fastapi-router-py
+source_class: pinned-reference-corpus
+license: MIT
+relationship: exact-version-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 8ae5031f98413bcb3a8e17d0a87c655e51c23b96
+upstream_last_updated_at: 2026-04-24T20:40:03Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: available-at-pin
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/fastapi-router-py
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: package-complete
+dependencies:
+  - Python
+  - FastAPI
+  - Pydantic response models
+  - application-specific auth dependencies
+  - application-specific service layer and resource models
+import_eligibility: adaptation-or-extraction-only
+rationale: >-
+  Useful FastAPI CRUD-router, dependency-injection, response-model, and authentication patterns remain valuable prior art, but unchanged adoption fails the authority hard gate. The bundled router template mutates durable application state: update authenticates the caller but leaves ownership/resource authorization as a commented optional check, while delete performs no equivalent ownership/resource authorization before destructive deletion. Authentication is not authorization. Adapt only after adding explicit resource-scope, ownership/role, destructive-action, and error/disclosure boundaries appropriate to the host application.

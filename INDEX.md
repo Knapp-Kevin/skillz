@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 268 |
+| Persisted third-party exact-version reviews | 271 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 96 / 189 |
-| Microsoft Skills current-standard gaps | 93 |
+| Microsoft Skills current-standard companions | 99 / 189 |
+| Microsoft Skills current-standard gaps | 90 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 37 / 40 |
+| Microsoft Python direct-package companions | 40 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **96/189**, leaving **93** gaps. The `.NET` and Java direct plugin slices are complete; Python is **37/40**, source-order through `azure-storage-queue-py`. The latest tranche adds exact one-file provenance/fingerprint/freshness evidence for all four contiguous Azure Storage Python packages. Each is rejected unchanged because the package mutates durable external storage or messaging state without sufficient resource/data scope and action-specific authorization; Data Lake additionally changes ACLs, Blob creates delegated SAS access, and Queue publishes and destructively settles messages. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **99/189**, leaving **90** gaps. The `.NET`, Java, and Python direct plugin slices are now complete, with Python at **40/40**. The final Python tranche rejects `fastapi-router-py` unchanged for missing resource authorization around mutating/destructive CRUD and rejects `m365-agents-py` unchanged for insufficient communication, identity/data-disclosure, external-service, and secret-custody authority. `pydantic-models-py` is verified as a low-authority schema-generation pattern. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

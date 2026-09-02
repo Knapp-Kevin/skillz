@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: pydantic-models-py
+display_name: Pydantic Models (Python)
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/pydantic-models-py
+source_class: pinned-reference-corpus
+license: MIT
+relationship: exact-version-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: available-at-pin
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/pydantic-models-py
+permission_tier: generate-only
+portability: high
+review_status: verified
+dependency_status: package-complete
+dependencies:
+  - Python
+  - Pydantic v2
+import_eligibility: eligible-for-unchanged-consideration
+rationale: >-
+  The exact package is a compact, low-authority schema-design procedure with one model template. It cleanly separates Base, Create, Update, Response, and InDB variants, documents aliases and partial-update semantics, and has no credential, network, production-service, monetary, identity, communication, or destructive lifecycle behavior. The host still must adapt field names, persistence conventions, and authorization semantics to its own application, but no unresolved hard-fail condition blocks unchanged consideration of the modeling pattern itself.

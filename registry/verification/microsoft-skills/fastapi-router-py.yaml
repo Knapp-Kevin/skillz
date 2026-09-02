@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: fastapi-router-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8162d81b2c2856172b495333f5bc3addfcc89ffd
+skill_md_blob_sha: 0d6f32e61e78dc533e0673791c1112e9ecce927e
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case:
+    - api-design
+    - implementation
+  lifecycle:
+    - implementation
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - mutating
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered SKILL.md and assets/template.py at the registered pin. The package is coherent and useful as FastAPI router prior art, but unchanged use is rejected under the authority hard fail. The bundled update endpoint authenticates the caller yet leaves the ownership check commented out as optional; the delete endpoint authenticates but performs no ownership/resource authorization before deletion. Both routes can mutate durable application state, and delete is destructive. Trigger guidance also does not establish non-trigger or authority boundaries. Preserve the CRUD structure, dependency injection, response models, and exception patterns only after adapting explicit resource-scope, ownership/role, destructive-action, and disclosure controls. No separate behavioral/adversarial evidence was run.
