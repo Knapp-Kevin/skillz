@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-identity-py
+display_name: Microsoft Azure Identity Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-identity-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-identity-py
+permission_tier: identity-credential-access
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python 3.9+; azure-identity; optional azure-identity-broker; Microsoft Entra ID; optional Azure CLI/PowerShell/Developer CLI/managed identity/workload identity
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1 and SKILL.md blob 37e6a034b861e30c675b7b2029e391612f69a535. Useful material covers DefaultAzureCredential, managed/workload identity, service principals, user auth, token acquisition, sovereign clouds, caching, async lifecycle, and credential selection. Unchanged use is rejected because the package handles highly sensitive authentication material and can issue bearer tokens, permits wildcard additional-tenant access, demonstrates client-secret/on-behalf-of flows, and recommends verbose identity logging without an explicit secret/token redaction or scope-authorization boundary. Preserve as adaptation/reference material with least-privilege tenant/scope policy, secure secret custody, no wildcard tenant allowance by default, token-output/log redaction, explicit identity-use authority, and pinned dependencies.

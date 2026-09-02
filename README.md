@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-249-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-252-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **249 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **252 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,12 +65,12 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **77/189** current-standard companion complete, **112** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **80/189** current-standard companion complete, **109** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
-- Microsoft direct Python: **18/40** complete, source-order through `azure-eventgrid-py`.
+- Microsoft direct Python: **21/40** complete, source-order through `azure-keyvault-py`.
 
-The latest Python tranche adds exact companions for `azure-cosmos-py`, `azure-data-tables-py`, and `azure-eventgrid-py`. All three are rejected unchanged under the current authority standard while preserving useful adaptation/reference material. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
+The latest Python tranche adds exact companions for `azure-eventhub-py`, `azure-identity-py`, and `azure-keyvault-py`. All three are rejected unchanged under the current authority/security standard while preserving useful adaptation/reference material. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
 
 Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-keyvault-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cbcf7a71066e1d3b1a073b07d358efbbe6b8e77b
+skill_md_blob_sha: 20c836c7b6e903dfce8d3fb90cc38c57892d0154
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Useful material covers managed-identity-first access, secret/key/certificate clients, soft-delete/recovery, cryptographic operations, async lifecycle and RBAC guidance. Unchanged adoption is rejected because examples set and print secret values, permanently purge deleted secrets, create/delete cryptographic keys and certificates, retrieve certificate private-key material as a secret, and perform encrypt/decrypt/sign operations without explicit secret-disclosure, destructive-action, cryptographic-use, retention/recovery or approval boundaries. Installation is unpinned. Behavioral validation is not-run.

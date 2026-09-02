@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 249 |
+| Persisted third-party exact-version reviews | 252 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 77 / 189 |
-| Microsoft Skills current-standard gaps | 112 |
+| Microsoft Skills current-standard companions | 80 / 189 |
+| Microsoft Skills current-standard gaps | 109 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 18 / 40 |
+| Microsoft Python direct-package companions | 21 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **77/189**, leaving **112** gaps. The `.NET` and Java direct plugin slices are complete; Python is **18/40**, source-order through `azure-eventgrid-py`. The latest additions are `azure-cosmos-py`, `azure-data-tables-py`, and `azure-eventgrid-py`; each has exact provenance/fingerprint/freshness evidence and a differentiated rejected-unchanged disposition. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **80/189**, leaving **109** gaps. The `.NET` and Java direct plugin slices are complete; Python is **21/40**, source-order through `azure-keyvault-py`. The latest additions are `azure-eventhub-py`, `azure-identity-py`, and `azure-keyvault-py`; each has exact provenance/fingerprint/freshness evidence and a differentiated rejected-unchanged disposition. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
