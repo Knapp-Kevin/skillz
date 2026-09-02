@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-ts
+display_name: Microsoft Azure AI Voice Live TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-ai-voicelive-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-ai-voicelive-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js or modern browser; @azure/ai-voicelive; @azure/identity or @azure/core-auth; Azure Voice Live endpoint/model; microphone and Web Audio APIs for browser audio; optional external APIs/tools invoked through function calling; package references/audio-streaming.md and references/function-calling.md
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 4d6a5df8e338ca17974ece250d9e574dbd6ed524 and SKILL.md blob 64ca766cb56c16b7d2b015cd3684834e25f076db. The intact package also includes references/audio-streaming.md blob c2858ec7790af3a9b41f111862de86f5d9b35173 and references/function-calling.md blob 27adcb7ec75b73403c4680cb7c7d6197edad8431. It provides useful TypeScript prior art for real-time bidirectional audio, WebSocket session/event handling, browser capture/playback, VAD, transcription, function calling, and cleanup. Unchanged adoption is rejected because ordinary flows capture and transmit microphone audio, transcripts, conversation content, locations, and tool arguments/results to Azure or downstream services without mandatory subject consent, data-classification, approved destination/region, minimization, retention/redaction, or output-disclosure boundaries. The function-calling reference explicitly enables model-triggered execution of external functions such as appointment booking and product/weather lookups without a real action-specific authorization boundary; a system instruction to confirm booking details is not sufficient authorization. The package also presents API-key authentication and personal/custom voice identifiers without a repository-enforced secure credential/identity path, and browser examples request microphone access without a governed consent/data-transfer contract. Preserve as adaptation/reference evidence with explicit microphone/voice consent, sensitive-data handling, secure credential custody, model/tool allowlisting, per-action authorization before consequential function execution, logging minimization, and budget/service boundaries.
