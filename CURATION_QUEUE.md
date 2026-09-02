@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **271** persisted exact-version third-party verification companions.
+- **280** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,21 +35,30 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **99/189**.
-- Remaining gaps: **90**.
+- Current-standard companions: **108/189**.
+- Remaining gaps: **81**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **40/40 complete**.
+- Direct Python: **40/40** complete.
+- Direct Rust: **9/9** complete.
 
-The pinned Python directory contains exactly **40** direct skill packages. Final source-ordered tranche, behavioral evidence `not-run`:
+The pinned Rust skill tree contains exactly **9** direct packages. Its upstream plugin README says 7 and omits `azure-servicebus-rust` and `azure-storage-queue-rust`; the registered-pin tree controls the denominator. All nine are one-file packages and have complete-package static review with behavioral evidence `not-run`.
 
-- `fastapi-router-py` — **rejected unchanged, 8/20**. Tree `8162d81b2c2856172b495333f5bc3addfcc89ffd`; `SKILL.md` `0d6f32e61e78dc533e0673791c1112e9ecce927e`. Useful FastAPI CRUD and dependency-injection structure remains prior art, but the bundled update path leaves ownership/resource authorization as a commented optional check and delete performs no equivalent resource authorization before destructive deletion.
-- `m365-agents-py` — **rejected unchanged, 7/20**. Tree `160c753348c6709974d2d3ae1b6d6b8bf7df146c`; `SKILL.md` `743e9ac137dc5a5427436a270982824fcb3b2ace`. Useful Microsoft 365 Agents SDK architecture remains prior art, but unchanged workflows send user communications, use identity tokens/profile data, transmit content to external AI/service endpoints, and offer a client-secret configuration path without adequate tenant, audience, disclosure, communication, privacy, or credential-custody authorization.
-- `pydantic-models-py` — **verified, 17/20**. Tree `591af99b6b71425df244508fc0b4d236b27fa683`; `SKILL.md` `56de5e4008552b3db86354a352a2105e26f59394`. The complete package is a low-authority multi-model schema-design pattern with one template and no unresolved hard fail.
+Decisive states:
 
-Freshness: `fastapi-router-py` binds to `8ae5031f98413bcb3a8e17d0a87c655e51c23b96` (2026-04-24); `m365-agents-py` to `d94f007962067bb6bfecb9c9ac523d71880f946c` (2026-05-04); `pydantic-models-py` to `e1f9cce11758d305e6c77683fe34ccc394586291` (2026-04-20).
+- `azure-cosmos-rust` — **rejected unchanged, 9/20**. Durable CRUD/patch/delete lacks resource/data, destructive-action, recovery, and budget authority.
+- `azure-eventhub-rust` — **rejected unchanged, 10/20**. Event publication and payload output lack audience/destination, disclosure, downstream-impact, retention, and budget authority.
+- `azure-identity-rust` — **rejected unchanged, 7/20**. Retrieves/prints secret material and demonstrates client-secret handling without adequate tenant/scope, redaction, or credential custody.
+- `azure-keyvault-certificates-rust` — **rejected unchanged, 7/20**. Certificate creation/update/delete and signing lack certificate, cryptographic-use, destructive-action, recovery, and production authorization.
+- `azure-keyvault-keys-rust` — **rejected unchanged, 7/20**. Key lifecycle and wrap/unwrap operations lack key-purpose, crypto-operation, destructive-action, and recovery authorization.
+- `azure-keyvault-secrets-rust` — **rejected unchanged, 5/20**. Literal/retrieved secret values, secret output, mutation, and deletion violate secret-custody and destructive-action requirements.
+- `azure-servicebus-rust` — **rejected unchanged, 8/20**. Upstream marks the SDK pre-production; message publication, output, and completion lack communication/disclosure/destructive-settlement authority.
+- `azure-storage-blob-rust` — **rejected unchanged, 9/20**. Durable upload/delete/container mutation and content download lack resource/data, recovery/retention, disclosure, destructive-action, and budget authority.
+- `azure-storage-queue-rust` — **rejected unchanged, 8/20**. Message publication/output/deletion lacks destination/downstream, disclosure, and destructive-settlement authority.
 
-**Next:** select the next Microsoft Skills tranche from the live registered-pin tree and existing companion gaps. Do not infer it from superseded structure artifacts.
+Exact tree/blob identities and package-specific freshness are retained in the individual provenance and verification companions.
+
+**Next:** recompute the next Microsoft Skills companion-gap tranche from the registered pin. Do not infer it from superseded structure artifacts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -86,5 +95,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **99/189**, **90 gaps**. Direct Python is **40/40 complete**.  
+**Microsoft Skills:** **108/189**, **81 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete.  
 **Next:** recompute the next Microsoft Skills companion-gap tranche from the registered pin.
