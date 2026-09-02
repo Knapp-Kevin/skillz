@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventgrid-py
+display_name: Microsoft Azure Event Grid Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-eventgrid-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-eventgrid-py
+permission_tier: external-event-publication
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-eventgrid; azure-identity; Azure Event Grid topic or namespace
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA 604b049cc7e1550e604b6f9e60fc896e1121211a and SKILL.md blob 907ee84b85bfaa87cc2dada271d27e03ae5dae28. Useful material covers CloudEvents/EventGridEvent schemas, Entra-first authentication, batching, namespace topics, sync/async publishing, and routing metadata. Unchanged use is rejected because its core workflow publishes application payloads to an external event service, potentially triggering downstream systems and incurring service cost, without distinct topic/audience, data-disclosure, publication/communication, downstream-side-effect, or budget authorization. The async example also does not close its DefaultAzureCredential despite the package's stated lifecycle rule. Dependencies are unpinned. Preserve as adaptation/reference material with explicit publication/data authority, downstream impact and cost gates, approved event schemas/data classes, deterministic credential cleanup, and pinned dependencies.

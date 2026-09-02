@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-data-tables-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6f143c9a8c7ceafc01a5ec691b5e136b34b642ff
+skill_md_blob_sha: ef513ce507818533f5bee1477d07dab5c3bf3fdd
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Useful material covers Entra-first authentication, table/entity CRUD, partition-aware and parameterized queries, same-partition transactions, async usage and client lifecycle. Unchanged adoption is rejected because normal workflows create/delete tables and create/update/upsert/batch/delete durable entities without distinct account/table/data-scope authorization, mutation/destructive-action, retention, rollback or cost boundaries. Installation is unpinned. Behavioral validation is not-run.

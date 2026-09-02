@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cosmos-py
+display_name: Microsoft Azure Cosmos DB Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-cosmos-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-cosmos-py
+permission_tier: external-database-and-resource-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-cosmos; azure-identity; Azure Cosmos DB account; bundled partitioning/query references and setup CLI
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 159aea3f186349abfb5004b51587e3dfe210ab56 and SKILL.md blob 9800d67e64c753e221128e38c43a81bfabdff944. The package includes partitioning and query references plus a setup CLI. Useful material covers Entra-first client guidance, partition/query design, CRUD, throughput, transactions, change feed, and client lifecycle. Unchanged use is rejected because normal workflows create databases/containers, mutate throughput and indexing, create/update/delete durable data, execute transactional mutations including a funds-transfer example, and provision billable resources without distinct account/environment/data-scope, mutation, destructive-action, financial, retention, rollback, or cost authorization boundaries. The bundled CLI also permits COSMOS_KEY account-key authentication despite the main guidance preferring Entra credentials. Dependencies are unpinned. Preserve intact as adaptation/reference material with explicit caller/data authority, destructive and financial-operation gates, resource/cost approval, least-privilege RBAC, retention/recovery policy, secret-safe credential handling, and pinned dependencies.

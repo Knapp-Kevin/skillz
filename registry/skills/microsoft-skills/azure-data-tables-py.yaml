@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-data-tables-py
+display_name: Microsoft Azure Tables Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-data-tables-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-data-tables-py
+permission_tier: external-database-data-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-data-tables; azure-identity; Azure Storage Tables or Cosmos DB Table API
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA 6f143c9a8c7ceafc01a5ec691b5e136b34b642ff and SKILL.md blob ef513ce507818533f5bee1477d07dab5c3bf3fdd. Useful material covers Entra-first authentication, table/entity CRUD, partition-aware queries, parameterized filters, same-partition transactions, async usage, and client lifecycle. Unchanged use is rejected because normal workflows create and delete tables and create, update, upsert, batch, and delete durable entities without distinct account/table/data-scope authorization, mutation/destructive-action, retention, rollback, or cost boundaries. Dependencies are unpinned. Preserve as adaptation/reference material with explicit data authority, destructive-operation approval, retention/recovery expectations, least-privilege RBAC, and pinned dependencies.

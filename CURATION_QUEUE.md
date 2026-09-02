@@ -4,141 +4,89 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 
 ## Current governed depth
 
-- **43** first-party user-facing skills.
-- **43/43** first-party provenance-complete.
+- **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **246** persisted exact-version third-party verification companions.
+- **249** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
-- Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora and must be reconciled rather than discarded or blindly repeated.
+
+Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
 
 ## Curation and admission model
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
 
-New third-party discoveries use the issue-first workflow in `docs/candidate-intake.md`. Intentional discovery inputs are documented in `docs/discovery-surfaces.md`, including the connected Creator Technical Resource Catalog. Discovery intelligence never substitutes for canonical upstream identity, license/terms, exact version, or individual quality evidence.
-
-Every governed user-facing skill must retain truthful provenance and exact-version evidence appropriate to its relationship. Missing provenance is a corpus-completeness defect.
+New third-party discoveries use `docs/candidate-intake.md`. Discovery intelligence never substitutes for canonical upstream identity, license/terms, exact version, or individual quality evidence.
 
 ## Mandatory provenance status
 
-Issue #66 is the corpus-wide provenance-completeness audit.
-
-- First-party denominator: **43**.
-- First-party structured semantic reviews: **43/43**.
-- First-party standalone provenance companions: **43/43** under `registry/skills/local-skills/`.
-- Enforcement is documentary/evidentiary through external-agent curation, not repository-owned scripts, CI, scanners, or runtime.
-
-## Completed historical source-level review evidence
-
-| Source | Historical reviewed denominator | Recorded result/state |
-|---|---:|---|
-| Anthropic Skills | 17 / 17 | 10 verified, 7 rejected |
-| Anthropic Knowledge Work Plugins | 74 / 74 | 36 verified, 38 rejected unchanged |
-| Matt Pocock Skills | 29 / 29 | Complete |
-| OpenHands Extensions | 1 / 1 | `theme-factory` rejected unchanged |
-| Vercel Agent Skills | 9 / 9 | 6 verified, 3 rejected |
-| Cloudflare Skills | 13 / 13 | 11 verified, 2 rejected |
-| Google Agents CLI | 7 / 7 | All verified |
-| Cline Skills | 36 / 36 | 19 verified, 17 rejected unchanged, plus one separately characterized internal/unlisted skill |
-| Addy Osmani Agent Skills | 24 / 24 | Complete with decisive exact-version static states |
-
-Search and reconcile this prior evidence before fresh re-review.
+Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/43** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
 ## Admitted-source curation
 
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 
-- Registered pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Exact eligible denominator: **72**.
-- Historical inspection: **72/72**.
-- Current-standard provenance + verification companion completeness: **72/72**.
-- Remaining current-standard gaps: **0**.
-
-The sequential campaign reconciled every core and specialized package. Completion preserves decisive negative states rather than converting everything to approval. Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates, and examples remain intact package dependencies rather than `skillz` execution machinery.
+- Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
+- Denominator: **72**
+- Current-standard companion completeness: **72/72**
+- Gaps: **0**
 
 ### Microsoft Skills — ACTIVE FRONTIER
 
-- Registered pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard provenance + verification companions persisted: **74/189**.
-- Remaining current-standard gaps: **115**.
-- Direct `.github/plugins/azure-sdk-dotnet/skills/` slice: **29/29 current-standard companion-complete**.
-- Direct `.github/plugins/azure-sdk-java/skills/` slice: exact denominator **26**, **26/26 current-standard companion-complete**.
-- Direct `.github/plugins/azure-sdk-python/skills/` slice: exact denominator **40**, **15/40 current-standard companion-complete**.
+- Current-standard companions: **77/189**.
+- Remaining gaps: **112**.
+- Direct `.NET`: **29/29** complete.
+- Direct Java: **26/26** complete.
+- Direct Python: **18/40** complete.
 
-Previously reconciled Microsoft units include `applicationinsights-web-ts`, `skill-creator`, `cloud-solution-architect`, `copilot-sdk`, the complete direct `.NET` SDK slice, the complete direct Java SDK slice, and the first fifteen direct Python packages. Their exact individual evidence remains in `registry/skills/microsoft-skills/` and `registry/verification/microsoft-skills/` rather than being flattened into a family-level verdict.
+Python is complete source-order through `azure-eventgrid-py`.
 
-#### Java plugin slice — CURRENT-STANDARD COMPLETE
+Latest tranche, behavioral evidence `not-run` for all:
 
-All 26 direct Java packages were evaluated as complete packages, including bundled examples/references where present. Exact upstream path revisions differ where pinned history differs; every record retains its own package-tree, skill-blob, source revision, freshness, dependency, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence state.
+- `azure-cosmos-py` — **rejected unchanged, 9/20**. Package tree `159aea3f186349abfb5004b51587e3dfe210ab56`; `SKILL.md` blob `9800d67e64c753e221128e38c43a81bfabdff944`. Complete-package review includes partitioning/query references and setup CLI. Useful prior art for Cosmos partitioning, parameterized queries, CRUD, throughput, transactions, change feed, and lifecycle. Unchanged use lacks explicit environment/data/destructive/financial/cost authority around resource provisioning, throughput/index changes, durable mutation/deletion, and a funds-transfer transaction example; the setup CLI also permits `COSMOS_KEY` account-key auth. Adapt/reference only.
+- `azure-data-tables-py` — **rejected unchanged, 12/20**. Package tree `6f143c9a8c7ceafc01a5ec691b5e136b34b642ff`; `SKILL.md` blob `ef513ce507818533f5bee1477d07dab5c3bf3fdd`. Useful Entra-first table/entity CRUD, partition queries, transaction and async patterns, but create/delete tables and mutate/delete entities without distinct account/table/data-scope, destructive, retention, rollback, or cost authorization. Adapt/reference only.
+- `azure-eventgrid-py` — **rejected unchanged, 13/20**. Package tree `604b049cc7e1550e604b6f9e60fc896e1121211a`; `SKILL.md` blob `907ee84b85bfaa87cc2dada271d27e03ae5dae28`. Useful CloudEvents/EventGridEvent, batching and namespace-topic material, but publishing can disclose payloads and trigger downstream systems without explicit publication/data/downstream-impact/budget authority; async credential cleanup is also inconsistent. Adapt/reference only.
 
-The tranche closes with `azure-security-keyvault-keys-java`, `azure-security-keyvault-secrets-java`, and `azure-storage-blob-java`. Their rejected-unchanged dispositions preserve concrete cryptographic-key, secret/data-handling, destructive-action, credential, mutation, and external-service authority findings rather than treating completion as endorsement. Behavioral validation remains `not-run` unless representative external evidence is separately recorded.
+All three bind skill-specific freshness to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
 
-#### Python plugin slice — ACTIVE
-
-The direct Python slice has an exact 40-package denominator. Current-standard companions are now present source-order through `azure-cosmos-db-py`, including `agent-framework-azure-ai-py`, `azure-ai-contentsafety-py`, `azure-ai-contentunderstanding-py`, `azure-ai-language-conversations-py`, `azure-ai-ml-py`, `azure-ai-projects-py`, `azure-ai-textanalytics-py`, `azure-ai-transcription-py`, `azure-ai-translation-document-py`, `azure-ai-translation-text-py`, `azure-ai-vision-imageanalysis-py`, `azure-ai-voicelive-py`, `azure-appconfiguration-py`, `azure-containerregistry-py`, and `azure-cosmos-db-py`.
-
-Latest tranche dispositions, all with behavioral evidence `not-run`:
-
-- `azure-containerregistry-py` — **rejected unchanged, 12/20**. Useful ACR guidance covers Entra-first authentication, repository/tag/manifest inspection, artifact download, property controls, and cleanup. Unchanged use can alter registry write/delete policy, delete repositories/manifests/tags, and automate deletion of old untagged images without distinct registry/environment scope, mutation, destructive-action, retention, rollback, or approval boundaries. Artifact download also writes local files.
-- `azure-cosmos-db-py` — **rejected unchanged, 11/20**. Complete-package review includes five references and three Python templates. The package has useful RBAC-first authentication, partition-key, parameterized-query, typed service-layer, testing, and graceful-degradation patterns, but unchanged use creates, updates, and deletes durable application data without a distinct tenant/workspace data-authorization, destructive-action, retention, rollback, or approval boundary. The package also contains inconsistent sync-versus-async guidance and broad exception/traceback logging that needs secret/privacy-safe adaptation.
-
-Earlier current-tranche dispositions include:
-
-- `azure-ai-translation-text-py` — **rejected unchanged, 13/20**. Strong translation/transliteration/dictionary and Entra-first guidance, but routine use sends text to an external AI service and incurs cost without distinct data-classification, disclosure/external-processing, or budget authority.
-- `azure-ai-vision-imageanalysis-py` — **rejected unchanged, 12/20**. Useful caption/OCR/object/people/smart-crop guidance, but routine image processing can disclose visual, OCR, and personal data externally without explicit privacy/consent/data-handling or budget authority.
-- `azure-ai-voicelive-py` — **rejected unchanged, 9/20**. Complete-package review includes bundled API/examples/models references. It covers live/recorded audio, transcription, remote conversation mutation, function/MCP calls, synthesized voice/avatar output, and local audio I/O without the participant-consent, recording/privacy, retention, tool-action, communication/output, conversation-mutation, or budget gates required for unchanged use.
-- `azure-appconfiguration-py` — **rejected unchanged, 12/20**. Useful settings/feature-flag/snapshot guidance, but can create/update/delete configuration, change feature behavior, remove read-only protection, and create persistent snapshots without a distinct approved environment/change/destructive-action boundary.
-
-- Denominator accounting is closed at the exact registered pin. The unit count includes language SDK plugin entries; real canonical `.github/skills` packages; Azure plugin packages; Deep Wiki; Microsoft 365 Agents Toolkit; and independently front-mattered nested skill entry points. Duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain part of their parent package.
-- Continue source-ordered review from the pinned tree and check both companion paths before every unit. The next direct Python package is `azure-cosmos-py`.
-- Favor differentiated Microsoft/M365/Foundry/developer-platform mechanisms rather than assuming official branding proves value.
+**Next source-ordered package:** `azure-eventhub-py`. Its references/scripts make it a complete-package review unit rather than a one-file quick pass.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
-- Registered pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Establish the exact eligible denominator before completion claims.
-- Distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
+Pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`. Establish its exact eligible denominator before completion claims and distinguish planning/read-only guidance from deployment, RBAC, cost, identity, and other higher-authority operations.
 
 ### Other admitted/tracked sources
 
-- **Cole Medin Skills**: pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`; denominator 33; selective reviews exist.
-- **David Ondrej Skills**: public pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`; denominator discrepancy remains to reconcile before completion can be claimed.
-- **OpenClaw Agent Skills**: pin `6cd3366b10e2a8c5608265f692acf9f5da2b2448`; denominator 8; selective `handoff` review exists.
-- **Archie Indian OpenClaw Superpowers**: pin `a95a59d221d44b89d4fc27a52934e24fb2060ddb`; denominator 56; selective `secrets-hygiene` review exists.
-- **Sabrina Ramonov Learn Claude Code Skills**: historical denominator 2; canonical source identity/pin/license must be recovered before further work.
-
-## Evidence-reconciliation lane
-
-Historically completed corpora with broader prior review evidence than their current one-file companion shelf should be reconciled without automatic re-review. High-value targets include Anthropic Knowledge Work Plugins, Cline, Addy Osmani, and any completed Vercel/Cloudflare/Google/Matt records not represented one-for-one today.
+- Cole Medin Skills: denominator 33, selective review ongoing.
+- David Ondrej Skills: denominator discrepancy still requires reconciliation.
+- OpenClaw Agent Skills: denominator 8, selective review exists.
+- Archie Indian OpenClaw Superpowers: denominator 56, selective review exists.
+- Sabrina Ramonov historical material: canonical source identity/pin/license must be recovered before further work.
 
 ## Discovery/source-vetting frontier
 
-Discovery proceeds in parallel but does not interrupt admitted-source completion merely to increase issue counts.
+Open candidate issues remain temporary evaluation workspaces. Current open bounded candidate work includes DBOS durable-workflow skills (#63) and first-party `session-continuity` derivation (#73). Do not close them merely to improve issue statistics; close them when evidence supports a decisive admission/rejection result.
 
-Current intentional surfaces/candidates include Hugging Face Skills, Selamy Labs Agent Skills, Hypergiant Agent Skills, BCGov Agent Skills, GitHub Awesome Copilot, Agent Skills Specification, the connected Creator Technical Resource Catalog, and open candidate-evaluation issues.
-
-New discoveries are queued as issues before admission. Restricted or unclear-license material remains reference-only unless terms later support a different relationship. Popularity and creator reputation are omission/context signals only.
+Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator/source leads, and the connected Creator Technical Resource Catalog. Popularity and reputation are omission/context signals only.
 
 ## Working rules
 
-1. **Finish the admitted corpus.** Sequential source order remains the default, with coherent multi-skill tranches used to reduce repeated accounting/PR overhead without reducing individual evidence quality.
-2. **Do not lower the bar for throughput.** Every unit gets duplication checking, exact identity, provenance, license/terms, dependency context, authority, portability, freshness, controlled tags, decisive static state, and explicit behavioral-evidence status.
-3. **Search before re-reviewing.** Recover compatible prior evidence first.
-4. **Do not erase negative evidence.** Rejection/retirement reasons prevent repeated mistakes.
-5. **Preserve complete upstream packages.** Their tooling is source context, not repository runtime.
-6. **Keep discovery separate from admission.** Discovery intelligence is not proof.
-7. **Keep `skillz` passive.** No repository-owned runtime, scripts, tests, CI, scheduler, monitor, crawler, installer, synchronizer, preflight, generator, background service, vector database, or autonomous observer.
-8. **Keep public accounting synchronized.** README, System State, this ledger, `INDEX.md`, and `index.json` must agree after each material batch.
-9. **Keep issues/PRs honest.** Every open item should have an active, blocked/waiting, superseded, or completed disposition rather than indefinite stale status.
+1. Finish admitted sources in coherent source-ordered batches.
+2. Do not lower individual evidence quality for throughput.
+3. Check both companion paths before every unit.
+4. Search compatible prior evidence before re-reviewing.
+5. Preserve rejected/retired material and reasons.
+6. Keep discovery separate from admission.
+7. Keep `skillz` passive. No repository-owned runtime, scripts, tests, CI, scheduler, monitor, crawler, installer, synchronizer, preflight, generator, background service, vector database, or autonomous observer.
+8. Reconcile README, System State, this ledger, `INDEX.md`, and `index.json` atomically after material batches.
+9. Keep issues and PRs in an explicit active, blocked, superseded, or completed state.
 
 ## Current posture
 
-**Core:** complete and passive.
-
-**First-party:** 43/43 provenance-complete.
-
-**AWS:** 72/72 historically inspected and **72/72 current-standard companion-complete**.
-
-**Active frontier:** Microsoft Skills, now **74/189** current-standard companion-complete with **115** gaps. The direct `.NET` plugin slice is **29/29 complete**, the direct Java plugin slice is **26/26 complete**, and the direct Python plugin slice is **15/40**. Continue source-ordered through Python. Microsoft Azure Skills follows after Microsoft Skills. Discovery and issue/PR hygiene continue in parallel.
+**Core:** complete and passive.  
+**First-party:** 43/43 provenance-complete.  
+**AWS:** 72/72 current-standard companion-complete.  
+**Microsoft Skills:** **77/189**, **112 gaps**. Python is **18/40**.  
+**Next:** complete-package review of `azure-eventhub-py`, then continue source-order.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cosmos-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 159aea3f186349abfb5004b51587e3dfe210ab56
+skill_md_blob_sha: 9800d67e64c753e221128e38c43a81bfabdff944
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, implementation, architecture]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin, including partitioning/query references and the setup CLI. Useful material covers Entra-first authentication, partition design, parameterized queries, point reads, CRUD, transactions, change feed, throughput, client lifecycle and operational efficiency. Unchanged adoption is rejected because the package creates databases/containers, changes throughput/indexing, mutates and deletes durable data, includes transactional financial mutation, and provisions billable resources without distinct environment/data-scope, mutation, destructive-action, financial, retention, rollback or cost authorization boundaries. The setup CLI also supports COSMOS_KEY account-key authentication while the main guidance recommends avoiding keys. Installation is unpinned. Behavioral validation is not-run.
