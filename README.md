@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-263-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-264-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **263 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **264 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,12 +65,12 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **91/189** current-standard companion complete, **98** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **92/189** current-standard companion complete, **97** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
-- Microsoft direct Python: **32/40** complete, source-order through `azure-servicebus-py`.
+- Microsoft direct Python: **33/40** complete, source-order through `azure-speech-to-text-rest-py`.
 
-The latest Python tranche adds exact complete-package companions for `azure-search-documents-py` and `azure-servicebus-py`. Both remain useful adaptation/reference evidence but are rejected unchanged under the current authority standard. Azure AI Search can create/delete indexes and knowledge resources, mutate indexed documents and data-source configuration, and invoke Azure OpenAI-backed vectorization/retrieval without explicit resource, data-disclosure, destructive-action, rollback, service-impact, and budget authority. Service Bus can publish externally consequential messages, destructively settle/reprocess/discard queued data, cancel schedules, and create/delete messaging entities without explicit entity/downstream, data-disclosure, destructive-action, rollback, and cost authority. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
+The latest Python tranche adds an exact complete-package companion for `azure-speech-to-text-rest-py`. Its short-audio REST transcription, chunking, response/error handling, token, and pronunciation-assessment patterns remain useful adaptation/reference evidence, but unchanged adoption is rejected because it transmits voice/audio and optional reference text to Azure Speech and exposes transcripts/pronunciation results without explicit subject consent/data authority, approved resource/region, sensitive-data retention/redaction, output-disclosure, secure credential-path, and budget boundaries. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
 
 Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
