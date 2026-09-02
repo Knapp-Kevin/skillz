@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage-file-share-py
+display_name: Microsoft Azure File Share Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-storage-file-share-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-storage-file-share-py
+permission_tier: persistent-data-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-storage-file-share; azure-identity; Azure Files account; Microsoft Entra credential with applicable file data roles
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 9f58beb6bc9d022669483f4f7c911305a95789e4 and SKILL.md blob 5200889a0df5498bfe704c12358e2f2c1465c84f. The one-file package contains useful Entra-first authentication, context-managed clients, streaming/range transfer, snapshots, and quota guidance. Unchanged use is rejected because it creates and deletes shares/directories/files, uploads and copies durable data, downloads potentially sensitive content, and creates snapshots on a billable external service without explicit resource/data scope, destructive-action authorization, copy-source trust, retention/recovery, output disclosure, service-impact, or budget boundaries. Preserve as adaptation/reference evidence with explicit scope, data classification, destructive-change gates, trusted copy-source policy, retention/snapshot policy, secure output handling, and cost controls.

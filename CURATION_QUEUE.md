@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **264** persisted exact-version third-party verification companions.
+- **268** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,21 +35,24 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **92/189**.
-- Remaining gaps: **97**.
+- Current-standard companions: **96/189**.
+- Remaining gaps: **93**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **33/40** complete.
+- Direct Python: **37/40** complete.
 
-Python is complete source-order through `azure-speech-to-text-rest-py`. The pinned Python directory contains exactly **40** direct skill packages.
+Python is complete source-order through `azure-storage-queue-py`. The pinned Python directory contains exactly **40** direct skill packages.
 
 Latest tranche, behavioral evidence `not-run`:
 
-- `azure-speech-to-text-rest-py` — **rejected unchanged, 10/20**. Tree `e3ec4de3b5c76926c40c502ec5afe82d0a0240ac`; `SKILL.md` `b0f96a3e9b5eac1d898e5b0938e862f164aa0aa1`. Complete-package review covers the pronunciation-assessment reference. Useful short-audio REST transcription, chunking, response/error handling, token, and pronunciation-assessment patterns remain prior art. Unchanged adoption transmits voice/audio and optional reference text to Azure Speech and exposes transcripts/pronunciation results without sufficient subject consent/data authority, approved resource/region, sensitive-data classification, retention/redaction, output-disclosure, secure credential-path, or budget authority. Audio and derived text may contain biometric, identity, health, location, document, or other sensitive data.
+- `azure-storage-blob-py` — **rejected unchanged, 10/20**. Tree `e12b45463c731c9e4a39721d7f52dbc16abdb8a9`; `SKILL.md` `45cb839141133f317683e77f2f3ecae2c8206a41`. Useful Entra-first authentication, upload/download, listing, performance, metadata, and user-delegation SAS patterns remain prior art. Unchanged use creates durable storage state, overwrites/deletes blob data, downloads content, mutates metadata/headers, and creates delegated SAS access without adequate scope, destructive-action, retention/recovery, disclosure, delegated-access custody, or budget authority.
+- `azure-storage-file-datalake-py` — **rejected unchanged, 7/20**. Tree `32ae7f0ea087950c1699629ae7ff16f64e8af597`; `SKILL.md` `cbf9de12757e9718d6ff120bc4275b27c4118873`. Useful hierarchical storage and append/flush patterns remain prior art. Unchanged use creates/deletes file systems/directories, mutates files and metadata, and recursively changes ACLs without adequate scope, destructive-action, access-control, recovery, disclosure, service-impact, or budget authority.
+- `azure-storage-file-share-py` — **rejected unchanged, 10/20**. Tree `9f58beb6bc9d022669483f4f7c911305a95789e4`; `SKILL.md` `5200889a0df5498bfe704c12358e2f2c1465c84f`. Useful Entra-first, streaming/range, snapshot, and quota patterns remain prior art. Unchanged use creates/deletes shares/directories/files, transfers persistent data, and creates snapshots without adequate scope, destructive-action, copy-source trust, recovery, disclosure, service-impact, or budget authority.
+- `azure-storage-queue-py` — **rejected unchanged, 9/20**. Tree `c64f41958010e30f3a43fb8d80d91d174ee13d24`; `SKILL.md` `2e953c26116a950325eb44150571ceb784631420`. Useful visibility-timeout, poison-message, TTL, peek, update, and async patterns remain prior art. Unchanged use creates/deletes queues, publishes messages, exposes message content, destructively settles/clears messages, and mutates metadata without adequate scope, publication/downstream-effect, destructive-settlement, disclosure, recovery, or budget authority. The async example also omits credential cleanup required by its own package guidance.
 
-Freshness: the package binds to `8ae5031f98413bcb3a8e17d0a87c655e51c23b96` (2026-04-24).
+Freshness: all four packages bind to `df52e9a69b78c2759553efafe2f937fc53c1cbd1` (2026-05-18).
 
-**Next source-ordered package:** `azure-storage-blob-py`.
+**Next source-ordered package:** `fastapi-router-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -86,5 +89,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **92/189**, **97 gaps**. Python is **33/40**.  
-**Next:** `azure-storage-blob-py`.
+**Microsoft Skills:** **96/189**, **93 gaps**. Python is **37/40**.  
+**Next:** `fastapi-router-py`.

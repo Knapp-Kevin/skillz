@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 264 |
+| Persisted third-party exact-version reviews | 268 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 92 / 189 |
-| Microsoft Skills current-standard gaps | 97 |
+| Microsoft Skills current-standard companions | 96 / 189 |
+| Microsoft Skills current-standard gaps | 93 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 33 / 40 |
+| Microsoft Python direct-package companions | 37 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **92/189**, leaving **97** gaps. The `.NET` and Java direct plugin slices are complete; Python is **33/40**, source-order through `azure-speech-to-text-rest-py`. The latest tranche adds exact complete-package provenance/fingerprint/freshness evidence for Azure Speech to Text REST Python. It is rejected unchanged under the current authority standard because it transmits voice/audio and optional reference text to an external speech service and exposes derived transcripts/pronunciation results without sufficient subject consent/data authority, approved destination/region, sensitive-data retention/redaction, output-disclosure, secure credential-path, and budget boundaries. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **96/189**, leaving **93** gaps. The `.NET` and Java direct plugin slices are complete; Python is **37/40**, source-order through `azure-storage-queue-py`. The latest tranche adds exact one-file provenance/fingerprint/freshness evidence for all four contiguous Azure Storage Python packages. Each is rejected unchanged because the package mutates durable external storage or messaging state without sufficient resource/data scope and action-specific authorization; Data Lake additionally changes ACLs, Blob creates delegated SAS access, and Queue publishes and destructively settles messages. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
