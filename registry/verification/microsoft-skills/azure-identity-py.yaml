@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-identity-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1
+skill_md_blob_sha: 37e6a034b861e30c675b7b2029e391612f69a535
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Useful material covers DefaultAzureCredential, managed/workload identity, service principals, user auth, direct token acquisition, sovereign clouds, caching, async lifecycle and credential selection. Unchanged adoption is rejected because the package handles highly sensitive authentication material and can issue bearer tokens, permits wildcard additional-tenant access, demonstrates client-secret and on-behalf-of flows, and recommends verbose identity logging without an explicit secret/token redaction or scope-authorization boundary. Installation is unpinned. Behavioral validation is not-run.
