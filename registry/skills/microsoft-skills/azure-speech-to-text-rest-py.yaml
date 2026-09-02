@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-speech-to-text-rest-py
+display_name: Microsoft Azure Speech to Text REST Python
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-speech-to-text-rest-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 8ae5031f98413bcb3a8e17d0a87c655e51c23b96
+upstream_last_updated_at: 2026-04-24T20:40:03Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-speech-to-text-rest-py
+permission_tier: sensitive-data-external-transmission
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; requests or aiohttp; Azure Speech resource; Azure Speech subscription key or bearer token
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA e3ec4de3b5c76926c40c502ec5afe82d0a0240ac and SKILL.md blob b0f96a3e9b5eac1d898e5b0938e862f164aa0aa1. The package includes pronunciation-assessment reference material and sends audio plus optional reference text to Azure Speech, then prints transcription and pronunciation results. Useful short-audio REST, chunking, response, error-handling, and pronunciation-assessment patterns remain prior art. Unchanged use is rejected because voice/audio and derived transcripts or assessment results can contain biometric, identity, health, location, document, or other sensitive information, yet the workflow lacks explicit subject consent/data authority, destination/region approval, retention/redaction rules, output-disclosure controls, and cost authority. It also normalizes direct subscription-key handling and token issuance without a secure credential-path contract. Preserve as adaptation/reference material with explicit audio-data classification and consent, approved Azure resource/region, least-data and retention rules, secure credential custody, transcript/output disclosure controls, and budget boundaries.

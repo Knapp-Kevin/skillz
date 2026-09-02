@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-speech-to-text-rest-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e3ec4de3b5c76926c40c502ec5afe82d0a0240ac
+skill_md_blob_sha: b0f96a3e9b5eac1d898e5b0938e862f164aa0aa1
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains SKILL.md plus pronunciation-assessment reference material. It provides useful bounded short-audio REST transcription, chunking, response/error handling, token, and pronunciation-assessment patterns. Unchanged adoption is rejected because it transmits voice/audio and optional reference text to an external Azure Speech service and exposes transcripts/pronunciation results without explicit subject consent or data authority, approved resource/region, sensitive-data classification, retention/redaction, output-disclosure, or budget boundaries. Audio and derived text may contain biometric, identity, health, location, document, or other sensitive data. Direct subscription-key handling and bearer-token issuance also lack a secure external credential-path contract. Behavioral validation is not-run.

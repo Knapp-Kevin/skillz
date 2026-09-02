@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **263** persisted exact-version third-party verification companions.
+- **264** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,22 +35,21 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **91/189**.
-- Remaining gaps: **98**.
+- Current-standard companions: **92/189**.
+- Remaining gaps: **97**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **32/40** complete.
+- Direct Python: **33/40** complete.
 
-Python is complete source-order through `azure-servicebus-py`. The pinned Python directory contains exactly **40** direct skill packages.
+Python is complete source-order through `azure-speech-to-text-rest-py`. The pinned Python directory contains exactly **40** direct skill packages.
 
 Latest tranche, behavioral evidence `not-run`:
 
-- `azure-search-documents-py` — **rejected unchanged, 10/20**. Tree `629dedbea4c5b2112e6eeae902145e4c0d5d6cc7`; `SKILL.md` `41ed03ad443be379d3cd39a3df18ff29634f1940`. Complete-package review covers three references and two setup scripts. Useful search, vector/semantic-ranking, agentic-retrieval, batching, and Entra-first patterns remain prior art; index/knowledge-resource creation and deletion, document/data-source mutation, Azure OpenAI-backed vectorization/retrieval, and cleanup lack sufficient resource/data, disclosure, destructive-action, rollback, service-impact, and budget authority.
-- `azure-servicebus-py` — **rejected unchanged, 9/20**. Tree `0c786cdf38814cdbdcaf42e9fb98b59dae38ca57`; `SKILL.md` `df06c9281cd34c06b0e8021517019267d9ae3a4c`. Complete-package review covers two substantial references and an administrative setup CLI. Useful messaging, retries, sessions, DLQ, transactions, batching, and Entra-first patterns remain prior art; publication, destructive settlement/reprocessing/discard, scheduled-send cancellation, session mutation, and queue/topic/subscription creation/deletion lack sufficient entity/downstream, data-disclosure, destructive-action, rollback, and budget authority. The CLI also permits a connection-string credential path.
+- `azure-speech-to-text-rest-py` — **rejected unchanged, 10/20**. Tree `e3ec4de3b5c76926c40c502ec5afe82d0a0240ac`; `SKILL.md` `b0f96a3e9b5eac1d898e5b0938e862f164aa0aa1`. Complete-package review covers the pronunciation-assessment reference. Useful short-audio REST transcription, chunking, response/error handling, token, and pronunciation-assessment patterns remain prior art. Unchanged adoption transmits voice/audio and optional reference text to Azure Speech and exposes transcripts/pronunciation results without sufficient subject consent/data authority, approved resource/region, sensitive-data classification, retention/redaction, output-disclosure, secure credential-path, or budget authority. Audio and derived text may contain biometric, identity, health, location, document, or other sensitive data.
 
-Freshness: both packages bind to `df52e9a69b78c2759553efafe2f937fc53c1cbd1` (2026-05-18).
+Freshness: the package binds to `8ae5031f98413bcb3a8e17d0a87c655e51c23b96` (2026-04-24).
 
-**Next source-ordered package:** `azure-speech-to-text-rest-py`.
+**Next source-ordered package:** `azure-storage-blob-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -87,5 +86,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **91/189**, **98 gaps**. Python is **32/40**.  
-**Next:** `azure-speech-to-text-rest-py`.
+**Microsoft Skills:** **92/189**, **97 gaps**. Python is **33/40**.  
+**Next:** `azure-storage-blob-py`.
