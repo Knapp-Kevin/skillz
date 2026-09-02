@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **280** persisted exact-version third-party verification companions.
+- **281** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,30 +35,24 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **108/189**.
-- Remaining gaps: **81**.
+- Current-standard companions: **109/189**.
+- Remaining gaps: **80**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
+- Direct TypeScript: **2/25** complete.
 
-The pinned Rust skill tree contains exactly **9** direct packages. Its upstream plugin README says 7 and omits `azure-servicebus-rust` and `azure-storage-queue-rust`; the registered-pin tree controls the denominator. All nine are one-file packages and have complete-package static review with behavioral evidence `not-run`.
+The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator. `applicationinsights-web-ts` was already current-standard companion-complete; the first genuine gap was therefore `azure-ai-contentsafety-ts`.
 
-Decisive states:
+Current TypeScript decisive states:
 
-- `azure-cosmos-rust` — **rejected unchanged, 9/20**. Durable CRUD/patch/delete lacks resource/data, destructive-action, recovery, and budget authority.
-- `azure-eventhub-rust` — **rejected unchanged, 10/20**. Event publication and payload output lack audience/destination, disclosure, downstream-impact, retention, and budget authority.
-- `azure-identity-rust` — **rejected unchanged, 7/20**. Retrieves/prints secret material and demonstrates client-secret handling without adequate tenant/scope, redaction, or credential custody.
-- `azure-keyvault-certificates-rust` — **rejected unchanged, 7/20**. Certificate creation/update/delete and signing lack certificate, cryptographic-use, destructive-action, recovery, and production authorization.
-- `azure-keyvault-keys-rust` — **rejected unchanged, 7/20**. Key lifecycle and wrap/unwrap operations lack key-purpose, crypto-operation, destructive-action, and recovery authorization.
-- `azure-keyvault-secrets-rust` — **rejected unchanged, 5/20**. Literal/retrieved secret values, secret output, mutation, and deletion violate secret-custody and destructive-action requirements.
-- `azure-servicebus-rust` — **rejected unchanged, 8/20**. Upstream marks the SDK pre-production; message publication, output, and completion lack communication/disclosure/destructive-settlement authority.
-- `azure-storage-blob-rust` — **rejected unchanged, 9/20**. Durable upload/delete/container mutation and content download lack resource/data, recovery/retention, disclosure, destructive-action, and budget authority.
-- `azure-storage-queue-rust` — **rejected unchanged, 8/20**. Message publication/output/deletion lacks destination/downstream, disclosure, and destructive-settlement authority.
+- `applicationinsights-web-ts` — **rejected unchanged, 16/20**. Browser telemetry can leave the client before mandatory user-consent/data-governance authorization; retain telemetry/privacy mechanics for adaptation.
+- `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**. Text/image moderation can disclose sensitive content externally; remote-image analysis lacks a trusted-source boundary; blocklist mutation/deletion lacks action-specific authority; recommended moderation logging lacks minimization/redaction/retention controls.
 
-Exact tree/blob identities and package-specific freshness are retained in the individual provenance and verification companions.
+Both retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** recompute the next Microsoft Skills companion-gap tranche from the registered pin. Do not infer it from superseded structure artifacts.
+**Next:** `azure-ai-document-intelligence-ts`, then continue the registered-pin TypeScript tree source-order in coherent batches.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -95,5 +89,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **108/189**, **81 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete.  
-**Next:** recompute the next Microsoft Skills companion-gap tranche from the registered pin.
+**Microsoft Skills:** **109/189**, **80 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **2/25**.  
+**Next:** `azure-ai-document-intelligence-ts` in the registered-pin TypeScript tree.
