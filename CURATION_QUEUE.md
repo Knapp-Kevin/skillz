@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **268** persisted exact-version third-party verification companions.
+- **271** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,24 +35,21 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **96/189**.
-- Remaining gaps: **93**.
+- Current-standard companions: **99/189**.
+- Remaining gaps: **90**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **37/40** complete.
+- Direct Python: **40/40 complete**.
 
-Python is complete source-order through `azure-storage-queue-py`. The pinned Python directory contains exactly **40** direct skill packages.
+The pinned Python directory contains exactly **40** direct skill packages. Final source-ordered tranche, behavioral evidence `not-run`:
 
-Latest tranche, behavioral evidence `not-run`:
+- `fastapi-router-py` — **rejected unchanged, 8/20**. Tree `8162d81b2c2856172b495333f5bc3addfcc89ffd`; `SKILL.md` `0d6f32e61e78dc533e0673791c1112e9ecce927e`. Useful FastAPI CRUD and dependency-injection structure remains prior art, but the bundled update path leaves ownership/resource authorization as a commented optional check and delete performs no equivalent resource authorization before destructive deletion.
+- `m365-agents-py` — **rejected unchanged, 7/20**. Tree `160c753348c6709974d2d3ae1b6d6b8bf7df146c`; `SKILL.md` `743e9ac137dc5a5427436a270982824fcb3b2ace`. Useful Microsoft 365 Agents SDK architecture remains prior art, but unchanged workflows send user communications, use identity tokens/profile data, transmit content to external AI/service endpoints, and offer a client-secret configuration path without adequate tenant, audience, disclosure, communication, privacy, or credential-custody authorization.
+- `pydantic-models-py` — **verified, 17/20**. Tree `591af99b6b71425df244508fc0b4d236b27fa683`; `SKILL.md` `56de5e4008552b3db86354a352a2105e26f59394`. The complete package is a low-authority multi-model schema-design pattern with one template and no unresolved hard fail.
 
-- `azure-storage-blob-py` — **rejected unchanged, 10/20**. Tree `e12b45463c731c9e4a39721d7f52dbc16abdb8a9`; `SKILL.md` `45cb839141133f317683e77f2f3ecae2c8206a41`. Useful Entra-first authentication, upload/download, listing, performance, metadata, and user-delegation SAS patterns remain prior art. Unchanged use creates durable storage state, overwrites/deletes blob data, downloads content, mutates metadata/headers, and creates delegated SAS access without adequate scope, destructive-action, retention/recovery, disclosure, delegated-access custody, or budget authority.
-- `azure-storage-file-datalake-py` — **rejected unchanged, 7/20**. Tree `32ae7f0ea087950c1699629ae7ff16f64e8af597`; `SKILL.md` `cbf9de12757e9718d6ff120bc4275b27c4118873`. Useful hierarchical storage and append/flush patterns remain prior art. Unchanged use creates/deletes file systems/directories, mutates files and metadata, and recursively changes ACLs without adequate scope, destructive-action, access-control, recovery, disclosure, service-impact, or budget authority.
-- `azure-storage-file-share-py` — **rejected unchanged, 10/20**. Tree `9f58beb6bc9d022669483f4f7c911305a95789e4`; `SKILL.md` `5200889a0df5498bfe704c12358e2f2c1465c84f`. Useful Entra-first, streaming/range, snapshot, and quota patterns remain prior art. Unchanged use creates/deletes shares/directories/files, transfers persistent data, and creates snapshots without adequate scope, destructive-action, copy-source trust, recovery, disclosure, service-impact, or budget authority.
-- `azure-storage-queue-py` — **rejected unchanged, 9/20**. Tree `c64f41958010e30f3a43fb8d80d91d174ee13d24`; `SKILL.md` `2e953c26116a950325eb44150571ceb784631420`. Useful visibility-timeout, poison-message, TTL, peek, update, and async patterns remain prior art. Unchanged use creates/deletes queues, publishes messages, exposes message content, destructively settles/clears messages, and mutates metadata without adequate scope, publication/downstream-effect, destructive-settlement, disclosure, recovery, or budget authority. The async example also omits credential cleanup required by its own package guidance.
+Freshness: `fastapi-router-py` binds to `8ae5031f98413bcb3a8e17d0a87c655e51c23b96` (2026-04-24); `m365-agents-py` to `d94f007962067bb6bfecb9c9ac523d71880f946c` (2026-05-04); `pydantic-models-py` to `e1f9cce11758d305e6c77683fe34ccc394586291` (2026-04-20).
 
-Freshness: all four packages bind to `df52e9a69b78c2759553efafe2f937fc53c1cbd1` (2026-05-18).
-
-**Next source-ordered package:** `fastapi-router-py`.
+**Next:** select the next Microsoft Skills tranche from the live registered-pin tree and existing companion gaps. Do not infer it from superseded structure artifacts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -89,5 +86,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **96/189**, **93 gaps**. Python is **37/40**.  
-**Next:** `fastapi-router-py`.
+**Microsoft Skills:** **99/189**, **90 gaps**. Direct Python is **40/40 complete**.  
+**Next:** recompute the next Microsoft Skills companion-gap tranche from the registered pin.
