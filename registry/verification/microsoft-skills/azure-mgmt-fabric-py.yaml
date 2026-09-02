@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-fabric-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3e29e264969add98346524136a232e61afa8f06e
+skill_md_blob_sha: fbb6c37b8289f216596a6f00ad798d78f93b75be
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, deployment, business-operations]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, cost-bounded, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first authentication, Fabric capacity lifecycle, SKU discovery, LRO handling, cost-aware suspend/resume guidance, and capacity administration are useful prior art. Unchanged adoption is rejected because examples create billable capacities, scale SKUs, assign administrators, suspend/resume service, and delete capacity without explicit environment, identity/role, availability-impact, destructive-action, rollback, or budget authorization. Behavioral validation is not-run.
