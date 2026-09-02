@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-projects-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f1d68f1c635903c22d4bfc6d85349a0405e2f175
+skill_md_blob_sha: baea6df8c76732e7a6ee9268a1de80cd52cb76e1
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [agent-development, cloud, evaluation, implementation, memory, orchestration]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, orchestration, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package comprises SKILL.md plus connections.md and evaluations.md and offers useful TypeScript prior art for Foundry project clients, agent/version management, connected-resource discovery, model deployments, datasets, indexes, evaluations, OpenAI client access, and tool wiring. Rejected unchanged under the current authority and secret/sensitive-data hard rules because examples create/delete persistent agents, conversations, datasets, indexes, evaluators, and evaluation runs; transmit data to Azure/OpenAI-backed services; enable code interpreter, file search, web search with approximate user location, Azure AI Search, functions, and MCP tools; and can incur model/storage/evaluation costs without sufficient action-specific resource, publication, destructive-action, downstream-effect, rollback, data-transfer, or budget authority. The bundled connections reference retrieves project connection credentials and explicitly prints an API key, a direct secret-custody failure. Evaluation examples can upload and print prompt/context/response/per-row data without mandatory minimization, redaction, retention, or disclosure controls. Behavioral validation remains not-run.
