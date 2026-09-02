@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-servicebus-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0c786cdf38814cdbdcaf42e9fb98b59dae38ca57
+skill_md_blob_sha: df06c9281cd34c06b0e8021517019267d9ae3a4c
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, implementation, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, orchestration, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains SKILL.md, two substantial references, and an administrative setup CLI covering message publication and receipt, destructive settlement, sessions, scheduled messages, DLQ retry/archive/discard, transactions, competing consumers, and queue/topic/subscription management. Useful Entra-first authentication, reliable messaging, retry, batching, and orchestration patterns remain prior art. Unchanged adoption is rejected because it can publish externally consequential messages, complete or receive-and-delete queued data, dead-letter/reprocess/discard messages, cancel scheduled sends, mutate session state, and create/delete Service Bus entities without explicit entity/downstream scope, data-disclosure, settlement/destructive-action, rollback, or budget authorization. The setup CLI also permits a connection-string credential path. Behavioral validation is not-run.
