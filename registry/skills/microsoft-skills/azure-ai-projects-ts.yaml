@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-projects-ts
+display_name: Microsoft Azure AI Projects TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-ai-projects-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-ai-projects-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/ai-projects; @azure/identity; optional @azure/monitor-opentelemetry and @opentelemetry/api; Azure AI Foundry project endpoint; model deployment; connected Azure resources; optional OpenAI client; agent tools including code interpreter, file search, web search, Azure AI Search, function tools, and MCP; datasets/indexes/evaluations; project connection credentials
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA f1d68f1c635903c22d4bfc6d85349a0405e2f175 and SKILL.md blob baea6df8c76732e7a6ee9268a1de80cd52cb76e1. The package contains SKILL.md plus connections.md and evaluations.md references and provides useful TypeScript prior art for Foundry project clients, agent/version management, connections, deployments, datasets, indexes, evaluations, OpenAI client access, and tool wiring. Unchanged adoption is rejected because ordinary examples create and delete persistent agents, conversations, datasets, indexes, evaluators, and evaluation runs; publish data to Azure/OpenAI-backed services; may invoke code, web search, file search, Azure AI Search, functions, and MCP tools; and can incur inference/storage/evaluation costs without sufficiently explicit action-specific resource, publication, destructive-action, downstream-effect, rollback, data-disclosure, or budget authorization. The bundled connections reference also demonstrates getWithCredentials() and printing an API key, directly violating the repository's secret-custody rule, while evaluation examples can upload and print potentially sensitive prompts, context, responses, and per-row results without minimization/redaction/retention controls. Preserve as adaptation/reference evidence with secure external credential handling, least-privilege connection access, explicit data-transfer and tool/action authority, resource lifecycle approval, and cost/disclosure controls.
