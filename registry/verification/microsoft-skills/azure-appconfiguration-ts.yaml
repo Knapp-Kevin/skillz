@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-appconfiguration-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: bd25e7da45cd666463be87ca57cebbbd7bfdd228
+skill_md_blob_sha: 82d0e0ffe52ac030cbe98560e85665bdcab52fcf
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package is a single SKILL.md and provides useful App Configuration mechanics for CRUD, optimistic concurrency, runtime loading/refresh, feature flags, labels, snapshots, and Key Vault references. Rejected unchanged under current authority and secret/sensitive-data rules because normal flows can create, update, delete, lock/unlock, archive/recover, and otherwise alter production configuration and feature rollout without mandatory environment/resource authorization, change-specific approval, rollback/recovery, staged-release, or budget/service boundaries. The skill presents a credential-bearing App Configuration connection string as a normal authentication path without a repository-enforced secure external credential route, automatically resolves Key Vault secrets into application memory, prints configuration values, and uses user email addresses in targeting examples without minimization/privacy controls. Configuration and feature-flag changes can materially affect production traffic and user experience, so tool availability or specifying a production label is not sufficient authorization. Behavioral validation remains not-run.
