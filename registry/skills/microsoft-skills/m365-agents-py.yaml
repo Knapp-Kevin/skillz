@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: m365-agents-py
+display_name: Microsoft 365 Agents SDK (Python)
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/m365-agents-py
+source_class: pinned-reference-corpus
+license: MIT
+relationship: exact-version-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: d94f007962067bb6bfecb9c9ac523d71880f946c
+upstream_last_updated_at: 2026-05-04T20:36:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: available-at-pin
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/m365-agents-py
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: package-complete
+dependencies:
+  - Python
+  - aiohttp
+  - python-dotenv
+  - Microsoft 365 Agents SDK packages
+  - MSAL / Microsoft Entra identity
+  - optional Microsoft Graph
+  - optional Azure OpenAI
+  - optional Copilot Studio
+import_eligibility: adaptation-or-extraction-only
+rationale: >-
+  Useful Microsoft 365 Agents SDK hosting, routing, JWT middleware, OAuth, streaming, and Copilot Studio patterns remain valuable prior art, but unchanged adoption fails the authority and sensitive-data hard gates. The examples send user-facing activities, obtain and use Graph access tokens, read profile data, transmit prompts/content to Azure OpenAI, interact with Copilot Studio, and expose a client-secret environment configuration path without explicit tenant, audience, communication, identity/data-access, disclosure, or secret-custody authorization. Adapt only with host-specific authorization, data classification/redaction, secure credential custody, audience controls, and externally consequential communication boundaries.
