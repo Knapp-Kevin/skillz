@@ -14,15 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 280 |
+| Persisted third-party exact-version reviews | 281 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 108 / 189 |
-| Microsoft Skills current-standard gaps | 81 |
+| Microsoft Skills current-standard companions | 109 / 189 |
+| Microsoft Skills current-standard gaps | 80 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
+| Microsoft TypeScript direct-package companions | 2 / 25 |
 
 ## First-party skills by purpose
 
@@ -61,6 +62,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **108/189**, leaving **81** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Rust is **9/9** from the registered-pin tree; the upstream Rust plugin README understates that denominator as seven. All nine Rust packages are rejected unchanged under current authority/sensitive-data hard gates while retaining useful SDK mechanics as adaptation/reference evidence. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **109/189**, leaving **80** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **2/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls. `applicationinsights-web-ts` and `azure-ai-contentsafety-ts` now have current-standard companions; both are rejected unchanged under current privacy/authority hard gates while retaining useful adaptation/reference evidence. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

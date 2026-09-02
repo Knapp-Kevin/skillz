@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1d1b8aef636c704c572507714fa26c2e73ec3dce
+skill_md_blob_sha: e038281439bf7d5b738ff6a6c9fd211281582e73
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package is a single SKILL.md and provides useful TypeScript prior art for Azure Content Safety text/image analysis, severity handling, blocklists, REST error handling, and constrained production credentials. Rejected unchanged under the current hard authority and sensitive-data rules because normal analysis examples transmit arbitrary text/images to Azure without a mandatory disclosure/privacy authority gate; remote blob URL analysis lacks a trusted-source/network boundary; blocklist examples create, mutate, and delete persistent service state without action-specific approval; and recommended moderation logging lacks minimization, redaction, and retention constraints. Behavioral validation remains not-run.

@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-280-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-281-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **280 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **281 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,15 +65,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **108/189** current-standard companion complete, **81** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **109/189** current-standard companion complete, **80** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
+- Microsoft direct TypeScript: **2/25** complete.
 
-The Rust denominator was recomputed from the pinned tree as nine independently front-mattered packages. The upstream Rust plugin README lists seven and omits `azure-servicebus-rust` and `azure-storage-queue-rust`, so the tree, not that stale README count, controls. All nine Rust packages are single-file packages and are rejected unchanged under the current authority/sensitive-data hard gates. Their official-SDK, authentication, storage, messaging, identity, and cryptographic mechanics remain useful adaptation/reference evidence; behavioral validation remains `not-run`.
+The TypeScript denominator was recomputed from the pinned tree as 25 independently first-class packages. The upstream TypeScript plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless present in the registered-pin tree and was already current-standard companion-complete. The next genuine gap, `azure-ai-contentsafety-ts`, is now rejected unchanged under the current authority and sensitive-data hard gates while retaining useful moderation, REST-client, credential, and blocklist mechanics for adaptation/reference; behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family. Continue from the registered pin after the now-complete direct `.NET`, Java, Python, and Rust slices; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family. Continue the TypeScript source order from `azure-ai-document-intelligence-ts`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
