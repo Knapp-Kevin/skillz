@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 283 |
+| **Persisted third-party review companions** | 284 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 111 / 189 |
-| **Microsoft Skills current-standard gaps** | 78 |
+| **Microsoft Skills current-standard companions** | 112 / 189 |
+| **Microsoft Skills current-standard gaps** | 77 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 4 / 25 |
+| **Microsoft TypeScript direct-package companions** | 5 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **111/189 companion-complete**, **78 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **112/189 companion-complete**, **77 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **4/25** complete.
+- Microsoft direct TypeScript: **5/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -54,7 +54,9 @@ The registered-pin TypeScript tree contains exactly **25** first-class packages.
 
 `azure-ai-projects-ts` is **rejected unchanged, 6/20**, with `validation_status: not-run`. Its Foundry project client, agent/version, connection, deployment, dataset, index, evaluation, OpenAI-client, and tool-wiring mechanics remain useful prior art. Unchanged examples create and delete persistent service-side resources, transmit datasets and evaluation content, invoke external tools/services, expose location context to web search, and can incur inference/storage/evaluation costs without sufficient action-specific resource, publication, destructive-action, downstream-effect, data-transfer, rollback, or budget authorization. The bundled connections reference also retrieves project connection credentials and explicitly prints an API key, directly violating the secret-custody rule; evaluation examples print row-level content without mandatory minimization/redaction/retention controls.
 
-Microsoft Skills remains active with **78** gaps. Continue TypeScript source-order from `azure-ai-translation-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+`azure-ai-translation-ts` is **rejected unchanged, 10/20**, with `validation_status: not-run`. Its text translation, transliteration, language detection, single-document translation, batch document translation, status/pagination, and Azure identity mechanics remain useful prior art. Unchanged examples transmit arbitrary text and document content to Azure without mandatory data-classification, subject/data-transfer, destination/region, minimization, retention, or output-disclosure authority. Batch document translation generates credential-bearing source and target container SAS URLs and starts a billable operation that writes translated content to persistent target storage without sufficient credential-custody, storage-scope, write/downstream-effect, overwrite/recovery, or budget authorization. API-key authentication is also presented without a repository-enforced secure external credential path.
+
+Microsoft Skills remains active with **77** gaps. Continue TypeScript source-order from `azure-ai-voicelive-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -72,7 +74,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 4/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 5/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
