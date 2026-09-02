@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-servicebus-py
+display_name: Microsoft Azure Service Bus Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-servicebus-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-servicebus-py
+permission_tier: external-messaging-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-servicebus; azure-identity; Azure Service Bus
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 0c786cdf38814cdbdcaf42e9fb98b59dae38ca57 and SKILL.md blob df06c9281cd34c06b0e8021517019267d9ae3a4c. The package includes two substantial references and an administrative setup CLI covering send/receive, settlement, sessions, scheduled messages, dead-letter processing/retry/archive, transactions, competing consumers, and queue/topic/subscription creation and deletion. Useful Entra-first authentication, reliable messaging, retry, DLQ, batching, and orchestration patterns remain prior art. Unchanged use is rejected because it sends externally consequential messages, completes or receive-and-deletes queued data, dead-letters and reprocesses messages, cancels schedules, mutates session state, and creates/deletes Service Bus entities without explicit namespace/entity, recipient/downstream, data-disclosure, settlement/destructive-action, rollback, or budget authorization. The setup CLI also permits a connection-string credential path. Preserve as adaptation/reference material with explicit entity and downstream scope, message-data classification, destructive settlement and DLQ authority, administrative change approval, secure credential handling, and cost controls.
