@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-translation-ts
+display_name: Microsoft Azure AI Translation TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-ai-translation-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-ai-translation-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure-rest/ai-translation-text; @azure-rest/ai-translation-document; @azure/identity; optional @azure/storage-blob for batch document translation; Azure Translator endpoint/region; API key or Azure TokenCredential; source/target Blob containers and generated SAS URLs for batch document translation
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA e5a6c3d8a10610fa17d95d68cf103e92d575293f and SKILL.md blob fa832211c5a8a90e6ca63b241314dd0437c96946. The package is a single SKILL.md and provides useful TypeScript prior art for text translation, transliteration, language detection, single-document translation, batch document translation, pagination/status handling, and Azure identity integration. Unchanged adoption is rejected because ordinary examples transmit arbitrary text and document content to Azure without mandatory data-classification, subject/data-transfer, destination/region, minimization, retention, or output-disclosure authority; batch document translation generates credential-bearing source and target container SAS URLs and starts a billable service-side translation operation that writes translated content to persistent storage without sufficient credential-custody, storage-scope, write, downstream-effect, rollback/overwrite, or budget authorization. API-key authentication is also presented without a repository-enforced secure external credential path. Preserve as adaptation/reference evidence with explicit data-transfer/privacy authority, secure external credential handling, least-privilege short-lived SAS custody, approved source/target storage scope, output disclosure controls, and action-specific cost/write authorization.
