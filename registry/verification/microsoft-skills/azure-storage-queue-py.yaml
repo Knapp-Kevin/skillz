@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-queue-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c64f41958010e30f3a43fb8d80d91d174ee13d24
+skill_md_blob_sha: 2e953c26116a950325eb44150571ceb784631420
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, implementation, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains only SKILL.md. It provides useful Entra-first authentication, visibility-timeout, poison-message, TTL, peek, update, async, and binary encoding patterns. Unchanged adoption is rejected because it creates/deletes queues, publishes externally consequential messages, receives and prints message contents, deletes/updates messages, clears whole queues, and mutates metadata without explicit queue/message scope, publication/downstream-effect authorization, destructive-settlement authority, sensitive-data disclosure controls, retention/recovery, or budget boundaries. Its async example also fails to close the async DefaultAzureCredential despite the package's own stated cleanup rule. Behavioral validation is not-run.
