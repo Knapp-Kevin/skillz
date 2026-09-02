@@ -4,13 +4,7 @@
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, or reconciliation.
 
-Canonical sources for this snapshot:
-
-- first-party category assignments: [`registry/categories.yaml`](registry/categories.yaml)
-- third-party source identities and roles: [`registry/sources.yaml`](registry/sources.yaml)
-- first-party review evidence: [`registry/local-verification.json`](registry/local-verification.json)
-- provenance companions: [`registry/skills/`](registry/skills/)
-- exact-version third-party review evidence: [`registry/verification/`](registry/verification/)
+Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 ## Current totals
 
@@ -20,112 +14,52 @@ Canonical sources for this snapshot:
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 246 |
-| AWS historical reviewed denominator | 72 / 72 |
+| Persisted third-party exact-version reviews | 249 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 74 / 189 |
-| Microsoft Skills current-standard gaps | 115 |
+| Microsoft Skills current-standard companions | 77 / 189 |
+| Microsoft Skills current-standard gaps | 112 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 15 / 40 |
+| Microsoft Python direct-package companions | 18 / 40 |
 
 ## First-party skills by purpose
 
 ### Planning & Productivity
-- `daily-briefing`
-- `decision-log`
-- `inbox-triage`
-- `learning-plan`
-- `task-surface`
-- `week-in-review`
+`daily-briefing`, `decision-log`, `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
 
 ### Writing & Communication
-- `brief-writer`
-- `deck-outline`
-- `devlog-draft`
-- `handoff-writer`
-- `standup-writer`
+`brief-writer`, `deck-outline`, `devlog-draft`, `handoff-writer`, `standup-writer`
 
 ### Research & Analysis
-- `compare`
-- `deep-dive`
-- `fact-check`
-- `paper-digest`
+`compare`, `deep-dive`, `fact-check`, `paper-digest`
 
 ### Software & Repositories
-- `repo-doctor`
-- `repo-pulse`
-- `todo-harvester`
+`repo-doctor`, `repo-pulse`, `todo-harvester`
 
 ### Agent Operations & Security
-- `agent-home-doctor`
-- `agent-postmortem`
-- `automation-receipts`
-- `mcp-vetting`
-- `permissions-review`
+`agent-home-doctor`, `agent-postmortem`, `automation-receipts`, `mcp-vetting`, `permissions-review`
 
 ### Monitoring & Intelligence
-- `claude-pulse`
-- `deepseek-pulse`
-- `gemini-pulse`
-- `github-pulse`
-- `glm-pulse`
-- `governance-pulse`
-- `hf-pulse`
-- `inference-pulse`
-- `kimi-pulse`
-- `llama-pulse`
-- `mcp-pulse`
-- `memory-pulse`
-- `mistral-pulse`
-- `openai-pulse`
-- `perplexity-pulse`
-- `qwen-pulse`
-- `xai-pulse`
+`claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
 
 ### Business & Career
-- `career-radar`
-- `finance-review`
-- `smallbiz-ops`
+`career-radar`, `finance-review`, `smallbiz-ops`
 
 ## Registered source roles
 
-### Pinned reference corpora
-1. `anthropic-skills`
-2. `anthropic-knowledge-work-plugins`
-3. `vercel-agent-skills`
-4. `microsoft-skills`
-5. `microsoft-azure-skills`
-6. `aws-agent-toolkit`
-7. `mattpocock-skills`
-8. `addyosmani-agent-skills`
-9. `openhands-extensions`
-10. `cline-skills`
-11. `cloudflare-skills`
-12. `google-agents-cli`
+**Pinned reference corpora:** `anthropic-skills`, `anthropic-knowledge-work-plugins`, `vercel-agent-skills`, `microsoft-skills`, `microsoft-azure-skills`, `aws-agent-toolkit`, `mattpocock-skills`, `addyosmani-agent-skills`, `openhands-extensions`, `cline-skills`, `cloudflare-skills`, `google-agents-cli`.
 
-### Tracked corpora
-- `cole-medin-skills`
-- `david-ondrej-skills`
-- `bm629-agent-skills`
-- `openclaw-agent-skills`
-- `archieindian-superpowers`
+**Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`.
 
-### Normative / discovery references
-- `agentskills-spec` — normative specification
-- `github-awesome-copilot` — dynamic discovery surface
+**Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` is a dynamic discovery surface.
 
 ## Interpretation
 
-Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use the exact-version companion evidence and apply:
+Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use exact-version companion evidence and apply:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS accounting is fully reconciled: **72/72 historical inspection and 72/72 current-standard companion completeness** at the registered pin. Rejected exact versions remain excluded from normal unchanged reuse; completion means every eligible package has decisive current evidence, not that every package passed unchanged.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **77/189**, leaving **112** gaps. The `.NET` and Java direct plugin slices are complete; Python is **18/40**, source-order through `azure-eventgrid-py`. The latest additions are `azure-cosmos-py`, `azure-data-tables-py`, and `azure-eventgrid-py`; each has exact provenance/fingerprint/freshness evidence and a differentiated rejected-unchanged disposition. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
-Microsoft Skills is the active admitted-source frontier. Its exact eligible denominator is **189 independently front-mattered `SKILL.md` entry points** at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **74/189** currently have current-standard provenance + verification companions, leaving **115** gaps. The denominator is derived from the pinned Git topology rather than the upstream README's inconsistent 174/175 headline counts: language SDK plugin entries, real canonical `.github/skills` packages, Azure plugin packages, Deep Wiki, Microsoft 365 Agents Toolkit, and independently front-mattered nested sub-skills are included; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files are not counted as separate skills.
-
-The direct `azure-sdk-dotnet` plugin slice is **29/29 current-standard companion-complete**. The direct `azure-sdk-java` plugin has an exact **26-package** denominator and is **26/26 current-standard companion-complete**. The direct `azure-sdk-python` plugin has an exact **40-package** denominator and is **15/40 current-standard companion-complete**. Python curation now includes source-ordered companions through `azure-cosmos-db-py`; the latest additions are `azure-containerregistry-py` and `azure-cosmos-db-py`, each retaining exact identity, complete-package evidence where applicable, and a differentiated rejected-unchanged disposition. Behavioral validation remains `not-run` unless separate representative evidence is actually recorded.
-
-This file has no generator contract. When repository-maintenance work materially changes the live corpus, the external host agent reconciles this snapshot directly from current evidence.
+This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
