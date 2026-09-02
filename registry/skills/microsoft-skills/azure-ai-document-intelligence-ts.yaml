@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-document-intelligence-ts
+display_name: Microsoft Azure AI Document Intelligence TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-ai-document-intelligence-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: aafe1aca3ff2f657dae863aeffb6df6e3449c549
+upstream_last_updated_at: 2026-04-22T17:03:34Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-ai-document-intelligence-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure-rest/ai-document-intelligence@1.0.0; @azure/identity; Azure AI Document Intelligence endpoint/resource; optional API key; local documents or remote document URLs; optional Azure Storage container SAS URL for custom-model training; persistent service-side models/classifiers
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 15f2f21b7bebeedf12dc47987c3663e56edf26cb and SKILL.md blob a87c33a71c51eda6ff4ca326600fcc774b3a691f. The single-file package is useful prior art for TypeScript document analysis, prebuilt invoice/receipt/identity/health-insurance/tax/bank-statement extraction, layout/table handling, batching, error handling, and custom model/classifier lifecycle. Unchanged adoption is rejected because ordinary examples transmit potentially highly sensitive documents and derived fields to Azure without mandatory subject/data authority, approved destination/region, minimization, retention, or output-disclosure controls; remote-URL analysis lacks an explicit trusted-source boundary; custom training solicits a credential-bearing storage SAS URL and persists derived models without a secure external credential path or training/data-use authorization; and build/compose/delete operations mutate persistent billable service state without action-specific model, destructive-action, rollback, or budget authority. Preserve as adaptation/reference evidence with explicit sensitive-data transmission authority, trusted-source restrictions, secure external credential handling, training/model lifecycle approval, disclosure/minimization/retention controls, and service-use/cost authorization.

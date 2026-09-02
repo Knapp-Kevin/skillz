@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-document-intelligence-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 15f2f21b7bebeedf12dc47987c3663e56edf26cb
+skill_md_blob_sha: a87c33a71c51eda6ff4ca326600fcc774b3a691f
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package is a single SKILL.md and provides useful TypeScript prior art for Document Intelligence prebuilt models, document/layout/table extraction, batch analysis, REST error handling, and custom model/classifier lifecycle. Rejected unchanged under the current hard authority and sensitive-data rules because normal examples transmit documents and extracted identity, health-insurance, tax, banking, invoice, receipt, address, birth-date, document-number, and other potentially sensitive fields to Azure without mandatory subject/data authority, destination/region approval, minimization, retention, redaction, or output-disclosure controls; remote document URLs lack an explicit trusted-source boundary; custom training uses a credential-bearing Azure Storage container SAS URL without a secure external credential path; and build, compose, classifier, and delete operations mutate persistent billable service state without action-specific training/model, destructive-action, rollback, or budget authorization. Behavioral validation remains not-run.
