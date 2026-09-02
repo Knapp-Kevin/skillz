@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-py
+display_name: Microsoft Azure API Management Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-mgmt-apimanagement-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-mgmt-apimanagement-py
+permission_tier: cloud-access-and-policy-management
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-mgmt-apimanagement; azure-identity; Azure API Management
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA b5092b4ffe491abdf28e33c8c9fa3d06af6c9aee and SKILL.md blob 23cccf5a75db3eff3a6e263347caf1e5fab5a495. Useful material covers Entra-first authentication, APIM service/API/product/subscription/policy/backend/user management, and lifecycle guidance. Unchanged use is rejected because examples create billable APIM services, publish products without approval, create active subscriptions and print subscription keys, mutate gateway policies/backends, create users with PII, and demonstrate a literal secret value without explicit environment, secret-custody, audience/access, user-data, policy-change, rollback, or cost authorization boundaries. Preserve only as adaptation/reference material with secure secret storage, no credential output, explicit target and policy approval, least privilege, privacy review, rollback/cleanup, cost controls, and pinned dependencies.

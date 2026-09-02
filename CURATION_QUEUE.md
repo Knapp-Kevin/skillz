@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **253** persisted exact-version third-party verification companions.
+- **255** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,21 +35,22 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **81/189**.
-- Remaining gaps: **108**.
+- Current-standard companions: **83/189**.
+- Remaining gaps: **106**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **22/40** complete.
+- Direct Python: **24/40** complete.
 
-Python is complete source-order through `azure-messaging-webpubsubservice-py`.
+Python is complete source-order through `azure-mgmt-apimanagement-py`.
 
 Latest tranche, behavioral evidence `not-run`:
 
-- `azure-messaging-webpubsubservice-py` — **rejected unchanged, 8/20**. Package tree `aa73dd40ee99a98ad10af90945869141b71f4a8e`; `SKILL.md` blob `8cdd7c32a64a02842a322e5a19607bf6c991dfbb`. Useful Entra-first authentication, client lifecycle, short-lived token, messaging, group, connection, and permission guidance remains prior art, but unchanged use prints credential-bearing access URLs, sends external messages, mutates group membership, closes connections, and grants/revokes permissions without explicit token-disclosure, audience/content, membership, disconnect, or action-authorization boundaries. Metered use and unpinned dependencies also remain unbounded. Adapt/reference only.
+- `azure-mgmt-apicenter-py` — **rejected unchanged, 11/20**. Package tree `cc4ec2952eeefd4cbfcf3c5443879ca21692c5ab`; `SKILL.md` blob `99f050f552d6aa7c18f0f49615a754b063c998fc`. Useful Entra-first API inventory/version/definition, spec import, environment/deployment, lifecycle, and governance metadata patterns remain prior art, but unchanged use creates billable Azure resources and mutates production-facing inventory, specs, lifecycle state, contacts, deployment/environment records, and metadata without explicit target, mutation, disclosure, rollback, or cost authorization.
+- `azure-mgmt-apimanagement-py` — **rejected unchanged, 7/20**. Package tree `b5092b4ffe491abdf28e33c8c9fa3d06af6c9aee`; `SKILL.md` blob `23cccf5a75db3eff3a6e263347caf1e5fab5a495`. Useful APIM management patterns remain prior art, but unchanged examples create billable services, publish products without approval, create active subscriptions and print subscription keys, mutate policies/backends, create users with PII, and show a literal secret value without explicit target, secret-custody, access, privacy, policy-change, rollback, or budget authorization.
 
 Skill-specific freshness binds to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
 
-**Next source-ordered package:** `azure-mgmt-apicenter-py`.
+**Next source-ordered package:** `azure-mgmt-botservice-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -86,5 +87,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **81/189**, **108 gaps**. Python is **22/40**.  
-**Next:** continue source-order with `azure-mgmt-apicenter-py`.
+**Microsoft Skills:** **83/189**, **106 gaps**. Python is **24/40**.  
+**Next:** continue source-order with `azure-mgmt-botservice-py`.

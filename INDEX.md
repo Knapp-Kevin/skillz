@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 253 |
+| Persisted third-party exact-version reviews | 255 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 81 / 189 |
-| Microsoft Skills current-standard gaps | 108 |
+| Microsoft Skills current-standard companions | 83 / 189 |
+| Microsoft Skills current-standard gaps | 106 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 22 / 40 |
+| Microsoft Python direct-package companions | 24 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **81/189**, leaving **108** gaps. The `.NET` and Java direct plugin slices are complete; Python is **22/40**, source-order through `azure-messaging-webpubsubservice-py`. The latest addition has exact provenance/fingerprint/freshness evidence and a rejected-unchanged disposition because credential-bearing token URL output and authority-bearing messaging, membership, connection, and permission operations require stronger boundaries. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **83/189**, leaving **106** gaps. The `.NET` and Java direct plugin slices are complete; Python is **24/40**, source-order through `azure-mgmt-apimanagement-py`. The latest tranche adds exact provenance/fingerprint/freshness evidence for API Center and API Management. Both are rejected unchanged because their management flows mutate Azure resources without sufficient action authority; APIM additionally demonstrates subscription-key output, literal secret material, policy/backend mutation, user PII, and billable service creation. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
