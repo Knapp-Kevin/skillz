@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-cosmos-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: dd2b4d34ed092a9719d75a114cb44e65ef91bb30
+skill_md_blob_sha: 4464932137813f02b495a56f9db25c3d17125067
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case:
+    - cloud
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - production-oriented
+    - risk-aware
+    - reference-heavy
+  authority:
+    - mutating
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md at the registered pin. Exact material performs create, read, replace, patch, and delete operations against durable Cosmos DB data and documents optional key authentication. It lacks explicit action-specific authorization, resource/data scope, destructive-operation, recovery/retention, and budget boundaries. Static rejection preserves the SDK and partitioning patterns as adaptation/reference evidence. Behavioral validation was not run.
