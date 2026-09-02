@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cosmos-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1ce58804be03d192a379cd5049d15237d112f214
+skill_md_blob_sha: 33fcce60f1488fbf7e3d1cef4656adb693f215f2
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, implementation, architecture]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus references/bulk-operations.md and references/query-patterns.md. Useful material includes Entra-first authentication, partition-key design, point reads, parameterized queries, continuation pagination, CRUD, bulk execution, indexing, diagnostics, retry handling, and client lifecycle. Rejected unchanged because the package creates databases and containers, creates/replaces/upserts/deletes durable items, and performs bulk mutation/destruction without mandatory environment/resource, data-scope, mutation, destructive-action, recovery/retention, or budget/throughput authorization boundaries. The package says to confirm destructive actions, but confirmation is not a substitute for action authorization under current governance. Query and diagnostic patterns can also expose item content or operational detail without mandatory classification, minimization, or output-disclosure controls. DefaultAzureCredential is a positive credential pattern and no literal secret value is required by the reviewed package. Behavioral validation remains not-run.

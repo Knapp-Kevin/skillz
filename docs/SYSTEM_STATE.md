@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 286 |
+| **Persisted third-party review companions** | 287 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 114 / 189 |
-| **Microsoft Skills current-standard gaps** | 75 |
+| **Microsoft Skills current-standard companions** | 115 / 189 |
+| **Microsoft Skills current-standard gaps** | 74 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 7 / 25 |
+| **Microsoft TypeScript direct-package companions** | 8 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **114/189 companion-complete**, **75 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **115/189 companion-complete**, **74 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **7/25** complete.
+- Microsoft direct TypeScript: **8/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -60,7 +60,9 @@ The registered-pin TypeScript tree contains exactly **25** first-class packages.
 
 `azure-appconfiguration-ts` is **rejected unchanged, 7/20**, with `validation_status: not-run`. Its App Configuration CRUD, optimistic-concurrency, provider-loading, dynamic-refresh, feature-flag, labels, snapshots, and Key Vault reference mechanics remain useful prior art. Unchanged examples create/update/delete production configuration, lock/unlock settings, change feature targeting, and archive/recover persistent snapshots without mandatory resource/environment, per-change, rollout, rollback/recovery, or budget/service authorization. The package presents a credential-bearing connection string as a normal path, automatically resolves Key Vault secrets into application memory, prints configuration values, and uses user email addresses in targeting examples without mandatory secure credential custody, secret/output redaction, or PII minimization boundaries.
 
-Microsoft Skills remains active with **75** gaps. Continue TypeScript source-order after `azure-appconfiguration-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+`azure-cosmos-ts` is **rejected unchanged, 9/20**, with `validation_status: not-run`. Its Entra-first client setup, partition design, point reads, parameterized queries, pagination, CRUD, bulk operations, indexing, diagnostics, retry handling, and client-lifecycle patterns remain useful prior art. Unchanged examples create databases and containers, create/replace/upsert/delete durable items, and perform bulk destructive operations without mandatory environment/resource, data-scope, mutation, destructive-action, recovery/retention, or budget/throughput authorization. The package's instruction to confirm destructive actions is not itself action authorization. Query and diagnostic patterns can also surface item content or operational detail without mandatory classification, minimization, or output-disclosure controls.
+
+Microsoft Skills remains active with **74** gaps. Continue TypeScript source-order after `azure-cosmos-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -78,7 +80,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 7/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 8/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
