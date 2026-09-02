@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-257-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-261-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **257 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **261 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,12 +65,12 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **85/189** current-standard companion complete, **104** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **89/189** current-standard companion complete, **100** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
-- Microsoft direct Python: **26/40** complete, source-order through `azure-mgmt-fabric-py`.
+- Microsoft direct Python: **30/40** complete, source-order through `azure-monitor-query-py`.
 
-The latest Python tranche adds exact companions for `azure-mgmt-botservice-py` and `azure-mgmt-fabric-py`. Both are rejected unchanged under the current authority/security standard while preserving useful Azure management patterns for adaptation/reference. Bot Service exposes credential-bearing Direct Line keys and accepts OAuth client secrets while mutating externally reachable channels; Fabric capacity operations create and scale billable resources, assign administrators, suspend/resume service, and delete capacity. Neither package supplies the action-specific authorization boundaries required for unchanged use. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
+The latest Python tranche adds exact companions for the four Azure Monitor packages: ingestion, the low-level OpenTelemetry exporter, the OpenTelemetry distro, and query. All four remain useful adaptation/reference evidence but are rejected unchanged under the current authority/privacy standard. The ingestion and OpenTelemetry packages can transmit logs, traces, metrics, request/database/exception context, or locally persisted retry telemetry without explicit data-admission, redaction, destination, retention, privacy, and cost boundaries. The query package is read-only but prints potentially sensitive operational results without explicit workspace/resource scope and least-data/output-disclosure controls. Behavioral evidence remains `not-run` unless representative external evidence is actually recorded.
 
 Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
