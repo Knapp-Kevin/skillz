@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **257** persisted exact-version third-party verification companions.
+- **261** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,20 +35,24 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **85/189**.
-- Remaining gaps: **104**.
+- Current-standard companions: **89/189**.
+- Remaining gaps: **100**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **26/40** complete.
+- Direct Python: **30/40** complete.
 
-Python is complete source-order through `azure-mgmt-fabric-py`.
+Python is complete source-order through `azure-monitor-query-py`. The pinned Python directory contains exactly **40** direct skill packages.
 
 Latest tranche, behavioral evidence `not-run`:
 
-- `azure-mgmt-botservice-py` — **rejected unchanged, 7/20**. Package tree `5c944f6d244f31ae24b7fd04486f63ac9d60a3ec`; `SKILL.md` blob `ec8513afbdbced86f7cbfe007f4430fdb849aa25`. Useful Entra-first bot/channel/connection management remains prior art, but unchanged examples create/update/delete resources, enable external channels, print Direct Line keys, accept OAuth client secrets, and mutate messaging configuration without sufficient authorization boundaries.
-- `azure-mgmt-fabric-py` — **rejected unchanged, 9/20**. Package tree `3e29e264969add98346524136a232e61afa8f06e`; `SKILL.md` blob `fbb6c37b8289f216596a6f00ad798d78f93b75be`. Useful Fabric capacity lifecycle and cost-control patterns remain prior art, but unchanged examples create billable capacities, scale SKUs, assign admins, suspend/resume service, and delete capacity without sufficient environment, identity, service-impact, destructive-action, rollback, or budget authority.
+- `azure-monitor-ingestion-py` — **rejected unchanged, 13/20**. Tree `6f77179d773886b1c5b47f79e40b6701680cf27c`; `SKILL.md` `b6146061c7cb223503d1de4b4c12864c643e4c1b`. Useful ingestion patterns remain prior art; arbitrary logs/JSON can be transmitted externally without sufficient data, destination, privacy, retention, cost, and fail-visible error boundaries.
+- `azure-monitor-opentelemetry-exporter-py` — **rejected unchanged, 13/20**. Tree `6f3f29fc5ab34768abdb08ba9c85a038f7deccbe`; `SKILL.md` `bd9553c42ef1863efcf87aebd92225f305786934`. Useful exporter/sampling/lifecycle patterns remain prior art; external telemetry export and local retry storage lack sufficient data-admission, redaction, destination, and retention controls.
+- `azure-monitor-opentelemetry-py` — **rejected unchanged, 12/20**. Tree `14a5c5e6184d8b29cca1dfe53d448b484a79f0a1`; `SKILL.md` `00f1d7534e6d2b49e3bf0e5b4ec4977fac99df69`. Useful distro/auto-instrumentation patterns remain prior art; broad automatic capture can export request, database, exception, and application data without sufficient privacy/telemetry authority.
+- `azure-monitor-query-py` — **rejected unchanged, 14/20**. Tree `ac052e9e1c0ebee1c7f57d074c3b288a78429813`; `SKILL.md` `95defd74b998e686aa9d28ec8d5ecfc0cb2141bf`. Useful read-only query patterns remain prior art; examples print potentially sensitive logs/metrics without sufficient workspace/resource scope, data-sensitivity, disclosure, and least-data controls.
 
-Skill-specific freshness binds to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
+Freshness: ingestion/query bind to `df52e9a69b78c2759553efafe2f937fc53c1cbd1` (2026-05-18); both OpenTelemetry packages bind to `d94f007962067bb6bfecb9c9ac523d71880f946c` (2026-05-04).
+
+**Next source-ordered package:** `azure-search-documents-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -85,5 +89,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **85/189**, **104 gaps**. Python is **26/40**.  
-**Next:** continue source-order from the pinned Microsoft Python denominator.
+**Microsoft Skills:** **89/189**, **100 gaps**. Python is **30/40**.  
+**Next:** `azure-search-documents-py`.
