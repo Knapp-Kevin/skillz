@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai-contentsafety-ts
+display_name: Microsoft Azure AI Content Safety TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-ai-contentsafety-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-ai-contentsafety-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure-rest/ai-content-safety; @azure/identity; @azure/core-auth; Azure AI Content Safety endpoint/resource; optional API key; local image files or remote image URLs; mutable service-side text blocklists
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1d1b8aef636c704c572507714fa26c2e73ec3dce and SKILL.md blob e038281439bf7d5b738ff6a6c9fd211281582e73. The package is useful prior art for text/image harm classification, severity handling, blocklists, REST-client error handling, and production-constrained Azure credential use. Unchanged adoption is rejected because ordinary examples transmit arbitrary text and images, including potentially highly sensitive moderation content, to an external service without a mandatory data-classification/privacy/transmission authority boundary; blob-URL analysis delegates retrieval of remote content without an explicit trusted-source boundary; blocklist examples create, mutate, and delete persistent moderation state without separate action authorization; and the best-practice recommendation to log moderation decisions lacks minimization, redaction, and retention controls. Preserve as adaptation/reference evidence with explicit disclosure authority, trusted-source restrictions, blocklist mutation/destruction approval, audit-log minimization/redaction/retention, secure credential handling, and service-use/cost authority.
