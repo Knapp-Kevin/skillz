@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-keyvault-keys-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: edf929a691b6dbbd1f5c214e832a3c650b259890
+skill_md_blob_sha: c995e4c598f385ba4aca948ff8ef2c57dae1bb01
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 5/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus references/keys.md and references/secrets.md. Useful material includes Key Vault key creation/import, key lifecycle and rotation policies, cryptographic encrypt/decrypt/sign/verify/wrap/unwrap operations, backup/restore, secret CRUD/versioning, recovery, error handling, managed-identity guidance, and least-privilege reminders. Rejected unchanged because the package can create/import/rotate/disable/delete/purge/restore cryptographic keys, alter key operations and rotation policy, perform sensitive cryptographic operations, and mutate/delete/restore secrets without mandatory vault/resource, key-purpose, per-operation, destructive-action, recovery, production, or security-control authorization. The bundled secrets reference also demonstrates literal secret material, printing retrieved secret values, storing API keys and connection strings as examples, bulk-exporting every enabled secret into process memory, and writing secret backup material to a local file without mandatory secure external custody, disclosure, minimization, or retention boundaries. Positive advice about managed identity, soft-delete, purge protection, least privilege, and backing up before deletion is useful but does not constitute action authorization. Behavioral validation remains not-run.

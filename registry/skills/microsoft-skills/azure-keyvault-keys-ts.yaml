@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-keyvault-keys-ts
+display_name: Microsoft Azure Key Vault Keys TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-keyvault-keys-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-keyvault-keys-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/keyvault-keys; @azure/keyvault-secrets; @azure/identity; @azure/core-rest-pipeline; Azure Key Vault; Microsoft Entra identity; optional Premium/HSM-backed vault capabilities; filesystem or external storage for backup material
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA edf929a691b6dbbd1f5c214e832a3c650b259890, SKILL.md blob c995e4c598f385ba4aca948ff8ef2c57dae1bb01, references/keys.md blob 92431a3ddcaae3a490be8ae9f7c2a4435077ef09, and references/secrets.md blob a42655c2972030bace17ecae97eeacf967978a46. The package provides useful TypeScript prior art for Key Vault key CRUD, rotation, backup/restore, encryption/decryption, signing/verification, wrap/unwrap, HSM-backed key creation, secret CRUD/versioning, and recovery. Unchanged adoption is rejected because it creates, imports, rotates, disables, deletes, purges, backs up, restores, encrypts/decrypts, signs, wraps/unwraps, and otherwise materially controls cryptographic keys and secrets without mandatory vault/resource, key-purpose, cryptographic-operation, destructive-action, recovery, security-control, or production authorization boundaries. The bundled secrets material additionally demonstrates literal secret values, raw secret-value output, connection strings and API keys as values, bulk secret export into process memory, and backup blobs written to local files without a secure external secret-custody and disclosure contract. Preserve as adaptation/reference evidence with managed/workload identity, least-privilege vault scope, explicit per-operation authority, purge protection/recovery controls, secure external credential and backup custody, and no raw secret or decrypted-sensitive output.
