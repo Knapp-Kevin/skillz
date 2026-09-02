@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 291 |
+| **Persisted third-party review companions** | 292 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 119 / 189 |
-| **Microsoft Skills current-standard gaps** | 70 |
+| **Microsoft Skills current-standard companions** | 120 / 189 |
+| **Microsoft Skills current-standard gaps** | 69 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 12 / 25 |
+| **Microsoft TypeScript direct-package companions** | 13 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **119/189 companion-complete**, **70 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **120/189 companion-complete**, **69 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **12/25** complete.
+- Microsoft direct TypeScript: **13/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -62,10 +62,11 @@ Current companion-complete TypeScript packages are:
 10. `azure-identity-ts` — rejected unchanged, 6/20.
 11. `azure-keyvault-keys-ts` — rejected unchanged, 5/20.
 12. `azure-keyvault-secrets-ts` — rejected unchanged, 5/20.
+13. `azure-microsoft-playwright-testing-ts` — rejected unchanged, 10/20.
 
-`azure-keyvault-secrets-ts` is bound to package tree `2dd97bf732af6c7d5ec00e23d05db80e9a56ce26`, `SKILL.md` blob `1f236a2b4c8d9ddab0e808d253c029a32193fcdd`, `references/keys.md` blob `92431a3ddcaae3a490be8ae9f7c2a4435077ef09`, and `references/secrets.md` blob `a42655c2972030bace17ecae97eeacf967978a46`. Skill-family freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its Key Vault secret CRUD/versioning, recovery, backup/restore, expiration, managed-identity, least-privilege, key-lifecycle, and cryptographic-operation mechanics remain useful prior art. Unchanged adoption fails because the package can set, retrieve, print, list, delete, permanently purge, recover, back up, restore, and bulk-handle secret material while also mutating cryptographic keys and performing consequential cryptographic operations without mandatory vault/resource, secret-purpose, data-owner, per-operation, destructive-action, recovery, secure-custody, disclosure, retention, production, or security-control authorization boundaries. Behavioral validation is `not-run`.
+`azure-microsoft-playwright-testing-ts` is bound to single-file package tree `2c64ca04d7e33d27405771bad5d6de42ce8433ac` and `SKILL.md` blob `b784591d64f11644dde1f7b165411792751f284a`. Skill-specific freshness is anchored to Microsoft revision `338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5` from 2026-04-22. Its Azure-hosted Playwright setup, Entra/workload identity, cloud-browser scaling, manual connection, CI/CD, migration, reporter, trace/video, and worker-scaling mechanics remain useful prior art. Unchanged adoption fails because normal flows execute browser automation against external targets, establish billable cloud-hosted browser sessions, can expose network-reachable targets, publish test results and artifacts to Azure, and configure CI identity-token permissions without mandatory target/environment, test-data, external-side-effect, artifact publication/retention, network-exposure, budget, or production authorization boundaries. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **70** gaps. Continue TypeScript source order after `azure-keyvault-secrets-ts`, beginning with `azure-microsoft-playwright-testing-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **69** gaps. Continue TypeScript source order after `azure-microsoft-playwright-testing-ts`, beginning with `azure-monitor-opentelemetry-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -83,7 +84,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 12/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 13/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
