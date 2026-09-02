@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-messaging-webpubsubservice-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: aa73dd40ee99a98ad10af90945869141b71f4a8e
+skill_md_blob_sha: 8cdd7c32a64a02842a322e5a19607bf6c991dfbb
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case: [cloud, communication, implementation]
+  lifecycle: [design, implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first authentication, deterministic client cleanup, short-lived access tokens, targeted messaging, groups, connection management, and permission APIs are useful prior art. Unchanged adoption is rejected because the examples print credential-bearing client access URLs, send messages to all/users/groups/connections, mutate group membership, close connections, and grant/revoke permissions without explicit token-disclosure, audience/content, membership, disconnect, or authorization boundaries. Service usage is metered and package installation is unpinned. Behavioral validation is not-run.

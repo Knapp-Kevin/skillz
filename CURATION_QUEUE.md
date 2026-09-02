@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **252** persisted exact-version third-party verification companions.
+- **253** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,23 +35,21 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **80/189**.
-- Remaining gaps: **109**.
+- Current-standard companions: **81/189**.
+- Remaining gaps: **108**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **21/40** complete.
+- Direct Python: **22/40** complete.
 
-Python is complete source-order through `azure-keyvault-py`.
+Python is complete source-order through `azure-messaging-webpubsubservice-py`.
 
-Latest tranche, behavioral evidence `not-run` for all:
+Latest tranche, behavioral evidence `not-run`:
 
-- `azure-eventhub-py` — **rejected unchanged, 10/20**. Package tree `0fbf762f81763b55040414428dcb0a3a0d29bd5f`; `SKILL.md` blob `289676f5c80a9f4064980ff98283575502fe1d99`. Complete-package review includes checkpointing/partition references and setup CLI. Useful streaming mechanics remain prior art, but unchanged use lacks distinct publication/data-disclosure, checkpoint-mutation, downstream-impact, retention and budget authority, and the CLI's async credential lifecycle conflicts with the package rule.
-- `azure-identity-py` — **rejected unchanged, 12/20**. Package tree `e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1`; `SKILL.md` blob `37e6a034b861e30c675b7b2029e391612f69a535`. Useful identity guidance, but sensitive credential/token handling, wildcard additional-tenant access, secret/assertion flows and verbose logging need explicit scope/tenant authority and redaction controls before adoption.
-- `azure-keyvault-py` — **rejected unchanged, 8/20**. Package tree `cbcf7a71066e1d3b1a073b07d358efbbe6b8e77b`; `SKILL.md` blob `20c836c7b6e903dfce8d3fb90cc38c57892d0154`. Useful Key Vault patterns are outweighed unchanged by secret-value output, permanent purge, key/certificate mutation, private-key retrieval and cryptographic operations without explicit disclosure/destructive/crypto/lifecycle authorization.
+- `azure-messaging-webpubsubservice-py` — **rejected unchanged, 8/20**. Package tree `aa73dd40ee99a98ad10af90945869141b71f4a8e`; `SKILL.md` blob `8cdd7c32a64a02842a322e5a19607bf6c991dfbb`. Useful Entra-first authentication, client lifecycle, short-lived token, messaging, group, connection, and permission guidance remains prior art, but unchanged use prints credential-bearing access URLs, sends external messages, mutates group membership, closes connections, and grants/revokes permissions without explicit token-disclosure, audience/content, membership, disconnect, or action-authorization boundaries. Metered use and unpinned dependencies also remain unbounded. Adapt/reference only.
 
-All three bind skill-specific freshness to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
+Skill-specific freshness binds to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
 
-**Next source-ordered package:** `azure-messaging-webpubsubservice-py`.
+**Next source-ordered package:** `azure-mgmt-apicenter-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -88,5 +86,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **80/189**, **109 gaps**. Python is **21/40**.  
-**Next:** continue source-order with `azure-messaging-webpubsubservice-py`.
+**Microsoft Skills:** **81/189**, **108 gaps**. Python is **22/40**.  
+**Next:** continue source-order with `azure-mgmt-apicenter-py`.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-messaging-webpubsubservice-py
+display_name: Microsoft Azure Web PubSub Service Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-messaging-webpubsubservice-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-messaging-webpubsubservice-py
+permission_tier: messaging-access-control
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-messaging-webpubsubservice; azure-messaging-webpubsubclient; azure-identity; Azure Web PubSub
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA aa73dd40ee99a98ad10af90945869141b71f4a8e and SKILL.md blob 8cdd7c32a64a02842a322e5a19607bf6c991dfbb. Useful material covers Entra-first authentication, client lifecycle, short-lived access tokens, targeted/broadcast messaging, group management, connection management, and permission controls. Unchanged use is rejected because examples print credential-bearing client access URLs, send messages to external recipients, mutate group membership, terminate client connections, and grant/revoke messaging permissions without distinct token-disclosure, audience/content, membership, disconnect, or authorization gates. Metered service use and unpinned installation also remain unbounded. Preserve as adaptation/reference material with secure token handling, explicit message audience/data authority, permission and connection-change approval, least privilege, cost awareness, and pinned dependencies.
