@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **288** persisted exact-version third-party verification companions.
+- **289** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,31 +35,32 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **116/189**.
-- Remaining gaps: **73**.
+- Current-standard companions: **117/189**.
+- Remaining gaps: **72**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **9/25** complete.
+- Direct TypeScript: **10/25** complete.
 
-The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator. `applicationinsights-web-ts` was already current-standard companion-complete; the first genuine gap was therefore `azure-ai-contentsafety-ts`.
+The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
 Current TypeScript decisive states:
 
 - `applicationinsights-web-ts` — **rejected unchanged, 16/20**. Browser telemetry can leave the client before mandatory user-consent/data-governance authorization; retain telemetry/privacy mechanics for adaptation.
-- `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**. Text/image moderation can disclose sensitive content externally; remote-image analysis lacks a trusted-source boundary; blocklist mutation/deletion lacks action-specific authority; recommended moderation logging lacks minimization/redaction/retention controls.
-- `azure-ai-document-intelligence-ts` — **rejected unchanged, 11/20**. Document analysis can disclose identity, health-insurance, tax, banking, invoice, receipt, address, birth-date, document-number, and other sensitive content externally; remote-document analysis lacks a trusted-source boundary; custom training uses a credential-bearing storage SAS URL without a secure external credential path; and model/classifier build, compose, and delete operations lack action-specific training, destructive-action, rollback, and budget authority.
-- `azure-ai-projects-ts` — **rejected unchanged, 6/20**. Foundry project/agent, connection, dataset, index, evaluation, OpenAI-client, and tool-wiring mechanics remain useful prior art, but unchanged use creates/deletes persistent resources, transmits potentially sensitive evaluation/dataset content, invokes external tools/services, and incurs service costs without adequate action-specific authority. Its bundled connections reference retrieves credentials and explicitly prints an API key, which is a direct secret-custody hard fail.
-- `azure-ai-translation-ts` — **rejected unchanged, 10/20**. Text/document translation, transliteration, detection, status, and pagination mechanics remain useful prior art, but unchanged use transmits arbitrary text/documents externally without mandatory data-transfer/privacy authority. Batch document translation creates credential-bearing source/target SAS URLs, starts a billable service-side operation, and writes translated content to persistent target storage without sufficient credential-custody, storage-scope, write/downstream-effect, recovery/overwrite, or budget authority.
-- `azure-ai-voicelive-ts` — **rejected unchanged, 6/20**. Real-time voice/audio, browser microphone capture/playback, VAD, transcription, session/event handling, and function-calling mechanics remain useful prior art. Unchanged use captures and transmits live microphone audio, transcripts, conversation content, locations, and tool arguments/results without mandatory subject consent, data-classification, destination/region, minimization, retention/redaction, or output-disclosure authority. The bundled function-calling reference permits model-triggered consequential external actions such as appointment booking without a real per-action authorization gate; API-key and personal/custom voice paths also need stronger credential and identity-sensitive boundaries.
-- `azure-appconfiguration-ts` — **rejected unchanged, 7/20**. App Configuration CRUD, optimistic concurrency, provider loading/refresh, feature flags, labels, snapshots, and Key Vault-reference mechanics remain useful prior art. Unchanged use can create/update/delete configuration, lock/unlock settings, alter feature targeting, and archive/recover snapshots without mandatory resource/environment, per-change, rollout, rollback/recovery, or budget/service authorization. A credential-bearing connection string is presented as a normal path; Key Vault references resolve secrets into application memory; configuration values are printed; and user email addresses appear in targeting examples without required secure credential custody, secret/output redaction, or PII minimization boundaries.
-- `azure-cosmos-ts` — **rejected unchanged, 9/20**. Entra-first client setup, partition design, point reads, parameterized queries, pagination, CRUD, bulk operations, indexing, diagnostics, retries, and client-lifecycle mechanics remain useful prior art. Unchanged use can create databases/containers, create/replace/upsert/delete durable items, and perform bulk destructive operations without mandatory environment/resource, data-scope, mutation, destructive-action, recovery/retention, or budget/throughput authorization. The package's destructive-action confirmation language is not action authorization, and query/diagnostic output lacks mandatory sensitive-data minimization/disclosure controls.
-- `azure-eventhub-ts` — **rejected unchanged, 8/20**. Producer/consumer setup, batching, partition targeting, consumer groups, event positions, Blob checkpointing, load balancing, lag monitoring, graceful shutdown, and retry/error patterns remain useful prior art. Unchanged flows publish arbitrary event payloads externally, create/update persistent checkpoint storage, and can drive downstream processing without mandatory destination, payload-classification/disclosure, environment/resource, write, downstream-effect, retention/recovery, or budget/throughput authorization. Connection-string credential paths and raw event-body/property/system-property logging also lack mandatory secure custody, minimization, and redaction controls.
+- `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**. External moderation and persistent blocklist operations lack mandatory disclosure/privacy, trusted-source, logging-minimization, and action-specific mutation boundaries.
+- `azure-ai-document-intelligence-ts` — **rejected unchanged, 11/20**. Sensitive-document transfer and custom-model lifecycle examples lack required data, credential-custody, destructive-action, recovery, and budget authority.
+- `azure-ai-projects-ts` — **rejected unchanged, 6/20**. Persistent Foundry resources, external tools, evaluation data, cost-bearing operations, and explicit API-key output violate current authority and secret-custody requirements.
+- `azure-ai-translation-ts` — **rejected unchanged, 10/20**. Arbitrary text/document transfer plus SAS-backed batch translation lacks sufficient privacy, credential, persistent-write, recovery, and budget authority.
+- `azure-ai-voicelive-ts` — **rejected unchanged, 6/20**. Live audio/transcript capture and model-triggered external actions lack mandatory consent, data, identity-sensitive, and per-action authorization boundaries.
+- `azure-appconfiguration-ts` — **rejected unchanged, 7/20**. Production configuration, feature targeting, snapshots, secret resolution, and PII examples lack adequate change, credential, redaction, rollout, and recovery authority.
+- `azure-cosmos-ts` — **rejected unchanged, 9/20**. Durable database/container/item mutation and bulk destructive operations lack environment/resource, data-scope, recovery, throughput, and destructive-action authority.
+- `azure-eventhub-ts` — **rejected unchanged, 8/20**. External event publication and persistent checkpoint state lack payload, destination, downstream-effect, storage, retention, redaction, and budget authority.
+- `azure-identity-ts` — **rejected unchanged, 6/20**. Strong managed/workload identity and credential-selection prior art is retained, but raw bearer-token logging, verbose identity diagnostics, secret/password credential paths, broad developer-credential fallbacks, user-identity handling, and CORS/security-control mutation lack mandatory credential-custody, least-privilege tenant/resource/scope, sensitive-output, identity/access, and action-specific security-control authorization.
 
-All nine retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All ten retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source-order after `azure-eventhub-ts`, beginning with `azure-identity-ts`.
+**Next:** continue the registered-pin TypeScript tree source order after `azure-identity-ts`, beginning with `azure-keyvault-keys-ts`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -96,5 +97,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **116/189**, **73 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **9/25**.  
-**Next:** continue after `azure-eventhub-ts` in the registered-pin TypeScript tree, beginning with `azure-identity-ts`.
+**Microsoft Skills:** **117/189**, **72 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **10/25**.  
+**Next:** continue after `azure-identity-ts` in the registered-pin TypeScript tree, beginning with `azure-keyvault-keys-ts`.

@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 288 |
+| **Persisted third-party review companions** | 289 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 116 / 189 |
-| **Microsoft Skills current-standard gaps** | 73 |
+| **Microsoft Skills current-standard companions** | 117 / 189 |
+| **Microsoft Skills current-standard gaps** | 72 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 9 / 25 |
+| **Microsoft TypeScript direct-package companions** | 10 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **116/189 companion-complete**, **73 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **117/189 companion-complete**, **72 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **9/25** complete.
+- Microsoft direct TypeScript: **10/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -48,23 +48,22 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The registered-pin TypeScript tree contains exactly **25** first-class packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which nevertheless exists as a separate first-class package at the same pin. Tree truth controls the denominator.
 
-`applicationinsights-web-ts` was already current-standard companion-complete. `azure-ai-contentsafety-ts` is **rejected unchanged, 11/20**, with `validation_status: not-run`, because its text/image moderation and persistent blocklist operations lack mandatory disclosure/privacy, trusted-source, logging-minimization, and action-specific mutation boundaries.
+Current companion-complete TypeScript packages are:
 
-`azure-ai-document-intelligence-ts` is **rejected unchanged, 11/20**, with `validation_status: not-run`. Its prebuilt document extraction, layout/table analysis, batching, error handling, and custom-model mechanics remain useful prior art, but unchanged examples transmit identity, health-insurance, tax, banking, invoice, receipt, address, birth-date, document-number, and other potentially sensitive document data to Azure without mandatory subject/data authority, destination/region, minimization, retention/redaction, or output-disclosure controls. Remote-document analysis lacks an explicit trusted-source boundary; custom model training uses a credential-bearing storage SAS URL without a secure external credential path; and build/compose/delete operations mutate persistent billable service state without action-specific model, destructive-action, rollback, or budget authority.
+1. `applicationinsights-web-ts` — rejected unchanged, 16/20.
+2. `azure-ai-contentsafety-ts` — rejected unchanged, 11/20.
+3. `azure-ai-document-intelligence-ts` — rejected unchanged, 11/20.
+4. `azure-ai-projects-ts` — rejected unchanged, 6/20.
+5. `azure-ai-translation-ts` — rejected unchanged, 10/20.
+6. `azure-ai-voicelive-ts` — rejected unchanged, 6/20.
+7. `azure-appconfiguration-ts` — rejected unchanged, 7/20.
+8. `azure-cosmos-ts` — rejected unchanged, 9/20.
+9. `azure-eventhub-ts` — rejected unchanged, 8/20.
+10. `azure-identity-ts` — rejected unchanged, 6/20.
 
-`azure-ai-projects-ts` is **rejected unchanged, 6/20**, with `validation_status: not-run`. Its Foundry project client, agent/version, connection, deployment, dataset, index, evaluation, OpenAI-client, and tool-wiring mechanics remain useful prior art. Unchanged examples create and delete persistent service-side resources, transmit datasets and evaluation content, invoke external tools/services, expose location context to web search, and can incur inference/storage/evaluation costs without sufficient action-specific resource, publication, destructive-action, downstream-effect, data-transfer, rollback, or budget authorization. The bundled connections reference also retrieves project connection credentials and explicitly prints an API key, directly violating the secret-custody rule; evaluation examples print row-level content without mandatory minimization/redaction/retention controls.
+`azure-identity-ts` is bound to package tree `b275cc7fb988e6502965015d0d091605332f87c1`, `SKILL.md` blob `50b8b57d4f064c88ddd3c35976511952bcdeba05`, `references/browser-auth.md` blob `1d8a93ad3e4a907e41e8cbe009ddf81b3b1f01c4`, and `references/credential-types.md` blob `ae246f78be2b6ae48863b180dd5c0c188aafbeae`. Skill-family freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its DefaultAzureCredential, managed/workload identity, service-principal, browser/device-code, sovereign-cloud, credential-chain, and auth-error mechanics remain useful prior art. Unchanged adoption fails because the package demonstrates raw bearer-token retrieval and token logging, verbose Azure Identity logging without mandatory redaction, secret/password-bearing credential paths without a secure external custody contract, broad developer-credential fallback chains without explicit tenant/resource/scope authorization, browser identity flows carrying user identifiers, and instructions that can change Azure Storage CORS/security configuration without action-specific security-control authorization. Behavioral validation is `not-run`.
 
-`azure-ai-translation-ts` is **rejected unchanged, 10/20**, with `validation_status: not-run`. Its text translation, transliteration, language detection, single-document translation, batch document translation, status/pagination, and Azure identity mechanics remain useful prior art. Unchanged examples transmit arbitrary text and document content to Azure without mandatory data-classification, subject/data-transfer, destination/region, minimization, retention, or output-disclosure authority. Batch document translation generates credential-bearing source and target container SAS URLs and starts a billable operation that writes translated content to persistent target storage without sufficient credential-custody, storage-scope, write/downstream-effect, overwrite/recovery, or budget authorization. API-key authentication is also presented without a repository-enforced secure external credential path.
-
-`azure-ai-voicelive-ts` is **rejected unchanged, 6/20**, with `validation_status: not-run`. Its real-time WebSocket voice session, browser microphone capture/playback, VAD, transcription, event handling, cleanup, and function-calling mechanics remain useful prior art. Unchanged examples capture and transmit live microphone audio, transcripts, conversation content, locations, and tool arguments/results to Azure or downstream services without mandatory subject consent, data classification, approved destination/region, minimization, retention/redaction, or output-disclosure controls. The bundled function-calling reference permits model-triggered external actions, including appointment booking and other API calls, without a real per-action authorization gate; a system prompt to confirm details is not action authorization. API-key authentication and personal/custom voice identifiers also require stronger credential and identity/biometric-sensitive boundaries than the unchanged package provides.
-
-`azure-appconfiguration-ts` is **rejected unchanged, 7/20**, with `validation_status: not-run`. Its App Configuration CRUD, optimistic-concurrency, provider-loading, dynamic-refresh, feature-flag, labels, snapshots, and Key Vault reference mechanics remain useful prior art. Unchanged examples create/update/delete production configuration, lock/unlock settings, change feature targeting, and archive/recover persistent snapshots without mandatory resource/environment, per-change, rollout, rollback/recovery, or budget/service authorization. The package presents a credential-bearing connection string as a normal path, automatically resolves Key Vault secrets into application memory, prints configuration values, and uses user email addresses in targeting examples without mandatory secure credential custody, secret/output redaction, or PII minimization boundaries.
-
-`azure-cosmos-ts` is **rejected unchanged, 9/20**, with `validation_status: not-run`. Its Entra-first client setup, partition design, point reads, parameterized queries, pagination, CRUD, bulk operations, indexing, diagnostics, retry handling, and client-lifecycle patterns remain useful prior art. Unchanged examples create databases and containers, create/replace/upsert/delete durable items, and perform bulk destructive operations without mandatory environment/resource, data-scope, mutation, destructive-action, recovery/retention, or budget/throughput authorization. The package's instruction to confirm destructive actions is not itself action authorization. Query and diagnostic patterns can also surface item content or operational detail without mandatory classification, minimization, or output-disclosure controls.
-
-`azure-eventhub-ts` is **rejected unchanged, 8/20**, with `validation_status: not-run`. Its producer/consumer setup, batching, partition targeting, consumer groups, event positions, Blob checkpointing, load balancing, lag monitoring, graceful shutdown, and retry/error patterns remain useful prior art. Unchanged flows publish arbitrary event payloads to an external Event Hub, create/update persistent Blob checkpoint state, and may drive downstream processing without mandatory destination, payload-classification/disclosure, environment/resource, write, downstream-effect, retention/recovery, or budget/throughput authorization. The bundled checkpointing material also presents storage and Event Hubs connection strings as normal credential paths, while event-processing examples log event bodies, properties, and system properties without mandatory secret/PII minimization or redaction.
-
-Microsoft Skills remains active with **73** gaps. Continue TypeScript source-order after `azure-eventhub-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **72** gaps. Continue TypeScript source order after `azure-identity-ts`, beginning with `azure-keyvault-keys-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -82,7 +81,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 9/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 10/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.

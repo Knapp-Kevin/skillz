@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-identity-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b275cc7fb988e6502965015d0d091605332f87c1
+skill_md_blob_sha: 50b8b57d4f064c88ddd3c35976511952bcdeba05
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [cloud, security, implementation]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus references/browser-auth.md and references/credential-types.md. Useful material includes DefaultAzureCredential, managed/workload identity, service-principal and certificate patterns, developer credentials, browser/device-code authentication, sovereign-cloud authority hosts, custom credential chains, token providers, authentication errors, and logout guidance. Rejected unchanged because the package demonstrates raw bearer-token retrieval and explicitly logs bearer tokens, enables verbose Azure Identity logging without mandatory redaction, includes client-secret/certificate-password credential paths without a secure external secret-custody contract, permits broad developer-credential fallback chains without mandatory tenant/resource/scope authorization, carries user identifiers through browser login hints, and includes instructions for changing Azure Storage CORS/security configuration without an action-specific security-control authorization gate. Positive guidance to prefer managed identity and avoid hardcoded secrets is useful but does not cure the missing authority and sensitive-output boundaries. Behavioral validation remains not-run.
