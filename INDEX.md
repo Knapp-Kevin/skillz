@@ -14,16 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 284 |
+| Persisted third-party exact-version reviews | 285 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 112 / 189 |
-| Microsoft Skills current-standard gaps | 77 |
+| Microsoft Skills current-standard companions | 113 / 189 |
+| Microsoft Skills current-standard gaps | 76 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
-| Microsoft TypeScript direct-package companions | 5 / 25 |
+| Microsoft TypeScript direct-package companions | 6 / 25 |
 
 ## First-party skills by purpose
 
@@ -62,6 +62,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **112/189**, leaving **77** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **5/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls. `applicationinsights-web-ts`, `azure-ai-contentsafety-ts`, `azure-ai-document-intelligence-ts`, `azure-ai-projects-ts`, and `azure-ai-translation-ts` now have current-standard companions; all five are rejected unchanged under current privacy, sensitive-data, secret-custody, or authority hard gates while retaining useful adaptation/reference evidence. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **113/189**, leaving **76** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **6/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls. `applicationinsights-web-ts`, `azure-ai-contentsafety-ts`, `azure-ai-document-intelligence-ts`, `azure-ai-projects-ts`, `azure-ai-translation-ts`, and `azure-ai-voicelive-ts` now have current-standard companions; all six are rejected unchanged under current privacy, sensitive-data, secret-custody, or authority hard gates while retaining useful adaptation/reference evidence. Voice Live adds explicit microphone/audio-transmission, transcript/privacy, personal/custom voice identity, and model-triggered external-function authorization risks. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
