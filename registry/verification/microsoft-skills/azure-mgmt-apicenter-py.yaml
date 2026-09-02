@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-apicenter-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cc4ec2952eeefd4cbfcf3c5443879ca21692c5ab
+skill_md_blob_sha: 99f050f552d6aa7c18f0f49615a754b063c998fc
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, api-design, implementation]
+  lifecycle: [design, implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first authentication, API inventory/version/definition management, specification import, environment/deployment records, and governance metadata are useful prior art. Unchanged adoption is rejected because examples create billable Azure resources and mutate production-facing inventory, specifications, lifecycle state, contacts, deployment/environment records, and metadata without explicit environment, mutation, disclosure, rollback, or cost authorization boundaries. Behavioral validation is not-run.
