@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-search-documents-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 629dedbea4c5b2112e6eeae902145e4c0d5d6cc7
+skill_md_blob_sha: 41ed03ad443be379d3cd39a3df18ff29634f1940
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation, research]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, retrieval-first, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains SKILL.md, three references, and two setup scripts covering vector/semantic search, agentic retrieval, Azure OpenAI integration, knowledge sources/bases, indexing, document mutation, and destructive cleanup. Useful Entra-first authentication, retrieval, batching, vector, semantic-ranking, and lifecycle patterns remain prior art. Unchanged adoption is rejected because it can create/delete indexes and knowledge resources, upload/merge/delete documents, configure external data sources/skillsets/indexers, and invoke Azure OpenAI-backed vectorization/answer synthesis without explicit resource/data scope, disclosure, destructive-action, rollback, service-impact, or budget authorization. Behavioral validation is not-run.
