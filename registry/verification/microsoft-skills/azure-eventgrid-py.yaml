@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventgrid-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 604b049cc7e1550e604b6f9e60fc896e1121211a
+skill_md_blob_sha: 907ee84b85bfaa87cc2dada271d27e03ae5dae28
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation, orchestration]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Useful material covers CloudEvents/EventGridEvent schemas, Entra-first authentication, batching, namespace topics, sync/async publishing and routing metadata. Unchanged adoption is rejected because the core workflow publishes application payloads to an external event service that can trigger downstream systems and incur cost without distinct topic/audience, data-disclosure, publication/communication, downstream-impact or budget authorization. The async example also fails to close its DefaultAzureCredential despite the package's stated lifecycle rule. Installation is unpinned. Behavioral validation is not-run.
