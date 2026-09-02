@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-eventhub-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c4cfb748dfa88feb9bcac3d1ae0f31a9dd0a6982
+skill_md_blob_sha: fe0cc9ab1db48af480d95c11e72de9db5c7c4645
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case: [cloud, implementation, architecture]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus references/checkpointing.md and references/event-processing.md. Useful material includes Entra-first producer/consumer setup, event batching, partition targeting, consumer groups, event positions, persistent Blob checkpointing, load balancing, lag monitoring, graceful shutdown, retry/error handling, and idempotent-processing guidance. Rejected unchanged because normal flows publish event payloads to an external Event Hub, create/update persistent Blob checkpoint state, and may drive downstream processing without mandatory destination, payload-classification/disclosure, environment/resource, write, downstream-effect, retention/recovery, or budget/throughput authorization. The bundled checkpointing reference also presents storage and Event Hubs connection strings as normal credential paths, while subscription examples log arbitrary event bodies, properties, and system properties without mandatory secret/PII minimization or redaction controls. DefaultAzureCredential and ManagedIdentityCredential are positive credential patterns, but they do not cure the missing action and data authority boundaries. Behavioral validation remains not-run.
