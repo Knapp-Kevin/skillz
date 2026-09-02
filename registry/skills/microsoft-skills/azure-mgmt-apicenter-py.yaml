@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-mgmt-apicenter-py
+display_name: Microsoft Azure API Center Management Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-mgmt-apicenter-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-mgmt-apicenter-py
+permission_tier: cloud-resource-management
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-mgmt-apicenter; azure-identity; Azure API Center
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA cc4ec2952eeefd4cbfcf3c5443879ca21692c5ab and SKILL.md blob 99f050f552d6aa7c18f0f49615a754b063c998fc. Useful material covers Entra-first authentication, API inventory, versions, definitions, specification import, environments, deployment records, lifecycle state, and governance metadata. Unchanged use is rejected because the examples create billable Azure resources and mutate production-facing API inventory, deployment/environment records, specifications, lifecycle state, contacts, and governance metadata without distinct environment, resource-creation, publication, data-disclosure, or cost authorization gates. Preserve as adaptation/reference material with explicit target-environment confirmation, mutation approval, data/metadata disclosure review, least privilege, rollback/cleanup planning, cost bounds, and pinned dependencies.
