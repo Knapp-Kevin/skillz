@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b5092b4ffe491abdf28e33c8c9fa3d06af6c9aee
+skill_md_blob_sha: 23cccf5a75db3eff3a6e263347caf1e5fab5a495
+characterized_at: 2026-09-01
+last_verified_at: 2026-09-01
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case: [cloud, api-design, deployment, security]
+  lifecycle: [design, implementation, release, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first authentication and APIM service/API/product/subscription/policy/backend/user patterns are useful prior art. Unchanged adoption is rejected because examples create billable APIM services, publish products without approval, create active subscriptions and print subscription keys, mutate gateway policies and backends, create users with PII, and show a literal secret value without explicit target-environment, secret-custody, access, privacy, policy-change, rollback, or budget authorization boundaries. Behavioral validation is not-run.
