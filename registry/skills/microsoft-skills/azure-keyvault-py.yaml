@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-keyvault-py
+display_name: Microsoft Azure Key Vault Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-keyvault-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-keyvault-py
+permission_tier: secrets-keys-certificates
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-keyvault-secrets; azure-keyvault-keys; azure-keyvault-certificates; azure-identity; Azure Key Vault
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA cbcf7a71066e1d3b1a073b07d358efbbe6b8e77b and SKILL.md blob 20c836c7b6e903dfce8d3fb90cc38c57892d0154. Useful material covers managed-identity-first access, secret/key/certificate clients, soft-delete/recovery, cryptographic operations, async lifecycle and RBAC guidance. Unchanged use is rejected because examples set and print secret values, permanently purge deleted secrets, create/delete cryptographic keys and certificates, retrieve certificate private-key material as a secret, and perform encrypt/decrypt/sign operations without explicit secret-disclosure, destructive-action, cryptographic-use, retention/recovery, or approval boundaries. Preserve as adaptation/reference material with no secret-value output, explicit destructive/purge approval, key/certificate lifecycle policy, cryptographic-use authorization, least privilege, and pinned dependencies.
