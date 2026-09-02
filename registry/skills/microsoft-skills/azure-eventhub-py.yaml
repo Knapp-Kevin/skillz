@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventhub-py
+display_name: Microsoft Azure Event Hubs Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-eventhub-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-01
+last_checked_at: 2026-09-01
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-eventhub-py
+permission_tier: external-event-streaming
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-eventhub; azure-identity; optional azure-eventhub-checkpointstoreblob; Azure Event Hubs; optional Azure Blob Storage checkpoint container
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 0fbf762f81763b55040414428dcb0a3a0d29bd5f and SKILL.md blob 289676f5c80a9f4064980ff98283575502fe1d99, including checkpointing/partition references and setup_consumer.py. Useful material covers Entra-first authentication, batching, partition routing, consumer groups, checkpointing, async streaming, and bounded receive options. Unchanged use is rejected because core flows send event payloads to an external metered service, receive and print event bodies/properties, write checkpoint state to Blob Storage, and provide a CLI that sends test messages without distinct publication/data-disclosure, storage-mutation, downstream-impact, retention, or budget authorization. The CLI also creates async credentials without an explicit async credential context manager despite the package rule. Preserve as adaptation/reference material with explicit data/publication/cost authority, approved logging/redaction, checkpoint lifecycle, deterministic credential cleanup, and pinned dependencies.
