@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-exporter-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6f3f29fc5ab34768abdb08ba9c85a038f7deccbe
+skill_md_blob_sha: bd9553c42ef1863efcf87aebd92225f305786934
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, monitoring, observability]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, instrumentation, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Explicit trace/metric/log exporters, Entra authentication, sampling, provider shutdown, sovereign-cloud configuration, and retry storage are useful prior art. Unchanged adoption is rejected because telemetry can be exported externally without explicit data-classification/disclosure authority, root logging can capture broad application data, and offline retry storage persists telemetry without stated retention or sensitive-data controls. Behavioral validation is not-run.
