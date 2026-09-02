@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-file-share-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9f58beb6bc9d022669483f4f7c911305a95789e4
+skill_md_blob_sha: 5200889a0df5498bfe704c12358e2f2c1465c84f
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains only SKILL.md. It provides useful Entra-first authentication, context-managed clients, streaming/range transfer, snapshot, and quota patterns. Unchanged adoption is rejected because it creates and deletes shares/directories/files, uploads and copies persistent data, downloads potentially sensitive content, and creates snapshots on a billable external service without explicit resource/data scope, destructive-action authorization, copy-source trust, retention/recovery, output-disclosure, service-impact, or budget boundaries. Behavioral validation is not-run.
