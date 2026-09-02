@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-identity-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 70fdb3c2195f292aa8178aad5ab92f3fd62c27ab
+skill_md_blob_sha: 317dc60da7d51ca0d479fb7720fc81b38630d05a
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case:
+    - cloud
+    - security
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - risk-aware
+    - reference-heavy
+  authority:
+    - read-only
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md. The skill teaches useful DeveloperToolsCredential, managed identity, workload identity, service-principal, and assertion concepts, but its own example retrieves and prints a secret value and its ClientSecretCredential example places a client secret directly into code. Missing tenant/scope authorization, redaction, and secure credential custody trigger rejection unchanged. Behavioral validation was not run.

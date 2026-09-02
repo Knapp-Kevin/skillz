@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: azure-storage-queue-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: be9d64723692c886bd698fd81c90b01cd26dd24f
+skill_md_blob_sha: 4ce6336f70c96323d064db7dc0486d6a621af9c9
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case:
+    - cloud
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md. It sends queue messages, prints received/peeked content, and deletes messages after processing. These are externally consequential publication/disclosure/destructive-settlement actions with no real action-specific authorization boundary. Behavioral validation was not run.

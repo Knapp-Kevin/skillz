@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: azure-storage-queue-rust
+display_name: Azure Queue Storage (Rust)
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-rust/skills/azure-storage-queue-rust
+source_class: pinned-reference-corpus
+license: MIT
+relationship: exact-version-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: c62ba68be03005ce17c0c00ee75bb7b8836d2352
+upstream_last_updated_at: 2026-06-11T21:18:03Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: available-at-pin
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-rust/skills/azure-storage-queue-rust
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: package-complete
+dependencies:
+  - Rust
+  - azure_storage_queue
+  - azure_identity
+  - azure_core
+  - tokio
+import_eligibility: adaptation-or-extraction-only
+rationale: >-
+  Useful queue client, RBAC, receive/peek, and message-lifecycle mechanics remain prior art. Unchanged adoption publishes messages, prints message content, and permanently deletes queue messages without explicit destination/audience, downstream-effect, sensitive-data disclosure, destructive-settlement, or resource-scope authorization.

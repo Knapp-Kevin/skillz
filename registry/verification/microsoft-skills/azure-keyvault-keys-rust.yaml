@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-keyvault-keys-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 24681f9fccb3030c14ef58f0f4e2a9b368cdb10e
+skill_md_blob_sha: c82708f0d858473533f8be28619e1d5bb0e0997c
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 7/20
+tags:
+  use_case:
+    - cloud
+    - security
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - mutating
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md. The package creates and deletes keys, changes key metadata, and performs wrap/unwrap operations. These are consequential cryptographic and durable-state operations and no action-specific key-purpose, vault-scope, destructive-operation, recovery, or production authorization gate is present. Behavioral validation was not run.

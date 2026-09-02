@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: azure-eventhub-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 89d58ddfed067e9997318a6a36a979f0257715f2
+skill_md_blob_sha: 6b728d857b1100fe2f8b43c4c07c6a2d041c7665
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case:
+    - cloud
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md. Sending single or batched events can trigger downstream systems, while the receive example prints event objects. No action-specific publication, destination, data-disclosure, downstream-impact, retention, or budget authorization is required. Static rejection does not erase the useful streaming and batching mechanics; behavioral validation was not run.

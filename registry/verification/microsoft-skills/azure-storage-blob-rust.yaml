@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: azure-storage-blob-rust
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 75d6bae5029c6569333639cc5b51c0f96511a3e5
+skill_md_blob_sha: 94abf8afbad19acbbc27b1367214fad98052381e
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case:
+    - cloud
+    - implementation
+  lifecycle:
+    - implementation
+    - operations
+  characteristic:
+    - production-oriented
+    - risk-aware
+  authority:
+    - mutating
+    - external-side-effect
+  portability:
+    - medium
+notes: >-
+  Complete-package review covered the single SKILL.md. The package uploads and deletes durable blobs, creates containers, and downloads content into application context. It lacks action-specific resource/data scope, destructive-operation, recovery/retention, disclosure, and budget authority. Static rejection preserves the useful client/error/RBAC patterns; behavioral validation was not run.
