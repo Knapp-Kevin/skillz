@@ -11,84 +11,56 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 246 |
+| **Persisted third-party review companions** | 249 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
-| **AWS historical review** | 72 / 72 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **AWS current-standard gaps** | 0 |
-| **Microsoft Skills current-standard companions** | 74 / 189 |
-| **Microsoft Skills current-standard gaps** | 115 |
+| **Microsoft Skills current-standard companions** | 77 / 189 |
+| **Microsoft Skills current-standard gaps** | 112 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
-| **Microsoft Python direct-package companions** | 15 / 40 |
+| **Microsoft Python direct-package companions** | 18 / 40 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
 ## Current architecture
 
-The canonical physical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance and exact-version evidence live under `registry/`.
+The canonical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance and exact-version evidence live under `registry/`.
 
-`skillz` owns no runtime, scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Tooling inside pinned third-party repositories remains upstream package material, not repository-owned execution machinery.
+`skillz` owns no runtime, scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Tooling inside pinned third-party repositories remains upstream package material.
 
 ## Inventory boundaries
 
-- **43 active first-party skills** are **43/43 provenance-complete** and have structured semantic review evidence.
-- **12 pinned external corpora** provide the broad reference surface.
-- **246 exact-version third-party verification companions** are persisted.
-- `registry/sources.yaml` contains **19 unique source identities**.
-- AWS Agent Toolkit has an exact eligible denominator of **72** at registered pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`. All **72/72** were historically inspected and all **72/72** now have current-standard per-skill provenance + verification companions.
-- AWS completion means every eligible entry has decisive current evidence, not that every upstream procedure is approved unchanged. Rejected states remain preserved where authority, secret handling, freshness, or other quality defects require adaptation/reference-only treatment.
-- Microsoft Skills has an exact eligible denominator of **189** independently front-mattered skill entry points at registered pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **74/189** have current-standard provenance + verification companions and **115** remain.
-- The direct `.github/plugins/azure-sdk-dotnet/skills/` slice contains **29** packages and is **29/29 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-java/skills/` slice contains **26** packages and is **26/26 current-standard companion-complete**.
-- The direct `.github/plugins/azure-sdk-python/skills/` slice contains **40** packages and is **15/40 current-standard companion-complete**.
-- Historical source-level evidence remains valid for what it establishes. Other corpora should be reconciled from prior evidence before fresh review.
+- First-party: **43/43 provenance-complete** with structured semantic review evidence.
+- AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
+- Microsoft Skills: exact denominator **189**, **77/189 companion-complete**, **112 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft direct `.NET`: **29/29** complete.
+- Microsoft direct Java: **26/26** complete.
+- Microsoft direct Python: **18/40** complete.
 
-## AWS curation completion
+Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-The sequential reconciliation campaign completed every AWS core and specialized package at the registered pin. Fully reconciled specialized families include analytics, database, EC2, migration/modernization, networking/content-delivery, operations, security/identity, serverless, storage, system-table, and web/mobile.
+## Active Microsoft frontier
 
-The final AWS tranche preserved useful negative evidence rather than rubber-stamping completion. Behavioral evidence remains `not-run` unless representative external evaluation actually occurred. Upstream scripts, assets, references, templates and examples remain intact package dependencies rather than `skillz` execution machinery.
+Python is active and now runs source-order through `azure-eventgrid-py`.
 
-## Microsoft Skills curation
+Latest tranche, all with `validation_status: not-run`:
 
-Microsoft Skills is the active admitted-source frontier. The denominator is **189** independently front-mattered `SKILL.md` entry points at the exact registered pin; duplicate exposure paths and symlink mirrors are de-duplicated, while ordinary workflow/reference `.md` files remain dependencies of their parent package.
+- `azure-cosmos-py` — **rejected unchanged, 9/20**. Complete-package review includes partitioning/query references and a setup CLI. Useful Cosmos design and SDK guidance is outweighed for unchanged adoption by unguarded database/container provisioning, throughput/index changes, durable CRUD/delete, transactional financial mutation, billable resource creation, and an account-key fallback in the CLI. Adaptation requires explicit environment/data/destructive/financial/cost authority, recovery/retention, least-privilege RBAC, and pinned dependencies.
+- `azure-data-tables-py` — **rejected unchanged, 12/20**. Useful Entra-first table/entity patterns, partition-aware queries, transactions, async use, and client lifecycle, but table/entity creation/update/delete lacks distinct account/table/data-scope, destructive, retention, rollback, and cost authorization boundaries.
+- `azure-eventgrid-py` — **rejected unchanged, 13/20**. Useful CloudEvents/EventGridEvent, batching, namespace-topic, and Entra-first guidance, but event publication can disclose payloads and trigger downstream external effects without explicit topic/audience, disclosure, publication, downstream-impact, or budget authority. The async credential lifecycle also contradicts the package's cleanup rule.
 
-Current progress is **74/189** current-standard companion-complete. Previously reconciled units include root/cross-language packages, the complete direct `.NET` SDK plugin slice, the complete direct Java SDK plugin slice, and the first fifteen direct Python packages.
-
-### .NET direct plugin slice — CURRENT-STANDARD COMPLETE
-
-All **29/29 direct `.github/plugins/azure-sdk-dotnet/skills/` packages** have exact-version provenance + verification companions at registered Microsoft pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-
-Every direct `.NET` package retains exact tree/blob identity, exact source revision/date, dependencies, portability, current authority classification, controlled taxonomy tags, decisive static state and `validation_status: not-run`. Completion means decisive current evidence for every package, not universal approval.
-
-### Java plugin slice — CURRENT-STANDARD COMPLETE
-
-The direct Java plugin has an exact denominator of **26** packages and is **26/26 current-standard companion-complete** at the registered Microsoft pin. Each reviewed Java package retains its own exact package-tree, `SKILL.md` fingerprint, source-path revision/freshness evidence, dependencies, authority, portability, controlled tags, decisive state, and explicit behavioral-evidence status.
-
-The final three packages were `azure-security-keyvault-keys-java`, `azure-security-keyvault-secrets-java`, and `azure-storage-blob-java`. Their rejected-unchanged states preserve concrete authority, secret/data-handling, destructive-action, credential, and external-service findings rather than converting tranche completion into blanket approval.
-
-Behavioral validation remains `not-run` for the Java tranche unless separate representative external scenario/adversarial evidence is actually recorded.
-
-### Python plugin slice — ACTIVE
-
-The direct Python plugin has an exact denominator of **40** packages and is **15/40 current-standard companion-complete** at the registered pin. Current exact companions run source-order through `azure-cosmos-db-py`. Each package retains differentiated evidence rather than source-level approval.
-
-The latest two-package tranche adds `azure-containerregistry-py` and `azure-cosmos-db-py`, both with behavioral evidence `not-run`:
-
-- `azure-containerregistry-py` — **rejected unchanged, 12/20**. Useful Container Registry reference material covers Entra-first authentication, repository/tag/manifest inspection, artifact download, property controls and cleanup. Unchanged use can alter registry write/delete policy, delete repositories, manifests and tags, and automate deletion of old untagged images without distinct registry scope, mutation, destructive-action, retention, rollback or approval boundaries. Artifact download also writes local files.
-- `azure-cosmos-db-py` — **rejected unchanged, 11/20**. The complete package includes five references and three Python templates with useful RBAC-first authentication, partition-key, parameterized-query, service-layer, testing and graceful-degradation patterns. Unchanged use performs durable create/update/delete operations without a distinct tenant/workspace data-authorization and destructive-action contract. The package also contains inconsistent sync-versus-async guidance and broad exception/traceback logging that requires secret/privacy-safe adaptation.
+The next source-ordered package is `azure-eventhub-py`. It contains references and scripts and should receive complete-package review before disposition.
 
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
 
-New third-party discoveries use issue-first intake. Discovery surfaces, including the connected Creator Technical Resource Catalog, provide leads only. Their scores, labels, creator attributions, popularity, and recommendations do not establish `skillz` provenance or individual quality.
+Discovery is intelligence only. Popularity, branding, creator reputation, and source-level signals never prove individual skill quality.
 
 ## Quality model
 
-Every governed user-facing skill must retain truthful provenance and applicable exact-version evidence before being called companion-complete. `verified` means the exact material passed structured static semantic review. `validated` additionally requires representative external scenario/adversarial evidence. `stale`, `rejected`, and `retired` are excluded from normal unchanged reuse while remaining useful evidence where appropriate.
+Every governed user-facing skill must retain truthful provenance and applicable exact-version evidence before being called companion-complete. `verified` means exact material passed structured static semantic review. `validated` additionally requires representative external behavioral/adversarial evidence. `stale`, `rejected`, and `retired` are excluded from normal unchanged reuse while remaining useful evidence where appropriate.
 
 Interpret candidate material in this order:
 
@@ -96,11 +68,10 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered plugin/language batches against the exact **189-entry** denominator; direct Python is the active tranche at **15/40**.
+1. Continue Microsoft Skills in coherent source-ordered batches, with Python at **18/40**.
 2. Complete Microsoft Azure Skills.
-3. Reconcile historically completed external corpora whose prior review evidence is broader than their current one-file companion shelf.
-4. Continue admitted/tracked creator-source curation and denominator reconciliation.
-5. Continue governed discovery/source-vetting through issue-first intake and omission recovery.
-6. Keep README, this System State, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
+4. Continue governed discovery/source-vetting and omission recovery.
+5. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
-The current living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
+The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
