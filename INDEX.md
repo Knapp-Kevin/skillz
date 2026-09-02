@@ -14,16 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 291 |
+| Persisted third-party exact-version reviews | 292 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 119 / 189 |
-| Microsoft Skills current-standard gaps | 70 |
+| Microsoft Skills current-standard companions | 120 / 189 |
+| Microsoft Skills current-standard gaps | 69 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
-| Microsoft TypeScript direct-package companions | 12 / 25 |
+| Microsoft TypeScript direct-package companions | 13 / 25 |
 
 ## First-party skills by purpose
 
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **119/189**, leaving **70** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **12/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **120/189**, leaving **69** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **13/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
-The current TypeScript companion-complete slice runs through `azure-keyvault-secrets-ts`. All twelve reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, or authority hard gates while retaining useful adaptation/reference evidence. `azure-keyvault-secrets-ts` specifically retains Key Vault secret lifecycle, recovery, backup/restore, key lifecycle, and cryptographic-operation mechanics, but raw secret output, literal secret material, purge/recovery, backup/export, key mutation, and cryptographic operations lack mandatory vault/resource, secret-purpose, per-operation, secure-custody, destructive-action, recovery, disclosure, retention, and production authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+The current TypeScript companion-complete slice runs through `azure-microsoft-playwright-testing-ts`. All thirteen reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, cost, or authority hard gates while retaining useful adaptation/reference evidence. `azure-microsoft-playwright-testing-ts` specifically retains Azure-hosted Playwright setup, Entra/workload identity, cloud browser scaling, manual connection, CI/CD, migration, reporter, trace/video, and worker-scaling mechanics, but executing browser automation against external targets, network exposure, publishing test results/artifacts, CI identity-token configuration, and billable cloud capacity lack mandatory target/environment, test-data, action, publication/retention, network, cost, and production authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
-The next Microsoft TypeScript unit is `azure-microsoft-playwright-testing-ts`.
+The next Microsoft TypeScript unit is `azure-monitor-opentelemetry-ts`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

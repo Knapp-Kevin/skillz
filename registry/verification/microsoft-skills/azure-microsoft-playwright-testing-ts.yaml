@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-microsoft-playwright-testing-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2c64ca04d7e33d27405771bad5d6de42ce8433ac
+skill_md_blob_sha: b784591d64f11644dde1f7b165411792751f284a
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [browser-testing, cloud, testing, implementation]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, tool-assisted, visual-verification]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single SKILL.md file. Useful material includes Azure-hosted Playwright setup, Entra/workload identity, cloud browser scaling, manual connections, CI/CD integration, reporter configuration, traces/videos, migration from the retired package, and worker-scaling patterns. Rejected unchanged because normal flows execute browser automation against external targets, establish billable cloud browser sessions, can expose network-reachable test targets through exposeNetwork, publish test results and artifacts to Azure, and configure CI identity-token permissions without mandatory target/environment, test-data, mutation/external-side-effect, publication/retention, network-exposure, cost, or production authorization boundaries. Test suites can themselves perform consequential writes or communications against the chosen target, so merely instructing the host to run them does not supply authorization. Positive use of Entra identity and production credential guidance is useful but does not cure these missing action boundaries. Behavioral validation remains not-run.

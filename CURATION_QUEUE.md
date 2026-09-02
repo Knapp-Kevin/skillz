@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **291** persisted exact-version third-party verification companions.
+- **292** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **119/189**.
-- Remaining gaps: **70**.
+- Current-standard companions: **120/189**.
+- Remaining gaps: **69**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **12/25** complete.
+- Direct TypeScript: **13/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
@@ -59,10 +59,11 @@ Current TypeScript decisive states:
 - `azure-identity-ts` — **rejected unchanged, 6/20**. Strong managed/workload identity and credential-selection prior art is retained, but raw bearer-token logging, verbose identity diagnostics, secret/password credential paths, broad developer-credential fallbacks, user-identity handling, and CORS/security-control mutation lack mandatory credential-custody, least-privilege tenant/resource/scope, sensitive-output, identity/access, and action-specific security-control authorization.
 - `azure-keyvault-keys-ts` — **rejected unchanged, 5/20**. Key creation/import/rotation/deletion/purge, cryptographic operations, bundled secret lifecycle, raw secret output, bulk secret export, and local backup-file examples lack mandatory vault/resource, key-purpose, per-operation, destructive-action, recovery, secure-custody, disclosure, and production authorization.
 - `azure-keyvault-secrets-ts` — **rejected unchanged, 5/20**. Secret set/get/list/delete/purge/recover/backup/restore, raw secret output, literal API-key/connection-string examples, bulk secret handling, key lifecycle, and cryptographic operations lack mandatory vault/resource, secret-purpose, data-owner, per-operation, destructive-action, recovery, secure-custody, disclosure, retention, production, and security-control authorization.
+- `azure-microsoft-playwright-testing-ts` — **rejected unchanged, 10/20**. Cloud browser execution, external test targets, network exposure, Azure result/artifact publication, CI identity-token configuration, and billable worker scaling lack mandatory target/environment, test-data, external-side-effect, artifact publication/retention, network-exposure, cost, and production authorization boundaries.
 
-All twelve retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All thirteen retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source order after `azure-keyvault-secrets-ts`, beginning with `azure-microsoft-playwright-testing-ts`.
+**Next:** continue the registered-pin TypeScript tree source order after `azure-microsoft-playwright-testing-ts`, beginning with `azure-monitor-opentelemetry-ts`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -99,5 +100,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **119/189**, **70 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **12/25**.  
-**Next:** continue after `azure-keyvault-secrets-ts` in the registered-pin TypeScript tree, beginning with `azure-microsoft-playwright-testing-ts`.
+**Microsoft Skills:** **120/189**, **69 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **13/25**.  
+**Next:** continue after `azure-microsoft-playwright-testing-ts` in the registered-pin TypeScript tree, beginning with `azure-monitor-opentelemetry-ts`.

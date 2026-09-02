@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-microsoft-playwright-testing-ts
+display_name: Microsoft Azure Playwright Testing TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-microsoft-playwright-testing-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5
+upstream_last_updated_at: 2026-04-22T00:02:09Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-microsoft-playwright-testing-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/playwright; @playwright/test; @azure/identity; Azure Playwright Workspaces; Microsoft Entra identity; browser test targets; CI/CD systems; Azure portal test-result storage and artifacts
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 2c64ca04d7e33d27405771bad5d6de42ce8433ac and SKILL.md blob b784591d64f11644dde1f7b165411792751f284a. The single-file package provides useful TypeScript prior art for Azure-hosted Playwright configuration, Entra/workload identity, cloud browser scaling, manual browser connection, CI integration, migration from the retired package, reporters, traces, videos, and worker scaling. Unchanged adoption is rejected because normal flows execute browser automation against external targets, open cloud-hosted browser sessions, can expose network-reachable targets, publish test results and artifacts to Azure, consume billable service capacity, and configure CI identity-token permissions without mandatory target/environment, test-data, external-side-effect, publication/retention, network-exposure, cost, or production authorization boundaries. Preserve as adaptation/reference evidence with explicit non-production/default-safe target scope, per-run authorization for mutating or consequential browser actions, governed artifact/data handling, bounded network exposure, least-privilege workload identity, and cost limits.
