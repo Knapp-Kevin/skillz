@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 14a5c5e6184d8b29cca1dfe53d448b484a79f0a1
+skill_md_blob_sha: 00f1d7534e6d2b49e3bf0e5b4ec4977fac99df69
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, monitoring, observability]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, instrumentation, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. One-line setup, Entra authentication, framework auto-instrumentation, custom traces/metrics/logs, sampling, service-role naming, live metrics, and selective instrumentation are useful prior art. Unchanged adoption is rejected because broad default auto-instrumentation and logging can capture and export request, database, exception, and application data without explicit telemetry admission, redaction, approved-destination, privacy, retention, or cost authority. Behavioral validation is not-run.

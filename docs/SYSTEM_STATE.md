@@ -11,15 +11,15 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 257 |
+| **Persisted third-party review companions** | 261 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 85 / 189 |
-| **Microsoft Skills current-standard gaps** | 104 |
+| **Microsoft Skills current-standard companions** | 89 / 189 |
+| **Microsoft Skills current-standard gaps** | 100 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
-| **Microsoft Python direct-package companions** | 26 / 40 |
+| **Microsoft Python direct-package companions** | 30 / 40 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -33,23 +33,25 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **85/189 companion-complete**, **104 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **89/189 companion-complete**, **100 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
-- Microsoft direct Python: **26/40** complete.
+- Microsoft direct Python: **30/40** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Active Microsoft frontier
 
-Python is active and now runs source-order through `azure-mgmt-fabric-py`.
+Python is active and now runs source-order through `azure-monitor-query-py`.
 
 Latest tranche, with `validation_status: not-run`:
 
-- `azure-mgmt-botservice-py` — **rejected unchanged, 7/20**. Useful Entra-first bot, channel, connection, and lifecycle patterns remain prior art. Unchanged adoption is rejected because examples create/update/delete Azure Bot resources, enable external channels, print Direct Line keys, accept OAuth client secrets, and mutate externally reachable messaging configuration without explicit environment, secret-custody, publication, destructive-action, rollback, or cost authorization.
-- `azure-mgmt-fabric-py` — **rejected unchanged, 9/20**. Useful Fabric capacity lifecycle, SKU discovery, LRO handling, cost-aware suspend/resume, and capacity-administration patterns remain prior art. Unchanged adoption is rejected because examples create billable capacities, scale SKUs, assign administrators, suspend/resume service, and delete capacity without explicit environment, identity/role, availability-impact, destructive-action, rollback, or budget authorization.
+- `azure-monitor-ingestion-py` — **rejected unchanged, 13/20**. Useful Entra-first DCE/DCR ingestion, batching, partial-failure, async, and sovereign-cloud patterns remain prior art. Unchanged adoption can transmit arbitrary log/JSON content externally without explicit data-classification, destination, retention, privacy, or budget authority, and includes a silent-ignore failure example.
+- `azure-monitor-opentelemetry-exporter-py` — **rejected unchanged, 13/20**. Useful explicit trace/metric/log exporter, sampling, lifecycle, and retry patterns remain prior art. Unchanged adoption can export broad telemetry and persist retry data locally without explicit telemetry admission, redaction, destination, retention, or sensitive-data controls.
+- `azure-monitor-opentelemetry-py` — **rejected unchanged, 12/20**. Useful one-line Azure Monitor, framework auto-instrumentation, sampling, role naming, and live-metrics patterns remain prior art. Unchanged adoption enables broad auto-instrumentation that may export request, database, exception, and application data without explicit telemetry/privacy authority.
+- `azure-monitor-query-py` — **rejected unchanged, 14/20**. Useful Entra-first read-only log/metric querying, batching, partial-result, async, and Kusto patterns remain prior art. Unchanged examples print potentially sensitive operational results without explicit workspace/resource scope, data-sensitivity, output-disclosure, or least-data controls.
 
-The next source-ordered package should be resolved from the pinned Microsoft Python denominator before mutation.
+The exact pinned Python denominator is **40 direct skill directories**; the source-order frontier after this tranche is `azure-search-documents-py`.
 
 ## Source lifecycle
 
@@ -67,7 +69,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches, with Python at **26/40**.
+1. Continue Microsoft Skills in coherent source-ordered batches, with Python at **30/40**.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.

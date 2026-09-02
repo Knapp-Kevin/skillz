@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-query-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ac052e9e1c0ebee1c7f57d074c3b288a78429813
+skill_md_blob_sha: 95defd74b998e686aa9d28ec8d5ecfc0cb2141bf
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, monitoring, observability]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, evidence-first, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first read-only log/metric queries, time ranges, batching, partial-result handling, metric dimensions/aggregations, async clients, and Kusto examples are useful prior art. Unchanged adoption is rejected because examples query and print raw Log Analytics rows, exceptions, request records, resource metrics, and DataFrames without explicit workspace/resource scope, data-sensitivity, output-disclosure, or least-data boundaries. Behavioral validation is not-run.

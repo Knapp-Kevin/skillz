@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-exporter-py
+display_name: Microsoft Azure Monitor OpenTelemetry Exporter Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-exporter-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: d94f007962067bb6bfecb9c9ac523d71880f946c
+upstream_last_updated_at: 2026-05-04T20:36:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-exporter-py
+permission_tier: external-telemetry-export
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-monitor-opentelemetry-exporter; azure-identity; OpenTelemetry SDK; Azure Application Insights
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA 6f3f29fc5ab34768abdb08ba9c85a038f7deccbe and SKILL.md blob bd9553c42ef1863efcf87aebd92225f305786934. Useful material covers explicit trace, metric, and log exporters, Entra-authenticated ingestion, sampling, provider shutdown, sovereign-cloud configuration, and retry storage. Unchanged use is rejected because telemetry is transmitted externally without an explicit data-classification/disclosure boundary, root Python logging may export broad application content, and offline retry storage can persist telemetry locally without retention or sensitive-data controls. Preserve as adaptation/reference material with telemetry admission/redaction, approved destination, storage retention/encryption, sampling/cost ceilings, and explicit provider lifecycle rules.

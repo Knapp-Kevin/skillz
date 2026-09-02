@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-py
+display_name: Microsoft Azure Monitor OpenTelemetry Python Distro
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: d94f007962067bb6bfecb9c9ac523d71880f946c
+upstream_last_updated_at: 2026-05-04T20:36:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py
+permission_tier: external-telemetry-export
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-monitor-opentelemetry; azure-identity; OpenTelemetry; Azure Application Insights
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA 14a5c5e6184d8b29cca1dfe53d448b484a79f0a1 and SKILL.md blob 00f1d7534e6d2b49e3bf0e5b4ec4977fac99df69. Useful material covers one-line Azure Monitor setup, Entra-authenticated ingestion, framework auto-instrumentation, custom traces/metrics/logs, sampling, role naming, live metrics, and selective instrumentation. Unchanged use is rejected because broad auto-instrumentation and logging can capture and transmit request, database, exception, and application data externally without explicit telemetry admission, redaction, approved-destination, privacy, retention, or cost authority. Preserve as adaptation/reference material with default-deny instrumentation selection, sensitive-field redaction, tenant/destination confirmation, sampling/cost limits, and explicit telemetry policy.

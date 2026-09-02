@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-query-py
+display_name: Microsoft Azure Monitor Query Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-monitor-query-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-monitor-query-py
+permission_tier: sensitive-observability-read
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-monitor-query; azure-identity; Azure Monitor; Log Analytics; optional pandas
+import_eligibility: adapt-or-reference-only
+rationale: Exact one-file package review at the registered Microsoft Skills pin, bound to package tree SHA ac052e9e1c0ebee1c7f57d074c3b288a78429813 and SKILL.md blob 95defd74b998e686aa9d28ec8d5ecfc0cb2141bf. Useful material covers Entra-first read-only log and metric queries, time ranges, batching, partial-result handling, metrics dimensions/aggregations, async clients, and Kusto examples. Unchanged use is rejected because examples query and print raw Log Analytics rows, exceptions, request records, resource metrics, and DataFrames without explicit workspace/resource scope, data-sensitivity, output-disclosure, or least-data boundaries. Preserve as adaptation/reference material with authorized workspace/resource scoping, query minimization, redaction, bounded output handling, and explicit restrictions on exporting or retaining sensitive observability results.
