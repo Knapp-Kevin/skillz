@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-eventhub-ts
+display_name: Microsoft Azure Event Hubs TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-eventhub-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-eventhub-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/event-hubs; @azure/identity; optional @azure/eventhubs-checkpointstore-blob and @azure/storage-blob; Azure Event Hubs namespace/event hub; optional Azure Blob Storage checkpoint container
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA c4cfb748dfa88feb9bcac3d1ae0f31a9dd0a6982, SKILL.md blob fe0cc9ab1db48af480d95c11e72de9db5c7c4645, references/checkpointing.md blob 8e63433edcf711be7ebebd49228bb0a41c4852ae, and references/event-processing.md blob feb07aff028b9c1b7f75b260d86cb68d4875e44a. The package provides useful TypeScript prior art for Event Hubs producers/consumers, batching, partition targeting, subscription positions, checkpointing, consumer groups, lag monitoring, graceful shutdown, and retry/error handling. Unchanged adoption is rejected because ordinary flows publish event payloads to an external event stream, create and update persistent Blob checkpoint state, and may trigger downstream processing without mandatory destination, payload-classification/disclosure, environment/resource, write, downstream-effect, retention/recovery, or budget/throughput authorization boundaries. The bundled references also present Event Hubs and storage connection strings as normal authentication paths and log arbitrary event bodies/properties/system properties without mandatory secret/PII minimization or output-redaction controls. Preserve as adaptation/reference evidence with explicit destination and payload authority, secure external credential custody, checkpoint-storage authorization, retention/recovery policy, downstream-effect and cost limits, and sensitive-output controls.
