@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4d6a5df8e338ca17974ece250d9e574dbd6ed524
+skill_md_blob_sha: 64ca766cb56c16b7d2b015cd3684834e25f076db
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [agent-development, cloud, communication, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware, tool-assisted]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains SKILL.md plus audio-streaming and function-calling references. Useful mechanics include bidirectional WebSocket audio, microphone capture/playback, VAD, transcription, event handling, function calling, browser support, and cleanup. Rejected unchanged under current authority and secret/sensitive-data rules because normal flows capture and transmit live microphone audio, transcripts, conversation content, locations, and tool arguments/results to Azure or downstream services without mandatory subject consent, data-classification, destination/region, minimization, retention/redaction, or output-disclosure boundaries. The function-calling reference enables model-triggered external actions including appointment booking and other API calls without a real action-specific authorization gate; prompting the model to confirm details is not equivalent to authorization. API-key authentication is presented alongside identity credentials without a repository-enforced secure external credential path, and personal/custom voice identifiers introduce additional identity/biometric-sensitive context without explicit authority. Behavioral validation remains not-run.
