@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-appconfiguration-ts
+display_name: Microsoft Azure App Configuration TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-appconfiguration-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5
+upstream_last_updated_at: 2026-04-22T00:02:09Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-appconfiguration-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/app-configuration; @azure/app-configuration-provider; @azure/identity; @microsoft/feature-management; Azure App Configuration resource; optional Azure Key Vault references and feature-targeting identities
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA bd25e7da45cd666463be87ca57cebbbd7bfdd228 and SKILL.md blob 82d0e0ffe52ac030cbe98560e85665bdcab52fcf. The package is a single-file first-class skill and provides useful TypeScript prior art for App Configuration CRUD, optimistic concurrency, provider loading, dynamic refresh, feature flags, labels, snapshots, and Key Vault reference resolution. Unchanged adoption is rejected because it creates, updates, deletes, locks/unlocks, archives/recovers, and otherwise changes production configuration and feature-rollout state without a real action-specific authorization boundary, rollback/recovery contract, or budget/service scope. It presents a credential-bearing App Configuration connection string as a normal environment path without enforcing secure external credential custody; automatically resolves Key Vault secrets into application memory; prints configuration values; and includes user email addresses in feature-targeting examples without privacy/data-minimization boundaries. Feature-flag and configuration changes can materially alter production behavior and user exposure, while snapshot lifecycle operations mutate persistent service state. Preserve as adaptation/reference evidence with least-privilege read/write role separation, secure credential paths, explicit environment/resource and per-change authorization, secret/output redaction, PII minimization, rollback/versioning, staged rollout, and cost/service boundaries.
