@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-search-documents-py
+display_name: Microsoft Azure AI Search Python SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-search-documents-py/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: df52e9a69b78c2759553efafe2f937fc53c1cbd1
+upstream_last_updated_at: 2026-05-18T15:32:08Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-python/skills/azure-search-documents-py
+permission_tier: external-data-index-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: Python; azure-search-documents; azure-identity; Azure AI Search; optional Azure OpenAI vectorization and knowledge-base services
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 629dedbea4c5b2112e6eeae902145e4c0d5d6cc7 and SKILL.md blob 41ed03ad443be379d3cd39a3df18ff29634f1940. The package includes three reference documents and two setup scripts covering vector and semantic search, agentic retrieval, index creation, Azure OpenAI vectorizers, knowledge sources and bases, document operations, and cleanup. Useful Entra-first authentication, search, retrieval, batching, vector, semantic-ranking, and lifecycle patterns remain prior art. Unchanged use is rejected because the material creates and deletes indexes and knowledge resources, uploads, merges, and deletes documents, configures external data sources, skillsets, and indexers, and can invoke Azure OpenAI-backed vectorization and answer synthesis without explicit index/data scope, disclosure, destructive-action, rollback, service-impact, or budget authorization. Preserve as adaptation/reference material with explicit environment and resource scope, document/data classification and disclosure authority, least-data output handling, destructive-operation approval and rollback, and service/cost boundaries.
