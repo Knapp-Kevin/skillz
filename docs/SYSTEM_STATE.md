@@ -11,15 +11,15 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 264 |
+| **Persisted third-party review companions** | 268 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 92 / 189 |
-| **Microsoft Skills current-standard gaps** | 97 |
+| **Microsoft Skills current-standard companions** | 96 / 189 |
+| **Microsoft Skills current-standard gaps** | 93 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
-| **Microsoft Python direct-package companions** | 33 / 40 |
+| **Microsoft Python direct-package companions** | 37 / 40 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -33,22 +33,27 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **92/189 companion-complete**, **97 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **96/189 companion-complete**, **93 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
-- Microsoft direct Python: **33/40** complete.
+- Microsoft direct Python: **37/40** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Active Microsoft frontier
 
-Python is active and now runs source-order through `azure-speech-to-text-rest-py`.
+Python is active and now runs source-order through `azure-storage-queue-py`.
 
 Latest tranche, with `validation_status: not-run`:
 
-- `azure-speech-to-text-rest-py` — **rejected unchanged, 10/20**. Exact complete-package review covers its pronunciation-assessment reference. Useful short-audio REST transcription, chunking, response/error handling, bearer-token, and pronunciation-assessment patterns remain prior art. Unchanged adoption sends voice/audio and optional reference text to Azure Speech and exposes transcripts/pronunciation results without explicit subject consent/data authority, approved resource/region, sensitive-data classification, retention/redaction, output-disclosure, secure credential-path, or budget authority. Audio and derived text may contain biometric, identity, health, location, document, or other sensitive data.
+- `azure-storage-blob-py` — **rejected unchanged, 10/20**. Useful Entra-first auth, upload/download, listing, performance, metadata and user-delegation SAS patterns remain prior art. Unchanged use creates persistent containers, overwrites/deletes blob data including snapshots, downloads data, mutates metadata/headers, and creates delegated SAS access without explicit storage/data scope, destructive-action, retention/recovery, disclosure, delegated-access custody, or budget authority.
+- `azure-storage-file-datalake-py` — **rejected unchanged, 7/20**. Useful hierarchical storage and append/flush patterns remain prior art. Unchanged use creates/deletes file systems and directories, mutates durable files and metadata, and changes owner/permission ACLs recursively without explicit resource/data scope, destructive-action, access-control, retention/recovery, disclosure, service-impact, or budget authority.
+- `azure-storage-file-share-py` — **rejected unchanged, 10/20**. Useful Entra-first, streaming/range, snapshot, and quota patterns remain prior art. Unchanged use creates/deletes shares/directories/files, uploads/copies/downloads data, and creates billable snapshots without explicit resource/data scope, destructive-action, copy-source trust, retention/recovery, disclosure, service-impact, or budget authority.
+- `azure-storage-queue-py` — **rejected unchanged, 9/20**. Useful visibility-timeout, poison-message, TTL, peek, update and async patterns remain prior art. Unchanged use creates/deletes queues, publishes messages, prints message content, deletes/updates messages, clears whole queues, and mutates metadata without explicit scope, publication/downstream-effect, destructive-settlement, disclosure, retention/recovery, or budget authority. Its async example also omits closing the async credential despite the package's stated cleanup rule.
 
-The exact pinned Python denominator is **40 direct skill directories**; the source-order frontier after this tranche is `azure-storage-blob-py`.
+All four are one-file packages and bind freshness to Microsoft revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` from 2026-05-18.
+
+The exact pinned Python denominator remains **40 direct skill directories**; the source-order frontier after this tranche is `fastapi-router-py`.
 
 ## Source lifecycle
 
@@ -66,7 +71,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches, with Python at **33/40**.
+1. Continue Microsoft Skills in coherent source-ordered batches, with Python at **37/40**.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
