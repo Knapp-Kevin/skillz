@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **249** persisted exact-version third-party verification companions.
+- **252** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,23 +35,23 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **77/189**.
-- Remaining gaps: **112**.
+- Current-standard companions: **80/189**.
+- Remaining gaps: **109**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
-- Direct Python: **18/40** complete.
+- Direct Python: **21/40** complete.
 
-Python is complete source-order through `azure-eventgrid-py`.
+Python is complete source-order through `azure-keyvault-py`.
 
 Latest tranche, behavioral evidence `not-run` for all:
 
-- `azure-cosmos-py` — **rejected unchanged, 9/20**. Package tree `159aea3f186349abfb5004b51587e3dfe210ab56`; `SKILL.md` blob `9800d67e64c753e221128e38c43a81bfabdff944`. Complete-package review includes partitioning/query references and setup CLI. Useful prior art for Cosmos partitioning, parameterized queries, CRUD, throughput, transactions, change feed, and lifecycle. Unchanged use lacks explicit environment/data/destructive/financial/cost authority around resource provisioning, throughput/index changes, durable mutation/deletion, and a funds-transfer transaction example; the setup CLI also permits `COSMOS_KEY` account-key auth. Adapt/reference only.
-- `azure-data-tables-py` — **rejected unchanged, 12/20**. Package tree `6f143c9a8c7ceafc01a5ec691b5e136b34b642ff`; `SKILL.md` blob `ef513ce507818533f5bee1477d07dab5c3bf3fdd`. Useful Entra-first table/entity CRUD, partition queries, transaction and async patterns, but create/delete tables and mutate/delete entities without distinct account/table/data-scope, destructive, retention, rollback, or cost authorization. Adapt/reference only.
-- `azure-eventgrid-py` — **rejected unchanged, 13/20**. Package tree `604b049cc7e1550e604b6f9e60fc896e1121211a`; `SKILL.md` blob `907ee84b85bfaa87cc2dada271d27e03ae5dae28`. Useful CloudEvents/EventGridEvent, batching and namespace-topic material, but publishing can disclose payloads and trigger downstream systems without explicit publication/data/downstream-impact/budget authority; async credential cleanup is also inconsistent. Adapt/reference only.
+- `azure-eventhub-py` — **rejected unchanged, 10/20**. Package tree `0fbf762f81763b55040414428dcb0a3a0d29bd5f`; `SKILL.md` blob `289676f5c80a9f4064980ff98283575502fe1d99`. Complete-package review includes checkpointing/partition references and setup CLI. Useful streaming mechanics remain prior art, but unchanged use lacks distinct publication/data-disclosure, checkpoint-mutation, downstream-impact, retention and budget authority, and the CLI's async credential lifecycle conflicts with the package rule.
+- `azure-identity-py` — **rejected unchanged, 12/20**. Package tree `e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1`; `SKILL.md` blob `37e6a034b861e30c675b7b2029e391612f69a535`. Useful identity guidance, but sensitive credential/token handling, wildcard additional-tenant access, secret/assertion flows and verbose logging need explicit scope/tenant authority and redaction controls before adoption.
+- `azure-keyvault-py` — **rejected unchanged, 8/20**. Package tree `cbcf7a71066e1d3b1a073b07d358efbbe6b8e77b`; `SKILL.md` blob `20c836c7b6e903dfce8d3fb90cc38c57892d0154`. Useful Key Vault patterns are outweighed unchanged by secret-value output, permanent purge, key/certificate mutation, private-key retrieval and cryptographic operations without explicit disclosure/destructive/crypto/lifecycle authorization.
 
 All three bind skill-specific freshness to upstream revision `df52e9a69b78c2759553efafe2f937fc53c1cbd1` dated 2026-05-18.
 
-**Next source-ordered package:** `azure-eventhub-py`. Its references/scripts make it a complete-package review unit rather than a one-file quick pass.
+**Next source-ordered package:** `azure-messaging-webpubsubservice-py`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -88,5 +88,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **77/189**, **112 gaps**. Python is **18/40**.  
-**Next:** complete-package review of `azure-eventhub-py`, then continue source-order.
+**Microsoft Skills:** **80/189**, **109 gaps**. Python is **21/40**.  
+**Next:** continue source-order with `azure-messaging-webpubsubservice-py`.
