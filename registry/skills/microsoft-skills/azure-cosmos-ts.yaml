@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cosmos-ts
+display_name: Microsoft Azure Cosmos DB TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-cosmos-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 7c8152429f598741892108523261ae8aefc2aba7
+upstream_last_updated_at: 2026-04-20T21:12:50Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-cosmos-ts
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/cosmos; @azure/identity; Azure Cosmos DB for NoSQL account; shared azure-identity-ts guidance
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1ce58804be03d192a379cd5049d15237d112f214, SKILL.md blob 33fcce60f1488fbf7e3d1cef4656adb693f215f2, references/bulk-operations.md blob 3e7897a9f78254b45021cb32bb0ec4f19c774214, and references/query-patterns.md blob 0d9b83865258c36a0f6352b6aa4ff58a0c2d7b5e. The package provides useful TypeScript prior art for Entra-first Cosmos clients, partition design, point reads, parameterized queries, pagination, CRUD, bulk operations, indexing, diagnostics, retry handling, and client lifecycle. Unchanged adoption is rejected because normal flows create databases and containers, create/replace/upsert/delete durable items, and perform bulk destructive operations without mandatory environment/resource, data-scope, mutation, destructive-action, recovery/retention, or budget authorization boundaries. The instruction to confirm destructive actions is not itself action authorization under current governance. Query and diagnostic examples can also surface item content or operational detail without mandatory data-classification, minimization, or output-disclosure boundaries. Preserve as adaptation/reference evidence with explicit resource/data authority, per-mutation and destructive-operation authorization, recovery/retention policy, budget/throughput limits, and sensitive-output controls.
