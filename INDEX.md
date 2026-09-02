@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 257 |
+| Persisted third-party exact-version reviews | 261 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 85 / 189 |
-| Microsoft Skills current-standard gaps | 104 |
+| Microsoft Skills current-standard companions | 89 / 189 |
+| Microsoft Skills current-standard gaps | 100 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 26 / 40 |
+| Microsoft Python direct-package companions | 30 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **85/189**, leaving **104** gaps. The `.NET` and Java direct plugin slices are complete; Python is **26/40**, source-order through `azure-mgmt-fabric-py`. The latest tranche adds exact provenance/fingerprint/freshness evidence for Azure Bot Service and Microsoft Fabric management. Both are rejected unchanged because their management flows mutate externally consequential Azure resources without sufficient action authority; Bot Service additionally exposes Direct Line keys and accepts OAuth client secrets, while Fabric capacity operations carry direct cost and service-availability impact. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **89/189**, leaving **100** gaps. The `.NET` and Java direct plugin slices are complete; Python is **30/40**, source-order through `azure-monitor-query-py`. The latest tranche adds exact provenance/fingerprint/freshness evidence for the four direct Azure Monitor Python packages. All four are rejected unchanged under the current authority/privacy standard: ingestion and OpenTelemetry export potentially sensitive telemetry externally without sufficient admission/redaction/destination/retention controls, while query is read-only but prints potentially sensitive operational data without explicit scope and disclosure boundaries. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
