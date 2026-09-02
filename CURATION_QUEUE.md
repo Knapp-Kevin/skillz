@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **285** persisted exact-version third-party verification companions.
+- **286** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **113/189**.
-- Remaining gaps: **76**.
+- Current-standard companions: **114/189**.
+- Remaining gaps: **75**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **6/25** complete.
+- Direct TypeScript: **7/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator. `applicationinsights-web-ts` was already current-standard companion-complete; the first genuine gap was therefore `azure-ai-contentsafety-ts`.
 
@@ -53,10 +53,11 @@ Current TypeScript decisive states:
 - `azure-ai-projects-ts` — **rejected unchanged, 6/20**. Foundry project/agent, connection, dataset, index, evaluation, OpenAI-client, and tool-wiring mechanics remain useful prior art, but unchanged use creates/deletes persistent resources, transmits potentially sensitive evaluation/dataset content, invokes external tools/services, and incurs service costs without adequate action-specific authority. Its bundled connections reference retrieves credentials and explicitly prints an API key, which is a direct secret-custody hard fail.
 - `azure-ai-translation-ts` — **rejected unchanged, 10/20**. Text/document translation, transliteration, detection, status, and pagination mechanics remain useful prior art, but unchanged use transmits arbitrary text/documents externally without mandatory data-transfer/privacy authority. Batch document translation creates credential-bearing source/target SAS URLs, starts a billable service-side operation, and writes translated content to persistent target storage without sufficient credential-custody, storage-scope, write/downstream-effect, recovery/overwrite, or budget authority.
 - `azure-ai-voicelive-ts` — **rejected unchanged, 6/20**. Real-time voice/audio, browser microphone capture/playback, VAD, transcription, session/event handling, and function-calling mechanics remain useful prior art. Unchanged use captures and transmits live microphone audio, transcripts, conversation content, locations, and tool arguments/results without mandatory subject consent, data-classification, destination/region, minimization, retention/redaction, or output-disclosure authority. The bundled function-calling reference permits model-triggered consequential external actions such as appointment booking without a real per-action authorization gate; API-key and personal/custom voice paths also need stronger credential and identity-sensitive boundaries.
+- `azure-appconfiguration-ts` — **rejected unchanged, 7/20**. App Configuration CRUD, optimistic concurrency, provider loading/refresh, feature flags, labels, snapshots, and Key Vault-reference mechanics remain useful prior art. Unchanged use can create/update/delete configuration, lock/unlock settings, alter feature targeting, and archive/recover snapshots without mandatory resource/environment, per-change, rollout, rollback/recovery, or budget/service authorization. A credential-bearing connection string is presented as a normal path; Key Vault references resolve secrets into application memory; configuration values are printed; and user email addresses appear in targeting examples without required secure credential custody, secret/output redaction, or PII minimization boundaries.
 
-All six retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All seven retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** `azure-appconfiguration-ts`, then continue the registered-pin TypeScript tree source-order in coherent batches.
+**Next:** continue the registered-pin TypeScript tree source-order after `azure-appconfiguration-ts` in coherent batches.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -93,5 +94,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **113/189**, **76 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **6/25**.  
-**Next:** `azure-appconfiguration-ts` in the registered-pin TypeScript tree.
+**Microsoft Skills:** **114/189**, **75 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **7/25**.  
+**Next:** continue after `azure-appconfiguration-ts` in the registered-pin TypeScript tree.
