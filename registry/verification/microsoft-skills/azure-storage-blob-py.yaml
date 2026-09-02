@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-blob-py
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e12b45463c731c9e4a39721d7f52dbc16abdb8a9
+skill_md_blob_sha: 45cb839141133f317683e77f2f3ecae2c8206a41
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin. The package contains only SKILL.md. It provides useful Entra-first authentication, deterministic client cleanup, upload/download, listing, performance, metadata, and user-delegation SAS patterns. Unchanged adoption is rejected because it creates persistent storage state, overwrites and deletes blob content including snapshots, downloads potentially sensitive data, mutates metadata/headers, and creates credential-bearing delegated SAS access URLs without explicit resource/data scope, destructive-change authorization, retention/recovery, disclosure, delegated-access custody, or budget boundaries. Behavioral validation is not-run.
