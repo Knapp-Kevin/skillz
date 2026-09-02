@@ -14,14 +14,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 261 |
+| Persisted third-party exact-version reviews | 263 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 89 / 189 |
-| Microsoft Skills current-standard gaps | 100 |
+| Microsoft Skills current-standard companions | 91 / 189 |
+| Microsoft Skills current-standard gaps | 98 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
-| Microsoft Python direct-package companions | 30 / 40 |
+| Microsoft Python direct-package companions | 32 / 40 |
 
 ## First-party skills by purpose
 
@@ -60,6 +60,6 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **89/189**, leaving **100** gaps. The `.NET` and Java direct plugin slices are complete; Python is **30/40**, source-order through `azure-monitor-query-py`. The latest tranche adds exact provenance/fingerprint/freshness evidence for the four direct Azure Monitor Python packages. All four are rejected unchanged under the current authority/privacy standard: ingestion and OpenTelemetry export potentially sensitive telemetry externally without sufficient admission/redaction/destination/retention controls, while query is read-only but prints potentially sensitive operational data without explicit scope and disclosure boundaries. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **91/189**, leaving **98** gaps. The `.NET` and Java direct plugin slices are complete; Python is **32/40**, source-order through `azure-servicebus-py`. The latest tranche adds exact complete-package provenance/fingerprint/freshness evidence for Azure AI Search and Azure Service Bus Python. Both are rejected unchanged under the current authority standard because they contain externally consequential mutation, data transmission, destructive lifecycle, and/or administrative operations without sufficient explicit authorization boundaries. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
