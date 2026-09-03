@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: airunway-aks-setup
+display_name: Microsoft AI Runway AKS Setup
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/airunway-aks-setup/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 951d18d43210f0d93a931ae5d5c2a774f63d5faf
+upstream_last_updated_at: 2026-04-21T21:13:53Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/airunway-aks-setup
+permission_tier: production-infrastructure-mutation
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Existing AKS cluster and active kubeconfig context; kubectl; make; curl; AI Runway repository root and its controller/provider Makefiles; Kubernetes CRDs/controller; inference provider (KAITO, Dynamo, or KubeRay); GPU/device-plugin state where applicable; Hugging Face access token for gated models; bundled references/gpu-profiles.md, model-sizing.md, powershell-notes.md, troubleshooting.md, and references/steps/step-1-verify.md through step-6-summary.md
+import_eligibility: adaptation-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 72ec58c0a7c574dc71e14c63feb3d2aa529849ac and SKILL.md blob 26bbd92815116826696fb6380d37446a285496b9 plus the complete bundled reference tree. The package contains unusually good positive-action safeguards for a consequential cloud workflow: it reports the active kubectl context, requires confirmation before installs/deployments, calls out GPU cost, confirms model choice, and keeps gated Hugging Face token entry in a no-echo terminal path with a permissioned temporary file rather than conversational context. Unchanged adoption is nevertheless rejected because troubleshooting/rollback gives destructive commands for deleting ModelDeployment resources and secrets and undeploying providers/controllers without requiring a fresh action-specific destructive authorization boundary. The main confirmation rule covers install/deployment actions, not rollback/delete/undeploy operations. Because those operations materially affect persistent Kubernetes/AKS state and credentials, the current authority hard-fail rule blocks unchanged promotion. Retain the staged verification, provider-selection, GPU/model-sizing, secret-custody, readiness, and rollback mechanics as strong adaptation/reference evidence, but add explicit target/resource and destructive-action authorization before reuse. Behavioral validation has not been run.
