@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-aigateway
+display_name: Microsoft Azure AI Gateway
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-aigateway/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 951d18d43210f0d93a931ae5d5c2a774f63d5faf
+upstream_last_updated_at: 2026-04-21T21:13:53Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-aigateway
+permission_tier: external-ai-gateway-security-and-routing-mutation
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure CLI; Azure API Management; Azure OpenAI or AI Foundry model backends; managed identity and Azure RBAC; optional Azure AI Content Safety and Redis Enterprise semantic-cache infrastructure; bundled auth-best-practices.md, patterns.md, policies.md, troubleshooting.md, and four SDK quick references for Content Safety and API Management
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA fb881f68bdc6d638438b46b04ab6d81f91e985ba and SKILL.md blob a8df9f45fae25501acf7fee988047f808d191fa5 plus the complete references tree. The package contains strong AI gateway prior art for managed-identity backend authentication, token/rate controls, semantic caching, content safety, load balancing, MCP exposure, streaming, multi-tenant metering, and troubleshooting. Unchanged adoption fails the current authority, security-control, credential-custody, production-routing, telemetry-disclosure, and external-side-effect hard gates. The normal flow directly enables APIM managed identity, creates RBAC role assignments and APIM backends, imports APIs, changes gateway policies and routing, configures content-safety and rate-limit controls, exposes APIs as MCP tools, and tests live AI endpoints without mandatory target/environment, identity/access, production-change, security-control, downstream-effect, data-transfer, telemetry, or cost authorization. SKILL.md also instructs listing APIM subscription keys, which can emit live credential material into conversational/tool output. Preserve the policy, managed-identity, gateway-governance, load-balancing, caching, content-safety, and MCP patterns for adaptation/reference use with explicit resource, identity/access, security-control, production-routing, disclosure, cost, and credential-custody gates. Behavioral validation has not been run.
