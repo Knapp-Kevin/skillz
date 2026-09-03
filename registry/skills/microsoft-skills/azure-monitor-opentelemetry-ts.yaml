@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-ts
+display_name: Microsoft Azure Monitor OpenTelemetry TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-monitor-opentelemetry-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-monitor-opentelemetry-ts
+permission_tier: sensitive-data-external
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/monitor-opentelemetry; @opentelemetry/api; Azure Monitor/Application Insights; optional Winston logging and HTTP, Azure SDK, MongoDB, MySQL, PostgreSQL, Redis instrumentation
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 745333bd43aa40a5a5639af738ade6ae35426c08 and SKILL.md blob 538f028b72746103fa2314ba625acad23c934fce. The single-file package provides useful TypeScript prior art for Azure Monitor OpenTelemetry initialization, migration from deprecated packages, custom spans and metrics, logging integration, automatic instrumentation, sampling, processors, context propagation, cloud-role metadata, correlation, and graceful shutdown. Unchanged adoption is rejected because normal flows transmit telemetry and logs to Azure Monitor, automatic instrumentation can capture HTTP, Azure SDK, database, Redis, exception, and request metadata, and examples propagate user.id and tenant.id across service boundaries without mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, or disclosure authorization. The textual instruction to exclude PII and secrets is good guidance but is not an enforced data-governance or authorization boundary. Preserve as adaptation/reference evidence with explicit telemetry destination and data-owner authority, minimization/redaction controls, bounded attributes and baggage, retention controls, and production observability authorization.

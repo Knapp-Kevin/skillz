@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 745333bd43aa40a5a5639af738ade6ae35426c08
+skill_md_blob_sha: 538f028b72746103fa2314ba625acad23c934fce
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [observability, telemetry, tracing, metrics, logging]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, sensitive-data, external-telemetry]
+  authority: [sensitive-data-external]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single SKILL.md file. Useful material includes Azure Monitor OpenTelemetry setup, migration from deprecated packages, custom spans and metrics, logging integration, automatic instrumentation, sampling, telemetry processors, context and baggage propagation, cloud-role metadata, correlated logging, and graceful shutdown. Rejected unchanged because normal flows export telemetry and logs to Azure Monitor, automatic instrumentation can collect HTTP, Azure SDK, database, Redis, exception, request, and response metadata, and examples propagate user.id and tenant.id across service boundaries without mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, or disclosure authorization. The source does instruct users never to log PII or secrets and shows processors that can remove attributes, which is useful safety material, but a warning and optional processor are not an enforced authorization or minimization boundary. Behavioral validation remains not-run.
