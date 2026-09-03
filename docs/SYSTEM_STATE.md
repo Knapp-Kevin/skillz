@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 301 |
+| **Persisted third-party review companions** | 304 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 129 / 189 |
-| **Microsoft Skills current-standard gaps** | 60 |
+| **Microsoft Skills current-standard companions** | 132 / 189 |
+| **Microsoft Skills current-standard gaps** | 57 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 22 / 25 |
+| **Microsoft TypeScript direct-package companions** | 25 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,47 +35,28 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **129/189 companion-complete**, **60 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **132/189 companion-complete**, **57 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **22/25** complete.
+- Microsoft direct TypeScript: **25/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-## Active Microsoft frontier
+## Microsoft TypeScript closure
 
 The registered-pin TypeScript tree contains exactly **25** first-class packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which nevertheless exists as a separate first-class package at the same pin. Tree truth controls the denominator.
 
-Current companion-complete TypeScript packages are:
+The direct TypeScript slice is now **25/25 current-standard companion-complete**. Its decisive states are twenty-two rejected unchanged and three verified local implementation packages. The final three units are:
 
-1. `applicationinsights-web-ts` — rejected unchanged, 16/20.
-2. `azure-ai-contentsafety-ts` — rejected unchanged, 11/20.
-3. `azure-ai-document-intelligence-ts` — rejected unchanged, 11/20.
-4. `azure-ai-projects-ts` — rejected unchanged, 6/20.
-5. `azure-ai-translation-ts` — rejected unchanged, 10/20.
-6. `azure-ai-voicelive-ts` — rejected unchanged, 6/20.
-7. `azure-appconfiguration-ts` — rejected unchanged, 7/20.
-8. `azure-cosmos-ts` — rejected unchanged, 9/20.
-9. `azure-eventhub-ts` — rejected unchanged, 8/20.
-10. `azure-identity-ts` — rejected unchanged, 6/20.
-11. `azure-keyvault-keys-ts` — rejected unchanged, 5/20.
-12. `azure-keyvault-secrets-ts` — rejected unchanged, 5/20.
-13. `azure-microsoft-playwright-testing-ts` — rejected unchanged, 10/20.
-14. `azure-monitor-opentelemetry-ts` — rejected unchanged, 9/20.
-15. `azure-postgres-ts` — rejected unchanged, 10/20.
-16. `azure-search-documents-ts` — rejected unchanged, 9/20.
-17. `azure-servicebus-ts` — rejected unchanged, 8/20.
-18. `azure-storage-blob-ts` — rejected unchanged, 6/20.
-19. `azure-storage-file-share-ts` — rejected unchanged, 6/20.
-20. `azure-storage-queue-ts` — rejected unchanged, 6/20.
-21. `azure-web-pubsub-ts` — rejected unchanged, 6/20.
-22. `frontend-ui-dark-ts` — verified, 15/20.
+- `m365-agents-ts` — **rejected unchanged, 13/20**. Exact package tree `0bcb6ef9c55c8f8bae331e85d40f8585844c4bc7`, `SKILL.md` blob `00169cce10c70508375fc9300513a7600c7f75f8`, skill-specific freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. It preserves useful AgentApplication, Express hosting, streaming, sensitivity-label, invoke, Copilot Studio, API-freshness, and secret-hygiene mechanics. Unchanged adoption fails because ordinary user messaging, generated-content streaming, invoke acknowledgement, remote Copilot conversations/questions, WebChat connections, Azure OpenAI data transfer, and tenant/client secret or bearer-token use lack mandatory tenant/environment, audience, message/data-owner/classification, identity/access, model-data-transfer, production, per-action communication, and credential-custody authorization.
+- `react-flow-node-ts` — **verified, 15/20**. Exact package tree `ba384d63f352c5518b3dd77168e5c49af2220e8a`, `SKILL.md` blob `ab4e1a6a5a4c1bf03f4d9b49dee6285e9ce0457d`, plus template blobs `8539c7b0fd5b453c9564a675b3e2fcaedeaf1c34` and `46c9e2ee44ff517693d611ad2e94388cff669adc`; freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. It is bounded local React Flow node-generation guidance. Portability is medium because it assumes project-local store/type/utility aliases, updateNode/canvasMode semantics, Frontier CSS variables, and a specific directory layout.
+- `zustand-store-ts` — **verified, 16/20**. Exact package tree `8dc1658099b269c1e6347b7d0ffbe38d6f7058c1`, `SKILL.md` blob `fe9aca17683b17d3c86c78cb3473f52a10b38f3d`, template blob `3c40062ec21c5d1e875b3816516a706701a8bc03`; freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. It is bounded local Zustand state-management guidance. Its async load example is a placeholder rather than an instruction to call an external service; portability remains medium because of project-path assumptions and an intentionally opinionated subscribeWithSelector rule.
 
-`frontend-ui-dark-ts` is bound to package tree `1f15eeae63b8e03b5c10f6dbfa550095079b2409` and `SKILL.md` blob `4ff865e3c1cc60d8e5999cf950a016d7c9f019d2`. Its complete package also contains three Markdown references, four Segoe UI TTF assets, and two Foundry logo PNG assets. Skill-specific freshness is anchored to Microsoft revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. The package provides a coherent local React/Vite/Tailwind dark-UI system with theme/design tokens, reusable components, responsive shells, mobile touch-target guidance, routing, and Framer Motion patterns. Its authority is bounded to local code generation and package installation rather than consequential external-state operation. Recorded limitations include reviewed-generation stack assumptions, accessibility hardening needed for some copied patterns such as dialog focus management and reduced-motion behavior, and medium portability for bundled Segoe UI/font/logo assets whose applicable upstream terms must remain attached. Behavioral validation is `not-run`.
+All twenty-five TypeScript packages retain `validation_status: not-run`; no behavioral evidence was invented.
 
-Microsoft Skills remains active with **60** gaps. Continue TypeScript source order after `frontend-ui-dark-ts`, beginning with `m365-agents-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **57** gaps outside the completed direct-language slices. The next registered-pin source-ordered gap is `.github/plugins/azure-skills/skills/airunway-aks-setup`.
 
 ## Source lifecycle
 
@@ -93,10 +74,11 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 22/25.
-2. Complete Microsoft Azure Skills.
-3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
-4. Continue governed discovery/source-vetting and omission recovery.
-5. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+1. Continue Microsoft Skills at the registered pin; all five direct language slices are now complete. Enter `.github/plugins/azure-skills/skills/airunway-aks-setup` next.
+2. Complete remaining Microsoft Skills non-direct plugin families before moving to Microsoft Azure Skills.
+3. Complete Microsoft Azure Skills.
+4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
+5. Continue governed discovery/source-vetting and omission recovery.
+6. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
