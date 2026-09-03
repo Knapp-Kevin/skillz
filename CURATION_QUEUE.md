@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **306** persisted exact-version third-party verification companions.
+- **307** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **134/189**.
-- Remaining gaps: **55**.
+- Current-standard companions: **135/189**.
+- Remaining gaps: **54**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -81,7 +81,9 @@ Non-direct Microsoft plugin frontier:
 
 - `appinsights-instrumentation` — **rejected unchanged, 12/20**. Exact package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`, `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`, and skill-specific freshness revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. The complete package includes `LICENSE.txt`, Bicep and PowerShell/Azure CLI examples, five platform/reference guides, and four SDK quick references. Application Insights/OpenTelemetry selection, SDK initialization, tracing, resource-topology, secret-reference, and KQL mechanics are useful prior art. Unchanged adoption is rejected because the package directly instructs creation of Log Analytics and Application Insights resources, App Service/Container App/Function App configuration mutation, application/IaC changes, telemetry export, and deployment-affecting operations without mandatory target/resource, production-change, cost, telemetry-data/disclosure, or deployment authorization. The Container Apps reference also retrieves the workspace primary shared key into a shell variable and performs secret/configuration mutation without a credential-custody authorization boundary. Behavioral validation is `not-run`.
 
-**Next:** continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/azure-ai`.
+- `azure-ai` — **rejected unchanged, 10/20**. Exact package tree `8a168336305c56e0eea0d89aced7d8a0001de3b5`, `SKILL.md` blob `6cce5b319f57f98f81772e4c8627c573d89e8571`, and skill-specific freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. The package includes `references/auth-best-practices.md` and 15 SDK quick references spanning Azure AI Search, OpenAI-related access, Document Intelligence, Vision, Translation, Transcription, and Content Safety. It has useful managed-identity/RBAC guidance and condensed service-selection/SDK mechanics, but unchanged adoption is rejected because bundled references direct persistent Azure AI Search index/document mutation and external processing of audio, documents, text, images, and other potentially sensitive content without mandatory data-owner/classification, disclosure/model-transfer, target-resource, mutation, production, retention, cost, or credential-custody authorization. The transcription quick reference also consumes a subscription key string from an environment variable and sends files/content URLs to the external service. Behavioral validation is `not-run`.
+
+**Next:** continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/azure-aigateway`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -118,5 +120,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **134/189**, **55 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
-**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/azure-ai`.
+**Microsoft Skills:** **135/189**, **54 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
+**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/azure-aigateway`.

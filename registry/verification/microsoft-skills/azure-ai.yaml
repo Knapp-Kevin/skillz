@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-ai
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8a168336305c56e0eea0d89aced7d8a0001de3b5
+skill_md_blob_sha: 6cce5b319f57f98f81772e4c8627c573d89e8571
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation, research]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, retrieval-first, production-oriented]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md, references/auth-best-practices.md, and all 15 bundled SDK quick references. The package is a concise router across Azure AI Search, Speech, OpenAI, Document Intelligence, Vision, Translation, Transcription, and Content Safety, with useful managed-identity guidance and condensed SDK mechanics. Unchanged adoption is rejected under the current authority and sensitive-data hard fail. The bundled search references recommend document indexing, buffered uploads, and create_or_update_index operations; transcription guidance sends audio files or blob-backed content to Azure and uses a subscription key string from an environment variable; the broader router also encourages OCR, speech synthesis, translation, vision, content-safety, and model interactions that can transmit user or application content externally. None of those workflows requires mandatory data-owner/classification, external-disclosure/model-transfer, target-resource, persistent-mutation, production, retention, cost, or action-specific credential-custody authorization. The auth guide's managed-identity, narrow-RBAC, no-hardcoded-secret, and Key Vault recommendations are strong safeguards but do not themselves authorize consequential operations or sensitive-data transfer. Preserve service-selection, hybrid/vector search, authentication, transcription, OCR, translation, and SDK patterns for adaptation/reference use with explicit data-transfer, target-resource, mutation, production, retention, cost, and credential-custody gates. Behavioral validation remains not-run.
