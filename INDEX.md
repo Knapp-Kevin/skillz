@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 308 |
+| Persisted third-party exact-version reviews | 309 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 136 / 189 |
-| Microsoft Skills current-standard gaps | 53 |
+| Microsoft Skills current-standard companions | 137 / 189 |
+| Microsoft Skills current-standard gaps | 52 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,18 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **136/189**, leaving **53** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete. Direct TypeScript is **25/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **137/189**, leaving **52** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete. Direct TypeScript is **25/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
 The completed TypeScript slice contains twenty-two packages rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, notification, cost, communication, model-data-transfer, or authority hard gates while retaining useful adaptation/reference evidence. Three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. The final consequential TypeScript package, `m365-agents-ts`, is **rejected unchanged, 13/20** because ordinary M365/Teams/Copilot Studio messaging, Azure OpenAI/Copilot data transfer, remote conversations, and tenant/client credential use lack mandatory tenant, audience, data, communication, production, and credential-custody authorization. Behavioral validation remains `not-run` for all twenty-five unless representative evidence is actually recorded.
 
-The non-direct Microsoft plugin frontier has started with `airunway-aks-setup`, **rejected unchanged, 15/20**. Its exact package tree is `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`; the package includes strong cluster-context reporting, install/deployment confirmations, GPU cost awareness, model-choice confirmation, and terminal-only Hugging Face secret handling, but rollback permits destructive model/secret deletion and provider/controller undeploy without a fresh destructive-action authorization boundary. Preserve those mechanics for adaptation/reference use.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**rejected unchanged, 12/20**), `azure-ai` (**rejected unchanged, 10/20**), `azure-aigateway` (**rejected unchanged, 8/20**), and `azure-cloud-migrate` (**rejected unchanged, 9/20**). `azure-cloud-migrate` is bound to exact package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4`; it preserves strong assessment-before-mutation, source-preservation, scenario-routing, service-mapping, staged conversion, progress-reporting, destructive-action confirmation, and explicit deploy-choice mechanics. Unchanged adoption fails because bundled deployment guidance creates Azure resources, identities/RBAC, external ingress and scaling, migrates Kubernetes secrets into Key Vault, imports images, and retrieves a Log Analytics primary shared key without mandatory per-resource target, identity/access, security-control, secret/data-owner, credential-custody, network-exposure, production, retention, or cost authorization. Behavioral validation is `not-run`.
 
-`appinsights-instrumentation` is **rejected unchanged, 12/20** at package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`. Its App Insights/OpenTelemetry selection, SDK setup, tracing, resource-topology, secret-reference, and KQL mechanics remain useful, but the package directly instructs cloud resource creation, application/configuration/IaC mutation, telemetry export, and deployment-affecting operations without mandatory target/resource, production-change, cost, telemetry-data/disclosure, deployment, or credential-custody authorization. Behavioral validation is `not-run`.
-
-`azure-ai` is **rejected unchanged, 10/20** at package tree `8a168336305c56e0eea0d89aced7d8a0001de3b5`. It is a useful Azure AI router and condensed reference across Search, Speech, OpenAI, Document Intelligence, Vision, Translation, Transcription, and Content Safety, with strong managed-identity and least-privilege guidance. Unchanged adoption fails because bundled references instruct persistent search-index/document writes and external processing of audio, documents, text, images, and other potentially sensitive content without mandatory data-owner/classification, disclosure/model-transfer, target-resource, mutation, production, retention, cost, or credential-custody authorization. Behavioral validation is `not-run`.
-
-`azure-aigateway` is **rejected unchanged, 8/20** at package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba`. It contains useful managed-identity, RBAC-backed model access, token/rate controls, semantic caching, content-safety, load-balancing, MCP exposure, multi-tenant metering, and troubleshooting patterns. Unchanged adoption fails because its ordinary flows mutate APIM identity, RBAC, backends, imported APIs, routing/security policies, and agent-facing endpoints without mandatory target/resource, identity/access, production-change, security-control, downstream-effect, disclosure, or cost authorization. The main skill also instructs listing APIM subscription keys, which can expose live credential material into tool/conversational output. Behavioral validation is `not-run`.
-
-The next Microsoft Skills gap in registered-pin source order is `.github/plugins/azure-skills/skills/azure-cloud-migrate`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-cloud-migrate`; do not infer it from stale prompts or historical issue text.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
