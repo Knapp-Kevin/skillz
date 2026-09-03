@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 310 |
+| Persisted third-party exact-version reviews | 311 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 138 / 189 |
-| Microsoft Skills current-standard gaps | 51 |
+| Microsoft Skills current-standard companions | 139 / 189 |
+| Microsoft Skills current-standard gaps | 50 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **138/189**, leaving **51** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **139/189**, leaving **50** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), and `azure-compliance` (**12/20**). `azure-compliance` is bound to exact package tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`; it preserves strong read-only assessment, azqr, Resource Graph, Key Vault expiration, evidence capture, prioritization, authentication, and recommendation mechanics. Unchanged adoption fails because bundled remediation guidance directly alters Azure networking, retention, Key Vault RBAC mode, diagnostics, backup, AKS security/identity, SQL auditing/private access, App Service identity, HTTPS/TLS, and bulk resource configuration without mandatory target-resource, identity/access, security-control, network-exposure, production, cost, retention/recovery, or per-action authorization. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), and `azure-compute` (**11/20**). `azure-compute` is bound to exact package tree `cdfc4a39b926efba5060eddc6d790b035501bc25`; it preserves strong VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, plan-card review, cost visibility, artifact generation, and an explicit final confirmation before live VM/VMSS creation. Unchanged adoption fails because bundled Capacity Reservation and Essential Machine Management workflows still perform billable or subscription-level mutations, resource-provider registration, workspace creation, identity/security configuration, and offboarding without mandatory action-specific authorization immediately before those consequential operations. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-compliance`; do not infer it from stale prompts or historical issue text.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-compute`; do not infer it from stale prompts or historical issue text.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
