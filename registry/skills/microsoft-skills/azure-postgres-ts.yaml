@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-postgres-ts
+display_name: Microsoft Azure PostgreSQL TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-postgres-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-postgres-ts
+permission_tier: database-mutation-sensitive-data
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; pg (node-postgres); @azure/identity for Entra ID; Azure Database for PostgreSQL Flexible Server; environment-provided database identity or password credentials
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA ead63d786ddd1ed88a4ce1b1df175e37bb836d0f and SKILL.md blob 1a2000157b776a125c355b1350f97dac0f11b3b3. The single-file package provides useful TypeScript prior art for PostgreSQL clients and pools, parameterized queries, transactions, typed queries, Entra ID token authentication and refresh, SSL, connection lifecycle, error handling, and pool sizing. Its intended triggers are PostgreSQL/node-postgres/Azure PostgreSQL connection work; it is not a general database-governance or schema-migration authority. Unchanged adoption is rejected because normal examples insert and mutate durable database records, run arbitrary queries and transactions against a selected database, acquire and use database access tokens, accept password and credential-bearing connection-string paths, and log database error details without mandatory environment/database, data-owner, query/mutation, production, credential-custody, sensitive-output, retention/recovery, or consequential-operation authorization. Parameterization, SSL, rollback, and Entra-first guidance are valuable safeguards but do not authorize writes or sensitive-data access. Preserve as adaptation/reference evidence with explicit target/database and data-owner authority, least-privilege credentials, query classification, mutation/destructive-action approval, output/log minimization, recovery/retention boundaries, and production change controls.
