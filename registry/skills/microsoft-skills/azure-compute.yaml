@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-compute
+display_name: Microsoft Azure Compute
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-compute/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 236687860a7ad1de9836938d1c0eacff05cdc922
+upstream_last_updated_at: 2026-06-09T12:00:37Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-compute
+permission_tier: cloud-compute-planning-provisioning-and-management-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP compute and subscription tools; Azure CLI; Azure Resource Manager; Bicep and Terraform examples; VM/VMSS pricing, quota, capacity reservation, troubleshooting, networking, security, and Essential Machine Management references
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA cdfc4a39b926efba5060eddc6d790b035501bc25 and SKILL.md blob fce17d1f64f4013e21ab1f53636852ca0251a5f2 plus the bundled workflow/reference tree. The package preserves strong VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, plan-card review, cost visibility, output-format separation, and an explicit final confirmation before live VM/VMSS creation through Azure MCP. Unchanged adoption is nevertheless rejected under the current authority hard fail because other bundled workflows directly create billable Capacity Reservation Groups/reservations and enable or offboard subscription-level Essential Machine Management, register resource providers, create monitoring workspaces, and alter security/identity-related subscription configuration without a mandatory action-specific authorization boundary immediately before those consequential mutations. Preserve the planning, validation, recommendation, and artifact-generation mechanics for adaptation/reference use, and require explicit target, cost, identity/access, security-control, production, and destructive/offboarding authorization before live operations. Behavioral validation has not been run.
