@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-294-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-295-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **294 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **295 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,18 +65,18 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **122/189** current-standard companion complete, **67** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **123/189** current-standard companion complete, **66** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **15/25** complete.
+- Microsoft direct TypeScript: **16/25** complete.
 
 The TypeScript denominator is tree-derived: 25 independently first-class packages. The upstream TypeScript plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless present in the registered-pin tree.
 
-The current TypeScript slice through `azure-postgres-ts` is companion-complete. `applicationinsights-web-ts`, `azure-ai-contentsafety-ts`, `azure-ai-document-intelligence-ts`, `azure-ai-projects-ts`, `azure-ai-translation-ts`, `azure-ai-voicelive-ts`, `azure-appconfiguration-ts`, `azure-cosmos-ts`, `azure-eventhub-ts`, `azure-identity-ts`, `azure-keyvault-keys-ts`, `azure-keyvault-secrets-ts`, `azure-microsoft-playwright-testing-ts`, `azure-monitor-opentelemetry-ts`, and `azure-postgres-ts` are rejected unchanged under current authority, privacy, sensitive-data, secret-custody, production-configuration, durable-data, database-mutation, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, artifact-publication/retention, network-exposure, telemetry-disclosure, or cost hard gates while retaining useful mechanics for adaptation/reference. Behavioral validation is `not-run` for this slice unless representative evidence is actually recorded.
+The current TypeScript slice through `azure-search-documents-ts` is companion-complete. All sixteen reviewed packages are rejected unchanged under current authority, privacy, sensitive-data, secret-custody, production-configuration, durable-data, database/search-index mutation, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, artifact-publication/retention, network-exposure, telemetry-disclosure, or cost hard gates while retaining useful mechanics for adaptation/reference. `azure-search-documents-ts` retains Azure AI Search client setup, index configuration, document indexing, full-text/vector/hybrid/semantic search, filtering/facets, autocomplete/suggestions, integrated vectorization, semantic captions/answers, and tuning guidance, but persistent index/document mutation, query/content transfer, admin-key handling, destructive document actions, and returned-content/debug output lack mandatory service/index, data-owner/classification, mutation/deletion, production, credential-custody, disclosure, retention/recovery, and sensitive-output authority. Behavioral validation is `not-run` unless representative evidence is actually recorded.
 
-Microsoft Skills remains the active admitted-source family. Continue TypeScript source order after `azure-postgres-ts`, beginning with `azure-search-documents-ts`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family. Continue TypeScript source order after `azure-search-documents-ts`, beginning with `azure-servicebus-ts`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
