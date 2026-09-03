@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **313** persisted exact-version third-party verification companions.
+- **314** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **141/189**.
-- Remaining gaps: **48**.
+- Current-standard companions: **142/189**.
+- Remaining gaps: **47**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -53,9 +53,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-compliance` — **rejected unchanged, 12/20**.
 - `azure-compute` — **rejected unchanged, 11/20**.
 - `azure-cost` — **rejected unchanged, 14/20**.
-- `azure-deploy` — **rejected unchanged, 15/20**. Exact package tree `e4d47784cfeba4f942bca41a909c957e65562fd7`, `SKILL.md` blob `23815db4c7c5946913b10ac1cd706ea2bf6727fe`, freshness revision `f1e39f53483cdcd4d039d6e317b3e430b725de16` from 2026-05-04. Preserve validated-plan prerequisites, exact subscription/region confirmation, conflict detection, destructive/security/cost confirmation, deployment recipes, RBAC health checks, recovery, and verification. Unchanged adoption fails because required post-deployment guidance can grant managed identities SQL permissions and apply EF Core schema migrations without a dedicated action-specific authorization checkpoint immediately before those separate persistent identity/access and database mutations. Behavioral validation is `not-run`.
+- `azure-deploy` — **rejected unchanged, 15/20**.
+- `azure-diagnostics` — **rejected unchanged, 13/20**. Exact package tree `1b0c314600a11fc0d63249d63c47cfb79a524443`, `SKILL.md` blob `693487020cc7c409f4c8387974cef122b5fe692c`, freshness revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. Preserve systematic triage, resource-health-first diagnosis, Azure-side-before-Kubernetes evidence ordering, read-only fallbacks, AKS remediation gating, and evidence/confidence reporting. Unchanged adoption fails because App Service remediation material presents persistent production mutations such as scaling, tracing, auto-heal, redeployment, app-setting changes, TLS binding, and DNS changes without a mandatory action-specific authorization checkpoint immediately before those changes. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-deploy`. Do not revive stale source-order assumptions from historical prompts.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-diagnostics`. Do not revive stale source-order assumptions from historical prompts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -84,4 +85,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-deploy` is merged and public accounting is verified at **313 reviews / Microsoft Skills 141/189 / 48 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-diagnostics` is merged and public accounting is verified at **314 reviews / Microsoft Skills 142/189 / 47 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
