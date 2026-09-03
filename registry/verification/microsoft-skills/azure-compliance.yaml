@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-compliance
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5d79eadfd4a42ff0091adb849bf016abd7ee57de
+skill_md_blob_sha: 5beb9da33c90ceff1b69ff78bdba78c326fd7a39
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, security, evaluation, monitoring]
+  lifecycle: [verification, operations, maintenance]
+  characteristic: [evidence-first, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and the bundled compliance, Azure Quick Review, Resource Graph, Key Vault expiration, authentication, recommendation, remediation, and SDK reference tree. The package has strong read-only assessment value: scope selection, azqr scanning, evidence capture, finding classification, Key Vault expiration review, remediation proposal, and an explicit best-practice statement to separate compliance reporting from remediation execution. Unchanged adoption is nevertheless rejected under the current authority hard fail because bundled remediation patterns provide direct Azure CLI/Bicep procedures that create or change private endpoints, public network access, retention, Key Vault RBAC mode, Log Analytics and diagnostic settings, backup protection, AKS Defender and managed identity, SQL auditing/private access, App Service identities, HTTPS/TLS settings, and bulk resource configuration without mandatory target-resource, identity/access, security-control, network-exposure, production, cost, retention/recovery, or per-action authorization. Preserve the assessment, evidence, classification, and recommendation mechanics for adaptation/reference use and require explicit action-specific authority before any remediation execution. Behavioral validation remains not-run.
