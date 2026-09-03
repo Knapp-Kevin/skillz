@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-postgres-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ead63d786ddd1ed88a4ce1b1df175e37bb836d0f
+skill_md_blob_sha: 1a2000157b776a125c355b1350f97dac0f11b3b3
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single SKILL.md file. Useful material includes PostgreSQL client and pool configuration, SSL, Entra ID token authentication and refresh, parameterized queries, transactions and rollback, typed query patterns, error handling, graceful shutdown, and pool sizing. Rejected unchanged because ordinary examples insert and mutate durable records, run arbitrary database queries and transactions, acquire and use access tokens as database passwords, offer password and credential-bearing connection-string authentication, and may log database error details without mandatory target/environment, database/data-owner, query/mutation, production, credential-custody, sensitive-output, retention/recovery, or consequential-operation authorization. Parameterized queries, SSL, transaction rollback, and Entra-first guidance reduce important risks but do not establish authority for database writes or sensitive-data access. Behavioral validation remains not-run.

@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 293 |
+| **Persisted third-party review companions** | 294 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 121 / 189 |
-| **Microsoft Skills current-standard gaps** | 68 |
+| **Microsoft Skills current-standard companions** | 122 / 189 |
+| **Microsoft Skills current-standard gaps** | 67 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 14 / 25 |
+| **Microsoft TypeScript direct-package companions** | 15 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **121/189 companion-complete**, **68 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **122/189 companion-complete**, **67 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **14/25** complete.
+- Microsoft direct TypeScript: **15/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -64,10 +64,11 @@ Current companion-complete TypeScript packages are:
 12. `azure-keyvault-secrets-ts` — rejected unchanged, 5/20.
 13. `azure-microsoft-playwright-testing-ts` — rejected unchanged, 10/20.
 14. `azure-monitor-opentelemetry-ts` — rejected unchanged, 9/20.
+15. `azure-postgres-ts` — rejected unchanged, 10/20.
 
-`azure-monitor-opentelemetry-ts` is bound to single-file package tree `745333bd43aa40a5a5639af738ade6ae35426c08` and `SKILL.md` blob `538f028b72746103fa2314ba625acad23c934fce`. Skill-specific freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its Azure Monitor initialization, deprecated-package migration, custom spans and metrics, logging integration, auto-instrumentation, sampling, processors, baggage/context propagation, correlation, role metadata, and graceful-shutdown mechanics remain useful prior art. Unchanged adoption fails because normal flows export telemetry and logs to Azure Monitor, auto-instrumentation can collect HTTP, Azure SDK, database, Redis, exception, request, and response metadata, and examples propagate `user.id` and `tenant.id` across service boundaries without mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, or disclosure authorization. The source's instruction not to log PII or secrets is valuable guidance but is not an enforced authorization boundary. Behavioral validation is `not-run`.
+`azure-postgres-ts` is bound to single-file package tree `ead63d786ddd1ed88a4ce1b1df175e37bb836d0f` and `SKILL.md` blob `1a2000157b776a125c355b1350f97dac0f11b3b3`. Skill-specific freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its client/pool configuration, SSL, parameterized queries, transaction/rollback patterns, typed queries, Entra ID token authentication and refresh, error handling, graceful shutdown, and pool-sizing guidance remain useful prior art. Unchanged adoption fails because ordinary flows mutate durable database records, run arbitrary queries and transactions, acquire and use access tokens as database passwords, allow password and credential-bearing connection-string paths, and may log database error details without mandatory target/environment, database/data-owner, query/mutation, production, credential-custody, sensitive-output, retention/recovery, or consequential-operation authorization. Parameterization, SSL, rollback, and Entra-first guidance are useful safeguards but do not authorize data access or writes. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **68** gaps. Continue TypeScript source order after `azure-monitor-opentelemetry-ts`, beginning with `azure-postgres-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **67** gaps. Continue TypeScript source order after `azure-postgres-ts`, beginning with `azure-search-documents-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -85,7 +86,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 14/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 15/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
