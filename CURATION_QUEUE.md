@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **309** persisted exact-version third-party verification companions.
+- **310** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,25 +35,24 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **137/189**.
-- Remaining gaps: **52**.
+- Current-standard companions: **138/189**.
+- Remaining gaps: **51**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-The TypeScript denominator is tree-derived. The registered-pin tree contains 25 independently first-class packages even though the upstream plugin README says 24 and omits `applicationinsights-web-ts`. Twenty-two packages are rejected unchanged under current authority/privacy/secret/sensitive-data/external-state hard gates; three bounded local implementation packages are verified: `frontend-ui-dark-ts` 15/20, `react-flow-node-ts` 15/20, and `zustand-store-ts` 16/20. All retain explicit behavioral-validation state in their companions.
-
 Current non-direct Microsoft plugin frontier:
 
-- `airunway-aks-setup` — **rejected unchanged, 15/20**. Strong setup and secret-entry safeguards; rollback lacks fresh destructive-action authorization.
-- `appinsights-instrumentation` — **rejected unchanged, 12/20**. Useful App Insights/OpenTelemetry prior art; infrastructure/configuration mutation, telemetry disclosure, deployment, cost, and shared-key custody lack mandatory authorization.
-- `azure-ai` — **rejected unchanged, 10/20**. Useful Azure AI router/reference; persistent search mutation and potentially sensitive external data processing lack mandatory data-owner, disclosure/model-transfer, mutation, production, retention, cost, and credential-custody authority.
-- `azure-aigateway` — **rejected unchanged, 8/20**. Useful APIM AI-gateway prior art; identity/RBAC/backend/API/security/routing mutation, agent exposure, live endpoint calls, metrics, and subscription-key listing lack mandatory target, identity/access, security-control, production, downstream-effect, disclosure, cost, and credential-custody authority.
-- `azure-cloud-migrate` — **rejected unchanged, 9/20**. Exact package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4`, `SKILL.md` blob `b1634cf629d9358eb70a95c089b309c304f9c42c`, freshness revision `e12b7d24dab47df1d935783b31b196fdf43ad56b` from 2026-05-07. Preserve assessment-before-mutation, source preservation, scenario routing, service mapping, runtime modernization, staged conversion, progress reporting, service-discovery auditing, destructive-action confirmation, and explicit local-test-versus-Azure-deploy choice. Unchanged adoption fails because bundled deployment guidance creates Azure resources, identities/RBAC, imports images, exposes external ingress, migrates Kubernetes secrets into Key Vault, retrieves a Log Analytics primary shared key, and configures production-like scaling without mandatory per-resource target/environment, identity/access, security-control, secret/data-owner, credential-custody, network-exposure, production, retention/recovery, or cost authorization. Behavioral validation is `not-run`.
+- `airunway-aks-setup` — **rejected unchanged, 15/20**.
+- `appinsights-instrumentation` — **rejected unchanged, 12/20**.
+- `azure-ai` — **rejected unchanged, 10/20**.
+- `azure-aigateway` — **rejected unchanged, 8/20**.
+- `azure-cloud-migrate` — **rejected unchanged, 9/20**.
+- `azure-compliance` — **rejected unchanged, 12/20**. Exact package tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`, `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`, freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve read-only compliance scanning, azqr, Resource Graph, Key Vault expiration, evidence capture, prioritization, authentication, and recommendation mechanics. Unchanged adoption fails because bundled remediation procedures directly mutate networking, retention, Key Vault RBAC mode, diagnostics, backup, AKS security/identity, SQL auditing/private access, App Service identity, HTTPS/TLS, and bulk resource configuration without mandatory target-resource, identity/access, security-control, network-exposure, production, cost, retention/recovery, or per-action authorization. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-cloud-migrate`. Do not revive stale source-order assumptions from historical prompts.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-compliance`. Do not revive stale source-order assumptions from historical prompts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -63,18 +62,7 @@ Use the registered source identity and pin in `registry/sources.yaml`. Do not be
 
 Discovery proceeds in parallel but cannot displace admitted-source closure.
 
-Current governed surfaces and candidates include:
-
-- Creator Technical Resource Catalog: discovery intelligence only; independently resolve canonical upstream identity and terms before promotion.
-- Hugging Face Skills: source-vetting accepted for selective deeper intake; no blanket trust.
-- GitHub Awesome Copilot: registered dynamic-discovery surface, never a trusted wholesale corpus.
-- Agent Skills Specification: registered normative reference, not an installable-skill denominator.
-- Cole Medin and David Ondrej: tracked creator corpora requiring selective exact-version curation and denominator/evidence reconciliation.
-- Nate B. Jones: canonical first-party source and redistribution terms still need evidence.
-- Andrej Karpathy-derived methodology: methodology/provenance candidate, not presumed Karpathy-authored skill corpus.
-- Sean Kochel: curator/methodology surface; trace useful recommendations to original authors.
-- Chase AI+: restricted/reference-only unless terms establish redistribution authority.
-- Open candidate issues #63 and #73 remain bounded workspaces and must terminate in decisive outcomes when sufficient evidence exists.
+Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sean Kochel, Chase AI+, and the bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
 ## Lifecycle hygiene
 
@@ -93,4 +81,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-cloud-migrate` is merged and public accounting is verified at **309 reviews / Microsoft Skills 137/189 / 52 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-compliance` is merged and public accounting is verified at **310 reviews / Microsoft Skills 138/189 / 51 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
