@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-deploy
+display_name: Microsoft Azure Deploy
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-deploy/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: f1e39f53483cdcd4d039d6e317b3e430b725de16
+upstream_last_updated_at: 2026-05-04T11:33:32Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-deploy
+permission_tier: cloud-deployment-and-production-mutation-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure Developer CLI; Azure CLI; Azure MCP; Bicep; Terraform; Azure Resource Manager; Azure Container Apps; Azure Container Registry; Azure SQL; Microsoft Entra ID; Entity Framework Core; bundled deployment recipes and SDK references
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA e4d47784cfeba4f942bca41a909c957e65562fd7 and SKILL.md blob 23815db4c7c5946913b10ac1cd706ea2bf6727fe plus the bundled pre-deploy, global-rule, authentication, RBAC, recipe, troubleshooting, post-deployment, SQL, migration, CI/CD, Bicep, Terraform, azd, and SDK references. The package preserves strong deployment discipline: it requires an existing validated deployment plan, forbids self-asserting validation, confirms the exact subscription and region, checks resource-group/environment conflicts, requires explicit confirmation for destructive, cost-impacting, and security/RBAC actions, separates recipe selection from execution, verifies live RBAC state, and performs post-deploy verification. Unchanged adoption is nevertheless rejected under the current authority hard fail because the required post-deployment path can grant managed identities database permissions and apply EF Core schema migrations after infrastructure deployment without a dedicated action-specific authorization checkpoint immediately before those persistent identity/access and database mutations. The overall request to deploy and the global destructive-action rule are not sufficient substitutes for explicit authorization of those separate post-deploy changes. Preserve the prerequisite, validation-proof, target-selection, conflict-detection, destructive-action confirmation, recipe, verification, and recovery mechanics for adaptation/reference use; require fresh database-owner, identity/access, schema-migration, production, target, and rollback authorization before post-deploy mutation. Behavioral validation has not been run.
