@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-diagnostics
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1b0c314600a11fc0d63249d63c47cfb79a524443
+skill_md_blob_sha: 693487020cc7c409f4c8387974cef122b5fe692c
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, debugging, monitoring, observability]
+  lifecycle: [verification, operations, maintenance]
+  characteristic: [evidence-first, risk-aware, retrieval-first, tool-assisted, reference-heavy]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and bundled App Service, Container Apps, Functions, KQL, Resource Graph, AKS, and messaging troubleshooting references. The package preserves strong systematic diagnosis, resource-health-first triage, Azure-side-before-Kubernetes evidence ordering, read-only fallback commands, root-cause evidence discipline, and an unusually explicit AKS guardrail requiring remediation approval before restart, delete, cordon, drain, scale, upgrade, or reconfiguration. Unchanged adoption nevertheless fails the authority hard rule because the App Service path presents production mutations including plan scaling, failed-request tracing, auto-heal/recycling, redeployment, app-setting changes, TLS certificate upload/binding, and DNS changes without a mandatory action-specific authorization checkpoint immediately before each mutation. A generic troubleshooting or remediation request is not sufficient authorization for target, production, availability, network/DNS, certificate, cost, and rollback effects. Preserve read-only diagnostic flow, evidence ordering, query patterns, AKS remediation gating, confidence reporting, and escalation mechanics for adaptation/reference use. Require fresh action-specific authorization before persistent production changes. Behavioral validation remains not-run.
