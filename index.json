@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-02",
+  "snapshot_date": "2026-09-03",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 43,
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 296,
+    "persisted_third_party_exact_version_reviews": 297,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
-    "microsoft_skills_current_standard_companions": 124,
+    "microsoft_skills_current_standard_companions": 125,
     "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 65,
+    "microsoft_skills_current_standard_gaps": 64,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -23,7 +23,7 @@
     "microsoft_python_direct_package_denominator": 40,
     "microsoft_rust_direct_package_companions": 9,
     "microsoft_rust_direct_package_denominator": 9,
-    "microsoft_typescript_direct_package_companions": 17,
+    "microsoft_typescript_direct_package_companions": 18,
     "microsoft_typescript_direct_package_denominator": 25
   },
   "first_party_categories": {
