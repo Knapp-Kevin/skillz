@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-queue-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e3b60c7b5588d8ebc701484fd5ca850a82d3b3ee
+skill_md_blob_sha: 130dd9277b2d87f7095f959d4d5fa93f41af6310
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [cloud, implementation, orchestration, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single-file SKILL.md package. Useful material includes Queue Storage client hierarchy, queue CRUD and metadata, message send/receive/peek/update/delete/clear operations, visibility timeout management, poison-message routing, worker/batch patterns, message encoding, SAS generation, error handling, and authentication choices. Rejected unchanged because normal flows create/delete persistent queues, mutate queue metadata, publish arbitrary external message payloads, receive and print message content and pop receipts, delete individual messages, clear entire queues, repeatedly execute downstream handlers, move poison-message payloads between queues, and update durable message content/visibility without mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, production, retention/recovery, or cost authorization. Credential paths include account keys, connection strings, SAS tokens, and SAS generation; queue SAS grants read/add/update/process and the account SAS example grants broad queue service permissions. Entra-first production guidance, poison handling, visibility extension, dequeue-count checks, and batch patterns are useful safeguards but do not authorize external publication, payload disclosure, downstream actions, destructive message lifecycle, delegated credentials, or production use. Behavioral validation remains not-run.
