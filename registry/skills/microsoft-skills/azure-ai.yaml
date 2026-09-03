@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai
+display_name: Microsoft Azure AI Services
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-ai/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 951d18d43210f0d93a931ae5d5c2a774f63d5faf
+upstream_last_updated_at: 2026-04-21T21:13:53Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-ai
+permission_tier: external-ai-data-and-search-mutation
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP or Azure CLI where used; Azure AI Search, Speech, OpenAI, Document Intelligence, Content Safety, Vision, Translation, and Transcription service contexts; Azure SDK language packages referenced by the 15 bundled SDK quick references; Azure identity or service-specific credential material; bundled auth-best-practices.md
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 8a168336305c56e0eea0d89aced7d8a0001de3b5 and SKILL.md blob 6cce5b319f57f98f81772e4c8627c573d89e8571 plus auth guidance and 15 SDK quick references. The package is useful as a service router and condensed Azure AI reference, but unchanged adoption fails the current authority and sensitive-data hard gates. Bundled references instruct persistent Azure AI Search index/document writes and create-or-update operations, audio/file transcription and speech synthesis, OCR/document analysis, translation, vision/content-safety processing, and other transfers of user or application content to Azure services without mandatory data-owner/classification, disclosure/model-transfer, target-resource, production, mutation, retention, or cost authorization. The transcription reference also uses a service subscription key directly from an environment variable. The auth reference strongly prefers managed identity and least-privilege RBAC, which is useful mitigation, but those recommendations are not action-specific authorization boundaries. Preserve service selection, authentication, hybrid/vector-search, transcription, OCR, translation, and SDK mechanics for adaptation/reference use with explicit data-transfer, target-resource, mutation, production, retention, cost, and credential-custody gates. Behavioral validation has not been run.
