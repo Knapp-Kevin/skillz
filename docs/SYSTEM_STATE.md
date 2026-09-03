@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 307 |
+| **Persisted third-party review companions** | 308 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 135 / 189 |
-| **Microsoft Skills current-standard gaps** | 54 |
+| **Microsoft Skills current-standard companions** | 136 / 189 |
+| **Microsoft Skills current-standard gaps** | 53 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **135/189 companion-complete**, **54 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **136/189 companion-complete**, **53 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -92,7 +92,9 @@ The non-direct Microsoft plugin frontier is now active. `airunway-aks-setup` is 
 
 `azure-ai` is bound to package tree `8a168336305c56e0eea0d89aced7d8a0001de3b5` and `SKILL.md` blob `6cce5b319f57f98f81772e4c8627c573d89e8571`, with bundled `references/auth-best-practices.md` and 15 SDK quick references. Skill-specific freshness is anchored to Microsoft revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. It is **rejected unchanged, 10/20**. The package is useful as a router/reference across Search, Speech, OpenAI, Document Intelligence, Vision, Translation, Transcription, and Content Safety, and its authentication reference has strong managed-identity and least-privilege guidance. Unchanged adoption fails because bundled references instruct persistent search-index/document mutation and external processing of audio, documents, text, images, and other potentially sensitive content without mandatory data-owner/classification, disclosure/model-transfer, target-resource, mutation, production, retention, cost, or credential-custody authorization. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **54** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/azure-aigateway` while preserving the complete `.NET`, Java, Python, Rust, and TypeScript slices.
+`azure-aigateway` is bound to package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba` and `SKILL.md` blob `a8df9f45fae25501acf7fee988047f808d191fa5`, with bundled authentication, configuration-pattern, policy, troubleshooting, and four SDK quick references. Skill-specific freshness is anchored to Microsoft revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. It is **rejected unchanged, 8/20**. The package retains valuable APIM AI-gateway prior art for managed-identity backend authentication, RBAC-backed model access, token/rate limits, semantic caching, token metrics, content safety, load balancing, streaming, MCP exposure, and multi-tenant metering. Unchanged adoption fails because normal flows enable APIM identity, create RBAC assignments/backends, import APIs, alter gateway routing and security policies, expose APIs as agent tools, call live model endpoints, and emit usage metrics without mandatory target/resource, identity/access, security-control, production-routing, downstream-effect, data/disclosure, or cost authorization. `SKILL.md` also instructs listing APIM subscription keys, which can expose live credential material into tool/conversational output. Behavioral validation is `not-run`.
+
+Microsoft Skills remains active with **53** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/azure-cloud-migrate` while preserving the complete `.NET`, Java, Python, Rust, and TypeScript slices.
 
 ## Source lifecycle
 
@@ -110,7 +112,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; all five direct language slices are complete. The next registered-pin gap is `.github/plugins/azure-skills/skills/azure-aigateway`.
+1. Continue Microsoft Skills in coherent source-ordered batches; all five direct language slices are complete. The next registered-pin gap is `.github/plugins/azure-skills/skills/azure-cloud-migrate`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
