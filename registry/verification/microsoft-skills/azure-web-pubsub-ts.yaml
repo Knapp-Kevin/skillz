@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-web-pubsub-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d58b609f6ec1d685143378e3e43f9e08f0883917
+skill_md_blob_sha: 175e519e8d39e7fe5c2eaa34013f73f53641c1b5
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [cloud, implementation, orchestration, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single-file SKILL.md package. Useful material includes Azure Web PubSub service/client setup, Entra-first production authentication, client access token generation, targeted/broadcast/group messaging, group and connection lifecycle, connection permission management, reconnect handling, Express event handlers, and negotiate endpoints. Rejected unchanged because normal flows print credential-bearing client access URLs, send messages to all/users/connections/groups, add or remove group members, close individual/user/group/all connections, grant or revoke connection permissions, emit client events, log user and connection identifiers plus message bodies, and echo user-event data without mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, or credential-custody authorization. Connection-string and access-key paths are also available. Entra-first guidance, early connection validation, specific-group roles, expiration controls, and handler-before-start guidance are useful safeguards but do not authorize messaging, notification, access mutation, forced disconnects, credential disclosure, or production operation. Behavioral validation remains not-run.

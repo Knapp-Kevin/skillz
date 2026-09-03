@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-web-pubsub-ts
+display_name: Microsoft Azure Web PubSub TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-web-pubsub-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-web-pubsub-ts
+permission_tier: external-messaging-credentialed-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/web-pubsub; @azure/web-pubsub-client; @azure/web-pubsub-express; @azure/identity; Azure Web PubSub hub/resource; environment-provided Entra identity, connection string, access key, or generated client access URL; Express/websocket application surfaces
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to single-file package tree SHA d58b609f6ec1d685143378e3e43f9e08f0883917 and SKILL.md blob 175e519e8d39e7fe5c2eaa34013f73f53641c1b5. The package provides useful TypeScript prior art for Web PubSub service/client setup, Entra-first production authentication, client token generation, targeted and broadcast messaging, groups, connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints. Its intended triggers are Azure Web PubSub implementation tasks; it is not authorization to disclose messages, mint or expose bearer credentials, alter group membership or connection permissions, disconnect users, broadcast notifications, execute user-event handlers, or operate production hubs. Unchanged adoption is rejected because ordinary examples print credential-bearing client access URLs, broadcast/send external messages, add/remove users or connections from groups, close individual/user/group/all connections, grant/revoke connection permissions, emit client events, log user IDs and message bodies, and return event data without mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, or credential-custody authority. Preserve as adaptation/reference evidence with Entra-first least privilege, secure non-conversational credential handling, explicit audience/message/action authorization, output minimization/redaction, bounded token roles/expiry, and production/notification safeguards.

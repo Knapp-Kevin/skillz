@@ -14,16 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 299 |
+| Persisted third-party exact-version reviews | 300 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 127 / 189 |
-| Microsoft Skills current-standard gaps | 62 |
+| Microsoft Skills current-standard companions | 128 / 189 |
+| Microsoft Skills current-standard gaps | 61 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
-| Microsoft TypeScript direct-package companions | 20 / 25 |
+| Microsoft TypeScript direct-package companions | 21 / 25 |
 
 ## First-party skills by purpose
 
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **127/189**, leaving **62** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **20/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **128/189**, leaving **61** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **21/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
-The current TypeScript companion-complete slice runs through `azure-storage-queue-ts`. All twenty reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, cost, or authority hard gates while retaining useful adaptation/reference evidence. `azure-storage-queue-ts` specifically retains Queue Storage clients, queue CRUD/metadata, send/receive/peek/update/delete/clear operations, visibility-timeout handling, poison-message routing, worker/batch patterns, encoding, SAS generation, error handling, and authentication choices, but persistent queue/message mutation, arbitrary payload publication, message-content/pop-receipt output, downstream handler execution, poison-payload transfer, destructive clear/delete operations, account-key/connection-string/SAS credential paths, and broad delegated queue/account SAS lack mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+The current TypeScript companion-complete slice runs through `azure-web-pubsub-ts`. All twenty-one reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, notification, cost, or authority hard gates while retaining useful adaptation/reference evidence. `azure-web-pubsub-ts` specifically retains Web PubSub service/client setup, Entra-first authentication, client-token generation, targeted/broadcast/group messaging, group and connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints, but credential-bearing access-URL output, messaging to external recipients, membership mutation, forced disconnects, permission mutation, user-event handling, and raw user/message logging lack mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, and credential-custody authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
-The next Microsoft TypeScript unit is `azure-web-pubsub-ts`.
+The next Microsoft TypeScript unit is `frontend-ui-dark-ts`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

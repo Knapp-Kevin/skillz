@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-299-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-300-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **299 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **300 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,18 +65,18 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **127/189** current-standard companion complete, **62** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **128/189** current-standard companion complete, **61** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **20/25** complete.
+- Microsoft direct TypeScript: **21/25** complete.
 
 The TypeScript denominator is tree-derived: 25 independently first-class packages. The upstream TypeScript plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless present in the registered-pin tree.
 
-The current TypeScript slice through `azure-storage-queue-ts` is companion-complete. All twenty reviewed packages are rejected unchanged under current authority, privacy, sensitive-data, secret-custody, production-configuration, durable-data, database/search-index/message/storage mutation, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, artifact-publication/retention, network-exposure, telemetry-disclosure, downstream-effect, delegated-credential, or cost hard gates while retaining useful mechanics for adaptation/reference. `azure-storage-queue-ts` retains Queue Storage client hierarchy, queue CRUD and metadata, send/receive/peek/update/delete/clear operations, visibility-timeout handling, poison-message routing, worker and batch patterns, encoding, SAS generation, error handling, and authentication choices, but persistent queue/message mutation, arbitrary payload publication, message-content/pop-receipt output, downstream processing, poison-payload transfer, destructive clear/delete operations, account-key/connection-string/SAS credential paths, and broad delegated queue/account SAS lack mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, disclosure, retention/recovery, production, and cost authority. Behavioral validation is `not-run` unless representative evidence is actually recorded.
+The current TypeScript slice through `azure-web-pubsub-ts` is companion-complete. All twenty-one reviewed packages are rejected unchanged under current authority, privacy, sensitive-data, secret-custody, production-configuration, durable-data, database/search-index/message/storage mutation, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, artifact-publication/retention, network-exposure, telemetry-disclosure, downstream-effect, delegated-credential, notification, or cost hard gates while retaining useful mechanics for adaptation/reference. `azure-web-pubsub-ts` retains Web PubSub service/client setup, Entra-first authentication, client-token generation, messaging, groups, connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints, but credential-bearing access-URL output, broadcasts and targeted messages, group-membership mutation, forced disconnects, permission grants/revocations, user-event handling, and raw user/message logging lack mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, and credential-custody authority. Behavioral validation is `not-run` unless representative evidence is actually recorded.
 
-Microsoft Skills remains the active admitted-source family. Continue TypeScript source order after `azure-storage-queue-ts`, beginning with `azure-web-pubsub-ts`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family. Continue TypeScript source order after `azure-web-pubsub-ts`, beginning with `frontend-ui-dark-ts`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
