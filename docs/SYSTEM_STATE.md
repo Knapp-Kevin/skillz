@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 311 |
+| **Persisted third-party review companions** | 312 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 139 / 189 |
-| **Microsoft Skills current-standard gaps** | 50 |
+| **Microsoft Skills current-standard companions** | 140 / 189 |
+| **Microsoft Skills current-standard gaps** | 49 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **139/189 companion-complete**, **50 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **140/189 companion-complete**, **49 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -56,9 +56,10 @@ The non-direct Microsoft plugin frontier is active. Reviewed packages now includ
 4. `azure-aigateway` — **rejected unchanged, 8/20**.
 5. `azure-cloud-migrate` — **rejected unchanged, 9/20**.
 6. `azure-compliance` — **rejected unchanged, 12/20**.
-7. `azure-compute` — **rejected unchanged, 11/20**, package tree `cdfc4a39b926efba5060eddc6d790b035501bc25`, `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`, freshness revision `236687860a7ad1de9836938d1c0eacff05cdc922` from 2026-06-09. It preserves strong VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, plan-card review, cost visibility, artifact-format separation, and an explicit final confirmation before live VM/VMSS creation. Unchanged adoption fails because bundled Capacity Reservation guidance directly creates billable reservations and EMM guidance enables/offboards subscription-level management, registers resource providers, creates monitoring workspaces, and changes identity/security-related subscription configuration without mandatory action-specific authorization immediately before those consequential mutations. Behavioral validation is `not-run`.
+7. `azure-compute` — **rejected unchanged, 11/20**.
+8. `azure-cost` — **rejected unchanged, 14/20**, package tree `b9f59c28575280e1f76aaf2b94d92b040b571c52`, `SKILL.md` blob `8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4`, freshness revision `ba3700d41a07ab5e01919ce9a42a38907186a9fe` from 2026-06-04. It preserves strong read-oriented cost query/forecast, scope selection, throttling discipline, pricing validation, total-bill context, and optimization heuristics. Unchanged adoption fails because bundled optimization guidance can enable the AKS cost-analysis add-on and includes implementation guidance for destructive or persistent cost/resource changes without mandatory action-specific authorization immediately before mutation. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **50** gaps. Establish the next gap from the registered-pin tree after `azure-compute`; do not infer it from stale prompts or historical issue text.
+Microsoft Skills remains active with **49** gaps. Establish the next gap from the registered-pin tree after `azure-cost`; do not infer it from stale prompts or historical issue text.
 
 ## Source lifecycle
 
@@ -76,7 +77,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-compute`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-cost`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
