@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 299 |
+| **Persisted third-party review companions** | 300 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 127 / 189 |
-| **Microsoft Skills current-standard gaps** | 62 |
+| **Microsoft Skills current-standard companions** | 128 / 189 |
+| **Microsoft Skills current-standard gaps** | 61 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 20 / 25 |
+| **Microsoft TypeScript direct-package companions** | 21 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **127/189 companion-complete**, **62 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **128/189 companion-complete**, **61 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **20/25** complete.
+- Microsoft direct TypeScript: **21/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -70,10 +70,11 @@ Current companion-complete TypeScript packages are:
 18. `azure-storage-blob-ts` — rejected unchanged, 6/20.
 19. `azure-storage-file-share-ts` — rejected unchanged, 6/20.
 20. `azure-storage-queue-ts` — rejected unchanged, 6/20.
+21. `azure-web-pubsub-ts` — rejected unchanged, 6/20.
 
-`azure-storage-queue-ts` is bound to single-file package tree `e3b60c7b5588d8ebc701484fd5ca850a82d3b3ee` and `SKILL.md` blob `130dd9277b2d87f7095f959d4d5fa93f41af6310`. Skill-specific freshness is anchored to Microsoft revision `338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5` from 2026-04-22. Its Queue Storage client hierarchy, queue CRUD/metadata, message send/receive/peek/update/delete/clear operations, visibility timeout management, poison-message routing, worker/batch patterns, message encoding, SAS generation, error handling, and authentication choices remain useful prior art. Unchanged adoption fails because normal flows create/delete persistent queues, mutate queue metadata, publish arbitrary payloads, receive and print message content plus pop receipts, delete individual messages, clear queues, execute downstream processing loops, move poison-message payloads, and update durable message content/visibility without mandatory storage-account/queue, payload/data-owner/classification, downstream-effect, mutation/destructive-action, production, retention/recovery, or cost authority. Account-key, connection-string, and SAS credential paths remain available, and the queue/account SAS examples grant broad delegated permissions. Behavioral validation is `not-run`.
+`azure-web-pubsub-ts` is bound to single-file package tree `d58b609f6ec1d685143378e3e43f9e08f0883917` and `SKILL.md` blob `175e519e8d39e7fe5c2eaa34013f73f53641c1b5`. Skill-specific freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its Web PubSub service/client setup, Entra-first production authentication, token generation, targeted/broadcast/group messaging, group and connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints remain useful prior art. Unchanged adoption fails because normal flows print credential-bearing client access URLs, send external messages, mutate group membership, close individual/user/group/all connections, grant or revoke permissions, emit client events, log identifiers and message bodies, and return user-event data without mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, or credential-custody authority. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **62** gaps. Continue TypeScript source order after `azure-storage-queue-ts`, beginning with `azure-web-pubsub-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **61** gaps. Continue TypeScript source order after `azure-web-pubsub-ts`, beginning with `frontend-ui-dark-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -91,7 +92,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 20/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 21/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
