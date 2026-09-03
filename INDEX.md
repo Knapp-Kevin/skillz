@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 305 |
+| Persisted third-party exact-version reviews | 306 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 133 / 189 |
-| Microsoft Skills current-standard gaps | 56 |
+| Microsoft Skills current-standard companions | 134 / 189 |
+| Microsoft Skills current-standard gaps | 55 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,14 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **133/189**, leaving **56** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete. Direct TypeScript is **25/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **134/189**, leaving **55** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete. Direct TypeScript is **25/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
 The completed TypeScript slice contains twenty-two packages rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, notification, cost, communication, model-data-transfer, or authority hard gates while retaining useful adaptation/reference evidence. Three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. The final consequential TypeScript package, `m365-agents-ts`, is **rejected unchanged, 13/20** because ordinary M365/Teams/Copilot Studio messaging, Azure OpenAI/Copilot data transfer, remote conversations, and tenant/client credential use lack mandatory tenant, audience, data, communication, production, and credential-custody authorization. Behavioral validation remains `not-run` for all twenty-five unless representative evidence is actually recorded.
 
 The non-direct Microsoft plugin frontier has started with `airunway-aks-setup`, **rejected unchanged, 15/20**. Its exact package tree is `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`; the package includes strong cluster-context reporting, install/deployment confirmations, GPU cost awareness, model-choice confirmation, and terminal-only Hugging Face secret handling, but rollback permits destructive model/secret deletion and provider/controller undeploy without a fresh destructive-action authorization boundary. Preserve those mechanics for adaptation/reference use.
 
-The next Microsoft Skills gap in registered-pin source order is `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
+`appinsights-instrumentation` is **rejected unchanged, 12/20** at package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`. Its App Insights/OpenTelemetry selection, SDK setup, tracing, resource-topology, secret-reference, and KQL mechanics remain useful, but the package directly instructs cloud resource creation, application/configuration/IaC mutation, telemetry export, and deployment-affecting operations without mandatory target/resource, production-change, cost, telemetry-data/disclosure, deployment, or credential-custody authorization. Behavioral validation is `not-run`.
+
+The next Microsoft Skills gap in registered-pin source order is `.github/plugins/azure-skills/skills/azure-ai`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: appinsights-instrumentation
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0
+skill_md_blob_sha: ca55c310862cb95b5ebcc1f10a070f312718d1cb
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation, observability]
+  lifecycle: [implementation, release, operations]
+  characteristic: [instrumentation, production-oriented, reference-heavy]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md, LICENSE.txt, examples/appinsights.bicep, scripts/appinsights.ps1, references/aspnetcore.md, auto.md, container-apps.md, nodejs.md, python.md, and the four SDK quick references. The package offers useful App Insights/OpenTelemetry selection and setup guidance, distinguishes guidance requests from explicit component-addition requests, and includes practical resource, application-code, Container Apps, tracing, and KQL references. Unchanged adoption is rejected under the current authority hard fail. Despite routing explicit mutation requests toward azure-prepare, the package itself instructs creation of Log Analytics and Application Insights resources, App Service/Container App/Function App configuration mutation, application/IaC changes, telemetry export, and eventual deployment without a mandatory action-specific authorization boundary for target subscription/resource group/app, production change, cost, telemetry destination/data classification, or deployment. The Container Apps reference retrieves the workspace primary shared key into a shell variable and performs secret/configuration mutation without a credential-custody authorization gate. Guidance to store the App Insights connection string as a Container Apps secret is useful but does not cure the broader missing authority boundary. Preserve instrumentation architecture, OpenTelemetry initialization, secret-reference, tracing, resource-topology, and KQL mechanics for adaptation/reference use with explicit target/resource, production-change, cost, telemetry-data/disclosure, and credential-custody approval gates. Behavioral validation remains not-run.
