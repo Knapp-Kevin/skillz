@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **301** persisted exact-version third-party verification companions.
+- **304** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **129/189**.
-- Remaining gaps: **60**.
+- Current-standard companions: **132/189**.
+- Remaining gaps: **57**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **22/25** complete.
+- Direct TypeScript: **25/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
@@ -69,10 +69,13 @@ Current TypeScript decisive states:
 - `azure-storage-queue-ts` — **rejected unchanged, 6/20**. Queue Storage clients, queue CRUD/metadata, send/receive/peek/update/delete/clear operations, visibility timeout handling, poison-message routing, worker/batch patterns, encoding, SAS generation, error handling, and authentication choices are useful prior art, but persistent queue/message mutation, arbitrary payload publication, message-content/pop-receipt output, downstream handler execution, poison-payload transfer, destructive clear/delete operations, account-key/connection-string/SAS credential paths, and broad delegated queue/account SAS lack mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
 - `azure-web-pubsub-ts` — **rejected unchanged, 6/20**. Web PubSub service/client setup, Entra-first authentication, client-token generation, targeted/broadcast/group messaging, group and connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints are useful prior art, but credential-bearing access-URL output, external messaging, group-membership mutation, forced disconnects, permission grants/revocations, client events, and raw user/message logging lack mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, and credential-custody authorization.
 - `frontend-ui-dark-ts` — **verified, 15/20**. The complete package provides differentiated local React/Vite/Tailwind dark-UI construction guidance with design tokens, reusable components, responsive/mobile shells, touch-target guidance, routing, glass effects, Framer Motion patterns, three supporting Markdown references, four Segoe UI TTF assets, and two Foundry logo PNG assets. Ordinary authority is local project creation and npm package installation rather than consequential infrastructure/external-state operation. Limitations are explicit: examples target the reviewed React 18/React Router 6/Framer Motion 11/Tailwind 3/Vite 5 generation, some copied component patterns need accessibility hardening such as modal focus management and reduced-motion behavior, and bundled font/logo assets have medium portability and must retain applicable upstream terms. No current hard fail remains for the exact pinned package.
+- `m365-agents-ts` — **rejected unchanged, 13/20**. M365 Agents SDK routing, Express hosting, streaming, sensitivity labeling, invoke handling, Copilot Studio clients/WebChat, API freshness checks, and secret-hygiene guidance are useful prior art, but ordinary user messaging, generated-content streaming, invoke acknowledgement, remote Copilot Studio conversations/questions, WebChat connections, Azure OpenAI data transfer, and tenant/client secret or bearer-token use lack mandatory tenant/environment, audience, message/data-owner/classification, identity/access, model-data-transfer, production, per-action communication, and credential-custody authorization.
+- `react-flow-node-ts` — **verified, 15/20**. The complete package provides focused local React Flow custom-node prior art with TypeScript typing, handles, resizing, selector-based Zustand integration, registration/menu steps, and two reusable templates. Authority is local source mutation. Portability is medium because the templates assume project-local aliases, useAppStore/updateNode/canvasMode semantics, Frontier CSS custom properties, and a source-specific directory layout; those assumptions must be mapped but do not create a consequential external-state hard fail.
+- `zustand-store-ts` — **verified, 16/20**. The complete package provides focused local Zustand prior art for typed state/action separation, subscribeWithSelector, individual selectors, subscriptions outside React, loading/error/reset state, and immutable add/remove operations. Authority is local source and in-memory application-state mutation. The async loadItems body is intentionally a placeholder, not an external request. Portability is medium because the integration path is source-specific and the categorical subscribeWithSelector rule is intentionally opinionated.
 
-All twenty-two retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All twenty-five retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source order after `frontend-ui-dark-ts`, beginning with `m365-agents-ts`.
+**Next:** direct TypeScript is complete. Continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/airunway-aks-setup`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -109,5 +112,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **129/189**, **60 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **22/25**.  
-**Next:** continue after `frontend-ui-dark-ts` in the registered-pin TypeScript tree, beginning with `m365-agents-ts`.
+**Microsoft Skills:** **132/189**, **57 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
+**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/airunway-aks-setup`.
