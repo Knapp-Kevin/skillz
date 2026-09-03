@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-search-documents-ts
+display_name: Microsoft Azure AI Search Documents TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-search-documents-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-search-documents-ts
+permission_tier: search-index-mutation-sensitive-data
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/search-documents; @azure/identity; Azure AI Search; optional embedding/vectorization provider such as Azure OpenAI; environment-provided Azure identity or admin-key credential
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 22089c7f7b4340797d5767cd7842822e9433dc97, SKILL.md blob b31e05d49593682d54727deec69b10e5394c1f6f, semantic-ranking reference blob b89ec78c4f02b3f92335e1017eaba47b4216567c, and vector-search reference blob c573322019dbe06307753ab31f214869389a3e5c. The three-file package provides useful TypeScript prior art for Azure AI Search clients, index configuration, document indexing, full-text/vector/hybrid/semantic search, filtering/facets, autocomplete/suggestions, batching, integrated vectorization, semantic captions/answers, and query tuning. Its intended triggers are Azure AI Search application and index/search implementation work; it is not general data-governance, identity, or production-change authority. Unchanged adoption is rejected because ordinary examples create or update persistent search indexes, upload/merge/delete indexed documents, transmit query text and indexed content to Azure search/semantic/vectorization services, expose an admin-key credential path, and print returned document content/debug information without mandatory service/index, data-owner/classification, document mutation/deletion, production, credential-custody, external-disclosure, retention/recovery, or sensitive-output authorization. Preserve as adaptation/reference evidence with explicit resource and data-owner authority, least-privilege credentials, index/document mutation approval, destructive-action/recovery controls, data minimization and transfer boundaries, output/log redaction, and production change controls.
