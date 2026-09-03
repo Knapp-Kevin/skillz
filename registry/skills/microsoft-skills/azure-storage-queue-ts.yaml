@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage-queue-ts
+display_name: Microsoft Azure Storage Queue TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-storage-queue-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5
+upstream_last_updated_at: 2026-04-22T00:02:09Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-storage-queue-ts
+permission_tier: external-storage-credentialed-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/storage-queue; @azure/identity; Azure Storage account/queue resources; environment-provided Entra identity or account key/connection string/SAS credentials; downstream message-processing handlers
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to single-file package tree SHA e3b60c7b5588d8ebc701484fd5ca850a82d3b3ee and SKILL.md blob 130dd9277b2d87f7095f959d4d5fa93f41af6310. The package provides useful TypeScript prior art for Azure Queue Storage client hierarchy, queue CRUD and metadata, send/receive/peek/update/delete/clear operations, visibility timeouts, poison-message routing, batch workers, message encoding, SAS generation, error handling, and authentication choices. Its intended triggers are Azure Queue Storage implementation tasks; it is not authorization to publish or disclose queue payloads, execute downstream work, mutate/delete persistent queues or messages, clear queues, move payloads across queues, mint delegated credentials, or operate production resources. Unchanged adoption is rejected because ordinary examples create/delete queues, mutate metadata, publish arbitrary message content, receive and print message content plus pop receipts, delete or clear durable messages, repeatedly process external payloads, move poison-message payloads, and mutate visibility/content without mandatory storage-account/queue, payload/data-owner/classification, downstream-effect, per-mutation/destructive-action, production, retention/recovery, or cost authority. Credential paths include account keys, connection strings, and SAS tokens; queue and account SAS examples grant broad add/update/process and account-level permissions. Preserve as adaptation/reference evidence with Entra-first least privilege, explicit destination/payload/downstream authority, sensitive-output minimization, narrow time-bounded SAS only when authorized, idempotency/recovery controls, and production/cost boundaries.
