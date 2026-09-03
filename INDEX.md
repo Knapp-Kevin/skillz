@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 312 |
+| Persisted third-party exact-version reviews | 313 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 140 / 189 |
-| Microsoft Skills current-standard gaps | 49 |
+| Microsoft Skills current-standard companions | 141 / 189 |
+| Microsoft Skills current-standard gaps | 48 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **140/189**, leaving **49** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **141/189**, leaving **48** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), and `azure-cost` (**14/20**). `azure-cost` is bound to exact package tree `b9f59c28575280e1f76aaf2b94d92b040b571c52`; it preserves strong read-oriented cost query/forecast, explicit scope selection, throttling discipline, pricing validation, total-bill context, and optimization heuristics. Unchanged adoption fails because bundled optimization guidance can enable the AKS cost-analysis add-on and includes destructive or persistent resource/cost-change implementation guidance without mandatory action-specific authorization immediately before mutation. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), and `azure-deploy` (**15/20**). `azure-deploy` is bound to exact package tree `e4d47784cfeba4f942bca41a909c957e65562fd7`; it preserves strong validated-plan prerequisites, exact subscription/region confirmation, conflict detection, destructive/security/cost confirmation, deployment recipes, RBAC health checks, recovery, and post-deploy verification. Unchanged adoption fails because required post-deployment guidance can grant managed identities SQL permissions and apply EF Core schema migrations without a dedicated action-specific authorization checkpoint immediately before those separate persistent identity/access and database mutations. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-cost`; do not infer it from stale prompts or historical issue text.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-deploy`; do not infer it from stale prompts or historical issue text.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
