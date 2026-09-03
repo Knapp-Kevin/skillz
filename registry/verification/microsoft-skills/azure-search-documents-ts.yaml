@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-search-documents-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 22089c7f7b4340797d5767cd7842822e9433dc97
+skill_md_blob_sha: b31e05d49593682d54727deec69b10e5394c1f6f
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, implementation, research]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus bundled semantic-ranking.md and vector-search.md references. Useful material includes Azure AI Search client setup, index creation/configuration, document upload and batch mutation, keyword/vector/hybrid/semantic search, filtering/facets, autocomplete/suggestions, integrated vectorization, captions/answers, and tuning guidance. Rejected unchanged because normal flows create or alter persistent indexes, upload/merge/delete indexed documents, transmit query and content data to Azure search/semantic/vectorization services, permit an admin-key credential path, and print returned content/debug information without mandatory service/index, data-owner/classification, document mutation/deletion, production, credential-custody, external-disclosure, retention/recovery, or sensitive-output authorization. Entra-first examples, filters, and search-quality best practices are useful safeguards but do not establish authority for data ingestion, deletion, disclosure, or production index mutation. Behavioral validation remains not-run.
