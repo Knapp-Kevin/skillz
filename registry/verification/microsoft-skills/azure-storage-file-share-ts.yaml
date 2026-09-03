@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-file-share-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b9f0ba8f0fcf741f5eb843505fc1d004f0e07e6e
+skill_md_blob_sha: ba358bca21670775d73dce057668e8784624662b
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single-file SKILL.md package. Useful material includes Azure Files client hierarchy, share/directory/file CRUD, quota management, local-file/buffer/stream uploads, downloads, file copies, metadata/HTTP headers, range operations, snapshots, SAS generation, error handling, and authentication choices. Rejected unchanged because normal flows create/delete persistent shares, directories, files, and snapshots; mutate quotas, metadata, headers, and byte ranges; upload local data and streams; copy remote content; and materialize downloaded data without mandatory resource, data-owner/classification, mutation/destructive-action, production, retention/recovery, or cost authorization. Credential paths include account keys, connection strings, and SAS tokens; the share-SAS example grants read/create/write/delete/list permissions for 24 hours. Download examples can print or write file contents without mandatory sensitive-data minimization or custody controls. Entra-first authentication guidance, quotas, snapshots, idempotent *IfExists methods, and streaming are useful safeguards but do not authorize storage mutation, data disclosure, credential delegation, destructive lifecycle actions, or production use. Behavioral validation remains not-run.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage-file-share-ts
+display_name: Microsoft Azure File Share TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-storage-file-share-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5
+upstream_last_updated_at: 2026-04-22T00:02:09Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-storage-file-share-ts
+permission_tier: external-storage-credentialed-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/storage-file-share; @azure/identity; Azure Storage account/file-share resources; environment-provided Entra identity or account key/connection string/SAS credentials; optional local filesystem for upload/download streaming
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to single-file package tree SHA b9f0ba8f0fcf741f5eb843505fc1d004f0e07e6e and SKILL.md blob ba358bca21670775d73dce057668e8784624662b. The package provides useful TypeScript prior art for Azure Files client hierarchy, share/directory/file CRUD, quota management, local-file/buffer/stream uploads, downloads, copy operations, metadata/headers, range mutation, snapshots, SAS generation, error handling, and authentication choices. Its intended triggers are Azure File Share implementation tasks; it is not authorization to upload or disclose local data, mint delegated credentials, mutate/delete persistent storage, change quotas, clear file ranges, delete snapshots, or operate production resources. Unchanged adoption is rejected because ordinary examples create/delete shares, directories, files, and snapshots; change quotas and metadata; upload local files and streams; copy remote content; clear ranges; and materialize downloaded data to memory, console output, or local files without mandatory storage-account/share, data-owner/classification, per-mutation, destructive-action, production, retention/recovery, or cost authority. Credential paths include account keys, connection strings, and SAS tokens; the share-SAS example grants read/create/write/delete/list permissions for 24 hours. Preserve as adaptation/reference evidence with Entra-first least privilege, explicit destination/data-owner authority, narrow time-bounded SAS only when authorized, sensitive-data minimization, destructive-action/recovery controls, and production/cost boundaries.
