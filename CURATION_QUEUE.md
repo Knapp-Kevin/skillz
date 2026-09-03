@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **305** persisted exact-version third-party verification companions.
+- **306** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **133/189**.
-- Remaining gaps: **56**.
+- Current-standard companions: **134/189**.
+- Remaining gaps: **55**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -79,7 +79,9 @@ Non-direct Microsoft plugin frontier:
 
 - `airunway-aks-setup` — **rejected unchanged, 15/20**. Exact package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, and skill-specific freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. The package contains strong staged AKS onboarding mechanics, explicit current-context reporting, prerequisite stop conditions, confirmation before install/deployment, GPU-cost awareness, model-choice confirmation, secure no-echo Hugging Face token handling, provider selection, readiness checks, and rollback guidance. Unchanged adoption is rejected because rollback explicitly instructs deletion of ModelDeployment resources and Hugging Face token secrets plus provider/controller undeploy without requiring a fresh destructive-action authorization boundary. The main confirmation rule covers install/deployment actions, not rollback/delete/undeploy. Preserve the setup, secret-custody, sizing, provider, readiness, and rollback mechanics for adaptation/reference use with an added target/resource and destructive-action approval gate. Behavioral validation is `not-run`.
 
-**Next:** continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
+- `appinsights-instrumentation` — **rejected unchanged, 12/20**. Exact package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`, `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`, and skill-specific freshness revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. The complete package includes `LICENSE.txt`, Bicep and PowerShell/Azure CLI examples, five platform/reference guides, and four SDK quick references. Application Insights/OpenTelemetry selection, SDK initialization, tracing, resource-topology, secret-reference, and KQL mechanics are useful prior art. Unchanged adoption is rejected because the package directly instructs creation of Log Analytics and Application Insights resources, App Service/Container App/Function App configuration mutation, application/IaC changes, telemetry export, and deployment-affecting operations without mandatory target/resource, production-change, cost, telemetry-data/disclosure, or deployment authorization. The Container Apps reference also retrieves the workspace primary shared key into a shell variable and performs secret/configuration mutation without a credential-custody authorization boundary. Behavioral validation is `not-run`.
+
+**Next:** continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/azure-ai`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -116,5 +118,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **133/189**, **56 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
-**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
+**Microsoft Skills:** **134/189**, **55 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
+**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/azure-ai`.
