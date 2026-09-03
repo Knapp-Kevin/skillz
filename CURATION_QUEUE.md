@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **298** persisted exact-version third-party verification companions.
+- **299** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **126/189**.
-- Remaining gaps: **63**.
+- Current-standard companions: **127/189**.
+- Remaining gaps: **62**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **19/25** complete.
+- Direct TypeScript: **20/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
@@ -66,10 +66,11 @@ Current TypeScript decisive states:
 - `azure-servicebus-ts` — **rejected unchanged, 8/20**. Service Bus queues/topics/subscriptions, batching, sessions/session state, scheduling, receive modes, settlement, dead-letter handling, retries, lock renewal, graceful shutdown, idempotency, and poison-message patterns are useful prior art, but external message publication, settlement/deletion, dead-letter/defer/abandon actions, scheduled delivery, durable session-state mutation, DLQ reprocessing, downstream business handlers, and raw message/error logging lack mandatory destination/resource, payload/data-owner, per-action/downstream-effect, destructive-action, production, retention/recovery, budget, and sensitive-output authorization.
 - `azure-storage-blob-ts` — **rejected unchanged, 6/20**. Blob Storage clients, container/blob CRUD, streaming, staged block uploads, browser uploads, copy operations, metadata/headers, SAS mechanics, progress/range downloads, and abort handling are useful prior art, but persistent storage mutation/deletion, local/browser data upload, downloaded-content materialization, account-key/connection-string/SAS credential paths, broad delegated SAS permissions, and printed credential-bearing SAS URLs lack mandatory storage-resource, data-owner/classification, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
 - `azure-storage-file-share-ts` — **rejected unchanged, 6/20**. Azure Files clients, share/directory/file CRUD, quota management, local-file/buffer/stream uploads, downloads, copy operations, metadata/headers, range operations, snapshots, SAS generation, error handling, and authentication choices are useful prior art, but persistent share/file mutation and deletion, local-data upload, downloaded-content materialization, quota/range mutation, snapshot deletion, account-key/connection-string/SAS credential paths, and broad 24-hour read/create/write/delete/list share SAS lack mandatory resource, data-owner/classification, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
+- `azure-storage-queue-ts` — **rejected unchanged, 6/20**. Queue Storage clients, queue CRUD/metadata, send/receive/peek/update/delete/clear operations, visibility timeout handling, poison-message routing, worker/batch patterns, encoding, SAS generation, error handling, and authentication choices are useful prior art, but persistent queue/message mutation, arbitrary payload publication, message-content/pop-receipt output, downstream handler execution, poison-payload transfer, destructive clear/delete operations, account-key/connection-string/SAS credential paths, and broad delegated queue/account SAS lack mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
 
-All nineteen retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All twenty retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source order after `azure-storage-file-share-ts`, beginning with `azure-storage-queue-ts`.
+**Next:** continue the registered-pin TypeScript tree source order after `azure-storage-queue-ts`, beginning with `azure-web-pubsub-ts`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -106,5 +107,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **126/189**, **63 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **19/25**.  
-**Next:** continue after `azure-storage-file-share-ts` in the registered-pin TypeScript tree, beginning with `azure-storage-queue-ts`.
+**Microsoft Skills:** **127/189**, **62 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **20/25**.  
+**Next:** continue after `azure-storage-queue-ts` in the registered-pin TypeScript tree, beginning with `azure-web-pubsub-ts`.
