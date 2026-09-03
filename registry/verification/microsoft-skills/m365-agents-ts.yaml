@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: m365-agents-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0bcb6ef9c55c8f8bae331e85d40f8585844c4bc7
+skill_md_blob_sha: 00169cce10c70508375fc9300513a7600c7f75f8
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, implementation, orchestration, communication, security]
+  lifecycle: [implementation, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered the single-file SKILL.md package. Strong material includes precise M365 Agents SDK triggers, explicit package/API freshness checks, AgentApplication routing, Express hosting, streaming lifecycle with endStream in finally, generated-by-AI and sensitivity labels, invoke-response patterns, Copilot Studio clients/WebChat, and advice to keep secrets out of source and validate invoke payloads before logging or persistence. The current authority hard fail remains unresolved: normal examples send user-visible activities and generated streams, acknowledge invoke events, start remote Copilot Studio conversations, submit external questions, and establish connected WebChat sessions while relying on tenant/client secrets and bearer tokens, without mandatory tenant/environment, recipient/audience, content/data-owner/classification, identity/access, model-data-transfer, production, per-action communication, or credential-custody authorization. Environment variables are a better custody path than literal source secrets, but their availability is not action authorization. Behavioral validation remains not-run.

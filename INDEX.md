@@ -14,16 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 301 |
+| Persisted third-party exact-version reviews | 304 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 129 / 189 |
-| Microsoft Skills current-standard gaps | 60 |
+| Microsoft Skills current-standard companions | 132 / 189 |
+| Microsoft Skills current-standard gaps | 57 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
-| Microsoft TypeScript direct-package companions | 22 / 25 |
+| Microsoft TypeScript direct-package companions | 25 / 25 |
 
 ## First-party skills by purpose
 
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **129/189**, leaving **60** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **22/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **132/189**, leaving **57** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete. Direct TypeScript is **25/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
-The current TypeScript companion-complete slice runs through `frontend-ui-dark-ts`. Of the twenty-two reviewed packages, twenty-one are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, notification, cost, or authority hard gates while retaining useful adaptation/reference evidence. `frontend-ui-dark-ts` is **verified, 15/20**. It retains a coherent local React/Vite/Tailwind dark-UI system with theme tokens, responsive layouts, mobile touch-target guidance, reusable components, and Framer Motion patterns. Its ordinary mutations are local project creation and package installation rather than consequential external-state operation. Limitations are explicit: the stack is generation-specific, some copied component patterns need accessibility hardening such as dialog focus management and reduced-motion behavior, and bundled Segoe UI/font/logo assets reduce portability and must retain applicable upstream terms. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+The completed TypeScript slice contains twenty-two packages rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message/storage mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, delegated-credential, notification, cost, communication, model-data-transfer, or authority hard gates while retaining useful adaptation/reference evidence. Three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. The final consequential TypeScript package, `m365-agents-ts`, is **rejected unchanged, 13/20** because ordinary M365/Teams/Copilot Studio messaging, Azure OpenAI/Copilot data transfer, remote conversations, and tenant/client credential use lack mandatory tenant, audience, data, communication, production, and credential-custody authorization. Behavioral validation remains `not-run` for all twenty-five unless representative evidence is actually recorded.
 
-The next Microsoft TypeScript unit is `m365-agents-ts`.
+The next Microsoft Skills gap in registered-pin source order is `.github/plugins/azure-skills/skills/airunway-aks-setup`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: zustand-store-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8dc1658099b269c1e6347b7d0ffbe38d6f7058c1
+skill_md_blob_sha: fe9aca17683b17d3c86c78cb3473f52a10b38f3d
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, prototyping]
+  lifecycle: [design, implementation]
+  characteristic: [maintainability, modularity, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md plus assets/template.ts. The skill has a precise Zustand/global-state trigger, separates state from actions, uses subscribeWithSelector and individual selectors coherently, demonstrates subscriptions outside React, and provides a complete typed template with loading/error/reset and immutable update patterns. Authority is local workspace and in-memory application-state mutation. The template's loadItems example contains no actual external request and explicitly requires replacement with a host implementation, so it does not itself authorize network or persistent-data effects. Limitations are bounded: the source-specific src/frontend integration path must be mapped in other projects, and the categorical 'Always Use subscribeWithSelector' guidance is stronger than necessary for every Zustand store. Those constraints do not create a current hard fail. Behavioral validation remains not-run.
