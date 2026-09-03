@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-307-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-308-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **307 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **308 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,7 +65,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **135/189** current-standard companion complete, **54** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **136/189** current-standard companion complete, **53** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -82,7 +82,9 @@ The non-direct Microsoft plugin frontier has begun. `airunway-aks-setup` is **re
 
 `azure-ai` is **rejected unchanged, 10/20** at exact package tree `8a168336305c56e0eea0d89aced7d8a0001de3b5`. It is a useful router and condensed reference across Azure AI Search, Speech, OpenAI, Document Intelligence, Vision, Translation, Transcription, and Content Safety. Its bundled authentication guidance strongly prefers managed identity, least-privilege RBAC, and no hardcoded secrets. Unchanged adoption still fails because bundled SDK guidance includes persistent search-index/document writes and external processing of audio, documents, text, images, and other potentially sensitive content without mandatory data-owner/classification, disclosure/model-transfer, target-resource, mutation, production, retention, cost, or credential-custody authorization. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **54** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/azure-aigateway`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+`azure-aigateway` is **rejected unchanged, 8/20** at exact package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba`. It retains strong managed-identity, gateway-policy, token/rate-control, semantic-cache, content-safety, load-balancing, MCP, multi-tenant metering, and troubleshooting patterns. Unchanged adoption fails because normal flows enable APIM identity, create RBAC role assignments and backends, import APIs, alter security/routing policies, expose APIs to agents, test live AI endpoints, and emit token metrics without mandatory target/resource, identity/access, production-change, security-control, downstream-effect, data/disclosure, or cost authorization. `SKILL.md` also instructs listing APIM subscription keys, which can expose live credential material into tool/conversational output. Behavioral validation is `not-run`.
+
+Microsoft Skills remains the active admitted-source family with **53** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/azure-cloud-migrate`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
