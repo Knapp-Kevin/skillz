@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cost
+display_name: Microsoft Azure Cost Management
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-cost/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ba3700d41a07ab5e01919ce9a42a38907186a9fe
+upstream_last_updated_at: 2026-06-04T12:00:24Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-cost
+permission_tier: cloud-cost-query-forecast-and-optimization-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure Cost Management Query and Forecast APIs; Azure CLI; Azure MCP; Azure Resource Graph; Azure Monitor; Azure Quick Review; AKS and Storage optimization references; official Azure pricing pages
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA b9f59c28575280e1f76aaf2b94d92b040b571c52 and SKILL.md blob 8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4 plus the bundled cost-query, forecast, optimization, AKS, Storage, Redis, SDK, guardrail, schema, error-handling, and reporting references. The package preserves strong read-oriented cost query and forecast mechanics, explicit scope selection for focused analyses, rate-limit handling, pricing validation, cost visibility, and useful optimization heuristics. Unchanged adoption is rejected under the current authority hard fail because bundled optimization guidance can enable the AKS cost-analysis add-on and includes implementation commands/recommendations for deleting or snapshot-and-deleting disks, applying lifecycle deletion/tiering rules, changing redundancy/SKUs, retention, and other persistent cost-affecting resource settings without a mandatory action-specific authorization boundary immediately before those consequential mutations. The Free-to-Standard AKS tier upgrade does require explicit approval, but enabling the add-on itself does not. Preserve query, forecast, analysis, report, pricing-validation, and recommendation mechanics for adaptation/reference use; require explicit target, cost, production, retention, data-lifecycle, destructive-action, and resource-mutation authorization before applying optimization changes. Behavioral validation has not been run.
