@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **304** persisted exact-version third-party verification companions.
+- **305** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **132/189**.
-- Remaining gaps: **57**.
+- Current-standard companions: **133/189**.
+- Remaining gaps: **56**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -75,7 +75,11 @@ Current TypeScript decisive states:
 
 All twenty-five retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** direct TypeScript is complete. Continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/airunway-aks-setup`.
+Non-direct Microsoft plugin frontier:
+
+- `airunway-aks-setup` — **rejected unchanged, 15/20**. Exact package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, and skill-specific freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. The package contains strong staged AKS onboarding mechanics, explicit current-context reporting, prerequisite stop conditions, confirmation before install/deployment, GPU-cost awareness, model-choice confirmation, secure no-echo Hugging Face token handling, provider selection, readiness checks, and rollback guidance. Unchanged adoption is rejected because rollback explicitly instructs deletion of ModelDeployment resources and Hugging Face token secrets plus provider/controller undeploy without requiring a fresh destructive-action authorization boundary. The main confirmation rule covers install/deployment actions, not rollback/delete/undeploy. Preserve the setup, secret-custody, sizing, provider, readiness, and rollback mechanics for adaptation/reference use with an added target/resource and destructive-action approval gate. Behavioral validation is `not-run`.
+
+**Next:** continue Microsoft Skills registered-pin source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -112,5 +116,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **132/189**, **57 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
-**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/airunway-aks-setup`.
+**Microsoft Skills:** **133/189**, **56 gaps**. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete; TypeScript is **25/25**.  
+**Next:** continue Microsoft Skills source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
