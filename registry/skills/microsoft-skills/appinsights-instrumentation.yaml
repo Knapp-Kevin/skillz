@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: appinsights-instrumentation
+display_name: Microsoft Application Insights Instrumentation
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/appinsights-instrumentation/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 2d821920c717bcdd5ee4e287a41205c07e43cb0a
+upstream_last_updated_at: 2026-05-05T11:27:55Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/appinsights-instrumentation
+permission_tier: production-infrastructure-mutation
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure-hosted ASP.NET Core, Node.js, or Python application context; Azure CLI and applicable extensions for resource/configuration mutation; Bicep where used; Azure Monitor/OpenTelemetry language packages; Application Insights and Log Analytics resources; bundled LICENSE.txt, examples/appinsights.bicep, scripts/appinsights.ps1, five platform/reference guides, and four SDK quick references
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA 8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0 and SKILL.md blob ca55c310862cb95b5ebcc1f10a070f312718d1cb plus the complete bundled example, script, and reference tree. The top-level trigger boundary correctly routes explicit project changes toward azure-prepare, but the package itself then provides direct instructions to create Application Insights and Log Analytics resources, mutate App Service/Container App/Function App settings, modify application code and IaC, and configure telemetry export. Those consequential operations lack a mandatory action-specific authorization boundary for target subscription/resource group/app, production configuration changes, cost-bearing resource creation, telemetry destination/data classification, or deployment. The Container Apps reference also retrieves a Log Analytics primary shared key into a shell variable and instructs secret/configuration mutation without a credential-custody authorization gate. Preserve the instrumentation selection, OpenTelemetry setup, resource topology, secret-reference, tracing, and query mechanics as adaptation/reference evidence, but require explicit target/resource, production-change, cost, telemetry-data/disclosure, and credential-custody authority before reuse. Behavioral validation has not been run.
