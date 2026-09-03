@@ -47,21 +47,21 @@ The pinned TypeScript skill tree contains exactly **25** direct packages. Its up
 
 Current TypeScript decisive states:
 
-- `applicationinsights-web-ts` — **rejected unchanged, 16/20**.
-- `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**.
-- `azure-ai-document-intelligence-ts` — **rejected unchanged, 11/20**.
-- `azure-ai-projects-ts` — **rejected unchanged, 6/20**.
-- `azure-ai-translation-ts` — **rejected unchanged, 10/20**.
-- `azure-ai-voicelive-ts` — **rejected unchanged, 6/20**.
-- `azure-appconfiguration-ts` — **rejected unchanged, 7/20**.
-- `azure-cosmos-ts` — **rejected unchanged, 9/20**.
-- `azure-eventhub-ts` — **rejected unchanged, 8/20**.
-- `azure-identity-ts` — **rejected unchanged, 6/20**.
-- `azure-keyvault-keys-ts` — **rejected unchanged, 5/20**.
-- `azure-keyvault-secrets-ts` — **rejected unchanged, 5/20**.
-- `azure-microsoft-playwright-testing-ts` — **rejected unchanged, 10/20**.
-- `azure-monitor-opentelemetry-ts` — **rejected unchanged, 9/20**.
-- `azure-postgres-ts` — **rejected unchanged, 10/20**.
+- `applicationinsights-web-ts` — **rejected unchanged, 16/20**. Browser telemetry can leave the client before mandatory user-consent/data-governance authorization; retain telemetry/privacy mechanics for adaptation.
+- `azure-ai-contentsafety-ts` — **rejected unchanged, 11/20**. External moderation and persistent blocklist operations lack mandatory disclosure/privacy, trusted-source, logging-minimization, and action-specific mutation boundaries.
+- `azure-ai-document-intelligence-ts` — **rejected unchanged, 11/20**. Sensitive-document transfer and custom-model lifecycle examples lack required data, credential-custody, destructive-action, recovery, and budget authority.
+- `azure-ai-projects-ts` — **rejected unchanged, 6/20**. Persistent Foundry resources, external tools, evaluation data, cost-bearing operations, and explicit API-key output violate current authority and secret-custody requirements.
+- `azure-ai-translation-ts` — **rejected unchanged, 10/20**. Arbitrary text/document transfer plus SAS-backed batch translation lacks sufficient privacy, credential, persistent-write, recovery, and budget authority.
+- `azure-ai-voicelive-ts` — **rejected unchanged, 6/20**. Live audio/transcript capture and model-triggered external actions lack mandatory consent, data, identity-sensitive, and per-action authorization boundaries.
+- `azure-appconfiguration-ts` — **rejected unchanged, 7/20**. Production configuration, feature targeting, snapshots, secret resolution, and PII examples lack adequate change, credential, redaction, rollout, and recovery authority.
+- `azure-cosmos-ts` — **rejected unchanged, 9/20**. Durable database/container/item mutation and bulk destructive operations lack environment/resource, data-scope, recovery, throughput, and destructive-action authority.
+- `azure-eventhub-ts` — **rejected unchanged, 8/20**. External event publication and persistent checkpoint state lack payload, destination, downstream-effect, storage, retention, redaction, and budget authority.
+- `azure-identity-ts` — **rejected unchanged, 6/20**. Strong managed/workload identity and credential-selection prior art is retained, but raw bearer-token logging, verbose identity diagnostics, secret/password credential paths, broad developer-credential fallbacks, user-identity handling, and CORS/security-control mutation lack mandatory credential-custody, least-privilege tenant/resource/scope, sensitive-output, identity/access, and action-specific security-control authorization.
+- `azure-keyvault-keys-ts` — **rejected unchanged, 5/20**. Key creation/import/rotation/deletion/purge, cryptographic operations, bundled secret lifecycle, raw secret output, bulk secret export, and local backup-file examples lack mandatory vault/resource, key-purpose, per-operation, destructive-action, recovery, secure-custody, disclosure, and production authorization.
+- `azure-keyvault-secrets-ts` — **rejected unchanged, 5/20**. Secret set/get/list/delete/purge/recover/backup/restore, raw secret output, literal API-key/connection-string examples, bulk secret handling, key lifecycle, and cryptographic operations lack mandatory vault/resource, secret-purpose, data-owner, per-operation, destructive-action, recovery, secure-custody, disclosure, retention, production, and security-control authorization.
+- `azure-microsoft-playwright-testing-ts` — **rejected unchanged, 10/20**. Cloud browser execution, external test targets, network exposure, Azure result/artifact publication, CI identity-token configuration, and billable worker scaling lack mandatory target/environment, test-data, external-side-effect, artifact publication/retention, network-exposure, cost, and production authorization boundaries.
+- `azure-monitor-opentelemetry-ts` — **rejected unchanged, 9/20**. External telemetry/log export, broad auto-instrumentation, and user/tenant baggage propagation lack mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, and disclosure authorization. The source's PII/secret warning and optional processors are useful but do not form an enforced authorization boundary.
+- `azure-postgres-ts` — **rejected unchanged, 10/20**. PostgreSQL clients/pools, SSL, parameterized queries, transactions/rollback, typed queries, Entra token refresh, error handling, and pool sizing are useful prior art, but ordinary database queries and durable mutations, token/password credential use, credential-bearing connection strings, and database error output lack mandatory target/database, data-owner, query/mutation, production, credential-custody, sensitive-output, retention/recovery, and consequential-operation authorization.
 - `azure-search-documents-ts` — **rejected unchanged, 9/20**. Azure AI Search index configuration, document indexing, full-text/vector/hybrid/semantic search, filtering/facets, suggestions, integrated vectorization, captions/answers, and query tuning are useful prior art, but persistent index/document mutation, content/query transfer, admin-key handling, destructive document actions, and returned-content/debug output lack mandatory service/index, data-owner/classification, mutation/deletion, production, credential-custody, external-disclosure, retention/recovery, and sensitive-output authorization.
 
 All sixteen retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
