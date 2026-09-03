@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage-blob-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1a845c3512fef61674ff30a5cd9132e100f42d3f
+skill_md_blob_sha: 5f9b967cebe6e1821e5a43749ff6f7f7d626c591
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 6/20
+tags:
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus bundled sas-tokens.md and streaming.md references. Useful material includes Blob Storage client hierarchy, container/blob CRUD, streaming and staged block uploads, range downloads, browser uploads, copy operations, metadata/HTTP headers, progress/abort handling, authentication options, and SAS mechanics. Rejected unchanged because normal flows create/delete persistent containers and blobs, upload local or browser-selected data, mutate metadata/headers, stage and commit blocks, copy remote content, and materialize downloaded data without mandatory resource, data-owner/classification, mutation/destructive-action, production, retention/recovery, or cost authorization. Credential paths include account keys, connection strings, and SAS tokens. The SAS reference can mint broad write/delete/account-scoped delegation and explicitly prints credential-bearing SAS URLs, creating a secret-disclosure risk; downloads may also print or write blob contents without mandatory sensitive-data minimization or custody controls. Entra-first authentication, short-lived SAS guidance, HTTPS, least privilege, abort handling, and streaming are useful safeguards but do not authorize storage mutation, data disclosure, credential delegation, destructive lifecycle actions, or production use. Behavioral validation remains not-run.
