@@ -14,16 +14,16 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 295 |
+| Persisted third-party exact-version reviews | 296 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 123 / 189 |
-| Microsoft Skills current-standard gaps | 66 |
+| Microsoft Skills current-standard companions | 124 / 189 |
+| Microsoft Skills current-standard gaps | 65 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
-| Microsoft TypeScript direct-package companions | 16 / 25 |
+| Microsoft TypeScript direct-package companions | 17 / 25 |
 
 ## First-party skills by purpose
 
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **123/189**, leaving **66** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **16/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **124/189**, leaving **65** gaps. Direct `.NET`, Java, Python, and Rust slices are complete. Direct TypeScript is **17/25** from the registered-pin tree. The TypeScript plugin README claims 24 and omits the separately present `applicationinsights-web-ts` package, so the 25-package tree controls.
 
-The current TypeScript companion-complete slice runs through `azure-search-documents-ts`. All sixteen reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, cost, or authority hard gates while retaining useful adaptation/reference evidence. `azure-search-documents-ts` specifically retains index configuration, document indexing, full-text/vector/hybrid/semantic search, filtering/facets, suggestions, integrated vectorization, captions/answers, and tuning mechanics, but persistent index/document mutation, content/query transfer, admin-key handling, destructive document actions, and returned-content/debug output lack mandatory service/index, data-owner/classification, mutation/deletion, production, credential-custody, disclosure, retention/recovery, and sensitive-output authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+The current TypeScript companion-complete slice runs through `azure-servicebus-ts`. All seventeen reviewed packages are rejected unchanged under current privacy, sensitive-data, secret-custody, durable-state, database/search-index/message mutation, production-configuration, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, network-exposure, artifact-publication/retention, telemetry-disclosure, downstream-effect, cost, or authority hard gates while retaining useful adaptation/reference evidence. `azure-servicebus-ts` specifically retains queue/topic/subscription, batching, session state, scheduling, settlement, dead-letter, retry, lock-renewal, graceful-shutdown, idempotency, and poison-message mechanics, but external publication, settlement/deletion, scheduling, durable session-state mutation, DLQ reprocessing, downstream business handlers, and raw message/error logging lack mandatory destination/resource, data-owner, per-action/downstream-effect, destructive-action, production, retention/recovery, budget, and sensitive-output authorization. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
 
-The next Microsoft TypeScript unit is `azure-servicebus-ts`.
+The next Microsoft TypeScript unit is `azure-storage-blob-ts`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **295** persisted exact-version third-party verification companions.
+- **296** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **123/189**.
-- Remaining gaps: **66**.
+- Current-standard companions: **124/189**.
+- Remaining gaps: **65**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **16/25** complete.
+- Direct TypeScript: **17/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
@@ -63,10 +63,11 @@ Current TypeScript decisive states:
 - `azure-monitor-opentelemetry-ts` — **rejected unchanged, 9/20**. External telemetry/log export, broad auto-instrumentation, and user/tenant baggage propagation lack mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, and disclosure authorization. The source's PII/secret warning and optional processors are useful but do not form an enforced authorization boundary.
 - `azure-postgres-ts` — **rejected unchanged, 10/20**. PostgreSQL clients/pools, SSL, parameterized queries, transactions/rollback, typed queries, Entra token refresh, error handling, and pool sizing are useful prior art, but ordinary database queries and durable mutations, token/password credential use, credential-bearing connection strings, and database error output lack mandatory target/database, data-owner, query/mutation, production, credential-custody, sensitive-output, retention/recovery, and consequential-operation authorization.
 - `azure-search-documents-ts` — **rejected unchanged, 9/20**. Azure AI Search index configuration, document indexing, full-text/vector/hybrid/semantic search, filtering/facets, suggestions, integrated vectorization, captions/answers, and query tuning are useful prior art, but persistent index/document mutation, content/query transfer, admin-key handling, destructive document actions, and returned-content/debug output lack mandatory service/index, data-owner/classification, mutation/deletion, production, credential-custody, external-disclosure, retention/recovery, and sensitive-output authorization.
+- `azure-servicebus-ts` — **rejected unchanged, 8/20**. Service Bus queues/topics/subscriptions, batching, sessions/session state, scheduling, receive modes, settlement, dead-letter handling, retries, lock renewal, graceful shutdown, idempotency, and poison-message patterns are useful prior art, but external message publication, settlement/deletion, dead-letter/defer/abandon actions, scheduled delivery, durable session-state mutation, DLQ reprocessing, downstream business handlers, and raw message/error logging lack mandatory destination/resource, payload/data-owner, per-action/downstream-effect, destructive-action, production, retention/recovery, budget, and sensitive-output authorization.
 
-All sixteen retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All seventeen retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source order after `azure-search-documents-ts`, beginning with `azure-servicebus-ts`.
+**Next:** continue the registered-pin TypeScript tree source order after `azure-servicebus-ts`, beginning with `azure-storage-blob-ts`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -103,5 +104,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **123/189**, **66 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **16/25**.  
-**Next:** continue after `azure-search-documents-ts` in the registered-pin TypeScript tree, beginning with `azure-servicebus-ts`.
+**Microsoft Skills:** **124/189**, **65 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **17/25**.  
+**Next:** continue after `azure-servicebus-ts` in the registered-pin TypeScript tree, beginning with `azure-storage-blob-ts`.
