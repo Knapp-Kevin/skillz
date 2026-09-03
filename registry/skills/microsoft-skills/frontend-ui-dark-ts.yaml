@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: frontend-ui-dark-ts
+display_name: Microsoft Frontend UI Dark TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/frontend-ui-dark-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/frontend-ui-dark-ts
+permission_tier: local-code-generation-package-install
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; React 18; React DOM 18; React Router 6; Framer Motion 11; clsx 2; Tailwind CSS 3; Vite 5; PostCSS; Autoprefixer; bundled component/design-token/layout references; bundled Segoe UI font files and Foundry logo assets
+import_eligibility: unchanged-consideration
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1f15eeae63b8e03b5c10f6dbfa550095079b2409 and SKILL.md blob 4ff865e3c1cc60d8e5999cf950a016d7c9f019d2. The package provides differentiated local TypeScript prior art for dark React dashboards and admin/data-rich interfaces, including theme tokens, glass effects, reusable components, responsive/mobile shells, touch targets, routing, animation patterns, and bundled component/design-token/layout references. Its intended triggers are local React/Vite/Tailwind UI construction and refinement; it is not authorization for unrelated application business actions or production deployment. The reviewed workflow mutates a local workspace and installs declared npm dependencies but does not itself direct infrastructure, credential, messaging, payment, identity/access, persistent-cloud, or sensitive-data operations. Exact-package limitations are recorded rather than hidden: some component patterns require accessibility hardening such as dialog focus management and reduced-motion handling, the stack is tied to the reviewed React 18/Tailwind 3/Vite 5 generation, and bundled Segoe UI/font/logo assets should remain under the upstream package's applicable terms rather than being treated as universally portable design assets. With those bounded constraints, the exact package passes current static verification for unchanged consideration. Behavioral validation has not been run.

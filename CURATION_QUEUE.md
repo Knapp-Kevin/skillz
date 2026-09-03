@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **300** persisted exact-version third-party verification companions.
+- **301** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,13 +35,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **128/189**.
-- Remaining gaps: **61**.
+- Current-standard companions: **129/189**.
+- Remaining gaps: **60**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
-- Direct TypeScript: **21/25** complete.
+- Direct TypeScript: **22/25** complete.
 
 The pinned TypeScript skill tree contains exactly **25** direct packages. Its upstream plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless a first-class package in the registered-pin tree. The tree controls the denominator.
 
@@ -68,10 +68,11 @@ Current TypeScript decisive states:
 - `azure-storage-file-share-ts` — **rejected unchanged, 6/20**. Azure Files clients, share/directory/file CRUD, quota management, local-file/buffer/stream uploads, downloads, copy operations, metadata/headers, range operations, snapshots, SAS generation, error handling, and authentication choices are useful prior art, but persistent share/file mutation and deletion, local-data upload, downloaded-content materialization, quota/range mutation, snapshot deletion, account-key/connection-string/SAS credential paths, and broad 24-hour read/create/write/delete/list share SAS lack mandatory resource, data-owner/classification, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
 - `azure-storage-queue-ts` — **rejected unchanged, 6/20**. Queue Storage clients, queue CRUD/metadata, send/receive/peek/update/delete/clear operations, visibility timeout handling, poison-message routing, worker/batch patterns, encoding, SAS generation, error handling, and authentication choices are useful prior art, but persistent queue/message mutation, arbitrary payload publication, message-content/pop-receipt output, downstream handler execution, poison-payload transfer, destructive clear/delete operations, account-key/connection-string/SAS credential paths, and broad delegated queue/account SAS lack mandatory resource, payload/data-owner/classification, downstream-effect, per-action/destructive-action, disclosure, retention/recovery, production, and cost authorization.
 - `azure-web-pubsub-ts` — **rejected unchanged, 6/20**. Web PubSub service/client setup, Entra-first authentication, client-token generation, targeted/broadcast/group messaging, group and connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints are useful prior art, but credential-bearing access-URL output, external messaging, group-membership mutation, forced disconnects, permission grants/revocations, client events, and raw user/message logging lack mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, and credential-custody authorization.
+- `frontend-ui-dark-ts` — **verified, 15/20**. The complete package provides differentiated local React/Vite/Tailwind dark-UI construction guidance with design tokens, reusable components, responsive/mobile shells, touch-target guidance, routing, glass effects, Framer Motion patterns, three supporting Markdown references, four Segoe UI TTF assets, and two Foundry logo PNG assets. Ordinary authority is local project creation and npm package installation rather than consequential infrastructure/external-state operation. Limitations are explicit: examples target the reviewed React 18/React Router 6/Framer Motion 11/Tailwind 3/Vite 5 generation, some copied component patterns need accessibility hardening such as modal focus management and reduced-motion behavior, and bundled font/logo assets have medium portability and must retain applicable upstream terms. No current hard fail remains for the exact pinned package.
 
-All twenty-one retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
+All twenty-two retain `validation_status: not-run`. Exact tree/blob identities and skill-specific freshness are retained in individual companion records.
 
-**Next:** continue the registered-pin TypeScript tree source order after `azure-web-pubsub-ts`, beginning with `frontend-ui-dark-ts`.
+**Next:** continue the registered-pin TypeScript tree source order after `frontend-ui-dark-ts`, beginning with `m365-agents-ts`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -108,5 +109,5 @@ Discovery surfaces include Hugging Face Skills, GitHub Awesome Copilot, Agent Sk
 **Core:** complete and passive.  
 **First-party:** 43/43 provenance-complete.  
 **AWS:** 72/72 current-standard companion-complete.  
-**Microsoft Skills:** **128/189**, **61 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **21/25**.  
-**Next:** continue after `azure-web-pubsub-ts` in the registered-pin TypeScript tree, beginning with `frontend-ui-dark-ts`.
+**Microsoft Skills:** **129/189**, **60 gaps**. Direct `.NET`, Java, Python, and Rust slices are complete; TypeScript is active at **22/25**.  
+**Next:** continue after `frontend-ui-dark-ts` in the registered-pin TypeScript tree, beginning with `m365-agents-ts`.

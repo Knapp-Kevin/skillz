@@ -11,17 +11,17 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 300 |
+| **Persisted third-party review companions** | 301 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 128 / 189 |
-| **Microsoft Skills current-standard gaps** | 61 |
+| **Microsoft Skills current-standard companions** | 129 / 189 |
+| **Microsoft Skills current-standard gaps** | 60 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
 | **Microsoft Rust direct-package companions** | 9 / 9 |
-| **Microsoft TypeScript direct-package companions** | 21 / 25 |
+| **Microsoft TypeScript direct-package companions** | 22 / 25 |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -35,12 +35,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **128/189 companion-complete**, **61 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **129/189 companion-complete**, **60 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
-- Microsoft direct TypeScript: **21/25** complete.
+- Microsoft direct TypeScript: **22/25** complete.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
@@ -71,10 +71,11 @@ Current companion-complete TypeScript packages are:
 19. `azure-storage-file-share-ts` — rejected unchanged, 6/20.
 20. `azure-storage-queue-ts` — rejected unchanged, 6/20.
 21. `azure-web-pubsub-ts` — rejected unchanged, 6/20.
+22. `frontend-ui-dark-ts` — verified, 15/20.
 
-`azure-web-pubsub-ts` is bound to single-file package tree `d58b609f6ec1d685143378e3e43f9e08f0883917` and `SKILL.md` blob `175e519e8d39e7fe5c2eaa34013f73f53641c1b5`. Skill-specific freshness is anchored to Microsoft revision `ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9` from 2026-04-22. Its Web PubSub service/client setup, Entra-first production authentication, token generation, targeted/broadcast/group messaging, group and connection lifecycle, permission management, reconnect handling, Express event handlers, and negotiate endpoints remain useful prior art. Unchanged adoption fails because normal flows print credential-bearing client access URLs, send external messages, mutate group membership, close individual/user/group/all connections, grant or revoke permissions, emit client events, log identifiers and message bodies, and return user-event data without mandatory hub/resource, recipient/audience, message/data-owner/classification, identity/access, per-action/disconnect, downstream-effect, disclosure, production, or credential-custody authority. Behavioral validation is `not-run`.
+`frontend-ui-dark-ts` is bound to package tree `1f15eeae63b8e03b5c10f6dbfa550095079b2409` and `SKILL.md` blob `4ff865e3c1cc60d8e5999cf950a016d7c9f019d2`. Its complete package also contains three Markdown references, four Segoe UI TTF assets, and two Foundry logo PNG assets. Skill-specific freshness is anchored to Microsoft revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. The package provides a coherent local React/Vite/Tailwind dark-UI system with theme/design tokens, reusable components, responsive shells, mobile touch-target guidance, routing, and Framer Motion patterns. Its authority is bounded to local code generation and package installation rather than consequential external-state operation. Recorded limitations include reviewed-generation stack assumptions, accessibility hardening needed for some copied patterns such as dialog focus management and reduced-motion behavior, and medium portability for bundled Segoe UI/font/logo assets whose applicable upstream terms must remain attached. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **61** gaps. Continue TypeScript source order after `azure-web-pubsub-ts`, beginning with `frontend-ui-dark-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
+Microsoft Skills remains active with **60** gaps. Continue TypeScript source order after `frontend-ui-dark-ts`, beginning with `m365-agents-ts`, while preserving the complete `.NET`, Java, Python, and Rust slices.
 
 ## Source lifecycle
 
@@ -92,7 +93,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 21/25.
+1. Continue Microsoft Skills in coherent source-ordered batches; direct `.NET`, Java, Python, and Rust are complete, TypeScript is active at 22/25.
 2. Complete Microsoft Azure Skills.
 3. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 4. Continue governed discovery/source-vetting and omission recovery.
