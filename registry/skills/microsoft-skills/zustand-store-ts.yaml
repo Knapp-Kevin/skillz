@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: zustand-store-ts
+display_name: Microsoft Zustand Store TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/zustand-store-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/zustand-store-ts
+permission_tier: local-code-generation
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: TypeScript; Zustand create API; zustand/middleware subscribeWithSelector; optional React selectors; bundled assets/template.ts; project-local src/frontend store layout when following integration example
+import_eligibility: unchanged-consideration
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 8dc1658099b269c1e6347b7d0ffbe38d6f7058c1, SKILL.md blob fe9aca17683b17d3c86c78cb3473f52a10b38f3d, and template blob 3c40062ec21c5d1e875b3816516a706701a8bc03. The package provides focused local state-management prior art for typed Zustand state/action separation, subscribeWithSelector, individual selectors, external subscriptions, loading/error state, immutable add/remove operations, and reset behavior. Its authority is bounded to local source and in-memory application state; the async loadItems body is deliberately a placeholder rather than an instruction to contact an external service. No current infrastructure, credential, messaging, identity/access, payment, persistent-cloud, destructive-lifecycle, production-traffic, or sensitive-data hard fail is present. Portability is medium because the integration path assumes a src/frontend layout and the 'Always Use subscribeWithSelector' rule is intentionally opinionated rather than universally necessary. Behavioral validation has not been run.

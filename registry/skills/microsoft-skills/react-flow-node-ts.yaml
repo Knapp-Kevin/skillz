@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: react-flow-node-ts
+display_name: Microsoft React Flow Node TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/react-flow-node-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/react-flow-node-ts
+permission_tier: local-code-generation
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: TypeScript/React; @xyflow/react; project-local useAppStore implementation; project-local @/types, @/store, and @/utils/utils aliases; expected Frontier CSS custom properties; bundled assets/template.tsx and assets/types.template.ts
+import_eligibility: unchanged-consideration
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA ba384d63f352c5518b3dd77168e5c49af2220e8a, SKILL.md blob ab4e1a6a5a4c1bf03f4d9b49dee6285e9ce0457d, template blob 8539c7b0fd5b453c9564a675b3e2fcaedeaf1c34, and type-template blob 46c9e2ee44ff517693d611ad2e94388cff669adc. The package provides focused local prior art for typed React Flow custom nodes, handles, resizing, selection/editing state, Zustand-backed node updates, registration, menu integration, and reusable templates. Its authority is bounded to local source modification and does not direct infrastructure, credential, messaging, payment, identity/access, production-traffic, persistent-cloud, or sensitive-data operations. Portability is honestly medium rather than universal because the template assumes project-local aliases, useAppStore/updateNode/canvasMode semantics, utility helpers, directory layout, and Frontier CSS variables. Those host assumptions require mapping but do not create a current hard fail. Behavioral validation has not been run.

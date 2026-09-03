@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: react-flow-node-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ba384d63f352c5518b3dd77168e5c49af2220e8a
+skill_md_blob_sha: ab4e1a6a5a4c1bf03f4d9b49dee6285e9ce0457d
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [implementation, prototyping, ux]
+  lifecycle: [design, implementation]
+  characteristic: [maintainability, modularity, reference-heavy]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md plus assets/template.tsx and assets/types.template.ts. The skill has a precise custom-node/workflow-editor trigger, an ordered copy-and-integrate procedure, coherent TypeScript/React Flow typing, node handles/resizing, selector-based store access, and concrete registration/menu steps. Authority is local workspace mutation only. Material limitations are explicit in this companion: the templates assume @xyflow/react, a project-specific useAppStore with updateNode/canvasMode, @/types and @/utils aliases, Frontier CSS custom properties, and a specific src/frontend directory organization. The skill does not describe fallback mapping for hosts without those conventions, so portability and dependency coherence are constrained rather than universal. No consequential external-state hard fail is present for the exact pinned package. Behavioral validation remains not-run.

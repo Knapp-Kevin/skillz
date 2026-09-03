@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: m365-agents-ts
+display_name: Microsoft 365 Agents TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/m365-agents-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20T16:58:14Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/m365-agents-ts
+permission_tier: external-messaging-credentialed-agent-operation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @microsoft/agents-hosting; @microsoft/agents-hosting-express; @microsoft/agents-activity; @microsoft/agents-copilotstudio-client; Express; optional AI SDK/Azure OpenAI integration; Microsoft 365/Teams/Copilot Studio environment; environment-provided tenant/client credentials and bearer tokens
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to single-file package tree SHA 0bcb6ef9c55c8f8bae331e85d40f8585844c4bc7 and SKILL.md blob 00169cce10c70508375fc9300513a7600c7f75f8. The package provides useful TypeScript prior art for Microsoft 365 Agents SDK routing, Express hosting, streaming responses, invoke handling, Copilot Studio Direct-to-Engine/WebChat integration, package/API freshness checks, sensitivity labeling, and basic secret hygiene. Its intended triggers are M365/Teams/Copilot Studio agent implementation tasks; it is not authorization to message users, invoke production agent endpoints, transmit prompts/content to Azure OpenAI or Copilot Studio, or use tenant/client credentials and bearer tokens. Unchanged adoption is rejected because ordinary examples send external activities, stream generated content to users, acknowledge invoke events, start remote Copilot Studio conversations, submit questions, render connected WebChat sessions, and consume high-value client secrets/bearer tokens without mandatory tenant/environment, recipient/audience, message/data-owner/classification, identity/access, model-data-transfer, production, per-action communication, or credential-custody authorization. Preserve as adaptation/reference evidence with secure non-conversational credential handling, explicit tenant/audience/action authority, disclosure/data-transfer boundaries, output minimization, and production communication safeguards.
