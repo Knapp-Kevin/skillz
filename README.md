@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-309-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-310-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **309 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **310 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,18 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **137/189** current-standard companion complete, **52** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **138/189** current-standard companion complete, **51** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-The direct TypeScript denominator is tree-derived: 25 independently first-class packages. Twenty-two are rejected unchanged under current authority/privacy/secret/sensitive-data/external-state hard gates and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Behavioral validation remains `not-run` unless representative evidence is actually recorded.
+The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), and `azure-compliance` (**12/20**). `azure-compliance` preserves strong read-only assessment, azqr, Resource Graph, Key Vault expiration, evidence capture, prioritization, and remediation-analysis mechanics. Unchanged adoption is rejected because bundled remediation procedures directly mutate network access, retention, Key Vault RBAC mode, diagnostics, backup, AKS security/identity, SQL auditing/private access, App Service identity, HTTPS/TLS, and bulk resource configuration without mandatory target-resource, identity/access, security-control, network-exposure, production, cost, retention, or per-action authorization. Behavioral validation is `not-run`.
 
-The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected unchanged, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), and `azure-cloud-migrate` (**9/20**). `azure-cloud-migrate` is bound to exact package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4` and retains useful assessment-before-mutation, source-preservation, scenario-routing, staged conversion, service-mapping, progress-reporting, destructive-action confirmation, and explicit deploy-choice mechanics. Unchanged adoption is rejected because bundled deployment guidance creates Azure resources, identities/RBAC, external ingress and scaling, imports images, migrates Kubernetes secrets into Key Vault, and retrieves a Log Analytics primary shared key without mandatory per-resource target, identity/access, security-control, secret/data-owner, credential-custody, network-exposure, production, retention, or cost authorization. Behavioral validation is `not-run`.
-
-Microsoft Skills remains the active admitted-source family with **52** gaps. The next gap must be established from the registered-pin tree after `azure-cloud-migrate`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **51** gaps. The next gap must be established from the registered-pin tree after `azure-compliance`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
