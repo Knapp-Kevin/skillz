@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage-blob-ts
+display_name: Microsoft Azure Blob Storage TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-storage-blob-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ee33ce9d2b4372b0cfe58375bebbf0bd989e3ac9
+upstream_last_updated_at: 2026-04-22T00:13:36Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-storage-blob-ts
+permission_tier: external-storage-credentialed-mutation
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js or browser; @azure/storage-blob; @azure/identity; Azure Storage account/container/blob resources; environment-provided Entra identity or account key/connection string/SAS credentials; optional local filesystem for upload/download streaming
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 1a845c3512fef61674ff30a5cd9132e100f42d3f, SKILL.md blob 5f9b967cebe6e1821e5a43749ff6f7f7d626c591, SAS-token reference blob d45d1a2130d0d8db4944cc2fa28e069a1e335951, and streaming reference blob 856b8f69a3a1296556cc78a72230d6b4eb5ca2c0. The package provides useful TypeScript prior art for Blob Storage clients, container/blob CRUD, streaming, block uploads, browser uploads, copy operations, metadata/headers, SAS generation, range downloads, progress, abort handling, and authentication choices. Its intended triggers are Azure Blob Storage implementation tasks; it is not authorization to upload local or browser data, expose blob contents, mint delegated credentials, mutate/delete persistent storage, or operate production resources. Unchanged adoption is rejected because ordinary examples create/delete containers and blobs, upload local files and browser-selected data, write metadata/headers, stage/commit blocks, copy from URLs, and delete cleanup targets without mandatory storage-account/container, data-owner/classification, per-mutation, destructive-action, production, retention/recovery, or cost authority. Credential paths include account keys, connection strings, and SAS tokens; the bundled SAS guide generates broad write/delete/account SAS permissions and prints credential-bearing SAS URLs to output. Downloads may materialize sensitive blob data into memory, console output, or local files without mandatory disclosure/minimization/custody boundaries. Preserve as adaptation/reference evidence with Entra-first least privilege, explicit destination/data-owner authority, narrow time-bounded SAS only when authorized, no credential-bearing URL output, sensitive-data minimization, destructive-action/recovery controls, and production/cost boundaries.
