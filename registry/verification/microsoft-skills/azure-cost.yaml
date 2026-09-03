@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cost
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b9f59c28575280e1f76aaf2b94d92b040b571c52
+skill_md_blob_sha: 8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, business-operations, monitoring, decision-support]
+  lifecycle: [planning, operations, maintenance]
+  characteristic: [cost-bounded, evidence-first, risk-aware, reference-heavy, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and bundled cost query, forecast, optimization, Azure Quick Review, Resource Graph, AKS, Storage, Redis, SDK, guardrail, request-schema, error-handling, and report references. The package is strong prior art for read-oriented cost analysis: it separates query/forecast/optimization intents, requires explicit scope selection for focused Redis and AKS analyses, validates pricing, preserves total-bill context, handles Cost Management throttling conservatively, and warns about retention/tier tradeoffs. Unchanged adoption nevertheless fails the authority hard rule because the optimization package includes live AKS add-on enablement and implementation commands/recommendations that can delete or snapshot-and-delete resources, alter storage lifecycle deletion/tiering, redundancy/SKU, retention, and other persistent cost-bearing settings without mandatory action-specific authorization immediately before mutation. The Free-to-Standard AKS tier change correctly requires explicit approval, demonstrating a useful safeguard to preserve, but the adjacent cost-analysis add-on mutation does not. Preserve query, forecast, analysis, reporting, pricing validation, scope-selection, and recommendation mechanics for adaptation/reference use. Require explicit target, cost, production, retention/data-lifecycle, destructive-action, and resource-mutation authorization before live optimization. Behavioral validation remains not-run.

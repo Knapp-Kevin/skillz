@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **311** persisted exact-version third-party verification companions.
+- **312** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **139/189**.
-- Remaining gaps: **50**.
+- Current-standard companions: **140/189**.
+- Remaining gaps: **49**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -51,9 +51,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-aigateway` — **rejected unchanged, 8/20**.
 - `azure-cloud-migrate` — **rejected unchanged, 9/20**.
 - `azure-compliance` — **rejected unchanged, 12/20**.
-- `azure-compute` — **rejected unchanged, 11/20**. Exact package tree `cdfc4a39b926efba5060eddc6d790b035501bc25`, `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`, freshness revision `236687860a7ad1de9836938d1c0eacff05cdc922` from 2026-06-09. Preserve VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, plan-card review, cost visibility, artifact generation, and the explicit final confirmation before live VM/VMSS creation. Unchanged adoption fails because bundled Capacity Reservation and Essential Machine Management procedures still perform billable/persistent subscription mutations, resource-provider registration, workspace creation, identity/security configuration, and offboarding without mandatory action-specific authorization immediately before each consequential mutation. Behavioral validation is `not-run`.
+- `azure-compute` — **rejected unchanged, 11/20**.
+- `azure-cost` — **rejected unchanged, 14/20**. Exact package tree `b9f59c28575280e1f76aaf2b94d92b040b571c52`, `SKILL.md` blob `8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4`, freshness revision `ba3700d41a07ab5e01919ce9a42a38907186a9fe` from 2026-06-04. Preserve read-oriented cost query/forecast, scope selection, throttling discipline, pricing validation, total-bill context, and optimization heuristics. Unchanged adoption fails because bundled optimization guidance can enable the AKS cost-analysis add-on and includes destructive or persistent resource/cost-change implementation guidance without mandatory action-specific authorization immediately before mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-compute`. Do not revive stale source-order assumptions from historical prompts.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-cost`. Do not revive stale source-order assumptions from historical prompts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -82,4 +83,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-compute` is merged and public accounting is verified at **311 reviews / Microsoft Skills 139/189 / 50 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-cost` is merged and public accounting is verified at **312 reviews / Microsoft Skills 140/189 / 49 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
