@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cloud-migrate
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: dd0d5a31e87576d5b46899b19aa3eedb24d412f4
+skill_md_blob_sha: b1634cf629d9358eb70a95c089b309c304f9c42c
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 9/20
+tags:
+  use_case: [cloud, deployment, implementation, architecture]
+  lifecycle: [planning, implementation, release]
+  characteristic: [reference-heavy, production-oriented, risk-aware, incremental]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and the full bundled reference tree for Functions, App Service, Container Apps, runtime conversion, assessment, deployment, and workflow tracking. The package provides valuable cross-cloud migration prior art: assessment-before-mutation, source-directory preservation, scenario routing, service mapping, runtime modernization, application-code conversion, migration-status reporting, service-discovery audits, and an explicit post-migration user choice between local testing and Azure deployment. It also explicitly requires ask_user for destructive actions. Unchanged adoption is nevertheless rejected under the current authority hard fail. The bundled Container Apps deployment path creates Azure resource groups, Log Analytics workspaces, environments, Key Vaults, managed identities, role assignments, container apps, external ingress, scaling configuration, and ACR imports; it also reads Kubernetes secret material and writes it to Key Vault and retrieves the Log Analytics primary shared key into a shell variable. The generic deploy choice and destructive-action rule do not establish mandatory per-resource target/environment, identity/access, security-control, secret/data-owner, credential-custody, network-exposure, production, retention/recovery, or cost authorization for these consequential actions. Preserve the assessment, staged conversion, source-preservation, compatibility, explicit deployment-choice, and progress-reporting patterns for adaptation/reference use with stronger action-specific authority and secret-custody gates. Behavioral validation remains not-run.

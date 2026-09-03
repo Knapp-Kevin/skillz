@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cloud-migrate
+display_name: Microsoft Azure Cloud Migrate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-cloud-migrate/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e12b7d24dab47df1d935783b31b196fdf43ad56b
+upstream_last_updated_at: 2026-05-07T11:33:24Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-cloud-migrate
+permission_tier: cross-cloud-code-and-infrastructure-migration
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure CLI and Azure MCP documentation/best-practices tools; source-cloud CLIs and workload metadata as applicable; Docker/ACR, kubectl/Kubernetes, Azure Functions, App Service, Container Apps, Key Vault, Log Analytics, managed identities and Azure RBAC; bundled migration, assessment, deployment, runtime, and workflow references
+import_eligibility: adaptation-only
+rationale: Exact complete-package review at the registered Microsoft Skills pin, bound to package tree SHA dd0d5a31e87576d5b46899b19aa3eedb24d412f4 and SKILL.md blob b1634cf629d9358eb70a95c089b309c304f9c42c plus the complete bundled reference tree. The package preserves strong cross-cloud assessment, code-conversion, service-mapping, runtime-selection, source-preservation, progress-reporting, and deployment-handoff mechanics. It also contains a meaningful top-level authorization safeguard: destructive actions require ask_user and migration completion explicitly asks whether to test locally or deploy to Azure. Unchanged adoption still fails current authority and secret-custody hard gates because bundled deployment guidance directly creates resource groups, Log Analytics workspaces, Container Apps environments, Key Vaults and managed identities, performs ACR imports, creates RBAC role assignments, migrates Kubernetes secret material, configures external ingress and production-like scaling, and retrieves a Log Analytics primary shared key into a shell variable without mandatory target-resource, identity/access, security-control, secret/data-owner, production, network-exposure, retention, or cost authorization boundaries appropriate to those individual actions. Preserve the assessment, conversion, compatibility, staged migration, source-preservation, and explicit deploy-choice mechanics for adaptation/reference use with stronger per-resource and secret-custody authorization. Behavioral validation has not been run.
