@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 304 |
+| **Persisted third-party review companions** | 305 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 132 / 189 |
-| **Microsoft Skills current-standard gaps** | 57 |
+| **Microsoft Skills current-standard companions** | 133 / 189 |
+| **Microsoft Skills current-standard gaps** | 56 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **132/189 companion-complete**, **57 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **133/189 companion-complete**, **56 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -86,7 +86,9 @@ Current companion-complete TypeScript packages are:
 
 The direct TypeScript slice is now **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three are verified; all twenty-five retain `validation_status: not-run` unless representative external behavioral/adversarial evidence is actually recorded.
 
-Microsoft Skills remains active with **57** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/airunway-aks-setup` while preserving the complete `.NET`, Java, Python, Rust, and TypeScript slices.
+The non-direct Microsoft plugin frontier is now active. `airunway-aks-setup` is bound to package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, and a complete reference tree containing GPU/model sizing, PowerShell notes, troubleshooting/rollback, and six staged step files. Skill-specific freshness is anchored to Microsoft revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. It is **rejected unchanged, 15/20**. The package is unusually strong about positive-action safety: it reports active cluster context, stops on missing prerequisites, requires confirmation before install/deployment actions, warns about GPU cost, confirms model choice, and keeps Hugging Face token input out of conversational context and shell history. The hard fail is narrower but decisive: rollback instructs deletion of ModelDeployment resources and token secrets plus provider/controller undeploy without requiring a fresh destructive-action authorization boundary. Those rollback operations materially change persistent Kubernetes/AKS state and credential material, so unchanged promotion is blocked while the package remains valuable adaptation/reference evidence. Behavioral validation is `not-run`.
+
+Microsoft Skills remains active with **56** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation` while preserving the complete `.NET`, Java, Python, Rust, and TypeScript slices.
 
 ## Source lifecycle
 
@@ -104,7 +106,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in coherent source-ordered batches; all five direct language slices are complete. The next registered-pin gap is `.github/plugins/azure-skills/skills/airunway-aks-setup`.
+1. Continue Microsoft Skills in coherent source-ordered batches; all five direct language slices are complete. The next registered-pin gap is `.github/plugins/azure-skills/skills/appinsights-instrumentation`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.

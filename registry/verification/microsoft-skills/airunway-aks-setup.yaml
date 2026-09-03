@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: airunway-aks-setup
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 72ec58c0a7c574dc71e14c63feb3d2aa529849ac
+skill_md_blob_sha: 26bbd92815116826696fb6380d37446a285496b9
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [evidence-first, incremental, production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact complete-package review covered SKILL.md plus the full bundled reference tree: gpu-profiles.md, model-sizing.md, powershell-notes.md, troubleshooting.md, and six ordered step references. The skill has strong trigger precision and staged operational mechanics for taking an existing AKS cluster through AI Runway controller installation, GPU assessment, inference-provider installation, model selection/deployment, readiness verification, and troubleshooting. It reports the active kubectl context, stops on missing prerequisites, requires user confirmation before install/deployment actions, warns about GPU cost, asks the user to confirm model choice, and handles gated Hugging Face credentials through no-echo terminal input plus a chmod-600 temporary file rather than conversational secret capture. However, the troubleshooting/rollback section provides destructive commands to delete ModelDeployment resources and token secrets and to undeploy providers/controllers without a fresh explicit destructive-action authorization boundary. The global confirmation rule is scoped to install/deployment actions and therefore does not authorize rollback/delete/undeploy. Under the current authority hard-fail rule, this unresolved destructive-lifecycle gap blocks verified status despite otherwise strong safety design. Preserve the verification, GPU/provider/model-sizing, credential-custody, readiness, and rollback mechanics for adaptation/reference use with an added explicit target/resource and destructive-action approval gate. Behavioral validation remains not-run.

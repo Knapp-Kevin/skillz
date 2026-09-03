@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-304-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-305-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -48,7 +48,7 @@ Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](r
 
 ### Exact-version evidence
 
-There are currently **304 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
+There are currently **305 persisted exact-version third-party verification companions**. `registry/skills/` records per-skill provenance; `registry/verification/` records exact-version semantic quality, fingerprints, tags, authority, portability, dependencies, and disposition.
 
 Current quality semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md). `verified` is structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Static completion comes before broad behavioral validation.
 
@@ -65,18 +65,20 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **132/189** current-standard companion complete, **57** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **133/189** current-standard companion complete, **56** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-The TypeScript denominator is tree-derived: 25 independently first-class packages. The upstream TypeScript plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless present in the registered-pin tree.
+The TypeScript denominator is tree-derived: 25 independently first-class packages. The upstream TypeScript plugin README says 24 because it omits `applicationinsights-web-ts`, which is nevertheless present at the registered-pin tree.
 
 The direct TypeScript slice is now **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged under current authority, privacy, sensitive-data, secret-custody, production-configuration, durable-data, database/search-index/message/storage mutation, external-publication, identity/access, security-control, cryptographic-operation, destructive-lifecycle, cloud-testing, artifact-publication/retention, network-exposure, telemetry-disclosure, downstream-effect, delegated-credential, notification, or cost hard gates while retaining useful mechanics for adaptation/reference. Three local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. `m365-agents-ts` closes the consequential part of the slice as **rejected unchanged, 13/20** because ordinary Teams/M365/Copilot Studio messaging, model-data transfer, remote conversations, and tenant/client credential use lack mandatory tenant, audience, data, communication, production, and credential-custody authorization. All twenty-five retain `validation_status: not-run` unless representative external behavioral/adversarial evidence is actually recorded.
 
-Microsoft Skills remains the active admitted-source family with **57** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/airunway-aks-setup`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+The non-direct Microsoft plugin frontier has begun. `airunway-aks-setup` is **rejected unchanged, 15/20** at exact package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`. It has unusually strong positive-action safeguards for AKS setup, including context reporting, install/deployment confirmation, cost awareness, model-choice confirmation, and secure terminal handling of Hugging Face tokens, but its rollback section permits destructive model/secret deletion and provider/controller undeploy without a fresh destructive-action authorization gate. Under the current hard-fail rule, those rollback mechanics remain adaptation/reference evidence rather than unchanged-selection eligibility.
+
+Microsoft Skills remains the active admitted-source family with **56** gaps outside the completed direct-language slices. Continue registered-pin source order with `.github/plugins/azure-skills/skills/appinsights-instrumentation`; Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
