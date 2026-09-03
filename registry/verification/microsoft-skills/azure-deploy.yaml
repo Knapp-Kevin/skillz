@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-deploy
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e4d47784cfeba4f942bca41a909c957e65562fd7
+skill_md_blob_sha: 23815db4c7c5946913b10ac1cd706ea2bf6727fe
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, planning, deployment, monitoring]
+  lifecycle: [implementation, deployment, operations, maintenance]
+  characteristic: [evidence-first, risk-aware, tool-assisted, reference-heavy]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and the bundled pre-deploy checklist, global rules, authentication guidance, live RBAC verification, azd/azcli/Bicep/Terraform/CI-CD recipes, SQL managed-identity and Entra-auth guidance, EF migrations, post-deployment verification, troubleshooting, and SDK references. This package is unusually strong deployment prior art: it requires a prior azure-prepare plan and azure-validate proof, forbids self-asserting validation, confirms actual subscription and region, checks resource-group and Container Apps conflicts, requires ask_user for destructive, cost-impacting, and security/RBAC actions, verifies RBAC propagation, and performs structured post-deploy verification. Unchanged adoption still fails the authority hard rule because required post-deployment guidance can grant managed identities SQL permissions and apply EF Core schema migrations after deployment without a dedicated action-specific authorization boundary immediately before those separate persistent identity/access and database changes. The user's request to deploy and the generic destructive-action rule do not automatically authorize every post-deploy permission/schema mutation. Preserve the validation-proof, target confirmation, conflict detection, destructive/security/cost confirmation, recipe selection, recovery, RBAC health-check, and verification mechanics for adaptation/reference use. Require fresh database-owner, identity/access, schema-migration, production, target, and rollback authorization before post-deploy mutation. Behavioral validation remains not-run.
