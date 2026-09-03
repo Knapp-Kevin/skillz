@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 313 |
+| **Persisted third-party review companions** | 314 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 141 / 189 |
-| **Microsoft Skills current-standard gaps** | 48 |
+| **Microsoft Skills current-standard companions** | 142 / 189 |
+| **Microsoft Skills current-standard gaps** | 47 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **141/189 companion-complete**, **48 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **142/189 companion-complete**, **47 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -48,19 +48,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The direct TypeScript slice is **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Exact identities, freshness, authority, portability, dependencies, rationale, and validation state remain in their individual companion records.
 
-The non-direct Microsoft plugin frontier is active. Reviewed packages now include:
+The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), and `azure-diagnostics` (**rejected unchanged, 13/20**). `azure-diagnostics` is bound to package tree `1b0c314600a11fc0d63249d63c47cfb79a524443`, `SKILL.md` blob `693487020cc7c409f4c8387974cef122b5fe692c`, freshness revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. It preserves systematic triage, resource-health-first diagnosis, Azure-side-before-Kubernetes evidence ordering, read-only AKS fallback commands, explicit AKS remediation approval, and evidence/confidence reporting. Unchanged adoption fails because App Service remediation guidance exposes production scaling, tracing, auto-heal/recycling, redeployment, app-setting, TLS-binding, and DNS mutations without a dedicated action-specific authorization checkpoint immediately before each change. Behavioral validation is `not-run`.
 
-1. `airunway-aks-setup` — **rejected unchanged, 15/20**.
-2. `appinsights-instrumentation` — **rejected unchanged, 12/20**.
-3. `azure-ai` — **rejected unchanged, 10/20**.
-4. `azure-aigateway` — **rejected unchanged, 8/20**.
-5. `azure-cloud-migrate` — **rejected unchanged, 9/20**.
-6. `azure-compliance` — **rejected unchanged, 12/20**.
-7. `azure-compute` — **rejected unchanged, 11/20**.
-8. `azure-cost` — **rejected unchanged, 14/20**.
-9. `azure-deploy` — **rejected unchanged, 15/20**, package tree `e4d47784cfeba4f942bca41a909c957e65562fd7`, `SKILL.md` blob `23815db4c7c5946913b10ac1cd706ea2bf6727fe`, freshness revision `f1e39f53483cdcd4d039d6e317b3e430b725de16` from 2026-05-04. It preserves strong validated-plan prerequisites, exact subscription/region confirmation, conflict detection, destructive/security/cost confirmation, deployment recipes, RBAC health checks, error recovery, and verification. Unchanged adoption fails because required post-deployment guidance can grant managed identities SQL permissions and apply EF Core schema migrations without a dedicated action-specific authorization checkpoint immediately before those separate persistent identity/access and database mutations. Behavioral validation is `not-run`.
-
-Microsoft Skills remains active with **48** gaps. Establish the next gap from the registered-pin tree after `azure-deploy`; do not infer it from stale prompts or historical issue text.
+Microsoft Skills remains active with **47** gaps. Establish the next gap from the registered-pin tree after `azure-diagnostics`; do not infer it from stale prompts or historical issue text.
 
 ## Source lifecycle
 
@@ -78,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-deploy`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-diagnostics`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
