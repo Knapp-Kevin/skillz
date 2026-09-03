@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-servicebus-ts
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 575e0399b5116369a5b57fd614a9d58f10b48f76
+skill_md_blob_sha: 43e5acb47b8db2aee786f02a19f6c0db19556713
+characterized_at: 2026-09-02
+last_verified_at: 2026-09-02
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 8/20
+tags:
+  use_case: [cloud, implementation, orchestration]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review at the registered Microsoft Skills pin covered SKILL.md plus bundled error-handling.md and queues-topics.md references. Useful material includes Service Bus queues/topics/subscriptions, batching, sessions and session state, scheduling/cancellation, receive modes, message settlement, dead-letter processing, lock renewal, retries, graceful shutdown, idempotent processing, and poison-message handling. Rejected unchanged because normal flows publish payloads externally, complete/delete or otherwise settle durable messages, dead-letter/defer/abandon messages, schedule future delivery, write session state, reprocess DLQ payloads, and invoke downstream business handlers without mandatory destination/resource, payload/data-owner, downstream-effect, settlement/destructive-action, production, retention/recovery, or budget authorization. References also print raw message bodies, DLQ payloads, entity paths, namespaces, and detailed errors without mandatory sensitive-data minimization or redaction. Entra-first authentication, peek-lock, idempotency, DLQ handling, retry guidance, and graceful shutdown are useful safeguards but do not establish authority for external publication, message destruction, downstream effects, or sensitive output. Behavioral validation remains not-run.
