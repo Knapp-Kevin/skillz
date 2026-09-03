@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-compute
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cdfc4a39b926efba5060eddc6d790b035501bc25
+skill_md_blob_sha: fce17d1f64f4013e21ab1f53636852ca0251a5f2
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, planning, deployment, monitoring]
+  lifecycle: [planning, implementation, operations, maintenance]
+  characteristic: [progressive-disclosure, risk-aware, tool-assisted, reference-heavy]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and the bundled VM recommendation, creation, troubleshooting, capacity reservation, Essential Machine Management, pricing, quota, VM-family, IaC, delivery, security, networking, and management references. The package contains unusually strong planning safeguards for VM/VMSS creation: read-only SKU/image/quota validation, adaptive requirement gathering, a user-visible Plan Card, cost surfacing, separation of artifact generation from live apply, and an explicit extra confirmation before compute_vm_create / compute_vmss_create. Unchanged adoption still fails the authority hard rule because the capacity-reservation workflow proceeds from gathered parameters directly to creation of billable CRG/reservation resources, while EMM guidance orchestrates subscription-level enrollment/offboarding, resource-provider registration, workspace creation, managed-identity/security configuration, and related operations without a mandatory action-specific authorization checkpoint immediately before each consequential mutation. Preserve the routing, validation, recommendation, cost, plan-card, and generate-only mechanics for adaptation/reference use. Require explicit target-resource/subscription, cost, identity/access, security-control, production, and destructive/offboarding authorization before live mutation. Behavioral validation remains not-run.
