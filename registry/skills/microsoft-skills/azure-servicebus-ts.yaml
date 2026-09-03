@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-servicebus-ts
+display_name: Microsoft Azure Service Bus TypeScript
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-typescript/skills/azure-servicebus-ts/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 338b73ff6b3a0d50fd8ee94e0112129a33fc3ee5
+upstream_last_updated_at: 2026-04-22T00:02:09Z
+curated_at: 2026-09-02
+last_checked_at: 2026-09-02
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/azure-servicebus-ts
+permission_tier: external-messaging-durable-state
+portability: medium
+review_status: rejected-unchanged
+dependency_status: source-intact
+dependencies: TypeScript/Node.js; @azure/service-bus; @azure/identity; Azure Service Bus namespace plus queues/topics/subscriptions; environment-provided Azure identity; optional database/Redis or Blob Storage for idempotency and claim-check patterns
+import_eligibility: adapt-or-reference-only
+rationale: Exact complete-package reconciliation at the registered Microsoft Skills pin, bound to package tree SHA 575e0399b5116369a5b57fd614a9d58f10b48f76, SKILL.md blob 43e5acb47b8db2aee786f02a19f6c0db19556713, error-handling reference blob 57d993a8094f0af3621e64381791ca3065ca599d, and queues-topics reference blob bebaeac42bc9e93f7eba353425ed29b170100223. The package provides useful TypeScript prior art for Service Bus queues/topics, batching, sessions and session state, scheduling, receive modes, settlement, dead-letter handling, retries, lock renewal, graceful shutdown, idempotency, and poison-message handling. Its intended triggers are Azure Service Bus messaging implementations; it is not authorization for external publication, downstream business actions, message disclosure, durable state mutation, or production queue/topic operations. Unchanged adoption is rejected because ordinary examples publish application payloads to external queues/topics, settle or delete messages, dead-letter/defer/abandon them, schedule future delivery, write persistent session state, reprocess DLQ payloads, and invoke downstream handlers such as billing/inventory/order processing without mandatory destination/resource, payload/data-owner, downstream-effect, settlement/destructive-action, production, retention/recovery, or budget authorization. The references also print raw message bodies, dead-letter payloads, entity paths, namespaces, and detailed errors without mandatory sensitive-data minimization/redaction. Preserve as adaptation/reference evidence with explicit destination and data-owner authority, per-action downstream authorization, least-privilege identity, payload minimization, output/log redaction, settlement/recovery controls, and production/cost boundaries.
