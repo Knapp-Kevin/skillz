@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: frontend-design-review
+display_name: Microsoft Frontend Design Review
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/frontend-design-review/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: cbfd1b6652debe08f9d329d713b382a1a0db2e3e
+upstream_last_updated_at: 2026-02-24T02:17:44Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/frontend-design-review
+permission_tier: generate-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: complete 5-file package consisting of SKILL.md plus 4 bundled references; optional access to the user's Figma design system/Dev Mode and component library for design-system-specific review; frontend source context when reviewing existing implementation
+import_eligibility: verified-exact-version
+rationale: Exact static review of frontend-design-review at the registered Microsoft Skills pin, bound to package tree SHA 5168482e112971181f4c4fec05ce694792bafd02 and SKILL.md blob 6fd8fe378026252e3810eae36844704f3c684fe3. The skill has explicit USE FOR/DO NOT USE FOR trigger boundaries, separates review from creative-generation modes, uses a structured three-pillar review rubric, preserves accessibility and design-system checks, and produces recommendations/review output rather than executing external mutations. Its references provide a bounded output template, review-type modifiers, approval checklist, and pattern examples. No credential handling, infrastructure mutation, production traffic change, user communication, or other external side effect is instructed by the reviewed package, so the action-specific mutation authorization hard fail does not apply to unchanged use. Behavioral validation has not been run.

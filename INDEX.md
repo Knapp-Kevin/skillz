@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 330 |
+| Persisted third-party exact-version reviews | 331 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 158 / 189 |
-| Microsoft Skills current-standard gaps | 31 |
+| Microsoft Skills current-standard companions | 159 / 189 |
+| Microsoft Skills current-standard gaps | 30 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **158/189**, leaving **31** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **159/189**, leaving **30** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), `azure-storage` (rejected, 12/20), `azure-upgrade` (rejected, 15/20), `azure-validate` (rejected, 16/20), and `entra-agent-id` (**rejected, 13/20**). `entra-agent-id` is bound to exact package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e`, `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`, and freshness revision `5bc90f7cc3012cb8e9a6f14b5ccb5a3edcd1cc67` from 2026-03-24. Preserve per-agent identity topology, typed Graph endpoints, BlueprintPrincipal prerequisite, workload-identity preference, per-agent permission scoping, cross-tenant token-exchange mechanics, localhost-only sidecar containment, and troubleshooting evidence. Unchanged adoption is rejected because identity/access mutations and persistent dependency installation lack mandatory action-specific authorization checkpoints. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `frontend-design-review` is **verified, 17/20**, bound to package tree `5168482e112971181f4c4fec05ce694792bafd02`, `SKILL.md` blob `6fd8fe378026252e3810eae36844704f3c684fe3`, and freshness revision `cbfd1b6652debe08f9d329d713b382a1a0db2e3e` from 2026-02-24. Its complete five-file package contributes explicit trigger boundaries, review and creative modes, design-system/token checks, accessibility modifiers, three quality pillars, severity-ranked findings, and structured review/checklist references. The package is generate-only and has no instructed external mutation or sensitive-data disclosure. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `entra-agent-id`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `frontend-design-review`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
