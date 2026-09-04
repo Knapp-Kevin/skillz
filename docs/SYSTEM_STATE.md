@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 330 |
+| **Persisted third-party review companions** | 331 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 158 / 189 |
-| **Microsoft Skills current-standard gaps** | 31 |
+| **Microsoft Skills current-standard companions** | 159 / 189 |
+| **Microsoft Skills current-standard gaps** | 30 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **158/189 companion-complete**, **31 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **159/189 companion-complete**, **30 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,11 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Exact identities, freshness, authority, portability, dependencies, rationale, and validation state remain in their individual companion records.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `frontend-design-review` is **verified, 17/20**, bound to package tree `5168482e112971181f4c4fec05ce694792bafd02`, `SKILL.md` blob `6fd8fe378026252e3810eae36844704f3c684fe3`, and freshness revision `cbfd1b6652debe08f9d329d713b382a1a0db2e3e` from 2026-02-24. The complete package is `SKILL.md` plus four bundled references. Preserve its explicit USE FOR/DO NOT USE FOR boundaries, separate design-review and creative-generation modes, design-system/token checks, accessibility modifiers, three-pillar frictionless/craft/trustworthy rubric, severity-ranked findings, and structured output template. The reviewed package is generate-only and contains no instructed external mutation, credential handling, deployment, production traffic change, user communication, or sensitive-data disclosure. Behavioral validation is `not-run`.
 
-The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), `azure-storage` (rejected, 12/20), `azure-upgrade` (rejected, 15/20), `azure-validate` (rejected, 16/20), and `entra-agent-id` (**rejected, 13/20**). `entra-agent-id` is bound to package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e`, `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`, freshness revision `5bc90f7cc3012cb8e9a6f14b5ccb5a3edcd1cc67` from 2026-03-24. Preserve distinct per-agent identities/audit trails, typed Graph endpoints, BlueprintPrincipal prerequisite, workload-identity preference, per-agent permission scoping, cross-tenant token-exchange mechanics, localhost-only sidecar containment, and troubleshooting evidence. Unchanged adoption is rejected because the workflow installs host dependencies, creates Entra identity objects/service principals, grants application and tenant-wide delegated permissions, and invokes admin consent without mandatory action-specific authorization checkpoints immediately before those identity/access mutations. Behavioral validation is `not-run`.
-
-Microsoft Skills remains active with **31** gaps. Establish the next gap from the registered-pin tree after `entra-agent-id`.
+Microsoft Skills remains active with **30** gaps. Establish the next gap from the registered-pin tree after `frontend-design-review`.
 
 ## Source lifecycle
 
@@ -68,8 +66,8 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `entra-agent-id`.
-2. Complete remaining Microsoft Skills non-direct plugin families.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `frontend-design-review`.
+2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 5. Continue governed discovery/source-vetting and omission recovery.
