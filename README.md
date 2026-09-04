@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-327-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-328-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **327 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **328 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,16 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **155/189** current-standard companion complete, **34** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **156/189** current-standard companion complete, **33** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), `azure-kubernetes-automatic-readiness` (**rejected, 15/20**), `azure-kusto` (**rejected, 14/20**), `azure-messaging` (**rejected, 13/20**), `azure-prepare` (**rejected, 16/20**), `azure-quotas` (**rejected, 14/20**), `azure-rbac` (**verified, 17/20**), `azure-reliability` (**rejected, 15/20**), `azure-resource-lookup` (**rejected, 14/20**), `azure-resource-visualizer` (**rejected, 15/20**), and `azure-storage` (**rejected, 12/20**). `azure-storage` is bound to exact package tree `58ffdd0c0f466a983a0064239d481fb08e58b7c8`, `SKILL.md` blob `21bdc643b63e040a9b1efe7422474cfb393ddc85`, and freshness revision `10cfecf15420a913fd7e8842cd4f953fbd9ef9a4` from 2026-05-01. Preserve its storage-service selection, access-tier and redundancy summaries, passwordless production authentication guidance, least-privilege RBAC advice, and multi-language SDK references as adaptation evidence. Unchanged adoption is rejected because the complete package directly instructs blob writes/overwrites, host dependency installation and setup, credential rotation, and enabling Defender for Cloud without mandatory action-specific authorization immediately before those mutations; blob get/download flows also lack an explicit sensitive-data disclosure/minimization boundary. Behavioral validation is `not-run`.
+The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), `azure-kubernetes-automatic-readiness` (**rejected, 15/20**), `azure-kusto` (**rejected, 14/20**), `azure-messaging` (**rejected, 13/20**), `azure-prepare` (**rejected, 16/20**), `azure-quotas` (**rejected, 14/20**), `azure-rbac` (**verified, 17/20**), `azure-reliability` (**rejected, 15/20**), `azure-resource-lookup` (**rejected, 14/20**), `azure-resource-visualizer` (**rejected, 15/20**), `azure-storage` (**rejected, 12/20**), and `azure-upgrade` (**rejected, 15/20**). `azure-upgrade` is bound to exact package tree `ad4f782ddd8eab34eacece4ccb1b66d65a0434d9`, `SKILL.md` blob `6b87a36c181440dd213443b19a2a58d25504a1ba`, and freshness revision `0544d2eee104ee7a1e15e698166ae38ad8940606` from 2026-06-01. Preserve its assessment-first sequencing, target plan/SKU confirmation, explicit authorization before resource creation and destructive actions, rollback discipline, idempotent/resumable automation requirement, and scenario-specific migration guidance as adaptation evidence. Unchanged adoption is rejected because bundled Functions automation reads the live `AzureWebJobsStorage` connection string into shell state and passes it directly to blob operations instead of using a secure identity-based credential path; its prerequisite sequence also installs the Resource Graph CLI extension without a distinct action-specific authorization checkpoint. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **34** gaps. The next gap must be established from the registered-pin tree after `azure-storage`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **33** gaps. The next gap must be established from the registered-pin tree after `azure-upgrade`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
