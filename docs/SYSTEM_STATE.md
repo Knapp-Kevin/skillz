@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 322 |
+| **Persisted third-party review companions** | 323 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 150 / 189 |
-| **Microsoft Skills current-standard gaps** | 39 |
+| **Microsoft Skills current-standard companions** | 151 / 189 |
+| **Microsoft Skills current-standard gaps** | 38 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **150/189 companion-complete**, **39 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **151/189 companion-complete**, **38 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -48,9 +48,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The direct TypeScript slice is **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Exact identities, freshness, authority, portability, dependencies, rationale, and validation state remain in their individual companion records.
 
-The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), and `azure-quotas` (**rejected unchanged, 14/20**). `azure-quotas` is bound to package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40`, `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`, freshness revision `c5efa32e0ef4922d693785014258f7a0aefae259` from 2026-05-27. Preserve quota-name discovery, read-oriented CLI inspection, limit-minus-usage capacity calculation, regional comparison, unsupported-provider fallbacks, and the warning that “No Limit” does not prove unlimited capacity. Unchanged adoption fails because the package directly instructs quota update/create, `Microsoft.Quota` provider registration, and Azure CLI extension installation without mandatory action-specific authorization immediately before those mutations. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), and `azure-rbac` (**verified, 17/20**). `azure-rbac` is bound to package tree `b52d696609b18a5dc2bae21e368812fe7b020ec5`, `SKILL.md` blob `02ac75d2ba22b4d7aa1e74469b01575281f05ddc`, freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve its least-privilege-first role selection, built-in-before-custom discipline, explicit `Microsoft.Authorization/roleAssignments/write` prerequisite, and preference for User Access Administrator over Owner when assignment is the only need. The package is generate-only: it produces CLI commands and Bicep but does not execute assignments or mutate Azure, so the mutation-authorization hard fail does not apply to unchanged use. Any later execution of generated artifacts is a separate host-agent action requiring scoped authorization. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **39** gaps. Establish the next gap from the registered-pin tree after `azure-quotas`.
+Microsoft Skills remains active with **38** gaps. Establish the next gap from the registered-pin tree after `azure-rbac`.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-quotas`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-rbac`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
