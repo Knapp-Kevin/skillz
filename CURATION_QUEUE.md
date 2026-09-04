@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **321** persisted exact-version third-party verification companions.
+- **322** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **149/189**.
-- Remaining gaps: **40**.
+- Current-standard companions: **150/189**.
+- Remaining gaps: **39**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -61,9 +61,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**.
 - `azure-kusto` — **rejected unchanged, 14/20**.
 - `azure-messaging` — **rejected unchanged, 13/20**.
-- `azure-prepare` — **rejected unchanged, 16/20**. Exact package tree `3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9`, `SKILL.md` blob `113c40edd44841b05b26ab836604c6a6d644fef4`, freshness revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve plan-first preparation, explicit plan approval before Phase 2, Azure context confirmation, destructive-action confirmation, Entra-only SQL guidance, specialized routing, security hardening, and validate-before-deploy handoff. Unchanged adoption fails because the mandatory first action writes `.azure/deployment-plan.md` before workspace analysis or approval and does not check whether the target already exists, conflicting with the package's own global rule that overwrite is destructive and requires explicit confirmation. Behavioral validation is `not-run`.
+- `azure-prepare` — **rejected unchanged, 16/20**.
+- `azure-quotas` — **rejected unchanged, 14/20**. Exact package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40`, `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`, freshness revision `c5efa32e0ef4922d693785014258f7a0aefae259` from 2026-05-27. Preserve quota-name discovery, read-oriented CLI inspection, limit-minus-usage capacity calculation, regional comparison, unsupported-provider fallbacks, and the warning that “No Limit” does not prove unlimited capacity. Unchanged adoption fails because quota update/create, `Microsoft.Quota` provider registration, and Azure CLI extension installation are directly instructed without mandatory action-specific authorization immediately before those mutations. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-prepare`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-quotas`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -92,4 +93,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-prepare` is merged and public accounting is verified at **321 reviews / Microsoft Skills 149/189 / 40 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-quotas` is merged and public accounting is verified at **322 reviews / Microsoft Skills 150/189 / 39 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
