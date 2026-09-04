@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **315** persisted exact-version third-party verification companions.
+- **316** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **143/189**.
-- Remaining gaps: **46**.
+- Current-standard companions: **144/189**.
+- Remaining gaps: **45**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -55,9 +55,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-cost` — **rejected unchanged, 14/20**.
 - `azure-deploy` — **rejected unchanged, 15/20**.
 - `azure-diagnostics` — **rejected unchanged, 13/20**.
-- `azure-enterprise-infra-planner` — **verified, 18/20**. Exact package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5`, `SKILL.md` blob `a261c21ed056be1958902cf23f6ae4879001b404`, freshness revision `ba3700d41a07ab5e01919ce9a42a38907186a9fe` from 2026-06-04. Preserve its multi-stage authorization model: resource selection approval, separate manual approval of the verified plan before IaC, and a fresh post-risk deployment reply that explicitly rejects the original prompt, implicit intent, and vague assent as authorization. Behavioral validation is `not-run`.
+- `azure-enterprise-infra-planner` — **verified, 18/20**.
+- `azure-hosted-copilot-sdk` — **rejected unchanged, 13/20**. Exact package tree `ee166d12b8f9a88a1d4d932a23e844d8203efa13`, `SKILL.md` blob `64b239df00aa320b64a9009c1875b303a87080b1`, freshness revision `03467cca995f5bd7abc9e2b7ddd7a373543ba08a` from 2026-05-08. Preserve deterministic SDK-marker routing, temp-directory scaffolding that protects existing projects, managed-identity production guidance, least-privilege RBAC, and Key Vault-backed token custody. Unchanged adoption fails because bundled troubleshooting can expand GitHub authorization through `gh auth refresh --scopes copilot` without a mandatory action-specific approval boundary and the deployment path inherits the rejected `azure-deploy` authorization gap. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-enterprise-infra-planner`. Do not revive stale source-order assumptions from historical prompts.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-hosted-copilot-sdk`. Do not revive stale source-order assumptions from historical prompts.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -86,4 +87,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-enterprise-infra-planner` is merged and public accounting is verified at **315 reviews / Microsoft Skills 143/189 / 46 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-hosted-copilot-sdk` is merged and public accounting is verified at **316 reviews / Microsoft Skills 144/189 / 45 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.

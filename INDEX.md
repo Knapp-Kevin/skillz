@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 315 |
+| Persisted third-party exact-version reviews | 316 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 143 / 189 |
-| Microsoft Skills current-standard gaps | 46 |
+| Microsoft Skills current-standard companions | 144 / 189 |
+| Microsoft Skills current-standard gaps | 45 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **143/189**, leaving **46** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **144/189**, leaving **45** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), and `azure-enterprise-infra-planner` (**verified, 18/20**). The planner is bound to exact package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5` and preserves explicit approval of resource selection, separate manual approval of the verified plan before IaC generation, and a fresh post-risk deployment reply that rejects the original prompt, implicit intent, and vague assent as action authorization. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), and `azure-hosted-copilot-sdk` (**rejected unchanged, 13/20**). `azure-hosted-copilot-sdk` is bound to exact package tree `ee166d12b8f9a88a1d4d932a23e844d8203efa13`; preserve SDK detection/routing, safe temp scaffolding, managed-identity production guidance, least-privilege RBAC, and Key Vault token custody. Unchanged adoption fails because GitHub auth scope expansion is not action-specifically gated and the deployment orchestration inherits the rejected `azure-deploy` authorization gap. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-enterprise-infra-planner`; do not infer it from stale prompts or historical issue text.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-hosted-copilot-sdk`; do not infer it from stale prompts or historical issue text.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
