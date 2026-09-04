@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **332** persisted exact-version third-party verification companions.
+- **333** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **160/189**.
-- Remaining gaps: **29**.
+- Current-standard companions: **161/189**.
+- Remaining gaps: **28**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `frontend-design-review` and now `github-issue-creator`. `github-issue-creator` is **rejected unchanged, 14/20** at package tree `bd1b5edf4cefdca8e192610e2e990130f67f704d`, `SKILL.md` blob `4351dcd35e719b49c81fa3430708f103db9cdf82`, freshness revision `a2003b6b95ead129e53dd5377a2229682ff75b1b` from 2026-01-28. Its complete package is one `SKILL.md` and provides a crisp issue template, extraction of reproduction and impact details from messy input, severity calibration, attachment references, and sensitive-value placeholders. Unchanged adoption is rejected because it mandates creating markdown files under `/issues/` without a mandatory action-specific authorization checkpoint before that persistent repository mutation, while its missing-context inference rule can turn absent or stale facts into asserted issue metadata. Preserve the structure, evidence-shaping, redaction, and severity mechanisms for adaptation/reference use. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `kql`. `kql` is **rejected unchanged, 15/20** at package tree `2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6`, `SKILL.md` blob `8be2bdeebd4cdfa0937d3457e70128042cd34904`, freshness revision `e7457389248c42433c940c3e497e2ee6c37604d4` from 2026-04-15. Its five-file package contributes strong KQL language mechanics, query-safety and performance discipline, public help-cluster examples, schema discovery, and troubleshooting patterns. Unchanged adoption is rejected because live execution is treated as the default without mandatory target authorization or sensitive-data minimization; bundled discovery can project external-table `ConnectionStrings` and expose principals, identity, operational diagnostics, logs, and workload configuration. Preserve those mechanisms for adaptation/reference use with authorization, redaction, and bounded-result safeguards. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `github-issue-creator`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `kql`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `github-issue-creator` is merged and public accounting is verified at **332 reviews / Microsoft Skills 160/189 / 29 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `kql` is merged and public accounting is verified at **333 reviews / Microsoft Skills 161/189 / 28 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
