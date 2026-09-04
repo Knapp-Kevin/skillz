@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 326 |
+| **Persisted third-party review companions** | 327 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 154 / 189 |
-| **Microsoft Skills current-standard gaps** | 35 |
+| **Microsoft Skills current-standard companions** | 155 / 189 |
+| **Microsoft Skills current-standard gaps** | 34 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **154/189 companion-complete**, **35 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **155/189 companion-complete**, **34 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -48,9 +48,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The direct TypeScript slice is **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Exact identities, freshness, authority, portability, dependencies, rationale, and validation state remain in their individual companion records.
 
-The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), and `azure-resource-visualizer` (**rejected, 15/20**). `azure-resource-visualizer` is bound to package tree `3a892f03908cf1a388ac9d3da91764bef1e9501c`, `SKILL.md` blob `dc60b612a54d125bca4feb92b2bfead2ee757873`, freshness revision `f2ced3b38ac6974989bd0c0de4c3a45fbd49b38d` from 2026-04-22. Preserve its explicit resource-group selection, read-only resource inventory and topology mapping, verification-first relationship synthesis, secret placeholders, layered Mermaid output, and architecture-document template. Unchanged adoption is rejected because its bundled Azure Resource Graph reference treats `az extension add --name resource-graph` as a prerequisite without a mandatory action-specific authorization checkpoint for that persistent host change. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), and `azure-storage` (**rejected, 12/20**). `azure-storage` is bound to package tree `58ffdd0c0f466a983a0064239d481fb08e58b7c8`, `SKILL.md` blob `21bdc643b63e040a9b1efe7422474cfb393ddc85`, freshness revision `10cfecf15420a913fd7e8842cd4f953fbd9ef9a4` from 2026-05-01. Preserve its service-selection guidance, tier/redundancy summaries, managed-identity production guidance, least-privilege RBAC advice, and SDK references. Unchanged adoption is rejected because the package directly instructs Azure blob writes/overwrites, package installation and host setup, credential rotation, and Defender enablement without mandatory action-specific authorization immediately before those mutations; blob get/download flows also lack an explicit sensitive-data disclosure/minimization boundary. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **35** gaps. Establish the next gap from the registered-pin tree after `azure-resource-visualizer`.
+Microsoft Skills remains active with **34** gaps. Establish the next gap from the registered-pin tree after `azure-storage`.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-resource-visualizer`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-storage`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
