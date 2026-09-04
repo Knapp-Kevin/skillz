@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 319 |
+| Persisted third-party exact-version reviews | 320 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 147 / 189 |
-| Microsoft Skills current-standard gaps | 42 |
+| Microsoft Skills current-standard companions | 148 / 189 |
+| Microsoft Skills current-standard gaps | 41 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **147/189**, leaving **42** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **148/189**, leaving **41** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), and `azure-kusto` (**rejected unchanged, 14/20**). `azure-kusto` is bound to exact package tree `71a8cb8f91c6078d4b745c0bf0c46d45437c263f`; preserve schema-first KQL exploration, read-only query tooling, early time filters, bounded exploratory result sets, aggregation guidance, and CLI/REST query fallback. Unchanged adoption fails because it targets security/SIEM data, audit logs, user behavior, telemetry, and raw rows without a mandatory disclosure-scope, minimization, redaction, or sensitive-data authorization checkpoint; persistent optimization/ingestion recommendations also lack separate action authorization. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), and `azure-messaging` (**rejected unchanged, 13/20**). `azure-messaging` is bound to exact package tree `de972c7cf2a46e572b5fcfd24ed8963bc41b5a04` and `SKILL.md` blob `512147e502149117b33fed6c0a367606f1829e1e`; preserve resource-health-first diagnosis, SDK/version identification, documentation lookup, configuration checks, and read-oriented namespace/entity/log inspection. Unchanged adoption fails because its workflow proceeds to applying remediation without a mandatory action-specific authorization checkpoint and its declared shared troubleshooting guidance includes consequential identity/security and credential operations without per-action approval. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-kusto`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-messaging`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
