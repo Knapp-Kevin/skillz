@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **331** persisted exact-version third-party verification companions.
+- **332** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **159/189**.
-- Remaining gaps: **30**.
+- Current-standard companions: **160/189**.
+- Remaining gaps: **29**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `entra-agent-id` and now `frontend-design-review`. `frontend-design-review` is **verified, 17/20** at package tree `5168482e112971181f4c4fec05ce694792bafd02`, `SKILL.md` blob `6fd8fe378026252e3810eae36844704f3c684fe3`, freshness revision `cbfd1b6652debe08f9d329d713b382a1a0db2e3e` from 2026-02-24. Its complete five-file package provides explicit trigger boundaries, separate design-review and creative-generation modes, design-system/token checks, accessibility review modifiers, a three-pillar quality rubric, severity-ranked findings, and bounded output/checklist references. The package is generate-only and does not itself instruct external mutation or sensitive-data disclosure; behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `frontend-design-review` and now `github-issue-creator`. `github-issue-creator` is **rejected unchanged, 14/20** at package tree `bd1b5edf4cefdca8e192610e2e990130f67f704d`, `SKILL.md` blob `4351dcd35e719b49c81fa3430708f103db9cdf82`, freshness revision `a2003b6b95ead129e53dd5377a2229682ff75b1b` from 2026-01-28. Its complete package is one `SKILL.md` and provides a crisp issue template, extraction of reproduction and impact details from messy input, severity calibration, attachment references, and sensitive-value placeholders. Unchanged adoption is rejected because it mandates creating markdown files under `/issues/` without a mandatory action-specific authorization checkpoint before that persistent repository mutation, while its missing-context inference rule can turn absent or stale facts into asserted issue metadata. Preserve the structure, evidence-shaping, redaction, and severity mechanisms for adaptation/reference use. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `frontend-design-review`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `github-issue-creator`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `frontend-design-review` is merged and public accounting is verified at **331 reviews / Microsoft Skills 159/189 / 30 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `github-issue-creator` is merged and public accounting is verified at **332 reviews / Microsoft Skills 160/189 / 29 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
