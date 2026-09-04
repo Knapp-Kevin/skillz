@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-rbac
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b52d696609b18a5dc2bae21e368812fe7b020ec5
+skill_md_blob_sha: 02ac75d2ba22b4d7aa1e74469b01575281f05ddc
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, security, planning]
+  lifecycle: [planning, design, implementation]
+  characteristic: [risk-aware, source-driven, tool-assisted]
+  authority: [generate-only]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-rbac package, which consists only of its independently front-mattered SKILL.md. The strongest mechanisms are least-privilege-first role selection, escalation to custom-role generation only when no built-in role fits, explicit use of Microsoft.Authorization/roleAssignments/write as the grant prerequisite, and preference for User Access Administrator over Owner when role assignment is the only need. The skill asks tooling to generate CLI commands and Bicep snippets but does not instruct the host to execute them, assign roles, alter Azure state, or disclose credentials. Therefore the current action-specific mutation authorization hard fail is not triggered by the reviewed package itself; any later execution of generated artifacts is a separate host-agent action requiring its own scoped authorization. Portability is medium because the procedure is conceptually portable but depends on Azure-specific documentation, CLI-generation, and Bicep tooling. Behavioral validation remains not-run.
