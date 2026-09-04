@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 327 |
+| Persisted third-party exact-version reviews | 328 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 155 / 189 |
-| Microsoft Skills current-standard gaps | 34 |
+| Microsoft Skills current-standard companions | 156 / 189 |
+| Microsoft Skills current-standard gaps | 33 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **155/189**, leaving **34** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **156/189**, leaving **33** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), and `azure-storage` (**rejected, 12/20**). `azure-storage` is bound to exact package tree `58ffdd0c0f466a983a0064239d481fb08e58b7c8`, `SKILL.md` blob `21bdc643b63e040a9b1efe7422474cfb393ddc85`, and freshness revision `10cfecf15420a913fd7e8842cd4f953fbd9ef9a4` from 2026-05-01. Preserve its service-selection, access-tier/redundancy, managed-identity authentication, least-privilege RBAC, and SDK patterns as adaptation evidence. Unchanged adoption is rejected because the package instructs blob writes/overwrites, package installation and host setup, credential rotation, and Defender enablement without mandatory action-specific authorization immediately before those mutations; blob get/download flows also lack explicit sensitive-data disclosure/minimization controls. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), `azure-storage` (rejected, 12/20), and `azure-upgrade` (**rejected, 15/20**). `azure-upgrade` is bound to exact package tree `ad4f782ddd8eab34eacece4ccb1b66d65a0434d9`, `SKILL.md` blob `6b87a36c181440dd213443b19a2a58d25504a1ba`, and freshness revision `0544d2eee104ee7a1e15e698166ae38ad8940606` from 2026-06-01. Preserve its assessment-first sequencing, target confirmation, explicit resource/destructive-action authorization, rollback, resumability, and migration references as adaptation evidence. Unchanged adoption is rejected because bundled Functions automation surfaces a live storage connection string for blob operations rather than using an identity-based secure credential path, and installs the Resource Graph CLI extension without a distinct action-specific authorization checkpoint. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-storage`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-upgrade`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
