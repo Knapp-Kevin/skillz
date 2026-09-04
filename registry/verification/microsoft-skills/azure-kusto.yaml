@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-kusto
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 71a8cb8f91c6078d4b745c0bf0c46d45437c263f
+skill_md_blob_sha: 76e6b1764da1d7352dd3d6056571751f4395c746
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, security]
+  lifecycle: [analysis, operations]
+  characteristic: [evidence-first, risk-aware, tool-assisted]
+  authority: [read-only, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned package, which contains only SKILL.md and no bundled references. Strong mechanisms include schema-first discovery, read-only cluster/database listing and KQL querying, early time filters, bounded exploratory result sets, aggregation guidance, and a CLI/REST fallback that remains query-oriented. Unchanged adoption fails current sensitive-data and authority governance because the stated use cases include SIEM/security events, audit logs, user behavior, telemetry, and raw row retrieval without a mandatory disclosure-scope, minimization, redaction, or sensitive-data authorization checkpoint before results are returned. The best-practice section also recommends stored functions, materialized views, retention policies, streaming ingestion, and Azure Monitor integration without explicitly separating those persistent changes behind action-specific authorization. Adaptation can preserve the query mechanics while requiring data-scope authorization and treating persistent optimization/ingestion changes as separate governed actions. Static rejection does not establish runtime behavior; behavioral validation remains not-run.

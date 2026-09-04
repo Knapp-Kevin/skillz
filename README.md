@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-318-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-319-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **318 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **319 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,16 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **146/189** current-standard companion complete, **43** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **147/189** current-standard companion complete, **42** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), and `azure-kubernetes-automatic-readiness` (**rejected, 15/20**). The readiness package is bound to package tree `1694eb4d1069fda2eac18653fdae8d2b55a3646c` and preserves a strong read-only assessment boundary, secret non-disclosure, explicit approval before file writes, deterministic versus context-dependent remediation separation, combined-diff approval, offline fallback, and versioned constraint-spec disclosure. Unchanged adoption is rejected because its bundled migration guide directly instructs billable cluster creation, credential acquisition, staging deployment, OIDC/workload-identity enablement, and old-cluster deletion without mandatory action-specific authorization immediately before those external mutations. Behavioral validation is `not-run`.
+The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), `azure-kubernetes-automatic-readiness` (**rejected, 15/20**), and `azure-kusto` (**rejected, 14/20**). `azure-kusto` is bound to exact package tree `71a8cb8f91c6078d4b745c0bf0c46d45437c263f` and preserves schema-first KQL exploration, read-only query tooling, early time filters, bounded exploratory result sets, and CLI/REST query fallback. Unchanged adoption is rejected because it explicitly targets SIEM/security data, audit logs, user behavior, telemetry, and raw-row retrieval without a mandatory sensitive-data scope, minimization, redaction, or disclosure-authorization checkpoint. Its optimization guidance also mentions persistent database/ingestion changes without separately governed authorization. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **43** gaps. The next gap must be established from the registered-pin tree after `azure-kubernetes-automatic-readiness`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **42** gaps. The next gap must be established from the registered-pin tree after `azure-kusto`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
