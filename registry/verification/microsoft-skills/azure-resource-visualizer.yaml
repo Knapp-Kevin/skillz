@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-resource-visualizer
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3a892f03908cf1a388ac9d3da91764bef1e9501c
+skill_md_blob_sha: dc60b612a54d125bca4feb92b2bfead2ee757873
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [architecture, cloud, documentation]
+  lifecycle: [discovery, design, verification]
+  characteristic: [evidence-first, synthesis, tool-assisted, visual-verification]
+  authority: [read-only, generate-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-resource-visualizer package: SKILL.md, assets/example-diagram.md, assets/template-architecture.md, and references/azure-resource-graph.md. Useful mechanisms include explicit resource-group selection, read-only Azure inspection, complete resource inventory, network/data/identity/configuration relationship mapping, verification-before-diagram discipline, meaningful secret placeholders instead of secret values, layered Mermaid synthesis, and a structured architecture-document template. The Azure cloud workflow itself explicitly prohibits modifying or deleting resources. The hard fail is the bundled Azure Resource Graph reference, which presents `az extension add --name resource-graph` as a prerequisite; that command installs persistent local tooling without a mandatory action-specific authorization checkpoint immediately before the host mutation. Under current authority governance, unchanged adoption is therefore rejected. Preserve the read-only topology and documentation methods as adaptation/reference evidence, but require host authorization before any extension installation. Behavioral validation remains not-run.
