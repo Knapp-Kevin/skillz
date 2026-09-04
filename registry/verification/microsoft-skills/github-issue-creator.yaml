@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: github-issue-creator
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: bd1b5edf4cefdca8e192610e2e990130f67f704d
+skill_md_blob_sha: 4351dcd35e719b49c81fa3430708f103db9cdf82
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [documentation, repository-maintenance, writing]
+  lifecycle: [implementation, maintenance]
+  characteristic: [evidence-first, risk-aware, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact complete-package review covered the sole SKILL.md file. Useful mechanisms include a crisp GitHub-flavored issue template, extraction of reproduction and impact details from messy input, severity calibration, inline attachment references, and explicit placeholders for sensitive values. Unchanged adoption is rejected because the Output Location section mandates creation of markdown files under /issues/ in the target repository with a naming convention, but contains no mandatory action-specific authorization boundary immediately before that persistent repository mutation. The guidance to infer missing context from conversation or memory is also too permissive for evidence-quality work because unknown environment facts can become asserted metadata; adaptation should require sourced context or explicit unknown placeholders. The skill does not itself create a remote GitHub issue despite its name. Preserve its issue-structure, evidence-shaping, redaction, and severity mechanisms as adaptation/reference evidence. Behavioral validation remains not-run.
