@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-kubernetes
+display_name: Microsoft Azure Kubernetes Service
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 1ecb3055e2d82e166e9bd4da6975eec65c41e3fd
+upstream_last_updated_at: 2026-05-29T12:05:14Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-kubernetes
+permission_tier: cloud-infrastructure-and-cluster-mutating-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP AKS tools; Azure CLI; kubectl; Azure Kubernetes Service; Microsoft Entra ID; Azure Key Vault; Azure Policy; Managed Prometheus; Container Insights; Grafana; bundled AKS autoscaler, rightsizing, Spot, VPA, and CLI references; nested azure-kubernetes-automatic-readiness first-class skill is independently eligible and not dispositioned by this record
+import_eligibility: reference-or-adaptation-only
+rationale: Exact static review of the azure-kubernetes top-level skill at the registered Microsoft Skills pin, bound to package tree SHA bab7f5eab9e8e1c311ef1fc29b419963903fbe09 and SKILL.md blob 3c5a448a679dafed5e0e747d28bd95cead4e8dec. Preserve its strong Day-0 versus Day-1 distinction, conservative AKS Automatic default, networking/security/reliability guidance, secret non-disclosure rule, subscription-context discovery without asking users to paste identifiers, staged-upgrade advice, and scenario-specific deep-dive references. Unchanged adoption fails the current authority hard rule because the skill is explicitly used to create and configure AKS and its bundled CLI reference directly provides commands that create persistent billable clusters, enable workload identity and autoscaling, obtain cluster credentials, and enable monitoring without a mandatory action-specific authorization checkpoint immediately before those mutations. The top-level guardrails address ambiguity, secrets, and downtime but do not establish target/resource/cost/security-control authorization. Preserve as adaptation/reference evidence; behavioral validation has not been run. The nested front-mattered azure-kubernetes-automatic-readiness skill remains a separate denominator unit and requires its own exact-version disposition.
