@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **324** persisted exact-version third-party verification companions.
+- **325** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **152/189**.
-- Remaining gaps: **37**.
+- Current-standard companions: **153/189**.
+- Remaining gaps: **36**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -64,9 +64,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-prepare` — **rejected unchanged, 16/20**.
 - `azure-quotas` — **rejected unchanged, 14/20**.
 - `azure-rbac` — **verified, 17/20**.
-- `azure-reliability` — **rejected unchanged, 15/20**. Exact package tree `1240c9672f0101c65ab0dbc461f9515a200b4486`, `SKILL.md` blob `835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb`, freshness revision `c5efa32e0ef4922d693785014258f7a0aefae259` from 2026-05-27. Preserve its scoped reliability assessment, staged live-vs-IaC path choice, separate storage-migration consent, explicit source-code-change consent, and multi-region hard stop. Unchanged adoption is rejected because bundled `references/configure-storage.md` emits a live storage connection string via CLI output before reusing it in Function App settings, violating the current secret-handling discipline. Behavioral validation is `not-run`.
+- `azure-reliability` — **rejected unchanged, 15/20**.
+- `azure-resource-lookup` — **rejected unchanged, 14/20**. Exact package tree `19e257c3720521014d81cd3dbf4e188e0ece621b`, `SKILL.md` blob `d16d74bd6369fd15f8d96ff0b637ac361c7d6e13`, freshness revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. Preserve its dedicated-tool-first routing, subscription/result scoping, ARG query shaping, orphaned-resource discovery, tag/configuration audit, and health-state inspection. Unchanged adoption is rejected because its Quick Reference and missing-extension recovery instruct `az extension add --name resource-graph`, installing persistent local tooling without an action-specific authorization checkpoint. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-reliability`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-resource-lookup`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -95,4 +96,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-reliability` is merged and public accounting is verified at **324 reviews / Microsoft Skills 152/189 / 37 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-resource-lookup` is merged and public accounting is verified at **325 reviews / Microsoft Skills 153/189 / 36 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
