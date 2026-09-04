@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-quotas
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8a628e265ecb05a8f78a9a7e4e4772fb82d78c40
+skill_md_blob_sha: cbd67b6c336362ee343390e713b91b5662841038
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, planning, deployment]
+  lifecycle: [planning, verification, operations]
+  characteristic: [evidence-first, risk-aware, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-quotas package: SKILL.md, references/commands.md, references/advanced-commands.md, and the bundled PowerShell/bash quota-check scripts. Strong mechanisms include quota resource-name discovery instead of ARM-name guessing, CLI-first read inspection, explicit usage/limit arithmetic, regional comparison, unsupported-provider fallbacks, and a useful warning that No Limit or Unlimited responses do not establish real capacity. Unchanged adoption fails current authority governance because the skill and command reference directly instruct az quota update/create and Microsoft.Quota provider registration without a mandatory action-specific authorization checkpoint immediately before those subscription-scoped mutations. The required az extension add prerequisite also mutates the local CLI environment without an explicit approval boundary. Adaptation should default to read-only list/show/usage operations and gate extension installation, provider registration, quota requests, and quota creation separately with target/scope confirmation and explicit authorization. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
