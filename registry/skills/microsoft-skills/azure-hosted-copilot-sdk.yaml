@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-hosted-copilot-sdk
+display_name: Microsoft Azure Hosted Copilot SDK
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 03467cca995f5bd7abc9e2b7ddd7a373543ba08a
+upstream_last_updated_at: 2026-05-08T11:29:39Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-hosted-copilot-sdk
+permission_tier: cloud-application-and-credential-sensitive-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: GitHub Copilot SDK; GitHub CLI; Azure Developer CLI; Docker; Azure Identity; azure-prepare; azure-validate; azure-deploy; bundled authentication, model-configuration, SDK, deployment, and existing-project references
+import_eligibility: reference-or-adaptation-only
+rationale: Exact complete-package static review at the registered Microsoft Skills pin, bound to package tree SHA ee166d12b8f9a88a1d4d932a23e844d8203efa13 and SKILL.md blob 64b239df00aa320b64a9009c1875b303a87080b1 plus five bundled references. Preserve its strong codebase detection/routing, temp-directory scaffolding that avoids overwriting the user project, managed-identity production guidance, least-privilege RBAC advice, secure Key Vault token storage pattern, SDK/BYOM integration guidance, and explicit separation between preparation and deployment. Unchanged adoption fails the current authority hard rule because bundled troubleshooting instructs `gh auth refresh --scopes copilot`, which expands credential authorization without a mandatory action-specific approval boundary, and the top-level deployment path delegates consequential provisioning to `azure-deploy`, whose exact pinned package is itself rejected unchanged for missing dedicated authorization before later RBAC/database mutations. The package does not repair that inherited gap. No workflow was found that asks the user to paste literal secrets into conversational context, but the GitHub token is credential-sensitive and must remain in external secure credential handling. Preserve as adaptation/reference evidence; behavioral validation has not been run.
