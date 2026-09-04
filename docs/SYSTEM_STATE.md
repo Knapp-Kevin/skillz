@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 333 |
+| **Persisted third-party review companions** | 334 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 161 / 189 |
-| **Microsoft Skills current-standard gaps** | 28 |
+| **Microsoft Skills current-standard companions** | 162 / 189 |
+| **Microsoft Skills current-standard gaps** | 27 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **161/189 companion-complete**, **28 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **162/189 companion-complete**, **27 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,9 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `kql` is **rejected unchanged, 15/20**, bound to package tree `2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6`, `SKILL.md` blob `8be2bdeebd4cdfa0937d3457e70128042cd34904`, and freshness revision `e7457389248c42433c940c3e497e2ee6c37604d4` from 2026-04-15. The complete package is `SKILL.md` plus four bundled references. Preserve its KQL mechanics, type/join/serialization corrections, memory and result-size discipline, public help-cluster examples, schema-discovery patterns, and diagnostic checklists. Unchanged adoption is rejected because it encourages live query/discovery execution without a mandatory authorization boundary for the target environment or a sensitive-data minimization/redaction step. The discovery reference can project external-table `ConnectionStrings` and expose principals, current identity, running queries, commands, operations, ingestion failures, and workload configuration. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `mcp-builder` is **rejected unchanged, 14/20**, bound to package tree `c87383e3a3a307ff9867adf610672e9f0b24687b`, `SKILL.md` blob `792635390fff9f4c0032b1f0e06db1d81affe678`, and freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. Its ten-file package contributes strong MCP architecture, tool naming/schema/pagination discipline, transport and authentication patterns, DNS-rebinding protection, approval-mode examples, and read-only evaluation design. Unchanged adoption is rejected because consequential installs, project mutations, live-service operations, and Azure deployment are not consistently gated by action-specific authorization, while the bundled evaluation harness forwards raw MCP tool results to Anthropic without requiring disclosure authority, minimization, or redaction. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **28** gaps. Establish the next gap from the registered-pin tree after `kql`.
+Microsoft Skills remains active with **27** gaps. Establish the next gap from the registered-pin tree after `mcp-builder`.
 
 ## Source lifecycle
 
@@ -66,7 +66,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `kql`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `mcp-builder`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.

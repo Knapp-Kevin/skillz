@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 333 |
+| Persisted third-party exact-version reviews | 334 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 161 / 189 |
-| Microsoft Skills current-standard gaps | 28 |
+| Microsoft Skills current-standard companions | 162 / 189 |
+| Microsoft Skills current-standard gaps | 27 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **161/189**, leaving **28** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **162/189**, leaving **27** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-Latest non-direct Microsoft closure: `kql` is **rejected unchanged, 15/20**, bound to package tree `2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6`, `SKILL.md` blob `8be2bdeebd4cdfa0937d3457e70128042cd34904`, and freshness revision `e7457389248c42433c940c3e497e2ee6c37604d4` from 2026-04-15. Its five-file package contributes strong KQL syntax/gotcha coverage, memory/result-size discipline, public help-cluster examples, discovery patterns, and operational diagnostics. Unchanged adoption is rejected because live target execution lacks a mandatory authority/disclosure boundary and bundled discovery can expose external-table `ConnectionStrings`, principals, identity/access metadata, logs, and operational state. Preserve the mechanics as adaptation/reference evidence with explicit authorization, minimization, and redaction. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `mcp-builder` is **rejected unchanged, 14/20**, bound to package tree `c87383e3a3a307ff9867adf610672e9f0b24687b`, `SKILL.md` blob `792635390fff9f4c0032b1f0e06db1d81affe678`, and freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. Its ten-file package contributes strong MCP architecture, tool naming/schema/pagination discipline, transport and authentication patterns, DNS-rebinding protection, approval-mode examples, and read-only evaluation design. Unchanged adoption is rejected because consequential installs, project mutations, live-service operations, and Azure deployment are not consistently gated by action-specific authorization, while the bundled evaluation harness forwards raw MCP tool results to Anthropic without requiring disclosure authority, minimization, or redaction. Preserve the mechanisms as adaptation/reference evidence with explicit authorization and sensitive-data safeguards. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `kql`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `mcp-builder`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
