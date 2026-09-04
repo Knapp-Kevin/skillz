@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 314 |
+| Persisted third-party exact-version reviews | 315 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 142 / 189 |
-| Microsoft Skills current-standard gaps | 47 |
+| Microsoft Skills current-standard companions | 143 / 189 |
+| Microsoft Skills current-standard gaps | 46 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **142/189**, leaving **47** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **143/189**, leaving **46** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), and `azure-diagnostics` (**rejected unchanged, 13/20**). `azure-diagnostics` is bound to exact package tree `1b0c314600a11fc0d63249d63c47cfb79a524443`; it preserves systematic triage, resource-health-first diagnosis, read-only AKS fallbacks, remediation approval for consequential AKS operations, and evidence/confidence reporting. Unchanged adoption fails because App Service remediation guidance presents persistent production scaling, tracing, auto-heal, redeployment, app-setting, TLS-binding, and DNS mutations without a dedicated action-specific authorization checkpoint immediately before each change. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), and `azure-enterprise-infra-planner` (**verified, 18/20**). The planner is bound to exact package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5` and preserves explicit approval of resource selection, separate manual approval of the verified plan before IaC generation, and a fresh post-risk deployment reply that rejects the original prompt, implicit intent, and vague assent as action authorization. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-diagnostics`; do not infer it from stale prompts or historical issue text.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-enterprise-infra-planner`; do not infer it from stale prompts or historical issue text.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

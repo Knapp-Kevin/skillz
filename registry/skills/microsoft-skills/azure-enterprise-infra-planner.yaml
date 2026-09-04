@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-enterprise-infra-planner
+display_name: Microsoft Azure Enterprise Infra Planner
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-enterprise-infra-planner/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: ba3700d41a07ab5e01919ce9a42a38907186a9fe
+upstream_last_updated_at: 2026-06-04T12:00:24Z
+curated_at: 2026-09-03
+last_checked_at: 2026-09-03
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-enterprise-infra-planner
+permission_tier: cloud-enterprise-planning-and-authorized-provisioning-reference
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: Azure MCP insights/best-practices/WAF/docs/Bicep schema tools; Azure CLI; Bicep; Terraform; bundled workflow, resource, constraint, verification, pairing, IaC-generation, and deployment references
+import_eligibility: eligible-with-host-fit-review
+rationale: Exact complete-package static review at the registered Microsoft Skills pin, bound to package tree SHA 620e71b64d369c1ea3aa5c8f4feee7793841e7a5 and SKILL.md blob a261c21ed056be1958902cf23f6ae4879001b404 plus bundled workflow, seven phase files, resource/constraint catalogs, verification/pairing checks, IaC generation, and deployment guidance. The package is unusually strong on authority: resource selection requires user approval, the verified plan requires separate manual explicit approval before IaC generation, and deployment has a fresh destructive-action gate that explicitly rejects the original task prompt, vague assent, or implicit intent and requires risk acknowledgement in a later reply. It also confirms subscription/resource group and requires explicit confirmation for each destructive action. Security insights may only weaken posture when explicitly requested. No workflow was found that solicits literal secrets into conversational context. Preserve as verified static reference for enterprise Azure planning/provisioning; host agents must still honor the package gates and local authority constraints. Behavioral validation has not been run.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-enterprise-infra-planner
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 620e71b64d369c1ea3aa5c8f4feee7793841e7a5
+skill_md_blob_sha: a261c21ed056be1958902cf23f6ae4879001b404
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [cloud, architecture, infrastructure, planning]
+  lifecycle: [planning, verification, deployment]
+  characteristic: [evidence-first, risk-aware, tool-assisted, reference-heavy]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md and bundled workflow, seven phase files, resource and pairing-constraint catalogs, WAF checklist, verification checks, Bicep/Terraform generation, and deployment guidance. The package has a coherent multi-gate authority model: preliminary resource selection requires user approval; Phase 5 requires manual explicit plan approval before IaC; Phase 7 requires a fresh reply after risks are presented, rejects the original prompt and vague assent as authorization, confirms subscription/resource group, and requires explicit confirmation for destructive actions. Security-related environmental insights cannot weaken posture unless the user explicitly requested that weaker posture. This satisfies the current authority hard rule for the package's consequential provisioning path. No literal-secret solicitation into conversational context was identified in the reviewed package. Static verification does not establish runtime behavior; behavioral validation remains not-run.
