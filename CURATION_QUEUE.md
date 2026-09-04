@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **334** persisted exact-version third-party verification companions.
+- **335** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **162/189**.
-- Remaining gaps: **27**.
+- Current-standard companions: **163/189**.
+- Remaining gaps: **26**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `mcp-builder`. `mcp-builder` is **rejected unchanged, 14/20** at package tree `c87383e3a3a307ff9867adf610672e9f0b24687b`, `SKILL.md` blob `792635390fff9f4c0032b1f0e06db1d81affe678`, freshness revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. Its ten-file package contributes strong MCP architecture, tool naming/schema/pagination discipline, transport and authentication patterns, DNS-rebinding protection, approval-mode examples, and read-only evaluation design. Unchanged adoption is rejected because consequential installs, project mutations, live-service operations, and Azure deployment are not consistently gated by mandatory action-specific authorization, while the bundled evaluation harness forwards raw MCP tool results to Anthropic without requiring disclosure authority, minimization, or redaction. Preserve the architecture and safety mechanisms for adaptation/reference use with explicit authority and sensitive-data boundaries. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `microsoft-docs`. `microsoft-docs` is **rejected unchanged, 16/20** at package tree `2e0eef527e4fafac394cca00144736954ecc9528`, `SKILL.md` blob `a5129731352a4dcad109b03e6f8e96bbdd00695b`, freshness revision `c80e39837bb085dd852a900f2580b9351d111a92` from 2026-03-31. Its single-file package contributes official-documentation routing, specific version/task/platform query shaping, search-before-fetch discipline, and bounded CLI retrieval controls. Unchanged adoption is rejected because the fallback explicitly offers persistent global installation of `@microsoft/learn-cli` without a mandatory action-specific authorization checkpoint. Preserve the retrieval mechanisms for adaptation/reference use with explicit authority before persistent host mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `mcp-builder`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `microsoft-docs`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `mcp-builder` is merged and public accounting is verified at **334 reviews / Microsoft Skills 162/189 / 27 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `microsoft-docs` is merged and public accounting is verified at **335 reviews / Microsoft Skills 163/189 / 26 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
