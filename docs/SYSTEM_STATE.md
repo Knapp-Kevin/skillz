@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 328 |
+| **Persisted third-party review companions** | 329 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 156 / 189 |
-| **Microsoft Skills current-standard gaps** | 33 |
+| **Microsoft Skills current-standard companions** | 157 / 189 |
+| **Microsoft Skills current-standard gaps** | 32 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **156/189 companion-complete**, **33 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **157/189 companion-complete**, **32 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -48,9 +48,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The direct TypeScript slice is **25/25 current-standard companion-complete**. Twenty-two packages are rejected unchanged and three bounded local implementation packages are verified: `frontend-ui-dark-ts` **15/20**, `react-flow-node-ts` **15/20**, and `zustand-store-ts` **16/20**. Exact identities, freshness, authority, portability, dependencies, rationale, and validation state remain in their individual companion records.
 
-The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), `azure-storage` (rejected, 12/20), and `azure-upgrade` (**rejected, 15/20**). `azure-upgrade` is bound to package tree `ad4f782ddd8eab34eacece4ccb1b66d65a0434d9`, `SKILL.md` blob `6b87a36c181440dd213443b19a2a58d25504a1ba`, freshness revision `0544d2eee104ee7a1e15e698166ae38ad8940606` from 2026-06-01. Preserve assessment-first sequencing, target confirmation, action authorization, rollback, resumability, and scenario-specific migration guidance. Unchanged adoption is rejected because bundled Functions automation surfaces the live `AzureWebJobsStorage` connection string for blob operations instead of using a secure identity-based credential path, and installs the Resource Graph CLI extension without a distinct action-specific authorization checkpoint. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier is active. Reviewed packages now include `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), `azure-kubernetes-automatic-readiness` (15/20), `azure-kusto` (14/20), `azure-messaging` (13/20), `azure-prepare` (16/20), `azure-quotas` (14/20), `azure-rbac` (verified, 17/20), `azure-reliability` (rejected, 15/20), `azure-resource-lookup` (rejected, 14/20), `azure-resource-visualizer` (rejected, 15/20), `azure-storage` (rejected, 12/20), `azure-upgrade` (rejected, 15/20), and `azure-validate` (**rejected, 16/20**). `azure-validate` is bound to package tree `f0eac59b12bba969fdec0e29b7558e441f7be14f`, `SKILL.md` blob `e852edd0519414ed61ee39d786b50bd8a8b0d389`, freshness revision `f2ced3b38ac6974989bd0c0de4c3a45fbd49b38d` from 2026-04-22. Preserve the prepare-before-validate gate, actual-command proof before status promotion, subscription/location confirmation, preview checks, unsupported-resource blockers, and static least-privilege RBAC review. Unchanged adoption is rejected because AZCLI/AZD recipes can install persistent host tooling and generate a missing `package-lock.json` without a distinct action-specific authorization checkpoint, while the broader workflow directs the agent to fix validation/build failures before proceeding. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **33** gaps. Establish the next gap from the registered-pin tree after `azure-upgrade`.
+Microsoft Skills remains active with **32** gaps. Establish the next gap from the registered-pin tree after `azure-validate`.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-upgrade`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `azure-validate`.
 2. Complete remaining Microsoft Skills non-direct plugin families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
