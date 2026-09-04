@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-kubernetes-automatic-readiness
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1694eb4d1069fda2eac18653fdae8d2b55a3646c
+skill_md_blob_sha: 452449d067b912207e88e2e4c0358571aba6ec66
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, deployment, security]
+  lifecycle: [planning, verification, operations]
+  characteristic: [evidence-first, human-review, reference-heavy, risk-aware, safety-bounded, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered SKILL.md and all four bundled references: constraint-spec-v1.yaml, common-fixes.md, mcp-integration.md, and migration-guide-summary.md. Strong mechanisms include a mandatory read-only cluster-assessment boundary, conservative secret handling, explicit approval before any file write, deterministic patch versus context-dependent remediation separation, combined-diff approval for batch fixes, offline fallback, and explicit constraint-spec version disclosure. Unchanged adoption fails the authority hard rule because the bundled migration guide supplies direct procedures for billable AKS cluster creation, credential acquisition, staging deployment, OIDC/workload-identity enablement, and old-cluster deletion without a mandatory action-specific authorization checkpoint immediately before each consequential external mutation. The top-level assessment guardrail is stronger than the migration reference it routes users into, so adaptation can preserve the assessment mechanics while adding per-action authorization to migration guidance. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
