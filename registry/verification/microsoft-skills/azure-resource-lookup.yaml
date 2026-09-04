@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-resource-lookup
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 19e257c3720521014d81cd3dbf4e188e0ece621b
+skill_md_blob_sha: d16d74bd6369fd15f8d96ff0b637ac361c7d6e13
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, research, monitoring]
+  lifecycle: [discovery, verification, operations]
+  characteristic: [retrieval-first, tool-routing, evidence-first, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-resource-lookup package: SKILL.md plus references/azure-resource-graph.md. Useful mechanisms include precise resource-inventory triggers and non-triggers, dedicated-MCP-tool-first routing, Azure Resource Graph fallback, explicit subscription and result limits, JMESPath output shaping, orphaned-resource patterns, tag coverage checks, provisioning/health inspection, and an explicit prohibition on ARG mutations. The hard fail is narrower than the cloud behavior: the package's Quick Reference and missing-extension recovery instruct `az extension add --name resource-graph`, which installs persistent local tooling without a mandatory action-specific authorization checkpoint. Under current authority governance, unchanged adoption is therefore rejected. Preserve the read-only lookup/query methods as adaptation/reference evidence, but require the host to establish authorization before any extension installation. Behavioral validation remains not-run.
