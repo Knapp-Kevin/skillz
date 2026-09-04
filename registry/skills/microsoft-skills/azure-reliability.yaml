@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-reliability
+display_name: Microsoft Azure Reliability
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-reliability/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: c5efa32e0ef4922d693785014258f7a0aefae259
+upstream_last_updated_at: 2026-05-27T16:59:58Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-reliability
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure Resource Graph; Azure CLI; Azure App Service and Functions resource context; Bicep or Terraform tooling when IaC patching is selected; bundled reliability assessment and remediation references
+import_eligibility: rejected-unchanged
+rationale: Exact static review of azure-reliability at the registered Microsoft Skills pin, bound to package tree SHA 1240c9672f0101c65ab0dbc461f9515a200b4486 and SKILL.md blob 835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb. The top-level workflow has unusually strong staged authorization: assessment precedes remediation; the user chooses live CLI versus IaC patching; storage migration, source-code health-endpoint changes, and multi-region work each require explicit consent. However, bundled configure-storage.md instructs the host to retrieve a live storage connection string with `az storage account show-connection-string --query connectionString -o tsv` and then place that secret into app settings. That exposes raw credential material to command output/conversational handling instead of requiring a secure external credential path or redacted transfer. Under the current secret-and-sensitive-data discipline, unchanged adoption therefore fails despite otherwise strong authority boundaries. Preserve its staged reliability assessment and consent mechanics as adaptation/reference evidence. Behavioral validation has not been run.

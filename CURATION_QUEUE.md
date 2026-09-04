@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **323** persisted exact-version third-party verification companions.
+- **324** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **151/189**.
-- Remaining gaps: **38**.
+- Current-standard companions: **152/189**.
+- Remaining gaps: **37**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -63,9 +63,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-messaging` — **rejected unchanged, 13/20**.
 - `azure-prepare` — **rejected unchanged, 16/20**.
 - `azure-quotas` — **rejected unchanged, 14/20**.
-- `azure-rbac` — **verified, 17/20**. Exact package tree `b52d696609b18a5dc2bae21e368812fe7b020ec5`, `SKILL.md` blob `02ac75d2ba22b4d7aa1e74469b01575281f05ddc`, freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve its least-privilege-first role selection, built-in-before-custom discipline, explicit `Microsoft.Authorization/roleAssignments/write` prerequisite, and preference for User Access Administrator over Owner when role assignment is the only need. The reviewed package is generate-only: it produces CLI commands and Bicep snippets but does not execute role assignments or mutate Azure state, so the mutation-authorization hard fail does not apply to unchanged use. Execution of generated artifacts remains a separate host-agent action requiring scoped authorization. Behavioral validation is `not-run`.
+- `azure-rbac` — **verified, 17/20**.
+- `azure-reliability` — **rejected unchanged, 15/20**. Exact package tree `1240c9672f0101c65ab0dbc461f9515a200b4486`, `SKILL.md` blob `835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb`, freshness revision `c5efa32e0ef4922d693785014258f7a0aefae259` from 2026-05-27. Preserve its scoped reliability assessment, staged live-vs-IaC path choice, separate storage-migration consent, explicit source-code-change consent, and multi-region hard stop. Unchanged adoption is rejected because bundled `references/configure-storage.md` emits a live storage connection string via CLI output before reusing it in Function App settings, violating the current secret-handling discipline. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-rbac`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-reliability`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -94,4 +95,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-rbac` is merged and public accounting is verified at **323 reviews / Microsoft Skills 151/189 / 38 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-reliability` is merged and public accounting is verified at **324 reviews / Microsoft Skills 152/189 / 37 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.

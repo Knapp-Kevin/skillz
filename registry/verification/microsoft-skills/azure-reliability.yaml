@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-reliability
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1240c9672f0101c65ab0dbc461f9515a200b4486
+skill_md_blob_sha: 835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, monitoring, deployment]
+  lifecycle: [verification, implementation, operations]
+  characteristic: [risk-aware, human-review, incremental, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-reliability package: SKILL.md plus 12 bundled reliability references. Strong mechanisms include scoped read-oriented discovery, feature-pivoted assessment, explicit choice between live CLI and IaC patching, quick-win sequencing, separate storage-migration confirmation, explicit consent before source-code health-endpoint changes, and a hard stop before multi-region work. Those are valuable staged-authorization patterns. Unchanged adoption is rejected under the repository's secret discipline because bundled references/configure-storage.md retrieves a live storage connection string with `az storage account show-connection-string --query connectionString -o tsv` and then instructs using that credential in Function App settings, causing raw secret material to be emitted into command output rather than transferred through a secure external credential path or redacted mechanism. The package is otherwise authority-conscious, so preserve its assessment, staged consent, and remediation sequencing as adaptation/reference evidence. Behavioral validation remains not-run.
