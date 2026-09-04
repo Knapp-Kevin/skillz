@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **335** persisted exact-version third-party verification companions.
+- **336** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **163/189**.
-- Remaining gaps: **26**.
+- Current-standard companions: **164/189**.
+- Remaining gaps: **25**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `microsoft-docs`. `microsoft-docs` is **rejected unchanged, 16/20** at package tree `2e0eef527e4fafac394cca00144736954ecc9528`, `SKILL.md` blob `a5129731352a4dcad109b03e6f8e96bbdd00695b`, freshness revision `c80e39837bb085dd852a900f2580b9351d111a92` from 2026-03-31. Its single-file package contributes official-documentation routing, specific version/task/platform query shaping, search-before-fetch discipline, and bounded CLI retrieval controls. Unchanged adoption is rejected because the fallback explicitly offers persistent global installation of `@microsoft/learn-cli` without a mandatory action-specific authorization checkpoint. Preserve the retrieval mechanisms for adaptation/reference use with explicit authority before persistent host mutation. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `podcast-generation`. `podcast-generation` is **rejected unchanged, 13/20** at package tree `a1aeeb2e902d732035066ed9f7be20cf120ce53c`, `SKILL.md` blob `7f2e72053b725adf289d5438138ddcee55e47012`, freshness revision `a2003b6b95ead129e53dd5377a2229682ff75b1b` from 2026-01-28. Its four-file package contributes Azure OpenAI Realtime event handling, explicit audio-format assumptions, deterministic PCM-to-WAV conversion, and a concrete FastAPI/React integration pattern. Unchanged adoption is rejected because application source content can be sent to an external model without a mandatory disclosure/minimization checkpoint and generated transcript/audio is persisted without action-specific authorization. Preserve those mechanisms for adaptation/reference use with explicit disclosure and persistence authority. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `microsoft-docs`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `podcast-generation`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `microsoft-docs` is merged and public accounting is verified at **335 reviews / Microsoft Skills 163/189 / 26 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `podcast-generation` is merged and public accounting is verified at **336 reviews / Microsoft Skills 164/189 / 25 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.

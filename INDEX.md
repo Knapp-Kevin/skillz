@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 335 |
+| Persisted third-party exact-version reviews | 336 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 163 / 189 |
-| Microsoft Skills current-standard gaps | 26 |
+| Microsoft Skills current-standard companions | 164 / 189 |
+| Microsoft Skills current-standard gaps | 25 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **163/189**, leaving **26** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **164/189**, leaving **25** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-Latest non-direct Microsoft closure: `microsoft-docs` is **rejected unchanged, 16/20**, bound to package tree `2e0eef527e4fafac394cca00144736954ecc9528`, `SKILL.md` blob `a5129731352a4dcad109b03e6f8e96bbdd00695b`, and freshness revision `c80e39837bb085dd852a900f2580b9351d111a92` from 2026-03-31. Its single-file package contributes official-documentation routing, version/task/platform-aware query shaping, search-before-fetch discipline, and bounded CLI retrieval controls. Unchanged adoption is rejected because the fallback explicitly offers persistent global installation of `@microsoft/learn-cli` without a mandatory action-specific authorization checkpoint. Preserve the retrieval mechanisms as adaptation/reference evidence with explicit authorization before persistent host mutation. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `podcast-generation` is **rejected unchanged, 13/20**, bound to package tree `a1aeeb2e902d732035066ed9f7be20cf120ce53c`, `SKILL.md` blob `7f2e72053b725adf289d5438138ddcee55e47012`, and freshness revision `a2003b6b95ead129e53dd5377a2229682ff75b1b` from 2026-01-28. Its four-file package contributes Azure OpenAI Realtime event handling, explicit PCM/WAV assumptions, deterministic conversion, and a concrete full-stack integration pattern. Unchanged adoption is rejected because it lacks mandatory disclosure/minimization authority before transmitting application content to an external model and lacks action-specific authorization before persisting generated transcript/audio. Preserve the mechanisms as adaptation/reference evidence with explicit authority. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `microsoft-docs`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `podcast-generation`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
