@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [identity, security, agents, cloud]
-  lifecycle: [configuration, deployment]
-  characteristic: [risk-aware, reference-heavy, tool-assisted, security-sensitive]
+  use_case: [security, cloud, agent-development]
+  lifecycle: [implementation, release, operations]
+  characteristic: [risk-aware, reference-heavy, tool-assisted]
   authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review covered SKILL.md plus all 6 bundled references for known limitations, OAuth2 token flow, OBO Blueprint setup, runtime token exchange, SDK sidecar architecture, and sidecar deployment. Strong prior art includes distinct per-agent service-principal identities and audit trails, typed Microsoft Graph endpoints, an explicit BlueprintPrincipal prerequisite, production preference for managed identity plus workload identity federation, per-Agent-Identity permission grants, cross-tenant home-tenant targeting, explicit token-exchange failure modes, and a localhost-only sidecar exposure rule. Unchanged adoption fails the authority hard rule because the core workflow directly creates identity objects and service principals, assigns application roles, creates AllPrincipals delegated permission grants including Tasks.ReadWrite and Mail.Send, and instructs admin consent, while prerequisites also install persistent PowerShell/Python dependencies. These identity/access and host-state mutations do not have mandatory action-specific authorization checkpoints immediately before execution. Preserve the identity topology, least-scope/per-agent design, token-exchange mechanics, sidecar containment, and troubleshooting evidence for adaptation/reference use. Require explicit scoped authorization before dependency installation, identity creation, credential configuration, permission grants, admin consent, deletion, or deployment. Behavioral validation remains not-run.
