@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-322-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-323-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **322 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **323 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,16 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **150/189** current-standard companion complete, **39** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **151/189** current-standard companion complete, **38** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), `azure-kubernetes-automatic-readiness` (**rejected, 15/20**), `azure-kusto` (**rejected, 14/20**), `azure-messaging` (**rejected, 13/20**), `azure-prepare` (**rejected, 16/20**), and `azure-quotas` (**rejected, 14/20**). `azure-quotas` is bound to exact package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40`, `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`, and freshness revision `c5efa32e0ef4922d693785014258f7a0aefae259` from 2026-05-27. Preserve its quota-name discovery, read-oriented CLI inspection, limit-minus-usage capacity calculation, regional comparison, unsupported-provider fallbacks, and explicit warning that “No Limit” does not prove unlimited capacity. Unchanged adoption is rejected because the package directly instructs quota update/create, `Microsoft.Quota` provider registration, and Azure CLI extension installation without mandatory action-specific authorization immediately before those mutations. Behavioral validation is `not-run`.
+The active non-direct Microsoft frontier now includes `airunway-aks-setup` (**rejected, 15/20**), `appinsights-instrumentation` (**12/20**), `azure-ai` (**10/20**), `azure-aigateway` (**8/20**), `azure-cloud-migrate` (**9/20**), `azure-compliance` (**12/20**), `azure-compute` (**11/20**), `azure-cost` (**14/20**), `azure-deploy` (**15/20**), `azure-diagnostics` (**13/20**), `azure-enterprise-infra-planner` (**verified, 18/20**), `azure-hosted-copilot-sdk` (**rejected, 13/20**), `azure-kubernetes` (**rejected, 12/20**), `azure-kubernetes-automatic-readiness` (**rejected, 15/20**), `azure-kusto` (**rejected, 14/20**), `azure-messaging` (**rejected, 13/20**), `azure-prepare` (**rejected, 16/20**), `azure-quotas` (**rejected, 14/20**), and `azure-rbac` (**verified, 17/20**). `azure-rbac` is bound to exact package tree `b52d696609b18a5dc2bae21e368812fe7b020ec5`, `SKILL.md` blob `02ac75d2ba22b4d7aa1e74469b01575281f05ddc`, and freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve its least-privilege-first role selection, built-in-before-custom discipline, explicit `Microsoft.Authorization/roleAssignments/write` prerequisite, and preference for User Access Administrator over Owner when role assignment is the only need. The reviewed package only generates CLI commands and Bicep snippets; it does not execute assignments or mutate Azure state, so the mutation-authorization hard fail does not apply to unchanged use. Execution of generated artifacts remains a separate host-agent action requiring scoped authorization. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **39** gaps. The next gap must be established from the registered-pin tree after `azure-quotas`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **38** gaps. The next gap must be established from the registered-pin tree after `azure-rbac`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
