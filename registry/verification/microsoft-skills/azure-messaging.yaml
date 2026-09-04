@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-messaging
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: de972c7cf2a46e572b5fcfd24ed8963bc41b5a04
+skill_md_blob_sha: 512147e502149117b33fed6c0a367606f1829e1e
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, debugging]
+  lifecycle: [verification, operations]
+  characteristic: [evidence-first, risk-aware, tool-assisted]
+  authority: [read-only, external-side-effect]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-messaging package and its explicitly declared shared messaging-troubleshooting dependency. Strong mechanisms include SDK/version identification, resource-health-first diagnosis, documentation lookup, connection/entity configuration checks, and read-oriented namespace, hub, queue, topic, subscription, log, and health inspection. Unchanged adoption fails current authority governance because the diagnosis workflow terminates in applying remediation without a mandatory action-specific authorization checkpoint. The shared authentication guidance also recommends consequential production identity/security and credential operations including managed-identity/RBAC configuration, secret or certificate rotation, and enabling Defender for Cloud, again without a per-action authorization boundary. Adaptation can retain the diagnostic sequence while forcing a read-only stopping point and requiring explicit scoped approval before any application, identity, security-control, credential, messaging-state, or infrastructure mutation. Static rejection does not establish runtime behavior; behavioral validation remains not-run.

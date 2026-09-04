@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **319** persisted exact-version third-party verification companions.
+- **320** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **147/189**.
-- Remaining gaps: **42**.
+- Current-standard companions: **148/189**.
+- Remaining gaps: **41**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -59,9 +59,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-hosted-copilot-sdk` — **rejected unchanged, 13/20**.
 - `azure-kubernetes` — **rejected unchanged, 12/20**.
 - `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**.
-- `azure-kusto` — **rejected unchanged, 14/20**. Exact package tree `71a8cb8f91c6078d4b745c0bf0c46d45437c263f`, `SKILL.md` blob `76e6b1764da1d7352dd3d6056571751f4395c746`, freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve schema-first exploration, read-only KQL/resource/schema queries, time filtering, bounded result sets, aggregation guidance, and CLI/REST query fallback. Unchanged adoption fails because the skill explicitly targets SIEM/security events, audit logs, user behavior, telemetry, and raw rows without a mandatory sensitive-data disclosure scope, minimization, redaction, or authorization checkpoint; persistent optimization/ingestion recommendations also lack separate action authorization. Behavioral validation is `not-run`.
+- `azure-kusto` — **rejected unchanged, 14/20**.
+- `azure-messaging` — **rejected unchanged, 13/20**. Exact package tree `de972c7cf2a46e572b5fcfd24ed8963bc41b5a04`, `SKILL.md` blob `512147e502149117b33fed6c0a367606f1829e1e`, freshness revision `6caaee77319fb3d6cb2b749c70586a1313bde78d` from 2026-04-29. Preserve SDK/version identification, resource-health-first diagnosis, documentation lookup, configuration checks, and read-oriented namespace/entity/log inspection. Unchanged adoption fails because its diagnosis workflow proceeds to applying remediation without a mandatory action-specific authorization checkpoint, while its declared shared messaging troubleshooting guidance includes managed-identity/RBAC changes, secret/certificate rotation, and enabling Defender for Cloud without per-action authorization. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-kusto`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-messaging`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -90,4 +91,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-kusto` is merged and public accounting is verified at **319 reviews / Microsoft Skills 147/189 / 42 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-messaging` is merged and public accounting is verified at **320 reviews / Microsoft Skills 148/189 / 41 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
