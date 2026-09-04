@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-storage
+display_name: Microsoft Azure Storage
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-storage/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 10cfecf15420a913fd7e8842cd4f953fbd9ef9a4
+upstream_last_updated_at: 2026-05-01T13:38:59Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-storage
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP storage tools or Azure CLI; authenticated Azure identity with appropriate storage RBAC; bundled auth and SDK guidance; language-specific Azure Storage SDKs and package managers for implementation examples; complete 14-file package including 13 bundled Markdown references
+import_eligibility: rejected-unchanged
+rationale: Exact static review of azure-storage at the registered Microsoft Skills pin, bound to package tree SHA 58ffdd0c0f466a983a0064239d481fb08e58b7c8 and SKILL.md blob 21bdc643b63e040a9b1efe7422474cfb393ddc85. Preserve its service-selection guidance, access-tier and redundancy summaries, passwordless production-authentication guidance, least-privilege RBAC advice, and multi-language SDK references as adaptation/reference evidence. Unchanged adoption is rejected because the package directly instructs blob uploads and overwrite-capable SDK writes, host package installation, setup/enabling actions, credential rotation, and enabling Defender for Cloud without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. Blob download/get paths also lack an explicit sensitive-data disclosure/minimization boundary. Behavioral validation has not been run.
