@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-hosted-copilot-sdk
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ee166d12b8f9a88a1d4d932a23e844d8203efa13
+skill_md_blob_sha: 64b239df00aa320b64a9009c1875b303a87080b1
+characterized_at: 2026-09-03
+last_verified_at: 2026-09-03
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, copilot, sdk, application-development]
+  lifecycle: [planning, implementation, deployment]
+  characteristic: [tool-assisted, reference-heavy, credential-sensitive]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md plus bundled authentication, Azure model configuration, Copilot SDK, deploy-existing, and existing-project integration references. Useful mechanisms include deterministic SDK-marker routing, temp-directory scaffolding to protect existing projects, managed identity for production, least-privilege RBAC guidance, Key Vault-backed token custody, and explicit handoff to azure-prepare/azure-validate/azure-deploy. Unchanged adoption fails the authority hard rule because troubleshooting directs `gh auth refresh --scopes copilot`, an identity/credential authorization change, without a mandatory action-specific approval immediately before mutation. In addition, its deployment path inherits the exact pinned azure-deploy package, currently rejected unchanged because post-deployment RBAC/database mutations lack a dedicated action-specific checkpoint; this package adds no compensating boundary. No literal-secret solicitation into conversational context was identified. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
