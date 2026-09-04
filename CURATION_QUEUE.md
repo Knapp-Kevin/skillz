@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **318** persisted exact-version third-party verification companions.
+- **319** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **146/189**.
-- Remaining gaps: **43**.
+- Current-standard companions: **147/189**.
+- Remaining gaps: **42**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -58,9 +58,10 @@ Current non-direct Microsoft plugin frontier:
 - `azure-enterprise-infra-planner` — **verified, 18/20**.
 - `azure-hosted-copilot-sdk` — **rejected unchanged, 13/20**.
 - `azure-kubernetes` — **rejected unchanged, 12/20**.
-- `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**. Exact package tree `1694eb4d1069fda2eac18653fdae8d2b55a3646c`, `SKILL.md` blob `452449d067b912207e88e2e4c0358571aba6ec66`, freshness revision `1ecb3055e2d82e166e9bd4da6975eec65c41e3fd` from 2026-05-29. Preserve the mandatory read-only assessment boundary, secret non-disclosure, explicit approval before file writes, deterministic versus context-dependent remediation separation, combined-diff approval for batch fixes, offline fallback, and explicit constraint-spec version disclosure. Unchanged adoption fails because the bundled migration guide directly provides procedures for billable AKS cluster creation, credential acquisition, staging deployment, OIDC/workload-identity enablement, and old-cluster deletion without mandatory action-specific authorization immediately before those consequential external mutations. Behavioral validation is `not-run`.
+- `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**.
+- `azure-kusto` — **rejected unchanged, 14/20**. Exact package tree `71a8cb8f91c6078d4b745c0bf0c46d45437c263f`, `SKILL.md` blob `76e6b1764da1d7352dd3d6056571751f4395c746`, freshness revision `951d18d43210f0d93a931ae5d5c2a774f63d5faf` from 2026-04-21. Preserve schema-first exploration, read-only KQL/resource/schema queries, time filtering, bounded result sets, aggregation guidance, and CLI/REST query fallback. Unchanged adoption fails because the skill explicitly targets SIEM/security events, audit logs, user behavior, telemetry, and raw rows without a mandatory sensitive-data disclosure scope, minimization, redaction, or authorization checkpoint; persistent optimization/ingestion recommendations also lack separate action authorization. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-kubernetes-automatic-readiness`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `azure-kusto`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -89,4 +90,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `azure-kubernetes-automatic-readiness` is merged and public accounting is verified at **318 reviews / Microsoft Skills 146/189 / 43 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `azure-kusto` is merged and public accounting is verified at **319 reviews / Microsoft Skills 147/189 / 42 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
