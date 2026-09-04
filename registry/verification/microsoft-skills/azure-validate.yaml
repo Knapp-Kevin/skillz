@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-validate
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f0eac59b12bba969fdec0e29b7558e441f7be14f
+skill_md_blob_sha: e852edd0519414ed61ee39d786b50bd8a8b0d389
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, deployment, testing, security]
+  lifecycle: [verification, release]
+  characteristic: [evidence-first, risk-aware, tool-assisted, reference-heavy, safety-bounded]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md plus all 16 bundled references for AZD, Azure CLI, Bicep, Terraform, policy, region, Aspire/Functions secret-storage configuration, error handling, environment setup, and static RBAC verification. Strong prior art includes a hard prepare-before-validate prerequisite, real-command proof before status promotion, static least-privilege role review, subscription/location confirmation, what-if/preview checks, explicit blockers for unsupported Aspire resources, and refusal to deploy after failed validation. Unchanged adoption fails the authority hard rule because the AZCLI and AZD validation recipes directly install persistent host tooling when missing and generate package-lock.json when absent without a distinct action-specific authorization checkpoint. The broader workflow also instructs the agent to fix build/configuration failures before proceeding; the package-level destructive-action rule covers destructive/overwrite/security cases but is not a fresh authorization boundary for every persistent setup or workspace mutation. Preserve the validation sequencing, proof discipline, blocker handling, preview checks, and static role-verification mechanics for adaptation/reference use. Require explicit authorization before installing tools, changing dependencies or lockfiles, editing source/IaC/configuration, or otherwise mutating the workspace beyond the already-authorized validation scope. Behavioral validation remains not-run.
