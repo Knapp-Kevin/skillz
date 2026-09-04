@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-quotas
+display_name: Microsoft Azure Quotas
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-quotas/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: c5efa32e0ef4922d693785014258f7a0aefae259
+upstream_last_updated_at: 2026-05-27T16:59:58Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-quotas
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure CLI; quota extension; authenticated Azure subscription context; Reader or Quota Request Operator permissions; bundled commands/advanced-commands references and check-quota PowerShell/bash scripts
+import_eligibility: reference-or-adaptation-only
+rationale: Exact static review of azure-quotas at the registered Microsoft Skills pin, bound to package tree SHA 8a628e265ecb05a8f78a9a7e4e4772fb82d78c40 and SKILL.md blob cbd67b6c336362ee343390e713b91b5662841038. Preserve its quota-name discovery discipline, CLI-first read workflows, capacity calculation, regional comparison, unsupported-provider fallbacks, and warning that No Limit does not imply unlimited capacity. Unchanged adoption fails current authority governance because the package directly instructs quota increase/create requests and provider registration without a mandatory action-specific authorization checkpoint immediately before those subscription-scoped external mutations. It also mandates installing the Azure CLI quota extension as a prerequisite without explicit approval for that local toolchain mutation. Adaptation should keep read-only quota inspection separate from mutating quota/provider/tool-install operations and require scoped authorization before each consequential action. Behavioral validation has not been run.
