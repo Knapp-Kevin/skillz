@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: entra-agent-id
+display_name: Microsoft Entra Agent ID
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/entra-agent-id/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 5bc90f7cc3012cb8e9a6f14b5ccb5a3edcd1cc67
+upstream_last_updated_at: 2026-03-24T19:20:29Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/entra-agent-id
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Microsoft Graph; Microsoft Entra roles and Graph permissions; PowerShell 7 and Microsoft.Graph.Applications or Python with azure-identity and requests; Azure CLI for sponsor lookup/admin consent examples; complete 7-file package consisting of SKILL.md plus 6 bundled references
+import_eligibility: rejected-unchanged
+rationale: Exact static review of entra-agent-id at the registered Microsoft Skills pin, bound to package tree SHA 405ed207c079150581ef0540a0b4a0a1f176fc9e and SKILL.md blob 5aaf917945171757112bdb341fb593b4517542cd. Preserve its per-agent identity model, typed Graph endpoints, BlueprintPrincipal prerequisite, production preference for workload identity federation, per-agent permission scoping, cross-tenant token-exchange guidance, localhost-only sidecar boundary, and explicit separation from ordinary app registration/RBAC. Unchanged adoption is rejected because the workflow directly installs host dependencies, creates Blueprints/BlueprintPrincipals/Agent Identities, grants application and tenant-wide delegated permissions, and invokes admin consent without mandatory action-specific authorization immediately before those identity/access mutations. Behavioral validation has not been run.
