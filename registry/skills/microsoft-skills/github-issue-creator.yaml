@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: github-issue-creator
+display_name: Microsoft GitHub Issue Creator
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/github-issue-creator/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: a2003b6b95ead129e53dd5377a2229682ff75b1b
+upstream_last_updated_at: 2026-01-28T18:33:12Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/github-issue-creator
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: complete single-file package consisting only of SKILL.md; target repository context and local filesystem/repository write capability are assumed when following its output-location instruction
+import_eligibility: rejected-unchanged
+rationale: Exact static review of github-issue-creator at the registered Microsoft Skills pin, bound to package tree SHA bd1b5edf4cefdca8e192610e2e990130f67f704d and SKILL.md blob 4351dcd35e719b49c81fa3430708f103db9cdf82. The skill provides a concise issue-report template, severity mapping, attachment references, and explicit placeholder handling for sensitive values. Unchanged adoption is rejected because it mandates creating markdown files under /issues/ in the target repository without a mandatory action-specific authorization checkpoint immediately before that repository mutation. Its instruction to infer missing context from conversation or memory also risks converting absent or stale facts into asserted issue metadata rather than preserving unknowns as unknown. Preserve the structured issue-writing, evidence-shaping, sensitive-placeholder, and severity-calibration mechanisms for adaptation. Behavioral validation has not been run.
