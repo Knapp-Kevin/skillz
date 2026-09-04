@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **330** persisted exact-version third-party verification companions.
+- **331** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,44 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **158/189**.
-- Remaining gaps: **31**.
+- Current-standard companions: **159/189**.
+- Remaining gaps: **30**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft plugin frontier:
+Current non-direct Microsoft frontier has advanced through `entra-agent-id` and now `frontend-design-review`. `frontend-design-review` is **verified, 17/20** at package tree `5168482e112971181f4c4fec05ce694792bafd02`, `SKILL.md` blob `6fd8fe378026252e3810eae36844704f3c684fe3`, freshness revision `cbfd1b6652debe08f9d329d713b382a1a0db2e3e` from 2026-02-24. Its complete five-file package provides explicit trigger boundaries, separate design-review and creative-generation modes, design-system/token checks, accessibility review modifiers, a three-pillar quality rubric, severity-ranked findings, and bounded output/checklist references. The package is generate-only and does not itself instruct external mutation or sensitive-data disclosure; behavioral validation is `not-run`.
 
-- `airunway-aks-setup` — **rejected unchanged, 15/20**.
-- `appinsights-instrumentation` — **rejected unchanged, 12/20**.
-- `azure-ai` — **rejected unchanged, 10/20**.
-- `azure-aigateway` — **rejected unchanged, 8/20**.
-- `azure-cloud-migrate` — **rejected unchanged, 9/20**.
-- `azure-compliance` — **rejected unchanged, 12/20**.
-- `azure-compute` — **rejected unchanged, 11/20**.
-- `azure-cost` — **rejected unchanged, 14/20**.
-- `azure-deploy` — **rejected unchanged, 15/20**.
-- `azure-diagnostics` — **rejected unchanged, 13/20**.
-- `azure-enterprise-infra-planner` — **verified, 18/20**.
-- `azure-hosted-copilot-sdk` — **rejected unchanged, 13/20**.
-- `azure-kubernetes` — **rejected unchanged, 12/20**.
-- `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**.
-- `azure-kusto` — **rejected unchanged, 14/20**.
-- `azure-messaging` — **rejected unchanged, 13/20**.
-- `azure-prepare` — **rejected unchanged, 16/20**.
-- `azure-quotas` — **rejected unchanged, 14/20**.
-- `azure-rbac` — **verified, 17/20**.
-- `azure-reliability` — **rejected unchanged, 15/20**.
-- `azure-resource-lookup` — **rejected unchanged, 14/20**.
-- `azure-resource-visualizer` — **rejected unchanged, 15/20**.
-- `azure-storage` — **rejected unchanged, 12/20**.
-- `azure-upgrade` — **rejected unchanged, 15/20**.
-- `azure-validate` — **rejected unchanged, 16/20**.
-- `entra-agent-id` — **rejected unchanged, 13/20**. Exact package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e`, `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`, freshness revision `5bc90f7cc3012cb8e9a6f14b5ccb5a3edcd1cc67` from 2026-03-24. Preserve distinct per-agent identities/audit trails, typed Graph endpoints, BlueprintPrincipal prerequisite, workload-identity preference, per-agent permission scoping, cross-tenant token-exchange mechanics, localhost-only sidecar containment, and troubleshooting evidence. Unchanged adoption is rejected because the workflow installs host dependencies, creates Entra identity objects/service principals, grants application and tenant-wide delegated permissions, and invokes admin consent without mandatory action-specific authorization checkpoints immediately before those identity/access mutations. Behavioral validation is `not-run`.
-
-The next Microsoft Skills unit must be established from the registered-pin tree after `entra-agent-id`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `frontend-design-review`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -101,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `entra-agent-id` is merged and public accounting is verified at **330 reviews / Microsoft Skills 158/189 / 31 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `frontend-design-review` is merged and public accounting is verified at **331 reviews / Microsoft Skills 159/189 / 30 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
