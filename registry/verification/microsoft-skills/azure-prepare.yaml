@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-prepare
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9
+skill_md_blob_sha: 113c40edd44841b05b26ab836604c6a6d644fef4
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, planning, deployment]
+  lifecycle: [planning, design, implementation, verification]
+  characteristic: [contract-first, human-review, risk-aware, safety-bounded, tool-routing]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: Exact static review covered the complete pinned azure-prepare package. Strong mechanisms include a mandatory plan-first workflow, explicit approval before execution, subscription and location confirmation, destructive-action confirmation, Entra-only SQL guidance, specialized-skill routing, security hardening, functional verification, and a strict validate-before-deploy handoff that keeps deployment execution outside this skill. Unchanged adoption fails current authority governance because the skill requires writing .azure/deployment-plan.md as its very first action before workspace analysis or plan approval and does not first check whether that path already exists. The package's own global rules classify overwriting existing files as destructive and require ask_user, creating an internal safety conflict if an existing deployment plan would be replaced. Adaptation should preserve the staged preparation workflow but inspect the destination first, preserve an existing plan by default, and require explicit scoped approval before replacement. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
