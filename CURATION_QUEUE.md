@@ -1,13 +1,13 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority. Detailed exact-version evidence belongs in the provenance and verification companions; this ledger records current denominators, frontier state, lifecycle debt, and discovery decisions without duplicating the entire evidence shelf.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority. Detailed exact-version evidence belongs in provenance and verification companions; this ledger records current denominators, frontier state, lifecycle debt, and discovery decisions.
 
 ## Current governed depth
 
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **329** persisted exact-version third-party verification companions.
+- **330** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,43 +35,22 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **157/189**.
-- Remaining gaps: **32**.
+- Current-standard companions: **158/189**.
+- Remaining gaps: **31**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft plugin frontier:
+Current non-direct Microsoft plugin frontier includes `airunway-aks-setup`, `appinsights-instrumentation`, `azure-ai`, `azure-aigateway`, `azure-cloud-migrate`, `azure-compliance`, `azure-compute`, `azure-cost`, `azure-deploy`, `azure-diagnostics`, `azure-enterprise-infra-planner`, `azure-hosted-copilot-sdk`, `azure-kubernetes`, `azure-kubernetes-automatic-readiness`, `azure-kusto`, `azure-messaging`, `azure-prepare`, `azure-quotas`, `azure-rbac`, `azure-reliability`, `azure-resource-lookup`, `azure-resource-visualizer`, `azure-storage`, `azure-upgrade`, `azure-validate`, and `entra-agent-id`.
 
-- `airunway-aks-setup` — **rejected unchanged, 15/20**.
-- `appinsights-instrumentation` — **rejected unchanged, 12/20**.
-- `azure-ai` — **rejected unchanged, 10/20**.
-- `azure-aigateway` — **rejected unchanged, 8/20**.
-- `azure-cloud-migrate` — **rejected unchanged, 9/20**.
-- `azure-compliance` — **rejected unchanged, 12/20**.
-- `azure-compute` — **rejected unchanged, 11/20**.
-- `azure-cost` — **rejected unchanged, 14/20**.
-- `azure-deploy` — **rejected unchanged, 15/20**.
-- `azure-diagnostics` — **rejected unchanged, 13/20**.
 - `azure-enterprise-infra-planner` — **verified, 18/20**.
-- `azure-hosted-copilot-sdk` — **rejected unchanged, 13/20**.
-- `azure-kubernetes` — **rejected unchanged, 12/20**.
-- `azure-kubernetes-automatic-readiness` — **rejected unchanged, 15/20**.
-- `azure-kusto` — **rejected unchanged, 14/20**.
-- `azure-messaging` — **rejected unchanged, 13/20**.
-- `azure-prepare` — **rejected unchanged, 16/20**.
-- `azure-quotas` — **rejected unchanged, 14/20**.
 - `azure-rbac` — **verified, 17/20**.
-- `azure-reliability` — **rejected unchanged, 15/20**.
-- `azure-resource-lookup` — **rejected unchanged, 14/20**.
-- `azure-resource-visualizer` — **rejected unchanged, 15/20**.
-- `azure-storage` — **rejected unchanged, 12/20**.
-- `azure-upgrade` — **rejected unchanged, 15/20**.
-- `azure-validate` — **rejected unchanged, 16/20**. Exact package tree `f0eac59b12bba969fdec0e29b7558e441f7be14f`, `SKILL.md` blob `e852edd0519414ed61ee39d786b50bd8a8b0d389`, freshness revision `f2ced3b38ac6974989bd0c0de4c3a45fbd49b38d` from 2026-04-22. Preserve prepare-before-validate gating, actual-command proof before `Validated`, subscription/location confirmation, preview/what-if checks, unsupported-resource blockers, and static least-privilege RBAC review. Unchanged adoption is rejected because AZCLI/AZD recipes can install persistent host tooling and generate a missing `package-lock.json` without a distinct action-specific authorization checkpoint, while the broader workflow directs the agent to fix validation/build failures before proceeding. Behavioral validation is `not-run`.
+- `azure-validate` — **rejected unchanged, 16/20**.
+- `entra-agent-id` — **rejected unchanged, 13/20**. Exact package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e`, `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`, freshness revision `5bc90f7cc3012cb8e9a6f14b5ccb5a3edcd1cc67` from 2026-03-24. Preserve distinct per-agent identities/audit trails, typed Graph endpoints, BlueprintPrincipal prerequisite, workload-identity preference, per-agent permission scoping, cross-tenant token-exchange mechanics, localhost-only sidecar containment, and troubleshooting evidence. Unchanged adoption is rejected because the workflow installs host dependencies, creates Entra identity objects/service principals, grants application and tenant-wide delegated permissions, and invokes admin consent without mandatory action-specific authorization checkpoints immediately before those identity/access mutations. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `azure-validate`.
+The next Microsoft Skills unit must be established from the registered-pin tree after `entra-agent-id`.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -79,25 +58,16 @@ Use the registered source identity and pin in `registry/sources.yaml`. Do not be
 
 ## Governed discovery / source-vetting
 
-Discovery proceeds in parallel but cannot displace admitted-source closure.
-
-Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sean Kochel, Chase AI+, and the bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
+Discovery proceeds in parallel but cannot displace admitted-source closure. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sean Kochel, Chase AI+, and bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
 ## Lifecycle hygiene
 
-At each run:
-
-1. inspect every open PR and issue before new curation;
-2. merge a green, current, authorized, still-correct PR in the same run;
-3. close evidence-complete, duplicate, or fully superseded bounded issues after preserving unique evidence;
-4. state concrete blockers for genuinely blocked work;
-5. reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after material corpus changes;
-6. preserve the passive architecture and never add repository-owned runtime, scripts, tests, CI, schedulers, monitors, crawlers, installers, synchronizers, preflight, generators, or background services.
+At each run: inspect every open PR and issue before new curation; merge a green, current, authorized, still-correct PR in the same run; close evidence-complete, duplicate, or fully superseded bounded issues after preserving unique evidence; state concrete blockers for genuinely blocked work; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after material corpus changes; and preserve the passive architecture without repository-owned execution machinery.
 
 ## Historical authority boundary
 
-Wayfinder #35 remains the canonical destination/scope evidence, but its stale frontier text is historical. Source queue #27, structure ticket #41, and PR #42 are closed historical evidence. Current README and Tier-1 governance control live execution. Do not revive #41/#42-era structure work unless current governance explicitly re-establishes it.
+Wayfinder #35 remains canonical destination/scope evidence, but its stale frontier text is historical. Source queue #27, structure ticket #41, and PR #42 are closed historical evidence. Current README and Tier-1 governance control live execution. Do not revive #41/#42-era structure work unless current governance explicitly re-establishes it.
 
 ## Next action
 
-After `azure-validate` is merged and public accounting is verified at **329 reviews / Microsoft Skills 157/189 / 32 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `entra-agent-id` is merged and public accounting is verified at **330 reviews / Microsoft Skills 158/189 / 31 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
