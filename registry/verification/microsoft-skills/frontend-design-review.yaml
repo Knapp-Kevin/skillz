@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: frontend-design-review
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5168482e112971181f4c4fec05ce694792bafd02
+skill_md_blob_sha: 6fd8fe378026252e3810eae36844704f3c684fe3
+characterized_at: 2026-09-04
+last_verified_at: 2026-09-04
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [ux, code-review, implementation]
+  lifecycle: [design, implementation, verification]
+  characteristic: [human-review, visual-verification, risk-aware]
+  authority: [generate-only]
+  portability: [medium]
+notes: Exact complete-package review covered SKILL.md plus all 4 bundled references: review-output-format, review-type-modifiers, quick-checklist, and pattern-examples. Strong mechanisms include explicit USE FOR/DO NOT USE FOR boundaries; separate design-review and creative-generation modes; pre-coding aesthetic-direction framing; design-system and token checks; a three-pillar frictionless/craft/trustworthy rubric; blocking/major/minor issue prioritization; accessibility modifiers covering keyboard, screen readers, contrast and zoom; and a structured review output. The package does not instruct external mutation, deployment, credential handling, production traffic changes, user communications, or sensitive-data disclosure. Its creative mode generates frontend implementation material, while review mode produces findings and recommendations, so generate-only is the conservative authority classification and the action-specific mutation hard fail is not triggered. Portability is medium because the general rubric is portable but design-system-specific verification assumes access to Figma Dev Mode/component-library context. The package acknowledges Quirine van Walt Meijer's framework and inspiration from Anthropic frontend-design; the registered Microsoft Skills source remains MIT while acknowledged upstream material retains its respective terms. Behavioral validation remains not-run.
