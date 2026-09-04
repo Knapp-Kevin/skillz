@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-rbac
+display_name: Microsoft Azure RBAC
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-rbac/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 951d18d43210f0d93a931ae5d5c2a774f63d5faf
+upstream_last_updated_at: 2026-04-21T21:13:53Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-rbac
+permission_tier: generate-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: Azure documentation MCP/tooling; Azure CLI command-generation tooling; Azure Bicep schema/best-practices tooling; target Azure identity/resource context supplied by the host/user
+import_eligibility: verified-exact-version
+rationale: Exact static review of azure-rbac at the registered Microsoft Skills pin, bound to package tree SHA b52d696609b18a5dc2bae21e368812fe7b020ec5 and SKILL.md blob 02ac75d2ba22b4d7aa1e74469b01575281f05ddc. The skill is concise and least-privilege oriented: it asks the host to resolve the minimal built-in role first, generate a custom definition only when necessary, then generate CLI and Bicep artifacts rather than execute assignments itself. It also correctly identifies Microsoft.Authorization/roleAssignments/write as the capability needed to grant roles and recommends User Access Administrator over Owner for role-assignment-only needs. Because the reviewed package is generate-only and contains no command-execution or external mutation step, the action-specific mutation authorization hard fail does not apply to unchanged use. Operational use of the generated commands remains subject to the host agent's separate authorization boundary. Behavioral validation has not been run.
