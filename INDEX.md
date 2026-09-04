@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-09-03
+**Snapshot date:** 2026-09-04
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, or reconciliation.
 
@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 317 |
+| Persisted third-party exact-version reviews | 318 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 145 / 189 |
-| Microsoft Skills current-standard gaps | 44 |
+| Microsoft Skills current-standard companions | 146 / 189 |
+| Microsoft Skills current-standard gaps | 43 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **145/189**, leaving **44** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **146/189**, leaving **43** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), and `azure-kubernetes` (**rejected unchanged, 12/20**). `azure-kubernetes` is bound to exact package tree `bab7f5eab9e8e1c311ef1fc29b419963903fbe09`; preserve Day-0/Day-1 framing, AKS Automatic defaults, security/reliability guidance, secret non-disclosure, and scenario deep dives. Unchanged adoption fails because bundled CLI guidance performs consequential cluster creation/configuration without action-specific approval immediately before mutation. Behavioral validation is `not-run`.
+The non-direct Microsoft plugin frontier currently includes `airunway-aks-setup` (15/20), `appinsights-instrumentation` (12/20), `azure-ai` (10/20), `azure-aigateway` (8/20), `azure-cloud-migrate` (9/20), `azure-compliance` (12/20), `azure-compute` (11/20), `azure-cost` (14/20), `azure-deploy` (15/20), `azure-diagnostics` (13/20), `azure-enterprise-infra-planner` (verified, 18/20), `azure-hosted-copilot-sdk` (13/20), `azure-kubernetes` (12/20), and `azure-kubernetes-automatic-readiness` (**rejected unchanged, 15/20**). The readiness package is bound to exact package tree `1694eb4d1069fda2eac18653fdae8d2b55a3646c`; preserve its read-only assessment boundary, secret non-disclosure, explicit approval before file writes, deterministic/context-dependent remediation split, combined-diff approval, offline fallback, and versioned constraint-spec disclosure. Unchanged adoption fails because bundled migration guidance performs consequential AKS creation, identity enablement, deployment, credential acquisition, and deletion operations without action-specific approval immediately before mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `azure-kubernetes`; the nested front-mattered `azure-kubernetes-automatic-readiness` is independently eligible and requires its own exact-version disposition.
+The next Microsoft Skills gap must be established from the registered-pin tree after `azure-kubernetes-automatic-readiness`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
