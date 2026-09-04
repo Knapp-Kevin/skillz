@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-lookup
+display_name: Microsoft Azure Resource Lookup
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-resource-lookup/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 981d9b71d0187be796b03c2f4d69cccca80c0e42
+upstream_last_updated_at: 2026-05-25T12:08:54Z
+curated_at: 2026-09-04
+last_checked_at: 2026-09-04
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-resource-lookup
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure CLI; Azure Resource Graph extension; Azure MCP extension_cli_generate and subscription/group listing tools when available; Reader access to queried Azure scopes; bundled Azure Resource Graph query-pattern reference
+import_eligibility: rejected-unchanged
+rationale: Exact static review of azure-resource-lookup at the registered Microsoft Skills pin, bound to package tree SHA 19e257c3720521014d81cd3dbf4e188e0ece621b and SKILL.md blob d16d74bd6369fd15f8d96ff0b637ac361c7d6e13. The package is intentionally read-oriented for Azure inventory, cross-subscription lookup, tag/configuration audits, orphan discovery, and health-state inspection; ARG itself is explicitly constrained to read-only use and mutations are routed elsewhere. Preserve its dedicated-tool-first routing, explicit subscription/result scoping, query-shaping patterns, and orphan/tag inventory mechanisms. Unchanged adoption is rejected because the Quick Reference and error-recovery path instruct `az extension add --name resource-graph`, which mutates the host environment by installing a CLI extension without a mandatory action-specific authorization checkpoint immediately before that change. Behavioral validation has not been run.
