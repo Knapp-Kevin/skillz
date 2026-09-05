@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: deploy-model
+display_name: Microsoft Foundry Deploy Model
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 1ee982fe7c88e38bc0ed4b5d711ad3177b29a887
+upstream_last_updated_at: 2026-07-02
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model
+permission_tier: external-side-effect
+portability: low
+review_status: verified
+dependency_status: source-intact
+dependencies: Complete deploy-model package tree; Azure CLI/MCP/Foundry services; independently front-mattered nested capacity, customize, and preset sub-skills remain separate denominator entries
+import_eligibility: verified-static
+rationale: Exact root-entry review bound to package tree 6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9 and SKILL.md blob 322b342762abbcd86eb90a92b2c4cb7dccd6aac6. Preserve intent routing, dynamic SKU/quota validation, project resolution, multi-mode chaining, and the mandatory pre-deployment target confirmation. The root explicitly requires showing project, region, and resource group and receiving an affirmative Yes, deploy here response before deployment, providing a substantive action-specific authorization boundary. Nested sub-skills remain independently reviewable and are not dispositioned by this root record. Behavioral validation is not-run.
