@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-onboarding
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3c95e30a619b223fb2ad107322fcbb9be46f13f5
+skill_md_blob_sha: c708309fd6314cb58788dcacc40216675024b989
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [documentation, onboarding, repository-maintenance, writing]
+  lifecycle: [implementation, maintenance]
+  characteristic: [source-driven, audience-specific, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact one-file package review. Preserve source-repository resolution, audience-specific Contributor/Staff Engineer/Executive/Product Manager decomposition, language-aware contributor guidance, evidence-linked diagrams and tables, and concrete path/name/Mermaid validation checks. Hard fail for unchanged adoption: after repository-context discovery, the procedure directs creation of onboarding/index.md plus four audience guides without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. A second material weakness is unsupported-claim risk: executive and product requirements demand ownership, bus factor, cost/scaling, SLA/current metrics, roadmap, compliance, planned status, and recommendations without a mandatory rule to mark unavailable evidence as unknown rather than infer it. Behavioral validation remains not-run.
