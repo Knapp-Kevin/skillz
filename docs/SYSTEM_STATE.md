@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 354 |
+| **Persisted third-party review companions** | 355 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 182 / 189 |
-| **Microsoft Skills current-standard gaps** | 7 |
+| **Microsoft Skills current-standard companions** | 183 / 189 |
+| **Microsoft Skills current-standard gaps** | 6 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **182/189 companion-complete**, **7 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **183/189 companion-complete**, **6 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,13 +44,13 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `ui-widget-developer` review resolves to **354 third-party exact-version companions / Microsoft Skills 182/189 / 7 gaps**.
+On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `microsoft-foundry/models/deploy-model` review resolves to **355 third-party exact-version companions / Microsoft Skills 183/189 / 6 gaps**.
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**, the `deep-wiki` family is complete, and `microsoft-365-agents-toolkit` is now companion-complete. Latest closure: `ui-widget-developer` is **rejected unchanged, 11/20**, bound to package tree `782d9f253d9bf51bf98a274d6c4e0d262bc1b54c` and `SKILL.md` blob `1240df9af50396f6420e83ea7fad62a920edbbb0`, with freshness revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve OAI Apps versus MCP Apps routing, MCP resource/widget protocol requirements, React + Fluent UI implementation constraints, MCP Inspector-driven schema synchronization, local widget links, E2E/health verification, and clear delegation boundaries. Unchanged adoption fails the authority hard rule because the skill mandates automatic plugin/package/tool installation, authentication, detached service/devtunnel startup, filesystem mutation, public tunnel exposure, tenant/AAD provisioning, and automatic deployment without distinct action-specific authorization checkpoints. Behavioral validation is `not-run`.
+The direct language slices, `deep-wiki`, and `microsoft-365-agents-toolkit` are companion-complete. Exact-pin reconciliation confirms the `microsoft-foundry` plugin exposes ten dangling symlinks rather than independent skill packages; canonical Foundry material lives under `.github/plugins/azure-skills/skills/microsoft-foundry`. The canonical root and `finetuning` were already companion-complete. The newly reviewed nested `models/deploy-model` entry is **verified, 17/20**, bound to package tree `6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9` and `SKILL.md` blob `322b342762abbcd86eb90a92b2c4cb7dccd6aac6`, with freshness revision `1ee982fe7c88e38bc0ed4b5d711ad3177b29a887` from 2026-07-02. It contains a substantive pre-deployment authorization boundary requiring explicit confirmation of project, region, and resource group before mutation. Behavioral validation remains `not-run`.
 
-Microsoft Skills remains active with **7** gaps. Establish the next genuine companion gap from the exact registered-pin source tree before review.
+Microsoft Skills remains active with **6** gaps. Continue through the remaining independently front-mattered descendants under the Foundry model subtree, checking companions and repository history before each review.
 
 ## Source lifecycle
 
@@ -68,8 +68,8 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Establish and review the next genuine Microsoft Skills gap after the now-complete `microsoft-365-agents-toolkit` family.
-2. Complete remaining Microsoft Skills non-direct families.
+1. Complete the remaining Microsoft Foundry nested model skill companions.
+2. Complete remaining Microsoft Skills non-direct gaps.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 5. Continue governed discovery/source-vetting and omission recovery.
