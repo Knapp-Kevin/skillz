@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-llms-txt
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b3a045c0f510f263fc05abba5daccaab4efcf164
+skill_md_blob_sha: f9eaf717a42a1206bdde938219f1d8cfbb1c64c4
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [documentation, repository-maintenance, writing]
+  lifecycle: [implementation, maintenance]
+  characteristic: [source-driven, deterministic, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact one-file package review. Preserve source-repository resolution, spec-aware llms.txt and llms-full.txt structure, project-specific evidence-derived summaries, frontmatter stripping, citation/Mermaid/table preservation, non-overwrite protection for unrelated root llms.txt, and concrete validation checks. Hard fail for unchanged adoption: after gathering repository context, the procedure directs creation of ./llms.txt, wiki/llms.txt, and wiki/llms-full.txt without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. Repository-context questions and non-overwrite behavior are safeguards but do not constitute authorization. Behavioral validation remains not-run.
