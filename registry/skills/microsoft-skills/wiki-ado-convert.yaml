@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-ado-convert
+display_name: Microsoft Deep Wiki ADO Convert
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-ado-convert/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-ado-convert
+permission_tier: mutating
+portability: high
+review_status: rejected
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; intended implementation creates a Node converter and generated ADO Wiki output tree
+import_eligibility: rejected-unchanged
+rationale: Exact review bound to package tree 1a9d5144324d5891454d25e3607ca09439584eb8 and SKILL.md blob 9c030896cd815faef45a314774d37480329e1f34. Preserve deterministic VitePress/GFM-to-ADO compatibility rules, Mermaid/front-matter/link transformations, built-in-only Node design, source/output separation, ordering requirements, citation preservation and verification checklist. Reject unchanged because it directs persistent creation of converter/generated files and may alter npm configuration without a mandatory action-specific authorization checkpoint. Behavioral validation is not-run.
