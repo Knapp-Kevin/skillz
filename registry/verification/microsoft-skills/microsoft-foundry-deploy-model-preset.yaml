@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: preset
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2d35e916a63fda4c49eb6f34d697e74ad00d82b9
+skill_md_blob_sha: 09fcc94cba4c178ec08650b6e6e1da32437c2701
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, deployment, planning]
+  lifecycle: [planning, release, operations]
+  characteristic: [risk-aware, tool-assisted]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact nested-entry review. Preserve capacity-aware current-region and multi-region discovery, model/version selection, project filtering, GlobalStandard defaults, quota fallback, and deployment-status monitoring as adaptation/extraction evidence. Reject unchanged under the authority hard fail. The fast path skips directly from capacity discovery to Phase 7 deployment, while the alternate path can create Azure AI Services and AIProject resources in Phase 6 before creating the model deployment in Phase 7. The package has no distinct action-specific authorization checkpoint immediately before these persistent external mutations; selection of region/model/project and existing create permissions are not sufficient authorization. Behavioral validation remains not-run.
