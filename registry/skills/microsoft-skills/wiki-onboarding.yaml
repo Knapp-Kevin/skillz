@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-onboarding
+display_name: Microsoft Deep Wiki Onboarding Guide Generator
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-onboarding/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-onboarding
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; Git repository context plus readable source, build metadata, tests, wiki, architecture, and operational documentation when available
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree 3c95e30a619b223fb2ad107322fcbb9be46f13f5 and SKILL.md blob c708309fd6314cb58788dcacc40216675024b989. Preserve audience-specific onboarding decomposition, source-repository resolution, evidence-linked codebase grounding, language detection, structured contributor/staff/executive/product views, and validation checks. Reject unchanged because the procedure directs creation of an onboarding directory and five persistent Markdown artifacts without a mandatory action-specific authorization checkpoint immediately before workspace mutation. It also requires executive/product assertions such as ownership, bus factor, cost/scaling, SLA/current metrics, roadmap, compliance, and planned status without an explicit unknown-or-insufficient-evidence rule, increasing unsupported-claim risk. Behavioral validation is not-run.
