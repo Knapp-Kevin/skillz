@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **338** persisted exact-version third-party verification companions.
+- **339** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **166/189**.
-- Remaining gaps: **23**.
+- Current-standard companions: **167/189**.
+- Remaining gaps: **22**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `microsoft-foundry`. `microsoft-foundry` is **rejected unchanged, 13/20** at package tree `75f1fef94394b6ffde32259d0268f2d3381938dc` and `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`. The registered pin carries metadata version `1.1.33` and current hosted-agent/`azd` contract updates. Its root package contributes workflow routing, agent-root scope partitioning, configuration precedence, remote-state verification, review-before-overwrite, and concepts-to-live-discovery patterns. Unchanged adoption is rejected because it routes into consequential Azure and workspace mutations without a universal mandatory action-specific authorization checkpoint, and production trace/evaluation/dataset paths lack a universal disclosure/minimization boundary. Preserve those mechanisms for adaptation/reference use with explicit target, mutation, and data-disclosure authority. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through the nested first-class `microsoft-foundry/finetuning` skill. `finetuning` is **rejected unchanged, 12/20** at package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd` and `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`; freshness is bound to sync revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. Preserve its baseline-first discipline, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption is rejected because the package can upload training data, submit paid jobs, deploy models, invoke external evaluation/model services, generate synthetic data, and delete remote resources without mandatory action-specific authorization, while data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after `microsoft-foundry`.
+The next Microsoft Skills unit must be established from the registered-pin tree after this nested `finetuning` entry.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `microsoft-foundry` is merged and public accounting is verified at **338 reviews / Microsoft Skills 166/189 / 23 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `microsoft-foundry/finetuning` is merged and public accounting is verified at **339 reviews / Microsoft Skills 167/189 / 22 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
