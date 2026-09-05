@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: deploy-model
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9
+skill_md_blob_sha: 322b342762abbcd86eb90a92b2c4cb7dccd6aac6
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, deployment, planning]
+  lifecycle: [design, implementation, verification]
+  characteristic: [risk-aware, evidence-grounded, adaptive]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact root-entry review. Preserve intent-based preset/customize/capacity routing, live SKU and quota checks, project resolution, cross-region chaining, and target visibility. The root contains a real deployment authorization boundary: before any deployment it must show project, region, and resource group and obtain an explicit affirmative deployment response. Nested capacity, customize, and preset SKILL.md entries remain independently eligible and require their own exact-version dispositions. Behavioral validation remains not-run.
