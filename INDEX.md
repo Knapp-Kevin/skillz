@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 350 |
+| Persisted third-party exact-version reviews | 351 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 178 / 189 |
-| Microsoft Skills current-standard gaps | 11 |
+| Microsoft Skills current-standard companions | 179 / 189 |
+| Microsoft Skills current-standard gaps | 10 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **178/189**, leaving **11** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **179/189**, leaving **10** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `declarative-agent-developer` is **rejected unchanged, 13/20**, bound to package tree `5e6287047863c5d889fe3b19f13ee4382d5f7e34` and `SKILL.md` blob `a974c332cdbed595eed80f79285ba12d7946f61e`; freshness is revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve workspace fingerprinting, hard reject/fix/edit routing, Detect-Inform-Ask error handling, schema-version gates, anti-fabrication rules, instruction-quality review, localization guidance, and bundled M365 agent references. Unchanged adoption fails the authority hard rule because the package directs or documents project creation plus M365 provisioning, sharing, publishing, authentication, OAuth/permission setup, and production-environment operations without a universal action-specific authorization checkpoint immediately before each consequential mutation. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `install-atk` is **rejected unchanged, 13/20**, bound to package tree `c7be3fb169d02f94492a3d1ca203bed5adacc9ba` and `SKILL.md` blob `44afbcbbd76801317776563a96d034574716e949`; freshness is revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve explicit install/update triggers, exact package and extension identifiers, CLI-versus-extension routing, dependency failure guidance, telemetry tagging, and result reporting. Unchanged adoption fails the authority hard rule because `npx -y` automatically downloads, executes, and caches the latest CLI package and ambiguous ATK intent defaults to installing the VS Code extension without a distinct action-specific authorization checkpoint immediately before those local-environment mutations. Latest-version execution is also unpinned. Behavioral validation is `not-run`.
 
-Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order, checking canonical companions and repository history before review.
+Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `m365-agent-evaluator` follows `install-atk`; check canonical companions and repository history before review.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
