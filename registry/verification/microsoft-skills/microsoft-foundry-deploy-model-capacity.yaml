@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: capacity
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: edb0b5bb776569c8941e4ed3755d9f65e32c5b80
+skill_md_blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, planning, research]
+  lifecycle: [discovery, planning, verification]
+  characteristic: [evidence-first, retrieval-first, risk-aware, tool-assisted]
+  authority: [read-only]
+  portability: [low]
+notes: Exact nested-entry review. Preserve read-only Azure OpenAI capacity and subscription-quota discovery, ranked region/project comparison, explicit no-deploy scope, and mandatory project confirmation before handoff to preset/customize. The package includes four query/discovery scripts and depends on authenticated Azure CLI access; the bash path additionally uses jq and python3. No resource mutation or quota-increase operation is performed by this skill. Behavioral validation remains not-run.
