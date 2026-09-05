@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 343 |
+| Persisted third-party exact-version reviews | 344 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 171 / 189 |
-| Microsoft Skills current-standard gaps | 18 |
+| Microsoft Skills current-standard companions | 172 / 189 |
+| Microsoft Skills current-standard gaps | 17 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **171/189**, leaving **18** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **172/189**, leaving **17** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `wiki-changelog` is **verified, 16/20**, bound to package tree `f00f784abc5b9276f5a353334afbabb2ea0dfd72` and `SKILL.md` blob `cd5c1cd2825da88b0d370d33a329b0d74f727855`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve explicit source-context resolution, time-bounded commit grouping, change-type classification, README terminology grounding, linked commit/file citations, and prominent breaking-change treatment. No authority hard fail applies because the canonical procedure is read-only. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-llms-txt` is **rejected unchanged, 15/20**, bound to package tree `b3a045c0f510f263fc05abba5daccaab4efcf164` and `SKILL.md` blob `f9eaf717a42a1206bdde938219f1d8cfbb1c64c4`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its spec-aware llms.txt structure, repository-context resolution, evidence-derived summaries, citation/Mermaid/table preservation, unrelated-root-file non-overwrite safeguard, and validation checklist. Unchanged adoption is rejected because it directs persistent creation of three llms.txt artifacts without a mandatory action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-changelog`; `wiki-llms-txt` is next in source order but is not a gap until canonical companions and repository history are checked.
+The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-llms-txt`; `wiki-onboarding` is next in source order but is not a gap until canonical companions and repository history are checked.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

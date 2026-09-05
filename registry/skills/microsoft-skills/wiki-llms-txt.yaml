@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-llms-txt
+display_name: Microsoft Deep Wiki llms.txt Generator
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-llms-txt/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-llms-txt
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; Git repository context plus readable wiki/README/source material when available
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree b3a045c0f510f263fc05abba5daccaab4efcf164 and SKILL.md blob f9eaf717a42a1206bdde938219f1d8cfbb1c64c4. Preserve spec-aware llms.txt structure, repository-context resolution, evidence-derived summaries, citation/diagram preservation, non-overwrite protection for unrelated root llms.txt, and explicit validation checks. Reject unchanged because the procedure directs creation of ./llms.txt, wiki/llms.txt, and wiki/llms-full.txt without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. Behavioral validation is not-run.

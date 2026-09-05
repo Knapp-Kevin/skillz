@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **343** persisted exact-version third-party verification companions.
+- **344** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **171/189**.
-- Remaining gaps: **18**.
+- Current-standard companions: **172/189**.
+- Remaining gaps: **17**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,9 +45,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-Current non-direct Microsoft frontier has advanced through `deep-wiki/wiki-changelog`. It is **verified, 16/20** at package tree `f00f784abc5b9276f5a353334afbabb2ea0dfd72` and `SKILL.md` blob `cd5c1cd2825da88b0d370d33a329b0d74f727855`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve explicit source-context resolution, time-bounded commit grouping, change-type classification, README terminology grounding, linked commit/file citations, and prominent breaking-change treatment. No authority hard fail is present because the canonical behavior is read-only. Limitations are Git-centric portability, limited missing/invalid Git-state handling, and insufficiently explicit diff/evidence inspection before synthesizing user-facing or migration claims. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `deep-wiki/wiki-llms-txt`. It is **rejected unchanged, 15/20** at package tree `b3a045c0f510f263fc05abba5daccaab4efcf164` and `SKILL.md` blob `f9eaf717a42a1206bdde938219f1d8cfbb1c64c4`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve spec-aware llms.txt structure, repository-context resolution, evidence-derived summaries, citation/Mermaid/table preservation, the non-overwrite safeguard for unrelated root `llms.txt`, and concrete validation checks. Unchanged adoption is rejected because the procedure directs creation of `./llms.txt`, `wiki/llms.txt`, and `wiki/llms-full.txt` without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-changelog`. The source tree places `wiki-llms-txt` next, but canonical registry companions and repository history must be checked before treating it as a genuine gap.
+The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-llms-txt`. The source tree places `wiki-onboarding` next, but canonical registry companions and repository history must be checked before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **343 reviews / Microsoft Skills 171/189 / 18 gaps**, establish whether `wiki-llms-txt` is the next genuine companion gap from the exact registered-pin tree and continue source-by-source.
+After public accounting is verified at **344 reviews / Microsoft Skills 172/189 / 17 gaps**, establish whether `wiki-onboarding` is the next genuine companion gap from the exact registered-pin tree and continue source-by-source.
