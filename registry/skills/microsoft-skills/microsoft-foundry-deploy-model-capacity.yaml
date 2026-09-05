@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: capacity
+display_name: Microsoft Foundry Deploy Model Capacity
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 2d821920c717bcdd5ee4e287a41205c07e43cb0a
+upstream_last_updated_at: 2026-05-05
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/capacity
+permission_tier: read-only
+portability: low
+review_status: verified
+dependency_status: source-intact
+dependencies: Complete capacity package tree; bundled PowerShell/bash discovery and capacity-query scripts; Azure CLI authenticated read access; jq and python3 for the bash workflow; parent deploy-model router and preset/customize handoff skills for any later deployment
+import_eligibility: verified-static
+rationale: Exact nested-entry review bound to package tree edb0b5bb776569c8941e4ed3755d9f65e32c5b80 and SKILL.md blob 46935315ebdf18fbc93771efb72e7f8f9e9980ac. Preserve read-only cross-region capacity discovery, subscription-quota validation, ranked project-aware recommendations, explicit separation from deployment, and project confirmation before any handoff to a mutating deployment skill. The bundled scripts query Azure management and usage APIs but do not create, update, or delete resources. Authentication is required, but the skill does not alter identity/access policy. Behavioral validation is not-run.
