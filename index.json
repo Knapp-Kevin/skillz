@@ -7,14 +7,14 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 353,
+    "persisted_third_party_exact_version_reviews": 354,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
-    "microsoft_skills_current_standard_companions": 181,
+    "microsoft_skills_current_standard_companions": 182,
     "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 8,
+    "microsoft_skills_current_standard_gaps": 7,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -47,6 +47,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: reviewed Microsoft microsoft-365-agents-toolkit teams-app-developer at exact registered pin; reconciled canonical companions and public accounting to Microsoft Skills 181/189"
+    "latest_reconciliation": "2026-09-05: reviewed Microsoft microsoft-365-agents-toolkit ui-widget-developer at exact registered pin; reconciled canonical companions and public accounting to Microsoft Skills 182/189"
   }
 }
