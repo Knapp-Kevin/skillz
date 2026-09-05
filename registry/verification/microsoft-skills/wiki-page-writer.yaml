@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-page-writer
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ffadefd1fab729385cc3d59ac46202305ff4688f
+skill_md_blob_sha: bb203da412a56c38cd457612bc0f46b91f046216
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, repository-maintenance, writing]
+  lifecycle: [design, implementation]
+  characteristic: [evidence-first, progressive-disclosure, source-driven, traceable]
+  authority: [generate-only]
+  portability: [medium]
+notes: Exact one-file package review. Strong points are mandatory source-repository resolution, actual-code-path tracing, claim-level source evidence, fact-versus-inference separation, explicit unknown markers, source comments on diagrams, source columns in structured tables, progressive disclosure, and concrete validation requirements. The package is generate-only: it instructs generation of Markdown content but does not itself require persistent workspace mutation, infrastructure changes, communications, credentials, or other external side effects, so the authority hard fail does not apply. Deductions reflect Git/VitePress assumptions and rigid minimum diagram/table requirements that can add ceremony or distort proportionality for small documentation scopes. Behavioral validation remains not-run.
