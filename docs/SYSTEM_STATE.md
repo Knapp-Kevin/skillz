@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 345 |
+| **Persisted third-party review companions** | 346 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 173 / 189 |
-| **Microsoft Skills current-standard gaps** | 16 |
+| **Microsoft Skills current-standard companions** | 174 / 189 |
+| **Microsoft Skills current-standard gaps** | 15 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **173/189 companion-complete**, **16 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **174/189 companion-complete**, **15 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,13 +44,13 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `wiki-onboarding` review resolves to **345 third-party exact-version companions / Microsoft Skills 173/189 / 16 gaps**.
+On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `wiki-page-writer` review resolves to **346 third-party exact-version companions / Microsoft Skills 174/189 / 15 gaps**.
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `wiki-onboarding` is **rejected unchanged, 13/20**, bound to package tree `3c95e30a619b223fb2ad107322fcbb9be46f13f5` and `SKILL.md` blob `c708309fd6314cb58788dcacc40216675024b989`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve audience-specific onboarding decomposition, source-repository resolution, language-aware contributor guidance, evidence-linked diagrams/tables, and concrete validation checks. Unchanged adoption is rejected because the procedure directs creation of an `onboarding/` directory and five persistent Markdown artifacts without a mandatory action-specific authorization checkpoint immediately before workspace mutation. Executive/Product requirements also create unsupported-claim risk by demanding ownership, bus factor, costs, SLA/current metrics, roadmap, compliance, and planned-status assertions without a mandatory unknown-when-unavailable rule. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `wiki-page-writer` is **verified, 17/20**, bound to package tree `ffadefd1fab729385cc3d59ac46202305ff4688f` and `SKILL.md` blob `bb203da412a56c38cd457612bc0f46b91f046216`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve evidence-first code-path tracing, claim-level citations, fact-versus-inference separation, explicit unknown markers, diagram/table source evidence, progressive disclosure, and concrete validation. The package is generate-only and does not direct persistent workspace mutation or external side effects, so the authority hard fail does not apply. Main weaknesses are Git/VitePress assumptions and rigid minimum diagram/table requirements that can reduce proportionality on small scopes. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **16** gaps. Establish the next gap from the exact registered-pin `deep-wiki` tree after `wiki-onboarding`, checking canonical registry companions and repository history before review.
+Microsoft Skills remains active with **15** gaps. Establish the next gap from the exact registered-pin `deep-wiki` tree after `wiki-page-writer`, checking canonical registry companions and repository history before review.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `wiki-onboarding` in `deep-wiki`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `wiki-page-writer` in `deep-wiki`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
