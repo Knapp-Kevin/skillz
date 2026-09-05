@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-changelog
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f00f784abc5b9276f5a353334afbabb2ea0dfd72
+skill_md_blob_sha: cd5c1cd2825da88b0d370d33a329b0d74f727855
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [documentation, repository-maintenance]
+  lifecycle: [discovery, maintenance]
+  characteristic: [source-driven, synthesis, traceable]
+  authority: [read-only]
+  portability: [medium]
+notes: Exact one-file package review. Preserve explicit source-repository resolution, time-bounded changelog grouping, change-type classification, README terminology grounding, linked commit/file citations, and prominent breaking-change treatment. No hard fail: canonical behavior reads Git/repository evidence and produces changelog text only. Limitations are Git-centric assumptions, weak handling of missing/invalid Git state, and insufficiently explicit inspection of diffs or other evidence before generating user-facing descriptions or migration notes from commit history. Any later write, commit, push, release publication, or external communication is a separate consequential action. Behavioral validation remains not-run.
