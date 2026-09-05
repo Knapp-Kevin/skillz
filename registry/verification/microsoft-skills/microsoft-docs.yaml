@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: microsoft-docs
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2e0eef527e4fafac394cca00144736954ecc9528
+skill_md_blob_sha: a5129731352a4dcad109b03e6f8e96bbdd00695b
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [documentation, research]
+  lifecycle: [discovery, verification]
+  characteristic: [retrieval-first, context-efficient, tool-routing]
+  authority: [mutating]
+  portability: [high]
+notes: Exact one-file package review. Strong official-document routing, specific query shaping, search-before-fetch discipline and bounded retrieval. Reject unchanged because its fallback offers a persistent global installation of @microsoft/learn-cli without mandatory action-specific authorization. The primary MCP retrieval path is read-only. Behavioral validation remains not-run.
