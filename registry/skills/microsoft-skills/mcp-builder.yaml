@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: mcp-builder
+display_name: Microsoft MCP Builder
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/mcp-builder/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e1f9cce11758d305e6c77683fe34ccc394586291
+upstream_last_updated_at: 2026-04-20
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/mcp-builder
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete 10-file package; host language/toolchain; MCP SDK/runtime; external services as selected; bundled evaluation harness additionally uses Anthropic API
+import_eligibility: rejected-unchanged
+rationale: Exact review bound to package tree c87383e3a3a307ff9867adf610672e9f0b24687b and SKILL.md blob 792635390fff9f4c0032b1f0e06db1d81affe678. Preserve MCP architecture, schema, pagination, transport, auth, DNS-rebinding, approval patterns and Microsoft examples. Reject unchanged because installs, project mutations, deployments and live-service actions lack universal action-specific authorization, and bundled evaluation can forward raw MCP results to a third-party model without a mandatory disclosure/minimization boundary. Behavioral validation is not-run.
