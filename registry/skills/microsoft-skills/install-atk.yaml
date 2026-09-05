@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: install-atk
+display_name: Microsoft 365 Agents Toolkit Installer
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/microsoft-365-agents-toolkit/skills/install-atk/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: a43d2c6a69fac2298ac0f301419931b39d996c6b
+upstream_last_updated_at: 2026-06-15T06:12:01Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/microsoft-365-agents-toolkit/skills/install-atk
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: single SKILL.md; Node.js 18+ and npm/npx for CLI path; VS Code code CLI for extension path; network/package-registry access for first npx use; writable local package cache and VS Code extension state
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree c7be3fb169d02f94492a3d1ca203bed5adacc9ba and SKILL.md blob 44afbcbbd76801317776563a96d034574716e949. Useful material includes explicit install/update triggers, exact package and extension identifiers, clear CLI-versus-extension routing, dependency failure guidance, telemetry tagging, and concise result reporting. Unchanged adoption is rejected because the procedure uses npx -y to automatically download, execute, and cache the latest CLI package and defaults ambiguous ATK intent to installing the VS Code extension, without a distinct action-specific authorization checkpoint immediately before either consequential local-environment mutation. Latest-version execution is also unpinned. Preserve the routing and failure-reporting mechanics for adaptation behind explicit host-side authorization and version-control policy. Behavioral validation is not-run.
