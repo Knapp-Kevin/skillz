@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 342 |
+| Persisted third-party exact-version reviews | 343 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 170 / 189 |
-| Microsoft Skills current-standard gaps | 19 |
+| Microsoft Skills current-standard companions | 171 / 189 |
+| Microsoft Skills current-standard gaps | 18 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **170/189**, leaving **19** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **171/189**, leaving **18** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `wiki-architect` is **verified, 17/20**, bound to package tree `124c5bec7008b1e25940cfc67ea09b069af0dbea` and `SKILL.md` blob `53bcf7016efbba50e4f634a7a4b4a40cddcb2234`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its repository-context resolution, evidence-grounded documentation catalogue, real-file citation discipline, bounded hierarchy, audience-specific onboarding architecture, and small-repository depth rule. No authority hard fail is present in the canonical procedure because it is read-only and emits JSON. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-changelog` is **verified, 16/20**, bound to package tree `f00f784abc5b9276f5a353334afbabb2ea0dfd72` and `SKILL.md` blob `cd5c1cd2825da88b0d370d33a329b0d74f727855`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve explicit source-context resolution, time-bounded commit grouping, change-type classification, README terminology grounding, linked commit/file citations, and prominent breaking-change treatment. No authority hard fail applies because the canonical procedure is read-only. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-architect`; `wiki-changelog` is next in source order but is not a gap until canonical companions and repository history are checked.
+The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-changelog`; `wiki-llms-txt` is next in source order but is not a gap until canonical companions and repository history are checked.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
