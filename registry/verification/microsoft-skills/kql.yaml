@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: kql
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6
+skill_md_blob_sha: 8be2bdeebd4cdfa0937d3457e70128042cd34904
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [analysis, debugging, security]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [evidence-first, risk-aware, reference-heavy]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact 5-file package review. Preserve KQL type/join/serialization discipline, query-safety and performance guidance, public help-cluster examples, discovery and troubleshooting. Reject unchanged because default live execution lacks mandatory target authorization and disclosure minimization; discovery can expose credential-bearing connection strings, principals, identity/access metadata, logs and operational state. Behavioral validation remains not-run.
