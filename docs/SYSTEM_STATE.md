@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 337 |
+| **Persisted third-party review companions** | 338 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 165 / 189 |
-| **Microsoft Skills current-standard gaps** | 24 |
+| **Microsoft Skills current-standard companions** | 166 / 189 |
+| **Microsoft Skills current-standard gaps** | 23 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **165/189 companion-complete**, **24 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **166/189 companion-complete**, **23 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,9 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `skill-creator` is **rejected unchanged, 15/20**, bound to package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, `SKILL.md` blob `8377383735afeb36e4b55a9937876b427785db9e`, and freshness revision `178d9730909101c93949a2ea364058345a6fae9e` from 2026-06-19. Its nine-file package contributes concise skill-authoring heuristics, progressive disclosure, source/freshness discipline, Azure SDK authentication/lifecycle conventions, output/workflow patterns, and local initialization/validation/packaging helpers. Unchanged adoption is rejected because the bundled initializer and packager persistently mutate target workspaces without a mandatory action-specific authorization checkpoint before mutation. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `microsoft-foundry` is **rejected unchanged, 13/20**, bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc` and `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`. The registered pin carries metadata version `1.1.33` and current hosted-agent/`azd` contract updates. Its root package contributes strong workflow routing, scoped agent-root discovery, configuration precedence, remote-state verification, review-before-overwrite, and concepts-to-live-discovery patterns. Unchanged adoption is rejected because it routes into persistent Azure/workspace mutations without a universal mandatory action-specific authorization checkpoint and lacks a universal disclosure/minimization boundary for production-derived trace/evaluation data. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **24** gaps. Establish the next gap from the registered-pin tree after `skill-creator`.
+Microsoft Skills remains active with **23** gaps. Establish the next gap from the registered-pin tree after `microsoft-foundry`.
 
 ## Source lifecycle
 
@@ -66,7 +66,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `skill-creator`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `microsoft-foundry`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.

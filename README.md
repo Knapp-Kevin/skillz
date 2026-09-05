@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-337-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-338-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **337 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **338 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,16 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **165/189** current-standard companion complete, **24** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **166/189** current-standard companion complete, **23** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-Latest non-direct Microsoft closure: `skill-creator` is **rejected unchanged, 15/20**. It is bound to package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, `SKILL.md` blob `8377383735afeb36e4b55a9937876b427785db9e`, and freshness revision `178d9730909101c93949a2ea364058345a6fae9e` from 2026-06-19. Preserve its concise authoring heuristics, progressive-disclosure model, source/freshness discipline, Azure SDK authentication and lifecycle conventions, output-pattern guidance, and validation/packaging concepts. Unchanged adoption is rejected because bundled initializer and packager helpers persistently create files, directories, executable mode changes, and archives without a mandatory action-specific authorization checkpoint immediately before workspace mutation. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `microsoft-foundry` is **rejected unchanged, 13/20**. It is bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc` and `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`; the registered pin updates it to metadata version `1.1.33` and the current hosted-agent/`azd` contract. Preserve its workflow routing, agent-root scope partitioning, configuration precedence, remote-state verification, review-before-overwrite, and concepts-to-live-discovery patterns. Unchanged adoption is rejected because the package routes into consequential Azure/workspace mutations without a universal mandatory action-specific authorization checkpoint and does not establish a universal disclosure/minimization boundary for production-derived trace/evaluation data. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **24** gaps. The next gap must be established from the registered-pin tree after `skill-creator`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **23** gaps. The next gap must be established from the registered-pin tree after `microsoft-foundry`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
