@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 339 |
+| **Persisted third-party review companions** | 340 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 167 / 189 |
-| **Microsoft Skills current-standard gaps** | 22 |
+| **Microsoft Skills current-standard companions** | 168 / 189 |
+| **Microsoft Skills current-standard gaps** | 21 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **167/189 companion-complete**, **22 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **168/189 companion-complete**, **21 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,9 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: nested `microsoft-foundry/finetuning` is **rejected unchanged, 12/20**, bound to package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd` and `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`, with freshness revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. Preserve its baseline-first discipline, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption is rejected because it permits consequential uploads, paid training, deployments, model/evaluation calls, synthetic-data generation, and cleanup without mandatory action-specific authorization and lacks a universal disclosure/minimization boundary for data-bearing workflows. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `python-appservice-deploy` is **rejected unchanged, 12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, with freshness revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve its framework detection, deterministic naming, shell-safe runtime syntax, idempotent create pattern, transient-error classification, `.env` packaging exclusion, and deployment-state caveats. Unchanged adoption is rejected because it can create Azure resources, incur paid App Service cost, mutate app settings/startup configuration, and deploy code while explicitly instructing the agent to present inferred defaults without asking for confirmation before proceeding. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **22** gaps. Establish the next gap from the registered-pin tree after the independently front-mattered `finetuning` entry.
+Microsoft Skills remains active with **21** gaps. Establish the next gap from the exact registered-pin tree after `python-appservice-deploy`; newer-upstream-only skills are not eligible denominator units.
 
 ## Source lifecycle
 
@@ -66,7 +66,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `microsoft-foundry/finetuning`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `python-appservice-deploy`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
