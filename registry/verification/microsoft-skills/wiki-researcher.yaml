@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-researcher
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 22777f05d7f11b559c120d6cae7f09848828b9d2
+skill_md_blob_sha: b4ccf2ca851d10c1b7395e49f39534af26ad5bce
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [architecture, documentation, repository-maintenance, research]
+  lifecycle: [discovery, verification]
+  characteristic: [evidence-first, source-driven, traceable, synthesis]
+  authority: [read-only]
+  portability: [medium]
+notes: Exact one-file package review. Strong points are mandatory repository-context resolution, tracing actual code paths rather than guessing from names or conventions, reading real implementations, following call chains, distinguishing fact from inference, explicit evidence standards for architectural and data-flow claims, confidence ratings, and open-question boundaries. The procedure is read-only and does not require persistent workspace mutation, infrastructure changes, communications, credentials, or other consequential side effects, so the authority hard fail does not apply. Deductions reflect Git-specific repository resolution, forcing a user question even when the host may already know the repository context, a fixed five-iteration research ceremony, and requiring at least one Mermaid diagram and table in every iteration regardless of whether they improve the answer. Behavioral validation remains not-run.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-researcher
+display_name: Microsoft Deep Wiki Researcher
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-researcher/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-researcher
+permission_tier: read-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; Git repository context plus readable source files and search capability for evidence-grounded multi-file research
+import_eligibility: eligible-with-fit-review
+rationale: Exact static review bound to package tree 22777f05d7f11b559c120d6cae7f09848828b9d2 and SKILL.md blob b4ccf2ca851d10c1b7395e49f39534af26ad5bce. Strong evidence discipline requires tracing actual code paths, reading implementations, separating fact from inference, explicit confidence and open questions, and evidence for architectural/data-flow/dependency claims. The procedure is read-only and does not direct persistent mutation or consequential external side effects, so the authority hard fail does not apply. Main weaknesses are Git-centric repository resolution, an unnecessary mandatory user question when repository identity may already be resolvable, a rigid five-iteration ceremony, and mandatory diagram/table output per iteration regardless of marginal value. Behavioral validation is not-run.
