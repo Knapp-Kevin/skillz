@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-09-04
+**Snapshot date:** 2026-09-05
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, or reconciliation.
 
@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 340 |
+| Persisted third-party exact-version reviews | 341 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 168 / 189 |
-| Microsoft Skills current-standard gaps | 21 |
+| Microsoft Skills current-standard companions | 169 / 189 |
+| Microsoft Skills current-standard gaps | 20 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **168/189**, leaving **21** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **169/189**, leaving **20** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-Latest non-direct Microsoft closure: `python-appservice-deploy` is **rejected unchanged, 12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`; freshness is revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve its framework detection, deterministic naming, shell-safety guidance, idempotent create pattern, transient-error classification, `.env` packaging exclusion, and deployment-state caveats. Unchanged adoption is rejected because resource creation, a paid P0v3 plan, app-configuration mutation, and code deployment proceed without a mandatory action-specific authorization checkpoint; the reference explicitly says not to ask for confirmation after presenting inferred defaults. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-ado-convert` is **rejected unchanged, 15/20**, bound to package tree `1a9d5144324d5891454d25e3607ca09439584eb8` and `SKILL.md` blob `9c030896cd815faef45a314774d37480329e1f34`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its deterministic ADO compatibility matrix, Mermaid/front-matter/link conversion rules, built-in-only Node.js design, source/output separation, landing-page and ordering requirements, citation preservation, and post-conversion checklist. Unchanged adoption is rejected because the workflow creates persistent project files and may modify npm configuration without a mandatory action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the exact registered-pin tree after `python-appservice-deploy`; newer upstream-only packages are discovery evidence, not denominator units.
+The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-ado-convert`; `wiki-agents-md` is next in source order but is not a gap until current companions and repository history are checked.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
