@@ -7,14 +7,14 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 357,
+    "persisted_third_party_exact_version_reviews": 358,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
-    "microsoft_skills_current_standard_companions": 185,
+    "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 4,
+    "microsoft_skills_current_standard_gaps": 3,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -47,6 +47,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: reviewed Microsoft Foundry nested deploy-model/customize at exact registered pin; verified 17/20 with mandatory pre-deployment configuration confirmation; reconciled Microsoft Skills to 185/189"
+    "latest_reconciliation": "2026-09-05: reviewed Microsoft Foundry nested deploy-model/preset at exact registered pin; rejected unchanged 12/20 for missing action-specific authorization before Azure resource/deployment mutation; reconciled Microsoft Skills to 186/189"
   }
 }
