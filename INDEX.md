@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 341 |
+| Persisted third-party exact-version reviews | 342 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 169 / 189 |
-| Microsoft Skills current-standard gaps | 20 |
+| Microsoft Skills current-standard companions | 170 / 189 |
+| Microsoft Skills current-standard gaps | 19 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **169/189**, leaving **20** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **170/189**, leaving **19** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-Latest non-direct Microsoft closure: `wiki-ado-convert` is **rejected unchanged, 15/20**, bound to package tree `1a9d5144324d5891454d25e3607ca09439584eb8` and `SKILL.md` blob `9c030896cd815faef45a314774d37480329e1f34`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its deterministic ADO compatibility matrix, Mermaid/front-matter/link conversion rules, built-in-only Node.js design, source/output separation, landing-page and ordering requirements, citation preservation, and post-conversion checklist. Unchanged adoption is rejected because the workflow creates persistent project files and may modify npm configuration without a mandatory action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-agents-md` is **rejected unchanged, 15/20**, bound to package tree `d41f5a10717c8a334cd4d2f2368dbfbef40d47e5` and `SKILL.md` blob `45e93b32d3d7f2120cb9b3b7f51e9271e3e0189c`; freshness is revision `4cf58ce31ea6e814a21ff4db46b5f52391ba8bfc` from 2026-02-13. Preserve its evidence-grounded repository instruction generation, real command/path discipline, scoped nested guidance, non-overwrite checks, explicit boundaries, and secret prohibition. Unchanged adoption is rejected because it creates persistent `AGENTS.md` and `CLAUDE.md` files across repository folders without a mandatory action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-ado-convert`; `wiki-agents-md` is next in source order but is not a gap until current companions and repository history are checked.
+The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-agents-md`; `wiki-architect` is next in source order but is not a gap until current companions and repository history are checked.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

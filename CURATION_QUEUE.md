@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **341** persisted exact-version third-party verification companions.
+- **342** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **169/189**.
-- Remaining gaps: **20**.
+- Current-standard companions: **170/189**.
+- Remaining gaps: **19**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced into the registered-pin `deep-wiki` plugin through `wiki-ado-convert`. It is **rejected unchanged, 15/20** at package tree `1a9d5144324d5891454d25e3607ca09439584eb8` and `SKILL.md` blob `9c030896cd815faef45a314774d37480329e1f34`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its deterministic VitePress/GFM-to-ADO conversion rules, Mermaid/front-matter/link transformations, built-in-only Node.js design, source/output separation, landing-page and `.order` requirements, citation preservation, and verification checklist. Unchanged adoption is rejected because the intended workflow creates a persistent project converter script and generated documentation tree, may mutate npm project configuration, and runs the converter without a mandatory action-specific authorization checkpoint immediately before workspace mutation. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `deep-wiki/wiki-agents-md`. It is **rejected unchanged, 15/20** at package tree `d41f5a10717c8a334cd4d2f2368dbfbef40d47e5` and `SKILL.md` blob `45e93b32d3d7f2120cb9b3b7f51e9271e3e0189c`; freshness is bound to revision `4cf58ce31ea6e814a21ff4db46b5f52391ba8bfc` from 2026-02-13. Preserve its evidence-grounded AGENTS.md generation discipline, real command/path verification, root-versus-nested scoping, non-overwrite guard, operational-boundary template, concise output principle, and explicit secret prohibition. Unchanged adoption is rejected because the intended workflow creates persistent `AGENTS.md` and `CLAUDE.md` files across pertinent repository folders without a mandatory action-specific authorization checkpoint immediately before writing. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-ado-convert`. The source tree currently places `wiki-agents-md` next, but companion shelves and repository history must be checked before treating it as a genuine gap.
+The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-agents-md`. The source tree places `wiki-architect` next, but companion shelves and repository history must be checked before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `wiki-ado-convert` is merged and public accounting is verified at **341 reviews / Microsoft Skills 169/189 / 20 gaps**, establish whether `wiki-agents-md` is the next genuine companion gap from the exact registered-pin tree and continue source-by-source.
+After `wiki-agents-md` is merged and public accounting is verified at **342 reviews / Microsoft Skills 170/189 / 19 gaps**, establish whether `wiki-architect` is the next genuine companion gap from the exact registered-pin tree and continue source-by-source.
