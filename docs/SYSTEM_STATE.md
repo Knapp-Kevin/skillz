@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 342 |
+| **Persisted third-party review companions** | 343 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 170 / 189 |
-| **Microsoft Skills current-standard gaps** | 19 |
+| **Microsoft Skills current-standard companions** | 171 / 189 |
+| **Microsoft Skills current-standard gaps** | 18 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **170/189 companion-complete**, **19 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **171/189 companion-complete**, **18 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,9 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `wiki-agents-md` is **rejected unchanged, 15/20**, bound to package tree `d41f5a10717c8a334cd4d2f2368dbfbef40d47e5` and `SKILL.md` blob `45e93b32d3d7f2120cb9b3b7f51e9271e3e0189c`, with freshness revision `4cf58ce31ea6e814a21ff4db46b5f52391ba8bfc` from 2026-02-13. Preserve its repository-evidence-first AGENTS.md authoring, exact build/test/path grounding, concise root-versus-nested scoping, non-overwrite checks, explicit operational-boundary template, and secret prohibition. Unchanged adoption is rejected because it directs creation of persistent `AGENTS.md` and `CLAUDE.md` files across pertinent repository folders without a mandatory action-specific authorization checkpoint immediately before those writes. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `wiki-architect` is **verified, 17/20**, bound to package tree `124c5bec7008b1e25940cfc67ea09b069af0dbea` and `SKILL.md` blob `53bcf7016efbba50e4f634a7a4b4a40cddcb2234`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its repository-context resolution, real-file citation discipline, bounded hierarchical catalogue, audience-specific onboarding structure, and small-repository depth rule. The canonical procedure is read-only and emits JSON. Its main limitations are Git-centric context resolution and the need to preserve explicit unknowns instead of inventing business/cost/risk facts for audience-specific guide prompts. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **19** gaps. Establish the next gap from the exact registered-pin `deep-wiki` tree after `wiki-agents-md`, checking current companions and repository history before review.
+Microsoft Skills remains active with **18** gaps. Establish the next gap from the exact registered-pin `deep-wiki` tree after `wiki-architect`, checking current companions and repository history before review.
 
 ## Source lifecycle
 
@@ -66,7 +66,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `wiki-agents-md` in `deep-wiki`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `wiki-architect` in `deep-wiki`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
