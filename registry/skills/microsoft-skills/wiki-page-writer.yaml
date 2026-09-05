@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-page-writer
+display_name: Microsoft Deep Wiki Page Writer
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-page-writer/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-page-writer
+permission_tier: generate-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; Git repository context plus readable implementation files and source locations for evidence-linked documentation
+import_eligibility: eligible-with-fit-review
+rationale: Exact static review bound to package tree ffadefd1fab729385cc3d59ac46202305ff4688f and SKILL.md blob bb203da412a56c38cd457612bc0f46b91f046216. Strong evidence-first documentation discipline requires tracing actual code paths, citing claims, distinguishing fact from inference, preserving unknowns when evidence is missing, and validating paths, symbols, Mermaid, and cross-links. The procedure generates documentation content but does not itself direct persistent repository mutation or external side effects, so the authority hard fail does not apply. Main weaknesses are Git-centric source-context assumptions, prescriptive diagram/table quotas that may overfit small scopes, and medium portability outside VitePress-style repositories. Behavioral validation is not-run.
