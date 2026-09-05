@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **339** persisted exact-version third-party verification companions.
+- **340** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **167/189**.
-- Remaining gaps: **22**.
+- Current-standard companions: **168/189**.
+- Remaining gaps: **21**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through the nested first-class `microsoft-foundry/finetuning` skill. `finetuning` is **rejected unchanged, 12/20** at package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd` and `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`; freshness is bound to sync revision `981d9b71d0187be796b03c2f4d69cccca80c0e42` from 2026-05-25. Preserve its baseline-first discipline, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption is rejected because the package can upload training data, submit paid jobs, deploy models, invoke external evaluation/model services, generate synthetic data, and delete remote resources without mandatory action-specific authorization, while data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `python-appservice-deploy`. It is **rejected unchanged, 12/20** at package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`; freshness is bound to sync revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve its framework detection, deterministic naming, shell-safety guidance, idempotent create pattern, transient-error classification, `.env` packaging exclusion, and deployment-vs-build-state distinction. Unchanged adoption is rejected because the workflow creates Azure resources, defaults to a paid P0v3 plan, mutates application configuration, and deploys code while explicitly instructing the agent not to ask for confirmation after presenting inferred defaults. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the registered-pin tree after this nested `finetuning` entry.
+The next Microsoft Skills unit must be established from the exact registered-pin tree after `python-appservice-deploy`. `foundry-projects-resources` and related newer Foundry packages observed upstream are absent from the registered revision and therefore do not count toward this denominator.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `microsoft-foundry/finetuning` is merged and public accounting is verified at **339 reviews / Microsoft Skills 167/189 / 22 gaps**, establish the first genuine remaining Microsoft Skills gap from the registered-pin tree and continue source-by-source.
+After `python-appservice-deploy` is merged and public accounting is verified at **340 reviews / Microsoft Skills 168/189 / 21 gaps**, establish the first genuine remaining Microsoft Skills gap from the exact registered-pin tree and continue source-by-source.
