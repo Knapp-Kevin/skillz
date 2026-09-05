@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: declarative-agent-developer
+display_name: Microsoft 365 Declarative Agent Developer
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/microsoft-365-agents-toolkit/skills/declarative-agent-developer/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: a43d2c6a69fac2298ac0f301419931b39d996c6b
+upstream_last_updated_at: 2026-06-15T06:12:01Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/microsoft-365-agents-toolkit/skills/declarative-agent-developer
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: SKILL.md plus bundled references; Node.js/npm; @microsoft/m365agentstoolkit-cli via npx; M365 Copilot/Teams tenant access and licensing; writable agent workspace; environment/authentication state; optional API/MCP/OAuth integrations
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree 5e6287047863c5d889fe3b19f13ee4382d5f7e34 and SKILL.md blob a974c332cdbed595eed80f79285ba12d7946f61e. Strong reusable material includes mandatory workspace fingerprinting, explicit reject/fix/edit routing, Detect-Inform-Ask error handling, schema-version gating, anti-fabrication rules, instruction-quality checks, localization guidance, and bundled M365 agent development references. Unchanged adoption is rejected because the procedure mandates provisioning after edits and includes project creation, tenant provisioning, sharing, publishing, authentication, credential/permission setup, and other consequential external mutations without a universal action-specific authorization checkpoint immediately before those operations. The npx -y invocation may also download the CLI while simultaneously claiming not to install it. Behavioral validation is not-run.
