@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: podcast-generation
+display_name: Microsoft Podcast Generation
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/podcast-generation/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: a2003b6b95ead129e53dd5377a2229682ff75b1b
+upstream_last_updated_at: 2026-01-28
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/podcast-generation
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure OpenAI Realtime; Python/OpenAI client; FastAPI; React; database for full reference architecture; complete 4-file package including two references and pcm_to_wav.py
+import_eligibility: rejected-unchanged
+rationale: Exact static review bound to package tree a1aeeb2e902d732035066ed9f7be20cf120ce53c and SKILL.md blob 7f2e72053b725adf289d5438138ddcee55e47012. Preserve Realtime event handling, PCM/WAV assumptions, streaming transcript/audio collection, deterministic conversion and integration patterns. Reject unchanged because source/application content can be transmitted to Azure OpenAI and generated transcripts/audio persisted without universal disclosure/minimization and action-specific persistence authorization. Behavioral validation is not-run.
