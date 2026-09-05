@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: microsoft-foundry
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 75f1fef94394b6ffde32259d0268f2d3381938dc
+skill_md_blob_sha: 49fe35776ef5ae8d8c028b8f28d5d11b00a47df2
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, orchestration, agent-development]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [orchestration, tool-routing, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact root-entry and complete-package-context review. Preserve Foundry workflow routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite and current-discovery patterns. Reject unchanged because consequential Azure/workspace mutations are not universally guarded by mandatory action-specific authorization and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. Behavioral validation remains not-run.

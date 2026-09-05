@@ -4,16 +4,17 @@ source_id: microsoft-skills
 source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 44744c928eba10e9e69272a6bab0859b79c480c5
+skill_md_blob_sha: 8377383735afeb36e4b55a9937876b427785db9e
 characterized_at: 2026-08-31
-last_verified_at: 2026-08-31
-verification_status: verified
+last_verified_at: 2026-09-05
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 15/20
 tags:
-  use_case: [authoring, implementation, documentation]
+  use_case: [skill-authoring, implementation, documentation]
   lifecycle: [design, implementation, verification]
-  characteristic: [reference-heavy, production-oriented, risk-aware, portable]
-  authority: [local-write]
+  characteristic: [progressive-disclosure, reference-heavy, maintainability]
+  authority: [mutating]
   portability: [high]
-notes: Exact package-tree review at the registered Microsoft Skills pin. Strong authoring guidance emphasizes concise context, progressive disclosure, explicit source context for SDK/API skills, current-documentation verification, safe credential patterns, lifecycle cleanup, structured package layout and clear best practices. Bundled Python helpers can initialize, validate and package local skill directories, so use requires ordinary host authorization for the target filesystem, but the package does not cross the hard consequential-authority boundary by itself and does not solicit actual secrets into conversational context. Upstream scripts remain reference-package tooling rather than skillz-owned execution machinery. Behavioral validation is not-run; Azure SDK/authentication conventions and host skill formats remain freshness-sensitive.
+notes: Exact package-tree review at the registered Microsoft Skills pin. Strong material includes concise authoring, progressive disclosure, SDK source/freshness discipline, safe credential patterns, lifecycle cleanup, structured package layout and clear output/workflow guidance. Current authority governance rejects unchanged use because bundled init_skill.py and package_skill.py persistently create directories/files, change script mode and create .skill archives without a mandatory action-specific authorization checkpoint immediately before mutation. Upstream helpers remain reference-package tooling, not skillz runtime. Behavioral validation remains not-run.

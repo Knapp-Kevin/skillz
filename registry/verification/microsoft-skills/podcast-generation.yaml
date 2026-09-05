@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: podcast-generation
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a1aeeb2e902d732035066ed9f7be20cf120ce53c
+skill_md_blob_sha: 7f2e72053b725adf289d5438138ddcee55e47012
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [implementation, communication]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, production-oriented, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact 4-file package review. Preserve Azure OpenAI Realtime event handling, explicit PCM/WAV assumptions, streaming transcript/audio collection, deterministic conversion and FastAPI/React reference integration. Reject unchanged because potentially private source content may be transmitted externally and transcript/audio state persisted without mandatory disclosure/minimization and persistence-authorization boundaries. Behavioral validation remains not-run.

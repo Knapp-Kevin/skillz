@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: kql
+display_name: Microsoft KQL
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/kql/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: e7457389248c42433c940c3e497e2ee6c37604d4
+upstream_last_updated_at: 2026-04-15
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/skills/kql
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Kusto-compatible query surface for live execution; complete 5-file package consisting of SKILL.md plus four bundled references
+import_eligibility: rejected-unchanged
+rationale: Exact static review bound to package tree 2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6 and SKILL.md blob 8be2bdeebd4cdfa0937d3457e70128042cd34904. Strong KQL mechanics, result-size discipline, discovery, troubleshooting, and public help-cluster examples are preserved. Unchanged adoption is rejected because live query/discovery execution lacks a mandatory target-authorization and sensitive-data minimization boundary and may expose connection strings, principals, logs, identity/access data, or operational state. Behavioral validation is not-run.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-agents-md
+display_name: Microsoft Deep Wiki AGENTS.md
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-agents-md/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 4cf58ce31ea6e814a21ff4db46b5f52391ba8bfc
+upstream_last_updated_at: 2026-02-13T02:28:22Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-agents-md
+permission_tier: mutating
+portability: high
+review_status: rejected
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; repository manifests/source/config/CI evidence; writable workspace for target instruction files
+import_eligibility: rejected-unchanged
+rationale: Exact review bound to package tree d41f5a10717c8a334cd4d2f2368dbfbef40d47e5 and SKILL.md blob 45e93b32d3d7f2120cb9b3b7f51e9271e3e0189c. Preserve evidence-grounded AGENTS.md generation, real command/path discipline, scoped root/nested guidance, non-overwrite checks, concise output, explicit boundaries and secret prohibition. Reject unchanged because file absence only prevents overwrite; it does not authorize creation of persistent AGENTS.md and CLAUDE.md files across repository folders. Behavioral validation is not-run.

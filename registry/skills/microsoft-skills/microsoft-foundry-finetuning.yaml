@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: finetuning
+display_name: Microsoft Foundry Fine-tuning
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/finetuning/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 981d9b71d0187be796b03c2f4d69cccca80c0e42
+upstream_last_updated_at: 2026-05-25
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/microsoft-foundry/finetuning
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Microsoft Foundry fine-tuning/evaluation services; complete nested package including references, workflow material, validators and operational scripts
+import_eligibility: rejected-unchanged
+rationale: Exact review bound to package tree f4fce572b9e1db4e7880315bf39045d03f42a0fd and SKILL.md blob 68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277. Preserve baseline-first methodology, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison and training-curve diagnostics. Reject unchanged because dataset upload, paid training, model deployment, external evaluation/model calls, synthetic-data generation and remote cleanup lack mandatory action-specific authorization, while data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation is not-run.

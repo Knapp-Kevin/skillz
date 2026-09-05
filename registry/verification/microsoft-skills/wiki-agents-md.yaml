@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-agents-md
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d41f5a10717c8a334cd4d2f2368dbfbef40d47e5
+skill_md_blob_sha: 45e93b32d3d7f2120cb9b3b7f51e9271e3e0189c
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [documentation, repository-maintenance]
+  lifecycle: [implementation, maintenance]
+  characteristic: [source-driven, evidence-first, human-review]
+  authority: [mutating]
+  portability: [high]
+notes: Exact one-file package review. Preserve real-command and real-path evidence discipline, scoped root/nested guidance, non-overwrite checks, explicit operational boundaries, concise output and secret prohibition. Reject unchanged because the procedure creates persistent AGENTS.md and CLAUDE.md files without mandatory action-specific authorization immediately before writing; missing files are a precondition, not permission. Behavioral validation remains not-run.

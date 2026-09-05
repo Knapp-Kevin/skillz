@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: python-appservice-deploy
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6e11dad529e50b7fbc37191de665788d0427ccad
+skill_md_blob_sha: ac25db692762945d0e3e9ed2016dcfa29fbfa610
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [deployment, cloud, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [production-oriented, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact 14-file package review. Preserve framework detection, deterministic naming, idempotent creation patterns, environment-file exclusion, startup handling and deployment acceptance versus asynchronous build/startup distinction. Reject unchanged because the workflow can create cost-bearing Azure resource groups, App Service plans and apps, apply settings and deploy code while explicitly instructing the agent not to ask for confirmation after defaults are inferred. Behavioral validation remains not-run.
