@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-vitepress
+display_name: Microsoft Deep Wiki VitePress Packager
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-vitepress/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-vitepress
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; Node.js/npm, VitePress, Vue, vitepress-plugin-mermaid, writable workspace, and source Markdown/wiki content
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree fb40a7721e7038dde865905b9626602b7a2da77d and SKILL.md blob b29a15e05917cb599592604643827c4fc7b6190e. Strong reusable material includes deterministic VitePress scaffolding, dark-mode Mermaid theming, SSR-aware Vue lifecycle guidance, click-to-zoom behavior, Markdown compatibility fixes, and explicit build-output expectations. Unchanged adoption is rejected because the procedure directs persistent workspace creation under wiki-site/, package.json creation, npm install, and a production build without a mandatory action-specific authorization checkpoint immediately before mutation/execution. Behavioral validation is not-run.
