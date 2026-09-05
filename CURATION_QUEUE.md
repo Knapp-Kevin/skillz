@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **348** persisted exact-version third-party verification companions.
+- **349** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **176/189**.
-- Remaining gaps: **13**.
+- Current-standard companions: **177/189**.
+- Remaining gaps: **12**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,9 +45,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-Current non-direct Microsoft frontier has advanced through `deep-wiki/wiki-researcher`. It is **verified, 18/20** at package tree `22777f05d7f11b559c120d6cae7f09848828b9d2` and `SKILL.md` blob `b4ccf2ca851d10c1b7395e49f39534af26ad5bce`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve actual-code-path tracing, implementation reading, fact/inference separation, evidence standards, confidence ratings, and explicit open-question boundaries. The package is read-only, so the authority hard fail does not apply. Main weaknesses are Git-centric context resolution, an unnecessary mandatory user question when context may already be resolvable, fixed five-iteration ceremony, and mandatory Mermaid/table output per iteration. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced through `deep-wiki/wiki-vitepress`. It is **rejected unchanged, 14/20** at package tree `fb40a7721e7038dde865905b9626602b7a2da77d` and `SKILL.md` blob `b29a15e05917cb599592604643827c4fc7b6190e`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve deterministic VitePress scaffolding, layered dark-mode Mermaid fixes, SSR-aware Vue lifecycle guidance, click-to-zoom behavior, Markdown compatibility post-processing, and explicit build-output expectations. Unchanged adoption fails the authority hard rule because it directs persistent `wiki-site/` and `package.json` creation, dependency installation with `npm install`, and a production build without a mandatory action-specific authorization checkpoint immediately before mutation/execution. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-researcher`, checking canonical registry companions and repository history before treating it as a genuine gap.
+The next Microsoft Skills unit should be established from the exact registered-pin source tree after `wiki-vitepress`, checking canonical registry companions and repository history before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **348 reviews / Microsoft Skills 176/189 / 13 gaps**, establish the next genuine companion gap after `wiki-researcher` from the exact registered-pin `deep-wiki` tree and continue source-by-source.
+After public accounting is verified at **349 reviews / Microsoft Skills 177/189 / 12 gaps**, establish the next genuine companion gap after `wiki-vitepress` from the exact registered-pin source tree and continue source-by-source.
