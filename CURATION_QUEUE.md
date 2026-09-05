@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **340** persisted exact-version third-party verification companions.
+- **341** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,17 +35,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **168/189**.
-- Remaining gaps: **21**.
+- Current-standard companions: **169/189**.
+- Remaining gaps: **20**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Current non-direct Microsoft frontier has advanced through `python-appservice-deploy`. It is **rejected unchanged, 12/20** at package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`; freshness is bound to sync revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve its framework detection, deterministic naming, shell-safety guidance, idempotent create pattern, transient-error classification, `.env` packaging exclusion, and deployment-vs-build-state distinction. Unchanged adoption is rejected because the workflow creates Azure resources, defaults to a paid P0v3 plan, mutates application configuration, and deploys code while explicitly instructing the agent not to ask for confirmation after presenting inferred defaults. Behavioral validation is `not-run`.
+Current non-direct Microsoft frontier has advanced into the registered-pin `deep-wiki` plugin through `wiki-ado-convert`. It is **rejected unchanged, 15/20** at package tree `1a9d5144324d5891454d25e3607ca09439584eb8` and `SKILL.md` blob `9c030896cd815faef45a314774d37480329e1f34`; freshness is bound to revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its deterministic VitePress/GFM-to-ADO conversion rules, Mermaid/front-matter/link transformations, built-in-only Node.js design, source/output separation, landing-page and `.order` requirements, citation preservation, and verification checklist. Unchanged adoption is rejected because the intended workflow creates a persistent project converter script and generated documentation tree, may mutate npm project configuration, and runs the converter without a mandatory action-specific authorization checkpoint immediately before workspace mutation. Behavioral validation is `not-run`.
 
-The next Microsoft Skills unit must be established from the exact registered-pin tree after `python-appservice-deploy`. `foundry-projects-resources` and related newer Foundry packages observed upstream are absent from the registered revision and therefore do not count toward this denominator.
+The next Microsoft Skills unit should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-ado-convert`. The source tree currently places `wiki-agents-md` next, but companion shelves and repository history must be checked before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -74,4 +74,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After `python-appservice-deploy` is merged and public accounting is verified at **340 reviews / Microsoft Skills 168/189 / 21 gaps**, establish the first genuine remaining Microsoft Skills gap from the exact registered-pin tree and continue source-by-source.
+After `wiki-ado-convert` is merged and public accounting is verified at **341 reviews / Microsoft Skills 169/189 / 20 gaps**, establish whether `wiki-agents-md` is the next genuine companion gap from the exact registered-pin tree and continue source-by-source.
