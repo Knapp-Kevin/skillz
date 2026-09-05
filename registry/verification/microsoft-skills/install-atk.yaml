@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: install-atk
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c7be3fb169d02f94492a3d1ca203bed5adacc9ba
+skill_md_blob_sha: 44afbcbbd76801317776563a96d034574716e949
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [deployment, implementation]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [deterministic, safety-bounded, tool-routing]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact one-file package review. Strong points are explicit install/update triggers, exact @microsoft/m365agentstoolkit-cli and TeamsDevApp.ms-teams-vscode-extension identifiers, straightforward CLI-versus-extension routing, Node/npm failure guidance, telemetry tagging, and explicit failure reporting. Unchanged adoption fails the current authority hard rule because npx -y automatically downloads, executes, and caches the latest CLI package on first use, while ambiguous ATK intent defaults to verifying that path and installing the VS Code extension. The skill contains no distinct action-specific authorization checkpoint immediately before those local-environment mutations. Running an unpinned latest package also weakens reproducibility and supply-chain control. Preserve the routing, dependency checks, and reporting pattern for adaptation behind explicit host-side authorization and a governed version policy. No secret-handling defect was identified. Behavioral validation remains not-run.
