@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 352 |
+| Persisted third-party exact-version reviews | 353 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 180 / 189 |
-| Microsoft Skills current-standard gaps | 9 |
+| Microsoft Skills current-standard companions | 181 / 189 |
+| Microsoft Skills current-standard gaps | 8 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **180/189**, leaving **9** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **181/189**, leaving **8** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `m365-agent-evaluator` is **rejected unchanged, 14/20**, bound to package tree `15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1` and `SKILL.md` blob `f09feb28a91638a7da7da797a0f409de4e690f26`; freshness is revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve schema 1.2.0 discipline, progressive reference loading, PRA scenario design, evaluator/threshold guidance, setup-versus-quality failure separation, and conservative secret/result handling. Unchanged adoption fails the authority hard rule because `npx -y ...@latest` downloads and executes unpinned code and tenant-dependent evaluation may transmit potentially sensitive data without a distinct action-specific authorization checkpoint immediately before execution. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `teams-app-developer` is **rejected unchanged, 12/20**, bound to package tree `164d327f3039e037b0ad2cdabeee01e2c6aa6d3f` and `SKILL.md` blob `04d194383e9863d8167d8005747cf6a3933ddc26`; freshness is revision `0bef15b6a4d82283d13b6ed3b6f13f430b9b846a` from 2026-06-20. Preserve intent-to-workflow routing, mandatory sub-skill reading, Playground-first testing, background-process handling, context resolution, troubleshooting, and broad Teams/M365 references. Unchanged adoption fails the authority hard rule because it directs global CLI installation, project scaffolding/file mutation, tenant app/AAD provisioning, Azure resource creation/deployment, authentication, sideloading/sharing/publishing, and related consequential operations without distinct action-specific authorization checkpoints. Its root also directs asking users for real missing environment values including Azure OpenAI API keys instead of preferring secure external credential injection. Behavioral validation is `not-run`.
 
-Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `teams-app-developer` follows `m365-agent-evaluator`; check canonical companions and repository history before review.
+Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `ui-widget-developer` follows `teams-app-developer`; check canonical companions and repository history before review.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
