@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 347 |
+| Persisted third-party exact-version reviews | 348 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 175 / 189 |
-| Microsoft Skills current-standard gaps | 14 |
+| Microsoft Skills current-standard companions | 176 / 189 |
+| Microsoft Skills current-standard gaps | 13 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **175/189**, leaving **14** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **176/189**, leaving **13** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `wiki-qa` is **verified, 18/20**, bound to package tree `80775b0be2ffbef4a1675afeaaa132696bdd1d01` and `SKILL.md` blob `2568639d0204aff644b86563342487fec78eb332`; freshness is revision `e1f9cce11758d305e6c77683fe34ccc394586291` from 2026-04-20. Preserve repository-context resolution, source-file-only evidence, search-and-read-before-answer discipline, inline file/line citations, explicit insufficiency handling, and the prohibition on guessing or external knowledge. The package is read-only. Main weaknesses are Git-centric context resolution, an unnecessary user question when context may already be resolvable, and rigid Mermaid/table requirements. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-researcher` is **verified, 18/20**, bound to package tree `22777f05d7f11b559c120d6cae7f09848828b9d2` and `SKILL.md` blob `b4ccf2ca851d10c1b7395e49f39534af26ad5bce`; freshness is revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve actual-code-path tracing, implementation reading, fact/inference separation, evidence standards, confidence ratings, and explicit open-question boundaries. The package is read-only. Main weaknesses are Git-centric context resolution, an unnecessary mandatory user question when context may already be resolvable, fixed five-iteration ceremony, and mandatory Mermaid/table output per iteration. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-qa`, checking canonical companions and repository history before review.
+The next Microsoft Skills gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-researcher`, checking canonical companions and repository history before review.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
