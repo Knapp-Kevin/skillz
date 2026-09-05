@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: declarative-agent-developer
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5e6287047863c5d889fe3b19f13ee4382d5f7e34
+skill_md_blob_sha: a974c332cdbed595eed80f79285ba12d7946f61e
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [agent-development, deployment, implementation, documentation]
+  lifecycle: [design, implementation, release, operations]
+  characteristic: [contract-first, evidence-first, safety-bounded, progressive-disclosure, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact package review of SKILL.md plus bundled references. Strong points include mandatory workspace fingerprinting, hard rejection for non-agent projects or missing manifests, Detect-Inform-Ask before correcting errors, schema-version gates, explicit anti-fabrication rules, structured instruction review, localization guidance, and clear CLI workflow references. Unchanged adoption fails the current authority hard rule. After appPackage edits the skill says to provision automatically unless the user explicitly opts out, while the deployment reference includes project creation, tenant provisioning, sharing to users or tenant, publishing to the M365 catalog, authentication, OAuth/permission setup, and production environments without a universal action-specific authorization checkpoint immediately before each consequential operation. These actions can alter tenant-visible state, permissions, user communications/access, credentials, and persistent cloud resources. The setup check also uses npx -y --package, which can download the CLI on first use while the prose says not to install it. Preserve the gating, schema, instruction-quality, and localization mechanisms for adaptation behind explicit host-side authorization and secure credential handling. Behavioral validation remains not-run.
