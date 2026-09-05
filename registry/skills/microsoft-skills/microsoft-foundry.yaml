@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: microsoft-foundry
+display_name: Microsoft Foundry
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: 2026-07-02T20:19:02Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/microsoft-foundry
+permission_tier: mutating
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete canonical Microsoft Foundry package tree; Azure/Foundry MCP tools and services; azd/az/SDKs as routed; nested first-class skills remain separate denominator entries; duplicate plugin exposure is a symlink to this canonical package
+import_eligibility: rejected-unchanged
+rationale: Exact root-entry review bound to package tree 75f1fef94394b6ffde32259d0268f2d3381938dc and SKILL.md blob 49fe35776ef5ae8d8c028b8f28d5d11b00a47df2. Preserve orchestration, scope partitioning, configuration precedence, remote-state verification, review-before-overwrite and live-discovery patterns. Reject unchanged because routed cloud/workspace mutations lack a universal mandatory action-specific authorization boundary and trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. Behavioral validation is not-run.
