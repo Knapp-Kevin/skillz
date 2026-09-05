@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: finetuning
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f4fce572b9e1db4e7880315bf39045d03f42a0fd
+skill_md_blob_sha: 68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [evaluation, cloud, research]
+  lifecycle: [design, implementation, verification]
+  characteristic: [metric-driven, holdout-aware, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact nested-package review. Preserve baseline-first fine-tuning, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison and training-curve diagnostics. Reject unchanged because uploads, paid training, deployments, external model/evaluation calls, synthetic-data generation and remote deletion lack mandatory action-specific authorization, and data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation remains not-run.
