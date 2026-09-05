@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 350 |
+| **Persisted third-party review companions** | 351 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 178 / 189 |
-| **Microsoft Skills current-standard gaps** | 11 |
+| **Microsoft Skills current-standard companions** | 179 / 189 |
+| **Microsoft Skills current-standard gaps** | 10 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **178/189 companion-complete**, **11 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **179/189 companion-complete**, **10 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,13 +44,13 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `declarative-agent-developer` review resolves to **350 third-party exact-version companions / Microsoft Skills 178/189 / 11 gaps**.
+On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `install-atk` review resolves to **351 third-party exact-version companions / Microsoft Skills 179/189 / 10 gaps**.
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete** and the `deep-wiki` family has been advanced through its final reviewed unit. The next active family is `microsoft-365-agents-toolkit`. Latest closure: `declarative-agent-developer` is **rejected unchanged, 13/20**, bound to package tree `5e6287047863c5d889fe3b19f13ee4382d5f7e34` and `SKILL.md` blob `a974c332cdbed595eed80f79285ba12d7946f61e`, with freshness revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve mandatory workspace fingerprinting, hard reject/fix/edit routing, Detect-Inform-Ask error handling, schema-version gates, anti-fabrication rules, instruction-quality review, localization guidance, and its bundled M365 agent references. Unchanged adoption fails the authority hard rule because the package directs or documents project scaffolding and consequential M365 operations including provisioning, sharing, publishing, authentication, OAuth/permission setup, and production environments without a universal action-specific authorization checkpoint immediately before each external mutation. The `npx -y --package` availability check may also download the CLI despite prose saying not to install it. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete** and the `deep-wiki` family is complete. The active family is `microsoft-365-agents-toolkit`. Latest closure: `install-atk` is **rejected unchanged, 13/20**, bound to package tree `c7be3fb169d02f94492a3d1ca203bed5adacc9ba` and `SKILL.md` blob `44afbcbbd76801317776563a96d034574716e949`, with freshness revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve explicit install/update triggers, exact package and extension identifiers, CLI-versus-extension routing, dependency failure guidance, telemetry tagging, and result reporting. Unchanged adoption fails the authority hard rule because `npx -y` automatically downloads, executes, and caches the latest CLI package and ambiguous ATK intent defaults to installing the VS Code extension without a distinct action-specific authorization checkpoint immediately before those local-environment mutations. Latest-version execution is also unpinned. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **11** gaps. Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order, checking canonical registry companions and repository history before review.
+Microsoft Skills remains active with **10** gaps. Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `m365-agent-evaluator` follows `install-atk`; check canonical registry companions and repository history before review.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills through the `microsoft-365-agents-toolkit` family from the first genuine remaining gap after `declarative-agent-developer`.
+1. Continue Microsoft Skills through the `microsoft-365-agents-toolkit` family from `m365-agent-evaluator`, after proving it is a genuine remaining gap.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
