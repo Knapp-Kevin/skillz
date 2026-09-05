@@ -7,14 +7,14 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 346,
+    "persisted_third_party_exact_version_reviews": 347,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
-    "microsoft_skills_current_standard_companions": 174,
+    "microsoft_skills_current_standard_companions": 175,
     "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 15,
+    "microsoft_skills_current_standard_gaps": 14,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -47,6 +47,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: reviewed Microsoft deep-wiki wiki-page-writer at exact registered pin; reconciled canonical companions and public accounting to Microsoft Skills 174/189"
+    "latest_reconciliation": "2026-09-05: reviewed Microsoft deep-wiki wiki-qa at exact registered pin; reconciled canonical companions and public accounting to Microsoft Skills 175/189"
   }
 }
