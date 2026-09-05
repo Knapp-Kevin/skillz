@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: m365-agent-evaluator
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1
+skill_md_blob_sha: f09feb28a91638a7da7da797a0f409de4e690f26
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, testing]
+  lifecycle: [verification, implementation]
+  characteristic: [evidence-first, progressive-disclosure, safety-bounded, spec-driven]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: Exact package review including SKILL.md, six bundled example Markdown files, and ten reference/schema files. Strong points are current schema 1.2.0 guidance, selective reference loading, PRA scenario design, public evaluator/threshold discipline, setup-versus-quality failure separation, temporary-file/overwrite safeguards, and conservative secret/result/debug-log handling. Unchanged adoption fails the current authority hard rule because the skill mandates npx -y --package @microsoft/m365-copilot-eval@latest, which downloads and executes unpinned code, and its real tenant-dependent evaluation path can send prompts, agent responses, retrieved grounding data, identifiers, and other potentially sensitive material to Microsoft 365 and Azure services. It requires approved configuration but does not require a distinct action-specific authorization checkpoint immediately before each consequential evaluation/data-transmission run. Warnings before cache-clear/signout and ask-before-overwrite are useful but do not repair the broader execution boundary. Preserve the evaluation methodology and data-handling guardrails for adaptation behind explicit execution/data-transmission authorization and a governed CLI version. Behavioral validation remains not-run.
