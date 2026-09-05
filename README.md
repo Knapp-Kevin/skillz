@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-336-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-337-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **336 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **337 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,16 +55,16 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **164/189** current-standard companion complete, **25** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **165/189** current-standard companion complete, **24** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
 - Microsoft direct Rust: **9/9** complete.
 - Microsoft direct TypeScript: **25/25** complete.
 
-Latest non-direct Microsoft closure: `podcast-generation` is **rejected unchanged, 13/20**. It is bound to package tree `a1aeeb2e902d732035066ed9f7be20cf120ce53c`, `SKILL.md` blob `7f2e72053b725adf289d5438138ddcee55e47012`, and freshness revision `a2003b6b95ead129e53dd5377a2229682ff75b1b` from 2026-01-28. Preserve its Realtime event handling, explicit audio-format assumptions, PCM-to-WAV conversion, and full-stack integration pattern. Unchanged adoption is rejected because source content is sent to Azure OpenAI without a mandatory disclosure/minimization checkpoint and generated transcript/audio is persisted without action-specific authorization. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `skill-creator` is **rejected unchanged, 15/20**. It is bound to package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, `SKILL.md` blob `8377383735afeb36e4b55a9937876b427785db9e`, and freshness revision `178d9730909101c93949a2ea364058345a6fae9e` from 2026-06-19. Preserve its concise authoring heuristics, progressive-disclosure model, source/freshness discipline, Azure SDK authentication and lifecycle conventions, output-pattern guidance, and validation/packaging concepts. Unchanged adoption is rejected because bundled initializer and packager helpers persistently create files, directories, executable mode changes, and archives without a mandatory action-specific authorization checkpoint immediately before workspace mutation. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **25** gaps. The next gap must be established from the registered-pin tree after `podcast-generation`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **24** gaps. The next gap must be established from the registered-pin tree after `skill-creator`. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
