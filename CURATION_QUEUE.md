@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **350** persisted exact-version third-party verification companions.
+- **351** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **178/189**.
-- Remaining gaps: **11**.
+- Current-standard companions: **179/189**.
+- Remaining gaps: **10**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,9 +45,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-The `deep-wiki` frontier is complete through `wiki-vitepress`. The active non-direct family is now `microsoft-365-agents-toolkit`. Latest closure: `declarative-agent-developer` is **rejected unchanged, 13/20** at package tree `5e6287047863c5d889fe3b19f13ee4382d5f7e34` and `SKILL.md` blob `a974c332cdbed595eed80f79285ba12d7946f61e`; freshness is bound to revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve mandatory workspace fingerprinting, hard reject/fix/edit routing, Detect-Inform-Ask error handling, schema-version gates, anti-fabrication rules, instruction-quality review, localization guidance, and bundled M365 agent references. Unchanged adoption fails the authority hard rule because the package directs or documents project creation plus M365 provisioning, sharing, publishing, authentication, OAuth/permission setup, and production-environment operations without a universal action-specific authorization checkpoint immediately before each consequential mutation. Its `npx -y --package` setup check may download the CLI despite prose saying not to install it. Behavioral validation is `not-run`.
+The `deep-wiki` frontier is complete. The active non-direct family is `microsoft-365-agents-toolkit`. Latest closure: `install-atk` is **rejected unchanged, 13/20** at package tree `c7be3fb169d02f94492a3d1ca203bed5adacc9ba` and `SKILL.md` blob `44afbcbbd76801317776563a96d034574716e949`; freshness is bound to revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve explicit install/update triggers, exact package and extension identifiers, CLI-versus-extension routing, dependency failure guidance, telemetry tagging, and result reporting. Unchanged adoption fails the authority hard rule because `npx -y` automatically downloads, executes, and caches the latest CLI package and ambiguous ATK intent defaults to installing the VS Code extension without a distinct action-specific authorization checkpoint immediately before those local-environment mutations. Latest-version execution is also unpinned. Behavioral validation is `not-run`.
 
-Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order, checking canonical registry companions and repository history before treating each unit as a genuine gap.
+Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `m365-agent-evaluator` follows `install-atk`; check canonical registry companions and repository history before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **350 reviews / Microsoft Skills 178/189 / 11 gaps**, establish the next genuine companion gap in `microsoft-365-agents-toolkit` after `declarative-agent-developer` from the exact registered-pin source tree and continue source-by-source.
+After public accounting is verified at **351 reviews / Microsoft Skills 179/189 / 10 gaps**, establish whether `m365-agent-evaluator` is the next genuine companion gap from the exact registered-pin source tree and continue source-by-source.
