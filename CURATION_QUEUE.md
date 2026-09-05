@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **352** persisted exact-version third-party verification companions.
+- **353** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **180/189**.
-- Remaining gaps: **9**.
+- Current-standard companions: **181/189**.
+- Remaining gaps: **8**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,9 +45,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-The `deep-wiki` frontier is complete. The active non-direct family is `microsoft-365-agents-toolkit`. Latest closure: `m365-agent-evaluator` is **rejected unchanged, 14/20** at package tree `15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1` and `SKILL.md` blob `f09feb28a91638a7da7da797a0f409de4e690f26`; freshness is bound to revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve schema 1.2.0 discipline, progressive reference loading, PRA scenario design, evaluator/threshold guidance, setup-versus-quality failure separation, and conservative secret/result handling. Unchanged adoption fails the authority hard rule because its mandated `npx -y ...@latest` downloads and executes unpinned code and tenant-dependent evaluation can transmit potentially sensitive prompts, responses, grounding data, identifiers, and results to Microsoft 365 and Azure without a distinct action-specific authorization checkpoint immediately before execution. Behavioral validation is `not-run`.
+The `deep-wiki` frontier is complete. The active non-direct family is `microsoft-365-agents-toolkit`. Latest closure: `teams-app-developer` is **rejected unchanged, 12/20** at package tree `164d327f3039e037b0ad2cdabeee01e2c6aa6d3f` and `SKILL.md` blob `04d194383e9863d8167d8005747cf6a3933ddc26`; freshness is bound to revision `0bef15b6a4d82283d13b6ed3b6f13f430b9b846a` from 2026-06-20. Preserve intent-to-workflow routing, mandatory sub-skill reading, Playground-first testing, background-process handling, context resolution, troubleshooting, and broad Teams/M365 references. Unchanged adoption fails the authority hard rule because it directs global CLI installation, project scaffolding/file mutation, tenant app/AAD provisioning, Azure resource creation/deployment, authentication, sideloading/sharing/publishing, and related consequential operations without distinct action-specific authorization checkpoints. Its root also directs asking users for real missing environment values including Azure OpenAI API keys instead of preferring secure external credential injection. Behavioral validation is `not-run`.
 
-Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `teams-app-developer` follows `m365-agent-evaluator`; check canonical registry companions and repository history before treating it as a genuine gap.
+Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `ui-widget-developer` follows `teams-app-developer`; check canonical registry companions and repository history before treating it as a genuine gap.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **352 reviews / Microsoft Skills 180/189 / 9 gaps**, establish whether `teams-app-developer` is the next genuine companion gap from the exact registered-pin source tree and continue source-by-source.
+After public accounting is verified at **353 reviews / Microsoft Skills 181/189 / 8 gaps**, establish whether `ui-widget-developer` is the next genuine companion gap from the exact registered-pin source tree and continue source-by-source.

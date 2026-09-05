@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 352 |
+| **Persisted third-party review companions** | 353 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 180 / 189 |
-| **Microsoft Skills current-standard gaps** | 9 |
+| **Microsoft Skills current-standard companions** | 181 / 189 |
+| **Microsoft Skills current-standard gaps** | 8 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **180/189 companion-complete**, **9 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **181/189 companion-complete**, **8 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,13 +44,13 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `m365-agent-evaluator` review resolves to **352 third-party exact-version companions / Microsoft Skills 180/189 / 9 gaps**.
+On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `teams-app-developer` review resolves to **353 third-party exact-version companions / Microsoft Skills 181/189 / 8 gaps**.
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete** and the `deep-wiki` family is complete. The active family is `microsoft-365-agents-toolkit`. Latest closure: `m365-agent-evaluator` is **rejected unchanged, 14/20**, bound to package tree `15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1` and `SKILL.md` blob `f09feb28a91638a7da7da797a0f409de4e690f26`, with freshness revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve schema-version discipline, progressive reference loading, PRA scenario design, evaluator/threshold guidance, setup-versus-quality failure separation, and conservative secret/result handling. Unchanged adoption fails the authority hard rule because the mandated `npx -y --package @microsoft/m365-copilot-eval@latest` downloads and executes unpinned code and real tenant-dependent evaluations can transmit potentially sensitive prompts, responses, grounding data, identifiers, and results to Microsoft 365 and Azure without a distinct action-specific authorization checkpoint immediately before execution. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete** and the `deep-wiki` family is complete. The active family is `microsoft-365-agents-toolkit`. Latest closure: `teams-app-developer` is **rejected unchanged, 12/20**, bound to package tree `164d327f3039e037b0ad2cdabeee01e2c6aa6d3f` and `SKILL.md` blob `04d194383e9863d8167d8005747cf6a3933ddc26`, with freshness revision `0bef15b6a4d82283d13b6ed3b6f13f430b9b846a` from 2026-06-20. Preserve intent-to-workflow routing, mandatory sub-skill reading, Playground-first testing, background-process handling, context resolution, troubleshooting, and broad Teams/M365 references. Unchanged adoption fails the authority hard rule because it directs global CLI installation, project scaffolding/file mutation, tenant app/AAD provisioning, Azure resource creation/deployment, authentication, sideloading/sharing/publishing, and related consequential operations without distinct action-specific authorization checkpoints. The root also directs asking users for real missing environment values including Azure OpenAI API keys rather than preferring secure external credential injection. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **9** gaps. Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `teams-app-developer` follows `m365-agent-evaluator`; check canonical registry companions and repository history before review.
+Microsoft Skills remains active with **8** gaps. Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `ui-widget-developer` follows `teams-app-developer`; check canonical registry companions and repository history before review.
 
 ## Source lifecycle
 
@@ -68,7 +68,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills through the `microsoft-365-agents-toolkit` family from `teams-app-developer`, after proving it is a genuine remaining gap.
+1. Continue Microsoft Skills through the `microsoft-365-agents-toolkit` family from `ui-widget-developer`, after proving it is a genuine remaining gap.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: teams-app-developer
+display_name: Microsoft 365 Teams App Developer
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 0bef15b6a4d82283d13b6ed3b6f13f430b9b846a
+upstream_last_updated_at: 2026-06-20T00:00:51Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: SKILL.md plus bundled create-project, test-playground, test-teams, provision-deploy, troubleshoot, slack-to-teams, toolkit, docs, and expert reference trees; ATK CLI; Node/npm for supported templates; Microsoft 365/Teams tenant and authentication for tenant workflows; Azure subscription/authentication for cloud provisioning and deployment; template-specific language/toolchain dependencies
+import_eligibility: adaptation-only
+rationale: Exact static review bound to package tree 164d327f3039e037b0ad2cdabeee01e2c6aa6d3f and SKILL.md blob 04d194383e9863d8167d8005747cf6a3933ddc26. Useful material includes intent-to-workflow routing, sub-skill-before-execution discipline, Playground-first testing, explicit long-running/background-process handling, project-context resolution, troubleshooting guidance, and broad Teams/M365 reference coverage. Unchanged adoption is rejected because the package directs global ATK installation, project scaffolding and filesystem mutation, tenant app/AAD provisioning, Azure resource creation and deployment, authentication, sideloading/sharing/publishing, and other consequential external operations without a mandatory action-specific authorization checkpoint immediately before each operation. It also instructs users to provide real missing Azure OpenAI secret values conversationally, contrary to the secure external credential-path preference. Preserve the routing, reference decomposition, and troubleshooting material for adaptation behind explicit mutation/external-action authorization and secure credential handling. Behavioral validation is not-run.
