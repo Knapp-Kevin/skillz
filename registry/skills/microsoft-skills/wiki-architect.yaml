@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-architect
+display_name: Microsoft Deep Wiki Architect
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-architect/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-architect
+permission_tier: read-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; read access to repository tree and README; Git commands for canonical remote/branch context resolution
+import_eligibility: verified-exact-version
+rationale: Exact static review bound to package tree 124c5bec7008b1e25940cfc67ea09b069af0dbea and SKILL.md blob 53bcf7016efbba50e4f634a7a4b4a40cddcb2234. Preserve repository-context resolution, evidence-grounded documentation catalogue generation, real-file citations, bounded hierarchy, audience-specific onboarding and small-repository depth handling. The canonical procedure is read-only and emits JSON, so no authority hard fail applies. Limitations are Git-centric context resolution and the need to preserve unknown business/cost/risk facts instead of fabricating them. Behavioral validation is not-run.
