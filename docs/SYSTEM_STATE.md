@@ -4,19 +4,19 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-04 |
+| **Last updated** | 2026-09-05 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 340 |
+| **Persisted third-party review companions** | 341 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 168 / 189 |
-| **Microsoft Skills current-standard gaps** | 21 |
+| **Microsoft Skills current-standard companions** | 169 / 189 |
+| **Microsoft Skills current-standard gaps** | 20 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **168/189 companion-complete**, **21 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **189**, **169/189 companion-complete**, **20 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -46,9 +46,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## Active Microsoft frontier
 
-The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `python-appservice-deploy` is **rejected unchanged, 12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, with freshness revision `24a3a7bd6caa8e87b3a91e93c95959e3cfdb906d` from 2026-06-15. Preserve its framework detection, deterministic naming, shell-safe runtime syntax, idempotent create pattern, transient-error classification, `.env` packaging exclusion, and deployment-state caveats. Unchanged adoption is rejected because it can create Azure resources, incur paid App Service cost, mutate app settings/startup configuration, and deploy code while explicitly instructing the agent to present inferred defaults without asking for confirmation before proceeding. Behavioral validation is `not-run`.
+The direct TypeScript slice is **25/25 current-standard companion-complete**. The non-direct Microsoft plugin/front-door frontier is active. Latest closure: `wiki-ado-convert` is **rejected unchanged, 15/20**, bound to package tree `1a9d5144324d5891454d25e3607ca09439584eb8` and `SKILL.md` blob `9c030896cd815faef45a314774d37480329e1f34`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its deterministic ADO compatibility matrix, Mermaid/front-matter/link conversion, built-in-only Node.js structure, non-destructive source/output separation, landing-page and ordering requirements, citation preservation, and verification checklist. Unchanged adoption is rejected because it directs the agent to create a project build script, write generated documentation and ordering files, may modify npm project configuration, and run the converter without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. Behavioral validation is `not-run`.
 
-Microsoft Skills remains active with **21** gaps. Establish the next gap from the exact registered-pin tree after `python-appservice-deploy`; newer-upstream-only skills are not eligible denominator units.
+Microsoft Skills remains active with **20** gaps. Establish the next gap from the exact registered-pin `deep-wiki` tree after `wiki-ado-convert`, checking current companions and repository history before review.
 
 ## Source lifecycle
 
@@ -66,7 +66,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `python-appservice-deploy`.
+1. Continue Microsoft Skills in registered-pin source order from the first genuine gap after `wiki-ado-convert` in `deep-wiki`.
 2. Complete remaining Microsoft Skills non-direct families.
 3. Complete Microsoft Azure Skills.
 4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
