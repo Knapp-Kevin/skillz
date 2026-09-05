@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-343-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-344-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **343 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **344 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,7 +55,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **171/189** current-standard companion complete, **18** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **172/189** current-standard companion complete, **17** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -64,9 +64,9 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 A 2026-09-05 contract reconciliation restored ten Microsoft reviews from auxiliary Markdown evidence into the mandatory `registry/skills/` + `registry/verification/` YAML companion paths. `skill-creator` already had a YAML pair and was therefore not counted twice; its existing pair was refreshed to the current 15/20 rejected authority disposition.
 
-Latest non-direct Microsoft closure: `wiki-changelog` is **verified, 16/20**. It is bound to package tree `f00f784abc5b9276f5a353334afbabb2ea0dfd72` and `SKILL.md` blob `cd5c1cd2825da88b0d370d33a329b0d74f727855`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its explicit source-context resolution, time-bounded commit grouping, change-type classification, project-terminology grounding, linked commit/file citations, and breaking-change emphasis. The canonical procedure is read-only. Its material limitations are Git-centric portability, limited failure handling, and insufficiently explicit diff/evidence inspection before synthesizing user-facing or migration claims. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-llms-txt` is **rejected unchanged, 15/20**. It is bound to package tree `b3a045c0f510f263fc05abba5daccaab4efcf164` and `SKILL.md` blob `f9eaf717a42a1206bdde938219f1d8cfbb1c64c4`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its spec-aware llms.txt structure, repository-context resolution, evidence-derived summaries, citation/diagram preservation, unrelated-root-file non-overwrite safeguard, and validation checklist. Unchanged adoption is rejected because it directs creation of `./llms.txt`, `wiki/llms.txt`, and `wiki/llms-full.txt` without a mandatory action-specific authorization checkpoint immediately before persistent workspace mutation. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **18** gaps. The next gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-changelog`, checking both canonical companion shelves and repository history before review. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **17** gaps. The next gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-llms-txt`, checking both canonical companion shelves and repository history before review. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
