@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: wiki-changelog
+display_name: Microsoft Deep Wiki Changelog
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/deep-wiki/skills/wiki-changelog/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_revision: 67ae723a23ba880e3e5c8a3e5e2320092024476e
+upstream_last_updated_at: 2026-04-02T16:37:09Z
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-skills/.github/plugins/deep-wiki/skills/wiki-changelog
+permission_tier: read-only
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: One-file SKILL.md package; read access to Git history, repository README, remote URL and branch context
+import_eligibility: verified-exact-version
+rationale: Exact static review bound to package tree f00f784abc5b9276f5a353334afbabb2ea0dfd72 and SKILL.md blob cd5c1cd2825da88b0d370d33a329b0d74f727855. Preserve explicit source-context resolution, time-bounded commit grouping, change-type classification, project-terminology grounding, linked commit/file citations, and breaking-change emphasis. The canonical procedure is read-only, so no authority hard fail applies. Material limitations are Git-centric portability, limited failure handling, and insufficiently explicit diff/evidence inspection before synthesizing user-facing or migration claims. Behavioral validation is not-run.
