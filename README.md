@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-348-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-349-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **348 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **349 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,7 +55,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **176/189** current-standard companion complete, **13** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **177/189** current-standard companion complete, **12** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -64,9 +64,9 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 A 2026-09-05 contract reconciliation restored ten Microsoft reviews from auxiliary Markdown evidence into the mandatory `registry/skills/` + `registry/verification/` YAML companion paths. `skill-creator` already had a YAML pair and was therefore not counted twice; its existing pair was refreshed to the current 15/20 rejected authority disposition.
 
-Latest non-direct Microsoft closure: `wiki-researcher` is **verified, 18/20**. It is bound to package tree `22777f05d7f11b559c120d6cae7f09848828b9d2` and `SKILL.md` blob `b4ccf2ca851d10c1b7395e49f39534af26ad5bce`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve its actual-code-path tracing, implementation reading, fact/inference separation, evidence standards, confidence ratings, and explicit open-question boundaries. The package is read-only, so the authority hard fail does not apply. Main weaknesses are Git-centric context resolution, an unnecessary mandatory user question when context may already be resolvable, fixed five-iteration ceremony, and mandatory Mermaid/table output per iteration. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `wiki-vitepress` is **rejected unchanged, 14/20**. It is bound to package tree `fb40a7721e7038dde865905b9626602b7a2da77d` and `SKILL.md` blob `b29a15e05917cb599592604643827c4fc7b6190e`, with freshness revision `67ae723a23ba880e3e5c8a3e5e2320092024476e` from 2026-04-02. Preserve deterministic VitePress scaffolding, layered dark-mode Mermaid handling, SSR-aware Vue lifecycle guidance, click-to-zoom behavior, Markdown compatibility post-processing, and explicit build-output expectations. Unchanged adoption fails the authority hard rule because the procedure directs persistent `wiki-site/` and `package.json` creation, `npm install`, and a production build without a mandatory action-specific authorization checkpoint. Behavioral validation is `not-run`.
 
-Microsoft Skills remains the active admitted-source family with **13** gaps. The next gap should be established from the exact registered-pin `deep-wiki` skill tree after `wiki-researcher`, checking both canonical companion shelves and repository history before review. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **12** gaps. The next gap should be established from the exact registered-pin source tree after `wiki-vitepress`, checking both canonical companion shelves and repository history before review. Microsoft Azure Skills follows Microsoft Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
