@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 337 |
+| Persisted third-party exact-version reviews | 338 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 165 / 189 |
-| Microsoft Skills current-standard gaps | 24 |
+| Microsoft Skills current-standard companions | 166 / 189 |
+| Microsoft Skills current-standard gaps | 23 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,10 +62,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **165/189**, leaving **24** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **166/189**, leaving **23** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
-Latest non-direct Microsoft closure: `skill-creator` is **rejected unchanged, 15/20**, bound to package tree `44744c928eba10e9e69272a6bab0859b79c480c5`, `SKILL.md` blob `8377383735afeb36e4b55a9937876b427785db9e`, and freshness revision `178d9730909101c93949a2ea364058345a6fae9e` from 2026-06-19. Its nine-file package contributes strong skill-authoring heuristics, progressive disclosure, source/freshness discipline, Azure SDK authentication/lifecycle conventions, workflow/output patterns, and bundled local helpers. Unchanged adoption is rejected because the initializer and packager can persistently mutate target workspaces without a mandatory action-specific authorization checkpoint immediately before mutation. Preserve the documentary mechanisms as adaptation/reference evidence with explicit target and mutation authority. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `microsoft-foundry` is **rejected unchanged, 13/20**, bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc` and `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`; the registered pin carries metadata version `1.1.33` and current hosted-agent/`azd` contract updates. Its root package contributes strong routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite, and live-discovery patterns. Unchanged adoption is rejected because consequential Azure/workspace mutations are not universally protected by mandatory action-specific authorization and production trace/evaluation data lacks a universal disclosure/minimization boundary. Preserve the mechanisms as adaptation/reference evidence with explicit authority. Behavioral validation is `not-run`.
 
-The next Microsoft Skills gap must be established from the registered-pin tree after `skill-creator`.
+The next Microsoft Skills gap must be established from the registered-pin tree after `microsoft-foundry`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
