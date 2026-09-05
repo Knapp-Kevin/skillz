@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-qa
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 80775b0be2ffbef4a1675afeaaa132696bdd1d01
+skill_md_blob_sha: 2568639d0204aff644b86563342487fec78eb332
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [documentation, repository-maintenance, research]
+  lifecycle: [discovery, verification]
+  characteristic: [evidence-first, source-driven, traceable]
+  authority: [read-only]
+  portability: [medium]
+notes: Exact one-file package review. Strong points are mandatory repository-context resolution, search-and-read-before-answer discipline, source-file-only evidence, inline file/line citations, same-language response behavior, explicit insufficiency handling, and a direct prohibition on guessing or external knowledge. The procedure is read-only and does not require persistent workspace mutation, infrastructure changes, communications, credentials, or other consequential side effects, so the authority hard fail does not apply. Deductions reflect Git-specific repository resolution, asking the user for repository context even when the host may already be able to establish it, and rigid Mermaid/table requirements that can add unnecessary ceremony. Behavioral validation remains not-run.
