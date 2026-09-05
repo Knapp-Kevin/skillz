@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **355** persisted exact-version third-party verification companions.
+- **356** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -35,8 +35,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
 - Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **183/189**.
-- Remaining gaps: **6**.
+- Current-standard companions: **184/189**.
+- Remaining gaps: **5**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,9 +45,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-Exact-pin Foundry reconciliation resolved the post-`ui-widget-developer` frontier. `.github/plugins/microsoft-foundry/skills/` contains ten symlink entries whose recorded targets are dangling at this pin; they are not independent eligible packages. Canonical Foundry material is under `.github/plugins/azure-skills/skills/microsoft-foundry`. The root and nested `finetuning` companions already existed. `models/deploy-model` is now **verified, 17/20** at package tree `6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9` and `SKILL.md` blob `322b342762abbcd86eb90a92b2c4cb7dccd6aac6`; freshness is revision `1ee982fe7c88e38bc0ed4b5d711ad3177b29a887` from 2026-07-02. Preserve intent routing, live SKU/quota validation, project resolution, and its mandatory explicit target/deployment confirmation. Behavioral validation is `not-run`.
+Exact-pin Foundry reconciliation resolved the post-`ui-widget-developer` frontier. `.github/plugins/microsoft-foundry/skills/` contains ten symlink entries whose recorded targets are dangling at this pin; they are not independent eligible packages. Canonical Foundry material is under `.github/plugins/azure-skills/skills/microsoft-foundry`. The root and nested `finetuning` companions already existed. `models/deploy-model` is verified 17/20. Its independently front-mattered `capacity` descendant is now **verified, 17/20** at package tree `edb0b5bb776569c8941e4ed3755d9f65e32c5b80` and `SKILL.md` blob `46935315ebdf18fbc93771efb72e7f8f9e9980ac`; freshness is revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve its read-only capacity/quota discovery, ranked region/project comparison, explicit no-deploy scope, and mandatory project confirmation before mutating handoff. Behavioral validation is `not-run`.
 
-Continue through the independently front-mattered descendants under `microsoft-foundry/models/deploy-model`, checking companion shelves and history before every unit.
+Continue through the remaining independently front-mattered descendants under `microsoft-foundry/models/deploy-model`, checking companion shelves and history before every unit.
 
 ### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **355 reviews / Microsoft Skills 183/189 / 6 gaps**, establish whether nested `microsoft-foundry/models/deploy-model/capacity` is the next genuine companion gap and continue source-by-source.
+After public accounting is verified at **356 reviews / Microsoft Skills 184/189 / 5 gaps**, establish whether nested `microsoft-foundry/models/deploy-model/customize` is the next genuine companion gap and continue source-by-source.

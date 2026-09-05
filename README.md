@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-355-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-356-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **355 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **356 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -55,7 +55,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **183/189** current-standard companion complete, **6** gaps remain.
+- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **184/189** current-standard companion complete, **5** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -64,9 +64,9 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 A 2026-09-05 contract reconciliation restored ten Microsoft reviews from auxiliary Markdown evidence into the mandatory `registry/skills/` + `registry/verification/` YAML companion paths. `skill-creator` already had a YAML pair and was therefore not counted twice; its existing pair was refreshed to the current 15/20 rejected authority disposition.
 
-Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model` is **verified, 17/20**, bound to package tree `6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9` and `SKILL.md` blob `322b342762abbcd86eb90a92b2c4cb7dccd6aac6`, with freshness revision `1ee982fe7c88e38bc0ed4b5d711ad3177b29a887` from 2026-07-02. Preserve intent routing, dynamic SKU/quota validation, project resolution, multi-mode chaining, and its substantive authorization boundary: before deployment the skill must show the project, region, and resource group and receive an explicit affirmative deployment response. Behavioral validation is `not-run`. The `microsoft-foundry` plugin's ten top-level skill entries are dangling symlinks at the registered pin and are not independent denominator units; the canonical package is under `azure-skills/skills/microsoft-foundry`, where nested front-mattered descendants are evaluated individually.
+Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model/capacity` is **verified, 17/20**, bound to package tree `edb0b5bb776569c8941e4ed3755d9f65e32c5b80` and `SKILL.md` blob `46935315ebdf18fbc93771efb72e7f8f9e9980ac`, with freshness revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve its read-only cross-region model-capacity discovery, subscription-quota validation, ranked project-aware recommendations, explicit separation from deployment, and mandatory project confirmation before a mutating handoff. Its bundled scripts query Azure management/usage APIs but do not create, update, or delete resources. Behavioral validation is `not-run`. The `microsoft-foundry` plugin's ten top-level skill entries are dangling symlinks at the registered pin and are not independent denominator units; the canonical package is under `azure-skills/skills/microsoft-foundry`, where nested front-mattered descendants are evaluated individually.
 
-Microsoft Skills remains the active admitted-source family with **6** gaps. Continue through the remaining independently front-mattered Microsoft Foundry model descendants before moving to Microsoft Azure Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills remains the active admitted-source family with **5** gaps. Continue through the remaining independently front-mattered Microsoft Foundry model descendants before moving to Microsoft Azure Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
