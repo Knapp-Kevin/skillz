@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: wiki-ado-convert
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1a9d5144324d5891454d25e3607ca09439584eb8
+skill_md_blob_sha: 9c030896cd815faef45a314774d37480329e1f34
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [documentation, implementation, repository-maintenance]
+  lifecycle: [implementation, verification]
+  characteristic: [deterministic, compatibility-aware, evidence-first]
+  authority: [mutating]
+  portability: [high]
+notes: Exact one-file package review. Preserve deterministic Azure DevOps Wiki conversion rules, Mermaid/front-matter/link handling, source/output separation, landing-page and ordering requirements, citations and verification checklist. Reject unchanged because intended use creates persistent converter and generated documentation files and may mutate npm configuration without mandatory action-specific authorization immediately before workspace mutation. Behavioral validation remains not-run.
