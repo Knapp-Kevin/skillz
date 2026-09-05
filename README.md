@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-[`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete** under [`registry/skills/local-skills/`](registry/skills/local-skills/) with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification/).
+[`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete** under [`registry/skills/local-skills/`](registry/skills/local-skills/) with structured semantic review evidence in [`registry/local-verification.json`](registry/local-verification.json).
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
