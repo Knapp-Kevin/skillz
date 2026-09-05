@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 356 |
+| Persisted third-party exact-version reviews | 357 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 184 / 189 |
-| Microsoft Skills current-standard gaps | 5 |
+| Microsoft Skills current-standard companions | 185 / 189 |
+| Microsoft Skills current-standard gaps | 4 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **184/189**, leaving **5** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **185/189**, leaving **4** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model/capacity` is **verified, 17/20**, bound to package tree `edb0b5bb776569c8941e4ed3755d9f65e32c5b80` and `SKILL.md` blob `46935315ebdf18fbc93771efb72e7f8f9e9980ac`; freshness is revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve its read-only cross-region capacity discovery, subscription-quota checks, ranked region/project comparison, explicit no-deploy scope, and required project confirmation before a mutating handoff. Its bundled scripts query Azure management and usage APIs but do not create, update, or delete resources. The `microsoft-foundry` plugin's ten skill entries are dangling symlink exposures at the registered pin and do not create duplicate denominator units; canonical Foundry material lives under `azure-skills/skills/microsoft-foundry`. Behavioral validation is `not-run`.
+Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model/customize` is **verified, 17/20**, bound to package tree `3ff8e09076dcc5337257a70845fb509b4ab229a0` and `SKILL.md` blob `7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2`; freshness is revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve its live model/version/SKU/quota discovery, capacity validation, cross-region fallback, RAI and version-upgrade selection, and required Phase 12 full-configuration confirmation immediately before deployment creation. The skill can create persistent Azure model deployments and Anthropic deployment may transmit tenant country/organization metadata, but the mutation/data transmission occurs only after that explicit confirmation. Behavioral validation is `not-run`. The `microsoft-foundry` plugin's ten skill entries are dangling symlink exposures at the registered pin and do not create duplicate denominator units; canonical Foundry material lives under `azure-skills/skills/microsoft-foundry`.
 
-Continue through the remaining independently front-mattered Foundry model descendants, beginning with a companion/history check for `microsoft-foundry/models/deploy-model/customize`.
+Continue through the remaining independently front-mattered Foundry model descendants, beginning with a companion/history check for `microsoft-foundry/models/deploy-model/preset`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
