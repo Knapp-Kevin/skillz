@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ui-widget-developer
+source_id: microsoft-skills
+source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 782d9f253d9bf51bf98a274d6c4e0d262bc1b54c
+skill_md_blob_sha: 1240df9af50396f6420e83ea7fad62a920edbbb0
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [agent-development, implementation, testing, ux]
+  lifecycle: [design, implementation, verification, release, operations]
+  characteristic: [tool-routing, spec-driven, production-oriented, visual-verification, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: Exact package review of the front-mattered SKILL.md and bundled references. Strong points include explicit OAI Apps versus MCP Apps route selection, MCP widget/resource protocol requirements, React + Fluent UI implementation constraints, MCP Inspector-driven schema synchronization, local widget links, E2E/health checks, and clear delegation boundaries. Unchanged adoption fails the authority hard rule because the skill requires automatic plugin/package/tool installation, authentication, detached service and devtunnel startup, filesystem changes, public tunnel exposure, tenant/AAD provisioning, and automatic deployment without a distinct action-specific authorization checkpoint immediately before each consequential operation. Its FULL AUTOMATION and AUTO-DEPLOY rules explicitly tell the agent not to wait for user approval. Preserve protocol, validation, routing, and implementation guidance for adaptation behind explicit per-action authorization. Behavioral validation remains not-run.
