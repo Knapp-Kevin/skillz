@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 353 |
+| Persisted third-party exact-version reviews | 354 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 181 / 189 |
-| Microsoft Skills current-standard gaps | 8 |
+| Microsoft Skills current-standard companions | 182 / 189 |
+| Microsoft Skills current-standard gaps | 7 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **181/189**, leaving **8** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is active at **182/189**, leaving **7** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest non-direct Microsoft closure: `teams-app-developer` is **rejected unchanged, 12/20**, bound to package tree `164d327f3039e037b0ad2cdabeee01e2c6aa6d3f` and `SKILL.md` blob `04d194383e9863d8167d8005747cf6a3933ddc26`; freshness is revision `0bef15b6a4d82283d13b6ed3b6f13f430b9b846a` from 2026-06-20. Preserve intent-to-workflow routing, mandatory sub-skill reading, Playground-first testing, background-process handling, context resolution, troubleshooting, and broad Teams/M365 references. Unchanged adoption fails the authority hard rule because it directs global CLI installation, project scaffolding/file mutation, tenant app/AAD provisioning, Azure resource creation/deployment, authentication, sideloading/sharing/publishing, and related consequential operations without distinct action-specific authorization checkpoints. Its root also directs asking users for real missing environment values including Azure OpenAI API keys instead of preferring secure external credential injection. Behavioral validation is `not-run`.
+Latest non-direct Microsoft closure: `ui-widget-developer` is **rejected unchanged, 11/20**, bound to package tree `782d9f253d9bf51bf98a274d6c4e0d262bc1b54c` and `SKILL.md` blob `1240df9af50396f6420e83ea7fad62a920edbbb0`; freshness is revision `a43d2c6a69fac2298ac0f301419931b39d996c6b` from 2026-06-15. Preserve OAI Apps versus MCP Apps routing, MCP resource/widget protocol guidance, React + Fluent UI constraints, MCP Inspector schema synchronization, local widget links, E2E/health verification, and delegation boundaries. Unchanged adoption fails the authority hard rule because it mandates automatic plugin/package/tool installation, authentication, detached service/devtunnel startup, filesystem mutation, public tunnel exposure, tenant/AAD provisioning, and auto-deployment without distinct action-specific authorization checkpoints. Behavioral validation is `not-run`.
 
-Continue through `microsoft-365-agents-toolkit` in exact registered-pin source order. `ui-widget-developer` follows `teams-app-developer`; check canonical companions and repository history before review.
+The `microsoft-365-agents-toolkit` family is now companion-complete. Establish the next genuine Microsoft Skills gap from the exact registered-pin source tree before review.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
