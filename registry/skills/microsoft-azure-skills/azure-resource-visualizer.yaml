@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-resource-visualizer
+display_name: Microsoft Azure Resource Visualizer
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-resource-visualizer/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22T11:24:28Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-resource-visualizer
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP resource discovery tools or Azure CLI; Azure Resource Graph extension for bundled cross-subscription query patterns; Reader access to selected Azure scopes; Mermaid-capable Markdown host; bundled assets/example-diagram.md, assets/template-architecture.md, and references/azure-resource-graph.md
+import_eligibility: rejected-unchanged
+rationale: Exact Azure-source package tree 3a892f03908cf1a388ac9d3da91764bef1e9501c and SKILL.md blob dc60b612a54d125bca4feb92b2bfead2ee757873 match the completed Microsoft Skills package exactly, so compatible complete-package static review evidence was reconciled rather than repeated. The primary workflow is read-only against Azure and requires explicit resource-group selection before analysis; it maps resource relationships, forbids secret values in diagrams, and generates a requested Markdown/Mermaid architecture artifact. Preserve its scoped discovery, topology synthesis, secret-placeholder discipline, complete-resource inventory, and diagram/documentation patterns. Unchanged adoption is rejected because the bundled Azure Resource Graph reference presents `az extension add --name resource-graph` as a prerequisite, installing persistent local tooling without a mandatory action-specific authorization checkpoint immediately before that host mutation. Behavioral validation has not been run.
