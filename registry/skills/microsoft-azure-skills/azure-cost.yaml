@@ -3,7 +3,7 @@ skill_name: azure-cost
 display_name: Microsoft Azure Cost Management
 source_id: microsoft-azure-skills
 source_repository: https://github.com/microsoft/azure-skills
-source_path: .github/plugins/azure-skills/skills/azure-cost/SKILL.md
+source_path: skills/azure-cost/SKILL.md
 source_class: official
 license: MIT
 relationship: vendored-reference
@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-06-04T16:38:04Z
 curated_at: 2026-09-06
 last_checked_at: 2026-09-06
 availability: pinned-source
-local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-cost
+local_path: skills/sources/azure-skills/skills/azure-cost
 permission_tier: cloud-cost-query-forecast-and-optimization-reference
 portability: medium
 review_status: rejected
