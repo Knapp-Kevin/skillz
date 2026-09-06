@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 379,
+    "persisted_third_party_exact_version_reviews": 380,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 21,
+    "microsoft_azure_skills_current_standard_companions": 22,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 110,
+    "microsoft_azure_skills_current_standard_gaps": 109,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 21/131; azure-resource-lookup exact tree 19e257c3720521014d81cd3dbf4e188e0ece621b and SKILL.md blob d16d74bd6369fd15f8d96ff0b637ac361c7d6e13 match completed Microsoft Skills evidence; unchanged adoption is rejected 14/20 because missing-extension recovery installs the resource-graph Azure CLI extension without a mandatory action-specific authorization checkpoint; 110 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 22/131; azure-resource-visualizer exact tree 3a892f03908cf1a388ac9d3da91764bef1e9501c and SKILL.md blob dc60b612a54d125bca4feb92b2bfead2ee757873 match completed Microsoft Skills evidence; unchanged adoption is rejected 15/20 because its bundled Azure Resource Graph reference presents resource-graph Azure CLI extension installation without a mandatory action-specific authorization checkpoint; 109 Azure gaps remain"
   }
 }
