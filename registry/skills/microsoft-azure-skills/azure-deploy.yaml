@@ -3,7 +3,7 @@ skill_name: azure-deploy
 display_name: Microsoft Azure Deploy
 source_id: microsoft-azure-skills
 source_repository: https://github.com/microsoft/azure-skills
-source_path: .github/plugins/azure-skills/skills/azure-deploy/SKILL.md
+source_path: skills/azure-deploy/SKILL.md
 source_class: official
 license: MIT
 relationship: vendored-reference
@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-05-04T11:33:41Z
 curated_at: 2026-09-06
 last_checked_at: 2026-09-06
 availability: pinned-source
-local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-deploy
+local_path: skills/sources/azure-skills/skills/azure-deploy
 permission_tier: cloud-deployment-and-production-mutation-reference
 portability: medium
 review_status: rejected
