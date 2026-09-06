@@ -13,8 +13,8 @@
     "aws_current_standard_companion_complete": 72,
     "aws_current_standard_gaps": 0,
     "microsoft_skills_current_standard_companions": 186,
-    "microsoft_skills_eligible_denominator": 189,
-    "microsoft_skills_current_standard_gaps": 3,
+    "microsoft_skills_eligible_denominator": 186,
+    "microsoft_skills_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -47,6 +47,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: reviewed Microsoft Foundry nested deploy-model/preset at exact registered pin; rejected unchanged 12/20 for missing action-specific authorization before Azure resource/deployment mutation; reconciled Microsoft Skills to 186/189"
+    "latest_reconciliation": "2026-09-05: exact-pin Microsoft Foundry denominator reconciliation confirmed models/deploy-model has only four independently front-mattered entry points (root, capacity, customize, preset), all companion-complete; non-SKILL Foundry procedure Markdown and dangling plugin symlinks are not denominator units; Microsoft Skills is current-standard complete at 186/186"
   }
 }
