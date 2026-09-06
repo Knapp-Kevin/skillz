@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **359** persisted exact-version third-party verification companions.
+- **360** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -49,14 +49,14 @@ Exact-pin Foundry reconciliation removed ordinary procedure Markdown and danglin
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **1/131**.
-- Remaining gaps: **130**.
-- First reconciled unit: `airunway-aks-setup`, verified **17/20**, behavioral validation `not-run`.
-- Exact package tree: `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`.
-- `SKILL.md` blob: `26bbd92815116826696fb6380d37446a285496b9`.
-- Skill freshness: upstream revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749`, 2026-04-22.
+- Current-standard companions: **2/131**.
+- Remaining gaps: **129**.
+- `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`; package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
+- `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`, `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`, freshness revision `a98eb86dc2a7b2bc57bdc0c346421576782bf3e5` on 2026-05-05.
 
-`airunway-aks-setup` has one canonical front-mattered `SKILL.md`; its remaining package files are references, not nested skill entry points. Preserve staged cluster/GPU checks, cost awareness, provider/model sizing, secure non-echoed token handling, and the explicit confirmation requirement before controller/provider/model install or deployment actions.
+`airunway-aks-setup` preserves staged cluster/GPU checks, cost awareness, provider/model sizing, secure non-echoed token handling, and explicit confirmation before controller/provider/model install or deployment actions.
+
+`appinsights-instrumentation` preserves useful reference-only separation, hosting-context collection, auto-instrumentation preference, language-specific guides, and OpenTelemetry SDK/platform references. It fails unchanged adoption because its manual path directs creation of Log Analytics and Application Insights resources plus mutation of App Service, Container App, and Function App settings without a distinct action-specific authorization checkpoint immediately before those consequential operations.
 
 ## Governed discovery / source-vetting
 
@@ -81,4 +81,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-Continue Microsoft Azure Skills from **359 persisted reviews / 1 of 131 eligible Azure Skills / 130 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **360 persisted reviews / 2 of 131 eligible Azure Skills / 129 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
