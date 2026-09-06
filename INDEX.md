@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 373 |
+| Persisted third-party exact-version reviews | 374 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 15 / 131 |
-| Microsoft Azure Skills current-standard gaps | 116 |
+| Microsoft Azure Skills current-standard companions | 16 / 131 |
+| Microsoft Azure Skills current-standard gaps | 115 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **15/131**, with **116** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **16/131**, with **115** current-standard gaps.
 
-The latest reconciled Azure unit is `azure-kusto`, rejected unchanged **14/20**, bound to package tree `71a8cb8f91c6078d4b745c0bf0c46d45437c263f` and `SKILL.md` blob `76e6b1764da1d7352dd3d6056571751f4395c746`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve the schema-first, time-bounded, result-limited KQL query mechanics; unchanged adoption fails because sensitive security/audit/user-behavior/telemetry/raw-row retrieval lacks a mandatory disclosure-scope, minimization, redaction, or sensitive-data authorization checkpoint, and persistent optimization suggestions require separate authorization. Behavioral validation has not been run.
+The latest reconciled Azure unit is `azure-messaging`, rejected unchanged **13/20**, bound to package tree `de972c7cf2a46e572b5fcfd24ed8963bc41b5a04` and `SKILL.md` blob `512147e502149117b33fed6c0a367606f1829e1e`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve the resource-health-first diagnosis, SDK/version identification, documentation lookup, configuration checks, and read-oriented namespace/entity inspection; unchanged adoption fails because remediation and consequential identity/security/credential changes lack mandatory action-specific authorization checkpoints. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
