@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 375 |
+| Persisted third-party exact-version reviews | 376 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 17 / 131 |
-| Microsoft Azure Skills current-standard gaps | 114 |
+| Microsoft Azure Skills current-standard companions | 18 / 131 |
+| Microsoft Azure Skills current-standard gaps | 113 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **17/131**, with **114** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **18/131**, with **113** current-standard gaps.
 
-The latest reconciled Azure unit is `azure-prepare`, rejected unchanged **16/20**, bound to package tree `3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9` and `SKILL.md` blob `113c40edd44841b05b26ab836604c6a6d644fef4`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its plan-first preparation flow, explicit plan approval before execution, subscription/location confirmation, destructive-action confirmation, specialized routing, and validate-before-deploy handoff; unchanged adoption fails because the required first write to `.azure/deployment-plan.md` can overwrite an existing artifact without first checking the path and obtaining scoped authorization. Behavioral validation has not been run.
+The latest reconciled Azure unit is `azure-quotas`, rejected unchanged **14/20**, bound to package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40` and `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its quota-name discovery, CLI-first read workflows, usage/capacity calculation, regional comparison, unsupported-provider fallback, and `No Limit` warning; unchanged adoption fails because quota updates/provider registration and local quota-extension installation lack mandatory scoped action authorization. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
