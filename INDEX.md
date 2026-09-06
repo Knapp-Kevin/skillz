@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 359 |
+| Persisted third-party exact-version reviews | 360 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 1 / 131 |
-| Microsoft Azure Skills current-standard gaps | 130 |
+| Microsoft Azure Skills current-standard companions | 2 / 131 |
+| Microsoft Azure Skills current-standard gaps | 129 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is current-standard complete at **186/186**, with **0** gaps. Microsoft Azure Skills is the active admitted-source frontier at **1/131**, with **130** current-standard gaps.
+AWS is fully reconciled at **72/72**. Microsoft Skills is current-standard complete at **186/186**, with **0** gaps. Microsoft Azure Skills is the active admitted-source frontier at **2/131**, with **129** current-standard gaps.
 
-The first Azure companion is `airunway-aks-setup`, verified **17/20** at exact source pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, and `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`. Behavioral validation has not been run. The package has one canonical front-mattered skill entry point; its bundled Markdown files are references.
+The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**, and `appinsights-instrumentation`, rejected unchanged **13/20** under the authority hard fail. `appinsights-instrumentation` is bound to exact package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0` and `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`; behavioral validation has not been run. Its reference guidance is useful, but the manual instrumentation path includes Azure resource creation and application-setting mutation without a distinct action-specific authorization checkpoint.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
