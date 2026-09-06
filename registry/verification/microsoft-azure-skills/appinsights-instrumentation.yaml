@@ -14,7 +14,7 @@ rubric_score: 13/20
 tags:
   use_case: [cloud, observability, implementation]
   lifecycle: [planning, implementation, operations]
-  characteristic: [reference-rich, progressive-disclosure, tool-assisted]
+  characteristic: [reference-heavy, progressive-disclosure, tool-assisted]
   authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact-package review of the Application Insights instrumentation guide. Preserve its guidance-versus-orchestration distinction, hosting-context collection, auto-instrumentation preference, language-specific references, Bicep example, and OpenTelemetry SDK/platform references. Reject unchanged under the authority hard fail because the manual path directs creation of Log Analytics and Application Insights resources and mutation of App Service, Container App, and Function App settings without an explicit action-specific authorization checkpoint immediately before those operations. Behavioral validation remains not-run.
