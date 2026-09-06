@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-messaging
+display_name: Microsoft Azure Messaging SDK Troubleshooting
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-messaging/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 44a73ae54e55bff8c9e032e562c2c9e0905a9d92
+upstream_last_updated_at: 2026-04-29T11:31:39Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-messaging
+permission_tier: diagnostic-reference-with-remediation-side-effects
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP Event Hubs/Service Bus/Monitor/Resource Health/Documentation tools; Azure Event Hubs and Service Bus SDKs; shared azure-diagnostics troubleshooting/messaging references; authenticated Azure access
+import_eligibility: reference-or-adaptation-only
+rationale: Exact Azure-source package tree de972c7cf2a46e572b5fcfd24ed8963bc41b5a04 and SKILL.md blob 512147e502149117b33fed6c0a367606f1829e1e exactly match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reconciled rather than repeated. Preserve the resource-health-first troubleshooting flow, SDK/version identification, documentation lookup, configuration checks, and read-oriented namespace/entity inspection. Unchanged adoption fails the current authority hard rule because the required workflow ends by applying remediation without a mandatory action-specific authorization checkpoint, while its declared shared troubleshooting dependency recommends consequential identity/security and credential operations such as managed-identity/RBAC changes, secret or certificate rotation, and enabling Defender for Cloud. Adaptation should preserve diagnosis while separating read-only evidence gathering from any mutating remediation behind explicit scoped authorization. Behavioral validation has not been run.
