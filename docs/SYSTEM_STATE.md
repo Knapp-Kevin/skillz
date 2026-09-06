@@ -11,12 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 358 |
+| **Persisted third-party review companions** | 359 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
+| **Microsoft Azure Skills current-standard companions** | 1 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 130 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -36,6 +38,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
 - Microsoft Skills: exact denominator **186**, **186/186 companion-complete**, **0 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **1/131 companion-complete**, **130 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,15 +47,13 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition.
-
 ## Microsoft Skills closure
 
-The direct language slices, `deep-wiki`, `microsoft-365-agents-toolkit`, and the independently front-mattered Microsoft Foundry packages are companion-complete. Exact-pin reconciliation confirms the `microsoft-foundry` plugin exposes ten dangling symlinks rather than independent skill packages; canonical Foundry material lives under `.github/plugins/azure-skills/skills/microsoft-foundry`.
+Microsoft Skills closes at **186/186** with **0** gaps after exact-pin denominator reconciliation removed ordinary Foundry Markdown and dangling duplicate symlink exposures from the eligible count.
 
-A final denominator pass corrected the prior **189** figure to **186**. The canonical `models/deploy-model` tree contains exactly four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companioned. Other Foundry workflow documents such as `project/create/create-foundry-project.md`, `resource/create/create-foundry-resource.md`, and `resource/private-network/private-network.md` are ordinary Markdown referenced by the root skill, not independent front-mattered skills. Ordinary references and duplicate/dangling exposure paths do not enter the eligible denominator.
+## Microsoft Azure Skills frontier
 
-Microsoft Skills therefore closes at **186/186** with **0** current-standard gaps and **358** persisted third-party exact-version companions overall. No synthetic companion records were added to reconcile the stale counter.
+The registered source pin is `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, with **131** eligible skill packages. The first current-standard companion pair is `airunway-aks-setup`, exact tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, last upstream change `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. It is verified 17/20 by structured static review; behavioral validation remains not-run. Mutating controller, provider, secret, and model-deployment operations are gated by explicit user-confirmation rules immediately before install/deployment actions.
 
 ## Source lifecycle
 
@@ -70,7 +71,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Establish the exact registered-pin denominator for Microsoft Azure Skills and reconcile the first genuine current-standard gap.
+1. Continue Microsoft Azure Skills from **1/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
