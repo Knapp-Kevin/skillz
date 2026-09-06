@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-ai
+display_name: Microsoft Azure AI Services
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-ai/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-azure-skills/skills/azure-ai
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete azure-ai package tree; Azure MCP and/or Azure service SDKs; authenticated Azure identity; bundled authentication guidance and condensed SDK references for AI Search, Speech, OpenAI, Vision, Translation, Document Intelligence, and Content Safety
+import_eligibility: rejected-unchanged
+rationale: Exact package review bound to tree 8a168336305c56e0eea0d89aced7d8a0001de3b5 and SKILL.md blob 6cce5b319f57f98f81772e4c8627c573d89e8571. Preserve the useful service-routing matrix, MCP-first discovery, SDK quick-reference map, passwordless/managed-identity guidance, and cross-language service references. Reject unchanged because normal triggered use can transmit search queries, audio, synthesized-text inputs, document/OCR material, prompts, or other user data to external Azure AI services and can incur paid service usage without a distinct action-specific authorization checkpoint before transmission or invocation. Behavioral validation is not-run.
