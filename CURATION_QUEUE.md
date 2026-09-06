@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **380** persisted exact-version third-party verification companions.
+- **381** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **22/131**.
-- Remaining gaps: **109**.
+- Current-standard companions: **23/131**.
+- Remaining gaps: **108**.
 
-Reconciled Azure packages and dispositions: `airunway-aks-setup` verified 17/20; `appinsights-instrumentation` rejected 13/20; `azure-ai` rejected 13/20; `azure-aigateway` rejected 13/20; `azure-cloud-migrate` verified 17/20; `azure-compliance` rejected 12/20; `azure-compute` rejected 11/20; `azure-cost` rejected 14/20; `azure-deploy` rejected 15/20; `azure-diagnostics` rejected 13/20; `azure-enterprise-infra-planner` verified 18/20; `azure-hosted-copilot-sdk` rejected 13/20; `azure-kubernetes` rejected 12/20; `azure-kubernetes-automatic-readiness` rejected 15/20; `azure-kusto` rejected 14/20; `azure-messaging` rejected 13/20; `azure-prepare` rejected 16/20; `azure-quotas` rejected 14/20; `azure-rbac` verified 17/20; `azure-reliability` rejected 15/20; `azure-resource-lookup` rejected 14/20; `azure-resource-visualizer` rejected 15/20. Behavioral validation remains `not-run` for all twenty-two.
+Reconciled Azure packages and dispositions: `airunway-aks-setup` verified 17/20; `appinsights-instrumentation` rejected 13/20; `azure-ai` rejected 13/20; `azure-aigateway` rejected 13/20; `azure-cloud-migrate` verified 17/20; `azure-compliance` rejected 12/20; `azure-compute` rejected 11/20; `azure-cost` rejected 14/20; `azure-deploy` rejected 15/20; `azure-diagnostics` rejected 13/20; `azure-enterprise-infra-planner` verified 18/20; `azure-hosted-copilot-sdk` rejected 13/20; `azure-kubernetes` rejected 12/20; `azure-kubernetes-automatic-readiness` rejected 15/20; `azure-kusto` rejected 14/20; `azure-messaging` rejected 13/20; `azure-prepare` rejected 16/20; `azure-quotas` rejected 14/20; `azure-rbac` verified 17/20; `azure-reliability` rejected 15/20; `azure-resource-lookup` rejected 14/20; `azure-resource-visualizer` rejected 15/20; `azure-storage` rejected 12/20. Behavioral validation remains `not-run` for all twenty-three.
 
-`azure-resource-visualizer` is bound to package tree `3a892f03908cf1a388ac9d3da91764bef1e9501c`, `SKILL.md` blob `dc60b612a54d125bca4feb92b2bfead2ee757873`, and Azure freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. Exact package identity matches completed Microsoft Skills evidence. Preserve its explicit resource-group selection, read-only topology discovery, complete-resource inventory, secret-placeholder discipline, relationship mapping, and structured Mermaid/documentation synthesis. Unchanged adoption remains rejected because the bundled Azure Resource Graph reference presents `az extension add --name resource-graph` as a prerequisite without a mandatory action-specific authorization checkpoint immediately before mutating the host toolchain.
+`azure-storage` is bound to package tree `58ffdd0c0f466a983a0064239d481fb08e58b7c8`, `SKILL.md` blob `21bdc643b63e040a9b1efe7422474cfb393ddc85`, and Azure freshness revision `6424382bd85e15814ce79370c6a307b2520c75d3` on 2026-04-27. Exact package identity matches completed Microsoft Skills evidence. Preserve its service-selection guidance, access-tier/redundancy summaries, passwordless production-authentication guidance, least-privilege RBAC advice, and multi-language SDK references. Unchanged adoption remains rejected because it instructs consequential storage writes, local package/tool setup, credential rotation, and security-control enablement without mandatory action-specific authorization immediately before mutation; blob read/download paths also lack explicit sensitive-data disclosure/minimization boundaries.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **380 persisted reviews / 22 of 131 eligible Azure Skills / 109 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **381 persisted reviews / 23 of 131 eligible Azure Skills / 108 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
