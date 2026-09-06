@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: airunway-aks-setup
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 72ec58c0a7c574dc71e14c63feb3d2aa529849ac
+skill_md_blob_sha: 26bbd92815116826696fb6380d37446a285496b9
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, deployment, operations]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [cost-bounded, progressive-disclosure, risk-aware, safety-bounded, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact-package review of the AI Runway AKS onboarding skill. Preserve read-first cluster and GPU checks, progressive step references, cost awareness, provider/model sizing, explicit confirmation before each install or deployment action, and non-echoed temporary-file handling for gated-model Hugging Face tokens. Consequential operations include controller/CRD installation, provider deployment, Kubernetes Secret creation, and ModelDeployment creation, but the governing root rule and mutating step references require user confirmation before those actions. Behavioral validation remains not-run.
