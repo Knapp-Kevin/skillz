@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-kubernetes
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: bab7f5eab9e8e1c311ef1fc29b419963903fbe09
+skill_md_blob_sha: 3c5a448a679dafed5e0e747d28bd95cead4e8dec
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review-reconciled-identical-package
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud]
+  lifecycle: [planning, operations]
+  characteristic: [tool-assisted, reference-heavy, risk-aware]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact Azure-source package identity matches the prior Microsoft Skills review, including package tree bab7f5eab9e8e1c311ef1fc29b419963903fbe09 and SKILL.md blob 3c5a448a679dafed5e0e747d28bd95cead4e8dec. Static evidence therefore reuses the compatible complete-package review rather than duplicating it. Useful mechanisms include explicit Day-0 versus Day-1 framing, AKS Automatic as a conservative default, strong networking/security/reliability recommendations, secret non-disclosure, subscription-context discovery without asking the user to paste identifiers, staged upgrade guidance, and scenario-specific deep dives. Unchanged adoption fails the authority hard rule because the workflow is explicitly for creating/configuring AKS and bundled CLI guidance supplies commands for billable cluster creation, workload identity, autoscaling, cluster credential acquisition, and monitoring enablement without a mandatory action-specific approval immediately before mutation. The nested front-mattered azure-kubernetes-automatic-readiness package is independently eligible and is not dispositioned by this record. Behavioral validation remains not-run.
