@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-quotas
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8a628e265ecb05a8f78a9a7e4e4772fb82d78c40
+skill_md_blob_sha: cbd67b6c336362ee343390e713b91b5662841038
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, planning, deployment]
+  lifecycle: [planning, verification, operations]
+  characteristic: [evidence-first, risk-aware, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact Azure-source package tree and SKILL.md blob match the completed Microsoft Skills review byte-for-byte, so compatible complete-package evidence was reconciled rather than duplicated. Strong mechanisms include explicit quota-name discovery instead of ARM-name guessing, CLI-first read workflows, current usage and available-capacity calculation, regional comparison, unsupported-provider fallback, and a warning that quota API "No Limit" responses do not establish unlimited capacity. Unchanged adoption fails current authority governance because quota increase requests and Microsoft.Quota provider registration can mutate subscription-scoped external state without a mandatory action-specific authorization boundary immediately before execution. The package also mandates installing the Azure CLI quota extension before use without first authorizing that local toolchain mutation. Adaptation should preserve the read and planning mechanics but place explicit scoped authorization before extension installation, provider registration, or quota-change submission. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
