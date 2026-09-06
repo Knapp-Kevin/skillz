@@ -1,13 +1,13 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority. Detailed exact-version evidence belongs in the canonical provenance and verification companions under `registry/`; this ledger records current denominators, frontier state, lifecycle debt, and discovery decisions without duplicating the entire evidence shelf.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority. Detailed exact-version evidence belongs in the canonical provenance and verification companions under `registry/`.
 
 ## Current governed depth
 
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **361** persisted exact-version third-party verification companions.
+- **362** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -27,61 +27,39 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 
 - Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
-- Denominator: **72**
-- Current-standard companion completeness: **72/72**
-- Gaps: **0**
+- Denominator/current-standard companions: **72/72**; gaps **0**.
 
 ### Microsoft Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
-- Exact eligible denominator: **186** independently front-mattered skill entry points.
-- Current-standard companions: **186/186**.
-- Remaining gaps: **0**.
-- Direct `.NET`: **29/29** complete.
-- Direct Java: **26/26** complete.
-- Direct Python: **40/40** complete.
-- Direct Rust: **9/9** complete.
-- Direct TypeScript: **25/25** complete.
-
-Exact-pin Foundry reconciliation removed ordinary procedure Markdown and dangling duplicate symlink exposures from the eligible denominator. Microsoft Skills therefore closes truthfully at **186/186**.
+- Exact eligible denominator/current-standard companions: **186/186**; gaps **0**.
+- Direct `.NET` **29/29**; Java **26/26**; Python **40/40**; Rust **9/9**; TypeScript **25/25**.
 
 ### Microsoft Azure Skills — ACTIVE FRONTIER
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **3/131**.
-- Remaining gaps: **128**.
-- `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`; package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
-- `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0`, `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`, freshness revision `a98eb86dc2a7b2bc57bdc0c346421576782bf3e5` on 2026-05-05.
-- `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `8a168336305c56e0eea0d89aced7d8a0001de3b5`, `SKILL.md` blob `6cce5b319f57f98f81772e4c8627c573d89e8571`, freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
+- Current-standard companions: **4/131**.
+- Remaining gaps: **127**.
+- `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
+- `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
+- `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
+- `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba`, `SKILL.md` blob `a8df9f45fae25501acf7fee988047f808d191fa5`, freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
 
-`airunway-aks-setup` preserves staged cluster/GPU checks, cost awareness, provider/model sizing, secure non-echoed token handling, and explicit confirmation before controller/provider/model install or deployment actions.
-
-`appinsights-instrumentation` preserves useful reference-only separation, hosting-context collection, auto-instrumentation preference, language-specific guides, and OpenTelemetry SDK/platform references. It fails unchanged adoption because its manual path directs creation of Log Analytics and Application Insights resources plus mutation of App Service, Container App, and Function App settings without a distinct action-specific authorization checkpoint immediately before those consequential operations.
-
-`azure-ai` preserves a useful Azure AI service-routing matrix, MCP-first discovery, condensed SDK references, and strong passwordless/managed-identity authentication guidance. It fails unchanged adoption because normal use can transmit search queries, audio, text-to-speech inputs, documents/OCR material, prompts, and other user data to paid external Azure AI services without a distinct action-specific authorization checkpoint immediately before transmission or invocation.
+`azure-aigateway` preserves useful AI-governance policy selection, managed-identity authentication, semantic caching, token limits/cost controls, content-safety, MCP rate-limiting, backend/load-balancing, and troubleshooting patterns. It fails unchanged adoption because its normal procedures directly enable APIM identity, create RBAC assignments and APIM backends, import APIs, and configure gateway policy without a distinct action-specific authorization checkpoint immediately before those mutations.
 
 ## Governed discovery / source-vetting
 
-Discovery proceeds in parallel but cannot displace admitted-source closure.
-
-Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sean Kochel, Chase AI+, and the bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
+Discovery proceeds in parallel but cannot displace admitted-source closure. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, Cole Medin, David Ondrej, Nate B. Jones, Andrej Karpathy-derived methodology, Sean Kochel, Chase AI+, and bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
 ## Lifecycle hygiene
 
-At each run:
-
-1. inspect every open PR and issue before new curation;
-2. merge a green, current, authorized, still-correct PR in the same run;
-3. close evidence-complete, duplicate, or fully superseded bounded issues after preserving unique evidence;
-4. state concrete blockers for genuinely blocked work;
-5. reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after material corpus changes;
-6. preserve the passive architecture and never add repository-owned runtime, scripts, tests, CI, schedulers, monitors, crawlers, installers, synchronizers, preflight, generators, or background services.
+At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after material corpus changes; preserve the passive architecture.
 
 ## Historical authority boundary
 
-Wayfinder #35 remains the canonical destination/scope evidence, but its stale frontier text is historical. Source queue #27, structure ticket #41, and PR #42 are closed historical evidence. Current README and Tier-1 governance control live execution. Do not revive #41/#42-era structure work unless current governance explicitly re-establishes it.
+Wayfinder #35 remains canonical destination/scope evidence, but stale frontier text is historical. Source queue #27, structure ticket #41, and PR #42 are closed historical evidence. Current README and Tier-1 governance control live execution.
 
 ## Next action
 
-Continue Microsoft Azure Skills from **361 persisted reviews / 3 of 131 eligible Azure Skills / 128 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **362 persisted reviews / 4 of 131 eligible Azure Skills / 127 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
