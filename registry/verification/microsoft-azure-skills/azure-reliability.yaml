@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-reliability
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1240c9672f0101c65ab0dbc461f9515a200b4486
+skill_md_blob_sha: 835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review-reconciled-identical-package
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, monitoring, deployment]
+  lifecycle: [verification, implementation, operations]
+  characteristic: [risk-aware, human-review, incremental, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact Azure-source package identity matches the completed Microsoft Skills azure-reliability review byte-for-byte: package tree 1240c9672f0101c65ab0dbc461f9515a200b4486 and SKILL.md blob 835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb. Compatible complete-package semantic evidence is therefore reused. Review covered SKILL.md plus 12 bundled reliability references. Strong mechanisms include scoped read-oriented discovery, feature-pivoted assessment, explicit choice between live CLI and IaC patching, quick-win sequencing, separate storage-migration confirmation, explicit consent before source-code health-endpoint changes, and a hard stop before multi-region work. Unchanged adoption is rejected under the repository secret discipline because bundled references/configure-storage.md retrieves a live storage connection string with `az storage account show-connection-string --query connectionString -o tsv` and then instructs using that credential in Function App settings, emitting raw secret material rather than requiring secure external credential transfer or redaction. Preserve the assessment and staged-consent mechanics as adaptation/reference evidence. Behavioral validation remains not-run.
