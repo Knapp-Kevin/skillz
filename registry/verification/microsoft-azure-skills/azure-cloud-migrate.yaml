@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-cloud-migrate
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: dd0d5a31e87576d5b46899b19aa3eedb24d412f4
+skill_md_blob_sha: b1634cf629d9358eb70a95c089b309c304f9c42c
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [discovery, implementation]
+  characteristic: [reference-heavy, progressive-disclosure, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: Exact-package review of the cross-cloud assessment and code-migration guide. Preserve sequential assessment-before-migration, scenario-specific references, source-directory immutability, Kubernetes service-discovery auditing, progress reporting, and explicit deployment handoff. The package writes converted code and reports to a separate local workspace directory. Consequential Azure deployment is not performed as part of the ordinary migration flow: the skill explicitly asks whether to test locally or deploy before handing off to azure-prepare, while destructive actions in the referenced service procedures require ask_user. Static verification therefore passes the current authority hard fail. Behavioral validation remains not-run.
