@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 371,
+    "persisted_third_party_exact_version_reviews": 372,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 13,
+    "microsoft_azure_skills_current_standard_companions": 14,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 118,
+    "microsoft_azure_skills_current_standard_gaps": 117,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 13/131; azure-kubernetes exact tree bab7f5eab9e8e1c311ef1fc29b419963903fbe09 and SKILL.md blob 3c5a448a679dafed5e0e747d28bd95cead4e8dec match the completed Microsoft Skills package, so compatible evidence was reconciled; unchanged adoption remains rejected 12/20 because consequential AKS cluster creation/configuration lacks action-specific approval immediately before mutation; nested azure-kubernetes-automatic-readiness remains independently eligible; 118 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 14/131; azure-kubernetes-automatic-readiness exact tree 1694eb4d1069fda2eac18653fdae8d2b55a3646c and SKILL.md blob 452449d067b912207e88e2e4c0358571aba6ec66 match completed Microsoft Skills evidence; unchanged adoption remains rejected 15/20 because bundled migration guidance lacks action-specific authorization immediately before consequential AKS mutations; 117 Azure gaps remain"
   }
 }
