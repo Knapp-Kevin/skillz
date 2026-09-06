@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-hosted-copilot-sdk
+display_name: Microsoft Azure Hosted Copilot SDK
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-hosted-copilot-sdk/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 4ac35b40b0df5379f3735a4882d3716f998e403d
+upstream_last_updated_at: 2026-05-08T15:51:50Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-hosted-copilot-sdk
+permission_tier: cloud-application-and-credential-sensitive-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: GitHub Copilot SDK; GitHub CLI; Azure Developer CLI; Docker; Azure Identity; azure-prepare; azure-validate; azure-deploy; bundled authentication, model-configuration, SDK, deployment, and existing-project references
+import_eligibility: reference-or-adaptation-only
+rationale: Exact Azure-source package tree ee166d12b8f9a88a1d4d932a23e844d8203efa13 and SKILL.md blob 64b239df00aa320b64a9009c1875b303a87080b1 match the current Microsoft Skills package exactly, so compatible complete-package semantic evidence is reconciled rather than repeated. Preserve its strong codebase detection/routing, temp-directory scaffolding that avoids overwriting the user project, managed-identity production guidance, least-privilege RBAC advice, secure Key Vault token storage pattern, SDK/BYOM integration guidance, and explicit separation between preparation and deployment. Unchanged adoption fails the current authority hard rule because bundled troubleshooting instructs `gh auth refresh --scopes copilot`, which expands credential authorization without a mandatory action-specific approval immediately before mutation, and the top-level deployment path delegates consequential provisioning to `azure-deploy`, whose exact pinned package is itself rejected unchanged for missing dedicated authorization before later RBAC/database mutations. This package adds no compensating boundary. No workflow was found that asks the user to paste literal secrets into conversational context; the GitHub token remains in external secure credential handling. Preserve as adaptation/reference evidence; behavioral validation has not been run.

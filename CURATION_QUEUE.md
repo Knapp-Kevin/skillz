@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **369** persisted exact-version third-party verification companions.
+- **370** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,8 +39,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **11/131**.
-- Remaining gaps: **120**.
+- Current-standard companions: **12/131**.
+- Remaining gaps: **119**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
@@ -52,8 +52,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - `azure-deploy`: rejected unchanged **15/20**, behavioral validation `not-run`.
 - `azure-diagnostics`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-enterprise-infra-planner`: verified **18/20**, behavioral validation `not-run`; package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5`, `SKILL.md` blob `a261c21ed056be1958902cf23f6ae4879001b404`, Azure-source freshness revision `02a614f6ee1f052826f834d65c61e430ad152c8e` on 2026-06-04.
+- `azure-hosted-copilot-sdk`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `ee166d12b8f9a88a1d4d932a23e844d8203efa13`, `SKILL.md` blob `64b239df00aa320b64a9009c1875b303a87080b1`, Azure-source freshness revision `4ac35b40b0df5379f3735a4882d3716f998e403d` on 2026-05-08.
 
-`azure-enterprise-infra-planner` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve the seven-phase evidence-first workflow, WAF/resource/constraint checks, explicit resource-selection approval, separate manual plan approval before IaC generation, and the fresh deployment gate after risks are presented. Phase 7 explicitly rejects the original prompt and vague assent as deployment authorization, confirms subscription/resource group, and requires explicit confirmation for destructive actions. This satisfies the current authority hard rule for the consequential provisioning path. No literal-secret solicitation into conversational context was identified.
+`azure-hosted-copilot-sdk` exactly matches the current Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its SDK-aware routing, temp-directory scaffolding safeguard, managed-identity/passwordless guidance, secure GitHub-token/Key Vault flow, BYOM references, and preparation/deployment orchestration. Unchanged adoption fails the authority hard rule because troubleshooting can expand GitHub credential scope through `gh auth refresh --scopes copilot` without a mandatory action-specific approval immediately before mutation, and its deployment path inherits the currently rejected exact-version `azure-deploy` package without adding a compensating boundary. The reviewed package does not solicit literal secrets into conversational context.
 
 ## Governed discovery / source-vetting
 
@@ -69,4 +70,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **369 persisted reviews / 11 of 131 eligible Azure Skills / 120 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **370 persisted reviews / 12 of 131 eligible Azure Skills / 119 gaps**. The next apparent source-tree candidate is `azure-kubernetes`; check exact provenance/verification paths and repository history before treating it as a genuine gap.
