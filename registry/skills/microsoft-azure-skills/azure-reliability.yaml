@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-reliability
+display_name: Microsoft Azure Reliability
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-reliability/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: a81025ed0ac25e09c5805ada5295d0304e0ebbf7
+upstream_last_updated_at: 2026-05-27T17:04:59Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-reliability
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure Resource Graph; Azure CLI; Azure App Service and Functions resource context; Bicep or Terraform tooling when IaC patching is selected; bundled reliability assessment and remediation references
+import_eligibility: rejected-unchanged
+rationale: Exact Azure-source package tree 1240c9672f0101c65ab0dbc461f9515a200b4486 and SKILL.md blob 835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb exactly match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reconciled rather than repeated. The package has unusually strong staged authorization for assessment and remediation, but bundled configure-storage.md retrieves a live storage connection string into command output and then uses that credential in app settings. That violates the current secret-and-sensitive-data discipline because raw secret material is exposed to command/conversational handling instead of a secure external credential path or redacted transfer. Preserve the staged reliability assessment, consent mechanics, and remediation sequencing as adaptation/reference evidence. Behavioral validation has not been run.
