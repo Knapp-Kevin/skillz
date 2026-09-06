@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **368** persisted exact-version third-party verification companions.
+- **369** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,8 +39,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **10/131**.
-- Remaining gaps: **121**.
+- Current-standard companions: **11/131**.
+- Remaining gaps: **120**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
@@ -50,9 +50,10 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - `azure-compute`: rejected unchanged **11/20**, behavioral validation `not-run`.
 - `azure-cost`: rejected unchanged **14/20**, behavioral validation `not-run`.
 - `azure-deploy`: rejected unchanged **15/20**, behavioral validation `not-run`.
-- `azure-diagnostics`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `1b0c314600a11fc0d63249d63c47cfb79a524443`, `SKILL.md` blob `693487020cc7c409f4c8387974cef122b5fe692c`, Azure-source freshness revision `96570bd196165d3f614de125efb71a627870a80d` on 2026-05-19.
+- `azure-diagnostics`: rejected unchanged **13/20**, behavioral validation `not-run`.
+- `azure-enterprise-infra-planner`: verified **18/20**, behavioral validation `not-run`; package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5`, `SKILL.md` blob `a261c21ed056be1958902cf23f6ae4879001b404`, Azure-source freshness revision `02a614f6ee1f052826f834d65c61e430ad152c8e` on 2026-06-04.
 
-`azure-diagnostics` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve resource-health-first triage, Azure-side-before-Kubernetes evidence ordering, read-only AKS fallback commands, root-cause confidence discipline, the explicit AKS remediation gate, diagnostic query patterns, and escalation mechanics. Unchanged adoption remains rejected because App Service remediation presents persistent production mutations including scaling, tracing, auto-heal/recycling, redeployment, app-setting changes, TLS certificate upload/binding, and DNS changes without dedicated action-specific authorization immediately before those changes.
+`azure-enterprise-infra-planner` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve the seven-phase evidence-first workflow, WAF/resource/constraint checks, explicit resource-selection approval, separate manual plan approval before IaC generation, and the fresh deployment gate after risks are presented. Phase 7 explicitly rejects the original prompt and vague assent as deployment authorization, confirms subscription/resource group, and requires explicit confirmation for destructive actions. This satisfies the current authority hard rule for the consequential provisioning path. No literal-secret solicitation into conversational context was identified.
 
 ## Governed discovery / source-vetting
 
@@ -68,4 +69,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **368 persisted reviews / 10 of 131 eligible Azure Skills / 121 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **369 persisted reviews / 11 of 131 eligible Azure Skills / 120 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
