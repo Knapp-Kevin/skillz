@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-kusto
+display_name: Microsoft Azure Data Explorer Kusto Query & Analytics
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-kusto/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22T11:24:28Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-kusto
+permission_tier: read-only-data-query-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP Kusto query/schema/list tools; Azure CLI/az rest fallback; Azure Data Explorer/Kusto; KQL; authenticated Azure subscription and database access
+import_eligibility: reference-or-adaptation-only
+rationale: Exact Azure-source package tree 71a8cb8f91c6078d4b745c0bf0c46d45437c263f and SKILL.md blob 76e6b1764da1d7352dd3d6056571751f4395c746 exactly match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reconciled rather than repeated. Preserve the read-oriented KQL workflow, schema-first exploration, early time filtering, result limiting, aggregation guidance, and CLI fallback. Unchanged adoption fails the current sensitive-data and authority rules because the skill explicitly targets SIEM/security analytics, audit logs, user behavior, telemetry, and raw data retrieval without a mandatory scope, disclosure-authority, minimization, or redaction checkpoint before returning potentially sensitive rows. Its best-practice suggestions also mention persistent database functions, materialized views, retention policies, streaming ingestion, and Azure Monitor integration without framing those as separately authorized mutations. Preserve as query/reference and adaptation evidence; behavioral validation has not been run.
