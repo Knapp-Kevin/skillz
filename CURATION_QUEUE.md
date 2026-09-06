@@ -31,12 +31,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - Current-standard companion completeness: **72/72**
 - Gaps: **0**
 
-### Microsoft Skills — ACTIVE FRONTIER
+### Microsoft Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
-- Exact eligible denominator: **189** independently front-mattered skill entry points.
-- Current-standard companions: **186/189**.
-- Remaining gaps: **3**.
+- Exact eligible denominator: **186** independently front-mattered skill entry points.
+- Current-standard companions: **186/186**.
+- Remaining gaps: **0**.
 - Direct `.NET`: **29/29** complete.
 - Direct Java: **26/26** complete.
 - Direct Python: **40/40** complete.
@@ -45,13 +45,13 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
 
-Exact-pin Foundry reconciliation resolved the post-`ui-widget-developer` frontier. `.github/plugins/microsoft-foundry/skills/` contains ten symlink entries whose recorded targets are dangling at this pin; they are not independent eligible packages. Canonical Foundry material is under `.github/plugins/azure-skills/skills/microsoft-foundry`. The root and nested `finetuning` companions already existed. `models/deploy-model` is verified 17/20; `capacity` is verified 17/20; `customize` is verified 17/20. The independently front-mattered `preset` descendant is now **rejected unchanged, 12/20** at package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9` and `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`; freshness is revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve its capacity-aware region selection, model/version discovery, project filtering, GlobalStandard defaults, quota fallback, and deployment monitoring as adaptation/extraction evidence. Reject unchanged because the fast path can deploy immediately after capacity discovery, and the alternate path can create Azure AI Services/project resources and a model deployment without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`.
+Exact-pin Foundry reconciliation resolved the post-`ui-widget-developer` frontier. `.github/plugins/microsoft-foundry/skills/` contains ten symlink entries whose recorded targets are dangling at this pin; they are not independent eligible packages. Canonical Foundry material is under `.github/plugins/azure-skills/skills/microsoft-foundry`. The root and nested `finetuning` companions already existed. `models/deploy-model` is verified 17/20; `capacity` is verified 17/20; `customize` is verified 17/20; and `preset` is rejected unchanged 12/20.
 
-Continue through the remaining independently front-mattered descendants under `microsoft-foundry/models/deploy-model`, checking companion shelves and history before every unit.
+A final exact-tree denominator check found that the prior **189** denominator overstated the eligible corpus by **3**. The remaining Foundry procedures referenced from the root such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown procedure/reference material, not independently front-mattered `SKILL.md` packages. The exact `models/deploy-model` tree contains only four independently front-mattered entry points: root, `capacity`, `customize`, and `preset`, all already companioned. Under the governing denominator rule, ordinary Markdown, duplicate exposure paths, and dangling symlinks do not create additional skill units. Microsoft Skills therefore closes truthfully at **186/186**, without inventing three records merely to satisfy the stale counter.
 
-### Microsoft Azure Skills — QUEUED AFTER MICROSOFT SKILLS
+### Microsoft Azure Skills — ACTIVE FRONTIER
 
-Use the registered source identity and pin in `registry/sources.yaml`. Do not begin this family merely because one Microsoft Skills lane is inconvenient; finish the active admitted family unless blocked or concurrently owned.
+Use the registered source identity and pin in `registry/sources.yaml`. Microsoft Skills is now current-standard complete, so this becomes the next admitted-source reconciliation family. Establish its exact eligible denominator from the registered pin before advancing individual units, recover compatible historical evidence before fresh review, and preserve the same authority, sensitive-data, and passive-repository rules.
 
 ## Governed discovery / source-vetting
 
@@ -76,4 +76,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-After public accounting is verified at **358 reviews / Microsoft Skills 186/189 / 3 gaps**, establish the next genuine nested Foundry companion gap from the exact pinned tree and continue source-by-source.
+With Microsoft Skills reconciled at **358 persisted reviews / 186 of 186 eligible Microsoft Skills / 0 gaps**, establish the exact registered-pin denominator and first genuine current-standard companion gap for **Microsoft Azure Skills**, after checking existing companions and repository history.
