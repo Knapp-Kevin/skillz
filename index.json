@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 374,
+    "persisted_third_party_exact_version_reviews": 375,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 16,
+    "microsoft_azure_skills_current_standard_companions": 17,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 115,
+    "microsoft_azure_skills_current_standard_gaps": 114,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 16/131; azure-messaging exact tree de972c7cf2a46e572b5fcfd24ed8963bc41b5a04 and SKILL.md blob 512147e502149117b33fed6c0a367606f1829e1e match completed Microsoft Skills evidence; unchanged adoption remains rejected 13/20 because remediation and consequential identity/security/credential changes lack mandatory action-specific authorization checkpoints; 115 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 17/131; azure-prepare exact tree 3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9 and SKILL.md blob 113c40edd44841b05b26ab836604c6a6d644fef4 match completed Microsoft Skills evidence; unchanged adoption remains rejected 16/20 because the mandatory first write to .azure/deployment-plan.md can overwrite an existing artifact before scoped authorization; 114 Azure gaps remain"
   }
 }

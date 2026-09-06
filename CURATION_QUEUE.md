@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **374** persisted exact-version third-party verification companions.
+- **375** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,8 +39,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **16/131**.
-- Remaining gaps: **115**.
+- Current-standard companions: **17/131**.
+- Remaining gaps: **114**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
@@ -56,9 +56,10 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - `azure-kubernetes`: rejected unchanged **12/20**, behavioral validation `not-run`.
 - `azure-kubernetes-automatic-readiness`: rejected unchanged **15/20**, behavioral validation `not-run`.
 - `azure-kusto`: rejected unchanged **14/20**, behavioral validation `not-run`.
-- `azure-messaging`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `de972c7cf2a46e572b5fcfd24ed8963bc41b5a04`, `SKILL.md` blob `512147e502149117b33fed6c0a367606f1829e1e`, Azure-source freshness revision `44a73ae54e55bff8c9e032e562c2c9e0905a9d92` on 2026-04-29.
+- `azure-messaging`: rejected unchanged **13/20**, behavioral validation `not-run`.
+- `azure-prepare`: rejected unchanged **16/20**, behavioral validation `not-run`; package tree `3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9`, `SKILL.md` blob `113c40edd44841b05b26ab836604c6a6d644fef4`, Azure-source freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15.
 
-`azure-messaging` exactly matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its resource-health-first diagnosis, SDK/version identification, documentation lookup, configuration checks, and read-oriented namespace/entity inspection. Unchanged adoption fails authority governance because diagnosis proceeds into remediation without a mandatory action-specific authorization checkpoint, while shared troubleshooting guidance also recommends consequential identity/security and credential changes without per-action authorization.
+`azure-prepare` exactly matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its plan-first preparation sequence, explicit plan approval before execution, subscription/location confirmation, destructive-action confirmation, Entra-only SQL guidance, specialized routing, and validate-before-deploy handoff. Unchanged adoption fails authority governance because the skill requires writing `.azure/deployment-plan.md` as its first action without first checking whether the path already exists, creating a possible unauthorized overwrite that conflicts with its own destructive-action rule.
 
 ## Governed discovery / source-vetting
 
@@ -74,4 +75,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **374 persisted reviews / 16 of 131 eligible Azure Skills / 115 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **375 persisted reviews / 17 of 131 eligible Azure Skills / 114 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
