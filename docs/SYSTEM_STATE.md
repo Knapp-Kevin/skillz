@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 371 |
+| **Persisted third-party review companions** | 372 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 13 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 118 |
+| **Microsoft Azure Skills current-standard companions** | 14 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 117 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **13/131** companion-complete, **118 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **14/131** companion-complete, **117 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills frontier
 
-`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `azure-enterprise-infra-planner` is verified **18/20**. `appinsights-instrumentation`, `azure-ai`, `azure-aigateway`, `azure-diagnostics`, and `azure-hosted-copilot-sdk` are rejected unchanged **13/20**. `azure-compliance` and `azure-kubernetes` are rejected unchanged **12/20**. `azure-compute` is rejected unchanged **11/20**. `azure-cost` is rejected unchanged **14/20**. `azure-deploy` is rejected unchanged **15/20**. Behavioral validation remains `not-run` for all thirteen reviewed Azure packages.
+`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `azure-enterprise-infra-planner` is verified **18/20**. `appinsights-instrumentation`, `azure-ai`, `azure-aigateway`, `azure-diagnostics`, and `azure-hosted-copilot-sdk` are rejected unchanged **13/20**. `azure-compliance` and `azure-kubernetes` are rejected unchanged **12/20**. `azure-compute` is rejected unchanged **11/20**. `azure-cost` is rejected unchanged **14/20**. `azure-deploy` and `azure-kubernetes-automatic-readiness` are rejected unchanged **15/20**. Behavioral validation remains `not-run` for all fourteen reviewed Azure packages.
 
-`azure-kubernetes` is bound to exact tree `bab7f5eab9e8e1c311ef1fc29b419963903fbe09`, `SKILL.md` blob `3c5a448a679dafed5e0e747d28bd95cead4e8dec`, and Azure-source freshness revision `d3440b8a4f138585a512ecd4e0c54ede13ab1cc2` on 2026-05-29. Exact package identity matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its Day-0/Day-1 decision framing, conservative AKS Automatic default, networking/security/reliability guidance, secret non-disclosure, subscription-context discovery, staged-upgrade guidance, and scenario-specific deep dives. Unchanged adoption fails the authority hard rule because bundled CLI guidance can create billable clusters, enable workload identity/autoscaling and monitoring, and obtain cluster credentials without a mandatory action-specific authorization checkpoint immediately before mutation. The nested front-mattered `azure-kubernetes-automatic-readiness` remains an independently eligible Azure denominator unit. Behavioral validation remains `not-run`.
+`azure-kubernetes-automatic-readiness` is bound to exact tree `1694eb4d1069fda2eac18653fdae8d2b55a3646c`, `SKILL.md` blob `452449d067b912207e88e2e4c0358571aba6ec66`, and Azure-source freshness revision `d3440b8a4f138585a512ecd4e0c54ede13ab1cc2` on 2026-05-29. Exact package identity matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its read-only assessment boundary, conservative secret handling, approval before file writes, deterministic/context-dependent fix separation, combined-diff approval, offline fallback, and constraint-spec disclosure. Unchanged adoption fails the authority hard rule because the bundled migration guide includes billable cluster creation, credential acquisition, staging deployment, OIDC/workload-identity enablement, and old-cluster deletion without mandatory action-specific authorization immediately before each consequential mutation. Behavioral validation remains `not-run`.
 
 ## Source lifecycle
 
@@ -65,7 +65,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **13/131**, checking canonical companion paths and repository history before each unit; the next genuine source-tree unit is nested `azure-kubernetes-automatic-readiness`.
+1. Continue Microsoft Azure Skills from **14/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.

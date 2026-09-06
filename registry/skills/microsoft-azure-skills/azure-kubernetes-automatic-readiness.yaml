@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-kubernetes-automatic-readiness
+display_name: Microsoft AKS Automatic Readiness Assessment
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: d3440b8a4f138585a512ecd4e0c54ede13ab1cc2
+upstream_last_updated_at: 2026-05-29T17:14:25Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-kubernetes/azure-kubernetes-automatic-readiness
+permission_tier: assessment-and-migration-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP AKS assessment tools; Azure CLI; kubectl; Kubernetes manifests; Helm/Kustomize inputs; bundled constraint spec, common fixes, MCP integration, and migration guide references
+import_eligibility: reference-or-adaptation-only
+rationale: Exact Azure-source package tree 1694eb4d1069fda2eac18653fdae8d2b55a3646c and SKILL.md blob 452449d067b912207e88e2e4c0358571aba6ec66 exactly match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reconciled rather than repeated. Preserve the strong read-only assessment boundary, explicit secret non-disclosure rule, user approval before file writes, deterministic versus context-dependent fix distinction, combined-diff approval flow, offline fallback, and versioned constraint-spec disclosure. Unchanged adoption fails the current authority hard rule because the bundled migration guide contains direct procedures for creating a persistent billable AKS Automatic cluster, obtaining credentials, deploying workloads, enabling OIDC/workload identity on existing clusters, and deleting the old cluster without mandatory action-specific authorization immediately before those external mutations. Preserve as adaptation/reference evidence; behavioral validation has not been run.
