@@ -17,8 +17,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Persisted third-party exact-version reviews | 358 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
-| Microsoft Skills current-standard companions | 186 / 189 |
-| Microsoft Skills current-standard gaps | 3 |
+| Microsoft Skills current-standard companions | 186 / 186 |
+| Microsoft Skills current-standard gaps | 0 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +62,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is active at **186/189**, leaving **3** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is now current-standard complete at **186/186**, with **0** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
 
 A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
 
-Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model/preset` is **rejected unchanged, 12/20**, bound to package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9` and `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`; freshness is revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve capacity-aware region selection, model/version discovery, project filtering, GlobalStandard defaults, quota fallback, and deployment monitoring as adaptation/extraction evidence. Reject unchanged because the fast path can deploy immediately after capacity discovery and the alternate path can create persistent Azure AI Services/project resources and a model deployment without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`. The `microsoft-foundry` plugin's ten skill entries are dangling symlink exposures at the registered pin and do not create duplicate denominator units; canonical Foundry material lives under `azure-skills/skills/microsoft-foundry`.
+The final Microsoft denominator pass corrected a stale **189** denominator to **186**. At the exact registered pin, the canonical `microsoft-foundry/models/deploy-model` tree contains only four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companion-complete. Foundry procedures such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown referenced by the root skill, not independent front-mattered packages. The `microsoft-foundry` plugin's ten skill entries are dangling symlink exposures at the registered pin and do not create duplicate denominator units. No synthetic review records were created to reconcile the stale count.
 
-Continue through the remaining independently front-mattered Foundry model descendants, beginning with a companion/history check against the exact pinned source tree.
+The next admitted-source frontier is **Microsoft Azure Skills**. Establish its exact registered-pin denominator and genuine companion gaps before new curation.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

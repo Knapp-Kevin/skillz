@@ -15,8 +15,8 @@
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
-| **Microsoft Skills current-standard companions** | 186 / 189 |
-| **Microsoft Skills current-standard gaps** | 3 |
+| **Microsoft Skills current-standard companions** | 186 / 186 |
+| **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -35,7 +35,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- Microsoft Skills: exact denominator **189**, **186/189 companion-complete**, **3 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
+- Microsoft Skills: exact denominator **186**, **186/186 companion-complete**, **0 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -44,13 +44,15 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition. Public accounting after the subsequent `microsoft-foundry/models/deploy-model/preset` review resolves to **358 third-party exact-version companions / Microsoft Skills 186/189 / 3 gaps**.
+On 2026-09-05, the Microsoft frontier was reconciled against the current companion contract. Ten exact reviews from `kql` through `wiki-architect` that existed only as auxiliary Markdown evidence now also have mandatory YAML pairs under `registry/skills/` and `registry/verification/`. `skill-creator` already had a canonical YAML pair, so its later Markdown re-review did not add a new companion; that YAML pair was refreshed to the current 15/20 rejected authority disposition.
 
-## Active Microsoft frontier
+## Microsoft Skills closure
 
-The direct language slices, `deep-wiki`, and `microsoft-365-agents-toolkit` are companion-complete. Exact-pin reconciliation confirms the `microsoft-foundry` plugin exposes ten dangling symlinks rather than independent skill packages; canonical Foundry material lives under `.github/plugins/azure-skills/skills/microsoft-foundry`. The canonical root and `finetuning` were already companion-complete. Nested `models/deploy-model` is verified 17/20; `capacity` is verified 17/20; `customize` is verified 17/20; and `preset` is now **rejected unchanged, 12/20**, bound to package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9` and `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`, with freshness revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. `preset` contributes useful capacity-aware region selection and deployment defaults, but its fast path can proceed directly to Azure deployment and its alternate path can create persistent Azure AI Services/project resources without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation remains `not-run`.
+The direct language slices, `deep-wiki`, `microsoft-365-agents-toolkit`, and the independently front-mattered Microsoft Foundry packages are companion-complete. Exact-pin reconciliation confirms the `microsoft-foundry` plugin exposes ten dangling symlinks rather than independent skill packages; canonical Foundry material lives under `.github/plugins/azure-skills/skills/microsoft-foundry`.
 
-Microsoft Skills remains active with **3** gaps. Continue through the remaining independently front-mattered descendants under the Foundry model subtree, checking companions and repository history before each review.
+A final denominator pass corrected the prior **189** figure to **186**. The canonical `models/deploy-model` tree contains exactly four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companioned. Other Foundry workflow documents such as `project/create/create-foundry-project.md`, `resource/create/create-foundry-resource.md`, and `resource/private-network/private-network.md` are ordinary Markdown referenced by the root skill, not independent front-mattered skills. Ordinary references and duplicate/dangling exposure paths do not enter the eligible denominator.
+
+Microsoft Skills therefore closes at **186/186** with **0** current-standard gaps and **358** persisted third-party exact-version companions overall. No synthetic companion records were added to reconcile the stale counter.
 
 ## Source lifecycle
 
@@ -68,11 +70,10 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Complete the remaining Microsoft Foundry nested model skill companions.
-2. Complete remaining Microsoft Skills non-direct gaps.
-3. Complete Microsoft Azure Skills.
-4. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
-5. Continue governed discovery/source-vetting and omission recovery.
-6. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+1. Establish the exact registered-pin denominator for Microsoft Azure Skills and reconcile the first genuine current-standard gap.
+2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
+3. Continue governed discovery/source-vetting and omission recovery.
+4. Resolve bounded candidate issues when evidence supports a decisive outcome.
+5. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
