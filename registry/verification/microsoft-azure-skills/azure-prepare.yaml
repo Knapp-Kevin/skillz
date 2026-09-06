@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-prepare
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9
+skill_md_blob_sha: 113c40edd44841b05b26ab836604c6a6d644fef4
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [cloud, planning, deployment]
+  lifecycle: [planning, design, implementation, verification]
+  characteristic: [contract-first, human-review, risk-aware, safety-bounded, tool-routing]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: Exact Azure-source package tree and SKILL.md blob match the completed Microsoft Skills review byte-for-byte, so compatible complete-package evidence was reconciled rather than duplicated. Strong mechanisms include a mandatory plan-first workflow, explicit approval before execution, subscription and location confirmation, destructive-action confirmation, Entra-only SQL guidance, specialized-skill routing, security hardening, functional verification, and a strict validate-before-deploy handoff that keeps deployment execution outside this skill. Unchanged adoption fails current authority governance because the skill requires writing .azure/deployment-plan.md as its very first action before workspace analysis or plan approval and does not first check whether that path already exists. The package's own global rules classify overwriting existing files as destructive and require ask_user, creating an internal safety conflict if an existing deployment plan would be replaced. Adaptation should preserve the staged preparation workflow but inspect the destination first, preserve an existing plan by default, and require explicit scoped approval before replacement. Static rejection does not establish runtime behavior; behavioral validation remains not-run.
