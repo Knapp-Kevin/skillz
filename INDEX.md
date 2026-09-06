@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 362 |
+| Persisted third-party exact-version reviews | 363 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 4 / 131 |
-| Microsoft Azure Skills current-standard gaps | 127 |
+| Microsoft Azure Skills current-standard companions | 5 / 131 |
+| Microsoft Azure Skills current-standard gaps | 126 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **4/131**, with **127** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **5/131**, with **126** current-standard gaps.
 
-The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; and `azure-aigateway`, rejected unchanged **13/20**. `azure-aigateway` is bound to package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba` and `SKILL.md` blob `a8df9f45fae25501acf7fee988047f808d191fa5`; its normal procedures mutate APIM identity, RBAC, backends, APIs, and policy without a distinct action-specific authorization checkpoint. Behavioral validation has not been run.
+The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; and `azure-cloud-migrate`, verified **17/20**. `azure-cloud-migrate` is bound to package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4` and `SKILL.md` blob `b1634cf629d9358eb70a95c089b309c304f9c42c`; it keeps ordinary migration work local, asks before deployment handoff, and requires `ask_user` for destructive actions. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
