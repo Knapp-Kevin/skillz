@@ -14,11 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 358 |
+| Persisted third-party exact-version reviews | 359 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
+| Microsoft Azure Skills current-standard companions | 1 / 131 |
+| Microsoft Azure Skills current-standard gaps | 130 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -62,12 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is fully reconciled at **72/72**. Microsoft Skills is now current-standard complete at **186/186**, with **0** gaps. Direct `.NET`, Java, Python, Rust, and TypeScript slices are complete.
+AWS is fully reconciled at **72/72**. Microsoft Skills is current-standard complete at **186/186**, with **0** gaps. Microsoft Azure Skills is the active admitted-source frontier at **1/131**, with **130** current-standard gaps.
 
-A 2026-09-05 contract repair restored ten genuinely missing Microsoft YAML companion pairs from the auxiliary Markdown review wave beginning with `kql`. `skill-creator` already had a canonical YAML pair, so its re-review refreshed that pair rather than adding another companion. Canonical counts are derived from `registry/`, not auxiliary review prose.
-
-The final Microsoft denominator pass corrected a stale **189** denominator to **186**. At the exact registered pin, the canonical `microsoft-foundry/models/deploy-model` tree contains only four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companion-complete. Foundry procedures such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown referenced by the root skill, not independent front-mattered packages. The `microsoft-foundry` plugin's ten skill entries are dangling symlink exposures at the registered pin and do not create duplicate denominator units. No synthetic review records were created to reconcile the stale count.
-
-The next admitted-source frontier is **Microsoft Azure Skills**. Establish its exact registered-pin denominator and genuine companion gaps before new curation.
+The first Azure companion is `airunway-aks-setup`, verified **17/20** at exact source pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, package tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, and `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`. Behavioral validation has not been run. The package has one canonical front-mattered skill entry point; its bundled Markdown files are references.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
