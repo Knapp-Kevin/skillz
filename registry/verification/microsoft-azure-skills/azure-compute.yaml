@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-compute
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cdfc4a39b926efba5060eddc6d790b035501bc25
+skill_md_blob_sha: fce17d1f64f4013e21ab1f53636852ca0251a5f2
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [cloud, planning, deployment, monitoring]
+  lifecycle: [planning, implementation, operations, maintenance]
+  characteristic: [progressive-disclosure, risk-aware, tool-assisted, reference-heavy]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact package identity matches compatible prior Microsoft Skills review evidence: tree cdfc4a39b926efba5060eddc6d790b035501bc25 and SKILL.md blob fce17d1f64f4013e21ab1f53636852ca0251a5f2. The package has strong planning safeguards for VM/VMSS creation, including read-only SKU/image/quota validation, adaptive requirement gathering, a user-visible Plan Card, cost surfacing, separation of artifact generation from live apply, and an explicit extra confirmation before compute_vm_create / compute_vmss_create. Unchanged adoption still fails the authority hard rule because the capacity-reservation workflow directs creation of billable CRG/reservation resources immediately after requirements gathering without a distinct action-specific authorization checkpoint, while other management paths can alter subscription-level management/security state. Preserve routing, validation, recommendation, cost, Plan Card, and generate-only mechanics for adaptation/reference use. Behavioral validation remains not-run.

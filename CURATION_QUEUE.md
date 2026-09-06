@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **364** persisted exact-version third-party verification companions.
+- **365** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,16 +39,17 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **6/131**.
-- Remaining gaps: **125**.
+- Current-standard companions: **7/131**.
+- Remaining gaps: **124**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`.
-- `azure-compliance`: rejected unchanged **12/20**, behavioral validation `not-run`; package tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`, `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`, Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
+- `azure-compliance`: rejected unchanged **12/20**, behavioral validation `not-run`.
+- `azure-compute`: rejected unchanged **11/20**, behavioral validation `not-run`; package tree `cdfc4a39b926efba5060eddc6d790b035501bc25`, `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`, Azure-source freshness revision `966330ee4fc61978b6e324993687e917125a1f36` on 2026-06-09.
 
-`azure-compliance` exactly matches the package tree and `SKILL.md` identity previously reviewed under the Microsoft Skills source, so compatible prior evidence was reconciled rather than wastefully re-reviewed. Preserve its read-only assessment, azqr, Resource Graph, Key Vault expiration, evidence-capture, prioritization, authentication, and recommendation mechanics. Unchanged adoption remains rejected because bundled remediation procedures directly mutate security, identity, networking, retention, backup, diagnostics, and production configuration without mandatory action-specific authorization immediately before mutation.
+`azure-compute` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, Plan Card review, cost visibility, output-format separation, and the explicit final confirmation before live VM/VMSS creation. Unchanged adoption remains rejected because bundled capacity-reservation guidance creates billable CRG/reservation resources after parameter gathering without a distinct action-specific authorization checkpoint, and management paths can alter subscription-level management/security state without mandatory authorization immediately before consequential mutation.
 
 ## Governed discovery / source-vetting
 
@@ -64,4 +65,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **364 persisted reviews / 6 of 131 eligible Azure Skills / 125 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **365 persisted reviews / 7 of 131 eligible Azure Skills / 124 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.

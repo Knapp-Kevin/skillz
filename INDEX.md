@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 364 |
+| Persisted third-party exact-version reviews | 365 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 6 / 131 |
-| Microsoft Azure Skills current-standard gaps | 125 |
+| Microsoft Azure Skills current-standard companions | 7 / 131 |
+| Microsoft Azure Skills current-standard gaps | 124 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **6/131**, with **125** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **7/131**, with **124** current-standard gaps.
 
-The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; and `azure-compliance`, rejected unchanged **12/20**. `azure-compliance` is bound to package tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de` and `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`; compatible prior review evidence was reconciled because the exact package identity matches the earlier Microsoft Skills package. Preserve its assessment and recommendation mechanics, but gate remediation execution behind explicit action-specific authority. Behavioral validation has not been run.
+The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; `azure-compliance`, rejected unchanged **12/20**; and `azure-compute`, rejected unchanged **11/20**. `azure-compute` is bound to package tree `cdfc4a39b926efba5060eddc6d790b035501bc25` and `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`; compatible prior review evidence was reconciled because the exact package identity matches the earlier Microsoft Skills package. Preserve its routing, validation, Plan Card, cost and generate-only mechanics, but require action-specific authority before billable capacity reservation or subscription-management mutation. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

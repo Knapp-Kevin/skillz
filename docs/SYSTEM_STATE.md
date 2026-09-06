@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 364 |
+| **Persisted third-party review companions** | 365 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 6 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 125 |
+| **Microsoft Azure Skills current-standard companions** | 7 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 124 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **6/131** companion-complete, **125 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **7/131** companion-complete, **124 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills frontier
 
-`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `appinsights-instrumentation`, `azure-ai`, and `azure-aigateway` are rejected unchanged **13/20**. `azure-compliance` is rejected unchanged **12/20**. Behavioral validation remains `not-run` for all six reviewed Azure packages.
+`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `appinsights-instrumentation`, `azure-ai`, and `azure-aigateway` are rejected unchanged **13/20**. `azure-compliance` is rejected unchanged **12/20**. `azure-compute` is rejected unchanged **11/20**. Behavioral validation remains `not-run` for all seven reviewed Azure packages.
 
-`azure-compliance` is bound to exact tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`, `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`, and Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. Its package identity matches compatible prior Microsoft Skills review evidence, so that structured evidence was reconciled rather than discarded. Preserve scope selection, azqr scanning, evidence capture, finding classification, Key Vault expiration review, and remediation proposals. Unchanged adoption fails because bundled remediation references directly mutate Azure security, identity, network, retention, backup, diagnostics, and production configuration without a mandatory action-specific authorization boundary immediately before mutation.
+`azure-compute` is bound to exact tree `cdfc4a39b926efba5060eddc6d790b035501bc25`, `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`, and Azure-source freshness revision `966330ee4fc61978b6e324993687e917125a1f36` on 2026-06-09. Exact package identity matches compatible prior Microsoft Skills evidence, so the review was reconciled rather than repeated. Preserve VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, user-visible Plan Card, cost surfacing, output-format separation, and the explicit final confirmation before live VM/VMSS creation. Unchanged adoption fails the authority hard rule because bundled capacity-reservation guidance moves from gathered parameters directly into creation of billable CRG/reservation resources, while management paths can alter subscription-level management/security state without a mandatory action-specific authorization checkpoint immediately before each consequential mutation.
 
 ## Source lifecycle
 
@@ -65,7 +65,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **6/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **7/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
