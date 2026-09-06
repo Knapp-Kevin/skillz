@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cost
+display_name: Microsoft Azure Cost Management
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/azure-cost/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 02a614f6ee1f052826f834d65c61e430ad152c8e
+upstream_last_updated_at: 2026-06-04T16:38:04Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-cost
+permission_tier: cloud-cost-query-forecast-and-optimization-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure Cost Management Query and Forecast APIs; Azure CLI; Azure MCP; Azure Resource Graph; Azure Monitor; Azure Quick Review; AKS and Storage optimization references; official Azure pricing pages
+import_eligibility: adaptation-only
+rationale: Exact Azure-source package identity matches the previously reviewed Microsoft Skills package tree SHA b9f59c28575280e1f76aaf2b94d92b040b571c52 and SKILL.md blob 8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4, so compatible prior semantic-review evidence is reconciled rather than repeated. Preserve read-oriented cost query and forecast mechanics, explicit scope selection, rate-limit handling, pricing validation, cost visibility, and optimization heuristics. Unchanged adoption remains rejected under the authority hard fail because bundled optimization guidance can enable the AKS cost-analysis add-on and includes implementation commands/recommendations for deleting or snapshot-and-deleting disks, applying lifecycle deletion/tiering rules, changing redundancy/SKUs, retention, and other persistent cost-affecting resource settings without a mandatory action-specific authorization boundary immediately before those consequential mutations. The Free-to-Standard AKS tier upgrade does require explicit approval, but enabling the add-on itself does not. Require explicit target, cost, production, retention, data-lifecycle, destructive-action, and resource-mutation authorization before applying optimization changes. Behavioral validation has not been run.

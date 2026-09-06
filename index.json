@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 365,
+    "persisted_third_party_exact_version_reviews": 366,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 7,
+    "microsoft_azure_skills_current_standard_companions": 8,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 124,
+    "microsoft_azure_skills_current_standard_gaps": 123,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 7/131; azure-compute exact tree cdfc4a39b926efba5060eddc6d790b035501bc25 matched compatible prior Microsoft Skills evidence and remains rejected unchanged 11/20 because billable capacity-reservation and subscription-management paths lack action-specific authorization immediately before consequential mutation; 124 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 8/131; azure-cost exact tree b9f59c28575280e1f76aaf2b94d92b040b571c52 and SKILL.md blob 8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4 matched compatible prior Microsoft Skills evidence and remains rejected unchanged 14/20 because optimization paths can perform destructive or persistent cost-affecting resource mutations without action-specific authorization immediately before mutation; 123 Azure gaps remain"
   }
 }

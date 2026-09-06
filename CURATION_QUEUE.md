@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **365** persisted exact-version third-party verification companions.
+- **366** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,17 +39,18 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **7/131**.
-- Remaining gaps: **124**.
+- Current-standard companions: **8/131**.
+- Remaining gaps: **123**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`.
 - `azure-compliance`: rejected unchanged **12/20**, behavioral validation `not-run`.
-- `azure-compute`: rejected unchanged **11/20**, behavioral validation `not-run`; package tree `cdfc4a39b926efba5060eddc6d790b035501bc25`, `SKILL.md` blob `fce17d1f64f4013e21ab1f53636852ca0251a5f2`, Azure-source freshness revision `966330ee4fc61978b6e324993687e917125a1f36` on 2026-06-09.
+- `azure-compute`: rejected unchanged **11/20**, behavioral validation `not-run`.
+- `azure-cost`: rejected unchanged **14/20**, behavioral validation `not-run`; package tree `b9f59c28575280e1f76aaf2b94d92b040b571c52`, `SKILL.md` blob `8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4`, Azure-source freshness revision `02a614f6ee1f052826f834d65c61e430ad152c8e` on 2026-06-04.
 
-`azure-compute` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, Plan Card review, cost visibility, output-format separation, and the explicit final confirmation before live VM/VMSS creation. Unchanged adoption remains rejected because bundled capacity-reservation guidance creates billable CRG/reservation resources after parameter gathering without a distinct action-specific authorization checkpoint, and management paths can alter subscription-level management/security state without mandatory authorization immediately before consequential mutation.
+`azure-cost` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve cost query, forecast, pricing validation, scope selection, throttling handling, total-bill context, reporting, and optimization-analysis mechanics. Unchanged adoption remains rejected because bundled optimization guidance can enable AKS cost analysis and apply destructive or persistent cost-affecting resource changes without a distinct action-specific authorization checkpoint immediately before mutation.
 
 ## Governed discovery / source-vetting
 
@@ -65,4 +66,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **365 persisted reviews / 7 of 131 eligible Azure Skills / 124 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **366 persisted reviews / 8 of 131 eligible Azure Skills / 123 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
