@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-hosted-copilot-sdk
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ee166d12b8f9a88a1d4d932a23e844d8203efa13
+skill_md_blob_sha: 64b239df00aa320b64a9009c1875b303a87080b1
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review-fresh-exact-package
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, developer-workflows, architecture]
+  lifecycle: [planning, implementation, deployment]
+  characteristic: [multi-step, reference-heavy, external-tools]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Fresh review was required because this Azure-source package does not match the previously reviewed Microsoft Skills copy. Review covered SKILL.md and the complete bundled reference set for authentication, Azure model configuration, Copilot SDK usage, existing-project integration, and deployment adaptation. Strong points include mandatory codebase detection, preservation of existing repositories through temp-directory scaffolding, passwordless/managed-identity guidance, least-privilege RBAC guidance, and secure GitHub-token handling via gh/azd/Key Vault rather than conversational secret solicitation. Unchanged adoption fails the current authority hard rule because generic build/modify/prepare triggers lead to a mandatory Step 4 chain through azure-prepare, azure-validate, and azure-deploy, while the current exact-version azure-deploy package is rejected for consequential post-deployment identity/database mutation paths lacking a distinct action-specific authorization checkpoint. Generic build or modify intent is not sufficient authority for those persistent external effects. Preserve as reference/adaptation evidence. Static review does not establish runtime behavior; behavioral validation remains not-run.
