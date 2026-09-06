@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-374-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-375-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -21,7 +21,7 @@ The repository provides four surfaces:
 
 1. **43 first-party user-facing skills** under [`skills/`](skills/).
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
-3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
+3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/`).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
 
 Third-party packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those remain upstream package material, not repository-owned execution machinery.
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **374 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **375 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -52,14 +52,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
-- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **16/131** current-standard companion complete, **115** gaps remain.
+- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **17/131** current-standard companion complete, **114** gaps remain.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-The sixteen reconciled Azure packages are `airunway-aks-setup` (verified **17/20**), `appinsights-instrumentation` (rejected unchanged **13/20**), `azure-ai` (rejected unchanged **13/20**), `azure-aigateway` (rejected unchanged **13/20**), `azure-cloud-migrate` (verified **17/20**), `azure-compliance` (rejected unchanged **12/20**), `azure-compute` (rejected unchanged **11/20**), `azure-cost` (rejected unchanged **14/20**), `azure-deploy` (rejected unchanged **15/20**), `azure-diagnostics` (rejected unchanged **13/20**), `azure-enterprise-infra-planner` (verified **18/20**), `azure-hosted-copilot-sdk` (rejected unchanged **13/20**), `azure-kubernetes` (rejected unchanged **12/20**), `azure-kubernetes-automatic-readiness` (rejected unchanged **15/20**), `azure-kusto` (rejected unchanged **14/20**), and `azure-messaging` (rejected unchanged **13/20**). Behavioral validation remains `not-run` for all sixteen reviewed Azure packages.
+The seventeen reconciled Azure packages are `airunway-aks-setup` (verified **17/20**), `appinsights-instrumentation` (rejected unchanged **13/20**), `azure-ai` (rejected unchanged **13/20**), `azure-aigateway` (rejected unchanged **13/20**), `azure-cloud-migrate` (verified **17/20**), `azure-compliance` (rejected unchanged **12/20**), `azure-compute` (rejected unchanged **11/20**), `azure-cost` (rejected unchanged **14/20**), `azure-deploy` (rejected unchanged **15/20**), `azure-diagnostics` (rejected unchanged **13/20**), `azure-enterprise-infra-planner` (verified **18/20**), `azure-hosted-copilot-sdk` (rejected unchanged **13/20**), `azure-kubernetes` (rejected unchanged **12/20**), `azure-kubernetes-automatic-readiness` (rejected unchanged **15/20**), `azure-kusto` (rejected unchanged **14/20**), `azure-messaging` (rejected unchanged **13/20**), and `azure-prepare` (rejected unchanged **16/20**). Behavioral validation remains `not-run` for all seventeen reviewed Azure packages.
 
-`azure-messaging` is bound to exact package tree `de972c7cf2a46e572b5fcfd24ed8963bc41b5a04` and `SKILL.md` blob `512147e502149117b33fed6c0a367606f1829e1e`; these match the completed Microsoft Skills package exactly, so compatible complete-package semantic evidence was reconciled rather than repeated. Preserve its resource-health-first troubleshooting flow, SDK/version identification, documentation lookup, configuration checks, and read-oriented namespace/entity inspection. Unchanged adoption is rejected because the workflow proceeds from diagnosis into remediation without a mandatory action-specific authorization checkpoint, while shared troubleshooting guidance also recommends consequential identity/security and credential operations such as RBAC changes, secret or certificate rotation, and Defender enablement without per-action authorization. Behavioral validation remains `not-run`.
+`azure-prepare` is bound to exact package tree `3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9` and `SKILL.md` blob `113c40edd44841b05b26ab836604c6a6d644fef4`; these match the completed Microsoft Skills package exactly, so compatible complete-package semantic evidence was reconciled rather than repeated. Preserve its plan-first preparation sequence, explicit plan approval before execution, Azure subscription/location confirmation, destructive-action confirmation, Entra-only SQL guidance, specialized routing, and validate-before-deploy handoff. Unchanged adoption is rejected because the workflow mandates writing `.azure/deployment-plan.md` as its first action without first checking whether an existing plan would be overwritten, despite its own rule that overwrite is destructive and requires action-specific authorization. Behavioral validation remains `not-run`.
 
-Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **16/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **17/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
