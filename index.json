@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 373,
+    "persisted_third_party_exact_version_reviews": 374,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 15,
+    "microsoft_azure_skills_current_standard_companions": 16,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 116,
+    "microsoft_azure_skills_current_standard_gaps": 115,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 15/131; azure-kusto exact tree 71a8cb8f91c6078d4b745c0bf0c46d45437c263f and SKILL.md blob 76e6b1764da1d7352dd3d6056571751f4395c746 match completed Microsoft Skills evidence; unchanged adoption remains rejected 14/20 because sensitive-data retrieval lacks a mandatory disclosure-scope/minimization/redaction/authorization checkpoint and persistent optimization suggestions require separate action authorization; 116 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 16/131; azure-messaging exact tree de972c7cf2a46e572b5fcfd24ed8963bc41b5a04 and SKILL.md blob 512147e502149117b33fed6c0a367606f1829e1e match completed Microsoft Skills evidence; unchanged adoption remains rejected 13/20 because remediation and consequential identity/security/credential changes lack mandatory action-specific authorization checkpoints; 115 Azure gaps remain"
   }
 }
