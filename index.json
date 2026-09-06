@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 376,
+    "persisted_third_party_exact_version_reviews": 377,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 18,
+    "microsoft_azure_skills_current_standard_companions": 19,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 113,
+    "microsoft_azure_skills_current_standard_gaps": 112,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 18/131; azure-quotas exact tree 8a628e265ecb05a8f78a9a7e4e4772fb82d78c40 and SKILL.md blob cbd67b6c336362ee343390e713b91b5662841038 match completed Microsoft Skills evidence; unchanged adoption remains rejected 14/20 because subscription quota/provider mutations and local quota-extension installation lack scoped action authorization; 113 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 19/131; azure-rbac exact tree b52d696609b18a5dc2bae21e368812fe7b020ec5 and SKILL.md blob 02ac75d2ba22b4d7aa1e74469b01575281f05ddc match completed Microsoft Skills evidence; unchanged adoption is verified 17/20 because the package is generate-only and does not execute role assignments; any execution of generated artifacts remains separately authorization-gated; 112 Azure gaps remain"
   }
 }
