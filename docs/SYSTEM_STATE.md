@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 360 |
+| **Persisted third-party review companions** | 361 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 2 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 129 |
+| **Microsoft Azure Skills current-standard companions** | 3 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 128 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,7 +38,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
 - Microsoft Skills: exact denominator **186**, **186/186 companion-complete**, **0 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **2/131 companion-complete**, **129 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **3/131 companion-complete**, **128 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -59,6 +59,8 @@ The registered source pin is `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, with **
 
 `appinsights-instrumentation` is rejected unchanged **13/20** at exact tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0` and `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`; freshness is bound to upstream revision `a98eb86dc2a7b2bc57bdc0c346421576782bf3e5` on 2026-05-05 and behavioral validation remains `not-run`. Its guidance, context collection, auto-instrumentation preference, and SDK/platform references are useful, but the manual path directs Azure resource creation and app-setting mutation without a distinct action-specific authorization checkpoint immediately before those operations.
 
+`azure-ai` is rejected unchanged **13/20** at exact tree `8a168336305c56e0eea0d89aced7d8a0001de3b5` and `SKILL.md` blob `6cce5b319f57f98f81772e4c8627c573d89e8571`; freshness is bound to upstream revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22 and behavioral validation remains `not-run`. Preserve its service-routing matrix, MCP-first tool map, SDK quick-reference map, and managed-identity authentication guidance. Reject unchanged because ordinary triggered use can transmit search queries, audio, synthesized-text inputs, documents/OCR payloads, prompts, or other user data to external Azure AI services and may incur paid usage without a distinct action-specific authorization checkpoint immediately before transmission or invocation.
+
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
@@ -75,7 +77,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **2/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **3/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.

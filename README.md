@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-360-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-361-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities** across pinned-reference, tracked-corpus, normative-spec, and dynamic-discovery roles.
 
-There are currently **360 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
+There are currently **361 persisted exact-version third-party verification companions** under the canonical registry contract. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection. Current semantics are defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 ## Discovery and admission
 
@@ -56,7 +56,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
 - **Microsoft Skills:** exact denominator **186** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **186/186** current-standard companion complete, **0** gaps remain.
-- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **2/131** current-standard companion complete, **129** gaps remain. `airunway-aks-setup` is verified 17/20. `appinsights-instrumentation` is rejected unchanged 13/20 because its manual instrumentation path directs Azure resource creation and application-setting mutation without a distinct action-specific authorization checkpoint. Behavioral validation is not run for either reviewed Azure package.
+- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **3/131** current-standard companion complete, **128** gaps remain. `airunway-aks-setup` is verified 17/20. `appinsights-instrumentation` is rejected unchanged 13/20 because its manual instrumentation path directs Azure resource creation and application-setting mutation without a distinct action-specific authorization checkpoint. `azure-ai` is rejected unchanged 13/20 because ordinary use can transmit search queries, audio, document/OCR content, prompts, and other user data to paid external Azure AI services without an action-specific authorization checkpoint. Behavioral validation is not run for these reviewed Azure packages.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -67,7 +67,7 @@ A 2026-09-05 contract reconciliation restored ten Microsoft reviews from auxilia
 
 Final Microsoft denominator reconciliation corrected a stale **189** denominator to **186**. At the exact pin, the canonical `microsoft-foundry/models/deploy-model` subtree contains only four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companion-complete. Foundry procedures such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown referenced by the root skill, not independent front-mattered packages. The `microsoft-foundry` plugin's ten top-level skill entries are dangling symlink exposures at the registered pin and likewise do not create denominator units. No synthetic companion records were created to satisfy the stale counter.
 
-Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is now the active admitted-source frontier at **2/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is now the active admitted-source frontier at **3/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
