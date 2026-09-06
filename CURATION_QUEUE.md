@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **378** persisted exact-version third-party verification companions.
+- **379** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **20/131**.
-- Remaining gaps: **111**.
+- Current-standard companions: **21/131**.
+- Remaining gaps: **110**.
 
-Reconciled Azure packages and dispositions: `airunway-aks-setup` verified 17/20; `appinsights-instrumentation` rejected 13/20; `azure-ai` rejected 13/20; `azure-aigateway` rejected 13/20; `azure-cloud-migrate` verified 17/20; `azure-compliance` rejected 12/20; `azure-compute` rejected 11/20; `azure-cost` rejected 14/20; `azure-deploy` rejected 15/20; `azure-diagnostics` rejected 13/20; `azure-enterprise-infra-planner` verified 18/20; `azure-hosted-copilot-sdk` rejected 13/20; `azure-kubernetes` rejected 12/20; `azure-kubernetes-automatic-readiness` rejected 15/20; `azure-kusto` rejected 14/20; `azure-messaging` rejected 13/20; `azure-prepare` rejected 16/20; `azure-quotas` rejected 14/20; `azure-rbac` verified 17/20; `azure-reliability` rejected 15/20. Behavioral validation remains `not-run` for all twenty.
+Reconciled Azure packages and dispositions: `airunway-aks-setup` verified 17/20; `appinsights-instrumentation` rejected 13/20; `azure-ai` rejected 13/20; `azure-aigateway` rejected 13/20; `azure-cloud-migrate` verified 17/20; `azure-compliance` rejected 12/20; `azure-compute` rejected 11/20; `azure-cost` rejected 14/20; `azure-deploy` rejected 15/20; `azure-diagnostics` rejected 13/20; `azure-enterprise-infra-planner` verified 18/20; `azure-hosted-copilot-sdk` rejected 13/20; `azure-kubernetes` rejected 12/20; `azure-kubernetes-automatic-readiness` rejected 15/20; `azure-kusto` rejected 14/20; `azure-messaging` rejected 13/20; `azure-prepare` rejected 16/20; `azure-quotas` rejected 14/20; `azure-rbac` verified 17/20; `azure-reliability` rejected 15/20; `azure-resource-lookup` rejected 14/20. Behavioral validation remains `not-run` for all twenty-one.
 
-`azure-reliability` is bound to package tree `1240c9672f0101c65ab0dbc461f9515a200b4486`, `SKILL.md` blob `835bc5e854d9cabfc6021a9bfc6d7fbb8c594abb`, and Azure freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact package identity matches completed Microsoft Skills evidence. Preserve its scoped assessment, staged consent, remediation sequencing, and explicit live-CLI-versus-IaC choice. Unchanged adoption remains rejected because bundled storage guidance exposes a live storage connection string in command output rather than requiring secure external credential transfer or redaction.
+`azure-resource-lookup` is bound to package tree `19e257c3720521014d81cd3dbf4e188e0ece621b`, `SKILL.md` blob `d16d74bd6369fd15f8d96ff0b637ac361c7d6e13`, and Azure freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact package identity matches completed Microsoft Skills evidence. Preserve its dedicated-tool-first routing, Azure Resource Graph fallback, explicit query scoping and shaping, and orphan/tag inventory methods. Unchanged adoption remains rejected because the missing-extension path installs the `resource-graph` Azure CLI extension without a mandatory action-specific authorization checkpoint immediately before mutating the host toolchain.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **378 persisted reviews / 20 of 131 eligible Azure Skills / 111 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **379 persisted reviews / 21 of 131 eligible Azure Skills / 110 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
