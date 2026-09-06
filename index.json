@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 367,
+    "persisted_third_party_exact_version_reviews": 368,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 9,
+    "microsoft_azure_skills_current_standard_companions": 10,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 122,
+    "microsoft_azure_skills_current_standard_gaps": 121,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 9/131; azure-deploy exact tree e4d47784cfeba4f942bca41a909c957e65562fd7 and SKILL.md blob 23815db4c7c5946913b10ac1cd706ea2bf6727fe matched compatible prior Microsoft Skills evidence and remains rejected unchanged 15/20 because required post-deployment SQL permission and EF schema-migration mutations lack dedicated action-specific authorization immediately before those changes; 122 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 10/131; azure-diagnostics exact tree 1b0c314600a11fc0d63249d63c47cfb79a524443 and SKILL.md blob 693487020cc7c409f4c8387974cef122b5fe692c matched compatible prior Microsoft Skills evidence and remains rejected unchanged 13/20 because persistent App Service remediation mutations lack dedicated action-specific authorization immediately before those changes; 121 Azure gaps remain"
   }
 }
