@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 376 |
+| Persisted third-party exact-version reviews | 377 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 18 / 131 |
-| Microsoft Azure Skills current-standard gaps | 113 |
+| Microsoft Azure Skills current-standard companions | 19 / 131 |
+| Microsoft Azure Skills current-standard gaps | 112 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **18/131**, with **113** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **19/131**, with **112** current-standard gaps.
 
-The latest reconciled Azure unit is `azure-quotas`, rejected unchanged **14/20**, bound to package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40` and `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its quota-name discovery, CLI-first read workflows, usage/capacity calculation, regional comparison, unsupported-provider fallback, and `No Limit` warning; unchanged adoption fails because quota updates/provider registration and local quota-extension installation lack mandatory scoped action authorization. Behavioral validation has not been run.
+The latest reconciled Azure unit is `azure-rbac`, verified **17/20**, bound to package tree `b52d696609b18a5dc2bae21e368812fe7b020ec5` and `SKILL.md` blob `02ac75d2ba22b4d7aa1e74469b01575281f05ddc`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve least-privilege-first role selection, custom-role fallback, explicit role-assignment capability guidance, and the User Access Administrator-over-Owner preference. The package is generate-only and does not execute role assignments, so unchanged use does not trigger the action-specific mutation hard fail; execution of generated artifacts remains a separate host-agent action requiring scoped authorization. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
