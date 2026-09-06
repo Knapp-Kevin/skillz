@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **376** persisted exact-version third-party verification companions.
+- **377** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,8 +39,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **18/131**.
-- Remaining gaps: **113**.
+- Current-standard companions: **19/131**.
+- Remaining gaps: **112**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
@@ -58,9 +58,10 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - `azure-kusto`: rejected unchanged **14/20**, behavioral validation `not-run`.
 - `azure-messaging`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-prepare`: rejected unchanged **16/20**, behavioral validation `not-run`.
-- `azure-quotas`: rejected unchanged **14/20**, behavioral validation `not-run`; package tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40`, `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`, Azure-source freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27.
+- `azure-quotas`: rejected unchanged **14/20**, behavioral validation `not-run`.
+- `azure-rbac`: verified **17/20**, behavioral validation `not-run`; package tree `b52d696609b18a5dc2bae21e368812fe7b020ec5`, `SKILL.md` blob `02ac75d2ba22b4d7aa1e74469b01575281f05ddc`, Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
 
-`azure-quotas` exactly matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve quota-name discovery, CLI-first read workflows, usage/capacity calculation, regional comparison, unsupported-provider fallback, and the `No Limit` warning. Unchanged adoption fails authority governance because subscription-scoped quota updates and provider registration lack mandatory action-specific authorization immediately before mutation, and the package also mandates local Azure CLI quota-extension installation without scoped authorization.
+`azure-rbac` exactly matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve least-privilege-first role selection, custom-role fallback, explicit role-assignment capability guidance, and the preference for User Access Administrator over Owner when assignment is the only requirement. The package is generate-only and does not execute role assignments or mutate Azure state, so the action-specific mutation authorization hard fail does not apply to unchanged use; execution of generated artifacts remains a separate host-agent action requiring scoped authorization.
 
 ## Governed discovery / source-vetting
 
@@ -76,4 +77,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **376 persisted reviews / 18 of 131 eligible Azure Skills / 113 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **377 persisted reviews / 19 of 131 eligible Azure Skills / 112 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
