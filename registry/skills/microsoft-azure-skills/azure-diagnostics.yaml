@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-diagnostics
+display_name: Microsoft Azure Diagnostics
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 96570bd196165d3f614de125efb71a627870a80d
+upstream_last_updated_at: 2026-05-19T16:24:57Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-diagnostics
+permission_tier: cloud-production-diagnostics-and-remediation-reference
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure CLI; Azure MCP AppLens/Monitor/Resource Health/AKS surfaces; kubectl; KQL; App Service; Container Apps; Functions; AKS; Event Hubs; Service Bus; bundled diagnostic and troubleshooting references
+import_eligibility: adaptation-only
+rationale: Exact Azure-source package identity matches the previously reviewed Microsoft Skills package exactly at tree SHA 1b0c314600a11fc0d63249d63c47cfb79a524443 and SKILL.md blob 693487020cc7c409f4c8387974cef122b5fe692c, so compatible complete-package semantic evidence is reconciled rather than repeated. The package preserves strong systematic triage, resource-health-first diagnosis, evidence ordering, read-only AKS fallbacks, root-cause confidence discipline, and an explicit AKS guardrail that forbids restart/delete/cordon/drain/scale/upgrade/reconfiguration unless remediation is explicitly requested. Unchanged adoption is rejected under the current authority hard fail because the broader App Service path directly presents persistent production mutations such as scaling plans, enabling failed-request tracing, configuring auto-heal/recycling, redeploying artifacts, changing app settings, uploading/binding TLS certificates, and changing DNS as normal fixes without a mandatory action-specific authorization checkpoint immediately before those changes. A general troubleshooting or remediation request does not establish target, production-change, availability-impact, network/DNS, certificate, cost, or rollback authority for each mutation. Preserve the read-only triage, evidence-order, AKS remediation gate, diagnostic query, and escalation mechanics for adaptation/reference use; require fresh action-specific authorization before any production mutation. Behavioral validation has not been run.
