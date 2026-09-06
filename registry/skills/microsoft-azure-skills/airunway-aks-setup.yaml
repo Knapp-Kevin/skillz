@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: airunway-aks-setup
+display_name: Microsoft Azure AI Runway AKS Setup
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/airunway-aks-setup/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-azure-skills/skills/airunway-aks-setup
+permission_tier: external-side-effect
+portability: low
+review_status: verified
+dependency_status: source-intact
+dependencies: Complete airunway-aks-setup package tree; kubectl, make, curl; an existing AKS cluster and active kubeconfig context; AI Runway repository for controller/provider Make targets; optional Hugging Face access token for gated models; bundled GPU sizing, PowerShell, step, and troubleshooting references
+import_eligibility: verified-static
+rationale: Exact package review bound to tree 72ec58c0a7c574dc71e14c63feb3d2aa529849ac and SKILL.md blob 26bbd92815116826696fb6380d37446a285496b9. Preserve staged cluster verification, GPU assessment, provider selection, model sizing, rollback/troubleshooting guidance, cost awareness, and explicit user confirmation before every install or deployment action. Mutating steps install cluster CRDs/controllers/providers, create Kubernetes secrets, and deploy ModelDeployment resources, but the root contract and mutating step references require confirmation before those operations. Secret handling for gated Hugging Face models uses non-echoed input, a permissioned temporary file, cleanup, and Kubernetes Secret creation rather than printing the token. Behavioral validation is not-run.
