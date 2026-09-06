@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **366** persisted exact-version third-party verification companions.
+- **367** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,8 +39,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **8/131**.
-- Remaining gaps: **123**.
+- Current-standard companions: **9/131**.
+- Remaining gaps: **122**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
@@ -48,9 +48,10 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`.
 - `azure-compliance`: rejected unchanged **12/20**, behavioral validation `not-run`.
 - `azure-compute`: rejected unchanged **11/20**, behavioral validation `not-run`.
-- `azure-cost`: rejected unchanged **14/20**, behavioral validation `not-run`; package tree `b9f59c28575280e1f76aaf2b94d92b040b571c52`, `SKILL.md` blob `8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4`, Azure-source freshness revision `02a614f6ee1f052826f834d65c61e430ad152c8e` on 2026-06-04.
+- `azure-cost`: rejected unchanged **14/20**, behavioral validation `not-run`.
+- `azure-deploy`: rejected unchanged **15/20**, behavioral validation `not-run`; package tree `e4d47784cfeba4f942bca41a909c957e65562fd7`, `SKILL.md` blob `23815db4c7c5946913b10ac1cd706ea2bf6727fe`, Azure-source freshness revision `ba20dd3abdeb081f60945a709cafadc94e4f7cc6` on 2026-05-04.
 
-`azure-cost` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve cost query, forecast, pricing validation, scope selection, throttling handling, total-bill context, reporting, and optimization-analysis mechanics. Unchanged adoption remains rejected because bundled optimization guidance can enable AKS cost analysis and apply destructive or persistent cost-affecting resource changes without a distinct action-specific authorization checkpoint immediately before mutation.
+`azure-deploy` exactly matches compatible prior Microsoft Skills package identity and review evidence, so that evidence was reconciled rather than wastefully repeated. Preserve mandatory prepare/validate prerequisites, validation proof, subscription/region confirmation, conflict detection, destructive/security/cost confirmation, RBAC propagation checks, recipe selection, recovery, and verification mechanics. Unchanged adoption remains rejected because required post-deployment SQL permission and EF schema-migration changes lack dedicated action-specific authorization immediately before those persistent identity/access and database mutations.
 
 ## Governed discovery / source-vetting
 
@@ -66,4 +67,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **366 persisted reviews / 8 of 131 eligible Azure Skills / 123 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **367 persisted reviews / 9 of 131 eligible Azure Skills / 122 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
