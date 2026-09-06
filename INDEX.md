@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 379 |
+| Persisted third-party exact-version reviews | 380 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 21 / 131 |
-| Microsoft Azure Skills current-standard gaps | 110 |
+| Microsoft Azure Skills current-standard companions | 22 / 131 |
+| Microsoft Azure Skills current-standard gaps | 109 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **21/131**, with **110** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **22/131**, with **109** current-standard gaps.
 
-The latest reconciled Azure unit is `azure-resource-lookup`, rejected unchanged **14/20**, bound to package tree `19e257c3720521014d81cd3dbf4e188e0ece621b` and `SKILL.md` blob `d16d74bd6369fd15f8d96ff0b637ac361c7d6e13`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its dedicated-tool-first routing, Azure Resource Graph fallback, subscription/result scoping, query shaping, and orphan/tag inventory mechanisms. Unchanged adoption remains rejected because its missing-extension recovery installs the `resource-graph` Azure CLI extension without a mandatory action-specific authorization checkpoint immediately before the persistent local toolchain mutation. Behavioral validation has not been run.
+The latest reconciled Azure unit is `azure-resource-visualizer`, rejected unchanged **15/20**, bound to package tree `3a892f03908cf1a388ac9d3da91764bef1e9501c` and `SKILL.md` blob `dc60b612a54d125bca4feb92b2bfead2ee757873`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its explicit resource-group selection, read-only topology discovery, complete-resource inventory, secret-placeholder discipline, relationship mapping, and structured Mermaid/documentation synthesis. Unchanged adoption remains rejected because the bundled Azure Resource Graph reference presents `az extension add --name resource-graph` as a prerequisite without a mandatory action-specific authorization checkpoint immediately before the persistent local toolchain mutation. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
