@@ -55,7 +55,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment and evidence reconciliation.
 
 - **AWS Agent Toolkit:** **72/72** current-standard provenance + verification companion complete at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
-- **Microsoft Skills:** exact denominator **189** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **186/189** current-standard companion complete, **3** gaps remain.
+- **Microsoft Skills:** exact denominator **186** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`; **186/186** current-standard companion complete, **0** gaps remain.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -64,9 +64,9 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 A 2026-09-05 contract reconciliation restored ten Microsoft reviews from auxiliary Markdown evidence into the mandatory `registry/skills/` + `registry/verification/` YAML companion paths. `skill-creator` already had a YAML pair and was therefore not counted twice; its existing pair was refreshed to the current 15/20 rejected authority disposition.
 
-Latest Microsoft closure: nested `microsoft-foundry/models/deploy-model/preset` is **rejected unchanged, 12/20**, bound to package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9` and `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`, with freshness revision `2d821920c717bcdd5ee4e287a41205c07e43cb0a` from 2026-05-05. Preserve capacity-aware region selection, model/version discovery, project filtering, GlobalStandard defaults, quota fallback, and deployment monitoring as adaptation/extraction evidence. Reject unchanged because the fast path can proceed directly to Azure deployment after capacity discovery and the alternate path can create persistent Azure AI Services/project resources before deployment without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation is `not-run`. The `microsoft-foundry` plugin's ten top-level skill entries are dangling symlinks at the registered pin and are not independent denominator units; canonical material is under `azure-skills/skills/microsoft-foundry`, where nested front-mattered descendants are evaluated individually.
+Final Microsoft denominator reconciliation corrected a stale **189** denominator to **186**. At the exact pin, the canonical `microsoft-foundry/models/deploy-model` subtree contains only four independently front-mattered `SKILL.md` entry points: root, `capacity`, `customize`, and `preset`, all already companion-complete. Foundry procedures such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown referenced by the root skill, not independent front-mattered packages. The `microsoft-foundry` plugin's ten top-level skill entries are dangling symlink exposures at the registered pin and likewise do not create denominator units. No synthetic companion records were created to satisfy the stale counter.
 
-Microsoft Skills remains the active admitted-source family with **3** gaps. Continue through the remaining independently front-mattered Microsoft Foundry model descendants before moving to Microsoft Azure Skills. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is therefore current-standard complete at **186/186**. **Microsoft Azure Skills** is the next admitted-source frontier. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
