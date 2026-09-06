@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: appinsights-instrumentation
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0
+skill_md_blob_sha: ca55c310862cb95b5ebcc1f10a070f312718d1cb
+characterized_at: 2026-09-05
+last_verified_at: 2026-09-05
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, observability, implementation]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [reference-rich, progressive-disclosure, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact-package review of the Application Insights instrumentation guide. Preserve its guidance-versus-orchestration distinction, hosting-context collection, auto-instrumentation preference, language-specific references, Bicep example, and OpenTelemetry SDK/platform references. Reject unchanged under the authority hard fail because the manual path directs creation of Log Analytics and Application Insights resources and mutation of App Service, Container App, and Function App settings without an explicit action-specific authorization checkpoint immediately before those operations. Behavioral validation remains not-run.
