@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-compliance
+display_name: Microsoft Azure Compliance
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/azure-compliance/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22T11:24:28Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-compliance
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete azure-compliance package tree; Azure CLI/Azure MCP azqr and subscription/resource-group tools; Azure Resource Graph; Key Vault metadata and SDK references; bundled recommendations, remediation, authentication, and expiration-audit references
+import_eligibility: adaptation-only
+rationale: Exact package review at the registered Microsoft Azure Skills pin, bound to tree 5d79eadfd4a42ff0091adb849bf016abd7ee57de and SKILL.md blob 5beb9da33c90ceff1b69ff78bdba78c326fd7a39. The exact package identity matches the compatible prior Microsoft Skills review, so that evidence is preserved rather than re-invented. Preserve read-only compliance scanning, azqr, Resource Graph, Key Vault expiration, evidence capture, prioritization, authentication, and recommendation mechanics. Unchanged adoption remains rejected because bundled remediation procedures directly mutate Azure networking, retention, Key Vault RBAC mode, diagnostics, backup, AKS security/identity, SQL auditing/private access, App Service identity, HTTPS/TLS, and bulk resource configuration without mandatory action-specific authorization immediately before those mutations. Behavioral validation is not-run.

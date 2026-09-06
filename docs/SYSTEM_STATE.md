@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 363 |
+| **Persisted third-party review companions** | 364 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 5 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 126 |
+| **Microsoft Azure Skills current-standard companions** | 6 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 125 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **5/131** companion-complete, **126 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **6/131** companion-complete, **125 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills frontier
 
-`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `appinsights-instrumentation`, `azure-ai`, and `azure-aigateway` are rejected unchanged **13/20**. Behavioral validation remains `not-run` for all five reviewed Azure packages.
+`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `appinsights-instrumentation`, `azure-ai`, and `azure-aigateway` are rejected unchanged **13/20**. `azure-compliance` is rejected unchanged **12/20**. Behavioral validation remains `not-run` for all six reviewed Azure packages.
 
-`azure-cloud-migrate` is bound to exact tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4`, `SKILL.md` blob `b1634cf629d9358eb70a95c089b309c304f9c42c`, and freshness revision `ed25b85a13ec001c53f538b07e0bfbe732673885` on 2026-05-07. Preserve its phased assessment-before-migration discipline, scenario-specific references, source-directory immutability, service-discovery audit, progress reporting, and explicit deployment handoff. Ordinary work writes reports and converted code to a separate local workspace. The skill asks whether to test locally or deploy before handing off to `azure-prepare`, and destructive actions in referenced service procedures require `ask_user`, so the current authority hard fail does not apply.
+`azure-compliance` is bound to exact tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`, `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`, and Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. Its package identity matches compatible prior Microsoft Skills review evidence, so that structured evidence was reconciled rather than discarded. Preserve scope selection, azqr scanning, evidence capture, finding classification, Key Vault expiration review, and remediation proposals. Unchanged adoption fails because bundled remediation references directly mutate Azure security, identity, network, retention, backup, diagnostics, and production configuration without a mandatory action-specific authorization boundary immediately before mutation.
 
 ## Source lifecycle
 
@@ -65,7 +65,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **5/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **6/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.

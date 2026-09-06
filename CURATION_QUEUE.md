@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **363** persisted exact-version third-party verification companions.
+- **364** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,15 +39,16 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **5/131**.
-- Remaining gaps: **126**.
+- Current-standard companions: **6/131**.
+- Remaining gaps: **125**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`.
-- `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`; package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4`, `SKILL.md` blob `b1634cf629d9358eb70a95c089b309c304f9c42c`, freshness revision `ed25b85a13ec001c53f538b07e0bfbe732673885` on 2026-05-07.
+- `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`.
+- `azure-compliance`: rejected unchanged **12/20**, behavioral validation `not-run`; package tree `5d79eadfd4a42ff0091adb849bf016abd7ee57de`, `SKILL.md` blob `5beb9da33c90ceff1b69ff78bdba78c326fd7a39`, Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
 
-`azure-cloud-migrate` preserves phased assessment-before-migration, source-directory immutability, scenario routing, service-discovery auditing, progress reporting, and a clean deployment handoff. Its ordinary flow writes local migration output, explicitly asks whether to test locally or deploy before handing off to `azure-prepare`, and requires `ask_user` for destructive actions in referenced service procedures. Static verification therefore passes the current authority hard fail.
+`azure-compliance` exactly matches the package tree and `SKILL.md` identity previously reviewed under the Microsoft Skills source, so compatible prior evidence was reconciled rather than wastefully re-reviewed. Preserve its read-only assessment, azqr, Resource Graph, Key Vault expiration, evidence-capture, prioritization, authentication, and recommendation mechanics. Unchanged adoption remains rejected because bundled remediation procedures directly mutate security, identity, networking, retention, backup, diagnostics, and production configuration without mandatory action-specific authorization immediately before mutation.
 
 ## Governed discovery / source-vetting
 
@@ -63,4 +64,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **363 persisted reviews / 5 of 131 eligible Azure Skills / 126 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **364 persisted reviews / 6 of 131 eligible Azure Skills / 125 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
