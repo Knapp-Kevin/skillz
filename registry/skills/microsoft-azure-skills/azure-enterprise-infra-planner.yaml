@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-enterprise-infra-planner
+display_name: Microsoft Azure Enterprise Infra Planner
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-enterprise-infra-planner/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 02a614f6ee1f052826f834d65c61e430ad152c8e
+upstream_last_updated_at: 2026-06-04T16:38:04Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/skills/azure-enterprise-infra-planner
+permission_tier: cloud-enterprise-planning-and-authorized-provisioning-reference
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: Azure MCP insights/best-practices/WAF/docs/Bicep schema tools; Azure CLI; Bicep; Terraform; bundled workflow, seven phase files, resource and pairing-constraint catalogs, WAF checklist, verification checks, IaC-generation, and deployment guidance
+import_eligibility: eligible-with-host-fit-review
+rationale: Exact Azure-source package tree 620e71b64d369c1ea3aa5c8f4feee7793841e7a5 and SKILL.md blob a261c21ed056be1958902cf23f6ae4879001b404 match the previously reviewed Microsoft Skills package exactly, so compatible complete-package semantic evidence is reconciled rather than repeated. The package has a substantive multi-stage authority model: resource selection requires approval; Phase 5 requires separate manual explicit plan approval before IaC generation; Phase 7 presents deployment risks and requires a fresh user reply, explicitly rejects the original task prompt or vague assent as authorization, confirms subscription/resource group, and requires explicit confirmation for destructive actions. Security-related environmental insights cannot weaken posture unless the user explicitly requested that weaker posture. No workflow was found that solicits literal secrets into conversational context. Preserve as verified static reference for enterprise Azure planning and provisioning; host agents must still honor package gates and local authority constraints. Behavioral validation has not been run.
