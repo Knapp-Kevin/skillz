@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 359 |
+| **Persisted third-party review companions** | 360 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 1 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 130 |
+| **Microsoft Azure Skills current-standard companions** | 2 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 129 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,7 +38,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: exact denominator **72**, **72/72 current-standard companion-complete** at pin `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
 - Microsoft Skills: exact denominator **186**, **186/186 companion-complete**, **0 gaps** at pin `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **1/131 companion-complete**, **130 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **2/131 companion-complete**, **129 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29** complete.
 - Microsoft direct Java: **26/26** complete.
 - Microsoft direct Python: **40/40** complete.
@@ -53,7 +53,11 @@ Microsoft Skills closes at **186/186** with **0** gaps after exact-pin denominat
 
 ## Microsoft Azure Skills frontier
 
-The registered source pin is `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, with **131** eligible skill packages. The first current-standard companion pair is `airunway-aks-setup`, exact tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`, `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`, last upstream change `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. It is verified 17/20 by structured static review; behavioral validation remains not-run. Mutating controller, provider, secret, and model-deployment operations are gated by explicit user-confirmation rules immediately before install/deployment actions.
+The registered source pin is `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`, with **131** eligible skill packages.
+
+`airunway-aks-setup` is verified **17/20** by structured static review at exact tree `72ec58c0a7c574dc71e14c63feb3d2aa529849ac` and `SKILL.md` blob `26bbd92815116826696fb6380d37446a285496b9`; behavioral validation remains `not-run`. Mutating controller, provider, secret, and model-deployment operations are gated by explicit user-confirmation rules immediately before install/deployment actions.
+
+`appinsights-instrumentation` is rejected unchanged **13/20** at exact tree `8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0` and `SKILL.md` blob `ca55c310862cb95b5ebcc1f10a070f312718d1cb`; freshness is bound to upstream revision `a98eb86dc2a7b2bc57bdc0c346421576782bf3e5` on 2026-05-05 and behavioral validation remains `not-run`. Its guidance, context collection, auto-instrumentation preference, and SDK/platform references are useful, but the manual path directs Azure resource creation and app-setting mutation without a distinct action-specific authorization checkpoint immediately before those operations.
 
 ## Source lifecycle
 
@@ -71,7 +75,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **1/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **2/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.

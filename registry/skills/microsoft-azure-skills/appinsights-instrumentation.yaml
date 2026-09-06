@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: appinsights-instrumentation
+display_name: Microsoft Azure Application Insights Instrumentation
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/appinsights-instrumentation/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: a98eb86dc2a7b2bc57bdc0c346421576782bf3e5
+upstream_last_updated_at: 2026-05-05
+curated_at: 2026-09-05
+last_checked_at: 2026-09-05
+availability: pinned-source
+local_path: skills/sources/microsoft-azure-skills/skills/appinsights-instrumentation
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete appinsights-instrumentation package tree; Azure CLI and Azure identity for resource creation; optional Bicep; ASP.NET Core, Node.js, or Python application context; bundled examples, platform guides, SDK references, and PowerShell command reference
+import_eligibility: rejected-unchanged
+rationale: Exact package review bound to tree 8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0 and SKILL.md blob ca55c310862cb95b5ebcc1f10a070f312718d1cb. Preserve the useful separation between guidance and azure-prepare orchestration, hosting-context collection, auto-instrumentation preference, language-specific instrumentation references, and SDK/platform reference material. Reject unchanged because the manual-instrumentation path explicitly directs creation of Application Insights and Log Analytics resources plus mutation of App Service, Container App, and Function App settings without a distinct action-specific authorization checkpoint immediately before those consequential Azure mutations. Behavioral validation is not-run.
