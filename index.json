@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 358,
+    "persisted_third_party_exact_version_reviews": 359,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,6 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
+    "microsoft_azure_skills_current_standard_companions": 1,
+    "microsoft_azure_skills_eligible_denominator": 131,
+    "microsoft_azure_skills_current_standard_gaps": 130,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -47,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: exact-pin Microsoft Foundry denominator reconciliation confirmed models/deploy-model has only four independently front-mattered entry points (root, capacity, customize, preset), all companion-complete; non-SKILL Foundry procedure Markdown and dangling plugin symlinks are not denominator units; Microsoft Skills is current-standard complete at 186/186"
+    "latest_reconciliation": "2026-09-05: Microsoft Azure Skills active frontier established at the exact registered-pin denominator of 131; airunway-aks-setup is the first current-standard exact-version companion, verified 17/20; Azure Skills now 1/131 with 130 gaps"
   }
 }
