@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **362** persisted exact-version third-party verification companions.
+- **363** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,14 +39,15 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **4/131**.
-- Remaining gaps: **127**.
+- Current-standard companions: **5/131**.
+- Remaining gaps: **126**.
 - `airunway-aks-setup`: verified **17/20**, behavioral validation `not-run`.
 - `appinsights-instrumentation`: rejected unchanged **13/20**, behavioral validation `not-run`.
 - `azure-ai`: rejected unchanged **13/20**, behavioral validation `not-run`.
-- `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`; package tree `fb881f68bdc6d638438b46b04ab6d81f91e985ba`, `SKILL.md` blob `a8df9f45fae25501acf7fee988047f808d191fa5`, freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22.
+- `azure-aigateway`: rejected unchanged **13/20**, behavioral validation `not-run`.
+- `azure-cloud-migrate`: verified **17/20**, behavioral validation `not-run`; package tree `dd0d5a31e87576d5b46899b19aa3eedb24d412f4`, `SKILL.md` blob `b1634cf629d9358eb70a95c089b309c304f9c42c`, freshness revision `ed25b85a13ec001c53f538b07e0bfbe732673885` on 2026-05-07.
 
-`azure-aigateway` preserves useful AI-governance policy selection, managed-identity authentication, semantic caching, token limits/cost controls, content-safety, MCP rate-limiting, backend/load-balancing, and troubleshooting patterns. It fails unchanged adoption because its normal procedures directly enable APIM identity, create RBAC assignments and APIM backends, import APIs, and configure gateway policy without a distinct action-specific authorization checkpoint immediately before those mutations.
+`azure-cloud-migrate` preserves phased assessment-before-migration, source-directory immutability, scenario routing, service-discovery auditing, progress reporting, and a clean deployment handoff. Its ordinary flow writes local migration output, explicitly asks whether to test locally or deploy before handing off to `azure-prepare`, and requires `ask_user` for destructive actions in referenced service procedures. Static verification therefore passes the current authority hard fail.
 
 ## Governed discovery / source-vetting
 
@@ -62,4 +63,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **362 persisted reviews / 4 of 131 eligible Azure Skills / 127 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
+Continue Microsoft Azure Skills from **363 persisted reviews / 5 of 131 eligible Azure Skills / 126 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.

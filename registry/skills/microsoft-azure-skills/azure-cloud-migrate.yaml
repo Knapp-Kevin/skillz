@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-cloud-migrate
+display_name: Microsoft Azure Cloud Migrate
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-cloud-migrate/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: ed25b85a13ec001c53f538b07e0bfbe732673885
+upstream_last_updated_at: 2026-05-07
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/microsoft-azure-skills/skills/azure-cloud-migrate
+permission_tier: mutating
+portability: medium
+review_status: verified
+dependency_status: source-intact
+dependencies: Complete azure-cloud-migrate package tree; Azure MCP best-practices and documentation tools; scenario-specific bundled references; source workload and workspace
+import_eligibility: eligible
+rationale: Exact package review bound to tree dd0d5a31e87576d5b46899b19aa3eedb24d412f4 and SKILL.md blob b1634cf629d9358eb70a95c089b309c304f9c42c. Preserve phased assessment-before-migration discipline, source-directory immutability, scenario routing, service-discovery audit, explicit progress reporting, and handoff boundary. Ordinary work is local assessment/code conversion into a separate workspace directory. The skill explicitly asks the user whether to test locally or deploy before handing off to azure-prepare, and destructive actions in referenced procedures require ask_user. Behavioral validation is not-run.
