@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-aigateway
+display_name: Microsoft Azure AI Gateway
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: skills/azure-aigateway/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/microsoft-azure-skills/skills/azure-aigateway
+permission_tier: mutating
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete azure-aigateway package tree; Azure CLI; existing Azure API Management and Azure AI resources; bundled policy, configuration-pattern, troubleshooting, authentication, and SDK references
+import_eligibility: rejected-unchanged
+rationale: Exact package review bound to tree fb881f68bdc6d638438b46b04ab6d81f91e985ba and SKILL.md blob a8df9f45fae25501acf7fee988047f808d191fa5. Preserve AI-gateway policy selection, managed-identity guidance, semantic caching, token limits, content safety, load-balancing, MCP protection, and troubleshooting patterns. Reject unchanged because ordinary triggered procedures directly enable APIM managed identity, create RBAC role assignments, create APIM backends, import APIs, and alter gateway policy without a distinct action-specific authorization checkpoint immediately before those consequential mutations. Behavioral validation is not-run.
