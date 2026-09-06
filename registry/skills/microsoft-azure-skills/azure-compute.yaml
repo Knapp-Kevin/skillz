@@ -3,7 +3,7 @@ skill_name: azure-compute
 display_name: Microsoft Azure Compute
 source_id: microsoft-azure-skills
 source_repository: https://github.com/microsoft/azure-skills
-source_path: .github/plugins/azure-skills/skills/azure-compute/SKILL.md
+source_path: skills/azure-compute/SKILL.md
 source_class: official
 license: MIT
 relationship: vendored-reference
@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-06-09T16:12:45Z
 curated_at: 2026-09-06
 last_checked_at: 2026-09-06
 availability: pinned-source
-local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-compute
+local_path: skills/sources/azure-skills/skills/azure-compute
 permission_tier: mutating
 portability: medium
 review_status: rejected
