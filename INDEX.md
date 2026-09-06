@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 367 |
+| Persisted third-party exact-version reviews | 368 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 9 / 131 |
-| Microsoft Azure Skills current-standard gaps | 122 |
+| Microsoft Azure Skills current-standard companions | 10 / 131 |
+| Microsoft Azure Skills current-standard gaps | 121 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **9/131**, with **122** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **10/131**, with **121** current-standard gaps.
 
-The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; `azure-compliance`, rejected unchanged **12/20**; `azure-compute`, rejected unchanged **11/20**; `azure-cost`, rejected unchanged **14/20**; and `azure-deploy`, rejected unchanged **15/20**. `azure-deploy` is bound to package tree `e4d47784cfeba4f942bca41a909c957e65562fd7` and `SKILL.md` blob `23815db4c7c5946913b10ac1cd706ea2bf6727fe`; compatible prior review evidence was reconciled because the exact package identity matches the earlier Microsoft Skills package. Preserve prerequisite validation, target confirmation, conflict detection, destructive/security/cost confirmation, RBAC health checks, recipe selection, recovery, and verification mechanics, but require action-specific authority before post-deployment SQL permission and EF schema-migration changes. Behavioral validation has not been run.
+The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; `azure-compliance`, rejected unchanged **12/20**; `azure-compute`, rejected unchanged **11/20**; `azure-cost`, rejected unchanged **14/20**; `azure-deploy`, rejected unchanged **15/20**; and `azure-diagnostics`, rejected unchanged **13/20**. `azure-diagnostics` is bound to package tree `1b0c314600a11fc0d63249d63c47cfb79a524443` and `SKILL.md` blob `693487020cc7c409f4c8387974cef122b5fe692c`; compatible prior review evidence was reconciled because the exact package identity matches the earlier Microsoft Skills package. Preserve systematic resource-health-first diagnosis, Azure-side-before-Kubernetes evidence ordering, read-only AKS fallback commands, root-cause confidence discipline, the explicit AKS remediation gate, diagnostic query patterns, and escalation mechanics, but require fresh action-specific authority before persistent App Service production mutations such as scaling, tracing, auto-heal/recycling, redeployment, app-setting changes, TLS certificate binding, and DNS changes. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
