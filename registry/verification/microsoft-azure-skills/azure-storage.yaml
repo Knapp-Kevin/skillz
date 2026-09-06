@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-storage
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 58ffdd0c0f466a983a0064239d481fb08e58b7c8
+skill_md_blob_sha: 21bdc643b63e040a9b1efe7422474cfb393ddc85
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covers the complete 14-file pinned azure-storage package: SKILL.md plus 13 bundled Markdown references covering authentication, SDK usage, Blob Storage, Queue Storage, File Shares, Data Lake, and Tables. Exact package tree and SKILL.md identities match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reused rather than repeated. Useful mechanisms include clear service-selection boundaries, access-tier and redundancy summaries, managed-identity production guidance, least-privilege RBAC, explicit warnings against hardcoded credentials and connection strings, and concise multi-language SDK references. Unchanged adoption fails the current authority gate because the package directly instructs Azure blob uploads and overwrite-capable SDK writes, local package installation across multiple ecosystems, MCP/setup enablement, credential or certificate rotation, and enabling Microsoft Defender for Cloud without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. Its blob get/download flows can also expose arbitrary stored content without an explicit sensitive-data disclosure/minimization boundary. Retain the read-oriented storage taxonomy, authentication safeguards, and SDK patterns as adaptation/reference evidence, but require explicit scoped authorization for mutations and disclosure controls for storage reads. Behavioral validation remains not-run.
