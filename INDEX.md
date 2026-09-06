@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 369 |
+| Persisted third-party exact-version reviews | 370 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 11 / 131 |
-| Microsoft Azure Skills current-standard gaps | 120 |
+| Microsoft Azure Skills current-standard companions | 12 / 131 |
+| Microsoft Azure Skills current-standard gaps | 119 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **11/131**, with **120** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **12/131**, with **119** current-standard gaps.
 
-The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; `azure-compliance`, rejected unchanged **12/20**; `azure-compute`, rejected unchanged **11/20**; `azure-cost`, rejected unchanged **14/20**; `azure-deploy`, rejected unchanged **15/20**; `azure-diagnostics`, rejected unchanged **13/20**; and `azure-enterprise-infra-planner`, verified **18/20**. `azure-enterprise-infra-planner` is bound to package tree `620e71b64d369c1ea3aa5c8f4feee7793841e7a5` and `SKILL.md` blob `a261c21ed056be1958902cf23f6ae4879001b404`; compatible prior Microsoft Skills review evidence was reconciled because the exact package identity matches. Preserve its evidence-first seven-phase planning workflow, WAF/resource/constraint checks, explicit resource-selection approval, separate manual plan approval before IaC generation, and fresh deployment authorization after risks are presented. The package explicitly rejects the original prompt and vague assent as deployment authorization, confirms subscription/resource group, and requires explicit destructive-action confirmation. Behavioral validation has not been run.
+The reconciled Azure companions are `airunway-aks-setup`, verified **17/20**; `appinsights-instrumentation`, rejected unchanged **13/20**; `azure-ai`, rejected unchanged **13/20**; `azure-aigateway`, rejected unchanged **13/20**; `azure-cloud-migrate`, verified **17/20**; `azure-compliance`, rejected unchanged **12/20**; `azure-compute`, rejected unchanged **11/20**; `azure-cost`, rejected unchanged **14/20**; `azure-deploy`, rejected unchanged **15/20**; `azure-diagnostics`, rejected unchanged **13/20**; `azure-enterprise-infra-planner`, verified **18/20**; and `azure-hosted-copilot-sdk`, rejected unchanged **14/20**. `azure-hosted-copilot-sdk` is bound to package tree `ee166d12b8f9a88a1d4d932a23e844d8203efa13` and `SKILL.md` blob `64b239df00aa320b64a9009c1875b303a87080b1`. Its bytes differ from the previously reviewed Microsoft Skills copy, so the review is fresh rather than reconciled. Preserve its SDK-aware routing, temp-directory scaffolding safeguard, managed-identity/passwordless guidance, secure GitHub-token/Key Vault flow, and BYOM references. Unchanged adoption fails the authority hard rule because generic build/modify/prepare triggers enter a mandatory deployment chain that composes the currently rejected exact-version `azure-deploy` package and its consequential ungated post-deployment mutation paths. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
