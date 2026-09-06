@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 370,
+    "persisted_third_party_exact_version_reviews": 371,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 12,
+    "microsoft_azure_skills_current_standard_companions": 13,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 119,
+    "microsoft_azure_skills_current_standard_gaps": 118,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 12/131; azure-hosted-copilot-sdk exact tree ee166d12b8f9a88a1d4d932a23e844d8203efa13 and SKILL.md blob 64b239df00aa320b64a9009c1875b303a87080b1 match the current Microsoft Skills package, so compatible evidence was reconciled; unchanged adoption remains rejected 13/20 because credential-scope expansion lacks action-specific approval and the deployment path inherits the rejected azure-deploy authority gap; 119 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 13/131; azure-kubernetes exact tree bab7f5eab9e8e1c311ef1fc29b419963903fbe09 and SKILL.md blob 3c5a448a679dafed5e0e747d28bd95cead4e8dec match the completed Microsoft Skills package, so compatible evidence was reconciled; unchanged adoption remains rejected 12/20 because consequential AKS cluster creation/configuration lacks action-specific approval immediately before mutation; nested azure-kubernetes-automatic-readiness remains independently eligible; 118 Azure gaps remain"
   }
 }
