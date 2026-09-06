@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 375 |
+| **Persisted third-party review companions** | 376 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 17 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 114 |
+| **Microsoft Azure Skills current-standard companions** | 18 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 113 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **17/131** companion-complete, **114 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **18/131** companion-complete, **113 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills frontier
 
-`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `azure-enterprise-infra-planner` is verified **18/20**. `appinsights-instrumentation`, `azure-ai`, `azure-aigateway`, `azure-diagnostics`, `azure-hosted-copilot-sdk`, and `azure-messaging` are rejected unchanged **13/20**. `azure-compliance` and `azure-kubernetes` are rejected unchanged **12/20**. `azure-compute` is rejected unchanged **11/20**. `azure-cost` and `azure-kusto` are rejected unchanged **14/20**. `azure-deploy` and `azure-kubernetes-automatic-readiness` are rejected unchanged **15/20**. `azure-prepare` is rejected unchanged **16/20**. Behavioral validation remains `not-run` for all seventeen reviewed Azure packages.
+`airunway-aks-setup` and `azure-cloud-migrate` are verified **17/20**. `azure-enterprise-infra-planner` is verified **18/20**. `appinsights-instrumentation`, `azure-ai`, `azure-aigateway`, `azure-diagnostics`, `azure-hosted-copilot-sdk`, and `azure-messaging` are rejected unchanged **13/20**. `azure-compliance` and `azure-kubernetes` are rejected unchanged **12/20**. `azure-compute` is rejected unchanged **11/20**. `azure-cost`, `azure-kusto`, and `azure-quotas` are rejected unchanged **14/20**. `azure-deploy` and `azure-kubernetes-automatic-readiness` are rejected unchanged **15/20**. `azure-prepare` is rejected unchanged **16/20**. Behavioral validation remains `not-run` for all eighteen reviewed Azure packages.
 
-`azure-prepare` is bound to exact tree `3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9`, `SKILL.md` blob `113c40edd44841b05b26ab836604c6a6d644fef4`, and Azure-source freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Exact package identity matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its plan-first preparation flow, explicit plan approval before execution, subscription/location confirmation, destructive-action confirmation, specialized routing, and validate-before-deploy handoff. Unchanged adoption fails authority governance because the required first write to `.azure/deployment-plan.md` does not first establish whether an existing artifact would be overwritten, despite the package's own rule that overwrite is destructive and requires user authorization. Behavioral validation remains `not-run`.
+`azure-quotas` is bound to exact tree `8a628e265ecb05a8f78a9a7e4e4772fb82d78c40`, `SKILL.md` blob `cbd67b6c336362ee343390e713b91b5662841038`, and Azure-source freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact package identity matches the completed Microsoft Skills package, so compatible complete-package evidence was reconciled rather than repeated. Preserve its quota-name discovery, CLI-first read workflows, usage/capacity calculation, regional comparison, unsupported-provider fallback, and warning that API `No Limit` output does not establish unlimited capacity. Unchanged adoption fails authority governance because quota updates and provider registration can mutate subscription-scoped state without a mandatory action-specific authorization checkpoint, while the package also mandates installing the Azure CLI quota extension without first authorizing that local toolchain mutation. Behavioral validation remains `not-run`.
 
 ## Source lifecycle
 
@@ -65,7 +65,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **17/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **18/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
