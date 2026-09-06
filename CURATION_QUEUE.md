@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **358** persisted exact-version third-party verification companions.
+- **359** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -43,15 +43,20 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - Direct Rust: **9/9** complete.
 - Direct TypeScript: **25/25** complete.
 
-Contract repair on 2026-09-05 reconciled the `kql` through `wiki-architect` review wave against the current mandatory YAML companion paths. Ten genuinely missing YAML pairs were restored. `skill-creator` already had a canonical pair and therefore is not counted a second time; its existing pair was refreshed to the current 15/20 rejected authority disposition. Auxiliary Markdown review records remain evidence but do not define companion counts.
-
-Exact-pin Foundry reconciliation resolved the post-`ui-widget-developer` frontier. `.github/plugins/microsoft-foundry/skills/` contains ten symlink entries whose recorded targets are dangling at this pin; they are not independent eligible packages. Canonical Foundry material is under `.github/plugins/azure-skills/skills/microsoft-foundry`. The root and nested `finetuning` companions already existed. `models/deploy-model` is verified 17/20; `capacity` is verified 17/20; `customize` is verified 17/20; and `preset` is rejected unchanged 12/20.
-
-A final exact-tree denominator check found that the prior **189** denominator overstated the eligible corpus by **3**. The remaining Foundry procedures referenced from the root such as `project/create`, `resource/create`, and `resource/private-network` are ordinary Markdown procedure/reference material, not independently front-mattered `SKILL.md` packages. The exact `models/deploy-model` tree contains only four independently front-mattered entry points: root, `capacity`, `customize`, and `preset`, all already companioned. Under the governing denominator rule, ordinary Markdown, duplicate exposure paths, and dangling symlinks do not create additional skill units. Microsoft Skills therefore closes truthfully at **186/186**, without inventing three records merely to satisfy the stale counter.
+Exact-pin Foundry reconciliation removed ordinary procedure Markdown and dangling duplicate symlink exposures from the eligible denominator. Microsoft Skills therefore closes truthfully at **186/186**.
 
 ### Microsoft Azure Skills — ACTIVE FRONTIER
 
-Use the registered source identity and pin in `registry/sources.yaml`. Microsoft Skills is now current-standard complete, so this becomes the next admitted-source reconciliation family. Establish its exact eligible denominator from the registered pin before advancing individual units, recover compatible historical evidence before fresh review, and preserve the same authority, sensitive-data, and passive-repository rules.
+- Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
+- Exact eligible denominator: **131**.
+- Current-standard companions: **1/131**.
+- Remaining gaps: **130**.
+- First reconciled unit: `airunway-aks-setup`, verified **17/20**, behavioral validation `not-run`.
+- Exact package tree: `72ec58c0a7c574dc71e14c63feb3d2aa529849ac`.
+- `SKILL.md` blob: `26bbd92815116826696fb6380d37446a285496b9`.
+- Skill freshness: upstream revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749`, 2026-04-22.
+
+`airunway-aks-setup` has one canonical front-mattered `SKILL.md`; its remaining package files are references, not nested skill entry points. Preserve staged cluster/GPU checks, cost awareness, provider/model sizing, secure non-echoed token handling, and the explicit confirmation requirement before controller/provider/model install or deployment actions.
 
 ## Governed discovery / source-vetting
 
@@ -76,4 +81,4 @@ Wayfinder #35 remains the canonical destination/scope evidence, but its stale fr
 
 ## Next action
 
-With Microsoft Skills reconciled at **358 persisted reviews / 186 of 186 eligible Microsoft Skills / 0 gaps**, establish the exact registered-pin denominator and first genuine current-standard companion gap for **Microsoft Azure Skills**, after checking existing companions and repository history.
+Continue Microsoft Azure Skills from **359 persisted reviews / 1 of 131 eligible Azure Skills / 130 gaps**, checking exact provenance/verification paths and repository history before selecting the next genuine unit.
