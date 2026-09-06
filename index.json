@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 360,
+    "persisted_third_party_exact_version_reviews": 361,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 2,
+    "microsoft_azure_skills_current_standard_companions": 3,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 129,
+    "microsoft_azure_skills_current_standard_gaps": 128,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-05: Microsoft Azure Skills advanced to 2/131 at the exact registered pin; appinsights-instrumentation was reviewed at exact package tree 8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0 and rejected unchanged 13/20 under the authority hard fail; 129 Azure gaps remain"
+    "latest_reconciliation": "2026-09-05: Microsoft Azure Skills advanced to 3/131 at the exact registered pin; azure-ai was reviewed at exact package tree 8a168336305c56e0eea0d89aced7d8a0001de3b5 and rejected unchanged 13/20 because ordinary use can transmit potentially sensitive user data to paid external Azure AI services without a distinct action-specific authorization checkpoint; 128 Azure gaps remain"
   }
 }
