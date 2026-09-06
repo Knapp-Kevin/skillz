@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 12/131; azure-hosted-copilot-sdk exact tree ee166d12b8f9a88a1d4d932a23e844d8203efa13 and SKILL.md blob 64b239df00aa320b64a9009c1875b303a87080b1 differ from the prior Microsoft Skills copy, so fresh static review rejected unchanged adoption 14/20 because generic build/modify/prepare triggers compose the currently rejected azure-deploy exact package and its consequential ungated post-deployment mutation paths; 119 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 12/131; azure-hosted-copilot-sdk exact tree ee166d12b8f9a88a1d4d932a23e844d8203efa13 and SKILL.md blob 64b239df00aa320b64a9009c1875b303a87080b1 match the current Microsoft Skills package, so compatible evidence was reconciled; unchanged adoption remains rejected 13/20 because credential-scope expansion lacks action-specific approval and the deployment path inherits the rejected azure-deploy authority gap; 119 Azure gaps remain"
   }
 }
