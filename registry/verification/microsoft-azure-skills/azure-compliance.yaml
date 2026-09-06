@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-compliance
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 5d79eadfd4a42ff0091adb849bf016abd7ee57de
+skill_md_blob_sha: 5beb9da33c90ceff1b69ff78bdba78c326fd7a39
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [cloud, security, evaluation, monitoring]
+  lifecycle: [verification, operations, maintenance]
+  characteristic: [evidence-first, reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Exact complete-package identity matches the prior Microsoft Skills azure-compliance review: tree 5d79eadfd4a42ff0091adb849bf016abd7ee57de and SKILL.md blob 5beb9da33c90ceff1b69ff78bdba78c326fd7a39. Compatible prior structured evidence is therefore reconciled rather than discarded. The package has strong read-only assessment value through scope selection, azqr scanning, evidence capture, finding classification, Key Vault expiration review, and remediation proposals, and the top-level guidance says to separate reporting from remediation execution. Unchanged adoption remains rejected under the authority hard fail because bundled remediation references directly change private endpoints, network access, retention, Key Vault RBAC, diagnostics, backup protection, AKS security/identity, SQL auditing/private access, App Service identities, HTTPS/TLS, and bulk resource configuration without mandatory action-specific authorization immediately before mutation. Preserve assessment and recommendation mechanics for adaptation/reference use. Behavioral validation remains not-run.
