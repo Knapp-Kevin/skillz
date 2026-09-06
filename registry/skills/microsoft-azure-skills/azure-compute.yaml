@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-compute
+display_name: Microsoft Azure Compute
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/azure-compute/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 966330ee4fc61978b6e324993687e917125a1f36
+upstream_last_updated_at: 2026-06-09T16:12:45Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-compute
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete azure-compute package tree; Azure MCP compute/subscription tools; Azure CLI; Azure Resource Manager; Bicep and Terraform adapters; VM/VMSS pricing, quota, capacity reservation, troubleshooting, networking, security, and Essential Machine Management references
+import_eligibility: adaptation-only
+rationale: Exact package review at the registered Microsoft Azure Skills pin, bound to package tree cdfc4a39b926efba5060eddc6d790b035501bc25 and SKILL.md blob fce17d1f64f4013e21ab1f53636852ca0251a5f2. Those exact identities match compatible prior Microsoft Skills review evidence, which is preserved rather than re-reviewed from scratch. Preserve VM/VMSS routing, read-only SKU/image/quota validation, adaptive requirement gathering, Plan Card review, cost visibility, output-format separation, and the explicit final confirmation before live VM/VMSS creation through Azure MCP. Unchanged adoption remains rejected under the authority hard fail because the bundled capacity-reservation workflow proceeds from gathered parameters directly to creation of billable Capacity Reservation Groups/reservations, and other management paths can alter subscription-level management/security state without a mandatory action-specific authorization checkpoint immediately before each consequential mutation. Behavioral validation is not-run.
