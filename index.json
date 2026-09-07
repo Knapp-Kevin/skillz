@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 399,
+    "persisted_third_party_exact_version_reviews": 400,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 10,
+    "cole_medin_skills_current_standard_companions": 11,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 23,
+    "cole_medin_skills_current_standard_gaps": 22,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin piv-create-pr added as the tenth current-standard companion pair, bound to exact package tree a5eaec0e21bb313d2fea77583beb7451e42458a5 and SKILL.md blob 93982ed9fed67be8c1553fb9a1d8f40179f70c45; rejected unchanged 13/20 for missing action-specific authorization before branch push and external PR creation, with behavioral validation not-run; Cole is 10/33 with 23 gaps; persisted review count is 399"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-fix-review-findings added as the eleventh current-standard companion pair, bound to exact package tree 6e3e14b1f367bc43a2c9f20bda5d11f6834fb190 and SKILL.md blob 7c71fae86e5ab40c0c86c2edbdc1b53a30b495da; rejected unchanged 15/20 for missing action-specific authorization before issue creation, source/test mutation, commit, and PR-branch push, with behavioral validation not-run; Cole is 11/33 with 22 gaps; persisted review count is 400"
   }
 }
