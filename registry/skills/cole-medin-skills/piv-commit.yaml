@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-commit
+display_name: PIV Commit
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-commit/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: mutating
+portability: high
+review_status: curated-external
+dependency_status: git-cli-and-project-conventions-optional
+dependencies: Git repository with git CLI available; optional .claude/references/conventions.md commit guidance
+package_tree_sha: c95ac39536c9893d0a8be2c2a9e881b9cca4e549
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong compact reference for reading project commit conventions, inspecting status/diff before committing, using conventional atomic summaries, and reporting what changed. Unchanged adoption fails the authority hard rule because it stages and commits all uncommitted changes without a mandatory action-specific authorization checkpoint immediately before mutation. Its all-changes staging instruction can also capture unrelated work, secrets, credentials, generated artifacts, or sensitive files without classification/exclusion. Preserve convention lookup, pre-commit inspection, message discipline, and post-commit summaries as adaptation/extraction evidence.
