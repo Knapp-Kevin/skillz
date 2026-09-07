@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 391 |
+| Persisted third-party exact-version reviews | 392 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 33 / 131 |
-| Microsoft Azure Skills current-standard gaps | 98 |
+| Microsoft Azure Skills current-standard companions | 34 / 131 |
+| Microsoft Azure Skills current-standard gaps | 97 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **33/131**, with **98** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **34/131**, with **97** current-standard gaps.
 
-The latest reconciled Azure unit is nested `microsoft-foundry/models/deploy-model/preset`, rejected unchanged **12/20**, bound to package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9` and `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`. Its exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve capacity-aware current-region and multi-region discovery, model/version selection, project filtering, GlobalStandard defaults, quota fallback, and deployment-status monitoring as adaptation/extraction evidence. Reject unchanged because persistent Azure resources can be created without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation has not been run.
+The latest reconciled Azure unit is `python-appservice-deploy`, rejected unchanged **12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`. Its exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, `.env` exclusion, FastAPI startup handling, and deployment-vs-build completion distinction as adaptation/extraction evidence. Reject unchanged because cost-bearing Azure resources, persistent app configuration, and code deployment can occur after inferred defaults without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
