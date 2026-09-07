@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: preset
+display_name: Microsoft Foundry Deploy Model Preset
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/preset/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 25607b744cbb764fe99f1b51c99c0c14e2fae091
+upstream_last_updated_at: 2026-03-06T11:14:03Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/preset
+permission_tier: external-side-effect
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete preset package tree including EXAMPLES.md, references/preset-workflow.md, and references/workflow.md; Azure CLI authenticated access with Cognitive Services read/create permissions; parent deploy-model router; quota handoff; shared deployment-name helper under the parent deploy-model scripts tree
+import_eligibility: rejected-unchanged
+rationale: Exact Azure-source reconciliation bound to package tree 2d35e916a63fda4c49eb6f34d697e74ad00d82b9 and SKILL.md blob 09fcc94cba4c178ec08650b6e6e1da32437c2701. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence is reused. Preserve capacity-aware current-region and multi-region discovery, model/version selection, project filtering, GlobalStandard defaults, quota fallback, and deployment-status monitoring as adaptation/extraction evidence. Reject unchanged because the fast path directs immediate deployment after capacity discovery and the alternate path can create persistent Azure AI Services/project resources and a model deployment without a distinct action-specific authorization checkpoint immediately before those mutations. Region/model/project selection and prerequisite permissions do not constitute authorization to create resources. Behavioral validation is not-run.
