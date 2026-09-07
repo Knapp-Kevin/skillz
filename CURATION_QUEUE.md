@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **397** persisted exact-version third-party verification companions.
+- **398** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **8/33**.
-- Remaining gaps: **25**.
+- Current-standard companions: **9/33**.
+- Remaining gaps: **24**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, and `opportunity-scan`. The latest unit, `opportunity-scan`, is bound to package tree `d22f203d905fab64a571f9b4d729d35038a6c3b1`, `SKILL.md` blob `15147cd2ee55ff5c556dc21956e5876c074d2df5`, and skill-path freshness revision `0d583b34fe2632be0300fca14c7a6904b435bb62` dated 2026-08-11. It is rejected unchanged **15/20** with behavioral validation `not-run`: retain reactive/proactive evidence scanning, capability-first primitive mapping, bounded full-read versus aggregate-not-ingest handling, user-steer/evidence weighting, one-off refusal, and smallest-durable-change selection. Unchanged use fails the sensitive-data and adversarial-input boundary because proactive session-history/log scanning may surface secrets, credentials, PII, private source, prompts, URLs, or other sensitive material into agent context without mandatory classification/redaction, secure handling, disclosure authorization, or prompt-injection controls.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, and `piv-commit`. The latest unit, `piv-commit`, is bound to package tree `c95ac39536c9893d0a8be2c2a9e881b9cca4e549`, `SKILL.md` blob `c0bde07e7413e5782f1e13ae152bd9146b6efbff`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`: retain project convention lookup, pre-commit status/diff inspection, conventional atomic commit-message discipline, and post-commit developer summaries. Unchanged use fails the authority hard rule because it stages and commits all uncommitted changes without mandatory action-specific authorization immediately before repository mutation; the all-changes staging step also lacks sensitive/unrelated-file classification and exclusion, final staged-diff verification, and robust partial-failure recovery.
 
 ## Governed discovery / source-vetting
 

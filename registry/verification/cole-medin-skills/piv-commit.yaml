@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-commit
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c0bde07e7413e5782f1e13ae152bd9146b6efbff
+package_tree_sha: c95ac39536c9893d0a8be2c2a9e881b9cca4e549
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [repository-maintenance]
+  lifecycle: [maintenance]
+  characteristic: [deterministic, evidence-first, maintainability, traceable]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. The package is a compact Git commit procedure with useful convention lookup, status/diff inspection, conventional message guidance, and developer-facing post-commit summaries. Unchanged use fails the current authority hard rule because it directs the agent to stage and commit all uncommitted changes without a mandatory action-specific authorization checkpoint immediately before those repository mutations. Its all-changes staging instruction also lacks a sensitive-file and unrelated-change classification/exclusion boundary, so secrets, credentials, generated artifacts, or another writer's work could be swept into the commit. It does not require verifying the final staged diff before commit or define recovery for partial staging/commit failure. Preserve convention lookup, pre-commit inspection, message discipline, and post-commit reporting as adaptation/extraction evidence. Behavioral validation has not been run."

@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 397,
+    "persisted_third_party_exact_version_reviews": 398,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 8,
+    "cole_medin_skills_current_standard_companions": 9,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 25,
+    "cole_medin_skills_current_standard_gaps": 24,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin opportunity-scan added as the eighth current-standard companion pair, bound to exact package tree d22f203d905fab64a571f9b4d729d35038a6c3b1 and SKILL.md blob 15147cd2ee55ff5c556dc21956e5876c074d2df5; rejected unchanged 15/20 for sensitive-data and adversarial-input boundary gaps with behavioral validation not-run; Cole is 8/33 with 25 gaps; persisted review count is 397"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-commit added as the ninth current-standard companion pair, bound to exact package tree c95ac39536c9893d0a8be2c2a9e881b9cca4e549 and SKILL.md blob c0bde07e7413e5782f1e13ae152bd9146b6efbff; rejected unchanged 12/20 for missing action-specific commit authorization plus all-changes sensitive/unrelated-file staging risk with behavioral validation not-run; Cole is 9/33 with 24 gaps; persisted review count is 398"
   }
 }
