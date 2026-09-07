@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-395-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-396-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **395 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **396 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -53,14 +53,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
 - **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.
-- **Cole Medin Skills:** exact registered-pin denominator **33**; **6/33** current-standard companion complete, **27** gaps.
+- **Cole Medin Skills:** exact registered-pin denominator **33**; **7/33** current-standard companion complete, **26** gaps.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at the registered pin: 28 canonical plugin skill roots, one nested `azure-kubernetes-automatic-readiness` package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown does not become a separate skill merely because it is useful or lives in an attractively named directory.
 
 Thirty-four Azure packages have current-standard companion pairs. The latest reconciled Azure package is `python-appservice-deploy`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all thirty-four reviewed Azure packages.
 
-Cole Medin is now the active admitted-source frontier. Its exact pin exposes **33** first-class `.claude/skills/*/SKILL.md` entries. Six currently have companion pairs. The latest is `build-dark-factory`, rejected unchanged **16/20** despite strong methodology: retain its construction ordering, observability refusal gates, protected-surface design, validation-harness separation, staged autonomy, holdouts, and stop-button concepts. Unchanged use fails the authority hard rule because it directs consequential repository, workflow, deployment, traffic, and scheduled-autonomy mutations without mandatory action-specific authorization immediately before those actions. Behavioral validation is `not-run`.
+Cole Medin is now the active admitted-source frontier. Its exact pin exposes **33** first-class `.claude/skills/*/SKILL.md` entries. Seven currently have companion pairs. The latest is `hooks-create`, rejected unchanged **16/20** despite strong deterministic-hook construction guidance: retain its event-selection, matcher-scope, fail-open, project-environment isolation, configuration-merge, stop-loop, and bidirectional verification methods. Unchanged use fails the authority hard rule because it writes executable hook code and `.claude/settings.json`, then runs the generated hook, without mandatory action-specific authorization immediately before those consequential project mutations/execution; Notification hooks can also produce external communications. Behavioral validation is `not-run`.
 
 AWS Agent Toolkit, Microsoft Skills, and Microsoft Azure Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
