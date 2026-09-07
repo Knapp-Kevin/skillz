@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **393** persisted exact-version third-party verification companions.
+- **394** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,16 +46,16 @@ Exact pinned-tree reconciliation resolves the denominator as 28 canonical plugin
 
 The prior denominator of 131 included ordinary workflow, procedure, reference, example, SDK, and other Markdown that is not independently first-class skill content. Current governance excludes such material from the eligible denominator. This is the same category distinction that previously corrected Microsoft Skills from 189 to 186 rather than promoting useful Foundry procedure Markdown into phantom skills.
 
-The latest package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
+The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
 
 ### Cole Medin Skills — ACTIVE FRONTIER
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **4/33**.
-- Remaining gaps: **29**.
+- Current-standard companions: **5/33**.
+- Remaining gaps: **28**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, and `agent-browser`. The latest unit, `agent-browser`, is bound to package tree `9b31e495b887e4ca123960415eca69fc7e1bba28`, `SKILL.md` blob `bdd73cc60a51261b0d18e3d3d646cba9e6280bc2`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **11/20** with behavioral validation `not-run`: retain the compact browser capability map, accessibility-tree/ref model, sessions, and progressive runtime-content discovery as reference/adaptation evidence, but unchanged use fails because consequential browser/login/form/Slack actions lack mandatory action-specific authorization and the operative workflow is dynamically loaded from the installed CLI rather than bound to the exact reviewed package.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, and `ast-grep`. The latest unit, `ast-grep`, is bound to package tree `ef60f77564e2d47d0cba25a809daa3af8f0c469b`, `SKILL.md` blob `9cacc8a849a5cedf4230a8add4b4b35514b7e839`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is verified **16/20** with behavioral validation `not-run`: retain the example-first structural-search workflow, AST inspection/debugging method, bundled rule reference, and iterative refinement. The reviewed package only writes local rule/example artifacts and performs read-oriented code search, so the authority hard fail does not apply. Host agents must still verify the separately installed, unpinned ast-grep CLI/version, preserve repository scope, handle shell quoting carefully, and avoid unnecessary disclosure of sensitive match content.
 
 ## Governed discovery / source-vetting
 
