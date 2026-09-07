@@ -35,16 +35,18 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 - Exact eligible denominator/current-standard companions: **186/186**; gaps **0**.
 - Direct `.NET` **29/29**; Java **26/26**; Python **40/40**; Rust **9/9**; TypeScript **25/25**.
 
-### Microsoft Azure Skills — ACTIVE FRONTIER
+### Microsoft Azure Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
-- Exact eligible denominator: **131**.
-- Current-standard companions: **34/131**.
-- Remaining gaps: **97**.
+- Exact eligible denominator: **34**.
+- Current-standard companions: **34/34**.
+- Remaining gaps: **0**.
 
-The thirty-four reconciled Azure packages are the prior thirty-three through nested `microsoft-foundry/models/deploy-model/preset` plus `python-appservice-deploy`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all thirty-four.
+Exact pinned-tree reconciliation resolves the denominator as 28 canonical plugin skill roots, one nested `azure-kubernetes/azure-kubernetes-automatic-readiness` `SKILL.md`, and five nested first-class Microsoft Foundry `SKILL.md` packages beyond the Foundry root: `finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, and `models/deploy-model/preset`. Those 34 independently eligible packages map exactly to the 34 canonical Azure companion pairs already persisted.
 
-`python-appservice-deploy` is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, `.env` exclusion, FastAPI startup handling, and deployment-vs-build completion distinction as adaptation/extraction evidence. Reject unchanged because cost-bearing Azure resource groups, App Service plans and web apps, persistent app settings, and application deployment can occur after inferred defaults without a distinct action-specific authorization checkpoint immediately before mutation.
+The prior denominator of 131 included ordinary workflow, procedure, reference, example, SDK, and other Markdown that is not independently first-class skill content. Current governance excludes such material from the eligible denominator. This is the same category distinction that previously corrected Microsoft Skills from 189 to 186 rather than promoting useful Foundry procedure Markdown into phantom skills.
+
+The latest package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +62,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **392 persisted reviews / 34 of 131 eligible Azure Skills / 97 gaps**. Recompute the next genuine first-class Azure denominator unit after `python-appservice-deploy`, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
+Recompute the next admitted-source frontier from current registered-source evidence now that AWS Agent Toolkit, Microsoft Skills, and Microsoft Azure Skills are current-standard complete. Prefer compatible prior exact-version evidence before fresh re-review, and continue bounded issue/source-vetting work where current evidence makes a decisive disposition possible.

@@ -19,8 +19,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 34 / 131 |
-| Microsoft Azure Skills current-standard gaps | 97 |
+| Microsoft Azure Skills current-standard companions | 34 / 34 |
+| Microsoft Azure Skills current-standard gaps | 0 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **34/131**, with **97** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps.
 
-The latest reconciled Azure unit is `python-appservice-deploy`, rejected unchanged **12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`. Its exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, `.env` exclusion, FastAPI startup handling, and deployment-vs-build completion distinction as adaptation/extraction evidence. Reject unchanged because cost-bearing Azure resources, persistent app configuration, and code deployment can occur after inferred defaults without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation has not been run.
+The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
+
+The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad` and `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

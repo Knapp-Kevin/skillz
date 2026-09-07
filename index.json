@@ -16,8 +16,8 @@
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
     "microsoft_azure_skills_current_standard_companions": 34,
-    "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 97,
+    "microsoft_azure_skills_eligible_denominator": 34,
+    "microsoft_azure_skills_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 34/131; python-appservice-deploy exact tree 6e11dad529e50b7fbc37191de665788d0427ccad and SKILL.md blob ac25db692762945d0e3e9ed2016dcfa29fbfa610 matched completed Microsoft Skills evidence, so compatible structured static review was reused; rejected unchanged 12/20 because cost-bearing Azure resources, persistent configuration, and code deployment lack a distinct action-specific authorization checkpoint immediately before mutation; behavioral validation remains not-run; 97 Azure gaps remain"
+    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills exact registered-pin denominator corrected from 131 to 34 after pinned-tree reconciliation established 28 canonical plugin roots, one nested azure-kubernetes automatic-readiness SKILL.md, and five nested Microsoft Foundry SKILL.md packages beyond the Foundry root; all 34 eligible packages already have current-standard companion pairs, so Azure is complete at 34/34 with 0 gaps; ordinary workflow, procedure, reference, example, SDK, and other non-first-class Markdown remains package evidence rather than independent skill inventory; persisted review count remains 392"
   }
 }

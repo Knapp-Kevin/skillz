@@ -17,8 +17,8 @@
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 34 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 97 |
+| **Microsoft Azure Skills current-standard companions** | 34 / 34 |
+| **Microsoft Azure Skills current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,18 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **34/131** companion-complete, **97 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-## Microsoft Azure Skills frontier
+## Microsoft Azure Skills denominator reconciliation
 
-Thirty-four Azure packages now have current-standard companion pairs. Behavioral validation remains `not-run` for all thirty-four.
+The exact pin exposes 28 canonical plugin skill roots. Recursive package-tree review establishes one additional first-class nested `SKILL.md` under `azure-kubernetes/azure-kubernetes-automatic-readiness` and five additional nested first-class `SKILL.md` packages under `microsoft-foundry` beyond the Foundry root: `finetuning`, `models/deploy-model`, and its `capacity`, `customize`, and `preset` children. That yields an eligible denominator of **34**, exactly matching the 34 current provenance and verification companion pairs.
 
-The latest unit, `python-appservice-deploy`, is rejected unchanged **12/20** and is bound to exact tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Exact identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, `.env` exclusion, FastAPI startup handling, and deployment-vs-build completion distinction as adaptation/extraction evidence. Reject unchanged under the authority hard fail because the workflow can create cost-bearing Azure resource groups, App Service plans and web apps, apply persistent configuration, and deploy code after inferred defaults without a distinct action-specific authorization checkpoint immediately before mutation. Behavioral validation remains `not-run`.
+The prior **131** denominator counted ordinary workflow, procedure, reference, example, SDK, or other Markdown as independent skills. Current governance explicitly excludes ordinary reference Markdown that is not independently first-class skill content. The same distinction previously corrected the Microsoft Skills denominator from 189 to 186. Microsoft Azure Skills is therefore current-standard complete at **34/34**, not 34/131.
+
+The latest package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, bound to exact tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
 
 ## Source lifecycle
 
@@ -65,7 +67,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **34/131**, checking canonical companion paths and repository history before each unit.
+1. Recompute the next admitted-source frontier from current registered-source evidence now that AWS Agent Toolkit, Microsoft Skills, and Microsoft Azure Skills are current-standard complete.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
