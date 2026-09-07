@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: hooks-create
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2fd9d8f73bced7427a8a450a3e394d6eeb6c4685
+package_tree_sha: c00e23a2452609c80e94aaf0a1d748637710f356
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [agent-development, implementation, security, testing]
+  lifecycle: [design, implementation, verification, maintenance]
+  characteristic: [deterministic, evidence-first, incremental, risk-aware, safety-bounded, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package is a strong deterministic-hook construction reference: it maps desired behavior to the correct Claude Code lifecycle event, distinguishes blocking from post-action hooks, scopes matchers, requires current docs before authoring, defaults generated hook failures open, preserves existing hook configuration, guards Stop/SubagentStop against loops, explains uv/project-environment traps in detail, and requires actual allow/block verification before handoff. The decisive defect is authority. After interpreting the user's desired guarantee, the workflow writes executable hook code into .claude/hooks, mutates .claude/settings.json, and runs the generated hook. It does not impose a mandatory action-specific authorization checkpoint immediately before those consequential project mutations/execution. Some supported Notification hooks can also produce external communications. Current governance therefore rejects unchanged operational adoption while preserving the event-selection, matcher, fail-open, environment isolation, configuration-merge, stop-loop, and bidirectional verification methods as adaptation/extraction evidence. Behavioral validation has not been run."

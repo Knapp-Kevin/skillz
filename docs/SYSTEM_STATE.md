@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 395 |
+| **Persisted third-party review companions** | 396 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 6 / 33 |
-| **Cole Medin Skills current-standard gaps** | 27 |
+| **Cole Medin Skills current-standard companions** | 7 / 33 |
+| **Cole Medin Skills current-standard gaps** | 26 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **6/33** companion-complete, **27 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **7/33** companion-complete, **26 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Six now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, and `build-dark-factory`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Seven now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, and `hooks-create`.
 
-`build-dark-factory` is bound to exact package tree `754851050fc2f4ed13b1eb3dad0c5c63f8217739`, `SKILL.md` blob `1172c3827c4563d066ab64e6e53af2d060a82c59`, and skill-path freshness revision `ecef6ffd4caa0b23a8c79601c1215b1e2908ac72` on 2026-08-14. It is rejected unchanged **16/20** with behavioral validation `not-run`. Preserve its construction order, observability/refusal gates, protected-surface model, validation-harness separation, staged autonomy, holdouts, structural gates, and stop-button design as strong adaptation/extraction evidence. Unchanged operational use fails the authority hard rule because the procedure directs concrete repository, CI/workflow, deployment, traffic, and scheduled-autonomy mutations without mandatory action-specific authorization immediately before those consequential actions.
+`hooks-create` is bound to exact package tree `c00e23a2452609c80e94aaf0a1d748637710f356`, `SKILL.md` blob `2fd9d8f73bced7427a8a450a3e394d6eeb6c4685`, and skill-path freshness revision `fb2e876f057c5356d6603ba0c52d6b4418d893ba` on 2026-08-26. It is rejected unchanged **16/20** with behavioral validation `not-run`. Preserve its lifecycle-event selection, matcher scoping, fail-open hook design, uv/project-environment isolation, merge-not-overwrite configuration handling, Stop-loop guard, and bidirectional allow/block verification as strong adaptation/extraction evidence. Unchanged operational use fails the authority hard rule because the procedure writes executable hook code and `.claude/settings.json` into the user's project and runs the generated hook without mandatory action-specific authorization immediately before those consequential mutations/execution; Notification hooks can also produce external communications.
 
 ## Source lifecycle
 

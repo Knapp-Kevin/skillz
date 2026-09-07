@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **395** persisted exact-version third-party verification companions.
+- **396** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **6/33**.
-- Remaining gaps: **27**.
+- Current-standard companions: **7/33**.
+- Remaining gaps: **26**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, and `build-dark-factory`. The latest unit, `build-dark-factory`, is bound to package tree `754851050fc2f4ed13b1eb3dad0c5c63f8217739`, `SKILL.md` blob `1172c3827c4563d066ab64e6e53af2d060a82c59`, and skill-path freshness revision `ecef6ffd4caa0b23a8c79601c1215b1e2908ac72` dated 2026-08-14. It is rejected unchanged **16/20** with behavioral validation `not-run`: retain its construction ordering, observability refusal gates, protected-list design, validation-harness separation, staged autonomy, holdouts, structural gates, and stop-button concepts as adaptation/extraction evidence. Unchanged use fails the authority hard rule because the procedure directs repository, CI/workflow, deployment, traffic, and scheduled-autonomy mutations without mandatory action-specific authorization immediately before those consequential actions; a broad autonomy-level decision does not substitute for concrete action authorization.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, and `hooks-create`. The latest unit, `hooks-create`, is bound to package tree `c00e23a2452609c80e94aaf0a1d748637710f356`, `SKILL.md` blob `2fd9d8f73bced7427a8a450a3e394d6eeb6c4685`, and skill-path freshness revision `fb2e876f057c5356d6603ba0c52d6b4418d893ba` dated 2026-08-26. It is rejected unchanged **16/20** with behavioral validation `not-run`: retain lifecycle-event selection, matcher scoping, fail-open hook design, uv/project-environment isolation, merge-not-overwrite configuration handling, Stop-loop prevention, and bidirectional allow/block verification. Unchanged use fails the authority hard rule because the workflow writes executable hook code and `.claude/settings.json` into the user's project and runs the generated hook without mandatory action-specific authorization immediately before those consequential mutations/execution; Notification hooks can also produce external communications.
 
 ## Governed discovery / source-vetting
 
