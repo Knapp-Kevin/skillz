@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **387** persisted exact-version third-party verification companions.
+- **388** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **29/131**.
-- Remaining gaps: **102**.
+- Current-standard companions: **30/131**.
+- Remaining gaps: **101**.
 
-The twenty-nine reconciled Azure packages are the prior twenty-eight through the root `microsoft-foundry` orchestrator plus nested `microsoft-foundry/finetuning`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all twenty-nine.
+The thirty reconciled Azure packages are the prior twenty-nine through nested `microsoft-foundry/finetuning` plus nested `microsoft-foundry/models/deploy-model`, verified **17/20**. Behavioral validation remains `not-run` for all thirty.
 
-`microsoft-foundry/finetuning` is bound to package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd`, `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`, and Azure freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact package identity matches completed Microsoft Skills evidence, so compatible complete-package static review evidence was reused. Preserve baseline-first methodology, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption remains rejected because uploads, paid training, deployments, external model/evaluation calls, synthetic-data generation, and remote deletion lack mandatory action-specific authorization, and data-bearing workflows lack a universal disclosure/minimization boundary.
+`microsoft-foundry/models/deploy-model` is bound to package tree `6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9`, `SKILL.md` blob `322b342762abbcd86eb90a92b2c4cb7dccd6aac6`, and Azure freshness revision `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` on 2026-07-02. Exact package identity matches completed Microsoft Skills evidence, so compatible root-entry static review evidence was reused. Preserve intent routing, live SKU/quota validation, project resolution, multi-mode chaining, and the mandatory pre-deployment target confirmation. The root requires project, region, and resource group visibility plus an explicit affirmative deployment response before mutation. Nested `capacity`, `customize`, and `preset` remain independent denominator entries.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **387 persisted reviews / 29 of 131 eligible Azure Skills / 102 gaps**. Within `microsoft-foundry`, review the next genuine first-class child after `finetuning`, checking canonical companion paths, nested denominator identity, and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
+Continue Microsoft Azure Skills from **388 persisted reviews / 30 of 131 eligible Azure Skills / 101 gaps**. Within `microsoft-foundry/models/deploy-model`, review the next genuine first-class child, `capacity`, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
