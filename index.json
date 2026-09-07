@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 398,
+    "persisted_third_party_exact_version_reviews": 399,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 9,
+    "cole_medin_skills_current_standard_companions": 10,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 24,
+    "cole_medin_skills_current_standard_gaps": 23,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin piv-commit added as the ninth current-standard companion pair, bound to exact package tree c95ac39536c9893d0a8be2c2a9e881b9cca4e549 and SKILL.md blob c0bde07e7413e5782f1e13ae152bd9146b6efbff; rejected unchanged 12/20 for missing action-specific commit authorization plus all-changes sensitive/unrelated-file staging risk with behavioral validation not-run; Cole is 9/33 with 24 gaps; persisted review count is 398"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-create-pr added as the tenth current-standard companion pair, bound to exact package tree a5eaec0e21bb313d2fea77583beb7451e42458a5 and SKILL.md blob 93982ed9fed67be8c1553fb9a1d8f40179f70c45; rejected unchanged 13/20 for missing action-specific authorization before branch push and external PR creation, with behavioral validation not-run; Cole is 10/33 with 23 gaps; persisted review count is 399"
   }
 }
