@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-implement-issue
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a04bd2ec839f90f0d1ff83e2741de64b1cd7c126
+package_tree_sha: 7fea1af7863685edb6022a3db6bfb9a08823d927
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, repository-maintenance, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [evidence-first, incremental, test-driven, traceable, risk-aware]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 0, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package requires full RCA consumption, explicit drift checking against current code, stopping rather than silently implementing a stale plan, bounded adherence to the proposed fix, regression and edge-case tests, validation reruns, manual reproduction, and explicit deviation reporting. Unchanged use fails the authority hard rule because it creates or switches branches, edits source/tests/documentation, and may comment on, relabel, or close GitHub issues without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. The allowed-tools declaration is also inconsistent with its documented git/gh shell workflow, weakening dependency coherence, and RCA/issue content is consumed without an explicit hostile-instruction boundary. Preserve the drift-stop, plan-bounded implementation, regression-test, validation, and deviation-reporting methods as adaptation/extraction evidence. Behavioral validation has not been run."
