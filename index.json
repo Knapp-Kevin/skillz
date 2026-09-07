@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 393,
+    "persisted_third_party_exact_version_reviews": 394,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 4,
+    "cole_medin_skills_current_standard_companions": 5,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 29,
+    "cole_medin_skills_current_standard_gaps": 28,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin Skills established as the active admitted-source frontier at exact registered-pin denominator 33; agent-browser added as the fourth companion pair, rejected unchanged 11/20 because consequential browser/login/form/Slack actions lack mandatory action-specific authorization and the operative workflow is dynamically loaded from the installed CLI rather than bound to the exact reviewed package; Cole is 4/33 with 29 gaps; persisted review count is 393"
+    "latest_reconciliation": "2026-09-07: Cole Medin ast-grep added as the fifth current-standard companion pair, bound to exact package tree ef60f77564e2d47d0cba25a809daa3af8f0c469b and SKILL.md blob 9cacc8a849a5cedf4230a8add4b4b35514b7e839; verified 16/20 with behavioral validation not-run; Cole is 5/33 with 28 gaps; persisted review count is 394"
   }
 }
