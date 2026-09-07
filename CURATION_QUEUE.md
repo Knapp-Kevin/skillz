@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **385** persisted exact-version third-party verification companions.
+- **386** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **27/131**.
-- Remaining gaps: **104**.
+- Current-standard companions: **28/131**.
+- Remaining gaps: **103**.
 
-The twenty-seven reconciled Azure packages are the prior twenty-six through `entra-agent-id` plus `entra-app-registration` rejected unchanged **12/20**. Behavioral validation remains `not-run` for all twenty-seven.
+The twenty-eight reconciled Azure packages are the prior twenty-seven through `entra-app-registration` plus the root `microsoft-foundry` orchestrator, rejected unchanged **13/20**. Behavioral validation remains `not-run` for all twenty-eight.
 
-`entra-app-registration` is bound to package tree `9796dd5d6b70d96a7defe3ee3e542fecdef5904c`, `SKILL.md` blob `9253ba09a6f71ea5b2bda0dd128d481bec321e52`, and Azure freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. No compatible prior exact-package companion existed, so this unit received fresh structured static review. Preserve its app-type/OAuth selection, least-privilege permission guidance, production preference for managed identity/certificates, MSAL examples, IaC guidance, and troubleshooting material. Unchanged adoption remains rejected because app/service-principal lifecycle mutations, API-permission changes, admin consent, owner changes, credential changes, and bulk deletion lack mandatory action-specific authorization checkpoints immediately before execution. Its credential-reset reference also emits a live client secret into command output and instructs the operator to save it, rather than requiring secure external credential handling.
+`microsoft-foundry` is bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc`, `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`, and Azure freshness revision `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` on 2026-07-02. Exact package identity matches the completed Microsoft Skills evidence, so compatible prior complete-package-context review evidence was reused. Preserve workflow routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite, and live-discovery patterns. Unchanged adoption remains rejected because routed cloud/workspace mutations lack a universal mandatory action-specific authorization boundary and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The parent contains five nested first-class `SKILL.md` children that remain separate denominator entries; ordinary workflow/reference Markdown is package context rather than independent skill inventory.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **385 persisted reviews / 27 of 131 eligible Azure Skills / 104 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **386 persisted reviews / 28 of 131 eligible Azure Skills / 103 gaps**. Within `microsoft-foundry`, review the next genuine first-class child, `finetuning`, after checking its Azure companion paths and exact-package overlap with completed Microsoft Skills evidence.
