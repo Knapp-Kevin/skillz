@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-fix-review-findings
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7c71fae86e5ab40c0c86c2edbdc1b53a30b495da
+package_tree_sha: 6e3e14b1f367bc43a2c9f20bda5d11f6834fb190
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [code-review, repository-maintenance, testing]
+  lifecycle: [verification, implementation]
+  characteristic: [evidence-first, human-review, incremental, test-driven, traceable]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package correctly treats review findings as input rather than a work order, requires the complete review to be read before triage, preserves the human's scope decision, separates fix/defer/manual/noise outcomes, and applies fixes one at a time with a proving test before final validation. Unchanged use fails the authority hard rule because it may create tracker issues, edit source/tests, commit, and push a PR branch without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. Review files and reviewer text are also consumed without an explicit hostile-instruction boundary. Preserve the triage taxonomy, bounded-scope discipline, incremental fix-and-test loop, and outcome reporting as adaptation/extraction evidence. Behavioral validation has not been run."
