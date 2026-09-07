@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **389** persisted exact-version third-party verification companions.
+- **390** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **31/131**.
-- Remaining gaps: **100**.
+- Current-standard companions: **32/131**.
+- Remaining gaps: **99**.
 
-The thirty-one reconciled Azure packages are the prior thirty through nested `microsoft-foundry/models/deploy-model` plus nested `microsoft-foundry/models/deploy-model/capacity`, verified **17/20**. Behavioral validation remains `not-run` for all thirty-one.
+The thirty-two reconciled Azure packages are the prior thirty-one through nested `microsoft-foundry/models/deploy-model/capacity` plus nested `microsoft-foundry/models/deploy-model/customize`, verified **17/20**. Behavioral validation remains `not-run` for all thirty-two.
 
-`microsoft-foundry/models/deploy-model/capacity` is bound to package tree `edb0b5bb776569c8941e4ed3755d9f65e32c5b80`, `SKILL.md` blob `46935315ebdf18fbc93771efb72e7f8f9e9980ac`, and Azure-path freshness revision `d98f6dd642338a5f5a423f4c17ab65dc1208d88d` on 2026-03-04. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve read-only Azure OpenAI capacity and subscription-quota discovery, ranked region/project comparison, explicit no-deploy scope, and project confirmation before handoff to `preset` or `customize`. The bundled scripts query Azure management and usage APIs but do not create, update, or delete resources. Nested `customize` and `preset` remain independent denominator entries.
+`microsoft-foundry/models/deploy-model/customize` is bound to package tree `3ff8e09076dcc5337257a70845fb509b4ab229a0`, `SKILL.md` blob `7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2`, and canonical Azure-path freshness revision `25607b744cbb764fe99f1b51c99c0c14e2fae091` on 2026-03-06. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve live model/version/SKU/quota discovery, capacity validation, cross-region fallback, RAI-policy and upgrade-policy selection, and the mandatory full-configuration review and explicit user confirmation immediately before deployment creation. The skill can create persistent Azure model deployments and may transmit tenant organization/country metadata for Anthropic deployments; the action-specific confirmation before mutation satisfies the current authority boundary. Nested `preset` remains a separate denominator entry.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **389 persisted reviews / 31 of 131 eligible Azure Skills / 100 gaps**. Within `microsoft-foundry/models/deploy-model`, review the next genuine first-class child, `customize`, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
+Continue Microsoft Azure Skills from **390 persisted reviews / 32 of 131 eligible Azure Skills / 99 gaps**. Within `microsoft-foundry/models/deploy-model`, review the next genuine first-class child, `preset`, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
