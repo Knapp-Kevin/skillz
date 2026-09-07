@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 389,
+    "persisted_third_party_exact_version_reviews": 390,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 31,
+    "microsoft_azure_skills_current_standard_companions": 32,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 100,
+    "microsoft_azure_skills_current_standard_gaps": 99,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 31/131; nested microsoft-foundry/models/deploy-model/capacity exact tree edb0b5bb776569c8941e4ed3755d9f65e32c5b80 and SKILL.md blob 46935315ebdf18fbc93771efb72e7f8f9e9980ac matched completed Microsoft Skills evidence, so compatible structured static review was reused; verified 17/20 as a read-only capacity/quota discovery and ranking package with explicit no-deploy scope and project confirmation before handoff; behavioral validation remains not-run; 100 Azure gaps remain"
+    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 32/131; nested microsoft-foundry/models/deploy-model/customize exact tree 3ff8e09076dcc5337257a70845fb509b4ab229a0 and SKILL.md blob 7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2 matched completed Microsoft Skills evidence, so compatible structured static review was reused; verified 17/20 with live model/version/SKU/quota discovery, capacity and cross-region validation, RAI/upgrade-policy selection, and a distinct full-configuration confirmation immediately before deployment creation; behavioral validation remains not-run; 99 Azure gaps remain"
   }
 }

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: customize
+display_name: Microsoft Foundry Deploy Model Customize
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 25607b744cbb764fe99f1b51c99c0c14e2fae091
+upstream_last_updated_at: 2026-03-06T11:14:03Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize
+permission_tier: external-side-effect
+portability: low
+review_status: verified
+dependency_status: source-intact
+dependencies: Complete customize package tree including EXAMPLES.md and references/customize-workflow.md plus customize-guides.md; Azure CLI authenticated access; parent deploy-model router; quota and project/create handoff skills where capacity or project prerequisites fail
+import_eligibility: verified-static
+rationale: Exact Azure-source reconciliation bound to package tree 3ff8e09076dcc5337257a70845fb509b4ab229a0 and SKILL.md blob 7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence is reused. Preserve live model/version/SKU/quota discovery, capacity-range validation, cross-region fallback, RAI-policy and upgrade-policy selection, and the mandatory Phase 12 full-configuration confirmation immediately before Phase 13 deployment creation. The skill can create persistent Azure model deployments and Anthropic deployments may transmit tenant organization/country metadata in modelProviderData; unchanged reuse remains acceptable only because the workflow contains a distinct action-specific authorization checkpoint before mutation. Behavioral validation is not-run.
