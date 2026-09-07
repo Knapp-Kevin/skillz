@@ -11,14 +11,14 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 386 |
+| **Persisted third-party review companions** | 387 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
-| **Microsoft Azure Skills current-standard companions** | 28 / 131 |
-| **Microsoft Azure Skills current-standard gaps** | 103 |
+| **Microsoft Azure Skills current-standard companions** | 29 / 131 |
+| **Microsoft Azure Skills current-standard gaps** | 102 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -38,16 +38,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - First-party: **43/43 provenance-complete** with structured semantic review evidence.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
-- Microsoft Azure Skills: exact registered-pin denominator **131**, **28/131** companion-complete, **103 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
+- Microsoft Azure Skills: exact registered-pin denominator **131**, **29/131** companion-complete, **102 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills frontier
 
-Twenty-eight Azure packages now have current-standard companion pairs. Behavioral validation remains `not-run` for all twenty-eight.
+Twenty-nine Azure packages now have current-standard companion pairs. Behavioral validation remains `not-run` for all twenty-nine.
 
-The latest unit, the root `microsoft-foundry` orchestrator, is rejected unchanged **13/20** and is bound to exact tree `75f1fef94394b6ffde32259d0268f2d3381938dc`, `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`, and Azure-source freshness revision `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` on 2026-07-02. Exact identity matches completed Microsoft Skills evidence, so compatible complete-package-context review evidence was reused. Preserve its workflow routing, scope partitioning, configuration precedence, remote-state verification, review-before-overwrite, and live-discovery patterns. Unchanged adoption remains rejected because routed Azure/workspace mutations are not universally guarded by mandatory action-specific authorization and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The parent tree contains five nested first-class `SKILL.md` children that remain independent denominator entries; ordinary workflow/reference Markdown is package context rather than independent inventory. Behavioral validation remains `not-run`.
+The latest unit, nested `microsoft-foundry/finetuning`, is rejected unchanged **12/20** and is bound to exact tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd`, `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`, and Azure-source freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact identity matches completed Microsoft Skills evidence, so compatible complete-package static review evidence was reused. Preserve its baseline-first methodology, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption remains rejected because uploads, paid training, deployments, external model/evaluation calls, synthetic-data generation, and remote deletion lack mandatory action-specific authorization, while data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation remains `not-run`.
 
 ## Source lifecycle
 
@@ -65,7 +65,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue Microsoft Azure Skills from **28/131**, checking canonical companion paths and repository history before each unit.
+1. Continue Microsoft Azure Skills from **29/131**, checking canonical companion paths and repository history before each unit.
 2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
