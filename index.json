@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 400,
+    "persisted_third_party_exact_version_reviews": 401,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 11,
+    "cole_medin_skills_current_standard_companions": 12,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 22,
+    "cole_medin_skills_current_standard_gaps": 21,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin piv-fix-review-findings added as the eleventh current-standard companion pair, bound to exact package tree 6e3e14b1f367bc43a2c9f20bda5d11f6834fb190 and SKILL.md blob 7c71fae86e5ab40c0c86c2edbdc1b53a30b495da; rejected unchanged 15/20 for missing action-specific authorization before issue creation, source/test mutation, commit, and PR-branch push, with behavioral validation not-run; Cole is 11/33 with 22 gaps; persisted review count is 400"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-implement-issue added as the twelfth current-standard companion pair, bound to exact package tree 7fea1af7863685edb6022a3db6bfb9a08823d927 and SKILL.md blob a04bd2ec839f90f0d1ff83e2741de64b1cd7c126; rejected unchanged 14/20 for missing action-specific authorization before branch/source/test/documentation and optional GitHub issue mutations, with behavioral validation not-run; Cole is 12/33 with 21 gaps; persisted review count is 401"
   }
 }

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-implement-issue
+display_name: PIV Implement Issue
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-implement-issue/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: rca-project-source-test-stack-and-git-github-context-required
+dependencies: RCA document at docs/issues/issue-<id>.md; local Git repository; project source and test stack; authenticated GitHub CLI for optional issue updates; piv-investigate-issue as upstream analysis dependency; piv-commit for later commit handoff
+package_tree_sha: 7fea1af7863685edb6022a3db6bfb9a08823d927
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong issue-remediation reference that requires full RCA reading, explicit drift detection before implementation, bounded plan adherence, regression and edge-case tests, validation reruns, manual reproduction, and deviation reporting. Unchanged adoption fails the authority hard rule because it creates branches, mutates source/tests/documentation, and may comment on, relabel, or close GitHub issues without mandatory action-specific authorization immediately before those consequential mutations. RCA and issue content are also trusted as operative instructions without an explicit hostile-instruction boundary. Preserve its drift-stop, plan-bounded implementation, regression-test, validation, and deviation-reporting methods as adaptation/extraction evidence.
