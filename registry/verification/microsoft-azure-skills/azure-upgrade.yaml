@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: azure-upgrade
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ad4f782ddd8eab34eacece4ccb1b66d65a0434d9
+skill_md_blob_sha: 6b87a36c181440dd213443b19a2a58d25504a1ba
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [evidence-first, incremental, risk-aware, safety-bounded, reference-heavy, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: Exact static review covers the complete 43-file pinned azure-upgrade package: SKILL.md plus 42 bundled Markdown/Python reference, template, workflow, and migration files. Exact package tree and SKILL.md identities match the completed Microsoft Skills package, so compatible complete-package semantic evidence is reused rather than repeated. Strong mechanisms include mandatory assessment before upgrade, explicit target plan/SKU confirmation, ask_user before creating Azure resources and before destructive/irreversible changes, keeping the original workload intact until validation, documented rollback, and idempotent/resumable automation. Unchanged adoption fails current secret-handling governance because bundled Functions automation reads the live AzureWebJobsStorage connection string into a shell variable and passes it directly to blob list/download operations, unnecessarily surfacing credential material instead of using an identity-based secure credential path. The same prerequisite sequence installs the resource-graph Azure CLI extension without a distinct action-specific authorization checkpoint. Retain the assessment, confirmation, rollback, and migration-planning mechanics as adaptation/reference evidence. Behavioral validation remains not-run.
