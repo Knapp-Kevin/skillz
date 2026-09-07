@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-06",
+  "snapshot_date": "2026-09-07",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 43,
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 385,
+    "persisted_third_party_exact_version_reviews": 386,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 27,
+    "microsoft_azure_skills_current_standard_companions": 28,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 104,
+    "microsoft_azure_skills_current_standard_gaps": 103,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 27/131; entra-app-registration exact tree 9796dd5d6b70d96a7defe3ee3e542fecdef5904c and SKILL.md blob 9253ba09a6f71ea5b2bda0dd128d481bec321e52 received fresh structured static review; unchanged adoption is rejected 12/20 for missing action-specific authorization before identity/access mutations and for exposing generated client-secret output instead of requiring secure external credential handling; 104 Azure gaps remain"
+    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 28/131; root microsoft-foundry exact tree 75f1fef94394b6ffde32259d0268f2d3381938dc and SKILL.md blob 49fe35776ef5ae8d8c028b8f28d5d11b00a47df2 matched completed Microsoft Skills evidence, so compatible static review was reused; unchanged adoption remains rejected 13/20 because routed mutations lack universal action-specific authorization and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary; five nested first-class Foundry SKILL.md children remain separate denominator entries; 103 Azure gaps remain"
   }
 }
