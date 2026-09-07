@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-09-06
+**Snapshot date:** 2026-09-07
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, and reconciliation.
 
@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 385 |
+| Persisted third-party exact-version reviews | 386 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 27 / 131 |
-| Microsoft Azure Skills current-standard gaps | 104 |
+| Microsoft Azure Skills current-standard companions | 28 / 131 |
+| Microsoft Azure Skills current-standard gaps | 103 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **27/131**, with **104** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **28/131**, with **103** current-standard gaps.
 
-The latest reconciled Azure unit is `entra-app-registration`, rejected unchanged **12/20**, bound to package tree `9796dd5d6b70d96a7defe3ee3e542fecdef5904c` and `SKILL.md` blob `9253ba09a6f71ea5b2bda0dd128d481bec321e52`. No compatible prior exact-package companion existed, so it received fresh structured static review. Preserve its app-type/OAuth selection, least-privilege guidance, production preference for managed identity/certificates, MSAL examples, IaC guidance, and troubleshooting material. Unchanged adoption remains rejected because identity lifecycle mutations, permission changes, admin consent, owner changes, credential changes, and bulk deletion lack mandatory action-specific authorization immediately before execution. The credential-reset reference also exposes a live client secret in command output rather than requiring secure external credential handling. Behavioral validation has not been run.
+The latest reconciled Azure unit is the root `microsoft-foundry` orchestrator, rejected unchanged **13/20**, bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc` and `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`. Its exact package identity matches completed Microsoft Skills evidence, so compatible prior complete-package-context review evidence was reused. Preserve its workflow routing, scope partitioning, configuration precedence, remote-state verification, review-before-overwrite, and current-discovery patterns. Unchanged adoption remains rejected because routed Azure/workspace mutations lack a universal action-specific authorization boundary and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The parent tree contains five nested first-class `SKILL.md` children that remain independent denominator entries; ordinary workflow/reference Markdown is package context. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
