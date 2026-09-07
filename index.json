@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 382,
+    "persisted_third_party_exact_version_reviews": 383,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 24,
+    "microsoft_azure_skills_current_standard_companions": 25,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 107,
+    "microsoft_azure_skills_current_standard_gaps": 106,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 24/131; azure-upgrade exact tree ad4f782ddd8eab34eacece4ccb1b66d65a0434d9 and SKILL.md blob 6b87a36c181440dd213443b19a2a58d25504a1ba match completed Microsoft Skills evidence; unchanged adoption is rejected 15/20 for live AzureWebJobsStorage credential exposure in bundled Functions automation and missing action-specific authorization before Resource Graph CLI extension installation; 107 Azure gaps remain"
+    "latest_reconciliation": "2026-09-06: Microsoft Azure Skills advanced to 25/131; azure-validate exact tree f0eac59b12bba969fdec0e29b7558e441f7be14f and SKILL.md blob e852edd0519414ed61ee39d786b50bd8a8b0d389 match completed Microsoft Skills evidence; unchanged adoption is rejected 16/20 for missing action-specific authorization before persistent host-tool installation and workspace/dependency mutation; 106 Azure gaps remain"
   }
 }
