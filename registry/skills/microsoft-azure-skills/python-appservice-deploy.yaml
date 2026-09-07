@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: python-appservice-deploy
+display_name: Microsoft Azure Python App Service Deploy
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/python-appservice-deploy/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 82492494405b948c8422766ddae390714bbd78ed
+upstream_last_updated_at: 2026-06-15T16:29:30Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/python-appservice-deploy
+permission_tier: mutating
+portability: low
+review_status: rejected
+dependency_status: source-intact
+dependencies: Complete 14-file package; Azure CLI; Azure subscription/resource permissions; Python web application and deployment packaging context
+import_eligibility: rejected-unchanged
+rationale: Exact Azure-source reconciliation bound to package tree 6e11dad529e50b7fbc37191de665788d0427ccad and SKILL.md blob ac25db692762945d0e3e9ed2016dcfa29fbfa610. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence is reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, .env exclusion, FastAPI startup handling, and deployment-vs-build completion distinction. Reject unchanged because the package directs creation of cost-bearing Azure resource groups, App Service plans and web apps, applies persistent configuration, and deploys application code after inferred defaults without a distinct action-specific authorization checkpoint immediately before those mutations. Behavioral validation is not-run.
