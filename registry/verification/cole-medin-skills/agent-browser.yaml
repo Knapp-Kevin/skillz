@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: agent-browser
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bdd73cc60a51261b0d18e3d3d646cba9e6280bc2
+package_tree_sha: 9b31e495b887e4ca123960415eca69fc7e1bba28
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [browser-testing, testing, monitoring]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [tool-assisted, tool-routing, progressive-disclosure]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric before hard-fail enforcement: trigger precision 2, procedural clarity 1, authority and safety 0, failure handling 0, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact pinned package is a discovery stub rather than a self-contained workflow: it installs or invokes the external agent-browser CLI and then dynamically loads the operative skill content from the installed version. That prevents the repository from binding the reviewed behavior to this exact snapshot. More importantly, the trigger surface explicitly includes logins, form submission, Electron-app control, Slack message sending, and broad browser automation without a mandatory action-specific authorization checkpoint before consequential external mutations or communications. There is also no explicit hostile-page/prompt-injection boundary despite operating on untrusted web content. Preserve the compact capability map, accessibility-tree/ref model, session concepts, and progressive runtime-content discovery as adaptation/reference evidence; reject unchanged until authority, untrusted-content handling, and exact content binding are addressed."
