@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 398 |
+| **Persisted third-party review companions** | 399 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 9 / 33 |
-| **Cole Medin Skills current-standard gaps** | 24 |
+| **Cole Medin Skills current-standard companions** | 10 / 33 |
+| **Cole Medin Skills current-standard gaps** | 23 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **9/33** companion-complete, **24 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **10/33** companion-complete, **23 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Nine now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, and `piv-commit`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Ten now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, and `piv-create-pr`.
 
-`piv-commit` is bound to exact package tree `c95ac39536c9893d0a8be2c2a9e881b9cca4e549`, `SKILL.md` blob `c0bde07e7413e5782f1e13ae152bd9146b6efbff`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`. Preserve its project commit-convention lookup, pre-commit status/diff inspection, conventional atomic message discipline, and developer-facing post-commit summaries as useful adaptation/extraction evidence. Unchanged operational use fails the authority hard rule because it stages and commits all uncommitted changes without mandatory action-specific authorization immediately before repository mutation. Its all-changes staging instruction also lacks a sensitive/unrelated-file classification and exclusion boundary, so credentials, secrets, generated artifacts, or another writer's work could be swept into the commit; it also omits final staged-diff verification and robust partial-failure recovery.
+`piv-create-pr` is bound to exact package tree `a5eaec0e21bb313d2fea77583beb7451e42458a5`, `SKILL.md` blob `93982ed9fed67be8c1553fb9a1d8f40179f70c45`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Preserve its base-branch detection, clean-state and duplicate-PR checks, convention/template-aware PR-body construction, validation/deviation disclosure, and explicit reviewer handoff. Unchanged operational use fails the authority hard rule because it pushes the current branch and creates an external GitHub pull request without mandatory action-specific authorization immediately before those remote mutations. Repository-local conventions/templates are also trusted without an explicit hostile-instruction boundary.
 
 ## Source lifecycle
 
