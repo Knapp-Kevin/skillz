@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-382-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-383-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **382 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **383 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -52,14 +52,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
-- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **24/131** current-standard companion complete, **107** gaps remain.
+- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **25/131** current-standard companion complete, **106** gaps remain.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-The twenty-four reconciled Azure packages are `airunway-aks-setup` (verified **17/20**), `appinsights-instrumentation` (rejected unchanged **13/20**), `azure-ai` (rejected unchanged **13/20**), `azure-aigateway` (rejected unchanged **13/20**), `azure-cloud-migrate` (verified **17/20**), `azure-compliance` (rejected unchanged **12/20**), `azure-compute` (rejected unchanged **11/20**), `azure-cost` (rejected unchanged **14/20**), `azure-deploy` (rejected unchanged **15/20**), `azure-diagnostics` (rejected unchanged **13/20**), `azure-enterprise-infra-planner` (verified **18/20**), `azure-hosted-copilot-sdk` (rejected unchanged **13/20**), `azure-kubernetes` (rejected unchanged **12/20**), `azure-kubernetes-automatic-readiness` (rejected unchanged **15/20**), `azure-kusto` (rejected unchanged **14/20**), `azure-messaging` (rejected unchanged **13/20**), `azure-prepare` (rejected unchanged **16/20**), `azure-quotas` (rejected unchanged **14/20**), `azure-rbac` (verified **17/20**), `azure-reliability` (rejected unchanged **15/20**), `azure-resource-lookup` (rejected unchanged **14/20**), `azure-resource-visualizer` (rejected unchanged **15/20**), `azure-storage` (rejected unchanged **12/20**), and `azure-upgrade` (rejected unchanged **15/20**). Behavioral validation remains `not-run` for all twenty-four reviewed Azure packages.
+Twenty-five Azure packages now have current-standard companion pairs. The latest is `azure-validate`, rejected unchanged **16/20**. Behavioral validation remains `not-run` for all twenty-five reviewed Azure packages.
 
-`azure-upgrade` is bound to exact package tree `ad4f782ddd8eab34eacece4ccb1b66d65a0434d9` and `SKILL.md` blob `6b87a36c181440dd213443b19a2a58d25504a1ba`; these match the completed Microsoft Skills package exactly, so compatible complete-package semantic evidence was reconciled rather than repeated. Preserve its assessment-first sequencing, target plan/SKU confirmation, confirmation before resource creation and destructive changes, rollback discipline, idempotent/resumable automation requirements, and scenario-specific migration references. Unchanged adoption remains rejected because bundled Functions automation surfaces the live `AzureWebJobsStorage` connection string into shell state for blob operations instead of using an identity-based secure credential path, and its prerequisite sequence installs the Resource Graph CLI extension without a distinct action-specific authorization checkpoint. Behavioral validation remains `not-run`.
+`azure-validate` is bound to exact package tree `f0eac59b12bba969fdec0e29b7558e441f7be14f` and `SKILL.md` blob `e852edd0519414ed61ee39d786b50bd8a8b0d389`; these match the completed Microsoft Skills package exactly, so compatible complete-package semantic evidence was reconciled rather than repeated. Preserve its prepare-before-validate gate, real-command proof before status promotion, static least-privilege RBAC review, subscription/location confirmation, preview/what-if checks, and explicit blockers. Unchanged adoption remains rejected because AZCLI/AZD validation recipes can install persistent host tooling and generate a missing `package-lock.json` without a distinct action-specific authorization checkpoint, while the broader workflow directs the agent to fix validation/build failures before proceeding. Behavioral validation remains `not-run`.
 
-Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **24/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **25/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
