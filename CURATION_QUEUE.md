@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **392** persisted exact-version third-party verification companions.
+- **393** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -48,6 +48,15 @@ The prior denominator of 131 included ordinary workflow, procedure, reference, e
 
 The latest package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
 
+### Cole Medin Skills — ACTIVE FRONTIER
+
+- Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
+- Current-standard companions: **4/33**.
+- Remaining gaps: **29**.
+
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, and `agent-browser`. The latest unit, `agent-browser`, is bound to package tree `9b31e495b887e4ca123960415eca69fc7e1bba28`, `SKILL.md` blob `bdd73cc60a51261b0d18e3d3d646cba9e6280bc2`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **11/20** with behavioral validation `not-run`: retain the compact browser capability map, accessibility-tree/ref model, sessions, and progressive runtime-content discovery as reference/adaptation evidence, but unchanged use fails because consequential browser/login/form/Slack actions lack mandatory action-specific authorization and the operative workflow is dynamically loaded from the installed CLI rather than bound to the exact reviewed package.
+
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel but cannot displace admitted-source closure. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
@@ -62,4 +71,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Recompute the next admitted-source frontier from current registered-source evidence now that AWS Agent Toolkit, Microsoft Skills, and Microsoft Azure Skills are current-standard complete. Prefer compatible prior exact-version evidence before fresh re-review, and continue bounded issue/source-vetting work where current evidence makes a decisive disposition possible.
+Continue Cole Medin Skills from the exact 33-skill pin, checking companion absence, package identity, freshness, license, authority, dependencies, and recoverable prior review evidence before every unit. Keep governed discovery/source-vetting active in parallel without letting it displace admitted-source closure.

@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 392,
+    "persisted_third_party_exact_version_reviews": 393,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,6 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
+    "cole_medin_skills_current_standard_companions": 4,
+    "cole_medin_skills_eligible_denominator": 33,
+    "cole_medin_skills_current_standard_gaps": 29,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills exact registered-pin denominator corrected from 131 to 34 after pinned-tree reconciliation established 28 canonical plugin roots, one nested azure-kubernetes automatic-readiness SKILL.md, and five nested Microsoft Foundry SKILL.md packages beyond the Foundry root; all 34 eligible packages already have current-standard companion pairs, so Azure is complete at 34/34 with 0 gaps; ordinary workflow, procedure, reference, example, SDK, and other non-first-class Markdown remains package evidence rather than independent skill inventory; persisted review count remains 392"
+    "latest_reconciliation": "2026-09-07: Cole Medin Skills established as the active admitted-source frontier at exact registered-pin denominator 33; agent-browser added as the fourth companion pair, rejected unchanged 11/20 because consequential browser/login/form/Slack actions lack mandatory action-specific authorization and the operative workflow is dynamically loaded from the installed CLI rather than bound to the exact reviewed package; Cole is 4/33 with 29 gaps; persisted review count is 393"
   }
 }
