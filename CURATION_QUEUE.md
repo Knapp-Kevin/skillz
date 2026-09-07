@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **398** persisted exact-version third-party verification companions.
+- **399** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **9/33**.
-- Remaining gaps: **24**.
+- Current-standard companions: **10/33**.
+- Remaining gaps: **23**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, and `piv-commit`. The latest unit, `piv-commit`, is bound to package tree `c95ac39536c9893d0a8be2c2a9e881b9cca4e549`, `SKILL.md` blob `c0bde07e7413e5782f1e13ae152bd9146b6efbff`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`: retain project convention lookup, pre-commit status/diff inspection, conventional atomic commit-message discipline, and post-commit developer summaries. Unchanged use fails the authority hard rule because it stages and commits all uncommitted changes without mandatory action-specific authorization immediately before repository mutation; the all-changes staging step also lacks sensitive/unrelated-file classification and exclusion, final staged-diff verification, and robust partial-failure recovery.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, and `piv-create-pr`. The latest unit, `piv-create-pr`, is bound to package tree `a5eaec0e21bb313d2fea77583beb7451e42458a5`, `SKILL.md` blob `93982ed9fed67be8c1553fb9a1d8f40179f70c45`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`: retain base-branch detection, clean-state and duplicate-PR preflight, convention/template-aware PR-body construction, validation/deviation disclosure, and explicit reviewer handoff. Unchanged use fails the authority hard rule because it pushes a branch and creates an external pull request without mandatory action-specific authorization immediately before those consequential remote mutations.
 
 ## Governed discovery / source-vetting
 
