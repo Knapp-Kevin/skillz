@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 391,
+    "persisted_third_party_exact_version_reviews": 392,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -15,9 +15,9 @@
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
-    "microsoft_azure_skills_current_standard_companions": 33,
+    "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 131,
-    "microsoft_azure_skills_current_standard_gaps": 98,
+    "microsoft_azure_skills_current_standard_gaps": 97,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -50,6 +50,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 33/131; nested microsoft-foundry/models/deploy-model/preset exact tree 2d35e916a63fda4c49eb6f34d697e74ad00d82b9 and SKILL.md blob 09fcc94cba4c178ec08650b6e6e1da32437c2701 matched completed Microsoft Skills evidence, so compatible structured static review was reused; rejected unchanged 12/20 because persistent deployment and optional Azure AI Services/project creation lack a distinct action-specific authorization checkpoint immediately before mutation; behavioral validation remains not-run; 98 Azure gaps remain"
+    "latest_reconciliation": "2026-09-07: Microsoft Azure Skills advanced to 34/131; python-appservice-deploy exact tree 6e11dad529e50b7fbc37191de665788d0427ccad and SKILL.md blob ac25db692762945d0e3e9ed2016dcfa29fbfa610 matched completed Microsoft Skills evidence, so compatible structured static review was reused; rejected unchanged 12/20 because cost-bearing Azure resources, persistent configuration, and code deployment lack a distinct action-specific authorization checkpoint immediately before mutation; behavioral validation remains not-run; 97 Azure gaps remain"
   }
 }
