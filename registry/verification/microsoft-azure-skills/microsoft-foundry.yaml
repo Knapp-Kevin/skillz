@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: microsoft-foundry
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 75f1fef94394b6ffde32259d0268f2d3381938dc
+skill_md_blob_sha: 49fe35776ef5ae8d8c028b8f28d5d11b00a47df2
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review-reused-exact-package
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, orchestration, agent-development]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [orchestration, tool-routing, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Exact root-entry and complete-package-context evidence is reused from the completed Microsoft Skills companion because both package tree 75f1fef94394b6ffde32259d0268f2d3381938dc and SKILL.md blob 49fe35776ef5ae8d8c028b8f28d5d11b00a47df2 match exactly. Preserve Foundry workflow routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite and current-discovery patterns. Reject unchanged because consequential Azure/workspace mutations are not universally guarded by mandatory action-specific authorization and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The Foundry parent contains five nested first-class SKILL.md children that remain separate denominator entries; ordinary workflow/reference Markdown is package context rather than independent skill inventory. Behavioral validation remains not-run.

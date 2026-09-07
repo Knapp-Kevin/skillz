@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-385-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-386-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **385 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **386 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -52,14 +52,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
-- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **27/131** current-standard companion complete, **104** gaps remain.
+- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **28/131** current-standard companion complete, **103** gaps remain.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-Twenty-seven Azure packages now have current-standard companion pairs. The latest is `entra-app-registration`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all twenty-seven reviewed Azure packages.
+Twenty-eight Azure packages now have current-standard companion pairs. The latest is the root `microsoft-foundry` orchestrator, rejected unchanged **13/20**. Behavioral validation remains `not-run` for all twenty-eight reviewed Azure packages.
 
-`entra-app-registration` is bound to exact package tree `9796dd5d6b70d96a7defe3ee3e542fecdef5904c`, `SKILL.md` blob `9253ba09a6f71ea5b2bda0dd128d481bec321e52`, and Azure-source freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. No compatible prior exact-package companion existed, so it received fresh static semantic review. Preserve its app-type/OAuth selection, least-privilege guidance, managed-identity/certificate preference, MSAL examples, IaC guidance, and troubleshooting material. Unchanged adoption is rejected because app/service-principal lifecycle changes, permission grants, admin consent, owner changes, credential changes, and bulk deletion lack mandatory action-specific authorization immediately before mutation. Its credential-reset reference also emits a live client secret into command output instead of requiring secure external credential handling. Behavioral validation remains `not-run`.
+`microsoft-foundry` is bound to exact package tree `75f1fef94394b6ffde32259d0268f2d3381938dc`, `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`, and Azure-source freshness revision `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` on 2026-07-02. Exact package identity matches completed Microsoft Skills evidence, so compatible complete-package-context review evidence was reused. Preserve its Foundry workflow routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite, and current-discovery patterns. Unchanged adoption is rejected because routed Azure/workspace mutations lack a universal mandatory action-specific authorization boundary and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The Foundry parent contains five nested first-class `SKILL.md` children that remain separate denominator entries; ordinary workflow/reference Markdown is package context, not separate skill inventory. Behavioral validation remains `not-run`.
 
-Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **27/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **28/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
