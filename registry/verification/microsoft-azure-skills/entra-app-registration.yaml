@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: entra-app-registration
+source_id: microsoft-azure-skills
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9796dd5d6b70d96a7defe3ee3e542fecdef5904c
+skill_md_blob_sha: 9253ba09a6f71ea5b2bda0dd128d481bec321e52
+characterized_at: 2026-09-06
+last_verified_at: 2026-09-06
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [security, cloud, implementation]
+  lifecycle: [design, implementation, operations]
+  characteristic: [reference-heavy, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: Fresh exact-package review covers SKILL.md plus all 16 bundled reference files. Strong prior art includes clear app-type and OAuth-flow selection, least-privilege API-permission guidance, production preference for managed identity/certificates over secrets, HTTPS redirect guidance, token-validation reminders, MSAL/Azure Identity examples, IaC guidance, and extensive troubleshooting/reference material. Unchanged adoption fails the authority hard rule because the workflow and CLI reference directly create, update, and delete app registrations and service principals; grant and delete API permissions; invoke tenant admin consent; add/remove owners; reset/delete credentials; and include bulk deletion without mandatory action-specific authorization checkpoints immediately before those consequential identity/access mutations. Secret discipline also fails unchanged adoption: az ad app credential reset emits a live client secret in command output and the reference explicitly tells the operator to save that output, rather than requiring a secure external credential path with disclosure minimization. Preserve the identity/OAuth design material and safer credential guidance for adaptation/reference use. Require explicit scoped authorization before every mutation and secure external handling for generated credentials. Behavioral validation remains not-run.
