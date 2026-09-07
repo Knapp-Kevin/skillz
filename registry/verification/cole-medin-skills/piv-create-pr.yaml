@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-create-pr
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 93982ed9fed67be8c1553fb9a1d8f40179f70c45
+package_tree_sha: a5eaec0e21bb313d2fea77583beb7451e42458a5
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [repository-maintenance, handoff]
+  lifecycle: [release]
+  characteristic: [deterministic, evidence-first, human-review, traceable]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. The package has useful base-branch detection, clean-state and duplicate-PR preflight checks, project-convention and PR-template integration, implementation-report/deviation disclosure, validation-status reporting, and an explicit reviewer handoff. Unchanged use fails the current authority hard rule because Phase 3 directly pushes the current branch and creates an external GitHub pull request without a mandatory action-specific authorization checkpoint immediately before those consequential remote mutations. It also trusts repository-local conventions/templates and implementation reports without an explicit hostile-instruction boundary, and its validation field permits either inherited report claims or a fresh run without requiring evidence provenance. Preserve the preflight, transparent PR-body construction, validation/deviation disclosure, and human-review handoff as adaptation/extraction evidence. Behavioral validation has not been run."
