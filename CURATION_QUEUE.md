@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **391** persisted exact-version third-party verification companions.
+- **392** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **33/131**.
-- Remaining gaps: **98**.
+- Current-standard companions: **34/131**.
+- Remaining gaps: **97**.
 
-The thirty-three reconciled Azure packages are the prior thirty-two through nested `microsoft-foundry/models/deploy-model/customize` plus nested `microsoft-foundry/models/deploy-model/preset`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all thirty-three.
+The thirty-four reconciled Azure packages are the prior thirty-three through nested `microsoft-foundry/models/deploy-model/preset` plus `python-appservice-deploy`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all thirty-four.
 
-`microsoft-foundry/models/deploy-model/preset` is bound to package tree `2d35e916a63fda4c49eb6f34d697e74ad00d82b9`, `SKILL.md` blob `09fcc94cba4c178ec08650b6e6e1da32437c2701`, and canonical Azure plugin-path freshness revision `25607b744cbb764fe99f1b51c99c0c14e2fae091` on 2026-03-06. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve capacity-aware current-region and multi-region discovery, model/version selection, project filtering, GlobalStandard defaults, quota fallback, and deployment-status monitoring as adaptation/extraction evidence. Reject unchanged because persistent model deployment, and on the alternate path Azure AI Services/project creation, can occur without a distinct action-specific authorization checkpoint immediately before mutation.
+`python-appservice-deploy` is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve framework detection, deterministic naming, shell-safe runtime syntax, idempotent creation patterns, transient-error classification, `.env` exclusion, FastAPI startup handling, and deployment-vs-build completion distinction as adaptation/extraction evidence. Reject unchanged because cost-bearing Azure resource groups, App Service plans and web apps, persistent app settings, and application deployment can occur after inferred defaults without a distinct action-specific authorization checkpoint immediately before mutation.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **391 persisted reviews / 33 of 131 eligible Azure Skills / 98 gaps**. Recompute the next genuine first-class Azure denominator unit after the completed `microsoft-foundry/models/deploy-model` subtree, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
+Continue Microsoft Azure Skills from **392 persisted reviews / 34 of 131 eligible Azure Skills / 97 gaps**. Recompute the next genuine first-class Azure denominator unit after `python-appservice-deploy`, checking canonical companion paths and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
