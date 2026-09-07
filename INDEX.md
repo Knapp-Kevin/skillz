@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 382 |
+| Persisted third-party exact-version reviews | 383 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 24 / 131 |
-| Microsoft Azure Skills current-standard gaps | 107 |
+| Microsoft Azure Skills current-standard companions | 25 / 131 |
+| Microsoft Azure Skills current-standard gaps | 106 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **24/131**, with **107** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **25/131**, with **106** current-standard gaps.
 
-The latest reconciled Azure unit is `azure-upgrade`, rejected unchanged **15/20**, bound to package tree `ad4f782ddd8eab34eacece4ccb1b66d65a0434d9` and `SKILL.md` blob `6b87a36c181440dd213443b19a2a58d25504a1ba`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its assessment-first sequencing, target plan/SKU confirmation, explicit confirmation before resource creation and destructive actions, rollback discipline, idempotent/resumable automation requirements, and scenario-specific migration references. Unchanged adoption remains rejected because bundled Functions automation surfaces the live `AzureWebJobsStorage` connection string into shell state for blob operations rather than requiring an identity-based secure credential path, and the prerequisite sequence installs the Resource Graph CLI extension without a distinct action-specific authorization checkpoint. Behavioral validation has not been run.
+The latest reconciled Azure unit is `azure-validate`, rejected unchanged **16/20**, bound to package tree `f0eac59b12bba969fdec0e29b7558e441f7be14f` and `SKILL.md` blob `e852edd0519414ed61ee39d786b50bd8a8b0d389`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its prepare-before-validate gate, evidence-backed validation proof, subscription/location confirmation, preview/what-if checks, unsupported-resource blockers, and static least-privilege RBAC review. Unchanged adoption remains rejected because AZCLI/AZD validation recipes can install persistent host tooling and generate a missing `package-lock.json` without a distinct action-specific authorization checkpoint, while the broader workflow directs the agent to fix validation/build failures before proceeding. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
