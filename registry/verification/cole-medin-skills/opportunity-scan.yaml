@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: opportunity-scan
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 15147cd2ee55ff5c556dc21956e5876c074d2df5
+package_tree_sha: d22f203d905fab64a571f9b4d729d35038a6c3b1
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [agent-development, evaluation, research]
+  lifecycle: [discovery, planning, maintenance]
+  characteristic: [context-efficient, evidence-first, progressive-disclosure, risk-aware, synthesis, tool-routing]
+  authority: [read-only, generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package is differentiated evidence-driven system-improvement guidance. It separates reactive one-run diagnosis from proactive recurrence scanning, requires learning the current host agent's actual extension points before mapping recommendations, reads bounded run artifacts in full while aggregating large log windows, weights an explicit user steer against evidence, refuses to manufacture durable rules for one-off failures, and chooses the smallest useful primitive in the target project's house style. The decisive defect is sensitive-data handling. Proactive mode may inspect session histories containing credentials, secrets, PII, private source, URLs, prompts, or other sensitive content and explicitly permits representative samples to enter agent context, but it provides no mandatory classification/redaction step, secure handling path, or disclosure-authorization boundary. It also does not define prompt-injection handling for untrusted artifact/log content. Current governance therefore rejects unchanged operational adoption while preserving target scoping, capability-first mapping, aggregate-not-ingest discipline, evidence weighting, one-off refusal, and smallest-durable-change selection as adaptation/extraction evidence. Behavioral validation has not been run."

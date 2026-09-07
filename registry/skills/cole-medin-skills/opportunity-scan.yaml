@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: opportunity-scan
+display_name: Opportunity Scan
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/opportunity-scan/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 0d583b34fe2632be0300fca14c7a6904b435bb62
+upstream_last_updated_at: 2026-08-11T21:11:12Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: host-agent-capability-docs-and-readable-run-or-session-artifacts
+package_tree_sha: d22f203d905fab64a571f9b4d729d35038a6c3b1
+dependencies: readable run artifacts or agent session/log history, access to current host-agent capability documentation, basic text aggregation tools for large log windows, and ability to emit a self-contained HTML report
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong reference for evidence-driven AI-layer improvement: separate reactive single-run diagnosis from proactive recurrence scanning, learn the host's real extension points before prescribing a primitive, aggregate large logs instead of ingesting them wholesale, distinguish system gaps from one-offs, and recommend the smallest durable change in the project's existing house style. Unchanged adoption fails the current sensitive-data hard rule because proactive scanning may process session histories containing secrets, credentials, PII, private code, or other sensitive material and explicitly allows representative samples to enter agent context without a mandatory redaction/classification and disclosure-authorization boundary. Preserve the target scoping, capability-first mapping, aggregation, evidence weighting, one-off refusal, and smallest-durable-change methods as adaptation/extraction evidence.
