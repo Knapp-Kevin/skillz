@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-389-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-390-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **389 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **390 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -52,14 +52,14 @@ Core passive architecture is complete. Ongoing work is corpus enrichment and evi
 
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
-- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **31/131** current-standard companion complete, **100** gaps remain.
+- **Microsoft Azure Skills:** exact registered-pin denominator **131** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`; **32/131** current-standard companion complete, **99** gaps remain.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-Thirty-one Azure packages now have current-standard companion pairs. The latest is nested `microsoft-foundry/models/deploy-model/capacity`, verified **17/20**. Behavioral validation remains `not-run` for all thirty-one reviewed Azure packages.
+Thirty-two Azure packages now have current-standard companion pairs. The latest is nested `microsoft-foundry/models/deploy-model/customize`, verified **17/20**. Behavioral validation remains `not-run` for all thirty-two reviewed Azure packages.
 
-`microsoft-foundry/models/deploy-model/capacity` is bound to exact package tree `edb0b5bb776569c8941e4ed3755d9f65e32c5b80`, `SKILL.md` blob `46935315ebdf18fbc93771efb72e7f8f9e9980ac`, and Azure-path freshness revision `d98f6dd642338a5f5a423f4c17ab65dc1208d88d` on 2026-03-04. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve read-only Azure OpenAI capacity and subscription-quota discovery, ranked region/project comparison, explicit no-deploy scope, and project confirmation before handoff to `preset` or `customize`. The bundled scripts query Azure management and usage APIs but do not create, update, or delete resources. Nested `customize` and `preset` remain separate denominator entries. Behavioral validation remains `not-run`.
+`microsoft-foundry/models/deploy-model/customize` is bound to exact package tree `3ff8e09076dcc5337257a70845fb509b4ab229a0`, `SKILL.md` blob `7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2`, and canonical Azure-path freshness revision `25607b744cbb764fe99f1b51c99c0c14e2fae091` on 2026-03-06. Exact package identity matches completed Microsoft Skills evidence, so compatible structured static review evidence was reused. Preserve live model/version/SKU/quota discovery, capacity-range validation, cross-region fallback, RAI-policy and upgrade-policy selection, and the mandatory full-configuration review and explicit user confirmation immediately before deployment creation. The skill can create persistent Azure model deployments and may transmit tenant organization/country metadata for Anthropic deployments; its authority boundary is acceptable because mutation follows a distinct action-specific confirmation checkpoint. Nested `preset` remains a separate denominator entry. Behavioral validation remains `not-run`.
 
-Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **31/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Microsoft Skills is current-standard complete at **186/186**. **Microsoft Azure Skills** is the active admitted-source frontier at **32/131**. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
