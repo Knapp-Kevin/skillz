@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **386** persisted exact-version third-party verification companions.
+- **387** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **28/131**.
-- Remaining gaps: **103**.
+- Current-standard companions: **29/131**.
+- Remaining gaps: **102**.
 
-The twenty-eight reconciled Azure packages are the prior twenty-seven through `entra-app-registration` plus the root `microsoft-foundry` orchestrator, rejected unchanged **13/20**. Behavioral validation remains `not-run` for all twenty-eight.
+The twenty-nine reconciled Azure packages are the prior twenty-eight through the root `microsoft-foundry` orchestrator plus nested `microsoft-foundry/finetuning`, rejected unchanged **12/20**. Behavioral validation remains `not-run` for all twenty-nine.
 
-`microsoft-foundry` is bound to package tree `75f1fef94394b6ffde32259d0268f2d3381938dc`, `SKILL.md` blob `49fe35776ef5ae8d8c028b8f28d5d11b00a47df2`, and Azure freshness revision `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` on 2026-07-02. Exact package identity matches the completed Microsoft Skills evidence, so compatible prior complete-package-context review evidence was reused. Preserve workflow routing, scoped context resolution, configuration precedence, remote-state verification, review-before-overwrite, and live-discovery patterns. Unchanged adoption remains rejected because routed cloud/workspace mutations lack a universal mandatory action-specific authorization boundary and production-derived trace/evaluation/dataset workflows lack a universal disclosure/minimization boundary. The parent contains five nested first-class `SKILL.md` children that remain separate denominator entries; ordinary workflow/reference Markdown is package context rather than independent skill inventory.
+`microsoft-foundry/finetuning` is bound to package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd`, `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`, and Azure freshness revision `a81025ed0ac25e09c5805ada5295d0304e0ebbf7` on 2026-05-27. Exact package identity matches completed Microsoft Skills evidence, so compatible complete-package static review evidence was reused. Preserve baseline-first methodology, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption remains rejected because uploads, paid training, deployments, external model/evaluation calls, synthetic-data generation, and remote deletion lack mandatory action-specific authorization, and data-bearing workflows lack a universal disclosure/minimization boundary.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **386 persisted reviews / 28 of 131 eligible Azure Skills / 103 gaps**. Within `microsoft-foundry`, review the next genuine first-class child, `finetuning`, after checking its Azure companion paths and exact-package overlap with completed Microsoft Skills evidence.
+Continue Microsoft Azure Skills from **387 persisted reviews / 29 of 131 eligible Azure Skills / 102 gaps**. Within `microsoft-foundry`, review the next genuine first-class child after `finetuning`, checking canonical companion paths, nested denominator identity, and exact-package overlap with completed Microsoft Skills evidence before fresh semantic review.
