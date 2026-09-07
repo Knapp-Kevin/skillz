@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 384 |
+| Persisted third-party exact-version reviews | 385 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 26 / 131 |
-| Microsoft Azure Skills current-standard gaps | 105 |
+| Microsoft Azure Skills current-standard companions | 27 / 131 |
+| Microsoft Azure Skills current-standard gaps | 104 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **26/131**, with **105** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **27/131**, with **104** current-standard gaps.
 
-The latest reconciled Azure unit is `entra-agent-id`, rejected unchanged **13/20**, bound to package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e` and `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`. Exact identity matches the completed Microsoft Skills package, so compatible complete-package review evidence was reconciled rather than repeated. Preserve its per-agent identity model, typed Graph endpoints, BlueprintPrincipal prerequisite, production preference for workload identity federation, per-agent permission scoping, cross-tenant token exchange, and localhost-only sidecar containment. Unchanged adoption remains rejected because dependency installation, identity/service-principal creation, permission grants, delegated AllPrincipals grants, and admin consent lack mandatory action-specific authorization checkpoints immediately before those consequential identity/access mutations. Behavioral validation has not been run.
+The latest reconciled Azure unit is `entra-app-registration`, rejected unchanged **12/20**, bound to package tree `9796dd5d6b70d96a7defe3ee3e542fecdef5904c` and `SKILL.md` blob `9253ba09a6f71ea5b2bda0dd128d481bec321e52`. No compatible prior exact-package companion existed, so it received fresh structured static review. Preserve its app-type/OAuth selection, least-privilege guidance, production preference for managed identity/certificates, MSAL examples, IaC guidance, and troubleshooting material. Unchanged adoption remains rejected because identity lifecycle mutations, permission changes, admin consent, owner changes, credential changes, and bulk deletion lack mandatory action-specific authorization immediately before execution. The credential-reset reference also exposes a live client secret in command output rather than requiring secure external credential handling. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
