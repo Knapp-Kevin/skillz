@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ast-grep
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9cacc8a849a5cedf4230a8add4b4b35514b7e839
+package_tree_sha: ef60f77564e2d47d0cba25a809daa3af8f0c469b
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [code-review, research, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [tool-assisted, iterative, evidence-first, retrieval-first]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The exact package gives a coherent example-first workflow for translating natural-language structural queries into ast-grep patterns/rules, testing them on controlled snippets, debugging with AST inspection, and then scanning the target codebase. Its bundled rule reference materially improves self-containment. It writes only local temporary/example and YAML rule artifacts and otherwise performs read-oriented searches, so the current authority hard fail does not apply. Limitations: the ast-grep CLI/version is not pinned or checked; broad scans can surface sensitive code in output, so the host should retain repository scope and minimize disclosure; shell/inline-rule quoting deserves care when incorporating user-controlled patterns. Behavioral validation has not been run."
