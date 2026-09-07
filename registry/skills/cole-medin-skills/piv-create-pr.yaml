@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-create-pr
+display_name: PIV Create PR
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-create-pr/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: git-and-github-cli-required-project-conventions-optional
+dependencies: Git repository with git CLI and authenticated GitHub gh CLI; optional .claude/references/conventions.md, implementation report, and pull-request template
+package_tree_sha: a5eaec0e21bb313d2fea77583beb7451e42458a5
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong compact reference for base-branch detection, clean-state checks, duplicate-PR avoidance, convention/template-aware PR bodies, validation/deviation disclosure, and explicit review handoff. Unchanged adoption fails the authority hard rule because it pushes a branch and creates an external pull request without a mandatory action-specific authorization checkpoint immediately before those consequential remote mutations. Preserve its preflight, context gathering, transparent validation reporting, and reviewer handoff as adaptation/extraction evidence.
