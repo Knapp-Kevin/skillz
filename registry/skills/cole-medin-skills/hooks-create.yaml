@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: hooks-create
+display_name: Hooks Create
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/hooks-create/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_last_updated_at: 2026-08-26T12:28:14Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: claude-code-hook-runtime-and-project-tooling
+package_tree_sha: c00e23a2452609c80e94aaf0a1d748637710f356
+dependencies: Claude Code hook lifecycle, writable .claude/hooks and .claude/settings.json, current Claude Code hook documentation, uv/Python for the default implementation, and any project command/toolchain invoked by the generated hook
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong reference for translating a behavioral guarantee into a scoped Claude Code lifecycle hook, selecting blocking-capable events correctly, failing open on unexpected hook errors, preserving existing hook configuration, avoiding uv/project-environment mistakes, and proving both allow/block behavior before handoff. Unchanged adoption fails the current authority hard rule because the procedure directly writes hook code and settings into the user's project and executes the generated hook without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. Notification hooks may also produce external communications. Preserve the event-selection, matcher-scope, fail-open, environment-isolation, stop-loop, merge-not-overwrite, and bidirectional verification methods as adaptation/extraction evidence.
