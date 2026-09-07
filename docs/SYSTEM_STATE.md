@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 393 |
+| **Persisted third-party review companions** | 394 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 4 / 33 |
-| **Cole Medin Skills current-standard gaps** | 29 |
+| **Cole Medin Skills current-standard companions** | 5 / 33 |
+| **Cole Medin Skills current-standard gaps** | 28 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **4/33** companion-complete, **29 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **5/33** companion-complete, **28 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Four now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, and `agent-browser`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Five now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, and `ast-grep`.
 
-`agent-browser` is bound to exact package tree `9b31e495b887e4ca123960415eca69fc7e1bba28`, `SKILL.md` blob `bdd73cc60a51261b0d18e3d3d646cba9e6280bc2`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **11/20** with behavioral validation `not-run`. Preserve the browser capability map, accessibility-tree/ref model, sessions, and progressive runtime-content discovery. Reject unchanged because consequential browser/login/form/Slack actions lack an action-specific authorization boundary and the operative workflow is dynamically loaded from the installed CLI rather than bound to the reviewed exact package.
+`ast-grep` is bound to exact package tree `ef60f77564e2d47d0cba25a809daa3af8f0c469b`, `SKILL.md` blob `9cacc8a849a5cedf4230a8add4b4b35514b7e839`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is verified **16/20** with behavioral validation `not-run`. Preserve its example-first structural-query workflow, AST inspection/debugging method, bundled rule reference, and iterative refinement. Its reviewed authority is bounded to local generated rule/example artifacts and read-oriented codebase search; host agents still need to verify the separately installed, unpinned ast-grep CLI/version and avoid unnecessarily surfacing sensitive match content.
 
 ## Source lifecycle
 
