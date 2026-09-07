@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: build-dark-factory
+display_name: Build Dark Factory
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/build-dark-factory/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: ecef6ffd4caa0b23a8c79601c1215b1e2908ac72
+upstream_last_updated_at: 2026-08-14T15:07:30Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: substantial-host-and-repository-tooling
+package_tree_sha: 754851050fc2f4ed13b1eb3dad0c5c63f8217739
+dependencies: Git repository with writable project files, authenticated GitHub CLI/API access for issue/PR/workflow operations, CI/test/start or import surfaces, deployment target, coding-agent harness, bundled guidance/deployment/interview/setup/validation references, bundled audit/factory-doctor scripts and governance/runner/harness templates
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Highly developed reference for decomposing unattended software delivery into guidance, validation, workflow, deployment, and trigger layers, with strong observability, protected-surface, holdout, staged-autonomy, and refusal concepts. Unchanged adoption fails the current authority hard rule because the procedure directs the host to mutate the user's repository, install workflow/factory machinery, commit files, configure deployment, and ultimately enable unattended auto-merge/deployment behavior without a mandatory action-specific authorization checkpoint immediately before each consequential mutation. The autonomy interview is valuable intent evidence but does not replace authorization for concrete repository, CI, deployment, traffic, or scheduled external-state changes. Preserve the methods and safeguards as adaptation/extraction evidence rather than unchanged operational guidance.
