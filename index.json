@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 395,
+    "persisted_third_party_exact_version_reviews": 396,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 6,
+    "cole_medin_skills_current_standard_companions": 7,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 27,
+    "cole_medin_skills_current_standard_gaps": 26,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin build-dark-factory added as the sixth current-standard companion pair, bound to exact package tree 754851050fc2f4ed13b1eb3dad0c5c63f8217739 and SKILL.md blob 1172c3827c4563d066ab64e6e53af2d060a82c59; rejected unchanged 16/20 on the authority hard fail with behavioral validation not-run; Cole is 6/33 with 27 gaps; persisted review count is 395"
+    "latest_reconciliation": "2026-09-07: Cole Medin hooks-create added as the seventh current-standard companion pair, bound to exact package tree c00e23a2452609c80e94aaf0a1d748637710f356 and SKILL.md blob 2fd9d8f73bced7427a8a450a3e394d6eeb6c4685; rejected unchanged 16/20 on the authority hard fail with behavioral validation not-run; Cole is 7/33 with 26 gaps; persisted review count is 396"
   }
 }
