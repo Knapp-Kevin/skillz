@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: azure-validate
+display_name: Microsoft Azure Validate
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/azure-validate/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22T11:24:28Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/azure-validate
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Azure MCP tools; Azure CLI and/or Azure Developer CLI; Bicep or Terraform; project build toolchain; Docker and npm when applicable; prior azure-prepare deployment plan; complete 17-file package consisting of SKILL.md plus 16 bundled validation references
+import_eligibility: rejected-unchanged
+rationale: Exact static review of azure-validate at the registered Microsoft Azure Skills pin, bound to package tree SHA f0eac59b12bba969fdec0e29b7558e441f7be14f and SKILL.md blob e852edd0519414ed61ee39d786b50bd8a8b0d389. These exact package identities match completed Microsoft Skills evidence, so compatible complete-package semantic evidence was reconciled rather than repeated. Preserve its prepare-before-validate gate, evidence-backed validation proof, static least-privilege RBAC review, subscription/location confirmation, deployment blockers, what-if checks, and explicit refusal to mark a plan Validated before real checks succeed. Unchanged adoption is rejected because required validation recipes can install Azure CLI/AZD tooling and generate package-lock.json without a distinct action-specific authorization boundary, while the workflow directs the agent to fix validation/build failures before proceeding. The global destructive-action rule does not independently authorize persistent host-tool installation or every workspace mutation. Behavioral validation has not been run.
