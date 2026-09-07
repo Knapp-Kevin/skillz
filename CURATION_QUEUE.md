@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **396** persisted exact-version third-party verification companions.
+- **397** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **7/33**.
-- Remaining gaps: **26**.
+- Current-standard companions: **8/33**.
+- Remaining gaps: **25**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, and `hooks-create`. The latest unit, `hooks-create`, is bound to package tree `c00e23a2452609c80e94aaf0a1d748637710f356`, `SKILL.md` blob `2fd9d8f73bced7427a8a450a3e394d6eeb6c4685`, and skill-path freshness revision `fb2e876f057c5356d6603ba0c52d6b4418d893ba` dated 2026-08-26. It is rejected unchanged **16/20** with behavioral validation `not-run`: retain lifecycle-event selection, matcher scoping, fail-open hook design, uv/project-environment isolation, merge-not-overwrite configuration handling, Stop-loop prevention, and bidirectional allow/block verification. Unchanged use fails the authority hard rule because the workflow writes executable hook code and `.claude/settings.json` into the user's project and runs the generated hook without mandatory action-specific authorization immediately before those consequential mutations/execution; Notification hooks can also produce external communications.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, and `opportunity-scan`. The latest unit, `opportunity-scan`, is bound to package tree `d22f203d905fab64a571f9b4d729d35038a6c3b1`, `SKILL.md` blob `15147cd2ee55ff5c556dc21956e5876c074d2df5`, and skill-path freshness revision `0d583b34fe2632be0300fca14c7a6904b435bb62` dated 2026-08-11. It is rejected unchanged **15/20** with behavioral validation `not-run`: retain reactive/proactive evidence scanning, capability-first primitive mapping, bounded full-read versus aggregate-not-ingest handling, user-steer/evidence weighting, one-off refusal, and smallest-durable-change selection. Unchanged use fails the sensitive-data and adversarial-input boundary because proactive session-history/log scanning may surface secrets, credentials, PII, private source, prompts, URLs, or other sensitive material into agent context without mandatory classification/redaction, secure handling, disclosure authorization, or prompt-injection controls.
 
 ## Governed discovery / source-vetting
 
