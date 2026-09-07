@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: entra-app-registration
+display_name: Microsoft Entra App Registration
+source_id: microsoft-azure-skills
+source_repository: https://github.com/microsoft/azure-skills
+source_path: .github/plugins/azure-skills/skills/entra-app-registration/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
+upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
+upstream_last_updated_at: 2026-04-22T11:24:28Z
+curated_at: 2026-09-06
+last_checked_at: 2026-09-06
+availability: pinned-source
+local_path: skills/sources/azure-skills/.github/plugins/azure-skills/skills/entra-app-registration
+permission_tier: mutating
+portability: medium
+review_status: rejected
+dependency_status: source-intact
+dependencies: Microsoft Entra ID; Microsoft Graph permissions/admin consent; Azure CLI or Azure portal; optional Bicep; MSAL/Azure Identity SDKs; complete 17-file package consisting of SKILL.md plus 16 bundled reference files
+import_eligibility: rejected-unchanged
+rationale: Exact static review of entra-app-registration at the registered Microsoft Azure Skills pin, bound to package tree SHA 9796dd5d6b70d96a7defe3ee3e542fecdef5904c and SKILL.md blob 9253ba09a6f71ea5b2bda0dd128d481bec321e52. No compatible prior exact-package companion exists in the repository, so this unit received fresh structured semantic review. Preserve its app-type/OAuth selection guidance, least-privilege recommendations, managed-identity and certificate preference for production, redirect-URI guidance, MSAL examples, and broad troubleshooting/reference coverage. Unchanged adoption is rejected because the package directly instructs app-registration creation/update/deletion, service-principal creation/deletion, permission grants, admin consent, owner changes, credential reset/deletion, and bulk cleanup without mandatory action-specific authorization immediately before those identity/access mutations. The credential-reset example also emits a live client secret into command output and tells the operator to save that output, which violates the repository's conservative secret-handling boundary when a secure external credential path should be used. Behavioral validation has not been run.

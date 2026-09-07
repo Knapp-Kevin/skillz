@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **384** persisted exact-version third-party verification companions.
+- **385** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,12 +39,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator: **131**.
-- Current-standard companions: **26/131**.
-- Remaining gaps: **105**.
+- Current-standard companions: **27/131**.
+- Remaining gaps: **104**.
 
-The twenty-six reconciled Azure packages are the prior twenty-five through `azure-validate` plus `entra-agent-id` rejected unchanged **13/20**. Behavioral validation remains `not-run` for all twenty-six.
+The twenty-seven reconciled Azure packages are the prior twenty-six through `entra-agent-id` plus `entra-app-registration` rejected unchanged **12/20**. Behavioral validation remains `not-run` for all twenty-seven.
 
-`entra-agent-id` is bound to package tree `405ed207c079150581ef0540a0b4a0a1f176fc9e`, `SKILL.md` blob `5aaf917945171757112bdb341fb593b4517542cd`, and Azure freshness revision `44a73ae54e55bff8c9e032e562c2c9e0905a9d92` on 2026-04-29. Exact package identity matches completed Microsoft Skills evidence. Preserve its per-agent identity model, typed Microsoft Graph endpoints, BlueprintPrincipal prerequisite, workload-identity-federation preference, per-agent permission scoping, cross-tenant token exchange, and localhost-only sidecar containment. Unchanged adoption remains rejected because dependency installation, identity/service-principal creation, permission grants, delegated AllPrincipals grants, and admin consent lack mandatory action-specific authorization checkpoints immediately before those consequential identity/access mutations.
+`entra-app-registration` is bound to package tree `9796dd5d6b70d96a7defe3ee3e542fecdef5904c`, `SKILL.md` blob `9253ba09a6f71ea5b2bda0dd128d481bec321e52`, and Azure freshness revision `317a8e7b879c0ed6a1890378eafd939bdd9bc749` on 2026-04-22. No compatible prior exact-package companion existed, so this unit received fresh structured static review. Preserve its app-type/OAuth selection, least-privilege permission guidance, production preference for managed identity/certificates, MSAL examples, IaC guidance, and troubleshooting material. Unchanged adoption remains rejected because app/service-principal lifecycle mutations, API-permission changes, admin consent, owner changes, credential changes, and bulk deletion lack mandatory action-specific authorization checkpoints immediately before execution. Its credential-reset reference also emits a live client secret into command output and instructs the operator to save it, rather than requiring secure external credential handling.
 
 ## Governed discovery / source-vetting
 
@@ -60,4 +60,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Microsoft Azure Skills from **384 persisted reviews / 26 of 131 eligible Azure Skills / 105 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
+Continue Microsoft Azure Skills from **385 persisted reviews / 27 of 131 eligible Azure Skills / 104 gaps**. Recompute the next genuine source-tree gap from the registered pin, checking Azure companions and exact-package overlap with completed Microsoft Skills evidence before fresh review.
