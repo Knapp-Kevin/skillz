@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **394** persisted exact-version third-party verification companions.
+- **395** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **5/33**.
-- Remaining gaps: **28**.
+- Current-standard companions: **6/33**.
+- Remaining gaps: **27**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, and `ast-grep`. The latest unit, `ast-grep`, is bound to package tree `ef60f77564e2d47d0cba25a809daa3af8f0c469b`, `SKILL.md` blob `9cacc8a849a5cedf4230a8add4b4b35514b7e839`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is verified **16/20** with behavioral validation `not-run`: retain the example-first structural-search workflow, AST inspection/debugging method, bundled rule reference, and iterative refinement. The reviewed package only writes local rule/example artifacts and performs read-oriented code search, so the authority hard fail does not apply. Host agents must still verify the separately installed, unpinned ast-grep CLI/version, preserve repository scope, handle shell quoting carefully, and avoid unnecessary disclosure of sensitive match content.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, and `build-dark-factory`. The latest unit, `build-dark-factory`, is bound to package tree `754851050fc2f4ed13b1eb3dad0c5c63f8217739`, `SKILL.md` blob `1172c3827c4563d066ab64e6e53af2d060a82c59`, and skill-path freshness revision `ecef6ffd4caa0b23a8c79601c1215b1e2908ac72` dated 2026-08-14. It is rejected unchanged **16/20** with behavioral validation `not-run`: retain its construction ordering, observability refusal gates, protected-list design, validation-harness separation, staged autonomy, holdouts, structural gates, and stop-button concepts as adaptation/extraction evidence. Unchanged use fails the authority hard rule because the procedure directs repository, CI/workflow, deployment, traffic, and scheduled-autonomy mutations without mandatory action-specific authorization immediately before those consequential actions; a broad autonomy-level decision does not substitute for concrete action authorization.
 
 ## Governed discovery / source-vetting
 

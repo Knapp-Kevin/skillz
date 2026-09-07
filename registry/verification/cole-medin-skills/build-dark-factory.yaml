@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: build-dark-factory
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1172c3827c4563d066ab64e6e53af2d060a82c59
+package_tree_sha: 754851050fc2f4ed13b1eb3dad0c5c63f8217739
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [agent-development, deployment, repository-maintenance, testing]
+  lifecycle: [planning, implementation, verification, release, operations]
+  characteristic: [production-oriented, evidence-first, risk-aware, safety-bounded, test-gated, human-review, orchestration]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. This is unusually detailed, internally coherent prior art for unattended software delivery. It separates guidance, validation, workflow, deployment, and trigger layers; requires a PRD; refuses brownfield repos without observability or tests; protects auth/payments/high-blast-radius surfaces; recommends staged autonomy; distinguishes factory from validation harnesses; and emphasizes holdouts and structural gates. The decisive defect is authority. The procedure explicitly builds files into the user's actual repository, commits working phases, installs workflow-driven automation, configures deployment, and targets level-3 unattended auto-merge as the default destination, with higher levels able to triage or originate work. Its interview asks whether the user is willing to let code reach users without review, but that broad autonomy choice is not a mandatory action-specific authorization checkpoint immediately before concrete repository, CI, deployment, traffic, scheduled-trigger, or other consequential mutations. Under current governance, unchanged adoption therefore hard-fails despite strong safeguards and methodology. Preserve it for adaptation/extraction, especially construction order, observability refusal gates, protected-list design, validation-harness separation, staged autonomy, and stop-button concepts. Behavioral validation has not been run."
