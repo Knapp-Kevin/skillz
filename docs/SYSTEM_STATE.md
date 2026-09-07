@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 399 |
+| **Persisted third-party review companions** | 400 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 10 / 33 |
-| **Cole Medin Skills current-standard gaps** | 23 |
+| **Cole Medin Skills current-standard companions** | 11 / 33 |
+| **Cole Medin Skills current-standard gaps** | 22 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **10/33** companion-complete, **23 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **11/33** companion-complete, **22 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Ten now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, and `piv-create-pr`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Eleven now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, and `piv-fix-review-findings`.
 
-`piv-create-pr` is bound to exact package tree `a5eaec0e21bb313d2fea77583beb7451e42458a5`, `SKILL.md` blob `93982ed9fed67be8c1553fb9a1d8f40179f70c45`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Preserve its base-branch detection, clean-state and duplicate-PR checks, convention/template-aware PR-body construction, validation/deviation disclosure, and explicit reviewer handoff. Unchanged operational use fails the authority hard rule because it pushes the current branch and creates an external GitHub pull request without mandatory action-specific authorization immediately before those remote mutations. Repository-local conventions/templates are also trusted without an explicit hostile-instruction boundary.
+`piv-fix-review-findings` is bound to exact package tree `6e3e14b1f367bc43a2c9f20bda5d11f6834fb190`, `SKILL.md` blob `7c71fae86e5ab40c0c86c2edbdc1b53a30b495da`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its review-as-input doctrine, whole-review triage, human scope primacy, fix/defer/manual/noise classification, one-at-a-time fix-and-test loop, and explicit outcome report. Unchanged operational use fails the authority hard rule because it may create tracker issues, mutate source/tests, commit, and push a PR branch without mandatory action-specific authorization immediately before those consequential mutations. Review text is also consumed without an explicit hostile-instruction boundary.
 
 ## Source lifecycle
 
