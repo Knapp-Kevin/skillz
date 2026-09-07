@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **400** persisted exact-version third-party verification companions.
+- **401** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **11/33**.
-- Remaining gaps: **22**.
+- Current-standard companions: **12/33**.
+- Remaining gaps: **21**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, and `piv-fix-review-findings`. The latest unit, `piv-fix-review-findings`, is bound to package tree `6e3e14b1f367bc43a2c9f20bda5d11f6834fb190`, `SKILL.md` blob `7c71fae86e5ab40c0c86c2edbdc1b53a30b495da`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`: retain review-as-input discipline, whole-review triage, human scope primacy, fix/defer/manual/noise classification, one-at-a-time fix-and-test remediation, and explicit outcome reporting. Unchanged use fails the authority hard rule because it may create tracker issues, mutate source/tests, commit, and push a PR branch without mandatory action-specific authorization immediately before those consequential mutations.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, and `piv-implement-issue`. The latest unit, `piv-implement-issue`, is bound to package tree `7fea1af7863685edb6022a3db6bfb9a08823d927`, `SKILL.md` blob `a04bd2ec839f90f0d1ff83e2741de64b1cd7c126`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **14/20** with behavioral validation `not-run`: retain full-RCA reading, explicit drift-stop, bounded plan adherence, regression/edge-case testing, validation reruns, manual reproduction, and deviation reporting. Unchanged use fails the authority hard rule because it creates or switches branches, mutates source/tests/documentation, and may comment on, relabel, or close GitHub issues without mandatory action-specific authorization immediately before those consequential mutations. Its documented `git`/`gh` shell workflow also exceeds the declared allowed-tool surface, and RCA/issue content lacks an explicit hostile-instruction boundary.
 
 ## Governed discovery / source-vetting
 
