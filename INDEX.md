@@ -14,13 +14,13 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 387 |
+| Persisted third-party exact-version reviews | 388 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
-| Microsoft Azure Skills current-standard companions | 29 / 131 |
-| Microsoft Azure Skills current-standard gaps | 102 |
+| Microsoft Azure Skills current-standard companions | 30 / 131 |
+| Microsoft Azure Skills current-standard gaps | 101 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -64,8 +64,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **29/131**, with **102** current-standard gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is the active admitted-source frontier at **30/131**, with **101** current-standard gaps.
 
-The latest reconciled Azure unit is nested `microsoft-foundry/finetuning`, rejected unchanged **12/20**, bound to package tree `f4fce572b9e1db4e7880315bf39045d03f42a0fd` and `SKILL.md` blob `68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277`. Its exact package identity matches completed Microsoft Skills evidence, so compatible prior complete-package review evidence was reused. Preserve its baseline-first methodology, SFT/DPO/RFT selection, dataset validation, grader calibration, reward-hacking checks, checkpoint evaluation, cost/accuracy comparison, and training-curve diagnostics. Unchanged adoption remains rejected because consequential fine-tuning, deployment, external evaluation/model, synthetic-data, and cleanup actions lack mandatory action-specific authorization and data-bearing workflows lack a universal disclosure/minimization boundary. Behavioral validation has not been run.
+The latest reconciled Azure unit is nested `microsoft-foundry/models/deploy-model`, verified **17/20**, bound to package tree `6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9` and `SKILL.md` blob `322b342762abbcd86eb90a92b2c4cb7dccd6aac6`. Its exact package identity matches completed Microsoft Skills evidence, so compatible prior root-entry review evidence was reused. Preserve intent-based preset/customize/capacity routing, live SKU/quota checks, project resolution, cross-region chaining, and target visibility. Its mandatory project/region/resource-group confirmation followed by an explicit affirmative deployment response is a substantive action-specific authorization boundary. Nested `capacity`, `customize`, and `preset` remain independently eligible. Behavioral validation has not been run.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
