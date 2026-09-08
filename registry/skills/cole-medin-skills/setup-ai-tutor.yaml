@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: setup-ai-tutor
+display_name: Setup AI Tutor
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/setup-ai-tutor/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: sample-project-specific-python-docker-database-and-local-server
+dependencies: AI Tutor repository root; .env.example; uv; Python dependencies from pyproject.toml; Docker Compose; PostgreSQL db service; Alembic migrations; FastAPI/Uvicorn application; curl for health checks
+package_tree_sha: 05b6a7bc0dd59857ae773fe8fce48647ea48ff08
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Compact first-run setup checklist with a sensible environment-copy, dependency-install, database-start, migration, server-start, health-check, and cleanup sequence. Unchanged adoption is rejected because it performs consequential local mutation and external side effects without mandatory action-specific authorization immediately before dependency installation, persistent database startup, schema migration, or server startup. It also directs creation of a live .env from repository-controlled material without an explicit hostile-instruction or secret-handling boundary, and its health-check output has no mandatory sensitive-data minimization rule. Preserve the staged setup ordering, explicit health checks, cleanup guidance, and project-specific-value verification note as adaptation/checklist evidence.
