@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: plan-create-prd
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5d9420cf4979cfed96716f693d478c8837645bf1
+package_tree_sha: e30f2b6b3702eb5f5f601744c02d56970af9c4b3
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [planning, documentation, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [human-review, evidence-first, risk-aware, incremental, traceable]
+  authority: [external-side-effect]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package strongly separates product intent from engineering decisions, starts from observable problems and evidence, refuses to invent requirements, uses explicit turn-boundary interview gates, requires a falsifiable hypothesis with distinct right and wrong conditions, defines the MVP as the thinnest end-to-end test of the hypothesis, records non-users/non-goals/open questions, and hands engineering decisions deliberately to a separate architecture stage. Unchanged use fails the authority hard rule because its output contract writes a persistent docs/<slug>.prd.md repository artifact or creates/updates an external tracker artifact without mandatory action-specific authorization immediately before mutation. Research, support-ticket, analytics, competitor, product-document, repository, and tracker inputs also lack an explicit hostile-instruction boundary, and external publication lacks a mandatory secret/PII/sensitive-data redaction gate. Preserve the problem-first interview, evidence-versus-assumption distinction, falsifiable wrong-condition discipline, thin-MVP framing, and intent-versus-engineering separation as adaptation/extraction evidence. Behavioral validation has not been run."
