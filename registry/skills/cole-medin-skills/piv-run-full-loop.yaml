@@ -18,6 +18,6 @@ portability: medium
 review_status: curated-external
 dependency_status: chained-piv-skills-and-git-write-access-required
 dependencies: prime-codebase; piv-plan-implementation; piv-implement; piv-commit; writable repository and .claude/plans path; git commit capability
-package_tree_sha: 214c06e2f95f047fdd815669fa76c8a2dd17767a
+package_tree_sha: c0ee5cdc13aba5d23c50d5528bc41b48a089c49d
 import_eligibility: rejected-unchanged-reference-and-adaptation-only
 rationale: Compact orchestration reference that sequences context loading, planning, implementation, validation inherited through piv-implement, commit, and a concrete final handoff. Unchanged adoption fails the authority hard rule because it explicitly promises a hands-off autonomous feature build and chains plan-file creation, source/test/documentation mutation, validation-command execution, staging, and commit without mandatory action-specific authorization immediately before consequential mutations. It also inherits hostile-instruction and sensitive-file risks from operative repository/plan input and the all-changes commit step. Preserve its phase ordering, explicit artifact handoff between phases, and final evidence summary as adaptation/extraction evidence.
