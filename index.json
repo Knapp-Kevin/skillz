@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 408,
+    "persisted_third_party_exact_version_reviews": 409,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 19,
+    "cole_medin_skills_current_standard_companions": 20,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 14,
+    "cole_medin_skills_current_standard_gaps": 13,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin piv-slice-epic added as the nineteenth current-standard companion pair, bound to exact package tree 85539e70184181bf22baf120b6bd56ed67e9a97a and SKILL.md blob 69c73a24e42ce365df87a2488ea0fae7b72a6dfa; rejected unchanged 13/20 because it writes tracker tickets or a local ticket artifact without action-specific authorization and lacks hostile-input and secret/PII publication boundaries; behavioral validation not-run; Cole is 19/33 with 14 gaps; persisted review count is 408"
+    "latest_reconciliation": "2026-09-08: Cole Medin piv-validate added as the twentieth current-standard companion pair, bound to exact package tree 618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1 and SKILL.md blob b68422586889a158bc332b79007d3eeb37d3eb51; rejected unchanged 15/20 because it executes repository-sourced validation commands and may start a live smoke-test application without action-specific authorization and lacks hostile-command and secret/PII output-redaction boundaries; behavioral validation not-run; Cole is 20/33 with 13 gaps; persisted review count is 409"
   }
 }
