@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-review-changes
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0251cee22af8d461d7ab30372bd008f267808b19
+package_tree_sha: edba14f106dd674c1370fc07a8ee2aac98eb5c53
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [code-review, repository-maintenance, security, testing]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, human-review, risk-aware, traceable, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package gathers codebase standards before review, enumerates modified and untracked files, requires whole-file context rather than diff-only inspection, checks logic/security/performance/quality/standards, and asks the reviewer to verify suspected issues with targeted tests and contextual validation before reporting them. Unchanged use fails the authority hard rule because it creates a persistent repository review artifact under .claude/code-reviews without a mandatory action-specific authorization checkpoint immediately before mutation. Repository instructions and changed source are treated as operative review input without an explicit hostile-instruction boundary, and the report contract lacks an explicit secret/PII redaction requirement even though exposed secrets are a review target. Preserve context-first full-file review, concrete severity/file/line reporting, verify-before-report discipline, and real-bugs-over-style focus as adaptation/extraction evidence. Behavioral validation has not been run."
