@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: skills-create
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 913c735743ef1f1282b0046d13c831e04cedf013
+package_tree_sha: cc6cae461ccd93fee16c6ce51b5b5f303ff251e3
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [skill-authoring, documentation]
+  lifecycle: [design, implementation, verification]
+  characteristic: [progressive-disclosure, behavior-preserving, context-efficient, human-review]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package is unusually coherent as a meta-skill: classify skill type before applying craft rules, gather concrete triggers and task context, plan resource placement, write a lean progressive-disclosure spine, preserve behavior during refactors, wire every bundled file, and validate structure, description quality, disclosure, behavior, independent review, triggering, and real end-to-end use. Unchanged use is rejected because create/refactor/porting paths write, copy, move, and remove persistent skill files without mandatory action-specific authorization immediately before mutation. Existing prompts/skills, repository or codebase material, external pointers, and runtime-gathered context are treated as operative input without an explicit hostile-instruction boundary. The procedure can also copy source material verbatim into persistent skills/references without a mandatory secret/PII/sensitive-data minimization gate. Preserve its proportional skill-type model, progressive-disclosure standards, behavior-preserving refactor method, resource wiring discipline, and layered validation gates as adaptation/extraction evidence. Behavioral validation has not been run."
