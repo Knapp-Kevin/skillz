@@ -14,15 +14,15 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 417 |
+| Persisted third-party exact-version reviews | 418 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Microsoft Azure Skills current-standard gaps | 0 |
-| Cole Medin Skills current-standard companions | 28 / 33 |
-| Cole Medin Skills current-standard gaps | 5 |
+| Cole Medin Skills current-standard companions | 29 / 33 |
+| Cole Medin Skills current-standard gaps | 4 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -66,10 +66,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is the active frontier at **28/33**, with **5** gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is the active frontier at **29/33**, with **4** gaps.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin skill roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
-The latest Cole reconciliation is `setup-ai-tutor`, rejected unchanged **12/20**, bound to package tree `05b6a7bc0dd59857ae773fe8fce48647ea48ff08` and `SKILL.md` blob `a44163b06a02c740a7ddf569d679266ac1bbf27a`. Behavioral validation has not been run. Its staged setup ordering, explicit API/database health checks, cleanup guidance, and project-specific value verification note are useful adaptation/checklist evidence. Unchanged use remains rejected because it installs dependencies, starts a persistent database, applies schema migrations, and starts a server without mandatory action-specific authorization; creates a live `.env` from repository-controlled material without an explicit hostile-instruction or secret-handling boundary; and lacks mandatory sensitive-data minimization for health-check output.
+The latest Cole reconciliation is `skills-create`, rejected unchanged **14/20**, bound to package tree `cc6cae461ccd93fee16c6ce51b5b5f303ff251e3` and `SKILL.md` blob `913c735743ef1f1282b0046d13c831e04cedf013`. Behavioral validation has not been run. Its proportional skill-type model, progressive-disclosure standards, behavior-preserving refactor method, resource wiring discipline, and layered validation gates are useful adaptation/extraction evidence. Unchanged use remains rejected because create/refactor/porting paths mutate persistent skill files without mandatory action-specific authorization; existing prompts/skills, repository or codebase material, external pointers, and runtime-gathered context lack an explicit hostile-instruction boundary; and source material can be copied into persistent skills/references without mandatory secret/PII/sensitive-data minimization.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
