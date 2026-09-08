@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-investigate-issue
+display_name: PIV Investigate Issue
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-investigate-issue/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: github-issue-local-git-codebase-analysis-and-authenticated-gh-required
+dependencies: Valid GitHub issue; local Git repository and history; authenticated GitHub CLI; repository source; codebase-analyst and research-agent or equivalent exploration capabilities; writable docs/issues path; permission to comment on the GitHub issue
+package_tree_sha: bfe3427b9bb379fb29c2bac281dd0d4c26274887
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong evidence-led root-cause-analysis reference that separates symptom from cause, fans out bounded codebase exploration, requires file-and-line evidence for a 5 Whys chain, distinguishes regression from long-standing behavior, assesses impact, and produces a reviewable RCA with explicit confidence. Unchanged adoption fails the authority hard rule because it writes a repository RCA document and posts an external GitHub issue comment without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. The issue/comments are also treated as operative investigation input without an explicit hostile-instruction boundary, and the external comment path lacks a mandatory secret/PII/redaction review before disclosure. Preserve its parallel exploration map, evidence-backed causal chain, confidence signaling, impact assessment, and implementation-handoff structure as adaptation/extraction evidence.
