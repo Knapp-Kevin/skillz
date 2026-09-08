@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: prime-backend
+display_name: Prime Backend
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/prime-backend/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: git-plus-optional-atlassian-mcp
+dependencies: local repository read access plus git; optional Jira and Confluence context requires authorized Atlassian MCP access and valid issue/page identifiers
+package_tree_sha: 3b4d38dbee11e02ec4f9edb02f1f2ce18ed0e91e
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong targeted-context reference that deliberately limits priming to backend structure, representative feature slices, current repository state, and optional task context. Unchanged adoption is rejected because Jira/Confluence and repository-controlled content are treated as operative instructions without an explicit hostile-instruction boundary, and the procedure may reproduce externally retrieved issue/page content in its summary without a mandatory secret, PII, or sensitive-data minimization/redaction check. Preserve its scoped-context, representative-slice, architecture-summary, and context-window discipline as adaptation/extraction evidence.
