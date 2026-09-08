@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-investigate-issue
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d982865256096bd13cb3e534cefabe042a6f1f46
+package_tree_sha: bfe3427b9bb379fb29c2bac281dd0d4c26274887
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [debugging, repository-maintenance, research]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, hypothesis-driven, traceable, tool-assisted, decomposition]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package requires issue retrieval, parallel codebase exploration, recent-history review, an evidence-backed 5 Whys chain, impact/severity assessment, a proposed fix, explicit confidence, and a structured RCA handoff. Unchanged use fails the authority hard rule because it writes docs/issues/issue-<id>.md and posts a GitHub issue comment without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. Issue descriptions/comments are accepted as investigation input without an explicit hostile-instruction boundary, and the outward issue-comment path has no mandatory secret, PII, or sensitive-source redaction review before disclosure. Preserve its parallel exploration map, causal evidence chain, confidence signaling, impact assessment, and reviewable RCA structure as adaptation/extraction evidence. Behavioral validation has not been run."
