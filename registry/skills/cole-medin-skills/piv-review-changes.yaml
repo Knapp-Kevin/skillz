@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-review-changes
+display_name: PIV Review Changes
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-review-changes/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: repository-mutation
+portability: medium
+review_status: curated-external
+dependency_status: repository-context-and-local-test-capability-required
+dependencies: Repository/codebase read access; git status/diff/file enumeration capability; project-specific standards/context; ability to run focused local tests when available; writable .claude/code-reviews path
+package_tree_sha: edba14f106dd674c1370fc07a8ee2aac98eb5c53
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong pre-commit review reference that gathers project context first, inspects full changed/new files rather than diff fragments alone, checks logic/security/performance/quality/standards, and asks the reviewer to verify findings with targeted tests and contextual validation before reporting them. Unchanged adoption fails the authority hard rule because the procedure creates a persistent repository artifact under .claude/code-reviews without a mandatory action-specific authorization checkpoint immediately before mutation. Repository instructions and changed source are also consumed as operative review input without an explicit hostile-instruction boundary, and the reporting contract lacks an explicit secret/PII redaction rule even though secret exposure is one of the review targets. Preserve its context-first full-file review, concrete severity/file/line reporting, verify-before-report discipline, and real-bugs-over-style focus as adaptation/extraction evidence.

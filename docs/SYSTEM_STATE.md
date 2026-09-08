@@ -4,14 +4,14 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-07 |
+| **Last updated** | 2026-09-08 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 404 |
+| **Persisted third-party review companions** | 405 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 15 / 33 |
-| **Cole Medin Skills current-standard gaps** | 18 |
+| **Cole Medin Skills current-standard companions** | 16 / 33 |
+| **Cole Medin Skills current-standard gaps** | 17 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **15/33** companion-complete, **18 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **16/33** companion-complete, **17 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Fifteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, and `piv-plan-implementation`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Sixteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, and `piv-review-changes`.
 
-`piv-plan-implementation` is bound to exact package tree `96e4c2827ee2e933c2be1e09d0bc87b8e3d8810c`, `SKILL.md` blob `17a8fca37cfb143e11e6e73ad7c8b822e9ec569a`, and skill-path freshness revision `ebb57a6962a8a916f1f4068887c82041504e1d4c` on 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`. Preserve its inherit-don't-redecide architecture discipline, bounded clarifying interview gate, explicit assumption/GOTCHA handling, context-reference map, acceptance-criterion traceability, and one-pass implementation handoff. Unchanged operational use fails the authority hard rule because it creates a persistent repository plan under `.claude/plans/` without a mandatory action-specific authorization checkpoint immediately before mutation. Tracker tickets, linked architecture pages, repository instructions, and researched external material are also treated as operative planning input without an explicit hostile-instruction boundary.
+`piv-review-changes` is bound to exact package tree `edba14f106dd674c1370fc07a8ee2aac98eb5c53`, `SKILL.md` blob `0251cee22af8d461d7ab30372bd008f267808b19`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its context-first full-file review, concrete severity/file/line reporting, verify-before-report discipline, and focus on real defects rather than stylistic churn. Unchanged operational use fails the authority hard rule because it creates a persistent review artifact under `.claude/code-reviews/` without a mandatory action-specific authorization checkpoint immediately before mutation. Repository instructions and changed source are also consumed as operative review input without an explicit hostile-instruction boundary, and the report contract lacks an explicit secret/PII redaction rule even though secret exposure is one of its review targets.
 
 ## Source lifecycle
 
