@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 413,
+    "persisted_third_party_exact_version_reviews": 414,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 24,
+    "cole_medin_skills_current_standard_companions": 25,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 9,
+    "cole_medin_skills_current_standard_gaps": 8,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin prime-backend added as the twenty-fourth current-standard companion pair, bound to exact package tree 3b4d38dbee11e02ec4f9edb02f1f2ce18ed0e91e and SKILL.md blob f42e8ee67b35027ffe4e580ff82b41b363e5a6f0; rejected unchanged 16/20 because Jira/Confluence and repository-controlled content lack an explicit hostile-instruction boundary and externally retrieved task material can be summarized without mandatory secret/PII/sensitive-data minimization or redaction; behavioral validation not-run; Cole is 24/33 with 9 gaps; persisted review count is 413"
+    "latest_reconciliation": "2026-09-08: Cole Medin prime-codebase added as the twenty-fifth current-standard companion pair, bound to exact package tree 766200290744d97473f554c4dd3320bd0176af8d and SKILL.md blob 67fcb551b6ce4fa099df215200da5e299431fef2; rejected unchanged 16/20 because Jira/Confluence and repository-controlled content lack an explicit hostile-instruction boundary and externally retrieved task material can be summarized without mandatory secret/PII/sensitive-data minimization or redaction; behavioral validation not-run; Cole is 25/33 with 8 gaps; persisted review count is 414"
   }
 }
