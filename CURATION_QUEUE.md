@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **411** persisted exact-version third-party verification companions.
+- **412** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **22/33**.
-- Remaining gaps: **11**.
+- Current-standard companions: **23/33**.
+- Remaining gaps: **10**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, and `plan-create-prd`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, and `plan-create-stories`.
 
-The latest unit, `plan-create-prd`, is bound to package tree `e30f2b6b3702eb5f5f601744c02d56970af9c4b3`, `SKILL.md` blob `5d9420cf4979cfed96716f693d478c8837645bf1`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **16/20** with behavioral validation `not-run`. Retain its problem-first interview, evidence/assumption distinction, falsifiable right/wrong hypothesis, thin end-to-end MVP, and intent-versus-engineering separation. Unchanged use fails the authority hard rule because it writes a persistent repository PRD or external tracker artifact without mandatory action-specific authorization immediately before mutation. Research/repository/tracker inputs also lack an explicit hostile-instruction boundary, and external publication lacks a mandatory secret/PII/sensitive-data redaction gate.
+The latest unit, `plan-create-stories`, is bound to package tree `50605e9a6b337cde5e01c64e87a7eb6c219b2850`, `SKILL.md` blob `6486a20bddeac7cdcd81aef687f3e864b3e42041`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its PRD-to-ticket decomposition, one-day ticket sizing, explicit acceptance criteria, phase traceability, Jira/GitHub branching, and genuine pre-creation confirmation checkpoint. Unchanged use remains rejected because the confirmation previews titles and grouping rather than the full published ticket bodies, leaving PRD-derived secrets, PII, or other sensitive data without an authorization/redaction boundary appropriate to disclosure. The PRD is also treated as operative input without an explicit hostile-instruction boundary.
 
 ## Governed discovery / source-vetting
 
