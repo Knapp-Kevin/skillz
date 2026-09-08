@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: worktree-merge
+display_name: Worktree Merge
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/worktree-merge/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: git-oriented-local-integration-with-repository-detected-validation-commands
+dependencies: Git; two or more local feature branches; repository-defined tests/type-check/lint commands discovered from CI, Makefile, or manifest scripts; optional Claude Code AskUserQuestion for cleanup choice
+package_tree_sha: 150cb167cb6c0bd703e3ba5b05330aa7f9db9861
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong local integration pattern that isolates risky combination work on a disposable integration branch, validates after each merge, stops on conflict rather than auto-resolving, runs the full repository-defined suite before touching the original branch, and makes worktree/feature-branch cleanup optional. Unchanged adoption is rejected because it creates and merges branches, including the final merge into the original branch, without a mandatory action-specific authorization boundary immediately before that consequential mutation. It also treats repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands as executable guidance without an explicit hostile-instruction boundary, so a malicious or compromised repository could steer command execution. Preserve the integration-branch staging model, incremental validation, conflict stop, rollback guidance, full-suite gate, and explicit cleanup choice as adaptation/extraction evidence.

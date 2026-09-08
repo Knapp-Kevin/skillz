@@ -14,15 +14,15 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 421 |
+| Persisted third-party exact-version reviews | 422 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Microsoft Azure Skills current-standard gaps | 0 |
-| Cole Medin Skills current-standard companions | 32 / 33 |
-| Cole Medin Skills current-standard gaps | 1 |
+| Cole Medin Skills current-standard companions | 33 / 33 |
+| Cole Medin Skills current-standard gaps | 0 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -66,10 +66,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is the active frontier at **32/33**, with **1** gap.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin skill roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
-The latest Cole reconciliation is `worktree-create`, rejected unchanged **12/20**, bound to package tree `70fe0b1bd72015c88652fb8ab929c5c1c021b1b5` and `SKILL.md` blob `9063cdaf70e5a2e460ff3d4d05d24ed042b27f80`. Behavioral validation has not been run. Its detect-don't-hardcode setup model, repository-derived install/config/health detection, isolated dependency/runtime setup, parallel fan-out, port isolation, failure-to-ready gate, and cleanup accounting are useful adaptation/extraction evidence. Unchanged use remains rejected because it creates branches/worktrees, copies gitignored config and secrets, installs dependencies, may generate artifacts, start services, and create or use isolated databases/schemas without mandatory action-specific authorization; repository-controlled setup instructions and discovered commands lack an explicit hostile-instruction boundary; secret-bearing files are duplicated without a secure minimization/handling rule beyond ignore checks; and health/error output lacks mandatory redaction.
+The final Cole reconciliation is `worktree-merge`, rejected unchanged **15/20**, bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861` and `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`. Behavioral validation has not been run. Its disposable integration-branch staging, repository-detected validation, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice are useful adaptation/extraction evidence. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands lack an explicit hostile-instruction boundary.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

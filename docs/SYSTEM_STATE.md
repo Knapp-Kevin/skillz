@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 421 |
+| **Persisted third-party review companions** | 422 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 32 / 33 |
-| **Cole Medin Skills current-standard gaps** | 1 |
+| **Cole Medin Skills current-standard companions** | 33 / 33 |
+| **Cole Medin Skills current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **32/33** companion-complete, **1 gap** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -50,11 +50,11 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The exact pin exposes 28 canonical plugin skill roots, one additional nested Kubernetes automatic-readiness package, and five additional nested first-class Microsoft Foundry packages beyond the Foundry root. That yields an eligible denominator of **34**, exactly matching the current companion pairs. Ordinary workflow, procedure, reference, example, SDK, or other Markdown is not independently first-class skill content. The latest Azure package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
 
-## Cole Medin Skills frontier
+## Cole Medin Skills completion
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Thirty-two now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, `setup-ai-tutor`, `skills-create`, `system-evolution-review`, `system-execution-report`, and `worktree-create`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries, and all thirty-three now have current companion pairs.
 
-`worktree-create` is bound to exact package tree `70fe0b1bd72015c88652fb8ab929c5c1c021b1b5`, `SKILL.md` blob `9063cdaf70e5a2e460ff3d4d05d24ed042b27f80`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`. Preserve its detect-don't-hardcode setup model, repository-derived install/config/health detection, isolated dependency/runtime setup, parallel fan-out, port isolation, failure-to-ready gate, and cleanup accounting. Unchanged use remains rejected because it creates branches/worktrees, copies gitignored config and secrets, installs dependencies, may generate artifacts, start services, and create or use isolated databases/schemas without mandatory action-specific authorization immediately before those mutations and side effects. Repository-controlled README/manifests/scripts/workflows/config and discovered commands are treated as operative input without an explicit hostile-instruction boundary. Secret-bearing files are intentionally duplicated without a secure minimization/handling rule beyond ignore checks, and health/error output lacks mandatory redaction.
+The final package, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before the consequential mutation. Repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are also treated as executable guidance without an explicit hostile-instruction boundary.
 
 ## Source lifecycle
 
@@ -72,10 +72,10 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Finish the final Cole Medin Skills exact-version gap, `worktree-merge`, checking existing companions and prior evidence first.
-2. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
-3. Continue governed discovery/source-vetting and omission recovery.
-4. Resolve bounded candidate issues when evidence supports a decisive outcome.
+1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
+2. Continue governed discovery/source-vetting and omission recovery.
+3. Resolve bounded candidate issues when evidence supports a decisive outcome.
+4. Continue the corpus-wide provenance audit in issue #66 until every governed family is truthfully accounted for.
 5. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.

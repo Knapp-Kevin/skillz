@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 421,
+    "persisted_third_party_exact_version_reviews": 422,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 32,
+    "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 1,
+    "cole_medin_skills_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin worktree-create added as the thirty-second current-standard companion pair, bound to exact package tree 70fe0b1bd72015c88652fb8ab929c5c1c021b1b5 and SKILL.md blob 9063cdaf70e5a2e460ff3d4d05d24ed042b27f80; rejected unchanged 12/20 because it creates branches/worktrees, copies secrets/config, installs dependencies, may run generators/services/databases without mandatory action-specific authorization, consumes repository-controlled commands without an explicit hostile-instruction boundary, and lacks secure secret-copy/output-redaction boundaries; behavioral validation not-run; Cole is 32/33 with 1 gap; persisted review count is 421"
+    "latest_reconciliation": "2026-09-08: Cole Medin worktree-merge added as the thirty-third and final current-standard companion pair, bound to exact package tree 150cb167cb6c0bd703e3ba5b05330aa7f9db9861 and SKILL.md blob 9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b; rejected unchanged 15/20 because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before mutation and consumes repository-controlled validation commands without an explicit hostile-instruction boundary; behavioral validation not-run; Cole is 33/33 with 0 gaps; persisted review count is 422"
   }
 }

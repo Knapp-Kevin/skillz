@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **421** persisted exact-version third-party verification companions.
+- **422** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -42,20 +42,18 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 
 The exact denominator is 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, SDK, and other Markdown is package evidence rather than an independent skill. The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
 
-### Cole Medin Skills — ACTIVE FRONTIER
+### Cole Medin Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **32/33**.
-- Remaining gaps: **1**.
+- Current-standard companions: **33/33**.
+- Remaining gaps: **0**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, `setup-ai-tutor`, `skills-create`, `system-evolution-review`, `system-execution-report`, and `worktree-create`.
-
-The latest unit, `worktree-create`, is bound to package tree `70fe0b1bd72015c88652fb8ab929c5c1c021b1b5`, `SKILL.md` blob `9063cdaf70e5a2e460ff3d4d05d24ed042b27f80`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`. Retain its detect-don't-hardcode setup model, repository-derived install/config/health detection, isolated dependency/runtime setup, parallel fan-out, port isolation, failure-to-ready gate, and cleanup accounting. Unchanged use remains rejected because it creates branches/worktrees, copies gitignored config and secrets, installs dependencies, may generate artifacts, start services, and create or use isolated databases/schemas without mandatory action-specific authorization immediately before those mutations and side effects; repository-controlled README/manifests/scripts/workflows/config and discovered commands are treated as operative input without an explicit hostile-instruction boundary; secret-bearing files are intentionally duplicated without a secure minimization/handling rule beyond ignore checks; and health/error output lacks mandatory redaction.
+The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before that consequential mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are treated as executable guidance without an explicit hostile-instruction boundary.
 
 ## Governed discovery / source-vetting
 
-Discovery proceeds in parallel but cannot displace admitted-source closure. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
+Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded open candidate issues #63 and #73. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
 ## Lifecycle hygiene
 
@@ -67,4 +65,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Cole Medin Skills from the exact 33-skill pin. The final remaining gap is `worktree-merge`; check companion absence, package identity, freshness, license, authority, dependencies, and recoverable prior review evidence before the unit. Keep governed discovery/source-vetting active in parallel without letting it displace admitted-source closure.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, and Cole Medin Skills current-standard complete at their exact registered pins, return to historically completed external corpora and recover compatible prior companion evidence before any fresh re-review. In parallel, continue bounded candidate/source-vetting work and omission detection, and close candidate issues only when their evidence supports a decisive outcome.
