@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: system-evolution-review
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4e884c86bf8b2c156444058387895725795145d1
+package_tree_sha: 000afbfb95821a00a98d4d500d1517d3ad586246
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, documentation]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, traceable, human-review, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The skill cleanly separates process review from code review, compares planned versus actual execution, classifies good and bad divergence, traces root causes, looks for repeated patterns, and converts findings into concrete CLAUDE.md/plan-skill/execute-skill/new-skill recommendations. Unchanged use is rejected because it persists a system-review file without mandatory action-specific authorization immediately before mutation. Plan/report contents and repository-controlled skill files are consumed as operative inputs without an explicit hostile-instruction boundary, and potentially sensitive material can be copied into the durable review without a mandatory secret/PII/sensitive-data minimization gate. Preserve the divergence taxonomy, root-cause tracing, pattern-compliance checks, and action-oriented process-improvement framing as adaptation/extraction evidence. Behavioral validation has not been run."
