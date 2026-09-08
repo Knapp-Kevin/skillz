@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-slice-epic
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 69c73a24e42ce365df87a2488ea0fae7b72a6dfa
+package_tree_sha: 85539e70184181bf22baf120b6bd56ed67e9a97a
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [planning, repository-maintenance]
+  lifecycle: [planning, design]
+  characteristic: [decomposition, evidence-first, orchestration, traceable]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package usefully decomposes an architected epic into independently provable vertical slices, maps dependency and parallel waves, carries per-ticket context, and defers planning dependent tickets until their prerequisites are implemented. Unchanged use fails the authority hard rule because Step 5 writes multiple persistent tracker tickets or a local docs/tickets artifact without mandatory action-specific authorization immediately before those mutations. Epic, architecture, tracker, and repository content are consumed as operative input without an explicit hostile-instruction boundary, and outward ticket context lacks a mandatory secret/PII redaction check. Preserve architecture-aware slicing, dependency mapping, per-ticket context, and just-in-time planning as adaptation/extraction evidence. Behavioral validation has not been run."
