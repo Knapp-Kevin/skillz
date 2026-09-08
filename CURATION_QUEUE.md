@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **405** persisted exact-version third-party verification companions.
+- **406** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -52,10 +52,10 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **16/33**.
-- Remaining gaps: **17**.
+- Current-standard companions: **17/33**.
+- Remaining gaps: **16**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, and `piv-review-changes`. The latest unit, `piv-review-changes`, is bound to package tree `edba14f106dd674c1370fc07a8ee2aac98eb5c53`, `SKILL.md` blob `0251cee22af8d461d7ab30372bd008f267808b19`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`: retain context-first whole-file review, explicit logic/security/performance/quality/standards checks, concrete severity/file/line reporting, verify-before-report discipline, and its focus on real defects rather than stylistic churn. Unchanged use fails the authority hard rule because it writes a persistent repository review artifact under `.claude/code-reviews/` without mandatory action-specific authorization immediately before mutation. It also lacks an explicit hostile-instruction boundary around repository instructions and changed source plus a mandatory secret/PII redaction rule for the generated report.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, and `piv-review-pr`. The latest unit, `piv-review-pr`, is bound to package tree `d838ca7b57b129273085262cec3f79fad6660853`, `SKILL.md` blob `425f02ab2f766ab9cdcf0b47d99da31f0c8f74e3`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`: retain fresh-eyes separation, PR state guarding, project-context loading, full-file review, severity triage, validation evidence, and human-final-call design. Unchanged use fails the authority hard rule because it checks out PR code, executes project- or plan-supplied validation commands, writes a persistent review report, and posts approve/request-changes/comment actions to GitHub without mandatory action-specific authorization immediately before those consequential mutations and external communications. It also lacks an explicit hostile-instruction boundary around PR/repository/plan/report/source input plus a mandatory secret/PII redaction rule for outward review text.
 
 ## Governed discovery / source-vetting
 
