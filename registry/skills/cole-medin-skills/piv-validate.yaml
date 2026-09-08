@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-validate
+display_name: PIV Validate
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-validate/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: project-validation-commands-required
+dependencies: read access to project configuration and documentation; project-specific test, type-check, lint, format, and optional smoke-test commands; applicable toolchains and services
+package_tree_sha: 618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong validation-orchestration reference that emphasizes project-specific commands, correct working directories, cross-platform awareness, full-surface coverage, continue-after-failure evidence collection, and one PASS/FAIL summary without mixing remediation into validation. Unchanged adoption fails the authority hard rule because it executes commands discovered from repository-controlled files and may start a live application smoke test without a mandatory action-specific authorization boundary immediately before consequential execution. It also lacks an explicit hostile-instruction boundary for repository-provided commands and a required secret/PII redaction rule before reproducing failing command output. Preserve its validation matrix, working-directory discipline, cross-platform checks, failure aggregation, and report-only separation as adaptation/extraction evidence.

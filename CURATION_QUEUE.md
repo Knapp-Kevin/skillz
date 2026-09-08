@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **408** persisted exact-version third-party verification companions.
+- **409** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **19/33**.
-- Remaining gaps: **14**.
+- Current-standard companions: **20/33**.
+- Remaining gaps: **13**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, and `piv-slice-epic`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, and `piv-validate`.
 
-The latest unit, `piv-slice-epic`, is bound to package tree `85539e70184181bf22baf120b6bd56ed67e9a97a`, `SKILL.md` blob `69c73a24e42ce365df87a2488ea0fae7b72a6dfa`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Retain architecture-aware vertical slicing, explicit dependency/parallel-wave mapping, per-ticket context, acceptance criteria, and just-in-time planning. Unchanged use fails the authority hard rule because it writes persistent tracker tickets or a local `docs/tickets` artifact without mandatory action-specific authorization immediately before mutation. Epic, architecture, tracker, and repository content lack an explicit hostile-instruction boundary, and published ticket context lacks a mandatory secret/PII redaction check.
+The latest unit, `piv-validate`, is bound to package tree `618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1`, `SKILL.md` blob `b68422586889a158bc332b79007d3eeb37d3eb51`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its project-specific validation matrix, working-directory discipline, cross-platform checks, continue-after-failure evidence collection, and report-only separation. Unchanged use fails the authority hard rule because it executes commands sourced from repository-controlled files and may start a live application smoke test without mandatory action-specific authorization immediately before consequential execution. Repository-provided commands also lack an explicit hostile-instruction boundary, and failing output lacks a mandatory secret/PII redaction check before reproduction.
 
 ## Governed discovery / source-vetting
 

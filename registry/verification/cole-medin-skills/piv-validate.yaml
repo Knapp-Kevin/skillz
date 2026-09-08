@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-validate
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b68422586889a158bc332b79007d3eeb37d3eb51
+package_tree_sha: 618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [testing, repository-maintenance]
+  lifecycle: [verification]
+  characteristic: [evidence-first, test-gated, tool-assisted, traceable]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package usefully requires project-specific validation commands, correct working directories, cross-platform awareness, full-stack coverage, continued execution after failures, and a single PASS/FAIL report while explicitly separating diagnosis from remediation. Unchanged use fails the authority hard rule because it executes commands sourced from repository-controlled configuration/documentation and may start a live application smoke test without mandatory action-specific authorization immediately before consequential execution. It also lacks an explicit hostile-instruction boundary for repository-provided commands and a mandatory secret/PII redaction check before echoing failing command output. Preserve the validation matrix, working-directory discipline, cross-platform checks, failure aggregation, and report-only separation as adaptation/extraction evidence. Behavioral validation has not been run."
