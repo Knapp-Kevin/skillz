@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 416 |
+| **Persisted third-party review companions** | 417 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 27 / 33 |
-| **Cole Medin Skills current-standard gaps** | 6 |
+| **Cole Medin Skills current-standard companions** | 28 / 33 |
+| **Cole Medin Skills current-standard gaps** | 5 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **27/33** companion-complete, **6 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **28/33** companion-complete, **5 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -52,9 +52,9 @@ The exact pin exposes 28 canonical plugin skill roots, one additional nested Kub
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-seven now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, and `rules-create-global`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-eight now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, and `setup-ai-tutor`.
 
-`rules-create-global` is bound to exact package tree `d4321047d3ea131849fd56bae61b126c0ef5c676`, `SKILL.md` blob `d2196a218b8c729ff520c39eb3d4b602e339dc81`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its greenfield/brownfield split, evidence-backed technical-rule derivation, user-elicited working principles, on-demand reference extraction, seam mapping, and aggressive lean-context pruning. Unchanged use remains rejected because it writes or replaces persistent rules/reference files without mandatory action-specific authorization immediately before mutation; backup advice is a safeguard rather than authorization. Repository documents, supplied specs/analysis, and web guidance are consumed as operative inputs without an explicit hostile-instruction boundary, and commands or source-derived details can be persisted without a mandatory secret/PII/sensitive-data minimization gate.
+`setup-ai-tutor` is bound to exact package tree `05b6a7bc0dd59857ae773fe8fce48647ea48ff08`, `SKILL.md` blob `a44163b06a02c740a7ddf569d679266ac1bbf27a`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`. Preserve its staged setup ordering, explicit API/database health checks, cleanup guidance, and project-specific value verification note. Unchanged use remains rejected because dependency installation, persistent database startup, schema migration, and server startup occur without mandatory action-specific authorization immediately before consequential actions. It also creates a live `.env` from repository-controlled material without an explicit hostile-instruction or secret-handling boundary, and health-check output lacks mandatory sensitive-data minimization.
 
 ## Source lifecycle
 
