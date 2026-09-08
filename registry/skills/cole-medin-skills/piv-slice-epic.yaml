@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-slice-epic
+display_name: PIV Slice Epic
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-slice-epic/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: tracker-or-local-write-and-source-access-required
+dependencies: epic and architecture source access; relevant codebase read access; tracker write capability or writable docs/tickets path
+package_tree_sha: 85539e70184181bf22baf120b6bd56ed67e9a97a
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong decomposition reference that ties architecture-aware vertical slicing to explicit dependency graphs, parallel waves, per-ticket context, acceptance criteria, and just-in-time planning. Unchanged adoption fails the authority hard rule because it writes multiple persistent tracker tickets or a local docs/tickets artifact without mandatory action-specific authorization immediately before those mutations. It also consumes epic, architecture, tracker, and repository content as operative instructions without an explicit hostile-instruction boundary and lacks a mandatory secret/PII redaction check before publishing ticket context. Preserve its architecture-aware slicing, dependency mapping, per-ticket context, and just-in-time planning methods as adaptation/extraction evidence.
