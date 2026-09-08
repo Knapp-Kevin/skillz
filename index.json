@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 419,
+    "persisted_third_party_exact_version_reviews": 420,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 30,
+    "cole_medin_skills_current_standard_companions": 31,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 3,
+    "cole_medin_skills_current_standard_gaps": 2,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin system-evolution-review added as the thirtieth current-standard companion pair, bound to exact package tree 000afbfb95821a00a98d4d500d1517d3ad586246 and SKILL.md blob 4e884c86bf8b2c156444058387895725795145d1; rejected unchanged 14/20 because it writes a persistent system-review artifact without mandatory action-specific authorization and lacks explicit hostile-input plus secret/PII/sensitive-data minimization boundaries for plan/report material; behavioral validation not-run; Cole is 30/33 with 3 gaps; persisted review count is 419"
+    "latest_reconciliation": "2026-09-08: Cole Medin system-execution-report added as the thirty-first current-standard companion pair, bound to exact package tree ab51285057df9d9c12941697e3ffaefbd1150aa1 and SKILL.md blob abfdab62c3111ac37f288e610cb1b5655bd44865; rejected unchanged 14/20 because it writes a persistent execution-report artifact without mandatory action-specific authorization, lacks explicit hostile-input and secret/PII/sensitive-data minimization boundaries for plan and implementation material, and does not require evidence-backed validation-result reporting; behavioral validation not-run; Cole is 31/33 with 2 gaps; persisted review count is 420"
   }
 }
