@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: worktree-create
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9063cdaf70e5a2e460ff3d4d05d24ed042b27f80
+package_tree_sha: 70fe0b1bd72015c88652fb8ab929c5c1c021b1b5
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [repository-maintenance, implementation, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [tool-assisted, incremental, context-efficient, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The package contributes a differentiated detect-don't-hardcode worktree setup method: inspect the repo once, derive install/config/health requirements, fan out isolated branches, assign non-colliding ports, verify readiness, refuse a ready claim on health failure, and provide cleanup accounting. Unchanged use is rejected because it mutates Git state, copies gitignored config/secrets, installs dependencies, may run code generation, start services, and create or use isolated databases/schemas without mandatory action-specific authorization immediately before those consequential operations. Repository-controlled README/manifests/scripts/workflows/config and discovered commands are consumed as operative instructions without an explicit hostile-instruction boundary. Secret-bearing files are intentionally duplicated into new worktrees without a secure minimization/handling rule beyond ignore checks, and health/error output lacks mandatory redaction. Behavioral validation has not been run."
