@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-implement
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4af15c77bd319df84630363a9ab4f29494ea31fa
+package_tree_sha: f441f4997c7656134a4081b261a36031bca15efe
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, repository-maintenance, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [incremental, test-driven, test-gated, evidence-first, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package requires full-plan reading, ordered implementation, per-task VALIDATE execution, full validation reruns, final verification, and a structured report that exposes deviations and evidence. Unchanged use fails the authority hard rule because it may create a feature branch and mutate source, tests, documentation, and repository report files without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. It also instructs the agent to execute plan-supplied validation commands exactly as specified without an explicit hostile-instruction or command-safety boundary, so an untrusted or compromised plan can become an execution vector. Preserve the incremental validation, task ordering, final verification, and deviation-reporting methods as adaptation/extraction evidence. Behavioral validation has not been run."
