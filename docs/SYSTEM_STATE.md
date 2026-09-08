@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 407 |
+| **Persisted third-party review companions** | 408 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 18 / 33 |
-| **Cole Medin Skills current-standard gaps** | 15 |
+| **Cole Medin Skills current-standard companions** | 19 / 33 |
+| **Cole Medin Skills current-standard gaps** | 14 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,24 +41,20 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **18/33** companion-complete, **15 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **19/33** companion-complete, **14 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
 ## Microsoft Azure Skills denominator reconciliation
 
-The exact pin exposes 28 canonical plugin skill roots. Recursive package-tree review establishes one additional first-class nested `SKILL.md` under `azure-kubernetes/azure-kubernetes-automatic-readiness` and five additional nested first-class `SKILL.md` packages under `microsoft-foundry` beyond the Foundry root: `finetuning`, `models/deploy-model`, and its `capacity`, `customize`, and `preset` children. That yields an eligible denominator of **34**, exactly matching the 34 current provenance and verification companion pairs.
-
-The prior **131** denominator counted ordinary workflow, procedure, reference, example, SDK, or other Markdown as independent skills. Current governance explicitly excludes ordinary reference Markdown that is not independently first-class skill content. The same distinction previously corrected the Microsoft Skills denominator from 189 to 186. Microsoft Azure Skills is therefore current-standard complete at **34/34**, not 34/131.
-
-The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, bound to exact tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
+The exact pin exposes 28 canonical plugin skill roots, one additional nested Kubernetes automatic-readiness package, and five additional nested first-class Microsoft Foundry packages beyond the Foundry root. That yields an eligible denominator of **34**, exactly matching the current companion pairs. Ordinary workflow, procedure, reference, example, SDK, or other Markdown is not independently first-class skill content. The latest Azure package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Eighteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, and `piv-run-full-loop`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Nineteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, and `piv-slice-epic`.
 
-`piv-run-full-loop` is bound to exact package tree `c0ee5cdc13aba5d23c50d5528bc41b48a089c49d`, `SKILL.md` blob `0a903459952007ef311931663f980482619f5a4f`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Preserve its compact prime → plan → implement → commit phase ordering, explicit inter-stage artifact handoff, and final evidence summary. Unchanged use fails the authority hard rule because its advertised hands-off loop chains plan-file creation, source/test/documentation mutation, validation-command execution, staging, and commit without mandatory action-specific authorization immediately before consequential mutation. It also inherits hostile-instruction risk from repository/plan inputs and sensitive or unrelated-file risk from the all-changes commit step.
+`piv-slice-epic` is bound to exact package tree `85539e70184181bf22baf120b6bd56ed67e9a97a`, `SKILL.md` blob `69c73a24e42ce365df87a2488ea0fae7b72a6dfa`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Preserve its architecture-aware vertical slicing, dependency and parallel-wave mapping, per-ticket context, acceptance-criterion discipline, and just-in-time planning. Unchanged use fails the authority hard rule because it writes persistent tracker tickets or a local `docs/tickets` artifact without mandatory action-specific authorization immediately before mutation. It also lacks explicit hostile-instruction boundaries for epic/architecture/tracker/repository input and a mandatory secret/PII redaction check before ticket publication.
 
 ## Source lifecycle
 

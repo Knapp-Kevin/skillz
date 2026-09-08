@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 407,
+    "persisted_third_party_exact_version_reviews": 408,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 18,
+    "cole_medin_skills_current_standard_companions": 19,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 15,
+    "cole_medin_skills_current_standard_gaps": 14,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin piv-run-full-loop added as the eighteenth current-standard companion pair, bound to exact package tree c0ee5cdc13aba5d23c50d5528bc41b48a089c49d and SKILL.md blob 0a903459952007ef311931663f980482619f5a4f; rejected unchanged 13/20 because its advertised hands-off loop chains plan-file creation, source/test/documentation mutation, validation-command execution, staging, and commit without action-specific authorization immediately before consequential mutation, while inheriting hostile-instruction and sensitive/unrelated-file risks; behavioral validation not-run; Cole is 18/33 with 15 gaps; persisted review count is 407"
+    "latest_reconciliation": "2026-09-08: Cole Medin piv-slice-epic added as the nineteenth current-standard companion pair, bound to exact package tree 85539e70184181bf22baf120b6bd56ed67e9a97a and SKILL.md blob 69c73a24e42ce365df87a2488ea0fae7b72a6dfa; rejected unchanged 13/20 because it writes tracker tickets or a local ticket artifact without action-specific authorization and lacks hostile-input and secret/PII publication boundaries; behavioral validation not-run; Cole is 19/33 with 14 gaps; persisted review count is 408"
   }
 }

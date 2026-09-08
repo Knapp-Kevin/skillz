@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **407** persisted exact-version third-party verification companions.
+- **408** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -38,24 +38,20 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **43/
 ### Microsoft Azure Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
-- Exact eligible denominator: **34**.
-- Current-standard companions: **34/34**.
-- Remaining gaps: **0**.
+- Exact eligible denominator/current-standard companions: **34/34**; gaps **0**.
 
-Exact pinned-tree reconciliation resolves the denominator as 28 canonical plugin skill roots, one nested `azure-kubernetes/azure-kubernetes-automatic-readiness` `SKILL.md`, and five nested first-class Microsoft Foundry `SKILL.md` packages beyond the Foundry root: `finetuning`, `models/deploy-model`, `models/deploy-model/capacity`, `models/deploy-model/customize`, and `models/deploy-model/preset`. Those 34 independently eligible packages map exactly to the 34 canonical Azure companion pairs already persisted.
-
-The prior denominator of 131 included ordinary workflow, procedure, reference, example, SDK, and other Markdown that is not independently first-class skill content. Current governance excludes such material from the eligible denominator. This is the same category distinction that previously corrected Microsoft Skills from 189 to 186 rather than promoting useful Foundry procedure Markdown into phantom skills.
-
-The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` dated 2026-06-15. Behavioral validation remains `not-run`.
+The exact denominator is 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, SDK, and other Markdown is package evidence rather than an independent skill. The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
 
 ### Cole Medin Skills — ACTIVE FRONTIER
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **18/33**.
-- Remaining gaps: **15**.
+- Current-standard companions: **19/33**.
+- Remaining gaps: **14**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, and `piv-run-full-loop`. The latest unit, `piv-run-full-loop`, is bound to package tree `c0ee5cdc13aba5d23c50d5528bc41b48a089c49d`, `SKILL.md` blob `0a903459952007ef311931663f980482619f5a4f`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`: retain compact phase ordering, explicit inter-stage artifact handoff, and final evidence summary. Unchanged use fails the authority hard rule because its advertised hands-off loop chains plan-file creation, source/test/documentation mutation, validation-command execution, staging, and commit without mandatory action-specific authorization immediately before consequential mutation. It also inherits hostile-instruction risk from repository/plan inputs and sensitive or unrelated-file risk from the all-changes commit step.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, and `piv-slice-epic`.
+
+The latest unit, `piv-slice-epic`, is bound to package tree `85539e70184181bf22baf120b6bd56ed67e9a97a`, `SKILL.md` blob `69c73a24e42ce365df87a2488ea0fae7b72a6dfa`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **13/20** with behavioral validation `not-run`. Retain architecture-aware vertical slicing, explicit dependency/parallel-wave mapping, per-ticket context, acceptance criteria, and just-in-time planning. Unchanged use fails the authority hard rule because it writes persistent tracker tickets or a local `docs/tickets` artifact without mandatory action-specific authorization immediately before mutation. Epic, architecture, tracker, and repository content lack an explicit hostile-instruction boundary, and published ticket context lacks a mandatory secret/PII redaction check.
 
 ## Governed discovery / source-vetting
 
