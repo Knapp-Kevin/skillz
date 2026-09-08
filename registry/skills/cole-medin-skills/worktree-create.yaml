@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: worktree-create
+display_name: Worktree Create
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/worktree-create/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: claude-code-oriented-git-worktree-setup-with-repository-detected-install-config-and-health-checks
+dependencies: Git; Claude Code Task/subagent model for parallel fan-out; repository manifests/lockfiles and runtime pins; gitignored environment/config files; package managers; optional generated artifacts; optional local services, ports, databases/schemas, and health checks
+package_tree_sha: 70fe0b1bd72015c88652fb8ab929c5c1c021b1b5
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong repository-detected worktree setup method with explicit branch input, stack detection, isolated dependency installation, per-worktree port assignment, health-check gating, parallel fan-out, exact failure reporting, and cleanup guidance. Unchanged adoption is rejected because it creates branches/worktrees, copies gitignored config and secrets, installs dependencies, may generate artifacts, start services, and create or use isolated databases/schemas without a mandatory action-specific authorization boundary immediately before those mutations and side effects. It also treats repository-controlled manifests, scripts, CI workflows, README/config, .worktreeinclude, and discovered commands as operative input without an explicit hostile-instruction boundary. Secret-bearing files are intentionally copied into new worktrees without a secure handling/minimization rule beyond gitignore checks, and generated health/error output lacks a mandatory redaction boundary. Preserve the detect-don't-hardcode setup model, isolation checklist, failure-to-ready gate, and cleanup accounting as adaptation/extraction evidence.
