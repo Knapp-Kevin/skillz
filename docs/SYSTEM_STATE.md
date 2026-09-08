@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 411 |
+| **Persisted third-party review companions** | 412 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 22 / 33 |
-| **Cole Medin Skills current-standard gaps** | 11 |
+| **Cole Medin Skills current-standard companions** | 23 / 33 |
+| **Cole Medin Skills current-standard gaps** | 10 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **22/33** companion-complete, **11 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **23/33** companion-complete, **10 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -52,9 +52,9 @@ The exact pin exposes 28 canonical plugin skill roots, one additional nested Kub
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-two now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, and `plan-create-prd`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-three now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, and `plan-create-stories`.
 
-`plan-create-prd` is bound to exact package tree `e30f2b6b3702eb5f5f601744c02d56970af9c4b3`, `SKILL.md` blob `5d9420cf4979cfed96716f693d478c8837645bf1`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **16/20** with behavioral validation `not-run`. Preserve its problem-first interview, evidence-versus-assumption distinction, falsifiable right/wrong hypothesis, thin end-to-end MVP framing, and strict separation between product intent and engineering decisions. Unchanged use fails the authority hard rule because it writes a persistent repository PRD or external tracker artifact without mandatory action-specific authorization immediately before mutation. It also lacks explicit hostile-instruction boundaries for research/repository/tracker inputs and a mandatory secret/PII/sensitive-data redaction gate before external publication.
+`plan-create-stories` is bound to exact package tree `50605e9a6b337cde5e01c64e87a7eb6c219b2850`, `SKILL.md` blob `6486a20bddeac7cdcd81aef687f3e864b3e42041`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its PRD-to-ticket decomposition, one-day ticket sizing, explicit acceptance criteria, phase traceability, Jira/GitHub branching, and genuine pre-creation confirmation checkpoint. Unchanged use remains rejected because the confirmation previews titles and phase grouping rather than the full externally published ticket bodies, so PRD-derived secrets, PII, or other sensitive data can be disclosed without an authorization/redaction boundary appropriate to the actual content. The PRD is also treated as operative input without an explicit hostile-instruction boundary.
 
 ## Source lifecycle
 
