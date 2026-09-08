@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 403,
+    "persisted_third_party_exact_version_reviews": 404,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 14,
+    "cole_medin_skills_current_standard_companions": 15,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 19,
+    "cole_medin_skills_current_standard_gaps": 18,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin piv-investigate-issue added as the fourteenth current-standard companion pair, bound to exact package tree bfe3427b9bb379fb29c2bac281dd0d4c26274887 and SKILL.md blob d982865256096bd13cb3e534cefabe042a6f1f46; rejected unchanged 14/20 for missing action-specific authorization before repository RCA creation and external GitHub issue-comment mutation, plus missing hostile-instruction and sensitive-disclosure boundaries, with behavioral validation not-run; Cole is 14/33 with 19 gaps; persisted review count is 403"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-plan-implementation added as the fifteenth current-standard companion pair, bound to exact package tree 96e4c2827ee2e933c2be1e09d0bc87b8e3d8810c and SKILL.md blob 17a8fca37cfb143e11e6e73ad7c8b822e9ec569a; rejected unchanged 14/20 for missing action-specific authorization before persistent repository plan creation plus a missing hostile-instruction boundary around tracker, architecture, repository-rule, and researched external input, with behavioral validation not-run; Cole is 15/33 with 18 gaps; persisted review count is 404"
   }
 }
