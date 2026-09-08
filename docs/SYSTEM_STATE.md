@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 402 |
+| **Persisted third-party review companions** | 403 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 13 / 33 |
-| **Cole Medin Skills current-standard gaps** | 20 |
+| **Cole Medin Skills current-standard companions** | 14 / 33 |
+| **Cole Medin Skills current-standard gaps** | 19 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **13/33** companion-complete, **20 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **14/33** companion-complete, **19 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -56,9 +56,9 @@ The latest package-level Azure reconciliation remains `python-appservice-deploy`
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Thirteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, and `piv-implement`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Fourteen now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, and `piv-investigate-issue`.
 
-`piv-implement` is bound to exact package tree `f441f4997c7656134a4081b261a36031bca15efe`, `SKILL.md` blob `4af15c77bd319df84630363a9ab4f29494ea31fa`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`. Preserve its full-plan reading, ordered task execution, per-task `VALIDATE` gating, full validation reruns, final verification, and structured implementation/deviation reporting. Unchanged operational use fails the authority hard rule because it may create a feature branch and mutate source, tests, documentation, and repository report files without mandatory action-specific authorization immediately before those consequential mutations. Plan-supplied validation commands are also executed exactly as written without an explicit hostile-instruction or command-safety boundary.
+`piv-investigate-issue` is bound to exact package tree `bfe3427b9bb379fb29c2bac281dd0d4c26274887`, `SKILL.md` blob `d982865256096bd13cb3e534cefabe042a6f1f46`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`. Preserve its parallel exploration map, evidence-backed 5 Whys causal chain, regression/history distinction, confidence signaling, impact assessment, and reviewable RCA handoff. Unchanged operational use fails the authority hard rule because it writes a repository RCA document and posts an external GitHub issue comment without mandatory action-specific authorization immediately before those consequential mutations. Issue descriptions/comments are also treated as investigation input without an explicit hostile-instruction boundary, and the outward comment path lacks a mandatory secret/PII/sensitive-source redaction review before disclosure.
 
 ## Source lifecycle
 
