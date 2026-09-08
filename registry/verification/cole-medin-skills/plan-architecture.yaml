@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: plan-architecture
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f0300a99ddf037e1e1f3d44c24876e56946a860c
+package_tree_sha: bcc295d357b953a638aee43fa1329e5619f8e145
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [architecture, planning]
+  lifecycle: [planning, design]
+  characteristic: [human-review, risk-aware, evidence-first, incremental]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package usefully separates architecture from implementation planning, requires interactive user choice among multiple options, branches explicitly between greenfield and brownfield, grounds brownfield work in the existing codebase, prefers reversible decisions, and uses time-boxed spikes with decision rules for expensive uncertainty. Unchanged use fails the authority hard rule because its output contract may create a tracker page, edit an existing PRD/epic, or write a repository architecture.md without mandatory action-specific authorization immediately before mutation. It also treats tracker pages, repository content, reference documents, and web research as operative input without an explicit hostile-instruction boundary and has no mandatory secret/PII redaction gate before publishing architecture context externally. Preserve the conversational option exploration, reversibility test, spike decision rules, brownfield grounding, and architecture-vs-implementation separation as adaptation/extraction evidence. Behavioral validation has not been run."
