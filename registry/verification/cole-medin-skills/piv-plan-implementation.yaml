@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-plan-implementation
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 17a8fca37cfb143e11e6e73ad7c8b822e9ec569a
+package_tree_sha: 96e4c2827ee2e933c2be1e09d0bc87b8e3d8810c
+characterized_at: 2026-09-07
+last_verified_at: 2026-09-07
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [planning, implementation, repository-maintenance, research]
+  lifecycle: [planning, design]
+  characteristic: [evidence-first, decomposition, traceable, context-efficient, spec-driven, human-review]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package resolves tracker context, inherits linked architecture decisions instead of reopening them, performs structured codebase and dependency analysis, uses a bounded Phase-2 interview gate with explicit assumptions when clarification is declined, maps tasks to concrete files/acceptance criteria, and produces a context-rich implementation handoff with validation commands and testing strategy. Unchanged use fails the authority hard rule because it creates a persistent repository plan under .claude/plans without a mandatory action-specific authorization checkpoint immediately before mutation. Tracker tickets, linked architecture pages, repository instructions, and researched external material are also treated as operative planning input without an explicit hostile-instruction boundary. Preserve the interview gate, inherit-dont-redecide rule, assumption/GOTCHA handling, context-reference map, acceptance-criterion traceability, and one-pass planning structure as adaptation/extraction evidence. Behavioral validation has not been run."
