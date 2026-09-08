@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 409 |
+| **Persisted third-party review companions** | 410 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 20 / 33 |
-| **Cole Medin Skills current-standard gaps** | 13 |
+| **Cole Medin Skills current-standard companions** | 21 / 33 |
+| **Cole Medin Skills current-standard gaps** | 12 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **20/33** companion-complete, **13 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **21/33** companion-complete, **12 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -52,9 +52,9 @@ The exact pin exposes 28 canonical plugin skill roots, one additional nested Kub
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, and `piv-validate`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-one now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, and `plan-architecture`.
 
-`piv-validate` is bound to exact package tree `618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1`, `SKILL.md` blob `b68422586889a158bc332b79007d3eeb37d3eb51`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its project-specific validation matrix, working-directory discipline, cross-platform checks, continue-after-failure evidence collection, and report-only separation. Unchanged use fails the authority hard rule because it executes commands sourced from repository-controlled files and may start a live application smoke test without mandatory action-specific authorization immediately before consequential execution. It also lacks an explicit hostile-instruction boundary for repository-provided commands and a mandatory secret/PII redaction check before reproducing failing command output.
+`plan-architecture` is bound to exact package tree `bcc295d357b953a638aee43fa1329e5619f8e145`, `SKILL.md` blob `f0300a99ddf037e1e1f3d44c24876e56946a860c`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its interactive multi-option architecture exploration, greenfield/brownfield branching, reversibility discipline, spike decision rules, codebase grounding, and separation between architecture and implementation planning. Unchanged use fails the authority hard rule because it may create a tracker page, edit an existing PRD/epic, or write a repository `architecture.md` without mandatory action-specific authorization immediately before mutation. It also lacks explicit hostile-instruction boundaries for tracker/repository/reference/web inputs and a mandatory secret/PII redaction gate before external publication.
 
 ## Source lifecycle
 
