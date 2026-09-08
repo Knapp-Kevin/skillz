@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 410,
+    "persisted_third_party_exact_version_reviews": 411,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 21,
+    "cole_medin_skills_current_standard_companions": 22,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 12,
+    "cole_medin_skills_current_standard_gaps": 11,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin plan-architecture added as the twenty-first current-standard companion pair, bound to exact package tree bcc295d357b953a638aee43fa1329e5619f8e145 and SKILL.md blob f0300a99ddf037e1e1f3d44c24876e56946a860c; rejected unchanged 15/20 because it may create or edit persistent tracker/repository architecture artifacts without action-specific authorization and lacks explicit hostile-input and secret/PII publication-redaction boundaries; behavioral validation not-run; Cole is 21/33 with 12 gaps; persisted review count is 410"
+    "latest_reconciliation": "2026-09-08: Cole Medin plan-create-prd added as the twenty-second current-standard companion pair, bound to exact package tree e30f2b6b3702eb5f5f601744c02d56970af9c4b3 and SKILL.md blob 5d9420cf4979cfed96716f693d478c8837645bf1; rejected unchanged 16/20 because it writes persistent repository or external tracker PRD artifacts without action-specific authorization and lacks explicit hostile-input and secret/PII/sensitive-data publication-redaction boundaries; behavioral validation not-run; Cole is 22/33 with 11 gaps; persisted review count is 411"
   }
 }

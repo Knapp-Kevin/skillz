@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **410** persisted exact-version third-party verification companions.
+- **411** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **21/33**.
-- Remaining gaps: **12**.
+- Current-standard companions: **22/33**.
+- Remaining gaps: **11**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, and `plan-architecture`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, and `plan-create-prd`.
 
-The latest unit, `plan-architecture`, is bound to package tree `bcc295d357b953a638aee43fa1329e5619f8e145`, `SKILL.md` blob `f0300a99ddf037e1e1f3d44c24876e56946a860c`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its interactive multi-option architecture exploration, greenfield/brownfield branch, reversibility discipline, spike decision rules, codebase grounding, and architecture-vs-implementation separation. Unchanged use fails the authority hard rule because it may create a tracker page, edit an existing PRD/epic, or write a repository `architecture.md` without mandatory action-specific authorization immediately before mutation. Tracker/repository/reference/web inputs also lack an explicit hostile-instruction boundary, and external publication lacks a mandatory secret/PII redaction gate.
+The latest unit, `plan-create-prd`, is bound to package tree `e30f2b6b3702eb5f5f601744c02d56970af9c4b3`, `SKILL.md` blob `5d9420cf4979cfed96716f693d478c8837645bf1`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **16/20** with behavioral validation `not-run`. Retain its problem-first interview, evidence/assumption distinction, falsifiable right/wrong hypothesis, thin end-to-end MVP, and intent-versus-engineering separation. Unchanged use fails the authority hard rule because it writes a persistent repository PRD or external tracker artifact without mandatory action-specific authorization immediately before mutation. Research/repository/tracker inputs also lack an explicit hostile-instruction boundary, and external publication lacks a mandatory secret/PII/sensitive-data redaction gate.
 
 ## Governed discovery / source-vetting
 
