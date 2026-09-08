@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-review-pr
+display_name: PIV Review PR
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-review-pr/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: github-pr-access-project-validation-and-review-capability-required
+dependencies: GitHub PR read/review capability; git checkout/read access; project CLAUDE.md and optional .claude references/reports/plans; project validation commands or piv-validate equivalent; optional code-reviewer subagent; writable .claude/code-reviews path
+package_tree_sha: d838ca7b57b129273085262cec3f79fad6660853
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong pull-request review reference that separates author and reviewer context, checks PR state before verdict, loads project standards and documented deviations, runs validation, reads every changed file in full, categorizes high-confidence findings by severity, and preserves a human final-approval boundary. Unchanged adoption fails the authority hard rule because it checks out PR code, executes project- or plan-supplied validation commands, writes a persistent review report, and posts approve/request-changes/comment actions to GitHub without a mandatory action-specific authorization checkpoint immediately before those consequential mutations and external communications. PR bodies, repository instructions, plans, reports, and changed source are also consumed as operative input without an explicit hostile-instruction boundary, and outward review text lacks a mandatory secret/PII redaction check. Preserve its fresh-eyes separation, state guard, full-file review, severity model, validation evidence, and human-final-call design as adaptation/extraction evidence.
