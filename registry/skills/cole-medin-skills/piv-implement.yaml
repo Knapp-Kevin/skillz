@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: piv-implement
+display_name: PIV Implement
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/piv-implement/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-07
+last_checked_at: 2026-09-07
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: implementation-plan-project-source-test-stack-and-git-context-required
+dependencies: implementation plan with per-task VALIDATE commands; local Git repository; project source and test stack; repository conventions; writable project files; piv-commit and piv-create-pr as downstream handoff skills
+package_tree_sha: f441f4997c7656134a4081b261a36031bca15efe
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong plan-execution reference that requires full-plan reading, ordered task execution, per-task validation, full-suite reruns, final verification, and explicit implementation/deviation reporting. Unchanged adoption fails the authority hard rule because it may create a feature branch and then mutate source, tests, documentation, and repository report files without a mandatory action-specific authorization checkpoint immediately before those consequential mutations. It also executes plan-supplied validation commands exactly as written without an explicit hostile-instruction or command-safety boundary. Preserve its task ordering, incremental validation, drift visibility through reports, and evidence-linked completion methods as adaptation/extraction evidence.
