@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: skills-create
+display_name: Skills Create
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/skills-create/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: claude-code-oriented-authoring-package-with-bundled-references-and-template
+dependencies: Claude Code skill conventions; .claude/skills filesystem layout; bundled references/creating-skills.md, references/refactoring-skills.md, references/skill-standards.md, references/validation.md, and templates/SKILL.template.md; optional shell, git/codebase inspection, external pointers, and reviewer agents for validation
+package_tree_sha: cc6cae461ccd93fee16c6ce51b5b5f303ff251e3
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong meta-skill for classifying skill type, gathering trigger/task context, planning progressive-disclosure resources, preserving behavior during refactors, wiring bundled resources, and validating structure, triggers, disclosure, independent review, and real-use behavior. Unchanged adoption is rejected because create/refactor/porting paths write, move, copy, and remove persistent skill files without mandatory action-specific authorization immediately before mutation. Repository/codebase files, existing prompts/skills, external pointers, and runtime-gathered context are consumed as operative material without an explicit hostile-instruction boundary, and there is no mandatory secret/PII/sensitive-data minimization gate before copying source material into persistent skills or references. Preserve the proportional skill-type model, progressive-disclosure craft rules, behavior-preserving refactor method, resource wiring discipline, and layered validation gates as adaptation/extraction evidence.

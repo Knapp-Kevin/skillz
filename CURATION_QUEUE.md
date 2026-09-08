@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **417** persisted exact-version third-party verification companions.
+- **418** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **28/33**.
-- Remaining gaps: **5**.
+- Current-standard companions: **29/33**.
+- Remaining gaps: **4**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, and `setup-ai-tutor`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, `setup-ai-tutor`, and `skills-create`.
 
-The latest unit, `setup-ai-tutor`, is bound to package tree `05b6a7bc0dd59857ae773fe8fce48647ea48ff08`, `SKILL.md` blob `a44163b06a02c740a7ddf569d679266ac1bbf27a`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **12/20** with behavioral validation `not-run`. Retain its staged environment/dependency/database/migration/server setup ordering, explicit API/database health checks, cleanup guidance, and project-specific value verification note. Unchanged use remains rejected because it installs dependencies, starts a persistent database, applies schema migrations, and starts a server without mandatory action-specific authorization immediately before consequential actions. It also creates a live `.env` from repository-controlled material without an explicit hostile-instruction or secret-handling boundary, and health-check output lacks mandatory sensitive-data minimization.
+The latest unit, `skills-create`, is bound to package tree `cc6cae461ccd93fee16c6ce51b5b5f303ff251e3`, `SKILL.md` blob `913c735743ef1f1282b0046d13c831e04cedf013`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`. Retain its proportional skill-type model, progressive-disclosure standards, behavior-preserving refactor method, resource wiring discipline, and layered validation gates. Unchanged use remains rejected because create/refactor/porting paths write, copy, move, and remove persistent skill files without mandatory action-specific authorization immediately before mutation; existing prompts/skills, repository or codebase material, external pointers, and runtime-gathered context are consumed without an explicit hostile-instruction boundary; and source material can be copied into persistent skills/references without mandatory secret/PII/sensitive-data minimization.
 
 ## Governed discovery / source-vetting
 
