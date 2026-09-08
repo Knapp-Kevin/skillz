@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: prime-codebase
+display_name: Prime Codebase
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/prime-codebase/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: git-plus-optional-atlassian-mcp
+dependencies: local repository read access plus git and optional tree command; optional Jira and Confluence context requires authorized Atlassian MCP access and valid issue/page identifiers
+package_tree_sha: 766200290744d97473f554c4dd3320bd0176af8d
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong whole-codebase orientation reference that combines external task context, repository structure, core documentation, representative entry points/configuration/models/services, and current git state into a concise architecture summary. Unchanged adoption is rejected because Jira/Confluence bodies and repository-controlled rules/docs/code are treated as operative context without an explicit hostile-instruction boundary, while externally retrieved task content may be reproduced in the summary without a mandatory secret, PII, or sensitive-data minimization/redaction check. Preserve its staged context loading, architecture orientation, evidence-first current-state inspection, and concise scan-friendly reporting as adaptation/extraction evidence.
