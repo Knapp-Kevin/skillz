@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: worktree-merge
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b
+package_tree_sha: 150cb167cb6c0bd703e3ba5b05330aa7f9db9861
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [repository-maintenance, testing, implementation]
+  lifecycle: [implementation, verification, release]
+  characteristic: [incremental, test-gated, risk-aware, evidence-first]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package contributes a strong integration discipline: detect project validation commands instead of hardcoding them; merge onto a disposable integration branch; run tests after each feature merge; stop on conflicts rather than auto-resolving; run the full suite before the original branch moves; provide exact rollback guidance; and ask before destructive cleanup. Unchanged use is rejected because branch creation and merges, especially the final merge into the original branch, lack a mandatory action-specific authorization boundary immediately before mutation. Repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are consumed as executable guidance without an explicit hostile-instruction boundary, creating command-execution risk in a malicious or compromised repository. Behavioral validation has not been run."
