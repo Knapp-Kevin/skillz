@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **415** persisted exact-version third-party verification companions.
+- **416** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **26/33**.
-- Remaining gaps: **7**.
+- Current-standard companions: **27/33**.
+- Remaining gaps: **6**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, and `prime-frontend`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, and `rules-create-global`.
 
-The latest unit, `prime-frontend`, is bound to package tree `d7bebf7313cfa4b2af952f792a6c9d494e5293a8`, `SKILL.md` blob `be66553264d59183b9079e7403510e4a9848cbdc`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **16/20** with behavioral validation `not-run`. Retain its frontend-scoped context loading, routing/state/styling convention discovery, representative component sampling, current-state inspection, and concise frontend architecture summary. Unchanged use remains rejected because Jira/Confluence and repository-controlled content are treated as operative context without an explicit hostile-instruction boundary, while externally retrieved task material can be reproduced in the output without a mandatory secret/PII/sensitive-data minimization or redaction gate.
+The latest unit, `rules-create-global`, is bound to package tree `d4321047d3ea131849fd56bae61b126c0ef5c676`, `SKILL.md` blob `d2196a218b8c729ff520c39eb3d4b602e339dc81`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its greenfield/brownfield separation, evidence-backed rule derivation, user-elicited working principles, on-demand reference extraction, codebase-seam mapping, and aggressive lean-context pruning. Unchanged use remains rejected because it writes or replaces persistent rules/reference files without mandatory action-specific authorization immediately before mutation; backup advice is a safeguard, not authorization. Repository documents, supplied specs/analysis, and web guidance are consumed as operative input without an explicit hostile-instruction boundary, and commands or source-derived details can be persisted without a mandatory secret/PII/sensitive-data minimization gate.
 
 ## Governed discovery / source-vetting
 

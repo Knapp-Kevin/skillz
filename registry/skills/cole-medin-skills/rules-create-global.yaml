@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: rules-create-global
+display_name: Rules Create Global
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/rules-create-global/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: repository-read-write-plus-source-docs-and-optional-web-guidance
+dependencies: local repository read/write access; optional PRD, architecture, or codebase-analysis inputs; prior primed codebase context for brownfield use; web access to current Claude Code or AGENTS.md guidance when following the upstream procedure
+package_tree_sha: d4321047d3ea131849fd56bae61b126c0ef5c676
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong global-rules design reference that separates product context from technical architecture, derives brownfield rules from observed evidence, elicits working principles from the user, pushes recurring detail into on-demand references, identifies codebase seams, and aggressively prunes generic guidance. Unchanged adoption is rejected because the procedure writes or replaces persistent CLAUDE.md/AGENTS.md and reference files without a mandatory action-specific authorization immediately before mutation; a backup warning is not authorization. It also consumes repository documents, user-supplied specs/analysis, and current web guidance as operative inputs without an explicit hostile-instruction boundary, and it can persist commands or source-derived details without a mandatory secret/PII/sensitive-data minimization check. Preserve its evidence-backed rule derivation, greenfield/brownfield split, lean-context discipline, seam mapping, and user-elicited working-principles method as adaptation/extraction evidence.
