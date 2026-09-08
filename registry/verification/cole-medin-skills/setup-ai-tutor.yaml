@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: setup-ai-tutor
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a44163b06a02c740a7ddf569d679266ac1bbf27a
+package_tree_sha: 05b6a7bc0dd59857ae773fe8fce48647ea48ff08
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [implementation, deployment]
+  lifecycle: [implementation, operations]
+  characteristic: [tool-assisted, incremental, evidence-first]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. The package is a concise sample-project setup procedure with coherent ordering: copy environment template, install dependencies, start PostgreSQL, apply migrations, start the development server, verify API/database health, and provide cleanup instructions. It also tells the operator to verify project-specific ports and service names. Unchanged use is rejected because it executes dependency installation, persistent database startup, schema migration, and server startup without mandatory action-specific authorization immediately before those consequential actions. It creates a live .env from repository-controlled material without an explicit hostile-instruction or secret-handling boundary, and health-check output lacks a mandatory sensitive-data minimization rule. Preserve the staged setup ordering, health checks, cleanup guidance, and project-specific verification note as adaptation/checklist evidence. Behavioral validation has not been run."
