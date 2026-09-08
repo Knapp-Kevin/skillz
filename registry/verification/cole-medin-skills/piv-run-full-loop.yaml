@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-run-full-loop
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0a903459952007ef311931663f980482619f5a4f
+package_tree_sha: c0ee5cdc13aba5d23c50d5528bc41b48a089c49d
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [implementation, orchestration, planning, repository-maintenance]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [decomposition, orchestration, traceable, tool-routing]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package is a compact four-stage orchestrator: prime codebase context, create a plan, implement from that plan, then commit, with explicit artifact handoff and a concrete final summary. Unchanged use fails the authority hard rule because its stated purpose is a hands-off autonomous feature build and it chains plan-file creation, source/test/documentation mutation, project- or plan-supplied validation command execution, staging, and git commit without mandatory action-specific authorization immediately before consequential mutations. It also inherits hostile-instruction risk from repository and plan inputs and sensitive/unrelated-file risk from the all-changes commit step. Preserve phase ordering, explicit inter-stage artifacts, and final evidence summary as adaptation/extraction evidence. Behavioral validation has not been run."
