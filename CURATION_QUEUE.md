@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **419** persisted exact-version third-party verification companions.
+- **420** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **30/33**.
-- Remaining gaps: **3**.
+- Current-standard companions: **31/33**.
+- Remaining gaps: **2**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, `setup-ai-tutor`, `skills-create`, and `system-evolution-review`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, `prime-frontend`, `rules-create-global`, `setup-ai-tutor`, `skills-create`, `system-evolution-review`, and `system-execution-report`.
 
-The latest unit, `system-evolution-review`, is bound to package tree `000afbfb95821a00a98d4d500d1517d3ad586246`, `SKILL.md` blob `4e884c86bf8b2c156444058387895725795145d1`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **14/20** with behavioral validation `not-run`. Retain its plan-versus-execution divergence taxonomy, root-cause tracing, pattern-compliance checklist, and concrete process-improvement actions. Unchanged use remains rejected because it writes a persistent system-review artifact without mandatory action-specific authorization immediately before mutation; plan/report contents and repository-controlled skill files are consumed without an explicit hostile-instruction boundary; and potentially sensitive material can be copied into the durable review without mandatory secret/PII/sensitive-data minimization.
+The latest unit, `system-execution-report`, is bound to package tree `ab51285057df9d9c12941697e3ffaefbd1150aa1`, `SKILL.md` blob `abfdab62c3111ac37f288e610cb1b5655bd44865`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **14/20** with behavioral validation `not-run`. Retain its structured implementation accounting, validation-result inventory, plan-divergence taxonomy, skipped-item accounting, and process-feedback framing. Unchanged use remains rejected because it writes a persistent execution-report artifact without mandatory action-specific authorization immediately before mutation; plan and repository/implementation context are consumed without an explicit hostile-instruction boundary; potentially sensitive implementation or validation material can be copied into the durable report without mandatory secret/PII/sensitive-data minimization; and validation results are not explicitly required to be evidence-backed.
 
 ## Governed discovery / source-vetting
 
@@ -67,4 +67,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue Cole Medin Skills from the exact 33-skill pin, checking companion absence, package identity, freshness, license, authority, dependencies, and recoverable prior review evidence before every unit. Keep governed discovery/source-vetting active in parallel without letting it displace admitted-source closure.
+Continue Cole Medin Skills from the exact 33-skill pin. The remaining gaps are `worktree-create` and `worktree-merge`; check companion absence, package identity, freshness, license, authority, dependencies, and recoverable prior review evidence before every unit. Keep governed discovery/source-vetting active in parallel without letting it displace admitted-source closure.
