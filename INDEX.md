@@ -14,15 +14,15 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 43 / 43 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 405 |
+| Persisted third-party exact-version reviews | 406 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Skills current-standard gaps | 0 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Microsoft Azure Skills current-standard gaps | 0 |
-| Cole Medin Skills current-standard companions | 16 / 33 |
-| Cole Medin Skills current-standard gaps | 17 |
+| Cole Medin Skills current-standard companions | 17 / 33 |
+| Cole Medin Skills current-standard gaps | 16 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -66,10 +66,10 @@ Physical presence or registration does not establish individual skill quality. F
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is the active frontier at **16/33**, with **17** gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is the active frontier at **17/33**, with **16** gaps.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
-The latest Cole reconciliation is `piv-review-changes`, rejected unchanged **15/20**, bound to package tree `edba14f106dd674c1370fc07a8ee2aac98eb5c53` and `SKILL.md` blob `0251cee22af8d461d7ab30372bd008f267808b19`. Behavioral validation has not been run. Its context-first whole-file review, concrete severity/file/line reporting, verify-before-report discipline, and focus on real defects rather than style are useful adaptation/extraction evidence. Unchanged use fails the authority hard rule because it writes a persistent review artifact under `.claude/code-reviews/` without mandatory action-specific authorization immediately before mutation. It also lacks an explicit hostile-instruction boundary around repository instructions and changed source and a mandatory secret/PII redaction rule for the generated report.
+The latest Cole reconciliation is `piv-review-pr`, rejected unchanged **14/20**, bound to package tree `d838ca7b57b129273085262cec3f79fad6660853` and `SKILL.md` blob `425f02ab2f766ab9cdcf0b47d99da31f0c8f74e3`. Behavioral validation has not been run. Its fresh-eyes separation, PR state guard, project-context loading, full-file review, severity triage, validation evidence, and human-final-call design are useful adaptation/extraction evidence. Unchanged use fails the authority hard rule because it checks out PR code, executes project- or plan-supplied validation commands, writes a persistent review report, and posts approve/request-changes/comment actions to GitHub without mandatory action-specific authorization immediately before those consequential mutations and external communications. It also lacks an explicit hostile-instruction boundary around PR/repository/plan/report/source input and a mandatory secret/PII redaction check before outward review publication.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

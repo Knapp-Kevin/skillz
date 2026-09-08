@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: piv-review-pr
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 425f02ab2f766ab9cdcf0b47d99da31f0c8f74e3
+package_tree_sha: d838ca7b57b129273085262cec3f79fad6660853
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [code-review, repository-maintenance, security, testing]
+  lifecycle: [verification, release]
+  characteristic: [evidence-first, human-review, risk-aware, traceable, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package enforces fresh-eyes separation, checks PR state, loads project standards and documented deviations, runs validation, reads every changed file in full, categorizes high-confidence findings by severity, and preserves a human final-approval boundary. Unchanged use fails the authority hard rule because it checks out PR code, executes project- or plan-supplied validation commands, writes a persistent .claude/code-reviews report, and posts approve/request-changes/comment actions to GitHub without a mandatory action-specific authorization checkpoint immediately before those consequential mutations and external communications. PR bodies, repository instructions, plans, reports, and changed source are treated as operative input without an explicit hostile-instruction boundary, and outward review text has no mandatory secret/PII redaction check. Preserve fresh-eyes separation, state guards, full-file review, severity triage, validation evidence, and human-final-call design as adaptation/extraction evidence. Behavioral validation has not been run."
