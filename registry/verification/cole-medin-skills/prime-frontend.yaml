@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: prime-frontend
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: be66553264d59183b9079e7403510e4a9848cbdc
+package_tree_sha: d7bebf7313cfa4b2af952f792a6c9d494e5293a8
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [context-management, architecture, repository-maintenance, ux]
+  lifecycle: [discovery, planning]
+  characteristic: [context-efficient, retrieval-first, source-driven, evidence-first]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package is a useful frontend-scoped priming procedure: it limits inspection to client-side surfaces, samples representative components, captures routing/state/styling conventions, includes current git state, and optionally anchors analysis to Jira/Confluence task context. It performs no repository or external mutation. Unchanged use is nevertheless rejected because Atlassian issue/page bodies, repository rules, README material, references, and source files are consumed as operative context without an explicit hostile-instruction boundary, and the output contract may summarize externally retrieved task content without a mandatory secret/PII/sensitive-data minimization or redaction gate. Preserve its scoped-context, representative-component, current-state, convention-summary, and context-window discipline as adaptation/extraction evidence. Behavioral validation has not been run."
