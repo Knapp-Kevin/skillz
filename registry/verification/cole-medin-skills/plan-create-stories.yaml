@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: plan-create-stories
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6486a20bddeac7cdcd81aef687f3e864b3e42041
+package_tree_sha: 50605e9a6b337cde5e01c64e87a7eb6c219b2850
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [planning, repository-maintenance, orchestration]
+  lifecycle: [planning, implementation]
+  characteristic: [decomposition, traceable, human-review, incremental, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package provides useful PRD-to-ticket decomposition, one-day ticket sizing, explicit acceptance criteria, phase traceability, Jira/GitHub branching, and a genuine pre-creation confirmation checkpoint. Unlike several adjacent planning skills, it does not simply mutate without warning. However, unchanged use remains rejected because step 2 previews only ticket titles, phase grouping, and target platform, while step 3 publishes descriptions and acceptance criteria derived from PRD content. That is not an authorization boundary appropriate to possible secret, PII, or other sensitive-data disclosure. The PRD is also treated as operative input without an explicit hostile-instruction boundary, and no mandatory redaction check precedes Jira/GitHub publication. Preserve the decomposition, traceability, acceptance-criteria, bounded-sizing, platform-branching, and pre-mutation preview methods as adaptation/extraction evidence. Behavioral validation has not been run."
