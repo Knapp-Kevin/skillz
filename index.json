@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 402,
+    "persisted_third_party_exact_version_reviews": 403,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 13,
+    "cole_medin_skills_current_standard_companions": 14,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 20,
+    "cole_medin_skills_current_standard_gaps": 19,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-07: Cole Medin piv-implement added as the thirteenth current-standard companion pair, bound to exact package tree f441f4997c7656134a4081b261a36031bca15efe and SKILL.md blob 4af15c77bd319df84630363a9ab4f29494ea31fa; rejected unchanged 14/20 for missing action-specific authorization before branch/source/test/documentation/report mutations and for executing plan-supplied validation commands without an explicit hostile-instruction or command-safety boundary, with behavioral validation not-run; Cole is 13/33 with 20 gaps; persisted review count is 402"
+    "latest_reconciliation": "2026-09-07: Cole Medin piv-investigate-issue added as the fourteenth current-standard companion pair, bound to exact package tree bfe3427b9bb379fb29c2bac281dd0d4c26274887 and SKILL.md blob d982865256096bd13cb3e534cefabe042a6f1f46; rejected unchanged 14/20 for missing action-specific authorization before repository RCA creation and external GitHub issue-comment mutation, plus missing hostile-instruction and sensitive-disclosure boundaries, with behavioral validation not-run; Cole is 14/33 with 19 gaps; persisted review count is 403"
   }
 }
