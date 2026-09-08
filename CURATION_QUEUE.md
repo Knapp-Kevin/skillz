@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **403** persisted exact-version third-party verification companions.
+- **404** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,16 +46,16 @@ Exact pinned-tree reconciliation resolves the denominator as 28 canonical plugin
 
 The prior denominator of 131 included ordinary workflow, procedure, reference, example, SDK, and other Markdown that is not independently first-class skill content. Current governance excludes such material from the eligible denominator. This is the same category distinction that previously corrected Microsoft Skills from 189 to 186 rather than promoting useful Foundry procedure Markdown into phantom skills.
 
-The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` on 2026-06-15. Behavioral validation remains `not-run`.
+The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**. It is bound to package tree `6e11dad529e50b7fbc37191de665788d0427ccad`, `SKILL.md` blob `ac25db692762945d0e3e9ed2016dcfa29fbfa610`, and canonical Azure plugin-path freshness revision `82492494405b948c8422766ddae390714bbd78ed` dated 2026-06-15. Behavioral validation remains `not-run`.
 
 ### Cole Medin Skills — ACTIVE FRONTIER
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **14/33**.
-- Remaining gaps: **19**.
+- Current-standard companions: **15/33**.
+- Remaining gaps: **18**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, and `piv-investigate-issue`. The latest unit, `piv-investigate-issue`, is bound to package tree `bfe3427b9bb379fb29c2bac281dd0d4c26274887`, `SKILL.md` blob `d982865256096bd13cb3e534cefabe042a6f1f46`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`: retain parallel exploration, evidence-backed 5 Whys, regression/history distinction, confidence signaling, impact assessment, and reviewable RCA handoff. Unchanged use fails the authority hard rule because it writes a repository RCA document and posts an external GitHub issue comment without mandatory action-specific authorization immediately before those consequential mutations. It also lacks an explicit hostile-instruction boundary around issue/comment input and a mandatory secret/PII/sensitive-source redaction review before outward disclosure.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, and `piv-plan-implementation`. The latest unit, `piv-plan-implementation`, is bound to package tree `96e4c2827ee2e933c2be1e09d0bc87b8e3d8810c`, `SKILL.md` blob `17a8fca37cfb143e11e6e73ad7c8b822e9ec569a`, and skill-path freshness revision `ebb57a6962a8a916f1f4068887c82041504e1d4c` dated 2026-08-09. It is rejected unchanged **14/20** with behavioral validation `not-run`: retain inherit-don't-redecide architecture discipline, the bounded interview gate, explicit assumption/GOTCHA handling, the context-reference map, acceptance-criterion traceability, and the one-pass implementation handoff. Unchanged use fails the authority hard rule because it creates a persistent repository plan under `.claude/plans/` without mandatory action-specific authorization immediately before mutation. It also lacks an explicit hostile-instruction boundary around tracker, architecture, repository-rule, and researched external content used as planning input.
 
 ## Governed discovery / source-vetting
 
