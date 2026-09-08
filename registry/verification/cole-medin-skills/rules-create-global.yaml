@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: rules-create-global
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d2196a218b8c729ff520c39eb3d4b602e339dc81
+package_tree_sha: d4321047d3ea131849fd56bae61b126c0ef5c676
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [documentation, architecture, context-management, repository-maintenance]
+  lifecycle: [planning, design, maintenance]
+  characteristic: [evidence-first, context-efficient, source-driven, progressive-disclosure, maintainability]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package is a strong global-rules design procedure: it distinguishes greenfield architecture decisions from product context, derives brownfield rules from observed evidence, elicits working principles rather than inventing them, moves recurring detail into on-demand references, maps extension seams, and prunes generic always-on guidance. Unchanged use is rejected because it writes or replaces persistent CLAUDE.md/AGENTS.md and reference files without mandatory action-specific authorization immediately before mutation; protecting or backing up an existing rules file is a safeguard, not authorization. Repository-controlled documents, supplied specs/analysis, and web guidance are also consumed as operative content without an explicit hostile-instruction boundary, and commands or source-derived details may be persisted without a mandatory secret/PII/sensitive-data minimization gate. Preserve the evidence-backed derivation, greenfield/brownfield split, lean-context, seam-mapping, and user-elicitation mechanisms as adaptation/extraction evidence. Behavioral validation has not been run."
