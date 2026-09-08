@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 43,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 416,
+    "persisted_third_party_exact_version_reviews": 417,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -18,9 +18,9 @@
     "microsoft_azure_skills_current_standard_companions": 34,
     "microsoft_azure_skills_eligible_denominator": 34,
     "microsoft_azure_skills_current_standard_gaps": 0,
-    "cole_medin_skills_current_standard_companions": 27,
+    "cole_medin_skills_current_standard_companions": 28,
     "cole_medin_skills_eligible_denominator": 33,
-    "cole_medin_skills_current_standard_gaps": 6,
+    "cole_medin_skills_current_standard_gaps": 5,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin rules-create-global added as the twenty-seventh current-standard companion pair, bound to exact package tree d4321047d3ea131849fd56bae61b126c0ef5c676 and SKILL.md blob d2196a218b8c729ff520c39eb3d4b602e339dc81; rejected unchanged 15/20 because it mutates persistent rules/reference files without mandatory action-specific authorization and lacks explicit hostile-input plus secret/PII/sensitive-data minimization boundaries; behavioral validation not-run; Cole is 27/33 with 6 gaps; persisted review count is 416"
+    "latest_reconciliation": "2026-09-08: Cole Medin setup-ai-tutor added as the twenty-eighth current-standard companion pair, bound to exact package tree 05b6a7bc0dd59857ae773fe8fce48647ea48ff08 and SKILL.md blob a44163b06a02c740a7ddf569d679266ac1bbf27a; rejected unchanged 12/20 because it performs dependency installation, database startup, schema migration, and server startup without mandatory action-specific authorization and lacks explicit hostile-input, secret-handling, and sensitive-output minimization boundaries; behavioral validation not-run; Cole is 28/33 with 5 gaps; persisted review count is 417"
   }
 }
