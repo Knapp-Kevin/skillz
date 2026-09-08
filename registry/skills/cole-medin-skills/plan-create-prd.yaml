@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: plan-create-prd
+display_name: Plan Create PRD
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/plan-create-prd/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 1c46cd18bc6100d358082c06357d649f7a4cf8c6
+upstream_last_updated_at: 2026-08-09T19:10:42Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: high
+review_status: curated-external
+dependency_status: optional-reference-docs-and-tracker-or-repository-write-access
+dependencies: optional read access to user interviews, support themes, analytics, competitor research, or existing product docs; optional repository write access for docs/<slug>.prd.md; optional external tracker access when the user names a tracker destination
+package_tree_sha: e30f2b6b3702eb5f5f601744c02d56970af9c4b3
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong problem-first product-planning reference that separates intent from engineering decisions, demands evidence rather than invented requirements, uses explicit interview gates, requires a falsifiable wrong condition, defines a thin end-to-end MVP, distinguishes reversible from expensive decisions, and records non-goals and open questions. Unchanged adoption fails the authority hard rule because the output contract writes a persistent repository PRD or creates/updates an external tracker artifact without a mandatory action-specific authorization boundary immediately before mutation. It also consumes user research, support tickets, analytics, competitor material, product documents, and tracker context as operative input without an explicit hostile-instruction boundary, and it lacks a mandatory secret/PII/sensitive-data redaction gate before publishing PRD evidence externally. Preserve its problem-first interview, evidence/assumption distinction, falsifiable hypothesis, wrong-condition discipline, thin-MVP framing, and intent-versus-engineering separation as adaptation/extraction evidence.
