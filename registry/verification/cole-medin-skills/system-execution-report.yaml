@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: system-execution-report
+source_id: cole-medin-skills
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: abfdab62c3111ac37f288e610cb1b5655bd44865
+package_tree_sha: ab51285057df9d9c12941697e3ffaefbd1150aa1
+characterized_at: 2026-09-08
+last_verified_at: 2026-09-08
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, documentation]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, traceable, human-review, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The skill provides a compact post-implementation accounting template covering changed files, validation outcomes, concrete successes and challenges, plan divergences with reasons, skipped items, and feedback into planning/execution guidance. Unchanged use is rejected because it persists an execution-report file without mandatory action-specific authorization immediately before mutation. Plan and repository/implementation context are consumed as operative inputs without an explicit hostile-instruction boundary, potentially sensitive implementation or validation material can be copied into the durable report without mandatory secret/PII/sensitive-data minimization, and validation results are not explicitly required to be grounded in captured evidence rather than recollection. Preserve the implementation-accounting structure, divergence taxonomy, skipped-item accounting, and process-feedback framing as adaptation/extraction evidence. Behavioral validation has not been run."
