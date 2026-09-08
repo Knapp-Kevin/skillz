@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **43** first-party user-facing skills, **43/43** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **413** persisted exact-version third-party verification companions.
+- **414** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -46,12 +46,12 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **24/33**.
-- Remaining gaps: **9**.
+- Current-standard companions: **25/33**.
+- Remaining gaps: **8**.
 
-Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, and `prime-backend`.
+Existing companion pairs are `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, and `prime-codebase`.
 
-The latest unit, `prime-backend`, is bound to package tree `3b4d38dbee11e02ec4f9edb02f1f2ce18ed0e91e`, `SKILL.md` blob `f42e8ee67b35027ffe4e580ff82b41b363e5a6f0`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **16/20** with behavioral validation `not-run`. Retain its backend-scoped context loading, representative feature-slice sampling, current-state inspection, architecture summarization, and context-window discipline. Unchanged use remains rejected because Jira/Confluence and repository-controlled content are treated as operative context without an explicit hostile-instruction boundary, while externally retrieved task material can be reproduced in the output without a mandatory secret/PII/sensitive-data minimization or redaction gate.
+The latest unit, `prime-codebase`, is bound to package tree `766200290744d97473f554c4dd3320bd0176af8d`, `SKILL.md` blob `67fcb551b6ce4fa099df215200da5e299431fef2`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` dated 2026-08-04. It is rejected unchanged **16/20** with behavioral validation `not-run`. Retain its staged external-context loading, whole-repository structure and documentation inspection, representative implementation/configuration sampling, current git-state inspection, and concise architecture synthesis. Unchanged use remains rejected because Jira/Confluence bodies and repository-controlled rules/docs/code are treated as operative context without an explicit hostile-instruction boundary, while externally retrieved task material can be reproduced in the output without a mandatory secret/PII/sensitive-data minimization or redaction gate.
 
 ## Governed discovery / source-vetting
 
