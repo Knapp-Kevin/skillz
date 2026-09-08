@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: plan-create-stories
+display_name: Plan Create Stories
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/plan-create-stories/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: prd-plus-jira-mcp-or-github-cli
+dependencies: read access to a completed PRD; Jira path requires Atlassian MCP plus project/epic context; GitHub path requires gh CLI plus repository issue/label/milestone permissions
+package_tree_sha: 50605e9a6b337cde5e01c64e87a7eb6c219b2850
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong backlog-decomposition reference with explicit PRD traceability, small-ticket discipline, verifiable acceptance criteria, phase grouping, platform selection, and a real pre-creation confirmation checkpoint. Unchanged adoption is still rejected because the confirmation previews titles and phase grouping rather than the full externally published ticket bodies, while descriptions and acceptance criteria are copied from repository PRD content into Jira or GitHub. The procedure therefore lacks an authorization/redaction boundary appropriate to possible secret, PII, or other sensitive-data disclosure, and it treats PRD content as operative instructions without an explicit hostile-instruction boundary. Preserve its decomposition, traceability, bounded ticket sizing, acceptance-criteria, and pre-mutation preview methods as adaptation/extraction evidence.
