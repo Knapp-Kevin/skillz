@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: prime-frontend
+display_name: Prime Frontend
+source_id: cole-medin-skills
+source_repository: https://github.com/coleam00/skills
+source_path: .claude/skills/prime-frontend/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: fb2e876f057c5356d6603ba0c52d6b4418d893ba
+upstream_revision: 356511604c75008271ec34933864ccba09100202
+upstream_last_updated_at: 2026-08-04T21:49:51Z
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: git-plus-optional-atlassian-mcp
+dependencies: local repository read access plus git; optional Jira and Confluence context requires authorized Atlassian MCP access and valid issue/page identifiers
+package_tree_sha: d7bebf7313cfa4b2af952f792a6c9d494e5293a8
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Strong targeted-context reference that deliberately limits priming to frontend structure, routing, state, styling, representative components, and current repository state. Unchanged adoption is rejected because Jira/Confluence and repository-controlled rules, documentation, and source files are treated as operative context without an explicit hostile-instruction boundary, and the procedure may reproduce externally retrieved issue/page content in its summary without a mandatory secret, PII, or sensitive-data minimization/redaction check. Preserve its frontend-scoped context discipline, representative component sampling, current-state inspection, and concise architecture/convention summary as adaptation/extraction evidence.

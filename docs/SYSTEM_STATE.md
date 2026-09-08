@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 43 |
 | **First-party provenance complete** | 43 / 43 |
-| **Persisted third-party review companions** | 414 |
+| **Persisted third-party review companions** | 415 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -19,8 +19,8 @@
 | **Microsoft Skills current-standard gaps** | 0 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Microsoft Azure Skills current-standard gaps** | 0 |
-| **Cole Medin Skills current-standard companions** | 25 / 33 |
-| **Cole Medin Skills current-standard gaps** | 8 |
+| **Cole Medin Skills current-standard companions** | 26 / 33 |
+| **Cole Medin Skills current-standard gaps** | 7 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -41,7 +41,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
-- Cole Medin Skills: exact registered-pin denominator **33**, **25/33** companion-complete, **8 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
+- Cole Medin Skills: exact registered-pin denominator **33**, **26/33** companion-complete, **7 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -52,9 +52,9 @@ The exact pin exposes 28 canonical plugin skill roots, one additional nested Kub
 
 ## Cole Medin Skills frontier
 
-The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-five now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, and `prime-codebase`.
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries. Twenty-six now have current companion pairs: `ablate-ai-layer`, `rules-check-drift`, `second-brain-audit`, `agent-browser`, `ast-grep`, `build-dark-factory`, `hooks-create`, `opportunity-scan`, `piv-commit`, `piv-create-pr`, `piv-fix-review-findings`, `piv-implement-issue`, `piv-implement`, `piv-investigate-issue`, `piv-plan-implementation`, `piv-review-changes`, `piv-review-pr`, `piv-run-full-loop`, `piv-slice-epic`, `piv-validate`, `plan-architecture`, `plan-create-prd`, `plan-create-stories`, `prime-backend`, `prime-codebase`, and `prime-frontend`.
 
-`prime-codebase` is bound to exact package tree `766200290744d97473f554c4dd3320bd0176af8d`, `SKILL.md` blob `67fcb551b6ce4fa099df215200da5e299431fef2`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **16/20** with behavioral validation `not-run`. Preserve its staged external-context loading, whole-repository structure and documentation inspection, representative implementation/configuration sampling, current git-state inspection, and concise architecture synthesis. Unchanged use remains rejected because Jira/Confluence bodies and repository-controlled rules/docs/code are consumed as operative context without an explicit hostile-instruction boundary, and externally retrieved task material can be summarized without a mandatory secret/PII/sensitive-data minimization or redaction gate.
+`prime-frontend` is bound to exact package tree `d7bebf7313cfa4b2af952f792a6c9d494e5293a8`, `SKILL.md` blob `be66553264d59183b9079e7403510e4a9848cbdc`, and skill-path freshness revision `356511604c75008271ec34933864ccba09100202` on 2026-08-04. It is rejected unchanged **16/20** with behavioral validation `not-run`. Preserve its targeted frontend context loading, routing/state/styling convention discovery, representative component sampling, current git-state inspection, and concise frontend architecture summary. Unchanged use remains rejected because Jira/Confluence bodies and repository-controlled rules/docs/references/code are consumed as operative context without an explicit hostile-instruction boundary, and externally retrieved task material can be summarized without a mandatory secret/PII/sensitive-data minimization or redaction gate.
 
 ## Source lifecycle
 
