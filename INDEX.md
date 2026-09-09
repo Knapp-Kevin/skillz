@@ -10,8 +10,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 
 | Surface | Count |
 |---|---:|
-| First-party user-facing skills | 43 |
-| First-party provenance-complete | 43 / 43 |
+| First-party user-facing skills | 44 |
+| First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
 | Persisted third-party exact-version reviews | 422 |
@@ -44,7 +44,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 `repo-doctor`, `repo-pulse`, `todo-harvester`
 
 ### Agent Operations & Security
-`agent-home-doctor`, `agent-postmortem`, `automation-receipts`, `mcp-vetting`, `permissions-review`
+`agent-home-doctor`, `agent-postmortem`, `automation-receipts`, `mcp-vetting`, `permissions-review`, `session-continuity`
 
 ### Monitoring & Intelligence
 `claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
@@ -65,6 +65,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use exact-version companion evidence and apply:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
+
+The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`. It is a substrate-agnostic continuity procedure: relevant recall is scoped and read-only, prior memory does not authorize new actions, and persistent continuity capture requires current or standing authority with secret and sensitive-data minimization.
 
 AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps.
 
