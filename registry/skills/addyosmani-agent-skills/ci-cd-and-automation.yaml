@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: ci-cd-and-automation
+display_name: CI/CD and Automation
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/ci-cd-and-automation/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: fea75b16472ba87e8c11f13a9e000c3ffdb2d1f5
+upstream_last_updated_at: 2026-03-31T20:41:45Z
+source_last_pushed_at: 2026-09-08T07:21:56Z
+curated_at: 2026-09-09
+last_checked_at: 2026-09-09
+availability: vendored-reference-only
+local_path: skills/sources/addyosmani-agent-skills/skills/ci-cd-and-automation/SKILL.md
+permission_tier: mutating-with-insufficient-confirmation-boundary
+portability: medium
+review_status: rejected-unchanged
+dependency_status: external-ci-and-deployment-authority-required
+dependencies: GitHub Actions or equivalent CI, repository package/test/build commands, secrets manager, and optional deployment/feature-flag platforms such as Vercel
+import_eligibility: reference-only-unless-adapted
+rationale: Useful CI quality-gate, staged rollout, rollback, secret-separation, and failure-feedback patterns, but unchanged use is blocked because it directs agents to create or modify CI, deployment, rollback, branch-protection, auto-merge, feature-flag, and credential-bearing workflows without a governing action-specific authorization boundary immediately before consequential mutations.

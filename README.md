@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-423-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-424-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **423 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **424 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -57,7 +57,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Cole Medin Skills:** exact registered-pin denominator **33**; **33/33** current-standard companion complete, **0** gaps.
 - **Matt Pocock Skills:** exact registered-pin denominator **29** after excluding `deprecated` and `in-progress`; **29/29** current-standard companion complete, **0** gaps.
 - **Cloudflare Skills:** exact registered-pin denominator **13**; **13/13** current-standard companion complete, **0** gaps; **11 verified / 2 rejected unchanged**.
-- **Addy Osmani Agent Skills:** exact registered-pin denominator **24**; **11/24** current-standard companion pairs, **13** gaps. Latest reconciliation: `documentation-and-adrs`, verified **19/20**, behavioral validation `not-run`.
+- **Addy Osmani Agent Skills:** exact registered-pin denominator **24**; **12/24** current-standard companion pairs, **12** gaps. Latest reconciliation: `ci-cd-and-automation`, rejected unchanged **13/20** for missing action-specific authorization around CI/deployment/rollback/branch-protection/auto-merge mutations; behavioral validation `not-run`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at the registered pin: 28 canonical plugin skill roots, one nested `azure-kubernetes-automatic-readiness` package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown does not become a separate skill merely because it is useful or lives in an attractively named directory.
@@ -70,7 +70,7 @@ Matt Pocock Skills is current-standard complete at registered pin `6654f6b60cd9d
 
 Cloudflare Skills is current-standard complete at registered pin `f96bff754e428838818017f75817f0f9428acd48`. The exact denominator is **13** first-class packages, all with matching provenance and verification companions whose physical paths resolve under `skills/sources/cloudflare-skills/`. Historical dispositions remain **11 verified / 2 rejected unchanged**. `web-perf` remains rejected for an unresolved privacy/telemetry boundary around its required Chrome DevTools MCP path; `wrangler` remains rejected because install/deploy/delete/migration/resource mutations lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the family.
 
-Addy Osmani Agent Skills is pinned at `f63ec56a3cc936408d792956ae583c3c96a825bd`. The exact upstream `skills/*/SKILL.md` denominator is **24**. Historical issue #27 records decisive exact-version static states for all 24, while the current companion shelf now contains **11** matching provenance/verification pairs. Compatible historical evidence should be recovered for the remaining 13 before fresh re-review where possible.
+Addy Osmani Agent Skills is pinned at `f63ec56a3cc936408d792956ae583c3c96a825bd`. The exact upstream `skills/*/SKILL.md` denominator is **24**. Historical issue #27 records decisive exact-version static states for all 24, while the current companion shelf now contains **12** matching provenance/verification pairs. The latest recovered unit is `ci-cd-and-automation`, bound to exact `SKILL.md` blob `118456fcb10225c030769a4fee7815b9c536b0ce` and skill-path freshness revision `fea75b16472ba87e8c11f13a9e000c3ffdb2d1f5` dated 2026-03-31. It is rejected unchanged **13/20** because CI configuration, deployment, rollback, feature-flag rollout, branch protection, auto-merge, and credential-bearing deployment instructions lack a governing action-specific authorization boundary; behavioral validation remains `not-run`. Compatible historical evidence should be recovered for the remaining 12 before fresh re-review where possible.
 
 AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
