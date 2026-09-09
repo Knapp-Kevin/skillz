@@ -22,6 +22,8 @@ New third-party discoveries use `docs/candidate-intake.md`. Discovery intelligen
 
 Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
+The latest first-party admission is `session-continuity`, created from the bounded gap evidence in issues #71/#73. It is a substrate-agnostic procedure, not a memory implementation: scoped recall is evidence-only, prior memory grants no current action authority, durable capture requires current or standing authorization, secrets are excluded, and sensitive durable capture is necessity- and authority-gated. Static review: **19/20 verified**; behavioral validation: `not-run`.
+
 ## Admitted-source curation
 
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
@@ -40,10 +42,16 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
 - Exact eligible denominator/current-standard companions: **34/34**; gaps **0**.
 
+The exact denominator is 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, SDK, and other Markdown is package evidence rather than an independent skill. The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
+
 ### Cole Medin Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
-- Exact eligible denominator/current-standard companions: **33/33**; gaps **0**.
+- Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
+- Current-standard companions: **33/33**.
+- Remaining gaps: **0**.
+
+The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before that consequential mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are treated as executable guidance without an explicit hostile-instruction boundary.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 
