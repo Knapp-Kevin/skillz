@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: durable-objects
 source_id: cloudflare-skills
 source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
-local_path: vendor/cloudflare-skills/skills/durable-objects/SKILL.md
+local_path: skills/sources/cloudflare-skills/skills/durable-objects/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: b595f1c2182f3b7d6f944d7ba0ac59667fba78aa
 characterized_at: 2026-08-29
