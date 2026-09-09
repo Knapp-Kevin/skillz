@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 424 |
+| Persisted third-party exact-version reviews | 425 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
@@ -27,8 +27,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Matt Pocock Skills current-standard gaps | 0 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Cloudflare Skills current-standard gaps | 0 |
-| Addy Osmani Agent Skills current-standard companions | 12 / 24 |
-| Addy Osmani Agent Skills current-standard gaps | 12 |
+| Addy Osmani Agent Skills current-standard companions | 13 / 24 |
+| Addy Osmani Agent Skills current-standard gaps | 11 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -74,7 +74,7 @@ Physical presence or registration does not establish individual skill quality. F
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`. It is a substrate-agnostic continuity procedure: relevant recall is scoped and read-only, prior memory does not authorize new actions, and persistent continuity capture requires current or standing authority with secret and sensitive-data minimization.
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy. Cloudflare Skills is complete at **13/13**, with **0** current-standard gaps and all companion paths canonical under `skills/sources/cloudflare-skills/`. Addy Osmani Agent Skills is actively reconciling at **12/24** current-standard companion pairs with **12** gaps.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy. Cloudflare Skills is complete at **13/13**, with **0** current-standard gaps and all companion paths canonical under `skills/sources/cloudflare-skills/`. Addy Osmani Agent Skills is actively reconciling at **13/24** current-standard companion pairs with **11** gaps.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin skill roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
@@ -84,6 +84,6 @@ The Matt Pocock family is pinned at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; 
 
 The Cloudflare family is pinned at `f96bff754e428838818017f75817f0f9428acd48`; provenance and verification expose matching 13-file companion sets. Historical review remains 11 verified / 2 rejected unchanged. `web-perf` remains rejected for an unresolved privacy/telemetry boundary around its required Chrome DevTools MCP path, and `wrangler` remains rejected for missing action-specific authorization around install/deploy/delete/migration/resource mutations. Behavioral validation remains `not-run`.
 
-The Addy Osmani family is pinned at `f63ec56a3cc936408d792956ae583c3c96a825bd`; the exact upstream denominator is **24** first-class `skills/*/SKILL.md` packages, matching historical #27. The latest current-standard pair is `ci-cd-and-automation`, rejected unchanged **13/20** at exact blob `118456fcb10225c030769a4fee7815b9c536b0ce`, behavioral validation `not-run`. Its CI quality-gate, staged rollout, rollback, secret-separation, and failure-feedback mechanisms remain useful adaptation/reference evidence, but unchanged use fails the action-specific authorization rule around CI/deployment/rollback/branch-protection/auto-merge mutations. Twelve companion gaps remain and should preferentially reuse compatible historical evidence.
+The Addy Osmani family is pinned at `f63ec56a3cc936408d792956ae583c3c96a825bd`; the exact upstream denominator is **24** first-class `skills/*/SKILL.md` packages, matching historical #27. The latest current-standard pair is `deprecation-and-migration`, rejected unchanged **14/20** at exact blob `765bdde6329dbd5fd22d5d3fc2c185737fc9f908`, behavioral validation `not-run`. Its deprecation framing, strangler/adapter patterns, usage verification, expand-contract migration, rollback/down-path discipline, and zombie-code ownership remain useful adaptation/reference evidence. Unchanged use fails the action-specific authorization rule around code/config removal, production traffic shifts, feature flags, database backfills and destructive schema operations, deployments, and user migration/communications. Eleven companion gaps remain and should preferentially reuse compatible historical evidence.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
