@@ -49,6 +49,7 @@ categories:
       - automation-receipts
       - mcp-vetting
       - permissions-review
+      - session-continuity
 
   monitoring-intelligence:
     label: Monitoring & Intelligence
