@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: shipping-and-launch
+display_name: Shipping and Launch
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/shipping-and-launch/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 91d4d07522de9577caf5d213e5bf1acc38fa3df2
+upstream_last_updated_at: 2026-08-07T11:27:44Z
+source_last_pushed_at: 2026-08-27T19:28:24Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/addyosmani-agent-skills/skills/shipping-and-launch/SKILL.md
+permission_tier: staging-write
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: deployment-platform-and-production-authority-dependent
+dependencies: deployment platform, monitoring/observability, rollback mechanism, optional feature-flag system, and production mutation authority
+import_eligibility: already-vendored
+rationale: Useful launch-checklist, observability, staged-rollout, rollback, and feature-flag concepts retained as adaptation/reference material because the exact skill hard-codes operational thresholds, windows, and deployment assumptions and includes an invalid generic Prisma rollback command.
