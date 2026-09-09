@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: context-engineering
 source_id: addyosmani-agent-skills
 source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
-local_path: vendor/addyosmani-agent-skills/skills/context-engineering/SKILL.md
+local_path: skills/sources/addyosmani-agent-skills/skills/context-engineering/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: be991103fe2b13f7e5f6f5da9d3c6029ad30ac64
 characterized_at: 2026-08-28
