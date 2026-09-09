@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 431 |
+| **Persisted third-party review companions** | 436 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -25,8 +25,8 @@
 | **Matt Pocock Skills current-standard gaps** | 0 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Cloudflare Skills current-standard gaps** | 0 |
-| **Addy Osmani Agent Skills current-standard companions** | 19 / 24 |
-| **Addy Osmani Agent Skills current-standard gaps** | 5 |
+| **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
+| **Addy Osmani Agent Skills current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -50,7 +50,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Matt Pocock Skills: exact registered-pin denominator **29**, **29/29** companion-complete, **0 gaps** at pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; `deprecated` and `in-progress` are excluded by source policy.
 - Cloudflare Skills: exact registered-pin denominator **13**, **13/13** companion-complete, **0 gaps** at pin `f96bff754e428838818017f75817f0f9428acd48`; dispositions remain **11 verified / 2 rejected unchanged**.
-- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **19/24** current-standard companion pairs, **5 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
+- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **24/24** current-standard companion pairs, **0 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24 and all are now represented on canonical shelves.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -83,9 +83,9 @@ The two rejected unchanged records remain intentional negative evidence. `web-pe
 
 ## Addy Osmani Agent Skills reconciliation
 
-The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **19** provenance/verification companion pairs, leaving **5** current-standard gaps.
+The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **24/24** provenance/verification companion pairs, leaving **0** current-standard gaps.
 
-The latest reconciled unit is `performance-optimization`, recovered from exact historical evidence preserved on superseded PR #42 rather than re-reviewed. It is bound to exact `SKILL.md` blob `6e95266942288ca0330eb2a8a716625958df7c57` at the registered source snapshot and remains verified **19/20** with behavioral validation `not-run`. Preserve its measure-first baseline, bottleneck localization, same-condition remeasurement, variance awareness, keep/revert decisions, regression guards, query-plan diagnosis, connection-pool guidance, and cache correctness/stampede safeguards. Authority is characterized as read-only plus mutating; portability remains medium because browser/database/APM tooling varies by project and time-sensitive Web Vitals thresholds need contextual refresh when they matter.
+The final five gaps were recovered from exact compatible historical evidence preserved on superseded PR #42, with each historical fingerprint matching the registered pinned tree. `security-and-hardening` remains verified **18/20** and `source-driven-development` remains verified **19/20**. `planning-and-task-breakdown` remains rejected unchanged **14/20** because mandatory planning artifacts and sizing/session heuristics are preferences rather than portable correctness requirements. `shipping-and-launch` remains rejected unchanged **12/20** because direct production mutation examples lack an adequate action-specific authorization boundary and operational thresholds/platform commands are not portable. `using-agent-skills` remains rejected unchanged **13/20** because it elevates source-specific lifecycle preferences into mandatory meta-governance and routes into downstream skills that are themselves rejected unchanged. Behavioral validation remains `not-run` for all five; no execution evidence was inferred from upstream eval assets.
 
 ## Source lifecycle
 
@@ -103,10 +103,9 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **19/24** current-standard companions and **5** gaps.
+1. Continue the corpus-wide provenance audit in issue #66 and identify the next admitted family with a truthful current-standard gap; recover compatible prior evidence before fresh re-review.
 2. Continue governed discovery/source-vetting and omission recovery.
 3. Resolve bounded candidate issues when evidence supports a decisive outcome.
-4. Continue the corpus-wide provenance audit in issue #66 until every governed family is truthfully accounted for.
-5. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+4. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.
