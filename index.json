@@ -3,8 +3,8 @@
   "snapshot_date": "2026-09-08",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
-    "first_party_skills": 43,
-    "first_party_provenance_complete": 43,
+    "first_party_skills": 44,
+    "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
     "persisted_third_party_exact_version_reviews": 422,
@@ -37,7 +37,7 @@
     "writing-communication": ["brief-writer", "deck-outline", "devlog-draft", "handoff-writer", "standup-writer"],
     "research-analysis": ["compare", "deep-dive", "fact-check", "paper-digest"],
     "software-repositories": ["repo-doctor", "repo-pulse", "todo-harvester"],
-    "agent-operations-security": ["agent-home-doctor", "agent-postmortem", "automation-receipts", "mcp-vetting", "permissions-review"],
+    "agent-operations-security": ["agent-home-doctor", "agent-postmortem", "automation-receipts", "mcp-vetting", "permissions-review", "session-continuity"],
     "monitoring-intelligence": ["claude-pulse", "deepseek-pulse", "gemini-pulse", "github-pulse", "glm-pulse", "governance-pulse", "hf-pulse", "inference-pulse", "kimi-pulse", "llama-pulse", "mcp-pulse", "memory-pulse", "mistral-pulse", "openai-pulse", "perplexity-pulse", "qwen-pulse", "xai-pulse"],
     "business-career": ["career-radar", "finance-review", "smallbiz-ops"]
   },
@@ -53,6 +53,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: Cole Medin worktree-merge added as the thirty-third and final current-standard companion pair, bound to exact package tree 150cb167cb6c0bd703e3ba5b05330aa7f9db9861 and SKILL.md blob 9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b; rejected unchanged 15/20 because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before mutation and consumes repository-controlled validation commands without an explicit hostile-instruction boundary; behavioral validation not-run; Cole is 33/33 with 0 gaps; persisted review count is 422"
+    "latest_reconciliation": "2026-09-08: first-party session-continuity admitted from issues #71/#73 as a substrate-agnostic continuity procedure; exact SKILL.md blob 93b8f0be84bdb39153386c27b46294233c39bb8b; verified 19/20 with behavioral validation not-run; relevant recall is scoped/read-only, prior memory does not authorize new actions, and durable capture requires current or standing authorization with secret and sensitive-data minimization; first-party count/provenance is 44/44; persisted third-party review count remains 422"
   }
 }

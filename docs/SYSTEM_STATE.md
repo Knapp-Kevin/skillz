@@ -9,8 +9,8 @@
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
-| **First-party skills** | 43 |
-| **First-party provenance complete** | 43 / 43 |
+| **First-party skills** | 44 |
+| **First-party provenance complete** | 44 / 44 |
 | **Persisted third-party review companions** | 422 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
@@ -37,7 +37,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 ## Inventory boundaries
 
-- First-party: **43/43 provenance-complete** with structured semantic review evidence.
+- First-party: **44/44 provenance-complete** with structured semantic review evidence. The latest admission is `session-continuity`, a substrate-agnostic continuity procedure verified **19/20**, behavioral validation `not-run`; recall is scoped/read-only and persistent capture is authorization-gated and sensitive-data-minimized.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
@@ -45,6 +45,12 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
+
+## First-party session continuity
+
+Issue #71 established that admissible wild prior art did not cover the cross-session memory-continuity primitive, and issue #73 bounded a first-party derivation. `session-continuity` expresses a portable procedure for scoped recall, correction precedence, explicit continuity gaps, and minimal durable records. It does not implement, mirror, schedule, monitor, or otherwise own a memory substrate.
+
+Persistent memory capture is treated as a mutation: a current request or applicable standing policy must authorize durable capture before it occurs. Secret material is excluded, and sensitive personal data requires specific durable-capture authority plus necessity. Prior memory is evidence, not current action authorization.
 
 ## Microsoft Azure Skills denominator reconciliation
 

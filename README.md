@@ -1,7 +1,7 @@
 # 🛠️ skillz
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
-![First-Party Skills](https://img.shields.io/badge/first--party_skills-43-brightgreen)
+![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-422-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
@@ -19,7 +19,7 @@
 
 The repository provides four surfaces:
 
-1. **43 first-party user-facing skills** under [`skills/`](skills/).
+1. **44 first-party user-facing skills** under [`skills/`](skills/).
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-[`skills/`](skills/) contains **43 active first-party user-facing skills**, all **43/43 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
+[`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
 There are currently **422 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
@@ -50,6 +50,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 
 Core passive architecture is complete. Ongoing work is corpus enrichment, historical evidence reconciliation, candidate resolution, and source freshness/omission detection.
 
+- **First-party:** **44/44** provenance-complete, including `session-continuity`, a substrate-agnostic continuity procedure with authorization-gated durable capture and behavioral validation `not-run`.
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
 - **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.

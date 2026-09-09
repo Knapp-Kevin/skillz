@@ -3,7 +3,7 @@
   "source_id": "local-skills",
   "source_class": "first-party",
   "license": "MIT",
-  "reviewed_at": "2026-08-30",
+  "reviewed_at": "2026-09-08",
   "verification_basis": "individual-structured-static-review",
   "rubric": "docs/skill-verification.md",
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
@@ -1375,6 +1375,39 @@
         ]
       },
       "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated."
+    },
+    {
+      "skill_name": "session-continuity",
+      "local_path": "skills/session-continuity/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "memory",
+          "context-management",
+          "handoff"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "context-efficient"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
     }
   ]
 }
