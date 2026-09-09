@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **430** persisted exact-version third-party verification companions.
+- **431** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -79,11 +79,11 @@ The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf`
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
 - Historical issue #27: **24/24** with decisive exact-version static states.
-- Current-standard provenance companions: **18/24**.
-- Current-standard verification companions: **18/24**.
-- Current-standard gaps: **6**.
+- Current-standard provenance companions: **19/24**.
+- Current-standard verification companions: **19/24**.
+- Current-standard gaps: **5**.
 
-The latest reconciled unit is `interview-me`. Its exact historical evidence was recovered from superseded PR #42 rather than re-reviewed and matches exact `SKILL.md` blob `de5e3aff0c497e2d474e329cde447678632e082b` at the registered source snapshot. The decisive state remains **rejected unchanged 13/20**, behavioral validation `not-run`. Preserve its one-question-at-a-time clarification, explicit hypothesis surfacing, and out-of-scope restatement as adaptation/reference evidence. Unchanged reuse remains rejected because the approximate 95% confidence target, requirement to reject ordinary confirmations such as “sounds good” or “sure, let's go,” and forced additional questioning are too rigid to impose portably. The optional intent-document write is explicitly user-confirmed. Recover compatible historical evidence for the remaining 6 before fresh review where possible.
+The latest reconciled unit is `performance-optimization`. Its exact historical evidence was recovered from superseded PR #42 rather than re-reviewed and matches exact `SKILL.md` blob `6e95266942288ca0330eb2a8a716625958df7c57` at the registered source snapshot. The decisive state remains **verified 19/20**, behavioral validation `not-run`. Preserve its measure-identify-fix-verify-guard workflow, same-condition remeasurement, variance awareness, keep/revert discipline, regression guards, query-plan and connection-pool diagnosis, and cache correctness/stampede safeguards. Portability remains medium because stack-specific examples and time-sensitive Web Vitals thresholds require contextual refresh. Recover compatible historical evidence for the remaining 5 before fresh review where possible.
 
 ## Governed discovery / source-vetting
 
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **18/24** current-standard companions by recovering compatible historical evidence for the remaining 6. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **19/24** current-standard companions by recovering compatible historical evidence for the remaining 5. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
