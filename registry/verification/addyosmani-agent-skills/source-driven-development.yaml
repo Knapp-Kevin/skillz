@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: source-driven-development
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/source-driven-development/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d1f599a9fe8eb77d4af7dc2f45404c2f6363e441
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [research, implementation]
+  lifecycle: [discovery, implementation, verification]
+  characteristic: [source-driven, retrieval-first, evidence-first, compatibility-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong exact-version detection, official-source hierarchy, conflict surfacing, unverified-state honesty, and citation discipline. Retrieval safety is unusually good: fetched docs are treated as data, model-directed instructions are ignored, and outbound endpoints from examples cannot be silently copied into code. Portability depends on host documentation retrieval. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
