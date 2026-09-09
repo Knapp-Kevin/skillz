@@ -55,6 +55,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
 - **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.
 - **Cole Medin Skills:** exact registered-pin denominator **33**; **33/33** current-standard companion complete, **0** gaps.
+- **Matt Pocock Skills:** exact registered-pin denominator **29** after excluding `deprecated` and `in-progress`; **29/29** current-standard companion complete, **0** gaps.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at the registered pin: 28 canonical plugin skill roots, one nested `azure-kubernetes-automatic-readiness` package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown does not become a separate skill merely because it is useful or lives in an attractively named directory.
@@ -63,7 +64,9 @@ Thirty-four Azure packages have current-standard companion pairs. The latest rec
 
 Cole Medin is current-standard complete at its exact 33-skill pin. The final reconciled package is `worktree-merge`, rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its disposable integration-branch staging, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without a mandatory action-specific authorization boundary immediately before that consequential mutation. It also consumes repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands as executable guidance without an explicit hostile-instruction boundary.
 
-AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, and Cole Medin Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Matt Pocock Skills is current-standard complete at registered pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. The eligible denominator is **29** first-class packages after the source registry exclusions for `deprecated` and `in-progress`. All 29 have matching provenance and verification companions under the canonical registry roots, and no live companion retains the obsolete `vendor/mattpocock-skills/...` physical path.
+
+AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, and Matt Pocock Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
