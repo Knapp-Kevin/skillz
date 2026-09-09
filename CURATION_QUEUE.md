@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **422** persisted exact-version third-party verification companions.
+- **423** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -74,6 +74,17 @@ The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3
 
 The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf` retains useful evidence-driven performance-audit methods but hard-fails unchanged use because its required Chrome DevTools MCP path lacks an adequate privacy/telemetry consent boundary. `wrangler` remains useful reference material but hard-fails unchanged use because install/deploy/delete/migration/resource-mutation procedures lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the 13-package family.
 
+### Addy Osmani Agent Skills — RECONCILIATION ACTIVE
+
+- Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
+- Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
+- Historical issue #27: **24/24** with decisive exact-version static states.
+- Current-standard provenance companions: **11/24**.
+- Current-standard verification companions: **11/24**.
+- Current-standard gaps: **13**.
+
+The latest reconciled unit is `documentation-and-adrs`, bound to exact `SKILL.md` blob `7faf52c9558fa60faf7362cf473cf24784f9209b` and skill-path freshness revision `a0eba71b5544c47c922cc55127bccec8b0f1e6ab` dated 2026-07-16. It is verified unchanged **19/20**, behavioral validation `not-run`, with high portability and generate-only authority. It is self-contained and explicitly detects repository-local ADR conventions before applying defaults. Recover compatible historical evidence for the remaining 13 before fresh review where possible.
+
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
@@ -88,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue historical external-corpus reconciliation from compatible prior evidence. Anthropic Knowledge Work Plugins remains blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **11/24** current-standard companions by recovering compatible historical evidence for the remaining 13. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
