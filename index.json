@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 423,
+    "persisted_third_party_exact_version_reviews": 424,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -27,9 +27,9 @@
     "cloudflare_skills_current_standard_companions": 13,
     "cloudflare_skills_eligible_denominator": 13,
     "cloudflare_skills_current_standard_gaps": 0,
-    "addy_osmani_agent_skills_current_standard_companions": 11,
+    "addy_osmani_agent_skills_current_standard_companions": 12,
     "addy_osmani_agent_skills_eligible_denominator": 24,
-    "addy_osmani_agent_skills_current_standard_gaps": 13,
+    "addy_osmani_agent_skills_current_standard_gaps": 12,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -62,6 +62,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-09: Addy Osmani Agent Skills denominator confirmed at 24 first-class skills at exact pin f63ec56a3cc936408d792956ae583c3c96a825bd; documentation-and-adrs added as current-standard provenance/verification pair, verified 19/20 with behavioral validation not-run; Addy current-standard companions 11/24 with 13 gaps; persisted third-party review count 423"
+    "latest_reconciliation": "2026-09-09: Addy Osmani Agent Skills denominator remains 24 first-class skills at exact pin f63ec56a3cc936408d792956ae583c3c96a825bd; ci-cd-and-automation added as current-standard provenance/verification pair, rejected unchanged 13/20 for missing action-specific authorization around consequential CI/deployment/rollback/branch-protection/auto-merge mutations; behavioral validation not-run; Addy current-standard companions 12/24 with 12 gaps; persisted third-party review count 424"
   }
 }
