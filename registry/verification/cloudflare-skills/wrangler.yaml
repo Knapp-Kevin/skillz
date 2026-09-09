@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: wrangler
 source_id: cloudflare-skills
 source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
-local_path: vendor/cloudflare-skills/skills/wrangler/SKILL.md
+local_path: skills/sources/cloudflare-skills/skills/wrangler/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 07d4dbbee98b6a55db42a2a01cb2c84df864a8e6
 characterized_at: 2026-08-29
