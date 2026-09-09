@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **431** persisted exact-version third-party verification companions.
+- **436** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -74,16 +74,16 @@ The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3
 
 The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf` retains useful evidence-driven performance-audit methods but hard-fails unchanged use because its required Chrome DevTools MCP path lacks an adequate privacy/telemetry consent boundary. `wrangler` remains useful reference material but hard-fails unchanged use because install/deploy/delete/migration/resource-mutation procedures lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the 13-package family.
 
-### Addy Osmani Agent Skills — RECONCILIATION ACTIVE
+### Addy Osmani Agent Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
 - Historical issue #27: **24/24** with decisive exact-version static states.
-- Current-standard provenance companions: **19/24**.
-- Current-standard verification companions: **19/24**.
-- Current-standard gaps: **5**.
+- Current-standard provenance companions: **24/24**.
+- Current-standard verification companions: **24/24**.
+- Current-standard gaps: **0**.
 
-The latest reconciled unit is `performance-optimization`. Its exact historical evidence was recovered from superseded PR #42 rather than re-reviewed and matches exact `SKILL.md` blob `6e95266942288ca0330eb2a8a716625958df7c57` at the registered source snapshot. The decisive state remains **verified 19/20**, behavioral validation `not-run`. Preserve its measure-identify-fix-verify-guard workflow, same-condition remeasurement, variance awareness, keep/revert discipline, regression guards, query-plan and connection-pool diagnosis, and cache correctness/stampede safeguards. Portability remains medium because stack-specific examples and time-sensitive Web Vitals thresholds require contextual refresh. Recover compatible historical evidence for the remaining 5 before fresh review where possible.
+The final five companion gaps were recovered from compatible historical evidence in superseded PR #42 and verified against the registered pinned tree rather than re-reviewed gratuitously. `security-and-hardening` remains verified **18/20** and `source-driven-development` verified **19/20**. `planning-and-task-breakdown` remains rejected unchanged **14/20**, `shipping-and-launch` rejected unchanged **12/20**, and `using-agent-skills` rejected unchanged **13/20**. The two verified records retain strong threat-model/retrieval discipline respectively. The three rejected records remain useful adaptation/reference evidence but retain portability or authority defects that prevent unchanged use. Behavioral validation is `not-run` for all five, and upstream eval fixtures were not laundered into local execution evidence.
 
 ## Governed discovery / source-vetting
 
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **19/24** current-standard companions by recovering compatible historical evidence for the remaining 5. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, and Addy Osmani Agent Skills current-standard complete at their exact registered pins, continue issue #66 by identifying the next admitted family with a truthful companion/provenance gap and recovering compatible historical evidence before fresh re-review. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.

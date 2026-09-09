@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: shipping-and-launch
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/shipping-and-launch/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: acef513b77a33b366220d58224e472cb83ffd21d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [deployment, monitoring]
+  lifecycle: [release, operations]
+  characteristic: [risk-aware, evidence-first, metric-driven, test-gated]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Rejected for unchanged reuse. Strong pre-launch, observability, staged-rollout, rollback, and feature-flag concepts are mixed with hard-coded universal rollout windows and thresholds, an assumption that every feature benefits from a flag, direct production mutation examples such as git push, and an invalid generic Prisma rollback example (`npx prisma migrate rollback`). Those operational specifics must be adapted to the actual platform and authority model before use. Exact pinned fingerprint confirmed. Behavioral validation remains pending and is not required for this static rejection."
