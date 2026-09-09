@@ -53,6 +53,15 @@ The exact denominator is 28 canonical plugin roots, one nested Kubernetes automa
 
 The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before that consequential mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are treated as executable guidance without an explicit hostile-instruction boundary.
 
+### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
+
+- Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
+- Exact eligible denominator: **29** first-class packages after excluding `deprecated` and `in-progress` per source policy.
+- Provenance companions: **29/29**.
+- Verification companions: **29/29**.
+- Current-standard gaps: **0**.
+- Canonical-path integrity: no live companion retains obsolete `vendor/mattpocock-skills/...`; all live paths resolve under `skills/sources/mattpocock-skills/`.
+
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
@@ -67,4 +76,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, and Cole Medin Skills current-standard complete at their exact registered pins, return to historically completed external corpora and recover compatible prior companion evidence before any fresh re-review. In parallel, continue bounded candidate/source-vetting work and omission detection, and close candidate issues only when their evidence supports a decisive outcome.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, and Matt Pocock Skills current-standard complete at their exact registered pins, continue historical external-corpus reconciliation from compatible prior evidence. Anthropic Knowledge Work Plugins remains blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
