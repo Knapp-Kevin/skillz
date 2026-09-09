@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **428** persisted exact-version third-party verification companions.
+- **429** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -79,11 +79,11 @@ The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf`
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
 - Historical issue #27: **24/24** with decisive exact-version static states.
-- Current-standard provenance companions: **16/24**.
-- Current-standard verification companions: **16/24**.
-- Current-standard gaps: **8**.
+- Current-standard provenance companions: **17/24**.
+- Current-standard verification companions: **17/24**.
+- Current-standard gaps: **7**.
 
-The latest reconciled unit is `git-workflow-and-versioning`. Its exact historical evidence was recovered from superseded PR #42 rather than re-reviewed. It is bound to exact `SKILL.md` blob `c64f9f2697b0e4a65978c5fab80327da56ad6069` at the registered source snapshot. The decisive state remains **rejected unchanged 14/20**, behavioral validation `not-run`. Preserve its atomic-commit discipline, worktree isolation, structured scope summaries, release tagging, changelog, semantic-versioning, and consumer-impact guidance as adaptation/reference evidence. Unchanged use remains rejected because the save-point workflow recommends destructive `git reset --hard HEAD`, release examples push tags remotely without a mandatory action-specific authorization boundary, several workflow preferences are framed too universally, and grep-based secret detection is inadequate as a safety check. Recover compatible historical evidence for the remaining 8 before fresh review where possible.
+The latest reconciled unit is `idea-refine`. Its exact historical evidence was recovered from superseded PR #42 rather than re-reviewed and matches exact `SKILL.md` blob `38955e8943f2ea68c041f10ef1902d94bdfb1cb9` at the registered source snapshot. The decisive state remains **verified 17/20**, behavioral validation `not-run`. Preserve its divergent-to-convergent ideation workflow, explicit assumption testing, user-value/feasibility/differentiation checks, concrete one-page artifact, and Not Doing boundary. The write path asks the user for confirmation before saving, satisfying the mutation authorization boundary. Portability remains medium because named host tools and skill-local references are preferred. Recover compatible historical evidence for the remaining 7 before fresh review where possible.
 
 ## Governed discovery / source-vetting
 
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **16/24** current-standard companions by recovering compatible historical evidence for the remaining 8. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **17/24** current-standard companions by recovering compatible historical evidence for the remaining 7. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
