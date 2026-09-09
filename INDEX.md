@@ -25,6 +25,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard gaps | 0 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Matt Pocock Skills current-standard gaps | 0 |
+| Cloudflare Skills current-standard companions | 13 / 13 |
+| Cloudflare Skills current-standard gaps | 0 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -70,12 +72,14 @@ Physical presence or registration does not establish individual skill quality. F
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`. It is a substrate-agnostic continuity procedure: relevant recall is scoped and read-only, prior memory does not authorize new actions, and persistent continuity capture requires current or standing authority with secret and sensitive-data minimization.
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy.
+AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy. Cloudflare Skills is complete at **13/13**, with **0** current-standard gaps and all companion paths canonical under `skills/sources/cloudflare-skills/`.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin skill roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
 The final Cole reconciliation is `worktree-merge`, rejected unchanged **15/20**, bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861` and `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`. Behavioral validation has not been run. Its disposable integration-branch staging, repository-detected validation, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice are useful adaptation/extraction evidence. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands lack an explicit hostile-instruction boundary.
 
 The Matt Pocock family is pinned at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; provenance and verification expose matching 29-file companion sets, and live companion metadata contains no obsolete `vendor/mattpocock-skills/...` path.
+
+The Cloudflare family is pinned at `f96bff754e428838818017f75817f0f9428acd48`; provenance and verification expose matching 13-file companion sets. Historical review remains 11 verified / 2 rejected unchanged. `web-perf` remains rejected for an unresolved privacy/telemetry boundary around its required Chrome DevTools MCP path, and `wrangler` remains rejected for missing action-specific authorization around install/deploy/delete/migration/resource mutations. Behavioral validation remains `not-run`.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
