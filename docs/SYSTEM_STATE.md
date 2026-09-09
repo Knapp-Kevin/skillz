@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 427 |
+| **Persisted third-party review companions** | 428 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -25,8 +25,8 @@
 | **Matt Pocock Skills current-standard gaps** | 0 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Cloudflare Skills current-standard gaps** | 0 |
-| **Addy Osmani Agent Skills current-standard companions** | 15 / 24 |
-| **Addy Osmani Agent Skills current-standard gaps** | 9 |
+| **Addy Osmani Agent Skills current-standard companions** | 16 / 24 |
+| **Addy Osmani Agent Skills current-standard gaps** | 8 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -50,7 +50,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Matt Pocock Skills: exact registered-pin denominator **29**, **29/29** companion-complete, **0 gaps** at pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; `deprecated` and `in-progress` are excluded by source policy.
 - Cloudflare Skills: exact registered-pin denominator **13**, **13/13** companion-complete, **0 gaps** at pin `f96bff754e428838818017f75817f0f9428acd48`; dispositions remain **11 verified / 2 rejected unchanged**.
-- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **15/24** current-standard companion pairs, **9 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
+- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **16/24** current-standard companion pairs, **8 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -83,9 +83,9 @@ The two rejected unchanged records remain intentional negative evidence. `web-pe
 
 ## Addy Osmani Agent Skills reconciliation
 
-The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **15** provenance/verification companion pairs, leaving **9** current-standard gaps.
+The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **16** provenance/verification companion pairs, leaving **8** current-standard gaps.
 
-The latest reconciled unit is `frontend-ui-engineering`, recovered from exact historical evidence preserved on superseded PR #42 rather than re-reviewed. It is bound to package tree `893e7558baef6a0773aec4c152ca8bccd544fa03`, exact `SKILL.md` blob `837df875900d4d431c6d51a3251bac0d4bd5dfed`, and skill-path freshness revision `91d4d07522de9577caf5d213e5bf1acc38fa3df2` dated 2026-08-07. It remains verified **16/20** with behavioral validation `not-run`. Preserve its design-system-first, accessibility, responsive, loading/error/empty-state, and rendered-verification discipline. Portability remains medium because examples lean on React/TSX and Tailwind-style conventions and accessibility verification benefits from browser/axe tooling; fixed breakpoint, component-size, and prop-drilling thresholds are heuristics for judgment rather than universal gates.
+The latest reconciled unit is `git-workflow-and-versioning`, recovered from exact historical evidence preserved on superseded PR #42 rather than re-reviewed. It is bound to exact `SKILL.md` blob `c64f9f2697b0e4a65978c5fab80327da56ad6069` at the registered source snapshot and remains rejected unchanged **14/20** with behavioral validation `not-run`. Preserve its atomic-commit, worktree, scope-summary, release-tag, changelog, and semantic-versioning patterns as adaptation/reference evidence. Unchanged use remains rejected because the save-point workflow recommends destructive `git reset --hard HEAD`, release examples push tags remotely without a mandatory action-specific authorization boundary, several workflow preferences are framed too universally, and grep-based secret detection is insufficient as a safety check.
 
 ## Source lifecycle
 
@@ -103,7 +103,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **15/24** current-standard companions and **9** gaps.
+1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **16/24** current-standard companions and **8** gaps.
 2. Continue governed discovery/source-vetting and omission recovery.
 3. Resolve bounded candidate issues when evidence supports a decisive outcome.
 4. Continue the corpus-wide provenance audit in issue #66 until every governed family is truthfully accounted for.
