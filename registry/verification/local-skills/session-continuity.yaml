@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: session-continuity
+source_id: local-skills
+local_path: "skills/session-continuity/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 93b8f0be84bdb39153386c27b46294233c39bb8b
+characterized_at: 2026-09-08
+reviewed_at: 2026-09-08
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [memory, context-management, handoff]
+  lifecycle: [operations, maintenance]
+  characteristic: [evidence-first, traceable, safety-bounded, context-efficient]
+  authority: [mutating]
+  portability: [high]
+notes: "Substrate-agnostic continuity procedure derived for the gap established in issues #71/#73. Strong trigger/non-trigger boundary, scoped recall, correction precedence, explicit gap reporting, persistent-write authorization, secret/sensitive-data minimization, and no substrate implementation. Loses one point because usefulness depends on a host memory/context capability and semantic behavior has not been externally exercised."
