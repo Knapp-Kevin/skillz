@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **425** persisted exact-version third-party verification companions.
+- **426** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -79,11 +79,11 @@ The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf`
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
 - Historical issue #27: **24/24** with decisive exact-version static states.
-- Current-standard provenance companions: **13/24**.
-- Current-standard verification companions: **13/24**.
-- Current-standard gaps: **11**.
+- Current-standard provenance companions: **14/24**.
+- Current-standard verification companions: **14/24**.
+- Current-standard gaps: **10**.
 
-The latest reconciled unit is `deprecation-and-migration`, bound to exact `SKILL.md` blob `765bdde6329dbd5fd22d5d3fc2c185737fc9f908` and skill-path freshness revision `5a4a69adfc7f70d4a284d5dca7b0d0de575cc802` dated 2026-07-05. It is rejected unchanged **14/20** with behavioral validation `not-run`. Preserve its deprecation framing, strangler/adapter migration patterns, usage verification, expand-contract database migration, rollback/down-path discipline, and zombie-code ownership as adaptation/reference evidence. Unchanged use hard-fails the authority rule because it directs code/config removal, production traffic shifts, feature-flag changes, database backfills and destructive schema operations, deployments, and user migration/communications without mandatory action-specific authorization immediately before consequential mutation. Recover compatible historical evidence for the remaining 11 before fresh review where possible.
+The latest reconciled unit is `doubt-driven-development`, bound to exact `SKILL.md` blob `ea46342c5dcfe445004a6fa5bc43e71f3f25e78d` and skill-path freshness revision `91d4d07522de9577caf5d213e5bf1acc38fa3df2` dated 2026-08-07. It is verified **19/20** with behavioral validation `not-run`. Preserve its fresh-context adversarial-review isolation, finding reconciliation rather than reviewer deference, bounded three-cycle stop, and explicit optional cross-model escalation. External CLI review is authority-safe because each invocation requires explicit user authorization, exact command confirmation, capability checks, reviewed artifacts via stdin, and read-only sandboxing. Portability remains medium because preferred operation assumes fresh-context reviewer/subagent capability and optionally named CLIs, with degraded self-review/manual-review fallbacks when unavailable. Recover compatible historical evidence for the remaining 10 before fresh review where possible.
 
 ## Governed discovery / source-vetting
 
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **13/24** current-standard companions by recovering compatible historical evidence for the remaining 11. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue Addy Osmani Agent Skills from **14/24** current-standard companions by recovering compatible historical evidence for the remaining 10. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
