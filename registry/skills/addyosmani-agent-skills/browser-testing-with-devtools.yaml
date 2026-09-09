@@ -14,7 +14,7 @@ source_last_pushed_at: 2026-08-27T19:28:24Z
 curated_at: 2026-08-28
 last_checked_at: 2026-08-28
 availability: vendored
-local_path: vendor/addyosmani-agent-skills/skills/browser-testing-with-devtools/SKILL.md
+local_path: skills/sources/addyosmani-agent-skills/skills/browser-testing-with-devtools/SKILL.md
 permission_tier: staging-write
 portability: medium
 review_status: curated-source-reviewed
