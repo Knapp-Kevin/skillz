@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: using-agent-skills
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/using-agent-skills/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b250b297c41369ac380eb322f6561c78dd177586
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [agent-development, orchestration]
+  lifecycle: [discovery, planning]
+  characteristic: [orchestration, tool-routing, safety-bounded]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. Rejected for unchanged reuse. The source-specific routing map and principles on assumptions, scope, simplicity, confusion, and verification are useful, but the skill declares workflows non-optional, directs agents to stop and wait on ambiguity, makes specs the default for non-trivial work, and proposes a long canonical lifecycle that can create process for process's sake. It also routes unchanged into skills this review has rejected. Use as routing/design evidence, not portable governing policy. Exact pinned fingerprint confirmed. Behavioral validation remains pending and is not required for this static rejection."
