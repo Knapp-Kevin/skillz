@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: ask-matt
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/ask-matt/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/ask-matt/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: ae8eb9b211972d9ae584b41d0f1439c644494fc7
 characterized_at: 2026-08-29
