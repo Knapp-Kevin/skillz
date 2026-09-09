@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-08",
+  "snapshot_date": "2026-09-09",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
@@ -21,6 +21,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
+    "matt_pocock_skills_current_standard_companions": 29,
+    "matt_pocock_skills_eligible_denominator": 29,
+    "matt_pocock_skills_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -53,6 +56,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-08: first-party session-continuity admitted from issues #71/#73 as a substrate-agnostic continuity procedure; exact SKILL.md blob 93b8f0be84bdb39153386c27b46294233c39bb8b; verified 19/20 with behavioral validation not-run; relevant recall is scoped/read-only, prior memory does not authorize new actions, and durable capture requires current or standing authorization with secret and sensitive-data minimization; first-party count/provenance is 44/44; persisted third-party review count remains 422"
+    "latest_reconciliation": "2026-09-09: Matt Pocock Skills reconciled as current-standard companion-complete at exact pin 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76; eligible denominator 29 after excluding deprecated and in-progress; provenance and verification companion sets match 29/29; no live companion retains obsolete vendor/mattpocock-skills paths; persisted third-party review count remains 422"
   }
 }
