@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: deprecation-and-migration
+display_name: Deprecation and Migration
+source_id: addyosmani-agent-skills
+source_repository: https://github.com/addyosmani/agent-skills
+source_path: skills/deprecation-and-migration/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+upstream_revision: 5a4a69adfc7f70d4a284d5dca7b0d0de575cc802
+upstream_last_updated_at: 2026-07-05T13:58:17Z
+source_last_pushed_at: unknown
+curated_at: 2026-09-09
+last_checked_at: 2026-09-09
+availability: vendored-reference-only
+local_path: skills/sources/addyosmani-agent-skills/skills/deprecation-and-migration/SKILL.md
+permission_tier: mutating-with-insufficient-confirmation-boundary
+portability: high
+review_status: rejected-unchanged
+dependency_status: environment-specific-migration-authority-required
+dependencies: target codebase and deployment environment; optional metrics/logs, feature-flag platform, database migration tooling, and user-communication channels
+import_eligibility: reference-only-unless-adapted
+rationale: Strong deprecation decision framing, incremental migration, expand-contract schema migration, rollback, usage verification, and zombie-code ownership guidance, but unchanged use directs code removal, production traffic shifts, feature-flag changes, database backfills/schema mutation, deployments, and compulsory user migration without a governing action-specific authorization boundary immediately before consequential mutation.
