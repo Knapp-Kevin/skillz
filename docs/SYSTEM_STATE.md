@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 422 |
+| **Persisted third-party review companions** | 423 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -25,6 +25,8 @@
 | **Matt Pocock Skills current-standard gaps** | 0 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Cloudflare Skills current-standard gaps** | 0 |
+| **Addy Osmani Agent Skills current-standard companions** | 11 / 24 |
+| **Addy Osmani Agent Skills current-standard gaps** | 13 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -48,6 +50,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Matt Pocock Skills: exact registered-pin denominator **29**, **29/29** companion-complete, **0 gaps** at pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; `deprecated` and `in-progress` are excluded by source policy.
 - Cloudflare Skills: exact registered-pin denominator **13**, **13/13** companion-complete, **0 gaps** at pin `f96bff754e428838818017f75817f0f9428acd48`; dispositions remain **11 verified / 2 rejected unchanged**.
+- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **11/24** current-standard companion pairs, **13 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -78,6 +81,12 @@ The registered exact pin is `f96bff754e428838818017f75817f0f9428acd48`. Historic
 
 The two rejected unchanged records remain intentional negative evidence. `web-perf` hard-fails unchanged use because the required Chrome DevTools MCP path omits an adequate privacy/telemetry consent boundary for browser-content and related data exposure. `wrangler` hard-fails unchanged use because install, deploy, delete, migration, secret, and resource-management procedures lack a governing action-specific authorization boundary. Both remain useful adaptation/reference evidence. Behavioral validation remains `not-run` across the family.
 
+## Addy Osmani Agent Skills reconciliation
+
+The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **11** provenance/verification companion pairs, leaving **13** current-standard gaps.
+
+The latest recovered unit is `documentation-and-adrs`, bound to exact `SKILL.md` blob `7faf52c9558fa60faf7362cf473cf24784f9209b` and skill-path freshness revision `a0eba71b5544c47c922cc55127bccec8b0f1e6ab` dated 2026-07-16. It is verified unchanged **19/20** with behavioral validation `not-run`. The procedure is self-contained, high-portability, and repository-local: it detects existing ADR conventions before applying defaults, preserves decision/supersession history, and introduces no external-system mutation or credential path.
+
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
@@ -94,7 +103,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review.
+1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **11/24** current-standard companions and **13** gaps.
 2. Continue governed discovery/source-vetting and omission recovery.
 3. Resolve bounded candidate issues when evidence supports a decisive outcome.
 4. Continue the corpus-wide provenance audit in issue #66 until every governed family is truthfully accounted for.
