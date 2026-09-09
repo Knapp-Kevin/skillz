@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: session-continuity
+display_name: "Session Continuity"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/session-continuity/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party-derived
+source_snapshot_revision: 25f22f4d263a721790277da0fcdc0140fd42390b
+curated_at: 2026-09-08
+last_checked_at: 2026-09-08
+availability: in-repo
+local_path: skills/session-continuity/SKILL.md
+permission_tier: mutating
+portability: high
+review_status: verified-structured
+dependency_status: host-capability-dependent
+dependencies: "Requires only a legitimate host memory/context capability when durable recall or persistence is available; degrades to explicit gap reporting when it is not."
+import_eligibility: eligible-standalone
+rationale: "First-party substrate-agnostic derivation for the cross-session continuity gap established in issues #71 and #73. It expresses continuity discipline informed by host-memory lessons without implementing or mirroring Continuum or any other substrate. Recall is read-only; persistent capture is explicitly authorization-gated and sensitive-data-minimized."
