@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 425,
+    "persisted_third_party_exact_version_reviews": 426,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -27,9 +27,9 @@
     "cloudflare_skills_current_standard_companions": 13,
     "cloudflare_skills_eligible_denominator": 13,
     "cloudflare_skills_current_standard_gaps": 0,
-    "addy_osmani_agent_skills_current_standard_companions": 13,
+    "addy_osmani_agent_skills_current_standard_companions": 14,
     "addy_osmani_agent_skills_eligible_denominator": 24,
-    "addy_osmani_agent_skills_current_standard_gaps": 11,
+    "addy_osmani_agent_skills_current_standard_gaps": 10,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -62,6 +62,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-09: Addy Osmani Agent Skills denominator remains 24 first-class skills at exact pin f63ec56a3cc936408d792956ae583c3c96a825bd; deprecation-and-migration added as current-standard provenance/verification pair, rejected unchanged 14/20 for missing action-specific authorization around destructive migration, production traffic, deployment, schema, feature-flag, and user-communication mutations; behavioral validation not-run; Addy current-standard companions 13/24 with 11 gaps; persisted third-party review count 425"
+    "latest_reconciliation": "2026-09-09: Addy Osmani Agent Skills denominator remains 24 first-class skills at exact pin f63ec56a3cc936408d792956ae583c3c96a825bd; doubt-driven-development added as current-standard provenance/verification pair, verified 19/20 for bounded adversarial review with explicit per-invocation authorization and read-only external-review sandboxing; behavioral validation not-run; Addy current-standard companions 14/24 with 10 gaps; persisted third-party review count 426"
   }
 }
