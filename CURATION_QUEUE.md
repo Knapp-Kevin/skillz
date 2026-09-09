@@ -62,6 +62,18 @@ The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3
 - Current-standard gaps: **0**.
 - Canonical-path integrity: no live companion retains obsolete `vendor/mattpocock-skills/...`; all live paths resolve under `skills/sources/mattpocock-skills/`.
 
+### Cloudflare Skills — CURRENT-STANDARD COMPLETE
+
+- Pin: `f96bff754e428838818017f75817f0f9428acd48`.
+- Exact eligible denominator: **13** first-class packages.
+- Provenance companions: **13/13**.
+- Verification companions: **13/13**.
+- Decisive states: **11 verified / 2 rejected unchanged**.
+- Current-standard gaps: **0**.
+- Canonical-path integrity: all live companion `local_path` values resolve under `skills/sources/cloudflare-skills/`; obsolete `vendor/cloudflare-skills/...` paths are eliminated from the companion family.
+
+The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf` retains useful evidence-driven performance-audit methods but hard-fails unchanged use because its required Chrome DevTools MCP path lacks an adequate privacy/telemetry consent boundary. `wrangler` remains useful reference material but hard-fails unchanged use because install/deploy/delete/migration/resource-mutation procedures lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the 13-package family.
+
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
@@ -76,4 +88,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, and Matt Pocock Skills current-standard complete at their exact registered pins, continue historical external-corpus reconciliation from compatible prior evidence. Anthropic Knowledge Work Plugins remains blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills current-standard complete at their exact registered pins, continue historical external-corpus reconciliation from compatible prior evidence. Anthropic Knowledge Work Plugins remains blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.

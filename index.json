@@ -24,6 +24,9 @@
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
+    "cloudflare_skills_current_standard_companions": 13,
+    "cloudflare_skills_eligible_denominator": 13,
+    "cloudflare_skills_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -56,6 +59,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-09: Matt Pocock Skills reconciled as current-standard companion-complete at exact pin 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76; eligible denominator 29 after excluding deprecated and in-progress; provenance and verification companion sets match 29/29; no live companion retains obsolete vendor/mattpocock-skills paths; persisted third-party review count remains 422"
+    "latest_reconciliation": "2026-09-09: Cloudflare Skills reconciled as current-standard companion-complete at exact pin f96bff754e428838818017f75817f0f9428acd48; eligible denominator 13; provenance and verification companion sets match 13/13; all live companion local_path values resolve under skills/sources/cloudflare-skills; dispositions remain 11 verified / 2 rejected; persisted third-party review count remains 422"
   }
 }

@@ -23,6 +23,8 @@
 | **Cole Medin Skills current-standard gaps** | 0 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Matt Pocock Skills current-standard gaps** | 0 |
+| **Cloudflare Skills current-standard companions** | 13 / 13 |
+| **Cloudflare Skills current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -45,6 +47,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Matt Pocock Skills: exact registered-pin denominator **29**, **29/29** companion-complete, **0 gaps** at pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; `deprecated` and `in-progress` are excluded by source policy.
+- Cloudflare Skills: exact registered-pin denominator **13**, **13/13** companion-complete, **0 gaps** at pin `f96bff754e428838818017f75817f0f9428acd48`; dispositions remain **11 verified / 2 rejected unchanged**.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -68,6 +71,12 @@ The final package, `worktree-merge`, is bound to package tree `150cb167cb6c0bd70
 ## Matt Pocock Skills reconciliation
 
 The registered exact pin is `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Applying the source registry exclusions for `deprecated` and `in-progress` yields exactly **29** eligible first-class packages. The provenance and verification companion directories each expose the same 29 named records, and live repository search finds no remaining `vendor/mattpocock-skills/...` companion path. The earlier Wayfinder and three-package repairs therefore completed path normalization rather than leaving a residual family gap. Historical 29/29 review evidence can now be promoted as current-standard companion-complete without re-reviewing unchanged exact material.
+
+## Cloudflare Skills reconciliation
+
+The registered exact pin is `f96bff754e428838818017f75817f0f9428acd48`. Historical source queue #27 establishes the finite denominator at **13/13**, with **11 verified / 2 rejected unchanged**. The provenance and verification companion directories expose matching 13-file sets, and all live companion `local_path` metadata now resolves under `skills/sources/cloudflare-skills/` rather than the removed top-level `vendor/` tree.
+
+The two rejected unchanged records remain intentional negative evidence. `web-perf` hard-fails unchanged use because the required Chrome DevTools MCP path omits an adequate privacy/telemetry consent boundary for browser-content and related data exposure. `wrangler` hard-fails unchanged use because install, deploy, delete, migration, secret, and resource-management procedures lack a governing action-specific authorization boundary. Both remain useful adaptation/reference evidence. Behavioral validation remains `not-run` across the family.
 
 ## Source lifecycle
 
