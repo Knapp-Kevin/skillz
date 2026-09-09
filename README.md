@@ -56,6 +56,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.
 - **Cole Medin Skills:** exact registered-pin denominator **33**; **33/33** current-standard companion complete, **0** gaps.
 - **Matt Pocock Skills:** exact registered-pin denominator **29** after excluding `deprecated` and `in-progress`; **29/29** current-standard companion complete, **0** gaps.
+- **Cloudflare Skills:** exact registered-pin denominator **13**; **13/13** current-standard companion complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at the registered pin: 28 canonical plugin skill roots, one nested `azure-kubernetes-automatic-readiness` package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown does not become a separate skill merely because it is useful or lives in an attractively named directory.
@@ -66,7 +67,9 @@ Cole Medin is current-standard complete at its exact 33-skill pin. The final rec
 
 Matt Pocock Skills is current-standard complete at registered pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. The eligible denominator is **29** first-class packages after the source registry exclusions for `deprecated` and `in-progress`. All 29 have matching provenance and verification companions under the canonical registry roots, and no live companion retains the obsolete `vendor/mattpocock-skills/...` physical path.
 
-AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, and Matt Pocock Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Cloudflare Skills is current-standard complete at registered pin `f96bff754e428838818017f75817f0f9428acd48`. The exact denominator is **13** first-class packages, all with matching provenance and verification companions whose physical paths resolve under `skills/sources/cloudflare-skills/`. Historical dispositions remain **11 verified / 2 rejected unchanged**. `web-perf` remains rejected for an unresolved privacy/telemetry boundary around its required Chrome DevTools MCP path; `wrangler` remains rejected because install/deploy/delete/migration/resource mutations lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the family.
+
+AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, and Cloudflare Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 
