@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: doubt-driven-development
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/doubt-driven-development/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ea46342c5dcfe445004a6fa5bc43e71f3f25e78d
+characterized_at: 2026-09-09
+last_verified_at: 2026-09-09
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [code-review, decision-support]
+  lifecycle: [implementation, verification]
+  characteristic: [evidence-first, human-review, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong fresh-context adversarial-review method with explicit artifact/contract isolation, bounded three-cycle stopping, finding classification instead of reviewer deference, and a clear non-interactive rule. Optional cross-model CLI escalation is authorization-safe: every invocation requires explicit user authorization, exact command confirmation, capability checks, and read-only sandboxing; shell interpolation of reviewed artifacts is explicitly forbidden. Portability is medium because the preferred flow assumes host subagent isolation and optional named CLIs, though degraded self-review and manual external-review fallbacks are documented. Exact pinned SKILL.md blob confirmed. Behavioral validation remains not-run."

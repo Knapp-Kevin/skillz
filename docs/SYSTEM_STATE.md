@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 425 |
+| **Persisted third-party review companions** | 426 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **AWS current-standard companion complete** | 72 / 72 |
@@ -25,8 +25,8 @@
 | **Matt Pocock Skills current-standard gaps** | 0 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Cloudflare Skills current-standard gaps** | 0 |
-| **Addy Osmani Agent Skills current-standard companions** | 13 / 24 |
-| **Addy Osmani Agent Skills current-standard gaps** | 11 |
+| **Addy Osmani Agent Skills current-standard companions** | 14 / 24 |
+| **Addy Osmani Agent Skills current-standard gaps** | 10 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -50,7 +50,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Cole Medin Skills: exact registered-pin denominator **33**, **33/33** companion-complete, **0 gaps** at pin `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Matt Pocock Skills: exact registered-pin denominator **29**, **29/29** companion-complete, **0 gaps** at pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; `deprecated` and `in-progress` are excluded by source policy.
 - Cloudflare Skills: exact registered-pin denominator **13**, **13/13** companion-complete, **0 gaps** at pin `f96bff754e428838818017f75817f0f9428acd48`; dispositions remain **11 verified / 2 rejected unchanged**.
-- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **13/24** current-standard companion pairs, **11 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
+- Addy Osmani Agent Skills: exact registered-pin denominator **24**, **14/24** current-standard companion pairs, **10 gaps** at pin `f63ec56a3cc936408d792956ae583c3c96a825bd`; historical issue #27 records decisive exact-version states for all 24.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
@@ -83,9 +83,9 @@ The two rejected unchanged records remain intentional negative evidence. `web-pe
 
 ## Addy Osmani Agent Skills reconciliation
 
-The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **13** provenance/verification companion pairs, leaving **11** current-standard gaps.
+The registered exact pin is `f63ec56a3cc936408d792956ae583c3c96a825bd`. The pinned upstream tree exposes exactly **24** first-class `skills/*/SKILL.md` packages, matching historical issue #27's 24/24 decisive static-review record. Current canonical shelves now contain **14** provenance/verification companion pairs, leaving **10** current-standard gaps.
 
-The latest reconciled unit is `deprecation-and-migration`, bound to exact `SKILL.md` blob `765bdde6329dbd5fd22d5d3fc2c185737fc9f908` and skill-path freshness revision `5a4a69adfc7f70d4a284d5dca7b0d0de575cc802` dated 2026-07-05. It is rejected unchanged **14/20** with behavioral validation `not-run`. The package contains useful deprecation decision framing, incremental migration, strangler/adapter patterns, usage verification, expand-contract database migration, rollback/down-path discipline, and zombie-code ownership. Unchanged use hard-fails the current authority rule because it directs code/config removal, production traffic shifts, feature-flag changes, database backfills and destructive schema operations, deployments, and user migration/communications without a mandatory action-specific authorization boundary immediately before consequential mutation. Preserve the useful mechanisms as adaptation/reference evidence.
+The latest reconciled unit is `doubt-driven-development`, bound to exact `SKILL.md` blob `ea46342c5dcfe445004a6fa5bc43e71f3f25e78d` and skill-path freshness revision `91d4d07522de9577caf5d213e5bf1acc38fa3df2` dated 2026-08-07. It is verified **19/20** with behavioral validation `not-run`. The package provides a strong bounded adversarial-review discipline: fresh-context isolation, explicit reconciliation/classification of findings rather than blind reviewer deference, and a three-cycle stop. Optional cross-model CLI escalation has a real authority boundary because every invocation requires explicit user authorization, exact invocation confirmation, capability checks, reviewed artifacts passed through stdin, and a read-only sandbox. Portability remains medium because the preferred workflow assumes fresh-context reviewer/subagent capability and optionally named external CLIs, with degraded self-review/manual external-review fallbacks when unavailable.
 
 ## Source lifecycle
 
@@ -103,7 +103,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **13/24** current-standard companions and **11** gaps.
+1. Reconcile historically completed external corpora from compatible prior evidence before fresh re-review, with Addy Osmani at **14/24** current-standard companions and **10** gaps.
 2. Continue governed discovery/source-vetting and omission recovery.
 3. Resolve bounded candidate issues when evidence supports a decisive outcome.
 4. Continue the corpus-wide provenance audit in issue #66 until every governed family is truthfully accounted for.
