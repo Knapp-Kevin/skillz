@@ -49,6 +49,22 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
+## First-party session continuity
+
+Issue #71 established that admissible wild prior art did not cover the cross-session memory-continuity primitive, and issue #73 bounded a first-party derivation. `session-continuity` expresses a portable procedure for scoped recall, correction precedence, explicit continuity gaps, and minimal durable records. It does not implement, mirror, schedule, monitor, or otherwise own a memory substrate.
+
+Persistent memory capture is treated as a mutation: a current request or applicable standing policy must authorize durable capture before it occurs. Secret material is excluded, and sensitive personal data requires specific durable-capture authority plus necessity. Prior memory is evidence, not current action authorization.
+
+## Microsoft Azure Skills denominator reconciliation
+
+The exact pin exposes 28 canonical plugin skill roots, one additional nested Kubernetes automatic-readiness package, and five additional nested first-class Microsoft Foundry packages beyond the Foundry root. That yields an eligible denominator of **34**, exactly matching the current companion pairs. Ordinary workflow, procedure, reference, example, SDK, or other Markdown is not independently first-class skill content. The latest Azure package-level reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
+
+## Cole Medin Skills completion
+
+The registered pin contains **33** first-class `.claude/skills/*/SKILL.md` entries, and all thirty-three now have current companion pairs.
+
+The final package, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` on 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Preserve its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before the consequential mutation. Repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are also treated as executable guidance without an explicit hostile-instruction boundary.
+
 ## Matt Pocock Skills reconciliation
 
 The registered exact pin is `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Applying the source registry exclusions for `deprecated` and `in-progress` yields exactly **29** eligible first-class packages. The provenance and verification companion directories each expose the same 29 named records, and live repository search finds no remaining `vendor/mattpocock-skills/...` companion path. The earlier Wayfinder and three-package repairs therefore completed path normalization rather than leaving a residual family gap. Historical 29/29 review evidence can now be promoted as current-standard companion-complete without re-reviewing unchanged exact material.
