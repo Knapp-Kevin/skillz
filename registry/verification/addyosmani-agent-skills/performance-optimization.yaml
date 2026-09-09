@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: performance-optimization
+source_id: addyosmani-agent-skills
+source_snapshot_revision: f63ec56a3cc936408d792956ae583c3c96a825bd
+local_path: skills/sources/addyosmani-agent-skills/skills/performance-optimization/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6e95266942288ca0330eb2a8a716625958df7c57
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [evaluation, monitoring, implementation]
+  lifecycle: [verification, operations, maintenance]
+  characteristic: [metric-driven, evidence-first, hypothesis-driven, instrumentation]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Excellent measure-first workflow with explicit baselines, bottleneck localization, same-condition remeasurement, variance awareness, keep/revert decisions, and regression guards. Cache correctness, query-plan, connection-pool, and stampede caveats materially improve safety. Stack-specific examples and time-sensitive Web Vitals thresholds reduce portability slightly and should be refreshed when a current decision depends on them. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
