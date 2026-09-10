@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 554,
+    "persisted_third_party_exact_version_reviews": 555,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 17,
+    "david_ondrej_skills_current_standard_companions": 18,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 38,
+    "david_ondrej_skills_current_standard_gaps": 37,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration added herdr rejected unchanged 11/20 under the authority hard fail; family companions 16/55 -> 17/55, gaps 39 -> 38, decisive states 9 verified / 8 rejected unchanged; agent orchestration 12/17 -> 13/17; persisted third-party review count 553 -> 554"
+    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration added launch-subagent verified 16/20; family companions 17/55 -> 18/55, gaps 38 -> 37, decisive states 10 verified / 8 rejected unchanged; agent orchestration 13/17 -> 14/17; persisted third-party review count 554 -> 555"
   }
 }

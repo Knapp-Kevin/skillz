@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: launch-subagent
+display_name: Launch Subagent
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/launch-subagent/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 2bbd544af771c3053a4ba72b8133ca19817fda99
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: host subagent or task-launch capability, availability of Fable 5 Max or GPT 5.6 Sol Max Fast as named by the source, optional deepapi skill for delegated live-web work
+import_eligibility: verified-unchanged-with-host-fit
+rationale: Concise orchestration guidance with a real launch authorization boundary, explicit independent-task/file partitioning, full-context handoff requirements, main-agent integration and review, and useful limits on delegation overhead. Unchanged reuse is acceptable only where the host actually exposes the named subagent models/capabilities; the hard-coded model policy and deepapi reference make portability low and freshness-sensitive.

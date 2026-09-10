@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: launch-subagent
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 2bbd544af771c3053a4ba72b8133ca19817fda99
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 49d50f550c837254d53a25634c0ed9fd4daa88e9
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [orchestration]
+  lifecycle: [planning, implementation]
+  characteristic: [decomposition, human-review, orchestration, risk-aware, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The skill explicitly forbids launching subagents unless the user requested it, requires independent task and file partitioning, tells the main agent to provide full context, and requires review/verification of every returned result before trust. It also limits delegation to cases where overhead is justified. The hard-coded Fable/GPT model policy and non-bundled deepapi reference are host-specific and freshness-sensitive, so portability is low. Behavioral validation was not run."
