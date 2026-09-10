@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 551 |
+| Persisted third-party exact-version reviews | 552 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -22,8 +22,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |
-| David Ondrej Skills current-standard companions | 14 / 55 |
-| David Ondrej Skills current-standard gaps | 41 |
+| David Ondrej Skills current-standard companions | 15 / 55 |
+| David Ondrej Skills current-standard gaps | 40 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -83,7 +83,7 @@ The latest first-party admission is `session-continuity`, statically verified **
 
 Anthropic Knowledge Work Plugins is current-standard complete for its exact **74-skill denominator** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`. Package-level companions recovered from superseded PR #42 preserve **36 verified / 38 rejected unchanged** historical dispositions and do not infer behavioral validation.
 
-David Ondrej Skills is tracked at pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`, with **55** first-class packages. Current companions cover **14/55**, leaving **41** gaps and decisive states **7 verified / 7 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **9/17** reviewed. `gpt-review` is verified 16/20 because it has an explicit user-request trigger, delegates review rather than mutation, keeps the reviewer prompt neutral, waits for completion, and returns the reviewer output unchanged; behavioral validation remains `not-run` and portability is low because its bb dependencies are host-specific.
+David Ondrej Skills is tracked at pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`, with **55** first-class packages. Current companions cover **15/55**, leaving **40** gaps and decisive states **8 verified / 7 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **10/17** reviewed. `git-worktree` is verified 17/20 because both its skill frontmatter and bundled OpenAI policy prohibit implicit invocation, it isolates task work from the primary checkout, requires human diff review before merge, and requires an explicit user request before pushing; behavioral validation remains `not-run`.
 
 OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`.
 

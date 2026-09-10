@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: git-worktree
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 7d36eec370ed25112a15288503de1654dea32b3c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b8e4f1a367e67c9a0fd0d8f4d7d9521e2a13e6ba
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [orchestration, repository-maintenance]
+  lifecycle: [implementation, maintenance]
+  characteristic: [human-review, risk-aware, safety-bounded]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Invocation is explicitly non-implicit via both skill frontmatter and bundled OpenAI policy. Local worktree/filesystem mutation is bounded by explicit invocation; merging requires human diff review and pushing requires an explicit user request. Environment bootstrap, Cursor-specific conveniences, and copied local secret files require host judgment. Behavioral validation was not run."
