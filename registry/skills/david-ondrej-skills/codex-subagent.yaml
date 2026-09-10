@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: codex-subagent
+display_name: Codex Subagent
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/codex-subagent/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 7ad1f9b982c8c69ab49658ddb3063aaa6652e149
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: OpenAI Codex CLI, ChatGPT subscription authentication, Git repository/worktree for normal coding tasks, shell with mktemp and stdin redirection
+import_eligibility: adaptation-only
+rationale: Useful delegation recipe with credential-safety guidance, sandboxing, worktree isolation, diff review, and explicit rejection of dangerous sandbox bypass. However, its normal launch path grants workspace-write mutation to a delegated coding agent without a distinct action-specific authorization checkpoint. Preserve as adaptation/reference evidence rather than unchanged adoption.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: cmux
+display_name: cmux
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/cmux/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 6e169801d8007180976bd03f93856f76fba8723f
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: cmux macOS terminal app and CLI, cmux Unix socket API, macOS 14+, optional jq/nc/browser surface support, host-specific cmux workspace state
+import_eligibility: adaptation-only
+rationale: Rich operational reference for cmux topology, browser automation, notifications, settings, and non-disruptive workspace control, but the broad trigger permits consequential send/click/close/settings actions without distinct action-specific authorization boundaries. Preserve as adaptation/reference evidence rather than unchanged adoption.

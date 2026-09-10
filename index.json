@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 546,
+    "persisted_third_party_exact_version_reviews": 549,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 9,
+    "david_ondrej_skills_current_standard_companions": 12,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 46,
+    "david_ondrej_skills_current_standard_gaps": 43,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration tranche added agent-self-scheduling, bb-plugins, and bb-subagents; family companions 6/55 -> 9/55, gaps 49 -> 46, decisive states 4 verified / 5 rejected unchanged; persisted third-party review count 543 -> 546"
+    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration tranche added cmux, codex-subagent, and corral-launch-agents; family companions 9/55 -> 12/55, gaps 46 -> 43, decisive states 5 verified / 7 rejected unchanged; persisted third-party review count 546 -> 549"
   }
 }

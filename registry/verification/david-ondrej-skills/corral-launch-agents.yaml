@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: corral-launch-agents
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: b974bf54ca72cb30cdbb11c367e70a5b35274f79
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d3e7862f487a4daa70f79e13fbffe62d383b0f38
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [orchestration, agent-development]
+  lifecycle: [implementation, operations]
+  characteristic: [risk-aware, evidence-first, tool-routing, human-review]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The skill explicitly treats launch as state-changing and permits it only when the user asks to launch, requires a dry-run before creation, separates resume from new launch and adoption, requires explicit acceptance for dirty-checkout bypass and preset changes, prohibits credential insertion, and verifies persisted/live state after launch. That is a real action-specific authorization boundary. Behavioral validation was not run. Portability is low because Corral, Herdr, bundled helper scripts/references, and session/worktree conventions are host-specific."
