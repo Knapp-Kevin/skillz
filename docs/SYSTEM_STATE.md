@@ -11,10 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 466 |
+| **Persisted third-party review companions** | 540 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
+| **Anthropic Knowledge Work Plugins current-standard companions** | 74 / 74 |
+| **Anthropic Knowledge Work Plugins current-standard gaps** | 0 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
@@ -24,11 +26,8 @@
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
 | **Vercel Agent Skills current-standard companions** | 9 / 9 |
 | **OpenHands Extensions current-standard companions** | 1 / 1 |
-| **OpenHands Extensions current-standard gaps** | 0 |
 | **Google Agents CLI current-standard companions** | 7 / 7 |
-| **Google Agents CLI current-standard gaps** | 0 |
 | **Cline Skills published current-standard companions** | 36 / 36 |
-| **Cline Skills published current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -45,32 +44,27 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 ## Inventory boundaries
 
-- First-party: **44/44 provenance-complete** with structured semantic review evidence.
-- Anthropic Skills: **17/17**, gaps **0**, historical distribution **10 verified / 7 rejected unchanged**.
+- First-party: **44/44 provenance-complete**.
+- Anthropic Skills: **17/17**, gaps **0**, **10 verified / 7 rejected unchanged**.
+- Anthropic Knowledge Work Plugins: exact denominator **74**, **74/74** provenance/verification companion complete, gaps **0**, at pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`; historical states **36 verified / 38 rejected unchanged**.
 - AWS Agent Toolkit: **72/72**, gaps **0**.
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- Matt Pocock Skills: **29/29**, gaps **0** after excluding `deprecated` and `in-progress` per source policy.
+- Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
 - Vercel Agent Skills: **9/9**, gaps **0**, **6 verified / 3 rejected unchanged**.
-- OpenHands Extensions: exact registered-pin denominator **1**, **1/1** provenance/verification companion complete, gaps **0**; `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`, at pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`.
-- Google Agents CLI: exact registered-pin denominator **7**, **7/7** provenance/verification companion pairs, gaps **0**, all seven verified at pin `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
-- Cline Skills: exact published denominator **36**, **36/36** provenance/verification companion pairs, published gaps **0**, at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`; the internal/unlisted `review-team` record remains separate from the published denominator.
+- OpenHands Extensions: **1/1**, gaps **0**; `theme-factory` remains **rejected unchanged 14/20**.
+- Google Agents CLI: **7/7**, gaps **0**, all seven verified.
+- Cline Skills: **36/36 published**, gaps **0**; internal/unlisted `review-team` remains outside the denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-## OpenHands Extensions reconciliation
+## Anthropic Knowledge Work Plugins reconciliation
 
-Source queue #27 establishes the exact pinned denominator as **1/1**: `theme-factory`. The current provenance and verification companions now bind the full registered source revision `87959a7da3e75445647e77b2fbf5bf5b66fb037b`, canonical `skills/sources/openhands-extensions/...` path, exact content blob `90dfceaf2ecdc191a4dcfb0069768a9560638998`, and decisive **rejected unchanged 14/20** state with behavioral validation `not-run`. The family is therefore current-standard companion complete even though unchanged adoption remains rejected.
-
-## Cline Skills reconciliation
-
-Source queue #27 records the finite public Cline corpus as **36/36 published skills reviewed**, plus a separate internal/unlisted `review-team` record. The source registry pins Cline Skills at `26378461e978f2b4e2e6d67b57121b86b2a79ba5`.
-
-After the passive-tree migration, current `main` retained only six published companion pairs plus `review-team`. Superseded PR #42 preserved exact package-level provenance and verification evidence for all 37 records under canonical `skills/sources/cline-skills/...` paths. The 30 genuinely missing published pairs have been recovered while the seven records already modernized on `main` were left untouched. This yields **36/36 published current-standard companion completeness** without counting the internal record in the published denominator or inventing behavioral evidence.
+The previously reported package-mapping blocker is resolved. Superseded PR #42 retains complete package-level trees under `registry/skills/anthropic-knowledge-work-plugins/` and `registry/verification/anthropic-knowledge-work-plugins/`, including exact source paths, revisions, fingerprints, individual scores/dispositions, authority findings, and behavioral-validation states. Those 74 provenance and 74 verification companions have been recovered intact rather than reconstructed from aggregate counts. The registered pin is `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`; historical source queue #27 records **74/74 reviewed, 36 verified / 38 rejected unchanged**.
 
 ## Source lifecycle
 
@@ -88,7 +82,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue the corpus-wide provenance audit in issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence; if still blocked, select the next admitted family with a truthful current-standard gap.
+1. Continue corpus-wide provenance audit #66 by recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 2. Continue governed discovery/source-vetting and omission recovery.
 3. Resolve bounded candidate issues when evidence supports a decisive outcome.
 4. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
