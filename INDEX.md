@@ -22,6 +22,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |
+| David Ondrej Skills current-standard companions | 3 / 55 |
+| David Ondrej Skills current-standard gaps | 52 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -38,7 +40,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is tracked and only partially curated; it is not included in that completed-family statement.
 
 ## First-party skills by purpose
 
@@ -80,6 +82,8 @@ Physical presence or registration does not establish individual skill quality. F
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`.
 
 Anthropic Knowledge Work Plugins is current-standard complete for its exact **74-skill denominator** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`. Package-level companions recovered from superseded PR #42 preserve **36 verified / 38 rejected unchanged** historical dispositions and do not infer behavioral validation.
+
+David Ondrej Skills is a tracked corpus at registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct pinned-tree recomputation establishes **55** first-class skill packages across the five documented category trees. Current companions cover **3/55**, leaving **52** exact-version gaps. The older 44-skill denominator is superseded; no disposition is inferred for the uncovered packages.
 
 OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`.
 

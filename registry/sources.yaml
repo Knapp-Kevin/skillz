@@ -166,7 +166,7 @@ sources:
     pinned_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
     mirror_source_revision: eed325a23bc29efca50084f85025d327460b2059
     mirror_fingerprint: cb682185dc410fb8615b36cd55ce10ecd9d9dbdf0bb7fd1209c0b065e36e0f3b
-    rationale: Creator-maintained public sanitized mirror tracked for selective curation. Denominator reconciliation is tracked in CURATION_QUEUE.md.
+    rationale: Creator-maintained public sanitized mirror tracked for selective curation. At the registered pin the exact eligible denominator is 55 first-class SKILL.md packages across five category trees; the older 44-skill accounting is superseded by direct recomputation of the same pin.
 
   - id: bm629-agent-skills
     name: Bhushan Modi Agent Skills

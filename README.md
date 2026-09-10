@@ -57,6 +57,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
 - **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
 - **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
+- **David Ondrej Skills:** exact registered-pin denominator **55**; **3/55** current-standard provenance/verification companion complete, **52** gaps; decisive states so far **1 verified / 2 rejected unchanged**.
 - **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
 - **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
@@ -65,6 +66,8 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**.
 - **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
+
+The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by that direct pinned-tree evidence; existing three exact-version dispositions are preserved rather than extrapolated.
 
 Anthropic Knowledge Work Plugins had been treated as blocked because only its aggregate 74/74 historical result was visible on current `main`. Superseded PR #42 in fact retains the full package-level provenance and verification trees for all 74 plugin skills. Those exact companions are now recovered under canonical registry paths, preserving individual dispositions, fingerprints, authority findings, and behavioral-validation states without inference.
 
