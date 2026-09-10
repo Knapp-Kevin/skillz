@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 558,
+    "persisted_third_party_exact_version_reviews": 561,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 21,
+    "david_ondrej_skills_current_standard_companions": 24,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 34,
+    "david_ondrej_skills_current_standard_gaps": 31,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: completed David Ondrej agent-orchestration with render-images-in-cursor verified 15/20, run-deep-swe rejected unchanged 12/20 for insecure missing-key handling, and total-review rejected unchanged 13/20 for insufficient remote-push authorization; family companions 18/55 -> 21/55, gaps 37 -> 34, decisive states 11 verified / 10 rejected unchanged; agent orchestration 14/17 -> 17/17; persisted third-party review count 555 -> 558"
+    "latest_reconciliation": "2026-09-10: began David Ondrej ops-and-setup curation with risky-changes rejected unchanged 14/20 for unauthorized paid research/production-data reads, global-agent-guardrails rejected unchanged 15/20 for unauthorized persistent security-control mutation, and google-safe-browsing rejected unchanged 14/20 for unauthorized deploy/DNS/review actions; family companions 21/55 -> 24/55, gaps 34 -> 31, decisive states 11 verified / 13 rejected unchanged; ops-and-setup 0/11 -> 3/11; persisted third-party review count 558 -> 561"
   }
 }
