@@ -14,8 +14,10 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 466 |
+| Persisted third-party exact-version reviews | 540 |
 | Anthropic Skills current-standard companions | 17 / 17 |
+| Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
+| Anthropic Knowledge Work Plugins current-standard gaps | 0 |
 | AWS current-standard companion-complete | 72 / 72 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
@@ -77,10 +79,12 @@ Physical presence or registration does not establish individual skill quality. F
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`.
 
-OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`; completion records decisive evidence, not universal approval.
+Anthropic Knowledge Work Plugins is current-standard complete for its exact **74-skill denominator** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`. Package-level companions recovered from superseded PR #42 preserve **36 verified / 38 rejected unchanged** historical dispositions and do not infer behavioral validation.
 
-Cline Skills is current-standard complete for its finite **36-skill published denominator** at registered pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. Canonical provenance and verification shelves now expose all **36/36 published identities**; the separate internal/unlisted `review-team` record is retained outside that denominator. Thirty missing published pairs were recovered from compatible exact package-level evidence in superseded PR #42 without replacing the seven records already modernized on `main`.
+OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`.
 
-Other explicitly complete families remain Anthropic Skills **17/17**, AWS **72/72**, Microsoft Skills **186/186**, Microsoft Azure Skills **34/34**, Cole Medin Skills **33/33**, Matt Pocock Skills **29/29**, Cloudflare Skills **13/13**, Addy Osmani Agent Skills **24/24**, Vercel Agent Skills **9/9**, and Google Agents CLI **7/7**.
+Cline Skills is current-standard complete for its finite **36-skill published denominator** at registered pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`; the separate internal/unlisted `review-team` record is outside that denominator.
+
+Other explicitly complete families remain Anthropic Skills **17/17**, AWS **72/72**, Microsoft Skills **186/186**, Microsoft Azure Skills **34/34**, Cole Medin Skills **33/33**, Matt Pocock Skills **29/29**, Cloudflare Skills **13/13**, Addy Osmani Agent Skills **24/24**, Vercel Agent Skills **9/9**, OpenHands Extensions **1/1**, Google Agents CLI **7/7**, and Cline Skills **36/36 published**.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.
