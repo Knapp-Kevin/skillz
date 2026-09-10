@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: herdr
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 28cf2bf6e7b08575ed898528984fe5a0d05a7f7e
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 651e96264a1e6d10ed58cc20a7a403cabe7ef597
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [orchestration, monitoring]
+  lifecycle: [operations]
+  characteristic: [evidence-first, orchestration, risk-aware, tool-assisted, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The workspace-scoped read/message/wait loop, explicit no-unrequested-pane-lifecycle rule, native-status verification, and detailed Herdr failure modes are valuable adaptation evidence. Authority hard fail: the launch procedure says ALWAYS launch agents with auto-approval and prescribes cursor-agent --yolo, codex --yolo, and claude --dangerously-skip-permissions, treating a global deny-list hook as sufficient safety. A request to launch an agent does not authorize every consequential mutation or external action that the bypassed downstream agent may perform. Unchanged adoption is therefore rejected. Behavioral validation was not run."

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: herdr
+display_name: Herdr
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/herdr/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 28cf2bf6e7b08575ed898528984fe5a0d05a7f7e
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Herdr CLI and local socket, Ghostty, HERDR_ENV/HERDR_WORKSPACE_ID session context, target terminal-agent CLIs, optional Herdr native integrations, global agent guardrails deny-list hook for auto-approval launch guidance
+import_eligibility: rejected-unchanged-adaptation-only
+rationale: High-detail Herdr orchestration reference with strong workspace targeting, read-before-message discipline, explicit protection against unrequested pane lifecycle changes, and useful empirically documented failure modes. Unchanged adoption is rejected because the launch procedure mandates auto-approval or permission-bypass modes such as cursor-agent --yolo, codex --yolo, and claude --dangerously-skip-permissions, relying on a global deny-list hook rather than establishing an action-specific authorization boundary for the downstream agent's consequential mutations or external effects. Preserve the targeting, status-verification, and orchestration mechanisms as adaptation evidence.
