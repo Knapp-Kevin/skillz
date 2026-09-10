@@ -68,6 +68,11 @@ The latest first-party admission is `session-continuity`, created from the bound
 - Exact eligible denominator/current-standard companions: **9/9**; decisive states **6 verified / 3 rejected unchanged**; gaps **0**.
 - All 18 live companion records resolve under `skills/sources/vercel-agent-skills/`.
 
+### OpenHands Extensions — CURRENT-STANDARD COMPLETE
+- Pin: `87959a7da3e75445647e77b2fbf5bf5b66fb037b`.
+- Exact eligible denominator/current-standard companions: **1/1**; gaps **0**.
+- `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`. Both current companions bind the full registered pin, exact content blob `90dfceaf2ecdc191a4dcfb0069768a9560638998`, and canonical `skills/sources/openhands-extensions/...` path.
+
 ### Google Agents CLI — CURRENT-STANDARD COMPLETE
 - Pin: `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
 - Exact eligible denominator: **7** first-class `skills/*/SKILL.md` packages.
@@ -99,4 +104,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With Cline Skills now **36/36 published current-standard complete**, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.
+With OpenHands Extensions now explicitly accounted as **1/1 current-standard complete**, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.
