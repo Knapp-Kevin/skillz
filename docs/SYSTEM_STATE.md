@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 562 |
+| **Persisted third-party review companions** | 563 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -21,8 +21,8 @@
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
-| **David Ondrej Skills current-standard companions** | 25 / 55 |
-| **David Ondrej Skills current-standard gaps** | 30 |
+| **David Ondrej Skills current-standard companions** | 26 / 55 |
+| **David Ondrej Skills current-standard gaps** | 29 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -53,7 +53,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- David Ondrej Skills: exact registered-pin denominator **55**, **25/55** provenance/verification companion complete, gaps **30**; current decisive states **12 verified / 13 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **4/11** reviewed.
+- David Ondrej Skills: exact registered-pin denominator **55**, **26/55** provenance/verification companion complete, gaps **29**; current decisive states **13 verified / 13 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **5/11** reviewed.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -67,7 +67,7 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## David Ondrej denominator reconciliation
 
-The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains twenty-five exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, and ops-and-setup is **4/11** reviewed. In ops-and-setup, `risky-changes` is rejected unchanged 14/20 because paid DeepAPI requests and production-data reads lack distinct action authorization, `global-agent-guardrails` is rejected unchanged 15/20 because persistent user-global security-control mutation lacks a configuration authorization boundary, `google-safe-browsing` is rejected unchanged 14/20 because deployment, DNS TXT mutation, and Search Console review submission are directed without action-specific authorization, and `anti-sleep` is verified 17/20 because its LaunchAgent mutation is narrowly authorized by the user's anti-sleep request and independently verified against the exact process and active power assertion. Behavioral validation remains `not-run` for all four. Together the family is **25/55**, with **30** gaps and **12 verified / 13 rejected unchanged**.
+The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains twenty-six exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, and ops-and-setup is **5/11** reviewed. In ops-and-setup, `risky-changes` is rejected unchanged 14/20 because paid DeepAPI requests and production-data reads lack distinct action authorization, `global-agent-guardrails` is rejected unchanged 15/20 because persistent user-global security-control mutation lacks a configuration authorization boundary, `google-safe-browsing` is rejected unchanged 14/20 because deployment, DNS TXT mutation, and Search Console review submission are directed without action-specific authorization, `anti-sleep` is verified 17/20 because its LaunchAgent mutation is narrowly authorized by the user's anti-sleep request and independently verified against the exact process and active power assertion, and `agentic-productivity-setup` is verified 18/20 because it separates explanation, build, and installation; keeps webhook secrets out of conversational context; limits persisted/transmitted data to aggregates; and requires permission for live Discord delivery testing. Behavioral validation remains `not-run` for all five. Together the family is **26/55**, with **29** gaps and **13 verified / 13 rejected unchanged**.
 
 ## Source lifecycle
 
@@ -85,7 +85,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **25/55**, with **30** exact-version companion gaps; skill authoring and agent orchestration are complete and ops-and-setup is **4/11** reviewed.
+1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **26/55**, with **29** exact-version companion gaps; skill authoring and agent orchestration are complete and ops-and-setup is **5/11** reviewed.
 2. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
