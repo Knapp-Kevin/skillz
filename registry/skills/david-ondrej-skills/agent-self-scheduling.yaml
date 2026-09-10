@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: agent-self-scheduling
+display_name: Agent Self-Scheduling
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/agent-self-scheduling/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 279c54e03d9328b124d4ba4b42def0893dbf6ecb
+upstream_revision: 3fd9bf6e1365389fa8f6c6844b614eac6a85c31e
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: cron or systemd or shell loop; one of Claude Code, Codex, Pi, cmux, or Hermes; host-specific permissions and delivery configuration
+import_eligibility: adaptation-only
+rationale: Useful scheduler taxonomy and verification guidance, but unchanged adoption is rejected because it recommends persistent cron/gateway creation and unattended agent execution without a distinct action-specific authorization checkpoint before creating the schedule. Preserve as adaptation and checklist evidence.
