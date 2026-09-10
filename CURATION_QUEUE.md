@@ -36,66 +36,66 @@ The latest first-party admission is `session-continuity`, created from the bound
 - Current-standard gaps: **0**.
 - Canonical-path integrity: live companion paths no longer reference obsolete top-level `vendor/anthropic-skills/...`.
 
-The family was already decisively reviewed in historical issue #27. Current shelves match the exact registered pin, so this reconciliation records current-standard completeness without re-reviewing unchanged evidence or inventing behavioral validation.
-
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 
-- Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
+- Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
 - Denominator/current-standard companions: **72/72**; gaps **0**.
 
 ### Microsoft Skills — CURRENT-STANDARD COMPLETE
 
-- Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`
+- Pin: `32cad4ee689c95c309e61aeefcbc6af356f1e6a7`.
 - Exact eligible denominator/current-standard companions: **186/186**; gaps **0**.
 - Direct `.NET` **29/29**; Java **26/26**; Python **40/40**; Rust **9/9**; TypeScript **25/25**.
 
 ### Microsoft Azure Skills — CURRENT-STANDARD COMPLETE
 
-- Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`
+- Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Exact eligible denominator/current-standard companions: **34/34**; gaps **0**.
 
-The exact denominator is 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, SDK, and other Markdown is package evidence rather than an independent skill. The latest package-level Azure reconciliation remains `python-appservice-deploy`, rejected unchanged **12/20**, behavioral validation `not-run`.
+The exact denominator is 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, SDK, and other Markdown is package evidence rather than an independent skill.
 
 ### Cole Medin Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator: **33** first-class `.claude/skills/*/SKILL.md` packages.
-- Current-standard companions: **33/33**.
-- Remaining gaps: **0**.
+- Current-standard companions: **33/33**; gaps **0**.
 
-The final unit, `worktree-merge`, is bound to package tree `150cb167cb6c0bd703e3ba5b05330aa7f9db9861`, `SKILL.md` blob `9912484e1f99ce5ae7f5fd25f88a3d60f3e61c2b`, and skill-path freshness revision `1c46cd18bc6100d358082c06357d649f7a4cf8c6` dated 2026-08-09. It is rejected unchanged **15/20** with behavioral validation `not-run`. Retain its repository-detected validation model, disposable integration branch, per-branch test localization, conflict stop, full-suite gate, rollback guidance, and explicit cleanup choice. Unchanged use remains rejected because it creates and merges branches, including the final merge into the original branch, without mandatory action-specific authorization immediately before that consequential mutation, and because repository-controlled CI workflows, Makefiles, manifests, and discovered validation commands are treated as executable guidance without an explicit hostile-instruction boundary.
+The final unit, `worktree-merge`, remains rejected unchanged **15/20** with behavioral validation `not-run`; its branch mutation and repository-controlled executable-guidance assumptions remain bounded adaptation evidence rather than unchanged-use authority.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
-- Exact eligible denominator: **29** first-class packages after excluding `deprecated` and `in-progress` per source policy.
-- Provenance companions: **29/29**.
-- Verification companions: **29/29**.
-- Current-standard gaps: **0**.
-- Canonical-path integrity: no live companion retains obsolete `vendor/mattpocock-skills/...`; all live paths resolve under `skills/sources/mattpocock-skills/`.
+- Exact eligible denominator: **29** after excluding `deprecated` and `in-progress` per source policy.
+- Provenance/verification companions: **29/29**; gaps **0**.
 
 ### Cloudflare Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `f96bff754e428838818017f75817f0f9428acd48`.
-- Exact eligible denominator: **13** first-class packages.
-- Provenance companions: **13/13**.
-- Verification companions: **13/13**.
-- Decisive states: **11 verified / 2 rejected unchanged**.
-- Current-standard gaps: **0**.
-- Canonical-path integrity: all live companion `local_path` values resolve under `skills/sources/cloudflare-skills/`; obsolete `vendor/cloudflare-skills/...` paths are eliminated from the companion family.
+- Exact eligible denominator: **13**.
+- Provenance/verification companions: **13/13**.
+- Decisive states: **11 verified / 2 rejected unchanged**; gaps **0**.
 
-The two rejected unchanged packages remain `web-perf` and `wrangler`. `web-perf` retains useful evidence-driven performance-audit methods but hard-fails unchanged use because its required Chrome DevTools MCP path lacks an adequate privacy/telemetry consent boundary. `wrangler` remains useful reference material but hard-fails unchanged use because install/deploy/delete/migration/resource-mutation procedures lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the 13-package family.
+`web-perf` remains rejected for its privacy/telemetry boundary and `wrangler` for missing action-specific authority around consequential mutations. Behavioral validation remains `not-run`.
 
 ### Addy Osmani Agent Skills — CURRENT-STANDARD COMPLETE
 
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator: **24** first-class `skills/*/SKILL.md` packages.
-- Historical issue #27: **24/24** with decisive exact-version static states.
-- Current-standard provenance companions: **24/24**.
-- Current-standard verification companions: **24/24**.
-- Current-standard gaps: **0**.
+- Current-standard provenance/verification companions: **24/24**; gaps **0**.
 
-The final five companion gaps were recovered from compatible historical evidence in superseded PR #42 and verified against the registered pinned tree rather than re-reviewed gratuitously. `security-and-hardening` remains verified **18/20** and `source-driven-development` verified **19/20**. `planning-and-task-breakdown` remains rejected unchanged **14/20**, `shipping-and-launch` rejected unchanged **12/20**, and `using-agent-skills` rejected unchanged **13/20**. The two verified records retain strong threat-model/retrieval discipline respectively. The three rejected records remain useful adaptation/reference evidence but retain portability or authority defects that prevent unchanged use. Behavioral validation is `not-run` for all five, and upstream eval fixtures were not laundered into local execution evidence.
+Historical exact evidence from superseded PR #42 was recovered only where fingerprints matched the registered pin. Behavioral validation was not inferred from upstream eval material.
+
+### Vercel Agent Skills — CURRENT-STANDARD COMPLETE
+
+- Pin: `f8a72b9603728bb92a217a879b7e62e43ad76c81`.
+- Exact eligible denominator: **9** first-class `skills/*/SKILL.md` packages.
+- Current-standard provenance companions: **9/9**.
+- Current-standard verification companions: **9/9**.
+- Decisive states: **6 verified / 3 rejected unchanged**.
+- Current-standard gaps: **0**.
+- Canonical-path integrity: all 18 live companion records now resolve under `skills/sources/vercel-agent-skills/`; obsolete `vendor/vercel-agent-skills/...` companion paths are eliminated.
+
+The three rejected unchanged records remain useful negative/adaptation evidence. `vercel-cli-with-tokens` hard-fails secret discipline because it exposes or solicits credential values and also contains consequential paid/destructive operations. `web-design-guidelines` and `writing-guidelines` hard-fail unchanged use because their effective instruction payloads are fetched from mutable unpinned `main`-branch documents outside the recorded exact-version fingerprints. Behavioral validation remains `not-run` for all nine.
 
 ## Governed discovery / source-vetting
 
@@ -111,4 +111,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With Anthropic Skills, AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, and Addy Osmani Agent Skills current-standard complete at their exact registered pins, continue issue #66 by identifying the next admitted family with a truthful companion/provenance gap and recovering compatible historical evidence before fresh re-review. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With Anthropic Skills, AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, Addy Osmani Agent Skills, and Vercel Agent Skills current-standard complete at their exact registered pins, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.

@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: vercel-react-native-skills
 source_id: vercel-agent-skills
 source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
-local_path: vendor/vercel-agent-skills/skills/react-native-skills/SKILL.md
+local_path: skills/sources/vercel-agent-skills/skills/react-native-skills/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 73401865dd7440a43c5243b107a3763e0d2f4aae
 characterized_at: 2026-08-29
