@@ -36,6 +36,9 @@
     "vercel_agent_skills_current_standard_companions": 9,
     "vercel_agent_skills_eligible_denominator": 9,
     "vercel_agent_skills_current_standard_gaps": 0,
+    "openhands_extensions_current_standard_companions": 1,
+    "openhands_extensions_eligible_denominator": 1,
+    "openhands_extensions_current_standard_gaps": 0,
     "google_agents_cli_current_standard_companions": 7,
     "google_agents_cli_eligible_denominator": 7,
     "google_agents_cli_current_standard_gaps": 0,
@@ -75,6 +78,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: Cline Skills reconciled current-standard complete for the exact 36-skill published denominator at pin 26378461e978f2b4e2e6d67b57121b86b2a79ba5; 30 missing provenance/verification pairs recovered from compatible exact package-level PR #42 evidence while preserving the seven newer records already on main; internal/unlisted review-team remains separate; persisted third-party review count is 466"
+    "latest_reconciliation": "2026-09-10: OpenHands Extensions explicitly reconciled current-standard complete for the exact 1-skill denominator at pin 87959a7da3e75445647e77b2fbf5bf5b66fb037b; theme-factory remains rejected unchanged 14/20 with behavioral validation not-run; persisted third-party review count remains 466"
   }
 }
