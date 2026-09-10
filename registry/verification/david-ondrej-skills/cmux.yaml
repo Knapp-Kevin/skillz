@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cmux
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 6e169801d8007180976bd03f93856f76fba8723f
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e97ce2ea7e69b91ff39eeb1ca010b2a412507bc6
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [orchestration, browser-testing]
+  lifecycle: [operations]
+  characteristic: [tool-routing, risk-aware, visual-verification]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The skill contains strong cmux-specific reference hygiene, non-focus guidance, secret-handling cautions, and explicit dry operational caveats. However, merely naming cmux is treated as enough to unlock commands that can send input, click/fill browser elements, close surfaces, change settings, and otherwise mutate user state. That is not a real action-specific authorization boundary under the current hard-fail rule. Preserve as adaptation/reference evidence; unchanged adoption is rejected. Behavioral validation was not run."
