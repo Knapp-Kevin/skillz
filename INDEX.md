@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 546 |
+| Persisted third-party exact-version reviews | 549 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -22,8 +22,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |
-| David Ondrej Skills current-standard companions | 9 / 55 |
-| David Ondrej Skills current-standard gaps | 46 |
+| David Ondrej Skills current-standard companions | 12 / 55 |
+| David Ondrej Skills current-standard gaps | 43 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -83,7 +83,7 @@ The latest first-party admission is `session-continuity`, statically verified **
 
 Anthropic Knowledge Work Plugins is current-standard complete for its exact **74-skill denominator** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`. Package-level companions recovered from superseded PR #42 preserve **36 verified / 38 rejected unchanged** historical dispositions and do not infer behavioral validation.
 
-David Ondrej Skills is tracked at pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`, with **55** first-class packages. Current companions cover **9/55**, leaving **46** gaps and decisive states **4 verified / 5 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **4/17** reviewed. `agent-self-scheduling` and `bb-plugins` are rejected unchanged under the authority hard fail; `bb-subagents` is verified 16/20 with low portability.
+David Ondrej Skills is tracked at pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`, with **55** first-class packages. Current companions cover **12/55**, leaving **43** gaps and decisive states **5 verified / 7 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **7/17** reviewed. `cmux` and `codex-subagent` join the rejected-unchanged set under the authority hard fail, while `corral-launch-agents` is verified 18/20 because it explicitly gates state-changing launches on user authorization and dry-run verification.
 
 OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`.
 
