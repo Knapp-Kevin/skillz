@@ -7,10 +7,13 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 466,
+    "persisted_third_party_exact_version_reviews": 540,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
+    "anthropic_knowledge_work_plugins_current_standard_companions": 74,
+    "anthropic_knowledge_work_plugins_eligible_denominator": 74,
+    "anthropic_knowledge_work_plugins_current_standard_gaps": 0,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -78,6 +81,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: OpenHands Extensions explicitly reconciled current-standard complete for the exact 1-skill denominator at pin 87959a7da3e75445647e77b2fbf5bf5b66fb037b; theme-factory remains rejected unchanged 14/20 with behavioral validation not-run; persisted third-party review count remains 466"
+    "latest_reconciliation": "2026-09-10: Anthropic Knowledge Work Plugins recovered from exact package-level PR #42 evidence: 74/74 provenance and verification companions at pin ca3e3fb2c4a1d3eea73fc003998faef6daa650b8; historical states 36 verified / 38 rejected unchanged; persisted third-party review count 540"
   }
 }
