@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: run-deep-swe
+display_name: Run DeepSWE
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/run-deep-swe/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: bf39dd853f769e457f716ce9cea196dfb16b71da
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: uv, git, Docker or Modal, datacurve-pier, mini-swe-agent, OpenRouter account and OPENROUTER_API_KEY, DeepSWE task corpus
+import_eligibility: rejected-unchanged-reference-only
+rationale: The benchmark procedure is reproducible-minded and explicitly requires confirmation before a full 113-task run, but unchanged adoption fails the repository's secret-handling standard because the missing-key path says to ask the user for the OpenRouter API key instead of directing the user to a secure external credential path. Preserve the setup, smoke-test, deterministic subset, spend-limit, and failure-mode guidance as adaptation evidence.
