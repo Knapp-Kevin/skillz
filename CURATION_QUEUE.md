@@ -26,6 +26,18 @@ The latest first-party admission is `session-continuity`, created from the bound
 
 ## Admitted-source curation
 
+### Anthropic Skills — CURRENT-STANDARD COMPLETE
+
+- Pin: `9d2f1ae187231d8199c64b5b762e1bdf2244733d`.
+- Exact eligible denominator: **17** first-class `skills/*/SKILL.md` packages.
+- Provenance companions: **17/17**.
+- Verification companions: **17/17**.
+- Decisive historical states: **10 verified / 7 rejected unchanged**.
+- Current-standard gaps: **0**.
+- Canonical-path integrity: live companion paths no longer reference obsolete top-level `vendor/anthropic-skills/...`.
+
+The family was already decisively reviewed in historical issue #27. Current shelves match the exact registered pin, so this reconciliation records current-standard completeness without re-reviewing unchanged evidence or inventing behavioral validation.
+
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 
 - Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`
@@ -99,4 +111,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, and Addy Osmani Agent Skills current-standard complete at their exact registered pins, continue issue #66 by identifying the next admitted family with a truthful companion/provenance gap and recovering compatible historical evidence before fresh re-review. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
+With Anthropic Skills, AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, and Addy Osmani Agent Skills current-standard complete at their exact registered pins, continue issue #66 by identifying the next admitted family with a truthful companion/provenance gap and recovering compatible historical evidence before fresh re-review. Anthropic Knowledge Work Plugins remains independently blocked on recoverable per-package historical mapping despite compatible 74/74 aggregate evidence. In parallel, continue bounded discovery/source-vetting and omission detection.
