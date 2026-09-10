@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: exa-search
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/exa-search/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a25672098ba7ec1556dc6434dee2d7648ef695ff
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, evaluation]
+  lifecycle: [discovery, verification]
+  characteristic: [evidence-first, decomposition, source-driven, iterative, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 1, procedure 2, authority 2, failure 2, evidence 2, dependencies 1, portability 0, usefulness 2, adversarial resilience 2, effectiveness 1. The research method is strong: complexity assessment, schema-first extraction, diverse search angles, explicit qualification criteria, deduplication, coverage checks, source-quality weighting, and red-teaming. Unchanged reuse is rejected because the trigger captures broad generic research, auth/rate-limit handling forbids fallback to other available web search, and nontrivial workflows hard-code an `Agent` tool plus `model: "haiku"`. Those assumptions undermine cross-host behavioral portability even though the method is valuable. Retain for adaptation/extraction into host-neutral research orchestration. Exact pinned blob and June 18 revision confirmed. Behavioral validation remains pending.

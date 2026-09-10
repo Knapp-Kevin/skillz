@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: ui5-typescript-conversion
+display_name: UI5 TypeScript Conversion
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/ui5-typescript-conversion/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: e1cb4cee959445e1b9bf8b39bb27422284937552
+upstream_last_updated_at: 2026-06-18T23:40:33Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/ui5-typescript-conversion/SKILL.md
+permission_tier: mutating
+portability: medium
+review_status: curated-vendored
+dependency_status: incomplete-template
+issues:
+  - required package.json dependency list is represented by unresolved literal '{{dependencies}}' in the canonical SKILL.md
+  - bundled test-conversion reference does not supply the missing dependency list
+dependencies:
+  - SAPUI5/OpenUI5 project context
+  - project package manager and UI5 tooling
+  - bundled references/test_conversion.md
+import_eligibility: already-vendored
+rationale: Detailed and disciplined UI5 JavaScript-to-TypeScript migration reference with strong preservation/type/testing guidance, but the exact packaged skill is incomplete because a required dependency block remains an unresolved template placeholder.

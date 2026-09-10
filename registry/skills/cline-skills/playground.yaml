@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: playground
+display_name: Playground
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/playground/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 0550400c84c4410b9886e88347050c07476e8c09
+upstream_last_updated_at: 2026-06-18T23:36:45Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/playground/SKILL.md
+permission_tier: generate-only
+portability: high
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - host file-writing capability
+  - optional browser-open capability
+  - bundled playground templates
+import_eligibility: already-vendored
+rationale: Portable generate-only pattern for self-contained interactive HTML explorers with live state, useful defaults, no external runtime dependencies, and actionable prompt output.

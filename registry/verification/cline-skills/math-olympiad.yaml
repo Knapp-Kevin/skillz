@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: math-olympiad
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/math-olympiad/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 94a064d7902d9d5282e7e75228ed2b3934cac30f
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [research, evaluation, testing]
+  lifecycle: [discovery, verification]
+  characteristic: [evidence-first, holdout-aware, iterative, hypothesis-driven, test-gated, cost-bounded, risk-aware, decomposition]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. This is an unusually strong reusable reasoning method: independent solution attempts, fresh-context adversarial verification, counterexample search, reasoning-trace isolation to reduce verifier bias, asymmetric voting thresholds, bounded deep-mode escalation, revision loops, and explicit abstention when confidence is insufficient. Full fidelity benefits from subagent or independent-context support, which reduces portability but does not undermine the core method. Exact pinned fingerprint and bundled verification assets confirmed. Behavioral validation remains pending.

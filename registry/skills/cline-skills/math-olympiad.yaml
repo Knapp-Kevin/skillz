@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: math-olympiad
+display_name: Math Olympiad
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/math-olympiad/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 090a18ace5ca470bb4b8c94b373d96c8a3adf291
+upstream_last_updated_at: 2026-06-18T23:35:38Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/math-olympiad/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - host reasoning capability
+  - subagent or independent-context execution for full verification workflow
+  - bundled adversarial/reasoning references
+  - optional local LaTeX tooling for presentation
+import_eligibility: already-vendored
+rationale: Strong reusable reasoning and verification method using independent solution attempts, fresh-context adversarial checks, counterexample search, bounded escalation, and explicit abstention when confidence is insufficient.

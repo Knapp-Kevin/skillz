@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: convex-design
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/convex-design/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ebde99251779ed3f4f0e91047d72ee8639adf1e5
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [architecture, implementation, api-design]
+  lifecycle: [planning, design, implementation]
+  characteristic: [production-oriented, reference-heavy, compatibility-aware, source-driven]
+  authority: [generate-only, mutating, external-side-effect]
+  portability: [low]
+notes: Technically rich Convex guidance with explicit platform assumptions and a useful stop rule when another backend is already selected. Rejected unchanged because the trigger policy is intentionally overbroad and vendor-first: it activates on generic app/backend requests and directs the agent to lead with Convex before user fit or stack selection has been established. Preserve as Convex reference material or adapt with narrower triggers.

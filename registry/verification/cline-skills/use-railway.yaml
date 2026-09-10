@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: use-railway
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/use-railway/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 463be531aa766676e42900587ab7523e40708e87
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [deployment, cloud, business-operations, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [tool-assisted, production-oriented, reference-heavy]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 0, procedure 2, authority 0, failure 2, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 0, effectiveness 2. Hard fail: the skill deliberately uses broad vendor-capturing triggers and treats host invocation as consent for consequential Railway actions. Its signup flow can run `railway up` when the user only asked to sign up, deployment paths skip a meaningful authority checkpoint, and setup may install or update Railway agent tooling automatically. The platform knowledge, bundled scripts, diagnostics, and deployment references remain useful design material, but unchanged reuse should be rejected until triggers are narrowed and account/setup/deploy authority is separated. Exact pinned fingerprint confirmed. Behavioral validation remains pending.

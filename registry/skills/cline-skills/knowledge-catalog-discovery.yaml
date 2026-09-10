@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: knowledge-catalog-discovery
+display_name: Knowledge Catalog Discovery
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/knowledge-catalog-discovery/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 87518dbd79e1bb0198137c05466636842501050c
+upstream_last_updated_at: 2026-06-18T23:35:21Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/knowledge-catalog-discovery/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - Node.js
+  - bundled Dataplex/Knowledge Catalog wrapper scripts
+  - '@toolbox-sdk/server@1.1.0 fetched/executed through npx --yes'
+  - host Google Cloud credentials/environment
+import_eligibility: already-vendored
+rationale: Useful bounded metadata-discovery reference with read-only operations and explicit result limits, but unchanged reuse implicitly executes an external npm dependency and assumes host-specific environment loading.

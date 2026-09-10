@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: cosmosdb-best-practices
+display_name: Cosmos DB Best Practices
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/cosmosdb-best-practices/SKILL.md
+source_class: official
+license: MIT
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: eea673c52904b975d6e568052d42c83ec60bf240
+upstream_last_updated_at: 2026-06-18T23:30:57Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/cosmosdb-best-practices/SKILL.md
+permission_tier: generate-only
+portability: medium
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - bundled Cosmos DB rule corpus
+  - Azure Cosmos DB domain context
+import_eligibility: already-vendored
+rationale: Large first-party Cosmos DB engineering reference with progressive disclosure across data modeling, partitioning, queries, SDK usage, indexing, throughput, distribution, monitoring, patterns, and vector search.
