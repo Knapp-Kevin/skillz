@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: bb-plugins
+display_name: BB Plugins
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/bb-plugins/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f5cc2811de008a7307d178723d9059827adcccbb
+upstream_revision: 964d508328da014cb169287010cf0e6f44aa4e32
+upstream_last_updated_at: 2026-08-19T18:29:43Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: bb CLI and plugin runtime, Node/npm, bb plugin SDK/types, authenticated package or Git source when installing remotely
+import_eligibility: adaptation-only
+rationale: Strong full-trust warning and source-review guidance, but unchanged adoption is rejected because the scaffold immediately runs bb plugin install . --yes, explicitly bypassing the product installation prompt for full-trust in-process code without a separate user authorization checkpoint.
