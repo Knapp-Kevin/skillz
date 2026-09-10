@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: handoff
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 439fd1b902d4c7c0a66a86a3eee8d8d9960f3619
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 79a5a972385c1fa8480f98e6152ee9d08a28fe65
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [handoff, context-management, documentation]
+  lifecycle: [maintenance]
+  characteristic: [context-efficient, evidence-first, human-review, risk-aware, safety-bounded]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Both skill frontmatter and bundled OpenAI policy prohibit implicit invocation. The requested handoff operation bounds the default local temp-file write; secrets and PII must be redacted, prior artifacts are referenced rather than recopied, and fresh agents are instructed to verify claims against source files before acting. Portability is reduced by the mandatory filesystem save and platform-specific temp-path handling. Behavioral validation was not run."
