@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: bb-subagents
+display_name: BB Subagents
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/bb-subagents/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 5aaf47ba59e4a34547514e44813436c97ce10016
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: bb CLI, configured bb projects/providers/models, provider subscriptions, worktree support, host-specific BB_THREAD_ID and optional BB_CLI environment
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Detailed spawn-only recipe with explicit lookup-before-spawn, strong no-guessing rules, read-only prompt constraints, and a user-request trigger that serves as action authorization for spawning a requested worker. Highly host-specific bb/provider/model defaults require adaptation elsewhere.
