@@ -7,11 +7,11 @@ source_path: skills/theme-factory/SKILL.md
 source_class: official-ecosystem
 license: Apache-2.0
 relationship: vendored-reference
-source_snapshot_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037
+source_snapshot_revision: 87959a7da3e75445647e77b2fbf5bf5b66fb037b
 upstream_revision: d60396e2a1b1a3c0b56c91c920873e344e1bc3f7
 upstream_last_updated_at: 2026-01-09T18:58:39Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-09-10
 availability: vendored-reference-only
 local_path: skills/sources/openhands-extensions/skills/theme-factory/SKILL.md
 permission_tier: mutate-after-explicit-theme-selection
