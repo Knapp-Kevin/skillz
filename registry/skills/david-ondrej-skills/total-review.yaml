@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: total-review
+display_name: Total Review
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/total-review/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: c695aae9da8167d3b922b4fdfce1d375c09270f1
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: fable-review, gpt-review, bb-subagents, bb-cli or an explicitly user-selected alternate review harness; Git and GitHub shipping capability for the final step
+import_eligibility: rejected-unchanged-reference-only
+rationale: Parallel independent review, deduplication, explicit triage, and approval before fixes are useful mechanisms. Unchanged adoption fails the authority boundary because approval to fix the shortlist is treated as authorization to stage, commit, and push to GitHub. Remote repository mutation requires a distinct shipping authorization unless the user's request already explicitly includes it.
