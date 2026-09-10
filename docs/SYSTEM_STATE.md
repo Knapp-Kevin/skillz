@@ -23,6 +23,8 @@
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
 | **Vercel Agent Skills current-standard companions** | 9 / 9 |
+| **OpenHands Extensions current-standard companions** | 1 / 1 |
+| **OpenHands Extensions current-standard gaps** | 0 |
 | **Google Agents CLI current-standard companions** | 7 / 7 |
 | **Google Agents CLI current-standard gaps** | 0 |
 | **Cline Skills published current-standard companions** | 36 / 36 |
@@ -53,11 +55,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
 - Vercel Agent Skills: **9/9**, gaps **0**, **6 verified / 3 rejected unchanged**.
+- OpenHands Extensions: exact registered-pin denominator **1**, **1/1** provenance/verification companion complete, gaps **0**; `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`, at pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`.
 - Google Agents CLI: exact registered-pin denominator **7**, **7/7** provenance/verification companion pairs, gaps **0**, all seven verified at pin `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
 - Cline Skills: exact published denominator **36**, **36/36** provenance/verification companion pairs, published gaps **0**, at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`; the internal/unlisted `review-team` record remains separate from the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
+
+## OpenHands Extensions reconciliation
+
+Source queue #27 establishes the exact pinned denominator as **1/1**: `theme-factory`. The current provenance and verification companions now bind the full registered source revision `87959a7da3e75445647e77b2fbf5bf5b66fb037b`, canonical `skills/sources/openhands-extensions/...` path, exact content blob `90dfceaf2ecdc191a4dcfb0069768a9560638998`, and decisive **rejected unchanged 14/20** state with behavioral validation `not-run`. The family is therefore current-standard companion complete even though unchanged adoption remains rejected.
 
 ## Cline Skills reconciliation
 

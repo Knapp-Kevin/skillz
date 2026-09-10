@@ -24,6 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
 | Vercel Agent Skills current-standard companions | 9 / 9 |
+| OpenHands Extensions current-standard companions | 1 / 1 |
+| OpenHands Extensions current-standard gaps | 0 |
 | Google Agents CLI current-standard companions | 7 / 7 |
 | Google Agents CLI current-standard gaps | 0 |
 | Cline Skills published current-standard companions | 36 / 36 |
@@ -74,6 +76,8 @@ Physical presence or registration does not establish individual skill quality. F
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`.
+
+OpenHands Extensions is current-standard complete for its exact **1-skill denominator** at registered pin `87959a7da3e75445647e77b2fbf5bf5b66fb037b`. `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`; completion records decisive evidence, not universal approval.
 
 Cline Skills is current-standard complete for its finite **36-skill published denominator** at registered pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. Canonical provenance and verification shelves now expose all **36/36 published identities**; the separate internal/unlisted `review-team` record is retained outside that denominator. Thirty missing published pairs were recovered from compatible exact package-level evidence in superseded PR #42 without replacing the seven records already modernized on `main`.
 
