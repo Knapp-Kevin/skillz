@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 562,
+    "persisted_third_party_exact_version_reviews": 563,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 25,
+    "david_ondrej_skills_current_standard_companions": 26,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 30,
+    "david_ondrej_skills_current_standard_gaps": 29,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: reviewed David Ondrej anti-sleep at the registered pin; verified 17/20 with behavioral validation not-run because the local LaunchAgent mutation is directly scoped to the user's explicit anti-sleep request and the bundled launcher verifies exact process plus active power assertion; family companions 24/55 -> 25/55, gaps 31 -> 30, decisive states 12 verified / 13 rejected unchanged; ops-and-setup 3/11 -> 4/11; persisted third-party review count 561 -> 562"
+    "latest_reconciliation": "2026-09-10: reviewed David Ondrej agentic-productivity-setup at the registered pin; verified 18/20 with behavioral validation not-run because the procedure explicitly separates explanation, project build, and installation, keeps webhook secrets out of conversational context, persists/transmits aggregates rather than raw prompt or repository data, and requires permission before live Discord delivery testing; family companions 25/55 -> 26/55, gaps 30 -> 29, decisive states 13 verified / 13 rejected unchanged; ops-and-setup 4/11 -> 5/11; persisted third-party review count 562 -> 563"
   }
 }
