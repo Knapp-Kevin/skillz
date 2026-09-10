@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 543 |
+| **Persisted third-party review companions** | 546 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -21,8 +21,8 @@
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
-| **David Ondrej Skills current-standard companions** | 6 / 55 |
-| **David Ondrej Skills current-standard gaps** | 49 |
+| **David Ondrej Skills current-standard companions** | 9 / 55 |
+| **David Ondrej Skills current-standard gaps** | 46 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -53,7 +53,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- David Ondrej Skills: exact registered-pin denominator **55**, **6/55** provenance/verification companion complete, gaps **49**; current decisive states **3 verified / 3 rejected unchanged**. The skill-authoring category is **4/4** current-standard complete.
+- David Ondrej Skills: exact registered-pin denominator **55**, **9/55** provenance/verification companion complete, gaps **46**; current decisive states **4 verified / 5 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **4/17** reviewed.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -69,11 +69,11 @@ Completion means decisive current evidence for every eligible package, not unive
 
 The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection of that exact tree establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill package directories, each represented by its package `SKILL.md`. The older 44-skill denominator recorded during the initial source-admission slice is stale for the same pin.
 
-Current repository evidence contains six exact-version companion pairs. The skill-authoring category is now **4/4** current-standard complete: `effective-agent-skills` is verified 16/20; `folder-specific-claude-and-agents-md` is verified 15/20; `push-skill-to-github` is verified 15/20; and `distribute-skill-to-all-agents` is rejected unchanged 11/20 under the authority hard fail because its update path recommends deletion-capable `rsync --delete` without a distinct destructive-action authorization checkpoint. Together with `goal-loop` rejected unchanged 12/20 and `fable-safe-prompt` rejected unchanged 7/20 hard fail, the family is **6/55**, with **49** gaps and **3 verified / 3 rejected unchanged**. Behavioral validation remains `not-run` for all six reviewed units.
+Current repository evidence contains nine exact-version companion pairs. Skill authoring is **4/4** current-standard complete. Agent orchestration is **4/17** reviewed: `fable-safe-prompt`, `agent-self-scheduling`, and `bb-plugins` are rejected unchanged, while `bb-subagents` is verified 16/20. `agent-self-scheduling` lacks a distinct authorization checkpoint before persistent recurring schedule creation; `bb-plugins` bypasses the full-trust install prompt with `--yes`; `bb-subagents` requires an explicit user launch request and lookup-before-spawn discipline. Together with `goal-loop`, the family is **9/55**, with **46** gaps and **4 verified / 5 rejected unchanged**. Behavioral validation remains `not-run` for all reviewed units.
 
 ## Anthropic Knowledge Work Plugins reconciliation
 
-The previously reported package-mapping blocker is resolved. Superseded PR #42 retains complete package-level trees under `registry/skills/anthropic-knowledge-work-plugins/` and `registry/verification/anthropic-knowledge-work-plugins/`, including exact source paths, revisions, fingerprints, individual scores/dispositions, authority findings, and behavioral-validation states. Those 74 provenance and 74 verification companions have been recovered intact rather than reconstructed from aggregate counts. The registered pin is `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`; historical source queue #27 records **74/74 reviewed, 36 verified / 38 rejected unchanged**.
+Superseded PR #42 retains complete package-level trees under `registry/skills/anthropic-knowledge-work-plugins/` and `registry/verification/anthropic-knowledge-work-plugins/`, including exact source paths, revisions, fingerprints, individual scores/dispositions, authority findings, and behavioral-validation states. Those 74 provenance and 74 verification companions were recovered intact rather than reconstructed from aggregate counts.
 
 ## Source lifecycle
 
@@ -91,7 +91,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. The highest visible tracked-family gap is David Ondrej Skills at **6/55**, with **49** exact-version companion gaps remaining after the skill-authoring category reached **4/4** current-standard complete.
+1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **9/55**, with **46** exact-version companion gaps; skill authoring is complete and agent orchestration is **4/17** reviewed.
 2. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
