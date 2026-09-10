@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **436** persisted exact-version third-party verification companions.
+- **466** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -78,6 +78,13 @@ The latest first-party admission is `session-continuity`, created from the bound
 - Canonical-path integrity: all 14 live companion records resolve under `skills/sources/google-agents-cli/`; obsolete `vendor/google-agents-cli/...` companion paths are eliminated.
 - Behavioral validation remains `not-run` across the family; exact fingerprints and authority characterizations are preserved.
 
+### Cline Skills — CURRENT-STANDARD COMPLETE
+- Pin: `26378461e978f2b4e2e6d67b57121b86b2a79ba5`.
+- Exact published denominator: **36**; provenance/verification companions **36/36**; published gaps **0**.
+- Source queue #27 records the finite public pass as 36/36 reviewed plus one separate internal/unlisted `review-team` record. That internal record is preserved but is not counted in the published denominator.
+- The passive-tree migration retained only six published pairs plus `review-team` on current `main`. Compatible exact package-level evidence from superseded PR #42 was recovered for the 30 genuine published gaps without overwriting the seven newer records already on `main`.
+- Static dispositions and behavioral-validation states are preserved exactly from their historical companions; no execution evidence is inferred.
+
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
@@ -92,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With Google Agents CLI now **7/7 current-standard complete**, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.
+With Cline Skills now **36/36 published current-standard complete**, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.
