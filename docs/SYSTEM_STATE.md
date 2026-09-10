@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 540 |
+| **Persisted third-party review companions** | 543 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -21,8 +21,8 @@
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
-| **David Ondrej Skills current-standard companions** | 3 / 55 |
-| **David Ondrej Skills current-standard gaps** | 52 |
+| **David Ondrej Skills current-standard companions** | 6 / 55 |
+| **David Ondrej Skills current-standard gaps** | 49 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -53,7 +53,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- David Ondrej Skills: exact registered-pin denominator **55**, **3/55** provenance/verification companion complete, gaps **52**; current decisive states **1 verified / 2 rejected unchanged**. Historical 44-skill accounting is superseded by direct recomputation of the same pin.
+- David Ondrej Skills: exact registered-pin denominator **55**, **6/55** provenance/verification companion complete, gaps **49**; current decisive states **3 verified / 3 rejected unchanged**. The skill-authoring category is **4/4** current-standard complete.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -67,7 +67,9 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## David Ondrej denominator reconciliation
 
-The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection of that exact tree establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill package directories, each represented by its package `SKILL.md`. The older 44-skill denominator recorded during the initial source-admission slice is therefore stale for the same pin. Current repository evidence contains three exact-version companion pairs: `effective-agent-skills` verified 16/20, `goal-loop` rejected 12/20, and `fable-safe-prompt` rejected 7/20 under the safety hard fail. No disposition is inferred for the remaining 52 packages and no behavioral validation is claimed.
+The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection of that exact tree establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill package directories, each represented by its package `SKILL.md`. The older 44-skill denominator recorded during the initial source-admission slice is stale for the same pin.
+
+Current repository evidence contains six exact-version companion pairs. The skill-authoring category is now **4/4** current-standard complete: `effective-agent-skills` is verified 16/20; `folder-specific-claude-and-agents-md` is verified 15/20; `push-skill-to-github` is verified 15/20; and `distribute-skill-to-all-agents` is rejected unchanged 11/20 under the authority hard fail because its update path recommends deletion-capable `rsync --delete` without a distinct destructive-action authorization checkpoint. Together with `goal-loop` rejected unchanged 12/20 and `fable-safe-prompt` rejected unchanged 7/20 hard fail, the family is **6/55**, with **49** gaps and **3 verified / 3 rejected unchanged**. Behavioral validation remains `not-run` for all six reviewed units.
 
 ## Anthropic Knowledge Work Plugins reconciliation
 
@@ -89,7 +91,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. The highest visible tracked-family gap is David Ondrej Skills at **3/55**, with **52** exact-version companion gaps remaining after denominator reconciliation.
+1. Continue corpus-wide provenance audit #66. The highest visible tracked-family gap is David Ondrej Skills at **6/55**, with **49** exact-version companion gaps remaining after the skill-authoring category reached **4/4** current-standard complete.
 2. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 3. Continue governed discovery/source-vetting and omission recovery.
 4. Resolve bounded candidate issues when evidence supports a decisive outcome.
