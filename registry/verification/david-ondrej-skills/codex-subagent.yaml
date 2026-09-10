@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: codex-subagent
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 7ad1f9b982c8c69ab49658ddb3063aaa6652e149
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0335abdf69f01c9a5e957ae82a79a6993800eb25
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [orchestration, implementation, code-review]
+  lifecycle: [implementation, verification]
+  characteristic: [decomposition, risk-aware, tool-routing]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 1, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The skill has strong sandbox guidance, credential discipline, independent diff review, worktree isolation for parallelism, and explicitly forbids dangerous approval/sandbox bypass. The authority hard fail applies because the normal procedure launches a workspace-write coding agent after a generic delegation decision rather than requiring a distinct user authorization for repository mutation. `disable-model-invocation` is routing metadata, not sufficient action authorization. Preserve the delegation mechanics as adaptation/reference evidence. Behavioral validation was not run."
