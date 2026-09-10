@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: global-agent-guardrails
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 6fcbad546de04c7de09d19111d90c899f52a4d21
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f48c7385d5fdccd59be9e2e3cab77aa38a00bf66
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [security, agent-development]
+  lifecycle: [implementation, verification, operations, maintenance]
+  characteristic: [risk-aware, safety-bounded, tool-routing, visual-verification]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Excellent operational detail: one shared catastrophic-command denylist, explicit statement that regex is not a sandbox, adapter-specific fail-open/fail-safe behavior, trust invalidation warnings, false-positive handling, and a safe non-git E2E probe. Authority hard fail: installation and tuning mutate persistent user-global security controls and multiple agent configs, yet the trigger does not require a distinct authorization boundary for those security-control changes. Preserve the mechanisms for adaptation behind explicit configuration authorization. Behavioral validation was not run."
