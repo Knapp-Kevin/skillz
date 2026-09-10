@@ -50,31 +50,20 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 
 Core passive architecture is complete. Ongoing work is corpus enrichment, historical evidence reconciliation, candidate resolution, and source freshness/omission detection.
 
-- **First-party:** **44/44** provenance-complete, including `session-continuity`, a substrate-agnostic continuity procedure with authorization-gated durable capture and behavioral validation `not-run`.
-- **Anthropic Skills:** exact registered-pin denominator **17**; **17/17** current-standard companion complete, **0** gaps; **10 verified / 7 rejected unchanged**.
-- **AWS Agent Toolkit:** **72/72** current-standard companion complete.
-- **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
-- **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.
-- **Cole Medin Skills:** exact registered-pin denominator **33**; **33/33** current-standard companion complete, **0** gaps.
-- **Matt Pocock Skills:** exact registered-pin denominator **29** after excluding `deprecated` and `in-progress`; **29/29** current-standard companion complete, **0** gaps.
-- **Cloudflare Skills:** exact registered-pin denominator **13**; **13/13** current-standard companion complete, **0** gaps; **11 verified / 2 rejected unchanged**.
-- **Addy Osmani Agent Skills:** exact registered-pin denominator **24**; **24/24** current-standard companion complete, **0** gaps.
-- **Vercel Agent Skills:** exact registered-pin denominator **9**; **9/9** current-standard companion complete, **0** gaps; **6 verified / 3 rejected unchanged**. All live companion paths resolve under `skills/sources/vercel-agent-skills/`.
+- **First-party:** **44/44** provenance-complete.
+- **Anthropic Skills:** **17/17** current-standard complete, **0** gaps; **10 verified / 7 rejected unchanged**.
+- **AWS Agent Toolkit:** **72/72** current-standard complete, **0** gaps.
+- **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
+- **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
+- **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
+- **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
+- **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
+- **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
+- **Vercel Agent Skills:** **9/9** current-standard complete, **0** gaps; **6 verified / 3 rejected unchanged**.
+- **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**. All 14 live companion paths resolve under `skills/sources/google-agents-cli/`.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-The Vercel family is pinned at `f8a72b9603728bb92a217a879b7e62e43ad76c81`. Its complete recursive pinned tree exposes exactly **9** first-class `skills/*/SKILL.md` packages, including `vercel-cli-with-tokens`. Canonical provenance and verification shelves expose the same **9/9** identities. The final current-standard defect was stale pre-passive physical-path metadata, now normalized from `vendor/vercel-agent-skills/...` to `skills/sources/vercel-agent-skills/...` across all 18 companion records while preserving exact fingerprints and dispositions. `vercel-cli-with-tokens` remains rejected unchanged for credential-exposure/solicitation and consequential-operation defects; `web-design-guidelines` and `writing-guidelines` remain rejected unchanged because their effective instruction payloads come from mutable unpinned remote `main` documents outside their recorded exact-version fingerprints. Behavioral validation remains `not-run` across all nine.
-
-The Azure denominator is the exact set of independently eligible `SKILL.md` packages at the registered pin: 28 canonical plugin skill roots, one nested `azure-kubernetes-automatic-readiness` package, and five nested Microsoft Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown does not become a separate skill merely because it is useful or lives in an attractively named directory.
-
-Cole Medin is current-standard complete at its exact 33-skill pin. The final reconciled package is `worktree-merge`, rejected unchanged **15/20** with behavioral validation `not-run`; its useful integration/validation mechanics remain adaptation evidence, while consequential branch mutation and repository-controlled executable-guidance assumptions prevent unchanged use.
-
-Matt Pocock Skills is current-standard complete at registered pin `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. The eligible denominator is **29** first-class packages after the source registry exclusions for `deprecated` and `in-progress`.
-
-Cloudflare Skills is current-standard complete at registered pin `f96bff754e428838818017f75817f0f9428acd48`. Historical dispositions remain **11 verified / 2 rejected unchanged**; `web-perf` remains rejected for its privacy/telemetry boundary and `wrangler` for missing action-specific authorization around consequential mutations.
-
-Anthropic Skills is current-standard complete at registered pin `9d2f1ae187231d8199c64b5b762e1bdf2244733d`, with **17/17** companion pairs and historical distribution **10 verified / 7 rejected unchanged**.
-
-Addy Osmani Agent Skills is current-standard complete at registered pin `f63ec56a3cc936408d792956ae583c3c96a825bd`, with **24/24** current companion pairs. Compatible historical evidence from superseded PR #42 was recovered only where exact fingerprints matched the registered pinned tree; upstream eval fixtures were not treated as behavioral validation.
+Google Agents CLI is pinned at `ef7808f33fc3038112b69d4ad488ce33b72699b1`. Historical issue #27 records the finite family as 7/7 reviewed and verified. Current canonical provenance and verification shelves expose the same seven identities. The remaining current-standard defect was stale pre-passive `vendor/google-agents-cli/...` physical-path metadata; all 14 companion records now use canonical `skills/sources/google-agents-cli/...` paths while preserving exact fingerprints, static dispositions, authority characterization, and behavioral-validation state `not-run`.
 
 Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
