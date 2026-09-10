@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-543-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-546-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **543 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **546 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -57,7 +57,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
 - **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
 - **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
-- **David Ondrej Skills:** exact registered-pin denominator **55**; **6/55** current-standard provenance/verification companion complete, **49** gaps; decisive states so far **3 verified / 3 rejected unchanged**. The skill-authoring category is now **4/4** current-standard complete.
+- **David Ondrej Skills:** exact registered-pin denominator **55**; **9/55** current-standard provenance/verification companion complete, **46** gaps; decisive states so far **4 verified / 5 rejected unchanged**. The skill-authoring category is **4/4** current-standard complete; agent orchestration is **4/17** reviewed.
 - **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
 - **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
@@ -67,7 +67,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by that direct pinned-tree evidence. The skill-authoring category is now complete at 4/4: `effective-agent-skills` and two newly reviewed units are verified, while `distribute-skill-to-all-agents` is rejected unchanged under the destructive-sync authority hard fail.
+The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by that direct pinned-tree evidence. Current review coverage is 9/55. Skill authoring is complete at 4/4. In agent orchestration, `agent-self-scheduling` and `bb-plugins` are rejected unchanged under the authority hard fail, while `bb-subagents` is verified with host-specific portability caveats.
 
 Anthropic Knowledge Work Plugins had been treated as blocked because only its aggregate 74/74 historical result was visible on current `main`. Superseded PR #42 in fact retains the full package-level provenance and verification trees for all 74 plugin skills. Those exact companions are now recovered under canonical registry paths, preserving individual dispositions, fingerprints, authority findings, and behavioral-validation states without inference.
 
