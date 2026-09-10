@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: global-agent-guardrails
+display_name: Global Agent Guardrails
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/global-agent-guardrails/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 6fcbad546de04c7de09d19111d90c899f52a4d21
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: user-global agent configuration directories; POSIX shell, jq, grep, Python for checks; host-specific hook/plugin formats across supported agents
+import_eligibility: rejected-unchanged-reference-only
+rationale: The shared denylist, explicit limitations, adapter-specific failure semantics, false-positive analysis, and safe non-git E2E probe are useful security engineering evidence. Unchanged adoption fails the authority boundary because the skill's normal trigger includes installing and editing user-global security-control configuration without requiring explicit authorization for those persistent security-control mutations.
