@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 436,
+    "persisted_third_party_exact_version_reviews": 466,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -39,6 +39,10 @@
     "google_agents_cli_current_standard_companions": 7,
     "google_agents_cli_eligible_denominator": 7,
     "google_agents_cli_current_standard_gaps": 0,
+    "cline_skills_published_current_standard_companions": 36,
+    "cline_skills_published_eligible_denominator": 36,
+    "cline_skills_published_current_standard_gaps": 0,
+    "cline_skills_internal_unlisted_companions": 1,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -71,6 +75,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: Google Agents CLI reconciled current-standard complete at exact pin ef7808f33fc3038112b69d4ad488ce33b72699b1; exact denominator 7, matching 7/7 provenance and verification companions with canonical skills/sources paths, 0 gaps, all seven verified; persisted third-party review count remains 436"
+    "latest_reconciliation": "2026-09-10: Cline Skills reconciled current-standard complete for the exact 36-skill published denominator at pin 26378461e978f2b4e2e6d67b57121b86b2a79ba5; 30 missing provenance/verification pairs recovered from compatible exact package-level PR #42 evidence while preserving the seven newer records already on main; internal/unlisted review-team remains separate; persisted third-party review count is 466"
   }
 }
