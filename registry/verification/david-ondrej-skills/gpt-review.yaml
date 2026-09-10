@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: gpt-review
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 2d6b055bdcf3fab5ae96f3c4dde053fd78ef93f2
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fcd77e01811aa114a8b256f63e6d564ea0b8c18f
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [code-review, orchestration]
+  lifecycle: [verification]
+  characteristic: [human-review, evidence-first, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Explicit user-request trigger; read-only delegated review; neutral prompt discipline; waits for completion; preserves reviewer output. Host-specific bb dependencies are unbundled. Behavioral validation was not run."
