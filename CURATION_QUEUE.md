@@ -53,6 +53,13 @@ The latest first-party admission is `session-continuity`, created from bounded g
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator/current-standard companions: **33/33**; gaps **0**.
 
+### David Ondrej Skills — TRACKED / PARTIALLY CURATED
+- Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
+- Exact eligible denominator recomputed directly from the pinned tree: **55** first-class `SKILL.md` packages across five category trees: agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
+- Current provenance/verification companions: **3/55**; gaps **52**.
+- Current decisive states: **1 verified / 2 rejected unchanged**; behavioral validation remains `not-run` for all three reviewed units.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by the direct pinned-tree denominator above. Existing package-level evidence is preserved; no state is inferred for the remaining 52.
+
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
 - Exact eligible denominator/current-standard companions: **29/29** after source-policy exclusions; gaps **0**.
@@ -97,4 +104,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With Anthropic Knowledge Work Plugins now **74/74 current-standard complete**, continue issue #66 by recomputing the remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps. Continue bounded discovery/source-vetting and omission detection in parallel.
+Continue issue #66 with the now-explicit David Ondrej frontier: **3/55 current-standard companion pairs, 52 genuine gaps** at the registered pin. For each next unit, check existing companions and repository history first, then perform fresh static review only where exact compatible evidence is genuinely absent. Continue bounded discovery/source-vetting and omission detection in parallel.
