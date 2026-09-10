@@ -51,6 +51,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 Core passive architecture is complete. Ongoing work is corpus enrichment, historical evidence reconciliation, candidate resolution, and source freshness/omission detection.
 
 - **First-party:** **44/44** provenance-complete, including `session-continuity`, a substrate-agnostic continuity procedure with authorization-gated durable capture and behavioral validation `not-run`.
+- **Anthropic Skills:** exact registered-pin denominator **17**; **17/17** current-standard companion complete, **0** gaps; **10 verified / 7 rejected unchanged**.
 - **AWS Agent Toolkit:** **72/72** current-standard companion complete.
 - **Microsoft Skills:** exact denominator **186**; **186/186** current-standard companion complete, **0** gaps.
 - **Microsoft Azure Skills:** exact registered-pin denominator **34**; **34/34** current-standard companion complete, **0** gaps.
@@ -70,9 +71,11 @@ Matt Pocock Skills is current-standard complete at registered pin `6654f6b60cd9d
 
 Cloudflare Skills is current-standard complete at registered pin `f96bff754e428838818017f75817f0f9428acd48`. The exact denominator is **13** first-class packages, all with matching provenance and verification companions whose physical paths resolve under `skills/sources/cloudflare-skills/`. Historical dispositions remain **11 verified / 2 rejected unchanged**. `web-perf` remains rejected for an unresolved privacy/telemetry boundary around its required Chrome DevTools MCP path; `wrangler` remains rejected because install/deploy/delete/migration/resource mutations lack a governing action-specific authorization boundary. Behavioral validation remains `not-run` across the family.
 
+Anthropic Skills is current-standard complete at registered pin `9d2f1ae187231d8199c64b5b762e1bdf2244733d`. The pinned `skills/` tree exposes exactly **17** first-class packages, and the canonical provenance and verification shelves expose the same **17/17** package identities. Historical issue #27 records the decisive distribution as **10 verified / 7 rejected unchanged**. No live companion path retains the obsolete top-level `vendor/anthropic-skills/...` location. Behavioral validation remains distinct from static review and is not inferred from upstream package assets.
+
 Addy Osmani Agent Skills is current-standard complete at registered pin `f63ec56a3cc936408d792956ae583c3c96a825bd`. The exact upstream `skills/*/SKILL.md` denominator is **24**, and canonical provenance/verification shelves now contain **24/24** matching companion pairs. The final five exact historical records were recovered from compatible evidence in superseded PR #42 and matched against the registered pinned tree: `security-and-hardening` remains verified **18/20**, `source-driven-development` verified **19/20**, `planning-and-task-breakdown` rejected unchanged **14/20**, `shipping-and-launch` rejected unchanged **12/20**, and `using-agent-skills` rejected unchanged **13/20**. The rejected records remain useful adaptation/reference evidence. `shipping-and-launch` continues to hard-fail unchanged use where production mutation examples lack action-specific authorization. Behavioral validation remains `not-run` across these recovered records; upstream eval fixtures are source evidence, not claimed local behavioral validation.
 
-AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, and Addy Osmani Agent Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+AWS Agent Toolkit, Microsoft Skills, Microsoft Azure Skills, Cole Medin Skills, Matt Pocock Skills, Cloudflare Skills, Addy Osmani Agent Skills, and Anthropic Skills are current-standard complete at their exact registered pins. Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
 ## Repository map
 

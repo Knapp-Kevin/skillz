@@ -8,6 +8,9 @@
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
     "persisted_third_party_exact_version_reviews": 436,
+    "anthropic_skills_current_standard_companions": 17,
+    "anthropic_skills_eligible_denominator": 17,
+    "anthropic_skills_current_standard_gaps": 0,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 72,
     "aws_current_standard_companion_complete": 72,
@@ -62,6 +65,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-09: Addy Osmani Agent Skills current-standard companion closure completed at exact pin f63ec56a3cc936408d792956ae583c3c96a825bd; 24/24 companion pairs, 0 gaps; final five exact historical records recovered from superseded PR #42 without inventing behavioral evidence; persisted third-party review count 436"
+    "latest_reconciliation": "2026-09-09: Anthropic Skills current-standard completeness reconciled at exact pin 9d2f1ae187231d8199c64b5b762e1bdf2244733d; exact denominator 17, matching 17/17 provenance and verification shelves, 0 gaps, historical decisive distribution 10 verified / 7 rejected unchanged; persisted third-party review count remains 436"
   }
 }
