@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: account-research
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/sales/skills/account-research/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d1e3b56675dcd55667c5f6cdfa91c5b942b7220e
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [research, communication, business-operations]
+  lifecycle: [discovery]
+  characteristic: [retrieval-first, synthesis, tool-assisted]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. The company/news/hiring/relationship research structure and source listing are useful. Reject unchanged because the method encourages collection and use of personal background, LinkedIn information, verified email/phone data, org charts, intent signals, and CRM history for outreach without a minimum-necessary, sensitive-data, retention, or privacy boundary. It also directs the agent to prioritize enrichment data over web as 'more accurate' rather than verifying claims independently. Exact pinned fingerprint confirmed. Behavioral validation not run."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: single-cell-rna-qc
+display_name: Single-Cell RNA QC
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: bio-research/skills/single-cell-rna-qc/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 7c35640e492acda9dfbd18c05d88e32776036b51
+upstream_last_updated_at: 2026-01-29T22:36:17Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/bio-research/skills/single-cell-rna-qc/SKILL.md
+permission_tier: mutating
+portability: low
+review_status: curated-source-reviewed
+dependency_status: scientific-python-and-domain-context-dependent
+dependencies: Python scientific stack, bundled QC scripts/references, compatible single-cell data, species/tissue metadata, and scientific review of filtering choices and outputs
+import_eligibility: already-vendored
+rationale: Strong reproducible QC scaffold with MAD-based filtering, pre/post visualizations, preservation of QC-annotated original data, modular alternatives, dataset/species caveats, and explicit encouragement to inspect biology before accepting filters. Specialized dependencies and scientific judgment limit portability but do not negate the method.

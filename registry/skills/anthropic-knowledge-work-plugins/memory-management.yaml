@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: memory-management
+display_name: Memory Management
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: productivity/skills/memory-management/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/productivity/skills/memory-management/SKILL.md
+permission_tier: staging-write
+portability: low
+review_status: curated-vendored
+dependency_status: host-context-dependent
+dependencies: Claude-style CLAUDE.md working-memory convention plus writable local filesystem and persistent memory directory
+import_eligibility: already-vendored
+rationale: Strong tiered-context and shorthand-decoding pattern retained as reference, but the exact skill is Claude-specific and persists rich people, project, company, preference, and historical context without adequate minimization, retention, deletion, or per-category consent boundaries.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sql-queries
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/data/skills/sql-queries/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f92e232c67054b078fcc1ee558101163ebdbb87d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [implementation, research, decision-support]
+  lifecycle: [implementation, verification]
+  characteristic: [reference-heavy, compatibility-aware, progressive-disclosure, maintainability]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. Useful cross-dialect generation/reference skill with concrete syntax, analytical patterns, performance cues, and debugging guidance. Verified as generate-only reference material, not as authority to execute DDL or tune production systems. Several performance tips are broad heuristics rather than workload-proven rules, and the skill lacks an explicit current-documentation/version verification loop, limiting the score. Exact pinned fingerprint confirmed; behavioral validation not run."

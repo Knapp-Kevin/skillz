@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: competitive-brief
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/marketing/skills/competitive-brief/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1a7df218996ed350c67e6899a60321f205bb69d6
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [research, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [source-driven, evidence-first, traceable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified. Uses current public sources, dates the brief, and grounds strengths/weaknesses in evidence. Collision-qualified record binds verdict to the marketing path. Exact fingerprint confirmed; behavioral validation not run."

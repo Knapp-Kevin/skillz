@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: financial-statements
+display_name: Financial Statements
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: finance/skills/financial-statements/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/finance/skills/financial-statements/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: authoritative-accounting-guidance-dependent
+dependencies: current financial data, organization chart of accounts/materiality policy, applicable reporting framework and current authoritative accounting guidance, plus qualified financial review
+import_eligibility: already-vendored
+rationale: Useful statement formatting, comparison, investigation, and variance-driver scaffold with explicit professional review, but unchanged reuse bundles static GAAP/IFRS presentation guidance and example materiality thresholds while also using a percentage-variance formula that needs explicit zero/comparability handling. Current authoritative accounting guidance and organization policy must control reporting use.

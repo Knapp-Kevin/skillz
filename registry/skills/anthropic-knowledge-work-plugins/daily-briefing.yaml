@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: daily-briefing
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: sales/skills/daily-briefing/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 7c35640e492acda9dfbd18c05d88e32776036b51
+upstream_last_updated_at: 2026-01-29T22:36:17Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/sales/skills/daily-briefing/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-source-reviewed
+dependency_status: sales-connectors-and-policy-dependent
+dependencies: [Sales connectors, organization-specific deal thresholds and urgency policy]
+import_eligibility: already-vendored
+rationale: Briefing structure retained; unchanged reuse rejected because connector pulls and hard-coded deal/activity urgency rules are treated as generic defaults.

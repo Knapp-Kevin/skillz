@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: variance-analysis
+display_name: Variance Analysis
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: finance/skills/variance-analysis/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/finance/skills/variance-analysis/SKILL.md
+permission_tier: generate
+portability: high
+review_status: curated-source-reviewed
+dependency_status: financial-data-dependent
+dependencies: relevant budget/forecast/actual financial data and organization-specific materiality context; qualified financial review before reporting
+import_eligibility: already-vendored
+rationale: Useful decomposition, reconciliation, narrative, and waterfall discipline with explicit qualified-review boundary and organization-specific thresholds. Retain caveats around generic materiality examples and forecast-accuracy math when actual values are zero or deviations exceed actuals.

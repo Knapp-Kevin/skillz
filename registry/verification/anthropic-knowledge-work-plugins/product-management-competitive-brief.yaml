@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: competitive-brief
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/product-management/skills/competitive-brief/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 05ca7ec4314ec1a73a882562a364726870944cff
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [research, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [source-driven, evidence-first, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified. Keeps competitive claims evidence-based, acknowledges competitor strengths, focuses on customer-relevant comparisons, and treats findings as time-sensitive. Exact fingerprint confirmed; behavioral validation not run."

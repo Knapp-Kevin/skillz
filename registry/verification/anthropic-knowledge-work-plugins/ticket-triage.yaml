@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ticket-triage
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/customer-support/skills/ticket-triage/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d5ebee4105be8ad8a32c6767fb741fb47e44c12a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [business-operations, communication, decision-support]
+  lifecycle: [discovery, operations]
+  characteristic: [retrieval-first, risk-aware, synthesis, tool-assisted]
+  authority: [generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. Useful parsing, duplicate-detection, priority, routing, and handoff structure. Rejected unchanged because fixed SLA and routing tables are organization-specific, escalation on executive involvement can distort impact-based priority, and customer-response templates can claim an issue was logged or escalated even though this skill only generated a triage assessment. Those action claims must be bound to actual tool evidence. Exact pinned fingerprint confirmed; behavioral validation not run."

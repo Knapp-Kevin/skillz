@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: search-strategy
+display_name: Search Strategy
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: enterprise-search/skills/search-strategy/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/enterprise-search/skills/search-strategy/SKILL.md
+permission_tier: generate
+portability: medium
+review_status: curated-source-reviewed
+dependency_status: host-search-connectors-dependent
+dependencies: one or more host search/content systems with source-specific query capabilities and result metadata
+import_eligibility: already-vendored
+rationale: Strong query decomposition, source-specific translation, ambiguity handling, fallback broadening, source authority, and deduplication concepts. Unchanged reuse is too prescriptive about fixed ranking weights, source hierarchies, connector syntax, and an absolute parallel-execution requirement that may not fit host capabilities, cost, rate limits, or dependency ordering.

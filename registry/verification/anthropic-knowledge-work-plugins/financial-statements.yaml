@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: financial-statements
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/finance/skills/financial-statements/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5a9a8fc83fa68280759541dbdf6703d1b0cac5de
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, decision-support]
+  lifecycle: [verification]
+  characteristic: [metric-driven, reference-heavy, human-review]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. Useful income-statement formatting, comparison, variance-driver investigation, follow-up questions, and explicit qualified-finance review. Reject unchanged because the skill is also triggered to provide GAAP presentation guidance yet relies on bundled static ASC/IFRS summaries rather than current authoritative retrieval; example materiality thresholds can be overgeneralized; and percentage variance `(Current-Prior)/|Prior|` lacks explicit zero-base and comparability handling. Adapt by making current accounting guidance and organization policy authoritative. Exact pinned fingerprint confirmed. Behavioral validation not run."

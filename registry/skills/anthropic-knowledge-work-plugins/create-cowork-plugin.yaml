@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: create-cowork-plugin
+display_name: Create Cowork Plugin
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: cowork-plugin-management/skills/create-cowork-plugin/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: e7a5e58b7d08dbadf66e4121b06c449e4faa2fb4
+upstream_last_updated_at: 2026-03-18T17:22:45Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/cowork-plugin-management/skills/create-cowork-plugin/SKILL.md
+permission_tier: mutating
+portability: low
+review_status: curated-source-reviewed
+dependency_status: claude-cowork-environment-dependent
+dependencies: Claude Cowork desktop environment, writable outputs directory, plugin filesystem access, optional Claude plugin validator, and packaging capability
+import_eligibility: already-vendored
+rationale: Well-scoped first-party Cowork authoring workflow with explicit compatibility, minimum-component planning, confirmation gates before implementation, progressive disclosure, least-privilege credential guidance, validation fallback, and deterministic packaging instructions. Low portability is intrinsic and honestly declared rather than a quality defect.

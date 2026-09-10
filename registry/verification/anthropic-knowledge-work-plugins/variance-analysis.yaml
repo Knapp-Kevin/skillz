@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: variance-analysis
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/finance/skills/variance-analysis/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4a430511eac2af771e55caf965bf713fff88d649
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [business-operations, decision-support]
+  lifecycle: [planning, verification]
+  characteristic: [metric-driven, evidence-first, traceable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. Strong price/volume reconciliation, causal narrative rules, offsetting-driver treatment, waterfall reconciliation, budget/forecast/prior-period distinctions, and explicit qualified-finance review. Caveats keep this at the threshold: illustrative materiality percentages can be overgeneralized, the three-way examples require dimensional/context validation, and Forecast Accuracy = 1 - |Actual-Forecast|/|Actual| needs an explicit zero-actual guard and interpretation when error exceeds actual. Verify as a reference method, with organization-specific thresholds and professional review controlling reporting use. Exact pinned fingerprint confirmed. Behavioral validation not run."

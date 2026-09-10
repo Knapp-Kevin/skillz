@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cowork-plugin-customizer
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/cowork-plugin-management/skills/cowork-plugin-customizer/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ddbe87ed81dcf5fb185986da45b041e4adb56814
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [skill-authoring, productivity, context-management]
+  lifecycle: [maintenance]
+  characteristic: [tool-assisted, tool-routing, human-review]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Useful scoped-versus-general customization model, explicit Cowork compatibility, and preservation of plugin/skill identity. Reject unchanged because Phase 1 can search broad internal chat/document/email sources for organization configuration and Phase 3 directs the agent to apply a 'clear answer' from those sources without confirmation. The workflow can then discover/suggest connectors and mutate MCP configuration. Adapt with minimum-necessary source scope, claim-level provenance/freshness, explicit confirmation for inferred organizational configuration, and bounded connector changes. Exact pinned fingerprint confirmed. Behavioral validation not run."

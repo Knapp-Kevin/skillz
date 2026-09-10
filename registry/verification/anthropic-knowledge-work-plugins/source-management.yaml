@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: source-management
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/enterprise-search/skills/source-management/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8df82355b33469e034ad6db962ce0d5606314dd4
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [context-management, research]
+  lifecycle: [operations]
+  characteristic: [retrieval-map, tool-routing, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rejected unchanged. It explicitly favors source maximization: lower priority changes ranking rather than whether a source is searched, and newly available sources are automatically included. Source characterization concepts remain useful. Exact fingerprint confirmed; behavioral validation not run."

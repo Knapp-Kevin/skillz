@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: start
+display_name: Productivity Start
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: productivity/skills/start/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+source_last_pushed_at: 2026-08-29T07:28:04Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/productivity/skills/start/SKILL.md
+permission_tier: mutating
+portability: low
+review_status: curated-source-reviewed
+dependency_status: host-filesystem-and-connectors-dependent
+dependencies:
+  - writable working directory
+  - Claude/Cowork plugin path conventions
+  - optional task, chat, email, document, and calendar sources
+import_eligibility: already-vendored
+rationale: Useful interactive shorthand-discovery and confidence-grouping patterns, but the unchanged workflow is Claude/Cowork-specific, creates persistent task and memory files, and can expand into broad cross-source personal/workplace scanning without a sufficiently explicit minimization, retention, or privacy boundary.

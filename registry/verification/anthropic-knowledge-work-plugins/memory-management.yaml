@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: memory-management
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/productivity/skills/memory-management/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f35a89c4fa023ee11afae1b2a68bc017933d9d9a
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [memory, context-management, productivity]
+  lifecycle: [operations, maintenance]
+  characteristic: [progressive-disclosure, context-efficient, tool-routing]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 1, portability honesty 0, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The hot-cache/deep-memory and shorthand-decoding concepts are valuable. Rejected unchanged because the exact design is tightly coupled to CLAUDE.md, persists detailed people/project/company/preference/history data, permits memory expansion from simple remember-this cues, lets deep memory grow indefinitely, and demotes stale data rather than defining minimization, retention, correction, deletion, sensitivity, or per-category consent boundaries. Retain for adaptation/extraction. Exact pinned fingerprint confirmed; behavioral validation not run."

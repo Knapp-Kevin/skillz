@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: content-creation
+source_id: anthropic-knowledge-work-plugins
+source_repository: https://github.com/anthropics/knowledge-work-plugins
+source_path: marketing/skills/content-creation/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+upstream_revision: 2d6f7e22dd25593f0f748010430ef86f19659735
+upstream_last_updated_at: 2026-03-13T15:57:57Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/knowledge-work-plugins/marketing/skills/content-creation/SKILL.md
+permission_tier: generate-only
+portability: high
+review_status: curated-source-reviewed
+dependency_status: channel-and-brand-dependent
+dependencies: [Audience, brand voice, channel constraints, current platform guidance]
+import_eligibility: already-vendored
+rationale: Content workflow is useful, but unchanged reuse rejected because volatile SEO/social length and formatting numbers are embedded as general best practices.
