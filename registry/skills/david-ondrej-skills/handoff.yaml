@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: handoff
+display_name: Handoff
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/handoff/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 439fd1b902d4c7c0a66a86a3eee8d8d9960f3619
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Host conversation context, readable project instructions when present, local/system temporary-file write capability, bundled agents/openai.yaml invocation policy
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Strong session-continuity procedure that explicitly disables implicit invocation, prioritizes state and decision rationale over duplicated artifacts, tells the next agent to verify handoff claims against source files, requires secret and PII redaction, and writes only a temporary handoff file by default. Invocation itself supplies the authority boundary for the bounded local file write; hosts without filesystem access need adaptation rather than unchanged use.
