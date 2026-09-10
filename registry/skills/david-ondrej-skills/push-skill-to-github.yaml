@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: push-skill-to-github
+display_name: Push Skill to GitHub
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/skill-authoring/push-skill-to-github/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 2c72ceaaa701161192d518e137adb3522bbfa9ba
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: git CLI, authenticated GitHub remote, a repository rooted at ~/.agents with skills/<skill-name>, main as the expected push branch, and the source author's private-to-public sanitized-mirror workflow
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Compact, well-bounded commit/push procedure that checks pending changes, stages only the intended skill path when unrelated work exists, requires the user to request the push, and verifies push output before claiming success. Unchanged reuse remains highly host-specific because repository location, branch, remote topology, and sanitized-public-mirror behavior are assumptions rather than portable invariants.
