@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-09",
+  "snapshot_date": "2026-09-10",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
@@ -36,6 +36,9 @@
     "vercel_agent_skills_current_standard_companions": 9,
     "vercel_agent_skills_eligible_denominator": 9,
     "vercel_agent_skills_current_standard_gaps": 0,
+    "google_agents_cli_current_standard_companions": 7,
+    "google_agents_cli_eligible_denominator": 7,
+    "google_agents_cli_current_standard_gaps": 0,
     "microsoft_dotnet_direct_package_companions": 29,
     "microsoft_dotnet_direct_package_denominator": 29,
     "microsoft_java_direct_package_companions": 26,
@@ -68,6 +71,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-09: Vercel Agent Skills reconciled current-standard complete at exact pin f8a72b9603728bb92a217a879b7e62e43ad76c81; exact denominator 9, matching 9/9 provenance and verification companions with canonical skills/sources paths, 0 gaps, decisive distribution 6 verified / 3 rejected unchanged; persisted third-party review count remains 436"
+    "latest_reconciliation": "2026-09-10: Google Agents CLI reconciled current-standard complete at exact pin ef7808f33fc3038112b69d4ad488ce33b72699b1; exact denominator 7, matching 7/7 provenance and verification companions with canonical skills/sources paths, 0 gaps, all seven verified; persisted third-party review count remains 436"
   }
 }
