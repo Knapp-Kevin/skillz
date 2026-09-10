@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **558** persisted exact-version third-party verification companions.
+- **561** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,11 +45,12 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **21/55**; gaps **34**.
-- Current decisive states: **11 verified / 10 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **24/55**; gaps **31**.
+- Current decisive states: **11 verified / 13 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
-- **Agent orchestration: 17/17 current-standard complete.** Final tranche: `render-images-in-cursor` verified 15/20; `run-deep-swe` rejected unchanged 12/20 because its missing-key path can solicit a real OpenRouter API key into conversational context instead of using a secure external credential path; `total-review` rejected unchanged 13/20 because approval to fix review findings is treated as authorization to stage, commit, and push to GitHub.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 34.
+- **Agent orchestration: 17/17 current-standard complete.**
+- **Ops-and-setup: 3/11 reviewed.** `risky-changes` is rejected unchanged 14/20 because paid DeepAPI calls and production-data reads lack distinct action authorization; `global-agent-guardrails` is rejected unchanged 15/20 because persistent user-global security-control mutation lacks a configuration authorization boundary; `google-safe-browsing` is rejected unchanged 14/20 because deployment, DNS TXT mutation, and Search Console review submission are directed without action-specific authorization.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 31.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; **29/29**, gaps **0** after source-policy exclusions.
@@ -86,4 +87,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **21/55 current-standard companion pairs, 34 genuine gaps**. Skill authoring and agent orchestration are current-standard complete at **4/4** and **17/17**. Move next to the highest-priority remaining David Ondrej category after checking companions and repository history for genuine gaps. Continue bounded discovery/source-vetting and omission detection in parallel.
+Continue issue #66 with the David Ondrej frontier now at **24/55 current-standard companion pairs, 31 genuine gaps**. Skill authoring and agent orchestration are current-standard complete at **4/4** and **17/17**; ops-and-setup is **3/11** reviewed. Continue that bounded category after checking companions and repository history for genuine gaps, while keeping discovery/source-vetting and omission detection parallel and secondary.
