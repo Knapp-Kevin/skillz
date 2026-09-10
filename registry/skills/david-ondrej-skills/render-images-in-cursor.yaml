@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: render-images-in-cursor
+display_name: Render Images in Cursor
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/render-images-in-cursor/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 63fef7091ab7e10a26ad866bcd8f8e95a4d6a31d
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-18T17:22:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Cursor workspace with local file access; optional cursor-app-control MCP open_resource capability or Cursor CLI fallback
+import_eligibility: verified-unchanged-with-host-fit
+rationale: Focused workaround for Cursor image-rendering failure modes. It copies an already-selected image into the active workspace, embeds the in-workspace path, opens an editor-tab fallback, and asks the user to confirm visibility. The workflow is useful but strongly Cursor-specific and performs bounded local workspace mutation, so unchanged reuse requires host fit.

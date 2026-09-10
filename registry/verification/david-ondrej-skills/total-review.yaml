@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: total-review
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: c695aae9da8167d3b922b4fdfce1d375c09270f1
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0f489790c483c9ad81d494658d5bd1de8e566656
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [code-review, orchestration]
+  lifecycle: [verification, implementation]
+  characteristic: [human-review, orchestration, synthesis, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The two-reviewer parallelism, deduplication, explicit overthinking triage, and requirement to get approval before fixing findings are useful mechanisms. Authority hard fail: step 5 converts approval to fix the shortlist into automatic stage/commit/push behavior. Approval of fixes is not inherently authorization to mutate a remote GitHub repository, so unchanged adoption is rejected unless a distinct shipping boundary is added or the user's request already explicitly includes shipping. Behavioral validation was not run."
