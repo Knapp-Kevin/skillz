@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: agentic-productivity-setup
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 5e3673e41f8fe972aa7bebebeecf68461ac80f77
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bb9c4c3728ba8a7198963a70b6c10226481670b5
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [productivity, monitoring, observability]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [deterministic, evidence-first, privacy-preserving, safety-bounded, production-oriented]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. The skill explicitly distinguishes explanation, project build, and installation and forbids creation or installation for explanation-only requests. It keeps webhook secrets out of conversational context, requires read-only native-store access, persists and transmits aggregates rather than raw prompts or repository metadata, reports coverage failures instead of silent zeroes, and requires permission before sending a live Discord test. Installation and daily delivery are consequential, but they are tied to the user's selected installation/reporting scope rather than inferred from tool availability. Portability is low because the unchanged workflow depends on macOS launchd, Keychain, local native agent stores, and Discord. Behavioral validation was not run."
