@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: bb-plugins
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f5cc2811de008a7307d178723d9059827adcccbb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: dfba55b33503e69af1b58a4df4e6de0786909084
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [agent-development, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [risk-aware, tool-assisted]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 1. REJECT unchanged under the authority hard fail. The skill correctly states that plugins are full-trust and recommends source review, but its primary scaffold runs `bb plugin install . --yes`, bypassing the installation prompt for in-process code without a distinct user authorization checkpoint. The later statement that installs prompt does not repair that default bypass. Behavioral validation was not run. Preserve the trust model, SDK lookup discipline, and verification checklist as adaptation evidence."
