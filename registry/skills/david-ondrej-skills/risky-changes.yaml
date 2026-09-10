@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: risky-changes
+display_name: Risky Changes
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/risky-changes/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: faff509cb955d46cbd8482ad256069e5d8fdc458
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-19T21:04:38Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: DeepAPI account and DEEPAPI_API_KEY through an external environment path; live endpoint/provider access; production-data read access where used; project eval-document write access
+import_eligibility: rejected-unchanged-reference-only
+rationale: Assumption enumeration, independent research questions, live before/after measurement, and explicit product-owner sign-off are strong verification mechanisms. Unchanged adoption fails the authority boundary because the normal workflow initiates paid external research and may read production data without a distinct authorization checkpoint for those consequential actions. Preserve as adaptation/checklist evidence with explicit authority gates.
