@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 550,
+    "persisted_third_party_exact_version_reviews": 551,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 13,
+    "david_ondrej_skills_current_standard_companions": 14,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 42,
+    "david_ondrej_skills_current_standard_gaps": 41,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration added fable-review verified 16/20; family companions 12/55 -> 13/55, gaps 43 -> 42, decisive states 6 verified / 7 rejected unchanged; persisted third-party review count 549 -> 550"
+    "latest_reconciliation": "2026-09-10: David Ondrej agent-orchestration added gpt-review verified 16/20; family companions 13/55 -> 14/55, gaps 42 -> 41, decisive states 7 verified / 7 rejected unchanged; persisted third-party review count 550 -> 551"
   }
 }
