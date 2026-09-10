@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-466-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-540-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **466 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **540 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -52,6 +52,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 
 - **First-party:** **44/44** provenance-complete.
 - **Anthropic Skills:** **17/17** current-standard complete, **0** gaps; **10 verified / 7 rejected unchanged**.
+- **Anthropic Knowledge Work Plugins:** **74/74** current-standard complete, **0** gaps; historical decisive states **36 verified / 38 rejected unchanged** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`.
 - **AWS Agent Toolkit:** **72/72** current-standard complete, **0** gaps.
 - **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
 - **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
@@ -61,11 +62,11 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
 - **Vercel Agent Skills:** **9/9** current-standard complete, **0** gaps; **6 verified / 3 rejected unchanged**.
 - **OpenHands Extensions:** exact registered-pin denominator **1**; **1/1** current-standard companion complete, **0** gaps; `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`.
-- **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**. All 14 live companion paths resolve under `skills/sources/google-agents-cli/`.
+- **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**.
 - **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-Cline's published 36-skill exact-version pass was already completed historically in source queue #27. Current `main` retained only six published companion pairs plus the separate internal `review-team` record after the passive-tree migration. Compatible package-level provenance and verification evidence from superseded PR #42 has now been recovered only for the 30 genuine published gaps, preserving the seven newer records already on `main`; behavioral validation remains exactly as recorded and is not inferred from static review.
+Anthropic Knowledge Work Plugins had been treated as blocked because only its aggregate 74/74 historical result was visible on current `main`. Superseded PR #42 in fact retains the full package-level provenance and verification trees for all 74 plugin skills. Those exact companions are now recovered under canonical registry paths, preserving individual dispositions, fingerprints, authority findings, and behavioral-validation states without inference.
 
 Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
 
