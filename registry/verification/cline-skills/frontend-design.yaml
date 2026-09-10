@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: frontend-design
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/frontend-design/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 616b043b185c6a03758bb340c9699a1ca8e3543c
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [ux, implementation]
+  lifecycle: [design, implementation]
+  characteristic: [iterative, production-oriented]
+  authority: [generate-only, mutating]
+  portability: [high]
+notes: Distinctive aesthetic guidance is useful reference material, but the exact skill lacks a concrete accessibility floor, failure handling, and an explicit verification loop despite claiming production-grade results. Rejected for unchanged governed selection; suitable for extraction/adaptation.

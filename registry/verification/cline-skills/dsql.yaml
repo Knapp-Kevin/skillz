@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: dsql
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/dsql/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0cf4926c1ff87919b2700f99b76e092fdc3e1742
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [implementation, data-analysis, debugging]
+  lifecycle: [implementation, operations, maintenance, verification]
+  characteristic: [tool-assisted, evidence-first, test-gated, risk-aware, source-driven]
+  authority: [read-only, mutating, destructive, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. Deep DSQL skill with explicit readonly_query versus transact separation, lint-before-DDL rules, dry-run-first loading, tenant authorization and safe query construction, current-limit verification guidance, and user confirmation at each destructive table-recreation step. Query-plan capture is explicitly prohibited from using write transactions. Provider-specific dependencies reduce portability but are appropriate to the skill's narrow trigger. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.

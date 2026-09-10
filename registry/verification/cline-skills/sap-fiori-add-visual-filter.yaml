@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sap-fiori-add-visual-filter
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/sap-fiori-add-visual-filter/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca602f2d1f0d4a389c6506a1a6ff47112112db95
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [implementation, testing]
+  lifecycle: [implementation, verification]
+  characteristic: [human-review, test-gated, source-driven, risk-aware]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. Strong focused implementation skill: it stops for five required inputs before editing, distinguishes CAP from ABAP RAP, calls out read-only metadata constraints, maintains qualifier consistency, lists common failure modes, and requires target-project testing with real data. Provider/framework specificity lowers portability but not quality. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: endor-setup
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/endor-setup/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b59a3f192bbdb67d1e154f621b67b3253b400478
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, debugging, testing]
+  lifecycle: [implementation, operations]
+  characteristic: [tool-assisted, source-driven, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 1, procedure 2, authority 0, failure 2, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Good security details include checksum verification, avoiding full auth-config dumps, namespace confirmation, explicit access-error handling, browser-auth timeout handling, and instructing API-key users to set credentials themselves rather than paste secrets into chat. Hard fail for unchanged reuse: the skill says a missing `endorctl` should be downloaded/installed automatically without asking on Linux/Windows and can trigger that behavior merely from command-not-found/auth troubleshooting contexts. Installation and subsequent security scanning are consequential host/external actions that should honor an explicit authority gate. Exact pinned blob and June 18 revision confirmed. Behavioral validation remains pending.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: searching-sourcegraph
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/searching-sourcegraph/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0d91199575aaf7cebad2034ed053894d72a36fcb
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [research, debugging, code-review, implementation]
+  lifecycle: [discovery, implementation, verification]
+  characteristic: [retrieval-first, tool-routing, context-efficient, evidence-first, source-driven]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 1, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. The skill cleanly distinguishes keyword, natural-language, reference/definition, and deeper search modes; scopes repositories deliberately; starts narrow; and routes search evidence into implementation, debugging, and review workflows without inventing code facts. Sourcegraph tooling is a hard operational dependency, so portability is low despite the broadly reusable retrieval method. Exact pinned fingerprint and bundled query/workflow references confirmed. Behavioral validation remains pending.

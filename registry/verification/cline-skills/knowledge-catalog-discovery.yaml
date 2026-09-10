@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: knowledge-catalog-discovery
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/knowledge-catalog-discovery/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c52e0128ff3df369ec55766fae5bd215e5a03461
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research, data-analysis]
+  lifecycle: [discovery, operations]
+  characteristic: [tool-assisted, source-driven, cost-bounded, risk-aware]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 1, evidence 1, dependencies 1, portability 1, usefulness 2, adversarial resilience 1, effectiveness 1. The exposed Catalog operations are read-only and generally bounded; search_entries explicitly warns against broad searches and defaults to small pages. Unchanged reuse is rejected because the bundled wrappers implicitly fetch/execute @toolbox-sdk/server@1.1.0 through npx --yes and load host-specific environment material without an explicit host approval/dependency boundary. Strong adaptation candidate when the host already provides trusted Dataplex/Catalog tooling. Exact pinned fingerprint and June 18 skill revision confirmed. Behavioral validation remains pending.

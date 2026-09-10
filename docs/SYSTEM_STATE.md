@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 436 |
+| **Persisted third-party review companions** | 466 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -25,6 +25,8 @@
 | **Vercel Agent Skills current-standard companions** | 9 / 9 |
 | **Google Agents CLI current-standard companions** | 7 / 7 |
 | **Google Agents CLI current-standard gaps** | 0 |
+| **Cline Skills published current-standard companions** | 36 / 36 |
+| **Cline Skills published current-standard gaps** | 0 |
 | **Microsoft .NET direct-package companions** | 29 / 29 |
 | **Microsoft Java direct-package companions** | 26 / 26 |
 | **Microsoft Python direct-package companions** | 40 / 40 |
@@ -52,17 +54,16 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
 - Vercel Agent Skills: **9/9**, gaps **0**, **6 verified / 3 rejected unchanged**.
 - Google Agents CLI: exact registered-pin denominator **7**, **7/7** provenance/verification companion pairs, gaps **0**, all seven verified at pin `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
+- Cline Skills: exact published denominator **36**, **36/36** provenance/verification companion pairs, published gaps **0**, at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`; the internal/unlisted `review-team` record remains separate from the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
 Completion means decisive current evidence for every eligible package, not universal approval. Rejected/retired material remains useful bounded prior art.
 
-## Google Agents CLI reconciliation
+## Cline Skills reconciliation
 
-The registered exact pin is `ef7808f33fc3038112b69d4ad488ce33b72699b1`. Historical source queue #27 establishes the finite denominator at **7/7**, all verified. Canonical provenance and verification shelves expose matching seven-file sets.
+Source queue #27 records the finite public Cline corpus as **36/36 published skills reviewed**, plus a separate internal/unlisted `review-team` record. The source registry pins Cline Skills at `26378461e978f2b4e2e6d67b57121b86b2a79ba5`.
 
-The final current-standard defect was physical-path metadata inherited from the pre-passive `vendor/` layout. All 14 Google Agents CLI companion records now resolve under `skills/sources/google-agents-cli/` while preserving exact source revisions, content fingerprints, review scores, dispositions, authority/dependency characterization, and behavioral validation `not-run`.
-
-The family includes consequential cloud operations, but its existing static reviews preserve action-specific authority characterization rather than treating source reputation as authorization. `deploy` retains explicit human deployment approval; `publish` remains scoped to explicitly requested registry mutations; observability retains privacy/data-destination cautions; evaluation retains cost boundaries.
+After the passive-tree migration, current `main` retained only six published companion pairs plus `review-team`. Superseded PR #42 preserved exact package-level provenance and verification evidence for all 37 records under canonical `skills/sources/cline-skills/...` paths. The 30 genuinely missing published pairs have been recovered while the seven records already modernized on `main` were left untouched. This yields **36/36 published current-standard companion completeness** without counting the internal record in the published denominator or inventing behavioral evidence.
 
 ## Source lifecycle
 

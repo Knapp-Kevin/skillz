@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: save-to-spotify
+display_name: Save to Spotify
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/save-to-spotify/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: de7baec9ecda0a729f35ddcc341a847820096f32
+upstream_last_updated_at: 2026-06-18T23:37:28Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/save-to-spotify/SKILL.md
+permission_tier: external-side-effect
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - save-to-spotify CLI and Spotify authentication
+  - TTS/audio generation provider
+  - ffmpeg and local media tooling
+  - image-generation or user/CDN artwork path
+  - host file read/write capability
+  - bundled production references
+import_eligibility: already-vendored
+rationale: Full audio-production and Spotify-save workflow with mandatory user interview, explicit plan confirmation, rights constraints, approval before CLI installation, and post-upload readiness verification; broad media/tool dependencies limit portability.

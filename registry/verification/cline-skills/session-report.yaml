@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: session-report
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/session-report/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c3eea47947ca093c858a86d4619e43175730892d
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [data-analysis, reporting, productivity]
+  lifecycle: [evaluation, maintenance]
+  characteristic: [tool-assisted, evidence-first]
+  authority: [read-only]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 0, failure 1, evidence 1, dependencies 2, portability 0, usefulness 2, adversarial resilience 0, effectiveness 1. The report-generation pipeline is concrete and useful, but unchanged reuse reads Claude Code transcript history and embeds detailed session-derived JSON including top prompts into a shareable HTML artifact without an explicit scope confirmation, secret/redaction pass, or minimum-necessary privacy boundary. It is also tightly coupled to Claude Code filesystem layout and bundled analyzer/template assets. Reject unchanged; adapt with explicit transcript scope, redaction, and output-sensitivity controls. Exact pinned fingerprint and June 18 revision confirmed. Behavioral validation remains pending.

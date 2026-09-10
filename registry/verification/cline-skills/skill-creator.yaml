@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: skill-creator
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/skill-creator/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 65b3a402dbd09b8e83f9d637c6b553875189085c
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [skill-authoring, evaluation, testing]
+  lifecycle: [discovery, design, implementation, verification]
+  characteristic: [iterative, evidence-first, holdout-aware, human-review, metric-driven, test-driven, tool-assisted, progressive-disclosure]
+  authority: [mutating]
+  portability: [medium]
+notes: Unusually complete skill-authoring loop with intent capture, realistic eval design, baseline/treatment comparison, human review, anti-overfitting guidance, trigger optimization, and host-specific fallbacks. Bundled Python/subagent/browser dependencies reduce portability but are explicit and intact. Behavioral validation remains pending.

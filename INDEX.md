@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 436 |
+| Persisted third-party exact-version reviews | 466 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | AWS current-standard companion-complete | 72 / 72 |
 | Microsoft Skills current-standard companions | 186 / 186 |
@@ -26,6 +26,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Vercel Agent Skills current-standard companions | 9 / 9 |
 | Google Agents CLI current-standard companions | 7 / 7 |
 | Google Agents CLI current-standard gaps | 0 |
+| Cline Skills published current-standard companions | 36 / 36 |
+| Cline Skills published current-standard gaps | 0 |
 | Microsoft .NET direct-package companions | 29 / 29 |
 | Microsoft Java direct-package companions | 26 / 26 |
 | Microsoft Python direct-package companions | 40 / 40 |
@@ -73,8 +75,8 @@ Physical presence or registration does not establish individual skill quality. F
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`.
 
-Google Agents CLI is current-standard complete at registered pin `ef7808f33fc3038112b69d4ad488ce33b72699b1`. Its exact denominator is **7** first-class packages, canonical provenance and verification shelves expose the same **7/7** identities, and historical issue #27 records all seven as verified. All 14 live companion paths now resolve under `skills/sources/google-agents-cli/`; no companion retains obsolete `vendor/google-agents-cli/...` metadata. Exact fingerprints, authority characterizations, and behavioral validation `not-run` are preserved.
+Cline Skills is current-standard complete for its finite **36-skill published denominator** at registered pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. Canonical provenance and verification shelves now expose all **36/36 published identities**; the separate internal/unlisted `review-team` record is retained outside that denominator. Thirty missing published pairs were recovered from compatible exact package-level evidence in superseded PR #42 without replacing the seven records already modernized on `main`.
 
-Other explicitly complete families remain Anthropic Skills **17/17**, AWS **72/72**, Microsoft Skills **186/186**, Microsoft Azure Skills **34/34**, Cole Medin Skills **33/33**, Matt Pocock Skills **29/29**, Cloudflare Skills **13/13**, Addy Osmani Agent Skills **24/24**, and Vercel Agent Skills **9/9**.
+Other explicitly complete families remain Anthropic Skills **17/17**, AWS **72/72**, Microsoft Skills **186/186**, Microsoft Azure Skills **34/34**, Cole Medin Skills **33/33**, Matt Pocock Skills **29/29**, Cloudflare Skills **13/13**, Addy Osmani Agent Skills **24/24**, Vercel Agent Skills **9/9**, and Google Agents CLI **7/7**.
 
 This file has no generator contract. Under explicit repository-maintenance authority, the external host agent reconciles this snapshot directly from live evidence.

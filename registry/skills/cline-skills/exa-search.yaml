@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: exa-search
+display_name: Exa Search
+source_id: cline-skills
+source_repository: https://github.com/cline/skills
+source_path: skills/exa-search/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+upstream_revision: 7f0e912da6f364598c84ca1552327b1174c1c691
+upstream_last_updated_at: 2026-06-18T23:33:54Z
+curated_at: 2026-08-29
+last_checked_at: 2026-08-29
+availability: vendored
+local_path: skills/sources/cline-skills/skills/exa-search/SKILL.md
+permission_tier: read-only
+portability: low
+review_status: curated-vendored
+dependency_status: source-intact
+dependencies:
+  - Exa MCP service
+  - OAuth, Exa API key, or anonymous Exa access
+  - host subagent/Agent-tool capability for nontrivial workflows
+  - availability of the hard-coded Haiku subagent model for unchanged full-fidelity use
+  - bundled research references
+import_eligibility: already-vendored
+rationale: Strong research decomposition, validation, deduplication, and source-quality method retained as adaptation material; unchanged portability is constrained by Exa-specific routing plus hard-coded Agent-tool and Haiku-model assumptions.

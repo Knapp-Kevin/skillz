@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sentry-cli
+source_id: cline-skills
+source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
+local_path: skills/sources/cline-skills/skills/sentry-cli/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: edac0959688f1961aac5f1276bca88d78370a560
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [observability, monitoring, debugging, deployment]
+  lifecycle: [verification, release, operations, maintenance]
+  characteristic: [tool-assisted, context-efficient, risk-aware, production-oriented, reference-heavy]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 2, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2. The skill has strong practical command coverage, bounded-output guidance, semantic exit-code recovery, explicit confirmation before destructive project deletion or trial activation, org/project context checks for mutations, and a clear rule never to store or log auth tokens. The command reference also documents `sentry auth token`, and broad release/project/API mutation capability means hosts must preserve the stated credential and authority boundaries rather than treating every listed command as pre-authorized. Verified as a useful operational reference with consequential-action caveats. Exact pinned fingerprint confirmed. Behavioral validation remains pending.
