@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: google-safe-browsing
+display_name: Google Safe Browsing
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/google-safe-browsing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f1c05f62fd481de4771788287c5fc49e10b6ea29
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-external-services
+dependencies: Google Transparency Report and Search Console; DNS registrar access for domain verification; deployment capability for public-surface remediation; browser/curl/whois for diagnosis
+import_eligibility: rejected-unchanged-reference-only
+rationale: The anonymous-surface diagnosis, apex/www distinction, public-site prevention checklist, and verify-after-review loop are useful incident-response evidence. Unchanged adoption fails the authority boundary because recovery directs deployment changes, DNS TXT mutation, and a Search Console review submission without a distinct authorization checkpoint for those external actions.
