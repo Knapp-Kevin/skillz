@@ -27,6 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
+    "david_ondrej_skills_current_standard_companions": 3,
+    "david_ondrej_skills_eligible_denominator": 55,
+    "david_ondrej_skills_current_standard_gaps": 52,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -81,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: Anthropic Knowledge Work Plugins recovered from exact package-level PR #42 evidence: 74/74 provenance and verification companions at pin ca3e3fb2c4a1d3eea73fc003998faef6daa650b8; historical states 36 verified / 38 rejected unchanged; persisted third-party review count 540"
+    "latest_reconciliation": "2026-09-10: David Ondrej Skills exact registered-pin denominator recomputed directly from five category trees as 55 first-class packages; current-standard companions remain 3/55 with 52 gaps and 1 verified / 2 rejected unchanged; historical 44-skill accounting is superseded; persisted third-party review count remains 540"
   }
 }
