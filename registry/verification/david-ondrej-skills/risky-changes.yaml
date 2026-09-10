@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: risky-changes
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: faff509cb955d46cbd8482ad256069e5d8fdc458
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5faab6c56e6bd2c75bae575a13e1fd2502c62faf
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, research, deployment]
+  lifecycle: [planning, verification, release, operations]
+  characteristic: [evidence-first, human-review, metric-driven, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong distinction between code correctness and product validity, with explicit assumptions, multiple research questions, live measurement, and product-owner sign-off before shipping. Authority hard fail: the normal procedure performs paid DeepAPI requests and permits production-data reads as measurement without a distinct authorization checkpoint for spending or sensitive production access. The environment-only API-key path is appropriately secret-conscious, but it does not cure the action-authorization gap. Behavioral validation was not run."
