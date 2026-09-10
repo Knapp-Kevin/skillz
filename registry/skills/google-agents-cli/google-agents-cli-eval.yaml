@@ -11,9 +11,9 @@ source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_last_updated_at: 2026-08-28T12:27:42Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
+last_checked_at: 2026-09-10
 availability: vendored
-local_path: vendor/google-agents-cli/skills/google-agents-cli-eval/SKILL.md
+local_path: skills/sources/google-agents-cli/skills/google-agents-cli-eval/SKILL.md
 permission_tier: external-side-effect
 portability: low
 review_status: verified-structured
