@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: git-worktree
+display_name: Git Worktree
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/git-worktree/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 7d36eec370ed25112a15288503de1654dea32b3c
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Git with worktree support, shell commands, optional Cursor worktree commands, optional package-manager and local-service bootstrap commands, bundled agents/openai.yaml invocation policy
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Practical worktree-isolation procedure with explicit no-implicit-invocation metadata, one-task/one-worktree collision avoidance, human diff review before merge, explicit user authority before pushing, and useful bootstrap/failure guidance. It performs local repository and filesystem mutation when invoked, so hosts must preserve the explicit invocation boundary; Cursor-specific conveniences and environment bootstrap details reduce portability.
