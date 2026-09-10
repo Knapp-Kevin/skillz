@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: fable-review
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 0b0cd42e2a840d9ee68cb54b0ffb9fbaf31bb8fa
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 70bd578a5f4b36b67c53268f6d9504db16d85268
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [code-review, orchestration]
+  lifecycle: [verification]
+  characteristic: [human-review, evidence-first, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The skill launches an external reviewer only when the user explicitly asks for Fable review, instructs the reviewer to review rather than modify, requires provider/model lookup instead of guessing, waits for completion, and returns the exact reviewer output without laundering it through a rewrite. No credential handling or repository mutation is requested. Failure handling and dependency coherence are thinner because bb-subagents and bb-cli are required but not bundled here, and alternate harness semantics are left to the host. Behavioral validation was not run."

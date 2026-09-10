@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: fable-review
+display_name: Fable Review
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/fable-review/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 0b0cd42e2a840d9ee68cb54b0ffb9fbaf31bb8fa
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: host-specific-unbundled-dependencies
+dependencies: bb CLI, bb-subagents skill, bb-cli skill, configured Fable 5 Max 1M provider/model, optional alternate agent harness
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Focused read-only review delegation procedure with an explicit user-request trigger, neutral reviewer-prompt discipline, provider/model lookup instead of guessing, wait/output verification, and no instruction for the reviewer to mutate code. Portability is low because the default path depends on bb, two unbundled companion skills, and a specifically configured Fable model; alternate harness behavior is delegated to the host environment.

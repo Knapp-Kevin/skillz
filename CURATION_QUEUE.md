@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **549** persisted exact-version third-party verification companions.
+- **550** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -56,11 +56,11 @@ The latest first-party admission is `session-continuity`, created from bounded g
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator recomputed directly from the pinned tree: **55** first-class `SKILL.md` packages across five category trees: agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **12/55**; gaps **43**.
-- Current decisive states: **5 verified / 7 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **13/55**; gaps **42**.
+- Current decisive states: **6 verified / 7 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.** `effective-agent-skills` verified 16/20; `folder-specific-claude-and-agents-md` verified 15/20; `push-skill-to-github` verified 15/20; `distribute-skill-to-all-agents` rejected unchanged 11/20 because its deletion-capable `rsync --delete` update path lacks a distinct destructive-action authorization checkpoint.
-- **Agent orchestration: 7/17 reviewed.** `fable-safe-prompt`, `agent-self-scheduling`, `bb-plugins`, `cmux`, and `codex-subagent` are rejected unchanged; `bb-subagents` and `corral-launch-agents` are verified. `cmux` exposes broad consequential actions without action-specific authorization, `codex-subagent` launches a workspace-write coding agent without a distinct mutation checkpoint, while `corral-launch-agents` explicitly gates launch on a user request, requires a dry-run, separates adoption/dirty-checkout authority, and verifies live/persisted state.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by the direct pinned-tree denominator above. Existing package-level evidence is preserved; no state is inferred for the remaining 43.
+- **Agent orchestration: 8/17 reviewed.** `fable-safe-prompt`, `agent-self-scheduling`, `bb-plugins`, `cmux`, and `codex-subagent` are rejected unchanged; `bb-subagents`, `corral-launch-agents`, and `fable-review` are verified. `fable-review` is verified 16/20 because it has an explicit user-request trigger, delegates review rather than mutation, looks up provider/model identity instead of guessing, waits for completion, and returns the reviewer output unchanged; behavioral validation is `not-run` and portability is low because bb and companion skills are host-specific.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by the direct pinned-tree denominator above. Existing package-level evidence is preserved; no state is inferred for the remaining 42.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
@@ -106,4 +106,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **12/55 current-standard companion pairs, 43 genuine gaps** at the registered pin. The skill-authoring category is complete at **4/4** and agent orchestration is **7/17** reviewed. For each next unit, check existing companions and repository history first, then perform fresh static review only where exact compatible evidence is genuinely absent. Continue bounded discovery/source-vetting and omission detection in parallel.
+Continue issue #66 with the David Ondrej frontier now at **13/55 current-standard companion pairs, 42 genuine gaps** at the registered pin. The skill-authoring category is complete at **4/4** and agent orchestration is **8/17** reviewed. For each next unit, check existing companions and repository history first, then perform fresh static review only where exact compatible evidence is genuinely absent. Continue bounded discovery/source-vetting and omission detection in parallel.
