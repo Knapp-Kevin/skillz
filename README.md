@@ -60,6 +60,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
 - **Vercel Agent Skills:** **9/9** current-standard complete, **0** gaps; **6 verified / 3 rejected unchanged**.
+- **OpenHands Extensions:** exact registered-pin denominator **1**; **1/1** current-standard companion complete, **0** gaps; `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`.
 - **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**. All 14 live companion paths resolve under `skills/sources/google-agents-cli/`.
 - **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
