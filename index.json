@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 561,
+    "persisted_third_party_exact_version_reviews": 562,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 24,
+    "david_ondrej_skills_current_standard_companions": 25,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 31,
+    "david_ondrej_skills_current_standard_gaps": 30,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: began David Ondrej ops-and-setup curation with risky-changes rejected unchanged 14/20 for unauthorized paid research/production-data reads, global-agent-guardrails rejected unchanged 15/20 for unauthorized persistent security-control mutation, and google-safe-browsing rejected unchanged 14/20 for unauthorized deploy/DNS/review actions; family companions 21/55 -> 24/55, gaps 34 -> 31, decisive states 11 verified / 13 rejected unchanged; ops-and-setup 0/11 -> 3/11; persisted third-party review count 558 -> 561"
+    "latest_reconciliation": "2026-09-10: reviewed David Ondrej anti-sleep at the registered pin; verified 17/20 with behavioral validation not-run because the local LaunchAgent mutation is directly scoped to the user's explicit anti-sleep request and the bundled launcher verifies exact process plus active power assertion; family companions 24/55 -> 25/55, gaps 31 -> 30, decisive states 12 verified / 13 rejected unchanged; ops-and-setup 3/11 -> 4/11; persisted third-party review count 561 -> 562"
   }
 }
