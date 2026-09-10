@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **554** persisted exact-version third-party verification companions.
+- **555** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,11 +45,11 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **17/55**; gaps **38**.
-- Current decisive states: **9 verified / 8 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **18/55**; gaps **37**.
+- Current decisive states: **10 verified / 8 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
-- **Agent orchestration: 13/17 reviewed.** `herdr` is rejected unchanged 11/20 under the authority hard fail. Its workspace targeting, read-before-message discipline, native status verification, and detailed orchestration failure modes are valuable adaptation evidence, but its launch procedure mandates auto-approval/permission-bypass modes (`--yolo`, `--dangerously-skip-permissions`) and relies on a global deny-list hook instead of a distinct authorization boundary for consequential downstream actions.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 38.
+- **Agent orchestration: 14/17 reviewed.** `launch-subagent` is verified 16/20. It has a real user-request launch boundary, partitions parallel work by task/file ownership, requires full-context delegation, and makes the main agent review/verify returned work before trust. Its hard-coded Fable/GPT model policy and `deepapi` reference are host-specific and freshness-sensitive, so portability remains low.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 37.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; **29/29**, gaps **0** after source-policy exclusions.
@@ -86,4 +86,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **17/55 current-standard companion pairs, 38 genuine gaps**. Skill authoring is complete at **4/4** and agent orchestration is **13/17** reviewed. Check existing companions and repository history before fresh static review. Continue bounded discovery/source-vetting and omission detection in parallel.
+Continue issue #66 with the David Ondrej frontier now at **18/55 current-standard companion pairs, 37 genuine gaps**. Skill authoring is complete at **4/4** and agent orchestration is **14/17** reviewed. Check existing companions and repository history before fresh static review. Continue bounded discovery/source-vetting and omission detection in parallel.
