@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: anti-sleep
+display_name: Anti-Sleep
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/anti-sleep/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 4ca590311f2b9612f022525aff64075c62a1afb7
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: macOS; bundled scripts/anti-sleep.sh; built-in caffeinate, launchctl, pmset, ps, awk, grep, stat, mktemp, date, chmod, mkdir, rm and related shell utilities; optional persistent terminal or cmux fallback
+import_eligibility: verified-unchanged-reference
+rationale: Provides a narrow, explicit macOS anti-sleep workflow with bounded local mutation, exact-process verification, strict flag validation, lock/state handling, and cleanup on failed startup. Starting or replacing the anti-sleep session is tied directly to an explicit user request for a duration or target process, so the local LaunchAgent mutation has an appropriate action boundary. Preserve its host-specific assumptions and bundled launcher as part of the exact package.
