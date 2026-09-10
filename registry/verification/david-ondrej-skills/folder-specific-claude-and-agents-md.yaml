@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: folder-specific-claude-and-agents-md
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 88dadb26c17a6b259aca4b974206d4edb2b5c2a7
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7cf7f915c9eb822fb3e7be045429e6cb356a5d2a
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [skill-authoring, context-management, documentation]
+  lifecycle: [design, implementation, maintenance]
+  characteristic: [context-efficient, human-review, maintainability, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 0, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The procedure has a strong folder-scoping test, requires reading local evidence rather than inventing context, exposes candidate content for user reaction before mutation, and separates constraints from conventions. Limits: it assumes Claude-specific CLAUDE.md behavior, AGENTS.md symlinks and Unix shell tooling, and cites an unbundled library/claude-code/claude-and-agents-md.md reference absent from the exact public package. The explicit user request plus pre-write review supplies an adequate authorization boundary for the local file/symlink mutation. Behavioral validation was not run."
