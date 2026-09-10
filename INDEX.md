@@ -15,6 +15,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
 | Persisted third-party exact-version reviews | 436 |
+| Anthropic Skills current-standard companions | 17 / 17 |
+| Anthropic Skills current-standard gaps | 0 |
 | AWS current-standard companion-complete | 72 / 72 |
 | AWS current-standard gaps | 0 |
 | Microsoft Skills current-standard companions | 186 / 186 |
@@ -74,7 +76,9 @@ Physical presence or registration does not establish individual skill quality. F
 
 The latest first-party admission is `session-continuity`, statically verified **19/20** with behavioral validation `not-run`. It is a substrate-agnostic continuity procedure: relevant recall is scoped and read-only, prior memory does not authorize new actions, and persistent continuity capture requires current or standing authority with secret and sensitive-data minimization.
 
-AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy. Cloudflare Skills is complete at **13/13**, with **0** current-standard gaps and all companion paths canonical under `skills/sources/cloudflare-skills/`. Addy Osmani Agent Skills is now complete at **24/24**, with **0** current-standard gaps.
+Anthropic Skills is complete at **17/17**, with **0** current-standard gaps and historical decisive distribution **10 verified / 7 rejected unchanged**. AWS is complete at **72/72**. Microsoft Skills is complete at **186/186**. Microsoft Azure Skills is complete at **34/34**, with **0** current-standard gaps. Cole Medin Skills is complete at **33/33**, with **0** gaps. Matt Pocock Skills is complete at **29/29**, with **0** gaps after excluding `deprecated` and `in-progress` per source policy. Cloudflare Skills is complete at **13/13**, with **0** current-standard gaps and all companion paths canonical under `skills/sources/cloudflare-skills/`. Addy Osmani Agent Skills is now complete at **24/24**, with **0** current-standard gaps.
+
+The Anthropic Skills family is pinned at `9d2f1ae187231d8199c64b5b762e1bdf2244733d`; the pinned `skills/` tree contains exactly **17** first-class packages, and provenance and verification expose matching 17-file companion sets. Historical issue #27 records **10 verified / 7 rejected unchanged**. Live companion paths contain no obsolete `vendor/anthropic-skills/...` location, so the family satisfies the current provenance/exact-version contract without unnecessary re-review.
 
 The Azure denominator is the exact set of independently eligible `SKILL.md` packages at registered pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`: 28 canonical plugin skill roots, one nested Kubernetes automatic-readiness package, and five nested Foundry packages beyond the Foundry root. Ordinary workflow, procedure, reference, example, and SDK Markdown is retained as package evidence but does not count as an independent skill.
 
