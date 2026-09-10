@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **466** persisted exact-version third-party verification companions.
+- **540** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -22,13 +22,19 @@ New third-party discoveries use `docs/candidate-intake.md`. Discovery intelligen
 
 Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
-The latest first-party admission is `session-continuity`, created from the bounded gap evidence in issues #71/#73. It is a substrate-agnostic procedure, not a memory implementation: scoped recall is evidence-only, prior memory grants no current action authority, durable capture requires current or standing authorization, secrets are excluded, and sensitive durable capture is necessity- and authority-gated. Static review: **19/20 verified**; behavioral validation: `not-run`.
+The latest first-party admission is `session-continuity`, created from bounded gap evidence in issues #71/#73. Static review: **19/20 verified**; behavioral validation: `not-run`.
 
 ## Admitted-source curation
 
 ### Anthropic Skills — CURRENT-STANDARD COMPLETE
 - Pin: `9d2f1ae187231d8199c64b5b762e1bdf2244733d`.
-- Exact eligible denominator: **17**; provenance/verification companions **17/17**; decisive states **10 verified / 7 rejected unchanged**; gaps **0**.
+- Exact eligible denominator: **17**; companions **17/17**; decisive states **10 verified / 7 rejected unchanged**; gaps **0**.
+
+### Anthropic Knowledge Work Plugins — CURRENT-STANDARD COMPLETE
+- Pin: `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`.
+- Exact eligible denominator/current-standard companions: **74/74**; gaps **0**.
+- Superseded PR #42 preserves the full package-level provenance and verification trees, resolving the previously reported mapping blocker without inference.
+- Historical decisive states remain **36 verified / 38 rejected unchanged**; behavioral-validation states are preserved exactly as recorded.
 
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 - Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
@@ -42,53 +48,40 @@ The latest first-party admission is `session-continuity`, created from the bound
 ### Microsoft Azure Skills — CURRENT-STANDARD COMPLETE
 - Pin: `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
 - Exact eligible denominator/current-standard companions: **34/34**; gaps **0**.
-- Denominator: 28 canonical plugin roots, one nested Kubernetes automatic-readiness package, and five nested Microsoft Foundry packages beyond the Foundry root.
 
 ### Cole Medin Skills — CURRENT-STANDARD COMPLETE
 - Pin: `fb2e876f057c5356d6603ba0c52d6b4418d893ba`.
 - Exact eligible denominator/current-standard companions: **33/33**; gaps **0**.
-- `worktree-merge` remains rejected unchanged **15/20**, behavioral validation `not-run`.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
-- Exact eligible denominator/current-standard companions: **29/29** after excluding `deprecated` and `in-progress`; gaps **0**.
+- Exact eligible denominator/current-standard companions: **29/29** after source-policy exclusions; gaps **0**.
 
 ### Cloudflare Skills — CURRENT-STANDARD COMPLETE
 - Pin: `f96bff754e428838818017f75817f0f9428acd48`.
 - Exact eligible denominator/current-standard companions: **13/13**; decisive states **11 verified / 2 rejected unchanged**; gaps **0**.
-- `web-perf` remains rejected for its privacy/telemetry boundary and `wrangler` for missing action-specific authority around consequential mutations.
 
 ### Addy Osmani Agent Skills — CURRENT-STANDARD COMPLETE
 - Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
 - Exact eligible denominator/current-standard companions: **24/24**; gaps **0**.
-- Historical exact evidence from superseded PR #42 was recovered only where fingerprints matched the registered pin. Behavioral validation was not inferred from upstream eval material.
 
 ### Vercel Agent Skills — CURRENT-STANDARD COMPLETE
 - Pin: `f8a72b9603728bb92a217a879b7e62e43ad76c81`.
 - Exact eligible denominator/current-standard companions: **9/9**; decisive states **6 verified / 3 rejected unchanged**; gaps **0**.
-- All 18 live companion records resolve under `skills/sources/vercel-agent-skills/`.
 
 ### OpenHands Extensions — CURRENT-STANDARD COMPLETE
 - Pin: `87959a7da3e75445647e77b2fbf5bf5b66fb037b`.
 - Exact eligible denominator/current-standard companions: **1/1**; gaps **0**.
-- `theme-factory` remains **rejected unchanged 14/20** with behavioral validation `not-run`. Both current companions bind the full registered pin, exact content blob `90dfceaf2ecdc191a4dcfb0069768a9560638998`, and canonical `skills/sources/openhands-extensions/...` path.
+- `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`.
 
 ### Google Agents CLI — CURRENT-STANDARD COMPLETE
 - Pin: `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
-- Exact eligible denominator: **7** first-class `skills/*/SKILL.md` packages.
-- Provenance companions: **7/7**.
-- Verification companions: **7/7**.
-- Decisive states: **7 verified / 0 rejected**.
-- Current-standard gaps: **0**.
-- Canonical-path integrity: all 14 live companion records resolve under `skills/sources/google-agents-cli/`; obsolete `vendor/google-agents-cli/...` companion paths are eliminated.
-- Behavioral validation remains `not-run` across the family; exact fingerprints and authority characterizations are preserved.
+- Exact eligible denominator/current-standard companions: **7/7**; gaps **0**; all seven verified.
 
 ### Cline Skills — CURRENT-STANDARD COMPLETE
 - Pin: `26378461e978f2b4e2e6d67b57121b86b2a79ba5`.
 - Exact published denominator: **36**; provenance/verification companions **36/36**; published gaps **0**.
-- Source queue #27 records the finite public pass as 36/36 reviewed plus one separate internal/unlisted `review-team` record. That internal record is preserved but is not counted in the published denominator.
-- The passive-tree migration retained only six published pairs plus `review-team` on current `main`. Compatible exact package-level evidence from superseded PR #42 was recovered for the 30 genuine published gaps without overwriting the seven newer records already on `main`.
-- Static dispositions and behavioral-validation states are preserved exactly from their historical companions; no execution evidence is inferred.
+- The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 
 ## Governed discovery / source-vetting
 
@@ -104,4 +97,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-With OpenHands Extensions now explicitly accounted as **1/1 current-standard complete**, continue issue #66 by testing the Anthropic Knowledge Work Plugins per-package historical-mapping blocker against current evidence. If it remains genuinely blocked, select the next admitted family with a truthful companion/provenance gap. Continue bounded discovery/source-vetting and omission detection in parallel.
+With Anthropic Knowledge Work Plugins now **74/74 current-standard complete**, continue issue #66 by recomputing the remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps. Continue bounded discovery/source-vetting and omission detection in parallel.
