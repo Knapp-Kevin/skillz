@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: corral-launch-agents
+display_name: Corral Launch Agents
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/agent-orchestration/corral-launch-agents/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: b974bf54ca72cb30cdbb11c367e70a5b35274f79
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Corral Design 1 helper package, Herdr, supported CLI coding agent harnesses, Python 3, Git worktrees, Corral/Herdr session state
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Strong launch/resume procedure with an explicit user-request authorization boundary for state-changing launches, mandatory dry-run before creation, distinct adoption authority, dirty-checkout safeguards, secret discipline, and verification of persisted/live state. Portability is low because it depends on the Corral/Herdr stack and bundled helper/reference package.
