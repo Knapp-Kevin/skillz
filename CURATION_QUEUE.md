@@ -22,6 +22,8 @@ New third-party discoveries use `docs/candidate-intake.md`. Discovery intelligen
 
 Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
+The latest first-party admission is `session-continuity`, created from bounded gap evidence in issues #71/#73. Static review: **19/20 verified**; behavioral validation: `not-run`.
+
 ## Admitted-source curation
 
 ### Anthropic Skills — CURRENT-STANDARD COMPLETE
@@ -30,7 +32,9 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 
 ### Anthropic Knowledge Work Plugins — CURRENT-STANDARD COMPLETE
 - Pin: `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`.
-- Exact eligible denominator/current-standard companions: **74/74**; gaps **0**; historical decisive states **36 verified / 38 rejected unchanged**.
+- Exact eligible denominator/current-standard companions: **74/74**; gaps **0**.
+- Superseded PR #42 preserves the full package-level provenance and verification trees, resolving the previously reported mapping blocker without inference.
+- Historical decisive states remain **36 verified / 38 rejected unchanged**; behavioral-validation states are preserved exactly as recorded.
 
 ### AWS Agent Toolkit — CURRENT-STANDARD COMPLETE
 - Pin: `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546`.
@@ -51,33 +55,42 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
-- Exact eligible denominator: **55** first-class `SKILL.md` packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
+- Exact eligible denominator recomputed directly from the pinned tree: **55** first-class `SKILL.md` packages across five category trees: agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
 - Current provenance/verification companions: **9/55**; gaps **46**.
 - Current decisive states: **4 verified / 5 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
-- **Skill authoring: 4/4 current-standard complete.**
+- **Skill authoring: 4/4 current-standard complete.** `effective-agent-skills` verified 16/20; `folder-specific-claude-and-agents-md` verified 15/20; `push-skill-to-github` verified 15/20; `distribute-skill-to-all-agents` rejected unchanged 11/20 because its deletion-capable `rsync --delete` update path lacks a distinct destructive-action authorization checkpoint.
 - **Agent orchestration: 4/17 reviewed.** `fable-safe-prompt`, `agent-self-scheduling`, and `bb-plugins` are rejected unchanged; `bb-subagents` is verified 16/20. The two new rejections are authority hard fails: persistent recurring schedule creation lacks a distinct action-specific authorization checkpoint, and the full-trust plugin scaffold bypasses its install prompt with `--yes`.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by the direct pinned-tree denominator above. Existing package-level evidence is preserved; no state is inferred for the remaining 46.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
-- Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; companions **29/29**; gaps **0** after source-policy exclusions.
+- Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`.
+- Exact eligible denominator/current-standard companions: **29/29** after source-policy exclusions; gaps **0**.
 
 ### Cloudflare Skills — CURRENT-STANDARD COMPLETE
-- Pin: `f96bff754e428838818017f75817f0f9428acd48`; companions **13/13**; **11 verified / 2 rejected unchanged**; gaps **0**.
+- Pin: `f96bff754e428838818017f75817f0f9428acd48`.
+- Exact eligible denominator/current-standard companions: **13/13**; decisive states **11 verified / 2 rejected unchanged**; gaps **0**.
 
 ### Addy Osmani Agent Skills — CURRENT-STANDARD COMPLETE
-- Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`; companions **24/24**; gaps **0**.
+- Pin: `f63ec56a3cc936408d792956ae583c3c96a825bd`.
+- Exact eligible denominator/current-standard companions: **24/24**; gaps **0**.
 
 ### Vercel Agent Skills — CURRENT-STANDARD COMPLETE
-- Pin: `f8a72b9603728bb92a217a879b7e62e43ad76c81`; companions **9/9**; **6 verified / 3 rejected unchanged**; gaps **0**.
+- Pin: `f8a72b9603728bb92a217a879b7e62e43ad76c81`.
+- Exact eligible denominator/current-standard companions: **9/9**; decisive states **6 verified / 3 rejected unchanged**; gaps **0**.
 
 ### OpenHands Extensions — CURRENT-STANDARD COMPLETE
-- Pin: `87959a7da3e75445647e77b2fbf5bf5b66fb037b`; companions **1/1**; gaps **0**; `theme-factory` rejected unchanged 14/20.
+- Pin: `87959a7da3e75445647e77b2fbf5bf5b66fb037b`.
+- Exact eligible denominator/current-standard companions: **1/1**; gaps **0**.
+- `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`.
 
 ### Google Agents CLI — CURRENT-STANDARD COMPLETE
-- Pin: `ef7808f33fc3038112b69d4ad488ce33b72699b1`; companions **7/7**; gaps **0**; all seven verified.
+- Pin: `ef7808f33fc3038112b69d4ad488ce33b72699b1`.
+- Exact eligible denominator/current-standard companions: **7/7**; gaps **0**; all seven verified.
 
 ### Cline Skills — CURRENT-STANDARD COMPLETE
-- Pin: `26378461e978f2b4e2e6d67b57121b86b2a79ba5`; published companions **36/36**; gaps **0**. Internal/unlisted `review-team` remains outside the denominator.
+- Pin: `26378461e978f2b4e2e6d67b57121b86b2a79ba5`.
+- Exact published denominator: **36**; provenance/verification companions **36/36**; published gaps **0**.
+- The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 
 ## Governed discovery / source-vetting
 
@@ -93,4 +106,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with David Ondrej at **9/55 current-standard companion pairs, 46 genuine gaps**. Skill authoring is complete at **4/4** and agent orchestration is **4/17** reviewed. Check existing companions and repository history before each next unit; perform fresh static review only for genuine evidence gaps.
+Continue issue #66 with the David Ondrej frontier now at **9/55 current-standard companion pairs, 46 genuine gaps** at the registered pin. The skill-authoring category is complete at **4/4** and agent orchestration is **4/17** reviewed. For each next unit, check existing companions and repository history first, then perform fresh static review only where exact compatible evidence is genuinely absent. Continue bounded discovery/source-vetting and omission detection in parallel.
