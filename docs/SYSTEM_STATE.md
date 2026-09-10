@@ -14,6 +14,8 @@
 | **Persisted third-party review companions** | 436 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 19 |
+| **Anthropic Skills current-standard companions** | 17 / 17 |
+| **Anthropic Skills current-standard gaps** | 0 |
 | **AWS current-standard companion complete** | 72 / 72 |
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Skills current-standard gaps** | 0 |
@@ -44,6 +46,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 ## Inventory boundaries
 
 - First-party: **44/44 provenance-complete** with structured semantic review evidence. The latest admission is `session-continuity`, a substrate-agnostic continuity procedure verified **19/20**, behavioral validation `not-run`; recall is scoped/read-only and persistent capture is authorization-gated and sensitive-data-minimized.
+- Anthropic Skills: exact registered-pin denominator **17**, with **17/17** provenance/verification companion pairs and **0 gaps**; historical decisive distribution remains **10 verified / 7 rejected unchanged**.
 - AWS Agent Toolkit: **72/72** current-standard companion-complete.
 - Microsoft Skills: **186/186** companion-complete, **0 gaps**.
 - Microsoft Azure Skills: exact registered-pin denominator **34**, **34/34** companion-complete, **0 gaps** at pin `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4`.
@@ -80,6 +83,10 @@ The registered exact pin is `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Applying
 The registered exact pin is `f96bff754e428838818017f75817f0f9428acd48`. Historical source queue #27 establishes the finite denominator at **13/13**, with **11 verified / 2 rejected unchanged**. The provenance and verification companion directories expose matching 13-file sets, and all live companion `local_path` metadata now resolves under `skills/sources/cloudflare-skills/` rather than the removed top-level `vendor/` tree.
 
 The two rejected unchanged records remain intentional negative evidence. `web-perf` hard-fails unchanged use because the required Chrome DevTools MCP path omits an adequate privacy/telemetry consent boundary for browser-content and related data exposure. `wrangler` hard-fails unchanged use because install, deploy, delete, migration, secret, and resource-management procedures lack a governing action-specific authorization boundary. Both remain useful adaptation/reference evidence. Behavioral validation remains `not-run` across the family.
+
+## Anthropic Skills reconciliation
+
+The registered exact pin is `9d2f1ae187231d8199c64b5b762e1bdf2244733d`. Its pinned `skills/` tree exposes exactly **17** first-class packages, and the canonical provenance and verification directories each expose those same **17** identities. Historical issue #27 records all seventeen as decisively reviewed, with **10 verified / 7 rejected unchanged**. Live repository search finds no obsolete `vendor/anthropic-skills/...` companion path. This family therefore satisfies the current provenance and exact-version companion contract without re-reviewing unchanged evidence.
 
 ## Addy Osmani Agent Skills reconciliation
 
