@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: push-skill-to-github
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 2c72ceaaa701161192d518e137adb3522bbfa9ba
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 92a96359fab1fc06755cf7b67cf6cbefcf01b5cf
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [skill-authoring, repository-maintenance]
+  lifecycle: [release, maintenance]
+  characteristic: [risk-aware, tool-assisted, traceable]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 0, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 2. The skill requires a user request before push, inspects pending changes, limits staging when unrelated work exists, and verifies the push result before claiming success. That is an adequate action-specific authorization boundary for the Git commit/push side effect. Limits are environmental: it assumes ~/.agents as repository root, skills/<skill-name>, main as the push branch, an authenticated GitHub remote, and an automatic sanitized public mirror. Those claims must be rediscovered or adapted for another host. Behavioral validation was not run."
