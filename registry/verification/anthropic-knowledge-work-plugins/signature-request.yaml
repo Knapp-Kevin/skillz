@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: signature-request
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/legal/skills/signature-request/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 242d64bd0431a7e1d87efda4493d7601a2332f07
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [business-operations, communication]
+  lifecycle: [operations]
+  characteristic: [human-review, risk-aware, safety-bounded]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Verified in its declared legal/signature context. The user request supplies the side-effect intent, and the workflow checks final form, entities, signer authority, approvals, and counsel review before routing. Exact fingerprint confirmed; behavioral validation not run."

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: data-context-extractor
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/data/skills/data-context-extractor/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1e065695c4f896f542c641ebeac3a80ccad952b6
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [skill-authoring, domain-modeling, context-management]
+  lifecycle: [discovery, design]
+  characteristic: [source-driven, progressive-disclosure, traceable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified. Directed interview method extracts entity semantics, metrics, data hygiene, and domain gotchas into explicit reusable context rather than assuming hidden knowledge. Exact fingerprint confirmed; behavioral validation not run."

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: knowledge-synthesis
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/enterprise-search/skills/knowledge-synthesis/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a5e816fb52c4d2055513eeaea446e79b81aa54f2
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [research, context-management, decision-support]
+  lifecycle: [discovery, verification]
+  characteristic: [synthesis, evidence-first, traceable, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Excellent cross-source deduplication, claim attribution, conflict surfacing, evolving-information handling, uncertainty language, and answer-first synthesis. It explicitly avoids silently picking a winner when sources disagree and requires every synthesized claim to be attributable. Caveats: fixed recency bands and generic authority hierarchies are heuristics and should yield to source-specific governance, update practices, and the query type. Exact pinned fingerprint confirmed. Behavioral validation not run."

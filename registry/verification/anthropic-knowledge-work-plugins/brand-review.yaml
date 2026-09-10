@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: brand-review
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/marketing/skills/brand-review/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 25ae9d95120b8eda4a61cb91da67cb48c15d3132
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing, communication, business-operations]
+  lifecycle: [verification]
+  characteristic: [human-review, risk-aware, evidence-first]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong distinction between brand-specific review and generic clarity/consistency review, localized severity findings, concrete before/after fixes, and useful claims/compliance flagging. Caveats: legal/compliance and copyright observations are screening flags rather than determinations, and generic inclusive-language/style examples should not override an organization or audience-specific guide. Exact pinned fingerprint confirmed. Behavioral validation not run."

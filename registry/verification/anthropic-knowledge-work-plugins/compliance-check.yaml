@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: compliance-check
+source_id: anthropic-knowledge-work-plugins
+source_snapshot_revision: ca3e3fb2c4a1d3eea73fc003998faef6daa650b8
+local_path: skills/sources/knowledge-work-plugins/legal/skills/compliance-check/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 688d8c967870e6036c27e8fa2f1bc34ca5cf0896
+characterized_at: 2026-08-29
+last_verified_at: 2026-08-29
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [business-operations, decision-support, security]
+  lifecycle: [planning, verification]
+  characteristic: [risk-aware, human-review, reference-heavy]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 0. The skill correctly warns that regulations change and that qualified legal review and authoritative verification are required. Reject unchanged because it nevertheless embeds a broad static legal reference across multiple jurisdictions, DPA requirements, cross-border transfers, request handling, and regulatory timelines. The pinned text already illustrates the risk by rendering GDPR Article 12's 'within one month' response period and possible extension by two further months as 30 and 60 days. The workflow should retrieve and cite current authoritative law for the applicable jurisdiction rather than treat the bundled reference as operative requirements. Exact pinned fingerprint confirmed. Behavioral validation not run."
