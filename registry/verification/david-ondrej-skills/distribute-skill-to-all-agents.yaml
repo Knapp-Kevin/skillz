@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: distribute-skill-to-all-agents
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: d74a760d44c90de20b90790b7da1ab9b59b2f5b2
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a4685d5999455c11a352c0c2d019ab9445b012d0
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [skill-authoring, agent-development, repository-maintenance]
+  lifecycle: [implementation, maintenance]
+  characteristic: [tool-assisted, compatibility-aware, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric before hard-fail enforcement: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 1, dependency coherence 1, portability honesty 0, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. Useful mechanisms include one canonical skill source, explicit symlink checks, divergence detection, and byte-count verification. Unchanged adoption fails the authority rule because the update flow recommends rsync -a --delete against the Hermes destination without a distinct destructive-action authorization checkpoint immediately before deletion-capable synchronization. The skill also hard-codes user-specific Mac paths and cross-client discovery/runtime behavior as universal facts. Preserve as adaptation/checklist evidence; require host discovery and an explicit destructive-sync checkpoint before use. Behavioral validation was not run."

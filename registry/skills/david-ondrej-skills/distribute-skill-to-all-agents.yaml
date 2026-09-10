@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: distribute-skill-to-all-agents
+display_name: Distribute Skill to All Agents
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/skill-authoring/distribute-skill-to-all-agents/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: d74a760d44c90de20b90790b7da1ab9b59b2f5b2
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: macOS/Unix-style home-directory layout, shell commands, rsync/cp, and user-specific assumptions about Codex, Claude Code, Pi, and Hermes global skill directories and symlink topology
+import_eligibility: reference-only-until-authority-and-host-layout-are-adapted
+rationale: Useful prior art for canonical-source plus multi-host distribution, divergence detection, and post-copy verification. Unchanged reuse is rejected because the update path recommends rsync --delete against the Hermes copy without a distinct destructive-action authorization checkpoint, and because several path/symlink/runtime assertions are user-specific rather than portable host invariants.

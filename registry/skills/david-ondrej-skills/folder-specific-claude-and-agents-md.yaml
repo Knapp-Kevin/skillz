@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: folder-specific-claude-and-agents-md
+display_name: Folder-Specific CLAUDE.md and AGENTS.md
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/skill-authoring/folder-specific-claude-and-agents-md/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 88dadb26c17a6b259aca4b974206d4edb2b5c2a7
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-with-unbundled-reference
+permissions: requires explicit user request for the target folder and presents candidate content for user reaction before writing; file and symlink creation still require a writable local workspace
+dependencies: Unix-like shell commands including ls and ln, writable target workspace, host conventions for CLAUDE.md and AGENTS.md, and an unbundled background reference at library/claude-code/claude-and-agents-md.md
+import_eligibility: eligible-standalone-with-portability-caveats
+rationale: Strong folder-scoped context discipline, anti-boilerplate guidance, user review before mutation, and explicit no-invention rules. Unchanged use is host-specific because it assumes CLAUDE.md semantics, AGENTS.md symlinks, Unix tooling, and a background reference that is not bundled in this public package.
