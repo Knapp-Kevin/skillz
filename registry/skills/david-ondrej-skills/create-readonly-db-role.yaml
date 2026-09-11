@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: create-readonly-db-role
+display_name: Create Read-Only DB Role
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/create-readonly-db-role/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 0e8fcd782224a38b390a216a5d1c0f58e4679a4c
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: PostgreSQL or Supabase; SQL editor or equivalent human-operated DDL surface; psql for verification; protected secret manager or local environment configuration; repository-local documentation path for generated SQL
+import_eligibility: rejected-unchanged-reference
+rationale: Provides a useful layered pattern for SELECT-only agent database access with explicit denylisting, read-only transactions, timeouts, human-applied production DDL, verification, and rollback guidance. Unchanged adoption is rejected because the workflow first directs the agent to write the role-creation SQL to a repository file and then tells the human to paste the whole file into Supabase while explicitly acknowledging that it contains the password. That creates an avoidable credential-bearing file and editor-history exposure path instead of requiring secure secret injection outside the generated artifact. The broad grant-plus-denylist model also requires careful local adaptation for sensitive-table coverage and optional RLS bypass. Preserve the architecture and verification ideas, but extract or adapt them with secure credential handling rather than using unchanged.
