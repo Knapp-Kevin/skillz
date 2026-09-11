@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: setup-help
+display_name: Setup Help
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/setup-help/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: c3f06cc300fedbd94dfdf1fff0f306875343d5cb
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: high
+review_status: curated-external
+dependency_status: source-intact-host-generic
+dependencies: host access to the relevant setup surface, repository/docs/current-screen context when available, and whatever external systems or credentials the requested setup actually requires
+import_eligibility: rejected-unchanged-reference
+rationale: Provides a clear progressive-disclosure interaction pattern for guiding a user through setup one atomic step at a time while keeping no more than eight future steps visible. The generic scope is also its blocking weakness: it can guide consequential setup involving credentials, infrastructure, money-bearing resources, access controls, communications, or sensitive data without requiring a separate action-specific authorization boundary or secure credential-handling rule. Preserve the one-step-at-a-time UX and checklist-reconciliation method as adaptation/extraction evidence, but do not adopt unchanged as an operational setup procedure.
