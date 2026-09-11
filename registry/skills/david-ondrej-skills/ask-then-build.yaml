@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ask-then-build
+display_name: Ask Then Build
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/thinking-and-docs/ask-then-build/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 43e588bb33b8996e9b42b719cb4ac144652ead7a
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: mutating
+portability: high
+review_status: curated-external
+dependency_status: self-contained-with-project-docs
+relationships: project requirements, ADRs, README, AGENTS.md, and another implementation agent
+import_eligibility: rejected-unchanged-reference
+rationale: The one-question-at-a-time scoping loop, explicit options with a preferred recommendation, decision capture, read-first implementation handoff, and compact implementation-prompt discipline are useful planning patterns. Unchanged adoption fails the authority hard fail because answering the scoping questions automatically directs the agent to update repository documentation immediately, including superseding prior decisions, without a distinct repository-mutation authorization boundary. Invoking a scoping interview authorizes analysis and questioning, not file mutation. Preserve the question sequencing, decision recording model, and implementation-handoff structure as adaptation/extraction evidence.

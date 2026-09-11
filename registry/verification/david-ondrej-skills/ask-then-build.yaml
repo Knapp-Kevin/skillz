@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ask-then-build
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 43e588bb33b8996e9b42b719cb4ac144652ead7a
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2a004315ede030cbb158957f9fcbd39f2b934961
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [planning, documentation]
+  lifecycle: [planning]
+  characteristic: [decomposition, human-review, spec-driven, traceable, context-efficient]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package provides a strong one-question-at-a-time scoping loop, option framing with a preferred recommendation, immediate decision capture, read-first implementation handoff, validation requirements, and a concise final prompt. It is rejected unchanged under the authority hard fail because ordinary execution instructs the agent to update repository documentation after each user answer and to supersede earlier documented decisions immediately, without a distinct repository-mutation authorization checkpoint. Invoking a scoping interview authorizes analysis and questioning, not file mutation. Behavioral validation was not run."
