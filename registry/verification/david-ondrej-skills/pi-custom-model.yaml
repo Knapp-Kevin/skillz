@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: pi-custom-model
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 96d2326260cc1619a62749bc845bc07234105d66
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8ab69a6cd8b9eeb1d573af8b5079706970c3e2e5
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [agent-development, productivity]
+  lifecycle: [operations, maintenance]
+  characteristic: [evidence-first, compatibility-aware, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Manual-only procedure with implicit invocation disabled. The requested operation directly scopes the local Pi model-registry and default-setting changes. Credential handling checks only credential presence through the documented secure local paths and does not require secret values in conversation. It confirms the model identifier before registration, preserves the user's thinking level, documents project overrides, and verifies local configuration visibility. The optional live provider smoke test is not required for local configuration success and remains subject to separate authority because it can create an external request and cost. Remaining weaknesses are Pi/provider specificity, provider metadata that can age, and limited adversarial treatment of malformed or unexpectedly expensive variants. Behavioral validation was not run."
