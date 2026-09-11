@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: twitter-alpha
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 82bd1e5131da44b6fa373d45a9badc9ade2b75f8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 652afc441b32667d41713400129eca13fefad011
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, web-search]
+  lifecycle: [discovery]
+  characteristic: [evidence-first, source-driven, retrieval-first, synthesis, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides a differentiated method for constructing a seven-person insider/outsider cohort from observed engagement, verifying handles, preserving low-activity members through LinkedIn fallback, ranking concrete non-obvious signals, and returning short source-linked findings. It is rejected unchanged under the authority hard fail because ordinary execution mandates numerous DeepAPI Twitter/LinkedIn/web requests across seven people without a distinct authorization checkpoint for money-bearing external service use. Configured credentials and bounded request sizes are not spend authority. Behavioral validation was not run."
