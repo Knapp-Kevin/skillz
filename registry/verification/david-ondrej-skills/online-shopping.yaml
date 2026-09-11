@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: online-shopping
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: cc963682fd73125eb7a7d24c4b63f066fa7434ae
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7c0f34158d554211afe616a89e59abd1f90eeb1f
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, web-search, decision-support]
+  lifecycle: [discovery]
+  characteristic: [evidence-first, cost-bounded, risk-aware, safety-bounded]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is research-only and explicitly forbids orders, payment/address entry, and account creation. It keeps the DeepAPI key external and undisclosed, scales effort by purchase price, verifies unknown shops, and requires found-price evidence. It is rejected unchanged under the money-bearing authority hard fail because normal mid-range and expensive shopping research directs one or more paid DeepAPI calls with per-request caps but no distinct spend authorization; the broad auto-trigger wording can route ordinary shopping requests into billable external work merely because credentials exist. Behavioral validation was not run."
