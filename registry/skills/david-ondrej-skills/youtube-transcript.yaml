@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: youtube-transcript
+display_name: YouTube Transcript
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/youtube-transcript/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 1a70408a52001469f626b34d22da2e582f6d49e4
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-required-external-service-and-local-tools
+dependencies: sibling deepapi skill; DeepAPI YouTube transcript endpoint; DEEPAPI_API_KEY external credential path; yt-dlp, jq, curl, uuidgen, python3; local filesystem write access
+import_eligibility: rejected-unchanged-reference
+rationale: The transcript extraction flow has useful idempotency, caption-only fallback, language handling, duplicate-caption avoidance, bounded retry, bot-detection stop behavior, and deterministic filename/output patterns. Unchanged adoption fails the authority hard fail because the primary path can incur paid DeepAPI spend without a distinct spend-authorization checkpoint, the workflow writes transcript artifacts to the filesystem even for trigger phrases that do not explicitly request persistence, and first local-fallback failure directs yt-dlp self-update without distinct software-mutation authorization. Preserve the transcript-extraction, retry, bot-detection, and caption-normalization mechanisms as adaptation/extraction evidence.
