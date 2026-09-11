@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: deepapi
+display_name: DeepAPI
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/deepapi/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f0a670d55284257a29996c4d8d9955209122b4a1
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-23T18:27:27Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-external-service
+dependencies: DeepAPI external service and paid endpoints; DEEPAPI_API_BASE_URL and DEEPAPI_API_KEY supplied through environment or ~/.deepapi/env; bundled VERSION.txt, MANIFEST.txt, and workflow references; curl/HTTP client behavior; optional browser, code-execution, email, memory, scraping, enrichment, image-generation, and account capabilities exposed by the service
+import_eligibility: rejected-unchanged-reference
+rationale: Broad, well-documented DeepAPI router with strong secret non-disclosure, idempotency, dry-run support, endpoint-specific references, polling/error recovery, and several local approval checks in high-risk subflows. Unchanged adoption fails current authority rules because normal web/search/research use is routed to paid external calls without a distinct spend authorization, open-web search mandates 5+ separate API calls, failed work and product-friction reports can be sent externally without separate communication authority, and the skill launches its updater automatically once per day. Preserve the routing, dry-run, idempotency, failure-recovery, endpoint-selection, and secret-handling patterns as adaptation/extraction evidence.
