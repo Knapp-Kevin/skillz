@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 565,
+    "persisted_third_party_exact_version_reviews": 566,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 28,
+    "david_ondrej_skills_current_standard_companions": 29,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 27,
+    "david_ondrej_skills_current_standard_gaps": 26,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-10: reviewed David Ondrej github-outside-sandbox at the registered pin; verified 18/20 with behavioral validation not-run because it narrowly changes execution context for an already-authorized Git/GitHub operation, preserves the user's action authority, forbids token copying and broad bypass wrappers, and verifies from the host context; family companions 27/55 -> 28/55, gaps 28 -> 27, decisive states 14 verified / 14 rejected unchanged; ops-and-setup 6/11 -> 7/11; persisted third-party review count 564 -> 565"
+    "latest_reconciliation": "2026-09-10: reviewed David Ondrej macbook-metrics-setup at the registered pin; rejected unchanged 14/20 with behavioral validation not-run because the default installs persistent LaunchAgents and pushes detailed activity telemetry to GitHub every three hours without a separate sensitive-data transmission authorization boundary, while simultaneously calling the design local-only/no-cloud; family companions 28/55 -> 29/55, gaps 27 -> 26, decisive states 14 verified / 15 rejected unchanged; ops-and-setup 7/11 -> 8/11; persisted third-party review count 565 -> 566"
   }
 }
