@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 580,
+    "persisted_third_party_exact_version_reviews": 581,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 43,
+    "david_ondrej_skills_current_standard_companions": 44,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 12,
+    "david_ondrej_skills_current_standard_gaps": 11,
     "corey_haines_marketing_skills_current_standard_companions": 0,
     "corey_haines_marketing_skills_eligible_denominator": 50,
     "corey_haines_marketing_skills_current_standard_gaps": 50,
@@ -85,6 +85,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej ask-then-build at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 16/20 because the ordinary scoping loop mutates repository documentation after each answer without distinct repository-mutation authorization; thinking-and-docs 0/13 -> 1/13; David Ondrej 42/55 -> 43/55 with gaps 13 -> 12; persisted exact-version review count 579 -> 580; Corey Haines remains tracked at 0/50"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej before-building at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; verified 16/20 as a narrow read-only pre-build framing checkpoint, with no-files/no-tools guidance recorded as an epistemic limitation rather than an authority hard fail; thinking-and-docs 1/13 -> 2/13; David Ondrej 43/55 -> 44/55 with gaps 12 -> 11; persisted exact-version review count 580 -> 581; Corey Haines remains tracked at 0/50"
   }
 }
