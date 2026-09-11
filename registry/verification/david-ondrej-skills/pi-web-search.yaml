@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: pi-web-search
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f08fddc2e8a22273831719d291775dd926def311
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f61757766674d6164a0f7c7932aaa8b53b14e140
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, web-search]
+  lifecycle: [discovery]
+  characteristic: [context-efficient, retrieval-first, tool-routing, evidence-first, cost-bounded, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is tightly scoped to Pi Agents and provides useful routing across web_search, code_search, fetch_content, and large-content retrieval, with explicit query-depth minimums and source-list fallback. It is rejected unchanged under the money-bearing authority hard fail because failure of the nominal zero-config Exa/Perplexity/Gemini chain directs the agent to DeepAPI web search, a paid-capable external request path, without a distinct spend-authorization checkpoint. Configured credentials and a per-request maxCostUsd cap do not grant spend authority. Behavioral validation was not run."
