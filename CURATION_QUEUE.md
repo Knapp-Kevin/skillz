@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **569** persisted exact-version third-party verification companions.
+- **570** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,14 +45,14 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **32/55**; gaps **23**.
-- Current decisive states: **16 verified / 16 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **33/55**; gaps **22**.
+- Current decisive states: **16 verified / 17 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
 - **Agent orchestration: 17/17 current-standard complete.**
-- **Ops-and-setup: 11/11 current-standard complete.** `risky-changes` is rejected unchanged 14/20 because paid DeepAPI calls and production-data reads lack distinct action authorization; `global-agent-guardrails` is rejected unchanged 15/20 because persistent user-global security-control mutation lacks a configuration authorization boundary; `google-safe-browsing` is rejected unchanged 14/20 because deployment, DNS TXT mutation, and Search Console review submission are directed without action-specific authorization; `anti-sleep` is verified 17/20 because its local LaunchAgent mutation is directly scoped to the user's explicit anti-sleep request and the bundled launcher verifies exact process and active power-assertion state; `agentic-productivity-setup` is verified 18/20 because it explicitly distinguishes explanation, project build, and installation, keeps webhook secrets out of chat, restricts persistence/transmission to aggregates, and requires permission before live Discord delivery testing; `create-readonly-db-role` is rejected unchanged 15/20 because it directs generation of a repository SQL file and then expects the human to paste that file into Supabase while acknowledging that it contains the role password, creating an avoidable credential-bearing artifact despite correctly reserving production DDL for the human; `github-outside-sandbox` is verified 18/20 because it changes only the execution context of an already-authorized Git/GitHub operation, explicitly preserves user authorization, forbids token copying and broad bypass wrappers, narrows escalation, and verifies from the host context; `macbook-metrics-setup` is rejected unchanged 14/20 because its default persistent LaunchAgent architecture automatically pushes detailed activity telemetry to a private GitHub repository every three hours without a separate sensitive-data transmission authorization boundary, while also describing the design as local-only/no-cloud; `nuke-cursor-app` is verified 17/20 because it is manual-only, disables implicit invocation, narrowly matches the Cursor application bundle, attempts graceful quit before stronger termination, and verifies shutdown/relaunch before success; `pi-custom-model` is verified 17/20 because it is manual-only, disables implicit invocation, checks credential presence without exposing secrets, scopes local Pi model configuration changes to the user's explicit request, preserves the user's thinking-level setting, and leaves the optional live provider smoke test subject to separate external-action/cost authority; `setup-help` is rejected unchanged 14/20 because its useful one-step-at-a-time setup interaction and canonical checklist discipline can direct consequential setup actions without a separate action-specific authorization checkpoint and do not prohibit requesting real secret values in conversation when secure external credential entry is appropriate.
-- **Research-and-web: 0/10 current-standard companions.** Reconcile companions/history before fresh review.
+- **Ops-and-setup: 11/11 current-standard complete.**
+- **Research-and-web: 1/10 reviewed.** `browser-harness` is rejected unchanged **14/20**. Its screenshot-first interaction, explicit authentication-wall stop behavior, local/remote routing, and visible-state verification are useful, but bundled install guidance directs automatic software update without asking the user, troubleshooting may escalate to killing all Chrome and daemon processes, and remote Browser Use sessions can create cost-bearing cloud resources. Setup intent or tool availability does not independently authorize software mutation, broad process termination, or money-bearing external state. Behavioral validation is `not-run`.
 - **Thinking-and-docs: 0/13 current-standard companions.** Reconcile companions/history before fresh review.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 23.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 22.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; **29/29**, gaps **0** after source-policy exclusions.
@@ -89,4 +89,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **32/55 current-standard companion pairs, 23 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Move to the bounded research-and-web category (**0/10**) after checking current companions and recoverable repository history for genuine gaps; keep discovery/source-vetting and omission detection parallel and secondary.
+Continue issue #66 with the David Ondrej frontier now at **33/55 current-standard companion pairs, 22 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Continue the bounded research-and-web category, now **1/10**, after checking current companions and recoverable repository history for each genuine gap; keep discovery/source-vetting and omission detection parallel and secondary.

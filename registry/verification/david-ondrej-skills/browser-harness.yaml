@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: browser-harness
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 8212043a676524e863872700d1a88ee09101fc60
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: eeb5d0972814b5e162f9cce9d1e9cbdad154e867
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [browser-testing, research, web-search]
+  lifecycle: [implementation, verification, operations]
+  characteristic: [tool-assisted, visual-verification, evidence-first, retrieval-first]
+  authority: [external-side-effect, mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The package has strong screenshot-first interaction guidance, explicit auth-wall stopping behavior, narrow local-browser routing, and repeated visible-state verification. It is rejected unchanged under the authority hard fail because bundled references/install.md instructs the agent to run browser-harness --update -y itself when an update banner appears and explicitly says not to ask the user, while troubleshooting may escalate to killing all Chrome and daemon processes. Remote mode can also create Browser Use cloud sessions that bill until timeout. Setup intent, tool availability, or a browser task does not independently authorize software mutation, broad process termination, or cost-bearing cloud resources. Behavioral validation was not run."
