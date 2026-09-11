@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 574 |
+| **Persisted third-party review companions** | 575 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -21,8 +21,8 @@
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
-| **David Ondrej Skills current-standard companions** | 37 / 55 |
-| **David Ondrej Skills current-standard gaps** | 18 |
+| **David Ondrej Skills current-standard companions** | 38 / 55 |
+| **David Ondrej Skills current-standard gaps** | 17 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | 0 / 50 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
@@ -55,7 +55,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- David Ondrej Skills: exact registered-pin denominator **55**, **37/55** provenance/verification companion complete, gaps **18**; current decisive states **16 verified / 21 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **5/10** reviewed.
+- David Ondrej Skills: exact registered-pin denominator **55**, **38/55** provenance/verification companion complete, gaps **17**; current decisive states **16 verified / 22 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **6/10** reviewed.
 - Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **0/50** individually current-standard reviewed. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
@@ -70,7 +70,7 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## David Ondrej denominator reconciliation
 
-The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains thirty-seven exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, ops-and-setup is **11/11** current-standard complete, and research-and-web is **5/10** reviewed.
+The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains thirty-eight exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, ops-and-setup is **11/11** current-standard complete, and research-and-web is **6/10** reviewed.
 
 `browser-harness` is **rejected unchanged 14/20** because bundled installation guidance instructs automatic software update without asking the user, troubleshooting may escalate to broad Chrome/daemon termination, and remote Browser Use sessions can create cost-bearing cloud resources without a distinct authorization boundary. Its screenshot-first interaction, explicit authentication-wall stopping behavior, local/remote routing, and visible-state verification remain useful adaptation/extraction evidence.
 
@@ -82,7 +82,9 @@ The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Di
 
 `online-shopping` is **rejected unchanged 15/20**. It is explicitly research-only, forbids orders/payment/address/account creation, keeps its DeepAPI credential external and undisclosed, scales effort by purchase price, verifies unknown shops, and requires found-price evidence. Unchanged use nevertheless fails the money-bearing authority hard fail because normal mid-range and expensive shopping research directs one or more paid DeepAPI calls with per-request cost caps but no distinct spend-authorization checkpoint. Behavioral validation is `not-run`.
 
-Together the David Ondrej family is **37/55**, with **18** gaps and **16 verified / 21 rejected unchanged**.
+`pi-web-search` is **rejected unchanged 15/20**. It is tightly scoped to Pi Agents and provides useful routing across web search, code search, URL/PDF/video/GitHub retrieval, and large-content continuation, with explicit query-depth minimums. Unchanged use nevertheless fails the money-bearing authority hard fail because failure of the nominal zero-config Exa/Perplexity/Gemini chain directs the agent to a DeepAPI fallback capable of paid external requests without a distinct spend-authorization checkpoint. Behavioral validation is `not-run`.
+
+Together the David Ondrej family is **38/55**, with **17** gaps and **16 verified / 22 rejected unchanged**.
 
 ## Corey Haines source admission
 
@@ -104,8 +106,8 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **37/55**, with **18** exact-version companion gaps; skill authoring, agent orchestration, and ops-and-setup are complete at **4/4**, **17/17**, and **11/11**.
-2. Continue the David Ondrej research-and-web category, now **5/10** current-standard companions, checking current companions and recoverable history before fresh review.
+1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **38/55**, with **17** exact-version companion gaps; skill authoring, agent orchestration, and ops-and-setup are complete at **4/4**, **17/17**, and **11/11**.
+2. Continue the David Ondrej research-and-web category, now **6/10** current-standard companions, checking current companions and recoverable history before fresh review.
 3. Begin selective exact-version curation of the newly admitted Corey Haines Marketing Skills **50-skill** tracked corpus after higher-priority admitted-source gaps, starting with high-differentiation user-fit candidates rather than wholesale approval.
 4. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 5. Continue governed discovery/source-vetting and omission recovery.
