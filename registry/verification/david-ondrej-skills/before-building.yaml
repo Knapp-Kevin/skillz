@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: before-building
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 8c2cb00823ad0cd4752141724eb869ff3dfd391b
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 285074a374626e919f82a59ed97a4a33438141e2
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [planning, decision-support]
+  lifecycle: [planning, design]
+  characteristic: [decomposition, context-efficient, human-review, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is a deliberately small pre-build checkpoint: surface one to three consequential choices, give compact options plus a recommendation, then stop for the user's answers. It has no mutation, external action, spend, credential, or sensitive-data side effect, and bundled OpenAI policy disables implicit invocation. Its main limitation is epistemic: it explicitly forbids reading files, searching, or using tools, so the recommendation is intentionally preliminary and can be wrong when project-specific facts matter. That reduces evidence, failure-handling, adversarial-resilience, and effectiveness scores but does not create a hard fail for the narrow early-framing role. Behavioral validation was not run."
