@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: online-shopping
+display_name: Online Shopping
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/online-shopping/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: cc963682fd73125eb7a7d24c4b63f066fa7434ae
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-external-service
+dependencies: DeepAPI paid external API; DEEPAPI_API_KEY and DEEPAPI_API_BASE_URL supplied through external environment state; curl; uuidgen; shell environment; web search/scrape/deep-research/Twitter endpoints
+import_eligibility: rejected-unchanged-reference
+rationale: Shopping-research workflow has strong purchase-side boundaries, price-tier effort scaling, shop-trust checks, evidence discipline, and API-key non-disclosure. Unchanged adoption fails the money-bearing authority hard fail because ordinary mid-range and expensive shopping research directs one or more paid DeepAPI requests without a distinct spend-authorization checkpoint; automatic trigger wording can route a shopping request into those billable calls merely because credentials are configured. Preserve the price-tier research scaling, shop-verification, evidence, and purchase-boundary patterns as adaptation/extraction evidence.
