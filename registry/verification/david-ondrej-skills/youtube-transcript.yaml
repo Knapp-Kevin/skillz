@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: youtube-transcript
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 1a70408a52001469f626b34d22da2e582f6d49e4
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 95c878ade2c775d6a476a89c828f81e9ec6f5483
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research]
+  lifecycle: [discovery]
+  characteristic: [deterministic, cost-bounded, risk-aware, tool-assisted]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful transcript extraction, DeepAPI idempotency, caption-only yt-dlp fallback, language handling, duplicate-caption avoidance through json3, bounded retry, explicit bot-detection stop behavior, and deterministic output naming. It is rejected unchanged under the authority hard fail because normal primary execution can spend money through DeepAPI without a distinct spend-authorization checkpoint, the skill always persists a transcript file even for triggers that merely ask what a video says, and first yt-dlp failure instructs `yt-dlp -U` without distinct software-mutation authorization. Behavioral validation was not run."
