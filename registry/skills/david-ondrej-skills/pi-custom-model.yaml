@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: pi-custom-model
+display_name: Pi Custom Model
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/pi-custom-model/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 96d2326260cc1619a62749bc845bc07234105d66
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Pi Agent; writable ~/.pi/agent/models.json and ~/.pi/agent/settings.json; readable ~/.pi/agent/auth.json or provider environment credential; provider model registry; optional network access for model existence verification and smoke test
+import_eligibility: verified-unchanged-reference
+rationale: Provides a focused manual procedure for registering an exact custom or routing-variant model slug in Pi when the saved default silently falls back. The package disables implicit invocation, requires confirming the model slug and credential presence without requesting or exposing credential values, preserves the user's thinking-level setting, distinguishes project overrides, and verifies registry visibility after mutation. Preserve the Pi-specific file layout and provider metadata assumptions, and treat the optional live model smoke test as requiring separate authority because it can incur external API cost.
