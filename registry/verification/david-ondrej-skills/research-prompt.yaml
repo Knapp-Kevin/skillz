@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: research-prompt
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 64b6b8ac1edec16ad11e5edd873cdfbd3fb44b68
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: afe18e0a576344c04473561357a7f2c04d9d5f39
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [research, writing]
+  lifecycle: [planning, discovery]
+  characteristic: [evidence-first, source-driven, synthesis, progressive-disclosure, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package provides a strong method for transforming vague research needs into one self-contained brief with explicit sub-questions, source hierarchy, contradiction handling, corroboration, completion criteria, and a gap-closing pass. It is rejected unchanged under the authority hard fail because its execution section directs the fully contextualized prompt to the paid-capable DeepAPI deep-research workflow without a distinct spend-authorization checkpoint and without a separate authorization boundary for transmitting embedded project/context details to that external service. Behavioral validation was not run."
