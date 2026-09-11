@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 575,
+    "persisted_third_party_exact_version_reviews": 576,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 38,
+    "david_ondrej_skills_current_standard_companions": 39,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 17,
+    "david_ondrej_skills_current_standard_gaps": 16,
     "corey_haines_marketing_skills_current_standard_companions": 0,
     "corey_haines_marketing_skills_eligible_denominator": 50,
     "corey_haines_marketing_skills_current_standard_gaps": 50,
@@ -85,6 +85,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej pi-web-search at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 15/20 under the money-bearing authority hard fail because the search-chain failure path directs the agent to a paid-capable DeepAPI fallback without distinct spend authorization; research-and-web 5/10 -> 6/10; David Ondrej 37/55 -> 38/55 with gaps 18 -> 17; persisted exact-version review count 574 -> 575; Corey Haines remains tracked at 0/50"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej research-prompt at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 16/20 under authority hard fails because its execution section directs a fully contextualized prompt to paid-capable DeepAPI without distinct spend or sensitive-context transmission authorization; research-and-web 6/10 -> 7/10; David Ondrej 38/55 -> 39/55 with gaps 17 -> 16; persisted exact-version review count 575 -> 576; Corey Haines remains tracked at 0/50"
   }
 }
