@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: github-outside-sandbox
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 4c40bded4a66ff659dd17f98d097e2086fd2fbb9
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4556906c440addbb95d205e9a66bf07ae68d6f5c
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [repository-maintenance, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [compatibility-aware, evidence-first, risk-aware, safety-bounded, tool-routing]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. The skill addresses a narrow real failure mode: an already-authorized Git or GitHub operation is blocked by sandbox execution context. It starts normally, escalates only the blocked command and only within the user's authorization, never copies tokens, rejects shell wrappers and broad approval prefixes, requires concrete escalation justification, and verifies from the host context before concluding authentication is broken. The bundled OpenAI policy allows implicit invocation, but invocation itself does not authorize a Git/GitHub mutation; the procedure explicitly preserves the user's existing action authority while changing only execution context. Portability is medium because host escalation APIs differ and the concrete example is Codex-specific. Behavioral validation was not run."

@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 19 |
-| Persisted third-party exact-version reviews | 564 |
+| Persisted third-party exact-version reviews | 565 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -22,8 +22,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |
-| David Ondrej Skills current-standard companions | 27 / 55 |
-| David Ondrej Skills current-standard gaps | 28 |
+| David Ondrej Skills current-standard companions | 28 / 55 |
+| David Ondrej Skills current-standard gaps | 27 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -40,7 +40,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is tracked and partially curated; skill authoring and agent orchestration are current-standard complete at **4/4** and **17/17**, while ops-and-setup is **6/11** reviewed.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is tracked and partially curated; skill authoring and agent orchestration are current-standard complete at **4/4** and **17/17**, while ops-and-setup is **7/11** reviewed.
 
 ## First-party skills by purpose
 
