@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: brain-to-docs
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 43e2017f662e4bd91208af4534b2b0e1909c417e
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1cf79ff60e2e44c589a5447501875bb34ebc7d35
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [documentation, planning]
+  lifecycle: [planning]
+  characteristic: [decomposition, human-review, spec-driven, traceable, context-efficient]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides a useful five-question knowledge-extraction loop, reads current project docs before continuing, separates vision into README from decisions into ADRs, and keeps decision records concise. It is rejected unchanged under the authority hard fail because ordinary execution mandates updating repository documentation after every user answer with no distinct repository-mutation authorization checkpoint. A request to explore or document project thinking does not automatically authorize unconditional file writes after each response. It also lacks explicit conflict/numbering handling and post-edit verification. Behavioral validation was not run."
