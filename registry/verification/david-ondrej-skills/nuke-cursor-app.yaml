@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: nuke-cursor-app
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: afda37bd143480a327ac4e121393523ef1a79b96
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 53e441c03fc3ffcbbfc95c2512b0dc7cf08c0fc9
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [debugging, productivity]
+  lifecycle: [operations, maintenance]
+  characteristic: [evidence-first, risk-aware, safety-bounded, tool-assisted]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The skill is manual-only, disables implicit invocation, restricts process matching to the Cursor application bundle path, explicitly excludes CursorUIViewService, attempts graceful quit before stronger termination, verifies complete shutdown, verifies relaunch before success, and reads the metrics database with sqlite3 -readonly. Killing Cursor is consequential local mutation, but the action is tightly bound to an explicit user request to nuke/restart Cursor. The remaining weaknesses are host specificity, a hard-coded local metrics path placeholder, and the fact that an in-flight local agent session can still be destroyed if the user's context is stale. Behavioral validation was not run."
