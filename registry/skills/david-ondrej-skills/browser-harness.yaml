@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: browser-harness
+display_name: Browser Harness
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/browser-harness/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 8212043a676524e863872700d1a88ee09101fc60
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: browser-harness executable and daemon; Chrome/Chromium CDP; bundled references/install.md; optional Browser Use cloud API and BROWSER_USE_API_KEY; optional profile-use cookie synchronization; host-specific Codex, Claude Code, Hermes, macOS/Linux/Windows integration assumptions
+import_eligibility: rejected-unchanged-reference
+rationale: Provides strong browser-control mechanics, screenshot-first verification, auth-wall stopping behavior, and useful local/remote connection guidance, but unchanged adoption fails the current authority standard. The bundled installation reference directs the agent to update installed code automatically without asking the user, permits stronger local process termination during troubleshooting, and can create billable remote cloud browser sessions. Those consequential mutations and external/cost-bearing actions require distinct authorization boundaries rather than being inferred from setup or browser-task intent. Preserve the package as adaptation/extraction and negative authority-boundary evidence.
