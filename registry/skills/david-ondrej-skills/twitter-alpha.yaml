@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: twitter-alpha
+display_name: Twitter Alpha
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/twitter-alpha/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 82bd1e5131da44b6fa373d45a9badc9ade2b75f8
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-required-external-service
+dependencies: sibling deepapi skill; DeepAPI Twitter search/user, LinkedIn posts, and web search endpoints; target company/person identity and public social-profile data
+import_eligibility: rejected-unchanged-reference
+rationale: The seven-person insider/outsider construction, engagement-graph grounding, handle verification, fallback handling, alpha-ranking criteria, and concise source-linked output are useful research patterns. Unchanged adoption fails the authority hard fail because ordinary execution mandates numerous DeepAPI external requests across seven people without a distinct spend-authorization checkpoint. Configured credentials, request limits, and user selection of a research target do not authorize money-bearing service use. Preserve the cohort-construction, evidence-ranking, and output-discipline mechanisms as adaptation/extraction evidence.
