@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 568,
+    "persisted_third_party_exact_version_reviews": 569,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 31,
+    "david_ondrej_skills_current_standard_companions": 32,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 24,
+    "david_ondrej_skills_current_standard_gaps": 23,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej pi-custom-model at the registered pin; verified unchanged 17/20 with behavioral validation not-run because the procedure is manual-only, disables implicit invocation, checks credential presence without exposing secrets, scopes local Pi model configuration changes to the requested task, preserves the user's thinking level, and leaves the optional live provider smoke test subject to separate external-action/cost authority; family companions 30/55 -> 31/55, gaps 25 -> 24, decisive states 16 verified / 15 rejected unchanged; ops-and-setup 9/11 -> 10/11; persisted third-party review count 567 -> 568"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej setup-help at the registered pin; rejected unchanged 14/20 with behavioral validation not-run because its useful one-step-at-a-time setup UX and canonical checklist reconciliation do not impose a separate authorization checkpoint for consequential setup actions or secure credential-handling boundary; family companions 31/55 -> 32/55, gaps 24 -> 23, decisive states 16 verified / 16 rejected unchanged; ops-and-setup 10/11 -> 11/11 complete; persisted third-party review count 568 -> 569"
   }
 }

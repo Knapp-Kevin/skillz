@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: setup-help
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: c3f06cc300fedbd94dfdf1fff0f306875343d5cb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5510cfc67d9d626317b5ab1a2c6eac4f179afacf
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [productivity, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [context-efficient, progressive-disclosure, human-review, iterative]
+  authority: [mutating, external-side-effect]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package is manual-only with implicit invocation disabled and has an excellent progressive-disclosure pattern: one atomic current step, a bounded future-step list, canonical checklist reconciliation, and explicit completion handling. Unchanged adoption fails the current authority rule because the skill claims to guide setup of anything and can therefore direct credential, infrastructure, billing, access-control, communication, or sensitive-data actions without requiring a separate action-specific authorization checkpoint. It also contains no rule preventing solicitation of real secret values into conversational context when a secure external credential path is appropriate. Preserve the interaction model and checklist discipline as adaptation/extraction evidence, but reject the unchanged universal operational procedure. Behavioral validation was not run."
