@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: deep-research
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 3377b8d793c4f84825f29b25ac41dffbe91cc78d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b2e12a3b2a35c1d920ab17b919aaf7f3185ccca5
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [research, web-search]
+  lifecycle: [implementation, verification]
+  characteristic: [evidence-first, source-driven, synthesis, cost-bounded]
+  authority: [external-side-effect, mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The package is manual-only and its OpenAI policy also forbids implicit invocation. It handles DEEPAPI_API_KEY through the environment or a local env file and explicitly forbids printing or logging the key. Idempotency keys, bounded retries, source extraction, and report synthesis are strong. It is rejected unchanged under the money-bearing authority hard fail because a normal run defaults to a paid DeepAPI request with maxCostUsd 0.70, and the larger-topic workflow can issue one separately billable call per numbered sub-question without requiring distinct authorization for the aggregate spend. The instruction to seek approval only when raising a single call above $0.70 does not authorize multiple default-priced calls. Behavioral validation was not run."

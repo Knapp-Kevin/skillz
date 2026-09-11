@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: deep-research
+display_name: Deep Research
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/deep-research/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 3377b8d793c4f84825f29b25ac41dffbe91cc78d
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-27T08:37:35Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-external-service
+dependencies: DeepAPI paid external API; DEEPAPI_API_KEY supplied through environment or ~/.deepapi/env; sibling research-prompt and deepapi skill guidance; curl, jq, uuidgen, shell, temporary local files, and a writable report destination
+import_eligibility: rejected-unchanged-reference
+rationale: Provides a disciplined source-backed research workflow with manual invocation, environment-based credential handling, idempotency keys, bounded retry behavior, and citation/report handling. Unchanged adoption fails the current money-bearing authority rule because the workflow defaults to a paid request with maxCostUsd 0.70 and can fan a larger report into multiple independently billable calls without requiring a distinct user authorization for the aggregate spend. Preserve its prompt construction, secret handling, idempotency, failure handling, and synthesis mechanics as adaptation/extraction evidence.
