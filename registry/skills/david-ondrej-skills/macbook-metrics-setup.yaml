@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: macbook-metrics-setup
+display_name: MacBook Metrics Setup
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/macbook-metrics-setup/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 5fd38bd43e04487e7bd01aa606c16ef875b163a5
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: macOS launchd and LaunchAgents; Swift/SwiftPM or equivalent compiled implementation; SQLite; Git; private GitHub repository and authenticated push access for the documented backup path
+import_eligibility: reference-only
+rationale: Provides a thoughtful low-overhead architecture for local Mac performance collection, WAL-safe SQLite snapshots, explicit nullable handling for undocumented metrics, ADR/schema discipline, and an opt-in per-app extension. Unchanged adoption is not eligible because the default architecture installs persistent LaunchAgents and automatically pushes a database containing detailed machine-activity telemetry to GitHub every three hours without a separate explicit authorization boundary for sensitive-data transmission. The text simultaneously claims "No cloud, no telemetry" and "local-only" while prescribing remote GitHub backup, a materially misleading privacy characterization. Preserve the local collection, low-overhead, WAL-safe backup, and opt-in monitoring patterns as reference evidence, but require explicit authorization and accurate disclosure before any external synchronization.

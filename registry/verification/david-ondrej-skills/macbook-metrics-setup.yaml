@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: macbook-metrics-setup
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 5fd38bd43e04487e7bd01aa606c16ef875b163a5
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 791eeff1bbba9fdecf2a5a482bdec48258b45921
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [monitoring, observability, productivity]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [evidence-first, instrumentation, production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The skill contains useful low-overhead system-metrics architecture, WAL-safe SQLite snapshotting, nullable handling for undocumented metrics, verification guidance, and opt-in per-app monitoring. It fails the authority/sensitive-data bar unchanged because the documented default installs persistent LaunchAgents and automatically commits and pushes detailed activity telemetry to a private GitHub repository every three hours without an explicit action-specific authorization boundary for external transmission. It also describes the design as 'No cloud, no telemetry' and 'local-only' despite that remote synchronization, obscuring the privacy boundary it later acknowledges. Preserve the local collector, safe snapshot, and monitoring design as adaptation/reference evidence only. Behavioral validation was not run."
