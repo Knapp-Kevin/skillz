@@ -13,7 +13,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party user-facing skills | 44 |
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
-| Unique registered source identities | 19 |
+| Unique registered source identities | 20 |
 | Persisted third-party exact-version reviews | 574 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
@@ -24,6 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 37 / 55 |
 | David Ondrej Skills current-standard gaps | 18 |
+| Corey Haines Marketing Skills current-standard companions | 0 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 50 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -40,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is tracked and partially curated; skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**; research-and-web is **5/10** reviewed.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is tracked and partially curated; skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**; research-and-web is **5/10** reviewed. Corey Haines Marketing Skills is newly admitted as a tracked corpus at an exact 50-skill denominator and remains **0/50** individually reviewed.
 
 ## First-party skills by purpose
 
@@ -69,7 +71,7 @@ Every explicitly current-standard-complete family above has **0** current-standa
 
 **Pinned reference corpora:** `anthropic-skills`, `anthropic-knowledge-work-plugins`, `vercel-agent-skills`, `microsoft-skills`, `microsoft-azure-skills`, `aws-agent-toolkit`, `mattpocock-skills`, `addyosmani-agent-skills`, `openhands-extensions`, `cline-skills`, `cloudflare-skills`, `google-agents-cli`.
 
-**Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`.
+**Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`, `corey-haines-marketing-skills`.
 
 **Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` is a dynamic discovery surface.
 

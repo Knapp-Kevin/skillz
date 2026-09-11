@@ -219,3 +219,14 @@ sources:
     license: MIT
     pinned_revision: f11a4e441c5ff061b4f8ae37952be8c602e4034e
     rationale: Large fast-moving discovery surface; useful for leads, never blanket trusted inventory.
+
+  - id: corey-haines-marketing-skills
+    name: Corey Haines Marketing Skills
+    source: https://github.com/coreyhaines31/marketingskills
+    class: community-vetted
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2025 Corey Haines
+    pinned_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+    rationale: Creator-maintained marketing skill corpus admitted via issue #297 for selective exact-version curation. The registered snapshot contains 50 top-level first-class SKILL.md packages under skills/; partner integrations, source tooling, generated partner surfaces, and ordinary references are outside that denominator.

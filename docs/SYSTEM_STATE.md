@@ -13,7 +13,7 @@
 | **First-party provenance complete** | 44 / 44 |
 | **Persisted third-party review companions** | 574 |
 | **Pinned external corpora** | 12 |
-| **Registered source identities** | 19 |
+| **Registered source identities** | 20 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
 | **Anthropic Knowledge Work Plugins current-standard companions** | 74 / 74 |
 | **Anthropic Knowledge Work Plugins current-standard gaps** | 0 |
@@ -23,6 +23,8 @@
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
 | **David Ondrej Skills current-standard companions** | 37 / 55 |
 | **David Ondrej Skills current-standard gaps** | 18 |
+| **Corey Haines Marketing Skills tracked denominator** | 50 |
+| **Corey Haines Marketing Skills current-standard companions** | 0 / 50 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -54,6 +56,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
 - David Ondrej Skills: exact registered-pin denominator **55**, **37/55** provenance/verification companion complete, gaps **18**; current decisive states **16 verified / 21 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **5/10** reviewed.
+- Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **0/50** individually current-standard reviewed. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -81,6 +84,10 @@ The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Di
 
 Together the David Ondrej family is **37/55**, with **18** gaps and **16 verified / 21 rejected unchanged**.
 
+## Corey Haines source admission
+
+Issue #297 established the exact source identity `coreyhaines31/marketingskills` and admitted it as a **tracked corpus**, not as a blanket trusted or pinned-reference corpus. The registered snapshot is `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state). Direct tree inspection shows **50** top-level skill directories under `skills/`, and source guidance defines each `skills/<name>/SKILL.md` as the required first-class skill entry point. Root terms are MIT. Commercial partner/integration material and source-maintained tooling remain source context and are excluded from the 50-skill denominator. Individual unchanged reuse still requires exact-version review.
+
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
@@ -99,9 +106,10 @@ Interpret candidate material in this order:
 
 1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **37/55**, with **18** exact-version companion gaps; skill authoring, agent orchestration, and ops-and-setup are complete at **4/4**, **17/17**, and **11/11**.
 2. Continue the David Ondrej research-and-web category, now **5/10** current-standard companions, checking current companions and recoverable history before fresh review.
-3. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
-4. Continue governed discovery/source-vetting and omission recovery.
-5. Resolve bounded candidate issues when evidence supports a decisive outcome.
-6. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
+3. Begin selective exact-version curation of the newly admitted Corey Haines Marketing Skills **50-skill** tracked corpus after higher-priority admitted-source gaps, starting with high-differentiation user-fit candidates rather than wholesale approval.
+4. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
+5. Continue governed discovery/source-vetting and omission recovery.
+6. Resolve bounded candidate issues when evidence supports a decisive outcome.
+7. Keep README, this file, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` aligned with live evidence.
 
 The living work surface is `CURATION_QUEUE.md` plus applicable open evaluation/provenance issues. Historical closed Wayfinder/issues/PRs remain evidence, not active execution plans.

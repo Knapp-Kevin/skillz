@@ -6,7 +6,7 @@
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
-    "registered_source_identities": 19,
+    "registered_source_identities": 20,
     "persisted_third_party_exact_version_reviews": 574,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
@@ -30,6 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 37,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 18,
+    "corey_haines_marketing_skills_current_standard_companions": 0,
+    "corey_haines_marketing_skills_eligible_denominator": 50,
+    "corey_haines_marketing_skills_current_standard_gaps": 50,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -72,7 +75,7 @@
   },
   "source_roles": {
     "pinned-reference-corpus": ["anthropic-skills", "anthropic-knowledge-work-plugins", "vercel-agent-skills", "microsoft-skills", "microsoft-azure-skills", "aws-agent-toolkit", "mattpocock-skills", "addyosmani-agent-skills", "openhands-extensions", "cline-skills", "cloudflare-skills", "google-agents-cli"],
-    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers"],
+    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers", "corey-haines-marketing-skills"],
     "normative-spec": ["agentskills-spec"],
     "dynamic-discovery": ["github-awesome-copilot"]
   },
@@ -82,6 +85,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej online-shopping at the registered pin; rejected unchanged 15/20 with behavioral validation not-run because normal mid-range and expensive shopping research directs one or more paid DeepAPI calls without a distinct spend-authorization checkpoint; family companions 36/55 -> 37/55, gaps 19 -> 18, decisive states 16 verified / 20 rejected unchanged -> 16 verified / 21 rejected unchanged; research-and-web 4/10 -> 5/10; persisted third-party review count 573 -> 574"
+    "latest_reconciliation": "2026-09-11: admitted Corey Haines Marketing Skills as a tracked corpus via issue #297 at exact snapshot 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; established MIT terms and an exact eligible denominator of 50 top-level first-class skill packages; partner/integration material and source-owned tooling remain outside the denominator; individual current-standard review coverage starts at 0/50; registered source identities 19 -> 20; persisted exact-version review count remains 574"
   }
 }
