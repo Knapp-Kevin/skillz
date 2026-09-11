@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: create-readonly-db-role
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 0e8fcd782224a38b390a216a5d1c0f58e4679a4c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9abd54c4bf8852bf75906393394be1cbd9edf7a6
+characterized_at: 2026-09-10
+last_verified_at: 2026-09-10
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [security, cloud]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [evidence-first, human-review, risk-aware, safety-bounded]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The skill contains a strong action boundary for production DDL: the human applies role creation and agents are explicitly forbidden from running production DDL. It also provides useful double-layer write verification, rollback guidance, and a human-selected denylist. The unchanged workflow nevertheless fails the repository's secret-handling standard because it tells the agent to write the SQL to a repository file and then tells the human to paste the whole file into the Supabase SQL editor while acknowledging that the file contains the password. A safe unchanged procedure would require password generation/injection through a secure external credential path so the credential never appears in a repository artifact or conversational context. The broad current/future-table SELECT grant and optional BYPASSRLS guidance also demand system-specific sensitive-data review. Behavioral validation was not run."
