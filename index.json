@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 571,
+    "persisted_third_party_exact_version_reviews": 572,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 34,
+    "david_ondrej_skills_current_standard_companions": 35,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 21,
+    "david_ondrej_skills_current_standard_gaps": 20,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej deep-research at the registered pin; rejected unchanged 16/20 with behavioral validation not-run because the default paid DeepAPI request and multi-call report fan-out lack distinct aggregate-spend authorization; family companions 33/55 -> 34/55, gaps 22 -> 21, decisive states 16 verified / 17 rejected unchanged -> 16 verified / 18 rejected unchanged; research-and-web 1/10 -> 2/10; persisted third-party review count 570 -> 571"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej deepapi at the registered pin; rejected unchanged 14/20 with behavioral validation not-run because normal paid external calls, mandatory 5+ open-web search calls, unsolicited external feedback, and automatic updater execution lack distinct action authorization; family companions 34/55 -> 35/55, gaps 21 -> 20, decisive states 16 verified / 18 rejected unchanged -> 16 verified / 19 rejected unchanged; research-and-web 2/10 -> 3/10; persisted third-party review count 571 -> 572"
   }
 }
