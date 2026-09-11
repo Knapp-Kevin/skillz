@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: fireflies-transcript
+display_name: Fireflies Transcript
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/fireflies-transcript/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: d805f5de6f093ee0ef51bb7f9e0af53d7470a1c3
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-external-service
+dependencies: Fireflies.ai GraphQL API; FIREFLIES_API_KEY supplied through an external environment file or secret manager; curl; jq; shell environment; local temporary-file storage; platform date conversion differs across operating systems
+import_eligibility: rejected-unchanged-reference
+rationale: Focused read-only Fireflies transcript retrieval with good meeting-identity verification, pagination guidance, local filtering, and an explicit instruction not to print or commit the API key. Unchanged adoption fails current secret and authority rules because the invalid-key recovery path tells the agent to ask the user for a new credential and update a local environment file without directing secure external credential entry or establishing separate authorization for credential-store mutation. Preserve the retrieval, transcript-identity verification, local filtering, and large-output handling patterns as adaptation/extraction evidence.
