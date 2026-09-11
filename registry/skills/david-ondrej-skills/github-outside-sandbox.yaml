@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: github-outside-sandbox
+display_name: GitHub Outside Sandbox
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/github-outside-sandbox/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 4c40bded4a66ff659dd17f98d097e2086fd2fbb9
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: Git; GitHub CLI for GitHub operations; authenticated host context; host-specific sandbox escalation mechanism when sandbox restrictions block an already-authorized operation
+import_eligibility: eligible-reference
+rationale: Provides a compact and useful execution-context recovery pattern for Git and GitHub operations that fail only because a sandbox blocks Keychain authentication, network access, or .git writes. The skill starts in the sandbox, escalates only the blocked command, explicitly limits host execution to the user's authorization, forbids token copying and broad bypass wrappers, requires concrete escalation justification, and verifies from the host context before asking the user to reauthenticate. Its bundled OpenAI policy permits implicit invocation, but the procedure does not independently grant a new Git or GitHub action; it changes execution context only for an operation already within user authority. Preserve that distinction. Portability is medium because the exact escalation mechanism is host-specific and the examples are Codex-oriented.
