@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 19,
-    "persisted_third_party_exact_version_reviews": 569,
+    "persisted_third_party_exact_version_reviews": 570,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 32,
+    "david_ondrej_skills_current_standard_companions": 33,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 23,
+    "david_ondrej_skills_current_standard_gaps": 22,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "matt_pocock_skills_current_standard_gaps": 0,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej setup-help at the registered pin; rejected unchanged 14/20 with behavioral validation not-run because its useful one-step-at-a-time setup UX and canonical checklist reconciliation do not impose a separate authorization checkpoint for consequential setup actions or secure credential-handling boundary; family companions 31/55 -> 32/55, gaps 24 -> 23, decisive states 16 verified / 16 rejected unchanged; ops-and-setup 10/11 -> 11/11 complete; persisted third-party review count 568 -> 569"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej browser-harness at the registered pin; rejected unchanged 14/20 with behavioral validation not-run because automatic software update, broad browser/daemon termination, and cost-bearing remote Browser Use sessions lack distinct action authorization; family companions 32/55 -> 33/55, gaps 23 -> 22, decisive states 16 verified / 16 rejected unchanged -> 16 verified / 17 rejected unchanged; research-and-web 0/10 -> 1/10; persisted third-party review count 569 -> 570"
   }
 }
