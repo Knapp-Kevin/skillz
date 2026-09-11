@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: pi-web-search
+display_name: Pi Web Search
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/pi-web-search/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f08fddc2e8a22273831719d291775dd926def311
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact-external-service
+dependencies: Pi Agent; globally installed pi-web-access package; Exa MCP with fallback Exa/Perplexity/Gemini services; optional GEMINI_API_KEY plus ffmpeg/yt-dlp for video frames; DeepAPI fallback with DEEPAPI_API_KEY, curl, uuidgen and shell environment; local filesystem for cloned GitHub content and extracted PDFs
+import_eligibility: rejected-unchanged-reference
+rationale: Pi-specific web routing has useful query-depth scaling, specialized code search, large-content retrieval, source-list fallback, and context-management patterns. Unchanged adoption fails the money-bearing authority hard fail because failure of the nominal zero-config Exa/Perplexity/Gemini chain directs the agent to a DeepAPI fallback capable of paid external requests without a distinct spend-authorization checkpoint. Preserve routing, query-depth, retrieval, and context-management mechanisms as adaptation/extraction evidence.
