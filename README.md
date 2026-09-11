@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-571-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-572-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-19-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **19 unique source identities**.
 
-There are currently **571 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **572 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -57,7 +57,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
 - **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
 - **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
-- **David Ondrej Skills:** exact registered-pin denominator **55**; **34/55** current-standard provenance/verification companion complete, **21** gaps; decisive states so far **16 verified / 18 rejected unchanged**. Skill authoring is **4/4** current-standard complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** current-standard complete; research-and-web is **2/10** reviewed.
+- **David Ondrej Skills:** exact registered-pin denominator **55**; **35/55** current-standard provenance/verification companion complete, **20** gaps; decisive states so far **16 verified / 19 rejected unchanged**. Skill authoring is **4/4** current-standard complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** current-standard complete; research-and-web is **3/10** reviewed.
 - **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
 - **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
@@ -67,7 +67,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
 - Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
 
-The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by direct pinned-tree evidence. Current review coverage is **34/55**. Skill authoring is complete at **4/4**, agent orchestration is complete at **17/17**, ops-and-setup is complete at **11/11**, and research-and-web is **2/10**. `browser-harness` is rejected unchanged **14/20** because its bundled install guidance directs automatic software update without asking the user, troubleshooting may escalate to killing all Chrome and daemon processes, and remote Browser Use sessions can incur cost without a distinct authorization boundary. `deep-research` is rejected unchanged **16/20** because a normal run defaults to a paid DeepAPI request capped at $0.70 and larger reports can fan out into multiple independently billable calls without distinct aggregate-spend authorization. Both retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
+The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by direct pinned-tree evidence. Current review coverage is **35/55**. Skill authoring is complete at **4/4**, agent orchestration is complete at **17/17**, ops-and-setup is complete at **11/11**, and research-and-web is **3/10**. `browser-harness` is rejected unchanged **14/20** because its bundled install guidance directs automatic software update without asking the user, troubleshooting may escalate to killing all Chrome and daemon processes, and remote Browser Use sessions can incur cost without a distinct authorization boundary. `deep-research` is rejected unchanged **16/20** because a normal run defaults to a paid DeepAPI request capped at $0.70 and larger reports can fan out into multiple independently billable calls without distinct aggregate-spend authorization. `deepapi` is rejected unchanged **14/20** because normal search/research routes can spend money without distinct authorization, open-web search requires 5+ separate paid-capable calls, failure/product-friction feedback can be transmitted externally without separate communication authority, and first daily use automatically launches the installed updater. All three retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
 
 Anthropic Knowledge Work Plugins had been treated as blocked because only its aggregate 74/74 historical result was visible on current `main`. Superseded PR #42 in fact retains the full package-level provenance and verification trees for all 74 plugin skills. Those exact companions are now recovered under canonical registry paths, preserving individual dispositions, fingerprints, authority findings, and behavioral-validation states without inference.
 
