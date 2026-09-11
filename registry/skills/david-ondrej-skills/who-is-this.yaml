@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: who-is-this
+display_name: Who Is This
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/who-is-this/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 89a6ac97bef4046eeecf74e8afbf141b1b9e6bcd
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-required-external-service
+dependencies: sibling deepapi skill; DeepAPI GitHub, LinkedIn, Twitter/X, and deep-research endpoints; public profile and social data for the target person; bundled agents/openai.yaml invocation policy
+import_eligibility: rejected-unchanged-reference
+rationale: The identity-disambiguation stop, cross-platform evidence gathering, claim-versus-evidence discipline, missing/private-profile handling, and concise verdict format are useful background-research patterns. Unchanged adoption fails the authority hard fail because ordinary execution mandates multiple paid-capable DeepAPI calls without a distinct spend-authorization checkpoint and transmits person-specific profile/social data to an external service without a separate sensitive-data disclosure boundary. Manual invocation authorizes the research objective, not the money-bearing service use or external transmission path. Preserve the identity-verification, evidence-ranking, uncertainty-labeling, and output-discipline mechanisms as adaptation/extraction evidence.

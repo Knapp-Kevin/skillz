@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 577,
+    "persisted_third_party_exact_version_reviews": 578,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 40,
+    "david_ondrej_skills_current_standard_companions": 41,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 15,
+    "david_ondrej_skills_current_standard_gaps": 14,
     "corey_haines_marketing_skills_current_standard_companions": 0,
     "corey_haines_marketing_skills_eligible_denominator": 50,
     "corey_haines_marketing_skills_current_standard_gaps": 50,
@@ -85,6 +85,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-11: reviewed David Ondrej twitter-alpha at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 15/20 because ordinary execution mandates numerous paid-capable DeepAPI requests across a seven-person X/LinkedIn cohort without distinct spend authorization; research-and-web 7/10 -> 8/10; David Ondrej 39/55 -> 40/55 with gaps 16 -> 15; persisted exact-version review count 576 -> 577; Corey Haines remains tracked at 0/50"
+    "latest_reconciliation": "2026-09-11: reviewed David Ondrej who-is-this at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 15/20 because ordinary execution mandates multiple paid-capable DeepAPI calls and routes person-specific profile/social data through an external service without distinct spend/disclosure authorization; research-and-web 8/10 -> 9/10; David Ondrej 40/55 -> 41/55 with gaps 15 -> 14; persisted exact-version review count 577 -> 578; Corey Haines remains tracked at 0/50"
   }
 }

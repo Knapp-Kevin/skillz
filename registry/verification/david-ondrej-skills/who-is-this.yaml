@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: who-is-this
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 89a6ac97bef4046eeecf74e8afbf141b1b9e6bcd
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 615a99dedac6399953b5116f0884bf065b723d09
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, web-search]
+  lifecycle: [discovery]
+  characteristic: [evidence-first, source-driven, retrieval-first, synthesis, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is manual-only and provides useful identity disambiguation, cross-platform evidence gathering, claim-versus-evidence labeling, missing/private-profile handling, and concise verdict discipline. It is rejected unchanged under the authority hard fail because ordinary execution requires several paid-capable DeepAPI GitHub/LinkedIn/Twitter/deep-research calls without a distinct spend-authorization checkpoint and sends person-specific public profile/social data through that external service without a separate disclosure boundary. Selecting a person to research and manually invoking the skill does not itself authorize the service spend or external data path. Behavioral validation was not run."
