@@ -6,7 +6,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
-- **19** unique registered source identities.
+- **20** unique registered source identities.
 - **574** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
@@ -54,6 +54,16 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 - **Thinking-and-docs: 0/13 current-standard companions.** Reconcile companions/history before fresh review.
 - Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 18.
 
+### Corey Haines Marketing Skills — TRACKED / ADMITTED
+- Pin: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state).
+- Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
+- Root license: **MIT**, copyright Corey Haines (2025).
+- Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Source guidance defines `SKILL.md` as required for each skill directory, and the pinned source tree exposes 50 top-level skill directories.
+- Current provenance/verification companions: **0/50**; gaps **50**. No individual unchanged-reuse eligibility is implied by source admission.
+- Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
+- High-value first review candidates include `customer-research`, `product-marketing`, `pricing`, `attribution`, `content-strategy`, `marketing-plan`, `offers`, `free-tools`, `launch`, and `ai-seo`.
+- Authority focus for individual review: ad spend/bids/budgets, outbound communications, CRM/analytics mutations, production publishing, pricing/revenue configuration, credentials/webhooks/tokens, PII/customer-research handling, and commercially sponsored integrations.
+
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; **29/29**, gaps **0** after source-policy exclusions.
 
@@ -79,6 +89,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
+Issue #297 completed source-level vetting for `coreyhaines31/marketingskills` and moved it from candidate to tracked-corpus admission at an exact snapshot. Individual skills remain unreviewed until companion evidence exists.
+
 ## Lifecycle hygiene
 
 At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after material corpus changes; preserve the passive architecture.
@@ -89,4 +101,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **37/55 current-standard companion pairs, 18 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Continue the bounded research-and-web category, now **5/10**, after checking current companions and recoverable repository history for each genuine gap; keep discovery/source-vetting and omission detection parallel and secondary.
+Continue issue #66 with the David Ondrej frontier now at **37/55 current-standard companion pairs, 18 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Continue the bounded research-and-web category, now **5/10**, after checking current companions and recoverable repository history for each genuine gap. Corey Haines Marketing Skills is now an admitted tracked corpus at **0/50** and should receive selective exact-version review after the higher-priority David frontier, beginning with differentiated marketing mechanisms rather than wholesale approval.
