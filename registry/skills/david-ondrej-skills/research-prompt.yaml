@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: research-prompt
+display_name: Research Prompt
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/research-and-web/research-prompt/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 64b6b8ac1edec16ad11e5edd873cdfbd3fb44b68
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-17T12:24:39Z
+curated_at: 2026-09-11
+last_checked_at: 2026-09-11
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact-optional-external-service
+dependencies: relevant project files or conversation context; optional handoff to the sibling deep-research skill and DeepAPI POST /v1/research/deep for execution
+import_eligibility: rejected-unchanged-reference
+rationale: The prompt-construction method is strong prior art for turning vague research needs into bounded, source-disciplined briefs with explicit sub-questions, contradiction handling, completion criteria, and gap-closing passes. Unchanged adoption fails the authority hard fail because the execution section directs the fully contextualized prompt to the paid-capable DeepAPI deep-research workflow without a distinct spend-authorization or sensitive-context transmission checkpoint. Preserve the prompt-design and evidence-discipline mechanisms as adaptation/extraction evidence.
