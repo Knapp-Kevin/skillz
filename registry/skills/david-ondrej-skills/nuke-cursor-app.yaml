@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: nuke-cursor-app
+display_name: Nuke Cursor App
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/ops-and-setup/nuke-cursor-app/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: afda37bd143480a327ac4e121393523ef1a79b96
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-10
+last_checked_at: 2026-09-10
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact-host-specific
+dependencies: macOS; Cursor.app at /Applications/Cursor.app; osascript; ps; grep; awk; pkill; kill; open; sqlite3; local metrics database at the documented Application Support path
+import_eligibility: verified-unchanged-reference
+rationale: Provides a narrowly scoped manual recovery procedure for restarting the Cursor desktop application when the user explicitly invokes it. The package disables implicit invocation, matches only the Cursor application bundle path, excludes CursorUIViewService, attempts graceful quit before stronger termination, verifies all Cursor processes are gone, verifies relaunch before claiming success, and keeps metrics reads read-only. The local destructive action is therefore bounded by an explicit user request and careful process identity checks. Preserve the macOS/Cursor-specific assumptions and the requirement to warn when an important local agent run may be in flight.
