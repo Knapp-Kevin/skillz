@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **19** unique registered source identities.
-- **570** persisted exact-version third-party verification companions.
+- **571** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,14 +45,14 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **33/55**; gaps **22**.
-- Current decisive states: **16 verified / 17 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **34/55**; gaps **21**.
+- Current decisive states: **16 verified / 18 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
 - **Agent orchestration: 17/17 current-standard complete.**
 - **Ops-and-setup: 11/11 current-standard complete.**
-- **Research-and-web: 1/10 reviewed.** `browser-harness` is rejected unchanged **14/20**. Its screenshot-first interaction, explicit authentication-wall stop behavior, local/remote routing, and visible-state verification are useful, but bundled install guidance directs automatic software update without asking the user, troubleshooting may escalate to killing all Chrome and daemon processes, and remote Browser Use sessions can create cost-bearing cloud resources. Setup intent or tool availability does not independently authorize software mutation, broad process termination, or money-bearing external state. Behavioral validation is `not-run`.
+- **Research-and-web: 2/10 reviewed.** `browser-harness` is rejected unchanged **14/20** because its bundled install/update and troubleshooting paths lack distinct authorization for software mutation, broad process termination, and billable remote sessions. `deep-research` is rejected unchanged **16/20** because its normal workflow defaults to a paid DeepAPI call capped at $0.70 and its larger-report path can issue multiple separately billable calls without distinct authorization for aggregate spend. Both retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
 - **Thinking-and-docs: 0/13 current-standard companions.** Reconcile companions/history before fresh review.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 22.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 21.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
 - Pin: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`; **29/29**, gaps **0** after source-policy exclusions.
@@ -89,4 +89,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **33/55 current-standard companion pairs, 22 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Continue the bounded research-and-web category, now **1/10**, after checking current companions and recoverable repository history for each genuine gap; keep discovery/source-vetting and omission detection parallel and secondary.
+Continue issue #66 with the David Ondrej frontier now at **34/55 current-standard companion pairs, 21 genuine gaps**. Skill authoring, agent orchestration, and ops-and-setup are current-standard complete at **4/4**, **17/17**, and **11/11**. Continue the bounded research-and-web category, now **2/10**, after checking current companions and recoverable repository history for each genuine gap; keep discovery/source-vetting and omission detection parallel and secondary.
