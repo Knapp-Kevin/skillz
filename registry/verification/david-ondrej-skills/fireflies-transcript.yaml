@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: fireflies-transcript
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: d805f5de6f093ee0ef51bb7f9e0af53d7470a1c3
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3b3d3fcc156bb5bb230f90095d970436d3aa204b
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, communication]
+  lifecycle: [operations]
+  characteristic: [retrieval-first, evidence-first, traceable, safety-bounded]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is a focused read-only Fireflies.ai transcript retriever. It keeps FIREFLIES_API_KEY in external local secret state, says never to commit or print it, lists recent meetings rather than relying on exact-title search, verifies meeting identity from speakers/topic, and avoids dumping large transcripts into chat. It is rejected unchanged under the secret/authority hard fail because the invalid-key path instructs the agent to ask the user for a replacement key and update a local environment file without requiring secure external credential entry or distinct authorization for credential-store mutation. Behavioral validation was not run."
