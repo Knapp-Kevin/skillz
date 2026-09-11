@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: deepapi
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f0a670d55284257a29996c4d8d9955209122b4a1
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d1ed7c828f1276c6343c1aa1351a1fc98eb096be
+characterized_at: 2026-09-11
+last_verified_at: 2026-09-11
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research, web-search, browser-testing, communication]
+  lifecycle: [implementation, operations]
+  characteristic: [tool-routing, evidence-first, traceable, cost-bounded]
+  authority: [external-side-effect, mutating]
+  portability: [low]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The exact package is a broad DeepAPI router with strong credential discipline: it reads DEEPAPI_API_KEY from external environment/local credential state and explicitly forbids committing, printing, logging, pasting, or exposing it. It also uses idempotency keys, dry-run previews, explicit polling rules, endpoint-specific references, and several sound subflow approvals, including direct email send and recurring inbox renewal. It is rejected unchanged under the authority hard fail because normal search/research routes can spend money without a distinct user authorization, open-web search requires 5+ separate paid-capable calls, failures and product-friction can trigger external feedback messages without separate communication approval, and first daily use automatically launches the installed updater in the background. A spend cap, pre-existing API key, or tool availability is not action authorization. Behavioral validation was not run."
