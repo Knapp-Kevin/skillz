@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: level-up
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: f1c5f5b28819e25bdfec78e50ad11643600b15a0
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4719f3142c99c2f97be91cd476b4d3663882f1a4
+characterized_at: 2026-09-18
+last_verified_at: 2026-09-18
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [learning, assessment]
+  lifecycle: [verification]
+  characteristic: [adaptive, human-review, stateful]
+  authority: [writes-local-files]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is manual-only and bundled OpenAI policy disables implicit invocation. It provides a differentiated seven-question adaptive assessment, honest 1-10 calibration, concise corrective teaching, and explicit gap extraction into a learning plan. It fails the authority hard fail unchanged because normal execution requires creating repo-relative learning files if absent, immediately persisting every verbatim answer and rating, appending gaps after each answer, and later mutating learned-item state without a distinct repository-mutation authorization checkpoint. Explicitly requesting an assessment does not by itself authorize persistent project-file creation and repeated writes. Useful questioning, calibration, and learning-plan mechanisms remain adaptation/extraction evidence. Behavioral validation was not run."
