@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: decisions
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 999e680334997448feaac663a23d13d6d1a7fdad
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9553582d22c628e96b7a7197ce597b8a59f376ab
+characterized_at: 2026-09-18
+last_verified_at: 2026-09-18
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [decision-support]
+  lifecycle: [verification]
+  characteristic: [context-efficient, human-review, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is manual-only and bundled OpenAI policy disables implicit invocation. It provides a useful uncertainty audit: identify consequential choices made during current work, consider strong alternatives, omit decisions already believed optimal, and report only genuine uncertainty concisely. It has no mutation, external action, spend, credential, communication, persistence, or sensitive-data side effect. Its weakness is epistemic rather than authority-related: it relies on current-context introspection and does not require retrieval, citations, confidence calibration, or a completeness check, so it may miss decisions or alternatives outside the active context. Behavioral validation was not run."
