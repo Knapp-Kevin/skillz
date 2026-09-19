@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: read-all-adrs
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 89a8308a74f4dd14e7b93a7e65278abeef9c0363
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 018fa638d4d4d1b5444b32b701b20f288d809282
+characterized_at: 2026-09-19
+last_verified_at: 2026-09-19
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [documentation, context-management]
+  lifecycle: [planning]
+  characteristic: [retrieval-first, evidence-first, context-efficient]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 0. The exact package is explicit-invocation-only and read-only: it directs the host to read every ADR markdown file under docs/adr/ in full before proceeding. Bundled agents/openai.yaml also disables implicit invocation. No repository mutation, external action, spend, credential, communication, persistence, or sensitive-data disclosure path is present. Limitations are the absence of graceful behavior when docs/adr/ is missing or enormous, no synthesis/output contract, and unnecessarily abrasive wording. Verified unchanged as a narrow full-context retrieval procedure. Behavioral validation was not run."
