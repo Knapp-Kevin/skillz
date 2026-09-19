@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: remind
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: a1db31fbab8128fe11c82fd1525edc46d30b374c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 1ff9689e8ae82fa1dc2382a43f58fb1be99e6e4f
+characterized_at: 2026-09-19
+last_verified_at: 2026-09-19
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [context-management, writing]
+  lifecycle: [maintenance]
+  characteristic: [context-efficient, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 1. The exact package is manual-only and read-only, and bundled agents/openai.yaml disables implicit invocation. Its useful mechanism is a concise 80/20 conversation recap followed by a shorter plain-English rewrite of the prior assistant response. Unchanged adoption is rejected because it mandates always repeating the very first user prompt verbatim, regardless of sensitivity, size, staleness, relevance, or the user's current simplification goal. That can re-surface secret/PII-bearing or otherwise sensitive text unnecessarily and can make the output dramatically longer while claiming to shorten it. No external-action or mutation authority hard fail is asserted. Preserve the recap-and-simplify mechanism as adaptation/extraction evidence, but remove verbatim first-message replay or gate it on relevance and sensitivity. Behavioral validation was not run."
