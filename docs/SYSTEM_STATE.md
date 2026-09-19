@@ -4,14 +4,14 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-18 |
+| **Last updated** | 2026-09-19 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 585 |
+| **Persisted third-party review companions** | 586 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -21,8 +21,8 @@
 | **Microsoft Skills current-standard companions** | 186 / 186 |
 | **Microsoft Azure Skills current-standard companions** | 34 / 34 |
 | **Cole Medin Skills current-standard companions** | 33 / 33 |
-| **David Ondrej Skills current-standard companions** | 48 / 55 |
-| **David Ondrej Skills current-standard gaps** | 7 |
+| **David Ondrej Skills current-standard companions** | 49 / 55 |
+| **David Ondrej Skills current-standard gaps** | 6 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | 0 / 50 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
@@ -55,7 +55,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Skills: **186/186**, gaps **0**.
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
-- David Ondrej Skills: exact registered-pin denominator **55**, **48/55** provenance/verification companion complete, gaps **7**; current decisive states **18 verified / 30 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **6/13** reviewed.
+- David Ondrej Skills: exact registered-pin denominator **55**, **49/55** provenance/verification companion complete, gaps **6**; current decisive states **18 verified / 31 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **7/13** reviewed.
 - Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **0/50** individually current-standard reviewed. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
@@ -70,41 +70,13 @@ Completion means decisive current evidence for every eligible package, not unive
 
 ## David Ondrej denominator reconciliation
 
-The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains forty-eight exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, ops-and-setup is **11/11** current-standard complete, research-and-web is **10/10** current-standard complete, and thinking-and-docs is **6/13** reviewed.
+The registered public snapshot is `7d0ef87dad1f638cab58995eead9e0e6e3fae237`. Direct inspection establishes five category folders with **17 + 11 + 10 + 4 + 13 = 55** first-class skill packages. Current repository evidence contains forty-nine exact-version companion pairs. Skill authoring is **4/4** current-standard complete, agent orchestration is **17/17** current-standard complete, ops-and-setup is **11/11** current-standard complete, research-and-web is **10/10** current-standard complete, and thinking-and-docs is **7/13** reviewed.
 
-`browser-harness` is **rejected unchanged 14/20** because bundled installation guidance instructs automatic software update without asking the user, troubleshooting may escalate to broad Chrome/daemon termination, and remote Browser Use sessions can create cost-bearing cloud resources without a distinct authorization boundary. Its screenshot-first interaction, explicit authentication-wall stopping behavior, local/remote routing, and visible-state verification remain useful adaptation/extraction evidence.
+Existing detailed package-level findings remain authoritative in their exact-version verification companions. The current thinking-and-docs frontier includes `ask-then-build`, `before-building`, `brain-to-docs`, `decisions`, `level-up`, `next-decision`, and `prompt-me`.
 
-`deep-research` is **rejected unchanged 16/20**. It is manual-only, handles its API key through external environment/local credential state without printing it, uses idempotency keys, bounds retries, and produces source-backed reports. It nevertheless defaults to a paid DeepAPI request with `maxCostUsd` 0.70 and can fan larger reports into multiple separately billable calls without a distinct aggregate-spend authorization boundary. Approval only for raising one call above $0.70 does not authorize several default-priced calls. Behavioral validation is `not-run`.
+`prompt-me` is **rejected unchanged 11/20**. It is explicitly draft and contains a useful seed for interviewing the user about remaining work, avoided work, importance, and non-importance, but it does not yet provide a production-usable interview procedure, adaptive question-selection logic, stopping rule, evidence discipline, prioritization synthesis, output contract, or failure behavior. No authority-boundary defect is asserted for this package. Behavioral validation is `not-run`.
 
-`deepapi` is **rejected unchanged 14/20**. Its exact package has strong secret non-disclosure, idempotency, dry-run previews, endpoint routing, polling/error recovery, and sound local approvals in some high-risk subflows. Unchanged use nevertheless fails the authority hard fail because ordinary search/research can spend money without distinct authorization, open-web search requires 5+ separately paid-capable calls, failed work and product-friction reports can be transmitted externally without separate communication authority, and first daily use automatically launches the installed updater. Behavioral validation is `not-run`.
-
-`fireflies-transcript` is **rejected unchanged 15/20**. It is a focused read-only Fireflies.ai transcript retriever with good local-secret non-disclosure, recent-meeting listing, pagination, speaker/topic verification, and large-output handling. Its invalid-key recovery path nevertheless tells the agent to ask the user for a replacement API key and update a local environment file without requiring secure external credential entry or distinct authorization for credential-store mutation. Behavioral validation is `not-run`.
-
-`online-shopping` is **rejected unchanged 15/20**. It is explicitly research-only, forbids orders/payment/address/account creation, keeps its DeepAPI credential external and undisclosed, scales effort by purchase price, verifies unknown shops, and requires found-price evidence. Unchanged use nevertheless fails the money-bearing authority hard fail because normal mid-range and expensive shopping research directs one or more paid DeepAPI calls with per-request cost caps but no distinct spend-authorization checkpoint. Behavioral validation is `not-run`.
-
-`pi-web-search` is **rejected unchanged 15/20**. It is tightly scoped to Pi Agents and provides useful routing across web search, code search, URL/PDF/video/GitHub retrieval, and large-content continuation, with explicit query-depth minimums. Unchanged use nevertheless fails the money-bearing authority hard fail because failure of the nominal zero-config Exa/Perplexity/Gemini chain directs the agent to a DeepAPI fallback capable of paid external requests without a distinct spend-authorization checkpoint. Behavioral validation is `not-run`.
-
-`research-prompt` is **rejected unchanged 16/20**. It provides strong research-question decomposition, source hierarchy, contradiction handling, corroboration requirements, completion criteria, and iterative gap-closing. Unchanged use nevertheless fails the authority hard fail because its execution section directs a fully contextualized prompt to the paid-capable DeepAPI deep-research workflow without a distinct spend-authorization checkpoint or separate authorization for transmitting embedded project/context details to that external service. Behavioral validation is `not-run`.
-
-`twitter-alpha` is **rejected unchanged 15/20**. It provides a differentiated method for constructing a seven-person insider/outsider cohort from observed X engagement, verifying handles, retaining sparse posters via LinkedIn fallback, ranking concrete non-obvious signals, and returning concise source-linked findings. Unchanged use nevertheless fails the money-bearing authority hard fail because ordinary execution mandates numerous DeepAPI Twitter, LinkedIn, and web requests across the cohort without a distinct spend-authorization checkpoint. Behavioral validation is `not-run`.
-
-`who-is-this` is **rejected unchanged 15/20**. It is manual-only and has strong identity-disambiguation, cross-platform evidence gathering, claim-versus-evidence labeling, missing/private-profile handling, and concise verdict discipline. Unchanged use nevertheless fails the authority hard fail because ordinary execution mandates multiple paid-capable DeepAPI GitHub, LinkedIn, Twitter/X, and deep-research calls without distinct spend authorization and routes person-specific profile/social data through that external service without a separate disclosure boundary. Behavioral validation is `not-run`.
-
-`youtube-transcript` is **rejected unchanged 14/20**. It has a useful transcript extraction flow with DeepAPI idempotency, caption-only yt-dlp fallback, language handling, json3 duplicate-caption avoidance, bounded retry, explicit bot-detection stop behavior, and deterministic naming. Unchanged use nevertheless fails the authority hard fail because the normal DeepAPI path can spend money without distinct spend authorization, the skill always persists a transcript file even for requests that only ask what a video says, and first yt-dlp failure instructs `yt-dlp -U` without distinct software-mutation authorization. Behavioral validation is `not-run`.
-
-`ask-then-build` is **rejected unchanged 16/20**. It provides a strong one-question-at-a-time scoping loop, option framing with a preferred recommendation, explicit decision capture, read-first implementation handoff, validation requirements, and a compact final prompt. Unchanged use nevertheless fails the authority hard fail because ordinary execution directs the agent to update repository documentation immediately after each user answer and to supersede earlier documented decisions without a distinct repository-mutation authorization checkpoint. Behavioral validation is `not-run`.
-
-`before-building` is **verified 16/20**. It is a deliberately small read-only pre-build framing checkpoint: surface one to three consequential choices, give compact options plus a recommendation, then stop for the user's answers. It has no mutation, external action, spend, credential, or sensitive-data side effect. Its explicit instruction not to read files, search, or use tools is an epistemic limitation, so its recommendations should remain preliminary when project-specific facts matter. Behavioral validation is `not-run`.
-
-`brain-to-docs` is **rejected unchanged 15/20**. It provides a useful five-question knowledge-extraction loop, reads project documentation before continuing, separates project vision into the README from decisions into ADRs, and keeps ADRs concise. Unchanged use nevertheless fails the authority hard fail because ordinary execution mandates updating repository documentation after every user answer with no distinct repository-mutation authorization checkpoint. A request to explore or document project thinking does not itself authorize unconditional file writes after each response. The skill also lacks explicit conflict/ADR-numbering handling and post-edit verification. Behavioral validation is `not-run`.
-
-`decisions` is **verified 16/20**. It is a manual-only read-only uncertainty audit that surfaces consequential decisions still worth reconsidering, compares strong alternatives, and suppresses decisions already believed optimal. It has no mutation, external action, spend, credential, communication, persistence, or sensitive-data side effect. Its main limitation is reliance on current-context introspection rather than explicit retrieval, so evidence quality depends on the host agent's available context. Behavioral validation is `not-run`.
-
-`level-up` is **rejected unchanged 15/20**. It provides a differentiated seven-question adaptive assessment, honest 1-10 calibration, concise corrective teaching, and explicit gap extraction into a learning plan. Unchanged use fails the authority hard fail because normal execution requires creating repo-relative learning files if absent, immediately persisting every verbatim answer and rating, appending gaps after each answer, and later mutating learned-item state without a distinct repository-mutation authorization checkpoint. Explicitly requesting an assessment does not by itself authorize persistent project-file creation and repeated writes. Behavioral validation is `not-run`.
-
-`next-decision` is **rejected unchanged 16/20**. It is a concise forward-looking decision drill that prioritizes the most important unresolved choice, presents four options, recommends one, asks the user, and stops. Unchanged use fails the authority hard fail because after each user decision it directs the agent to update an existing plan document without a distinct file/repository-mutation authorization checkpoint. A request to work through decisions authorizes the interactive decision process, not automatic project-file mutation. Its prioritization, option framing, recommendation, and stop-for-user-input mechanism remain useful adaptation/extraction evidence. Behavioral validation is `not-run`.
-
-Together the David Ondrej family is **48/55**, with **7** gaps and **18 verified / 30 rejected unchanged**.
+Together the David Ondrej family is **49/55**, with **6** gaps and **18 verified / 31 rejected unchanged**.
 
 ## Corey Haines source admission
 
@@ -126,8 +98,8 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **48/55**, with **7** exact-version companion gaps; skill authoring, agent orchestration, ops-and-setup, and research-and-web are complete at **4/4**, **17/17**, **11/11**, and **10/10**.
-2. Continue David Ondrej thinking-and-docs, now **6/13**, checking current companions and recoverable history before fresh review of each genuine gap.
+1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **49/55**, with **6** exact-version companion gaps; skill authoring, agent orchestration, ops-and-setup, and research-and-web are complete at **4/4**, **17/17**, **11/11**, and **10/10**.
+2. Continue David Ondrej thinking-and-docs, now **7/13**, checking current companions and recoverable history before fresh review of each genuine gap.
 3. Begin selective exact-version curation of the newly admitted Corey Haines Marketing Skills **50-skill** tracked corpus after higher-priority admitted-source gaps, starting with high-differentiation user-fit candidates rather than wholesale approval.
 4. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 5. Continue governed discovery/source-vetting and omission recovery.
