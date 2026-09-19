@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: read-all-adrs
+display_name: Read All ADRs
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/thinking-and-docs/read-all-adrs/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 89a8308a74f4dd14e7b93a7e65278abeef9c0363
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-19T21:12:12Z
+curated_at: 2026-09-19
+last_checked_at: 2026-09-19
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: project ADR markdown files under docs/adr/; bundled agents/openai.yaml disables implicit invocation
+relationships: explicit full-context ADR-reading procedure for recovering prior project decisions before reasoning
+import_eligibility: verified
+rationale: The exact pinned package is deliberately narrow and read-only. It requires explicit invocation, directs complete reading of every ADR markdown file under docs/adr/, has no mutation or external side effect, and carries no secret, spend, communication, or sensitive-data disclosure path. The procedure is useful when complete ADR context is genuinely needed, though it lacks graceful handling for absent or very large ADR collections and its abrasive wording is unnecessary to the mechanism.
