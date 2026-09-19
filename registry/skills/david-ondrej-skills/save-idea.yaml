@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: save-idea
+display_name: Save Idea
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/thinking-and-docs/save-idea/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 85101f0e36d68d19c3dd1509c2d17b7abce8ae44
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-29T09:14:12Z
+curated_at: 2026-09-19
+last_checked_at: 2026-09-19
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: hard-coded ~/ideas repository, five specific backlog files, git CLI, local repository state, chat/session metadata, and source-specific pre-authorization claims
+relationships: idea-capture routing, append-only backlog persistence, source attribution, and automatic Git commit/push procedure
+import_eligibility: rejected
+rationale: The exact pinned package contains useful bucket routing, append-only numbering discipline, source attribution, narrow staging, and no-force-push safeguards. Unchanged adoption is rejected because normal execution mandates persistent file mutation plus git pull, commit, and push based on source-specific claims of standing pre-authorization rather than a real current authorization boundary appropriate to repository mutation and external communication. It also hard-codes one user's ~/ideas layout and private workflow assumptions, making portability low. Preserve the capture/routing/source-line mechanism as adaptation or extraction evidence, but require host-specific destination discovery and explicit current mutation/push authority.
