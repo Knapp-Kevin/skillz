@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: short
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: dfdb212c4ff274234ec5f4e9eaf063e9cc632f85
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f1c9f163d7d575b3e4fa3df9adba4dc29bc17573
+characterized_at: 2026-09-19
+last_verified_at: 2026-09-19
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, communication]
+  lifecycle: [maintenance]
+  characteristic: [context-efficient]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 2. The exact package is manual-only and read-only; bundled agents/openai.yaml disables implicit invocation. It instructs the agent to rewrite only its prior response to be simpler and shorter and explicitly says not to do anything else. There is no mutation, external action, spend, credential, communication, persistence, or sensitive-data authority defect. Its main weakness is intentionally minimal failure handling and little differentiation beyond a compact response-compression command, but the narrow objective and stop boundary are coherent. Behavioral validation was not run."
