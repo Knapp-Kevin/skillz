@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: next-decision
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: aacb6f26f480ef2514b4d3be7e07f13bb9a31326
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ace0abe2c81e04da265aa20fc65ff1cf031e6e96
+characterized_at: 2026-09-18
+last_verified_at: 2026-09-18
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [decision-support, planning]
+  lifecycle: [planning]
+  characteristic: [human-review, incremental]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is a concise forward-looking decision drill: choose the most important unresolved decision, present four options, state a preference, ask the user, and stop. It fails the authority hard fail unchanged because after each decision it directs the agent to record the answer by updating an existing plan document without a distinct file/repository-mutation authorization checkpoint. A request to work through decisions authorizes the interactive decision process, not automatic project-file mutation. The prioritization, option framing, recommendation, and explicit stop-for-user-input pattern remain useful adaptation/extraction evidence. Behavioral validation was not run."
