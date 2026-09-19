@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 587,
+    "persisted_third_party_exact_version_reviews": 588,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -27,9 +27,9 @@
     "cole_medin_skills_current_standard_companions": 33,
     "cole_medin_skills_eligible_denominator": 33,
     "cole_medin_skills_current_standard_gaps": 0,
-    "david_ondrej_skills_current_standard_companions": 50,
+    "david_ondrej_skills_current_standard_companions": 51,
     "david_ondrej_skills_eligible_denominator": 55,
-    "david_ondrej_skills_current_standard_gaps": 5,
+    "david_ondrej_skills_current_standard_gaps": 4,
     "corey_haines_marketing_skills_current_standard_companions": 0,
     "corey_haines_marketing_skills_eligible_denominator": 50,
     "corey_haines_marketing_skills_current_standard_gaps": 50,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-19: reviewed David Ondrej read-all-adrs at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; verified 16/20 as an explicit-invocation-only read-only complete-ADR retrieval procedure with no authority hard-fail defect; limitations are missing/huge ADR-set handling, no synthesis/output contract, and abrasive wording; thinking-and-docs 7/13 -> 8/13; David Ondrej 49/55 -> 50/55 with gaps 6 -> 5; persisted exact-version review count 586 -> 587; Corey Haines remains tracked at 0/50"
+    "latest_reconciliation": "2026-09-19: reviewed David Ondrej remind at registered pin 7d0ef87dad1f638cab58995eead9e0e6e3fae237; rejected unchanged 13/20 because its useful 80/20 recap and plain-English simplification pattern unconditionally requires replaying the first user prompt verbatim regardless of sensitivity, size, staleness, relevance, or simplification objective; behavioral validation not-run; thinking-and-docs 8/13 -> 9/13; David Ondrej 50/55 -> 51/55 with gaps 5 -> 4; persisted exact-version review count 587 -> 588; Corey Haines remains tracked at 0/50"
   }
 }
