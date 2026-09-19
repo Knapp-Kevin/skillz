@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **585** persisted exact-version third-party verification companions.
+- **586** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,14 +45,14 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **48/55**; gaps **7**.
-- Current decisive states: **18 verified / 30 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **49/55**; gaps **6**.
+- Current decisive states: **18 verified / 31 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
 - **Agent orchestration: 17/17 current-standard complete.**
 - **Ops-and-setup: 11/11 current-standard complete.**
 - **Research-and-web: 10/10 current-standard complete.** Exact authority findings remain in the individual companions; rejected packages retain useful adaptation/extraction evidence.
-- **Thinking-and-docs: 6/13 reviewed.** `ask-then-build` is rejected unchanged **16/20** because the ordinary scoping loop directs immediate repository-document mutation after each user answer without a distinct repository-mutation authorization checkpoint. `before-building` is verified **16/20** as a narrow read-only pre-build framing checkpoint. `brain-to-docs` is rejected unchanged **15/20** because ordinary execution mandates updating repository documentation after every user answer without distinct file-mutation authorization. `decisions` is verified **16/20** as a manual-only read-only uncertainty audit; its main limitation is reliance on current-context introspection rather than explicit retrieval. `level-up` is rejected unchanged **15/20** because ordinary execution mandates persistent repository learning-file creation and repeated writes after each answer without a distinct repository-mutation authorization checkpoint. `next-decision` is rejected unchanged **16/20** because after each user decision it directs the agent to update an existing plan document without a distinct file/repository-mutation authorization checkpoint. The prioritization, option framing, recommendation, and stop-for-user-input pattern remain useful adaptation/extraction evidence. Behavioral validation is `not-run`.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 7.
+- **Thinking-and-docs: 7/13 reviewed.** `ask-then-build` is rejected unchanged **16/20** because the ordinary scoping loop directs immediate repository-document mutation after each user answer without a distinct repository-mutation authorization checkpoint. `before-building` is verified **16/20** as a narrow read-only pre-build framing checkpoint. `brain-to-docs` is rejected unchanged **15/20** because ordinary execution mandates updating repository documentation after every user answer without distinct file-mutation authorization. `decisions` is verified **16/20** as a manual-only read-only uncertainty audit; its main limitation is reliance on current-context introspection rather than explicit retrieval. `level-up` is rejected unchanged **15/20** because ordinary execution mandates persistent repository learning-file creation and repeated writes after each answer without a distinct repository-mutation authorization checkpoint. `next-decision` is rejected unchanged **16/20** because after each user decision it directs the agent to update an existing plan document without a distinct file/repository-mutation authorization checkpoint. `prompt-me` is rejected unchanged **11/20** because it is explicitly DRAFT and lacks a usable interview procedure, adaptive question-selection logic, stopping rule, evidence discipline, synthesis/output contract, and failure behavior; its priority/avoidance interview questions remain useful adaptation/extraction evidence. Behavioral validation is `not-run`.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 6.
 
 ### Corey Haines Marketing Skills — TRACKED / ADMITTED
 - Pin: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state).
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **48/55 current-standard companion pairs, 7 genuine gaps**. Skill authoring, agent orchestration, ops-and-setup, and research-and-web are current-standard complete at **4/4**, **17/17**, **11/11**, and **10/10**. Continue thinking-and-docs, now **6/13**, after checking current companions and recoverable repository history for each genuine gap. Corey Haines Marketing Skills remains admitted at **0/50** for selective exact-version review after the higher-priority David frontier.
+Continue issue #66 with the David Ondrej frontier now at **49/55 current-standard companion pairs, 6 genuine gaps**. Skill authoring, agent orchestration, ops-and-setup, and research-and-web are current-standard complete at **4/4**, **17/17**, **11/11**, and **10/10**. Continue thinking-and-docs, now **7/13**, after checking current companions and recoverable repository history for each genuine gap. Corey Haines Marketing Skills remains admitted at **0/50** for selective exact-version review after the higher-priority David frontier.
