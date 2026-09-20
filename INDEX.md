@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 20 |
-| Persisted third-party exact-version reviews | 592 |
+| Persisted third-party exact-version reviews | 593 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -24,8 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 55 / 55 |
 | David Ondrej Skills current-standard gaps | 0 |
-| Corey Haines Marketing Skills current-standard companions | 0 / 50 |
-| Corey Haines Marketing Skills current-standard gaps | 50 |
+| Corey Haines Marketing Skills current-standard companions | 1 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 49 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -42,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is now current-standard companion-complete at **55/55**; skill authoring, agent orchestration, ops-and-setup, research-and-web, and thinking-and-docs are complete at **4/4**, **17/17**, **11/11**, **10/10**, and **13/13**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and remains **0/50** individually reviewed.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **1/50** individually reviewed with **49** gaps; `ab-testing` is rejected unchanged **13/20** on exact-version statistical-quality grounds, with behavioral validation `not-run`.
 
 ## First-party skills by purpose
 
