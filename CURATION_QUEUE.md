@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **589** persisted exact-version third-party verification companions.
+- **590** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -45,14 +45,14 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 ### David Ondrej Skills — TRACKED / PARTIALLY CURATED
 - Pin: `7d0ef87dad1f638cab58995eead9e0e6e3fae237`.
 - Exact eligible denominator: **55** first-class packages across agent orchestration **17**, ops/setup **11**, research/web **10**, skill authoring **4**, thinking/docs **13**.
-- Current provenance/verification companions: **52/55**; gaps **3**.
-- Current decisive states: **19 verified / 33 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
+- Current provenance/verification companions: **53/55**; gaps **2**.
+- Current decisive states: **20 verified / 33 rejected unchanged**; behavioral validation remains `not-run` for all reviewed units.
 - **Skill authoring: 4/4 current-standard complete.**
 - **Agent orchestration: 17/17 current-standard complete.**
 - **Ops-and-setup: 11/11 current-standard complete.**
 - **Research-and-web: 10/10 current-standard complete.** Exact authority findings remain in the individual companions; rejected packages retain useful adaptation/extraction evidence.
-- **Thinking-and-docs: 10/13 reviewed.** `save-idea` is rejected unchanged **14/20** because ordinary execution mandates persistent idea-file mutation plus Git pull/commit/push while relying on source-specific dated claims of prior authorization rather than a current authorization boundary. Its idea routing, append-only numbering, source attribution, narrow staging, exact failure reporting, and no-force-push safeguards remain useful adaptation/extraction evidence. Behavioral validation is `not-run`.
-- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 3.
+- **Thinking-and-docs: 11/13 reviewed.** `short` is verified **16/20** as an explicit-invocation, read-only response-compression skill. It rewrites only the prior assistant response to be simpler and shorter, then stops; bundled OpenAI policy disables implicit invocation. It has no authority hard-fail defect. Its main limitations are minimal failure handling and modest differentiation. Behavioral validation is `not-run`.
+- Historical issue #47 / PR #50 accounting of **44** skills for this same public pin is superseded by direct pinned-tree evidence. No state is inferred for the remaining 2.
 
 ### Corey Haines Marketing Skills — TRACKED / ADMITTED
 - Pin: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state).
@@ -99,4 +99,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue issue #66 with the David Ondrej frontier now at **52/55 current-standard companion pairs, 3 genuine gaps**. Skill authoring, agent orchestration, ops-and-setup, and research-and-web are current-standard complete at **4/4**, **17/17**, **11/11**, and **10/10**. Continue thinking-and-docs, now **10/13**, after checking current companions and recoverable repository history for each genuine gap. Corey Haines Marketing Skills remains admitted at **0/50** for selective exact-version review after the higher-priority David frontier.
+Continue issue #66 with the David Ondrej frontier now at **53/55 current-standard companion pairs, 2 genuine gaps**. Skill authoring, agent orchestration, ops-and-setup, and research-and-web are current-standard complete at **4/4**, **17/17**, **11/11**, and **10/10**. Continue thinking-and-docs, now **11/13**, after checking current companions and recoverable repository history for each genuine gap. Corey Haines Marketing Skills remains admitted at **0/50** for selective exact-version review after the higher-priority David frontier.
