@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: teach
+display_name: Teach
+source_id: david-ondrej-skills
+source_repository: https://github.com/davidondrej/skills
+source_path: skills/thinking-and-docs/teach/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-sanitized-mirror-reference
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 71f729c4170a24fb396fcdd34a59f2f2ef03ca52
+upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+upstream_last_updated_at: 2026-08-21T15:33:31Z
+curated_at: 2026-09-20
+last_checked_at: 2026-09-20
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: teaching workspace files/directories; bundled format references; web/resource discovery; optional CLI file opening; bundled agents/openai.yaml disables implicit invocation
+relationships: stateful teaching-workspace method derived from Matt Pocock teach skill
+import_eligibility: rejected-unchanged
+rationale: The exact pinned package contains a strong teaching method: mission grounding, trusted-source research, retrieval practice, spacing, interleaving, zone-of-proximal-development selection, tight feedback loops, learning records, and compact reference artifacts. However ordinary execution mandates persistent workspace mutation across MISSION.md, RESOURCES.md, lessons, reference documents, learning records, and NOTES.md without a distinct authorization checkpoint for file mutation. It also encourages opening lesson files through a CLI command when possible without a separate execution boundary. Mission changes do require confirmation, which is a useful safeguard, but that narrower confirmation does not authorize the broader persistent-write workflow. Preserve the package as adaptation/extraction evidence rather than unchanged adoption.
