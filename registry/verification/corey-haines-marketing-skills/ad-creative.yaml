@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ad-creative
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 54521f47698ac0614c692ebd713cdd1cadea5c7f
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d2cafa2f4559ff595897e8108df3362e1902403e
+characterized_at: 2026-09-20
+last_verified_at: 2026-09-20
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [business-operations, communication, planning, writing]
+  lifecycle: [planning, design, implementation, verification]
+  characteristic: [evidence-first, human-review, iterative, metric-driven, progressive-disclosure, reference-heavy, risk-aware, traceable, visual-verification]
+  authority: [generate-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is unusually substantive: it grounds scaled creative in real winning ads/reviews/comments, forbids invented claims/stats/testimonials, requires source traceability, separates generation from performance-driven iteration, checks platform constraints, and includes detailed static/video format, hook, roadmap, and review-page references. The creative-review-page reference also correctly treats review data as inert JSON, requires escaping '<' as \\u003c, HTML-escapes rendered values, and requires truthful grounding disclosures. Unchanged adoption nevertheless fails the authority hard fail. Mode 3 and review workflows prescribe durable inputs/outputs and creation of INDEX.md, per-concept files, images, and review.html without a distinct file-mutation authorization checkpoint. The bundled review-page procedure further says a client link may be hosted via Vercel or another static host, which can mutate external deployment state and communicate/publish client-facing material without a separate publication/communication authorization boundary. The package also assumes access to customer reviews/comments and performance data; a fitted host workflow should keep sensitive/customer data handling explicitly authorized and minimized. Preserve the grounding, no-fabricated-claims, platform-spec, creative-format, performance-learning, safe-template, and human-review mechanisms behind explicit mutation/publication boundaries. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."
