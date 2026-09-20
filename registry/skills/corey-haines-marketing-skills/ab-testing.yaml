@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ab-testing
+display_name: A/B Test Setup
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/ab-testing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f9d3b11d01ea9367d3b8635ec134b0691aefc853
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-14T05:05:15Z
+curated_at: 2026-09-20
+last_checked_at: 2026-09-20
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references
+relationships: bundled references/sample-size-guide.md and references/test-templates.md; bundled evals/evals.json is upstream evaluation material, not behavioral evidence established by skillz; optionally reads existing product-marketing context files; external calculators are optional references
+import_eligibility: rejected-unchanged-reference
+rationale: A useful experiment-planning package with strong hypothesis framing, precommitted sample-size discipline, primary/secondary/guardrail metrics, test documentation, and continuous experimentation mechanics. Unchanged adoption is rejected because its core statistical guidance contains material internal inconsistency and misleading interpretation: the SKILL.md quick sample-size table materially disagrees with the bundled sample-size guide for the same baseline/lift combinations, and both the skill and reference language misstate frequentist significance as the probability that an observed difference is due to random chance. The reusable planning and documentation mechanisms remain valuable adaptation/extraction evidence after statistical correction.

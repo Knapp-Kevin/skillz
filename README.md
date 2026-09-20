@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-592-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-593-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -38,7 +38,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 [`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **20 unique source identities**.
 
-There are currently **592 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+There are currently **593 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 ## Discovery and admission
 
@@ -58,7 +58,7 @@ Core passive architecture is complete. Ongoing work is corpus enrichment, histor
 - **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
 - **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
 - **David Ondrej Skills:** exact registered-pin denominator **55**; **55/55** current-standard provenance/verification companion complete, **0** gaps; decisive states **21 verified / 34 rejected unchanged**. Skill authoring is **4/4** current-standard complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** current-standard complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **13/13** reviewed.
-- **Corey Haines Marketing Skills:** admitted as a **tracked corpus** at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class skill packages; **0/50** individually current-standard reviewed so far. MIT terms are established. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the skill denominator. Admission does not grant blanket unchanged-reuse eligibility.
+- **Corey Haines Marketing Skills:** admitted as a **tracked corpus** at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class skill packages; **1/50** individually current-standard reviewed, **49** gaps. `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`: useful hypothesis, metric/guardrail, QA, documentation, backlog/playbook, and cadence mechanisms are preserved, but unchanged adoption is rejected because the exact package contains materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics. MIT terms are established. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the skill denominator. Admission does not grant blanket unchanged-reuse eligibility.
 - **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
 - **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
 - **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.

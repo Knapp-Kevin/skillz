@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **592** persisted exact-version third-party verification companions.
+- **593** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -59,7 +59,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 - Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
 - Root license: **MIT**, copyright Corey Haines (2025).
 - Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages.
-- Current provenance/verification companions: **0/50**; gaps **50**. No individual unchanged-reuse eligibility is implied by source admission.
+- Current provenance/verification companions: **1/50**; gaps **49**. No individual unchanged-reuse eligibility is implied by source admission.
+- `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`. It has useful hypothesis framing, primary/secondary/guardrail metrics, pre-launch QA, experiment documentation, backlog/playbook mechanics, and cadence. No authority hard-fail defect is established. Unchanged adoption is rejected because its exact package contains materially inconsistent sample-size guidance between `SKILL.md` and its bundled sample-size reference and misstates frequentist p-value/confidence semantics. Preserve the planning mechanisms as adaptation/extraction evidence after statistical correction.
 - Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
@@ -99,4 +100,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-David Ondrej is now **55/55 current-standard companion complete with 0 gaps**. Skill authoring, agent orchestration, ops-and-setup, research-and-web, and thinking-and-docs are complete at **4/4**, **17/17**, **11/11**, **10/10**, and **13/13**. After atomic public-accounting reconciliation and merge of the final `teach` review, continue issue #66 and move the admitted-source frontier to Corey Haines Marketing Skills, currently **0/50** individually reviewed at its exact admitted snapshot, unless higher-priority live lifecycle debt appears first.
+Continue the Corey Haines Marketing Skills admitted-source frontier from **1/50** reviewed and **49** gaps, while issue #66 tracks corpus-wide provenance completeness. Resolve #307/#308 only when canonical redistribution/license evidence changes; do not manufacture certainty from README badges or public visibility.

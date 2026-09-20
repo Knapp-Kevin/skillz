@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 592 |
+| **Persisted third-party review companions** | 593 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -24,7 +24,8 @@
 | **David Ondrej Skills current-standard companions** | 55 / 55 |
 | **David Ondrej Skills current-standard gaps** | 0 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | 0 / 50 |
+| **Corey Haines Marketing Skills current-standard companions** | 1 / 50 |
+| **Corey Haines Marketing Skills current-standard gaps** | 49 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -56,7 +57,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
 - David Ondrej Skills: exact registered-pin denominator **55**, **55/55** provenance/verification companion complete, gaps **0**; current decisive states **21 verified / 34 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **13/13** reviewed.
-- Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **0/50** individually current-standard reviewed. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
+- Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **1/50** individually current-standard reviewed, gaps **49**. `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`, because its exact package contains materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics. Its hypothesis framing, metric/guardrail selection, pre-launch QA, documentation, backlog/playbook, and cadence mechanisms remain useful adaptation/extraction evidence after statistical correction. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -124,6 +125,8 @@ Together the David Ondrej family is **55/55**, with **0** gaps and **21 verified
 
 Issue #297 established the exact source identity `coreyhaines31/marketingskills` and admitted it as a **tracked corpus**, not as a blanket trusted or pinned-reference corpus. The registered snapshot is `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state). Direct tree inspection shows **50** top-level skill directories under `skills/`, and source guidance defines each `skills/<name>/SKILL.md` as the required first-class skill entry point. Root terms are MIT. Commercial partner/integration material and source-maintained tooling remain source context and are excluded from the 50-skill denominator. Individual unchanged reuse still requires exact-version review.
 
+The first exact package review is `ab-testing`: **rejected unchanged 13/20**, behavioral validation `not-run`. The package has useful experiment-planning structure, but its core statistical guidance is not reliable enough for unchanged adoption at this exact version because sample-size guidance materially conflicts between `SKILL.md` and the bundled sample-size reference and its significance explanation misstates frequentist p-value/confidence semantics. No authority hard-fail defect is established. Preserve the planning mechanisms as adaptation/extraction evidence after statistical correction.
+
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
@@ -140,8 +143,8 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66. David Ondrej Skills is now **55/55**, with **0** exact-version companion gaps; all five sub-families are complete at **4/4**, **17/17**, **11/11**, **10/10**, and **13/13**.
-2. Begin selective exact-version curation of the admitted Corey Haines Marketing Skills **50-skill** tracked corpus after higher-priority admitted-source gaps, starting with high-differentiation user-fit candidates rather than wholesale approval.
+1. Continue corpus-wide provenance audit #66 while the admitted Corey Haines Marketing Skills frontier advances from **1/50** reviewed with **49** gaps.
+2. Continue exact-version curation of the Corey Haines **50-skill** tracked corpus, prioritizing differentiated user-fit candidates rather than wholesale approval.
 3. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 4. Continue governed discovery/source-vetting and omission recovery.
 5. Resolve bounded candidate issues when evidence supports a decisive outcome.
