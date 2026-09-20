@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ab-testing
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f9d3b11d01ea9367d3b8635ec134b0691aefc853
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e3f999719ccc2aa408d107d24b3e662b88f079a3
+characterized_at: 2026-09-20
+last_verified_at: 2026-09-20
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [business-operations, decision-support, evaluation, research]
+  lifecycle: [planning, design, verification]
+  characteristic: [evidence-first, human-review, iterative, metric-driven, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 0, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The exact package has strong hypothesis framing, single-primary-metric discipline, guardrails, pre-launch QA, precommitted sample-size intent, experiment documentation, and useful program-level backlog/playbook mechanics. No mutation, spend, credential, communication, or sensitive-data authority hard fail is established. Unchanged adoption is rejected on exact-version quality grounds: SKILL.md's quick sample-size table materially conflicts with bundled references/sample-size-guide.md for the same baseline/lift combinations (for example 1% baseline and 10% relative lift is 150k/variant in SKILL.md versus 380k/variant in the reference), while its significance explanation incorrectly frames p<0.05 / 95% confidence as less than a 5% chance the observed result is random. The analysis guidance also treats an adequately sampled nonsignificant result too casually as a reason for more traffic or a bolder test. These are consequential defects for a skill whose purpose is statistically valid experimentation. Preserve the hypothesis, metric, guardrail, documentation, and cadence mechanisms as adaptation/extraction evidence, but correct the statistical model before use. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."
