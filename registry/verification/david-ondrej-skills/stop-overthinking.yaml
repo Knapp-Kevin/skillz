@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: stop-overthinking
+source_id: david-ondrej-skills
+source_snapshot_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
+package_tree_sha: 81e424158c8fb69fbd9113bf75a0b2bba9408164
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b7be3125fa434b6a761c581859827a6557b4c8b9
+characterized_at: 2026-09-20
+last_verified_at: 2026-09-20
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [decision-support, planning]
+  lifecycle: [planning]
+  characteristic: [context-efficient, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 0, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 2. The exact package is explicit-invocation-only and read-only; bundled agents/openai.yaml disables implicit invocation. It instructs the agent to surface critical or serious issues, otherwise state that proceeding is appropriate, then give concise practical next steps. There is no mutation, external action, spend, credential, communication, persistence, or sensitive-data authority defect. Its main weaknesses are minimal failure handling, no explicit evidence-gathering method for deciding whether an issue is critical, and modest differentiation from direct prompting. Behavioral validation was not run."
