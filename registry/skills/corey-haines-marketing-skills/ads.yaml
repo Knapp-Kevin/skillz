@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ads
+display_name: Paid Ads
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/ads/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 5434180eac3f0c59762db0fa23c7c82a110bf201
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:23:50Z
+curated_at: 2026-09-20
+last_checked_at: 2026-09-20
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-evals-and-live-platform-context
+relationships: bundled evals/evals.json is upstream evaluation material, not behavioral evidence established by skillz; bundled references cover ABM, ad copy, audience targeting, audits, B2B paid media, conversion tracking, creative research automation, Google Ads audits/search, LinkedIn, Meta decision systems, payback-period budgeting, platform setup, and RSA output; cross-references ad-creative, attribution, pricing, CRO, competitor-profiling, customer-research, copywriting, and positioning; assumes possible access to live ad accounts, analytics, CRM/customer lists, browsers/connectors, and Slack
+import_eligibility: rejected-unchanged-reference
+rationale: A deep and differentiated paid-media operating package with strong evidence-coverage semantics, benchmark discipline, prompt-injection treatment for fetched ad data, payback/budget reasoning, channel-specific playbooks, and a notably good audit rule that defaults live-account changes to a reviewable plan requiring explicit user approval. Unchanged adoption is nevertheless rejected under the authority hard fail because that approval boundary is not consistently routed across the package: the main skill and operational references prescribe live budget changes, campaign/ad-set launches, audience/customer-list operations, platform/account setup, spend-bearing tests, recurring scheduled Slack delivery, and persistent research artifacts without requiring the same distinct authorization for each material external action, spend, communication, data disclosure, or mutation. Preserve the read-only audit, decision-support, evidence, budgeting, and reversible-change mechanisms as adaptation/extraction evidence while making the explicit approval boundary universal.
