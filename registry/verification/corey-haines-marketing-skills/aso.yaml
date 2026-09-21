@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: aso
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 8a7000c0e27457cd85997cc02217c46a1076c339
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 961bc364429e0571948b4953e23dabab9a25d930
+characterized_at: 2026-09-21
+last_verified_at: 2026-09-21
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, decision-support, research]
+  lifecycle: [discovery, planning, verification]
+  characteristic: [evidence-first, human-review, metric-driven, reference-heavy, risk-aware, source-driven, visual-verification]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 0. The exact package is a useful read-only audit/report framework: it treats fetched listings and reviews as untrusted prompt-injection surfaces, distinguishes Apple and Google Play, asks the auditor to note unavailable data rather than fabricate it, adds brand-maturity context before scoring, includes visual inspection and competitor comparison, and produces concrete prioritized recommendations. Unchanged adoption is rejected because important optimization and benchmark claims are not sufficiently reliable or traceable for a production knowledge resource. The package states that Apple screenshot captions are indexed for search since June 2025 even though App Store screenshots do not expose a separate caption metadata field; it prescribes a 2-3% Google Play keyword-density target as a scoring criterion despite modern semantic ranking and anti-stuffing guidance; and its benchmark reference aggregates numerous conversion/rating/video statistics behind source-name lists rather than claim-level citations or reproducible evidence. Several such claims are volatile and materially affect scoring/recommendations. A fitted version should retain the audit structure, platform-specific field inventory, prompt-injection boundary, uncertainty handling, brand-context check, visual review, comparison table, and report template while re-verifying platform facts against current primary documentation, replacing keyword-density heuristics with relevance/readability guidance, and treating third-party benchmarks as dated contextual signals with claim-level provenance. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."
