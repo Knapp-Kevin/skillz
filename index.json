@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 595,
+    "persisted_third_party_exact_version_reviews": 596,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 3,
+    "corey_haines_marketing_skills_current_standard_companions": 4,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 47,
+    "corey_haines_marketing_skills_current_standard_gaps": 46,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-20: reviewed Corey Haines ads at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 15/20 because its strong live-account audit approval rule is not consistently inherited by operational paths prescribing spend changes, campaign/ad-set launches, account/audience setup, customer-data operations, persistent research artifacts, and recurring Slack delivery; behavioral validation not-run; Corey Haines 2/50 -> 3/50 with gaps 48 -> 47; persisted exact-version review count 594 -> 595"
+    "latest_reconciliation": "2026-09-20: reviewed Corey Haines ai-seo at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 14/20 because its pinned crawler guidance materially misidentifies GPTBot as the ChatGPT-search crawler and Google-Extended as controlling Google Search/AI Overview citation, and it lacks consistent authorization boundaries for website/publication mutations; behavioral validation not-run; Corey Haines 3/50 -> 4/50 with gaps 47 -> 46; persisted exact-version review count 595 -> 596"
   }
 }
