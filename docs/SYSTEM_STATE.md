@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | 594 |
+| **Persisted third-party review companions** | 595 |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Anthropic Skills current-standard companions** | 17 / 17 |
@@ -24,8 +24,8 @@
 | **David Ondrej Skills current-standard companions** | 55 / 55 |
 | **David Ondrej Skills current-standard gaps** | 0 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | 2 / 50 |
-| **Corey Haines Marketing Skills current-standard gaps** | 48 |
+| **Corey Haines Marketing Skills current-standard companions** | 3 / 50 |
+| **Corey Haines Marketing Skills current-standard gaps** | 47 |
 | **Matt Pocock Skills current-standard companions** | 29 / 29 |
 | **Cloudflare Skills current-standard companions** | 13 / 13 |
 | **Addy Osmani Agent Skills current-standard companions** | 24 / 24 |
@@ -57,7 +57,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 - Microsoft Azure Skills: **34/34**, gaps **0**.
 - Cole Medin Skills: **33/33**, gaps **0**.
 - David Ondrej Skills: exact registered-pin denominator **55**, **55/55** provenance/verification companion complete, gaps **0**; current decisive states **21 verified / 34 rejected unchanged**. Skill authoring is **4/4** complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **13/13** reviewed.
-- Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **2/50** individually current-standard reviewed, gaps **48**. `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`, because its exact package contains materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics. Its hypothesis framing, metric/guardrail selection, pre-launch QA, documentation, backlog/playbook, and cadence mechanisms remain useful adaptation/extraction evidence after statistical correction. `ad-creative` is **rejected unchanged 15/20**, behavioral validation `not-run`, because normal scaled/review workflows prescribe persistent output-file creation without a distinct file-mutation authorization checkpoint and the bundled review-page procedure can host/deploy client-facing approval material without a separate external-publication/user-communication authorization boundary. Its grounding, source-traceability, platform-spec, creative-format, performance-learning, safe review-template, and human-review mechanisms remain useful adaptation/extraction evidence behind explicit mutation/publication authority checkpoints. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
+- Corey Haines Marketing Skills: tracked at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class `skills/<name>/SKILL.md` packages; **3/50** individually current-standard reviewed, gaps **47**. `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`, because its exact package contains materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics. Its hypothesis framing, metric/guardrail selection, pre-launch QA, documentation, backlog/playbook, and cadence mechanisms remain useful adaptation/extraction evidence after statistical correction. `ad-creative` is **rejected unchanged 15/20**, behavioral validation `not-run`, because normal scaled/review workflows prescribe persistent output-file creation without a distinct file-mutation authorization checkpoint and the bundled review-page procedure can host/deploy client-facing approval material without a separate external-publication/user-communication authorization boundary. Its grounding, source-traceability, platform-spec, creative-format, performance-learning, safe review-template, and human-review mechanisms remain useful adaptation/extraction evidence behind explicit mutation/publication authority checkpoints. `ads` is **rejected unchanged 15/20**, behavioral validation `not-run`, because its excellent live-account audit approval rule is not consistently inherited by operational paths that prescribe spend changes, campaign/ad-set launches, account/audience setup, customer/contact-list uploads, tracking/integration changes, persistent research artifacts, and recurring Slack delivery without distinct authorization. Its evidence-coverage semantics, benchmark discipline, payback/budget reasoning, prompt-injection treatment, read-only audit posture, and reversible-change mechanisms remain useful adaptation/extraction evidence after making the explicit approval boundary universal. Root license is MIT. Partner/integration guides, source-owned CLI/tooling, generated partner surfaces, and ordinary reference Markdown do not count toward the skill denominator.
 - Matt Pocock Skills: **29/29**, gaps **0** after source-policy exclusions.
 - Cloudflare Skills: **13/13**, gaps **0**, **11 verified / 2 rejected unchanged**.
 - Addy Osmani Agent Skills: **24/24**, gaps **0**.
@@ -129,6 +129,8 @@ The first exact package review is `ab-testing`: **rejected unchanged 13/20**, be
 
 The second exact package review is `ad-creative`: **rejected unchanged 15/20**, behavioral validation `not-run`. The package preserves valuable creative-analysis and review structure, but unchanged use fails the authority hard fail because normal scaled/review workflows prescribe persistent output-file creation without a distinct file-mutation authorization checkpoint, and its bundled review-page procedure can host/deploy client-facing approval material without a separate external-publication/user-communication authorization boundary. Preserve the grounding, traceability, platform-spec, format, performance-learning, review-template, and human-review mechanisms behind explicit mutation/publication authority checkpoints.
 
+The third exact package review is `ads`: **rejected unchanged 15/20**, behavioral validation `not-run`. The package is deep and differentiated, and `audit-guardrails.md` contains an unusually good live-account rule: default connected work to read-only analysis, propose a reviewable change plan with rollback, and apply only after explicit approval of that specific plan. Unchanged adoption still fails the authority hard fail because that rule is not universally routed across the package. Main and operational paths prescribe live budget changes, campaign/ad-set launches, account/audience setup, customer/contact-list uploads, tracking/integration changes, persistent research artifacts, and recurring Slack delivery without the same distinct authorization boundary. Preserve the evidence, budgeting, audit, benchmark, prompt-injection, and reversible-change mechanisms while making explicit approval universal across spend, mutation, communication, persistence, and sensitive/customer-data disclosure.
+
 ## Source lifecycle
 
 **discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
@@ -145,7 +147,7 @@ Interpret candidate material in this order:
 
 ## Current curation priority
 
-1. Continue corpus-wide provenance audit #66 while the admitted Corey Haines Marketing Skills frontier advances from **2/50** reviewed with **48** gaps.
+1. Continue corpus-wide provenance audit #66 while the admitted Corey Haines Marketing Skills frontier advances from **3/50** reviewed with **47** gaps.
 2. Continue exact-version curation of the Corey Haines **50-skill** tracked corpus, prioritizing differentiated user-fit candidates rather than wholesale approval.
 3. Continue recomputing remaining admitted and tracked families for genuine provenance, fingerprint, exact-pin, or canonical-path gaps.
 4. Continue governed discovery/source-vetting and omission recovery.
