@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 597,
+    "persisted_third_party_exact_version_reviews": 598,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 5,
+    "corey_haines_marketing_skills_current_standard_companions": 6,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 45,
+    "corey_haines_marketing_skills_current_standard_gaps": 44,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-21: reviewed Corey Haines analytics at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 15/20 under the authority hard fail because normal implementation paths prescribe analytics/site/configuration mutations and privacy-sensitive telemetry activation without distinct explicit authorization; behavioral validation not-run; Corey Haines 4/50 -> 5/50 with gaps 46 -> 45; persisted exact-version review count 596 -> 597"
+    "latest_reconciliation": "2026-09-21: reviewed Corey Haines aso at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 14/20 because volatile platform/benchmark claims lack sufficient claim-level evidence and include misleading optimization heuristics; behavioral validation not-run; Corey Haines 5/50 -> 6/50 with gaps 45 -> 44; persisted exact-version review count 597 -> 598"
   }
 }
