@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ai-seo
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: a9dd55de5fac849e776b97e8d66c2f04f41ae158
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 39d0384e8d93a7a069fed6d6d3c88389877c1c68
+characterized_at: 2026-09-20
+last_verified_at: 2026-09-20
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, planning, research, writing]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [evidence-first, iterative, metric-driven, reference-heavy, source-driven, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is substantive and unusually current for a volatile domain. It distinguishes traditional SEO from AI citation optimization, emphasizes people-first content for Google, treats visibility measurement as platform-specific, includes useful extractability and source-quality patterns, and bundles substantial references plus upstream eval material. Unchanged adoption nevertheless fails on exact-version correctness and authority. The pinned main skill and platform-ranking reference say GPTBot powers ChatGPT search / that blocking GPTBot prevents ChatGPT citation; current OpenAI crawler guidance instead identifies OAI-SearchBot as the crawler used to surface sites in ChatGPT search and separates it from training-oriented GPTBot. The same package tells users to allow Google-Extended for Google AI Overviews, while Google's current Search documentation explicitly states Google-Extended does not affect Google Search. Those are operationally material crawler-control errors in a skill whose purpose includes robots.txt configuration. The package also recommends changing robots.txt, schema, llms.txt/pricing/agent-readable files, public third-party profiles, community participation, and publication surfaces without a consistently required explicit authorization checkpoint for website mutation, publication, or identity-bearing external communication. A fitted version should correct crawler semantics from current primary sources, distinguish training controls from search discovery, treat volatile platform claims as dated evidence rather than durable fact, default audits/recommendations to read-only, and require explicit approval before mutating or publishing site files/configuration or acting through public identities. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."
