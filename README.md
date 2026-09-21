@@ -2,12 +2,12 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-595-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-596-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A passive skill knowledge resource for AI agents.** `skillz` accumulates reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, tags, source context, catalog snapshots, and instructions so an external host agent can construct the smallest useful skill set for the user.
+**A passive skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, controlled tags, source context, and static catalog snapshots. The external host agent is the active system.
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure.
 
@@ -15,11 +15,11 @@
 
 ## What `skillz` is
 
-`skillz` is entirely passive. The external host agent is the active system. The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services.
+`skillz` is entirely passive. The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services.
 
 The repository provides four surfaces:
 
-1. **44 first-party user-facing skills** under [`skills/`](skills/).
+1. **44 first-party user-facing skills** under [`skills/`](skills/), all **44/44 provenance-complete**.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
@@ -36,9 +36,42 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-[`skills/`](skills/) contains **44 active first-party user-facing skills**, all **44/44 provenance-complete**. The 12 pinned corpora are Anthropic Skills, Anthropic Knowledge Work Plugins, Vercel Agent Skills, Microsoft Skills, Microsoft Azure Skills, AWS Agent Toolkit, Matt Pocock Skills, Addy Osmani Agent Skills, OpenHands Extensions, Cline Skills, Cloudflare Skills, and Google Agents CLI. Exact source identity, role, terms, and pins live in [`registry/sources.yaml`](registry/sources.yaml). The registry contains **20 unique source identities**.
+The registry contains **20 unique source identities**. There are currently **596 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
-There are currently **595 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+Current admitted-source accounting:
+
+| Source family | Current-standard state |
+|---|---:|
+| Anthropic Skills | 17 / 17 |
+| Anthropic Knowledge Work Plugins | 74 / 74 |
+| AWS Agent Toolkit | 72 / 72 |
+| Microsoft Skills | 186 / 186 |
+| Microsoft Azure Skills | 34 / 34 |
+| Cole Medin Skills | 33 / 33 |
+| David Ondrej Skills | 55 / 55 |
+| Corey Haines Marketing Skills | **4 / 50, 46 gaps** |
+| Matt Pocock Skills | 29 / 29 |
+| Cloudflare Skills | 13 / 13 |
+| Addy Osmani Agent Skills | 24 / 24 |
+| Vercel Agent Skills | 9 / 9 |
+| OpenHands Extensions | 1 / 1 |
+| Google Agents CLI | 7 / 7 |
+| Cline Skills (published) | 36 / 36 |
+
+Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**.
+
+### Active curation frontier
+
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Four are individually current-standard reviewed and **46** remain.
+
+- `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
+- `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
+- `ads`: **rejected unchanged 15/20**; strong audit/read-only mechanisms, but operational paths do not consistently inherit explicit authorization for spend, launches, data operations, persistence, and recurring communication.
+- `ai-seo`: **rejected unchanged 14/20**; useful AI-search/content mechanisms, but materially incorrect crawler-control semantics and insufficient explicit authorization boundaries around website mutation/publication and identity-bearing external activity.
+
+Behavioral validation is `not-run` for all four. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+
+Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 
 ## Discovery and admission
 
@@ -46,37 +79,7 @@ There are currently **595 persisted exact-version third-party verification compa
 
 New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-intake.md). Discovery scores, popularity, official branding, creator reputation, or catalog recommendations are signals only. Restricted or unclear-license material remains reference-only unless terms justify another role.
 
-## Current curation state
-
-Core passive architecture is complete. Ongoing work is corpus enrichment, historical evidence reconciliation, candidate resolution, and source freshness/omission detection.
-
-- **First-party:** **44/44** provenance-complete.
-- **Anthropic Skills:** **17/17** current-standard complete, **0** gaps; **10 verified / 7 rejected unchanged**.
-- **Anthropic Knowledge Work Plugins:** **74/74** current-standard complete, **0** gaps; historical decisive states **36 verified / 38 rejected unchanged** at registered pin `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8`.
-- **AWS Agent Toolkit:** **72/72** current-standard complete, **0** gaps.
-- **Microsoft Skills:** **186/186** current-standard complete, **0** gaps.
-- **Microsoft Azure Skills:** **34/34** current-standard complete, **0** gaps.
-- **Cole Medin Skills:** **33/33** current-standard complete, **0** gaps.
-- **David Ondrej Skills:** exact registered-pin denominator **55**; **55/55** current-standard provenance/verification companion complete, **0** gaps; decisive states **21 verified / 34 rejected unchanged**. Skill authoring is **4/4** current-standard complete; agent orchestration is **17/17** complete; ops-and-setup is **11/11** current-standard complete; research-and-web is **10/10** current-standard complete; thinking-and-docs is **13/13** reviewed.
-- **Corey Haines Marketing Skills:** admitted as a **tracked corpus** at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`; exact eligible denominator **50** top-level first-class skill packages; **3/50** individually current-standard reviewed, **47** gaps. `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`: useful hypothesis, metric/guardrail, QA, documentation, backlog/playbook, and cadence mechanisms are preserved, but unchanged adoption is rejected because the exact package contains materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics. `ad-creative` is **rejected unchanged 15/20**, behavioral validation `not-run`: useful grounding, source-traceability, platform-spec, creative-format, performance-learning, safe review-template, and human-review mechanisms are preserved, but unchanged adoption is rejected because scaled/review workflows prescribe persistent output-file creation without a distinct file-mutation authorization checkpoint and the bundled review-page procedure can host/deploy client-facing approval material without a separate external-publication/user-communication authorization boundary. `ads` is **rejected unchanged 15/20**, behavioral validation `not-run`: its evidence-coverage semantics, benchmark discipline, payback/budget reasoning, live-account audit guardrail, and reversible-change design are valuable, but unchanged adoption is rejected because the explicit approval boundary in the audit sub-policy is not consistently inherited by operational paths prescribing spend changes, campaign/ad-set launches, account/audience setup, customer/contact-list operations, tracking/integration changes, persistent research artifacts, and recurring Slack delivery. MIT terms are established. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the skill denominator. Admission does not grant blanket unchanged-reuse eligibility.
-- **Matt Pocock Skills:** **29/29** current-standard complete, **0** gaps after source-policy exclusions.
-- **Cloudflare Skills:** **13/13** current-standard complete, **0** gaps; **11 verified / 2 rejected unchanged**.
-- **Addy Osmani Agent Skills:** **24/24** current-standard complete, **0** gaps.
-- **Vercel Agent Skills:** **9/9** current-standard complete, **0** gaps; **6 verified / 3 rejected unchanged**.
-- **OpenHands Extensions:** exact registered-pin denominator **1**; **1/1** current-standard companion complete, **0** gaps; `theme-factory` remains **rejected unchanged 14/20**, behavioral validation `not-run`.
-- **Google Agents CLI:** exact registered-pin denominator **7**; **7/7** current-standard companion complete, **0** gaps; all **7 verified**.
-- **Cline Skills:** exact published denominator **36**; **36/36** current-standard provenance/verification companion complete, **0** published gaps at pin `26378461e978f2b4e2e6d67b57121b86b2a79ba5`. The separate internal/unlisted `review-team` record is preserved outside the published denominator.
-- Microsoft direct `.NET`: **29/29**; Java: **26/26**; Python: **40/40**; Rust: **9/9**; TypeScript: **25/25**.
-
-The David Ondrej denominator was recomputed directly from the registered pin `7d0ef87dad1f638cab58995eead9e0e6e3fae237`: five category trees contain 17 + 11 + 10 + 4 + 13 first-class skill packages, for **55 total**. Historical 44-skill accounting for the same pin is superseded by direct pinned-tree evidence. Current review coverage is **55/55**. Skill authoring is complete at **4/4**, agent orchestration is complete at **17/17**, ops-and-setup is complete at **11/11**, research-and-web is **10/10** current-standard complete, and thinking-and-docs is **13/13**.
-
-`browser-harness` is rejected unchanged **14/20** because its bundled install guidance directs automatic software update without asking the user, troubleshooting may escalate to killing all Chrome and daemon processes, and remote Browser Use sessions can incur cost without a distinct authorization boundary. `deep-research` is rejected unchanged **16/20** because a normal run defaults to a paid DeepAPI request capped at $0.70 and larger reports can fan out into multiple independently billable calls without distinct aggregate-spend authorization. `deepapi` is rejected unchanged **14/20** because normal search/research routes can spend money without distinct authorization, open-web search requires 5+ separate paid-capable calls, failure/product-friction feedback can be transmitted externally without separate communication authority, and first daily use automatically launches the installed updater. `fireflies-transcript` is rejected unchanged **15/20** because invalid-key recovery tells the agent to ask the user for a replacement credential and update local credential state without requiring secure external credential entry or distinct authorization for credential-store mutation. `online-shopping` is rejected unchanged **15/20** because ordinary mid-range and expensive shopping research can trigger one or more paid DeepAPI requests without a distinct spend-authorization checkpoint; per-request cost caps and configured credentials are not action authorization. `pi-web-search` is rejected unchanged **15/20** because failure of its nominal zero-config search chain directs the Pi agent to a paid-capable DeepAPI fallback without a distinct spend-authorization checkpoint; configured credentials and a per-request cost cap are not spend authority. `research-prompt` is rejected unchanged **16/20** because its execution section directs a fully contextualized research prompt to the paid-capable DeepAPI deep-research workflow without a distinct spend-authorization checkpoint or separate authorization for transmitting embedded project/context details to that external service. `twitter-alpha` is rejected unchanged **15/20** because ordinary execution mandates numerous paid-capable DeepAPI requests across a seven-person X/LinkedIn cohort without a distinct spend-authorization checkpoint. `who-is-this` is rejected unchanged **15/20** because ordinary execution mandates multiple paid-capable DeepAPI GitHub, LinkedIn, Twitter/X, and deep-research calls and routes person-specific profile/social data through that external service without distinct spend and disclosure authorization. `youtube-transcript` is rejected unchanged **14/20** because the normal DeepAPI path can spend money without distinct spend authorization, the workflow always persists a transcript file even for requests that only ask what a video says, and first yt-dlp failure directs `yt-dlp -U` without distinct software-mutation authorization. All ten retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
-
-`ask-then-build` is rejected unchanged **16/20** because its normal scoping workflow instructs the agent to mutate repository documentation immediately after each user answer, including superseding prior documented decisions, without a distinct repository-mutation authorization checkpoint. Its one-question-at-a-time scoping, option framing, decision capture, and compact implementation-handoff structure remain useful adaptation/extraction evidence. `before-building` is **verified 16/20** as a deliberately small read-only pre-build framing checkpoint; its main limitation is epistemic because it forbids file/tool inspection, so recommendations are preliminary when project-specific facts matter. `brain-to-docs` is rejected unchanged **15/20** because its normal loop mandates updating project documentation after every user answer with no distinct repository-mutation authorization checkpoint. Its five-angle questioning, current-doc refresh, README-versus-ADR separation, and concise decision-capture format remain useful adaptation/extraction evidence. `decisions` is **verified 16/20** as a manual-only read-only uncertainty audit that surfaces consequential decisions still worth reconsidering, compares strong alternatives, and suppresses decisions already believed optimal; its main limitation is reliance on current-context introspection rather than explicit retrieval. `level-up` is rejected unchanged **15/20** because ordinary execution mandates creating or updating persistent repository learning files and writing every answer/rating and gap without a distinct repository-mutation authorization checkpoint. Its adaptive seven-question assessment, honest calibration, concise corrective teaching, and gap-to-learning-plan mechanism remain useful adaptation/extraction evidence. `next-decision` is rejected unchanged **16/20** because after each user decision it directs the agent to update an existing plan document without a distinct file/repository-mutation authorization checkpoint. Its prioritization, four-option framing, recommendation, and explicit stop for user input remain useful adaptation/extraction evidence. `prompt-me` is rejected unchanged **11/20** because the pinned package explicitly marks itself DRAFT and provides only a core priority/avoidance interview idea plus example trigger; it lacks a usable interview procedure, adaptive question-selection logic, stopping rule, evidence discipline, synthesis/output contract, and failure behavior. Its pointed questions about remaining work, avoided work, importance, and non-importance remain useful adaptation/extraction evidence. `read-all-adrs` is **verified 16/20** as an explicit-invocation-only, read-only complete-ADR retrieval procedure; it has no authority hard-fail defect, but has weak missing/huge-set handling, no synthesis/output contract, and abrasive wording. `remind` is rejected unchanged **13/20** because it mandates replaying the conversation's first user prompt verbatim regardless of sensitivity, size, staleness, relevance, or the current simplification objective. Its 80/20 recap and plain-English simplification pattern remain useful adaptation/extraction evidence. `save-idea` is rejected unchanged **14/20** because ordinary execution mandates persistent idea-file mutation plus Git pull/commit/push while relying on source-specific dated claims of prior user authorization rather than a current authorization boundary; it is also tightly coupled to one user's `~/ideas` repository and private categorization conventions. Its routing, append-only numbering, source attribution, narrow staging, pull/rebase failure handling, and no-force-push safeguards remain useful adaptation/extraction evidence. `short` is **verified 16/20** as a manual-only, read-only response-compression skill that asks only for a simpler, shorter rewrite of the previous response; bundled policy disables implicit invocation and there is no mutation, spend, credential, communication, persistence, external-action, or sensitive-data authority defect. `stop-overthinking` is **verified 15/20** as an explicit-invocation-only, read-only critical-issue check that surfaces serious concerns, otherwise permits proceeding, and asks for concise practical next steps. Bundled OpenAI policy disables implicit invocation. It has no authority hard-fail defect; limitations are minimal failure handling, no explicit evidence-gathering method for judging whether an issue is critical, and modest differentiation from direct prompting. `teach` is rejected unchanged **16/20** because ordinary execution mandates persistent teaching-workspace writes without a distinct file-mutation authorization checkpoint and recommends optional CLI file opening without a separate execution boundary. Its mission grounding, trusted-source acquisition, retrieval practice, spacing, interleaving, learning-record structure, and citation discipline remain useful adaptation/extraction evidence. Behavioral validation is `not-run` for all thirteen.
-
-Anthropic Knowledge Work Plugins had been treated as blocked because only its aggregate 74/74 historical result was visible on current `main`. Superseded PR #42 in fact retains the full package-level provenance and verification trees for all 74 plugin skills. Those exact companions are now recovered under canonical registry paths, preserving individual dispositions, fingerprints, authority findings, and behavioral-validation states without inference.
-
-Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review.
+Historically completed external corpora should be reconciled from compatible prior evidence before fresh re-review. Current lifecycle truth lives in [`CURATION_QUEUE.md`](CURATION_QUEUE.md); historical issue/PR records remain evidence only unless current governance explicitly re-establishes them.
 
 ## Repository map
 
