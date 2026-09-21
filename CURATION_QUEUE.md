@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **594** persisted exact-version third-party verification companions.
+- **595** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -59,9 +59,10 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 - Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
 - Root license: **MIT**, copyright Corey Haines (2025).
 - Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages.
-- Current provenance/verification companions: **2/50**; gaps **48**. No individual unchanged-reuse eligibility is implied by source admission.
+- Current provenance/verification companions: **3/50**; gaps **47**. No individual unchanged-reuse eligibility is implied by source admission.
 - `ab-testing` is **rejected unchanged 13/20**, behavioral validation `not-run`. It has useful hypothesis framing, primary/secondary/guardrail metrics, pre-launch QA, experiment documentation, backlog/playbook mechanics, and cadence. No authority hard-fail defect is established. Unchanged adoption is rejected because its exact package contains materially inconsistent sample-size guidance between `SKILL.md` and its bundled sample-size reference and misstates frequentist p-value/confidence semantics. Preserve the planning mechanisms as adaptation/extraction evidence after statistical correction.
 - `ad-creative` is **rejected unchanged 15/20**, behavioral validation `not-run`. It has strong grounding, no-fabricated-claims, source-traceability, platform-spec, creative-format, performance-learning, safe review-template, and human-review mechanisms. Unchanged adoption fails the authority hard fail because normal scaled/review workflows prescribe persistent output-file creation without a distinct file-mutation authorization checkpoint, and the bundled review-page procedure can host/deploy client-facing approval material without a separate external-publication/user-communication authorization boundary. Preserve the review and creative-analysis mechanisms as adaptation/extraction evidence behind explicit mutation/publication authority checkpoints.
+- `ads` is **rejected unchanged 15/20**, behavioral validation `not-run`. It has strong evidence-coverage semantics, benchmark discipline, prompt-injection treatment for fetched ad data, payback/budget reasoning, channel-specific playbooks, and an excellent audit rule that defaults connected live-account work to read-only proposal mode and requires explicit approval of a specific change plan. Unchanged adoption still fails the authority hard fail because that approval rule is not universal: other first-class paths prescribe spend changes, campaign/ad-set launches, account/audience setup, customer/contact-list uploads, tracking/integration changes, persistent research artifacts, and recurring Slack delivery without distinct spend/mutation/communication/data-disclosure authorization. Preserve the read-only audit, decision-support, evidence, budgeting, and reversible-change mechanisms while making the explicit approval boundary universal.
 - Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
 
 ### Matt Pocock Skills — CURRENT-STANDARD COMPLETE
@@ -101,4 +102,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills admitted-source frontier from **2/50** reviewed and **48** gaps, while issue #66 tracks corpus-wide provenance completeness. Resolve #307/#308 only when canonical redistribution/license evidence changes; do not manufacture certainty from README badges or public visibility.
+Continue the Corey Haines Marketing Skills admitted-source frontier from **3/50** reviewed and **47** gaps, while issue #66 tracks corpus-wide provenance completeness. Resolve #307/#308 only when canonical redistribution/license evidence changes; do not manufacture certainty from README badges or public visibility.

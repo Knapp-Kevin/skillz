@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 20 |
-| Persisted third-party exact-version reviews | 594 |
+| Persisted third-party exact-version reviews | 595 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -24,8 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 55 / 55 |
 | David Ondrej Skills current-standard gaps | 0 |
-| Corey Haines Marketing Skills current-standard companions | 2 / 50 |
-| Corey Haines Marketing Skills current-standard gaps | 48 |
+| Corey Haines Marketing Skills current-standard companions | 3 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 47 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -42,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **2/50** individually reviewed with **48** gaps. `ab-testing` is rejected unchanged **13/20** on exact-version statistical-quality grounds. `ad-creative` is rejected unchanged **15/20** because its scaled/review workflows prescribe persistent output-file mutation without a distinct authorization checkpoint and its bundled review-page procedure permits hosting/deploying client-facing approval material without a separate publication/communication authorization boundary. Both retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **3/50** individually reviewed with **47** gaps. `ab-testing` is rejected unchanged **13/20** on exact-version statistical-quality grounds. `ad-creative` is rejected unchanged **15/20** because its scaled/review workflows prescribe persistent output-file mutation without a distinct authorization checkpoint and its bundled review-page procedure permits hosting/deploying client-facing approval material without a separate publication/communication authorization boundary. `ads` is rejected unchanged **15/20** because its strong live-account audit approval rule is not consistently inherited by operational paths that prescribe spend changes, campaign/ad-set launches, account/audience setup, customer-data operations, persistent research artifacts, and recurring Slack delivery. All three retain useful adaptation/extraction evidence; behavioral validation is `not-run`.
 
 ## First-party skills by purpose
 
