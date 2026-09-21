@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ai-seo
+display_name: AI SEO
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/ai-seo/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: a9dd55de5fac849e776b97e8d66c2f04f41ae158
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-09-05T04:48:02Z
+curated_at: 2026-09-20
+last_checked_at: 2026-09-20
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-evals-and-current-platform-documentation
+relationships: bundled evals/evals.json is upstream evaluation material, not behavioral evidence established by skillz; bundled references cover agent readiness, citation/recommendation distinctions, content patterns/types, format volatility, Open Knowledge Format, platform ranking factors, and YouTube citation anatomy; cross-references seo-audit, schema, public-relations, and product-marketing context; some recommendations imply website-file, robots, schema, publishing, and third-party profile/community changes
+import_eligibility: rejected-unchanged-reference
+rationale: A deep and differentiated AI-search optimization package with useful people-first framing, evidence/source discipline, extractability patterns, volatility awareness, and explicit acknowledgement that Google does not require AI-specific markup. Unchanged adoption is rejected because the exact pinned package contains materially incorrect crawler/control guidance: it identifies GPTBot as powering ChatGPT search and says blocking it prevents ChatGPT citation, while current OpenAI guidance uses OAI-SearchBot for public-web search discovery; it also treats Google-Extended as controlling Google AI Overviews/Search citation even though Google states Google-Extended does not affect Google Search. The package additionally recommends mutating robots.txt, schema, machine-readable site files, public profiles/community participation, and other publication surfaces without a consistently explicit mutation/publication/identity authorization boundary. Preserve the content-structure, citation-quality, measurement, volatility, and agent-readiness mechanisms as adaptation/extraction evidence after correcting crawler semantics and placing external mutations/publication behind explicit approval.
