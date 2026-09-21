@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: ad-creative
+display_name: Ad Creative
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/ad-creative/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 54521f47698ac0614c692ebd713cdd1cadea5c7f
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T17:36:51Z
+curated_at: 2026-09-20
+last_checked_at: 2026-09-20
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-assets-evals
+relationships: bundled asset creative-review-template.html; bundled evals/evals.json is upstream evaluation material, not behavioral evidence established by skillz; bundled references cover creative review, roadmap, generative tools, hooks, iOS-native video, Meta formats, motion video, platform specs, short-form video, and static templates; cross-references ads, social, and marketing-loops skills; may read product-marketing context files
+import_eligibility: rejected-unchanged-reference
+rationale: A rich, differentiated ad-creative package with strong grounding, claim-integrity, platform-spec, creative-format, performance-iteration, and review mechanics. Unchanged adoption is rejected under the authority hard fail because normal scaled/review workflows prescribe persistent output-file creation and the bundled review-page procedure can host/deploy a client-facing approval page without a distinct file-mutation or external-publication/user-communication authorization checkpoint. Preserve the grounded-input, evidence-traceability, no-invented-claims, safe JSON population, format-selection, and creative-review mechanisms as adaptation/extraction evidence behind explicit mutation and publication boundaries.
