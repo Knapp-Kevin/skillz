@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: ads
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 5434180eac3f0c59762db0fa23c7c82a110bf201
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3a06fcda47f69c826b00fc54968e749e91230f0a
+characterized_at: 2026-09-20
+last_verified_at: 2026-09-20
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [business-operations, decision-support, planning, research]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [evidence-first, human-review, metric-driven, production-oriented, reference-heavy, risk-aware, safety-bounded, source-driven, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. The exact package is unusually substantive. It separates account-health scoring from evidence coverage, treats unknowns as unknown, disciplines benchmarks by provenance and cohort fit, treats fetched pages/exports/screenshots/competitor ads as untrusted data rather than instructions, and its audit-guardrails reference explicitly defaults connected live-account work to read-only analysis, a reviewable current-state/proposed-change/expected-effect/rollback plan, and application only after explicit approval of that specific plan. However that strong authorization rule is not universally inherited by the main skill and other operational references. The top-level procedure assumes direct ad-account access and directs operational decisions involving live spend; main guidance says to run side-by-side paid tests, place variants into CBO campaigns, launch zombie ad sets, scale budgets, and run successful organic creative as paid ads. The Meta operating reference prescribes kill/swap/launch/scale/rollback actions and weekly launch/scaling cadence. Platform setup checklists include payment methods, account/team access, pixels/tags, customer/contact-list uploads, CRM integrations, domains/events, audiences, campaigns, and launch-team notification. Creative research automation directs scraping reviews to CSV, persisting persona context, scheduling recurring reports to Slack, and browser/Slack connector use. These can mutate external state, spend money, communicate externally, persist data, and disclose customer/profile/review data without a consistently required distinct authorization checkpoint. A fitted version should make the strong audit approval contract universal, default all connected operations to read-only proposal mode, require explicit current approval for each spend/mutation/publication/communication/data-disclosure step, minimize customer data, and keep scheduled delivery separately authorized. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."
