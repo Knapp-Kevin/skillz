@@ -90,7 +90,7 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-Issues #307 and #308 track `ConsultingFuture4200/unusual-thoughts` and `ConsultingFuture4200/repo-readme`; both remain concretely blocked on canonical license/redistribution evidence and must not be vendored or promoted to governed corpus material until terms are established.
+`ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion. Their useful public prior art may still inform discovery, but neither is vendored or promoted to governed corpus material unless canonical terms materially change.
 
 ## Lifecycle hygiene
 
@@ -102,4 +102,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills admitted-source frontier from **3/50** reviewed and **47** gaps, while issue #66 tracks corpus-wide provenance completeness. Resolve #307/#308 only when canonical redistribution/license evidence changes; do not manufacture certainty from README badges or public visibility.
+Continue the Corey Haines Marketing Skills admitted-source frontier from **3/50** reviewed and **47** gaps, while issue #66 tracks corpus-wide provenance completeness. The next bounded Corey unit should reconcile all five public accounting surfaces atomically with its exact-version companions before merge.
