@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: aso
+display_name: ASO Audit
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/aso/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 8a7000c0e27457cd85997cc02217c46a1076c339
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-19T16:44:30Z
+curated_at: 2026-09-21
+last_checked_at: 2026-09-21
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/apple-specs.md, references/google-play-specs.md, references/benchmarks.md, references/report-template.md, references/scoring-criteria.md, and evals/evals.json are part of the exact package; cross-references cro, ad-creative, analytics, customer-research, ab-testing, ads, and product-marketing context; normal workflow fetches public store listings and reviews as untrusted input and produces audit/recommendation output without requiring store mutation
+import_eligibility: rejected-unchanged-reference
+rationale: A useful read-only ASO audit framework with strong trigger precision, prompt-injection treatment for fetched listing/review content, platform differentiation, brand-maturity context, explicit evidence gaps, structured scoring, competitor comparison, and actionable report mechanics. Unchanged adoption is rejected on exact-version correctness/evidence grounds: the package presents several volatile or weakly sourced claims as settled platform facts, including Apple screenshot-caption indexing, prescriptive Google Play keyword-density targets, and benchmark/conversion claims whose bundled citations are source-name summaries rather than claim-level traceable evidence. Preserve the audit structure, platform comparison, visual-review workflow, uncertainty handling, and report mechanics as adaptation/extraction evidence after re-verifying volatile platform facts and removing unsupported optimization heuristics.
