@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: analytics
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: cbb8b810847072efe55e8de9c0dd42ddbcc5f91e
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e20a3df64f984d048ab769ec1bb609faf05f8a65
+characterized_at: 2026-09-21
+last_verified_at: 2026-09-21
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [business-operations, implementation, monitoring, observability, planning]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [evidence-first, instrumentation, metric-driven, reference-heavy, risk-aware, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is useful and concrete: it starts from decisions rather than data volume, provides coherent event naming and tracking-plan structures, includes practical GA4/GTM implementation references, emphasizes debugging/data quality, warns against PII, and includes consent, minimization, retention, and deletion considerations. Unchanged adoption nevertheless fails the current authority hard fail. Its normal implementation paths prescribe creating GA4 properties/data streams, enabling measurement, configuring events and conversion/key-event behavior, installing gtag/GTM, changing site dataLayer instrumentation, creating custom dimensions/audiences, linking Google Ads, exporting audiences, publishing GTM changes, and activating third-party pixels without a distinct explicit authorization checkpoint before external-state or persistent site/configuration mutation. Those workflows can also transmit privacy-sensitive behavioral, user/account, campaign, purchase, search, and form-interaction data to analytics/advertising systems. Privacy warnings and consent examples are safeguards, not authorization for collection or disclosure. A fitted version should default discovery/audit/planning to read-only, require explicit approval for the concrete implementation/change plan before mutation or telemetry activation, separately establish authority for sensitive-data collection/disclosure and advertising audiences, minimize or pseudonymize identifiers, and preserve consent-denied defaults. Upstream evals/evals.json is bundled source material only; skillz did not run it. Behavioral validation was not run."

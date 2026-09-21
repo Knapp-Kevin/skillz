@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **596** |
+| **Persisted third-party review companions** | **597** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | **4 / 50** |
-| **Corey Haines Marketing Skills current-standard gaps** | **46** |
+| **Corey Haines Marketing Skills current-standard companions** | **5 / 50** |
+| **Corey Haines Marketing Skills current-standard gaps** | **45** |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -39,7 +39,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
-| **Corey Haines Marketing Skills** | **4 / 50** | **46** |
+| **Corey Haines Marketing Skills** | **5 / 50** | **45** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -56,12 +56,13 @@ Completion means decisive current evidence for every eligible package, not unive
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-Four packages now have current-standard provenance and exact-version verification companions:
+Five packages now have current-standard provenance and exact-version verification companions:
 
 - `ab-testing`: **rejected unchanged 13/20**, behavioral validation `not-run`. Useful experiment-planning mechanisms remain adaptation/extraction evidence, but unchanged adoption is rejected for materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful grounding, source-traceability, creative-format, performance-learning, review-template, and human-review mechanisms remain adaptation/extraction evidence, but unchanged adoption lacks distinct authorization boundaries for persistent file mutation and client-facing publication/communication.
 - `ads`: **rejected unchanged 15/20**, behavioral validation `not-run`. Strong evidence, budgeting, read-only audit, and reversible-change mechanisms remain adaptation/extraction evidence, but operational paths do not consistently inherit explicit authorization for spend, launches, customer-data operations, persistence, integrations, and recurring communication.
 - `ai-seo`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful AI-search/content mechanisms remain adaptation/extraction evidence, but unchanged adoption contains materially incorrect crawler-control semantics and insufficient explicit authorization boundaries around website mutation/publication and identity-bearing external activity.
+- `analytics`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful decision-first measurement, event taxonomy, debugging, data-quality, consent, and minimization mechanisms remain adaptation/extraction evidence, but normal implementation paths prescribe GA4/GTM/site/configuration mutation and privacy-sensitive telemetry activation without distinct explicit authorization boundaries.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -102,4 +103,4 @@ Recompute counts from live evidence. Do not increment stale counters. At minimum
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills frontier from **4/50 reviewed and 46 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.
+Continue the Corey Haines Marketing Skills frontier from **5/50 reviewed and 45 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.

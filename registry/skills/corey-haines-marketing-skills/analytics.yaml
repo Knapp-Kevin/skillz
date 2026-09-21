@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: analytics
+display_name: Analytics Tracking
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/analytics/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: cbb8b810847072efe55e8de9c0dd42ddbcc5f91e
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-07-22T18:13:53Z
+curated_at: 2026-09-21
+last_checked_at: 2026-09-21
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/event-library.md, references/ga4-implementation.md, references/gtm-implementation.md, and evals/evals.json are part of the exact package; cross-references attribution, ab-testing, seo-audit, cro, revops, product-marketing context, and source-level tools/integrations guidance; normal implementation paths can create or change GA4 properties/data streams/events/key-event configuration, GTM tags/triggers/variables, site code/dataLayer instrumentation, advertising links/audiences, and consent/telemetry behavior
+import_eligibility: rejected-unchanged-reference
+rationale: A useful analytics-planning and debugging package with strong decision-first measurement framing, naming discipline, validation checklists, consent/privacy guidance, and concrete GA4/GTM implementation references. Unchanged adoption is rejected under the authority hard fail because normal implementation procedures directly prescribe creating or changing analytics properties, streams, tags, events, advertising links/audiences, site instrumentation, and telemetry without a distinct explicit authorization checkpoint before those external or persistent mutations. The package also handles privacy-sensitive behavioral/user/account identifiers and third-party tracking pixels; its privacy section is useful but does not itself authorize collection, disclosure, or activation. Preserve planning, event-taxonomy, debugging, data-quality, minimization, and consent mechanisms as adaptation/extraction evidence behind explicit mutation and sensitive-data authority boundaries.
