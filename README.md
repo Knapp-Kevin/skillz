@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-599-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-600-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities**. There are currently **599 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities**. There are currently **600 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 Current admitted-source accounting:
 
@@ -49,7 +49,7 @@ Current admitted-source accounting:
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
-| Corey Haines Marketing Skills | **7 / 50, 43 gaps** |
+| Corey Haines Marketing Skills | **8 / 50, 42 gaps** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 ### Active curation frontier
 
-Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Seven are individually current-standard reviewed and **43** remain.
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Eight are individually current-standard reviewed and **42** remain.
 
 - `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
@@ -71,8 +71,9 @@ Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766
 - `analytics`: **rejected unchanged 15/20**; useful decision-first measurement, event-taxonomy, debugging, data-quality, consent, and minimization mechanisms, but normal GA4/GTM/site implementation paths lack distinct explicit authorization before external/persistent mutation and privacy-sensitive telemetry activation.
 - `aso`: **rejected unchanged 14/20**; useful read-only ASO audit and platform-differentiation mechanisms, but volatile platform/benchmark claims are asserted too confidently and several bundled benchmarks lack claim-level traceability.
 - `attribution`: **rejected unchanged 15/20**; strong source-of-truth, incrementality, identity-safety, webhook-verification, and conservative reconciliation mechanisms, but implementation paths prescribe persistent analytics/CRM/identity mutation and privacy-sensitive identifier transmission without distinct explicit authorization checkpoints.
+- `churn-prevention`: **rejected unchanged 14/20**; useful churn diagnosis, segmentation, cancellation UX, measurement, and recovery-planning mechanisms, but normal procedures prescribe billing/account mutations, integrations, data processing, and customer communications without distinct explicit authorization checkpoints, while volatile benchmark and legal claims lack claim-level sourcing.
 
-Behavioral validation is `not-run` for all seven. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+Behavioral validation is `not-run` for all eight. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
 
 Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 

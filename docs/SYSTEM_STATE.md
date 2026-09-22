@@ -4,19 +4,19 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-21 |
+| **Last updated** | 2026-09-22 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **599** |
+| **Persisted third-party review companions** | **600** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | **7 / 50** |
-| **Corey Haines Marketing Skills current-standard gaps** | **43** |
+| **Corey Haines Marketing Skills current-standard companions** | **8 / 50** |
+| **Corey Haines Marketing Skills current-standard gaps** | **42** |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -39,7 +39,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
-| **Corey Haines Marketing Skills** | **7 / 50** | **43** |
+| **Corey Haines Marketing Skills** | **8 / 50** | **42** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -56,7 +56,7 @@ Completion means decisive current evidence for every eligible package, not unive
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-Seven packages now have current-standard provenance and exact-version verification companions:
+Eight packages now have current-standard provenance and exact-version verification companions:
 
 - `ab-testing`: **rejected unchanged 13/20**, behavioral validation `not-run`. Useful experiment-planning mechanisms remain adaptation/extraction evidence, but unchanged adoption is rejected for materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful grounding, source-traceability, creative-format, performance-learning, review-template, and human-review mechanisms remain adaptation/extraction evidence, but unchanged adoption lacks distinct authorization boundaries for persistent file mutation and client-facing publication/communication.
@@ -65,6 +65,7 @@ Seven packages now have current-standard provenance and exact-version verificati
 - `analytics`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful decision-first measurement, event taxonomy, debugging, data-quality, consent, and minimization mechanisms remain adaptation/extraction evidence, but normal implementation paths prescribe GA4/GTM/site/configuration mutation and privacy-sensitive telemetry activation without distinct explicit authorization boundaries.
 - `aso`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful read-only ASO audit structure, Apple/Google differentiation, evidence-gap handling, visual review, competitor comparison, and prompt-injection boundaries remain adaptation/extraction evidence, but unchanged adoption presents volatile platform and benchmark claims too confidently, including prescriptive Google Play keyword-density targets and asserted Apple screenshot-caption indexing, while several bundled benchmark statistics lack claim-level traceability.
 - `attribution`: **rejected unchanged 15/20**, behavioral validation `not-run`. Strong source-of-truth discipline, model caveats, incrementality, self-reported attribution, fail-closed identity handling, webhook verification, PII-aware logging, confidence labeling, and conservative backfill remain useful adaptation/extraction evidence. Unchanged adoption fails because normal implementation paths prescribe persistent analytics/CRM/identity mutation and privacy-sensitive identifier transmission without distinct explicit authorization checkpoints.
+- `churn-prevention`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful voluntary/involuntary churn separation, intervention mapping, visible cancellation paths, dark-pattern avoidance, payment-failure classification, dunning/grace-period structure, and cohort measurement remain adaptation/extraction evidence. Unchanged adoption fails because normal procedures prescribe billing/account mutations, integrations, data processing, and customer communications without distinct explicit authorization checkpoints; volatile benchmark and legal/regulatory claims also lack claim-level sourcing.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -105,4 +106,4 @@ Recompute counts from live evidence. Do not increment stale counters. At minimum
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills frontier from **7/50 reviewed and 43 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.
+Continue the Corey Haines Marketing Skills frontier from **8/50 reviewed and 42 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.

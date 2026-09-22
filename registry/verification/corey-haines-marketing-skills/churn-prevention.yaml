@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: churn-prevention
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 78bdc8ca0ff1077fdcd55e18938349e0211fe604
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b8fbcd28ebc3942dc557db84b69e233b03c45296
+characterized_at: 2026-09-21
+last_verified_at: 2026-09-21
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, decision-support, implementation, monitoring]
+  lifecycle: [planning, design, implementation, operations]
+  characteristic: [human-review, instrumentation, iterative, metric-driven, reference-heavy, risk-aware]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful differentiated retention prior art: it separates voluntary from involuntary churn, maps exit reasons to save interventions, keeps a visible path to cancellation, discourages guilt/dark-pattern copy, distinguishes soft/hard/authentication payment failures, structures dunning and grace periods, recommends cohort/offer measurement, and includes GDPR/data-retention and cancellation-compliance awareness. Its bundled references materially expand cancel-flow segmentation and provider-specific dunning guidance. Unchanged adoption nevertheless fails the authority hard fail. Normal procedures prescribe discounts and plan changes, pauses/auto-reactivation, billing retry and dunning configuration, account access degradation/pause/cancellation, CRM/customer-success routing, product-health instrumentation, proactive intervention triggers, third-party retention/billing integrations, and customer email/in-app communications. These are money-bearing, persistent account/billing, identity-bearing, data-processing, and user-communication side effects, yet the procedure does not establish distinct explicit authorization checkpoints before executing them. The package also presents numerous volatile benchmark and legal/regulatory assertions without claim-level sourcing, including churn composition/recovery percentages, save/pause benchmarks, provider behavior, and FTC/GDPR summaries; these require current authoritative verification before operational reliance. Upstream evals/evals.json is bundled intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the diagnosis, segmentation, cancellation UX, measurement, and recovery-planning mechanisms as adaptation/extraction evidence behind explicit billing/account/communication/data authority boundaries and current source verification."

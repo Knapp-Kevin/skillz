@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: churn-prevention
+display_name: Churn Prevention
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/churn-prevention/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 78bdc8ca0ff1077fdcd55e18938349e0211fe604
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-14T05:05:15Z
+curated_at: 2026-09-21
+last_checked_at: 2026-09-21
+availability: external
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/cancel-flow-patterns.md, references/dunning-playbook.md, and evals/evals.json are part of the exact package; cross-references emails, paywalls, pricing, onboarding, analytics, ab-testing, product-marketing context, billing providers, retention platforms, CRM/customer-success workflows, product analytics, and external communication systems
+import_eligibility: rejected-unchanged-reference
+rationale: A differentiated retention framework with useful voluntary/involuntary churn separation, exit-survey and reason-to-offer mapping, visible cancellation paths, dunning/recovery structure, cohort measurement, and some privacy/compliance awareness. Unchanged adoption is rejected under the authority hard fail because normal procedures prescribe changing subscriptions, discounts, pauses, billing retry/dunning configuration, account access state, customer-success routing, analytics instrumentation, proactive intervention triggers, and customer email/in-app communications without distinct explicit authorization checkpoints before those money-bearing, persistent, identity-bearing, and communication side effects. Several benchmark and regulatory claims are also presented without claim-level sourcing. Preserve the read-only diagnosis, segmentation, cancellation UX, measurement, and recovery-planning mechanisms as adaptation/extraction evidence behind explicit spend/billing/account/communication/data authority boundaries and current legal/source verification.
