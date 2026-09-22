@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 603,
+    "persisted_third_party_exact_version_reviews": 604,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 11,
+    "corey_haines_marketing_skills_current_standard_companions": 12,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 39,
+    "corey_haines_marketing_skills_current_standard_gaps": 38,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-22: reviewed Corey Haines community-marketing at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 14/20 because normal procedures prescribe community communications, role/access changes, commercial incentives, member tracking/data processing, and publication without distinct authorization checkpoints, while volatile benchmarks lack claim-level primary sourcing; behavioral validation not-run; Corey Haines 10/50 -> 11/50 with gaps 40 -> 39; persisted exact-version review count 602 -> 603"
+    "latest_reconciliation": "2026-09-22: reviewed Corey Haines competitor-profiling at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 16/20 because public-profile/review/social/recruiting collection needs stronger privacy, data-minimization, and source-terms boundaries, while volatile vendor capability/pricing guidance requires current primary-source verification; no authority hard fail; behavioral validation not-run; Corey Haines 11/50 -> 12/50 with gaps 39 -> 38; persisted exact-version review count 603 -> 604"
   }
 }
