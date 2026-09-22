@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-605-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-606-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities**. There are currently **605 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities**. There are currently **606 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 Current admitted-source accounting:
 
@@ -49,7 +49,7 @@ Current admitted-source accounting:
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
-| Corey Haines Marketing Skills | **13 / 50, 37 gaps** |
+| Corey Haines Marketing Skills | **14 / 50, 36 gaps** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 ### Active curation frontier
 
-Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Thirteen are individually current-standard reviewed and **37** remain.
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Fourteen are individually current-standard reviewed and **36** remain.
 
 - `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
@@ -77,8 +77,9 @@ Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766
 - `community-marketing`: **rejected unchanged 14/20**; useful shared-identity, community-model, launch/growth, journey-design, support, health-audit, measurement, and scaling mechanisms, but normal procedures prescribe community communications, access/role changes, commercial incentives, member tracking/data processing, and publication without distinct explicit authorization checkpoints; volatile health and growth benchmarks also lack claim-level primary sourcing.
 - `competitor-profiling`: **rejected unchanged 16/20**; strong read-only competitive-intelligence structure, evidence tiers, confidence/freshness discipline, unknown-field handling, matrices, battlecards, win/loss synthesis, and prompt-injection safeguards. No authority hard fail applies. Unchanged adoption needs stronger privacy, data-minimization, and source-terms boundaries for public-profile/review/social/recruiting collection, plus current primary-source verification for volatile vendor capability/pricing guidance.
 - `competitors`: **rejected unchanged 14/20**; useful competitor/alternative page formats, honest comparative positioning, centralized competitor data, comparison templates, research/update cadence, internal-linking architecture, and sales-enablement routing, but ordinary procedures prescribe persistent competitor-data/page creation, sitewide footer/internal-link changes, and public comparative claims/CTAs without distinct mutation/publication authorization checkpoints. Research also needs stronger privacy/source-terms boundaries and current claim-level verification for volatile competitor, pricing, feature, support, testimonial, search-volume, and migration assertions.
+- `content-strategy`: **rejected unchanged 14/20**; useful customer-led research, buyer-stage mapping, pillar/cluster planning, weighted prioritization, content-as-product, distribution, atomization, and CMS/content-model mechanisms, but ordinary procedures prescribe identity-bearing distribution plus persistent CMS/site configuration, permissions, webhook/rebuild, migration, and publication without distinct authorization checkpoints. Research also needs stronger privacy/data-minimization/retention/consent/source-terms boundaries, while volatile backlink, reach, platform-half-life, CMS, and SEO claims require current primary-source verification.
 
-Behavioral validation is `not-run` for all thirteen. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+Behavioral validation is `not-run` for all fourteen. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
 
 Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 

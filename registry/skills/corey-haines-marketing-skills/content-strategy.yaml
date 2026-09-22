@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: content-strategy
+display_name: Content Strategy
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/content-strategy/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 331845a9e8be071ca8b7506bd9e07d5a54815cea
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:37:25Z
+curated_at: 2026-09-22
+last_checked_at: 2026-09-22
+availability: external
+permission_tier: external-side-effect
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/content-distribution.md, references/headless-cms.md, and evals/evals.json are part of the exact package; cross-references product-marketing context, copywriting, seo-audit, social, launch, emails, free-tools, ai-seo, programmatic-seo, customer/support/sales data, public forums, competitor research, CMS platforms, and website content architecture
+import_eligibility: rejected-unchanged-reference
+rationale: A differentiated content-planning framework with customer-led inputs, searchable/shareable framing, buyer-stage mapping, content pillars and clusters, prioritization scoring, distribution planning, and explicit routing to adjacent skills. Unchanged adoption is rejected because ordinary procedures prescribe public posting/distribution, email-list sends, partnership/PR activity, persistent CMS/site configuration, role/permission changes, webhook/rebuild setup, and content publication without distinct authorization checkpoints. Research guidance also reaches customer transcripts, support tickets, surveys, forums, reviews, and competitor material without sufficient privacy/data-minimization/source-terms boundaries. Volatile platform, backlink, reach, half-life, CMS capability/pricing, and SEO guidance requires current primary-source verification before operational reliance. Preserve the read-only strategy, prioritization, cluster, distribution-design, and content-modeling mechanisms behind explicit communication/mutation/data authority and evidence safeguards.

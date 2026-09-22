@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: content-strategy
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 331845a9e8be071ca8b7506bd9e07d5a54815cea
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b8a26a008ed59a4eef2b46794be9baeeb7e22d57
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [planning, research, writing]
+  lifecycle: [discovery, planning, implementation]
+  characteristic: [evidence-first, metric-driven, reference-heavy, source-driven]
+  authority: [external-side-effect, mutating]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful content-strategy prior art: customer-led research inputs, searchable/shareable framing, buyer-stage keyword mapping, content pillars and hub/spoke clusters, a weighted prioritization model, content-as-product discipline, 60/30/10 calendar guidance, Create Once Distribute Twice, ORB distribution framing, atomization, and content-model/CMS reference material. Unchanged adoption fails the authority hard fail because normal execution prescribes public social posting/reposting, email-list sends, partnerships/PR and other identity-bearing distribution, persistent CMS/site content-model and preview configuration, role/permission changes, webhook/rebuild setup, migration work, and publication without distinct explicit authorization checkpoints for communication, persistent mutation, access control, or deployment/publication. Research paths also solicit or analyze sales/customer transcripts, support tickets, surveys, forum/community material, public reviews, and competitor content without sufficiently explicit privacy, data-minimization, retention, consent, or source-terms boundaries. Evidence discipline is mixed: the skill appropriately labels the Foundation backlink study directional, but still embeds volatile backlink multipliers, platform half-lives/reach claims, CMS capabilities/pricing/free-tier guidance, SEO character limits, and other operational claims that require current primary-source verification. Upstream evals/evals.json encodes intended behavior, including disputed/prescriptive content quantities, and is not behavioral validation. skillz did not run those evals. Behavioral validation was not run. Preserve the read-only research synthesis, prioritization, cluster design, distribution planning, routing, and content-modeling mechanisms behind explicit authority/data safeguards and current source verification."
