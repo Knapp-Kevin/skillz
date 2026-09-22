@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cold-email
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 81cf1e5ce680c38f84a8661baccd2b1bb0082999
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9e18b25c3547d9e6c2558d1e78cb982223add86a
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [communication, writing, business-operations]
+  lifecycle: [planning, design]
+  characteristic: [human-review, reference-heavy, metric-driven, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful cold-outreach drafting prior art: peer-style brevity, problem-linked personalization, audience tone calibration, multiple copy frameworks, low-friction CTAs, non-repetitive follow-up angle rotation, breakup-email finality, critique heuristics, and correct routing of opted-in lifecycle nurture to a separate skill. The skill itself is generate-only: it writes or critiques copy and does not instruct the host to send messages, enroll prospects, mutate a CRM, or operate outreach tooling, so no authority hard fail is established at the package level. Unchanged adoption is still rejected because evidence discipline and safety context are insufficient for production reliance. Bundled references assert numerous volatile performance, deliverability, seniority, industry, regional, timing, and behavioral-effect claims with source-name attribution but without claim-level primary citations; several are framed as prescriptive truths despite conflicting data acknowledged elsewhere. Personalization guidance encourages person-level and psychographic research across LinkedIn, podcasts, job changes, funding, tech stack, and other signals without a meaningful privacy/data-minimization or jurisdictional compliance boundary. Subject-line guidance explicitly promotes internal-looking camouflage, which can slide from concise human tone into deceptive sender-context mimicry. The package lacks substantive CAN-SPAM/GDPR/CASL or equivalent unsolicited-outreach compliance guidance and lacks an explicit boundary requiring separate authorization before generated copy becomes actual external communication. Upstream evals/evals.json is intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the drafting, critique, framework, sequence-design, and lifecycle-routing mechanisms as adaptation/extraction evidence while requiring current primary-source verification for quantitative claims and explicit privacy/compliance/send-authorization safeguards before operational use."
