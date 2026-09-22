@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: competitors
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 6018975d02490e828f82fdff6558c9a19b85c5cb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e919fec899061f3d894c2f0bd6dac98709eeb8e4
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, research, writing]
+  lifecycle: [discovery, planning, implementation]
+  characteristic: [human-review, reference-heavy, source-driven]
+  authority: [mutating, external-side-effect]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is useful prior art for competitor/alternative content: four clear page formats, honest positioning rules, decision-oriented comparison sections, centralized competitor data, structured research, migration/support treatment, site architecture/internal linking, and correct routing of internal battlecards to sales-enablement. Unchanged adoption fails the authority hard fail because normal execution prescribes creating persistent competitor data and public page content, adding index/footer/internal links, and publishing identity-bearing comparative claims and CTAs without distinct explicit authorization checkpoints for file/site mutation and external publication/communication. Research guidance also reaches public reviews and customer conversations without explicit privacy/data-minimization/source-terms boundaries. Pricing, features, support, testimonials, search volume, migration claims, and competitor assertions are volatile or reputation-sensitive and need current claim-level verification before publication. The bundled content-architecture example contains dated Notion pricing/feature/migration facts and is illustrative, not current evidence. Upstream evals/evals.json is intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the read-only page-format selection, honest-comparison principles, centralized-data schema, comparison templates, research/update cadence, and sales-enablement routing as adaptation/extraction evidence behind explicit mutation/publication authority, privacy/source-terms safeguards, and current claim verification."
