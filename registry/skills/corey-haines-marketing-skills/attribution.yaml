@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: attribution
+display_name: Attribution
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/attribution/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 321fc3ebb79a109a813a94861b19dd8055de8d6d
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-07-23T19:41:02Z
+curated_at: 2026-09-21
+last_checked_at: 2026-09-21
+availability: external
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/attribution-models.md, references/by-business-type.md, references/first-party-tracking.md, references/measurement-paradigms.md, and evals/evals.json are part of the exact package; cross-references analytics, ads, revops, ai-seo, product-marketing context, CRM/backend systems, product analytics, third-party booking/checkout providers, webhooks, and external measurement platforms
+import_eligibility: rejected-unchanged-reference
+rationale: A differentiated attribution framework with strong model limitations, source-of-truth discipline, triangulation, incrementality, self-reported attribution, business-type forks, and unusually careful fail-closed identity/PII guardrails. Unchanged adoption is rejected under the authority hard fail because the first-party build track directly prescribes persistent site instrumentation, analytics identity/profile mutation, third-party URL metadata transmission, webhook-driven identity merges and conversion events, CRM attribution writes, account rollups, and production configuration changes without a distinct explicit authorization checkpoint before those external mutations and privacy-sensitive data disclosures. Preserve the read-only interpretation, measurement, reconciliation, evidence-confidence, minimization, and implementation-hardening mechanisms as adaptation/extraction evidence behind explicit mutation and sensitive-data authority boundaries.
