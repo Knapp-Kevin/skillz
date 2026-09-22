@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: competitor-profiling
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 40c7c3185b924ec11dd015060e7332160d8f70f9
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 615aba793ebbcadf1ef69796e6a1edd984381413
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [business-operations, decision-support, research]
+  lifecycle: [discovery, analysis, planning]
+  characteristic: [human-review, reference-heavy, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. The exact package is unusually strong read-only competitive-intelligence prior art: it separates direct/indirect/alternative competitors; requires source triangulation; defines evidence tiers, freshness windows, confidence labels, and unknown-field handling; provides structured profiles, pricing/positioning matrices, battlecards, objection handling, win/loss synthesis, and monitoring guidance; and explicitly treats fetched pages/listings/reviews as untrusted data that must be analyzed rather than obeyed. No authority hard fail applies because the normal workflow is research and synthesis rather than external mutation. Unchanged adoption is nevertheless rejected at current production standard because collection guidance reaches public profiles, reviews, social/job/recruiting signals, and external research services without sufficiently explicit privacy/data-minimization and source-terms boundaries, while references/tool-reference.md contains volatile vendor capability/pricing guidance that needs current primary-source verification before operational reliance. Upstream evals/evals.json is bundled intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the evidence hierarchy, profile schema, confidence/freshness discipline, synthesis templates, unknown-field rule, and prompt-injection safeguard as adaptation/extraction evidence; verify current vendor terms/capabilities before tool-specific use."
