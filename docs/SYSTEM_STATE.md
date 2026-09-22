@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **601** |
+| **Persisted third-party review companions** | **602** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | **9 / 50** |
-| **Corey Haines Marketing Skills current-standard gaps** | **41** |
+| **Corey Haines Marketing Skills current-standard companions** | **10 / 50** |
+| **Corey Haines Marketing Skills current-standard gaps** | **40** |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -39,7 +39,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
-| **Corey Haines Marketing Skills** | **9 / 50** | **41** |
+| **Corey Haines Marketing Skills** | **10 / 50** | **40** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -56,7 +56,7 @@ Completion means decisive current evidence for every eligible package, not unive
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-Nine packages now have current-standard provenance and exact-version verification companions:
+Ten packages now have current-standard provenance and exact-version verification companions:
 
 - `ab-testing`: **rejected unchanged 13/20**, behavioral validation `not-run`. Useful experiment-planning mechanisms remain adaptation/extraction evidence, but unchanged adoption is rejected for materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful grounding, source-traceability, creative-format, performance-learning, review-template, and human-review mechanisms remain adaptation/extraction evidence, but unchanged adoption lacks distinct authorization boundaries for persistent file mutation and client-facing publication/communication.
@@ -67,6 +67,7 @@ Nine packages now have current-standard provenance and exact-version verificatio
 - `attribution`: **rejected unchanged 15/20**, behavioral validation `not-run`. Strong source-of-truth discipline, model caveats, incrementality, self-reported attribution, fail-closed identity handling, webhook verification, PII-aware logging, confidence labeling, and conservative backfill remain useful adaptation/extraction evidence. Unchanged adoption fails because normal implementation paths prescribe persistent analytics/CRM/identity mutation and privacy-sensitive identifier transmission without distinct explicit authorization checkpoints.
 - `churn-prevention`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful voluntary/involuntary churn separation, intervention mapping, visible cancellation paths, dark-pattern avoidance, payment-failure classification, dunning/grace-period structure, and cohort measurement remain adaptation/extraction evidence. Unchanged adoption fails because normal procedures prescribe billing/account mutations, integrations, data processing, and customer communications without distinct explicit authorization checkpoints; volatile benchmark and legal/regulatory claims also lack claim-level sourcing.
 - `co-marketing`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful partner identification, audience-overlap analysis, six-dimension scoring, campaign ideation, partnership-alignment questions, lead-handling considerations, measurement, routing boundaries, and partnership taxonomy remain adaptation/extraction evidence. Unchanged adoption fails because normal procedures prescribe identity-bearing partner outreach, lead/data sharing, joint publication/promotion, events, discounts/bundles, integrations, marketplace activity, and commercial/brand commitments without distinct explicit authorization checkpoints; volatile quantitative claims also lack claim-level primary sourcing and brand-association guidance lacks adequate authorization caution.
+- `cold-email`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful peer-style brevity, problem-linked personalization, audience calibration, framework selection, low-friction CTAs, follow-up angle rotation, breakup-email finality, critique heuristics, and lifecycle routing remain adaptation/extraction evidence. The package is generate-only and does not itself instruct sending or CRM mutation, so no authority hard fail is established. Unchanged adoption is rejected because volatile outreach/deliverability claims lack claim-level primary evidence, person-level/psychographic personalization lacks adequate privacy/data-minimization and jurisdictional compliance boundaries, and internal-looking subject guidance lacks a sufficient anti-deception boundary; operational use also requires a separate send-authorization boundary.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -107,4 +108,4 @@ Recompute counts from live evidence. Do not increment stale counters. At minimum
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills frontier from **9/50 reviewed and 41 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.
+Continue the Corey Haines Marketing Skills frontier from **10/50 reviewed and 40 gaps**. Before each new unit, confirm it is a genuine gap, inspect existing provenance/verification paths and compatible history, review the exact pinned package and bundled references, apply authority and sensitive-data hard fails, persist decisive evidence, and reconcile all five public accounting surfaces atomically.
