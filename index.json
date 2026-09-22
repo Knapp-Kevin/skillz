@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-21",
+  "snapshot_date": "2026-09-22",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 599,
+    "persisted_third_party_exact_version_reviews": 600,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 7,
+    "corey_haines_marketing_skills_current_standard_companions": 8,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 43,
+    "corey_haines_marketing_skills_current_standard_gaps": 42,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-21: reviewed Corey Haines attribution at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 15/20 because implementation paths mutate analytics/CRM/external identity state and disclose privacy-sensitive data without distinct explicit authorization checkpoints; behavioral validation not-run; Corey Haines 6/50 -> 7/50 with gaps 44 -> 43; persisted exact-version review count 598 -> 599"
+    "latest_reconciliation": "2026-09-22: reviewed Corey Haines churn-prevention at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 14/20 because normal procedures prescribe billing/account mutations, integrations, data processing, and customer communications without distinct explicit authorization checkpoints, while volatile benchmark and legal claims lack claim-level sourcing; behavioral validation not-run; Corey Haines 7/50 -> 8/50 with gaps 43 -> 42; persisted exact-version review count 599 -> 600"
   }
 }
