@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: co-marketing
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 2d37bb173bd654bcc9562ae302329d0964c9b561
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4d4849476b4128409414700ddd3dd476881f7e6a
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, communication, decision-support, planning, research]
+  lifecycle: [discovery, planning, design, implementation]
+  characteristic: [evidence-first, human-review, metric-driven, reference-heavy, risk-aware]
+  authority: [read-only, external-side-effect]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful differentiated partnership prior art: audience-overlap analysis, six-dimension partner scoring, multiple discovery surfaces, campaign-format selection, shared-audience/combined-value brainstorming, explicit partnership-alignment questions, lead-handling considerations, quantitative and qualitative success measures, and clear routing away from customer-referral work. Its bundled partnership-types reference broadens the strategy taxonomy across integrations, reseller, affiliate, co-marketing, and app-store/marketplace plays. Unchanged adoption nevertheless fails the authority hard fail. Normal procedures prescribe identity-bearing cold outreach and calls, lead capture/sharing/follow-up, shared metrics, joint publication and promotion, social/community activity, events, discounts/bundles, integrations, marketplace activity, and commercial/brand commitments without distinct explicit authorization checkpoints before those user communications, sensitive/customer-data disclosures, external publication, money-bearing offers, or external-system mutations. The reference also presents numerous volatile quantitative claims without claim-level primary sourcing and recommends permissionless co-marketing using other companies' brands without adequate trademark/authorization caution. Upstream evals/evals.json is bundled intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the read-only partner identification, scoring, campaign ideation, agreement checklist, measurement, and taxonomy mechanisms as adaptation/extraction evidence behind explicit communication, publication, data-sharing, commercial, brand-use, and external-action authority boundaries plus current source verification."
