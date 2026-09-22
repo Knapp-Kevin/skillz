@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: copywriting
+display_name: Copywriting
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/copywriting/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: e5457b0306878bac731cda9a05e8b68d882b7b40
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:25:53Z
+curated_at: 2026-09-22
+last_checked_at: 2026-09-22
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/copy-frameworks.md, references/natural-transitions.md, and evals/evals.json are part of the exact package; cross-references product-marketing context, copy-editing, cro, emails, popups, offers, and ab-testing
+import_eligibility: rejected-unchanged-reference
+rationale: A strong generate-only page-copy framework with precise routing, context gathering, clarity/specificity/customer-language rules, page structures, CTA guidance, voice/tone calibration, output annotations, and useful message-market-fit heuristics. No authority hard fail applies because the skill produces copy rather than publishing or mutating external systems. Unchanged adoption is rejected because the exact package presents several volatile or weakly sourced conversion-performance claims as established facts, including the SavvyCal roughly-3x case and +81% conversion/-38% sales-cycle/-28% CAC/+175% referral metrics, and encourages voice-of-customer use from reviews/interviews/support tickets without explicit privacy, minimization, consent, or source-terms boundaries. Preserve the drafting, critique, structure, routing, and message-market-fit mechanisms with current claim verification and customer-data safeguards.
