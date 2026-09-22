@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: community-marketing
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: a1bb048a2cb4a1f30e0f6d45d4888f523ca995bb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 441463df2bd0cd0bc5349f3151e95bc7afad0f04
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [business-operations, communication, decision-support, planning]
+  lifecycle: [discovery, planning, design, implementation, operations]
+  characteristic: [human-review, metric-driven, reference-heavy, risk-aware]
+  authority: [read-only, external-side-effect]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package provides useful differentiated community-building prior art: shared-identity framing, member-first value, a simple community flywheel, launch and growth playbooks, new-member journey design, recurring rituals, power-user investment, ambassador-program structure, community-led support, platform-selection tradeoffs, health metrics, community-model selection, and stage-based role shifts. Unchanged adoption nevertheless fails the authority hard fail. Normal procedures prescribe direct messages and email to users/members, public posts and announcements, recurring calls/events, moderator-role or access changes, referral links and revenue-share incentives, public recognition, member-level monitoring/sentiment review, and other external community actions without distinct explicit authorization checkpoints before communications, access changes, commercial commitments, tracking/data processing, or publication. The package also states volatile quantitative heuristics such as DAU/MAU health thresholds, power-user concentration, response-time warning thresholds, and Notion ambassador/referral benchmarks without claim-level primary sourcing. Member research/monitoring guidance lacks a sufficiently explicit privacy/data-minimization boundary. Upstream evals/evals.json is bundled intended-behavior evidence only; skillz did not run it. Behavioral validation was not run. Preserve the read-only strategy, model selection, health-audit, journey-design, support, measurement, and scaling mechanisms as adaptation/extraction evidence behind explicit communication, access/role, commercial-incentive, tracking/data, and publication authority boundaries plus current primary-source verification."
