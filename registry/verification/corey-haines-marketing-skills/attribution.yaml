@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: attribution
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 321fc3ebb79a109a813a94861b19dd8055de8d6d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6529ae887e34e9175e420dec3b178315c9ab90b2
+characterized_at: 2026-09-21
+last_verified_at: 2026-09-21
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [business-operations, decision-support, implementation, research]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [evidence-first, holdout-aware, human-review, instrumentation, metric-driven, reference-heavy, risk-aware, safety-bounded, source-driven, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package has strong differentiated read-only attribution guidance: it explicitly treats attribution as directional rather than objective truth, warns against summing overlapping platform claims, anchors conversion counts to a defensible backend/CRM source of truth, distinguishes attribution models from causal measurement paradigms, recommends incrementality as a high-stakes tiebreaker, uses self-reported attribution for dark-social blind spots, and provides business-type-specific interpretation. Its build track also contains unusually thoughtful implementation safeguards: audit-before-build, fail-closed anonymous-id handling, UUID-vs-email identity distinctions, webhook signature verification, bounded/non-fatal analytics calls, no email logging, cross-subdomain verification, confidence/basis labeling, and conservative campaign-window fallback/backfill rules. Unchanged adoption nevertheless fails the authority hard fail. Normal Pillar B procedures prescribe calling identify(), creating person profiles, decorating outbound third-party URLs with identifiers, sending webhook-driven identity merges and conversion events, changing analytics/referrer configuration, persisting full touch paths, writing attribution fields into CRM records, and rolling identities to accounts. These operations mutate persistent external systems and transmit privacy-sensitive behavioral/identity data, but the procedure does not establish a distinct explicit user authorization checkpoint before performing those mutations/disclosures. Control of the site/app and a request to build are scope signals, not automatically authorization for each consequential external/data action. A fitted version should preserve the interpretation/reconciliation framework and implementation guardrails while separating read-only planning from execution and requiring explicit authorization for instrumentation, third-party identifier transmission, analytics/CRM mutation, webhook deployment, and sensitive-data disclosure. Upstream evals/evals.json is bundled intended-behavior evidence only; skillz did not run it. Behavioral validation was not run."
