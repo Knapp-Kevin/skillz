@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: copywriting
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: e5457b0306878bac731cda9a05e8b68d882b7b40
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 349426d7f1874815401194d642fa59a0bb5b1842
+characterized_at: 2026-09-22
+last_verified_at: 2026-09-22
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [writing, communication]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is a useful page-copy prior-art package: precise page-copy triggers and email/popup/editing/offer routing, product-marketing-context reuse, audience/offer/traffic context gathering, clarity-over-cleverness, benefits/specificity/customer-language discipline, page-specific structures, CTA formulas, voice/tone calibration, annotated output, headline alternatives, and message-market-fit tools including the Now-you-can test, Human Action Model, and Perception Gap. No authority hard fail applies: ordinary execution drafts/generates copy and does not instruct publication, sending, CMS mutation, spend, access changes, or other external side effects. Unchanged adoption is rejected because evidence discipline is materially deficient: SKILL.md and references/copy-frameworks.md assert that clearer positioning/copy is associated with +81% conversions, 38% shorter sales cycle, 28% lower CAC, and 175% more referrals without claim-level source evidence, and the SavvyCal example asserts roughly 3x conversions without a primary citation in the package. Those claims are repeated as expected behavior in upstream eval id 8, which is intended-behavior evidence rather than independent validation. Customer-language guidance also directs use of reviews, interviews, and support tickets without explicit privacy, data-minimization, consent, retention, or source-terms boundaries. The package's natural-transitions reference attributes some material broadly to Manchester Academic Phrasebank/Plain English Campaign/web best practices but does not create a material authority defect. Behavioral validation was not run. Preserve the drafting, critique, page-structure, CTA, routing, and message-market-fit mechanisms with current primary-source verification for quantitative claims and explicit customer-data safeguards."
