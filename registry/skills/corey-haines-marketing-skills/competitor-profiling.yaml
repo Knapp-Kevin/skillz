@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: competitor-profiling
+display_name: Competitor Profiling
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/competitor-profiling/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 40c7c3185b924ec11dd015060e7332160d8f70f9
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-19T16:44:30Z
+curated_at: 2026-09-22
+last_checked_at: 2026-09-22
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/templates.md, references/tool-reference.md, and evals/evals.json are part of the exact package; cross-references competitors, customer-research, positioning, prospecting, ads, SEO/audit surfaces, public review sources, competitor websites, and third-party research tools
+import_eligibility: rejected-unchanged-reference
+rationale: A strong read-only competitive-intelligence framework with evidence-tiering, source triangulation, freshness/confidence labels, unknown-field discipline, battlecards, pricing/positioning matrices, objection handling, and explicit treatment of fetched competitor material as untrusted data. Unchanged adoption is rejected because the package recommends public-profile/review monitoring and external research services without sufficiently explicit privacy/data-minimization and source-terms boundaries, and its tool reference contains volatile vendor capability/pricing claims that require current primary-source verification before operational reliance. Preserve the read-only evidence hierarchy, profile schema, confidence/freshness discipline, synthesis templates, and untrusted-data safeguard as adaptation/extraction evidence; require current source/terms verification before using vendor-specific collection guidance.
