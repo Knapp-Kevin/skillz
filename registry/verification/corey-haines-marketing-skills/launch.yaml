@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: launch
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 2c974c62be1d04e7c8658e50629c2385e5fc44d0
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9438859e19c1ec10bf07632de1887b789df8761d
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [planning, business-operations, communication]
+  lifecycle: [planning, release, operations]
+  characteristic: [human-review, reference-heavy, synthesis, production-oriented]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Authority hard fail: ordinary launch procedures prescribe landing-page/signup changes, public announcements, user invitations, email/social/community communications, Product Hunt actions, in-app/website publication, opening self-serve access, and beginning charging without distinct authorization checkpoints for publication, communications, access state, or money-bearing effects. Strong reusable mechanisms include the SLC readiness gate, owned/rented/borrowed channel framing, five-phase internal-to-GA progression, launch-touchpoint checklist, announcement sizing, and post-launch momentum discipline. Named case-study outcomes and some channel/platform tactics lack claim-level primary evidence. Upstream evals are intended behavior, not validation. Behavioral validation was not run."

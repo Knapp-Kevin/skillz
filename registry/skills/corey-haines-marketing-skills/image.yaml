@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: image
+display_name: Marketing Image Production
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/image/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 03c0c80ec888685403cd5f9b17e90f6ae6ed9d25
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-19T05:26:38Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-reference-evals-and-optional-external-tools
+relationships: bundled references/ai-image-prompting.md and evals/evals.json are part of the exact package; optional workflows use Gemini/Flux/Ideogram/GPT Image/Midjourney/Recraft/Stable Diffusion, Canva/Figma, browser screenshots, image CLIs, CDNs, Vercel OG/Satori/Cloudinary, brand assets, and uploaded reference images
+import_eligibility: rejected-unchanged-reference
+rationale: Useful visual-production prior art with a clear model/tool selection map, prompt structure, real-screenshot-over-hallucinated-UI rule, brand-consistency guidance, aspect-ratio planning, asset-type distinctions, and web-image optimization checklist. Unchanged adoption fails the authority hard fail because ordinary procedures move from planning into paid external generation/API use and persistent asset/file mutation via design tools and shell/image commands without distinct cost, upload/disclosure, or file-mutation authorization checkpoints. The package also asks about API-key availability without clarifying secure credential paths, and lacks robust copyright/trademark, likeness/consent, provenance, confidential-brand-asset, and reference-image disclosure safeguards. Model capabilities/pricing, platform dimensions, browser support, and performance claims are volatile and need current primary verification. Preserve tool selection, prompting, screenshot integrity, and optimization mechanisms behind explicit authority/rights/data boundaries.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: image
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 03c0c80ec888685403cd5f9b17e90f6ae6ed9d25
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4ec01425410a26518a3f6ba8b0b5d8dd9fc85bbc
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [ux, implementation]
+  lifecycle: [design, implementation]
+  characteristic: [tool-routing, reference-heavy, human-review, visual-verification]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Authority hard fail: ordinary workflows can invoke paid external image models/APIs, upload brand/reference assets, use design platforms, and persist/modify image files via shell tools without distinct authorization checkpoints for cost, disclosure/upload, or file mutation. Strong mechanisms include tool/model routing, subject+setting+style+lighting+composition prompting, real screenshots instead of hallucinated UI, brand-consistency techniques, asset-type distinctions, and optimization checklists. Missing safeguards include secure credential-path guidance, copyright/trademark and likeness/consent checks, confidential-brand/reference-image disclosure boundaries, and provenance/rights discipline. Model capability/pricing, platform dimensions, browser support, and performance claims are volatile. Upstream evals are intended behavior only. Behavioral validation was not run."

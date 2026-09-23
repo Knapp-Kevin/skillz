@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: influencer-marketing
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 16d1b1ecf33bff98b5f6769e4f1a51cb67a275b8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 53066b284b22a3403f04bd72803dc78849e2f975
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [business-operations, communication, planning]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [risk-aware, human-review, source-driven, metric-driven]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Authority hard fail: the package prescribes creator outreach, paid/gifted compensation, negotiated commercial terms, exclusivity/usage rights, creator-account operation, public posts, tracking setup, and paid-ad whitelisting without distinct authorization checkpoints for communication, money, legal/commercial commitments, publication, or data disclosure. Strong safeguards include explicit material-connection disclosure, no fabricated claims, platform-label guidance, advertiser responsibility, and the bundled UGC reference's compliance rewrite of stealth-account/comment-bounty tactics. Useful mechanisms include audience-fit vetting, compensation-model comparison, creative briefs, agreement dimensions, and qualified-outcome measurement. Compensation/engagement ranges and legal/platform requirements remain volatile and should be reverified for jurisdiction and current platform rules. Behavioral validation was not run."

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: customer-research
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: e137d628841013c62251db1e25b12c71bbfc3f47
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e8571f8b67f3d096718a3607aa67e852a49b74e5
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [evidence-first, source-driven, synthesis, human-review]
+  authority: [read-only, external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Authority hard fail: primary-research procedures prescribe CRM segmentation, customer outreach, interviews/surveys, and paid incentives without a distinct authorization checkpoint for communications, customer-data use, or money-bearing action. Useful read-only analysis includes jobs-to-be-done, pains, triggers, desired outcomes, vocabulary, alternatives, quote clustering, source weighting, confidence labels, and explicit disconfirmation. Bundled public-source and support-ticket guidance lacks explicit privacy, minimization, retention, consent, and source-terms boundaries, and the package treats the 40% PMF benchmark, Superhuman 58%, incentive amounts, sample-size heuristics, and some source-confidence weights as operational guidance without claim-level primary evidence. Upstream evals are intended-behavior evidence, not behavioral validation. Behavioral validation was not run."
