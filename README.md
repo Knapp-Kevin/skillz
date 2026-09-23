@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-608-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-609-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities**. There are currently **608 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities**. There are currently **609 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 Current admitted-source accounting:
 
@@ -49,7 +49,7 @@ Current admitted-source accounting:
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
-| Corey Haines Marketing Skills | **16 / 50, 34 gaps** |
+| Corey Haines Marketing Skills | **17 / 50, 33 gaps** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 ### Active curation frontier
 
-Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Sixteen are individually current-standard reviewed and **34** remain.
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Seventeen are individually current-standard reviewed and **33** remain.
 
 - `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
@@ -80,8 +80,9 @@ Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766
 - `content-strategy`: **rejected unchanged 14/20**; useful customer-led research, buyer-stage mapping, pillar/cluster planning, weighted prioritization, content-as-product, distribution, atomization, and CMS/content-model mechanisms, but ordinary procedures prescribe identity-bearing distribution plus persistent CMS/site configuration, permissions, webhook/rebuild, migration, and publication without distinct authorization checkpoints. Research also needs stronger privacy/data-minimization/retention/consent/source-terms boundaries, while volatile backlink, reach, platform-half-life, CMS, and SEO claims require current primary-source verification.
 - `copy-editing`: **rejected unchanged 15/20**; useful multi-pass editing, checklist, plain-language, specificity/voice, and refresh-vs-rewrite mechanisms. No authority hard fail applies because ordinary behavior is generate/edit-only. Unchanged adoption is rejected because refresh guidance contains unsupported volatile AI-search/SEO and cadence claims and lacks explicit source-verification, privacy, minimization, consent, retention, and source-terms boundaries for testimonials, case studies, competitor material, traffic/search data, pricing, and feature claims.
 - `copywriting`: **rejected unchanged 14/20**; strong generate-only page-copy routing, context gathering, clarity/specificity/customer-language discipline, page structures, CTA guidance, voice/tone calibration, annotated alternatives, Now-you-can test, Human Action Model, and Perception Gap. No authority hard fail applies. Unchanged adoption is rejected because material quantitative conversion/sales/CAC/referral and SavvyCal performance claims lack claim-level primary evidence, while voice-of-customer guidance needs explicit privacy, data-minimization, consent, retention, and source-terms boundaries.
+- `cro`: **rejected unchanged 15/20**; useful read-only CRO audit, page-specific frameworks, experiment hypotheses, and form UX mechanisms. No authority hard fail applies because ordinary execution analyzes and recommends rather than mutating external systems. Unchanged adoption is rejected because bundled form guidance contains unsupported quantitative field-count/UX claims, enrichment/inference and behavioral profiling lack explicit privacy/minimization/consent/retention/purpose-limitation/disclosure boundaries, and social-proof/security/review/case-study/ROI/guarantee recommendations lack an explicit current claim-verification rule.
 
-Behavioral validation is `not-run` for all sixteen. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+Behavioral validation is `not-run` for all seventeen. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
 
 Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: cro
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: add272bb1b29f8721994e5dcf307ffe6018d98dc
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 74a2394f838e0f07a5a5f06eee99047b8a5adcd6
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [marketing, analysis]
+  lifecycle: [planning, review]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The exact package is useful CRO prior art: it provides clear page-goal and traffic-context intake, a prioritized value-proposition/headline/CTA/hierarchy/trust/objection/friction audit, page-specific frameworks, hypothesis-oriented experiment ideas, and detailed form UX guidance. No authority hard fail applies because ordinary execution analyzes pages and proposes tests or copy alternatives rather than directly publishing, sending, spending, changing access, or mutating external systems. Unchanged adoption is rejected because references/form.md asserts unsupported quantitative field-count completion penalties (including 10-25% and 25-50%+ reductions) and presents several generalized UX prescriptions without claim-level evidence. It also encourages company enrichment, email-domain inference, field-level behavioral tracking, progressive profiling, personalization, and handling phone/company-size data without explicit privacy, data-minimization, consent, retention, purpose-limitation, or third-party disclosure boundaries. Social-proof, security-badge, review-score, case-study, ROI, and guarantee recommendations likewise lack an explicit current claim-verification rule. Behavioral validation was not run. Preserve the read-only CRO audit, prioritization, experiment-design, message-match, friction analysis, and form-design mechanisms with current evidence and explicit data-handling and claim-verification safeguards."
