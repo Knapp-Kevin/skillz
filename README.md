@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-617-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-619-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities**. There are currently **617 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities**. There are currently **619 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 Current admitted-source accounting:
 
@@ -49,7 +49,7 @@ Current admitted-source accounting:
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
-| Corey Haines Marketing Skills | **25 / 50, 25 gaps** |
+| Corey Haines Marketing Skills | **27 / 50, 23 gaps** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 ### Active curation frontier
 
-Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Twenty-five are individually current-standard reviewed and **25** remain.
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Twenty-seven are individually current-standard reviewed and **23** remain.
 
 - `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
@@ -89,10 +89,14 @@ Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766
 - `image`: **rejected unchanged 13/20**; useful tool/model routing, prompt structure, real-screenshot integrity, brand-consistency, asset-type, and optimization mechanisms remain useful, but normal workflows fail the authority hard fail by moving into paid external generation/API use, upload/disclosure of brand/reference assets, and persistent file mutation without distinct authorization. Rights/likeness/provenance/credential safeguards are incomplete and model/platform guidance is volatile.
 - `influencer-marketing`: **rejected unchanged 15/20**; useful creator-fit vetting, compensation-model comparison, disclosure/compliance safeguards, brief design, agreement dimensions, measurement, and a compliance-rewritten UGC playbook remain useful, but normal procedures fail the authority hard fail through creator outreach, compensation, commercial terms/rights, account operation, publication, tracking, and paid-ad whitelisting without distinct authorization. Legal/platform and compensation guidance also require current verification.
 - `launch`: **rejected unchanged 14/20**; useful SLC readiness, channel portfolio framing, phased internal-to-GA progression, touchpoint checklist, announcement sizing, and post-launch momentum mechanisms remain useful, but normal procedures fail the authority hard fail through site/signup mutation, public announcements, user invitations, identity-bearing communications, Product Hunt activity, in-app/site publication, access-state changes, and charging without distinct authorization. Case-study/channel claims also need current verification.
+- `lead-magnets`: **rejected unchanged 15/20**; useful buyer-stage matching, gating trade-offs, format selection, landing-page structure, distribution planning, minimum-data instincts, and measurement framing remain useful. No authority hard fail applies because ordinary behavior is generate-only strategy. Unchanged adoption is rejected because lead capture/segmentation lacks explicit consent, privacy, minimization, retention, purpose-limitation, and disclosure boundaries; social-proof claims need explicit current verification; and field-friction, conversion, engagement, and format benchmarks lack claim-level primary evidence.
+- `marketing-council`: **rejected unchanged 16/20**; strong simulation labeling, deliberate dissent, disagreement maps, anti-fabrication rules, primary-source preference, living-advisor recency care, and grounded synthesis remain useful. Unchanged adoption fails the authority hard rule because the custom-advisor path instructs persistent `.agents/advisors/` file creation without a distinct file-write authorization checkpoint. Living-person simulation also requires exact/current-source discipline for quotes, attributed positions, named competitors, controversies, and evolving views.
 
-Behavioral validation is `not-run` for all twenty-five. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+Behavioral validation is `not-run` for all twenty-seven. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
 
-**Macro tranche finding:** the source family is consistently stronger as planning/checklist/design prior art than as unchanged operational authority. Across the eight-skill tranche, recurring defects are (1) action authority that does not cleanly separate planning from external communication, spend, publication, access, or mutation; (2) privacy/minimization/consent/retention gaps around customer, lead, attendee, behavioral, profile, creator, and reference-asset data; and (3) volatile quantitative marketing/platform claims that are often encoded in upstream evals as expected behavior without independent claim-level evidence. Upstream evals are therefore treated as intended-behavior evidence, never behavioral validation.
+**Macro tranche finding:** the source family is consistently stronger as planning/checklist/design prior art than as unchanged operational authority. Across the initial eight-skill tranche, recurring defects are (1) action authority that does not cleanly separate planning from external communication, spend, publication, access, or mutation; (2) privacy/minimization/consent/retention gaps around customer, lead, attendee, behavioral, profile, creator, and reference-asset data; and (3) volatile quantitative marketing/platform claims that are often encoded in upstream evals as expected behavior without independent claim-level evidence. Upstream evals are therefore treated as intended-behavior evidence, never behavioral validation.
+
+**Concurrent-work reconciliation:** a second writer independently reviewed the same eight packages plus `lead-magnets` and `marketing-council` while the first tranche was in flight. The duplicate eight were superseded by the merged tranche; the two unique reviews were independently rechecked against the same exact source pin, corrected to the live controlled taxonomy, and preserved as a clean follow-on rather than merging overlapping stale work.
 
 Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 
