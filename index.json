@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-22",
+  "snapshot_date": "2026-09-23",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 607,
+    "persisted_third_party_exact_version_reviews": 608,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 15,
+    "corey_haines_marketing_skills_current_standard_companions": 16,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 35,
+    "corey_haines_marketing_skills_current_standard_gaps": 34,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-22: reviewed Corey Haines copywriting at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 14/20 without an authority hard fail because the package is generate-only, but material conversion/sales-cycle/CAC/referral and SavvyCal performance claims lack claim-level primary evidence and voice-of-customer guidance needs explicit privacy/data-minimization/consent/retention/source-terms boundaries; behavioral validation not-run; Corey Haines 14/50 -> 15/50 with gaps 36 -> 35; persisted exact-version review count 606 -> 607"
+    "latest_reconciliation": "2026-09-23: reviewed omitted Corey Haines copy-editing at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; rejected unchanged 15/20 without an authority hard fail because ordinary behavior is generate/edit-only, but volatile AI-search/SEO and refresh-cadence claims lack claim-level evidence and testimonial/case-study/competitor/pricing/feature/traffic guidance needs explicit source-verification, privacy/data-minimization/consent/retention/source-terms boundaries; behavioral validation not-run; Corey Haines 15/50 -> 16/50 with gaps 35 -> 34; persisted exact-version review count 607 -> 608"
   }
 }
