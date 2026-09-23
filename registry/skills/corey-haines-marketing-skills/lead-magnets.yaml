@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: lead-magnets
+display_name: Lead Magnets
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/lead-magnets/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: b7c11f1a123e5d991db75fd3ec8a4d1fb2ecc66c
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-14T05:05:15Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/benchmarks.md, references/format-guide.md, and evals/evals.json are part of the exact package; cross-references free-tools, copywriting, emails, cro, popups, content-strategy, analytics, ads, and social; optional implementation paths lead to live capture, distribution, advertising, and email systems but the canonical output is a strategy
+import_eligibility: rejected-unchanged-reference
+rationale: Useful buyer-stage matching, gating trade-offs, format selection, landing-page structure, distribution planning, measurement framing, and minimum-data instincts. No authority hard fail applies because ordinary execution produces a strategy rather than directly collecting data, sending messages, publishing content, or buying ads. Unchanged adoption is rejected because email/name/company/role capture and segmentation guidance lacks explicit consent, privacy, minimization, retention, purpose-limitation, and disclosure boundaries; social-proof and other landing-page claims need explicit truth/current-verification rules; and multiple field-friction, conversion, engagement, and format benchmark percentages are presented without claim-level primary evidence. Preserve the planning and measurement mechanisms behind explicit data-governance and downstream action-authorization boundaries.

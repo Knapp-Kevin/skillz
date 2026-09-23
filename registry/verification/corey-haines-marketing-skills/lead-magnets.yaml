@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: lead-magnets
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: b7c11f1a123e5d991db75fd3ec8a4d1fb2ecc66c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fc53513f326836381e81a2d4e3e699cdd52f9cbc
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [planning, communication]
+  lifecycle: [planning, design]
+  characteristic: [human-review, reference-heavy, metric-driven, hypothesis-driven]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. No authority hard fail applies because the canonical workflow outputs a lead-magnet strategy rather than directly collecting data, sending messages, publishing, or buying ads. Useful mechanisms include buyer-stage matching, gating trade-offs, format selection, landing-page structure, distribution planning, minimum-data instincts, A/B-test ideas, and measurement framing. Unchanged adoption is rejected because email/name/company/role capture and segmentation lacks explicit consent/privacy/minimization/retention/purpose-limitation/disclosure boundaries; social-proof and related landing-page claims need an explicit truth/current-verification rule; and quantitative field-friction, conversion, engagement, and benchmark claims lack claim-level primary evidence. Upstream evals are intended behavior only. Behavioral validation was not run."
