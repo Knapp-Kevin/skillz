@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: image
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 03c0c80ec888685403cd5f9b17e90f6ae6ed9d25
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4ec01425410a26518a3f6ba8b0b5d8dd9fc85bbc
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 11/20
+tags:
+  use_case: [marketing, image-generation, design]
+  lifecycle: [creation, optimization]
+  characteristic: [tool-oriented, reference-heavy]
+  authority: [external-side-effects, credentials]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 0, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. AUTHORITY/SECRET HARD FAIL: the skill asks whether the user has API keys for generation tools, which can solicit real credentials into conversational context, and includes commands that overwrite/convert local image files plus external generation paths that may incur spend, without a real authorization boundary. Model names, capabilities, costs, platform dimensions, and browser-support claims are volatile. Behavioral validation not run. Preserve tool-selection logic, prompt anatomy, real-screenshot rule, optimization checklist, and asset-format guidance with secure credential and mutation authorization boundaries."
