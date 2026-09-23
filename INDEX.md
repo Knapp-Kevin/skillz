@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-09-23
+**Snapshot date:** 2026-09-24
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, and reconciliation.
 
@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 20 |
-| Persisted third-party exact-version reviews | 625 |
+| Persisted third-party exact-version reviews | 633 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -24,8 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 55 / 55 |
 | David Ondrej Skills current-standard gaps | 0 |
-| Corey Haines Marketing Skills current-standard companions | 33 / 50 |
-| Corey Haines Marketing Skills current-standard gaps | 17 |
+| Corey Haines Marketing Skills current-standard companions | 41 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 9 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -42,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **33/50** individually reviewed with **17** gaps. The first twenty-five exact-version dispositions remain unchanged. Macro tranche 02 adds eight rejected-unchanged packages: `lead-magnets`, `marketing-council`, `marketing-ideas`, `marketing-loops`, `marketing-plan`, `marketing-psychology`, `offers`, and `onboarding`. `marketing-plan` has an authority hard fail because it instructs persistent file creation and optional external API/data pulls without a real authorization boundary. The other seven are primarily planning/advisory artifacts but have recurring evidence, privacy/consent, non-deception, or implementation-authorization defects that prevent unchanged adoption. All thirty-three retain useful adaptation/extraction evidence; behavioral validation is `not-run`. The source-family systemic pattern remains consistent: planning/checklist/design prior art is stronger than unchanged operational authority, with recurring planning-to-execution boundary blur, privacy/minimization/consent gaps, and unsupported or volatile quantitative marketing claims.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **41/50** individually reviewed with **9** gaps. Macro tranche 03 adds `paywalls` and `prospecting` as **VERIFIED** unchanged-use candidates and rejects `popups`, `pricing`, `product-marketing`, `programmatic-seo`, `public-relations`, and `referrals` unchanged while preserving adaptation/extraction value. `product-marketing` and `referrals` have authority hard fails. Behavioral validation remains `not-run`. The family remains stronger as planning/checklist/design prior art than as unchanged operational authority, while tranche 03 confirms meaningful bounded exceptions.
 
 ## First-party skills by purpose
 
