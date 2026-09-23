@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 20 |
-| Persisted third-party exact-version reviews | 617 |
+| Persisted third-party exact-version reviews | 625 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -24,8 +24,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 55 / 55 |
 | David Ondrej Skills current-standard gaps | 0 |
-| Corey Haines Marketing Skills current-standard companions | 25 / 50 |
-| Corey Haines Marketing Skills current-standard gaps | 25 |
+| Corey Haines Marketing Skills current-standard companions | 33 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 17 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
@@ -42,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **25/50** individually reviewed with **25** gaps. The first seventeen exact-version dispositions remain unchanged. Macro tranche 01 adds eight rejected-unchanged packages: `customer-research` **15/20** (authority hard fail for outreach/incentives/customer-data actions plus privacy/evidence defects), `directory-submissions` **12/20** (authority hard fail for submissions/publication/outreach/incentives plus volatile platform claims), `emails` **14/20** (no authority hard fail; rejected for weak evidence and segmentation/privacy/send-boundary defects), `events` **14/20** (authority hard fail across spend/outreach/attendee-data/recording/publication), `free-tools` **14/20** (no authority hard fail; rejected for unsourced benchmark library and lead-data governance), `image` **13/20** (authority hard fail across paid generation/upload/file mutation plus rights/data safeguards), `influencer-marketing` **15/20** (authority hard fail across outreach/compensation/commercial rights/publication/tracking despite strong disclosure safeguards), and `launch` **14/20** (authority hard fail across publication/communications/access/charging). All twenty-five retain useful adaptation/extraction evidence; behavioral validation is `not-run`. The tranche-level systemic pattern is fragmented action authorization, weak privacy/minimization/consent/retention boundaries, and volatile marketing/platform claims that upstream evals often encode as expected behavior rather than independently validate.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. David Ondrej Skills is current-standard companion-complete at **55/55**. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **33/50** individually reviewed with **17** gaps. The first twenty-five exact-version dispositions remain unchanged. Macro tranche 02 adds eight rejected-unchanged packages: `lead-magnets`, `marketing-council`, `marketing-ideas`, `marketing-loops`, `marketing-plan`, `marketing-psychology`, `offers`, and `onboarding`. `marketing-plan` has an authority hard fail because it instructs persistent file creation and optional external API/data pulls without a real authorization boundary. The other seven are primarily planning/advisory artifacts but have recurring evidence, privacy/consent, non-deception, or implementation-authorization defects that prevent unchanged adoption. All thirty-three retain useful adaptation/extraction evidence; behavioral validation is `not-run`. The source-family systemic pattern remains consistent: planning/checklist/design prior art is stronger than unchanged operational authority, with recurring planning-to-execution boundary blur, privacy/minimization/consent gaps, and unsupported or volatile quantitative marketing claims.
 
 ## First-party skills by purpose
 
