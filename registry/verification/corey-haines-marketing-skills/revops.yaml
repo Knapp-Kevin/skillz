@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: revops
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: a17c8893281ab6860507e58486469cb3b39240eb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fba4dc188fa79cc094ba8f3dd878c0791331d1a0
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [business-operations, planning, automation]
+  lifecycle: [planning, execution]
+  characteristic: [human-review, risk-aware, tool-assisted]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rejected unchanged under the authority hard rule. The planning framework is useful, but the normal procedure includes CRM lifecycle mutation, routing, task/alert creation, proposal/forecast actions, enrichment, scheduling, and communications without a distinct authorization checkpoint. Multiple benchmark claims are also volatile and should be re-sourced before operational use. Behavioral validation was not run."
