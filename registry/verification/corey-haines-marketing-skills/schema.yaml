@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: schema
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 23ea18f891aa09456529424f06a046998db04eb4
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e6012136a998d5881d320dce58360bac1809b246
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [content-generation, web-development]
+  lifecycle: [planning]
+  characteristic: [human-review, risk-aware, reusable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified for unchanged reference use as generate-only structured-data guidance. It requires truthful page-content matching, anti-spam discipline, Google/schema.org validation, and testing before deployment. It does not itself authorize or perform site mutation. Behavioral validation was not run."
