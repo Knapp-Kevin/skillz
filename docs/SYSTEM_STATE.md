@@ -4,19 +4,19 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-23 |
+| **Last updated** | 2026-09-24 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **625** |
+| **Persisted third-party review companions** | **633** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | **33 / 50** |
-| **Corey Haines Marketing Skills current-standard gaps** | **17** |
+| **Corey Haines Marketing Skills current-standard companions** | **41 / 50** |
+| **Corey Haines Marketing Skills current-standard gaps** | **9** |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -39,7 +39,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
-| **Corey Haines Marketing Skills** | **33 / 50** | **17** |
+| **Corey Haines Marketing Skills** | **41 / 50** | **9** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -56,11 +56,11 @@ Completion means decisive current evidence for every eligible package, not unive
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-Thirty-three packages now have current-standard provenance and exact-version verification companions. The first twenty-five dispositions remain as recorded in their canonical companions. Macro tranche 02 adds eight rejected-unchanged packages: `lead-magnets` **16/20**, `marketing-council` **16/20**, `marketing-ideas` **15/20**, `marketing-loops` **16/20**, `marketing-plan` **14/20**, `marketing-psychology` **15/20**, `offers` **15/20**, and `onboarding` **15/20**. Behavioral validation is `not-run` for all thirty-three.
+Forty-one packages now have current-standard provenance and exact-version verification companions. Macro tranche 03 adds eight packages: `paywalls` **17/20 VERIFIED**, `popups` **15/20 REJECTED unchanged**, `pricing` **14/20 REJECTED unchanged**, `product-marketing` **13/20 REJECTED unchanged**, `programmatic-seo` **15/20 REJECTED unchanged**, `prospecting` **17/20 VERIFIED**, `public-relations` **14/20 REJECTED unchanged**, and `referrals` **13/20 REJECTED unchanged**. Behavioral validation is `not-run` for all forty-one reviewed units.
 
-`marketing-plan` fails the authority hard rule because ordinary procedure includes persistent file creation and optional external API/data pulls without a distinct authorization boundary. The other seven tranche-02 packages are primarily advisory/planning artifacts and do not establish an authority hard fail, but unchanged adoption is rejected for combinations of unsupported or volatile claims, privacy/consent/minimization gaps, simulated-authority concerns, planning-to-execution boundary blur, and insufficient non-deception safeguards around persuasion, scarcity, urgency, profiling, or behavioral instrumentation.
+`product-marketing` fails the authority hard rule because its ordinary workflow creates/updates and may move persistent files without a distinct mutation authorization checkpoint. `referrals` fails because its normal launch procedure crosses into external tool/tracking mutation, customer communications, and money-bearing rewards/commissions without distinct authorization checkpoints. `paywalls` clears the unchanged static bar with explicit anti-dark-pattern, dismissal, and escape-hatch safeguards; `prospecting` clears it with strong evidence-lineage, anti-scraping, privacy, sensitive-trait, contact-provenance, and downstream-outreach separation safeguards.
 
-**Macro synthesis:** Corey Haines is substantially stronger as a planning/checklist/design corpus than as unchanged operational authority. Across the first thirty-three reviews, recurring defects cluster around fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or dark-pattern-adjacent tactics. Upstream evals are treated as intended-behavior evidence, never behavioral validation. The remaining seventeen should therefore continue under macro mapping and coherent tranches while preserving individual exact-version decisions and deeper review for high-authority, privacy-sensitive, evidence-heavy, or ambiguous packages.
+**Macro synthesis:** Corey Haines remains substantially stronger as a planning/checklist/design corpus than as unchanged operational authority, but tranche 03 confirms the family is not uniformly reject-only. Recurring defects remain fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or dark-pattern-adjacent tactics. Upstream evals are intended-behavior evidence, never behavioral validation. The remaining nine should be treated as one final macro frontier if their actual complexity permits, with deeper review for high-authority, privacy-sensitive, evidence-heavy, or ambiguous packages.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/` rather than being duplicated here.
 
@@ -71,6 +71,8 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 Static verification is not behavioral validation. `verified` means the exact bound material passed structured semantic review. `validated` requires representative external behavioral/adversarial evidence that actually exists. `rejected` and `retired` remain prior art but are excluded from normal unchanged selection.
 
 The authority hard fail remains controlling: procedures that can mutate or materially affect infrastructure, external state, production traffic, money-bearing resources, credentials, subscriptions, DNS/routing, security controls, user communications, notifications, identity/access, persistent cloud resources, destructive lifecycle state, or sensitive-data disclosure require a real authorization boundary appropriate to the action.
+
+A corpus-hygiene defect is tracked under #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use only current controlled values; historical tag drift should be normalized without inventing new behavioral evidence.
 
 ## Discovery and source vetting
 
@@ -89,16 +91,8 @@ Current governed discovery surfaces include the Creator Technical Resource Catal
 
 ## Accounting contract
 
-After every material corpus tranche, reconcile these five public surfaces atomically:
-
-1. `README.md`
-2. `docs/SYSTEM_STATE.md`
-3. `CURATION_QUEUE.md`
-4. `INDEX.md`
-5. `index.json`
-
-Recompute counts from live evidence. Do not increment stale counters. At minimum keep persisted exact-version review count, active source-family completion, denominator, gaps, completed sub-family denominators, and active frontier consistent. Do not perform five-surface ceremony after every individual record when a coherent tranche is still in progress, but do not merge a material tranche while these surfaces disagree.
+After every material corpus tranche, reconcile these five public surfaces atomically: `README.md`, `docs/SYSTEM_STATE.md`, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json`. Recompute counts from live evidence. Do not increment stale counters. Do not merge a material tranche while these surfaces disagree.
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills frontier from **33/50 reviewed and 17 gaps** using the macro-first cycle shape: recompute the remaining frontier, select a coherent bounded tranche, deep-review ambiguous/high-authority/privacy/evidence-sensitive packages, batch shared source facts without weakening individual evidence, synthesize family-level findings, and reconcile all five public accounting surfaces before merge.
+Complete and merge Corey macro tranche 03 at **41/50 reviewed and 9 gaps**, then recompute the remaining nine as a whole and finish them as one final macro tranche if evidence and complexity permit.
