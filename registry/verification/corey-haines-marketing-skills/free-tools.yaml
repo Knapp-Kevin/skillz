@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: free-tools
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 38d5ae0dd86fb1a13486a737deb0f662b6d599a7
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ead49b70b42507df7dcc888359e3a9ff906ce16c
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [planning, decision-support]
+  lifecycle: [discovery, planning, design]
+  characteristic: [hypothesis-driven, human-review, reference-heavy, cost-bounded]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. No authority hard fail is established because ordinary behavior plans/evaluates free tools rather than deploying them. Useful mechanisms include pain-led ideation, adjacency, build-vs-buy/no-code choices, MVP scoping, maintenance/security-debt recognition, gating options, and an evaluation scorecard. Unchanged adoption is rejected because references/tool-benchmarks.md presents named lead, conversion, traffic, revenue, CAC, acquisition, and build-time claims as real expectation-setting evidence without claim-level primary citations. Lead-capture/qualification guidance also lacks explicit consent, privacy, minimization, retention, and disclosure boundaries. Upstream evals are intended behavior only. Behavioral validation was not run."

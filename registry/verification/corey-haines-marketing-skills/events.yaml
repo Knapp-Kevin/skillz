@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: events
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: ec52d238c66f1a6737ae369f963cd3d77798cd20
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca56d1cd1edc7baf05a1cab50f8d56b262fb8f39
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [planning, business-operations, communication]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [metric-driven, human-review, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Authority hard fail: ordinary workflows prescribe sponsorship spend and negotiation, pre-event outreach/meeting booking, attendee-data capture, CRM routing, event hosting, post-event communications, recording, and publication without distinct authorization checkpoints. Strong mechanisms include portfolio-first selection, ICP-overlap reasoning, cost-per-qualified-meeting comparisons, before/during/after decomposition, follow-up tiering, qualified-conversation focus, and vanity/real/decisive metric separation. Some bundled guidance correctly raises recording rights and explicit consent for joint-webinar lead sharing, but these safeguards are not universal. Event-performance, timing, opportunity-count, audience-size, and AI-citation claims need current primary evidence. Upstream evals are intended behavior, not validation. Behavioral validation was not run."

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: emails
+display_name: Email Sequence Design
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/emails/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 5b4e8b70c6e47d428e0f26e17d6ec1e9ad2ea8e0
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-14T05:05:15Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/copy-guidelines.md, references/email-types.md, references/sequence-templates.md, and evals/evals.json are part of the exact package; cross-references onboarding, lead-magnets, churn-prevention, copywriting, ab-testing, popups, and revops; optional implementation guidance points to external email tools but drafting does not require live tool access
+import_eligibility: rejected-unchanged-reference
+rationale: A useful generate-only lifecycle-email design package with clear sequence routing, one-email-one-job, value-before-ask, structured trigger/goal/timing/exit-condition outputs, onboarding/nurture/re-engagement patterns, and explicit separation from in-app onboarding and cold outreach. No authority hard fail is established because ordinary execution drafts and plans rather than sending or changing an ESP. Unchanged adoption is rejected because timing, length, subject-line, open/click/unsubscribe, and lifecycle benchmark guidance is materially prescriptive without claim-level evidence; behavior/profile/usage segmentation and personalization guidance lacks explicit privacy, consent, minimization, retention, and purpose-limitation boundaries; and the package does not clearly require a separate send/automation authorization before implementation. Preserve sequence architecture and drafting mechanisms with current evidence, data-governance safeguards, and explicit implementation authority.

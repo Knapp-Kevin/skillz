@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: influencer-marketing
+display_name: Influencer and Creator Marketing
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/influencer-marketing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 16d1b1ecf33bff98b5f6769e4f1a51cb67a275b8
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-19T17:40:03Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-reference-and-evals
+relationships: bundled references/ugc-creator-program.md and evals/evals.json are part of the exact package; cross-references referrals, community-marketing, ad-creative, cold-email, customer-research, attribution, and paid-media workflows; procedures assume creator outreach, compensation/deals, content usage rights, disclosures, tracking links/codes, optional whitelisting, and creator-account operation
+import_eligibility: rejected-unchanged-reference
+rationale: A differentiated creator-program package with useful audience-fit vetting, compensation-model comparison, written-agreement checklist, disclosure/compliance emphasis, creative-brief discipline, tracking/ROI methods, ambassador design, and a bundled UGC playbook that explicitly rewrites undisclosed-comment and stealth-account tactics toward disclosed operation. Unchanged adoption still fails the authority hard fail because ordinary procedures prescribe creator outreach, paid/gifted compensation, commercial commitments, exclusivity and usage-right agreements, account operation, content publication, tracking setup, and paid-ad whitelisting without distinct authorization checkpoints for communications, money, legal/commercial commitments, identity-bearing publication, or data disclosure. Compensation/engagement benchmarks and legal/platform guidance are also volatile and require current jurisdiction/platform verification. Preserve vetting, disclosure safeguards, brief design, agreement dimensions, and measurement behind explicit authority and current legal/platform checks.

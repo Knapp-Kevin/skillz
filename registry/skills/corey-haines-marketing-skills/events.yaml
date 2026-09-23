@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: events
+display_name: Event Marketing
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/events/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: ec52d238c66f1a6737ae369f963cd3d77798cd20
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:02:09Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/event-portfolio-strategy.md, references/speaking.md, references/sponsorship-roi.md, references/webinar-funnel.md, and evals/evals.json are part of the exact package; cross-references launch, co-marketing, community-marketing, public-relations, emails, sms, cold-email, revops, attribution, social, video, content-strategy, sales-enablement, and ai-seo
+import_eligibility: rejected-unchanged-reference
+rationale: Strong event-strategy prior art covering portfolio selection, role-specific motions, audience/ICP fit, cost-per-qualified-meeting reasoning, before/during/after lifecycle, qualified-conversation capture, content reuse, and vanity-vs-real metric discipline. Unchanged adoption fails the authority hard fail because normal procedures prescribe sponsorship spend/negotiation, pre-booking and follow-up communications, attendee targeting/data capture, CRM routing, event hosting, recording, publication, and related external actions without distinct authorization checkpoints. Some bundled guidance usefully flags recording rights and explicit registrant consent for joint-webinar lead sharing, but those boundaries are not universal. Volatile event-performance, timing, attendance, opportunity-count, and transcript/AI-citation claims also need current evidence. Preserve portfolio/economics, segmentation, measurement, and event-arc mechanisms behind universal spend, communication, recording, publication, and data authority boundaries.
