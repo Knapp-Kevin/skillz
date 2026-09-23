@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: paywalls
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 311cf4073370289060c62f34f6fbfff462275599
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: de911a4f39e11b03113f31a96404d06035952d1a
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [ux, planning]
+  lifecycle: [planning, design]
+  characteristic: [human-review, hypothesis-driven, metric-driven, safety-bounded]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified for unchanged reference use as a generate-only paywall/upgrade design procedure. It contains unusually clear anti-dark-pattern, dismissal, and escape-hatch safeguards and does not itself authorize spend, publication, billing mutation, or user communication. Current product/pricing/social-proof claims still require verification when instantiated. Behavioral validation was not run."

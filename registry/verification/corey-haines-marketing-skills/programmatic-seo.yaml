@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: programmatic-seo
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: afbffddf471de4fc36f31fb0e502be1d79a3cf1d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e96bf82ed07475262490f60108258d8dfccb6389
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [planning, research, writing]
+  lifecycle: [discovery, planning, design]
+  characteristic: [human-review, reference-heavy, risk-aware, synthesis]
+  authority: [generate-only]
+  portability: [high]
+notes: "No authority hard fail for ordinary strategy/template output. Rejected unchanged because public/licensed/product/user-generated data acquisition lacks explicit privacy, source-terms, consent, and minimization boundaries; some SEO prescriptions such as categorical subfolder/subdomain authority claims are too absolute; and live page generation/indexation/publication must be separated behind explicit mutation/publication authorization. Behavioral validation was not run."

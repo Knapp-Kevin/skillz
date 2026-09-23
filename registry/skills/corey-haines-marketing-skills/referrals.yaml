@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: referrals
+display_name: Referrals
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/referrals/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 40058d9362d9f4aac1f9d44bbdd2fc9a38df984c
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:37:25Z
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: external-side-effect
+portability: high
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-optional-external-tools
+relationships: bundled evals plus program-examples, viral-mechanisms, and affiliate-program references are part of the exact package; optional referral/payment/partner tools are external dependencies; cross-references launch, emails, marketing-psychology, and analytics
+import_eligibility: rejected-unchanged-reference
+rationale: Useful referral-loop, incentive, affiliate, fraud-prevention, measurement, and launch prior art. Unchanged adoption fails the authority hard rule because the ordinary launch procedure includes configuring referral tooling/tracking, announcing to customers, in-app prompts, reminder emails, and money-bearing rewards/commissions without distinct authorization checkpoints. Several LTV/churn/referral-rate and commission heuristics also lack claim-level evidence.

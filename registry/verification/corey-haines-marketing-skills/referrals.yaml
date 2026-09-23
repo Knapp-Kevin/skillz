@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: referrals
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 40058d9362d9f4aac1f9d44bbdd2fc9a38df984c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bcd90b1d3d03480ff86dbe914e90f92f7f8673bf
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [business-operations, planning, communication]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [human-review, metric-driven, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [high]
+notes: "AUTHORITY HARD FAIL: ordinary launch guidance includes configuring external referral/tracking tools, customer announcements, in-app prompts, reminder emails, and money-bearing rewards/commissions without distinct authorization checkpoints for external mutation, communications, tracking, and spend. Rejected unchanged also because LTV/churn/referral-rate and commission/buyout heuristics lack claim-level evidence. Behavioral validation was not run."
