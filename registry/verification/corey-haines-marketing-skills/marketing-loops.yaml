@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: marketing-loops
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 8e238c15aabd940ee42c03bf121a73a91ac65bd8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 895072416c4c53941d354e48b0bab973f94a3d83
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [growth-experiments, marketing-strategy]
+  lifecycle: [planning, design]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [propose-only]
+  portability: [high]
+notes: "No hard fail for planning-only use, but unchanged adoption is rejected because implementation guidance can cross into automated outreach, incentives, sharing, and product-state mutation without a universal action-authorization boundary or consistently bound privacy/consent/anti-abuse controls. The loop anatomy, state, orchestration, and guardrail mechanisms remain high-value adaptation material. Behavioral validation was not run."
