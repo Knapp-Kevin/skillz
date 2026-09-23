@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: customer-research
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: e137d628841013c62251db1e25b12c71bbfc3f47
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e8571f8b67f3d096718a3607aa67e852a49b74e5
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [marketing, research, analysis]
+  lifecycle: [discovery, planning, review]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [external-side-effects]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. AUTHORITY HARD FAIL: Mode 3 instructs CRM segmentation, direct outreach, incentives, interviews, and surveys without a real authorization boundary for communications, money-bearing incentives, customer-data access, or recording/data handling. Existing-asset analysis can involve support, NPS, churn, identity, and other customer data without explicit minimization/consent/retention boundaries. The package has unusually useful disconfirmation, source-bias, confidence-labeling, VOC extraction, JTBD, and persona guardrails, but quantitative PMF/sample/incentive guidance also needs source verification. Behavioral validation not run. Preserve read-only synthesis and research-design mechanisms with explicit authority/privacy safeguards."
