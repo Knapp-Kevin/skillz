@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: influencer-marketing
+display_name: Influencer and Creator Marketing
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/influencer-marketing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 16d1b1ecf33bff98b5f6769e4f1a51cb67a275b8
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-19T17:40:03Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: external-side-effects
+portability: high
+review_status: curated-external
+dependency_status: bundled-reference-and-evals
+relationships: bundled references/ugc-creator-program.md and evals/evals.json are part of the exact package; cross-references referrals, community-marketing, ad-creative, cold-email, customer-research, ai-seo, and social
+import_eligibility: rejected-unchanged-reference
+rationale: Strong partner-fit, disclosure, brief, attribution, and portfolio concepts with unusually explicit anti-fabrication/compliance guidance. Unchanged adoption is still rejected under the authority hard fail because it directs outreach, compensation/spend, contracts, gifting, tracking, private communities, creator activation, and paid-ad usage-rights actions without explicit per-action authorization; compensation ranges and legal/platform guidance also require current jurisdiction/source verification.
