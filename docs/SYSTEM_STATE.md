@@ -11,12 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **617** |
+| **Persisted third-party review companions** | **619** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 20 |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
-| **Corey Haines Marketing Skills current-standard companions** | **25 / 50** |
-| **Corey Haines Marketing Skills current-standard gaps** | **25** |
+| **Corey Haines Marketing Skills current-standard companions** | **27 / 50** |
+| **Corey Haines Marketing Skills current-standard gaps** | **23** |
 | **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
 | **Repository runtime/CI requirement** | None |
 
@@ -39,7 +39,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
-| **Corey Haines Marketing Skills** | **25 / 50** | **25** |
+| **Corey Haines Marketing Skills** | **27 / 50** | **23** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -56,7 +56,7 @@ Completion means decisive current evidence for every eligible package, not unive
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-Twenty-five packages now have current-standard provenance and exact-version verification companions:
+Twenty-seven packages now have current-standard provenance and exact-version verification companions:
 
 - `ab-testing`: **rejected unchanged 13/20**, behavioral validation `not-run`. Useful experiment-planning mechanisms remain adaptation/extraction evidence, but unchanged adoption is rejected for materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful grounding, source-traceability, creative-format, performance-learning, review-template, and human-review mechanisms remain adaptation/extraction evidence, but unchanged adoption lacks distinct authorization boundaries for persistent file mutation and client-facing publication/communication.
@@ -83,8 +83,12 @@ Twenty-five packages now have current-standard provenance and exact-version veri
 - `image`: **rejected unchanged 13/20**, behavioral validation `not-run`. Useful tool/model routing, prompt structure, real-screenshot integrity, brand consistency, asset-type distinctions, and optimization remain useful. Unchanged adoption fails the authority hard fail through paid external generation/API use, asset upload/disclosure, and file mutation without distinct authorization; rights/likeness/provenance/credential safeguards are incomplete and model/platform guidance is volatile.
 - `influencer-marketing`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful creator-fit vetting, compensation-model comparison, disclosure/compliance, creative briefs, agreement dimensions, measurement, and a compliance-rewritten UGC playbook remain useful. Unchanged adoption fails the authority hard fail through outreach, compensation, commercial terms/rights, account operation, publication, tracking, and whitelisting without distinct authorization; legal/platform/compensation guidance also requires current verification.
 - `launch`: **rejected unchanged 14/20**, behavioral validation `not-run`. Useful SLC readiness, channel framing, phased progression, touchpoint checklist, announcement sizing, and post-launch momentum remain useful. Unchanged adoption fails the authority hard fail through site/signup mutation, public announcements, user invitations, communications, Product Hunt activity, publication, access-state changes, and charging without distinct authorization; case/channel claims also need current evidence.
+- `lead-magnets`: **rejected unchanged 15/20**, behavioral validation `not-run`. Useful buyer-stage matching, gating trade-offs, format selection, landing-page structure, distribution planning, minimum-data instincts, and measurement framing remain useful. No authority hard fail applies because ordinary execution produces strategy rather than collecting data or publishing. Unchanged adoption is rejected because capture/segmentation lacks explicit consent/privacy/minimization/retention/purpose-limitation/disclosure boundaries, social-proof claims need explicit current verification, and quantitative field-friction/conversion/engagement/format benchmarks lack claim-level primary evidence.
+- `marketing-council`: **rejected unchanged 16/20**, behavioral validation `not-run`. Strong simulation labeling, deliberate dissent, disagreement maps, anti-fabrication rules, primary-source preference, living-advisor recency care, and grounded synthesis remain useful. Unchanged adoption fails the authority hard rule because the custom-advisor path tells the agent to persist `.agents/advisors/<name>.md` without a distinct file-write authorization checkpoint. Living-person simulation also requires exact/current-source discipline for quotes, attributed positions, named competitors, controversies, and evolving views.
 
 **Macro synthesis:** the first concerted tranche confirms that Corey Haines is substantially more valuable as a planning/checklist/design corpus than as unchanged operational authority. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries around audience/customer/attendee/creator/reference data, and volatile quantitative marketing/platform claims that upstream evals often encode as expected behavior rather than independently prove. The curation model therefore uses macro mapping and coherent tranches for shared source facts while preserving individual exact-version dispositions and deeper review for high-authority, privacy-sensitive, evidence-heavy, or ambiguous packages.
+
+A concurrent writer independently covered the same eight-package tranche plus `lead-magnets` and `marketing-council`. The overlapping eight were superseded by the merged tranche; the two unique packages were independently rechecked, corrected to the live controlled taxonomy, and reconciled forward rather than discarding useful evidence or merging stale duplicate work.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -125,4 +129,4 @@ Recompute counts from live evidence. Do not increment stale counters. At minimum
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills frontier from **25/50 reviewed and 25 gaps** using the macro-first cycle shape: recompute the remaining frontier, select a coherent bounded tranche, deep-review ambiguous/high-authority/privacy/evidence-sensitive packages, batch shared source facts without weakening individual evidence, synthesize family-level findings, and reconcile all five public accounting surfaces before merge.
+Continue the Corey Haines Marketing Skills frontier from **27/50 reviewed and 23 gaps** using the macro-first cycle shape: recompute the remaining frontier, select a coherent bounded tranche, deep-review ambiguous/high-authority/privacy/evidence-sensitive packages, batch shared source facts without weakening individual evidence, synthesize family-level findings, and reconcile all five public accounting surfaces before merge.
