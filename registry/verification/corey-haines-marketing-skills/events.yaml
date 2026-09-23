@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: events
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: ec52d238c66f1a6737ae369f963cd3d77798cd20
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca56d1cd1edc7baf05a1cab50f8d56b262fb8f39
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [marketing, events, pipeline]
+  lifecycle: [planning, execution, measurement]
+  characteristic: [reference-heavy, checklist, synthesis]
+  authority: [external-side-effects]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. AUTHORITY HARD FAIL: the procedure directs outreach/meeting booking, sponsorship and event spend, attendee/contact capture, follow-up messages, CRM routing, recording, testimonial collection, and hosted events without explicit action authorization or privacy/recording-consent boundaries. Claims such as response decay, meetings-per-dollar, and event-size/ROI guidance also need claim-level evidence. Behavioral validation not run. Preserve portfolio selection, universal event arc, qualified-conversation focus, content reuse, and pipeline measurement as adaptation/checklist evidence."
