@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: revops
+display_name: RevOps
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/revops/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: a17c8893281ab6860507e58486469cb3b39240eb
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-07-13T19:12:49Z
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-optional-external-tools
+relationships: bundled lifecycle, scoring, routing, and automation references are part of the exact package; CRM, enrichment, scheduling, and automation platforms are optional external dependencies
+import_eligibility: rejected-unchanged
+rationale: Strong RevOps planning prior art, but ordinary guidance crosses into CRM mutation, routing, alerts, task creation, automated proposals, contact enrichment, and customer communications without a distinct action-authorization boundary. Volatile benchmark claims also require current evidence before operational use.
