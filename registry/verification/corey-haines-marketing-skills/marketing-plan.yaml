@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: marketing-plan
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f6c99ba989414b5319ab7f2cd29a49839bae663f
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4cb30ec952b7d7001d1d81c58583bbde5ddf433c
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [marketing-strategy, planning]
+  lifecycle: [planning, design]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [read-write]
+  portability: [medium]
+notes: "AUTHORITY HARD FAIL. The procedure instructs persistent file creation and permits external API/data pulls without a real authorization boundary for mutation, credentials, sensitive business data, or external services. Strong planning/reference material remains useful for adaptation. Behavioral validation was not run."
