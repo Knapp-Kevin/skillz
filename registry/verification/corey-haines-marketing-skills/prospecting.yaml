@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: prospecting
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 90018c683343a850a78defd09387b6035228098f
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 472435c76bb7c0e03d620b9412994ec016615e42
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [research, web-search, business-operations]
+  lifecycle: [discovery]
+  characteristic: [evidence-first, human-review, risk-aware, source-driven, traceable, tool-assisted]
+  authority: [read-only]
+  portability: [medium]
+notes: "Verified for unchanged reference use as read-only prospect research. Strong safeguards prohibit bulk platform scraping, CAPTCHA/login bypass, breached/unprovenanced data, sensitive-trait targeting, and untraceable contacts; every qualification requires source evidence and contact lineage, and downstream outreach is separated from list building. Optional enrichment/provider use still requires legitimate user access, lawful basis, provider-term compliance, and current-source verification. Behavioral validation was not run."

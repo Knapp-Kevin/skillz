@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: prospecting
+display_name: Prospecting
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/prospecting/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 90018c683343a850a78defd09387b6035228098f
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-07-13T19:12:49Z
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-optional-external-tools
+relationships: bundled evals plus SaaS, B2B, local, demand-signal, compliance, and data-source references are part of the exact package; optional upstream tool integrations are external dependencies; downstream outreach is explicitly handed off to cold-email
+import_eligibility: verified-unchanged-reference
+rationale: High-quality read-only prospect research procedure with branch-specific qualification, evidence/confidence discipline, contact lineage, no bulk scraping, no CAPTCHA/login bypass, no breached/unprovenanced data, sensitive-trait prohibition, public-business-contact constraints, deliverability verification, and explicit separation from downstream outreach. External data-provider use remains subject to user access, lawful basis, provider terms, and current verification.

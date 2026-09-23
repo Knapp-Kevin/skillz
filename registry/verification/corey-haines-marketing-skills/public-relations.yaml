@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: public-relations
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 490cce495b8ab6a65d03c5d06323b74805bd430d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 76fbe11745b68099b4019a35c93d1b259d528791
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [communication, planning, research, writing]
+  lifecycle: [discovery, planning]
+  characteristic: [human-review, reference-heavy, source-driven, synthesis]
+  authority: [generate-only]
+  portability: [high]
+notes: "No authority hard fail for draft/strategy use, but live journalist/podcast/newsletter outreach requires a separate explicit communication authorization that the package does not consistently establish. Rejected unchanged because drafting and pitching/responding are blurred, media-contact research lacks sufficiently explicit privacy/source-terms boundaries, and AI-citation/coverage-effect claims lack claim-level evidence. Behavioral validation was not run."

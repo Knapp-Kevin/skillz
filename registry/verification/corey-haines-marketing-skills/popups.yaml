@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: popups
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 7a5cc86cf0f13b029a0e01b5f8920339618ad387
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 398b3329e4a7cea4b610edf143a5896466287d51
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [ux, planning]
+  lifecycle: [planning, design]
+  characteristic: [human-review, hypothesis-driven, metric-driven, risk-aware]
+  authority: [generate-only]
+  portability: [high]
+notes: "No authority hard fail for ordinary design/recommendation use. Rejected unchanged because unsupported popup conversion/timing benchmarks are presented as norms; behavior-based targeting, visitor-data personalization, localStorage/cookie preference tracking, and progressive profiling need stronger minimization, retention, purpose-limitation, and consent boundaries; countdown/urgency experiments need explicit truthfulness constraints. Behavioral validation was not run."
