@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: lead-magnets
 source_id: corey-haines-marketing-skills
-source_snapshot_revision: 5b2c0007766c1a1cf1d53fd8fc73e979e0821022
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
 package_tree_sha: b7c11f1a123e5d991db75fd3ec8a4d1fb2ecc66c
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: fc53513f326836381e81a2d4e3e699cdd52f9cbc
