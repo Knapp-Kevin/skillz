@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: emails
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 5b4e8b70c6e47d428e0f26e17d6ec1e9ad2ea8e0
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a9b31c79599095f66d9705090a25d877a437a7d7
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [marketing, writing, lifecycle]
+  lifecycle: [planning, drafting]
+  characteristic: [reference-heavy, template-driven]
+  authority: [propose-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. No authority hard fail applies because the canonical workflow produces sequence plans/copy and points elsewhere for implementation rather than sending messages itself. Unchanged adoption is rejected because lifecycle automation guidance lacks robust consent, suppression/unsubscribe, transactional-vs-marketing, privacy/minimization, sensitive-segmentation, and current-claim verification boundaries; cadence, subject-length, sequence-length, and re-engagement heuristics are generalized without evidence. Behavioral validation not run. Preserve sequence architecture, entry/exit conditions, one-email-one-job discipline, lifecycle taxonomy, and structured output format."
