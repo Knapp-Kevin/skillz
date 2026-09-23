@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities** and **633 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities** and **633 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. **41 are individually current-standard reviewed and 9 remain.**
 
-Macro tranche 03 reviewed `paywalls`, `popups`, `pricing`, `product-marketing`, `programmatic-seo`, `prospecting`, `public-relations`, and `referrals`. `paywalls` and `prospecting` are **VERIFIED** for unchanged static use. The other six are **REJECTED unchanged** while retained as adaptation/extraction/reference prior art. `product-marketing` and `referrals` fail the authority hard rule. Behavioral validation remains `not-run` for all reviewed Corey units.
+Macro tranche 03 reviewed `paywalls`, `popups`, `pricing`, `product-marketing`, `programmatic-seo`, `prospecting`, `public-relations`, and `referrals`. `paywalls` and `prospecting` are **VERIFIED** exact-version static reviews. The other six are **REJECTED unchanged** while retained as adaptation/extraction/reference prior art. `product-marketing` and `referrals` fail the authority hard rule. Behavioral validation remains `not-run` for all reviewed Corey units.
 
 The family-level pattern is stable but not absolute: Corey Haines is stronger as planning/checklist/design prior art than as unchanged operational authority. Recurring defects cluster around action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and safeguards around persuasive or dark-pattern-adjacent tactics. Exact dispositions, scores, fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and rationale live in the canonical companions under `registry/` rather than being duplicated here.
 
