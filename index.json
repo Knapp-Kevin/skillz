@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-24: Corey Haines macro tranche 03 reviewed paywalls, popups, pricing, product-marketing, programmatic-seo, prospecting, public-relations, and referrals at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; paywalls and prospecting verified unchanged-use, six rejected unchanged but retained as adaptation/reference prior art; product-marketing and referrals fail the authority hard rule; behavioral validation not-run for all; Corey Haines 33/50 -> 41/50 with gaps 17 -> 9; persisted exact-version review count 625 -> 633"
+    "latest_reconciliation": "2026-09-24: Corey Haines macro tranche 03 reviewed paywalls, popups, pricing, product-marketing, programmatic-seo, prospecting, public-relations, and referrals at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; paywalls and prospecting passed exact-version static semantic review; six rejected unchanged but retained as adaptation/reference prior art; product-marketing and referrals fail the authority hard rule; behavioral validation not-run for all; Corey Haines 33/50 -> 41/50 with gaps 17 -> 9; persisted exact-version review count 625 -> 633"
   }
 }
