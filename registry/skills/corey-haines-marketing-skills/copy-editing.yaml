@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: copy-editing
+display_name: Copy Editing
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/copy-editing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 4d29a5bcbbf92f159f713c17db9d3d0bf6217b48
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T21:25:53Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-references-and-evals
+relationships: bundled references/checklist.md, references/content-refresh.md, references/plain-english-alternatives.md, and evals are part of the exact package; cross-references copywriting and ai-seo
+import_eligibility: rejected-unchanged-reference
+rationale: A useful generate-only editing framework with a disciplined multi-pass process, plain-language guidance, specificity and voice checks, and refresh/accuracy checklists. No authority hard fail applies because ordinary execution critiques and rewrites supplied copy rather than publishing or mutating external systems. Unchanged adoption is rejected because the refresh reference makes volatile SEO/AI-search assertions and prescriptive refresh-cadence claims without claim-level evidence, while guidance to update testimonials, case studies, competitor material, pricing, features, and traffic-derived decisions lacks explicit source-verification, privacy/minimization, and source-terms boundaries. Preserve the editing passes, checklist, plain-language substitutions, and refresh-vs-rewrite decision framework with current evidence and data-handling safeguards.
