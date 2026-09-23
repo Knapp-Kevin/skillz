@@ -42,7 +42,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **41/50** individually reviewed with **9** gaps. Macro tranche 03 adds `paywalls` and `prospecting` as **VERIFIED** unchanged-use candidates and rejects `popups`, `pricing`, `product-marketing`, `programmatic-seo`, `public-relations`, and `referrals` unchanged while preserving adaptation/extraction value. `product-marketing` and `referrals` have authority hard fails. Behavioral validation remains `not-run`. The family remains stronger as planning/checklist/design prior art than as unchanged operational authority, while tranche 03 confirms meaningful bounded exceptions.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Corey Haines Marketing Skills is admitted as a tracked corpus at an exact 50-skill denominator and is now **41/50** individually reviewed with **9** gaps. Macro tranche 03 adds `paywalls` and `prospecting` as **VERIFIED exact-version static reviews** and rejects `popups`, `pricing`, `product-marketing`, `programmatic-seo`, `public-relations`, and `referrals` unchanged while preserving adaptation/extraction value. `product-marketing` and `referrals` have authority hard fails. Behavioral validation remains `not-run`. The family remains stronger as planning/checklist/design prior art than as unchanged operational authority, while tranche 03 confirms meaningful bounded exceptions.
 
 ## First-party skills by purpose
 
@@ -77,6 +77,6 @@ Every explicitly current-standard-complete family above has **0** current-standa
 
 ## Interpretation
 
-Physical presence or registration does not establish individual skill quality. For unchanged third-party consideration, use exact-version companion evidence and apply:
+Physical presence, registration, or a `verified` static review does not by itself establish behavioral validation or automatic unchanged-use eligibility. For unchanged third-party consideration, use exact-version companion evidence and apply:
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
