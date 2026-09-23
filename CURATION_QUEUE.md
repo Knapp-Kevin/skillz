@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **625** persisted exact-version third-party verification companions.
+- **633** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -37,7 +37,7 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 | Microsoft Azure Skills | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | 34 / 34 | 0 | CURRENT-STANDARD COMPLETE |
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |
 | David Ondrej Skills | `7d0ef87dad1f638cab58995eead9e0e6e3fae237` | 55 / 55 | 0 | CURRENT-STANDARD COMPLETE |
-| **Corey Haines Marketing Skills** | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **33 / 50** | **17** | **TRACKED / ADMITTED** |
+| **Corey Haines Marketing Skills** | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **41 / 50** | **9** | **TRACKED / ADMITTED** |
 | Matt Pocock Skills | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | 29 / 29 | 0 | CURRENT-STANDARD COMPLETE |
 | Cloudflare Skills | `f96bff754e428838818017f75817f0f9428acd48` | 13 / 13 | 0 | CURRENT-STANDARD COMPLETE |
 | Addy Osmani Agent Skills | `f63ec56a3cc936408d792956ae583c3c96a825bd` | 24 / 24 | 0 | CURRENT-STANDARD COMPLETE |
@@ -54,23 +54,25 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
 - Root license: **MIT**, copyright Corey Haines (2025).
 - Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages.
-- Current provenance/verification companions: **33/50**; gaps **17**.
+- Current provenance/verification companions: **41/50**; gaps **9**.
 - Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
-- Behavioral validation is `not-run` for all thirty-three reviewed units.
+- Behavioral validation is `not-run` for all forty-one reviewed units.
 
-Reviewed through tranche 01: `ab-testing`, `ad-creative`, `ads`, `ai-seo`, `analytics`, `aso`, `attribution`, `churn-prevention`, `co-marketing`, `cold-email`, `community-marketing`, `competitor-profiling`, `competitors`, `content-strategy`, `copy-editing`, `copywriting`, `cro`, `customer-research`, `directory-submissions`, `emails`, `events`, `free-tools`, `image`, `influencer-marketing`, and `launch`.
+Macro tranche 03 adds: `paywalls` **17/20 VERIFIED**, `popups` **15/20 REJECTED unchanged**, `pricing` **14/20 REJECTED unchanged**, `product-marketing` **13/20 REJECTED unchanged**, `programmatic-seo` **15/20 REJECTED unchanged**, `prospecting` **17/20 VERIFIED**, `public-relations` **14/20 REJECTED unchanged**, and `referrals` **13/20 REJECTED unchanged**.
 
-Macro tranche 02 adds: `lead-magnets` **16/20**, `marketing-council` **16/20**, `marketing-ideas` **15/20**, `marketing-loops` **16/20**, `marketing-plan` **14/20**, `marketing-psychology` **15/20**, `offers` **15/20**, and `onboarding` **15/20**.
+`product-marketing` fails the authority hard rule because ordinary workflow creates/updates and may move persistent files without a distinct mutation authorization checkpoint. `referrals` fails because its normal launch procedure crosses into external tool/tracking mutation, customer communications, and money-bearing rewards/commissions without distinct authorization checkpoints. `paywalls` clears the unchanged static bar with explicit anti-dark-pattern, dismissal, and escape-hatch safeguards. `prospecting` clears it with strong evidence-lineage, anti-scraping, privacy, sensitive-trait, contact-provenance, and downstream-outreach separation safeguards. The other four rejected packages preserve useful mechanisms but require adaptation around evidence, privacy, non-deception, or implementation boundaries.
 
-All eight tranche-02 packages are **rejected unchanged** while retained as adaptation/extraction/reference prior art. `marketing-plan` fails the authority hard rule because ordinary procedure includes persistent file creation and optional external API/data pulls without a distinct authorization boundary. The other seven are primarily advisory/planning artifacts and do not establish an authority hard fail, but unchanged adoption is rejected for combinations of unsupported or volatile claims, privacy/consent/minimization gaps, simulated-authority concerns, planning-to-execution boundary blur, and insufficient non-deception safeguards around persuasion, scarcity, urgency, profiling, or behavioral instrumentation. Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
+**Macro finding:** Corey Haines remains consistently stronger as planning/checklist/design prior art than as unchanged operational authority, but tranche 03 demonstrates meaningful exceptions. Across the first forty-one reviews, recurring defects remain fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or dark-pattern-adjacent tactics. Upstream evals are intended-behavior evidence, never behavioral validation. The remaining nine are now a plausible final macro tranche, subject to actual complexity rather than quota pressure.
 
-**Macro finding:** Corey Haines remains consistently stronger as planning/checklist/design prior art than as unchanged operational authority. Across the first thirty-three reviews, recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or dark-pattern-adjacent tactics. Upstream evals are intended-behavior evidence, never behavioral validation. The remaining seventeen should continue in coherent tranches with deeper review reserved for high-authority, privacy-sensitive, evidence-heavy, or ambiguous packages.
+A separate corpus-hygiene defect is tracked in #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use current controlled values; historical drift should be normalized without re-inventing exact-version or behavioral evidence.
+
+Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion. Their useful public prior art may still inform discovery, but neither is vendored or promoted to governed corpus material unless canonical terms materially change.
+`ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion.
 
 ## Lifecycle hygiene
 
@@ -82,4 +84,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue the Corey Haines Marketing Skills admitted-source frontier from **33/50** reviewed and **17** gaps while issue #66 tracks corpus-wide provenance completeness. Recompute the whole remaining frontier first, choose a coherent tranche when quality permits, deep-review ambiguous/high-authority/privacy/evidence-sensitive units, preserve individual exact-version decisions, synthesize macro findings, and reconcile all five public accounting surfaces once per material tranche before merge.
+Complete and merge Corey macro tranche 03 at **41/50** reviewed and **9** gaps. Then recompute the remaining nine as one frontier and finish them as a final macro tranche if evidence and complexity permit, while issue #66 continues to track corpus-wide provenance and taxonomy hygiene.
