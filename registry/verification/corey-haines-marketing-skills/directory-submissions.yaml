@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: directory-submissions
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 2b12b936c7c39614f8c7bab042da1f4e31cb764d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9abacadbdca03bb9c72d2232a5e5a0c5de8013b0
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 10/20
+tags:
+  use_case: [marketing, distribution, seo]
+  lifecycle: [planning, execution]
+  characteristic: [reference-heavy, checklist]
+  authority: [external-side-effects]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 0, evidence discipline 0, dependency coherence 2, portability honesty 1, usefulness/differentiation 1, adversarial resilience 1, effectiveness design 1. AUTHORITY HARD FAIL: the workflow tells the agent/user to submit listings, publish/community-post, solicit reviews, offer incentives, perform outreach, and create/update public profiles without an explicit authorization boundary for communications, public mutations, spend/incentives, or account actions. It also embeds many volatile Product Hunt, G2, GEO/AI-citation, SEO, conversion, traffic, pricing, and algorithm claims without claim-level sources/current verification. Behavioral validation not run. Preserve tiering, readiness, positioning variants, destination-page planning, and tracker structure as reference/adaptation evidence."
