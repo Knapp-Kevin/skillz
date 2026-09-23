@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: marketing-psychology
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 0a527bd6cff5ab2fe2b5a60b97d86013a385326a
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 806c09fba8228e53b9d2443cea7e2bbb104e6ee9
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [marketing-strategy, audience-research]
+  lifecycle: [planning, design]
+  characteristic: [human-review, synthesis]
+  authority: [propose-only]
+  portability: [high]
+notes: "No authority hard fail for ordinary advisory use. Rejected unchanged because behavioral effects are often stated without claim-level evidence/uncertainty and the catalog includes coercive or dark-pattern-adjacent tactics without explicit ethical, consent, accessibility, or vulnerable-user safeguards. Behavioral validation was not run."

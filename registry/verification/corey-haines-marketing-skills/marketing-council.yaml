@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: marketing-council
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 7e26e04a19c15ed0e6d288732f97e077b1d91219
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f4737811fb0ef5f2b5d1b51c996d018e9f66607e
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [marketing-strategy, planning]
+  lifecycle: [planning]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [propose-only]
+  portability: [high]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. No authority hard fail: ordinary behavior is advisory synthesis. Rejected unchanged because named-expert simulations mix sourced doctrine with persona inference without claim-level citations and can manufacture false authority or consensus. Preserve independent lenses, disagreement surfacing, and synthesis using generic roles or explicitly sourced frameworks. Behavioral validation was not run."

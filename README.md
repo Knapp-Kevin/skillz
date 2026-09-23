@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-617-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-625-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-20-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **20 unique source identities**. There are currently **617 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **20 unique source identities**. There are currently **625 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 Current admitted-source accounting:
 
@@ -49,7 +49,7 @@ Current admitted-source accounting:
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
-| Corey Haines Marketing Skills | **25 / 50, 25 gaps** |
+| Corey Haines Marketing Skills | **33 / 50, 17 gaps** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -62,7 +62,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 ### Active curation frontier
 
-Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Twenty-five are individually current-standard reviewed and **25** remain.
+Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`, with an exact eligible denominator of **50** top-level first-class skill packages. Thirty-three are individually current-standard reviewed and **17** remain.
 
 - `ab-testing`: **rejected unchanged 13/20**; useful experiment-planning mechanisms, but materially inconsistent sample-size guidance and misleading frequentist p-value/confidence semantics.
 - `ad-creative`: **rejected unchanged 15/20**; useful creative/review mechanisms, but scaled workflows lack distinct file-mutation and external-publication/user-communication authorization boundaries.
@@ -89,10 +89,18 @@ Corey Haines Marketing Skills is a tracked corpus at exact snapshot `5b2c0007766
 - `image`: **rejected unchanged 13/20**; useful tool/model routing, prompt structure, real-screenshot integrity, brand-consistency, asset-type, and optimization mechanisms remain useful, but normal workflows fail the authority hard fail by moving into paid external generation/API use, upload/disclosure of brand/reference assets, and persistent file mutation without distinct authorization. Rights/likeness/provenance/credential safeguards are incomplete and model/platform guidance is volatile.
 - `influencer-marketing`: **rejected unchanged 15/20**; useful creator-fit vetting, compensation-model comparison, disclosure/compliance safeguards, brief design, agreement dimensions, measurement, and a compliance-rewritten UGC playbook remain useful, but normal procedures fail the authority hard fail through creator outreach, compensation, commercial terms/rights, account operation, publication, tracking, and paid-ad whitelisting without distinct authorization. Legal/platform and compensation guidance also require current verification.
 - `launch`: **rejected unchanged 14/20**; useful SLC readiness, channel portfolio framing, phased internal-to-GA progression, touchpoint checklist, announcement sizing, and post-launch momentum mechanisms remain useful, but normal procedures fail the authority hard fail through site/signup mutation, public announcements, user invitations, identity-bearing communications, Product Hunt activity, in-app/site publication, access-state changes, and charging without distinct authorization. Case-study/channel claims also need current verification.
+- `lead-magnets`: **rejected unchanged**; useful lead-magnet strategy prior art, but unchanged adoption lacks sufficient evidence and privacy/consent boundaries around lead capture and downstream use.
+- `marketing-council`: **rejected unchanged**; useful multi-perspective critique structure, but simulated-authority framing and evidence boundaries are insufficient for unchanged adoption.
+- `marketing-ideas`: **rejected unchanged**; useful ideation prior art, but evidence quality and planning-to-execution authorization boundaries are insufficient.
+- `marketing-loops`: **rejected unchanged**; useful growth-loop design prior art, but implementation boundaries, privacy-sensitive instrumentation concerns, and unsupported quantitative guidance prevent unchanged adoption.
+- `marketing-plan`: **rejected unchanged**; useful planning structure, but fails the authority hard fail through persistent file creation and optional external API/data pulls without distinct authorization.
+- `marketing-psychology`: **rejected unchanged**; useful behavioral-design prior art, but unchanged adoption lacks sufficient non-deception safeguards and claim-level evidence around persuasive mechanisms.
+- `offers`: **rejected unchanged**; useful offer-design prior art, but unsupported quantitative claims and insufficient safeguards around scarcity, urgency, and persuasion prevent unchanged adoption.
+- `onboarding`: **rejected unchanged**; useful onboarding design/checklist prior art, but evidence, privacy, and implementation-authorization boundaries are insufficient for unchanged adoption.
 
-Behavioral validation is `not-run` for all twenty-five. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
+Behavioral validation is `not-run` for all thirty-three. Exact rationale, fingerprints, dependencies, authority findings, tags, and source identity live in their canonical provenance and verification companions.
 
-**Macro tranche finding:** the source family is consistently stronger as planning/checklist/design prior art than as unchanged operational authority. Across the eight-skill tranche, recurring defects are (1) action authority that does not cleanly separate planning from external communication, spend, publication, access, or mutation; (2) privacy/minimization/consent/retention gaps around customer, lead, attendee, behavioral, profile, creator, and reference-asset data; and (3) volatile quantitative marketing/platform claims that are often encoded in upstream evals as expected behavior without independent claim-level evidence. Upstream evals are therefore treated as intended-behavior evidence, never behavioral validation.
+**Macro tranche finding:** the source family is consistently stronger as planning/checklist/design prior art than as unchanged operational authority. Recurring defects are (1) action authority that does not cleanly separate planning from external communication, spend, publication, access, or mutation; (2) privacy/minimization/consent/retention gaps; (3) insufficient safeguards around persuasive or dark-pattern-adjacent tactics; and (4) volatile quantitative marketing/platform claims often encoded in upstream evals as expected behavior without independent claim-level evidence. Upstream evals are therefore treated as intended-behavior evidence, never behavioral validation.
 
 Admission never grants blanket unchanged-reuse eligibility. Partner integrations, upstream source tooling, generated partner surfaces, and ordinary reference Markdown are outside the Corey denominator.
 

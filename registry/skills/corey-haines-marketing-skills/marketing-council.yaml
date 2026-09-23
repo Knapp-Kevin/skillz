@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: marketing-council
+display_name: Marketing Council
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/marketing-council/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 7e26e04a19c15ed0e6d288732f97e077b1d91219
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-05-18T06:02:20Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: propose-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-evals-and-advisor-references
+relationships: bundled evals/evals.json, advisor template, and twelve advisor persona references are part of the exact package
+import_eligibility: rejected-unchanged-reference
+rationale: Differentiated deliberation prior art that forces multiple lenses, independent first-round recommendations, disagreement surfacing, and synthesis. Unchanged adoption is rejected because named-expert simulations blur sourced doctrine with persona inference, provide no claim-level citations for attributed principles, and can create false authority through simulated consensus. Preserve the multi-lens deliberation, dissent, and synthesis mechanisms while replacing named-person imitation with explicitly sourced frameworks or generic roles.

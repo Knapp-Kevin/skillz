@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: marketing-ideas
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: c28943ec678fba961dd1a6aac2503b967d8accdc
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c5d681932b8e329236fa9e06fa85d6f5dc632c8d
+characterized_at: 2026-09-23
+last_verified_at: 2026-09-23
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [marketing-strategy, growth-experiments]
+  lifecycle: [planning]
+  characteristic: [human-review, reference-heavy, synthesis]
+  authority: [propose-only]
+  portability: [high]
+notes: "No authority hard fail for ordinary planning use. Rejected unchanged because 'proven' catalog framing lacks claim-level evidence, volatile channel tactics are mixed with evergreen mechanisms, and paid/public/outreach recommendations lack an explicit planning-versus-authorized-execution boundary. Behavioral validation was not run."

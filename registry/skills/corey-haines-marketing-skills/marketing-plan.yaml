@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: marketing-plan
+display_name: Marketing Plan
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/marketing-plan/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f6c99ba989414b5319ab7f2cd29a49839bae663f
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+upstream_last_updated_at: 2026-08-23T02:19:47Z
+curated_at: 2026-09-23
+last_checked_at: 2026-09-23
+availability: external
+permission_tier: read-write
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-large-reference-suite
+relationships: bundled evals and thirteen planning/methodology/reference documents are part of the exact package; the skill also instructs optional external API/data pulls
+import_eligibility: rejected-unchanged-reference
+rationale: Comprehensive planning prior art with audit, AARRR, budget, measurement, ops-stack, and plan-template material. Unchanged adoption hard-fails authority because it instructs creating persistent context and plan files and permits external API/data pulls without a real authorization boundary for repository mutation, credentials, sensitive business data, or external services. It also contains broad benchmark and methodology claims requiring stronger evidence discipline. Preserve the planning framework and templates as adaptation/reference evidence.

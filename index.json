@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 617,
+    "persisted_third_party_exact_version_reviews": 625,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -30,9 +30,9 @@
     "david_ondrej_skills_current_standard_companions": 55,
     "david_ondrej_skills_eligible_denominator": 55,
     "david_ondrej_skills_current_standard_gaps": 0,
-    "corey_haines_marketing_skills_current_standard_companions": 25,
+    "corey_haines_marketing_skills_current_standard_companions": 33,
     "corey_haines_marketing_skills_eligible_denominator": 50,
-    "corey_haines_marketing_skills_current_standard_gaps": 25,
+    "corey_haines_marketing_skills_current_standard_gaps": 17,
     "matt_pocock_skills_current_standard_companions": 29,
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
@@ -84,6 +84,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-23: Corey Haines macro tranche 01 reviewed customer-research, directory-submissions, emails, events, free-tools, image, influencer-marketing, and launch at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; all eight rejected unchanged with individual scores 15, 12, 14, 14, 14, 13, 15, 14; emails and free-tools have no authority hard fail but fail evidence/data-governance quality, while the other six fail the authority hard rule; behavioral validation not-run for all; recurring family defects are fragmented external-action authority, privacy/minimization/consent/retention gaps, and volatile marketing/platform claims encoded by upstream evals without independent validation; Corey Haines 17/50 -> 25/50 with gaps 33 -> 25; persisted exact-version review count 609 -> 617"
+    "latest_reconciliation": "2026-09-23: Corey Haines macro tranche 02 reviewed lead-magnets, marketing-council, marketing-ideas, marketing-loops, marketing-plan, marketing-psychology, offers, and onboarding at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; all eight rejected unchanged but retained as adaptation/reference prior art; marketing-plan fails the authority hard rule for persistent file creation and optional external API/data pulls without a real authorization boundary, while the other seven fail recurring evidence, privacy/consent, non-deception, or implementation-authorization quality requirements; behavioral validation not-run for all; Corey Haines 25/50 -> 33/50 with gaps 25 -> 17; persisted exact-version review count 617 -> 625"
   }
 }
