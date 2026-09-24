@@ -11,9 +11,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 18/20
 tags:
-  use_case: [container-deployment, container-operations, container-debugging, infrastructure-guidance]
-  lifecycle: [design, implementation, deployment, operations, troubleshooting]
-  characteristic: [security-aware, operationally-detailed, reference-routed, rollback-aware, production-oriented]
+  use_case: [cloud, deployment, debugging, architecture]
+  lifecycle: [design, implementation, release, operations]
+  characteristic: [risk-aware, reference-heavy, safety-bounded, production-oriented]
   authority: [mutating]
   portability: [medium]
 notes: Exact package-tree review at the registered AWS pin, including SKILL.md plus ten bundled reference documents. Strong scope boundaries and operational detail cover ECS, Fargate, ECR, ECS Exec, deployment strategies, scaling, networking, logging, and troubleshooting. Safeguards include explicit execution-role versus task-role separation, secret-injection constraints, private-subnet endpoint requirements, lifecycle-policy preview before ECR cleanup, deployment circuit-breaker rollback, health-check grace periods, zero-downtime deployment constraints, and explicit blocking log mode for guaranteed audit/compliance delivery. Authority is mutating because the documented workflows can create repositories, task definitions, services, load balancers, scaling configuration, VPC-related dependencies, deployments, and cloud cost. Portability is medium because practical use depends on AWS-specific services and often AWS CLI, credentials, Docker, Session Manager, CDK, or equivalent host capabilities. Behavioral validation remains not-run.
