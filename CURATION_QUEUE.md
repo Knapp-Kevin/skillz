@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **20** unique registered source identities.
-- **633** persisted exact-version third-party verification companions.
+- **642** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -24,7 +24,7 @@ For an active finite source family, recompute the whole remaining frontier befor
 
 ## Mandatory provenance status
 
-Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
+Issue #66 is the corpus-wide provenance-completeness and corpus-hygiene audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
 ## Admitted-source curation
 
@@ -37,7 +37,7 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 | Microsoft Azure Skills | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | 34 / 34 | 0 | CURRENT-STANDARD COMPLETE |
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |
 | David Ondrej Skills | `7d0ef87dad1f638cab58995eead9e0e6e3fae237` | 55 / 55 | 0 | CURRENT-STANDARD COMPLETE |
-| **Corey Haines Marketing Skills** | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **41 / 50** | **9** | **TRACKED / ADMITTED** |
+| Corey Haines Marketing Skills | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **50 / 50** | **0** | **CURRENT-STANDARD COMPLETE** |
 | Matt Pocock Skills | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | 29 / 29 | 0 | CURRENT-STANDARD COMPLETE |
 | Cloudflare Skills | `f96bff754e428838818017f75817f0f9428acd48` | 13 / 13 | 0 | CURRENT-STANDARD COMPLETE |
 | Addy Osmani Agent Skills | `f63ec56a3cc936408d792956ae583c3c96a825bd` | 24 / 24 | 0 | CURRENT-STANDARD COMPLETE |
@@ -48,23 +48,21 @@ Issue #66 is the corpus-wide provenance-completeness audit. First-party is **44/
 
 Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**. David Ondrej sub-family accounting remains agent orchestration **17/17**, ops/setup **11/11**, research/web **10/10**, skill authoring **4/4**, and thinking/docs **13/13**.
 
-### Corey Haines Marketing Skills — active frontier
+### Corey Haines Marketing Skills — completed frontier
 
 - Pin: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state).
 - Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
 - Root license: **MIT**, copyright Corey Haines (2025).
 - Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages.
-- Current provenance/verification companions: **41/50**; gaps **9**.
+- Current provenance/verification companions: **50/50**; gaps **0**.
 - Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
-- Behavioral validation is `not-run` for all forty-one reviewed units.
+- Behavioral validation is `not-run` for reviewed units unless a companion explicitly records otherwise.
 
-Macro tranche 03 adds: `paywalls` **17/20 VERIFIED**, `popups` **15/20 REJECTED unchanged**, `pricing` **14/20 REJECTED unchanged**, `product-marketing` **13/20 REJECTED unchanged**, `programmatic-seo` **15/20 REJECTED unchanged**, `prospecting` **17/20 VERIFIED**, `public-relations` **14/20 REJECTED unchanged**, and `referrals` **13/20 REJECTED unchanged**. `VERIFIED` denotes a successful exact-version static semantic review, not behavioral validation or automatic unchanged-use eligibility.
+Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` denotes successful exact-version static semantic review, not behavioral validation or automatic unchanged-use eligibility.
 
-`product-marketing` fails the authority hard rule because ordinary workflow creates/updates and may move persistent files without a distinct mutation authorization checkpoint. `referrals` fails because its normal launch procedure crosses into external tool/tracking mutation, customer communications, and money-bearing rewards/commissions without distinct authorization checkpoints. `paywalls` has explicit anti-dark-pattern, dismissal, and escape-hatch safeguards. `prospecting` has strong evidence-lineage, anti-scraping, privacy, sensitive-trait, contact-provenance, and downstream-outreach separation safeguards. The other four rejected packages preserve useful mechanisms but require adaptation around evidence, privacy, non-deception, or implementation boundaries.
+**Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded unchanged-use candidates. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
 
-**Macro finding:** Corey Haines remains consistently stronger as planning/checklist/design prior art than as unchanged operational authority, but tranche 03 demonstrates meaningful exceptions. Across the first forty-one reviews, recurring defects remain fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or dark-pattern-adjacent tactics. Upstream evals are intended-behavior evidence, never behavioral validation. The remaining nine are now a plausible final macro tranche, subject to actual complexity rather than quota pressure.
-
-A separate corpus-hygiene defect is tracked in #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use current controlled values; historical drift should be normalized without re-inventing exact-version or behavioral evidence.
+A separate corpus-hygiene defect remains tracked in #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use current controlled values; historical drift should be normalized without re-inventing exact-version or behavioral evidence.
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -84,4 +82,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Complete and merge Corey macro tranche 03 at **41/50** reviewed and **9** gaps. Then recompute the remaining nine as one frontier and finish them as a final macro tranche if evidence and complexity permit, while issue #66 continues to track corpus-wide provenance and taxonomy hygiene.
+Corey Haines is current-standard complete at **50/50 with 0 gaps**. Return the primary maintenance lane to issue #66 corpus-wide provenance/taxonomy hygiene and governed omission/source discovery. Prefer bounded evidence-backed maintenance over inventing architecture to keep the queue busy.
