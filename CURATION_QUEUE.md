@@ -24,7 +24,9 @@ For an active finite source family, recompute the whole remaining frontier befor
 
 ## Mandatory provenance status
 
-Issue #66 is the corpus-wide provenance-completeness and corpus-hygiene audit. First-party is **44/44** complete. Enforcement is documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
+The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every admitted third-party family below is current-standard companion-complete with zero package gaps. Ongoing enforcement remains documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
+
+Controlled-taxonomy conformance is a separate bounded hygiene lane under #342. Recompute from current verification companions before changing records; do not assume historical #66 examples still exist.
 
 ## Admitted-source curation
 
@@ -62,8 +64,6 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 **Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded unchanged-use candidates. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
 
-A separate corpus-hygiene defect remains tracked in #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use current controlled values; historical drift should be normalized without re-inventing exact-version or behavioral evidence.
-
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
 ## Governed discovery / source-vetting
@@ -78,8 +78,8 @@ At each run: inspect every open PR and issue; merge a current authorized ready P
 
 ## Historical authority boundary
 
-Wayfinder #35 remains canonical destination/scope evidence, but stale frontier text is historical. Source queue #27, structure ticket #41, and PR #42 are closed historical evidence. Current README and Tier-1 governance control live execution.
+Wayfinder #35 remains canonical destination/scope evidence, but stale frontier text is historical. Source queue #27, structure ticket #41, PR #42, and completed provenance audit #66 are historical evidence. Current README and Tier-1 governance control live execution.
 
 ## Next action
 
-Corey Haines is current-standard complete at **50/50 with 0 gaps**. Return the primary maintenance lane to issue #66 corpus-wide provenance/taxonomy hygiene and governed omission/source discovery. Prefer bounded evidence-backed maintenance over inventing architecture to keep the queue busy.
+Run #342 as a bounded live inventory of persisted verification companions against `registry/taxonomy.yaml`, normalizing only actual current controlled-tag defects while preserving exact-version evidence. In parallel, continue governed omission/source discovery. Do not invent new architecture to keep the queue busy.
