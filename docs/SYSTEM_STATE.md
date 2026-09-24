@@ -64,13 +64,13 @@ Exact fingerprints, package boundaries, dependencies, controlled tags, freshness
 
 ## Provenance and quality state
 
-Issue #66 is the corpus-wide provenance-completeness and corpus-hygiene audit. First-party is **44/44 provenance-complete**. Every governed third-party unit must retain truthful provenance and exact-version verification evidence; unknown facts remain unknown rather than inferred.
+The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44 provenance-complete**, and every admitted third-party family in current public accounting is current-standard companion-complete with zero package gaps. Every governed third-party unit must continue to retain truthful provenance and exact-version verification evidence; unknown facts remain unknown rather than inferred.
 
 Static verification is not behavioral validation. `verified` means the exact bound material passed structured semantic review. `validated` requires representative external behavioral/adversarial evidence that actually exists. `rejected` and `retired` remain prior art but are excluded from normal unchanged selection.
 
 The authority hard fail remains controlling: procedures that can mutate or materially affect infrastructure, external state, production traffic, money-bearing resources, credentials, subscriptions, DNS/routing, security controls, user communications, notifications, identity/access, persistent cloud resources, destructive lifecycle state, or sensitive-data disclosure require a real authorization boundary appropriate to the action.
 
-A corpus-hygiene defect remains tracked under #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use only current controlled values; historical tag drift should be normalized without inventing new behavioral evidence.
+Controlled-taxonomy conformance is now tracked separately under #342. Historical #66 comments cited older nonconforming Corey tag values, but fresh default-branch searches no longer find those examples. #342 therefore requires a live inventory of persisted verification companions against `registry/taxonomy.yaml` before changing any records; exact-version evidence must not be re-reviewed merely to normalize metadata.
 
 ## Discovery and source vetting
 
@@ -84,6 +84,7 @@ Current governed discovery surfaces include the Creator Technical Resource Catal
 
 - Wayfinder #35 remains canonical destination/scope evidence. Its stale frontier text is historical.
 - Source queue #27, structure ticket #41, and PR #42 are closed historical evidence, not live execution authority.
+- Provenance audit #66 is closed completed; bounded taxonomy-conformance follow-up is #342.
 - Current README, AGENTS, Governance Index, this file, CURATION_QUEUE, INDEX, index.json, source registry, and taxonomy control live repository truth.
 - Open PRs and issues must be triaged before new curation. Ready authorized work should move through merge/closure rather than becoming permanent lifecycle furniture.
 
@@ -93,4 +94,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With Corey Haines at **50/50 and 0 gaps**, return the primary curation lane to corpus-wide provenance/taxonomy hygiene under #66 and governed omission/source discovery. Prefer bounded evidence-backed maintenance over inventing new architecture.
+With admitted-source provenance current-standard complete and Corey Haines at **50/50 with 0 gaps**, run the bounded controlled-taxonomy conformance audit in #342 from live verification records, while continuing governed omission/source discovery. Prefer evidence-backed maintenance over inventing new architecture.
