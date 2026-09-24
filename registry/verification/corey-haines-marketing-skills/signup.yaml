@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 15/20
 tags:
-  use_case: [analysis, web-development]
+  use_case: [ux, business-operations]
   lifecycle: [planning]
-  characteristic: [human-review, risk-aware, reusable]
+  characteristic: [human-review, risk-aware]
   authority: [generate-only]
   portability: [high]
 notes: "Rejected unchanged but retained as adaptation evidence. The package has strong friction-reduction and data-minimization instincts, but it also recommends inferring organization from email domains and tracking field-level interactions without a sufficiently explicit consent, minimization, retention, and sensitive-data boundary. It remains planning guidance rather than direct mutation authority. Behavioral validation was not run."
