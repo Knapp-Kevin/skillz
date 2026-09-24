@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: sms
+display_name: SMS
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/sms/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: de4f45acae07c5508dbae602f4f16c59da1c886b
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-external-messaging-platforms
+relationships: bundled compliance, platform, and sequence references are part of the exact package; messaging providers and campaign systems are external dependencies
+import_eligibility: rejected-unchanged
+rationale: Valuable compliance and sequence evidence, but ordinary workflows cross into regulated external communications, consent-state handling, automation, and potentially spend without a distinct action-authorization checkpoint.
