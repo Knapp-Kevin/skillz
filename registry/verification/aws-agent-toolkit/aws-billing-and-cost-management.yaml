@@ -11,9 +11,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 18/20
 tags:
-  use_case: [cost-analysis, cost-optimization, budgeting, pricing, cloud-finance]
-  lifecycle: [analysis, planning, operations, optimization]
-  characteristic: [cost-aware, deterministic-calculation, reference-heavy, failure-diagnosis, production-oriented]
+  use_case: [business-operations, cloud, decision-support]
+  lifecycle: [planning, operations]
+  characteristic: [cost-bounded, deterministic, reference-heavy, evidence-first, production-oriented]
   authority: [mutating]
   portability: [medium]
 notes: Exact package-tree review at the registered AWS pin. Strong scope and trigger coverage, mandatory current-date checks for time-bounded billing APIs, explicit deterministic-calculation requirements instead of model arithmetic, API-specific correctness traps, billing-view scoping, optimization workflows, and troubleshooting guidance. Authority is mixed in practice but classified mutating because budget creation, Compute Optimizer enrollment, commitment-oriented workflows, and related account changes can alter AWS configuration or create financial consequences. Portability is medium because the guidance depends on AWS CLI/API semantics, valid credentials, optional AWS MCP capabilities, calculator or scripting support, and the source-intact reference package. Behavioral validation remains not-run.
