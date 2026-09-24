@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: seo-audit
+display_name: SEO Audit
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/seo-audit/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 88e419e823dc951fc243243ec91e888c5088f7f1
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-optional-audit-tools
+relationships: bundled AI-writing-detection and international-SEO references are part of the exact package; external SEO/browser tools are optional dependencies
+import_eligibility: eligible-unchanged
+rationale: Strong read-only audit guidance with explicit prompt-injection handling for fetched content and clear tool-limit caveats that reduce false findings; implementation remains separately authorized.

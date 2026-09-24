@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: seo-audit
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 88e419e823dc951fc243243ec91e888c5088f7f1
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: af014ef82989c61a672cdab26cd898821ef9518b
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [analysis, web-development]
+  lifecycle: [review]
+  characteristic: [human-review, risk-aware, reusable]
+  authority: [read-only]
+  portability: [high]
+notes: "Verified for unchanged reference use as a read-only SEO audit procedure. The pinned package explicitly treats fetched page content as untrusted evidence rather than instructions and documents tooling limits to reduce false findings. Recommendations may lead to later site changes, but this skill does not itself authorize or perform those mutations. Behavioral validation was not run."

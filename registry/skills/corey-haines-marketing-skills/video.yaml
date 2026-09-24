@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: video
+display_name: Video
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/video/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 7918e961f12cb9a236a353cf5a6fdc04a18fbaab
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-external-generation-rendering-services
+relationships: bundled AI-video prompting and edit-anatomy references are part of the exact package; generation/rendering APIs and publishing surfaces are external dependencies
+import_eligibility: rejected-unchanged
+rationale: Prompting and editing guidance is useful, but unchanged workflow crosses into paid external generation/rendering and publication-ready media without sufficient spend/action authorization plus likeness, rights, licensing, and provenance safeguards.

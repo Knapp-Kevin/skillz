@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: social
+display_name: Social
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/social/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f57536dbeabbee11f21cc618fd4de6b7ccef7847
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: bundled-evals-and-references-plus-optional-social-platforms
+relationships: bundled listening, platform, post-template, reverse-engineering, carousel, and short-video references are part of the exact package; scheduling and engagement systems are external
+import_eligibility: rejected-unchanged
+rationale: Useful planning and listening prior art is mixed with scheduling, monitoring, engagement, and DM actions lacking a distinct authorization boundary; volatile platform claims also require freshness checks.

@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: signup
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: fe7a49ae5e12fb97b176d1a806997624c9adafa2
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3ef89f8e51f7a58b3994d2c0bdd8754980425db2
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [analysis, web-development]
+  lifecycle: [planning]
+  characteristic: [human-review, risk-aware, reusable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rejected unchanged but retained as adaptation evidence. The package has strong friction-reduction and data-minimization instincts, but it also recommends inferring organization from email domains and tracking field-level interactions without a sufficiently explicit consent, minimization, retention, and sensitive-data boundary. It remains planning guidance rather than direct mutation authority. Behavioral validation was not run."
