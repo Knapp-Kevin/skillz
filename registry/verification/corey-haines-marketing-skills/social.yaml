@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 14/20
 tags:
-  use_case: [content-generation, analysis]
-  lifecycle: [execution]
-  characteristic: [human-review, reusable]
+  use_case: [communication, research]
+  lifecycle: [operations]
+  characteristic: [human-review, risk-aware]
   authority: [external-side-effect]
   portability: [medium]
 notes: "Rejected unchanged but retained as adaptation evidence. Useful platform, listening, post-template, and reverse-engineering material is mixed with scheduling, monitoring, engagement, and DM workflows that can communicate externally without a distinct action-authorization boundary. Several platform-performance and limit assertions are also volatile and require freshness checks. Behavioral validation was not run."
