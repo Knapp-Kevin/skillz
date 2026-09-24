@@ -12,8 +12,8 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [business-operations, planning, automation]
-  lifecycle: [planning, execution]
+  use_case: [business-operations, planning]
+  lifecycle: [planning, operations]
   characteristic: [human-review, risk-aware, tool-assisted]
   authority: [mutating, external-side-effect]
   portability: [medium]
