@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [content-generation, business-operations, planning]
+  use_case: [writing, business-operations, planning]
   lifecycle: [planning]
-  characteristic: [human-review, evidence-first, reusable]
+  characteristic: [human-review, evidence-first, maintainability]
   authority: [generate-only]
   portability: [high]
 notes: "Verified for unchanged reference use as a generate-only sales-enablement framework. The package structures decks, one-pagers, objection handling, demos, ROI calculators, playbooks, personas, and proposals without itself publishing or contacting prospects. Users must supply or verify proof points, ROI inputs, customer claims, and deal-specific facts before use. Behavioral validation was not run."
