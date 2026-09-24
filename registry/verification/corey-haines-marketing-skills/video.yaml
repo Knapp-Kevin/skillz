@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: video
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 7918e961f12cb9a236a353cf5a6fdc04a18fbaab
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6c8e9fdeb640594d3bf36690174f1726a721c4e3
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [content-generation]
+  lifecycle: [execution]
+  characteristic: [human-review, risk-aware, reusable]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rejected unchanged but retained as adaptation/reference evidence. The package crosses into paid external generation/rendering services and publication-ready media without a sufficiently explicit authorization boundary for spend or external actions, and its AI-video workflow needs stronger likeness, rights, licensing, and provenance safeguards. Prompting and edit-anatomy material remains useful. Behavioral validation was not run."
