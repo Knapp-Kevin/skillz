@@ -12,8 +12,8 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [content-generation, customer-support]
-  lifecycle: [execution]
+  use_case: [communication, business-operations]
+  lifecycle: [operations]
   characteristic: [human-review, risk-aware]
   authority: [external-side-effect]
   portability: [medium]
