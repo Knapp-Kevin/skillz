@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [content-generation, web-development]
+  use_case: [architecture, ux]
   lifecycle: [planning]
-  characteristic: [human-review, reusable]
+  characteristic: [human-review, modularity]
   authority: [generate-only]
   portability: [high]
 notes: "Verified for unchanged reference use as generate-only information-architecture guidance. It produces navigation, hierarchy, URL, and sitemap recommendations and reusable diagrams/templates without itself authorizing deployment or site mutation. Implementation remains a separate host-controlled action. Behavioral validation was not run."
