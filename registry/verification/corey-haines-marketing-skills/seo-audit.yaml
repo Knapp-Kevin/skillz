@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [analysis, web-development]
-  lifecycle: [review]
-  characteristic: [human-review, risk-aware, reusable]
+  use_case: [research, web-search]
+  lifecycle: [verification]
+  characteristic: [human-review, risk-aware, evidence-first]
   authority: [read-only]
   portability: [high]
 notes: "Verified for unchanged reference use as a read-only SEO audit procedure. The pinned package explicitly treats fetched page content as untrusted evidence rather than instructions and documents tooling limits to reduce false findings. Recommendations may lead to later site changes, but this skill does not itself authorize or perform those mutations. Behavioral validation was not run."
