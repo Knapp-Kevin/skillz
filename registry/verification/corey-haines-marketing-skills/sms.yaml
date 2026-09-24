@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: sms
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: de4f45acae07c5508dbae602f4f16c59da1c886b
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 50cfa8d32c434ca948fecaa596aa5cd23f91d8cd
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [content-generation, customer-support]
+  lifecycle: [execution]
+  characteristic: [human-review, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rejected unchanged; preserve compliance, consent, sequencing, and copy guidance as adaptation/checklist evidence. The ordinary workflow concerns regulated customer communications, consent records, automated sequences, platform actions, and potentially money-bearing messaging operations without a distinct authorization checkpoint immediately before external sends or campaign mutation. Behavioral validation was not run."
