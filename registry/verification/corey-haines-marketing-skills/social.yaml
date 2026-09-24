@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: social
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: f57536dbeabbee11f21cc618fd4de6b7ccef7847
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ab1d083ef4a9dd2a91c1eaedfb5cb745c3055d24
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [content-generation, analysis]
+  lifecycle: [execution]
+  characteristic: [human-review, reusable]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rejected unchanged but retained as adaptation evidence. Useful platform, listening, post-template, and reverse-engineering material is mixed with scheduling, monitoring, engagement, and DM workflows that can communicate externally without a distinct action-authorization boundary. Several platform-performance and limit assertions are also volatile and require freshness checks. Behavioral validation was not run."
