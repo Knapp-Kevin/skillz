@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [content-generation]
-  lifecycle: [execution]
-  characteristic: [human-review, risk-aware, reusable]
+  use_case: [writing, communication]
+  lifecycle: [implementation]
+  characteristic: [human-review, risk-aware]
   authority: [external-side-effect]
   portability: [medium]
 notes: "Rejected unchanged but retained as adaptation/reference evidence. The package crosses into paid external generation/rendering services and publication-ready media without a sufficiently explicit authorization boundary for spend or external actions, and its AI-video workflow needs stronger likeness, rights, licensing, and provenance safeguards. Prompting and edit-anatomy material remains useful. Behavioral validation was not run."
