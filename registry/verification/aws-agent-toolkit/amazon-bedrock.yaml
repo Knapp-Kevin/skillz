@@ -11,9 +11,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 18/20
 tags:
-  use_case: [generative-ai, rag, agent-development, cloud-infrastructure, troubleshooting]
-  lifecycle: [design, implementation, validation, deployment, operations]
-  characteristic: [security-aware, reference-heavy, cost-aware, failure-diagnosis, production-oriented]
+  use_case: [agent-development, architecture, cloud, debugging]
+  lifecycle: [design, implementation, verification, release, operations]
+  characteristic: [risk-aware, reference-heavy, cost-bounded, evidence-first, production-oriented]
   authority: [mutating]
   portability: [medium]
 notes: Exact package-tree review at the registered AWS pin. Strong scope and non-use boundaries, mandatory reference-file routing for fast-changing APIs, least-privilege IAM and Secrets Manager guidance, explicit untrusted-input handling, CloudTrail and PII logging cautions, maxTokens/quota safeguards, cost attribution guidance, dependency checks, execution previews, stop/abort respect, and destructive-operation confirmation. Authority and portability remain constrained because many workflows create, configure, invoke, deploy, or mutate Bedrock/AgentCore resources and depend on AWS credentials, regional service access, recent CLI/SDK behavior, and source-intact references. Behavioral validation remains not-run.

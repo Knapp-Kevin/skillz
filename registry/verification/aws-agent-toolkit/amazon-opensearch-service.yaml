@@ -11,8 +11,8 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [architecture, cloud, migration, search, observability, security]
-  lifecycle: [design, implementation, migration, verification, operations]
+  use_case: [architecture, cloud, research, observability, security]
+  lifecycle: [design, implementation, verification, operations]
   characteristic: [production-oriented, risk-aware, source-driven, reference-heavy]
   authority: [mutating]
   portability: [medium]
