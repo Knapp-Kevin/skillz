@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: site-architecture
+display_name: Site Architecture
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/site-architecture/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 35e29642aec1bc03c33f560a315d325e0e61ec7e
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-evals-and-references
+relationships: bundled Mermaid, navigation-pattern, and site-type references are part of the exact package; deployment is external and separately authorized
+import_eligibility: eligible-unchanged
+rationale: Reusable generate-only information-architecture guidance that produces navigation, hierarchy, URL, sitemap, and diagram recommendations without authorizing deployment.
