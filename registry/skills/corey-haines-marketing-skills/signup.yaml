@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: signup
+display_name: Signup
+source_id: corey-haines-marketing-skills
+source_repository: https://github.com/coreyhaines31/marketingskills
+source_path: skills/signup/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: fe7a49ae5e12fb97b176d1a806997624c9adafa2
+upstream_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+curated_at: 2026-09-24
+last_checked_at: 2026-09-24
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: bundled-evals
+relationships: exact package includes bundled evals; implementation and analytics systems are external to the passive corpus
+import_eligibility: rejected-unchanged
+rationale: Useful signup-CRO guidance with strong minimization instincts, but unchanged use lacks sufficient consent/minimization boundaries around field-level tracking and inferred organization data.
