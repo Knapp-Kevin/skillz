@@ -66,7 +66,7 @@ The final macro tranche reviewed `revops`, `sales-enablement`, `schema`, `seo-au
 
 The family-level pattern is stable but not absolute: Corey Haines is stronger as planning/checklist/design prior art than as unchanged operational authority. Recurring defects cluster around action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and safeguards around persuasive or dark-pattern-adjacent tactics. Exact dispositions, scores, fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and rationale live in the canonical companions under `registry/` rather than being duplicated here.
 
-A corpus-hygiene defect remains tracked under #66: some older Corey verification companions use tag values outside the current controlled vocabulary in `registry/taxonomy.yaml`. New reviews use only current controlled values.
+Controlled-taxonomy conformance is tracked under #342. Historical invalid-tag examples must not be assumed to remain present; the active hygiene work inventories current verification companions against `registry/taxonomy.yaml` and normalizes only demonstrated violations without rewriting exact-version evidence.
 
 ## Discovery and admission
 
