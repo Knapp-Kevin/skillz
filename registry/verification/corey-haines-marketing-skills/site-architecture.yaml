@@ -1,0 +1,20 @@
+schema_version: 1
+skill_name: site-architecture
+source_id: corey-haines-marketing-skills
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
+package_tree_sha: 35e29642aec1bc03c33f560a315d325e0e61ec7e
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b7658d5f3035a77be3474be2cf25065e9b6df713
+characterized_at: 2026-09-24
+last_verified_at: 2026-09-24
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [content-generation, web-development]
+  lifecycle: [planning]
+  characteristic: [human-review, reusable]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified for unchanged reference use as generate-only information-architecture guidance. It produces navigation, hierarchy, URL, and sitemap recommendations and reusable diagrams/templates without itself authorizing deployment or site mutation. Implementation remains a separate host-controlled action. Behavioral validation was not run."
