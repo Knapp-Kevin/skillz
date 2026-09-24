@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [content-generation, web-development]
+  use_case: [implementation, documentation]
   lifecycle: [planning]
-  characteristic: [human-review, risk-aware, reusable]
+  characteristic: [human-review, risk-aware, spec-driven]
   authority: [generate-only]
   portability: [high]
 notes: "Verified for unchanged reference use as generate-only structured-data guidance. It requires truthful page-content matching, anti-spam discipline, Google/schema.org validation, and testing before deployment. It does not itself authorize or perform site mutation. Behavioral validation was not run."
