@@ -6,7 +6,7 @@ package_tree_sha: 1bca9cf1bf416c4809f06370aa5503b067d270ca
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 622eab19e823a131fe8b9d500aa53143604fad8a
 characterized_at: 2026-09-24
-last_verified_at: 2026-09-24
+last_verified_at: 2026-09-25
 verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
