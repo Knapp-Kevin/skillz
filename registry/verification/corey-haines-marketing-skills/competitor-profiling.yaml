@@ -13,7 +13,7 @@ validation_status: not-run
 rubric_score: 16/20
 tags:
   use_case: [business-operations, decision-support, research]
-  lifecycle: [discovery, analysis, planning]
+  lifecycle: [discovery, planning]
   characteristic: [human-review, reference-heavy, risk-aware]
   authority: [read-only]
   portability: [high]
