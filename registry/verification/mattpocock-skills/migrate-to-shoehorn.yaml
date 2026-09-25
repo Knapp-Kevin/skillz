@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: migrate-to-shoehorn
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/misc/migrate-to-shoehorn/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/misc/migrate-to-shoehorn/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: ae4f965e204fc93cedbc4e2c306e92829d93f800
 characterized_at: 2026-08-29
