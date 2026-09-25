@@ -14,7 +14,7 @@ rubric_score: 11/20
 tags:
   use_case: [planning, decision-support]
   lifecycle: [planning]
-  characteristic: [human-review, interactive]
+  characteristic: [human-review]
   authority: [read-only]
   portability: [high]
 notes: "Rubric: trigger precision 2, procedural clarity 0, authority and safety 2, failure handling 0, evidence discipline 0, dependency coherence 2, portability honesty 2, usefulness/differentiation 1, adversarial resilience 0, effectiveness design 2. The exact package is explicitly labeled DRAFT and gives only a core concept and example trigger for interviewing the user about remaining work, avoided work, importance, and non-importance. It is read-only and has no authority defect, but it lacks an executable interview procedure, question-selection/adaptation logic, stopping rule, synthesis/output contract, evidence handling, and failure behavior. Reject unchanged as materially incomplete while preserving the pointed-priority-interview concept as extraction/adaptation evidence. Behavioral validation was not run."
