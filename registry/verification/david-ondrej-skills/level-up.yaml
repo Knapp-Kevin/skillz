@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 15/20
 tags:
-  use_case: [learning, assessment]
+  use_case: [evaluation, productivity]
   lifecycle: [verification]
-  characteristic: [adaptive, human-review, stateful]
-  authority: [writes-local-files]
+  characteristic: [human-review, incremental]
+  authority: [mutating]
   portability: [medium]
 notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is manual-only and bundled OpenAI policy disables implicit invocation. It provides a differentiated seven-question adaptive assessment, honest 1-10 calibration, concise corrective teaching, and explicit gap extraction into a learning plan. It fails the authority hard fail unchanged because normal execution requires creating repo-relative learning files if absent, immediately persisting every verbatim answer and rating, appending gaps after each answer, and later mutating learned-item state without a distinct repository-mutation authorization checkpoint. Explicitly requesting an assessment does not by itself authorize persistent project-file creation and repeated writes. Useful questioning, calibration, and learning-plan mechanisms remain adaptation/extraction evidence. Behavioral validation was not run."
