@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: grill-me
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/productivity/grill-me/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/productivity/grill-me/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 3947ff9c4ad980d14fc07fccbf659d47c114e81d
 characterized_at: 2026-08-29
