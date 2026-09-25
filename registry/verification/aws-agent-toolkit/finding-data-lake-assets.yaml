@@ -12,7 +12,7 @@ validation_status: not-run
 rubric_score: 17/20
 tags:
   use_case: [cloud, research, debugging]
-  lifecycle: [discovery, analysis, verification, operations]
+  lifecycle: [discovery, verification, operations]
   characteristic: [production-oriented, risk-aware, reference-heavy, tool-routing]
   authority: [read-only]
   portability: [low]

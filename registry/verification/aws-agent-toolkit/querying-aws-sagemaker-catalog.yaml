@@ -13,7 +13,7 @@ rubric_score: 16/20
 tags:
   use_case: [cloud, observability, security]
   lifecycle: [planning, implementation, verification, operations]
-  characteristic: [deterministic, production-oriented, evidence-oriented, safety-bounded, reference-heavy]
+  characteristic: [deterministic, production-oriented, evidence-first, safety-bounded, reference-heavy]
   authority: [mutating]
   portability: [low]
 notes: Exact package-tree reconciliation at the registered AWS pin. Strong query mechanisms include mandatory snapshot-time filtering, workgroup/output confirmation, read-only catalog analytics, sensitive metadata handling and narrow Lake Formation/KMS guidance. Rejected unchanged because enable and access-grant paths mutate DataZone export configuration and Lake Formation permissions without a distinct affirmative authorization gate. Retain the query core as adaptation/reference evidence. Behavioral validation remains not-run; export timing, service naming, schemas, pricing and APIs are freshness-sensitive.
