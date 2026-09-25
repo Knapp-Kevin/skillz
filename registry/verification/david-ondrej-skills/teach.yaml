@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 16/20
 tags:
-  use_case: [education, research, knowledge-management]
+  use_case: [research, documentation]
   lifecycle: [planning, documentation]
-  characteristic: [stateful, evidence-oriented, interactive]
-  authority: [file-write, command-execution]
+  characteristic: [incremental, evidence-first, human-review]
+  authority: [mutating]
   portability: [medium]
 notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. The exact package is explicit-invocation-only; bundled agents/openai.yaml disables implicit invocation. Its teaching design is unusually strong: mission grounding, trusted-source acquisition, retrieval practice, spacing, interleaving, zone-of-proximal-development selection, tight feedback loops, learning records, citations, and compressed reference artifacts. Unchanged adoption hard-fails authority because normal execution mandates persistent teaching-workspace writes across MISSION.md, RESOURCES.md, lessons, reference documents, learning records, and NOTES.md without a distinct file-mutation authorization checkpoint. It also recommends opening lesson files via CLI when possible without a separate execution boundary. Confirmation is required before changing the mission, but that narrow safeguard does not authorize the broader write workflow. Preserve the method for adaptation/extraction with explicit mutation boundaries. Behavioral validation was not run."
