@@ -13,7 +13,7 @@ rubric_score: 18/20
 tags:
   use_case: [cloud, debugging, observability]
   lifecycle: [verification, operations]
-  characteristic: [deterministic, production-oriented, reference-heavy, evidence-oriented, safety-bounded]
+  characteristic: [deterministic, production-oriented, reference-heavy, evidence-first, safety-bounded]
   authority: [read-only]
   portability: [low]
 notes: Exact package-tree reconciliation at the registered AWS pin. Verified unchanged because the workflow remains diagnostic and evidence-driven: configuration, metrics, CloudWatch Logs Insights, dependencies, cold starts and optional user-provided code are analyzed before recommendations are produced, with no prescribed cloud mutation. Time-range handling and query-result completion checks reduce false conclusions. Behavioral validation remains not-run; Lambda limits, CloudWatch metric/query behavior and service semantics are freshness-sensitive.
