@@ -1,12 +1,12 @@
 schema_version: 1
 skill_name: pricing
 source_id: corey-haines-marketing-skills
-source_snapshot_revision: 5b2c0007766c1d53fd8fc73e979e0821022
+source_snapshot_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
 package_tree_sha: 504ad663e4a687adeee5c684c2c8df13816a6075
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 0ea73d15170f969c68f47adaeca9692467d0ec66
 characterized_at: 2026-09-24
-last_verified_at: 2026-09-24
+last_verified_at: 2026-09-25
 verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
