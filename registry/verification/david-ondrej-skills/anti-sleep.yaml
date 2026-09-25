@@ -12,7 +12,7 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [productivity, operations]
+  use_case: [productivity, business-operations]
   lifecycle: [operations, maintenance]
   characteristic: [deterministic, safety-bounded, evidence-first, tool-assisted]
   authority: [mutating]
