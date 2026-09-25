@@ -11,8 +11,8 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 15/20
 tags:
-  use_case: [cloud, data-engineering, migration, operations]
-  lifecycle: [implementation, migration, verification, operations]
+  use_case: [cloud, implementation, deployment]
+  lifecycle: [implementation, verification, operations]
   characteristic: [production-oriented, reference-heavy, tool-routing, risk-aware]
   authority: [mutating]
   portability: [low]
