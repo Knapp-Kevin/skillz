@@ -13,7 +13,7 @@ validation_status: not-run
 rubric_score: 15/20
 tags:
   use_case: [writing, communication]
-  lifecycle: [implementation, review]
+  lifecycle: [implementation, verification]
   characteristic: [human-review, reference-heavy, synthesis]
   authority: [generate-only]
   portability: [high]

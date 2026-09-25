@@ -12,8 +12,8 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 15/20
 tags:
-  use_case: [marketing, analysis]
-  lifecycle: [planning, review]
+  use_case: [decision-support, ux]
+  lifecycle: [planning, verification]
   characteristic: [human-review, reference-heavy, synthesis]
   authority: [read-only]
   portability: [high]
