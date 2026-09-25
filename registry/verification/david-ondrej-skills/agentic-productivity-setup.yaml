@@ -14,7 +14,7 @@ rubric_score: 18/20
 tags:
   use_case: [productivity, monitoring, observability]
   lifecycle: [implementation, operations, maintenance]
-  characteristic: [deterministic, evidence-first, privacy-preserving, safety-bounded, production-oriented]
+  characteristic: [deterministic, evidence-first, safety-bounded, production-oriented]
   authority: [external-side-effect]
   portability: [low]
 notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. The skill explicitly distinguishes explanation, project build, and installation and forbids creation or installation for explanation-only requests. It keeps webhook secrets out of conversational context, requires read-only native-store access, persists and transmits aggregates rather than raw prompts or repository metadata, reports coverage failures instead of silent zeroes, and requires permission before sending a live Discord test. Installation and daily delivery are consequential, but they are tied to the user's selected installation/reporting scope rather than inferred from tool availability. Portability is low because the unchanged workflow depends on macOS launchd, Keychain, local native agent stores, and Discord. Behavioral validation was not run."
