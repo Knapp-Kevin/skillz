@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [content-analysis, cloud, document-analysis, image-analysis, audio-analysis, video-analysis]
-  lifecycle: [development, operations, integration]
-  characteristic: [reference-heavy, privacy-sensitive, network-capable, persistent-state-capable, side-effectful]
-  authority: [external-service-access, data-disclosure, network-access, persistent-state-write]
+  use_case: [cloud, evaluation, implementation, research]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, production-oriented, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Content Understanding Python prior art for multimodal extraction, long-running operations, prebuilt/custom analyzers, async use, production-constrained credentials, and deterministic client cleanup. Unchanged adoption is rejected because ordinary examples transmit potentially sensitive documents, images, audio, and video to Azure without a distinct data-classification/privacy/transmission authority gate, permit service-side retrieval of remote URLs without an explicit network/trust boundary, print extracted document text/transcripts/frame descriptions/invoice fields without redaction or disclosure constraints, and create/delete persistent custom analyzers without separate approval. Ordinary snippets also use unconstrained DefaultAzureCredential despite stronger top-level production guidance. Positive controls include environment-backed endpoints, explicit preference for Entra credentials over keys, production credential-chain guidance, context-manager cleanup, placeholders, and acknowledgement that long-running media analysis can take minutes. Behavioral validation is not-run.
