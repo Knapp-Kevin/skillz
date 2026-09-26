@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 12/20
 tags:
-  use_case: [cloud, communication, authentication, identity]
-  lifecycle: [development, integration]
-  characteristic: [reference-heavy, security-sensitive]
-  authority: [credential-bearing, identity-sensitive, external-side-effect]
+  use_case: [cloud, communication, security]
+  lifecycle: [implementation]
+  characteristic: [reference-heavy, risk-aware]
+  authority: [external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful prior art for ACS user credentials, proactive token refresh, identifiers, cloud environments, and Entra authentication, but unchanged use is rejected because token and identity handling lacks a distinct sensitive-data authorization boundary. SKILL.md prints ACS, phone, Teams, and unknown identifier values and demonstrates logging the first 20 characters of an access token despite warning not to expose tokens. Bundled examples fetch a token using userId in a GET query string, cache per-user CommunicationTokenCredential instances, and demonstrate the TeamsExtension.ManageCalls scope without explicit least-privilege or consequential-call authorization guidance. Placeholders, proactive refresh, credential disposal, and the instruction never to log full tokens are positive controls but insufficient for unchanged reuse. Behavioral validation is not-run.
