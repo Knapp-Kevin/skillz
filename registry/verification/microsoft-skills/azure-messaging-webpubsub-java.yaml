@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [cloud, real-time-messaging, websocket, notifications]
-  lifecycle: [development, deployment, operations]
-  characteristic: [reference-heavy, communication-sensitive, access-control-sensitive, token-sensitive]
-  authority: [external-communication, membership-mutation, connection-termination, permission-mutation, credential-access, external-side-effect]
+  use_case: [cloud, communication, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Web PubSub Java prior art for broadcast and targeted messaging, group/user/connection administration, client access-token issuance, permission management, asynchronous operations, and chat-service patterns. Unchanged use is rejected because normal examples send user/application content externally, mutate group membership, terminate individual/user/group connections, grant and revoke SEND_TO_GROUP permission, and issue bearer-capable client access URLs without distinct communication, membership, destructive-connection, access-control, token-secret, privacy/data, or service-cost authorization boundaries. Both the main skill and bundled complete application print token.getUrl()/the WebSocket access URL, creating a concrete credential-disclosure risk. Positive controls include placeholders, environment-backed connection strings in bundled examples, a production-restricted DefaultAzureCredential pattern, token-expiration guidance, least-role guidance, and hub isolation. Behavioral validation is not-run.
