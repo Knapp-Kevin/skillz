@@ -11,9 +11,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [agent-development, sdk-integration, tool-integration, mcp, application-development]
-  lifecycle: [implementation, integration, verification]
-  characteristic: [production-oriented, reference-heavy, extensible, freshness-sensitive]
-  authority: [host-authorized-tools, external-side-effects-possible]
-  portability: [medium-high]
+  use_case: [implementation, orchestration, security]
+  lifecycle: [implementation, verification]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
 notes: Exact package-tree review at the registered Microsoft Skills pin. The skill provides substantial cross-language Copilot SDK guidance covering client/session lifecycle, streaming, custom tools, hooks, MCP integration, authentication, BYOK, session persistence, custom agents/skills, and deployment patterns. It includes a first-class pre-tool hook with allow/deny/ask permission decisions and post-tool redaction support, which is strong authority scaffolding. The skill does not itself mutate infrastructure or external systems; consequential behavior depends on host-defined tools, MCP servers, deployment code, and application policy, which must preserve an action-appropriate authorization boundary. Credential examples use environment variables or stored auth rather than soliciting actual secret values into conversation. Deducted points reflect substantial host/runtime dependencies and fast-moving SDK/model/API details that require current documentation checks. Behavioral validation is not-run; no representative external scenario/adversarial execution evidence is claimed.
