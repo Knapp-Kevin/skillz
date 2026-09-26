@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [cloud, database, nosql, data-access]
-  lifecycle: [development, deployment, operations]
-  characteristic: [reference-heavy, data-bearing, cost-bearing, version-sensitive]
-  authority: [external-side-effect, data-mutating, destructive]
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Cosmos DB Java prior art for client creation, partition keys, consistency, CRUD, SQL queries, paging, async flows, request-unit visibility, and authentication. Unchanged use is rejected because examples create/delete databases and containers, create/replace/upsert/delete records, perform broad queries, consume metered RUs, and print user/item data without distinct data-access, mutation, destructive-action, privacy/logging, or cost authorization boundaries. The top-level Maven example uses LATEST rather than an exact SDK version. Positive controls include environment-backed key examples, DefaultAzureCredential in bundled examples, parameterized-query examples, and explicit RU visibility. Behavioral validation is not-run.
