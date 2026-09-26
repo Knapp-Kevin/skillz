@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [cloud, observability, logs, metrics, migration]
+  use_case: [cloud, observability]
   lifecycle: [maintenance, migration, operations]
-  characteristic: [deprecated, reference-heavy, read-oriented, data-sensitive]
-  authority: [sensitive-data-read, credential-access, external-service-access]
+  characteristic: [source-backed, read-only, sensitive-data]
+  authority: [sensitive-data-access, credential-use, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. Microsoft explicitly marks azure-monitor-query deprecated and instructs migration to azure-monitor-query-logs and azure-monitor-query-metrics, so retired is the correct decisive state. The package remains useful migration/reference material for Log Analytics/Kusto queries, Azure resource metrics, batch queries, result mapping, async query patterns, time-range control, and partial-failure handling. Unchanged use is additionally unsuitable because examples access and print operational telemetry and workspace/resource data without a distinct data-access, privacy/classification, output-redaction, or query-scope authorization boundary. Bundled examples also construct DefaultAzureCredential without the top-level skill's production requireEnvVars constraint. Positive controls include explicit deprecation/migration messaging, a pinned 1.5.9 legacy dependency, production credential-chain guidance in SKILL.md, bounded query examples using top/take/project, time-range limits, and partial-failure handling. Behavioral validation is not-run.

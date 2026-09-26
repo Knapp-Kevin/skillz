@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 9/20
 tags:
-  use_case: [cloud, deployment, business-operations]
+  use_case: [cloud, business-operations]
   lifecycle: [implementation, operations, maintenance]
-  characteristic: [production-oriented, cost-bounded, risk-aware]
+  characteristic: [production-oriented, cost-bearing, risk-aware]
   authority: [external-side-effect, mutating]
   portability: [medium]
 notes: Exact one-file review at the registered Microsoft Skills pin. Entra-first authentication, Fabric capacity lifecycle, SKU discovery, LRO handling, cost-aware suspend/resume guidance, and capacity administration are useful prior art. Unchanged adoption is rejected because examples create billable capacities, scale SKUs, assign administrators, suspend/resume service, and delete capacity without explicit environment, identity/role, availability-impact, destructive-action, rollback, or budget authorization. Behavioral validation is not-run.

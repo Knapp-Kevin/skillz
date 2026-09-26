@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 9/20
 tags:
-  use_case: [observability, telemetry, tracing, metrics, logging]
+  use_case: [observability]
   lifecycle: [implementation, verification, operations]
-  characteristic: [production-oriented, sensitive-data, external-telemetry]
-  authority: [sensitive-data-external]
+  characteristic: [production-oriented, sensitive-data, external-side-effecting]
+  authority: [sensitive-data-disclosure, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin covered the single SKILL.md file. Useful material includes Azure Monitor OpenTelemetry setup, migration from deprecated packages, custom spans and metrics, logging integration, automatic instrumentation, sampling, telemetry processors, context and baggage propagation, cloud-role metadata, correlated logging, and graceful shutdown. Rejected unchanged because normal flows export telemetry and logs to Azure Monitor, automatic instrumentation can collect HTTP, Azure SDK, database, Redis, exception, request, and response metadata, and examples propagate user.id and tenant.id across service boundaries without mandatory destination/region, data-classification, subject/data-transfer, minimization, retention/redaction, or disclosure authorization. The source does instruct users never to log PII or secrets and shows processors that can remove attributes, which is useful safety material, but a warning and optional processor are not an enforced authorization or minimization boundary. Behavioral validation remains not-run.
