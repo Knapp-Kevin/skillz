@@ -12,7 +12,7 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 9/20
 tags:
-  use_case: [cloud, deployment, business-operations]
+  use_case: [cloud, business-operations]
   lifecycle: [implementation, operations, maintenance]
   characteristic: [production-oriented, cost-bounded, risk-aware]
   authority: [external-side-effect, mutating]
