@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [cloud, storage, files, data-transfer]
-  lifecycle: [operations, data-management, maintenance]
-  characteristic: [reference-heavy, destructive-capable, credential-capable, side-effectful]
-  authority: [credential-access, external-service-access, storage-data-read, storage-data-write, destructive-action, credential-generation]
+  use_case: [cloud, implementation, security]
+  lifecycle: [implementation, operations, maintenance]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package provides useful Azure Blob Storage Java prior art for service/container/blob clients, container lifecycle, uploads/downloads, streaming, listing, copy, metadata, leases, SAS generation, and failure handling. Unchanged adoption is rejected because examples exercise consequential data and storage authority without distinct authorization gates: they create/delete containers, upload and overwrite blobs, delete blobs and snapshots, list/download external data, mutate metadata and headers, acquire leases, copy blobs, and mint SAS credentials. The package does not establish clear data-classification/privacy, destructive-action, overwrite, credential-generation/non-disclosure, external-service, or cost authority boundaries. Bundled examples also construct unconstrained DefaultAzureCredential and demonstrate shared-key authentication, while SKILL.md provides stronger production requireEnvVars guidance. Positive controls include placeholders for credentials, a stable azure-storage-blob 12.33.0 pin, request-condition examples that can prevent overwrite, and stronger production credential-chain guidance in SKILL.md. Behavioral validation is not-run.
