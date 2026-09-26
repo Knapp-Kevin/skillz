@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 13/20
 tags:
-  use_case: [content-moderation, cloud, safety, text-analysis, image-analysis]
-  lifecycle: [development, operations, integration]
-  characteristic: [reference-heavy, privacy-sensitive, network-capable, persistent-state-capable, side-effectful]
-  authority: [external-service-access, data-disclosure, network-access, persistent-state-write]
+  use_case: [cloud, evaluation, implementation, security]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, production-oriented, risk-aware, safety-bounded]
+  authority: [mutating, external-side-effect]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin. The package provides useful Azure AI Content Safety Python prior art for text/image classification, severity handling, blocklists, constrained production credentials, and client lifecycle. Unchanged adoption is rejected because ordinary examples transmit arbitrary text and image content to Azure without a distinct data-classification/privacy/transmission authority gate, permit service-side retrieval of remote image URLs without an explicit network/trust boundary, create or mutate persistent blocklist state without separate approval, and recommend logging moderation analysis results without redaction or retention constraints. Positive controls include production-constrained DefaultAzureCredential guidance, environment-backed legacy API keys, deterministic context-manager cleanup, placeholders, and explicit legacy-key framing. Behavioral validation is not-run.
