@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [cloud, compute, batch-processing, hpc]
-  lifecycle: [development, deployment, operations]
-  characteristic: [reference-heavy, cost-bearing, command-executing, privilege-sensitive]
-  authority: [external-side-effect, infrastructure-mutating, destructive, scheduled-execution]
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [production-oriented, reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Batch prior art for pools, jobs, tasks, compute nodes, schedules, autoscale, output handling, and Entra/shared-key authentication. Unchanged use is rejected because examples create, resize, autoscale, and delete compute pools; create/update/terminate/delete jobs; submit arbitrary command lines and large task collections; reboot nodes; create recurring schedules; and demonstrate ADMIN-elevated pool/task startup commands without distinct infrastructure, cost, command-execution, privilege, destructive-action, or scheduling authorization gates. Bundled examples also embed SAS-bearing Storage URLs in resource/output configuration, which needs an explicit secret/data-handling boundary. Positive controls include Entra ID/managed identity guidance, environment-backed shared keys, task constraints, and at least one NON_ADMIN identity example. Behavioral validation is not-run.
