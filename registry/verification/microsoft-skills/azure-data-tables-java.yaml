@@ -12,9 +12,9 @@ verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 11/20
 tags:
-  use_case: [cloud, database, table-storage, data-access]
-  lifecycle: [development, deployment, operations]
-  characteristic: [reference-heavy, data-bearing, beta-dependency, version-sensitive]
-  authority: [external-side-effect, data-mutating, destructive]
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, release, operations]
+  characteristic: [reference-heavy, risk-aware]
+  authority: [external-side-effect, mutating]
   portability: [medium]
 notes: Exact complete-package review at the registered Microsoft Skills pin, including bundled references/examples.md. The package is useful Azure Tables Java prior art for client creation, partition/row-key design, CRUD, OData queries, optimistic concurrency, transactions, async flows, and authentication. Unchanged use is rejected because examples create/delete tables, create/update/upsert/delete entities, submit mixed mutation transactions, enumerate tables/entities, and print entity properties without distinct data-access, mutation, destructive-action, privacy/logging, or external-service authorization boundaries. Connection-string, shared-key, and SAS credential paths need stronger least-privilege and secret-governance framing; DefaultAzureCredential with requireEnvVars and managed identity are useful positive patterns. The package pins azure-data-tables 12.6.0-beta.1, so dependency stability/freshness should be rechecked before reuse. Behavioral validation is not-run.
