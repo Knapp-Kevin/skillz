@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-sense
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ca333d55802ab6e498963bb8e394362eb7fc5d60
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [human-review, decomposition, iterative]
+  authority: [read-only]
+  portability: [high]
+notes: "Strong trigger/non-trigger boundary, compact Assess-Diagnose-Intervene-Reassess model, one-intervention bias, and explicit routing across fiction problem classes. Optional Deno helpers are read-only source-package tools and are not required for the core diagnostic behavior. No credentials, network action, sensitive-data transmission, or mutation required. Source age is visible and should be rechecked on future upgrades. Behavioral validation not run. Reviewed in #384."
