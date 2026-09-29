@@ -6,8 +6,8 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
-- **21** unique registered source identities.
-- **650** persisted exact-version third-party verification companions.
+- **22** unique registered source identities.
+- **673** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -40,6 +40,7 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |
 | David Ondrej Skills | `7d0ef87dad1f638cab58995eead9e0e6e3fae237` | 55 / 55 | 0 | CURRENT-STANDARD COMPLETE |
 | Corey Haines Marketing Skills | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **50 / 50** | **0** | **CURRENT-STANDARD COMPLETE** |
+| Dan Dewhurst Story Skills | `b113a8298ae5deb37929a5b1d0cc1536d98a508c` | **23 / 23** | **0** | **CURRENT-STANDARD COMPLETE** |
 | Matt Pocock Skills | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | 29 / 29 | 0 | CURRENT-STANDARD COMPLETE |
 | Cloudflare Skills | `f96bff754e428838818017f75817f0f9428acd48` | 13 / 13 | 0 | CURRENT-STANDARD COMPLETE |
 | Addy Osmani Agent Skills | `f63ec56a3cc936408d792956ae583c3c96a825bd` | 24 / 24 | 0 | CURRENT-STANDARD COMPLETE |
@@ -61,6 +62,20 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Bounded fiction tranche: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED**; `story-zoom` is **REJECTED unchanged** because it couples persistent `story-state/` mutation with instructions to start a background watcher daemon without an action-appropriate authorization gate.
 - Source-owned scripts remain upstream evidence and never become repository-owned runtime.
 - Behavioral validation remains `not-run` across the tranche.
+
+### Dan Dewhurst Story Skills — completed frontier
+
+- Pin: `b113a8298ae5deb37929a5b1d0cc1536d98a508c`.
+- Root license: **MIT**, Copyright (c) 2026 Daniel Dewhurst.
+- Exact eligible denominator: **23** first-class `skills/<name>/SKILL.md` packages.
+- Current provenance/verification companions: **23/23**; gaps **0**.
+- All 23 are **VERIFIED unchanged exact-version references**, with static rubric scores **16/20–18/20**.
+- Behavioral validation is `not-run` for all 23; upstream tests/evals remain source evidence only.
+- Main portability caveat: the corpus assumes its Markdown/YAML Story Skills project schema and often an optional upstream `story` CLI.
+- `story-maintenance` packages a local Node fallback with explicit validate/reindex/rename/move/remove/repair operations. That runtime remains upstream-only and is not adopted by `skillz`.
+- Submission/publishing/editorial procedures prepare artifacts and plans but leave actual sending, uploads, purchases, contracts, account operations, pushes, and publication to the author.
+
+Individual fingerprints, package trees, freshness evidence, dependencies, controlled tags, authority findings, and exact rationale live in `registry/skills/danjdewhurst-story-skills/` and `registry/verification/danjdewhurst-story-skills/`.
 
 ### Corey Haines Marketing Skills — completed frontier
 
@@ -84,6 +99,8 @@ Discovery proceeds in parallel without displacing current-standard source mainte
 
 `jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with eight individually governed fiction units at the registered snapshot. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
 
+`danjdewhurst/story-skills` is an admitted **tracked corpus with a complete 23/23 exact-version review** at the registered snapshot. Its source-owned runtime remains upstream-only.
+
 `ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion.
 
 ## Lifecycle hygiene
@@ -96,4 +113,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-The bounded Jwynia fiction tranche is governed. Continue with the next coherent differentiated narrative tranche only through issue-first exact-version evaluation; preserve source freshness, omission detection, candidate source-vetting, lifecycle hygiene, and the no-bulk-promotion rule.
+Complete the remaining 46-package Jwynia fiction frontier under issue #388 with per-skill exact-package decisions. Keep the narrative capability program in #386 open until that denominator and downstream host-specific integration decisions are resolved.
