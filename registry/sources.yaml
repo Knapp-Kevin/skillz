@@ -240,3 +240,14 @@ sources:
     license: MIXED
     pinned_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
     rationale: Creator-maintained 112-skill corpus with 57 creative/narrative skills, admitted via issue #382 for selective individual curation. No root LICENSE was found at the evaluated pin, so per-skill declarations control; story-collaborator is individually MIT-declared and verified at the exact registered snapshot.
+
+  - id: danjdewhurst-story-skills
+    name: Dan Dewhurst Story Skills
+    source: https://github.com/danjdewhurst/story-skills
+    class: community-vetted
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIT
+    upstream_copyright: Copyright (c) 2026 Daniel Dewhurst
+    pinned_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+    rationale: Creator-maintained 23-skill end-to-end fiction workflow admitted via issue #387 after complete exact-package review. All 23 are individually VERIFIED exact-version static references; source-owned runtime remains upstream-only and Story Skills schema/CLI coupling gives medium portability.
