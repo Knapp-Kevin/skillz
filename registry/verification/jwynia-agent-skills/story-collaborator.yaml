@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-collaborator
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7669353fce1643fe1c31c161cfaebc9189957522
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing]
+  lifecycle: [implementation]
+  characteristic: [human-review, iterative, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Exact package is a single SKILL.md. Strengths: clear active-collaborator trigger, writer-control/voice preservation, multiple-option generation, explicit anti-patterns, and concrete scene/character/dialogue/originality mechanisms. Material limitation: mandatory project-file persistence makes unchanged use host-conditional; the skill asks where to save output before writing but does not define a no-filesystem/no-persistence fallback. Conceptual companion skills are not strict package dependencies because abbreviated checks are embedded. Behavioral validation not run. Admitted via issue #382."
