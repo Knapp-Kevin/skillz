@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-704-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-719-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **22 unique source identities** and **704 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **22 unique source identities** and **719 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
@@ -63,7 +63,9 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 `jwynia/agent-skills` is tracked at exact snapshot `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective individual curation, not blanket trust or vendoring. The source contains 112 skills, including 57 creative/narrative skills. Source-wide licensing is recorded as **MIXED/per-skill** because no root `LICENSE` was found at the evaluated pin.
 
-Thirty-nine fiction units are now individually governed: **32 VERIFIED** exact-version static references and **7 REJECTED unchanged** references retained as adaptation/extraction prior art. The original governed set remains `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 added seven VERIFIED and four REJECTED unchanged core/craft/character units. Tranche 2 added nine VERIFIED structure units and rejected `reverse-outliner` unchanged. Tranche 3 adds VERIFIED `belief-systems`, `economic-systems`, `governance-systems`, `language-evolution`, `metabolic-cultures`, `oblique-worldbuilding`, `settlement-design`, `systemic-worldbuilding`, and `world-fates`; it rejects `conlang` unchanged because its precise cross-linguistic phoneme-frequency and universal/common/rare claims lack pinned PHOIBLE provenance and derivation evidence. `story-zoom` remains rejected unchanged for its persistent watcher authorization defect. `world-fates` remains bounded by propose-before-canon human approval, and rejected sibling references do not inherit trust through verified workflows. Behavioral validation remains `not-run` for all thirty-nine. Several verified units require user-authorized project-file persistence and therefore remain host-fit conditional rather than universally portable. The exact fiction denominator is 54, leaving **15** application/orchestrator packages under #388.
+The exact fiction denominator is now **54/54 governed**: **39 VERIFIED** exact-version static references and **15 REJECTED unchanged** references retained as adaptation/extraction prior art. The original governed set remains `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 added seven VERIFIED and four REJECTED unchanged core/craft/character units. Tranche 2 added nine VERIFIED structure units and rejected `reverse-outliner` unchanged. Tranche 3 added nine VERIFIED worldbuilding units and rejected `conlang` unchanged. The final application/orchestrator tranche VERIFIED `book-marketing`, `dna-extraction`, `flash-fiction`, `interactive-fiction`, `media-adaptation`, `paradox-fables`, and `table-tone`; it REJECTED unchanged `adaptation-synthesis`, `game-facilitator`, `list-builder`, `multi-order-evolution`, `sensitivity-check`, `shared-world`, `sleep-story`, and `chapter-drafter` for concrete oracle, evidence, package-integrity, or authority defects. Behavioral validation remains `not-run` for all fifty-four.
+
+For Celestara, rejected does not mean useless. `shared-world`, `game-facilitator`, and `chapter-drafter` are especially strong adaptation prior art once canon authority and pseudo-oracle defects are removed. `systemic-worldbuilding`, `interactive-fiction`, `table-tone`, and `world-fates` provide clean governed concepts for causal consequence, player agency, table experience, and proposal-only long-range state. Rejected sibling behavior never inherits trust through a verified workflow.
 
 ### Dan Dewhurst Story Skills complete intake
 
