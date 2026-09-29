@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: list-builder
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d8cb53c91244dd6bf26ae28b7884bacbcffb8c35
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/1. Positive: writer needs a broad, less-default ideation list. Non-trigger: user needs factual dataset construction or validated statistical diversity. Pressure: SKILL instructs use of merge-lists.ts but the exact package does not contain that helper; numerical targets such as 30% surprise and list maturity bands are unsourced heuristics. Rejected unchanged; behavioral validation not run. Reviewed in #388."

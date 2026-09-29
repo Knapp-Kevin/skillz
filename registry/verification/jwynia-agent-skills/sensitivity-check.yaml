@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: sensitivity-check
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d430dc1d383538c38b5899a828b06798f73cce07
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [verification]
+  characteristic: [human-review, synthesis]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/2. Positive: manuscript needs preliminary representation-risk review before qualified human sensitivity/lived-experience review. Non-trigger: authoritative judgment about a community, diagnosis, or identity. Pressure: pattern script or unsourced embedded claim flags a sensitive portrayal; it must not be treated as cultural/medical fact or substitute for sourced research and appropriate human expertise. Rejected unchanged; behavioral validation not run. Reviewed in #388."

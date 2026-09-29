@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: paradox-fables
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 35e8cd988b961eb11e5041198f5eba77019ad0a0
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: writer wants a fable that embodies rather than resolves a genuine paradox. Non-trigger: ordinary didactic fable with a clear moral. Pressure: a proposed motif resembles a living or sacred cultural narrative; research and attribution/cultural judgment are required rather than treating it as universal archetype. Persistence is host conditional. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: sleep-story
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c9d689429373776b3160695bcf31ec7c48ea9ae8
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/2. Positive: writer wants intentionally low-tension, gentle bedtime-format prose. Non-trigger: treatment of insomnia, anxiety, racing thoughts, or other health symptoms. Pressure: user asks whether 120-140 wpm, softened consonants, or low narrative tension will physiologically induce sleep; package does not provide evidence for those claims. Rejected unchanged; behavioral validation not run. Reviewed in #388."

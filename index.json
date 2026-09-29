@@ -7,8 +7,12 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 704,
-    "jwynia_agent_skills_selectively_reviewed_units": 39,
+    "persisted_third_party_exact_version_reviews": 719,
+    "jwynia_agent_skills_selectively_reviewed_units": 54,
+    "jwynia_agent_skills_fiction_denominator": 54,
+    "jwynia_agent_skills_fiction_verified": 39,
+    "jwynia_agent_skills_fiction_rejected_unchanged": 15,
+    "jwynia_agent_skills_fiction_gaps": 0,
     "danjdewhurst_story_skills_current_standard_companions": 23,
     "danjdewhurst_story_skills_eligible_denominator": 23,
     "danjdewhurst_story_skills_current_standard_gaps": 0,
@@ -88,6 +92,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-29: issue #388 Jwynia fiction worldbuilding tranche persisted 10 exact-version reviews at source pin e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; Jwynia governed units 29 -> 39, exact-version review companions 694 -> 704, registered sources remain 22; tranche result 9 VERIFIED / 1 REJECTED unchanged; behavioral validation remains not-run; 15 application/orchestrator packages remain under #388"
+    "latest_reconciliation": "2026-09-29: issue #388 Jwynia fiction denominator completed at source pin e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; final application/orchestrator tranche persisted 15 exact-version reviews, bringing Jwynia fiction 39 -> 54 governed and repository exact-version reviews 704 -> 719; final Jwynia disposition 39 VERIFIED / 15 REJECTED unchanged; behavioral validation remains not-run; next action is parent #386 capability synthesis and Celestara-specific composition"
   }
 }

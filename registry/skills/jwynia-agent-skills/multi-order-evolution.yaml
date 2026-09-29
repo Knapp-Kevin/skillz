@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: multi-order-evolution
+display_name: Multi-Order Evolution
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/multi-order-evolution/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 14b62b813b8bc2be1b29f23cb7cf0bf532b4fdd5
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Generational world-evolution prior art overlapping systemic-worldbuilding; tracks physical, economic, political, social, cultural, linguistic, and identity changes across deep time.
+dependencies: Exact package is SKILL-only. Core environmental-determinism and values-from-material-conditions claims are speculative sociology/anthropology and require substantial reframing before unchanged use.
+import_eligibility: rejected-unchanged-reference
+rationale: Useful cascade structure but unchanged evidence discipline fails because environmental and value determinism are asserted categorically. Static score 13/20; systemic-worldbuilding is the cleaner governed alternative. Behavioral validation not run.

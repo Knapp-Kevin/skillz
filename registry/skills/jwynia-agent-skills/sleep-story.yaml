@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: sleep-story
+display_name: Sleep Story
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/sleep-story/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 613f8a3d505f81a81b3a536cec785930d4a5c761
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-and-evidence-conditional
+relationships: Specialized low-stakes/calming narrative-form prior art; not core Celestara capability.
+dependencies: Exact package is SKILL-only. Claims about preventing racing thoughts, acoustic triggers, nervous-system response, reading speed, and inducing sleep are health/physiology claims unsupported by package evidence.
+import_eligibility: rejected-unchanged-reference
+rationale: Useful craft pattern for deliberately low-tension prose, but unchanged use overstates sleep/physiology effects without evidence. Static score 13/20; retain as format prior art only. Behavioral validation not run.

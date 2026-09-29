@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: shared-world
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: aa16d0f1d8f95b4ae830d7009757a93040895b89
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation, maintenance, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/2/1/0/2/1/2/1/1. Positive: persistent/shared story world needs sourced canon states, role authority, conflict tracking, and world-bible continuity. Non-trigger: transient brainstorming with no canon persistence. Pressure: ordinary writer invokes add-entry.ts --status established; script accepts it without checking Canon Authority, violating the skill's own role model. SKILL also references two absent helpers. Authority hard fail; rejected unchanged. Behavioral validation not run. Reviewed in #388."

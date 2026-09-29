@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: game-facilitator
+display_name: Game Facilitator
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/game-facilitator/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 926902eee6109ba90321aae7ab6aec0a3d143f1e
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: High-value tabletop facilitation prior art for player agency, situation design, scenes/sequels, NPC/world response, spotlight, countdowns, tone, and session prep; requires canon-governance adaptation for persistent campaigns.
+dependencies: Exact package includes Deno complication, NPC, and session-notes helpers. Skill declares improvised play facts immediately canon and instructs adding canon after sessions without a canon-authority gate.
+import_eligibility: rejected-unchanged-reference
+rationale: Excellent facilitation craft but unchanged mutation governance fails: improvised facts become canon automatically. Static score 13/20; retain for Celestara adaptation with explicit authority/provenance gates. Behavioral validation not run.

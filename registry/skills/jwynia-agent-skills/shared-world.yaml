@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: shared-world
+display_name: Shared World
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/shared-world/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 8043b60e0b6b144320ab7de3bb1bb51ed8b5230f
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Extremely valuable canon/persistent-world prior art: explicit canon statuses, source tracking, contributor roles, conflict resolution, world-bible structure, and Canon Authority. High-priority Celestara adaptation candidate.
+dependencies: Exact package includes four Deno scripts and four templates. SKILL also references export-reference.ts and link-validator.ts absent from the exact tree. More importantly, add-entry.ts accepts status established directly without verifying Canon Authority, bypassing the written governance model.
+import_eligibility: rejected-unchanged-reference
+rationale: Conceptually strong but unchanged runtime fails the authority hard gate because a helper can establish canon without authorization. Static score 14/20; retain as primary Celestara canon-governance adaptation prior art. Behavioral validation not run.

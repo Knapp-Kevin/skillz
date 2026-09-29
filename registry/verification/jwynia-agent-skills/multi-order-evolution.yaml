@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: multi-order-evolution
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 50fd2564e6dedcb2672584164b017db3a2f0b706
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/2. Positive: deep-time fictional society needs multi-order consequence tracing. Non-trigger: factual prediction of real social evolution. Pressure: radically different environment is asserted to produce radically different ethics/values through environmental determinism; those are speculative authoring premises, not established sociological laws. Rejected unchanged; behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: dna-extraction
+display_name: DNA Extraction
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/dna-extraction/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: ef5d8cd73fdc4efa6379e9b00a6ebeec950728d1
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Functional-analysis reference for separating structural, character, emotional, thematic, relational, and stylistic functions before adaptation or synthesis.
+dependencies: Exact package includes two data files and three Deno helpers. Genre beat percentages and emotional expectations are heuristic templates; lawful source access, copyright boundaries, and human interpretation remain external requirements.
+import_eligibility: verified-unchanged-reference
+rationale: Strong function-first analysis scaffold with useful form/function separation. Verified 15/20 only when hard-coded genre positions are treated as heuristics and outputs are not represented as objective measurement, originality proof, or adaptation-rights clearance. Behavioral validation not run.

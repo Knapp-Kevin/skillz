@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: book-marketing
+display_name: Book Marketing
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/book-marketing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 94f4f9f3759db121ad313b74489f33771a6db7ad
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Publishing-copy diagnostic/generative reference for blurbs, descriptions, queries, taglines, and positioning; downstream of manuscript/story work rather than core narrative composition.
+dependencies: Exact package includes Amazon, blurb, query, and tagline templates. Platform and agent-market conventions are volatile and require current external verification before operational use; no external publication/send authority is granted.
+import_eligibility: verified-unchanged-reference
+rationale: Useful bounded copy framework. Amazon KDP description/HTML premise was freshness-checked against current official KDP guidance on 2026-09-29; other publishing-market conventions remain heuristics. Verified 15/20; behavioral validation not run.

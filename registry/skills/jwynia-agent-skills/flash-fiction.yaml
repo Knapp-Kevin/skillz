@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: flash-fiction
+display_name: Flash Fiction
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/flash-fiction/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: d105f72924a9cbcd950162039fade11ea86125ee
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Specialized short-form fiction diagnostic spanning compression, framing/payoff, character economy, subtext, imagery, setting, theme, rhythm, and logical consistency.
+dependencies: Exact package is SKILL-only. Output persistence is host-conditional; word-count/category guidance is craft convention rather than a universal publication standard.
+import_eligibility: verified-unchanged-reference
+rationale: Focused and differentiated short-form diagnostic with clear interventions and bounded claims. Verified 16/20; behavioral validation not run.

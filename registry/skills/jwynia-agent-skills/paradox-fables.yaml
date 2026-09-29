@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: paradox-fables
+display_name: Paradox Fables
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/paradox-fables/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: f149e0e1ee390f317d32a4ac15eb4dca9569e250
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Specialized narrative-form generator for embodying unresolved paradox through story structure, multiple readings, witness perspectives, and non-moralizing endings.
+dependencies: Exact package is SKILL-only. Cultural/sacred-story similarity requires research, attribution, and appropriate cultural judgment; persistence is host conditional.
+import_eligibility: verified-unchanged-reference
+rationale: Coherent niche narrative method with useful anti-patterns, cultural-sensitivity cautions, and explicit oracle limits. Verified 15/20; behavioral validation not run.
