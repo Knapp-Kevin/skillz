@@ -118,4 +118,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Roll the complete Jwynia fiction findings into parent narrative-capability program #386, reconcile them against the already-complete Dan Dewhurst story corpus and Celestara's existing authoring foundation, then compose the smallest coherent Celestara-native narrative skill system. Keep rejected behavior bounded as adaptation prior art rather than importing it by association.
+The admitted corpus has no known current-standard gaps in the explicitly complete families, and the narrative capability program is complete. Continue with source freshness and high-salience omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective behavioral/adversarial evidence produced only by authorized external environments. Preserve decisive prior evidence and do not invent repository runtime or architecture to keep the queue busy.
