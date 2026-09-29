@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: prose-style
+display_name: Prose Style
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/craft/prose-style/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: dddeec7961592581d54463ea955aefda99761a12
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Hands off structural/dialogue issues to revision, dialogue, scene-sequencing, and story-sense; source-owned analysis helpers are optional.
+dependencies: Writable project filesystem for required output persistence; optional local read-only Deno prose/rhythm analyzers; user is asked where to save before writing.
+import_eligibility: verified-unchanged-reference
+rationale: Detailed sentence-level diagnostic with explicit prerequisite that structure be stable, useful anti-patterns, and non-rewrite boundary. Persistence is user-authorized. Exact-version static review passed 17/20; behavioral validation not run.
