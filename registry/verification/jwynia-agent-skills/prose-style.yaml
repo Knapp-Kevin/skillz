@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: prose-style
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 076d4fbd0847ccc1c3f61cf97557a09cc9f71925
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing]
+  lifecycle: [implementation, verification]
+  characteristic: [human-review, iterative, evidence-first]
+  authority: [mutating]
+  portability: [medium]
+notes: "Strong last-mile trigger boundary, multi-level prose diagnosis, explicit caveat against mechanical rule-following, and clear handoffs when the problem is structural. Optional source helpers are local/read-only. Persistence requires user-selected destination before writes. Source includes attributed craft quotations/reference material; unchanged use remains subject to ordinary copyright constraints on output. Behavioral validation not run. Reviewed in #384."

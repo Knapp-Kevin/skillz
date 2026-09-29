@@ -14,8 +14,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 21 |
-| Persisted third-party exact-version reviews | 643 |
-| Jwynia Agent Skills selectively reviewed units | 1 |
+| Persisted third-party exact-version reviews | 650 |
+| Jwynia Agent Skills selectively reviewed units | 8 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -43,9 +43,9 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
-Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Selectively tracked corpora are bounded to the individually admitted units and are not silently treated as whole-family complete.
+Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Selectively tracked corpora are bounded to the individually governed units and are not silently treated as whole-family complete.
 
-`jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. `story-collaborator` is the first governed unit, **16/20 VERIFIED**, behavioral validation `not-run`, with `mutating` authority and `medium` portability because unchanged operation requires mandatory project-file persistence. Issue #382 is the admission/source-vetting record. Additional fiction candidates remain unverified pending individual review.
+`jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Eight units are now governed: `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six of the seven-unit follow-up tranche are VERIFIED; `story-zoom` is REJECTED unchanged because persistent `story-state/` mutation and a background watcher daemon lack an action-appropriate authorization boundary. Behavioral validation remains `not-run`.
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 

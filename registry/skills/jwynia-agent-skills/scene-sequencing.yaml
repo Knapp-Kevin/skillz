@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: scene-sequencing
+display_name: Scene Sequencing
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/scene-sequencing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: bd7535b8f234145abe0dbedbec63e0a7cb820e4a
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Conceptually integrates with story-sense, key-moments, outline-collaborator, drafting, story-collaborator, revision, and dialogue.
+dependencies: Writable project filesystem for required output persistence; optional local read-only Deno analyzer; user is asked where to save before writing.
+import_eligibility: verified-unchanged-reference
+rationale: Practical scene/sequel pacing diagnostic with non-rigid framing, strong anti-patterns, and explicit user control. Required persistence is user-authorized. Exact-version static review passed 17/20; behavioral validation not run.

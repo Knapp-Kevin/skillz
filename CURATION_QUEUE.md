@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **21** unique registered source identities.
-- **643** persisted exact-version third-party verification companions.
+- **650** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -53,14 +53,14 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 ### Jwynia Agent Skills — selective fiction intake
 
 - Source pin: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`.
-- Source scope at the evaluated snapshot: **112** skills, including **57** creative/narrative skills.
+- Source scope: **112** skills, including **57** creative/narrative skills.
 - Source role: **tracked-corpus**, selective individual curation only; not vendored and not blanket trusted.
-- License state: **MIXED/per-skill** because no root `LICENSE` was found at the evaluated pin. Individual declarations control.
-- Issue-first admission: #382.
-- First governed unit: `story-collaborator`, single-file package tree `3572586b549a852a10e3039fbb86db61e7de5124`, `SKILL.md` blob `7669353fce1643fe1c31c161cfaebc9189957522`.
-- Review result: **16/20 VERIFIED**, behavioral validation `not-run`, authority `mutating`, portability `medium`.
-- Material constraint: mandatory project-file persistence requires a writable host filesystem and user fit for that persistence workflow; this is an operational-fit condition, not a hidden exception.
-- Priority follow-up candidates: `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, `prose-style`. They remain unverified until individually reviewed.
+- License state: **MIXED/per-skill**; no root `LICENSE` was found at the evaluated pin.
+- Governed units: **8**.
+- `story-collaborator`: **16/20 VERIFIED**, behavioral validation `not-run`.
+- Bounded fiction tranche: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED**; `story-zoom` is **REJECTED unchanged** because it couples persistent `story-state/` mutation with instructions to start a background watcher daemon without an action-appropriate authorization gate.
+- Source-owned scripts remain upstream evidence and never become repository-owned runtime.
+- Behavioral validation remains `not-run` across the tranche.
 
 ### Corey Haines Marketing Skills — completed frontier
 
@@ -82,7 +82,7 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`jwynia/agent-skills` (#382) is now an admitted **tracked corpus for selective curation**, with `story-collaborator` individually verified at the registered snapshot. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
+`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with eight individually governed fiction units at the registered snapshot. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
 
 `ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion.
 
@@ -96,4 +96,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Prioritize the bounded Jwynia fiction follow-up tranche from issue #382 while continuing governed source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Do not bulk-promote the 112-skill source, and do not invent new architecture merely to keep the queue busy.
+The bounded Jwynia fiction tranche is governed. Continue with the next coherent differentiated narrative tranche only through issue-first exact-version evaluation; preserve source freshness, omission detection, candidate source-vetting, lifecycle hygiene, and the no-bulk-promotion rule.

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: dialogue
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fcccfad1a39a7d8ad3ebd5d2ff1a64ec5f985f15
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing]
+  lifecycle: [implementation, verification]
+  characteristic: [human-review, iterative, evidence-first]
+  authority: [mutating]
+  portability: [medium]
+notes: "Strong text/subtext/context model, six concrete failure states, double-duty test, anti-patterns, and explicit diagnostic-only boundary. Optional Deno helpers are local/read-only. Primary output persistence requires a writable filesystem but asks the user for the destination before writing. No external action or credential path. Behavioral validation not run. Reviewed in #384."

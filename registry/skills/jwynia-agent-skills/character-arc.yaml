@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: character-arc
+display_name: Character Arc
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/character-arc/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 2c2307e4cb2f8bb77931ed95b4af6c928ea332cd
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Integrates conceptually with story-sense, dialogue, scene-sequencing, endings, and worldbuilding; none is a strict package dependency.
+dependencies: Writable project filesystem for required output persistence; user is asked where to save before writing.
+import_eligibility: verified-unchanged-reference
+rationale: Strong transformation-arc diagnostic with explicit writer-control boundaries. Required persistence is authority-bounded by an explicit save-location question. Exact-version static review passed 17/20; behavioral validation not run.
