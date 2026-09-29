@@ -124,4 +124,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-Roll the closed Jwynia fiction denominator into the narrative capability map in #386, reconcile it with the complete Dan Dewhurst story corpus and Celestara's current authoring/canon architecture, then compose the smallest coherent Celestara-native narrative skill set. Adapt rejected-but-valuable concepts only after removing their authority, oracle, evidence, or package-integrity defects.
+The narrative capability program is complete. Continue in post-completion maintenance mode: verify source freshness and high-salience omission risk, resolve bounded candidate/source evaluations decisively, keep issue/PR lifecycle debt at zero where actionable, and add selective behavioral/adversarial evidence only when an authorized external environment can produce truthful evidence. Do not invent repository runtime or architecture merely to create work.
