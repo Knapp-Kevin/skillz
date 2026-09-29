@@ -25,14 +25,15 @@ Each vendored git submodule retains its upstream license files and repository id
 
 ## Tracked reference sources
 
-These sources are referenced for standards or discovery without being vendored into the repository:
+These sources are referenced for standards, discovery, or selective individual curation without being vendored into the repository:
 
 | Source | Repository | License | Snapshot used for current review | Role |
 |---|---|---|---|---|
 | Agent Skills Specification | `agentskills/agentskills` | Apache-2.0 | `69ef37e9424c0a7ea9dd2293b559e43ec8176379` | normative specification |
 | GitHub Awesome Copilot | `github/awesome-copilot` | MIT | `f11a4e441c5ff061b4f8ae37952be8c602e4034e` | dynamic discovery/comparison |
+| Jwynia Agent Skills | `jwynia/agent-skills` | **Mixed / per-skill.** No root `LICENSE` found at evaluated snapshot; `story-collaborator` explicitly declares MIT in its own front matter. | `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` | tracked corpus for selective individual curation |
 
-Tracked discovery does not imply endorsement, redistribution, or verification of individual contributions.
+Tracked discovery or source registration does not imply endorsement, redistribution, or verification of every contribution. Individual unchanged-reuse eligibility remains bound to exact per-skill provenance and verification evidence.
 
 ## Local adaptations
 

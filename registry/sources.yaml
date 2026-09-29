@@ -230,3 +230,13 @@ sources:
     upstream_copyright: Copyright (c) 2025 Corey Haines
     pinned_revision: 5b2c0007766c6a1cf1d53fd8fc73e979e0821022
     rationale: Creator-maintained marketing skill corpus admitted via issue #297 for selective exact-version curation. The registered snapshot contains 50 top-level first-class SKILL.md packages under skills/; partner integrations, source tooling, generated partner surfaces, and ordinary references are outside that denominator.
+
+  - id: jwynia-agent-skills
+    name: Jwynia Agent Skills
+    source: https://github.com/jwynia/agent-skills
+    class: community-vetted
+    source_role: tracked-corpus
+    inclusion: tracked
+    license: MIXED
+    pinned_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+    rationale: Creator-maintained 112-skill corpus with 57 creative/narrative skills, admitted via issue #382 for selective individual curation. No root LICENSE was found at the evaluated pin, so per-skill declarations control; story-collaborator is individually MIT-declared and verified at the exact registered snapshot.

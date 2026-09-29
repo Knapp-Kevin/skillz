@@ -11,9 +11,10 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **642** |
+| **Persisted third-party review companions** | **643** |
 | **Pinned external corpora** | 12 |
-| **Registered source identities** | 20 |
+| **Registered source identities** | 21 |
+| **Jwynia Agent Skills selectively reviewed units** | **1** |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | **50 / 50** |
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
@@ -50,7 +51,15 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 
 Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**.
 
-Completion means decisive current evidence for every eligible package, not universal approval. Rejected and retired material remains useful bounded prior art.
+Completion means decisive current evidence for every eligible package in the explicitly complete families above, not universal approval. Selectively tracked corpora may intentionally have only bounded individually governed units. Rejected and retired material remains useful bounded prior art.
+
+## Jwynia Agent Skills — selective tracked corpus
+
+Registered snapshot: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`. Source scope: 112 skills, including 57 creative/narrative skills. Source-wide license state is **MIXED/per-skill** because no root `LICENSE` was found at the evaluated revision; individual declarations control.
+
+`story-collaborator` is the first governed unit from this source. Its exact package is a single `SKILL.md` with git blob SHA `7669353fce1643fe1c31c161cfaebc9189957522`. Structured review scored **16/20 VERIFIED**, with behavioral validation `not-run`. It is classified **mutating / medium portability** because mandatory project-file persistence requires a writable host filesystem and user fit for that persistence workflow. Issue #382 records source-vetting, semantic scenarios, hard-fail review, and the decisive admission result.
+
+The source is tracked for selective individual curation rather than vendored or blanket trusted. Follow-up candidates include `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`; none inherit `story-collaborator`'s verification state.
 
 ## Corey Haines Marketing Skills — current-standard complete
 
@@ -64,7 +73,7 @@ Exact fingerprints, package boundaries, dependencies, controlled tags, freshness
 
 ## Provenance and quality state
 
-The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44 provenance-complete**, and every admitted third-party family in current public accounting is current-standard companion-complete with zero package gaps. Every governed third-party unit must continue to retain truthful provenance and exact-version verification evidence; unknown facts remain unknown rather than inferred.
+The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44 provenance-complete**, and every explicitly current-standard-complete third-party family in public accounting has zero package gaps. Selective tracked corpora remain bounded by the individual units actually admitted; they are not counted as whole-family complete. Every governed third-party unit must continue to retain truthful provenance and exact-version verification evidence; unknown facts remain unknown rather than inferred.
 
 Static verification is not behavioral validation. `verified` means the exact bound material passed structured semantic review. `validated` requires representative external behavioral/adversarial evidence that actually exists. `rejected` and `retired` remain prior art but are excluded from normal unchanged selection.
 
@@ -77,6 +86,8 @@ The bounded controlled-taxonomy conformance audit #342 is **closed completed**. 
 Discovery runs in parallel with admitted-source maintenance but never grants quality, trust, installation authority, redistribution rights, or automatic admission. New third-party discoveries use the issue-first lifecycle in `docs/candidate-intake.md`.
 
 Current governed discovery surfaces include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, canonical creator/source repositories, and candidate work recorded in the living curation ledger. Restricted or unclear-license material remains reference-only unless terms justify another role.
+
+`jwynia/agent-skills` was admitted through issue #382 as a tracked corpus for selective individual curation. The source's missing root license prevents blanket license inference; per-skill declarations remain controlling.
 
 `ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) are closed REFERENCE-ONLY candidates because canonical redistribution terms sufficient for governed corpus inclusion were not established.
 
@@ -94,4 +105,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With admitted-source provenance current-standard complete, all publicly accounted admitted families at zero gaps, and the bounded taxonomy audit complete, prioritize governed source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Prefer evidence-backed maintenance over inventing new architecture.
+With current-standard complete families at zero gaps, `story-collaborator` admitted as the first individually governed Jwynia fiction skill, and the bounded taxonomy audit complete, prioritize the small follow-up fiction tranche named in issue #382 while continuing ordinary governed source freshness, omission detection, and lifecycle hygiene. Prefer evidence-backed maintenance over inventing new architecture.

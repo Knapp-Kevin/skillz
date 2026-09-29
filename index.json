@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-24",
+  "snapshot_date": "2026-09-29",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
-    "registered_source_identities": 20,
-    "persisted_third_party_exact_version_reviews": 642,
+    "registered_source_identities": 21,
+    "persisted_third_party_exact_version_reviews": 643,
+    "jwynia_agent_skills_selectively_reviewed_units": 1,
     "anthropic_skills_current_standard_companions": 17,
     "anthropic_skills_eligible_denominator": 17,
     "anthropic_skills_current_standard_gaps": 0,
@@ -74,7 +75,7 @@
   },
   "source_roles": {
     "pinned-reference-corpus": ["anthropic-skills", "anthropic-knowledge-work-plugins", "vercel-agent-skills", "microsoft-skills", "microsoft-azure-skills", "aws-agent-toolkit", "mattpocock-skills", "addyosmani-agent-skills", "openhands-extensions", "cline-skills", "cloudflare-skills", "google-agents-cli"],
-    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers", "corey-haines-marketing-skills"],
+    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers", "corey-haines-marketing-skills", "jwynia-agent-skills"],
     "normative-spec": ["agentskills-spec"],
     "dynamic-discovery": ["github-awesome-copilot"]
   },
@@ -84,6 +85,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-24: final Corey Haines macro tranche reviewed revops, sales-enablement, schema, seo-audit, signup, site-architecture, sms, social, and video at registered pin 5b2c0007766c6a1cf1d53fd8fc73e979e0821022; sales-enablement, schema, seo-audit, and site-architecture passed exact-version static semantic review; five rejected unchanged but retained as adaptation/reference prior art; behavioral validation not-run for all; Corey Haines 41/50 -> 50/50 with gaps 9 -> 0; persisted exact-version review count 633 -> 642"
+    "latest_reconciliation": "2026-09-29: admitted jwynia/agent-skills via issue #382 as a selective tracked corpus at e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; story-collaborator became the first governed unit at blob 7669353fce1643fe1c31c161cfaebc9189957522 with 16/20 VERIFIED static review, behavioral validation not-run, mutating authority, and medium portability due mandatory project-file persistence; registered sources 20 -> 21 and persisted exact-version reviews 642 -> 643"
   }
 }
