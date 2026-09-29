@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: adaptation
+display_name: Adaptation
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/adaptation/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: e76897f6b5e767137b91f3719a09bc6f5da35da3
+upstream_revision: 764817002bc68b296f38d40aeb6ef51837433722
+upstream_last_updated_at: 2026-09-27T23:13:35Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; target-format tooling remains host/upstream supplied.
+import_eligibility: verified-unchanged-reference
+rationale: Media-adaptation workflow with explicit source-story authority and bounded outputs. Static review 17/20; behavioral validation not run. Issue #387.

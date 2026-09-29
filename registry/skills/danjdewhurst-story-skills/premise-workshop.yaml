@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: premise-workshop
+display_name: Premise Workshop
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/premise-workshop/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: a8f26ca8409ba8bb62555c55c1a27db47189058f
+upstream_revision: da9f811273436901411a6380ec6c7efb3f3722f0
+upstream_last_updated_at: 2026-09-27T15:49:06Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Story Skills project when persisting decisions; package-local premise/form/title references.
+import_eligibility: verified-unchanged-reference
+rationale: Strong premise ideation and testing with bounded alternatives and clear handoff into project state. Static review 18/20; validation not run. Issue #387.

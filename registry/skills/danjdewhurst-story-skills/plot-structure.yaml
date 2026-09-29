@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: plot-structure
+display_name: Plot Structure
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/plot-structure/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: adfc5ba07e49bcd50476237cc614ed763993ced1
+upstream_revision: b56aee1e46680d441ef66e84693c98bc32353bb4
+upstream_last_updated_at: 2026-09-27T20:22:27Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; package-local structure references and optional story CLI.
+import_eligibility: verified-unchanged-reference
+rationale: Multi-model plot and arc planning with explicit routing and structural maintenance. Static review 18/20; validation not run. Issue #387.

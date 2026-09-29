@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: submission
+display_name: Submission
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/submission/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 6ceb2297ce2e883dc49eedaef4e594f7ec5bf44a
+upstream_revision: 2023e985a3ae1a6074c38b6c41e9de2a525930eb
+upstream_last_updated_at: 2026-09-27T23:51:37Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-current-market-verification
+dependencies: Writable Story Skills project for query/synopsis/tracker artifacts; actual submissions and current market requirements remain author-controlled/external.
+import_eligibility: verified-unchanged-reference
+rationale: Submission-package preparation with explicit author-owned sending boundary; volatile market facts require fresh verification. Static review 16/20; validation not run. Issue #387.

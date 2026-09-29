@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: research
+display_name: Research
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/research/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 6892b786abbb13303797be78459511a99ecff6d2
+upstream_revision: 7b61fd4025d98f671f9f46a587ee77ba0a079035
+upstream_last_updated_at: 2026-09-25T17:14:24Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-source-access-when-needed
+dependencies: Story Skills project; real-world claims may require current host-provided sources or subject-matter expertise. No network client is bundled with the skill.
+import_eligibility: verified-unchanged-reference
+rationale: Source-conscious story research with sensible fictional-lore non-trigger and uncertainty handling. Static review 17/20; validation not run. Issue #387.

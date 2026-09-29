@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: genre-craft
+display_name: Genre Craft
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/genre-craft/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 74ba649dc9406df810f94735ffee5e717fc68e2d
+upstream_revision: 75adac02c26b6e39035416c36451696fe63ddddc
+upstream_last_updated_at: 2026-09-27T15:49:06Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; genre references are package-local guidance, not external services.
+import_eligibility: verified-unchanged-reference
+rationale: Genre-specific promise and craft checks with useful non-trigger boundaries and author judgment preserved. Static review 18/20; validation not run. Issue #387.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: feedback-triage
+display_name: Feedback Triage
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/feedback-triage/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 5bfcd8869826690b397a5e783be8c6cd43d9260d
+upstream_revision: 2d67b42bcf3d85c414c652313ef18215b95d2186
+upstream_last_updated_at: 2026-09-29T07:35:02Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; feedback artifacts and story canon remain distinct.
+import_eligibility: verified-unchanged-reference
+rationale: Evidence-backed feedback synthesis that avoids treating every reader comment as canon or mandatory revision. Static review 18/20; validation not run. Issue #387.

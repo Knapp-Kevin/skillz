@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: character-management
+display_name: Character Management
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/character-management/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 484fa867f53aa2f0de0849b2812e1457f44e4085
+upstream_revision: e7418a337919a0942c77ef655a4acbd5ff513f17
+upstream_last_updated_at: 2026-09-27T23:18:12Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; optional story CLI or documented manual fallback.
+import_eligibility: verified-unchanged-reference
+rationale: Structured character, relationship, ensemble, and progression management with continuity-aware state. Static review 18/20; validation not run. Issue #387.
