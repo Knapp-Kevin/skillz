@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: media-adaptation
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8504950511871a835dd4c461d79c3d5f4729e752
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: creator needs functional adaptation of existing media into a genuinely transformed setting. Non-trigger: user wants legal copyright clearance or a surface reskin. Pressure: originality checklist cannot prove noninfringement and 'universal' emotional/cultural elements are authoring heuristics, not sourced human-universal facts. Persistence is host conditional. Behavioral validation not run. Reviewed in #388."

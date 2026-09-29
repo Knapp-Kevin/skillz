@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: chapter-drafter
+display_name: Chapter Drafter
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/orchestrators/chapter-drafter/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: e7ff67670e43be7d920b7cb142cef1deab1fc24d
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-filesystem-and-governance-adaptation-required
+relationships: Valuable hierarchical chapter drafting/revision orchestration prior art combining scene sequencing, character arc, cliche review, dialogue, and prose style; strong Celestara adaptation candidate after oracle and canon gates are replaced.
+dependencies: Exact package includes score-scene.ts plus pass-criteria and progress-tracker templates. Fixed pass weights, PASS/WARN/FAIL values, acceptance thresholds, and autonomous rewrite loops turn subjective judgments into pseudo-objective literary decisions.
+import_eligibility: rejected-unchanged-reference
+rationale: Strong orchestration concept but unchanged effectiveness oracle is not defensible and autonomous rewriting lacks Celestara-specific canon/editorial authority gates. Static score 13/20; retain for adaptation. Behavioral validation not run.

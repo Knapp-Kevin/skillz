@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: sensitivity-check
+display_name: Sensitivity Check
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/sensitivity-check/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: c90dc5cbc2889de7e9c5216a3280cf0add38fad1
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-filesystem-and-expert-review-required
+relationships: Representation-review prior art emphasizing power, stereotype, trope, agency, and lived-experience review, but not authoritative enough for unchanged sensitive-domain use.
+dependencies: Exact package includes representation-map and sensitivity-audit Deno scripts. Skill itself says it does not replace own-voices/sensitivity readers, yet embeds unsourced cultural, identity, and medical assertions operationalized by pattern-based auditing.
+import_eligibility: rejected-unchanged-reference
+rationale: Useful checklist concepts and humility boundaries, but evidence discipline is insufficient for a sensitive identity/medical review surface. Static score 13/20; retain for adaptation with sourced research and appropriate human expertise. Behavioral validation not run.

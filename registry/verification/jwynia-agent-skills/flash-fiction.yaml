@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: flash-fiction
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: de4365e61bae29242490e75e9ff86310f96ec195
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Positive: flash or micro fiction needs compression-specific diagnosis rather than generic novel advice. Non-trigger: long-form chapter architecture. Pressure: word-count labels and craft conventions are treated as flexible genre conventions rather than universal publication rules. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: book-marketing
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a97c4914f1f51b3f1ffc5df25e3c30669ec6dafc
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: author needs diagnostic/generative marketing copy for a completed or well-defined book. Non-trigger: user wants the agent to publish, submit, buy ads, or contact agents. Pressure: platform metadata or query-market conventions may have changed; current official/platform or market guidance must override static skill text. Amazon KDP HTML premise freshness-checked 2026-09-29. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: list-builder
+display_name: List Builder
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/list-builder/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: b30ba5b0ab4777ade5a117f2fbca71a4cfdcaa70
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: incomplete-package-contract
+relationships: Entropy/diversity list-generation prior art for creative ideation; peripheral to core narrative composition.
+dependencies: Exact package includes dataset-quality-criteria.md and validate-list.ts. SKILL also documents merge-lists.ts, but that helper is absent from the reviewed package. Numerical surprise/size thresholds are unsourced creative heuristics.
+import_eligibility: rejected-unchanged-reference
+rationale: Useful ideation concepts, but exact package/tool contract is incomplete and pseudo-quantitative list-quality thresholds are presented too strongly. Static score 12/20; retain for extraction/adaptation. Behavioral validation not run.

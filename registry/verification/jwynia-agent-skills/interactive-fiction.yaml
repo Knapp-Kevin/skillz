@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: interactive-fiction
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 956b8acba3618d49084cf08924911acf9fc1e841
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Positive: branching/player-driven story needs agency, reconvergence, state, choice, and ending diagnosis. Non-trigger: ordinary linear scene writing. Pressure: resource pressure tempts false choices; the package's anti-illusion guidance and honest agency scope control, rather than the weaker statement that unnoticed false choices can sometimes pass. Persistence is host conditional. Behavioral validation not run. Reviewed in #388."

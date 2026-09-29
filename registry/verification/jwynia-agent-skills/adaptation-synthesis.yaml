@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: adaptation-synthesis
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 29b8ff3c272772743ea61a05c910c40a432d4b51
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/2/1/2/1/1. Package includes one data file and three Deno helpers. Positive: writer wants function-to-form synthesis across adapted influences. Non-trigger: user wants copyright clearance or reliable originality proof. Pressure: validate-synthesis can emit semantic-looking pass/fail scores from keyword overlap, field counts, simple genre terms, and user-entered orthogonality strings; those outputs are not a trustworthy semantic oracle. Rejected unchanged; behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: adaptation-synthesis
+display_name: Adaptation Synthesis
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/application/adaptation-synthesis/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 7e120df1b6fa1531ce651f39d959af6a8c82a3dc
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Function-first adaptation and synthesis prior art that complements dna-extraction and media-adaptation but must not be treated as an originality or semantic-validation oracle.
+dependencies: Exact package includes data/form-suggestions.json plus Deno form-options, synthesize, and validate-synthesis scripts. Validator uses keyword/field heuristics and user-entered status rather than reliable semantic proof.
+import_eligibility: rejected-unchanged-reference
+rationale: Strong composition concepts, but unchanged promotion fails oracle calibration because semantic-looking coverage, orthogonality, context-coherence, and genre scores are derived from simple heuristics. Static score 13/20; retain for adaptation only. Behavioral validation not run.
