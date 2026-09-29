@@ -65,7 +65,11 @@ The source remains tracked for selective individual curation rather than vendore
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-All fifty packages now have current-standard provenance and exact-version verification companions. Behavioral validation remains `not-run` unless a companion explicitly records otherwise. Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
+All fifty packages now have current-standard provenance and exact-version verification companions. The final macro tranche adds `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` means exact-version structured static semantic review, not behavioral validation or automatic unchanged-use eligibility. Behavioral validation remains `not-run`.
+
+**Macro synthesis:** Corey Haines is materially stronger as planning/checklist/design prior art than as unchanged operational authority, but the family contains meaningful bounded unchanged-use candidates. Recurring defects cluster around fragmented action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. `seo-audit` is notable for an explicit untrusted-content boundary; `site-architecture` remains generate-only. `revops`, `sms`, `social`, and `video` cross into consequential external-action surfaces and require stronger authority boundaries; `signup` needs stronger identity/tracking/data-inference boundaries.
+
+Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
 ## Provenance and quality state
 
@@ -101,4 +105,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With the bounded Jwynia fiction tranche governed, return to source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Continue selective Jwynia curation only when a coherent differentiated tranche is justified; do not bulk-promote the source or invent new architecture to keep the queue busy.
+With the bounded Jwynia fiction tranche governed, continue the next coherent differentiated narrative tranche only through issue-first exact-version evaluation while maintaining ordinary governed source freshness, omission detection, and lifecycle hygiene. Do not bulk-promote the source.
