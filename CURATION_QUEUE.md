@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **704** persisted exact-version third-party verification companions.
+- **719** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -51,20 +51,21 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 
 Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**. David Ondrej sub-family accounting remains agent orchestration **17/17**, ops/setup **11/11**, research/web **10/10**, skill authoring **4/4**, and thinking/docs **13/13**.
 
-### Jwynia Agent Skills — selective fiction intake
+### Jwynia Agent Skills — fiction denominator complete
 
 - Source pin: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`.
 - Source scope: **112** skills, including **57** creative/narrative skills; exact fiction denominator under #388: **54** first-class packages.
 - Source role: **tracked-corpus**, selective individual curation only; not vendored and not blanket trusted.
 - License state: **MIXED/per-skill**; no root `LICENSE` was found at the evaluated pin.
-- Governed fiction units: **39 / 54**; remaining **15**.
-- Current disposition: **32 VERIFIED**, **7 REJECTED unchanged**; behavioral validation `not-run` for all thirty-nine.
+- Governed fiction units: **54 / 54**; remaining **0**.
+- Current disposition: **39 VERIFIED**, **15 REJECTED unchanged**; behavioral validation `not-run` for all fifty-four.
 - Tranche 1 under #388 added seven VERIFIED and four REJECTED unchanged core/craft/character units.
 - Tranche 2 added nine VERIFIED structure units and rejected `reverse-outliner` unchanged at **12/20** because its semantic-looking analysis rests largely on regex/common-name/fixed-position heuristics with broad Deno runtime requirements.
-- Tranche 3 added VERIFIED `belief-systems` **15/20**, `economic-systems` **15/20**, `governance-systems` **15/20**, `language-evolution` **15/20**, `metabolic-cultures` **15/20**, `oblique-worldbuilding` **16/20**, `settlement-design` **15/20**, `systemic-worldbuilding` **17/20**, and `world-fates` **15/20**.
-- The same tranche rejected `conlang` unchanged at **13/20** because precise cross-linguistic phoneme-frequency and universal/common/rare tiers lack pinned PHOIBLE source/version/derivation evidence. Its deterministic phonology/word-generation architecture remains useful adaptation prior art.
-- `story-zoom` remains REJECTED unchanged from the earlier tranche because it couples persistent story-state mutation with a background watcher daemon lacking an action-appropriate authorization gate.
-- `world-fates` preserves a valuable authority boundary for campaign use: scripts may calculate/propose, but player consent and human approval govern canon/world-bible mutation.
+- Tranche 3 added nine VERIFIED worldbuilding units and rejected `conlang` unchanged at **13/20** for unsupported cross-linguistic frequency/provenance claims.
+- Final tranche VERIFIED `book-marketing` **15/20**, `dna-extraction` **15/20**, `flash-fiction` **16/20**, `interactive-fiction` **16/20**, `media-adaptation` **15/20**, `paradox-fables` **15/20**, and `table-tone` **16/20**.
+- Final tranche REJECTED unchanged `adaptation-synthesis` **13/20**, `game-facilitator` **13/20**, `list-builder` **12/20**, `multi-order-evolution` **13/20**, `sensitivity-check` **13/20**, `shared-world` **14/20**, `sleep-story` **13/20**, and `chapter-drafter` **13/20**.
+- Key Celestara finding: `shared-world`, `game-facilitator`, and `chapter-drafter` contain unusually valuable concepts but require adaptation because their unchanged runtime/authority/oracle behavior is not governable enough. `systemic-worldbuilding`, `interactive-fiction`, `table-tone`, and proposal-only `world-fates` provide strong governed reference behavior.
+- `story-zoom` remains REJECTED unchanged because its persistent watcher lacks an action-appropriate authorization gate; its cross-level synchronization concept remains useful prior art.
 - Source-owned scripts remain upstream evidence and never become repository-owned runtime.
 
 ### Dan Dewhurst Story Skills — completed frontier
@@ -75,7 +76,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Current provenance/verification companions: **23/23**; gaps **0**.
 - All 23 are **VERIFIED unchanged exact-version references**, with static rubric scores **16/20–18/20**.
 - Behavioral validation is `not-run` for all 23; upstream tests/evals remain source evidence only.
-- Main portability caveat: the corpus assumes its Markdown/YAML Story Skills project schema and often an optional upstream `story` CLI.
+- Main portability caveat: the corpus assumes the upstream Markdown/YAML Story Skills project schema and often an optional upstream `story` CLI.
 - `story-maintenance` packages a local Node fallback with explicit validate/reindex/rename/move/remove/repair operations. That runtime remains upstream-only and is not adopted by `skillz`.
 - Submission/publishing/editorial procedures prepare artifacts and plans but leave actual sending, uploads, purchases, contracts, account operations, pushes, and publication to the author.
 
@@ -101,7 +102,7 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with **39/54** individually governed fiction packages at the registered snapshot and **15** remaining application/orchestrator packages under #388. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
+`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with the exact **54/54 fiction denominator complete** at the registered snapshot. Missing root licensing still prevents blanket source-wide license inference outside the individually governed packages.
 
 `danjdewhurst/story-skills` is an admitted **tracked corpus with a complete 23/23 exact-version review** at the registered snapshot. Its source-owned runtime remains upstream-only.
 
@@ -117,4 +118,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Review the remaining **15 application/orchestrator packages** under issue #388 with individual exact-package decisions, then close the Jwynia denominator and reconcile the narrative capability program in #386 for host-specific composition. Keep behavioral validation claims truthful throughout.
+Roll the complete Jwynia fiction findings into parent narrative-capability program #386, reconcile them against the already-complete Dan Dewhurst story corpus and Celestara's existing authoring foundation, then compose the smallest coherent Celestara-native narrative skill system. Keep rejected behavior bounded as adaptation prior art rather than importing it by association.
