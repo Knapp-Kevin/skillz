@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **21** unique registered source identities.
-- **643** persisted exact-version third-party verification companions.
+- **650** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -39,7 +39,7 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 | Microsoft Azure Skills | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | 34 / 34 | 0 | CURRENT-STANDARD COMPLETE |
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |
 | David Ondrej Skills | `7d0ef87dad1f638cab58995eead9e0e6e3fae237` | 55 / 55 | 0 | CURRENT-STANDARD COMPLETE |
-| Corey Haines Marketing Skills | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | **50 / 50** | **0** | **CURRENT-STANDARD COMPLETE** |
+| Corey Haines Marketing Skills | `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` | 50 / 50 | 0 | CURRENT-STANDARD COMPLETE |
 | Matt Pocock Skills | `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | 29 / 29 | 0 | CURRENT-STANDARD COMPLETE |
 | Cloudflare Skills | `f96bff754e428838818017f75817f0f9428acd48` | 13 / 13 | 0 | CURRENT-STANDARD COMPLETE |
 | Addy Osmani Agent Skills | `f63ec56a3cc936408d792956ae583c3c96a825bd` | 24 / 24 | 0 | CURRENT-STANDARD COMPLETE |
@@ -48,43 +48,25 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 | Google Agents CLI | `ef7808f33fc3038112b69d4ad488ce33b72699b1` | 7 / 7 | 0 | CURRENT-STANDARD COMPLETE |
 | Cline Skills | `26378461e978f2b4e2e6d67b57121b86b2a79ba5` | 36 / 36 published | 0 | CURRENT-STANDARD COMPLETE |
 
-Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**. David Ondrej sub-family accounting remains agent orchestration **17/17**, ops/setup **11/11**, research/web **10/10**, skill authoring **4/4**, and thinking/docs **13/13**.
+Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**.
 
 ### Jwynia Agent Skills — selective fiction intake
 
 - Source pin: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`.
-- Source scope at the evaluated snapshot: **112** skills, including **57** creative/narrative skills.
+- Source scope: **112** skills, including **57** creative/narrative skills.
 - Source role: **tracked-corpus**, selective individual curation only; not vendored and not blanket trusted.
-- License state: **MIXED/per-skill** because no root `LICENSE` was found at the evaluated pin. Individual declarations control.
-- Issue-first admission: #382.
-- First governed unit: `story-collaborator`, single-file package tree `3572586b549a852a10e3039fbb86db61e7de5124`, `SKILL.md` blob `7669353fce1643fe1c31c161cfaebc9189957522`.
-- Review result: **16/20 VERIFIED**, behavioral validation `not-run`, authority `mutating`, portability `medium`.
-- Material constraint: mandatory project-file persistence requires a writable host filesystem and user fit for that persistence workflow; this is an operational-fit condition, not a hidden exception.
-- Priority follow-up candidates: `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, `prose-style`. They remain unverified until individually reviewed.
-
-### Corey Haines Marketing Skills — completed frontier
-
-- Pin: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022` (upstream v2.11.1 state).
-- Admitted through issue #297 as a **tracked corpus**, not blanket trusted inventory.
-- Root license: **MIT**, copyright Corey Haines (2025).
-- Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages.
-- Current provenance/verification companions: **50/50**; gaps **0**.
-- Out of denominator: partner/integration guides, `tools/` CLI/integration material, source-owned scripts/workflows, generated partner surfaces, and ordinary reference Markdown nested beneath skill packages.
-- Behavioral validation is `not-run` for reviewed units unless a companion explicitly records otherwise.
-
-Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` denotes successful exact-version static semantic review, not behavioral validation or automatic unchanged-use eligibility.
-
-**Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded unchanged-use candidates. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
-
-Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
+- License state: **MIXED/per-skill**; no root `LICENSE` was found at the evaluated pin.
+- Governed units: **8**.
+- `story-collaborator`: **16/20 VERIFIED**, behavioral validation `not-run`.
+- Bounded fiction tranche: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED**; `story-zoom` is **REJECTED unchanged** because it couples persistent `story-state/` mutation with instructions to start a background watcher daemon without an action-appropriate authorization gate.
+- Source-owned scripts remain upstream evidence and never become repository-owned runtime.
+- Behavioral validation remains `not-run` across the tranche.
 
 ## Governed discovery / source-vetting
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`jwynia/agent-skills` (#382) is now an admitted **tracked corpus for selective curation**, with `story-collaborator` individually verified at the registered snapshot. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
-
-`ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) were resolved **REFERENCE-ONLY** and closed after canonical repository review found no redistribution license/terms sufficient for governed corpus inclusion.
+`jwynia/agent-skills` is an admitted tracked corpus for selective curation. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
 
 ## Lifecycle hygiene
 
@@ -96,4 +78,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Prioritize the bounded Jwynia fiction follow-up tranche from issue #382 while continuing governed source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Do not bulk-promote the 112-skill source, and do not invent new architecture merely to keep the queue busy.
+The bounded Jwynia fiction tranche is governed. Return to source freshness, omission detection, candidate source-vetting, and lifecycle hygiene; continue Jwynia only when another coherent differentiated tranche is justified. Do not bulk-promote the 112-skill source, and do not invent new architecture merely to keep the queue busy.
