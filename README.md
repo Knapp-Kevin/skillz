@@ -2,8 +2,8 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-650-8A2BE2)
-![Registered Sources](https://img.shields.io/badge/registered_sources-21-6f42c1)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-673-8A2BE2)
+![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **21 unique source identities** and **650 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **22 unique source identities** and **673 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
@@ -48,6 +48,7 @@ The registry contains **21 unique source identities** and **650 persisted exact-
 | Cole Medin Skills | 33 / 33 |
 | David Ondrej Skills | 55 / 55 |
 | Corey Haines Marketing Skills | **50 / 50** |
+| Dan Dewhurst Story Skills | **23 / 23** |
 | Matt Pocock Skills | 29 / 29 |
 | Cloudflare Skills | 13 / 13 |
 | Addy Osmani Agent Skills | 24 / 24 |
@@ -63,6 +64,12 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 `jwynia/agent-skills` is tracked at exact snapshot `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective individual curation, not blanket trust or vendoring. The source contains 112 skills, including 57 creative/narrative skills. Source-wide licensing is recorded as **MIXED/per-skill** because no root `LICENSE` was found at the evaluated pin.
 
 Eight units are now individually governed. `story-collaborator`, `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED** exact-version static references. `story-zoom` is **REJECTED unchanged** because its workflow directs persistent story-state mutation and startup of a background watcher daemon without an action-appropriate authorization gate; its synchronization model remains useful adaptation/extraction prior art. Behavioral validation remains `not-run` for all eight. Several verified units require user-authorized project-file persistence and therefore remain host-fit conditional rather than universally portable.
+
+### Dan Dewhurst Story Skills complete intake
+
+`danjdewhurst/story-skills` is tracked at exact snapshot `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. The MIT-licensed corpus has an exact denominator of **23** first-class skills, and **all 23 now have individual provenance and exact-version VERIFIED static-review companions**. Scores range from **16/20 to 18/20**; behavioral validation remains `not-run` for all 23.
+
+The family is unusually coherent as an end-to-end fiction workflow, but it is not universally portable unchanged. Most skills assume the upstream Markdown/YAML Story Skills project model, and several can invoke the optional `story` CLI. `story-maintenance` also packages a local Node fallback with explicit rename/move/remove operations. Those source-owned runtime assets remain upstream evidence and dependencies rather than repository-owned `skillz` runtime. Submission, publishing, and editorial workflows keep consequential real-world sends, purchases, contracts, account actions, and publication under author control.
 
 ### Corey Haines corpus completion
 
