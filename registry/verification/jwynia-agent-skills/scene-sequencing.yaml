@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: scene-sequencing
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 926f9eb8c365446c1b4ee9d012a811725d07557c
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing, planning]
+  lifecycle: [design, implementation, verification]
+  characteristic: [human-review, iterative, decomposition]
+  authority: [mutating]
+  portability: [medium]
+notes: "Useful Goal-Conflict-Disaster / Reaction-Dilemma-Decision diagnostic presented as a flexible pacing model rather than a rigid template. Anti-patterns and handoff boundaries are explicit. Optional analyzer is read-only. Persistence requires user-selected destination before writes, satisfying mutation authorization. Behavioral validation not run. Reviewed in #384."
