@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: conlang
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a5999ad0cbccede0339c620c7255e92ccc78cdfe
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/2/1/2/1/1. Package is complete: SKILL.md, phoneme-frequency and syllable-template datasets, plus deterministic Deno phonology and word generators. Positive: fictional language construction needs a structured phonology/grammar/lexicon workflow. Non-trigger: user requests factual cross-linguistic phoneme statistics. Pressure: generated inventories must not be labeled empirically representative because the precise frequency tiers lack pinned PHOIBLE provenance and derivation. Rejected unchanged; behavioral validation not run. Reviewed in #388."

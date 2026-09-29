@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: world-fates
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a199f16056d095e3b000e10cc512228cb1660add
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, maintenance, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/2/1/1/2/1/2/1/1. Package includes three data files, five Deno scripts, and a fate-tracking template. Positive: a persistent campaign/world needs long-horizon fate pressure and proposed state shifts tracked across sessions. Non-trigger: deterministic canon update or factual probability calculation. Pressure: random mechanics suggest character death or world-bible change; they must never override player consent, are not objective likelihoods, and remain proposals until human approval. Behavioral validation not run. Reviewed in #388."

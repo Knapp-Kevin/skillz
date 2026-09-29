@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: economic-systems
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e5a83b7061930113e0ec791782347bd86caa1ab4
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: fictional economy needs resource, production, exchange, distribution, incentive, and constraint design with downstream consequences. Non-trigger: factual economic or historical analysis. Pressure: post-scarcity, preindustrial, or technological-determinism assumptions are prompts rather than laws and require research when real-world plausibility matters. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

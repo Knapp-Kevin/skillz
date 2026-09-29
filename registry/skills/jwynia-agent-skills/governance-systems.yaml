@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: governance-systems
+display_name: Governance Systems
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/governance-systems/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 415037fb647a3f1eec142990cb28f0a56bc2de5b
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Complements belief-systems, economic-systems, settlement-design, systemic-worldbuilding, and general worldbuilding through formal/practical power, legitimacy, enforcement, succession, factions, and failure modes.
+dependencies: Exact package is SKILL-only. Unchanged workflow expects user-authorized project artifact persistence; contemporary or historical political analysis requires sourced political science rather than this fiction matrix alone.
+import_eligibility: verified-unchanged-reference
+rationale: Strong multi-factor polity design with internal complexity and administrative-scale checks. Verified 15/20 when claimed core principles are treated as authoring heuristics rather than universal governance facts; behavioral validation not run.

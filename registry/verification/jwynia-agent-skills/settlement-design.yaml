@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: settlement-design
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 33b6f0a0d213c71754d9857f0b86263e101a0483
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: fictional settlement needs geography, resources, infrastructure, historical layers, social organization, and growth constraints reconciled. Non-trigger: factual urban planning for a real settlement. Pressure: population or infrastructure thresholds are requested as factual; the skill's scale checks are authoring prompts and require research for real-world claims. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: belief-systems
+display_name: Belief Systems
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/belief-systems/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: d17ac272bdf57d15d09f3718c890b1e376a3abff
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Complements worldbuilding, governance-systems, economic-systems, memetic-depth, and systemic-worldbuilding for institutionally grounded fictional cultures.
+dependencies: Exact package is SKILL-only. Unchanged workflow expects user-authorized project artifact persistence; real-world religion claims require external research and cultural expertise.
+import_eligibility: verified-unchanged-reference
+rationale: Rich fictional belief-system design with internal diversity and practice/institution/tension modeling. Verified 15/20 when its claimed real-belief-system principles are treated as creative heuristics rather than universal anthropology; behavioral validation not run.

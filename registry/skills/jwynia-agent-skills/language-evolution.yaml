@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: language-evolution
+display_name: Language Evolution
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/language-evolution/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 384b9e0176037cc5f13087353ae3b6e998d78bcc
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Complements worldbuilding and language construction by modeling language families, contact, register, sound/grammar/semantic drift, and change over fictional time.
+dependencies: Exact package is SKILL-only. References to rejected conlang and character-naming are conceptual handoffs only and do not inherit trust. Real-language historical claims require linguistic sources; unchanged workflow expects project persistence.
+import_eligibility: verified-unchanged-reference
+rationale: Useful diachronic language-family/contact/evolution scaffold. Verified 15/20 with caution around universal contact-change claims and simplified pidgin-to-creole sequences; behavioral validation not run.
