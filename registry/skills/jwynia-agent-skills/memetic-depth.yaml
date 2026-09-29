@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: memetic-depth
+display_name: Memetic Depth
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/memetic-depth/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 04e5540c48ae47afcad2b575880808e3f71df34d
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: self-contained
+relationships: Cultural-texture/worldbuilding complement.
+dependencies: Exact package contains SKILL.md only; unchanged workflow persists project output.
+import_eligibility: verified-unchanged-reference
+rationale: Strong texture method with human-judgment limits; ratios are authoring heuristics, not measured reader-response facts. Static review 15/20; behavioral validation not run.

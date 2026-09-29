@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: drafting
+display_name: Drafting
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/craft/drafting/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 2ee33df283a4ec6f0deca370ce83fdad886d1098
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: self-contained
+relationships: Drafting-state diagnosis prior art complementary to revision.
+dependencies: Exact package contains SKILL.md only; unchanged workflow persists project output.
+import_eligibility: rejected-unchanged-reference
+rationale: REJECTED unchanged because unsupported/misattributed quotation, oversimplified neuroscience framing, and categorical process prescriptions fail evidence discipline. Static review 13/20; behavioral validation not run.

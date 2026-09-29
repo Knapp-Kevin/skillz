@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-idea-generator
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5e75fd8e97b987c36864c960cf0cbe749c8aaac2
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, planning]
+  lifecycle: [discovery]
+  characteristic: [decomposition, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rejected unchanged: workflow presents five setting/implementation modules as part of the procedure, but the exact package contains only SKILL.md and the referenced files are absent. Useful adaptation prior art remains. Behavioral validation not run. Reviewed in #388."

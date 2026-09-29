@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: revision
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f91e88bdc8ae435ff58c8dfda2fa09974939effa
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, planning]
+  lifecycle: [verification, maintenance]
+  characteristic: [human-review, iterative, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Clear top-down revision workflow, bounded read-only audit helper, and useful feedback triage. Unchanged workflow requires persistent project output. Behavioral validation not run. Reviewed in #388."

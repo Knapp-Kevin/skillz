@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: statistical-distance
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 847174cccbeb7fa4e91ecb668740bc0e0c02c5e6
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [design]
+  characteristic: [metric-driven, human-review]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rejected unchanged: statistical center/edge and 60-80% familiarity targets are presented quantitatively without a corpus, measurement method, or actual statistics. Transformation method remains useful adaptation prior art. Behavioral validation not run. Reviewed in #388."

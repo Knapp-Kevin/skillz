@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: cliche-transcendence
+display_name: Cliche Transcendence
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/craft/cliche-transcendence/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 3e5d09c6b968302d292edf21c5ffc7a311fa65e9
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: optional-source-tools
+relationships: Differentiated function-preserving originality method.
+dependencies: Bundles scripts/orthogonality-check.ts at blob 92cea0877a9964ae9ae43545f1ae332e6afee95a; optional sibling entropy helper; unchanged workflow persists output.
+import_eligibility: verified-unchanged-reference
+rationale: Useful bounded originality method with human-judgment limits; host-conditional due persistence and optional helper. Static review 16/20; behavioral validation not run.

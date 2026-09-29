@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: genre-conventions
+display_name: Genre Conventions
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/craft/genre-conventions/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: e2190832db1d82bcf9c03ac67d736ac6c6aca3d7
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-runtime-optional
+relationships: Genre-promise diagnostic and generative framework.
+dependencies: Bundles genre-elements data and three Deno helpers; one helper imports Deno std remotely. Unchanged workflow persists output.
+import_eligibility: verified-unchanged-reference
+rationale: Useful complete package when scores and blend ratios are treated as heuristics; host-conditional due Deno/network helper and persistence. Static review 15/20; behavioral validation not run.

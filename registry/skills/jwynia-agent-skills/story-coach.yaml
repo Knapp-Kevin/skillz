@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: story-coach
+display_name: Story Coach
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/core/story-coach/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: dc344ef867592ba7399fd910e5d4147aed2627b1
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Coaching complement to story-collaborator; explicitly avoids writing prose for the user.
+dependencies: Exact package contains SKILL.md only; unchanged workflow expects writable project storage.
+import_eligibility: verified-unchanged-reference
+rationale: Strong coaching boundary and diagnosis flow; host-conditional because unchanged use requires filesystem discovery and persistence. Static review 16/20; behavioral validation not run.

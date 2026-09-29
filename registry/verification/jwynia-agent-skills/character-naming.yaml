@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: character-naming
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 29b2a2cdff50b85cd321e007eb7eab4159a31a9b
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing, research]
+  lifecycle: [design]
+  characteristic: [tool-assisted, human-review, risk-aware]
+  authority: [mutating]
+  portability: [low]
+notes: "Rejected unchanged: real-world cultural authenticity claims are not supported by pinned provenance; broad regional/ethnic pools collapse traditions; local PRNG selection is mislabeled external entropy. Deno remote import and cast-state writes add portability cost. No user-data exfiltration path found in reviewed scripts. Behavioral validation not run. Reviewed in #388."

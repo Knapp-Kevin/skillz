@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: genre-conventions
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c46594fd7949c8e211e853447ba3d822ab93cfc9
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [design, verification]
+  characteristic: [human-review, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Useful genre-promise diagnostic with complete bundled data/scripts. Genre scores, blend ratios, and regex analysis are authoring heuristics rather than empirical measurements. Source-owned Deno helper may fetch std remotely. Behavioral validation not run. Reviewed in #388."

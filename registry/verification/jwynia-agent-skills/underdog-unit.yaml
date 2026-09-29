@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: underdog-unit
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9e22577af177d3675fbd655d26a297b0848b585c
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing, domain-modeling]
+  lifecycle: [design]
+  characteristic: [human-review, decomposition]
+  authority: [mutating]
+  portability: [medium]
+notes: "Narrow useful ensemble formula with clear anti-patterns and self-limits. Institutional claims and constraint counts are creative heuristics; real-world institutional plausibility requires research and human judgment. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: character-naming
+display_name: Character Naming
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/character-naming/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 15b80e43f725fc90b8ed9a045bc00bbd40b312a8
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-runtime-required-for-full-workflow
+relationships: Naming mechanics and cast-collision prior art; not authoritative cultural research.
+dependencies: Bundles broad cultural/fantasy data pools, character-name.ts, mutating cast-tracker.ts, template, and a Deno remote std import; mandatory cast-state persistence.
+import_eligibility: rejected-unchanged-reference
+rationale: REJECTED unchanged because cultural-authenticity claims lack pinned sources and broad pools collapse traditions; local PRNG is mislabeled external entropy. No user-data exfiltration path found. Static review 13/20; behavioral validation not run.

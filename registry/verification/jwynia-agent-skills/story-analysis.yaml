@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-analysis
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: be94ddafad83e3a5ddfa665068944ad4c0e772ec
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 19/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [verification]
+  characteristic: [evidence-first, human-review, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Strong post-draft diagnostic with explicit anti-checklist and prioritization safeguards. No mutation or consequential external action required. Behavioral validation not run. Reviewed in #388."

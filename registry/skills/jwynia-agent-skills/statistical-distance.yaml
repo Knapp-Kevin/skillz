@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: statistical-distance
+display_name: Statistical Distance
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/statistical-distance/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: c918387be9a1fddd1f984e7f37d4e9bb9a8d9637
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: self-contained
+relationships: Trope-transformation prior art complementary to cliche-transcendence.
+dependencies: Exact package contains SKILL.md only; unchanged workflow persists project output.
+import_eligibility: rejected-unchanged-reference
+rationale: REJECTED unchanged because statistical-center/edge language and 60-80 percent familiarity targets lack a corpus or measurement method. Transformation method remains useful prior art. Static review 13/20; behavioral validation not run.
