@@ -4,7 +4,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-24 |
+| **Last updated** | 2026-09-29 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
@@ -70,7 +70,7 @@ Static verification is not behavioral validation. `verified` means the exact bou
 
 The authority hard fail remains controlling: procedures that can mutate or materially affect infrastructure, external state, production traffic, money-bearing resources, credentials, subscriptions, DNS/routing, security controls, user communications, notifications, identity/access, persistent cloud resources, destructive lifecycle state, or sensitive-data disclosure require a real authorization boundary appropriate to the action.
 
-Controlled-taxonomy conformance is now tracked separately under #342. Historical #66 comments cited older nonconforming Corey tag values, but fresh default-branch searches no longer find those examples. #342 therefore requires a live inventory of persisted verification companions against `registry/taxonomy.yaml` before changing any records; exact-version evidence must not be re-reviewed merely to normalize metadata.
+The bounded controlled-taxonomy conformance audit #342 is **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; historical examples and audit comments remain evidence only and do not establish current defects without live verification.
 
 ## Discovery and source vetting
 
@@ -84,7 +84,7 @@ Current governed discovery surfaces include the Creator Technical Resource Catal
 
 - Wayfinder #35 remains canonical destination/scope evidence. Its stale frontier text is historical.
 - Source queue #27, structure ticket #41, and PR #42 are closed historical evidence, not live execution authority.
-- Provenance audit #66 is closed completed; bounded taxonomy-conformance follow-up is #342.
+- Provenance audit #66 and taxonomy-conformance audit #342 are closed completed; ongoing provenance and taxonomy conformance are ordinary curation hygiene.
 - Current README, AGENTS, Governance Index, this file, CURATION_QUEUE, INDEX, index.json, source registry, and taxonomy control live repository truth.
 - Open PRs and issues must be triaged before new curation. Ready authorized work should move through merge/closure rather than becoming permanent lifecycle furniture.
 
@@ -94,4 +94,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With admitted-source provenance current-standard complete and Corey Haines at **50/50 with 0 gaps**, run the bounded controlled-taxonomy conformance audit in #342 from live verification records, while continuing governed omission/source discovery. Prefer evidence-backed maintenance over inventing new architecture.
+With admitted-source provenance current-standard complete, all publicly accounted admitted families at zero gaps, and the bounded taxonomy audit complete, prioritize governed source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Prefer evidence-backed maintenance over inventing new architecture.
