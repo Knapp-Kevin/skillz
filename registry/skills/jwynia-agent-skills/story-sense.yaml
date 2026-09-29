@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: story-sense
+display_name: Story Sense
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/core/story-sense/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 23daf0806d97fb1279a23d3e2f46c88e91e679bc
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: optional-source-tools
+relationships: Routes fiction diagnosis to sibling craft skills; sibling skills are conceptual recommendations, not strict package dependencies.
+dependencies: Core procedure is self-contained; source package includes optional local read-only Deno helpers for creative prompts.
+import_eligibility: verified-unchanged-reference
+rationale: Clear fiction diagnostic router with explicit non-triggers, bounded intervention selection, and no required external side effect. Exact-version static review passed 17/20; behavioral validation not run.
