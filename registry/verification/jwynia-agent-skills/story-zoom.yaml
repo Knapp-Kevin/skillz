@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-zoom
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 284b769c32b563199fcc0cf1ea741124b9325e12
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [writing, context-management]
+  lifecycle: [maintenance, verification]
+  characteristic: [human-review, traceable, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Differentiated cross-level consistency model and useful drift/cascade/conflict diagnostics. Exact package includes source-owned init/status/watcher scripts and templates. Hard fail: unchanged procedure directs creation/continuous mutation of story-state and startup of a background watcher daemon as workflow steps without an explicit action-appropriate authorization gate for starting that persistent process. Warnings and tool availability are not authorization. Preserve synchronization model, severity triage, relationship mapping, and dashboard concepts for adaptation/extraction. Behavioral validation not run. Reviewed in #384."
