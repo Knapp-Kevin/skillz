@@ -11,10 +11,10 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **643** |
+| **Persisted third-party review companions** | **650** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 21 |
-| **Jwynia Agent Skills selectively reviewed units** | **1** |
+| **Jwynia Agent Skills selectively reviewed units** | **8** |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | **50 / 50** |
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
@@ -57,19 +57,15 @@ Completion means decisive current evidence for every eligible package in the exp
 
 Registered snapshot: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`. Source scope: 112 skills, including 57 creative/narrative skills. Source-wide license state is **MIXED/per-skill** because no root `LICENSE` was found at the evaluated revision; individual declarations control.
 
-`story-collaborator` is the first governed unit from this source. Its exact package is a single `SKILL.md` with git blob SHA `7669353fce1643fe1c31c161cfaebc9189957522`. Structured review scored **16/20 VERIFIED**, with behavioral validation `not-run`. It is classified **mutating / medium portability** because mandatory project-file persistence requires a writable host filesystem and user fit for that persistence workflow. Issue #382 records source-vetting, semantic scenarios, hard-fail review, and the decisive admission result.
+Eight units are now individually governed: `story-collaborator` plus the bounded fiction tranche `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six tranche units are **VERIFIED**: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. `story-zoom` is **REJECTED unchanged** because its useful cross-level synchronization model is coupled to persistent `story-state/` mutation and instructions to start a background watcher daemon without an action-appropriate authorization gate for that persistent process. Behavioral validation remains `not-run` for all eight governed units.
 
-The source is tracked for selective individual curation rather than vendored or blanket trusted. Follow-up candidates include `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`; none inherit `story-collaborator`'s verification state.
+The source remains tracked for selective individual curation rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, and rationale live in the canonical Jwynia provenance and verification companions.
 
 ## Corey Haines Marketing Skills — current-standard complete
 
 Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: MIT. Exact eligible denominator: **50** top-level first-class `skills/<name>/SKILL.md` packages. Partner/integration guides, source-owned tooling, generated partner surfaces, and ordinary reference Markdown are outside the denominator.
 
-All fifty packages now have current-standard provenance and exact-version verification companions. The final macro tranche adds `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` means exact-version structured static semantic review, not behavioral validation or automatic unchanged-use eligibility. Behavioral validation remains `not-run`.
-
-**Macro synthesis:** Corey Haines is materially stronger as planning/checklist/design prior art than as unchanged operational authority, but the family contains meaningful bounded unchanged-use candidates. Recurring defects cluster around fragmented action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. `seo-audit` is notable for an explicit untrusted-content boundary; `site-architecture` remains generate-only. `revops`, `sms`, `social`, and `video` cross into consequential external-action surfaces and require stronger authority boundaries; `signup` needs stronger identity/tracking/data-inference boundaries.
-
-Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
+All fifty packages now have current-standard provenance and exact-version verification companions. Behavioral validation remains `not-run` unless a companion explicitly records otherwise. Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
 ## Provenance and quality state
 
@@ -105,4 +101,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With current-standard complete families at zero gaps, `story-collaborator` admitted as the first individually governed Jwynia fiction skill, and the bounded taxonomy audit complete, prioritize the small follow-up fiction tranche named in issue #382 while continuing ordinary governed source freshness, omission detection, and lifecycle hygiene. Prefer evidence-backed maintenance over inventing new architecture.
+With the bounded Jwynia fiction tranche governed, return to source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Continue selective Jwynia curation only when a coherent differentiated tranche is justified; do not bulk-promote the source or invent new architecture to keep the queue busy.
