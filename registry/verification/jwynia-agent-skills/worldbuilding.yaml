@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: worldbuilding
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a264e62536c2be42c651157a80a36f278697c2c5
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing, domain-modeling]
+  lifecycle: [planning, design]
+  characteristic: [human-review, decomposition, synthesis]
+  authority: [read-only]
+  portability: [high]
+notes: "Clear diagnostic scope for setting/institution/economy/culture problems, useful consequence-cascade mechanism, explicit non-triggers, and disciplined depth-vs-breadth guidance. Sibling skills are recommendations rather than required dependencies. No mutation, credentials, network calls, or sensitive-data disclosure required. Behavioral validation not run. Reviewed in #384."
