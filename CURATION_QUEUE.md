@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **694** persisted exact-version third-party verification companions.
+- **704** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -57,13 +57,14 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Source scope: **112** skills, including **57** creative/narrative skills; exact fiction denominator under #388: **54** first-class packages.
 - Source role: **tracked-corpus**, selective individual curation only; not vendored and not blanket trusted.
 - License state: **MIXED/per-skill**; no root `LICENSE` was found at the evaluated pin.
-- Governed fiction units: **29 / 54**; remaining **25**.
-- Current disposition: **23 VERIFIED**, **6 REJECTED unchanged**; behavioral validation `not-run` for all twenty-nine.
+- Governed fiction units: **39 / 54**; remaining **15**.
+- Current disposition: **32 VERIFIED**, **7 REJECTED unchanged**; behavioral validation `not-run` for all thirty-nine.
 - Tranche 1 under #388 added seven VERIFIED and four REJECTED unchanged core/craft/character units.
-- Tranche 2 added VERIFIED `endings` **15/20**, `identity-denial` **15/20**, `key-moments` **15/20**, `moral-parallax` **15/20**, `novel-revision` **16/20**, `outline-coach` **16/20**, `outline-collaborator` **15/20**, `perspectival-constellation` **15/20**, and `positional-revelation` **15/20**.
-- The same tranche rejected `reverse-outliner` unchanged at **12/20**: the complete package is useful prior art, but its Deno helpers derive semantic-looking genre/arc/POV/scene-function/confidence outputs largely from regex, common-name, and fixed-position heuristics; unchanged use also has broad runtime/write requirements and an insufficient published-text rights/minimization boundary.
+- Tranche 2 added nine VERIFIED structure units and rejected `reverse-outliner` unchanged at **12/20** because its semantic-looking analysis rests largely on regex/common-name/fixed-position heuristics with broad Deno runtime requirements.
+- Tranche 3 added VERIFIED `belief-systems` **15/20**, `economic-systems` **15/20**, `governance-systems` **15/20**, `language-evolution` **15/20**, `metabolic-cultures` **15/20**, `oblique-worldbuilding` **16/20**, `settlement-design` **15/20**, `systemic-worldbuilding` **17/20**, and `world-fates` **15/20**.
+- The same tranche rejected `conlang` unchanged at **13/20** because precise cross-linguistic phoneme-frequency and universal/common/rare tiers lack pinned PHOIBLE source/version/derivation evidence. Its deterministic phonology/word-generation architecture remains useful adaptation prior art.
 - `story-zoom` remains REJECTED unchanged from the earlier tranche because it couples persistent story-state mutation with a background watcher daemon lacking an action-appropriate authorization gate.
-- `outline-collaborator` does not inherit trust from siblings: rejected `character-naming` and `story-zoom` integrations require governed substitution/constraint.
+- `world-fates` preserves a valuable authority boundary for campaign use: scripts may calculate/propose, but player consent and human approval govern canon/world-bible mutation.
 - Source-owned scripts remain upstream evidence and never become repository-owned runtime.
 
 ### Dan Dewhurst Story Skills — completed frontier
@@ -100,7 +101,7 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with **29/54** individually governed fiction packages at the registered snapshot and **25** remaining under #388. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
+`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with **39/54** individually governed fiction packages at the registered snapshot and **15** remaining application/orchestrator packages under #388. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
 
 `danjdewhurst/story-skills` is an admitted **tracked corpus with a complete 23/23 exact-version review** at the registered snapshot. Its source-owned runtime remains upstream-only.
 
@@ -116,4 +117,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Continue the remaining **25-package** Jwynia fiction frontier under issue #388 with per-skill exact-package decisions. Keep the narrative capability program in #386 open until that denominator and downstream host-specific integration decisions are resolved.
+Review the remaining **15 application/orchestrator packages** under issue #388 with individual exact-package decisions, then close the Jwynia denominator and reconcile the narrative capability program in #386 for host-specific composition. Keep behavioral validation claims truthful throughout.
