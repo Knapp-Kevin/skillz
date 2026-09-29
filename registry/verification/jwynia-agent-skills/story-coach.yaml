@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-coach
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4ffce9f7e27df006aa7730a082561a5275ec02e1
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Positive: writer explicitly wants questions, diagnosis, and options without generated prose. Non-trigger: writer asks for a drafted scene; route to an active collaborator instead of violating the coaching boundary. Pressure: host lacks writable project storage or user forbids persistence, so unchanged workflow cannot satisfy its before-work persistence requirement. Behavioral validation not run. Reviewed in #388."

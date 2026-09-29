@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: underdog-unit
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9e22577af177d3675fbd655d26a297b0848b585c
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Useful institutional-underdog ensemble formula with constraint and team-dysfunction checks plus explicit oracle limitations. Positive: design an institutional outcast team with an impossible mandate. Non-trigger: solo character arc or institution-only worldbuilding. Pressure: real-world institutional plausibility requires research beyond this narrative formula; constraint-count and institutional-behavior guidance is heuristic. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

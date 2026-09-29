@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: memetic-depth
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fd29ea0d1f0e9ecb46e954955e8202b4a0969bcc
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Strong recognizable/inferrable/inscrutable world-texture method and explicit human-judgment/cultural-sensitivity boundaries. Positive: fictional setting needs lived-in cultural layers and implied history. Non-trigger: factual research about a real culture. Pressure: target readers may not share assumed familiarity categories, so 40/40/20 and genre-specific ratios are heuristics, not empirical measurements. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

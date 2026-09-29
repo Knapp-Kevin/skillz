@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: character-naming
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 29b2a2cdff50b85cd321e007eb7eab4159a31a9b
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/2. Exact package includes 12 broad cultural families, fantasy/mixed pools, naming framework, template, local generator, and mutating cast tracker. Data metadata uses vague provenance such as census data/regional research rather than pinned sources; broad pools combine multiple cultural traditions. The skill's 'external entropy' claim does not match the reviewed implementation, which uses local Math.random; Deno std is fetched by pinned remote import and cast tracking writes local state. Positive: constrained name generation plus cast-collision checks. Non-trigger: simple evaluation of an already chosen fictional name. Pressure: culturally authentic real-world naming requires stronger sourced data and human cultural review. No reviewed code path transmits user data externally. Rejected unchanged; behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: story-coach
+display_name: Story Coach
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/core/story-coach/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: dc344ef867592ba7399fd910e5d4147aed2627b1
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Explicitly contrasts with story-collaborator; conceptually routes to story-sense, cliche-transcendence, character-arc, and scene-sequencing.
+dependencies: Core coaching procedure is self-contained, but unchanged workflow requires writable project files and output-config discovery/persistence before other work.
+import_eligibility: verified-unchanged-reference
+rationale: Clear coaching-only boundary, strong diagnostic questioning, and explicit refusal to take over authorship. Verified 16/20, conditional on a host that can honor the mandatory persistence contract; behavioral validation not run.

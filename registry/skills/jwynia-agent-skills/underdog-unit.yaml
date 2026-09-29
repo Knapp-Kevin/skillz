@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: underdog-unit
+display_name: Underdog Unit
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/underdog-unit/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 4b1d12414aca1e0ead33a75ccdb213ae22c01683
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Can consume character-arc and worldbuilding inputs and feed dialogue, scene-sequencing, and ending design.
+dependencies: Core formula is self-contained; unchanged workflow requires output persistence. Real-institution plausibility requires external research/human judgment beyond the package.
+import_eligibility: verified-unchanged-reference
+rationale: Narrow and differentiated ensemble formula with clear anti-patterns and self-limits. Verified 15/20 with institutional claims and constraint counts treated as creative heuristics, not general empirical rules; behavioral validation not run.

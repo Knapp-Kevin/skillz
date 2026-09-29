@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: cliche-transcendence
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7a37b990b6cc505fb5ac97472c59efec94847cff
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, iterative, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Exact package includes scripts/orthogonality-check.ts, a bounded stdin/stdout Deno questionnaire with no filesystem/network permission. Positive: generic trope needs fresh alternatives while preserving narrative function. Non-trigger: familiar convention is deliberately desired. Pressure: no writable filesystem, so the conceptual method remains useful but unchanged mandatory persistence cannot run as written. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: story-idea-generator
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5e75fd8e97b987c36864c960cf0cbe749c8aaac2
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing]
+  lifecycle: [discovery, planning]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/1/0/1/2/1/2. Dependency hard gate: the skill presents Science Fiction, Urban Fantasy, Epic Fantasy, Historical Fiction, and Implementation Guide modules as workflow components, but the exact package contains only SKILL.md; repository search at the source pin finds the references rather than the files. Positive: early brainstorming from desired emotional experience. Non-trigger: completed scene needs line revision. Pressure: requesting an advertised setting module exposes the missing dependency. Rejected unchanged; adaptation prior art retained. Behavioral validation not run. Reviewed in #388."

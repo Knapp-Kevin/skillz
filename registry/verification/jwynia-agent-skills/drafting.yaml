@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: drafting
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 22cc7c57b0b6328ee7e1fe536a9174b6ceef8824
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [writing]
+  lifecycle: [implementation]
+  characteristic: [human-review, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/0/1/1/2/1/2. Useful D1-D6 drafting-state taxonomy, but evidence discipline fails: the Hemingway quotation is only loosely attributed, the 'cortex creative vs limbic survival' explanation is an oversimplified neuroscience claim, and several drafting rules are categorical rather than goal-relative. Positive: outline exists but drafting stalls. Non-trigger: completed manuscript needs revision. Pressure: a writer asks whether anxiety is neurologically blocking creativity; the skill cannot responsibly present its neuroscience explanation as established fact. Rejected unchanged; behavioral validation not run. Reviewed in #388."
