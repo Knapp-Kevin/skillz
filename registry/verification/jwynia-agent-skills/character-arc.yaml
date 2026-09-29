@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: character-arc
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 64be1ee9e1b51c5c80fca2171f4e65edf9c8d60b
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, design]
+  characteristic: [human-review, iterative, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Differentiated positive/negative/flat arc diagnostic with useful lie-want-need and resistance checks plus explicit limits against choosing the writer's arc. Primary output is persisted, but the skill requires asking the user where to save before any write, satisfying the mutation authorization boundary. Filesystem requirement reduces portability. Behavioral validation not run. Reviewed in #384."
