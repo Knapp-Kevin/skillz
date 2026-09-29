@@ -26,7 +26,7 @@ For an active finite source family, recompute the whole remaining frontier befor
 
 The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every admitted third-party family below is current-standard companion-complete with zero package gaps. Ongoing enforcement remains documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
 
-Controlled-taxonomy conformance is a separate bounded hygiene lane under #342. Recompute from current verification companions before changing records; do not assume historical #66 examples still exist.
+The bounded controlled-taxonomy conformance audit #342 is also **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; do not infer current defects from historical examples without live evidence.
 
 ## Admitted-source curation
 
@@ -78,8 +78,8 @@ At each run: inspect every open PR and issue; merge a current authorized ready P
 
 ## Historical authority boundary
 
-Wayfinder #35 remains canonical destination/scope evidence, but stale frontier text is historical. Source queue #27, structure ticket #41, PR #42, and completed provenance audit #66 are historical evidence. Current README and Tier-1 governance control live execution.
+Wayfinder #35 remains canonical destination/scope evidence, but stale frontier text is historical. Source queue #27, structure ticket #41, PR #42, completed provenance audit #66, and completed taxonomy audit #342 are historical evidence. Current README and Tier-1 governance control live execution.
 
 ## Next action
 
-Run #342 as a bounded live inventory of persisted verification companions against `registry/taxonomy.yaml`, normalizing only actual current controlled-tag defects while preserving exact-version evidence. In parallel, continue governed omission/source discovery. Do not invent new architecture to keep the queue busy.
+With all publicly accounted admitted families current-standard complete and the bounded taxonomy audit closed, prioritize governed source freshness, omission detection, candidate source-vetting, and lifecycle hygiene. Do not invent new architecture to keep the queue busy.
