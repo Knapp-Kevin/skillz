@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: editorial-review
+display_name: Editorial Review
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/editorial-review/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: d07b96fa8a35b782307984a6d69e3f7ab282a442
+upstream_revision: ca69065ddc52f7a42ad12ce75fff63a2aafbbe15
+upstream_last_updated_at: 2026-09-29T07:37:49Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; human permissions/sensitivity workflows remain author-controlled; no send/upload/push/publish without separate instruction.
+import_eligibility: verified-unchanged-reference
+rationale: Editorial, permission, and sensitivity-review workflow with explicit external-action limits. Static review 17/20; validation not run. Issue #387.

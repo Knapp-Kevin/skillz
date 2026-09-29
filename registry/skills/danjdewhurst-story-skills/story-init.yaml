@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: story-init
+display_name: Story Init
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/story-init/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: ed6102360794afe00efbe0c937b5963a4eef29cd
+upstream_revision: e32596925e38b8cdb338f72fe7a1b16780eae4cc
+upstream_last_updated_at: 2026-09-27T20:24:53Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable filesystem; initializes the upstream Story Skills Markdown/YAML project model.
+import_eligibility: verified-unchanged-reference
+rationale: Clear project initialization/import workflow with useful validation and overwrite hygiene. Static review 17/20; validation not run. Issue #387.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: series-continuity
+display_name: Series Continuity
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/series-continuity/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 642a07505b808f0c565efe2b90ed670592b9d4bd
+upstream_revision: 3bff7a8a639c53807a8c698bed16b0dc2e402f60
+upstream_last_updated_at: 2026-09-28T20:58:04Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: multiple-upstream-projects-and-optional-cli
+dependencies: Multiple structured Story Skills projects/books and their chronology; optional upstream story CLI.
+import_eligibility: verified-unchanged-reference
+rationale: Cross-book canon/entity-state continuity with explicit chronological resolution. Static review 18/20; validation not run. Issue #387.

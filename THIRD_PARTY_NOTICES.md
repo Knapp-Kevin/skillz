@@ -32,6 +32,7 @@ These sources are referenced for standards, discovery, or selective individual c
 | Agent Skills Specification | `agentskills/agentskills` | Apache-2.0 | `69ef37e9424c0a7ea9dd2293b559e43ec8176379` | normative specification |
 | GitHub Awesome Copilot | `github/awesome-copilot` | MIT | `f11a4e441c5ff061b4f8ae37952be8c602e4034e` | dynamic discovery/comparison |
 | Jwynia Agent Skills | `jwynia/agent-skills` | **Mixed / per-skill.** No root `LICENSE` found at evaluated snapshot; `story-collaborator` explicitly declares MIT in its own front matter. | `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` | tracked corpus for selective individual curation |
+| Dan Dewhurst Story Skills | `danjdewhurst/story-skills` | MIT, Copyright (c) 2026 Daniel Dewhurst | `b113a8298ae5deb37929a5b1d0cc1536d98a508c` | tracked corpus; 23/23 exact-version reviewed |
 
 Tracked discovery or source registration does not imply endorsement, redistribution, or verification of every contribution. Individual unchanged-reuse eligibility remains bound to exact per-skill provenance and verification evidence.
 

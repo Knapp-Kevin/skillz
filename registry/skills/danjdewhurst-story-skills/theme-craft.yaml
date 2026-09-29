@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: theme-craft
+display_name: Theme Craft
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/theme-craft/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: f7bf96fdfe95270d9d0c9f48183bfbd780e82180
+upstream_revision: f9090b8e4256adda70aa1eaed428b1508253f4c1
+upstream_last_updated_at: 2026-09-24T21:48:43Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; package-local theme, motif, antagonist, and lie/truth references.
+import_eligibility: verified-unchanged-reference
+rationale: Theme development and audit workflow that keeps interpretation subordinate to story evidence and author intent. Static review 18/20; validation not run. Issue #387.

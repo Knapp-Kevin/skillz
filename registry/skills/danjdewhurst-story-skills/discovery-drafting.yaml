@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: discovery-drafting
+display_name: Discovery Drafting
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/discovery-drafting/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 0c26b03b7b2b3f319b62bb5ac5b10e98e4d0580e
+upstream_revision: d289c96269ce422f217c7bb20b938d9334038e65
+upstream_last_updated_at: 2026-09-27T15:49:06Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; later reconciliation into structured story state is part of the method.
+import_eligibility: verified-unchanged-reference
+rationale: Exploratory drafting with an explicit reconciliation loop instead of silently promoting improvisation to canon. Static review 17/20; validation not run. Issue #387.

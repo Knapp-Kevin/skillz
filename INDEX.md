@@ -13,9 +13,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party user-facing skills | 44 |
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
-| Unique registered source identities | 21 |
-| Persisted third-party exact-version reviews | 650 |
+| Unique registered source identities | 22 |
+| Persisted third-party exact-version reviews | 673 |
 | Jwynia Agent Skills selectively reviewed units | 8 |
+| Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
+| Dan Dewhurst Story Skills current-standard gaps | 0 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
@@ -47,6 +49,8 @@ Every explicitly current-standard-complete family above has **0** current-standa
 
 `jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Eight units are now governed: `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six of the seven-unit follow-up tranche are VERIFIED; `story-zoom` is REJECTED unchanged because persistent `story-state/` mutation and a background watcher daemon lack an action-appropriate authorization boundary. Behavioral validation remains `not-run`.
 
+Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. All 23 first-class packages are individually **VERIFIED exact-version static references** with scores from 16/20 to 18/20 and behavioral validation `not-run`. The primary operational caveat is medium portability because the family assumes the upstream Story Skills Markdown/YAML project model and optional `story` CLI; source-owned runtime remains upstream-only.
+
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
 ## First-party skills by purpose
@@ -76,7 +80,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **Pinned reference corpora:** `anthropic-skills`, `anthropic-knowledge-work-plugins`, `vercel-agent-skills`, `microsoft-skills`, `microsoft-azure-skills`, `aws-agent-toolkit`, `mattpocock-skills`, `addyosmani-agent-skills`, `openhands-extensions`, `cline-skills`, `cloudflare-skills`, `google-agents-cli`.
 
-**Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`, `corey-haines-marketing-skills`, `jwynia-agent-skills`.
+**Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`, `corey-haines-marketing-skills`, `jwynia-agent-skills`, `danjdewhurst-story-skills`.
 
 **Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` is a dynamic discovery surface.
 

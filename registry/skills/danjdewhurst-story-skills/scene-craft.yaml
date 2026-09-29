@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: scene-craft
+display_name: Scene Craft
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/scene-craft/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 2df7b38e5e07b1f997414d3809626cda79449f16
+upstream_revision: 2023e985a3ae1a6074c38b6c41e9de2a525930eb
+upstream_last_updated_at: 2026-09-27T23:51:37Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; package-local POV, dialogue, exposition, opening, sequel, and scene-card references.
+import_eligibility: verified-unchanged-reference
+rationale: Detailed scene-level craft procedure with multiple useful diagnostic and drafting lenses. Static review 18/20; validation not run. Issue #387.

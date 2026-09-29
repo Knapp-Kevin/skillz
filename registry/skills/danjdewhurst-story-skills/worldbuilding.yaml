@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: worldbuilding
+display_name: Worldbuilding
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/worldbuilding/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: a40fa9bcbf1670fabe80b2ec851a4aa02d45a494
+upstream_revision: 3b8b51d6ebe4537c22dcd483cdfa8ba1ea820409
+upstream_last_updated_at: 2026-09-27T21:01:12Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; package-local templates for locations, factions, systems, artifacts, routes, calendars, and naming.
+import_eligibility: verified-unchanged-reference
+rationale: Rich structured worldbuilding with logistics, systems, maps/routes, factions, and reusable world-element templates. Static review 18/20; validation not run. Issue #387.

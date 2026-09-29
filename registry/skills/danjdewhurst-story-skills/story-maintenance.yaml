@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: story-maintenance
+display_name: Story Maintenance
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/story-maintenance/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: 81c28773dfbbeae989dc0dd4538dfe6a333bc38e
+upstream_revision: 4aeb35d238fe97bcbb259a7c077b1490ba5d3857
+upstream_last_updated_at: 2026-09-29T07:44:03Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-cli-or-bundled-node-fallback
+dependencies: Writable Story Skills project plus upstream story CLI or bundled local Node fallback scripts/story.js; named maintenance commands can rename, move, remove, and repair files.
+import_eligibility: verified-unchanged-reference
+rationale: Explicit local maintenance with locking/write planning and bounded destructive operations; bundled 673KB helper was included in package review. Static review 16/20; validation not run. Issue #387.

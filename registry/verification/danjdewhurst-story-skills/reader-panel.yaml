@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: reader-panel
+source_id: danjdewhurst-story-skills
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bfc8725eb05d3dcb47c965ae91f1a21d2f3c5dcc
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing]
+  lifecycle: [verification]
+  characteristic: [evidence-first, human-review, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Simulated personas are not real-reader evidence. Behavioral validation not run. Issue #387."

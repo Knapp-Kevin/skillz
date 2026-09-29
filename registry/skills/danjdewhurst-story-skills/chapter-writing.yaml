@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: chapter-writing
+display_name: Chapter Writing
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/chapter-writing/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: eeb557ba2a695e2f971bdae7e7af82d86298124d
+upstream_revision: ec04d4aa869618b57f1d6a75f1a0296382c1f997
+upstream_last_updated_at: 2026-09-27T21:20:39Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills Markdown/YAML project; optional upstream story CLI or documented manual fallback.
+import_eligibility: verified-unchanged-reference
+rationale: Context-grounded chapter and scene drafting with clear routing and continuity boundaries. Static review 18/20; behavioral validation not run. Issue #387.

@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: voice-style
+display_name: Voice Style
+source_id: danjdewhurst-story-skills
+source_repository: https://github.com/danjdewhurst/story-skills
+source_path: skills/voice-style/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
+package_tree_sha: fa50fc04983244677804322d735f476f6408d30f
+upstream_revision: 9ed97c2da3fa9598c5433a04f1e236f1783014b6
+upstream_last_updated_at: 2026-09-29T07:40:52Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: upstream-project-schema-and-optional-cli
+dependencies: Writable Story Skills project; optional author-owned prose samples can establish a descriptive style baseline.
+import_eligibility: verified-unchanged-reference
+rationale: Voice/style capture and drift checking that treats metrics as reread prompts rather than prescriptive rules. Static review 18/20; validation not run. Issue #387.
