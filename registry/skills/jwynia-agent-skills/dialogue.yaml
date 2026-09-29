@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: dialogue
+display_name: Dialogue
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/dialogue/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 33724e2317ae093d4db0988d2ab243cb69d2898e
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Conceptually hands off to character-arc, scene-sequencing, cliche-transcendence, and prose-style; source-owned analysis helpers are optional.
+dependencies: Writable project filesystem for required output persistence; optional local read-only Deno analysis helpers; user is asked where to save before writing.
+import_eligibility: verified-unchanged-reference
+rationale: Detailed dialogue diagnostic across text/subtext/context with strong anti-patterns and explicit non-rewrite boundary. Required persistence is user-authorized. Exact-version static review passed 17/20; behavioral validation not run.
