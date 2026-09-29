@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: systemic-worldbuilding
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2f4ab1083f583989c8fd105ec722688b082d8e3b
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, implementation, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/2/1/2/2/2. Positive: a speculative change must propagate coherently through multiple world domains and generations. Non-trigger: isolated decorative lore with no consequence chain. Pressure: a third-order consequence depends on specialist economics, medicine, engineering, law, or another expert domain; the framework's oracle limits require factual/expert validation rather than confident invention. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: conlang
+display_name: Conlang
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/conlang/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: cd0c103081b3048d951d10f651012fd96b8903b6
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Structured phonology/grammar/lexicon construction prior art that can complement language-evolution, character-naming, and worldbuilding after evidence claims are adapted.
+dependencies: Exact package includes data/phoneme-frequencies.json, data/syllable-templates.json, scripts/phonology.ts, and scripts/words.ts. The generators are deterministic Deno tooling; unchanged workflow also persists project artifacts.
+import_eligibility: rejected-unchanged-reference
+rationale: Complete and useful language-construction architecture, but unchanged promotion fails evidence discipline. Precise cross-linguistic frequencies and universal/common/rare tiers are presented without a pinned PHOIBLE source, version, or derivation method. Static score 13/20; retain for adaptation only. Behavioral validation not run.

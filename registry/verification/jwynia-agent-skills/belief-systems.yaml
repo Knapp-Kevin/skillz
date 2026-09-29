@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: belief-systems
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 697621ae2d681c4a23312dfadb3b76df39c547e5
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: fictional culture needs belief, practice, institution, and internal tension designed as a causal system. Non-trigger: factual analysis of a real religion. Pressure: user asks whether the skill's ten principles are universal facts about actual belief systems; they are design heuristics and real-world claims require external sources and cultural expertise. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

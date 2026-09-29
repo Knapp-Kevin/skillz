@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: economic-systems
+display_name: Economic Systems
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/economic-systems/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 48c50038f67015a910a0096d8e973d1d52644448
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Complements governance-systems, settlement-design, systemic-worldbuilding, and general worldbuilding by tracing resources, production, exchange, distribution, incentives, and constraints.
+dependencies: Exact package is SKILL-only. Unchanged workflow expects user-authorized project artifact persistence; factual historical or real-economy claims require external research.
+import_eligibility: verified-unchanged-reference
+rationale: Useful causal economy-design matrix with explicit plausibility limits. Verified 15/20 when technological-determinism and real-economy generalizations remain creative modeling assumptions rather than economic law; behavioral validation not run.

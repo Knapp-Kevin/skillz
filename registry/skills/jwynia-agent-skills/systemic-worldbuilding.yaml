@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: systemic-worldbuilding
+display_name: Systemic Worldbuilding
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/systemic-worldbuilding/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: e4d96729e6a2486be90d7767b137b7172a33a849
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Broad integrator across worldbuilding domains. Traces speculative changes through first-, second-, and third-order consequences, contradiction mapping, institutions, economics, culture, geography, and generations; especially relevant to persistent campaign worlds.
+dependencies: Exact package is SKILL-only. Unchanged workflow expects user-authorized project artifact persistence. Specialist-domain causal chains require factual or expert validation beyond the framework.
+import_eligibility: verified-unchanged-reference
+rationale: Excellent consequence-cascade and cross-domain consistency method with explicit oracle limits. Verified 17/20 and a particularly strong candidate for Celestara-style persistent causal worldbuilding; behavioral validation not run.

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: oblique-worldbuilding
+display_name: Oblique Worldbuilding
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/oblique-worldbuilding/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 65dda21468bdeb72b2de5781e0661403a20e3e57
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-conditional
+relationships: Complements prose-style, worldbuilding, and scene work by revealing setting through positioned documents, epigraphs, artifacts, behavior, omissions, and consequences rather than exposition.
+dependencies: Exact package is SKILL-only. Optional reference to rejected story-zoom does not inherit trust. In-world documentary perspective must remain distinct from objective canon truth; unchanged workflow expects project persistence.
+import_eligibility: verified-unchanged-reference
+rationale: Strong documentary-perspective method with clear position/need/lens/blindness controls and useful anti-patterns. Verified 16/20 with explicit narrator-limitation and canon-truth boundaries; behavioral validation not run.

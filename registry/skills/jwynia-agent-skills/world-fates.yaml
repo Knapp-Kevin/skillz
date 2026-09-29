@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: world-fates
+display_name: World Fates
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/worldbuilding/world-fates/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 92f70b45478cee643dab060c37d2733adb8bd7a9
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Meta-campaign world-state prior art for long-horizon trajectories, exposure, pressure, proposed shifts, and tracked world-bible consequences. Complements systemic-worldbuilding and campaign continuity work.
+dependencies: Exact package includes three data files, five Deno scripts, and templates/fate-tracking.md. Scripts calculate or propose; world-bible mutation remains human-approved. Numeric fate/exposure/fortune/death mechanics are invented game mechanics, not objective probabilities.
+import_eligibility: verified-unchanged-reference
+rationale: Complete long-horizon meta-campaign toolchain with a strong propose-before-canon authority boundary. Verified 15/20 only while random mechanics never override player consent or masquerade as probabilistic truth; behavioral validation not run.

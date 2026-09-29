@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: governance-systems
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2b81062a1a5bdc9bc6422ccf868be2c73ac3ed3c
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: fictional polity needs formal authority, practical power, legitimacy, enforcement, succession, factions, and failure modes designed together. Non-trigger: analysis of a current or historical real government. Pressure: the framework's core-principles language is heuristic, not sourced political science, and real-world claims require external research. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."

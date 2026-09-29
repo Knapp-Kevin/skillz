@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: language-evolution
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: af33f6b303320572e0b968e261bebd2ddee7b0e1
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: fictional languages need plausible family/contact/register change across time rather than a static naming layer. Non-trigger: factual history of a real language. Pressure: contact-driven change and pidgin-to-creole sequences are simplified authoring models, not universal linguistic laws; rejected conlang and character-naming references cannot silently become trusted dependencies. Mandatory persistence remains host conditional. Behavioral validation not run. Reviewed in #388."
