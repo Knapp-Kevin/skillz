@@ -18,23 +18,36 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Jwynia Agent Skills selectively reviewed units | 8 |
 | Anthropic Skills current-standard companions | 17 / 17 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
+| Anthropic Knowledge Work Plugins current-standard gaps | 0 |
 | AWS current-standard companion-complete | 72 / 72 |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |
 | David Ondrej Skills current-standard companions | 55 / 55 |
+| David Ondrej Skills current-standard gaps | 0 |
 | Corey Haines Marketing Skills current-standard companions | 50 / 50 |
+| Corey Haines Marketing Skills current-standard gaps | 0 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
 | Vercel Agent Skills current-standard companions | 9 / 9 |
 | OpenHands Extensions current-standard companions | 1 / 1 |
+| OpenHands Extensions current-standard gaps | 0 |
 | Google Agents CLI current-standard companions | 7 / 7 |
+| Google Agents CLI current-standard gaps | 0 |
 | Cline Skills published current-standard companions | 36 / 36 |
+| Cline Skills published current-standard gaps | 0 |
+| Microsoft .NET direct-package companions | 29 / 29 |
+| Microsoft Java direct-package companions | 26 / 26 |
+| Microsoft Python direct-package companions | 40 / 40 |
+| Microsoft Rust direct-package companions | 9 / 9 |
+| Microsoft TypeScript direct-package companions | 25 / 25 |
 
 Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Selectively tracked corpora are bounded to the individually governed units and are not silently treated as whole-family complete.
 
 `jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Eight units are now governed: `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six of the seven-unit follow-up tranche are VERIFIED; `story-zoom` is REJECTED unchanged because persistent `story-state/` mutation and a background watcher daemon lack an action-appropriate authorization boundary. Behavioral validation remains `not-run`.
+
+Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
 ## First-party skills by purpose
 
