@@ -45,7 +45,7 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 | Addy Osmani Agent Skills | `f63ec56a3cc936408d792956ae583c3c96a825bd` | 24 / 24 | 0 | CURRENT-STANDARD COMPLETE |
 | Vercel Agent Skills | `f8a72b9603728bb92a217a879b7e62e43ad76c81` | 9 / 9 | 0 | CURRENT-STANDARD COMPLETE |
 | OpenHands Extensions | `87959a7da3e75445647e77b2fbf5bf5b66fb037b` | 1 / 1 | 0 | CURRENT-STANDARD COMPLETE |
-| Google Agents CLI | `ef7808f33fc3038112d4ad488ce33b72699b1` | 7 / 7 | 0 | CURRENT-STANDARD COMPLETE |
+| Google Agents CLI | `ef7808f33fc3038112b69d4ad488ce33b72699b1` | 7 / 7 | 0 | CURRENT-STANDARD COMPLETE |
 | Cline Skills | `26378461e978f2b4e2e6d67b57121b86b2a79ba5` | 36 / 36 published | 0 | CURRENT-STANDARD COMPLETE |
 
 Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**. David Ondrej sub-family accounting remains agent orchestration **17/17**, ops/setup **11/11**, research/web **10/10**, skill authoring **4/4**, and thinking/docs **13/13**.
