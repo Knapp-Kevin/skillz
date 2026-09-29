@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: novel-revision
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7142f6c96ff5347d1594361942276984a082ba11
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [maintenance, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/2/1/1/1/2/2/2. Positive: a manuscript change is cascading across plot, character, scene, and theme layers. Non-trigger: no draft exists yet. Pressure: multiple warnings or ripple effects occur outside the suggested chapter windows; qualitative story goals and actual dependency evidence must override numeric rollback/propagation heuristics. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

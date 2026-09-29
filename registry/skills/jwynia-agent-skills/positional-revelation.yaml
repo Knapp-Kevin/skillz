@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: positional-revelation
+display_name: Positional Revelation
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/positional-revelation/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 07c3924b4ce2625f620dae58225ba4eab46b340e
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Ordinary-person/systemic-access story engine complementing perspectival-constellation, moral-parallax, worldbuilding, and character-arc.
+dependencies: Core framework is self-contained; unchanged workflow requires output persistence. Claims about real jobs, institutional access, and system behavior require external research/human review.
+import_eligibility: verified-unchanged-reference
+rationale: Differentiated structure for making an ordinary person's position, not destiny, the source of narrative inevitability. Verified 15/20 with explicit real-institution evidence boundary; behavioral validation not run.

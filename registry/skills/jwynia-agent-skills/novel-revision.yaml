@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: novel-revision
+display_name: Novel Revision
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/novel-revision/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 90100c09998de7e86033db8bf02fcdac496a9fcd
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Cross-level manuscript change-management procedure complementing revision, story-zoom, scene-sequencing, character-arc, prose-style, and endings.
+dependencies: Core procedure is self-contained; unchanged workflow requires writable project files. Numeric propagation windows and rollback warning thresholds are heuristics, not evidence-backed guarantees.
+import_eligibility: verified-unchanged-reference
+rationale: Strong revision cascade/rollback procedure with unusually good failure handling. Verified 16/20 with heuristic treatment of chapter-window thresholds; behavioral validation not run.

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: moral-parallax
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 64e108314ecb8cb975872993ec70069122a54670
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: speculative story intentionally explores exported/systemic harm and complicity. Non-trigger: user wants a clean heroic adventure or straightforward villain conflict. Pressure: writer rejects the framework's no-clean-moral-position premise; the framework must yield to the selected project rather than moralize it. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

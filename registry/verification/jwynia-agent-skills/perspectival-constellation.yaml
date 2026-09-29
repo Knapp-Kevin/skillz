@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: perspectival-constellation
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9835e114ed3b3daf9437615373ebf5ce02e1fb00
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: multi-POV story needs a shared catalyst and organic character intersections. Non-trigger: single-POV scene sequencing. Pressure: catalyst is modeled on immigration, medical, gender, legal, or another consequential real institution; current research and human authenticity/sensitivity review are required rather than archetype-only inference. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

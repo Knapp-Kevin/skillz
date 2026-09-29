@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: positional-revelation
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 507e2e0b092ee2a9622b48250ec4ad7b3de2661d
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: an ordinary worker should become structurally central because of genuine access or position. Non-trigger: chosen-one or heroic-destiny narrative. Pressure: user asks whether a real occupation or institution truly provides the proposed access; external research is required rather than treating the fictional archetype as factual. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

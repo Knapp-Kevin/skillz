@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reverse-outliner
+display_name: Reverse Outliner
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/reverse-outliner/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 9ff3217e3e0816821cc5c0ad3030572cbd735046
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-required
+relationships: Reverse-engineering pipeline intended to feed story-zoom, scene-sequencing, character-arc, genre-conventions, dna-extraction, and revision study workflows.
+dependencies: Exact package includes two data files and six Deno scripts. Orchestrator requires read/write/run plus pinned remote Deno std imports. Full-text published-work analysis also needs a stronger rights/minimization boundary than the unchanged skill provides.
+import_eligibility: rejected-unchanged-reference
+rationale: Complete and potentially useful human-reviewed scaffold, but unchanged promotion fails evidence and portability discipline: regex/common-name/fixed-position heuristics are rendered as genre, arc, scene-function, and numeric-confidence conclusions with insufficient qualification. Static score 12/20; retain for adaptation only. Behavioral validation not run.
