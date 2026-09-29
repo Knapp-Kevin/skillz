@@ -11,10 +11,10 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **704** |
+| **Persisted third-party review companions** | **719** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
-| **Jwynia Agent Skills selectively reviewed units** | **39** |
+| **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
 | **Dan Dewhurst Story Skills current-standard companions** | **23 / 23** |
 | **Dan Dewhurst Story Skills current-standard gaps** | **0** |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
@@ -56,13 +56,17 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 Completion means decisive current evidence for every eligible package in the explicitly complete families above, not universal approval. Selectively tracked corpora may intentionally have only bounded individually governed units. Rejected and retired material remains useful bounded prior art.
 
-## Jwynia Agent Skills — selective tracked corpus
+## Jwynia Agent Skills — fiction denominator complete
 
 Registered snapshot: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`. Source scope: 112 skills, including 57 creative/narrative skills. Source-wide license state is **MIXED/per-skill** because no root `LICENSE` was found at the evaluated revision; individual declarations control.
 
-Thirty-nine fiction units are now individually governed: **32 VERIFIED** exact-version static references and **7 REJECTED unchanged** references retained as bounded prior art. The original eight are `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 added seven VERIFIED and four REJECTED unchanged core/craft/character units. Tranche 2 added nine VERIFIED structure units and rejected `reverse-outliner` unchanged. Tranche 3 adds VERIFIED `belief-systems` (15/20), `economic-systems` (15/20), `governance-systems` (15/20), `language-evolution` (15/20), `metabolic-cultures` (15/20), `oblique-worldbuilding` (16/20), `settlement-design` (15/20), `systemic-worldbuilding` (17/20), and `world-fates` (15/20), while rejecting `conlang` unchanged at 13/20 because its precise cross-linguistic phoneme-frequency and universal/common/rare claims lack pinned PHOIBLE source/version/derivation evidence. `story-zoom` remains rejected unchanged for its background-watcher authorization defect. `world-fates` retains a strict proposal boundary: its random/state mechanics may suggest world changes, but player consent and human approval govern canon/world-bible mutation. Behavioral validation remains `not-run` for all thirty-nine governed units.
+The exact fiction denominator is now **54/54 governed**: **39 VERIFIED** exact-version static references and **15 REJECTED unchanged** references retained as bounded prior art. Behavioral validation remains `not-run` for all fifty-four. The four review phases under #388 covered core/craft/character, structure, worldbuilding, and application/orchestrator packages without inheriting trust between siblings.
 
-The source remains tracked for selective individual curation rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, semantic scenarios, and rationale live in the canonical Jwynia provenance/verification companions and issue #388. The fiction denominator is **54** first-class packages, so **15 application/orchestrator packages** remain under #388 after this tranche.
+The final application/orchestrator phase VERIFIED `book-marketing` (15/20), `dna-extraction` (15/20), `flash-fiction` (16/20), `interactive-fiction` (16/20), `media-adaptation` (15/20), `paradox-fables` (15/20), and `table-tone` (16/20). It REJECTED unchanged `adaptation-synthesis` (13/20), `game-facilitator` (13/20), `list-builder` (12/20), `multi-order-evolution` (13/20), `sensitivity-check` (13/20), `shared-world` (14/20), `sleep-story` (13/20), and `chapter-drafter` (13/20).
+
+**Celestara synthesis finding:** the unchanged disposition is not the same as compositional value. `shared-world` contributes the strongest explicit canon-state/source/role/conflict model but its helper can establish canon without authority. `game-facilitator` contributes high-value player-agency/session practice but auto-promotes improvised facts to canon. `chapter-drafter` contributes valuable orchestration but uses arbitrary weighted literary thresholds as an autonomous acceptance oracle. Those three should be adapted, not imported. Verified `systemic-worldbuilding`, `interactive-fiction`, `table-tone`, and proposal-only `world-fates` provide stronger governed references for causal consequence, player-driven narrative, table experience, and long-range state.
+
+The source remains tracked rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, semantic scenarios, and rationale live in the canonical Jwynia provenance/verification companions and issue #388.
 
 ## Dan Dewhurst Story Skills — current-standard complete
 
@@ -100,7 +104,7 @@ Discovery runs in parallel with admitted-source maintenance but never grants qua
 
 Current governed discovery surfaces include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, canonical creator/source repositories, and candidate work recorded in the living curation ledger. Restricted or unclear-license material remains reference-only unless terms justify another role.
 
-`jwynia/agent-skills` was admitted through issue #382 as a tracked corpus for selective individual curation. The source's missing root license prevents blanket license inference; per-skill declarations remain controlling. Issue #388 is the active exact-version fiction-completion frontier.
+`jwynia/agent-skills` was admitted through issue #382 as a tracked corpus for selective individual curation. The source's missing root license prevents blanket license inference; per-skill declarations remain controlling. Its exact 54-package fiction denominator is complete under #388.
 
 `danjdewhurst/story-skills` was admitted through issue #387 as a tracked corpus after a complete 23-package exact-version review. Source-owned Story Skills runtime remains upstream-only.
 
@@ -120,4 +124,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-Review the remaining **15 application/orchestrator packages** under issue #388 with individual exact-package decisions. Once the 54-package denominator is closed, use the governed narrative capability map in #386 to drive the Celestara-specific composition without weakening repository passivity or importing rejected behavior by association.
+Roll the closed Jwynia fiction denominator into the narrative capability map in #386, reconcile it with the complete Dan Dewhurst story corpus and Celestara's current authoring/canon architecture, then compose the smallest coherent Celestara-native narrative skill set. Adapt rejected-but-valuable concepts only after removing their authority, oracle, evidence, or package-integrity defects.
