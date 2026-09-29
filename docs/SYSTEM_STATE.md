@@ -11,10 +11,10 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **684** |
+| **Persisted third-party review companions** | **694** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
-| **Jwynia Agent Skills selectively reviewed units** | **19** |
+| **Jwynia Agent Skills selectively reviewed units** | **29** |
 | **Dan Dewhurst Story Skills current-standard companions** | **23 / 23** |
 | **Dan Dewhurst Story Skills current-standard gaps** | **0** |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
@@ -60,9 +60,9 @@ Completion means decisive current evidence for every eligible package in the exp
 
 Registered snapshot: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`. Source scope: 112 skills, including 57 creative/narrative skills. Source-wide license state is **MIXED/per-skill** because no root `LICENSE` was found at the evaluated revision; individual declarations control.
 
-Nineteen units are now individually governed: **14 VERIFIED** exact-version static references and **5 REJECTED unchanged** references retained as bounded prior art. The original eight are `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 adds VERIFIED `story-analysis` (19/20), `story-coach` (16/20), `cliche-transcendence` (16/20), `genre-conventions` (15/20), `revision` (16/20), `memetic-depth` (15/20), and `underdog-unit` (15/20). It rejects unchanged `story-idea-generator` (13/20; advertised modules absent), `drafting` (13/20; evidence-discipline defects), `character-naming` (13/20; cultural-data provenance and entropy-framing defects), and `statistical-distance` (13/20; unsupported quantitative/statistical framing). `story-zoom` remains rejected unchanged for its background-watcher authorization defect. Behavioral validation remains `not-run` for all nineteen governed units.
+Twenty-nine fiction units are now individually governed: **23 VERIFIED** exact-version static references and **6 REJECTED unchanged** references retained as bounded prior art. The original eight are `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 added seven VERIFIED and four REJECTED unchanged core/craft/character units. Tranche 2 adds VERIFIED `endings` (15/20), `identity-denial` (15/20), `key-moments` (15/20), `moral-parallax` (15/20), `novel-revision` (16/20), `outline-coach` (16/20), `outline-collaborator` (15/20), `perspectival-constellation` (15/20), and `positional-revelation` (15/20), while rejecting `reverse-outliner` unchanged at 12/20 because its Deno pipeline derives semantic-looking genre, character-arc, POV, scene-function, and confidence outputs primarily from regex/common-name/fixed-position heuristics and lacks stronger published-text rights/minimization boundaries. `story-zoom` remains rejected unchanged for its background-watcher authorization defect. Behavioral validation remains `not-run` for all twenty-nine governed units.
 
-The source remains tracked for selective individual curation rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, semantic scenarios, and rationale live in the canonical Jwynia provenance/verification companions and issue #388. The fiction denominator is **54** first-class packages, so **35** remain under #388 after this tranche.
+The source remains tracked for selective individual curation rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, semantic scenarios, and rationale live in the canonical Jwynia provenance/verification companions and issue #388. The fiction denominator is **54** first-class packages, so **25** remain under #388 after this tranche.
 
 ## Dan Dewhurst Story Skills — current-standard complete
 
@@ -120,4 +120,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-Continue the remaining **35-package** Jwynia fiction denominator under issue #388 with individual exact-package decisions, then use the governed narrative capability map in #386 to drive host-specific integration without weakening repository passivity.
+Continue the remaining **25-package** Jwynia fiction denominator under issue #388 with individual exact-package decisions, then use the governed narrative capability map in #386 to drive host-specific integration without weakening repository passivity.

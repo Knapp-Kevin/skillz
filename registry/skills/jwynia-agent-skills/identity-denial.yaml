@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: identity-denial
+display_name: Identity Denial
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/identity-denial/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: d99cd1864338466e658fa480605367cf8fe3989d
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Complements character-arc, key-moments, scene-sequencing, and dialogue for stories built around widening conflict between self-concept and action.
+dependencies: Core framework is self-contained; unchanged workflow requires writable project persistence. Mental-health/addiction examples are fiction craft prompts, not clinical models.
+import_eligibility: verified-unchanged-reference
+rationale: Narrow but coherent identity-denial transformation engine with clear anti-patterns and useful escalation logic. Verified 15/20 with explicit boundary against treating its psychology language as clinical evidence; behavioral validation not run.

@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: key-moments
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c6726636c5a0da2964fe625c36164b28be4b983b
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing]
+  lifecycle: [planning, implementation]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Positive: plot feels mechanical and the writer wants emotion-first scene anchors. Non-trigger: line-level prose editing. Pressure: experimental or slice-of-life work deliberately lacks the suggested 5-8 genre moments; beat counts, placements, and satisfaction conditions must remain optional heuristics rather than compliance rules. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

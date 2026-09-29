@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: outline-collaborator
+display_name: Outline Collaborator
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/outline-collaborator/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: b83d1f4ea799d22b52648d43a4008d6b2fcd329c
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-and-governed-sibling-substitution-required
+relationships: Active structural partner integrating story-sense, key-moments, character-arc, scene-sequencing, worldbuilding, dialogue, naming, and story-zoom concepts.
+dependencies: Core collaboration method is self-contained and requires project persistence. Sibling references do not inherit trust; character-naming and story-zoom are rejected unchanged and require governed substitution/constraint rather than automatic activation.
+import_eligibility: verified-unchanged-reference
+rationale: Strong active outlining collaborator that keeps the writer in control and offers bounded alternatives. Verified 15/20 only with no sibling trust inheritance and explicit constraints around rejected naming/watcher integrations; behavioral validation not run.

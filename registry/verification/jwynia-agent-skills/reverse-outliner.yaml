@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: reverse-outliner
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f6d785f631c92a93f9c911ccda14e991f164b34f
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: rejected
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [verification]
+  characteristic: [human-review, synthesis]
+  authority: [mutating]
+  portability: [low]
+notes: "Rubric 2/2/1/1/0/2/0/2/1/1. Package is complete: scene/genre data plus segment-book, analyze-scene-batch, detect-genre, track-characters, generate-outline, and reverse-outline Deno scripts. Scripts derive semantic-looking genre, arc, scene-function, POV, and confidence outputs largely from regex density, common-name/proper-noun heuristics, and fixed position percentages; orchestrator uses read/write/run and remote pinned Deno std imports. Positive: lawfully accessible text needs a human-reviewed structural study scaffold. Non-trigger: user wants reliable semantic measurement or verbatim reconstruction. Pressure: keyword density yields a high-confidence label, demonstrating why unchanged output authority is not trustworthy; published full-text use also needs stronger rights/minimization boundaries. Rejected unchanged; behavioral validation not run. Reviewed in #388."

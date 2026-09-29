@@ -7,8 +7,8 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 684,
-    "jwynia_agent_skills_selectively_reviewed_units": 19,
+    "persisted_third_party_exact_version_reviews": 694,
+    "jwynia_agent_skills_selectively_reviewed_units": 29,
     "danjdewhurst_story_skills_current_standard_companions": 23,
     "danjdewhurst_story_skills_eligible_denominator": 23,
     "danjdewhurst_story_skills_current_standard_gaps": 0,
@@ -88,6 +88,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-29: issue #388 Jwynia fiction tranche 1 persisted 11 exact-version reviews at source pin e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; Jwynia governed units 8 -> 19, exact-version review companions 673 -> 684, registered sources remain 22; tranche result 7 VERIFIED / 4 REJECTED unchanged; behavioral validation remains not-run; 35 fiction packages remain under #388"
+    "latest_reconciliation": "2026-09-29: issue #388 Jwynia fiction structure tranche persisted 10 exact-version reviews at source pin e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; Jwynia governed units 19 -> 29, exact-version review companions 684 -> 694, registered sources remain 22; tranche result 9 VERIFIED / 1 REJECTED unchanged; behavioral validation remains not-run; 25 fiction packages remain under #388"
   }
 }

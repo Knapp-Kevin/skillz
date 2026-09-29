@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: endings
+display_name: Endings
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/structure/endings/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: d1457e9ae63acfc3c12caac416aafb4534a80193
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-runtime-and-filesystem-conditional
+relationships: Complements key-moments, character-arc, scene-sequencing, theme work, and revision for resolution design and setup/payoff checks.
+dependencies: Exact package includes read-only Deno helpers ending-check.ts and setup-payoff.ts; helper outputs are regex heuristics. Unchanged workflow also requires writable project output persistence.
+import_eligibility: verified-unchanged-reference
+rationale: Strong ending-design framework with useful setup/payoff and resolution checks. Verified 15/20 only when helper detections and pacing/type labels are treated as human-review heuristics rather than literary truth; behavioral validation not run.

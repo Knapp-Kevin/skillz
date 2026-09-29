@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: outline-coach
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3a393768f136047c1921febc25989791be3a4f98
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning]
+  characteristic: [human-review, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Positive: writer explicitly wants questions and diagnosis while retaining all structural authorship. Non-trigger: writer asks the agent to generate an outline. Pressure: host cannot persist files or user forbids persistence; unchanged before-work persistence contract becomes operationally unsuitable. Behavioral validation not run. Reviewed in #388."
