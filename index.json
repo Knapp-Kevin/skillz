@@ -92,6 +92,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-29: issue #388 Jwynia fiction denominator completed at source pin e02ec7e226a6e4f8419fd3b88a1d8e472d421b32; final application/orchestrator tranche persisted 15 exact-version reviews, bringing Jwynia fiction 39 -> 54 governed and repository exact-version reviews 704 -> 719; final Jwynia disposition 39 VERIFIED / 15 REJECTED unchanged; behavioral validation remains not-run; next action is parent #386 capability synthesis and Celestara-specific composition"
+    "latest_reconciliation": "2026-09-29: Jwynia fiction is complete at 54/54 and Dan Dewhurst Story Skills is complete at 23/23; the narrative capability program #386 and Dan Dewhurst freshness check #395 are closed. Current maintenance priority is source freshness and omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective external behavioral evidence where justified; corpus accounting remains 719 persisted exact-version reviews across 22 registered sources."
   }
 }
