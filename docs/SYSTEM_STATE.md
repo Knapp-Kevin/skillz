@@ -11,10 +11,12 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **650** |
+| **Persisted third-party review companions** | **673** |
 | **Pinned external corpora** | 12 |
-| **Registered source identities** | 21 |
+| **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **8** |
+| **Dan Dewhurst Story Skills current-standard companions** | **23 / 23** |
+| **Dan Dewhurst Story Skills current-standard gaps** | **0** |
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | **50 / 50** |
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
@@ -41,6 +43,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Cole Medin Skills | 33 / 33 | 0 |
 | David Ondrej Skills | 55 / 55 | 0 |
 | **Corey Haines Marketing Skills** | **50 / 50** | **0** |
+| **Dan Dewhurst Story Skills** | **23 / 23** | **0** |
 | Matt Pocock Skills | 29 / 29 | 0 |
 | Cloudflare Skills | 13 / 13 | 0 |
 | Addy Osmani Agent Skills | 24 / 24 | 0 |
@@ -60,6 +63,16 @@ Registered snapshot: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`. Source scope: 1
 Eight units are now individually governed: `story-collaborator` plus the bounded fiction tranche `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six tranche units are **VERIFIED**: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. `story-zoom` is **REJECTED unchanged** because its useful cross-level synchronization model is coupled to persistent `story-state/` mutation and instructions to start a background watcher daemon without an action-appropriate authorization gate for that persistent process. Behavioral validation remains `not-run` for all eight governed units.
 
 The source remains tracked for selective individual curation rather than vendored or blanket trusted. Source-owned scripts remain upstream package evidence and do not become repository-owned runtime. Exact fingerprints, dependencies, tags, authority findings, and rationale live in the canonical Jwynia provenance and verification companions.
+
+## Dan Dewhurst Story Skills — current-standard complete
+
+Registered snapshot: `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. Root license: MIT, Copyright (c) 2026 Daniel Dewhurst. Exact eligible denominator: **23** first-class packages under `skills/`.
+
+All 23 packages now have exact-version provenance and verification companions and are **VERIFIED unchanged references** after complete package review, with static rubric scores ranging from **16/20 to 18/20**. Behavioral validation remains `not-run` for all 23. Source-authored tests/evals are upstream evidence, not claimed as repository behavioral validation.
+
+**Family synthesis:** Dewhurst provides a coherent end-to-end fiction workflow spanning premise, project initialization, character/world/plot/theme/genre design, research, drafting, scene/voice/verse craft, line editing, continuity, simulated readers, feedback/editorial review, submission, publishing, adaptation, and maintenance. Its main limitation is portability: most units assume the upstream Markdown/YAML Story Skills schema and optional `story` CLI. `story-maintenance` additionally packages a local Node fallback with explicit rename/move/remove/repair operations. These runtime assets remain upstream dependencies and are not adopted as `skillz` runtime. Submission/publishing/editorial procedures keep external sending, contracts, purchases, account actions, uploads, pushes, and publication under author control.
+
+Exact fingerprints, package trees, dependencies, freshness evidence, controlled tags, rubric detail, and rationale live under `registry/skills/danjdewhurst-story-skills/` and `registry/verification/danjdewhurst-story-skills/`.
 
 ## Corey Haines Marketing Skills — current-standard complete
 
@@ -89,6 +102,8 @@ Current governed discovery surfaces include the Creator Technical Resource Catal
 
 `jwynia/agent-skills` was admitted through issue #382 as a tracked corpus for selective individual curation. The source's missing root license prevents blanket license inference; per-skill declarations remain controlling.
 
+`danjdewhurst/story-skills` was admitted through issue #387 as a tracked corpus after a complete 23-package exact-version review. Source-owned Story Skills runtime remains upstream-only.
+
 `ConsultingFuture4200/unusual-thoughts` (#307) and `ConsultingFuture4200/repo-readme` (#308) are closed REFERENCE-ONLY candidates because canonical redistribution terms sufficient for governed corpus inclusion were not established.
 
 ## Current authority and lifecycle surfaces
@@ -105,4 +120,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-With the bounded Jwynia fiction tranche governed, continue the next coherent differentiated narrative tranche only through issue-first exact-version evaluation while maintaining ordinary governed source freshness, omission detection, and lifecycle hygiene. Do not bulk-promote the source.
+Complete the remaining Jwynia fiction denominator under issue #388 with individual exact-package decisions, then use the governed narrative capability map in #386 to drive host-specific integration without weakening repository passivity.
