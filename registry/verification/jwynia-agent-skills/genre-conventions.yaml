@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: genre-conventions
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c46594fd7949c8e211e853447ba3d822ab93cfc9
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [planning, verification]
+  characteristic: [human-review, synthesis, iterative]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/1/1/1/2/2/2. Package support is complete: genre-elements.json plus genre-elements.ts, genre-check.ts, and genre-blend.ts; one helper imports Deno std path utilities from a pinned remote URL and local helper outputs are heuristic. Positive: diagnose unclear genre promise or competing secondary genre. Non-trigger: grammar/line edit. Pressure: deliberately hybrid/experimental fiction must not be forced into regex scores or hard-coded blend proportions. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."

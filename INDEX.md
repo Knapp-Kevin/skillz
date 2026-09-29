@@ -14,8 +14,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 673 |
-| Jwynia Agent Skills selectively reviewed units | 8 |
+| Persisted third-party exact-version reviews | 684 |
+| Jwynia Agent Skills selectively reviewed units | 19 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |
 | Anthropic Skills current-standard companions | 17 / 17 |
@@ -47,7 +47,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 
 Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Selectively tracked corpora are bounded to the individually governed units and are not silently treated as whole-family complete.
 
-`jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Eight units are now governed: `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Six of the seven-unit follow-up tranche are VERIFIED; `story-zoom` is REJECTED unchanged because persistent `story-state/` mutation and a background watcher daemon lack an action-appropriate authorization boundary. Behavioral validation remains `not-run`.
+`jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Nineteen fiction units are now governed: **14 VERIFIED** exact-version static references and **5 REJECTED unchanged** references retained as prior art. Issue #388 tranche 1 added seven verified units (`story-analysis`, `story-coach`, `cliche-transcendence`, `genre-conventions`, `revision`, `memetic-depth`, `underdog-unit`) and four rejected unchanged units (`story-idea-generator`, `drafting`, `character-naming`, `statistical-distance`). The exact fiction denominator is 54, leaving **35** packages under active review. Behavioral validation remains `not-run`.
 
 Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. All 23 first-class packages are individually **VERIFIED exact-version static references** with scores from 16/20 to 18/20 and behavioral validation `not-run`. The primary operational caveat is medium portability because the family assumes the upstream Story Skills Markdown/YAML project model and optional `story` CLI; source-owned runtime remains upstream-only.
 

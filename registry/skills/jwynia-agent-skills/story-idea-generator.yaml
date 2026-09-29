@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: story-idea-generator
+display_name: Story Idea Generator
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/core/story-idea-generator/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 89f94f0387b4bac0a332959560d73fc4df8fee51
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: missing-advertised-modules
+relationships: Intended as a genre-first ideation orchestrator with setting-specific modules and implementation guidance.
+dependencies: Unchanged workflow references five named setting/implementation module files, but the exact package tree contains only SKILL.md and repository search at the pin does not locate those modules.
+import_eligibility: rejected-unchanged-reference
+rationale: Useful emotional-core and genre-first ideation prior art, but dependency coherence is a hard-gate failure because advertised workflow modules are absent from the exact package. Static score 13/20; preserve for adaptation/extraction only. Behavioral validation not run.

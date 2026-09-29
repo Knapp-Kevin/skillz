@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: memetic-depth
+display_name: Memetic Depth
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/character/memetic-depth/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 04e5540c48ae47afcad2b575880808e3f71df34d
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Adds cultural texture atop worldbuilding and can feed dialogue, settlement-design, and scene-sequencing.
+dependencies: Core framework is self-contained; unchanged workflow requires writable persistence and human cultural judgment for real-world references.
+import_eligibility: verified-unchanged-reference
+rationale: Differentiated lived-in-world texture method with explicit oracle limits. Verified 15/20 only when 40/40/20 and genre-specific ratios are treated as authoring heuristics rather than empirical reader-response measurements; behavioral validation not run.

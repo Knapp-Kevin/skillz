@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-673-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-684-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,7 +36,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **22 unique source identities** and **673 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **22 unique source identities** and **684 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
@@ -63,7 +63,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 
 `jwynia/agent-skills` is tracked at exact snapshot `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective individual curation, not blanket trust or vendoring. The source contains 112 skills, including 57 creative/narrative skills. Source-wide licensing is recorded as **MIXED/per-skill** because no root `LICENSE` was found at the evaluated pin.
 
-Eight units are now individually governed. `story-collaborator`, `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED** exact-version static references. `story-zoom` is **REJECTED unchanged** because its workflow directs persistent story-state mutation and startup of a background watcher daemon without an action-appropriate authorization gate; its synchronization model remains useful adaptation/extraction prior art. Behavioral validation remains `not-run` for all eight. Several verified units require user-authorized project-file persistence and therefore remain host-fit conditional rather than universally portable.
+Nineteen units are now individually governed: **14 VERIFIED** exact-version static references and **5 REJECTED unchanged** references retained as adaptation/extraction prior art. The original governed set remains `story-collaborator`, `story-sense`, `story-zoom`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style`. Issue #388 tranche 1 adds VERIFIED `story-analysis`, `story-coach`, `cliche-transcendence`, `genre-conventions`, `revision`, `memetic-depth`, and `underdog-unit`; it rejects unchanged `story-idea-generator` (missing advertised modules), `drafting` (unsupported/misleading evidence claims), `character-naming` (insufficient cultural-data provenance plus misleading entropy framing), and `statistical-distance` (unsupported quantitative/statistical framing). `story-zoom` remains rejected unchanged for its persistent watcher authorization defect. Behavioral validation remains `not-run` for all nineteen. Several verified units require user-authorized project-file persistence and therefore remain host-fit conditional rather than universally portable.
 
 ### Dan Dewhurst Story Skills complete intake
 

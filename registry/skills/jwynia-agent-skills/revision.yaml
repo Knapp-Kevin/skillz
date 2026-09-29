@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: revision
+display_name: Revision
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/craft/revision/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: 80e98afc0ad2367c1fac6dec26a32bef010760a2
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: host-filesystem-required
+relationships: Integrates with scene-sequencing, character-arc, dialogue, prose-style, and endings during focused revision passes.
+dependencies: Exact package includes a local read-only Deno revision-audit helper. Core procedure is self-contained; unchanged workflow requires output persistence.
+import_eligibility: verified-unchanged-reference
+rationale: Clear top-down revision workflow, bounded audit helper, and useful feedback triage. Verified 16/20 with standard host-filesystem portability caveat; behavioral validation not run.

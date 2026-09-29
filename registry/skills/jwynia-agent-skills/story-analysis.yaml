@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: story-analysis
+display_name: Story Analysis
+source_id: jwynia-agent-skills
+source_repository: https://github.com/jwynia/agent-skills
+source_path: skills/creative/fiction/core/story-analysis/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+package_tree_sha: a0052291898e70a7c5fd78a1f20feb579e6aa38d
+upstream_revision: 99a879745e03899987cde34b17e66f12a1e32ef5
+upstream_last_updated_at: 2026-02-15T03:24:59Z
+curated_at: 2026-09-29
+last_checked_at: 2026-09-29
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: self-contained
+relationships: Complements story-sense for post-draft evaluation and can route deeper craft problems to specialist fiction skills.
+dependencies: None required; exact package contains only SKILL.md.
+import_eligibility: verified-unchanged-reference
+rationale: Strong post-draft story/chapter diagnostic with explicit anti-checklist safeguards, prioritization discipline, and no required mutation or external action. Exact-version static review passed 19/20; behavioral validation not run.

@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **673** persisted exact-version third-party verification companions.
+- **684** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -54,14 +54,15 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 ### Jwynia Agent Skills — selective fiction intake
 
 - Source pin: `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32`.
-- Source scope: **112** skills, including **57** creative/narrative skills.
+- Source scope: **112** skills, including **57** creative/narrative skills; exact fiction denominator under #388: **54** first-class packages.
 - Source role: **tracked-corpus**, selective individual curation only; not vendored and not blanket trusted.
 - License state: **MIXED/per-skill**; no root `LICENSE` was found at the evaluated pin.
-- Governed units: **8**.
-- `story-collaborator`: **16/20 VERIFIED**, behavioral validation `not-run`.
-- Bounded fiction tranche: `story-sense`, `worldbuilding`, `character-arc`, `dialogue`, `scene-sequencing`, and `prose-style` are **VERIFIED**; `story-zoom` is **REJECTED unchanged** because it couples persistent `story-state/` mutation with instructions to start a background watcher daemon without an action-appropriate authorization gate.
+- Governed fiction units: **19 / 54**; remaining **35**.
+- Current disposition: **14 VERIFIED**, **5 REJECTED unchanged**; behavioral validation `not-run` for all nineteen.
+- Issue #388 tranche 1 added VERIFIED `story-analysis` **19/20**, `story-coach` **16/20**, `cliche-transcendence` **16/20**, `genre-conventions` **15/20**, `revision` **16/20**, `memetic-depth` **15/20**, and `underdog-unit` **15/20**.
+- The same tranche rejected unchanged `story-idea-generator` **13/20** (advertised package modules absent), `drafting` **13/20** (evidence-discipline defects), `character-naming` **13/20** (insufficient real-world cultural-data provenance and misleading entropy framing), and `statistical-distance` **13/20** (unsupported pseudo-quantitative/statistical framing).
+- `story-zoom` remains REJECTED unchanged from the earlier tranche because it couples persistent story-state mutation with a background watcher daemon lacking an action-appropriate authorization gate.
 - Source-owned scripts remain upstream evidence and never become repository-owned runtime.
-- Behavioral validation remains `not-run` across the tranche.
 
 ### Dan Dewhurst Story Skills — completed frontier
 
@@ -97,7 +98,7 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 
-`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with eight individually governed fiction units at the registered snapshot. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
+`jwynia/agent-skills` is an admitted **tracked corpus for selective curation**, with **19/54** individually governed fiction packages at the registered snapshot and **35** remaining under #388. Missing root licensing prevents blanket source-wide license inference; every additional candidate must establish its own terms and exact identity.
 
 `danjdewhurst/story-skills` is an admitted **tracked corpus with a complete 23/23 exact-version review** at the registered snapshot. Its source-owned runtime remains upstream-only.
 
@@ -113,4 +114,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-Complete the remaining 46-package Jwynia fiction frontier under issue #388 with per-skill exact-package decisions. Keep the narrative capability program in #386 open until that denominator and downstream host-specific integration decisions are resolved.
+Continue the remaining **35-package** Jwynia fiction frontier under issue #388 with per-skill exact-package decisions. Keep the narrative capability program in #386 open until that denominator and downstream host-specific integration decisions are resolved.

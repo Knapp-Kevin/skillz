@@ -1,0 +1,19 @@
+schema_version: 1
+skill_name: revision
+source_id: jwynia-agent-skills
+source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f91e88bdc8ae435ff58c8dfda2fa09974939effa
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [writing, decision-support]
+  lifecycle: [maintenance, verification]
+  characteristic: [human-review, iterative, synthesis]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric 2/2/1/1/2/1/1/2/2/2. Package includes scripts/revision-audit.ts, a read-only Deno scene/checklist helper. Positive: completed draft needs a top-down revision plan. Non-trigger: active first draft is still being generated. Pressure: nonlinear/experimental work may not fit scene/pass assumptions and requires adaptation rather than mechanical checklist enforcement. Mandatory persistence remains host-conditional. Behavioral validation not run. Reviewed in #388."
