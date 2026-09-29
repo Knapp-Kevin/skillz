@@ -3,7 +3,7 @@ skill_name: prose-style
 source_id: jwynia-agent-skills
 source_snapshot_revision: e02ec7e226a6e4f8419fd3b88a1d8e472d421b32
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5f6682c20c9e88cc01a47b7e20d750ed91d670ce
+content_blob_sha: 076d4fbd0847ccc1c3f61cf97557a09cc9f71925
 characterized_at: 2026-09-29
 last_verified_at: 2026-09-29
 verification_status: verified
