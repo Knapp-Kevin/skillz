@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: doc-coauthoring
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/doc-coauthoring/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/doc-coauthoring/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a5a69839ef4a161131d80b6daef10037a9686f4a
+package_tree_sha: d9df960e61fe2bafe9183e37de6f9f6b73b74087
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: rejected
-verification_basis: structured-static-review-hard-fail
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 13/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [iterative, human-review, synthesis]
   authority: [read-only, generate-only]
   portability: [low]
-notes: 'Hard fails: unresolved license and privacy scope broader than skillz policy. Adaptation can preserve the drafting/reader-testing workflow while narrowing evidence collection.'
+notes: 'Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Hard fails remain unresolved license and privacy scope broader than skillz policy. Adaptation can preserve the drafting/reader-testing workflow while narrowing evidence collection. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.'

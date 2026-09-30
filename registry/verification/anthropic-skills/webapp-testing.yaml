@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: webapp-testing
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/webapp-testing/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/webapp-testing/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 4726215301db64a0cc4d41fc3219c61f37a30f4a
+package_tree_sha: 5ffb7dc66b9fd4c25c3e400a4c00da99a349b714
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: verified
-verification_basis: structured-static-review
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 16/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [tool-assisted, visual-verification, evidence-first, compatibility-aware]
   authority: [read-only, mutating]
   portability: [medium]
-notes: Pinned helper is bounded and auditable despite the skill's execute-before-inspect preference. Behavioral validation remains pending.
+notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Pinned helper remains bounded and auditable despite the execute-before-inspect preference. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.

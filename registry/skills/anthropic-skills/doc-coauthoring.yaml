@@ -7,17 +7,18 @@ source_path: skills/doc-coauthoring/SKILL.md
 source_class: official
 license: UNRESOLVED
 relationship: vendored-reference
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: 00756142ab04c82a447693cf373c4e0c554d1005
 upstream_last_updated_at: 2025-12-04T17:01:46Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-09-30
 availability: vendored-reference-only
-local_path: vendor/anthropic-skills/skills/doc-coauthoring/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/doc-coauthoring/SKILL.md
+package_tree_sha: d9df960e61fe2bafe9183e37de6f9f6b73b74087
 permission_tier: read-and-generate-with-connector-expansion
 portability: low
 review_status: rejected-unchanged
 dependency_status: license-unresolved-and-privacy-scope-too-broad
 dependencies: Artifact editing host plus optional organizational connectors/context
 import_eligibility: reference-only-unless-adapted-and-license-resolved
-rationale: Staged coauthoring is useful, but unchanged use encourages broad organizational/context collection beyond minimum necessary evidence and has unresolved per-skill licensing.
+rationale: Exact candidate package tree is unchanged from the registered pin. Staged coauthoring remains useful, but unchanged use encourages broad organizational/context collection beyond minimum necessary evidence and has unresolved per-skill licensing; prior rejection carries forward if the pin advances.
