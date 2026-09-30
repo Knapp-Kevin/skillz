@@ -7,17 +7,18 @@ source_path: skills/canvas-design/SKILL.md
 source_class: official
 license: Apache-2.0
 relationship: vendored-reference
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: ef740771ac901e03fbca3ce4e1c453a96010f30a
 upstream_last_updated_at: 2025-12-01T18:05:36Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-09-30
 availability: vendored
-local_path: vendor/anthropic-skills/skills/canvas-design/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/canvas-design/SKILL.md
+package_tree_sha: 95095faaee2ea943e85a5d1d562fde06841e835e
 permission_tier: generate-only
 portability: medium
 review_status: verified-structured
 dependency_status: source-intact-bundled-assets
 dependencies: Bundled fonts/assets plus PDF/PNG-capable artifact tooling
-import_eligibility: already-vendored
-rationale: Original static-design workflow with anti-copying guidance, bundled assets, and required refinement.
+import_eligibility: pin-advance-candidate
+rationale: Exact candidate package tree is unchanged from the registered pin. Original static-design workflow with anti-copying guidance, bundled assets, and required refinement remains applicable; prior structured review may carry forward if the Anthropic pin advances.
