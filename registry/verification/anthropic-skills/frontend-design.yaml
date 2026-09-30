@@ -1,12 +1,14 @@
 schema_version: 1
 skill_name: frontend-design
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/frontend-design/SKILL.md
-fingerprint_algorithm: git-blob-sha1
-content_blob_sha: decdff43d05908b4c1fc2cfd2d80fc5743440934
-characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+source_path: skills/frontend-design/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/frontend-design/SKILL.md
+fingerprint_algorithm: git-tree-and-blob-sha1
+package_tree_sha: d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6
+content_blob_sha: a5333457c414d20d625f307df945842c0952ecc3
+characterized_at: 2026-09-30
+last_verified_at: 2026-09-30
 verification_status: verified
 verification_basis: structured-static-review
 validation_status: not-run
@@ -17,4 +19,4 @@ tags:
   characteristic: [iterative, visual-verification, human-review, compatibility-aware]
   authority: [generate-only, mutating]
   portability: [high]
-notes: Accessibility and visual-review requirements materially improve ordinary UI generation. Behavioral validation remains pending.
+notes: "Candidate remains a differentiated, accessibility-aware frontend design method with strong anti-template and visual-review discipline. The instruction to use remembered client context is bounded as a privacy/minimization caveat: only relevant non-sensitive context may inform design, and it does not authorize unrelated private retrieval or disclosure. No static hard fail found. Behavioral validation remains not-run."
