@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: brand-guidelines
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/brand-guidelines/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/brand-guidelines/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59
+package_tree_sha: 1dc8bd3584b80568edae7da16382363e24ecf0f0
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: verified
-verification_basis: structured-static-review
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 15/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [reference-heavy, source-driven, compatibility-aware]
   authority: [generate-only]
   portability: [high]
-notes: Narrow but coherent official styling guidance; host font availability is the main limitation. Behavioral validation remains pending.
+notes: "Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward to the candidate revision without inventing new behavioral evidence. Host font availability remains the main limitation; behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances."

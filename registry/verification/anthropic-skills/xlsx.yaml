@@ -1,12 +1,14 @@
 schema_version: 1
 skill_name: xlsx
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/xlsx/SKILL.md
-fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c5c881be9ebaa2bfcdd02f97de2ebd711ab78803
-characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+source_path: skills/xlsx/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/xlsx/SKILL.md
+fingerprint_algorithm: git-tree-and-blob-sha1
+package_tree_sha: fe6471cc9b5b97aae0b576ccb92ffd9b0207589d
+content_blob_sha: 9da54804cc8c938586f89363c8da3b3a6e2a563d
+characterized_at: 2026-09-30
+last_verified_at: 2026-09-30
 verification_status: rejected
 verification_basis: structured-static-review-hard-fail
 validation_status: not-run
@@ -17,4 +19,4 @@ tags:
   characteristic: [tool-assisted, deterministic, compatibility-aware]
   authority: [mutating]
   portability: [low]
-notes: Technical design scores well, but licensing is a hard fail. Reference-only; no behavioral validation claimed.
+notes: "Candidate package/helper churn does not cure the restrictive package terms. Licensing remains a hard fail for unchanged skillz reuse, extraction, derivatives, redistribution, or retained copies. Preserve as bounded reference evidence only; source-owned scripts remain upstream material. Behavioral validation remains not-run."

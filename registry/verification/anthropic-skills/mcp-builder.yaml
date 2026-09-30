@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: mcp-builder
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/mcp-builder/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/mcp-builder/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8a1a77a47d141967b246adb4da4f91037578ff7d
+package_tree_sha: b866bcfb57b780c10b587c7b543e871a91661ce0
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: verified
-verification_basis: structured-static-review
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 16/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [spec-driven, test-driven, reference-heavy, source-driven, tool-assisted]
   authority: [read-only, generate-only, mutating]
   portability: [medium]
-notes: Strong local workflow; mutable official SDK docs are an explicit freshness dependency rather than hidden governing instructions. Behavioral validation remains pending.
+notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Strong local workflow remains applicable; mutable official SDK docs are an explicit freshness dependency. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.

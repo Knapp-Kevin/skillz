@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: web-artifacts-builder
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/web-artifacts-builder/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/web-artifacts-builder/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8b39b19f259b4216ecb07574741dd8eaa9863a07
+package_tree_sha: 821b94f16c123d5f12e4e72eda9f7a162e2698f6
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: rejected
-verification_basis: structured-static-review-hard-fail
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 13/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [tool-assisted, production-oriented]
   authority: [generate-only, mutating]
   portability: [low]
-notes: 'Hard fail: executable dependency graph is mutable and unpinned. Adapt with reviewed lockfiles/version pins and no implicit global install.'
+notes: 'Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Hard fail remains a mutable and unpinned executable dependency graph. Adapt with reviewed lockfiles/version pins and no implicit global install. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.'

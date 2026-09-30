@@ -6,18 +6,19 @@ source_repository: https://github.com/anthropics/skills
 source_path: skills/docx/SKILL.md
 source_class: official
 license: Proprietary
-relationship: vendored-reference
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-upstream_revision: 3d59511518591fa82e6cfcf0438d68dd5dad3e76
-upstream_last_updated_at: 2026-02-25T04:28:38Z
-curated_at: 2026-08-29
-last_checked_at: 2026-08-29
-availability: vendored-reference-only
-local_path: vendor/anthropic-skills/skills/docx/SKILL.md
+relationship: pinned-reference
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+curated_at: 2026-09-30
+last_checked_at: 2026-09-30
+availability: candidate-reference-only
+local_path: skills/sources/anthropic-skills/skills/docx/SKILL.md
+package_tree_sha: 6e6f5b95c1de6e803cc07b214f5059b074d64e0c
+skill_blob_sha: fb954a460a1ea2294e9595e87fecce8df043eeba
 permission_tier: file-mutation-on-explicit-user-request
 portability: low
 review_status: rejected-unchanged
 dependency_status: license-restricted
-dependencies: Anthropic-service-governed proprietary materials plus DOCX/OOXML tooling
+dependencies: Anthropic-service-governed proprietary materials plus DOCX/OOXML tooling and bundled source-owned scripts
 import_eligibility: reference-only-license-restricted
-rationale: Technically detailed DOCX workflow whose proprietary terms prohibit the reuse model required for normal skillz install/selection.
+rationale: Candidate package and helpers changed, but the package license remains restrictive and does not permit the extraction, reproduction, derivative, redistribution, or retention model required for normal skillz unchanged reuse. Technical material remains bounded reference evidence only.
