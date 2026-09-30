@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: discernment-nudge
+source_id: anthropic-skills
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/discernment-nudge/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 49ebbcad692ffdf70e518087468609a5c4ab9e22
+package_tree_sha: 290670f304c67cf36725d7612583cf203f7a4e50
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [decision-support, communication]
+  lifecycle: [planning]
+  characteristic: [human-review, safety-bounded, context-efficient]
+  authority: [generate-only]
+  portability: [high]
+notes: "Verified candidate at the exact upstream revision. The once-per-conversation limit and explicit non-trigger carve-outs materially bound over-triggering and paternalistic behavior; it yields to user-requested verification, reviews, quick answers, user-supplied material, educational explanation, and opinion requests. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances to this revision."
