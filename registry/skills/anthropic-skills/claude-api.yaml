@@ -6,18 +6,21 @@ source_repository: https://github.com/anthropics/skills
 source_path: skills/claude-api/SKILL.md
 source_class: official
 license: Apache-2.0
-relationship: vendored-reference
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-upstream_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-upstream_last_updated_at: 2026-07-01T18:11:23Z
-curated_at: 2026-08-29
-last_checked_at: 2026-08-29
-availability: vendored
-local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
-permission_tier: read-only-and-generate-only
+relationship: pinned-reference
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+upstream_last_updated_at: 2026-09-29T02:20:03Z
+curated_at: 2026-09-30
+last_checked_at: 2026-09-30
+availability: candidate-pinned-reference
+local_path: skills/sources/anthropic-skills/skills/claude-api/SKILL.md
+package_tree_sha: f36627d91743cb1961466775b5820f02c1d0f948
+skill_blob_sha: 317b8b501b6acb85c81775ebb33e56dd76e35e90
+permission_tier: mixed-reference-generate-and-mutation-capable
 portability: medium
-review_status: rejected-unchanged-current-doc-drift
-dependency_status: material-current-documentation-drift
-dependencies: Bundled API/SDK references plus current Anthropic platform docs
-import_eligibility: design-evidence-only-until-refreshed-and-reverified
-rationale: Strong provider/SDK reference design, but the pinned July skill contains time-sensitive model defaults and feature assumptions that materially diverge from current official Anthropic migration guidance. Keep as reference/design evidence; do not reuse unchanged without refreshing current official documentation and re-verifying the adapted result.
+review_status: rejected-unchanged-authority-composition
+behavioral_validation: not-run
+dependency_status: bundled-language-sdk-references-live-sources-and-executable-helpers
+dependencies: Bundled language/API references, live-source links, eval and migration guidance, and source-owned helper scripts
+import_eligibility: reference-extract-adapt-only
+rationale: Candidate is materially fresher and contains strong live-source, schema-validation, migration, cost/eval approval, and secret-handling safeguards, but mutation-capable operational subflows do not share a uniform package-wide action-authorization invariant. Reject unchanged direct adoption while preserving high-value reference, extraction, and adaptation evidence.
