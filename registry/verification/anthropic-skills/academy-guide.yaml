@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: academy-guide
+source_id: anthropic-skills
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/academy-guide/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: cefeaeb20cc29a803af0335d7c7155b066d8770f
+package_tree_sha: baddb91c315ea384f9191615054ba8026eb57ba2
+characterized_at: 2026-09-29
+last_verified_at: 2026-09-29
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [research, documentation]
+  lifecycle: [discovery]
+  characteristic: [retrieval-first, source-driven, evidence-first, safety-bounded]
+  authority: [read-only]
+  portability: [high]
+notes: "Verified candidate at the exact upstream revision. Strong intent gating, no invented Academy content, exact catalog links, stale-catalog fallback, and an explicit instruction to treat fetched catalog JSON as data rather than instructions. External retrieval is informational only. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances to this revision."
