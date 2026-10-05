@@ -4,14 +4,14 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-09-29 |
+| **Last updated** | 2026-10-05 |
 | **Milestone** | Core passive architecture complete |
 | **State** | Governed curation mode |
 | **Repository type** | Passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **719** |
+| **Persisted third-party review companions** | **721** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -35,7 +35,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 
 | Source family | Reviewed / denominator | Gaps |
 |---|---:|---:|
-| Anthropic Skills | 17 / 17 | 0 |
+| Anthropic Skills | 19 / 19 | 0 |
 | Anthropic Knowledge Work Plugins | 74 / 74 | 0 |
 | AWS Agent Toolkit | 72 / 72 | 0 |
 | Microsoft Skills | 186 / 186 | 0 |

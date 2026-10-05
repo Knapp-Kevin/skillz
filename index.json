@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-29",
+  "snapshot_date": "2026-10-05",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 719,
+    "persisted_third_party_exact_version_reviews": 721,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
     "jwynia_agent_skills_fiction_verified": 39,
@@ -16,8 +16,8 @@
     "danjdewhurst_story_skills_current_standard_companions": 23,
     "danjdewhurst_story_skills_eligible_denominator": 23,
     "danjdewhurst_story_skills_current_standard_gaps": 0,
-    "anthropic_skills_current_standard_companions": 17,
-    "anthropic_skills_eligible_denominator": 17,
+    "anthropic_skills_current_standard_companions": 19,
+    "anthropic_skills_eligible_denominator": 19,
     "anthropic_skills_current_standard_gaps": 0,
     "anthropic_knowledge_work_plugins_current_standard_companions": 74,
     "anthropic_knowledge_work_plugins_eligible_denominator": 74,
@@ -92,6 +92,6 @@
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
     "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-09-29: Jwynia fiction is complete at 54/54 and Dan Dewhurst Story Skills is complete at 23/23; the narrative capability program #386 and Dan Dewhurst freshness check #395 are closed. Current maintenance priority is source freshness and omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective external behavioral evidence where justified; corpus accounting remains 719 persisted exact-version reviews across 22 registered sources."
+    "latest_reconciliation": "2026-10-05: Anthropic Skills freshness reconciliation advanced the registered pin to 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 with an exact denominator of 19/19 and zero current-standard gaps; corpus accounting is 721 persisted exact-version reviews across 22 registered sources. Current maintenance priority remains source freshness and omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective external behavioral evidence where justified."
   }
 }

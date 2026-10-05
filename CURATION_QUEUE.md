@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **719** persisted exact-version third-party verification companions.
+- **721** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -32,7 +32,7 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 
 | Source family | Pin / scope | Reviewed | Gaps | State |
 |---|---|---:|---:|---|
-| Anthropic Skills | `9d2f1ae187231d8199c64b5b762e1bdf2244733d` | 17 / 17 | 0 | CURRENT-STANDARD COMPLETE |
+| Anthropic Skills | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | 19 / 19 | 0 | CURRENT-STANDARD COMPLETE |
 | Anthropic Knowledge Work Plugins | `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8` | 74 / 74 | 0 | CURRENT-STANDARD COMPLETE |
 | AWS Agent Toolkit | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | 72 / 72 | 0 | CURRENT-STANDARD COMPLETE |
 | Microsoft Skills | `32cad4ee689c95c309e61aeefcbc6af356f1e6a7` | 186 / 186 | 0 | CURRENT-STANDARD COMPLETE |

@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-719-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-721-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -36,11 +36,11 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **22 unique source identities** and **719 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **22 unique source identities** and **721 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
-| Anthropic Skills | 17 / 17 |
+| Anthropic Skills | 19 / 19 |
 | Anthropic Knowledge Work Plugins | 74 / 74 |
 | AWS Agent Toolkit | 72 / 72 |
 | Microsoft Skills | 186 / 186 |
