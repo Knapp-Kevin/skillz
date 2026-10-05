@@ -1,20 +1,22 @@
 schema_version: 1
 skill_name: claude-api
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/claude-api/SKILL.md
-fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 9a9407309936d7fd36858296374c246dc2c27e46
-characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+source_path: skills/claude-api/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/claude-api/SKILL.md
+fingerprint_algorithm: git-tree-and-blob-sha1
+package_tree_sha: f36627d91743cb1961466775b5820f02c1d0f948
+content_blob_sha: 317b8b501b6acb85c81775ebb33e56dd76e35e90
+characterized_at: 2026-09-30
+last_verified_at: 2026-09-30
 verification_status: rejected
-verification_basis: structured-static-review-plus-freshness-check
+verification_basis: structured-static-review-authority-hard-fail
 validation_status: not-run
 rubric_score: 17/20
 tags:
-  use_case: [api-design, agent-development, implementation]
-  lifecycle: [discovery, implementation, maintenance]
-  characteristic: [reference-heavy, retrieval-first, source-driven, compatibility-aware]
-  authority: [read-only, generate-only]
+  use_case: [api-design, agent-development, implementation, evaluation]
+  lifecycle: [discovery, implementation, verification, maintenance]
+  characteristic: [reference-heavy, retrieval-first, source-driven, compatibility-aware, risk-aware]
+  authority: [read-only, generate-only, mutating, external-side-effect]
   portability: [medium]
-notes: "Rejected for unchanged reuse at the pinned version because material provider facts have drifted. The pinned skill defaults to Claude Opus 4.8 plus explicit adaptive-thinking configuration, while current Anthropic migration guidance documents newer Claude Fable 5 / Mythos 5 and Claude Opus 5 behavior, including changed thinking defaults and migration requirements. Structurally strong and still useful as design/reference evidence, but time-sensitive provider guidance must be refreshed from current official Anthropic documentation before reuse or adaptation. Behavioral validation remains pending and is not required for this static rejection."
+notes: "Candidate freshness is materially improved over the registered July snapshot. Strong safeguards include live-source fallback, SDK/schema validation, migration classification, explicit approval before money-bearing cost/eval runs, and secret/vault guidance. Direct unchanged adoption still fails the authority standard because the broadened package combines reference guidance with mutation-capable operational procedures without a uniform package-wide action-authorization invariant. Preserve as REFERENCE / EXTRACT / ADAPT evidence. Behavioral validation remains not-run."

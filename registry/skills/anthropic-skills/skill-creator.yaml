@@ -7,17 +7,18 @@ source_path: skills/skill-creator/SKILL.md
 source_class: official
 license: Apache-2.0
 relationship: vendored-reference
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: b0cbd3df1533b396d281a6886d5132f623393a9c
 upstream_last_updated_at: 2026-03-06T20:06:23Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-09-30
 availability: vendored
-local_path: vendor/anthropic-skills/skills/skill-creator/SKILL.md
+local_path: skills/sources/anthropic-skills/skills/skill-creator/SKILL.md
+package_tree_sha: 3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6
 permission_tier: local-skill-mutation-with-user-intent
 portability: medium
 review_status: verified-structured
 dependency_status: source-intact-host-agent-capabilities-required
 dependencies: Bundled eval/grader/analyzer/viewer scripts; Python; agent host with local files and optional subagents
-import_eligibility: already-vendored
-rationale: Comprehensive skill-authoring loop with baselines, objective assertions, qualitative review, reproducible workspaces, and explicit anti-exfiltration security guidance.
+import_eligibility: pin-advance-candidate
+rationale: Exact candidate package tree is unchanged from the registered pin. Comprehensive skill-authoring loop with baselines, objective assertions, qualitative review, reproducible workspaces, and explicit anti-exfiltration security guidance remains applicable.

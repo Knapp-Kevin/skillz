@@ -1,14 +1,15 @@
 schema_version: 1
 skill_name: skill-creator
 source_id: anthropic-skills
-source_snapshot_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
-local_path: vendor/anthropic-skills/skills/skill-creator/SKILL.md
+source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+local_path: skills/sources/anthropic-skills/skills/skill-creator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 65b3a402dbd09b8e83f9d637c6b553875189085c
+package_tree_sha: 3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
+last_verified_at: 2026-09-30
 verification_status: verified
-verification_basis: structured-static-review
+verification_basis: structured-static-review-carried-forward-exact-tree
 validation_status: not-run
 rubric_score: 18/20
 tags:
@@ -17,4 +18,4 @@ tags:
   characteristic: [test-driven, evidence-first, iterative, human-review, holdout-aware, traceable]
   authority: [generate-only, mutating]
   portability: [medium]
-notes: Unusually strong evaluation and security methodology; host-specific subagent/viewer mechanics reduce portability. Behavioral validation remains pending.
+notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Unusually strong evaluation and security methodology remains applicable; host-specific subagent/viewer mechanics reduce portability. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.

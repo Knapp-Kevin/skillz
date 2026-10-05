@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-09-29
+**Snapshot date:** 2026-10-05
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, and reconciliation.
 
@@ -14,11 +14,11 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 719 |
+| Persisted third-party exact-version reviews | 721 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |
-| Anthropic Skills current-standard companions | 17 / 17 |
+| Anthropic Skills current-standard companions | 19 / 19 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
 | AWS current-standard companion-complete | 72 / 72 |

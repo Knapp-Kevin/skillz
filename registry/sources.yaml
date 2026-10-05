@@ -17,7 +17,7 @@ sources:
     resolved_path: skills/sources/anthropic-skills
     inclusion: pinned-reference
     license: MIXED
-    pinned_revision: 9d2f1ae187231d8199c64b5b762e1bdf2244733d
+    pinned_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
     rationale: First-party Anthropic skill implementations and authoring references. Per-skill terms control where licensing differs.
 
   - id: anthropic-knowledge-work-plugins
