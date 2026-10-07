@@ -162,7 +162,7 @@ Check, as far as the host can truthfully establish:
 Rules:
 
 - `verified` or `validated` plus matching exact identity may satisfy the semantic quality dimension;
-- scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed` under `docs/security-scanning.md` for unchanged reuse;
+- scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed` under the repository's current package-security policy for unchanged reuse;
 - security `not-run`, `failed`, `incomplete`, or `stale` remains adaptation/design evidence only until the security gap is resolved;
 - `unverified` and legacy `trusted-baseline` are design evidence only;
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection;
