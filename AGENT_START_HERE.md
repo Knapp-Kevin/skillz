@@ -85,13 +85,15 @@ The repository intentionally exposes a broad 500+ reference surface. That breadt
 
 For unchanged third-party reuse:
 
-- exact matching `verified` or `validated` records may be considered;
+- exact matching `verified` or `validated` semantic records may be considered only when applicable package-security evidence is also acceptable;
+- scanner-compatible packages require security `passed` or explicitly `findings-reviewed` for new unchanged reuse;
+- security `not-run`, `failed`, `incomplete`, or `stale` material is adaptation/design evidence only until the security gap is resolved;
 - `unverified` and legacy `trusted-baseline` material are design evidence only;
 - `stale`, `rejected`, and `retired` material is excluded from normal unchanged selection;
 - quality state is eligibility evidence, not a command to reuse;
 - if exact identity is unavailable, say so and take the conservative path.
 
-`verified` and `validated` are semantic quality states. See `docs/skill-verification.md`.
+`verified` and `validated` are semantic quality states. Package-security state is separate. See `docs/skill-verification.md` and `docs/security-scanning.md`.
 
 ## 4. User work is not `skillz` maintenance
 
@@ -113,7 +115,7 @@ A normal bootstrap is complete when the agent has:
 1. identified durable needs from legitimate evidence;
 2. translated them into capability requirements;
 3. searched relevant whole skills and reusable components across the available first-party, governed, pinned-reference, tracked, and live surfaces;
-4. gated unchanged reuse on available quality/provenance/identity evidence;
+4. gated unchanged reuse on available semantic quality, package-security, provenance, and identity evidence;
 5. chosen explicit fit decisions such as ADOPT, ADAPT, SUPPLEMENT, COMPOSE, CREATE, or DO NOT CREATE;
 6. produced the smallest coherent fitted system;
 7. adversarially reviewed important instructions for likely misinterpretation, overreach, or failure;

@@ -2,7 +2,7 @@
 
 `skillz` is a library and reference corpus, not a dump and not a popularity contest.
 
-The repository deliberately separates **availability**, **provenance**, **individual characterization**, **semantic verification**, **scenario/adversarial semantic validation**, and **source context**. Those concepts must never collapse into one vague word such as "curated."
+The repository deliberately separates **availability**, **provenance**, **individual characterization**, **semantic verification**, **package-security evidence**, **scenario/adversarial semantic validation**, and **source context**. Those concepts must never collapse into one vague word such as "curated."
 
 ## The two external corpus layers
 
@@ -31,11 +31,12 @@ A skill is part of the governed individual surface only when the available evide
 5. authority and portability characterization;
 6. controlled metadata tags;
 7. exact content fingerprint when establishable;
-8. an individual structured semantic review with a decisive quality state.
+8. an individual structured semantic review with a decisive quality state;
+9. applicable exact-version package-security evidence with a decisive security state.
 
 These requirements apply to existing and future governed user-facing skills. First-party authorship does not waive provenance; it changes what truthful provenance looks like.
 
-Only `verified` and `validated` records are eligible for unchanged third-party consideration. Eligibility is still not a command to reuse. User fit and current operational constraints decide the result.
+Only semantically `verified` or `validated` records with applicable security state `passed` or explicitly `findings-reviewed` are eligible for new unchanged third-party consideration. Eligibility is still not a command to reuse. User fit and current operational constraints decide the result.
 
 This separation lets the repository remain broad without falsely asserting that hundreds of pinned upstream files have been individually proven.
 
@@ -45,10 +46,11 @@ This separation lets the repository remain broad without falsely asserting that 
 2. **Provenance:** Where did it come from, under what terms, and what exact source version was inspected?
 3. **Characterized:** What does it do, what assumptions does it carry, and what controlled tags describe it?
 4. **Verified:** Did this exact identity pass the structured semantic gate?
-5. **Validated:** Did representative trigger, non-trigger, and pressure/adversarial readings reveal unresolved ambiguity or overreach?
-6. **Source context:** What objective, dated evidence exists about source maintenance or visibility?
+5. **Package security:** Did an exact-version scanner establish complete coverage, and what findings or residual risk remain?
+6. **Validated:** Did representative trigger, non-trigger, and pressure/adversarial readings reveal unresolved ambiguity or overreach?
+7. **Source context:** What objective, dated evidence exists about source maintenance or visibility?
 
-The normative exact-version quality rules are in [`skill-verification.md`](skill-verification.md). Companion-field rules are in [`companion-metadata.md`](companion-metadata.md). New discovery intake is governed by [`candidate-intake.md`](candidate-intake.md). The living source/evaluation frontier is [`../CURATION_QUEUE.md`](../CURATION_QUEUE.md).
+The normative exact-version quality rules are in [`skill-verification.md`](skill-verification.md). Package-security rules are in [`security-scanning.md`](security-scanning.md). Companion-field rules are in [`companion-metadata.md`](companion-metadata.md). New discovery intake is governed by [`candidate-intake.md`](candidate-intake.md). The living source/evaluation frontier is [`../CURATION_QUEUE.md`](../CURATION_QUEUE.md).
 
 ## Source and quality defaults
 
@@ -58,8 +60,8 @@ Source identity does not establish individual skill quality.
 - missing individual verification record -> reference/design evidence only;
 - `unverified` -> design evidence only;
 - legacy `trusted-baseline` -> design evidence only until individual structured review;
-- `verified` -> eligible for unchanged consideration when identity and operational fit match;
-- `validated` -> stronger semantic evidence from representative adversarial/scenario review;
+- `verified` -> semantic quality eligible, but unchanged consideration still requires applicable package-security evidence plus identity and operational fit;
+- `validated` -> stronger semantic evidence from representative adversarial/scenario review; package-security state remains separate;
 - `stale`, `rejected`, `retired` -> excluded from normal unchanged selection.
 
 A changed fingerprint invalidates the ability to rely silently on prior exact-version evidence until refreshed.
@@ -111,6 +113,10 @@ That record owns:
 
 If the canonical fingerprint changes, treat the prior assessment as operationally stale until the relevant semantic review is refreshed.
 
+## Security evidence
+
+For scanner-compatible packages, exact-version package-security evidence is governed by [`security-scanning.md`](security-scanning.md) and persisted under `registry/security/`. Semantic verification never implies a security pass. Security `not-run`, `failed`, `incomplete`, or `stale` blocks new unchanged admission/refresh; `passed` or explicitly `findings-reviewed` satisfies only the package-security dimension.
+
 ## Candidate admission standard
 
 Newly discovered third-party candidates are evaluated issue-first under [`candidate-intake.md`](candidate-intake.md). The issue is the pre-admission evidence workspace; final repository companions are persisted only after a decisive admission result.
@@ -118,7 +124,7 @@ Newly discovered third-party candidates are evaluated issue-first under [`candid
 This does not weaken the metadata standard. It means:
 
 - before admission, evidence lives on the candidate issue;
-- after admission, the exact admitted identity must have finalized provenance and verification companions;
+- after admission, the exact admitted identity must have finalized provenance, verification, and applicable security evidence;
 - rejected/reference-only candidates remain outside governed inventory unless the decision explicitly requires passive metadata for reference tracking.
 
 ## Component reuse and adaptation
@@ -181,9 +187,10 @@ When intentionally refreshing a reviewed skill:
 4. invalidate prior exact-version evidence when material content changed;
 5. re-check dependencies, licensing, scope, authority, and portability;
 6. repeat structured semantic verification when required;
-7. repeat scenario/adversarial semantic review when prior validation could be invalidated;
-8. update controlled tags when behavior changed;
-9. preserve prior history through Git.
+7. rerun applicable exact-version package-security scanning when package identity or relevant executable/supporting content changed;
+8. repeat scenario/adversarial semantic review when prior validation could be invalidated;
+9. update controlled tags when behavior changed;
+10. preserve prior history through Git.
 
 No registered source is auto-upgraded merely because a newer commit exists.
 
@@ -191,9 +198,9 @@ No registered source is auto-upgraded merely because a newer commit exists.
 
 Use this order:
 
-**user fit -> exact-version quality -> operational fit -> freshness -> provenance/source context**
+**user fit -> exact-version semantic quality -> package-security evidence -> operational fit -> freshness -> provenance/source context**
 
-For unchanged third-party reuse, `verified` and `validated` are the only current eligible quality states.
+For unchanged third-party reuse, `verified` and `validated` are the only current eligible semantic quality states, and scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed`.
 
 Popularity and official branding are discovery/provenance signals, not competence certificates.
 

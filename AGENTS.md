@@ -1,6 +1,6 @@
 # Agent Entry Contract
 
-`skillz` is a passive skill library, source registry, review corpus, and instruction set. The host agent is the active system.
+`skillz` is a runtime-passive, maintenance-active skill library, source registry, review corpus, and instruction set. The host agent is the active user-facing system; bounded repository-maintenance automation may establish corpus evidence.
 
 **Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).**
 
@@ -50,7 +50,7 @@ Only `REPOSITORY_MAINTENANCE` may target repository files for mutation. Every ot
 
 ## Capability routing
 
-Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, or repository scripts for normal user work.
+Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, repository scanners, or repository scripts for normal user work. Under explicit `REPOSITORY_MAINTENANCE`, bounded CI/scanner/test tooling may be used to establish repository evidence without becoming a consumer prerequisite.
 
 When `skills/sources/<source-id>/` is available in the host, use the applicable pinned corpus as local reference material. When a pinned corpus is not locally materialized or accessible through the current host, resolve the same registered upstream source through whatever legitimate repository/API/web capability the host has, preserving the registered source identity and exact pin when the task depends on exact-version evidence.
 
@@ -58,8 +58,10 @@ When `skills/sources/<source-id>/` is available in the host, use the applicable 
 
 Source reputation does not equal individual verification.
 
-Unchanged third-party reuse requires an individually reviewed exact version whose current state is `verified` or `validated`, plus acceptable provenance, license, dependencies, authority, portability, identity confidence, and actual user fit.
+Unchanged third-party reuse requires an individually reviewed exact version whose current semantic state is `verified` or `validated`, acceptable exact-version package-security evidence when the package is scanner-compatible, plus acceptable provenance, license, dependencies, authority, portability, identity confidence, and actual user fit.
 
+- semantic `verified` / `validated` does not imply a security pass; security state is governed separately by `docs/security-scanning.md`.
+- security `not-run`, `failed`, `incomplete`, or `stale`: not eligible for new unchanged admission/refresh where a qualifying package scan is applicable.
 - `unverified` and legacy `trusted-baseline`: reference/design evidence only.
 - `stale`: do not inherit the old review silently.
 - `rejected` / `retired`: exclude from normal unchanged selection.
@@ -72,7 +74,7 @@ If exact identity cannot be established, say so and take the conservative path.
 
 A reference may contribute useful components without becoming the final workflow. Preserve the useful mechanism without automatically importing source-specific terminology, ceremony, commands, UX, file layout, or authority assumptions.
 
-A skill may legitimately own scripts, references, templates, fixtures, examples, JSON, assets, or other supporting components. Preserve and evaluate those as part of the skill package. The passive boundary applies to the repository engine, not to every file inside every user-facing skill.
+A skill may legitimately own scripts, references, templates, fixtures, examples, JSON, assets, or other supporting components. Preserve and evaluate those as part of the skill package. The runtime-passive boundary applies to normal repository consumption, not to every file inside every user-facing skill and not to explicitly governed maintainer-side security automation.
 
 ## Memory, privacy, and mutation
 

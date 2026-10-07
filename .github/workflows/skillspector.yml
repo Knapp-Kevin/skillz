@@ -1,0 +1,216 @@
+name: SkillSpector security gate
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "engine/skills/**"
+      - ".github/workflows/skillspector.yml"
+      - "docs/security-scanning.md"
+      - "registry/security-tools.yaml"
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Manual scan scope"
+        required: true
+        default: "first-party"
+        type: choice
+        options:
+          - first-party
+          - all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skillspector-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    name: Static skill security scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Verify Python runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 --version
+          python3 - <<'PY'
+          import sys
+          if not ((3, 12) <= sys.version_info[:2] < (3, 15)):
+              raise SystemExit(f"SkillSpector requires Python 3.12-3.14; got {sys.version}")
+          PY
+
+      - name: Install pinned SkillSpector
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check             "git+https://github.com/NVIDIA/SkillSpector.git@c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+          skillspector --version
+
+      - name: Resolve scan targets
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          MANUAL_SCOPE: ${{ inputs.scope }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .skillspector/reports
+          : > .skillspector/targets.txt
+
+          python3 - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
+
+          root = Path.cwd()
+          targets: set[Path] = set()
+
+          def manifest_roots(base: Path):
+              if not base.exists():
+                  return []
+              found = []
+              for manifest in list(base.rglob("SKILL.md")) + list(base.rglob("skill.md")):
+                  if ".git" not in manifest.parts:
+                      found.append(manifest.parent)
+              return found
+
+          def enclosing_skill(path: Path):
+              current = path if path.is_dir() else path.parent
+              while current != root and root in current.parents:
+                  if (current / "SKILL.md").is_file() or (current / "skill.md").is_file():
+                      return current
+                  current = current.parent
+              return None
+
+          event = os.environ.get("EVENT_NAME")
+          if event == "pull_request":
+              base = os.environ["BASE_SHA"]
+              head = os.environ["HEAD_SHA"]
+              changed = subprocess.check_output(
+                  ["git", "diff", "--name-only", "--diff-filter=ACMRT", base, head],
+                  text=True,
+              ).splitlines()
+
+              for rel in changed:
+                  path = root / rel
+                  skill = enclosing_skill(path)
+                  if skill is not None:
+                      targets.add(skill)
+                      continue
+
+                  parts = Path(rel).parts
+                  if len(parts) >= 3 and parts[:2] == ("skills", "sources"):
+                      source_root = root.joinpath(*parts[:3])
+                      targets.update(manifest_roots(source_root))
+                  elif parts and parts[0] == "skills":
+                      targets.update(
+                          p for p in manifest_roots(root / "skills")
+                          if "sources" not in p.relative_to(root / "skills").parts
+                      )
+                  elif len(parts) >= 2 and parts[:2] == ("engine", "skills"):
+                      targets.update(manifest_roots(root / "engine" / "skills"))
+                  elif rel in {
+                      ".github/workflows/skillspector.yml",
+                      "docs/security-scanning.md",
+                      "registry/security-tools.yaml",
+                  }:
+                      # A security-control change must exercise a real package,
+                      # not merely prove that the YAML parses.
+                      smoke = root / "engine" / "skills" / "skill-bootstrap"
+                      if (smoke / "SKILL.md").is_file():
+                          targets.add(smoke)
+          else:
+              scope = os.environ.get("MANUAL_SCOPE") or "first-party"
+              if scope == "all":
+                  targets.update(manifest_roots(root / "skills"))
+                  targets.update(manifest_roots(root / "engine" / "skills"))
+              else:
+                  targets.update(
+                      p for p in manifest_roots(root / "skills")
+                      if "sources" not in p.relative_to(root / "skills").parts
+                  )
+                  targets.update(manifest_roots(root / "engine" / "skills"))
+
+          relative = sorted(str(p.relative_to(root)) for p in targets)
+          Path(".skillspector/targets.txt").write_text(
+              "".join(f"{p}\n" for p in relative),
+              encoding="utf-8",
+          )
+          print(f"Resolved {len(relative)} skill package(s)")
+          for item in relative:
+              print(f"  {item}")
+          PY
+
+      - name: Scan exact packages
+        shell: bash
+        run: |
+          set -uo pipefail
+          if [[ ! -s .skillspector/targets.txt ]]; then
+            echo "No skill package requires scanning."
+            exit 0
+          fi
+
+          failures=0
+          count=0
+          while IFS= read -r target; do
+            [[ -z "$target" ]] && continue
+            count=$((count + 1))
+            slug="$(printf '%s' "$target" | tr '/ ' '__' | tr -cd '[:alnum:]_.-')"
+            report=".skillspector/reports/${slug}.json"
+            echo "::group::SkillSpector: $target"
+            if skillspector scan "$target"               --no-llm               --format json               --output "$report"               --fail-on-findings               --fail-on-incomplete; then
+              echo "PASS: $target"
+            else
+              status=$?
+              failures=$((failures + 1))
+              echo "FAIL ($status): $target"
+              [[ -f "$report" ]] && cat "$report"
+            fi
+            echo "::endgroup::"
+          done < .skillspector/targets.txt
+
+          echo "Scanned $count package(s); failures: $failures"
+          if (( failures > 0 )); then
+            exit 1
+          fi
+
+      - name: Write summary
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          print("## SkillSpector security gate")
+          reports = sorted(Path(".skillspector/reports").glob("*.json"))
+          if not reports:
+              print("\nNo scan report was produced.")
+              raise SystemExit(0)
+
+          print("\n| Package | Score | Severity | Recommendation |")
+          print("|---|---:|---|---|")
+          for report in reports:
+              try:
+                  data = json.loads(report.read_text(encoding="utf-8"))
+                  skill = data.get("skill", {})
+                  risk = data.get("risk_assessment", {})
+                  name = skill.get("source") or skill.get("name") or report.stem
+                  print(
+                      f"| {name} | {risk.get('score', '?')} | "
+                      f"{risk.get('severity', '?')} | {risk.get('recommendation', '?')} |"
+                  )
+              except Exception as exc:
+                  print(f"| {report.stem} | ? | report-error | {exc} |")
+          PY

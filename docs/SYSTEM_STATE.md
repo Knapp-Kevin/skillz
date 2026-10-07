@@ -4,10 +4,10 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-05 |
-| **Milestone** | Core passive architecture complete |
+| **Last updated** | 2026-10-06 |
+| **Milestone** | Runtime-passive architecture + maintainer security gate |
 | **State** | Governed curation mode |
-| **Repository type** | Passive skill knowledge resource |
+| **Repository type** | Runtime-passive, maintenance-active skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
@@ -20,14 +20,15 @@
 | **Corey Haines Marketing Skills tracked denominator** | 50 |
 | **Corey Haines Marketing Skills current-standard companions** | **50 / 50** |
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
-| **Evaluation model** | Static semantic review first; optional later external behavioral evidence |
-| **Repository runtime/CI requirement** | None |
+| **Evaluation model** | Static semantic review + separate exact-version package-security evidence; optional later external behavioral evidence |
+| **Normal-use runtime/CI requirement** | None |
+| **Maintenance security automation** | Pinned NVIDIA SkillSpector static gate; no scheduled full-corpus scan |
 
 ## Current architecture
 
-The canonical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance and exact-version evidence live under `registry/`.
+The canonical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance, semantic verification, security evidence, and exact-version tool identity live under `registry/`.
 
-`skillz` owns no runtime, scripts layer, tests gate, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service. Tooling inside pinned third-party repositories remains upstream package material.
+`skillz` owns no **normal-use** runtime, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Explicit repository maintenance may use bounded CI/scanner/test tooling to establish corpus evidence. The current security gate invokes exact-pinned NVIDIA SkillSpector externally; it does not become user-facing runtime. Tooling inside pinned third-party repositories remains upstream package material.
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
@@ -72,7 +73,7 @@ The source remains tracked rather than vendored or blanket trusted. Source-owned
 
 Registered snapshot: `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. Root license: MIT, Copyright (c) 2026 Daniel Dewhurst. Exact eligible denominator: **23** first-class packages under `skills/`.
 
-All 23 packages now have exact-version provenance and verification companions and are **VERIFIED unchanged references** after complete package review, with static rubric scores ranging from **16/20 to 18/20**. Behavioral validation remains `not-run` for all 23. Source-authored tests/evals are upstream evidence, not claimed as repository behavioral validation.
+All 23 packages now have exact-version provenance and verification companions and are **VERIFIED semantic references** after complete package review, with static rubric scores ranging from **16/20 to 18/20**. New unchanged-reuse eligibility additionally depends on applicable package-security backfill under #402. Behavioral validation remains `not-run` for all 23. Source-authored tests/evals are upstream evidence, not claimed as repository behavioral validation.
 
 **Family synthesis:** Dewhurst provides a coherent end-to-end fiction workflow spanning premise, project initialization, character/world/plot/theme/genre design, research, drafting, scene/voice/verse craft, line editing, continuity, simulated readers, feedback/editorial review, submission, publishing, adaptation, and maintenance. Its main limitation is portability: most units assume the upstream Markdown/YAML Story Skills schema and optional `story` CLI. `story-maintenance` additionally packages a local Node fallback with explicit rename/move/remove/repair operations. These runtime assets remain upstream dependencies and are not adopted as `skillz` runtime. Submission/publishing/editorial procedures keep external sending, contracts, purchases, account actions, uploads, pushes, and publication under author control.
 
@@ -84,7 +85,7 @@ Registered snapshot: `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`. Root license: M
 
 All fifty packages now have current-standard provenance and exact-version verification companions. The final macro tranche adds `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` means exact-version structured static semantic review, not behavioral validation or automatic unchanged-use eligibility. Behavioral validation remains `not-run`.
 
-**Macro synthesis:** Corey Haines is materially stronger as planning/checklist/design prior art than as unchanged operational authority, but the family contains meaningful bounded unchanged-use candidates. Recurring defects cluster around fragmented action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. `seo-audit` is notable for an explicit untrusted-content boundary; `site-architecture` remains generate-only. `revops`, `sms`, `social`, and `video` cross into consequential external-action surfaces and require stronger authority boundaries; `signup` needs stronger identity/tracking/data-inference boundaries.
+**Macro synthesis:** Corey Haines is materially stronger as planning/checklist/design prior art than as unchanged operational authority, but the family contains meaningful bounded semantic candidates for unchanged use pending applicable package-security evidence. Recurring defects cluster around fragmented action authorization, privacy/minimization/consent/retention, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. `seo-audit` is notable for an explicit untrusted-content boundary; `site-architecture` remains generate-only. `revops`, `sms`, `social`, and `video` cross into consequential external-action surfaces and require stronger authority boundaries; `signup` needs stronger identity/tracking/data-inference boundaries.
 
 Exact fingerprints, package boundaries, dependencies, controlled tags, freshness evidence, authority findings, scores, and detailed rationale live in the canonical companions under `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -92,7 +93,7 @@ Exact fingerprints, package boundaries, dependencies, controlled tags, freshness
 
 The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44 provenance-complete**, and every explicitly current-standard-complete third-party family in public accounting has zero package gaps. Selective tracked corpora remain bounded by the individual units actually admitted; they are not counted as whole-family complete. Every governed third-party unit must continue to retain truthful provenance and exact-version verification evidence; unknown facts remain unknown rather than inferred.
 
-Static verification is not behavioral validation. `verified` means the exact bound material passed structured semantic review. `validated` requires representative external behavioral/adversarial evidence that actually exists. `rejected` and `retired` remain prior art but are excluded from normal unchanged selection.
+Static verification is not package-security validation or behavioral validation. `verified` means the exact bound material passed structured semantic review. `validated` requires representative external behavioral/adversarial evidence that actually exists. Package-security state is separate under `docs/security-scanning.md`; no historical record inherits a security pass merely because it is `verified`. `rejected` and `retired` remain prior art but are excluded from normal unchanged selection.
 
 The authority hard fail remains controlling: procedures that can mutate or materially affect infrastructure, external state, production traffic, money-bearing resources, credentials, subscriptions, DNS/routing, security controls, user communications, notifications, identity/access, persistent cloud resources, destructive lifecycle state, or sensitive-data disclosure require a real authorization boundary appropriate to the action.
 
@@ -124,4 +125,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-The narrative capability program is complete. Continue in post-completion maintenance mode: verify source freshness and high-salience omission risk, resolve bounded candidate/source evaluations decisively, keep issue/PR lifecycle debt at zero where actionable, and add selective behavioral/adversarial evidence only when an authorized external environment can produce truthful evidence. Do not invent repository runtime or architecture merely to create work.
+The narrative capability program is complete. Continue in post-completion maintenance mode: verify source freshness and high-salience omission risk, resolve bounded candidate/source evaluations decisively, backfill exact-version package-security evidence in risk order, keep issue/PR lifecycle debt at zero where actionable, and add selective behavioral/adversarial evidence only when an authorized external environment can produce truthful evidence. Do not invent user-facing repository runtime merely to create work; bounded governed maintenance automation is permitted.

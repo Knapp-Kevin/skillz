@@ -4,9 +4,9 @@ You do not need to understand skills, write code, clone repositories, or browse 
 
 **Give your AI the GitHub link to this repository. That is enough to start.**
 
-`skillz` is passive. The host agent reads the repository, reasons over legitimately available context, and creates or hands off a fitted skill system using capabilities it already has.
+`skillz` is runtime-passive for normal users. The host agent reads the repository, reasons over legitimately available context, and creates or hands off a fitted skill system using capabilities it already has. Maintainer-side security automation is separate and never a bootstrap prerequisite.
 
-There is no CI, runtime, test harness, or executable proof requirement.
+There is no CI, runtime, test harness, or executable proof requirement for normal bootstrap. Repository maintenance may use bounded CI/scanner tooling to establish corpus evidence.
 
 ## Where generated skills go
 
@@ -28,7 +28,7 @@ Then:
 2. translate those patterns into capability requirements before searching by skill name;
 3. compare existing user/project skills, the local library, governed third-party records, the pinned 500+ reference corpus when available, and relevant tracked upstream references;
 4. inspect both whole-skill fit and reusable components, including required scripts, templates, references, fixtures, or other package material;
-5. gate unchanged third-party reuse on exact-version quality, provenance, licensing, dependencies, authority, portability, identity confidence, and user fit;
+5. gate unchanged third-party reuse on exact-version semantic quality, applicable package-security evidence, provenance, licensing, dependencies, authority, portability, identity confidence, and user fit;
 6. choose explicitly among reuse, refinement, adaptation, supplementation, composition, custom creation, helper/checklist, dynamic handling, or no skill;
 7. compose the smallest coherent system;
 8. adapt artifacts to the actual host instead of assuming one product's format;
@@ -55,7 +55,7 @@ Do not rebuild from zero.
 
 Both are prior-art and discovery surfaces. **Availability does not create blanket trust.** A reference can be valuable for comparison, component extraction, or adaptation even when it has not earned unchanged-reuse eligibility.
 
-An unchanged third-party skill is eligible for consideration only when its individual exact-version state is `verified` or `validated` and the remaining provenance, license, dependency, authority, portability, identity, and fit conditions are acceptable.
+An unchanged third-party skill is eligible for consideration only when its individual exact-version semantic state is `verified` or `validated`, any applicable package-security state is `passed` or explicitly `findings-reviewed`, and the remaining provenance, license, dependency, authority, portability, identity, and fit conditions are acceptable.
 
 - `unverified`: reference/design evidence only;
 - `trusted-baseline`: legacy characterization only;
@@ -70,6 +70,8 @@ The quality model is defined in [`docs/skill-verification.md`](docs/skill-verifi
 
 - `verified` means the exact skill/package version passed structured semantic review.
 - `validated` means the verified material also received representative scenario/adversarial semantic review.
+
+These semantic states do not imply a package-security pass. Security state is governed separately by [`docs/security-scanning.md`](docs/security-scanning.md).
 
 These are best-effort judgments about instruction and package quality. They are not guarantees about the capability or compliance of any particular model.
 

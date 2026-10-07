@@ -4,10 +4,10 @@
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-721-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
-![Repository](https://img.shields.io/badge/repository-passive-blueviolet)
+![Repository](https://img.shields.io/badge/repository-runtime--passive%20%7C%20maintenance--active-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A passive skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, controlled tags, source context, and static catalog snapshots. The external host agent is the active system.
+**A runtime-passive, maintenance-active skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, security evidence, controlled tags, source context, and static catalog snapshots. The external host agent remains the active user-facing system.
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure.
 
@@ -15,7 +15,7 @@
 
 ## What `skillz` is
 
-`skillz` is entirely passive. The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services.
+`skillz` is **runtime-passive for consumers**. It owns no user-facing runtime, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Repository maintainers may use bounded CI, scanners, tests, and other maintenance tooling to establish evidence about the corpus. That tooling is never a normal-use prerequisite or a runtime supplied to host agents.
 
 The repository provides four surfaces:
 
@@ -23,6 +23,7 @@ The repository provides four surfaces:
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
 4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
+5. **Exact-version package-security policy and evidence** under [`docs/security-scanning.md`](docs/security-scanning.md) and [`registry/security/`](registry/security/), backed by pinned maintainer-side scanning.
 
 Third-party packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those remain upstream package material, not repository-owned execution machinery.
 
@@ -36,7 +37,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-The registry contains **22 unique source identities** and **721 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply behavioral validation or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+The registry contains **22 unique source identities** and **721 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply a package-security pass, behavioral validation, or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. Security state is recorded separately; for SkillSpector-compatible packages, new unchanged admission or refresh eligibility requires `passed` or explicitly `findings-reviewed` security evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|
@@ -85,7 +86,7 @@ The bounded controlled-taxonomy conformance audit in #342 is **closed completed*
 
 ## Discovery and admission
 
-**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → exact-version security scan → decisive admission result → repository persistence when justified → user-fit decision**
 
 New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-intake.md). Discovery scores, popularity, official branding, creator reputation, or catalog recommendations are signals only. Restricted or unclear-license material remains reference-only unless terms justify another role.
 
@@ -102,10 +103,13 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 | [`registry/sources.yaml`](registry/sources.yaml) | Source identities, roles, pins, licenses, paths |
 | [`registry/skills/`](registry/skills/) | Mandatory per-skill provenance companions |
 | [`registry/verification/`](registry/verification/) | Exact-version semantic review evidence |
+| [`registry/security/`](registry/security/) | Exact-version package-security evidence |
+| [`registry/security-tools.yaml`](registry/security-tools.yaml) | Pinned maintainer security-tool identity and policy |
+| [`docs/security-scanning.md`](docs/security-scanning.md) | Security scanning, state, licensing, CI, and backfill contract |
 | [`engine/skills/`](engine/skills/) | Passive repository-use/curation procedures |
 | [`docs/GOVERNANCE_INDEX.md`](docs/GOVERNANCE_INDEX.md) | Current governance precedence |
 | [`docs/SYSTEM_STATE.md`](docs/SYSTEM_STATE.md) | Current live corpus and architecture snapshot |
 
 ## Licensing
 
-First-party content is MIT-licensed. Third-party repositories and materially derived content retain their applicable upstream obligations; the root MIT license does not relicense pinned source corpora. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`docs/third-party-provenance.md`](docs/third-party-provenance.md).
+First-party content is MIT-licensed. Third-party repositories and materially derived content retain their applicable upstream obligations; the root MIT license does not relicense pinned source corpora. NVIDIA SkillSpector is used as a pinned external Apache-2.0 maintenance dependency and is not vendored or relicensed here. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md), [`docs/third-party-provenance.md`](docs/third-party-provenance.md), and [`docs/security-scanning.md`](docs/security-scanning.md).
