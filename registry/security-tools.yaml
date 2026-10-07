@@ -1,0 +1,26 @@
+version: 1
+security_tools:
+  skillspector:
+    name: NVIDIA SkillSpector
+    role: exact-version skill package security scanner
+    source: https://github.com/NVIDIA/SkillSpector
+    license: Apache-2.0
+    integration: external-maintenance-dependency
+    vendored: false
+    upstream_release: v2.12.0
+    upstream_revision: c7958a3268d9498644b22edb75d0f051bbc8cbfc
+    routine_mode: static-only
+    install:
+      method: pip-git
+      spec: git+https://github.com/NVIDIA/SkillSpector.git@c7958a3268d9498644b22edb75d0f051bbc8cbfc
+    gate:
+      fail_on_findings: true
+      fail_on_incomplete: true
+      min_coverage_percent: 100
+    network:
+      static_file_content_to_llm: false
+      osv_dependency_coordinate_lookup: true
+    notes:
+      - Do not follow main or a mutable tag silently.
+      - Semantic verification and security state are separate evidence dimensions.
+      - Vendoring or redistributing SkillSpector source requires a fresh Apache-2.0 notice review.
