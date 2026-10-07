@@ -21,13 +21,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root (set `GITHUB_TOKEN` — five search queries burn unauthenticated rate limits fast):
-
-   ```
-   node scripts/pulse-run.ts --sources skills/github-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch github.com/trending (weekly view) — the search API measures new repos, trending measures acceleration of existing ones; both matter. HN/Reddit searches catch the story behind a spike.
 3. **Filter.** For each candidate: real code or README-ware? active maintainer? does it duplicate something we already vendored/adopted (check INDEX.md and the registry)?
@@ -50,5 +44,5 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Notes
 
-- Cross-check picks against `registry/candidates.yaml` before recommending — a repo already rejected there needs new evidence, not a re-pitch.
+- When the host exposes prior intake decisions, cross-check picks against them before recommending; a repository already rejected there needs new evidence, not a re-pitch.
 - Handoff: skill-shaped finds go to skills-pulse's registry-proposal flow; tool-shaped finds can become BACKLOG items.
