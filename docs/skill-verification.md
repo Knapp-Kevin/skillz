@@ -4,7 +4,7 @@ Source reputation and skill quality are separate facts.
 
 A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. Availability alone never establishes trusted unchanged-selection eligibility.
 
-`skillz` is a passive instruction repository. Its quality surface is therefore the **meaning and likely interpretation of its text and complete skill package**, not a runtime owned by this repository. Verification and validation are semantic, reviewer-driven, and probabilistic.
+`skillz` is runtime-passive for consumers. Its semantic quality surface is therefore the **meaning and likely interpretation of its text and complete skill package**, not a user-facing runtime owned by this repository. Semantic verification and validation remain reviewer-driven and probabilistic; package-security evidence is a separate maintainer-side dimension governed by `docs/security-scanning.md`.
 
 ## Quality lifecycle
 
@@ -17,11 +17,13 @@ any assessed state -> stale
 - `verified` means the exact fingerprint passed the structured semantic quality gate below.
 - `validated` means a verified exact version also received representative scenario/adversarial semantic review and remained coherent under those readings.
 - `unverified` remains useful as design/reference evidence while review is pending but is not silently trusted for unchanged installation.
+
+These semantic states do not encode package-security status. A skill may be semantically `verified` while security is `not-run`, `failed`, `incomplete`, or `stale`. Security state is recorded independently.
 - `trusted-baseline` is retained only for historical compatibility. It is not eligible for current unchanged selection.
 - `stale` means the reviewed content or material evidence changed enough that the previous judgment should not be silently inherited.
 - `rejected` and `retired` are excluded from normal unchanged selection.
 
-Neither `verified` nor `validated` is a mathematical guarantee that every model will behave identically. Models are probabilistic. The repository's responsibility is to make the material clear, bounded, useful, internally coherent, and reasonably resistant to obvious misinterpretation. It is not responsible for proving that arbitrary models are sufficiently capable.
+Neither `verified` nor `validated` is a mathematical guarantee that every model will behave identically, nor does either state imply that an executable/package-level security scan passed. Models are probabilistic. The repository's responsibility is to make semantic claims explicit and to keep package-security evidence separate and truthful.
 
 ## What is not required
 
@@ -118,7 +120,7 @@ No upstream source is auto-upgraded merely because a newer commit exists.
 
 ## Selection semantics
 
-- `verified`, `validated`: eligible for unchanged consideration if fingerprint/identity, provenance, dependencies, authority, portability, and user fit match.
+- `verified`, `validated`: eligible for unchanged consideration only if fingerprint/identity, provenance, dependencies, authority, portability, user fit, and applicable package-security state also match. For scanner-compatible packages, security must be `passed` or explicitly `findings-reviewed` under `docs/security-scanning.md`.
 - `unverified`: design evidence only by default.
 - `trusted-baseline`: legacy characterization only; blocked from unchanged selection until structured review replaces it.
 - `stale`, `rejected`, `retired`: excluded from normal unchanged selection.
