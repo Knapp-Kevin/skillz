@@ -5,6 +5,9 @@ on:
     paths:
       - "skills/**"
       - "engine/skills/**"
+      - ".github/workflows/skillspector.yml"
+      - "docs/security-scanning.md"
+      - "registry/security-tools.yaml"
   workflow_dispatch:
     inputs:
       scope:
@@ -117,6 +120,16 @@ jobs:
                       )
                   elif len(parts) >= 2 and parts[:2] == ("engine", "skills"):
                       targets.update(manifest_roots(root / "engine" / "skills"))
+                  elif rel in {
+                      ".github/workflows/skillspector.yml",
+                      "docs/security-scanning.md",
+                      "registry/security-tools.yaml",
+                  }:
+                      # A security-control change must exercise a real package,
+                      # not merely prove that the YAML parses.
+                      smoke = root / "engine" / "skills" / "skill-bootstrap"
+                      if (smoke / "SKILL.md").is_file():
+                          targets.add(smoke)
           else:
               scope = os.environ.get("MANUAL_SCOPE") or "first-party"
               if scope == "all":
