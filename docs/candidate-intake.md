@@ -2,11 +2,11 @@
 
 `skillz` uses an **issue-first admission workflow** for newly discovered third-party skills and source families.
 
-This policy refines the discovery and curation lifecycle in `docs/curation-policy.md`. It does not change the passive repository boundary: the external host agent performs discovery, inspection, evaluation, scoring, fingerprinting, behavioral validation, and any external action. The repository stores instructions and resulting evidence only.
+This policy refines the discovery and curation lifecycle in `docs/curation-policy.md`. It preserves the runtime-passive boundary for normal users while allowing bounded maintainer-side automation. The external host agent still performs user-facing discovery, fit decisions, behavioral validation, and external actions; repository maintenance may use governed scanners/CI to establish exact-version corpus evidence.
 
 ## Standard lifecycle
 
-**discovery surface → candidate issue → source/terms vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → optional later external behavioral evidence → user-fit decision**
+**discovery surface → candidate issue → source/terms vetting → exact-version static evaluation → exact-version package-security scan → decisive admission result → repository persistence when justified → optional later external behavioral evidence → user-fit decision**
 
 A candidate issue is required before a newly discovered third-party skill or source family is admitted to the governed corpus.
 
@@ -36,6 +36,8 @@ The issue is the pre-admission evidence workspace. Establish, when applicable:
 - controlled taxonomy tags;
 - overlap and differentiation against the existing governed corpus;
 - structured exact-version semantic review and score;
+- exact-version package-security state and scanner identity when the package is compatible with the governed scanner;
+- active security findings and their dispositions, if any;
 - behavioral-evidence state, which remains `not-run` unless representative external evaluation actually occurred;
 - useful mechanisms for adaptation/extraction even when unchanged reuse is rejected;
 - a decisive result.
@@ -62,7 +64,7 @@ Before the issue reaches a justified admission result:
 - do not create final provenance or verification companions that imply admission or review completion;
 - do not count the candidate in governed corpus totals.
 
-After admission is justified, persist only the material appropriate to the decision and bind provenance/verification metadata to the **exact evaluated identity**. A newly admitted governed skill is not complete until those companions exist. If source material remains external or reference-only, metadata must say so truthfully.
+After admission is justified, persist only the material appropriate to the decision and bind provenance, verification, and applicable security evidence to the **exact evaluated identity**. A newly admitted governed skill is not complete for unchanged reuse until those companions exist. If source material remains external or reference-only, metadata must say so truthfully.
 
 Rejection is a valid result. Preserve the reason so later agents do not repeatedly rediscover the same defect or duplication problem.
 
@@ -78,7 +80,7 @@ When an existing governed skill lacks required provenance or exact-version metad
 4. do not count the record as companion-complete or statically complete until repaired;
 5. preserve the correction through normal repository history.
 
-This is passive governance enforcement. It requires no repository-owned scanner, CI job, script, test runner, or background process. The external agent checks the contract during curation and records the resulting evidence.
+This is runtime-passive governance with bounded maintenance automation. Normal users require no repository-owned scanner, CI job, script, test runner, or background process. Under explicit repository maintenance, the pinned SkillSpector workflow may establish package-security evidence and fail closed without becoming a consumer prerequisite.
 
 ## Source-family issues versus individual-skill issues
 
