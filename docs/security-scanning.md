@@ -21,7 +21,7 @@ The repository invokes SkillSpector as an **external maintenance dependency** an
 | Exact commit | `c7958a3268d9498644b22edb75d0f051bbc8cbfc` |
 | License | Apache-2.0 |
 | Routine mode | static-only (`--no-llm`) |
-| Default gate | fail on findings, incomplete analysis, or coverage below 100% |
+| Default gate | fail on findings or incomplete/partial analysis |
 | Network behavior | declared dependency coordinates may be queried against OSV.dev; skill file contents are not sent by the static-only CI gate |
 
 A future scanner update is a repository-maintenance decision. Do not silently follow an upstream branch or mutable tag.
@@ -102,7 +102,7 @@ Routine CI:
 - does not schedule recurring full-corpus scans;
 - fails on active findings;
 - fails on incomplete analysis;
-- requires 100% scanner coverage;
+- fails closed whenever the pinned scanner reports partial or incomplete coverage;
 - installs SkillSpector from the exact pinned commit.
 
 LLM-backed SkillSpector analysis may be used manually as supplemental evidence when justified. It is not required for ordinary CI and must not silently transmit repository content to an external model provider.
