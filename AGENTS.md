@@ -60,7 +60,9 @@ Source reputation does not equal individual verification.
 
 Unchanged third-party reuse requires an individually reviewed exact version whose current semantic state is `verified` or `validated`, acceptable exact-version package-security evidence when the package is scanner-compatible, plus acceptable provenance, license, dependencies, authority, portability, identity confidence, and actual user fit.
 
-- semantic `verified` / `validated` does not imply a security pass; security state is governed separately by `docs/security-scanning.md`.\n- security `not-run`, `failed`, `incomplete`, or `stale`: not eligible for new unchanged admission/refresh where a qualifying package scan is applicable.\n- `unverified` and legacy `trusted-baseline`: reference/design evidence only.
+- semantic `verified` / `validated` does not imply a security pass; security state is governed separately by `docs/security-scanning.md`.
+- security `not-run`, `failed`, `incomplete`, or `stale`: not eligible for new unchanged admission/refresh where a qualifying package scan is applicable.
+- `unverified` and legacy `trusted-baseline`: reference/design evidence only.
 - `stale`: do not inherit the old review silently.
 - `rejected` / `retired`: exclude from normal unchanged selection.
 
