@@ -16,7 +16,7 @@ security_tools:
     gate:
       fail_on_findings: true
       fail_on_incomplete: true
-      min_coverage_percent: 100
+      required_complete_coverage: true
     network:
       static_file_content_to_llm: false
       osv_dependency_coordinate_lookup: true
