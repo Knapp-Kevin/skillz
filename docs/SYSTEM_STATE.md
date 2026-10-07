@@ -21,7 +21,8 @@
 | **Corey Haines Marketing Skills current-standard companions** | **50 / 50** |
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
 | **Evaluation model** | Static semantic review + separate exact-version package-security evidence; optional later external behavioral evidence |
-| **Normal-use runtime/CI requirement** | None |\n| **Maintenance security automation** | Pinned NVIDIA SkillSpector static gate; no scheduled full-corpus scan |
+| **Normal-use runtime/CI requirement** | None |
+| **Maintenance security automation** | Pinned NVIDIA SkillSpector static gate; no scheduled full-corpus scan |
 
 ## Current architecture
 
