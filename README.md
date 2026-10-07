@@ -22,7 +22,8 @@ The repository provides four surfaces:
 1. **44 first-party user-facing skills** under [`skills/`](skills/), all **44/44 provenance-complete**.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
 3. **Governed provenance and exact-version evidence** under [`registry/skills/`](registry/skills/) and [`registry/verification/`](registry/verification/).
-4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.\n5. **Exact-version package-security policy and evidence** under [`docs/security-scanning.md`](docs/security-scanning.md) and [`registry/security/`](registry/security/), backed by pinned maintainer-side scanning.
+4. **Passive repository-use and curation procedures** under [`engine/skills/`](engine/skills/), excluded from user-facing inventory.
+5. **Exact-version package-security policy and evidence** under [`docs/security-scanning.md`](docs/security-scanning.md) and [`registry/security/`](registry/security/), backed by pinned maintainer-side scanning.
 
 Third-party packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those remain upstream package material, not repository-owned execution machinery.
 
@@ -101,7 +102,10 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 | [`CURATION_QUEUE.md`](CURATION_QUEUE.md) | Living curation and source-vetting ledger |
 | [`registry/sources.yaml`](registry/sources.yaml) | Source identities, roles, pins, licenses, paths |
 | [`registry/skills/`](registry/skills/) | Mandatory per-skill provenance companions |
-| [`registry/verification/`](registry/verification/) | Exact-version semantic review evidence |\n| [`registry/security/`](registry/security/) | Exact-version package-security evidence |\n| [`registry/security-tools.yaml`](registry/security-tools.yaml) | Pinned maintainer security-tool identity and policy |\n| [`docs/security-scanning.md`](docs/security-scanning.md) | Security scanning, state, licensing, CI, and backfill contract |
+| [`registry/verification/`](registry/verification/) | Exact-version semantic review evidence |
+| [`registry/security/`](registry/security/) | Exact-version package-security evidence |
+| [`registry/security-tools.yaml`](registry/security-tools.yaml) | Pinned maintainer security-tool identity and policy |
+| [`docs/security-scanning.md`](docs/security-scanning.md) | Security scanning, state, licensing, CI, and backfill contract |
 | [`engine/skills/`](engine/skills/) | Passive repository-use/curation procedures |
 | [`docs/GOVERNANCE_INDEX.md`](docs/GOVERNANCE_INDEX.md) | Current governance precedence |
 | [`docs/SYSTEM_STATE.md`](docs/SYSTEM_STATE.md) | Current live corpus and architecture snapshot |
