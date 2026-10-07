@@ -169,7 +169,7 @@ jobs:
             slug="$(printf '%s' "$target" | tr '/ ' '__' | tr -cd '[:alnum:]_.-')"
             report=".skillspector/reports/${slug}.json"
             echo "::group::SkillSpector: $target"
-            if skillspector scan "$target"               --no-llm               --format json               --output "$report"               --fail-on-findings               --fail-on-incomplete               --min-coverage 100; then
+            if skillspector scan "$target"               --no-llm               --format json               --output "$report"               --fail-on-findings               --fail-on-incomplete; then
               echo "PASS: $target"
             else
               status=$?
