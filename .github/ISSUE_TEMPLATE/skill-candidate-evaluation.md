@@ -32,6 +32,8 @@ This issue is the evaluation workspace. **Do not add candidate skill material or
 - [ ] Controlled taxonomy tags
 - [ ] Duplication / overlap comparison against the existing governed corpus
 - [ ] Structured exact-version semantic review and score
+- [ ] Exact-version package-security scan state and scanner identity when applicable
+- [ ] Active security findings and dispositions, if any
 - [ ] Behavioral-evidence state (`not-run` unless representative external evaluation was actually performed)
 - [ ] Useful extraction/adaptation mechanisms identified even if unchanged reuse is rejected
 
@@ -48,8 +50,8 @@ Choose and justify one or more as appropriate:
 
 ## Admission and persistence rule
 
-Only after the issue records a justified admission decision may `skillz` persist the candidate skill/source material as appropriate and create or finalize its provenance and verification metadata. Persisted metadata must match the exact evaluated identity. Rejection and retirement reasons remain useful evidence and should be preserved.
+Only after the issue records a justified admission decision may `skillz` persist the candidate skill/source material as appropriate and create or finalize its provenance, verification, and applicable security metadata. Persisted metadata must match the exact evaluated identity. Rejection and retirement reasons remain useful evidence and should be preserved.
 
-## Passive boundary
+## Runtime-passive boundary
 
-All discovery, inspection, scoring, verification, behavioral evaluation, installation, and external action are performed by the external host agent/environment under user authority. `skillz` gains no crawler, runtime, evaluator, scheduler, test harness, installer, monitor, or autonomous intake process.
+Normal user discovery, fit decisions, behavioral evaluation, installation, and external action are performed by the external host agent/environment under user authority. `skillz` gains no user-facing crawler, runtime, scheduler, installer, monitor, or autonomous intake process. Explicit repository maintenance may use the governed pinned package-security scanner/CI path to establish exact-version corpus evidence.
