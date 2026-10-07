@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive; the external host agent performs curation under explicit repository-maintenance authority. Detailed exact-version evidence belongs in canonical companions under `registry/`; this ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is runtime-passive for normal users and maintenance-active under explicit repository-maintenance authority. Detailed exact-version evidence belongs in canonical companions under `registry/`; bounded maintainer automation may establish package-security evidence without becoming a user-facing runtime. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
 ## Current governed depth
 
@@ -14,7 +14,7 @@ Historical source-level review evidence remains broader than the one-file compan
 
 ## Curation and admission model
 
-**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → exact-version package-security scan → decisive admission result → repository persistence when justified → user-fit decision**
 
 New third-party discoveries use `docs/candidate-intake.md`. Discovery intelligence never substitutes for canonical upstream identity, license/terms, exact version, or individual quality evidence.
 
@@ -24,9 +24,13 @@ For an active finite source family, recompute the whole remaining frontier befor
 
 ## Mandatory provenance status
 
-The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every source family explicitly represented as current-standard complete below has zero package gaps. Selectively tracked corpora remain bounded to the individual units actually admitted and are not silently counted as whole-family complete. Ongoing enforcement remains documentary/evidentiary through external-agent curation, never repository-owned scripts, CI, scanners, or runtime.
+The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every source family explicitly represented as current-standard complete below has zero package gaps. Selectively tracked corpora remain bounded to the individual units actually admitted and are not silently counted as whole-family complete. Provenance and semantic completion remain documentary/evidentiary; package-security evidence may now be established through the explicitly governed pinned maintainer scanner/CI path without creating a normal-use runtime.
 
 The bounded controlled-taxonomy conformance audit #342 is also **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; do not infer current defects from historical examples without live evidence.
+
+## Package-security backfill
+
+Issue **#402** owns the bounded backfill introduced by the SkillSpector integration. Existing `verified` / `validated` records remain valid semantic evidence but do not inherit a security pass. Backfill priority is first-party, then semantically eligible third-party packages with executable components or consequential authority, then the remaining unchanged-use candidate surface. Security evidence is persisted under `registry/security/` and must bind to the exact package and exact scanner revision.
 
 ## Admitted-source curation
 
@@ -74,7 +78,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Root license: **MIT**, Copyright (c) 2026 Daniel Dewhurst.
 - Exact eligible denominator: **23** first-class `skills/<name>/SKILL.md` packages.
 - Current provenance/verification companions: **23/23**; gaps **0**.
-- All 23 are **VERIFIED unchanged exact-version references**, with static rubric scores **16/20–18/20**.
+- All 23 are **VERIFIED semantic exact-version references**, with static rubric scores **16/20–18/20**. New unchanged-reuse eligibility additionally depends on package-security backfill under #402.
 - Behavioral validation is `not-run` for all 23; upstream tests/evals remain source evidence only.
 - Main portability caveat: the corpus assumes the upstream Markdown/YAML Story Skills project schema and often an optional upstream `story` CLI.
 - `story-maintenance` packages a local Node fallback with explicit validate/reindex/rename/move/remove/repair operations. That runtime remains upstream-only and is not adopted by `skillz`.
@@ -94,7 +98,7 @@ Individual fingerprints, package trees, freshness evidence, dependencies, contro
 
 Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` **17/20 VERIFIED**, `schema` **17/20 VERIFIED**, `seo-audit` **17/20 VERIFIED**, `signup` **15/20 REJECTED unchanged**, `site-architecture` **17/20 VERIFIED**, `sms` **13/20 REJECTED unchanged**, `social` **14/20 REJECTED unchanged**, and `video` **13/20 REJECTED unchanged**. `VERIFIED` denotes successful exact-version static semantic review, not behavioral validation or automatic unchanged-use eligibility.
 
-**Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded unchanged-use candidates. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
+**Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded semantic candidates for unchanged use pending applicable package-security evidence. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
@@ -110,7 +114,7 @@ Discovery proceeds in parallel without displacing current-standard source mainte
 
 ## Lifecycle hygiene
 
-At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after a material tranche; preserve the passive architecture.
+At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after a material tranche; preserve the runtime-passive/maintenance-active architecture.
 
 ## Historical authority boundary
 
