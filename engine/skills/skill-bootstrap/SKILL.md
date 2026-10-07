@@ -153,6 +153,7 @@ Check, as far as the host can truthfully establish:
 - source/provenance;
 - exact version/fingerprint;
 - semantic quality state;
+- applicable exact-version package-security state;
 - license/attribution;
 - required supporting components and dependencies;
 - authority/side effects;
@@ -160,7 +161,9 @@ Check, as far as the host can truthfully establish:
 
 Rules:
 
-- `verified` or `validated` plus matching exact identity may be considered unchanged;
+- `verified` or `validated` plus matching exact identity may satisfy the semantic quality dimension;
+- scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed` under `docs/security-scanning.md` for unchanged reuse;
+- security `not-run`, `failed`, `incomplete`, or `stale` remains adaptation/design evidence only until the security gap is resolved;
 - `unverified` and legacy `trusted-baseline` are design evidence only;
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection;
 - never invent an exact identity match.
@@ -349,7 +352,7 @@ Do not end at recommendations if complete artifacts can be produced.
 - Extract mechanisms without importing unnecessary ceremony.
 - Preserve required skill-owned components unless there is a specific reason to change them.
 - Component reuse does not bypass provenance, licensing, dependencies, authority, or rejection reasons.
-- `verified` and `validated` are the only current unchanged-reuse quality states.
+- `verified` and `validated` are the only current unchanged-reuse semantic quality states; applicable package-security evidence is an additional independent gate.
 - Never fabricate identity, review state, installation, artifacts, or evidence.
 - Do not mine unrelated private connectors.
 - During normal bootstrap, `skillz` is read-only and never the destination for generated or adapted user skills.
