@@ -4,11 +4,11 @@
 
 This file maps the current control surfaces for `skillz`.
 
-`skillz` is a **passive skill knowledge resource**. The external host agent is the active system. The repository owns no runtime, scripts, tests, CI workflow, scheduler, monitor, crawler, installer, synchronizer, preflight process, generator, background service, vector database, autonomous observer, or personalization service.
+`skillz` is a **runtime-passive, maintenance-active skill knowledge resource**. The external host agent is the active user-facing system. Normal use requires no repository runtime, CI, scanner, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Explicit `REPOSITORY_MAINTENANCE` may use bounded CI, scanners, tests, and related tooling to establish repository evidence.
 
 During normal `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER` use, the repository is also **read-only reference material**. Skills created, adapted, composed, refined, packaged, or installed for a user belong in the user's active host/environment or in a portable handoff. They do not belong in `skillz`. Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation.
 
-Historical Qor, alpha, CI, preflight, runtime, generator, evaluator, and test-era artifacts are historical evidence only unless a current Tier 1 document explicitly re-establishes a static documentation requirement from them. They never override the passive-repository invariant.
+Historical Qor, alpha, CI, preflight, runtime, generator, evaluator, and test-era artifacts are historical evidence only unless a current Tier 1 document explicitly re-establishes a current maintenance requirement from them. They never create a consumer runtime requirement or override the runtime-passive boundary.
 
 ## Tier 1: current repository identity and state
 
@@ -54,7 +54,7 @@ The connected Creator Technical Resource Catalog is an intentional internal disc
 
 For new third-party discoveries, the definitive lifecycle begins with an evaluation issue before corpus admission:
 
-**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → decisive admission result → repository persistence when justified → user-fit decision**
+**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → exact-version security scan → decisive admission result → repository persistence when justified → user-fit decision**
 
 The candidate issue is the pre-admission evidence workspace. Do not persist a newly discovered candidate as governed corpus material or finalize provenance/verification companions before the issue establishes a justified admission result.
 
@@ -80,7 +80,22 @@ Static source completion requires an established eligible denominator and a deci
 
 For historically reviewed admitted corpora, current-standard companion reconciliation must begin by checking existing companions and recoverable prior evidence. Re-review only genuine evidence gaps; do not erase or duplicate trustworthy prior work merely because the storage contract became stricter.
 
-## Tier 4: passive catalog and browsing surfaces
+## Tier 4: exact-version package-security evidence
+
+These establish a separate package-security dimension. Security scanning does not replace semantic review, provenance, licensing, authority, portability, behavioral evidence, or user fit.
+
+| Artifact | Path | Freshness contract |
+|---|---|---|
+| Security scanning policy | `docs/security-scanning.md` | canonical scanner boundary, security states, fail-closed rules, licensing, CI, and backfill policy |
+| Security-tool registry | `registry/security-tools.yaml` | exact scanner identity, release, revision, license, mode, and gate configuration |
+| Exact-version security records | `registry/security/` | persisted package-bound security evidence and finding dispositions |
+| Maintainer CI gate | `.github/workflows/skillspector.yml` | changed-package static scan using the exact registered SkillSpector revision |
+
+Semantic `verified` or `validated` state never implies a security pass. For scanner-compatible packages, new unchanged admission or refresh eligibility requires security `passed` or `findings-reviewed`. Existing historical semantic reviews remain valid as semantic evidence but must not be relabeled as security-reviewed without an actual qualifying scan.
+
+The maintainer workflow is deliberately static-only by default, fail-closed on findings or incomplete coverage, exact-version pinned, and unscheduled. It is repository maintenance automation, not a runtime or prerequisite for normal users.
+
+## Tier 5: passive catalog and browsing surfaces
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
@@ -91,7 +106,7 @@ For historically reviewed admitted corpora, current-standard companion reconcili
 
 `INDEX.md` and `index.json` are **static catalog snapshots**. The repository does not own or require a catalog generator, idempotency script, executable refresh step, or materialization preflight. The external host agent may reconcile these files directly from evidence available through its legitimate repository/API/file capabilities only when operating under explicit repository-maintenance authority.
 
-## Tier 5: behavioral evidence
+## Tier 6: behavioral evidence
 
 Behavioral validation is optional later evidence for consequential or high-use skills after static corpus completion.
 
@@ -101,7 +116,7 @@ Behavioral validation is optional later evidence for consequential or high-use s
 
 `skillz` does not own an evaluator, test harness, scenario runner, fixtures pipeline, benchmark, or behavioral-validation runtime. Absence of behavioral evidence does not invalidate a completed static review; it simply means behavioral validation has not been established.
 
-## Tier 6: authority and handoff safety
+## Tier 7: authority and handoff safety
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
@@ -130,9 +145,9 @@ When a current control surface changes:
 4. if exact evidence cannot be established, mark the state pending instead of guessing;
 5. distinguish source context from individual skill quality;
 6. distinguish terminology such as `vendored` from obsolete physical `vendor/...` path assumptions;
-7. treat any current first-party claim that `skillz` runs, executes, schedules, monitors, crawls, installs, fetches, synchronizes, generates, tests, validates, or operates something as architecture/documentation drift;
+7. treat any current claim that normal consumers require repository runtime, CI, scanners, scripts, tests, schedulers, monitors, crawlers, installers, synchronizers, or background services as architecture/documentation drift; bounded maintenance automation explicitly defined by current governance is allowed;
 8. treat any normal-use instruction that makes `skillz` the destination for a user-derived skill, or implies that `CREATE` means repository admission, as architecture/documentation drift;
 9. treat any governed user-facing skill lacking truthful provenance evidence as corpus-completeness drift;
-10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review and a justified admission decision as admission-process drift;
+10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review, applicable exact-version security scanning, and a justified admission decision as admission-process drift;
 11. treat any discovery-surface score, verification label, creator attribution, or recommendation copied into governed provenance/quality evidence without independent canonical-source verification as evidence-process drift;
 12. treat unnecessary re-review of historically reviewed exact material, when compatible prior evidence can be recovered, as curation-process drift.
