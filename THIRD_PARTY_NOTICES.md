@@ -36,6 +36,16 @@ These sources are referenced for standards, discovery, or selective individual c
 
 Tracked discovery or source registration does not imply endorsement, redistribution, or verification of every contribution. Individual unchanged-reuse eligibility remains bound to exact per-skill provenance and verification evidence.
 
+## External maintenance dependencies
+
+These tools may be invoked by repository-maintenance automation but are **not vendored or redistributed as part of `skillz`**.
+
+| Tool | Repository | License | Exact integration identity | Role |
+|---|---|---|---|---|
+| NVIDIA SkillSpector | `NVIDIA/SkillSpector` | Apache-2.0 | `v2.12.0` / `c7958a3268d9498644b22edb75d0f051bbc8cbfc` | exact-version skill-package security scanning |
+
+Using an external dependency does not relicense this repository or that dependency. If SkillSpector source is later copied, modified, or redistributed from this repository, the Apache-2.0 redistribution requirements and applicable upstream/third-party notices must be satisfied explicitly.
+
 ## Local adaptations
 
 A local skill under `skills/` may be covered by the repository's MIT license when it is independently authored from general ideas or patterns.
