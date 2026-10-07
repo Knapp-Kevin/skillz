@@ -20,8 +20,8 @@ A recurring inventory of the agent fleet's blast radius: every MCP server, allow
 
 ## Execution Flow
 
-1. **Inventory connected MCP servers.** From the active MCP configuration, list each server and enumerate its tool surface. Classify each server by the permission tiers in `docs/evaluation-framework.md`, using its highest-impact tool.
-2. **Review permission settings.** Read Claude Code `settings.json` and `settings.local.json` allowlists (Bash patterns, tool permissions) and configured hooks. Flag broad patterns (wildcards, whole-command allowances) and hooks that execute with write or network access.
+1. **Inventory connected MCP servers.** From the active MCP configuration, list each server and enumerate its tool surface. Classify each server by its highest-impact tool using these tiers: read-only, plan-only, generate, staging-write, production-write, identity, cost, or destructive.
+2. **Review permission settings.** Read the active host's user and local permission settings, including command/tool allowlists and configured hooks. Flag broad patterns (wildcards, whole-command allowances) and hooks that execute with write or network access.
 3. **Map reachable credentials.** Identify credentials agents can reach: environment variables, credential files in readable paths, tokens embedded in MCP server configs. Record what each credential unlocks, not its value.
 4. **Ask "when was this last needed?" per item.** Check transcripts, logs, or git history where available; where no evidence exists, mark last-use unknown — unknown is a finding, not a pass.
 5. **Rank findings by risk.** Highest first: unused high-tier access (an idle `destructive` or `identity` capability), then broad allowlist patterns, then credentials with no identified consumer, then stale but low-tier items.
