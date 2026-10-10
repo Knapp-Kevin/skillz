@@ -275,7 +275,7 @@ jobs:
               records.append(rec)
               print("SECURITY_RECEIPT " + json.dumps(rec, sort_keys=True))
           (root / "evidence.jsonl").write_text(
-              "".join(json.dumps(r, sort_keys=True) + "\\n" for r in records),
+              "".join(json.dumps(r, sort_keys=True) + "\n" for r in records),
               encoding="utf-8"
           )
           print(f"Evidence receipts: {len(records)} / targets: {len(targets)}")
