@@ -257,7 +257,7 @@ jobs:
                       "risk_score": risk.get("score"),
                       "risk_severity": risk.get("severity"),
                       "risk_recommendation": risk.get("recommendation"),
-                      "coverage": report.get("coverage"),
+                      "coverage": report.get("analysis_completeness"),
                       "result": "report-available",
                       "security_state": "pending-evidence-review",
                       "run_id": os.getenv("GITHUB_RUN_ID"),
