@@ -20,13 +20,7 @@ Vendor pulse for OpenAI: official releases and community reception, synthesized 
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root (this skill's `sources.json` drives the shared engine):
-
-   ```
-   node scripts/pulse-run.ts --sources skills/openai-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools — same shape, no script required.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the listed pages (API changelog, news, ChatGPT release notes) and run the listed web searches; the changelog pages are JS-rendered, so search results often beat raw fetches.
 3. **Synthesize.** Deprecations and pricing changes first; then model/feature releases; then SDK/repo activity worth acting on; then community sentiment. Do not paste raw output.

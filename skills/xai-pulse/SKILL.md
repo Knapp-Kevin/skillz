@@ -20,13 +20,7 @@ Vendor pulse for xAI's Grok family. Sources are data (`sources.json`), synthesis
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/xai-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch x.ai/news and the API release notes; run the searches. Much xAI news lands on X itself — the web searches are the primary channel, not a fallback.
 3. **Synthesize.** API changes and pricing first; model releases; community reception (note: Grok discourse is noisy — weight technical threads over culture-war ones).
