@@ -77,7 +77,10 @@ Establish, as far as the host permits:
 - read/write/tool capabilities;
 - host/surface;
 - installation/packaging capability;
-- privacy, cost, and authority limits.
+- privacy, cost, and authority limits;
+- four capability axes: **persistence** (yes/no/unknown), **user-in-the-loop** (yes/no/unknown), **scheduling** (yes/no/unknown), and **side-effect authority** (read-only/approval-gated/autonomous/unknown). A host's actual controls, not an agent's self-label, determine these values.
+
+For FIRST_VISIT or RETURNING_USER, use the [first-contact discovery walkthrough](../../../docs/first-contact-discovery.md) to produce a compact host-profile receipt. Do not create a mandatory persistent file or assume storage. If writing is unavailable or unauthorized, include the receipt in the reply or portable handoff. Never treat a receipt as permission to perform actions.
 
 Use the strongest path actually available: repository-native, connector/API/web, or minimal read-only.
 
@@ -99,6 +102,8 @@ For each candidate need record:
 Do not mine unrelated private connectors merely because they are accessible.
 
 Stop when more evidence is unlikely to change the capability requirements. Mark thinly supported items `PROVISIONAL`; never invent unavailable history.
+
+Use a **fit checklist**, not a list of familiar skill names: operator role and current goals; tools and authority; recurring cadences; costly failure modes; preferred handoff/verification; what is already working. Prefer evidence already in scope and ask only for details that materially change the fit. Exclude unrelated private data.
 
 **Output:** short durable-need list.
 
@@ -141,6 +146,8 @@ For each relevant candidate inspect:
 - **component value** such as triggers, safeguards, decision gates, evidence rules, procedure fragments, failure handling, or abstractions.
 
 Stop when every material requirement has an adequate candidate path or a justified custom/dynamic/no-skill path.
+
+For first contact, map needs to categories before names, note where adjacent skills are merely *reference* rather than eligible unchanged, and state what was deliberately deferred. Do not read the entire registry as a ritual.
 
 **Output:** capability-to-candidate/component map.
 
@@ -360,3 +367,7 @@ Do not end at recommendations if complete artifacts can be produced.
 - Do not make repository-maintenance tooling a user prerequisite.
 - Stop evidence/search expansion when it is no longer decision-relevant.
 - Prefer the smallest coherent system over maximum skill count.
+
+## Portable first-contact receipt
+
+For FIRST_VISIT and RETURNING_USER, include a compact receipt in the handoff: route; capability axes (including unknowns); durable needs; shortlist with ADOPT/ADAPT/COMPOSE/NO CHANGE decisions and verification/identity constraints; proposed activation mode conditional on the host; installation state; and one next action or `none`. Prefer deriving activation behavior from capabilities and approvals, **not** a universal per-skill `runtime-tier` that would misstate support in headless or single-session environments. `background` does not imply authority to schedule or autonomously act. The receipt is an output record, not a new `skillz` file, remote service, or compliance bypass. See [the walkthrough](../../../docs/first-contact-discovery.md).

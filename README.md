@@ -9,7 +9,7 @@
 
 **A runtime-passive, maintenance-active skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, security evidence, controlled tags, source context, and static catalog snapshots. The external host agent remains the active user-facing system.
 
-> **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure.
+> **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure. The [first-contact discovery walkthrough](docs/first-contact-discovery.md) provides a capability-aware checklist and example handoff; direct skill lookup stays lightweight.
 
 > **Normal-use boundary:** skills created, adapted, composed, or refined for a user belong in that user's active AI/agent environment or in a portable handoff. They are not written back here unless repository maintenance/curation was explicitly requested.
 
@@ -95,6 +95,8 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 | Area | Purpose |
 |---|---|
 | [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Agent routing and capability floor |
+| [`docs/first-contact-discovery.md`](docs/first-contact-discovery.md) | Capability-aware first-visit walkthrough and portable receipt |
+| [`CHANGES.md`](CHANGES.md) | Dated material repository changes; no adoption claims inferred |
 | [`AGENTS.md`](AGENTS.md) | Repository-wide agent contract |
 | [`skills/`](skills/) | First-party user-facing corpus |
 | [`skills/sources/`](skills/sources/) | Intact exact-revision external reference corpora |
