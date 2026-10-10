@@ -17,7 +17,7 @@ Choose exactly one route:
 - **RETURNING_USER** — an existing fitted skill system should be reviewed/refined.
 - **REPOSITORY_MAINTENANCE** — the user explicitly wants to change `skillz` itself.
 
-For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md`.
+For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md` and use the [first-contact discovery walkthrough](docs/first-contact-discovery.md) to collect host capabilities and choose candidate skills without guessing. `DIRECT_LIBRARY` remains a lightweight route; it does not require a full bootstrap.
 
 ### Destination invariant
 
@@ -34,6 +34,12 @@ In particular:
 - a useful user-generated skill does not become a repository-admission candidate automatically.
 
 Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation, and that work follows repository-maintainer governance rather than normal bootstrap.
+
+### First-contact receipt (FIRST_VISIT and RETURNING_USER only)
+
+Before recommending a fitted system, record the four capability axes described in [the walkthrough](docs/first-contact-discovery.md): persistence, user-in-the-loop, scheduling, and side-effect authority. Record unknowns honestly. A small receipt may live in the host environment **only when authorized and supported**; otherwise return it inline or with the portable handoff. This is an evidence handoff, **not a repository runtime gate**, and it never authorizes installation, scheduling, writes, or background activity.
+
+The host's task and safety policies always override discovery suggestions. The walkthrough makes the normal bootstrap difficult to misread, not impossible to bypass: consumers of a directly named skill may use `DIRECT_LIBRARY` without ceremony.
 
 ## 2. Do not invent host prerequisites
 
