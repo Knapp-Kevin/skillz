@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: data-lifecycle-review
+source_id: local-skills
+local_path: skills/data-lifecycle-review/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b30673b509e25382afbce8dc52f32440ebfdbed9
+characterized_at: 2026-10-10
+reviewed_at: 2026-10-10
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+validation_note: No external behavioral evidence was produced.
+package_security_status: not-run
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case: [security, memory, context-management]
+  lifecycle: [planning, maintenance]
+  characteristic: [evidence-first, risk-aware, human-review, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: Passive privacy planning with scoped approval, retention and deletion verification; exact-version external behavioral evidence is absent.
