@@ -259,7 +259,7 @@ jobs:
                       "risk_recommendation": risk.get("recommendation"),
                       "coverage": report.get("analysis_completeness"),
                       "result": "report-available",
-                      "security_state": "pending-evidence-review",
+                      "security_state": ("pending-evidence-review" if report.get("analysis_completeness", {}).get("is_complete") is True else "incomplete"),
                       "run_id": os.getenv("GITHUB_RUN_ID"),
                       "observed_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
                   }
