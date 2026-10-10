@@ -214,3 +214,79 @@ jobs:
               except Exception as exc:
                   print(f"| {report.stem} | ? | report-error | {exc} |")
           PY
+
+      - name: Produce auditable exact-package scan receipts
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import datetime
+          import hashlib
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          root = Path(".skillspector")
+          root.mkdir(exist_ok=True)
+          targets_file = root / "targets.txt"
+          targets = targets_file.read_text(encoding="utf-8").splitlines() if targets_file.exists() else []
+          records = []
+          for target in targets:
+              if not target:
+                  continue
+              slug = "".join(ch if ch.isalnum() or ch in "_.-" else "_" for ch in target)
+              path = root / "reports" / (slug + ".json")
+              try:
+                  raw = path.read_bytes()
+                  report = json.loads(raw)
+                  risk = report.get("risk_assessment", {})
+                  package_tree = subprocess.check_output(
+                      ["git", "rev-parse", "HEAD:" + target], text=True
+                  ).strip()
+                  rec = {
+                      "target": target,
+                      "source_revision": os.getenv("GITHUB_SHA"),
+                      "package_git_tree": package_tree,
+                      "scanner": "NVIDIA SkillSpector",
+                      "scanner_release": "v2.12.0",
+                      "scanner_revision": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+                      "mode": "static-only",
+                      "flags": ["--no-llm", "--fail-on-findings", "--fail-on-incomplete"],
+                      "report_sha256": hashlib.sha256(raw).hexdigest(),
+                      "risk_score": risk.get("score"),
+                      "risk_severity": risk.get("severity"),
+                      "risk_recommendation": risk.get("recommendation"),
+                      "coverage": report.get("coverage"),
+                      "result": "report-available",
+                      "security_state": "pending-evidence-review",
+                      "run_id": os.getenv("GITHUB_RUN_ID"),
+                      "observed_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                  }
+              except Exception as exc:
+                  rec = {
+                      "target": target,
+                      "scanner_revision": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+                      "result": "missing-or-unreadable-evidence",
+                      "security_state": "incomplete",
+                      "error_type": type(exc).__name__,
+                      "run_id": os.getenv("GITHUB_RUN_ID")
+                  }
+              records.append(rec)
+              print("SECURITY_RECEIPT " + json.dumps(rec, sort_keys=True))
+          (root / "evidence.jsonl").write_text(
+              "".join(json.dumps(r, sort_keys=True) + "\\n" for r in records),
+              encoding="utf-8"
+          )
+          print(f"Evidence receipts: {len(records)} / targets: {len(targets)}")
+          PY
+
+      - name: Preserve scanner reports for exact-version evidence review
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: skillspector-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .skillspector/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
