@@ -59,3 +59,22 @@
 5. Only after the complete eligible candidate denominator has decisive provenance, verification, security and disposition: update the pinned gitlink, `registry/sources.yaml`, `README.md`, `docs/SYSTEM_STATE.md`, `CURATION_QUEUE.md`, `INDEX.md` and `index.json` atomically. Otherwise leave current pinned corpus and historical 721 reviews untouched.
 
 This evidence file supports subsequent reconciliation and is not an approval to execute any source-owned tooling, deployment, sync, telemetry, or other external mutation.
+
+
+## Governed canonical-path reconciliation (186 of 186 confirmed)
+
+The original **192** manifest-bearing directories at the registered pin include **186** canonical individually governed entries and **six** additional manifests that are not their own governed package identity. The registry's `source_path` for **all 186** existing companions was read and matched to the exact July source tree, allowing for `source_path` values that identify the package directory rather than a `SKILL.md` path.
+
+The seven non-unique/nested identifiers were explicitly resolved using canonical provenance: `applicationinsights-web-ts`, `entra-agent-id`, and five `microsoft-foundry-*` nested entries. The other 179 source paths were checked directly against their unique old source packages. See [full governed crosswalk](../registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json).
+
+| Governed exact-tree partition | Count |
+|---|---:|
+| Canonical current entries | **186** |
+| Unchanged entire package subtree | **106** |
+| Changed entire package subtree, same canonical path | **76** |
+| Removed canonical package subtree | **4** |
+| Raw new candidate manifest paths requiring eligibility review | **22** |
+
+The **six** historical raw manifests outside the governed 186 are `.github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts`, `.github/plugins/azure-skills/skills/entra-app-registration`, `.github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/slack-to-teams`, `.github/skills/continual-learning`, `.github/skills/debugview`, and `.github/skills/entra-agent-id`. Their existence as nested/alias/editorial or additional upstream surfaces does not license automatic exclusion forever; each retains an explicitly visible, ungoverned status.
+
+**This completes the existing 186 canonical identity join only.** The candidate eligible denominator still needs judgment on 22 raw additions, four removals/renames, overlap and nested first-class classification. The 76 changed packages need individual semantic/security/authority disposition, while 106 unchanged package trees can reuse genuinely compatible exact-version semantic evidence without being re-reviewed ceremonially. No source pin, public review count or unchanged-use security claim has changed.
