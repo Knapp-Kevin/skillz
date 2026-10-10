@@ -72,7 +72,7 @@
       "old_tree_sha": "d4ba91752ddd62b9cae2d77e8275dc5a8d75685e",
       "candidate_tree_sha": "e9e12ca2e693ff23016569cc3fe61d289dca736a",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "airunway-aks-setup",
@@ -80,7 +80,7 @@
       "old_tree_sha": "72ec58c0a7c574dc71e14c63feb3d2aa529849ac",
       "candidate_tree_sha": "f1188c99d276aada84992b4e60387f2ad5814dd8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "appinsights-instrumentation",
@@ -88,7 +88,7 @@
       "old_tree_sha": "8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0",
       "candidate_tree_sha": "2bb1307f9a0f22a26c6efbd8c795caf353be9d72",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "applicationinsights-web-ts",
@@ -96,7 +96,7 @@
       "old_tree_sha": "cb03b364b8f9dcb5fc2ee9662758a1f949c23102",
       "candidate_tree_sha": "cb03b364b8f9dcb5fc2ee9662758a1f949c23102",
       "category": "unchanged",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-agents-persistent-dotnet",
@@ -104,7 +104,7 @@
       "old_tree_sha": "62d6ee2d1e7ffe649e6bae74b9235d061b852376",
       "candidate_tree_sha": "62d6ee2d1e7ffe649e6bae74b9235d061b852376",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-agents-persistent-java",
@@ -112,7 +112,7 @@
       "old_tree_sha": "a4c692537c1bf669d70f8fe56a5f43f6d65fc76f",
       "candidate_tree_sha": "a4c692537c1bf669d70f8fe56a5f43f6d65fc76f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-anomalydetector-java",
@@ -120,7 +120,7 @@
       "old_tree_sha": "b3e4d266af84eb18450c25a7d8c050824f9e5baa",
       "candidate_tree_sha": "b3e4d266af84eb18450c25a7d8c050824f9e5baa",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-contentsafety-java",
@@ -128,7 +128,7 @@
       "old_tree_sha": "13114aaaa55d03f8e9d0f450b1af0fc9a7dd053f",
       "candidate_tree_sha": "13114aaaa55d03f8e9d0f450b1af0fc9a7dd053f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-contentsafety-py",
@@ -136,7 +136,7 @@
       "old_tree_sha": "5cb38eecdb5ba01a6ac68b7c38803f622195f008",
       "candidate_tree_sha": "63dca1fa9603fd7514ce7c586bb1cf1a51ad3761",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-contentsafety-ts",
@@ -144,7 +144,7 @@
       "old_tree_sha": "1d1b8aef636c704c572507714fa26c2e73ec3dce",
       "candidate_tree_sha": "1d1b8aef636c704c572507714fa26c2e73ec3dce",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-contentunderstanding-py",
@@ -152,7 +152,7 @@
       "old_tree_sha": "1d31c9ef35cd6fe44cb05bee04bb268df7656824",
       "candidate_tree_sha": "bdc77f05d3f0f8fceb5c6160d84a7c8814906e6b",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-document-intelligence-dotnet",
@@ -160,7 +160,7 @@
       "old_tree_sha": "17be5880febf72e104b84d32e626197693d90e3b",
       "candidate_tree_sha": "17be5880febf72e104b84d32e626197693d90e3b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-document-intelligence-ts",
@@ -168,7 +168,7 @@
       "old_tree_sha": "15f2f21b7bebeedf12dc47987c3663e56edf26cb",
       "candidate_tree_sha": "15f2f21b7bebeedf12dc47987c3663e56edf26cb",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-formrecognizer-java",
@@ -176,7 +176,7 @@
       "old_tree_sha": "87ed30f519f37b28d0e05f2391d2729c47b94be6",
       "candidate_tree_sha": "87ed30f519f37b28d0e05f2391d2729c47b94be6",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-language-conversations-py",
@@ -184,7 +184,7 @@
       "old_tree_sha": "5f16d5df768d377afae4741ad297c989fa119fb7",
       "candidate_tree_sha": "065885039d26abe547d0059e2248cb2da1097717",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-ml-py",
@@ -192,7 +192,7 @@
       "old_tree_sha": "ae7411d24137b2d0b4a8e44067ba085912115076",
       "candidate_tree_sha": "4d28e7e22af766b358524eb42873aec1bd0680d8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-openai-dotnet",
@@ -200,7 +200,7 @@
       "old_tree_sha": "38bd23798e46c5c010737ecabfcf2bc8d8033d9a",
       "candidate_tree_sha": "38bd23798e46c5c010737ecabfcf2bc8d8033d9a",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-projects-dotnet",
@@ -208,7 +208,7 @@
       "old_tree_sha": "2dabc3855c1b4ea3c8bf6f855ccf310c9e36eccd",
       "candidate_tree_sha": "2dabc3855c1b4ea3c8bf6f855ccf310c9e36eccd",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-projects-java",
@@ -216,7 +216,7 @@
       "old_tree_sha": "7476d650fa39aa40ca73da5587a56531b652c6cd",
       "candidate_tree_sha": "7476d650fa39aa40ca73da5587a56531b652c6cd",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-projects-py",
@@ -224,7 +224,7 @@
       "old_tree_sha": "53d560d95d7f0c865ab8852fc32be027c1c27f99",
       "candidate_tree_sha": "6d23ede5e1afb2839765204309097c3143a67564",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-projects-ts",
@@ -232,7 +232,7 @@
       "old_tree_sha": "f1d68f1c635903c22d4bfc6d85349a0405e2f175",
       "candidate_tree_sha": "f1d68f1c635903c22d4bfc6d85349a0405e2f175",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-textanalytics-py",
@@ -240,7 +240,7 @@
       "old_tree_sha": "bc61d52e96da645ccf3d906086f4f4edd00545de",
       "candidate_tree_sha": "375453ad9ff4f6867adf6623a1b567bfe0c60bfb",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-transcription-py",
@@ -248,7 +248,7 @@
       "old_tree_sha": "31060aa7cce2f85a2ba92f048e199530f5e82b0d",
       "candidate_tree_sha": "c21d6071b1414199c46f08dcf3a1a0632843d00d",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-translation-document-py",
@@ -256,7 +256,7 @@
       "old_tree_sha": "64b1396db764d8690a4526128c4d37c64d649629",
       "candidate_tree_sha": "e548c746ec02f0ec9d2acb4adf18334d6ca0edf3",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-translation-text-py",
@@ -264,7 +264,7 @@
       "old_tree_sha": "71c7dccc2dd8d41e0c263d792206834eb37f2149",
       "candidate_tree_sha": "1d0affb190094b511470c1f6b9622044d5c3c25f",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-translation-ts",
@@ -272,7 +272,7 @@
       "old_tree_sha": "e5a6c3d8a10610fa17d95d68cf103e92d575293f",
       "candidate_tree_sha": "e5a6c3d8a10610fa17d95d68cf103e92d575293f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-vision-imageanalysis-java",
@@ -280,7 +280,7 @@
       "old_tree_sha": "86f720a7dbed3474b6e4da1d7593db81f9715145",
       "candidate_tree_sha": "86f720a7dbed3474b6e4da1d7593db81f9715145",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-vision-imageanalysis-py",
@@ -288,7 +288,7 @@
       "old_tree_sha": "736165f45cb6167b177b2e2231a682554924282d",
       "candidate_tree_sha": "bc979291b13c4a0b5c3133fb8a12ae94a7a55883",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-voicelive-dotnet",
@@ -296,7 +296,7 @@
       "old_tree_sha": "5569dda3e6dba27f9101b32be55992a6f62443c9",
       "candidate_tree_sha": "5569dda3e6dba27f9101b32be55992a6f62443c9",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-voicelive-java",
@@ -304,7 +304,7 @@
       "old_tree_sha": "ac2032a229e8853b9d4957a9d9146ca958eaeed4",
       "candidate_tree_sha": "ac2032a229e8853b9d4957a9d9146ca958eaeed4",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-voicelive-py",
@@ -312,7 +312,7 @@
       "old_tree_sha": "8e2c48a446597c749edca8381cb7d2dd112eed64",
       "candidate_tree_sha": "c9e31e86696d1af0604abc9aa11f6b1b9ce8b87c",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai-voicelive-ts",
@@ -320,7 +320,7 @@
       "old_tree_sha": "4d6a5df8e338ca17974ece250d9e574dbd6ed524",
       "candidate_tree_sha": "4d6a5df8e338ca17974ece250d9e574dbd6ed524",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-ai",
@@ -328,7 +328,7 @@
       "old_tree_sha": "8a168336305c56e0eea0d89aced7d8a0001de3b5",
       "candidate_tree_sha": "34c27c0761f1a2f730d45ddc1f395c6036723754",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-aigateway",
@@ -336,7 +336,7 @@
       "old_tree_sha": "fb881f68bdc6d638438b46b04ab6d81f91e985ba",
       "candidate_tree_sha": "8529348e07a31f48a46f0345a34fcaae9b27e7d0",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-appconfiguration-java",
@@ -344,7 +344,7 @@
       "old_tree_sha": "869a8ab74ba9a470461a6c9948a8d018d1efe36b",
       "candidate_tree_sha": "869a8ab74ba9a470461a6c9948a8d018d1efe36b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-appconfiguration-py",
@@ -352,7 +352,7 @@
       "old_tree_sha": "d1c5d69df9fb386eb27d2b26503ff2ceea7728f5",
       "candidate_tree_sha": "ec240bbbb4fc7e96000e5e9919451c78a07d1fab",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-appconfiguration-ts",
@@ -360,7 +360,7 @@
       "old_tree_sha": "bd25e7da45cd666463be87ca57cebbbd7bfdd228",
       "candidate_tree_sha": "bd25e7da45cd666463be87ca57cebbbd7bfdd228",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cloud-migrate",
@@ -368,7 +368,7 @@
       "old_tree_sha": "dd0d5a31e87576d5b46899b19aa3eedb24d412f4",
       "candidate_tree_sha": "064dc66880cee5694234690f2b9be17e135dd1dd",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-communication-callautomation-java",
@@ -376,7 +376,7 @@
       "old_tree_sha": "5b42ac2158632a3e14fad272ec0510864f459ed2",
       "candidate_tree_sha": "5b42ac2158632a3e14fad272ec0510864f459ed2",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-communication-callingserver-java",
@@ -384,7 +384,7 @@
       "old_tree_sha": "276440fcfee1858c728b0db63898d52e578ce86b",
       "candidate_tree_sha": "276440fcfee1858c728b0db63898d52e578ce86b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-communication-chat-java",
@@ -392,7 +392,7 @@
       "old_tree_sha": "b58604b7161eec1bf999295046a4fced6f9d4507",
       "candidate_tree_sha": "b58604b7161eec1bf999295046a4fced6f9d4507",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-communication-common-java",
@@ -400,7 +400,7 @@
       "old_tree_sha": "7a6a66c205648ad69cda647462d102993115180a",
       "candidate_tree_sha": "7a6a66c205648ad69cda647462d102993115180a",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-communication-sms-java",
@@ -408,7 +408,7 @@
       "old_tree_sha": "d4bea547144aea210f1dcb782658f947847d72a6",
       "candidate_tree_sha": "d4bea547144aea210f1dcb782658f947847d72a6",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-compliance",
@@ -416,7 +416,7 @@
       "old_tree_sha": "5d79eadfd4a42ff0091adb849bf016abd7ee57de",
       "candidate_tree_sha": "83ec452ff0bb131e41363be040ad22251d7bcb5a",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-compute-batch-java",
@@ -424,7 +424,7 @@
       "old_tree_sha": "84c4838dbba5893e78a5ea42565ea35feddbcd1c",
       "candidate_tree_sha": "84c4838dbba5893e78a5ea42565ea35feddbcd1c",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-compute",
@@ -432,7 +432,7 @@
       "old_tree_sha": "cdfc4a39b926efba5060eddc6d790b035501bc25",
       "candidate_tree_sha": "eac48d13e7b19366050bd7a176c7b5189ad34cdb",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-containerregistry-py",
@@ -440,7 +440,7 @@
       "old_tree_sha": "73bdb987bf73d524b40ac93c3ea0c3533dd75ba3",
       "candidate_tree_sha": "26cbed5d43ce55fad7487f71421fb9c12f59d7b7",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cosmos-db-py",
@@ -448,7 +448,7 @@
       "old_tree_sha": "77bdd7486a9195478b4d1663fb36e1b29c42f6b6",
       "candidate_tree_sha": "1a03b83a1054d4183c58bd828db8c7997f1c38eb",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cosmos-java",
@@ -456,7 +456,7 @@
       "old_tree_sha": "11dfaafad2fac0ca15d3b328d0ae76f8338da917",
       "candidate_tree_sha": "11dfaafad2fac0ca15d3b328d0ae76f8338da917",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cosmos-py",
@@ -464,7 +464,7 @@
       "old_tree_sha": "159aea3f186349abfb5004b51587e3dfe210ab56",
       "candidate_tree_sha": "75a26c6f97359e532458e1e4c9da92328961bf49",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cosmos-rust",
@@ -472,7 +472,7 @@
       "old_tree_sha": "dd2b4d34ed092a9719d75a114cb44e65ef91bb30",
       "candidate_tree_sha": "ed1e2001dc9d80548aa651ad7390b8eeb6df8ede",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cosmos-ts",
@@ -480,7 +480,7 @@
       "old_tree_sha": "1ce58804be03d192a379cd5049d15237d112f214",
       "candidate_tree_sha": "1ce58804be03d192a379cd5049d15237d112f214",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-cost",
@@ -488,7 +488,7 @@
       "old_tree_sha": "b9f59c28575280e1f76aaf2b94d92b040b571c52",
       "candidate_tree_sha": null,
       "category": "removed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-data-tables-java",
@@ -496,7 +496,7 @@
       "old_tree_sha": "9aa33d977e6fec260080fb5a25dae296ccb3c9e8",
       "candidate_tree_sha": "9aa33d977e6fec260080fb5a25dae296ccb3c9e8",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-data-tables-py",
@@ -504,7 +504,7 @@
       "old_tree_sha": "6f143c9a8c7ceafc01a5ec691b5e136b34b642ff",
       "candidate_tree_sha": "ffea94e6587f3dfd4db8123207e45dfd71f4c46d",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-deploy",
@@ -512,7 +512,7 @@
       "old_tree_sha": "e4d47784cfeba4f942bca41a909c957e65562fd7",
       "candidate_tree_sha": "782b021717e199423ed37720a6ba5436b2951aa7",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-diagnostics",
@@ -520,7 +520,7 @@
       "old_tree_sha": "1b0c314600a11fc0d63249d63c47cfb79a524443",
       "candidate_tree_sha": "97443699e171b2f40e969f7ee6302e63e4161d87",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-enterprise-infra-planner",
@@ -528,7 +528,7 @@
       "old_tree_sha": "620e71b64d369c1ea3aa5c8f4feee7793841e7a5",
       "candidate_tree_sha": "6a82cbd081dc48dd74d5f726e2c032f8092fa3e4",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventgrid-dotnet",
@@ -536,7 +536,7 @@
       "old_tree_sha": "482dbcdcc9a1108a63e53395c16d08ac5b3fef22",
       "candidate_tree_sha": "482dbcdcc9a1108a63e53395c16d08ac5b3fef22",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventgrid-java",
@@ -544,7 +544,7 @@
       "old_tree_sha": "46ee0d19d1b62cd236e6cf0dd95d9c2507728fb5",
       "candidate_tree_sha": "46ee0d19d1b62cd236e6cf0dd95d9c2507728fb5",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventgrid-py",
@@ -552,7 +552,7 @@
       "old_tree_sha": "604b049cc7e1550e604b6f9e60fc896e1121211a",
       "candidate_tree_sha": "90c336cbe658115749f78e8f7ef89e1d120b7669",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventhub-dotnet",
@@ -560,7 +560,7 @@
       "old_tree_sha": "61210008d0cda928fe40b6463925443054d79f7b",
       "candidate_tree_sha": "61210008d0cda928fe40b6463925443054d79f7b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventhub-java",
@@ -568,7 +568,7 @@
       "old_tree_sha": "83b03c95ba3346a76ad291867fb3a4c9803dc545",
       "candidate_tree_sha": "83b03c95ba3346a76ad291867fb3a4c9803dc545",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventhub-py",
@@ -576,7 +576,7 @@
       "old_tree_sha": "0fbf762f81763b55040414428dcb0a3a0d29bd5f",
       "candidate_tree_sha": "0fbf762f81763b55040414428dcb0a3a0d29bd5f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventhub-rust",
@@ -584,7 +584,7 @@
       "old_tree_sha": "89d58ddfed067e9997318a6a36a979f0257715f2",
       "candidate_tree_sha": "e7f76b1759742674de009cc3d75bb5668da0d004",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-eventhub-ts",
@@ -592,7 +592,7 @@
       "old_tree_sha": "c4cfb748dfa88feb9bcac3d1ae0f31a9dd0a6982",
       "candidate_tree_sha": "c4cfb748dfa88feb9bcac3d1ae0f31a9dd0a6982",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-hosted-copilot-sdk",
@@ -600,7 +600,7 @@
       "old_tree_sha": "ee166d12b8f9a88a1d4d932a23e844d8203efa13",
       "candidate_tree_sha": null,
       "category": "removed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-identity-dotnet",
@@ -608,7 +608,7 @@
       "old_tree_sha": "a77d4ff49b15f776a2daad5f4a59fa6561c94414",
       "candidate_tree_sha": "a77d4ff49b15f776a2daad5f4a59fa6561c94414",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-identity-java",
@@ -616,7 +616,7 @@
       "old_tree_sha": "3b21b1a4c9189a1b1ad32f411194375f7d8ebf3f",
       "candidate_tree_sha": "3b21b1a4c9189a1b1ad32f411194375f7d8ebf3f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-identity-py",
@@ -624,7 +624,7 @@
       "old_tree_sha": "e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1",
       "candidate_tree_sha": "024a029bb7accc557287d8a118404e7dea88cbca",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-identity-rust",
@@ -632,7 +632,7 @@
       "old_tree_sha": "70fdb3c2195f292aa8178aad5ab92f3fd62c27ab",
       "candidate_tree_sha": "2a047dcea30ab4010b31c88846fa987716d21456",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-identity-ts",
@@ -640,7 +640,7 @@
       "old_tree_sha": "b275cc7fb988e6502965015d0d091605332f87c1",
       "candidate_tree_sha": "b275cc7fb988e6502965015d0d091605332f87c1",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-certificates-rust",
@@ -648,7 +648,7 @@
       "old_tree_sha": "f219e6f1cba6f4f1d2578ca13c0dc93f2a8124ee",
       "candidate_tree_sha": "0df025484a282e71a0bee75de5d3fdc4e1f83e3e",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-keys-rust",
@@ -656,7 +656,7 @@
       "old_tree_sha": "24681f9fccb3030c14ef58f0f4e2a9b368cdb10e",
       "candidate_tree_sha": "14b39462ab5460308b52aafb3cde010e9e0da8b8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-keys-ts",
@@ -664,7 +664,7 @@
       "old_tree_sha": "edf929a691b6dbbd1f5c214e832a3c650b259890",
       "candidate_tree_sha": "edf929a691b6dbbd1f5c214e832a3c650b259890",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-py",
@@ -672,7 +672,7 @@
       "old_tree_sha": "cbcf7a71066e1d3b1a073b07d358efbbe6b8e77b",
       "candidate_tree_sha": "27962e81b958c741c87fa87dc34554942a179607",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-secrets-rust",
@@ -680,7 +680,7 @@
       "old_tree_sha": "e7f544367d2b9f788c91655b4b6787be8e694bfc",
       "candidate_tree_sha": "8549b0a1e53fdb031fd4ba5f2fbecf541178a8e9",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-keyvault-secrets-ts",
@@ -688,7 +688,7 @@
       "old_tree_sha": "2dd97bf732af6c7d5ec00e23d05db80e9a56ce26",
       "candidate_tree_sha": "2dd97bf732af6c7d5ec00e23d05db80e9a56ce26",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-kubernetes-automatic-readiness",
@@ -696,7 +696,7 @@
       "old_tree_sha": "1694eb4d1069fda2eac18653fdae8d2b55a3646c",
       "candidate_tree_sha": "c8ffe7bbfd195951701a5514cbdad6263c817e7a",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-kubernetes",
@@ -704,7 +704,7 @@
       "old_tree_sha": "bab7f5eab9e8e1c311ef1fc29b419963903fbe09",
       "candidate_tree_sha": "71489aae5cff8383d9699f974493e748825abdbc",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-kusto",
@@ -712,7 +712,7 @@
       "old_tree_sha": "71a8cb8f91c6078d4b745c0bf0c46d45437c263f",
       "candidate_tree_sha": "8a2191fbf1dd17fc72fc3cc0429977215e2b55fb",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-maps-search-dotnet",
@@ -720,7 +720,7 @@
       "old_tree_sha": "4d9a9dcd4d8143792c0f2a377c156524b901e981",
       "candidate_tree_sha": "4d9a9dcd4d8143792c0f2a377c156524b901e981",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-messaging-webpubsub-java",
@@ -728,7 +728,7 @@
       "old_tree_sha": "55e1ef74b4d923403871dd5486bafc6d0cae199a",
       "candidate_tree_sha": "55e1ef74b4d923403871dd5486bafc6d0cae199a",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-messaging-webpubsubservice-py",
@@ -736,7 +736,7 @@
       "old_tree_sha": "aa73dd40ee99a98ad10af90945869141b71f4a8e",
       "candidate_tree_sha": "3d4959574cec66dc53330d47e557bf225e250e13",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-messaging",
@@ -744,7 +744,7 @@
       "old_tree_sha": "de972c7cf2a46e572b5fcfd24ed8963bc41b5a04",
       "candidate_tree_sha": "ea4f43fba357f1cdffec81e0db9415da05dea16a",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-apicenter-dotnet",
@@ -752,7 +752,7 @@
       "old_tree_sha": "267b94e36949f787a72d3c9f2e0b1f1e88ba2615",
       "candidate_tree_sha": "267b94e36949f787a72d3c9f2e0b1f1e88ba2615",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-apicenter-py",
@@ -760,7 +760,7 @@
       "old_tree_sha": "cc4ec2952eeefd4cbfcf3c5443879ca21692c5ab",
       "candidate_tree_sha": "7a985c0369d797b3aead2e8bcb3e1a15f623c1c0",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-apimanagement-dotnet",
@@ -768,7 +768,7 @@
       "old_tree_sha": "6a3ef007b414bbd0cc2e23fd2d0c5dbcd318c33d",
       "candidate_tree_sha": "6a3ef007b414bbd0cc2e23fd2d0c5dbcd318c33d",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-apimanagement-py",
@@ -776,7 +776,7 @@
       "old_tree_sha": "b5092b4ffe491abdf28e33c8c9fa3d06af6c9aee",
       "candidate_tree_sha": "e7cf59c979b611b71a2b84ce83da54edbf68fe7c",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-applicationinsights-dotnet",
@@ -784,7 +784,7 @@
       "old_tree_sha": "97d0a70bf390fa9ba763eacc544c441e7a64fd5f",
       "candidate_tree_sha": "97d0a70bf390fa9ba763eacc544c441e7a64fd5f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-arizeaiobservabilityeval-dotnet",
@@ -792,7 +792,7 @@
       "old_tree_sha": "87d564bcece7e8f237f84d118cf2f540c0aa922f",
       "candidate_tree_sha": "87d564bcece7e8f237f84d118cf2f540c0aa922f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-botservice-dotnet",
@@ -800,7 +800,7 @@
       "old_tree_sha": "35acc4dd431bfb75320c3f00b9bb47b0f86c43c8",
       "candidate_tree_sha": "35acc4dd431bfb75320c3f00b9bb47b0f86c43c8",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-botservice-py",
@@ -808,7 +808,7 @@
       "old_tree_sha": "5c944f6d244f31ae24b7fd04486f63ac9d60a3ec",
       "candidate_tree_sha": "cc3364a8c4e688481e68dc7b567fd95ef52259e8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-fabric-dotnet",
@@ -816,7 +816,7 @@
       "old_tree_sha": "fb958f3071a3896afd1340cf879eabd417ff6e91",
       "candidate_tree_sha": "fb958f3071a3896afd1340cf879eabd417ff6e91",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-fabric-py",
@@ -824,7 +824,7 @@
       "old_tree_sha": "3e29e264969add98346524136a232e61afa8f06e",
       "candidate_tree_sha": "26c5eecd68541a029caa2896af3df606d3a77de2",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-mongodbatlas-dotnet",
@@ -832,7 +832,7 @@
       "old_tree_sha": "4d3f7bfa53fcab38401f88969c8b3643f709cb2b",
       "candidate_tree_sha": "4d3f7bfa53fcab38401f88969c8b3643f709cb2b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-mgmt-weightsandbiases-dotnet",
@@ -840,7 +840,7 @@
       "old_tree_sha": "8f2587380047b7bed88ee6a35c0aeae040342709",
       "candidate_tree_sha": "8f2587380047b7bed88ee6a35c0aeae040342709",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-microsoft-playwright-testing-ts",
@@ -848,7 +848,7 @@
       "old_tree_sha": "2c64ca04d7e33d27405771bad5d6de42ce8433ac",
       "candidate_tree_sha": "2c64ca04d7e33d27405771bad5d6de42ce8433ac",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-ingestion-java",
@@ -856,7 +856,7 @@
       "old_tree_sha": "99ffd5484dfa60d3c5c38d0bd22b3d2861d8a624",
       "candidate_tree_sha": "99ffd5484dfa60d3c5c38d0bd22b3d2861d8a624",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-ingestion-py",
@@ -864,7 +864,7 @@
       "old_tree_sha": "6f77179d773886b1c5b47f79e40b6701680cf27c",
       "candidate_tree_sha": "cf9873304bb7524e71c91e20d6b9188624f38975",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-opentelemetry-exporter-java",
@@ -872,7 +872,7 @@
       "old_tree_sha": "1fb82a6bf0c567a8263c6dcf63d72010aab761c2",
       "candidate_tree_sha": "1fb82a6bf0c567a8263c6dcf63d72010aab761c2",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-opentelemetry-exporter-py",
@@ -880,7 +880,7 @@
       "old_tree_sha": "6f3f29fc5ab34768abdb08ba9c85a038f7deccbe",
       "candidate_tree_sha": "b9ef1b1944018c8adb2db2e3dae9c654d58f13d6",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-opentelemetry-py",
@@ -888,7 +888,7 @@
       "old_tree_sha": "14a5c5e6184d8b29cca1dfe53d448b484a79f0a1",
       "candidate_tree_sha": "43c5891abcc3d700972f42cd3427f5f73b19edcc",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-opentelemetry-ts",
@@ -896,7 +896,7 @@
       "old_tree_sha": "745333bd43aa40a5a5639af738ade6ae35426c08",
       "candidate_tree_sha": "745333bd43aa40a5a5639af738ade6ae35426c08",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-query-java",
@@ -904,7 +904,7 @@
       "old_tree_sha": "5a8c8f952a2e64ad8ade693b6ec964818191e55f",
       "candidate_tree_sha": "5a8c8f952a2e64ad8ade693b6ec964818191e55f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-monitor-query-py",
@@ -912,7 +912,7 @@
       "old_tree_sha": "ac052e9e1c0ebee1c7f57d074c3b288a78429813",
       "candidate_tree_sha": "6b4f1407426414aa44cd60566d0c49fd10493e73",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-postgres-ts",
@@ -920,7 +920,7 @@
       "old_tree_sha": "ead63d786ddd1ed88a4ce1b1df175e37bb836d0f",
       "candidate_tree_sha": "ead63d786ddd1ed88a4ce1b1df175e37bb836d0f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-prepare",
@@ -928,7 +928,7 @@
       "old_tree_sha": "3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9",
       "candidate_tree_sha": "4003cdc806c09cc3bd422d27505a02a1b57625b8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-quotas",
@@ -936,7 +936,7 @@
       "old_tree_sha": "8a628e265ecb05a8f78a9a7e4e4772fb82d78c40",
       "candidate_tree_sha": "a84712b809a10b9584d99b523a74b52526bb2713",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-rbac",
@@ -944,7 +944,7 @@
       "old_tree_sha": "b52d696609b18a5dc2bae21e368812fe7b020ec5",
       "candidate_tree_sha": null,
       "category": "removed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-reliability",
@@ -952,7 +952,7 @@
       "old_tree_sha": "1240c9672f0101c65ab0dbc461f9515a200b4486",
       "candidate_tree_sha": "9330ac7bb6e8dbe5748219ac467ed066d8baa476",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-lookup",
@@ -960,7 +960,7 @@
       "old_tree_sha": "19e257c3720521014d81cd3dbf4e188e0ece621b",
       "candidate_tree_sha": "ba9b018e96ff88bd68d6bfd120eac1f281e4248e",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-cosmosdb-dotnet",
@@ -968,7 +968,7 @@
       "old_tree_sha": "ae77139599d20bf57a395beb84a68190b5e4382e",
       "candidate_tree_sha": "ae77139599d20bf57a395beb84a68190b5e4382e",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-durabletask-dotnet",
@@ -976,7 +976,7 @@
       "old_tree_sha": "7891cd49733687e3c08c0034b15c709d2ffca41e",
       "candidate_tree_sha": "7891cd49733687e3c08c0034b15c709d2ffca41e",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-mysql-dotnet",
@@ -984,7 +984,7 @@
       "old_tree_sha": "e0816f9a38d4d5d2fc8012d59fb1a08f7ab0921d",
       "candidate_tree_sha": "e0816f9a38d4d5d2fc8012d59fb1a08f7ab0921d",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-playwright-dotnet",
@@ -992,7 +992,7 @@
       "old_tree_sha": "982606adb8bcbcff01af1a0338ac6c5e44aa0edd",
       "candidate_tree_sha": "982606adb8bcbcff01af1a0338ac6c5e44aa0edd",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-postgresql-dotnet",
@@ -1000,7 +1000,7 @@
       "old_tree_sha": "0eb8cd54476d9d72fffb81b24285c708b10af293",
       "candidate_tree_sha": "0eb8cd54476d9d72fffb81b24285c708b10af293",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-redis-dotnet",
@@ -1008,7 +1008,7 @@
       "old_tree_sha": "761c421a38337a78693190a8f69bfe267a586406",
       "candidate_tree_sha": "761c421a38337a78693190a8f69bfe267a586406",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-manager-sql-dotnet",
@@ -1016,7 +1016,7 @@
       "old_tree_sha": "02e74e01786d668b7d51f8a9592bdb5dc05e401e",
       "candidate_tree_sha": "02e74e01786d668b7d51f8a9592bdb5dc05e401e",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-resource-visualizer",
@@ -1024,7 +1024,7 @@
       "old_tree_sha": "3a892f03908cf1a388ac9d3da91764bef1e9501c",
       "candidate_tree_sha": "766da0d5907e804ef1bb1245e306e3f99b598f92",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-search-documents-dotnet",
@@ -1032,7 +1032,7 @@
       "old_tree_sha": "49ed94e58508e30be14b5e531d53a243c821de6c",
       "candidate_tree_sha": "49ed94e58508e30be14b5e531d53a243c821de6c",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-search-documents-py",
@@ -1040,7 +1040,7 @@
       "old_tree_sha": "629dedbea4c5b2112e6eeae902145e4c0d5d6cc7",
       "candidate_tree_sha": "629dedbea4c5b2112e6eeae902145e4c0d5d6cc7",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-search-documents-ts",
@@ -1048,7 +1048,7 @@
       "old_tree_sha": "22089c7f7b4340797d5767cd7842822e9433dc97",
       "candidate_tree_sha": "22089c7f7b4340797d5767cd7842822e9433dc97",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-security-keyvault-keys-dotnet",
@@ -1056,7 +1056,7 @@
       "old_tree_sha": "6a9a7395f14b97c73fd882e6e1ae1d4e8ffff10b",
       "candidate_tree_sha": "6a9a7395f14b97c73fd882e6e1ae1d4e8ffff10b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-security-keyvault-keys-java",
@@ -1064,7 +1064,7 @@
       "old_tree_sha": "1bedbdd6834c29fe29dcb3b6834d5ddec89b068a",
       "candidate_tree_sha": "1bedbdd6834c29fe29dcb3b6834d5ddec89b068a",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-security-keyvault-secrets-java",
@@ -1072,7 +1072,7 @@
       "old_tree_sha": "712a8838341a4ce44b275e1e906a1b3de2150c59",
       "candidate_tree_sha": "712a8838341a4ce44b275e1e906a1b3de2150c59",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-servicebus-dotnet",
@@ -1080,7 +1080,7 @@
       "old_tree_sha": "2bfd232583ad2850a49c787169e16782f87bc1d7",
       "candidate_tree_sha": "2bfd232583ad2850a49c787169e16782f87bc1d7",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-servicebus-py",
@@ -1088,7 +1088,7 @@
       "old_tree_sha": "0c786cdf38814cdbdcaf42e9fb98b59dae38ca57",
       "candidate_tree_sha": "0c786cdf38814cdbdcaf42e9fb98b59dae38ca57",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-servicebus-rust",
@@ -1096,7 +1096,7 @@
       "old_tree_sha": "338bfd05040689d7092d391f24bf29d36f4fb50e",
       "candidate_tree_sha": null,
       "category": "removed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-servicebus-ts",
@@ -1104,7 +1104,7 @@
       "old_tree_sha": "575e0399b5116369a5b57fd614a9d58f10b48f76",
       "candidate_tree_sha": "575e0399b5116369a5b57fd614a9d58f10b48f76",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-speech-to-text-rest-py",
@@ -1112,7 +1112,7 @@
       "old_tree_sha": "e3ec4de3b5c76926c40c502ec5afe82d0a0240ac",
       "candidate_tree_sha": "d6a54c61e1c1772e43b6cd3a15849328161b4f25",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-blob-java",
@@ -1120,7 +1120,7 @@
       "old_tree_sha": "546766fa052b52e814f86f445b686f9bd04364fa",
       "candidate_tree_sha": "546766fa052b52e814f86f445b686f9bd04364fa",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-blob-py",
@@ -1128,7 +1128,7 @@
       "old_tree_sha": "e12b45463c731c9e4a39721d7f52dbc16abdb8a9",
       "candidate_tree_sha": "b0b817e0231ec11785ae5b2e6cbe32ff362c320e",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-blob-rust",
@@ -1136,7 +1136,7 @@
       "old_tree_sha": "75d6bae5029c6569333639cc5b51c0f96511a3e5",
       "candidate_tree_sha": "1d22a03690fb949dfcdb9e1ce298e0059a90989b",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-blob-ts",
@@ -1144,7 +1144,7 @@
       "old_tree_sha": "1a845c3512fef61674ff30a5cd9132e100f42d3f",
       "candidate_tree_sha": "1a845c3512fef61674ff30a5cd9132e100f42d3f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-file-datalake-py",
@@ -1152,7 +1152,7 @@
       "old_tree_sha": "32ae7f0ea087950c1699629ae7ff16f64e8af597",
       "candidate_tree_sha": "dd1e5344aef7bd25e2480a9af6a89128923e53db",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-file-share-py",
@@ -1160,7 +1160,7 @@
       "old_tree_sha": "9f58beb6bc9d022669483f4f7c911305a95789e4",
       "candidate_tree_sha": "08ad8bd92ae39f83a50f89eeb5f327569afa6464",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-file-share-ts",
@@ -1168,7 +1168,7 @@
       "old_tree_sha": "b9f0ba8f0fcf741f5eb843505fc1d004f0e07e6e",
       "candidate_tree_sha": "b9f0ba8f0fcf741f5eb843505fc1d004f0e07e6e",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-queue-py",
@@ -1176,7 +1176,7 @@
       "old_tree_sha": "c64f41958010e30f3a43fb8d80d91d174ee13d24",
       "candidate_tree_sha": "58287bdc78694230979293fbf56a05858e3b8720",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-queue-rust",
@@ -1184,7 +1184,7 @@
       "old_tree_sha": "be9d64723692c886bd698fd81c90b01cd26dd24f",
       "candidate_tree_sha": "a72fa4d7cea88cc8e0ccf45e5231db6863fe4ff2",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage-queue-ts",
@@ -1192,7 +1192,7 @@
       "old_tree_sha": "e3b60c7b5588d8ebc701484fd5ca850a82d3b3ee",
       "candidate_tree_sha": "e3b60c7b5588d8ebc701484fd5ca850a82d3b3ee",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-storage",
@@ -1200,7 +1200,7 @@
       "old_tree_sha": "58ffdd0c0f466a983a0064239d481fb08e58b7c8",
       "candidate_tree_sha": "4c077fa32d77e27b1c1b105d532af6945bb7604f",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-upgrade",
@@ -1208,7 +1208,7 @@
       "old_tree_sha": "ad4f782ddd8eab34eacece4ccb1b66d65a0434d9",
       "candidate_tree_sha": "a506c3804c11500bede1be1fa0cf3de969f1d36b",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-validate",
@@ -1216,7 +1216,7 @@
       "old_tree_sha": "f0eac59b12bba969fdec0e29b7558e441f7be14f",
       "candidate_tree_sha": "23c61eed8d0009d712d71904e21e3c4e0df4d6d0",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "azure-web-pubsub-ts",
@@ -1224,7 +1224,7 @@
       "old_tree_sha": "d58b609f6ec1d685143378e3e43f9e08f0883917",
       "candidate_tree_sha": "d58b609f6ec1d685143378e3e43f9e08f0883917",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "cloud-solution-architect",
@@ -1232,7 +1232,7 @@
       "old_tree_sha": "cf94add87e80c754b41298fe08dc16cd9b442531",
       "candidate_tree_sha": "cf94add87e80c754b41298fe08dc16cd9b442531",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "copilot-sdk",
@@ -1240,7 +1240,7 @@
       "old_tree_sha": "dbdf15d9f078af5a2996a8b9a3bf719e80330aed",
       "candidate_tree_sha": "dbdf15d9f078af5a2996a8b9a3bf719e80330aed",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "declarative-agent-developer",
@@ -1248,7 +1248,7 @@
       "old_tree_sha": "5e6287047863c5d889fe3b19f13ee4382d5f7e34",
       "candidate_tree_sha": "5e6287047863c5d889fe3b19f13ee4382d5f7e34",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "entra-agent-id",
@@ -1256,7 +1256,7 @@
       "old_tree_sha": "405ed207c079150581ef0540a0b4a0a1f176fc9e",
       "candidate_tree_sha": "2757439372801955542e909dc218f74914811203",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "fastapi-router-py",
@@ -1264,7 +1264,7 @@
       "old_tree_sha": "8162d81b2c2856172b495333f5bc3addfcc89ffd",
       "candidate_tree_sha": "995dd3c35e422d29a8fb584b069d4657cd47eefd",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "frontend-design-review",
@@ -1272,7 +1272,7 @@
       "old_tree_sha": "5168482e112971181f4c4fec05ce694792bafd02",
       "candidate_tree_sha": "5168482e112971181f4c4fec05ce694792bafd02",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "frontend-ui-dark-ts",
@@ -1280,7 +1280,7 @@
       "old_tree_sha": "1f15eeae63b8e03b5c10f6dbfa550095079b2409",
       "candidate_tree_sha": "1f15eeae63b8e03b5c10f6dbfa550095079b2409",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "github-issue-creator",
@@ -1288,7 +1288,7 @@
       "old_tree_sha": "bd1b5edf4cefdca8e192610e2e990130f67f704d",
       "candidate_tree_sha": "bd1b5edf4cefdca8e192610e2e990130f67f704d",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "install-atk",
@@ -1296,7 +1296,7 @@
       "old_tree_sha": "c7be3fb169d02f94492a3d1ca203bed5adacc9ba",
       "candidate_tree_sha": "c7be3fb169d02f94492a3d1ca203bed5adacc9ba",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "kql",
@@ -1304,7 +1304,7 @@
       "old_tree_sha": "2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6",
       "candidate_tree_sha": "2dcd3bc9c947fd36356d5b91cc7d88841c9ce0c6",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "m365-agent-evaluator",
@@ -1312,7 +1312,7 @@
       "old_tree_sha": "15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1",
       "candidate_tree_sha": "15aceb8b6d27b175ab0d54cf34b5d6b1c345e5d1",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "m365-agents-dotnet",
@@ -1320,7 +1320,7 @@
       "old_tree_sha": "2f64c721e9639aede6ce2d0cd1402db021684c69",
       "candidate_tree_sha": "2f64c721e9639aede6ce2d0cd1402db021684c69",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "m365-agents-py",
@@ -1328,7 +1328,7 @@
       "old_tree_sha": "160c753348c6709974d2d3ae1b6d6b8bf7df146c",
       "candidate_tree_sha": "7d30932e571b05101cc0060eb2adab2195f7aec8",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "m365-agents-ts",
@@ -1336,7 +1336,7 @@
       "old_tree_sha": "0bcb6ef9c55c8f8bae331e85d40f8585844c4bc7",
       "candidate_tree_sha": "0bcb6ef9c55c8f8bae331e85d40f8585844c4bc7",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "mcp-builder",
@@ -1344,7 +1344,7 @@
       "old_tree_sha": "c87383e3a3a307ff9867adf610672e9f0b24687b",
       "candidate_tree_sha": "c87383e3a3a307ff9867adf610672e9f0b24687b",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-azure-webjobs-extensions-authentication-events-dotnet",
@@ -1352,7 +1352,7 @@
       "old_tree_sha": "15a35dcb0638dad179c9bbc5fe10a7587a27dee7",
       "candidate_tree_sha": "15a35dcb0638dad179c9bbc5fe10a7587a27dee7",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-docs",
@@ -1360,7 +1360,7 @@
       "old_tree_sha": "2e0eef527e4fafac394cca00144736954ecc9528",
       "candidate_tree_sha": "2e0eef527e4fafac394cca00144736954ecc9528",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry-deploy-model-capacity",
@@ -1368,7 +1368,7 @@
       "old_tree_sha": "edb0b5bb776569c8941e4ed3755d9f65e32c5b80",
       "candidate_tree_sha": "547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry-deploy-model-customize",
@@ -1376,7 +1376,7 @@
       "old_tree_sha": "3ff8e09076dcc5337257a70845fb509b4ab229a0",
       "candidate_tree_sha": "118035ed1dad47d2389464e2968c92923dc2c7b5",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry-deploy-model-preset",
@@ -1384,7 +1384,7 @@
       "old_tree_sha": "2d35e916a63fda4c49eb6f34d697e74ad00d82b9",
       "candidate_tree_sha": "643a38ce95fbe3e737002335bd52cb2b164b4380",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry-deploy-model",
@@ -1392,7 +1392,7 @@
       "old_tree_sha": "6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9",
       "candidate_tree_sha": "5e60a08596808fd2dc6209ab309d682664d2e03c",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry-finetuning",
@@ -1400,7 +1400,7 @@
       "old_tree_sha": "f4fce572b9e1db4e7880315bf39045d03f42a0fd",
       "candidate_tree_sha": "91b3afacfb2c855870109207d0b584e8e2993f8e",
       "category": "changed",
-      "path_match_method": "explicit_canonical_source_path_read"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "microsoft-foundry",
@@ -1408,7 +1408,7 @@
       "old_tree_sha": "75f1fef94394b6ffde32259d0268f2d3381938dc",
       "candidate_tree_sha": "233dad996312195f0ea0505b87a66f12b835e892",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "podcast-generation",
@@ -1416,7 +1416,7 @@
       "old_tree_sha": "a1aeeb2e902d732035066ed9f7be20cf120ce53c",
       "candidate_tree_sha": "a1aeeb2e902d732035066ed9f7be20cf120ce53c",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "pydantic-models-py",
@@ -1424,7 +1424,7 @@
       "old_tree_sha": "591af99b6b71425df244508fc0b4d236b27fa683",
       "candidate_tree_sha": "f7a11cfe361df8e698cb9ecb42a94dae0889bb77",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "python-appservice-deploy",
@@ -1432,7 +1432,7 @@
       "old_tree_sha": "6e11dad529e50b7fbc37191de665788d0427ccad",
       "candidate_tree_sha": "3003f4d14f1e1a63ec94afd28f958560aab4b273",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "react-flow-node-ts",
@@ -1440,7 +1440,7 @@
       "old_tree_sha": "ba384d63f352c5518b3dd77168e5c49af2220e8a",
       "candidate_tree_sha": "ba384d63f352c5518b3dd77168e5c49af2220e8a",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "skill-creator",
@@ -1448,7 +1448,7 @@
       "old_tree_sha": "44744c928eba10e9e69272a6bab0859b79c480c5",
       "candidate_tree_sha": "f9dc3aaf9210af8eb06ba11bf4883e6ace705673",
       "category": "changed",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "teams-app-developer",
@@ -1456,7 +1456,7 @@
       "old_tree_sha": "164d327f3039e037b0ad2cdabeee01e2c6aa6d3f",
       "candidate_tree_sha": "164d327f3039e037b0ad2cdabeee01e2c6aa6d3f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "ui-widget-developer",
@@ -1464,7 +1464,7 @@
       "old_tree_sha": "782d9f253d9bf51bf98a274d6c4e0d262bc1b54c",
       "candidate_tree_sha": "782d9f253d9bf51bf98a274d6c4e0d262bc1b54c",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-ado-convert",
@@ -1472,7 +1472,7 @@
       "old_tree_sha": "1a9d5144324d5891454d25e3607ca09439584eb8",
       "candidate_tree_sha": "1a9d5144324d5891454d25e3607ca09439584eb8",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-agents-md",
@@ -1480,7 +1480,7 @@
       "old_tree_sha": "d41f5a10717c8a334cd4d2f2368dbfbef40d47e5",
       "candidate_tree_sha": "d41f5a10717c8a334cd4d2f2368dbfbef40d47e5",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-architect",
@@ -1488,7 +1488,7 @@
       "old_tree_sha": "124c5bec7008b1e25940cfc67ea09b069af0dbea",
       "candidate_tree_sha": "124c5bec7008b1e25940cfc67ea09b069af0dbea",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-changelog",
@@ -1496,7 +1496,7 @@
       "old_tree_sha": "f00f784abc5b9276f5a353334afbabb2ea0dfd72",
       "candidate_tree_sha": "f00f784abc5b9276f5a353334afbabb2ea0dfd72",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-llms-txt",
@@ -1504,7 +1504,7 @@
       "old_tree_sha": "b3a045c0f510f263fc05abba5daccaab4efcf164",
       "candidate_tree_sha": "b3a045c0f510f263fc05abba5daccaab4efcf164",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-onboarding",
@@ -1512,7 +1512,7 @@
       "old_tree_sha": "3c95e30a619b223fb2ad107322fcbb9be46f13f5",
       "candidate_tree_sha": "3c95e30a619b223fb2ad107322fcbb9be46f13f5",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-page-writer",
@@ -1520,7 +1520,7 @@
       "old_tree_sha": "ffadefd1fab729385cc3d59ac46202305ff4688f",
       "candidate_tree_sha": "ffadefd1fab729385cc3d59ac46202305ff4688f",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-qa",
@@ -1528,7 +1528,7 @@
       "old_tree_sha": "80775b0be2ffbef4a1675afeaaa132696bdd1d01",
       "candidate_tree_sha": "80775b0be2ffbef4a1675afeaaa132696bdd1d01",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-researcher",
@@ -1536,7 +1536,7 @@
       "old_tree_sha": "22777f05d7f11b559c120d6cae7f09848828b9d2",
       "candidate_tree_sha": "22777f05d7f11b559c120d6cae7f09848828b9d2",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "wiki-vitepress",
@@ -1544,7 +1544,7 @@
       "old_tree_sha": "fb40a7721e7038dde865905b9626602b7a2da77d",
       "candidate_tree_sha": "fb40a7721e7038dde865905b9626602b7a2da77d",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     },
     {
       "registered_id": "zustand-store-ts",
@@ -1552,8 +1552,10 @@
       "old_tree_sha": "8dc1658099b269c1e6347b7d0ffbe38d6f7058c1",
       "candidate_tree_sha": "8dc1658099b269c1e6347b7d0ffbe38d6f7058c1",
       "category": "unchanged",
-      "path_match_method": "unique_basename_inferred_pending_yaml_confirmation"
+      "path_match_method": "canonical_source_path_read_verified"
     }
   ],
-  "identity_disclaimer": "Seven ambiguous/non-name mappings were checked against canonical source_path companion fields. The other 179 match a unique raw manifest basename but their source_path fields still require a complete 179-record confirmation pass. Counts are a provisional exact-tree crosswalk, not completed semantic verification."
+  "identity_disclaimer": "All 186 registered companion source_path fields were independently checked against the July upstream tree; 179 uniquely named paths (directory or SKILL.md notation) plus seven explicitly resolved aliases/nested identifiers. The classification is exact at the selected two revisions, but per-package semantic/security review and new eligible denominator are not yet complete.",
+  "canonical_paths_confirmed": 186,
+  "canonical_paths_unconfirmed": 0
 }
