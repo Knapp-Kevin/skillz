@@ -38,6 +38,59 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Materialize relevant pinned source packages
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          MANUAL_SCOPE: ${{ inputs.scope }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
+
+          gitlinks = subprocess.check_output(
+              ["git", "ls-tree", "-r", "HEAD", "skills/sources"], text=True
+          ).splitlines()
+          pinned_paths = sorted(
+              line.split("\t", 1)[1] for line in gitlinks
+              if line.startswith("160000 ") and "\t" in line
+          )
+          if os.environ.get("EVENT_NAME") == "pull_request":
+              changed = subprocess.check_output(
+                  [
+                      "git", "diff", "--name-only", "--diff-filter=ACMRT",
+                      os.environ["BASE_SHA"], os.environ["HEAD_SHA"]
+                  ], text=True
+              ).splitlines()
+              selected = [
+                  path for path in pinned_paths
+                  if any(rel == path or rel.startswith(path + "/") for rel in changed)
+              ]
+          elif os.environ.get("MANUAL_SCOPE") == "all":
+              selected = pinned_paths
+          else:
+              selected = []
+
+          print(f"Pinned source packages selected: {len(selected)}")
+          if selected:
+              subprocess.run(
+                  ["git", "submodule", "update", "--init", "--depth", "1", "--", *selected],
+                  check=True
+              )
+          for path in selected:
+              root = Path(path)
+              manifests = list(root.rglob("SKILL.md")) + list(root.rglob("skill.md"))
+              if not manifests:
+                  raise SystemExit(
+                      f"Incomplete security coverage: pinned source {path} "
+                      "has no materialized skill manifests"
+                  )
+          PY
+
       - name: Verify Python runtime
         shell: bash
         run: |
@@ -214,3 +267,79 @@ jobs:
               except Exception as exc:
                   print(f"| {report.stem} | ? | report-error | {exc} |")
           PY
+
+      - name: Produce auditable exact-package scan receipts
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import datetime
+          import hashlib
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          root = Path(".skillspector")
+          root.mkdir(exist_ok=True)
+          targets_file = root / "targets.txt"
+          targets = targets_file.read_text(encoding="utf-8").splitlines() if targets_file.exists() else []
+          records = []
+          for target in targets:
+              if not target:
+                  continue
+              slug = "".join(ch if ch.isalnum() or ch in "_.-" else "_" for ch in target)
+              path = root / "reports" / (slug + ".json")
+              try:
+                  raw = path.read_bytes()
+                  report = json.loads(raw)
+                  risk = report.get("risk_assessment", {})
+                  package_tree = subprocess.check_output(
+                      ["git", "rev-parse", "HEAD:" + target], text=True
+                  ).strip()
+                  rec = {
+                      "target": target,
+                      "source_revision": os.getenv("GITHUB_SHA"),
+                      "package_git_tree": package_tree,
+                      "scanner": "NVIDIA SkillSpector",
+                      "scanner_release": "v2.12.0",
+                      "scanner_revision": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+                      "mode": "static-only",
+                      "flags": ["--no-llm", "--fail-on-findings", "--fail-on-incomplete"],
+                      "report_sha256": hashlib.sha256(raw).hexdigest(),
+                      "risk_score": risk.get("score"),
+                      "risk_severity": risk.get("severity"),
+                      "risk_recommendation": risk.get("recommendation"),
+                      "coverage": report.get("analysis_completeness"),
+                      "result": "report-available",
+                      "security_state": ("pending-evidence-review" if report.get("analysis_completeness", {}).get("is_complete") is True else "incomplete"),
+                      "run_id": os.getenv("GITHUB_RUN_ID"),
+                      "observed_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                  }
+              except Exception as exc:
+                  rec = {
+                      "target": target,
+                      "scanner_revision": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+                      "result": "missing-or-unreadable-evidence",
+                      "security_state": "incomplete",
+                      "error_type": type(exc).__name__,
+                      "run_id": os.getenv("GITHUB_RUN_ID")
+                  }
+              records.append(rec)
+              print("SECURITY_RECEIPT " + json.dumps(rec, sort_keys=True))
+          (root / "evidence.jsonl").write_text(
+              "".join(json.dumps(r, sort_keys=True) + "\n" for r in records),
+              encoding="utf-8"
+          )
+          print(f"Evidence receipts: {len(records)} / targets: {len(targets)}")
+          PY
+
+      - name: Preserve scanner reports for exact-version evidence review
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: skillspector-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .skillspector/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
