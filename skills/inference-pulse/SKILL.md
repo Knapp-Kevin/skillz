@@ -30,15 +30,7 @@ skill offers to bind a target for next time.
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/inference-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read
-   `sources.json` beside this file and fetch/search those sources
-   directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the llama.cpp releases page and the Ollama/vLLM
    blogs directly if the engine's coverage is thin; run the searches,

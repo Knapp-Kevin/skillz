@@ -20,13 +20,7 @@ Vendor pulse for Mistral AI. Sources are data (`sources.json`), synthesis is you
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/mistral-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch mistral.ai/news and the API changelog; run the searches. Watch both the hosted API line and the open-weights line — they move independently.
 3. **Synthesize.** Deprecations/pricing first; new models (note open vs API-only licensing); coding-model changes (Codestral/Devstral matter for agent workflows); community sentiment.

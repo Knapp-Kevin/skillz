@@ -21,16 +21,10 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/governance-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the EU AI Act tracker (implementation deadlines are the hard dates), NIST AI RMF page, and OWASP GenAI project; run the searches for the week's regulatory news.
-3. **Optional local section (read-only).** When run inside a workspace carrying Qor-style governance state (a `.qor/` directory or `docs/META_LEDGER.md`), skim `docs/META_LEDGER.md` and shadow-genome growth across `.qor/`-instrumented repos and report process drift in one short section. Never write to governance artifacts from this skill.
+3. **Optional local section (read-only).** When the active workspace exposes Qor-style governance state, such as a governance metadata directory or meta-ledger, inspect the available ledger and shadow-genome growth and report process drift in one short section. Never write to governance artifacts from this skill.
 4. **Synthesize.** Deadlines and binding changes first; standards drafts; security-framework updates; competitive signals (new governance startups/repos — the bound product's market).
 
 ## Scheduling

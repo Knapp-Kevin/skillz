@@ -20,13 +20,7 @@ Vendor pulse for Meta AI's Llama family and its open-weights ecosystem. Sources 
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/llama-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the Meta AI blog; run the searches. r/LocalLLaMA is the highest-signal community source for open-weights news — if the Reddit API was blocked, the site-scoped search is mandatory, not optional.
 3. **Synthesize.** New weights and licenses first (license terms matter for local deployment); llama-stack/tooling changes; benchmark and quantization chatter.

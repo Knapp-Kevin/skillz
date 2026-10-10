@@ -58,8 +58,8 @@ Produces a handoff document a successor — another agent or a future session �
 
 These override every section rule above, including "define every term." An honest blank beats a filled fabrication in every case.
 
-- **Never reproduce secret-shaped strings** — tokens, API keys, passwords, private keys, session cookies, connection strings (`sk-…`, `key=`, `token=`, `Bearer …`, `-----BEGIN`). Refer to a credential by type and short prefix only: "the OpenAI key (`sk-pr…`)". "Define every term" does **not** apply to credential values — a handoff that quotes a secret becomes a new leak vector. If a secret appears anywhere in the work being inventoried, flag probable exposure and recommend rotation in Landmines.
-- **Never invent a fact to fill a slot.** If a Decisions line has no evidence for its *because*, or a State row has no verification method, write `not established` — do not manufacture a rationale, a rejected alternative, or a verifier to satisfy the format.
+- **Never reproduce secret-shaped strings** — tokens, API keys, passwords, private keys, session cookies, connection strings (`sk-…`, `key=`, `token=`, `Bearer …`, `-----BEGIN`). Refer to a credential by type and short prefix only: "the OpenAI key (`sk-pr…`)". "Define every term" does **not** apply to credential values — a handoff that quotes a secret becomes a new leak vector. If a secret appears anywhere in the work being inventoried, flag probable exposure and recommend rotation in Landmines; never rotate, revoke, or otherwise change credentials from this skill.
+- **Never invent a fact to fill a slot.** If a Decisions line has no evidence for its *because*, or a State row has no established way to check its status, write `not established` — do not manufacture a rationale, a rejected alternative, or a verifier to satisfy the format.
 - **Mark inference as inference.** Anything not directly observed in the session gets "(inferred: <basis>)". Never promote an inferred requirement or risk to a stated one.
 - **Sections may be empty.** An empty section with `none established` is a valid, complete answer; missing evidence is itself handoff content — report it as an open thread.
 

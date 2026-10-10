@@ -20,13 +20,7 @@ Vendor pulse for Perplexity — the answer-engine/search-AI lane (Sonar API, Com
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/perplexity-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the API changelog and hub blog; run the searches. Perplexity ships product faster than models — separate product news (Comet, integrations) from API/model news (Sonar line, deprecations).
 3. **Synthesize.** API/model deprecations and pricing first; Sonar capability changes (relevant to research-skill design — it's a search-grounding option); product moves; community sentiment.
