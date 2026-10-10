@@ -13,9 +13,9 @@ Answer four axes with **yes / no / unknown**, except for authority:
 | Persistence | Can this host reliably read/write approved durable state across sessions? | Without it, return carry-forward text in the response instead of promising remembered state |
 | User in the loop | Can the host request and receive actionable approval in the actual workflow? | Without it, consequential actions need to remain plans/handoffs unless separately authorized |
 | Scheduling | Does this host have a real scheduling capability and permission to use it? | Without it, no background monitoring or scheduled follow-up claims |
-| Side-effect authority | **read-only / approval-gated / autonomous / unknown** for the specific action and current instruction | Unknown defaults to no mutation; approval must be specific to the action and destination |
+| Side-effect authority | **read-only / approval-gated / autonomous / unknown** for the specific action, resource, destination, scope, and current instruction | Unknown defaults to no mutation; approval must be specific to the action and destination |
 
-A capability's technical availability is **not** authorization. A persistent host with scheduling can still be limited to read-only. A single-session host can still provide a complete portable skill.
+A capability's technical availability is **not** authorization. Before any external write, disclosure, communication, identity change, money-bearing operation, or other consequential action, the host must establish authorization for the exact action, target resource, destination or recipient, data scope, and expected effects. `autonomous` describes a host capability, never blanket user consent. If any material dimension is unknown, remain read-only and ask for scoped approval or return a plan. Never copy secrets or unredacted sensitive data into the receipt. A persistent host with scheduling can still be limited to read-only. A single-session host can still provide a complete portable skill.
 
 ## 2. Discover demand before looking at names
 
@@ -66,7 +66,10 @@ needs:
 shortlist:
   - skill: <name / path>
     disposition: <ADOPT | ADAPT | COMPOSE | NO CHANGE | ...>
-    identity_and_security: <verified / unresolved / not applicable with reason>
+    semantic_review_state: <verified | rejected | pending | not-applicable, with exact-version reason>
+    package_security_state: <passed | failed | incomplete | not-run | not-applicable, with evidence revision>
+    behavioral_validation_state: <validated | failed | not-run | not-applicable, with evidence>
+    authorization: <action / resource / destination / data scope / approved-or-pending>
     activation: <request-driven / host event / separately authorized scheduled>
     destination: <user host / portable handoff>
 deferred: []
