@@ -37,6 +37,7 @@ categories:
   software-repositories:
     label: Software & Repositories
     skills:
+      - release-evidence-review
       - repo-doctor
       - repo-pulse
       - todo-harvester
@@ -50,6 +51,7 @@ categories:
       - mcp-vetting
       - permissions-review
       - session-continuity
+      - skill-behavior-evaluation
 
   monitoring-intelligence:
     label: Monitoring & Intelligence
