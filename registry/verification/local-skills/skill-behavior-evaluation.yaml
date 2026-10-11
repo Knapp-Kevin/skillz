@@ -1,0 +1,9 @@
+schema_version: 1
+skill_name: skill-behavior-evaluation
+source_id: local-skills
+local_path: skills/skill-behavior-evaluation/SKILL.md
+content_blob_sha: ceb0e562a70d6848e56d2641306eeac619d5f60f
+verification_status: verified
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 19/20
