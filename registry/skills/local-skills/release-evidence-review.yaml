@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: release-evidence-review
+display_name: Release Evidence Review
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/release-evidence-review/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: d43226dd400120911141dcf42282dc9070d691c9
+curated_at: 2026-10-10
+last_checked_at: 2026-10-10
+availability: in-repo
+local_path: skills/release-evidence-review/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: External host agent and access to authorized release evidence; no repository-owned deployment or test machinery
+import_eligibility: conditional-on-security-and-user-fit
+rationale: Readiness evidence is separated from authorization and actual release; covers immutable artifacts, migration/rollback, approval and production observation. No real release validation was performed.
