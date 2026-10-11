@@ -8,3 +8,15 @@ verification_status: verified
 validation_status: not-run
 package_security_status: not-run
 rubric_score: 19/20
+fingerprint_algorithm_note: git-blob-sha1
+characterized_at: 2026-10-10
+reviewed_at: 2026-10-10
+verification_basis: individual-structured-static-review
+rubric: docs/skill-verification.md
+tags:
+  use_case: [deployment, repository-maintenance, evaluation]
+  lifecycle: [verification, release]
+  characteristic: [evidence-first, risk-aware, traceable, safety-bounded, production-oriented]
+  authority: [read-only]
+  portability: [high]
+notes: Static review only; external behavior and security scan have not been evidenced.
