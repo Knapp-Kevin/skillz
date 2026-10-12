@@ -47,5 +47,5 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Notes
 
-- Server finds that merit adoption go through the intake registry (`registry/candidates.yaml`) with a permission tier — an MCP server is the highest-trust dependency class there is.
-- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).
+- A server recommended for adoption needs a governed intake record and explicit permission-tier review. If the skillz intake registry is accessible in the authorized host, consult its current decisions; otherwise provide a proposed intake handoff rather than assuming the registry is bundled with this skill.
+- Flag changes affecting the bound platform's MCP integration or the user's actual connector configuration, when the user has authorized access. Host-specific configuration is external to this skill package and may be unavailable.
