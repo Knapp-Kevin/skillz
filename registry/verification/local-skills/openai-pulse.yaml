@@ -3,9 +3,9 @@ skill_name: openai-pulse
 source_id: local-skills
 local_path: "skills/openai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d6b98630525e16d392b3f50e67ae674332316310
+content_blob_sha: 79a3dda12fd44756b2b8f6661c10c3b9e3e51fb5
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,5 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+
+passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
