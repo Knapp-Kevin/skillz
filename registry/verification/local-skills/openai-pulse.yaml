@@ -3,7 +3,7 @@ skill_name: openai-pulse
 source_id: local-skills
 local_path: "skills/openai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 79a3dda12fd44756b2b8f6661c10c3b9e3e51fb5
+content_blob_sha: cfb234de2003eb1024b8e4d7dd7c3172c80e1718
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
