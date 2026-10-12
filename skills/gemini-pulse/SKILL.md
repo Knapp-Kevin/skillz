@@ -20,13 +20,7 @@ Vendor pulse for Google Gemini / DeepMind. Sources are data (`sources.json`), sy
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/gemini-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the Gemini API changelog and the Google AI / DeepMind blogs; run the listed searches. Google announces across several surfaces — the searches catch what the blogs miss.
 3. **Synthesize.** Deprecations/quota changes first; model releases; agent tooling (gemini-cli, ADK); community sentiment.

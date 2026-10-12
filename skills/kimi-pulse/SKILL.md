@@ -20,13 +20,7 @@ Vendor pulse for Moonshot AI's Kimi family. Sources are data (`sources.json`), s
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/kimi-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Check the MoonshotAI GitHub org and Hugging Face org page (weights land there first); run the searches. Kimi releases tend to arrive with strong agentic/tool-use claims — pull the community benchmark threads to test them.
 3. **Synthesize.** New weights/licenses and agentic capabilities first; API/pricing changes; community verification of benchmark claims.

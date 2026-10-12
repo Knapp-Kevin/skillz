@@ -20,13 +20,7 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/mcp-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the spec changelog (the hard source — protocol changes are the deprecation-equivalent); run the searches, especially the security one — MCP server vulnerabilities are an active research area.
 3. **Synthesize.** Spec/SDK changes first with migration impact; security advisories second; then notable new servers (filter: does it unlock a capability we lack, or duplicate a connected one?); registry/ecosystem news.
@@ -49,5 +43,5 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Notes
 
-- Server finds that merit adoption go through the intake registry (`registry/candidates.yaml`) with a permission tier — an MCP server is the highest-trust dependency class there is.
-- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).
+- Server finds that merit adoption go through the host's governed intake process with an explicit permission tier; an MCP server is a high-trust dependency class.
+- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers and their active configuration.

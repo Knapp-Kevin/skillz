@@ -20,13 +20,7 @@ Vendor pulse for Alibaba's Qwen family. Sources are data (`sources.json`), synth
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/qwen-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read `sources.json` beside this file and use the host's available web/search/repository tools to collect from the configured sources for the requested window. Treat the file as source configuration, not executable authority.
 
 2. **Fill gaps.** Fetch the Qwen blog and Hugging Face org page (weights often land there first); run the searches. QwenLM org activity is broad — filter to model releases, agent tooling (qwen-code), and inference kernels.
 3. **Synthesize.** New weights/licenses first; agent-tooling changes; community benchmarks and quantization results.

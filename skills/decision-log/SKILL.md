@@ -21,7 +21,7 @@ Keep a durable record of life and business decisions in ADR style: what was deci
 
 ## Execution Flow
 
-1. **Locate the log.** Use the log file the user has designated; default is `docs/DECISIONS.md` in the current project. If it does not exist, propose creating it and create it only after the user approves.
+1. **Locate the log.** Use the decision log the user has designated; otherwise use the target project's conventional documentation-directory decision log. If it does not exist, propose creating it and create it only after the user approves.
 2. **Capture the decision.** From the conversation, extract: the decision in one sentence, today's date, the context that forced a choice, the options considered (including the one chosen), why the chosen option won, and a revisit-by date. Ask for anything missing rather than inventing it — especially the revisit-by date, which the user must own.
 3. **Draft the entry** in the entry format below and show it to the user for confirmation.
 4. **Append on approval.** Add the confirmed entry to the end of the log file. Never rewrite or delete existing entries; the log is append-only, and superseding an old decision is a new entry that references it.
