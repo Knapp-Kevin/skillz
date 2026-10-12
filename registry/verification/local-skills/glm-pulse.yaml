@@ -3,9 +3,9 @@ skill_name: glm-pulse
 source_id: local-skills
 local_path: "skills/glm-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 3bfbb84c43a76413897b30ad675d1ba5d8b8a1de
+content_blob_sha: 5a0414e6d8bda0433d5fbedbde734b8369a25f6c
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,4 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization."
+passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
