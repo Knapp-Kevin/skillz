@@ -5,9 +5,9 @@
 | Attribute | Value |
 |---|---|
 | **Last updated** | 2026-10-06 |
-| **Milestone** | Runtime-passive architecture + maintainer security gate |
+| **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
-| **Repository type** | Runtime-passive, maintenance-active skill knowledge resource |
+| **Repository type** | Entirely passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
@@ -22,13 +22,13 @@
 | **Corey Haines Marketing Skills current-standard gaps** | **0** |
 | **Evaluation model** | Static semantic review + separate exact-version package-security evidence; optional later external behavioral evidence |
 | **Normal-use runtime/CI requirement** | None |
-| **Maintenance security automation** | Pinned NVIDIA SkillSpector static gate; no scheduled full-corpus scan |
+| **Maintenance security evidence** | Host-executed exact-pinned SkillSpector assessments; no repository-owned CI |
 
 ## Current architecture
 
 The canonical boundary is stable: user-facing material lives under `skills/`; intact pinned upstream corpora live under `skills/sources/<source-id>/`; passive repository-use/curation procedures live under `engine/skills/` and are excluded from user-facing counts; provenance, semantic verification, security evidence, and exact-version tool identity live under `registry/`.
 
-`skillz` owns no **normal-use** runtime, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Explicit repository maintenance may use bounded CI/scanner/test tooling to establish corpus evidence. The current security gate invokes exact-pinned NVIDIA SkillSpector externally; it does not become user-facing runtime. Tooling inside pinned third-party repositories remains upstream package material.
+`skillz` owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An explicitly authorized external host may execute pinned security tools and commit the resulting exact-version evidence. Tooling inside pinned third-party corpora remains upstream source material.
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
@@ -125,4 +125,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-The narrative capability program is complete. Continue in post-completion maintenance mode: verify source freshness and high-salience omission risk, resolve bounded candidate/source evaluations decisively, backfill exact-version package-security evidence in risk order, keep issue/PR lifecycle debt at zero where actionable, and add selective behavioral/adversarial evidence only when an authorized external environment can produce truthful evidence. Do not invent user-facing repository runtime merely to create work; bounded governed maintenance automation is permitted.
+The narrative capability program is complete. Continue in post-completion maintenance mode: verify source freshness and high-salience omission risk, resolve bounded candidate/source evaluations decisively, backfill exact-version package-security evidence in risk order, keep issue/PR lifecycle debt at zero where actionable, and add selective behavioral/adversarial evidence only when an authorized external environment can produce truthful evidence. Do not invent user-facing repository runtime merely to create work; any active maintenance or assessment is performed by the authorized external host.
