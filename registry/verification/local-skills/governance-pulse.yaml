@@ -3,7 +3,7 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4ecf9a1acb8f1efbaac0761e7e44eaaec7e40084
+content_blob_sha: ac4927ff83ffac0b15377b0b4773252ade7a536e
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
@@ -20,3 +20,5 @@ tags:
   portability: [medium]
 notes: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
 passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
+
+external_reference_review: Host/repository paths were clarified as optional externally authorized evidence, not bundled package components. Previous static scan had zero active findings but incomplete link coverage. New exact revision has not been re-scanned; behavioral validation not-run.
