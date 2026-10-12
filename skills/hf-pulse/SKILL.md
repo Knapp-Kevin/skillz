@@ -21,12 +21,12 @@ Topic pulse for the Hugging Face ecosystem — the cross-vendor view: what's act
 
 ## Execution Flow
 
-1. **Prefer the HF MCP tools when connected** — they beat the generic engine here:
+1. **Prefer connected HF MCP tools** for relevant source-specific retrieval:
    - `paper_search` — this window's notable papers (query by topic: agents, memory, reasoning)
    - `hub_repo_search` / `hub_repo_details` — trending models and datasets
    - `space_search` — trending spaces (often the earliest demo signal)
 
-2. **Collect the rest** with the shared engine, from the skillz repo root:
+2. **Collect remaining sources** using the external host's authorized tools:
 
    Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
