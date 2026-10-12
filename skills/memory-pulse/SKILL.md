@@ -22,7 +22,7 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
+1. **Collect.** Use the authorized external host's retrieval capabilities:
 
    Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
