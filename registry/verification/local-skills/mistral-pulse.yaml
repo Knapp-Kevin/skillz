@@ -3,7 +3,7 @@ skill_name: mistral-pulse
 source_id: local-skills
 local_path: "skills/mistral-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 0a0983f03c893dc9ab02cf99a3fd0fd09fe7092c
+content_blob_sha: 81e2d64d29af4fa3ac1fc6aeeda38166ec5bed11
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
