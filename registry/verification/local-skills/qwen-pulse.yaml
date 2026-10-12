@@ -3,7 +3,7 @@ skill_name: qwen-pulse
 source_id: local-skills
 local_path: "skills/qwen-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 1e360e440bf4d15879fcbd97c5d2ff02d39df42e
+content_blob_sha: 9b78f2c0a4dc3197eb61ec8bafbe8141d15138ad
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
