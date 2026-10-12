@@ -3,9 +3,9 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: bc90e5248c04c408c8c5a44bea62b1d66a7fb143
+content_blob_sha: fdbc3aa0741a4d1ae191ce9feddff52de612ad75
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,5 @@ tags:
   authority: [read-only]
   portability: [medium]
 notes: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+
+passive_runner_remediation: Repository script invocation replaced by authorized host retrieval. Current revision manually reviewed for passive collection boundaries; behavioral validation not-run and old package scan evidence does not transfer.
