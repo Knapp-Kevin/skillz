@@ -22,18 +22,16 @@ Vendor pulse for Mistral AI. Sources are data (`sources.json`), synthesis is you
 
 1. **Collect.** From the skillz repo root:
 
-   ```
-   node scripts/pulse-run.ts --sources skills/mistral-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+   The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
 2. **Fill gaps.** Fetch mistral.ai/news and the API changelog; run the searches. Watch both the hosted API line and the open-weights line — they move independently.
 3. **Synthesize.** Deprecations/pricing first; new models (note open vs API-only licensing); coding-model changes (Codestral/Devstral matter for agent workflows); community sentiment.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses.
+- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses. Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
 
 ## Output Format
 
