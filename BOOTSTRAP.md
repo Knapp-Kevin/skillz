@@ -51,7 +51,7 @@ Do not rebuild from zero.
 
 ## Reference corpus and governed selection
 
-`vendor/` contains pinned upstream reference corpora. Other sources may remain tracked upstream through `registry/sources.yaml`.
+`skills/sources/<source-id>/` contains intact pinned upstream reference corpora. Other sources may remain tracked upstream through `registry/sources.yaml`.
 
 Both are prior-art and discovery surfaces. **Availability does not create blanket trust.** A reference can be valuable for comparison, component extraction, or adaptation even when it has not earned unchanged-reuse eligibility.
 
@@ -69,7 +69,7 @@ A blocked whole skill may still contain a useful idea. Component reuse does not 
 The quality model is defined in [`docs/skill-verification.md`](docs/skill-verification.md).
 
 - `verified` means the exact skill/package version passed structured semantic review.
-- `validated` means the verified material also received representative scenario/adversarial semantic review.
+- `validated` requires representative external behavioral/adversarial execution evidence for the exact skill version, not merely a static scenario design or semantic review. When no such execution occurred, record behavioral validation as `not-run`.
 
 These semantic states do not imply a package-security pass. Security state is governed separately by [`docs/security-scanning.md`](docs/security-scanning.md).
 
