@@ -3,9 +3,9 @@ skill_name: qwen-pulse
 source_id: local-skills
 local_path: "skills/qwen-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e22ff1879ce563a76e733bc576bed80cf4cc5f12
+content_blob_sha: 1e360e440bf4d15879fcbd97c5d2ff02d39df42e
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,5 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
+
+passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
