@@ -3,9 +3,9 @@ skill_name: gemini-pulse
 source_id: local-skills
 local_path: "skills/gemini-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80
+content_blob_sha: 36b460f40471134da8e13c16d707b6d17f3004a1
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,4 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.

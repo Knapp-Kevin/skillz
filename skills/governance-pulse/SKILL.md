@@ -21,21 +21,15 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/governance-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read the bundled `sources.json` beside this SKILL.md as a source list. The authorized external host agent fetches or searches selected sources with capabilities it actually has, records source URLs and dates, and respects access and privacy boundaries. If browsing is unavailable, report the unverified gaps. This repository provides no runner, fetcher, scheduler, or automated collection process.
 
 2. **Fill gaps.** Fetch the EU AI Act tracker (implementation deadlines are the hard dates), NIST AI RMF page, and OWASP GenAI project; run the searches for the week's regulatory news.
-3. **Optional local section (read-only).** When run inside a workspace carrying Qor-style governance state (a `.qor/` directory or `docs/META_LEDGER.md`), skim `docs/META_LEDGER.md` and shadow-genome growth across `.qor/`-instrumented repos and report process drift in one short section. Never write to governance artifacts from this skill.
+3. **Optional operator-workspace review (read-only).** Only when the user has authorized access to a separate governance-instrumented workspace, inspect available governance ledgers and locally recorded process-drift summaries there. These files are external workspace evidence, never required components of this skill package. If no such workspace is authorized and accessible, omit this section. Do not write to governance artifacts.
 4. **Synthesize.** Deadlines and binding changes first; standards drafts; security-framework updates; competitive signals (new governance startups/repos — the bound product's market).
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly; monthly is acceptable — regulation moves slower than models.
+- **Claude Code:** `/schedule` weekly; monthly is acceptable — regulation moves slower than models. Schedule only when the user explicitly authorizes it and the external host supports scheduling; this skill does not create a scheduled job.
 
 ## Output Format
 

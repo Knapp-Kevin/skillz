@@ -21,25 +21,23 @@ Topic pulse for the Hugging Face ecosystem — the cross-vendor view: what's act
 
 ## Execution Flow
 
-1. **Prefer the HF MCP tools when connected** — they beat the generic engine here:
+1. **Prefer connected HF MCP tools** for relevant source-specific retrieval:
    - `paper_search` — this window's notable papers (query by topic: agents, memory, reasoning)
    - `hub_repo_search` / `hub_repo_details` — trending models and datasets
    - `space_search` — trending spaces (often the earliest demo signal)
 
-2. **Collect the rest** with the shared engine, from the skillz repo root:
+2. **Collect remaining sources** using the external host's authorized tools:
 
-   ```
-   node scripts/pulse-run.ts --sources skills/hf-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
-   If MCP tools are absent and the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+   The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
 3. **Fill gaps.** Fetch the HF blog and daily-papers page; run the searches.
 4. **Synthesize.** Trending models with *why* they're trending (new SOTA? small-and-runnable? meme?); paper themes, not paper lists; library releases that affect downstream tooling.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the vendor pulses — this is the cross-vendor summary that ties them together.
+- **Claude Code:** `/schedule` weekly, same morning as the vendor pulses — this is the cross-vendor summary that ties them together. Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
 
 ## Output Format
 

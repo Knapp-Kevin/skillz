@@ -9,7 +9,7 @@ license: MIT
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-12
 availability: in-repo
 local_path: skills/deepseek-pulse/SKILL.md
 permission_tier: read-only

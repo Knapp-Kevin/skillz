@@ -3,9 +3,9 @@ skill_name: deepseek-pulse
 source_id: local-skills
 local_path: "skills/deepseek-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e5778521bac5459432731814755dd2c4d60ff705
+content_blob_sha: 2aadd8f5d190e3b4ae91cf5877a09ef25ee33304
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,4 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
+passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.

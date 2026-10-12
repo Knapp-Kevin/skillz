@@ -20,20 +20,18 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
+1. **Collect.** Use the authorized external host's retrieval capabilities:
 
-   ```
-   node scripts/pulse-run.ts --sources skills/mcp-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+   The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
 2. **Fill gaps.** Fetch the spec changelog (the hard source — protocol changes are the deprecation-equivalent); run the searches, especially the security one — MCP server vulnerabilities are an active research area.
 3. **Synthesize.** Spec/SDK changes first with migration impact; security advisories second; then notable new servers (filter: does it unlock a capability we lack, or duplicate a connected one?); registry/ecosystem news.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs with github-pulse (which sweeps MCP repos broadly; this pulse goes narrow and deep — cross-reference, don't duplicate).
+- **Claude Code:** `/schedule` weekly — pairs with github-pulse (which sweeps MCP repos broadly; this pulse goes narrow and deep — cross-reference, don't duplicate). Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
 
 ## Output Format
 
@@ -49,5 +47,5 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Notes
 
-- Server finds that merit adoption go through the intake registry (`registry/candidates.yaml`) with a permission tier — an MCP server is the highest-trust dependency class there is.
-- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).
+- A server recommended for adoption needs a governed intake record and explicit permission-tier review. If the skillz intake registry is accessible in the authorized host, consult its current decisions; otherwise provide a proposed intake handoff rather than assuming the registry is bundled with this skill.
+- Flag changes affecting the bound platform's MCP integration or the user's actual connector configuration, when the user has authorized access. Host-specific configuration is external to this skill package and may be unavailable.

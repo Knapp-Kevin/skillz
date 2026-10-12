@@ -3,7 +3,7 @@
   "source_id": "local-skills",
   "source_class": "first-party",
   "license": "MIT",
-  "reviewed_at": "2026-09-08",
+  "reviewed_at": "2026-10-12",
   "verification_basis": "individual-structured-static-review",
   "rubric": "docs/skill-verification.md",
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
@@ -335,7 +335,7 @@
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
+      "content_blob_sha": "2aadd8f5d190e3b4ae91cf5877a09ef25ee33304",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -360,7 +360,8 @@
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
+      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "devlog-draft",
@@ -463,7 +464,7 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
+      "content_blob_sha": "36b460f40471134da8e13c16d707b6d17f3004a1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -488,13 +489,14 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "content_blob_sha": "eed6bd85ed885da7277749e092fc24f77aabb7cb",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -519,13 +521,14 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
+      "content_blob_sha": "5a0414e6d8bda0433d5fbedbde734b8369a25f6c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -550,13 +553,14 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization."
+      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "content_blob_sha": "ac4927ff83ffac0b15377b0b4773252ade7a536e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -583,7 +587,8 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "handoff-writer",
@@ -622,7 +627,7 @@
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+      "content_blob_sha": "cae0fe0493d2ead5d8de2f6dbd90fd1c46718df0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -647,7 +652,8 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "inbox-triage",
@@ -685,7 +691,7 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "content_blob_sha": "fdbc3aa0741a4d1ae191ce9feddff52de612ad75",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -711,13 +717,14 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "content_blob_sha": "4c953878c4c02183d819e94a89462c151bef2f44",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -742,7 +749,8 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
+      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "learning-plan",
@@ -780,7 +788,7 @@
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
+      "content_blob_sha": "4d22181cee40f4e26b2563c2893083887d66910e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -805,13 +813,14 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "content_blob_sha": "fb2faabfb3de8e7487b5f98d628e1edfc07dc806",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -838,7 +847,8 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mcp-vetting",
@@ -876,7 +886,7 @@
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
+      "content_blob_sha": "bfccb4b879a7ffcb67c844b0d3683f3bbc3a0f3e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -901,13 +911,14 @@
           "medium"
         ]
       },
-      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
+      "content_blob_sha": "81e2d64d29af4fa3ac1fc6aeeda38166ec5bed11",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -932,13 +943,14 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
+      "content_blob_sha": "cfb234de2003eb1024b8e4d7dd7c3172c80e1718",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -963,7 +975,8 @@
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "paper-digest",
@@ -1032,7 +1045,7 @@
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
+      "content_blob_sha": "4426e6744badf1f77c552fb50aa807a464b8ab8b",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1057,13 +1070,14 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
+      "content_blob_sha": "9b78f2c0a4dc3197eb61ec8bafbe8141d15138ad",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1088,7 +1102,8 @@
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
+      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "repo-doctor",
@@ -1318,7 +1333,7 @@
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
+      "content_blob_sha": "fd78686d64ff02b2e730b3839ff7c980c275b7ed",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1343,7 +1358,8 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
+      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "automation-receipts",
