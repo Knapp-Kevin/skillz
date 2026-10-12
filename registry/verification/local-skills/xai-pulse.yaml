@@ -3,7 +3,7 @@ skill_name: xai-pulse
 source_id: local-skills
 local_path: "skills/xai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 2a6e9b30959772bd0a6def95a4c76065f3601e91
+content_blob_sha: fd78686d64ff02b2e730b3839ff7c980c275b7ed
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
