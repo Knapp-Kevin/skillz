@@ -1,8 +1,8 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-10-05
+**Snapshot date:** 2026-10-12
 
-This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, and reconciliation.
+This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, security assessment, and reconciliation. The repository owns no runtime, scripts, tests, CI workflows, or background services.
 
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
@@ -52,6 +52,10 @@ Every explicitly current-standard-complete family above has **0** current-standa
 Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. All 23 first-class packages are individually **VERIFIED exact-version static references** with scores from 16/20 to 18/20 and behavioral validation `not-run`. The primary operational caveat is medium portability because the family assumes the upstream Story Skills Markdown/YAML project model and optional `story` CLI; source-owned runtime remains upstream-only.
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
+
+## First-party monitoring hygiene (2026-10-12)
+
+The existing first-party monitoring category remains **17** skills. At PR #416, **16** skills have a passive host-driven collection revision and refreshed exact manifest verification companions, replacing defunct repository runner calls; `claude-pulse` needed no edit. These are maintenance revisions, **not additional admissions**. The final three scanner-incomplete packages require exact-revision external-host assessment; behavioral validation is `not-run`.
 
 ## First-party skills by purpose
 
