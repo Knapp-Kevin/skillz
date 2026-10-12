@@ -22,9 +22,7 @@ Vendor pulse for OpenAI: official releases and community reception, synthesized 
 
 1. **Collect.** From the skillz repo root (this skill's `sources.json` drives the shared engine):
 
-   ```
-   node scripts/pulse-run.ts --sources skills/openai-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
    If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools — same shape, no script required.
 
@@ -33,7 +31,7 @@ Vendor pulse for OpenAI: official releases and community reception, synthesized 
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs with claude-pulse and the other vendor pulses on the same morning for a cross-vendor view.
+- **Claude Code:** `/schedule` weekly — pairs with claude-pulse and the other vendor pulses on the same morning for a cross-vendor view. Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
 
 ## Output Format
 
