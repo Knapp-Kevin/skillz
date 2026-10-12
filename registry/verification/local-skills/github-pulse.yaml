@@ -3,9 +3,9 @@ skill_name: github-pulse
 source_id: local-skills
 local_path: "skills/github-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 03e135f4e916115040af63271de71b23277e36f7
+content_blob_sha: 4def1719e472cd8e0f2a3f3a4d9b7f50438ce62c
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,4 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
