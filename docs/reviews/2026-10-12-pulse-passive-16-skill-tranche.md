@@ -34,3 +34,16 @@ This is a **16-of-17 first-party revision**, not new admissions: first-party inv
 - Confirm no deleted runner is referenced anywhere in the 17 skills.
 - Check package-security/behavioral state truthfully, and coordinate the five public surfaces with PR #408 before merge.
 - No repository-owned automation, or forced host execution.
+
+
+## Historical exact-head security scan and subsequent remediation
+
+Pinned SkillSpector v2.12.0 static gate ran at prior PR #416 head `25c338fffd866c5c6a32a44db94f9cefa9b77e92`: [workflow 38316077674](https://github.com/Knapp-Kevin/skillz/actions/runs/38316077674), job `115032899545`, 2026-10-12. Log: 16 changed skill packages scanned; **13 PASS and 3 FAIL (incomplete file-reference coverage)**. Failed packages: `github-pulse`, `governance-pulse`, `mcp-pulse`. For each failed report, `risk_assessment.score = 0`, severity `LOW`, `issues = []`, but the tool identified references outside the standalone package and returned a nonzero result. A zero issue count does **not** override the incomplete-coverage failure.
+
+Follow-up revision clarified the distinction between host-local/skillz-wide files and bundled skill components in those three SKILL.md files. Specifically: the skillz candidate registry is optional external context; a separate governance workspace is optional and authorization-gated; host connector configurations are external to a packaged pulse skill. Companion blob fingerprints were refreshed after the changes.
+
+**Important:** the scanner did not publish downloadable JSON report artifacts in that run. Its 13 passes apply to the *unchanged exact packages at the scanned head* only. The **three subsequently revised manifests have not received a new exact-version scan**, and neither an individual report digest nor a passing post-remediation scan is claimed. Any further scan must run in an authorized external host environment, because PR #408 removed repository-owned CI. Package-security eligibility for these final revised versions is pending external assessment. Behavioral validation remains `not-run`.
+
+## Five-surface accounting reconciliation
+
+README.md, docs/SYSTEM_STATE.md, CURATION_QUEUE.md, INDEX.md and index.json are updated together on this branch from the content of current main after merged PR #408. They all retain **44** first-party skills, **44/44** provenance-complete, **721** third-party review records and **22** source identities, while distinguishing the proposed 16-skill maintenance tranche from new admission. Their snapshot notes are review-stage evidence, not claims that PR #416 has shipped.
