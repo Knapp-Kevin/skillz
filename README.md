@@ -17,7 +17,7 @@
 
 `skillz` is **entirely passive**. It owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An authorized external host may run assessments elsewhere and deposit exact-version evidence here; pinned upstream package tooling stays source-owned reference material.
 
-The repository provides four surfaces:
+The repository provides five surfaces:
 
 1. **44 first-party user-facing skills** under [`skills/`](skills/), all **44/44 provenance-complete**.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
