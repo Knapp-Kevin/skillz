@@ -54,7 +54,7 @@ This does **not** mean an individual user-facing skill cannot contain or require
 When a current local checkout exists, the agent may inspect:
 
 - first-party skills under `skills/`;
-- pinned external reference corpora under `vendor/` when submodules are materialized;
+- pinned external reference corpora under `skills/sources/<source-id>/` when submodules are materialized;
 - governed per-skill provenance and semantic review records under `registry/`;
 - the living curation ledger in `CURATION_QUEUE.md`.
 
