@@ -4,7 +4,7 @@
 
 This file maps the current control surfaces for `skillz`.
 
-`skillz` is a **runtime-passive, maintenance-active skill knowledge resource**. The external host agent is the active user-facing system. Normal use requires no repository runtime, CI, scanner, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Explicit `REPOSITORY_MAINTENANCE` may use bounded CI, scanners, tests, and related tooling to establish repository evidence.
+`skillz` is an **entirely passive skill knowledge resource**. The external host agent is the active system for normal use and authorized maintenance. The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. External host-executed assessments may contribute passive exact-version evidence.
 
 During normal `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER` use, the repository is also **read-only reference material**. Skills created, adapted, composed, refined, packaged, or installed for a user belong in the user's active host/environment or in a portable handoff. They do not belong in `skillz`. Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation.
 
@@ -86,14 +86,14 @@ These establish a separate package-security dimension. Security scanning does no
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
-| Security scanning policy | `docs/security-scanning.md` | canonical scanner boundary, security states, fail-closed rules, licensing, CI, and backfill policy |
+| Security scanning policy | `docs/security-scanning.md` | external scanner boundary, security states, fail-closed rules, licensing, and backfill policy |
 | Security-tool registry | `registry/security-tools.yaml` | exact scanner identity, release, revision, license, mode, and gate configuration |
 | Exact-version security records | `registry/security/` | persisted package-bound security evidence and finding dispositions |
-| Maintainer CI gate | `.github/workflows/skillspector.yml` | changed-package static scan using the exact registered SkillSpector revision |
+| Historical maintainer CI | Git history | former workflow evidence only; no live repository-owned CI |
 
 Semantic `verified` or `validated` state never implies a security pass. For scanner-compatible packages, new unchanged admission or refresh eligibility requires security `passed` or `findings-reviewed`. Existing historical semantic reviews remain valid as semantic evidence but must not be relabeled as security-reviewed without an actual qualifying scan.
 
-The maintainer workflow is deliberately static-only by default, fail-closed on findings or incomplete coverage, exact-version pinned, and unscheduled. It is repository maintenance automation, not a runtime or prerequisite for normal users.
+Security analysis is performed in a separately authorized external host environment. The repository records exact-version scanner identity, completeness, findings and dispositions without running a workflow.
 
 ## Tier 5: passive catalog and browsing surfaces
 
@@ -145,7 +145,7 @@ When a current control surface changes:
 4. if exact evidence cannot be established, mark the state pending instead of guessing;
 5. distinguish source context from individual skill quality;
 6. distinguish terminology such as `vendored` from obsolete physical `vendor/...` path assumptions;
-7. treat any current claim that normal consumers require repository runtime, CI, scanners, scripts, tests, schedulers, monitors, crawlers, installers, synchronizers, or background services as architecture/documentation drift; bounded maintenance automation explicitly defined by current governance is allowed;
+7. treat any current claim that normal consumers require repository runtime, CI, scanners, scripts, tests, schedulers, monitors, crawlers, installers, synchronizers, or background services as architecture/documentation drift; active evidence collection belongs to the external host, never repository-owned automation;
 8. treat any normal-use instruction that makes `skillz` the destination for a user-derived skill, or implies that `CREATE` means repository admission, as architecture/documentation drift;
 9. treat any governed user-facing skill lacking truthful provenance evidence as corpus-completeness drift;
 10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review, applicable exact-version security scanning, and a justified admission decision as admission-process drift;

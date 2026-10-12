@@ -1,6 +1,6 @@
 # Agent Entry Contract
 
-`skillz` is a runtime-passive, maintenance-active skill library, source registry, review corpus, and instruction set. The host agent is the active user-facing system; bounded repository-maintenance automation may establish corpus evidence.
+`skillz` is an entirely passive skill library, source registry, review corpus, and instruction set. The external host agent performs all active work; it may deposit authorized review evidence here without introducing repository-owned automation.
 
 **Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).**
 
@@ -50,7 +50,7 @@ Only `REPOSITORY_MAINTENANCE` may target repository files for mutation. Every ot
 
 ## Capability routing
 
-Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, repository scanners, or repository scripts for normal user work. Under explicit `REPOSITORY_MAINTENANCE`, bounded CI/scanner/test tooling may be used to establish repository evidence without becoming a consumer prerequisite.
+Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, repository scanners, or repository scripts for normal user work. During explicit `REPOSITORY_MAINTENANCE`, the external host may use its authorized tools to assess source material and commit passive evidence; this repository owns no scanners, scripts, tests, or CI workflows.
 
 When `skills/sources/<source-id>/` is available in the host, use the applicable pinned corpus as local reference material. When a pinned corpus is not locally materialized or accessible through the current host, resolve the same registered upstream source through whatever legitimate repository/API/web capability the host has, preserving the registered source identity and exact pin when the task depends on exact-version evidence.
 
@@ -74,7 +74,7 @@ If exact identity cannot be established, say so and take the conservative path.
 
 A reference may contribute useful components without becoming the final workflow. Preserve the useful mechanism without automatically importing source-specific terminology, ceremony, commands, UX, file layout, or authority assumptions.
 
-A skill may legitimately own scripts, references, templates, fixtures, examples, JSON, assets, or other supporting components. Preserve and evaluate those as part of the skill package. The runtime-passive boundary applies to normal repository consumption, not to every file inside every user-facing skill and not to explicitly governed maintainer-side security automation.
+A skill may legitimately own scripts, references, templates, fixtures, examples, JSON, assets, or other supporting components. Preserve and evaluate those as part of the skill package. The passive boundary applies to repository-owned infrastructure, not intact source-authored bundled components used by an authorized external host.
 
 ## Memory, privacy, and mutation
 

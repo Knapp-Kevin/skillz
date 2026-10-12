@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is runtime-passive for normal users and maintenance-active under explicit repository-maintenance authority. Detailed exact-version evidence belongs in canonical companions under `registry/`; bounded maintainer automation may establish package-security evidence without becoming a user-facing runtime. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
+This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive even during explicitly authorized maintenance. Detailed exact-version evidence belongs in canonical companions under `registry/`; any scanners or behavioral tests are run by the external host, not by repository-owned automation. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
 ## Current governed depth
 
@@ -24,7 +24,7 @@ For an active finite source family, recompute the whole remaining frontier befor
 
 ## Mandatory provenance status
 
-The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every source family explicitly represented as current-standard complete below has zero package gaps. Selectively tracked corpora remain bounded to the individual units actually admitted and are not silently counted as whole-family complete. Provenance and semantic completion remain documentary/evidentiary; package-security evidence may now be established through the explicitly governed pinned maintainer scanner/CI path without creating a normal-use runtime.
+The corpus-wide provenance-completeness audit #66 is **closed completed**. First-party is **44/44** complete and every source family explicitly represented as current-standard complete below has zero package gaps. Selectively tracked corpora remain bounded to the individual units actually admitted and are not silently counted as whole-family complete. Provenance and semantic completion remain documentary/evidentiary; package-security evidence may be established by an authorized external host using the registered pinned scanner, with only passive receipts persisted here.
 
 The bounded controlled-taxonomy conformance audit #342 is also **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; do not infer current defects from historical examples without live evidence.
 
@@ -114,7 +114,7 @@ Discovery proceeds in parallel without displacing current-standard source mainte
 
 ## Lifecycle hygiene
 
-At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after a material tranche; preserve the runtime-passive/maintenance-active architecture.
+At each run: inspect every open PR and issue; merge a current authorized ready PR; close evidence-complete/duplicate/superseded bounded issues; state concrete blockers; reconcile README, `docs/SYSTEM_STATE.md`, this ledger, `INDEX.md`, and `index.json` atomically after a material tranche; preserve the entirely passive architecture.
 
 ## Historical authority boundary
 

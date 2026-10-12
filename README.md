@@ -4,10 +4,10 @@
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-721-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
-![Repository](https://img.shields.io/badge/repository-runtime--passive%20%7C%20maintenance--active-blueviolet)
+![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**A runtime-passive, maintenance-active skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, security evidence, controlled tags, source context, and static catalog snapshots. The external host agent remains the active user-facing system.
+**An entirely passive skill knowledge resource for AI agents.** `skillz` stores reusable skills, procedures, safeguards, anti-patterns, rejected examples, creator methods, standards, pinned source material, provenance, exact-version review evidence, security evidence, controlled tags, source context, and static catalog snapshots. The external host agent remains the active user-facing system.
 
 > **AI agent? Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** For first-visit or returning-user skill-system work, [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md) is the canonical passive procedure. The [first-contact discovery walkthrough](docs/first-contact-discovery.md) provides a capability-aware checklist and example handoff; direct skill lookup stays lightweight.
 
@@ -15,9 +15,9 @@
 
 ## What `skillz` is
 
-`skillz` is **runtime-passive for consumers**. It owns no user-facing runtime, installer, scheduler, monitor, crawler, synchronizer, background service, vector database, autonomous observer, or personalization service. Repository maintainers may use bounded CI, scanners, tests, and other maintenance tooling to establish evidence about the corpus. That tooling is never a normal-use prerequisite or a runtime supplied to host agents.
+`skillz` is **entirely passive**. It owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An authorized external host may run assessments elsewhere and deposit exact-version evidence here; pinned upstream package tooling stays source-owned reference material.
 
-The repository provides four surfaces:
+The repository provides five surfaces:
 
 1. **44 first-party user-facing skills** under [`skills/`](skills/), all **44/44 provenance-complete**.
 2. **12 intact pinned third-party corpora** under [`skills/sources/`](skills/sources/) at exact upstream revisions.
@@ -107,7 +107,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 | [`registry/verification/`](registry/verification/) | Exact-version semantic review evidence |
 | [`registry/security/`](registry/security/) | Exact-version package-security evidence |
 | [`registry/security-tools.yaml`](registry/security-tools.yaml) | Pinned maintainer security-tool identity and policy |
-| [`docs/security-scanning.md`](docs/security-scanning.md) | Security scanning, state, licensing, CI, and backfill contract |
+| [`docs/security-scanning.md`](docs/security-scanning.md) | External security-evidence, licensing, and backfill contract |
 | [`engine/skills/`](engine/skills/) | Passive repository-use/curation procedures |
 | [`docs/GOVERNANCE_INDEX.md`](docs/GOVERNANCE_INDEX.md) | Current governance precedence |
 | [`docs/SYSTEM_STATE.md`](docs/SYSTEM_STATE.md) | Current live corpus and architecture snapshot |
