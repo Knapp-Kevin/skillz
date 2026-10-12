@@ -3,7 +3,7 @@ skill_name: perplexity-pulse
 source_id: local-skills
 local_path: "skills/perplexity-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 1c045126e4574923b1668b8080864914da99ef72
+content_blob_sha: 4426e6744badf1f77c552fb50aa807a464b8ab8b
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
