@@ -73,6 +73,37 @@
       "notes": "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
     },
     {
+      "skill_name": "automation-receipts",
+      "local_path": "skills/automation-receipts/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1d6c076f2888a0d6c8b2be1552717b96e14a341b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "security"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "deterministic",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated."
+    },
+    {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -1091,6 +1122,41 @@
       "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
     },
     {
+      "skill_name": "release-evidence-review",
+      "local_path": "skills/release-evidence-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d236826daad241afbfc5c8867221c066b7ff5044",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "deployment",
+          "repository-maintenance",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "release"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "traceable",
+          "safety-bounded",
+          "production-oriented"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Static exact-version semantic review only; external behavioral validation and qualifying persisted package-security evidence not-run.",
+      "reviewed_at": "2026-10-10"
+    },
+    {
       "skill_name": "repo-doctor",
       "local_path": "skills/repo-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -1152,6 +1218,75 @@
         ]
       },
       "notes": "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."
+    },
+    {
+      "skill_name": "session-continuity",
+      "local_path": "skills/session-continuity/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "memory",
+          "context-management",
+          "handoff"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "context-efficient"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
+    },
+    {
+      "skill_name": "skill-behavior-evaluation",
+      "local_path": "skills/skill-behavior-evaluation/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "ceb0e562a70d6848e56d2641306eeac619d5f60f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "evaluation",
+          "testing",
+          "skill-authoring",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "test-driven",
+          "holdout-aware",
+          "traceable",
+          "safety-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Static exact-version semantic review only; no representative external behavioral evidence or persisted package-security report.",
+      "reviewed_at": "2026-10-10"
     },
     {
       "skill_name": "smallbiz-ops",
@@ -1344,70 +1479,6 @@
         ]
       },
       "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
-    },
-    {
-      "skill_name": "automation-receipts",
-      "local_path": "skills/automation-receipts/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1d6c076f2888a0d6c8b2be1552717b96e14a341b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "security"
-        ],
-        "lifecycle": [
-          "verification",
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "deterministic",
-          "traceable"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated."
-    },
-    {
-      "skill_name": "session-continuity",
-      "local_path": "skills/session-continuity/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "memory",
-          "context-management",
-          "handoff"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "safety-bounded",
-          "context-efficient"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
     }
   ]
 }

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: skill-behavior-evaluation
+display_name: Skill Behavior Evaluation
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/skill-behavior-evaluation/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: d43226dd400120911141dcf42282dc9070d691c9
+curated_at: 2026-10-10
+last_checked_at: 2026-10-10
+availability: in-repo
+local_path: skills/skill-behavior-evaluation/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: External host agent and authorized versioned fixtures; no repository-owned runner
+import_eligibility: conditional-on-security-and-user-fit
+rationale: Passive scenario and evidence contract; external behavioral execution evidence is absent.
