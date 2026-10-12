@@ -10,8 +10,8 @@ verification_status: verified
 verification_basis: individual-structured-static-review
 validation_status: not-run
 validation_note: No host-executed behavioral scenarios were run.
-package_security_status: not-run
-package_security_note: New example wording removed the prior context-only scanner match, but no security scan against this exact file revision has been confirmed; security gate remains open.
+package_security_status: incomplete
+package_security_note: Exact-head SkillSpector CI gate passed at fc6f74c8 for this package; persisted per-package JSON risk metrics and digest are unavailable. See registry/security/local-skills/trust-boundary-review.yaml.
 rubric: docs/skill-verification.md
 rubric_score: 19/20
 tags:
