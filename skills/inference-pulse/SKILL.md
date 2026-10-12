@@ -32,13 +32,9 @@ skill offers to bind a target for next time.
 
 1. **Collect.** From the skillz repo root:
 
-   ```
-   node scripts/pulse-run.ts --sources skills/inference-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
-   If the engine is unavailable (skill deployed standalone), read
-   `sources.json` beside this file and fetch/search those sources
-   directly with web tools.
+   The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
 2. **Fill gaps.** Fetch the llama.cpp releases page and the Ollama/vLLM
    blogs directly if the engine's coverage is thin; run the searches,
@@ -50,7 +46,7 @@ skill offers to bind a target for next time.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — runs alongside the other pulses
+- **Claude Code:** `/schedule` weekly — runs alongside the other pulses Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
   (mcp-pulse, github-pulse); cross-reference, don't duplicate.
 
 ## Output Format
