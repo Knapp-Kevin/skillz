@@ -10,7 +10,8 @@ verification_status: verified
 verification_basis: individual-structured-static-review
 validation_status: not-run
 validation_note: No external behavioral evidence was produced.
-package_security_status: not-run
+package_security_status: incomplete
+package_security_note: Exact-head SkillSpector CI gate passed at fc6f74c8; raw JSON report not retained. See registry/security/local-skills/data-lifecycle-review.yaml.
 rubric: docs/skill-verification.md
 rubric_score: 18/20
 tags:
