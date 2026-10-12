@@ -21,13 +21,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root (set `GITHUB_TOKEN` — five search queries burn unauthenticated rate limits fast):
-
-   ```
-   node scripts/pulse-run.ts --sources skills/github-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect.** Read the bundled `sources.json` beside this SKILL.md as a source list. The authorized external host agent fetches or searches selected sources with capabilities it actually has, records source URLs and dates, and respects access and privacy boundaries. If browsing is unavailable, report the unverified gaps. This repository provides no runner, fetcher, scheduler, or automated collection process.
 
 2. **Fill gaps.** Fetch github.com/trending (weekly view) — the search API measures new repos, trending measures acceleration of existing ones; both matter. HN/Reddit searches catch the story behind a spike.
 3. **Filter.** For each candidate: real code or README-ware? active maintainer? does it duplicate something we already vendored/adopted (check INDEX.md and the registry)?
@@ -35,7 +29,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs naturally with skills-pulse (repos found here often become skill/tool intake candidates there).
+- **Claude Code:** `/schedule` weekly — pairs naturally with skills-pulse (repos found here often become skill/tool intake candidates there). Schedule only when the user explicitly authorizes it and the external host supports scheduling; this skill does not create a scheduled job.
 
 ## Output Format
 
