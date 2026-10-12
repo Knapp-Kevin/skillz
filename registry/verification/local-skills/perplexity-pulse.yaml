@@ -3,9 +3,9 @@ skill_name: perplexity-pulse
 source_id: local-skills
 local_path: "skills/perplexity-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: ef8b1cfd50f464f91d02855eaad7d05032475493
+content_blob_sha: 1c045126e4574923b1668b8080864914da99ef72
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-12
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -19,3 +19,5 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+
+passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
