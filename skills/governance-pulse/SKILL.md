@@ -24,7 +24,7 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 1. **Collect.** Read the bundled `sources.json` beside this SKILL.md as a source list. The authorized external host agent fetches or searches selected sources with capabilities it actually has, records source URLs and dates, and respects access and privacy boundaries. If browsing is unavailable, report the unverified gaps. This repository provides no runner, fetcher, scheduler, or automated collection process.
 
 2. **Fill gaps.** Fetch the EU AI Act tracker (implementation deadlines are the hard dates), NIST AI RMF page, and OWASP GenAI project; run the searches for the week's regulatory news.
-3. **Optional local section (read-only).** When run inside a workspace carrying Qor-style governance state (a `.qor/` directory or `docs/META_LEDGER.md`), skim `docs/META_LEDGER.md` and shadow-genome growth across `.qor/`-instrumented repos and report process drift in one short section. Never write to governance artifacts from this skill.
+3. **Optional operator-workspace review (read-only).** Only when the user has authorized access to a separate governance-instrumented workspace, inspect available governance ledgers and locally recorded process-drift summaries there. These files are external workspace evidence, never required components of this skill package. If no such workspace is authorized and accessible, omit this section. Do not write to governance artifacts.
 4. **Synthesize.** Deadlines and binding changes first; standards drafts; security-framework updates; competitive signals (new governance startups/repos — the bound product's market).
 
 ## Scheduling
