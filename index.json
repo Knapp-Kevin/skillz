@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-05",
+  "snapshot_date": "2026-10-12",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
@@ -72,26 +72,115 @@
     "microsoft_typescript_direct_package_denominator": 25
   },
   "first_party_categories": {
-    "planning-productivity": ["daily-briefing", "decision-log", "inbox-triage", "learning-plan", "task-surface", "week-in-review"],
-    "writing-communication": ["brief-writer", "deck-outline", "devlog-draft", "handoff-writer", "standup-writer"],
-    "research-analysis": ["compare", "deep-dive", "fact-check", "paper-digest"],
-    "software-repositories": ["repo-doctor", "repo-pulse", "todo-harvester"],
-    "agent-operations-security": ["agent-home-doctor", "agent-postmortem", "automation-receipts", "mcp-vetting", "permissions-review", "session-continuity"],
-    "monitoring-intelligence": ["claude-pulse", "deepseek-pulse", "gemini-pulse", "github-pulse", "glm-pulse", "governance-pulse", "hf-pulse", "inference-pulse", "kimi-pulse", "llama-pulse", "mcp-pulse", "memory-pulse", "mistral-pulse", "openai-pulse", "perplexity-pulse", "qwen-pulse", "xai-pulse"],
-    "business-career": ["career-radar", "finance-review", "smallbiz-ops"]
+    "planning-productivity": [
+      "daily-briefing",
+      "decision-log",
+      "inbox-triage",
+      "learning-plan",
+      "task-surface",
+      "week-in-review"
+    ],
+    "writing-communication": [
+      "brief-writer",
+      "deck-outline",
+      "devlog-draft",
+      "handoff-writer",
+      "standup-writer"
+    ],
+    "research-analysis": [
+      "compare",
+      "deep-dive",
+      "fact-check",
+      "paper-digest"
+    ],
+    "software-repositories": [
+      "repo-doctor",
+      "repo-pulse",
+      "todo-harvester"
+    ],
+    "agent-operations-security": [
+      "agent-home-doctor",
+      "agent-postmortem",
+      "automation-receipts",
+      "mcp-vetting",
+      "permissions-review",
+      "session-continuity"
+    ],
+    "monitoring-intelligence": [
+      "claude-pulse",
+      "deepseek-pulse",
+      "gemini-pulse",
+      "github-pulse",
+      "glm-pulse",
+      "governance-pulse",
+      "hf-pulse",
+      "inference-pulse",
+      "kimi-pulse",
+      "llama-pulse",
+      "mcp-pulse",
+      "memory-pulse",
+      "mistral-pulse",
+      "openai-pulse",
+      "perplexity-pulse",
+      "qwen-pulse",
+      "xai-pulse"
+    ],
+    "business-career": [
+      "career-radar",
+      "finance-review",
+      "smallbiz-ops"
+    ]
   },
   "source_roles": {
-    "pinned-reference-corpus": ["anthropic-skills", "anthropic-knowledge-work-plugins", "vercel-agent-skills", "microsoft-skills", "microsoft-azure-skills", "aws-agent-toolkit", "mattpocock-skills", "addyosmani-agent-skills", "openhands-extensions", "cline-skills", "cloudflare-skills", "google-agents-cli"],
-    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers", "corey-haines-marketing-skills", "jwynia-agent-skills", "danjdewhurst-story-skills"],
-    "normative-spec": ["agentskills-spec"],
-    "dynamic-discovery": ["github-awesome-copilot"]
+    "pinned-reference-corpus": [
+      "anthropic-skills",
+      "anthropic-knowledge-work-plugins",
+      "vercel-agent-skills",
+      "microsoft-skills",
+      "microsoft-azure-skills",
+      "aws-agent-toolkit",
+      "mattpocock-skills",
+      "addyosmani-agent-skills",
+      "openhands-extensions",
+      "cline-skills",
+      "cloudflare-skills",
+      "google-agents-cli"
+    ],
+    "tracked-corpus": [
+      "cole-medin-skills",
+      "david-ondrej-skills",
+      "bm629-agent-skills",
+      "openclaw-agent-skills",
+      "archieindian-superpowers",
+      "corey-haines-marketing-skills",
+      "jwynia-agent-skills",
+      "danjdewhurst-story-skills"
+    ],
+    "normative-spec": [
+      "agentskills-spec"
+    ],
+    "dynamic-discovery": [
+      "github-awesome-copilot"
+    ]
   },
-  "interpretation_order": ["user-fit", "exact-version-quality", "operational-fit", "skill-freshness", "provenance-source-context"],
+  "interpretation_order": [
+    "user-fit",
+    "exact-version-quality",
+    "operational-fit",
+    "skill-freshness",
+    "provenance-source-context"
+  ],
   "maintenance": {
     "mode": "hand-maintained-static-snapshot",
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
-    "canonical_companion_paths": ["registry/skills", "registry/verification"],
-    "latest_reconciliation": "2026-10-05: Anthropic Skills freshness reconciliation advanced the registered pin to 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 with an exact denominator of 19/19 and zero current-standard gaps; corpus accounting is 721 persisted exact-version reviews across 22 registered sources. Current maintenance priority remains source freshness and omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective external behavioral evidence where justified."
+    "canonical_companion_paths": [
+      "registry/skills",
+      "registry/verification"
+    ],
+    "latest_reconciliation": "2026-10-12: Passive architecture clarification staged on PR #408. No corpus admission or count changes; registered sources, semantic review counts, and current-standard source denominators remain unchanged. Historic SkillSpector CI run evidence is retained as version-bound reference, while repository-owned CI is removed in favor of host-executed assessments.",
+    "repository_owned_ci": false,
+    "repository_owned_scripts": false,
+    "security_assessment_executor": "authorized-external-host"
   }
 }
