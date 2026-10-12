@@ -3,7 +3,7 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5ace34f38843cb9a2bb026df3c6f8e0949a8e02a
+content_blob_sha: fd2374a7cb87720cac72c355bbec16bb0cc44880
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-12
 verification_status: verified
