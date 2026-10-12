@@ -44,5 +44,5 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Notes
 
-- Cross-check picks against `registry/candidates.yaml` before recommending — a repo already rejected there needs new evidence, not a re-pitch.
+- When the host has access to the current skillz candidate-intake registry, cross-check picks against its rejected and already-reviewed entries before recommending. Without access, mark the duplicate/rejection check `not-run` and offer a bounded intake proposal; do not assume the registry is bundled with this skill.
 - Handoff: skill-shaped finds go to skills-pulse's registry-proposal flow; tool-shaped finds can become BACKLOG items.
