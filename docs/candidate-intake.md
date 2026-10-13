@@ -2,7 +2,7 @@
 
 `skillz` uses an **issue-first admission workflow** for newly discovered third-party skills and source families.
 
-This policy refines the discovery and curation lifecycle in `docs/curation-policy.md`. It preserves the runtime-passive boundary for normal users while allowing bounded maintainer-side automation. The external host agent still performs user-facing discovery, fit decisions, behavioral validation, and external actions; repository maintenance may use governed scanners/CI to establish exact-version corpus evidence.
+This policy refines the discovery and curation lifecycle in `docs/curation-policy.md`. It preserves the entirely passive repository boundary during normal use and maintenance. All discovery, scanning, evaluation, behavioral validation, and external actions are performed by an authorized external host. The repository stores only instructions and evidence; it owns no CI or maintenance automation.
 
 ## Standard lifecycle
 
@@ -53,6 +53,8 @@ A candidate issue should end in a clear state such as:
 - reject unchanged;
 - reject source.
 
+A candidate issue is a bounded evidence workspace, not a permanent queue. Once sufficient evidence exists, record one terminal disposition: ADMIT, ADAPT, EXTRACT, REFERENCE-ONLY, or REJECT, then close the issue with decisive evidence. DEFER/BLOCKED is permitted only when a named external dependency genuinely prevents a decision; record that dependency and its resolution condition. Source admission for selective curation must still identify its exact scope and subsequent individual review frontier.
+
 Popularity, stars, official branding, repository age, or creator reputation may inform discovery and source context but cannot replace individual evidence.
 
 ## Persistence gate
@@ -80,7 +82,7 @@ When an existing governed skill lacks required provenance or exact-version metad
 4. do not count the record as companion-complete or statically complete until repaired;
 5. preserve the correction through normal repository history.
 
-This is runtime-passive governance with bounded maintenance automation. Normal users require no repository-owned scanner, CI job, script, test runner, or background process. Under explicit repository maintenance, the pinned SkillSpector workflow may establish package-security evidence and fail closed without becoming a consumer prerequisite.
+This is entirely passive governance. The repository owns no scanner, CI job, script, test runner, scheduler, or background process, including for maintenance. An explicitly authorized external host may run the exact pinned SkillSpector version outside the repository, preserve complete package-bound reports, and fail closed on incomplete or adverse results.
 
 ## Source-family issues versus individual-skill issues
 
