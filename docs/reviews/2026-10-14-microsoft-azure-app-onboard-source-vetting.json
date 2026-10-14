@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-14",
+  "review_type": "candidate-freshness-static-vetting",
+  "source_family": "microsoft-skills",
+  "source_repository": "https://github.com/microsoft/skills",
+  "source_revision": "fc164ba1d7a0c10377dbcc1c9ac07253b9329fdb",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "canonical_source_path": ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md",
+  "package_tree_sha": "ce62e3df0d860115631b3fb7658eb7a6c35cf141",
+  "manifest_blob_sha": "00635c01fc9518e171e5157185a60999e1455b84",
+  "package_blobs_inspected": 68,
+  "nested_non_first_class_skill_references": [
+    "prepare/SKILL.md",
+    "scaffold/SKILL.md",
+    "deploy/SKILL.md"
+  ],
+  "license": "MIT",
+  "license_blob_sha": "356b112bcc4f07e03b6e57569eedf9d79978d2d5",
+  "purpose": "Azure app onboarding, architecture and cost planning, IaC scaffolding, deployment",
+  "triggers": [
+    "Azure app onboarding",
+    "move existing app to Azure",
+    "plan app Azure architecture and deploy"
+  ],
+  "non_triggers": [
+    "isolated cost optimization",
+    "azd-only deployment",
+    "direct AKS operations"
+  ],
+  "dependencies": [
+    "Azure CLI",
+    "Azure MCP",
+    "Bicep/Terraform",
+    "Key Vault",
+    "optional subagents",
+    "host PowerShell/Bash",
+    "source-owned conformance scripts",
+    "Azure plugin hooks"
+  ],
+  "authority": [
+    "mutating",
+    "external-side-effect"
+  ],
+  "privacy": [
+    "session prompt and identity persistence",
+    "cloud resource and credential metadata",
+    "plaintext local secret cache",
+    "sensitive deployment logs"
+  ],
+  "portability": "low",
+  "controlled_tags": {
+    "use_case": [
+      "cloud",
+      "deployment",
+      "planning",
+      "security"
+    ],
+    "lifecycle": [
+      "planning",
+      "design",
+      "implementation",
+      "release"
+    ],
+    "characteristic": [
+      "evidence-first",
+      "risk-aware",
+      "orchestration"
+    ],
+    "authority": [
+      "mutating",
+      "external-side-effect"
+    ],
+    "portability": [
+      "low"
+    ]
+  },
+  "rubric": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 0,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 2,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 0,
+    "effectiveness_design": 1
+  },
+  "score": 12,
+  "max_score": 20,
+  "disposition": "REJECT_UNCHANGED_ADAPT",
+  "authority_finding": "Automatic seven-day deletion of prior session folders lacks action-specific authorization; unchanged installation is also blocked by shared unpinned plugin telemetry hooks.",
+  "findings": [
+    {
+      "id": "AUTO_PRUNE",
+      "severity": "hard-fail",
+      "evidence": "references/session-protocol.md:23; references/pipeline-rules.md:59"
+    },
+    {
+      "id": "SECRET_CONTRADICTIONS",
+      "severity": "high",
+      "evidence": "deploy/references/blocked-patterns.md:26-27; deploy/references/deploy-safety.md:38; references/pipeline-rules-runtime.md:17,29; deploy/references/code-deployment-container-apps.md:49,86-89"
+    },
+    {
+      "id": "UNOWNED_TEMP_DELETE",
+      "severity": "hard-fail",
+      "evidence": "deploy/references/code-deployment-swa.md:25,27"
+    },
+    {
+      "id": "BROAD_DB_FIREWALL",
+      "severity": "high",
+      "evidence": "scaffold/references/bicep-patterns-data.md:33-37,75-79; references/approval-gates.md:27",
+      "note": "Explicit exposure warning and user Yes exist; problem is default network posture, not absent disclosure."
+    },
+    {
+      "id": "SCM_POLICY_DRIFT",
+      "severity": "high",
+      "evidence": "scaffold/references/bicep-app-service.md:54; deploy/SKILL.md:51"
+    },
+    {
+      "id": "AUDIT_RECONSTRUCTION",
+      "severity": "high",
+      "evidence": "deploy/references/deploy-checklist-template.md:90"
+    },
+    {
+      "id": "DIAGNOSTIC_WRITE",
+      "severity": "medium",
+      "evidence": "deploy/references/health-check-patterns.md:93"
+    },
+    {
+      "id": "UNPINNED_PLUGIN_HOOKS",
+      "severity": "hard-fail",
+      "evidence": "plugin SessionStart/PostToolUse hooks; npx -y @azure/mcp@latest"
+    }
+  ],
+  "preserve": [
+    "distinct scaffold and deploy approval gates",
+    "subscription/resource group/region/cost disclosure",
+    "quota and what-if checks",
+    "deployment health checks beyond HTTP 200",
+    "non-destructive cloud cleanup"
+  ],
+  "package_security": "not-run",
+  "behavioral_validation": "not-run",
+  "canonical_verification_persisted": false,
+  "admitted_source_denominator_delta": 0
+}
