@@ -21,10 +21,10 @@ Produce a devlog draft built from evidence, not vibes: commits and decisions fro
 
 ## Execution Flow
 
-1. **Pin the window.** Discover the bound workspace root(s) — the directory(ies) whose git repos supply the evidence — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions, and if none is discoverable, ask once and offer to persist the answer for future runs. Then ask the operator for the time window (e.g. "last two weeks") and, if ambiguous, which of the bound repos are in scope. Do not guess a window.
-2. **Gather evidence.** Run `git log --since=<window> --oneline --stat` across each in-scope repo. Read decision entries for the window from the project's designated decision log or other project ledgers. Collect exact commit messages and decision phrasing — this is the quote pool.
+1. **Pin and authorize the evidence scope.** Identify the operator-designated repositories and time window from the request or approved workspace context. If either is unclear, ask rather than guessing. A repository path remembered by the host is not permission to inspect it; obtain authorization for any private repository or decision ledger before reading. Persisting workspace preferences is a separate opt-in host action.
+2. **Gather bounded evidence.** Use authorized host Git/repository tools to inspect commits within the approved scope and window; `git log --since=<window> --oneline --stat` is an optional host command, not a repository runner. Read only authorized decision entries. Keep commit identities and source pointers, but exclude credentials, credential-bearing URLs, private personal details, and confidential or unreleased content unless its inclusion and intended audience are expressly approved.
 3. **Pick ONE narrative.** Scan the evidence for the single story worth telling: a problem wrestled with, a bet placed, a reversal, a thing learned. A devlog is not a changelog; if the evidence only supports a list of changes, say so and ask the operator which thread matters to them.
-4. **Draft in the operator's voice.** Quote their actual phrasing — commit messages, decision-log sentences — wherever possible rather than paraphrasing it into marketing prose. Tag each factual claim inline with its evidence (commit hash, decision entry, file).
+4. **Draft in the operator's voice.** Quote approved, non-sensitive phrasing from commits and decisions where useful rather than inventing a voice. Redact secrets, PII and private customer or organizational information; never paste raw private logs into a publication draft. Tag factual claims with minimal safe evidence references (commit hash, decision entry, file).
 5. **Separate hypothesis from proof.** Anything not directly backed by the evidence pool gets phrased as a hypothesis ("we think", "the bet is") or moved to the verification list. No synthetic authority, no invented traction or usage numbers, no "users love" without a source.
 6. **Present** in the Output Format below.
 
@@ -50,4 +50,4 @@ Produce a devlog draft built from evidence, not vibes: commits and decisions fro
 
 - Registry marketing rules are hard constraints: no synthetic authority, no fake traction claims, hypothesis and proof stay visibly separate, and the operator's voice is preserved — quote them, don't ventriloquize them.
 - One narrative per draft. Cut side-threads rather than braiding three weak stories together.
-- Read-only: this skill produces a draft document. Publishing or posting it anywhere is draft-only — never send, post, or schedule publication without explicit approval.
+- Read-only evidence gathering and generate-only output: this skill produces a draft. Sharing it with other people, posting it, or scheduling publication are separate external actions requiring explicit approval of audience, destination and exact content.
