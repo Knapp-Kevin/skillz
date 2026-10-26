@@ -21,7 +21,7 @@ Keep a durable record of life and business decisions in ADR style: what was deci
 
 ## Execution Flow
 
-1. **Locate the log.** Use the decision log the user has designated; otherwise use the target project's conventional documentation-directory decision log. If it does not exist, propose creating it and create it only after the user approves.
+1. **Locate and authorize the log.** Use the decision log and project scope designated by the user. If no log is designated, propose an exact path and obtain approval for that path before reading or appending, even when a plausible log already exists. Creating a missing log requires separate explicit approval.
 2. **Capture the decision.** From the conversation, extract: the decision in one sentence, today's date, the context that forced a choice, the options considered (including the one chosen), why the chosen option won, and a revisit-by date. Ask for anything missing rather than inventing it — especially the revisit-by date, which the user must own.
 3. **Draft the entry** in the entry format below and show it to the user for confirmation.
 4. **Append on approval.** Add the confirmed entry to the end of the log file. Never rewrite or delete existing entries; the log is append-only, and superseding an old decision is a new entry that references it.
@@ -55,11 +55,11 @@ These override the entry format. The log's value is that it records what was act
 - **Never backfill rationale the decider did not give.** Ask, or record `rationale: not established (recorded after the fact)`.
 - **Never invent alternatives considered.** `alternatives: none recorded` is a complete, valid entry.
 - **Never fabricate a revisit date** to finish the template; it comes from the decider or the entry's own risk discussion, or it is `not set`.
-- **Secrets never belong in an entry** — reference systems by name, credentials by type + short prefix only.
+- **Secrets and private personal details never belong in an entry** — reference systems and credential types without values, prefixes, credential-bearing URLs, or unrelated sensitive excerpts.
 
 ## Notes
 
 - Independent of Qor: shares the ADR spirit of qor-meta-log-decision but touches none of its gates, genome files, or process machinery.
 - File mutations are gated: creating the log and appending an entry both require the user to see and approve the exact text first. Entries are append-only.
-- If external context is needed to reconstruct a decision (an email thread, a meeting), pull it via the connected Gmail MCP or Google Calendar MCP tools — never raw API calls.
-- Every entry needs a revisit-by date; decisions without expiry silently become dogma.
+- If external context is needed to reconstruct a decision (an email thread, a meeting), first obtain source-specific authorization for the account, date range, and purpose; then use approved connected host tools if available. Do not search private mail or calendars merely because a connector is accessible. Minimize quoted private content.
+- Ask for a revisit-by date, but record `not set` when none was authorized; never fabricate one to satisfy the format.
