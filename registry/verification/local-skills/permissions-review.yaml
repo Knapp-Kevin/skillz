@@ -3,19 +3,19 @@ skill_name: permissions-review
 source_id: local-skills
 local_path: "skills/permissions-review/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 60e1d546e713cfa5b289def082dd73e8b326f029
+content_blob_sha: 8e7719b68f4c125fb256d72203841dd4064a9fd0
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
-verification_status: verified
-verification_basis: "individual-structured-static-review"
+reviewed_at: 2026-10-26
+verification_status: unverified
+verification_basis: "revised-boundaries-await-independent-structured-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
-rubric_score: "18/20"
+rubric_score: "pending"
 tags:
   use_case: [security, evaluation]
   lifecycle: [verification, maintenance]
   characteristic: [evidence-first, risk-aware, traceable, human-review]
   authority: [read-only]
   portability: [medium]
-notes: "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+notes: "New exact-version skill now requires approval before sensitive configuration/log review; static boundaries improved, but independent complete-package semantic/security verification remains pending. No behavioral execution claimed."
