@@ -9,13 +9,13 @@ license: MIT
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
-last_checked_at: 2026-10-12
+last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/inference-pulse/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: review-pending
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: eligible-with-complete-skill-folder
-rationale: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+rationale: "Host-managed source retrieval with clear missing-evidence handling and optional scheduling only after explicit user approval; corrected October 26 exact version awaits independent verification."
