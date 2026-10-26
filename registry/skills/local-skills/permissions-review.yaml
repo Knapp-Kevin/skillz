@@ -9,13 +9,13 @@ license: MIT
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/permissions-review/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: review-pending
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: eligible-standalone
-rationale: "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+rationale: "Read-only permission blast-radius analysis with explicit prior authorization for sensitive host configuration and redacted last-use metadata; changed exact package awaits independent semantic and security requalification."
