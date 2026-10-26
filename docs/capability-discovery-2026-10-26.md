@@ -63,3 +63,7 @@ The named blob identities above were re-read at their respective exact observed 
 **Discovery flow:** 14 new source leads, 14 source identity/HEAD inspections, 5 pinned individual manifest reads, 0 admitted, 0 semantically verified, 0 package-security scans, 0 behaviorally validated. One bounded source-vetting issue opened: #418. Existing #414 owns accessibility capability fit. No new corpus count or five-surface accounting change is justified by discovery alone.
 
 **Single next priority:** Finish #418's twelve-package macro reconciliation, with deep exact-version static review of the accessibility regression and chart-equivalence packages, then decide selective admission versus adaptation with applicable external package-security evidence.
+
+## Accessibility source-vetting follow-up (2026-10-26)
+
+[The 12-package exact-revision accessibility assessment](reviews/2026-10-26-a11y-source-vetting.md) resolves the candidate source's actual first-class manifest denominator, required reference identities, license and third-party notices, differentiated capability facets, authority/privacy gaps, and individual ADAPT / EXTRACT / REFERENCE-ONLY decisions. **No unchanged source admission, exact-version security pass, or behavioral validation is claimed.** The assessment preserves valuable complementary methods even where unchanged use is not authorized. This discovery report's earlier `SOURCE-VET SELECTIVE` label describes its original intake state, not an ongoing admission claim.
