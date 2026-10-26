@@ -7,15 +7,15 @@ source_path: skills/permissions-review/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: ee2ac59e44cdf4f4ee839be378292a8030fc7121
 curated_at: 2026-08-30
 last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/permissions-review/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: review-pending
+review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
+dependencies: "Explicitly authorized host redacted MCP/permission/last-use metadata; no raw secret access or scheduler required."
 import_eligibility: eligible-standalone
-rationale: "Read-only permission blast-radius analysis with explicit prior authorization for sensitive host configuration and redacted last-use metadata; changed exact package awaits independent semantic and security requalification."
+rationale: "Read-only blast-radius inventory with source-specific authorization, redacted evidence and opt-in report/schedule actions; 18/20 static review."
