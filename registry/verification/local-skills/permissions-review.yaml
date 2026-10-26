@@ -6,16 +6,18 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8e7719b68f4c125fb256d72203841dd4064a9fd0
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-26
-verification_status: unverified
-verification_basis: "revised-boundaries-await-independent-structured-review"
+verification_status: verified
+verification_basis: "individual-structured-static-review; exact-version manual scenario review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+package_security_status: not-run
 rubric: "docs/skill-verification.md"
-rubric_score: "pending"
+rubric_score: "18/20"
 tags:
   use_case: [security, evaluation]
   lifecycle: [verification, maintenance]
   characteristic: [evidence-first, risk-aware, traceable, human-review]
   authority: [read-only]
   portability: [medium]
-notes: "New exact-version skill now requires approval before sensitive configuration/log review; static boundaries improved, but independent complete-package semantic/security verification remains pending. No behavioral execution claimed."
+notes: "Prior approval of host, sources and reporting destination, redacted metadata only, conservative unknowns and separate authorization for revocation, report sending or scheduling."
+static_review_evidence: docs/reviews/2026-10-26-pr410-distinct-five-skill-review.md
