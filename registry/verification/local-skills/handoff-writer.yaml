@@ -3,19 +3,21 @@ skill_name: handoff-writer
 source_id: local-skills
 local_path: "skills/handoff-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8a789ea0dd3b1c89ccac9d50727b06007abcf5c1
+content_blob_sha: b60a41bc26348370eb61a60b9c1287f29044e92c
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-26
 verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_basis: "individual-structured-static-review; exact-version manual scenario review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+package_security_status: not-run
 rubric: "docs/skill-verification.md"
-rubric_score: "20/20"
+rubric_score: "19/20"
 tags:
   use_case: [handoff, documentation, communication]
   lifecycle: [release, maintenance]
   characteristic: [evidence-first, traceable, context-efficient, risk-aware]
   authority: [generate-only]
   portability: [high]
-notes: "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+notes: "Zero-context evidence handoff with no secret prefixes, recipient-appropriate safe pointers, and separate authorization for distribution; no action execution."
+static_review_evidence: docs/reviews/2026-10-26-pr410-distinct-five-skill-review.md
