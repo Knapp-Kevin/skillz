@@ -63,6 +63,6 @@ Observed revision is a **source HEAD**, not an approved admission pin. `Root ter
 4. **No fake quality evidence:** source HEADs, Git blobs, LICENSE and sampled procedures are discovery evidence only. The source's benchmark or test suite has **not** been executed. Semantic `verified`, package security `passed`, and behavioral `validated` are all **zero new**.
 5. **No accounting inflation:** twelve new leads and one bounded candidate issue (#420) create **zero** new admitted sources, **zero** new user-facing skills, and **zero** new persisted verification companions. The five public accounting surfaces therefore remain unchanged.
 
-**Flow:** 12 newly identified source leads; 12 source identities and exact HEADs inspected; 12 sampled skill/document blobs inspected; 2 LICENSE bodies inspected; 1 bounded issue opened (#420); 0 admissions, 0 new static verifications, 0 package scans, 0 behavioral validations.
+**Flow:** 12 newly identified source leads; 12 source identities and exact HEADs inspected; 13 sampled skill/document blobs inspected; 2 LICENSE bodies inspected; 1 bounded issue opened (#420); 0 admissions, 0 new static verifications, 0 package scans, 0 behavioral validations.
 
 **Next highest-priority action:** complete #420's bounded Godot-first source-vetting and selective exact-version semantic review, then issue decisive per-skill dispositions with the appropriate package-security gate. Keep #418's accessibility work separate.
