@@ -25,7 +25,7 @@ Produces a handoff document a successor — another agent or a future session �
 2. **Record decisions and their why.** For each decision that shaped the current state, capture what was chosen, what was rejected, and the reason — one or two sentences each. The point is that the successor does not relitigate settled questions.
 3. **List open threads with exact next actions.** Each thread gets a concrete first step ("run X, expect Y, then edit Z"), not a topic label. If the next action depends on an unresolved question, state the question and who or what can answer it.
 4. **Mark the landmines.** Two kinds: things that look wrong but are intentional (workarounds, deliberate duplication, disabled checks — say why), and things that look done but are not (stubs, untested paths, hardcoded values pending real ones).
-5. **Add pointers.** Reference every relevant file and artifact by full path; never "the config file" or "the script we discussed."
+5. **Add safe pointers.** Reference authorized files and artifacts by precise paths or stable identifiers when appropriate for the approved recipient. Redact private home directories, identity-bearing paths, credential locations and restricted document identifiers from any handoff whose audience lacks access; use a scoped descriptor instead.
 6. Define every codename or shorthand in one line at first use, then assemble the document in the Output Format below.
 
 ## Output Format
@@ -58,7 +58,7 @@ Produces a handoff document a successor — another agent or a future session �
 
 These override every section rule above, including "define every term." An honest blank beats a filled fabrication in every case.
 
-- **Never reproduce secret-shaped strings** — tokens, API keys, passwords, private keys, session cookies, connection strings (`sk-…`, `key=`, `token=`, `Bearer …`, `-----BEGIN`). Refer to a credential by type and short prefix only: "the OpenAI key (`sk-pr…`)". "Define every term" does **not** apply to credential values — a handoff that quotes a secret becomes a new leak vector. If a secret appears anywhere in the work being inventoried, flag probable exposure and recommend rotation in Landmines; never rotate, revoke, or otherwise change credentials from this skill.
+- **Never reproduce secrets or secret-shaped strings** — tokens, API keys, passwords, private keys, session cookies, connection strings, credential-bearing URLs or token prefixes. Refer to credentials by type and approved system identifier only, without any portion of the value. "Define every term" does **not** apply to credentials. If evidence suggests exposure, flag the risk and recommend an authorized rotation process in Landmines; never rotate, revoke, or otherwise change credentials from this skill.
 - **Never invent a fact to fill a slot.** If a Decisions line has no evidence for its *because*, or a State row has no established way to check its status, write `not established` — do not manufacture a rationale, a rejected alternative, or a verifier to satisfy the format.
 - **Mark inference as inference.** Anything not directly observed in the session gets "(inferred: <basis>)". Never promote an inferred requirement or risk to a stated one.
 - **Sections may be empty.** An empty section with `none established` is a valid, complete answer; missing evidence is itself handoff content — report it as an open thread.
@@ -68,4 +68,4 @@ These override every section rule above, including "define every term." An hones
 - Test the document against the zero-context standard: if a sentence only makes sense to someone who was present, rewrite it.
 - Verification method matters more than the done/not-done label; successors get burned by unverified "done" items, not by honest "in progress" ones.
 - Landmines are the highest-value section — they prevent the successor's two most expensive mistakes: fixing what is not broken and trusting what is not finished.
-- This skill writes the handoff document only; it never modifies the work itself or any configuration while inventorying it.
+- This skill writes the handoff document only; it never modifies the work itself or any configuration while inventorying it. Reading private evidence and sharing or transmitting a handoff require authorization for the sources, audience and destination; draft creation is not permission to send.
