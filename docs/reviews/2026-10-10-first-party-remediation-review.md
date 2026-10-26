@@ -1,5 +1,7 @@
 # SkillSpector first-party remediation: exact-version review handoff
 
+> **2026-10-26 exact-version update:** The five distinct non-pulse skills have since undergone additional privacy/authority hardening and individual structured static review. Their current blobs, rubric scores, and scenario findings are authoritative in [`2026-10-26-pr410-distinct-five-skill-review.md`](2026-10-26-pr410-distinct-five-skill-review.md). The historical table below documents the October 10 proposed blobs only and is **not** the current identity or security state for those five skills. Four were subsequently edited again, invalidating earlier scan inheritance. Final package-security scanning and independent integration review remain pending. The 16 overlapping pulse manifests are owned by the #416 reconciliation lane.
+
 Date: 2026-10-10. Branch: `security/402-first-party-scan-remediation`. Related [#402](https://github.com/Knapp-Kevin/skillz/issues/402), [#410](https://github.com/Knapp-Kevin/skillz/pull/410).
 
 **State: individual semantic/adversarial reviews pending.** A successful scanner run is not proof that new skill instructions satisfy the prior semantic rubric, and historical verification fingerprints do not automatically transfer.
