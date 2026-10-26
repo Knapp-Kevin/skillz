@@ -237,10 +237,10 @@
       "skill_name": "decision-log",
       "local_path": "skills/decision-log/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "56e5c574c295546c9e654a9e6a14a9814136f2f4",
+      "content_blob_sha": "3e1ceeb3a20e2d933e5ade631e82d54dd582a44b",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "decision-support",
@@ -263,7 +263,7 @@
           "medium"
         ]
       },
-      "notes": "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+      "notes": "Exact-path and text approval for append; optional private mail/calendar reads require source-specific consent; security scan not-run."
     },
     {
       "skill_name": "deck-outline",
@@ -366,10 +366,10 @@
       "skill_name": "devlog-draft",
       "local_path": "skills/devlog-draft/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "073f18ba2c2f7de21015cd072741c395335e9f2e",
+      "content_blob_sha": "e7f6456fafbe4b432270696d64e3685a8ca8725a",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "writing",
@@ -392,7 +392,7 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+      "notes": "Authorized repository/window evidence with confidential-data redaction and draft-only publication; security scan not-run."
     },
     {
       "skill_name": "fact-check",
@@ -589,10 +589,10 @@
       "skill_name": "handoff-writer",
       "local_path": "skills/handoff-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
+      "content_blob_sha": "b60a41bc26348370eb61a60b9c1287f29044e92c",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "19/20",
       "tags": {
         "use_case": [
           "handoff",
@@ -616,7 +616,7 @@
           "high"
         ]
       },
-      "notes": "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+      "notes": "Zero-context handoff with recipient-scoped pointers, no secret prefixes and separate sending approval; security scan not-run."
     },
     {
       "skill_name": "hf-pulse",
@@ -844,10 +844,10 @@
       "skill_name": "mcp-vetting",
       "local_path": "skills/mcp-vetting/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
+      "content_blob_sha": "aa79354448d800c97c577a74b1bc13f97c4c550c",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "security",
@@ -870,7 +870,7 @@
           "high"
         ]
       },
-      "notes": "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+      "notes": "Static MCP assessment with redacted metadata, self-contained impact tiers and separate connection authority; security scan not-run."
     },
     {
       "skill_name": "memory-pulse",
@@ -1000,7 +1000,7 @@
       "skill_name": "permissions-review",
       "local_path": "skills/permissions-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
+      "content_blob_sha": "8e7719b68f4c125fb256d72203841dd4064a9fd0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1026,7 +1026,7 @@
           "medium"
         ]
       },
-      "notes": "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+      "notes": "Prior approval for sensitive host inspection, redacted credential metadata, optional host scheduling only on approval; security scan not-run."
     },
     {
       "skill_name": "perplexity-pulse",
