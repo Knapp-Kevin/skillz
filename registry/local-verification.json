@@ -691,10 +691,10 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fdbc3aa0741a4d1ae191ce9feddff52de612ad75",
-      "verification_status": "verified",
+      "content_blob_sha": "8bd3e47c89d6ecf64f8371dacd92e52c35b7487c",
+      "verification_status": "unverified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "pending",
       "tags": {
         "use_case": [
           "monitoring",
@@ -717,8 +717,8 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
-      "reviewed_at": "2026-10-12"
+      "notes": "Host-driven inference-source retrieval and explicit opt-in external scheduling. The exact 2026-10-26 scheduling repair awaits independent structured semantic requalification and external package-security evidence; no behavioral validation has run.",
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "kimi-pulse",
