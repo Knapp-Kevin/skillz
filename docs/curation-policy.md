@@ -2,7 +2,7 @@
 
 `skillz` is a library and reference corpus, not a dump and not a popularity contest.
 
-The repository deliberately separates **availability**, **provenance**, **individual characterization**, **semantic verification**, **package-security evidence**, **scenario/adversarial semantic validation**, and **source context**. Those concepts must never collapse into one vague word such as "curated."
+The repository deliberately separates **availability**, **provenance**, **individual characterization**, **semantic verification**, **package-security evidence**, **representative external behavioral/adversarial validation**, and **source context**. Those concepts must never collapse into one vague word such as "curated."
 
 ## The two external corpus layers
 
@@ -47,7 +47,7 @@ This separation lets the repository remain broad without falsely asserting that 
 3. **Characterized:** What does it do, what assumptions does it carry, and what controlled tags describe it?
 4. **Verified:** Did this exact identity pass the structured semantic gate?
 5. **Package security:** Did an exact-version scanner establish complete coverage, and what findings or residual risk remain?
-6. **Validated:** Did representative trigger, non-trigger, and pressure/adversarial readings reveal unresolved ambiguity or overreach?
+6. **Validated:** Did an authorized external host actually exercise representative trigger, non-trigger, and adversarial scenarios, preserve observations, and resolve material failures? Static readings alone remain semantic verification.
 7. **Source context:** What objective, dated evidence exists about source maintenance or visibility?
 
 The normative exact-version quality rules are in [`skill-verification.md`](skill-verification.md). Package-security rules are in [`security-scanning.md`](security-scanning.md). Companion-field rules are in [`companion-metadata.md`](companion-metadata.md). New discovery intake is governed by [`candidate-intake.md`](candidate-intake.md). The living source/evaluation frontier is [`../CURATION_QUEUE.md`](../CURATION_QUEUE.md).
@@ -61,7 +61,7 @@ Source identity does not establish individual skill quality.
 - `unverified` -> design evidence only;
 - legacy `trusted-baseline` -> design evidence only until individual structured review;
 - `verified` -> semantic quality eligible, but unchanged consideration still requires applicable package-security evidence plus identity and operational fit;
-- `validated` -> stronger semantic evidence from representative adversarial/scenario review; package-security state remains separate;
+- `validated` -> verified exact material plus actual representative external behavioral/adversarial evidence; static scenario inspection alone is not behavioral validation, and package-security state remains separate;
 - `stale`, `rejected`, `retired` -> excluded from normal unchanged selection.
 
 A changed fingerprint invalidates the ability to rely silently on prior exact-version evidence until refreshed.
@@ -108,7 +108,7 @@ That record owns:
 - quality state and basis;
 - structured rubric result;
 - controlled tags;
-- semantic validation state/evidence when separately performed;
+- explicit behavioral-validation state (`not-run` unless actually exercised externally) and exact-version evidence references;
 - material review limitations.
 
 If the canonical fingerprint changes, treat the prior assessment as operationally stale until the relevant semantic review is refreshed.
@@ -188,7 +188,7 @@ When intentionally refreshing a reviewed skill:
 5. re-check dependencies, licensing, scope, authority, and portability;
 6. repeat structured semantic verification when required;
 7. rerun applicable exact-version package-security scanning when package identity or relevant executable/supporting content changed;
-8. repeat scenario/adversarial semantic review when prior validation could be invalidated;
+8. refresh static scenario/adversarial semantic inspection as needed, and repeat actual external behavioral/adversarial evaluation before carrying forward a previous `validated` claim;
 9. update controlled tags when behavior changed;
 10. preserve prior history through Git.
 
@@ -198,7 +198,7 @@ No registered source is auto-upgraded merely because a newer commit exists.
 
 Use this order:
 
-**user fit -> exact-version semantic quality -> package-security evidence -> operational fit -> freshness -> provenance/source context**
+**user fit -> exact-version quality -> operational fit (including applicable package-security gate) -> skill freshness -> provenance/source context**
 
 For unchanged third-party reuse, `verified` and `validated` are the only current eligible semantic quality states, and scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed`.
 
