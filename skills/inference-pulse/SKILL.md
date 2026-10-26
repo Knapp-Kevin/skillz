@@ -46,8 +46,7 @@ skill offers to bind a target for next time.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — runs alongside the other pulses Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
-  (mcp-pulse, github-pulse); cross-reference, don't duplicate.
+- **Claude Code:** A weekly host-managed `/schedule` may be useful alongside `mcp-pulse` and `github-pulse`; cross-reference findings rather than duplicating digests. Scheduling is a separate external action requiring explicit user authorization for the recurrence, sources, and report destination. This repository never schedules runs.
 
 ## Output Format
 
