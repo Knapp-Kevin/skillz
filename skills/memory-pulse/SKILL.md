@@ -28,6 +28,8 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 
    The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
+   **Resolve source-query windows.** `sources.json` is inert source configuration. For each `github_search[].q` containing `{SINCE}`, substitute a UTC `YYYY-MM-DD` date at the beginning of the requested report window before querying GitHub. If the user supplied no window, use the preceding seven days and label that default in the report. GitHub date-only `created:>` filters are approximate window boundaries, not proof of complete coverage. Never submit a literal `{SINCE}` placeholder, execute the source file, or imply an unexecuted search succeeded; record unavailable tools and incomplete results as evidence gaps.
+
 2. **Fill gaps.** Run the arXiv/paper searches (the Hugging Face MCP `paper_search` tool is ideal when connected); fetch the Letta/Mem0 blogs; review the new-repo search hits for genuinely novel approaches vs wrappers.
 3. **Synthesize.** Breaking architecture ideas first (temporal KGs, memory consolidation, sleep-time compute); framework releases and API changes; benchmarks; what's hype vs load-bearing.
 
