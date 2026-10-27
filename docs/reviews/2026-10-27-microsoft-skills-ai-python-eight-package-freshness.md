@@ -90,7 +90,7 @@
 ### 8. `azure-ai-vision-imageanalysis-py`
 
 - **Purpose / differentiator:** Image caption/OCR/people/object detection and cost-aware feature selection with context-managed credentials.
-- **Dependency / portability:** `pip install azure-ai-vision-imageanalysis` (unpinned), Azure SDK auth/core, authorized Azure endpoint and paid cloud service; medium portability. Two declared references inspected: `references/capabilities.md` (`b24da438beec64aefd03216ec35f8478e757472`) and `references/non-hero-scenarios.md` (`fe519431024080a6cfe80daaebf4b6459c81c53d`).
+- **Dependency / portability:** `pip install azure-ai-vision-imageanalysis` (unpinned), Azure SDK auth/core, authorized Azure endpoint and paid cloud service; medium portability. Two declared references inspected: `references/capabilities.md` (`b24da438beecbcf0190512c8f951f8478e757472`) and `references/non-hero-scenarios.md` (`fe519431024080a6cfe80daaebf4b6459c81c53d`).
 - **Decisive authority/privacy failure:** Unapproved upload or remote URL processing of potentially personal images; OCR outputs and people detections printed without privacy/retention gates; no cost authorization.
 - **Static score:** 12/20; ten dimensions in rubric order: `1,2,0,1,1,2,1,2,0,2`. Prior registered-pin score: 12/20. A changed manifest is not presumed improved merely because it has new references or revised credential guidance.
 - **User-fit / salvage:** EXTRACT feature-selection and OCR method; require image owner consent, external processing approval, output redaction and budget bounds.
@@ -106,4 +106,4 @@
 
 **Next action:** Obtain an **uncapped complete latest** upstream tree and re-partition the 186 governed identities, alias/nested exposures and new raw manifests. Continue a distinct high-authority changed-package tranche, with exact package scans only in an authorized external host. PRs #412/#413/#416 remain draft/blocked on complete security evidence and independent acceptance; this document does not change their readiness.
 
-**Machine-readable evidence:** [eight individual candidate records](../registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json). These are *pre-pin freshness review records*, not canonical admitted-source verification companions.
+**Machine-readable evidence:** [eight individual candidate records](../../registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json). These are *pre-pin freshness review records*, not canonical admitted-source verification companions.
