@@ -3,7 +3,7 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c61be1b05b97cab0d969e9ed4afc8499bc2f636b
+content_blob_sha: 6c676b7e9e45e82504d84fa4bbd56682830660b8
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-26
 verification_status: verified
@@ -21,3 +21,5 @@ tags:
 notes: "Breaking-change-first runtime digest with primary-source dates, honest missing-evidence handling, authorization-gated private target binding, and no automatic upgrade; portability depends on host browsing."
 
 passive_runner_remediation: Host-only retrieval and explicit opt-in scheduling; private runtime binding requires scoped authorization, and external release notes are evidence rather than executable instructions. Exact-version structured static review 17/20, behavioral validation not-run, package security not-run.
+
+review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
