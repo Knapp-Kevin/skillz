@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "kind": "bounded_new_manifest_source_vetting",
+  "source": "https://github.com/microsoft/skills",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_comparison_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+  "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "starting_skillz_main": "8a47a5c74445af337e4a8986f93666eafd27a7c4",
+  "registered_static_complete": "186/186 at July pin, unchanged",
+  "frozen_frontier": "106 unchanged / 76 changed-existing / 4 removed / 22 raw additions at October 10; changed-existing screening remains 40/76",
+  "new_manifest_accounting": {
+    "distinct_added_since_registered_pin": 11,
+    "present_at_frozen_revision": 9,
+    "added_after_frozen_revision": 2,
+    "first_pass_source_vetted": 11,
+    "terminal_reject_unchanged": 3,
+    "deferred_reference_only": 8,
+    "qualified_admissions": 0,
+    "latest_source_denominator": "unknown; this is not a whole-repository count"
+  },
+  "review_scope": "All 11 SKILL.md files at immutable candidate revision, compare paths per selected package, source MIT license, selected high-risk supporting references/scripts; full package tree identity and exhaustive dependency/security audit not established",
+  "records": [
+    {
+      "canonical_id": "aks-gpu-inference",
+      "canonical_manifest": ".github/plugins/aks-skills/skills/aks-gpu-inference/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "42a952599c484f1a437056310e93d7ef273ea252",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "42a952599c484f1a437056310e93d7ef273ea252",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/gpu-cost-and-scaling.md",
+        "references/gpu-observability.md",
+        "references/gpu-scheduling.md",
+        "references/kaito-workspaces.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/gpu-cost-and-scaling.md",
+        "references/kaito-workspaces.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/gpu-observability.md",
+        "references/gpu-scheduling.md"
+      ],
+      "trigger": "GPU scheduling/VRAM/KAITO Day-2 incident",
+      "nontrigger": "Not cluster setup, generic AKS or cost optimization",
+      "dependencies": "kubectl, az, DCGM, KAITO, optional cost plugin",
+      "authority_class": "read-only",
+      "authority_findings": "GPU/KAITO evidence-only diagnosis, scoped cluster/pool; explicit approval before scaling, drain, add-ons and deletion",
+      "privacy_findings": "Kubernetes and Azure metadata can expose workload identifiers and logs; no sensitive payloads should be emitted without approval",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "debugging",
+          "observability"
+        ],
+        "lifecycle": [
+          "operations",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 17,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Remaining GPU references and package dependencies need exact review; scanner evidence absent",
+      "preserved_value": "GPU profile evidence, distinguish KEDA pod scaling from node scaling",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "aks-known-issues",
+      "canonical_manifest": ".github/plugins/aks-skills/skills/aks-known-issues/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "a0d46fac012c39520a351eb2fdcb8bc915e05228",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "a0d46fac012c39520a351eb2fdcb8bc915e05228",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/error-code-map.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/error-code-map.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [],
+      "trigger": "Exact cataloged AKS signature with all qualifiers",
+      "nontrigger": "Not generic, quota, bare wrappers or non-AKS incidents",
+      "dependencies": "Azure read tools optional; catalog reference",
+      "authority_class": "read-only",
+      "authority_findings": "Exact AKS error signature and qualifier matching; fixes are proposals requiring explicit approval",
+      "privacy_findings": "Azure operation errors can contain private subscription or infrastructure identifiers",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "debugging",
+          "research"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "retrieval-map"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 19,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Package tree identity and security evidence not established",
+      "preserved_value": "Qualified error matching and cited read-only verification",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "aks-network-capture",
+      "canonical_manifest": ".github/plugins/aks-skills/skills/aks-network-capture/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "cffcb7322710cd1f02db709aa6d504ae61ac2772",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "cffcb7322710cd1f02db709aa6d504ae61ac2772",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/capture-authorization.md",
+        "scripts/collect-azure-network-info.ps1",
+        "scripts/collect-azure-network-info.sh",
+        "scripts/create-capture.ps1",
+        "scripts/create-capture.sh",
+        "scripts/generate-test-traffic.ps1",
+        "scripts/generate-test-traffic.sh",
+        "scripts/retrieve-captures.ps1",
+        "scripts/retrieve-captures.sh",
+        "scripts/run-capture.sh",
+        "scripts/setup-capture-configmap.ps1",
+        "scripts/setup-capture-configmap.sh"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/capture-authorization.md",
+        "scripts/setup-capture-configmap.sh",
+        "scripts/create-capture.sh",
+        "scripts/generate-test-traffic.sh",
+        "scripts/retrieve-captures.sh",
+        "scripts/run-capture.sh"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "scripts/collect-azure-network-info.ps1",
+        "scripts/collect-azure-network-info.sh",
+        "scripts/create-capture.ps1",
+        "scripts/generate-test-traffic.ps1",
+        "scripts/retrieve-captures.ps1",
+        "scripts/setup-capture-configmap.ps1"
+      ],
+      "trigger": "Explicit bounded packet-capture request after diagnostics",
+      "nontrigger": "Not general networking troubleshooting or implicit cluster-wide collection",
+      "dependencies": "kubectl, az, shell/PowerShell, pinned container images, hostPath, packet capture",
+      "authority_class": "mutating",
+      "authority_findings": "Creates cluster ConfigMap, privileged host-path capture Jobs, retrieval pods and traffic; approval reference exists but create script defaults to all Linux nodes when no node/pod selector is supplied",
+      "privacy_findings": "PCAP can contain credentials, private customer payloads and traffic metadata; artifact and cleanup exposure",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "security",
+          "observability"
+        ],
+        "lifecycle": [
+          "operations",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 12,
+      "semantic_status": "rejected",
+      "candidate_disposition": "REJECT unchanged / EXTRACT",
+      "unchanged_use_eligible": false,
+      "blocker": "Unsafe default cluster-wide node selection and high-privilege script bundle; full script/package security review absent",
+      "preserved_value": "Run-ID cleanup, pinned images, explicit capture plan",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "aks-troubleshooting",
+      "canonical_manifest": ".github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "b6d2a1e2f762ce0e5f3fb6b2f3551fc44a7e7e3e",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "b6d2a1e2f762ce0e5f3fb6b2f3551fc44a7e7e3e",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "general-diagnostics.md",
+        "load-balancer-and-ingress.md",
+        "network-policy.md",
+        "networking.md",
+        "node-issues.md",
+        "pod-failures.md",
+        "references/api-server-webhooks-tunnel.md",
+        "references/auto-upgrade-evidence.md",
+        "references/azure-mcp.md",
+        "references/azure-network-path.md",
+        "references/command-flows.md",
+        "references/inspektor-gadget.md",
+        "references/report-template.md",
+        "references/structured-input-modes.md",
+        "references/symptom-map.md",
+        "scripts/cluster-snapshot.sh",
+        "scripts/pod-deep-dive.sh",
+        "spot-and-zone-issues.md",
+        "upgrade-operations.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "node-issues.md",
+        "references/inspektor-gadget.md",
+        "scripts/pod-deep-dive.sh"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "general-diagnostics.md",
+        "load-balancer-and-ingress.md",
+        "network-policy.md",
+        "networking.md",
+        "pod-failures.md",
+        "references/api-server-webhooks-tunnel.md",
+        "references/auto-upgrade-evidence.md",
+        "references/azure-mcp.md",
+        "references/azure-network-path.md",
+        "references/command-flows.md",
+        "references/report-template.md",
+        "references/structured-input-modes.md",
+        "references/symptom-map.md",
+        "scripts/cluster-snapshot.sh",
+        "spot-and-zone-issues.md",
+        "upgrade-operations.md"
+      ],
+      "trigger": "AKS Day-2 incidents not routed to narrower AKS skills",
+      "nontrigger": "Not packet capture, GPU-specific, exact known signature or non-AKS Azure incidents",
+      "dependencies": "az, kubectl, jq, POSIX sh, optional Azure MCP and Inspektor Gadget",
+      "authority_class": "read-only",
+      "authority_findings": "Read-only diagnosis by default; privileged debug pod is separately approved; evidence bound to subscription/cluster/context",
+      "privacy_findings": "Raw pod logs are stored in approved local artifact directory and may contain secrets despite stdout redaction",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "debugging",
+          "observability"
+        ],
+        "lifecycle": [
+          "operations",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "hypothesis-driven"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 17,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Many bundled references and collector paths remain unreviewed; complete package security absent",
+      "preserved_value": "Hypothesis/falsifier investigation, target proof, log redaction",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-search-nav",
+      "canonical_manifest": ".github/plugins/aks-skills/skills/azure-search-nav/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "d4d3d2cedf6bf399613682ae918e20ef25dd2bc3",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "d4d3d2cedf6bf399613682ae918e20ef25dd2bc3",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/Invoke-PortalSearchNav.ps1",
+        "references/README.md",
+        "references/resource-types.json"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/Invoke-PortalSearchNav.ps1"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/README.md",
+        "references/resource-types.json"
+      ],
+      "trigger": "Azure portal navigation link for supported resource",
+      "nontrigger": "Not unapproved auth, module installation or token transmission",
+      "dependencies": "Az.Accounts PowerShell, interactive login, remote semantic search API",
+      "authority_class": "external-side-effect",
+      "authority_findings": "Bundled PowerShell acquires ARM bearer token then sends it to fixed azurefd.net endpoint; audience/origin trust and user-approved token disclosure not established",
+      "privacy_findings": "ARM bearer credential and Azure resource identity leave the token's normal management endpoint context; do not run or print token",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "security",
+          "productivity"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 10,
+      "semantic_status": "rejected",
+      "candidate_disposition": "REJECT unchanged / EXTRACT",
+      "unchanged_use_eligible": false,
+      "blocker": "Unverified endpoint trust/credential disclosure; host install/login side effects require scoped consent",
+      "preserved_value": "Validated ARM path parsing and portal link construction",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-advisor-actionability",
+      "canonical_manifest": ".github/plugins/azure-advisor/skills/azure-advisor-actionability/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "b9a5ad54433b1398b11ebaf3f2cc1bd156f47a18",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": null,
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md"
+      ],
+      "selected_supporting_content_inspected": [],
+      "remaining_supporting_content_not_fully_inspected": [],
+      "trigger": "User requests Advisor remediation guidance",
+      "nontrigger": "Not execution, guessed resource IDs or uncited instructions",
+      "dependencies": "advisor_remediation_get and public Microsoft Learn retrieval",
+      "authority_class": "generate-only",
+      "authority_findings": "Produces cited remediation steps only; never executes; exact recommendation type and affected resource required",
+      "privacy_findings": "Recommendation and ARM resource IDs can reveal private environment structure",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "documentation",
+          "decision-support"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 19,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Security evidence and complete source-package identity not established",
+      "preserved_value": "Tool-vs-Learn provenance and placeholder preservation",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-advisor",
+      "canonical_manifest": ".github/plugins/azure-advisor/skills/azure-advisor/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "d817a28d4a38f845cd589bf8ff8e991b5d7f37e6",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": null,
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md"
+      ],
+      "selected_supporting_content_inspected": [],
+      "remaining_supporting_content_not_fully_inspected": [],
+      "trigger": "Show Advisor recommendations, metadata or change status",
+      "nontrigger": "Not remediation commands, which route to actionability",
+      "dependencies": "Advisor MCP tools with scoped subscription/service-group",
+      "authority_class": "mutating",
+      "authority_findings": "Advisor status update tool is included; generic confirmation required, but exact recommendation/status/target confirmation still needs independent adversarial inspection",
+      "privacy_findings": "Recommendations and subscription/resource metadata are private",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "decision-support",
+          "monitoring"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "tool-routing",
+          "evidence-first"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 18,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Confirm action-specific status/target authorization; scanner evidence absent",
+      "preserved_value": "Tool routing and capped-list honesty",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "cost-analysis",
+      "canonical_manifest": ".github/plugins/azure-cost/skills/cost-analysis/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "3c02cbfaa11f748177fb9b6df80f130f74a87544",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "3c02cbfaa11f748177fb9b6df80f130f74a87544",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/ai-cost-analysis.md",
+        "references/aks-anomaly.md",
+        "references/aks-cost-analysis.md",
+        "references/aks-enablement.md",
+        "references/cost-investigation.md",
+        "references/cost-query/dimensions-by-scope.md",
+        "references/cost-query/error-handling.md",
+        "references/cost-query/examples.md",
+        "references/cost-query/guardrails.md",
+        "references/cost-query/request-body-schema.md",
+        "references/cost-query/workflow.md",
+        "references/tools-and-safety.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/tools-and-safety.md",
+        "references/aks-enablement.md",
+        "references/aks-cost-analysis.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/ai-cost-analysis.md",
+        "references/aks-anomaly.md",
+        "references/cost-investigation.md",
+        "references/cost-query/dimensions-by-scope.md",
+        "references/cost-query/error-handling.md",
+        "references/cost-query/examples.md",
+        "references/cost-query/guardrails.md",
+        "references/cost-query/request-body-schema.md",
+        "references/cost-query/workflow.md"
+      ],
+      "trigger": "Historical spend, bill spikes, AKS or AI costs",
+      "nontrigger": "Not estimates, commitment purchase or budget setup",
+      "dependencies": "Azure Cost MCP, Resource Graph, optional CLI/REST fallback",
+      "authority_class": "external-side-effect",
+      "authority_findings": "Mostly read-only spend queries; AKS cost add-on enablement is separate mutation with explicit approval",
+      "privacy_findings": "Billing and namespace-level spend expose financial and resource identifiers",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations",
+          "observability"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "cost-bounded"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 17,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Remaining references and host fallback authority need full review and scan",
+      "preserved_value": "Currency/period boundaries, avoid inventing zero for missing data",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "cost-estimation",
+      "canonical_manifest": ".github/plugins/azure-cost/skills/cost-estimation/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "756ad958d176e212254dff123bfdbf2294fdf4d0",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "756ad958d176e212254dff123bfdbf2294fdf4d0",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/cost-forecast/error-handling.md",
+        "references/cost-forecast/examples.md",
+        "references/cost-forecast/guardrails.md",
+        "references/cost-forecast/request-body-schema.md",
+        "references/cost-forecast/workflow.md",
+        "references/pricing-estimate.md",
+        "references/tool-fallback.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/pricing-estimate.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/cost-forecast/error-handling.md",
+        "references/cost-forecast/examples.md",
+        "references/cost-forecast/guardrails.md",
+        "references/cost-forecast/request-body-schema.md",
+        "references/cost-forecast/workflow.md",
+        "references/tool-fallback.md"
+      ],
+      "trigger": "Azure spend forecasts and hypothetical pricing",
+      "nontrigger": "Not actual bill analysis or budget governance",
+      "dependencies": "Azure Cost forecast/retail/EA-MCA pricesheet MCP tools",
+      "authority_class": "external-side-effect",
+      "authority_findings": "Negotiated pricesheet workflow instructs returning a short-lived ZIP download URL to the user without verifying whether it is a capability-bearing/SAS credential",
+      "privacy_findings": "Short-lived negotiated pricing download URLs may confer access to confidential rate cards; conservative secret-handling hard fail",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "cost-bounded"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 12,
+      "semantic_status": "rejected",
+      "candidate_disposition": "REJECT unchanged / EXTRACT",
+      "unchanged_use_eligible": false,
+      "blocker": "Secure transfer/credential-bearing URL handling absent; do not emit live URLs in conversation",
+      "preserved_value": "Meter disambiguation, currency and retail-vs-negotiated separation",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "cost-governance",
+      "canonical_manifest": ".github/plugins/azure-cost/skills/cost-governance/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "4902a03e2b7950bcb7e84b6bfe799b4c92927d9b",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "4902a03e2b7950bcb7e84b6bfe799b4c92927d9b",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/budget-health.md",
+        "references/budget-setup.md",
+        "references/guardrails.md",
+        "references/tool-fallback.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/budget-setup.md",
+        "references/guardrails.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/budget-health.md",
+        "references/tool-fallback.md"
+      ],
+      "trigger": "Budget health, creation, alerts and cost policy coverage",
+      "nontrigger": "Not bill anomalies, pricing or rightsizing",
+      "dependencies": "Azure Cost MCP create_budget, Resource Graph, fallback APIs",
+      "authority_class": "mutating",
+      "authority_findings": "Budget creation has explicit approval of exact scope, name, amount, thresholds and recipients; policies/guardrails reviewed read-only",
+      "privacy_findings": "Budget notification emails and billing scope are sensitive; never send without confirmed recipients",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations",
+          "security"
+        ],
+        "lifecycle": [
+          "operations",
+          "planning"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "cost-bounded"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 17,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Tool fallback and complete package security not established",
+      "preserved_value": "Explicit budget proposal confirmation and policy enforcement-mode distinction",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "cost-optimization",
+      "canonical_manifest": ".github/plugins/azure-cost/skills/cost-optimization/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "65104fd7b16b65af4fec3afffa9c5168c98886a1",
+      "registered_manifest_absent": true,
+      "frozen_manifest_blob_sha": "65104fd7b16b65af4fec3afffa9c5168c98886a1",
+      "source_license": "MIT root and manifest (transitive service/dependency terms not audited)",
+      "source_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "package_tree_sha": null,
+      "package_tree_identity_state": "not established; compare endpoint provides changed paths, not complete tree SHA",
+      "observed_changed_paths_in_package": [
+        "SKILL.md",
+        "references/commitments.md",
+        "references/optimization.md",
+        "references/report-template.md",
+        "references/resource-graph.md",
+        "references/services/redis.md",
+        "references/services/storage-lifecycle.md",
+        "references/services/storage.md",
+        "references/tool-fallback.md"
+      ],
+      "selected_supporting_content_inspected": [
+        "references/commitments.md",
+        "references/optimization.md"
+      ],
+      "remaining_supporting_content_not_fully_inspected": [
+        "references/report-template.md",
+        "references/resource-graph.md",
+        "references/services/redis.md",
+        "references/services/storage-lifecycle.md",
+        "references/services/storage.md",
+        "references/tool-fallback.md"
+      ],
+      "trigger": "Rightsizing, waste and commitment utilization",
+      "nontrigger": "Not spend spikes, forecasts or budgets",
+      "dependencies": "Azure Cost and Resource Graph, optional pricing fallback",
+      "authority_class": "generate-only",
+      "authority_findings": "Only recommends rightsizing and commitments; no delete, resize, deploy or purchase execution",
+      "privacy_findings": "Billing/commitment utilization can reveal sensitive account financial data",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations",
+          "decision-support"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "cost-bounded"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score": 17,
+      "semantic_status": "unverified",
+      "candidate_disposition": "DEFER / REFERENCE-ONLY",
+      "unchanged_use_eligible": false,
+      "blocker": "Full reference and dependency review plus scanner evidence absent",
+      "preserved_value": "Amortized vs actual savings and owner confirmation",
+      "package_security": {
+        "status": "not-run",
+        "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false
+    }
+  ]
+}
