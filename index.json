@@ -207,15 +207,17 @@
       "exact_package_mirror_exclusions": 1,
       "candidate_exact_tree_carry_forward": 106,
       "candidate_changed_existing_requiring_full_qualification": 76,
-      "candidate_new_or_ungoverned_requiring_first_review": 26,
-      "candidate_total_needing_current_standard_review": 102,
+      "candidate_new_or_ungoverned_requiring_first_review": 23,
+      "candidate_total_needing_current_standard_review": 99,
       "old_ungoverned_exposures_classified": 6,
       "canonical_denominator_evidence": "registry/freshness/microsoft-skills-canonical-denominator-2026-10-27.json",
       "candidate_new_full_static_rejected": 3,
       "candidate_new_remaining_first_review": 23,
       "candidate_total_remaining_full_review": 99,
       "candidate_full_review": "docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md",
-      "public_count_reconciliation": "Live verification tree 768 YAML records including 44 local first-party = 724 third-party before this tranche; 3 candidate exact-version rejected companions = 727."
+      "public_count_reconciliation": "Live verification tree 768 YAML records including 44 local first-party = 724 third-party before this tranche; 3 candidate exact-version rejected companions = 727.",
+      "candidate_total_initial_review_frontier": 102,
+      "candidate_new_or_ungoverned_initial_first_review": 26
     }
   }
 }
