@@ -1,0 +1,37 @@
+schema_version: 1
+skill_name: azure-advisor
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cf9561057dc322d3be42b4a2f78a91adb8eaef6c
+skill_md_blob_sha: d817a28d4a38f845cd589bf8ff8e991b5d7f37e6
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 14/20
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, monitoring]
+  lifecycle: [operations]
+  characteristic: [evidence-first, tool-routing]
+  authority: [read-only, mutating]
+  portability: [medium]
+package_file_count: 1
+package_files_inspected: "All 1 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+authority_hard_fail: true
+notes: "REJECT unchanged: useful capped-list avoidance and tool routing, but complete/dismiss/postpone/reactivate are consequential state mutations with only generic confirmation. Extract read-only summary/list behavior; require specific target, intended new state, effects and explicit action authorization. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."

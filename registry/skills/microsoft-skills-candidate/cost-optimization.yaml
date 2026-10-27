@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: cost-optimization
+display_name: "Microsoft cost-optimization candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-cost/skills/cost-optimization/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: a016fbc32a0961b6c18041298d0df37048d0afa3
+skill_md_blob_sha: 65104fd7b16b65af4fec3afffa9c5168c98886a1
+package_file_count: 9
+permission_tier: "report template directs create_file and raw billing-result persistence without explicit storage/retention authorization; resource changes otherwise proposal-only"
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: "Cost Management, Resource Graph, Advisor, benefit/reservation tools and create_file; eight bundled commitment, storage, resource-graph, report and fallback references."
+purpose: "Evaluate Azure cost-saving opportunities, rightsizing and financial commitments."
+trigger_nontrigger: "Optimization and commitment analysis, not cost spikes, forecasts, budgets or governance."
+authority_finding: "report template directs create_file and raw billing-result persistence without explicit storage/retention authorization; resource changes otherwise proposal-only"
+privacy_finding: "Saved cost-query JSON and resource/owner inventories can contain sensitive financial and infrastructure metadata; report paths have no retention or disclosure guard."
+import_eligibility: adaptation-extraction-reference-only
+rationale: "REJECT unchanged: optimization workflow correctly prohibits delete/resize/purchase without approval, but report-template mandates output/cost-query-result JSON and create_file with no explicit authorization, minimization or retention boundary. Extract evidence-backed savings prioritization and owner checks; make artifact persistence opt-in and scoped."

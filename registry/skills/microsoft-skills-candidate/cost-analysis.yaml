@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: cost-analysis
+display_name: "Microsoft cost-analysis candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-cost/skills/cost-analysis/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: e2bcd6ba7f86f01f7c2ed74a3b7ef22d290ed3fd
+skill_md_blob_sha: 3c02cbfaa11f748177fb9b6df80f130f74a87544
+package_file_count: 13
+permission_tier: "cost and resource queries are scoped reads; AKS cost add-on and tier changes require explicit approval in bundled enablement reference"
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-package-static-inspected
+dependencies: "Azure Resource Manager MCP CostManagement query_costs/query_aks_costs, Resource Graph and Azure Monitor; twelve bundled cost-query, AKS and AI references; approved CLI/REST fallback only when operation unavailable."
+purpose: "Evidence-based analysis of Azure actual spend, spikes and AKS/AI cost allocation."
+trigger_nontrigger: "Actual billed spend or cost anomaly, not forecasts, negotiated pricing, budget creation or rightsizing."
+authority_finding: "cost and resource queries are scoped reads; AKS cost add-on and tier changes require explicit approval in bundled enablement reference"
+privacy_finding: "Financial spend, chargeback owners, resource tags and workloads are sensitive; minimize returned fields and report only to authorized recipients."
+import_eligibility: reference-only-pending-exact-package-security-and-user-fit
+rationale: "VERIFY static only: exact scoped billing dimensions, currency separation, bounded queries and explicit add-on/tier approval. Treat financial data as sensitive; external host must establish data-access and disclosure authority. No scanner or behavioral evidence."
