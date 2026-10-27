@@ -32,6 +32,6 @@ tags:
   authority: [read-only, external-side-effect]
   portability: [medium]
 package_file_count: 9
-package_files_inspected: "All 9 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md; references/commitments.md; references/optimization.md; references/report-template.md; references/resource-graph.md; references/services/redis.md; references/services/storage-lifecycle.md; references/services/storage.md; references/tool-fallback.md"
 authority_hard_fail: true
 notes: "REJECT unchanged: optimization workflow correctly prohibits delete/resize/purchase without approval, but report-template mandates output/cost-query-result JSON and create_file with no explicit authorization, minimization or retention boundary. Extract evidence-backed savings prioritization and owner checks; make artifact persistence opt-in and scoped. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."

@@ -32,6 +32,6 @@ tags:
   authority: [read-only]
   portability: [medium]
 package_file_count: 5
-package_files_inspected: "All 5 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md; references/gpu-cost-and-scaling.md; references/gpu-observability.md; references/gpu-scheduling.md; references/kaito-workspaces.md"
 authority_hard_fail: false
 notes: "VERIFY static only: scoped host capability and target authorization, evidence/missing-data handling, explicit approval before scaling, deletion, add-on or monitoring changes. No behavioral or security scan evidence. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."
