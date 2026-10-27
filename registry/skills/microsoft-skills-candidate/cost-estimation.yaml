@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: a21080854fecab8e15014121bcfd328bf4cbe5df
 skill_md_blob_sha: 756ad958d176e212254dff123bfdbf2294fdf4d0
 package_file_count: 8
+package_file_paths: ["SKILL.md","references/cost-forecast/error-handling.md","references/cost-forecast/examples.md","references/cost-forecast/guardrails.md","references/cost-forecast/request-body-schema.md","references/cost-forecast/workflow.md","references/pricing-estimate.md","references/tool-fallback.md"]
 permission_tier: "negotiated pricesheet download can expose a short-lived credential-bearing ZIP URL; no safe delivery/recipient authorization boundary"
 portability: medium
 review_status: rejected-unchanged-structured

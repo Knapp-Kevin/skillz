@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: 5b797fd877111afa34a811ffe4545de4789e7964
 skill_md_blob_sha: 42a952599c484f1a437056310e93d7ef273ea252
 package_file_count: 5
+package_file_paths: ["SKILL.md","references/gpu-cost-and-scaling.md","references/gpu-observability.md","references/gpu-scheduling.md","references/kaito-workspaces.md"]
 permission_tier: "read-only GPU telemetry; proposed changes require explicit action authorization"
 portability: medium
 review_status: verified-structured-static-security-pending

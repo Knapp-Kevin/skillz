@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: 0642cbfede48e571a698325dccdf9c29ac6650e8
 skill_md_blob_sha: a0d46fac012c39520a351eb2fdcb8bc915e05228
 package_file_count: 2
+package_file_paths: ["SKILL.md","references/error-code-map.md"]
 permission_tier: "read-only diagnosis; proposed fixes explicitly require user approval before mutation"
 portability: medium
 review_status: verified-structured-static-security-pending

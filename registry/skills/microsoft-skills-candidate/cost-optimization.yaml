@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: a016fbc32a0961b6c18041298d0df37048d0afa3
 skill_md_blob_sha: 65104fd7b16b65af4fec3afffa9c5168c98886a1
 package_file_count: 9
+package_file_paths: ["SKILL.md","references/commitments.md","references/optimization.md","references/report-template.md","references/resource-graph.md","references/services/redis.md","references/services/storage-lifecycle.md","references/services/storage.md","references/tool-fallback.md"]
 permission_tier: "report template directs create_file and raw billing-result persistence without explicit storage/retention authorization; resource changes otherwise proposal-only"
 portability: medium
 review_status: rejected-unchanged-structured

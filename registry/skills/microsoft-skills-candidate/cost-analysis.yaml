@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: e2bcd6ba7f86f01f7c2ed74a3b7ef22d290ed3fd
 skill_md_blob_sha: 3c02cbfaa11f748177fb9b6df80f130f74a87544
 package_file_count: 13
+package_file_paths: ["SKILL.md","references/ai-cost-analysis.md","references/aks-anomaly.md","references/aks-cost-analysis.md","references/aks-enablement.md","references/cost-investigation.md","references/cost-query/dimensions-by-scope.md","references/cost-query/error-handling.md","references/cost-query/examples.md","references/cost-query/guardrails.md","references/cost-query/request-body-schema.md","references/cost-query/workflow.md","references/tools-and-safety.md"]
 permission_tier: "cost and resource queries are scoped reads; AKS cost add-on and tier changes require explicit approval in bundled enablement reference"
 portability: medium
 review_status: verified-structured-static-security-pending

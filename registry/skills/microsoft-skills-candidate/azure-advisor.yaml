@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: cf9561057dc322d3be42b4a2f78a91adb8eaef6c
 skill_md_blob_sha: d817a28d4a38f845cd589bf8ff8e991b5d7f37e6
 package_file_count: 1
+package_file_paths: ["SKILL.md"]
 permission_tier: "advisor_recommendation_update changes persistent recommendation state; generic 'confirm before' lacks action-specific state/scope/effect authorization"
 portability: medium
 review_status: rejected-unchanged-structured
