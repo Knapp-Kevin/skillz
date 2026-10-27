@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **746** persisted exact-version third-party verification companions.
+- **747** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -102,11 +102,11 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
-**Candidate full-package static reviews (2026-10-27):** Three Kusto rejections, eight AKS/Advisor/Cost reviews (4 VERIFIED semantic only / 4 REJECT unchanged), eight [authority/privacy rejections](docs/reviews/2026-10-27-microsoft-authority-eight-exact-static.md), and three [AKS/readiness/Entra rejections](docs/reviews/2026-10-27-microsoft-aks-prereq-entra-three-exact-static.md) after complete bundled-file inspection. **22/26 new candidates** now have full static companions (4 VERIFIED semantic only / 18 REJECT unchanged); **4 new + 76 changed = 80** candidate-version full reviews remain. Persisted third-party verification companions: **743 before this tranche + 3 = 746**. No admission, scanner execution, behavioral evidence or pin changes.
+**Candidate full-package static reviews (2026-10-27):** Three Kusto rejections, eight AKS/Advisor/Cost reviews (4 VERIFIED semantic only / 4 REJECT unchanged), eight [authority/privacy rejections](docs/reviews/2026-10-27-microsoft-authority-eight-exact-static.md), three [AKS/readiness/Entra rejections](docs/reviews/2026-10-27-microsoft-aks-prereq-entra-three-exact-static.md), and one [AKS app-deployment rejection](docs/reviews/2026-10-27-microsoft-aks-app-deploy-exact-static.md) after complete bundled-file inspection. **23/26 new candidates** now have full static companions (4 VERIFIED semantic only / 19 REJECT unchanged); **3 new + 76 changed = 79** candidate-version full reviews remain. Persisted third-party verification companions: **746 before this tranche + 1 = 747**. No admission, scanner execution, behavioral evidence or pin changes.
 
 ## Active Microsoft freshness frontier (issue #400, 2026-10-27)
 
-Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **22/26 new candidates** now have full static companions (4 VERIFIED semantic only / 18 REJECT unchanged), leaving **4 new + 76 changed = 80** full current-version reviews. Four removed-path successor decisions remain. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
+Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **23/26 new candidates** now have full static companions (4 VERIFIED semantic only / 18 REJECT unchanged), leaving **3 new + 76 changed = 79** full current-version reviews. Four removed-path successor decisions remain. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
 
 ## Governed discovery / source-vetting
 
