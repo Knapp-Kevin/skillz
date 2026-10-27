@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "discover-azure-skills"
+candidate_key: "discover-azure-skills"
+source_id: "microsoft-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "baf3348531f80582ceb1445357250af80a1aa8c5"
+skill_md_blob_sha: "ce732e882f25414f630e571ce250f062d95335ad"
+characterized_at: "2026-10-27"
+last_verified_at: "2026-10-27"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 1
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 2
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","research","skill-authoring"]
+  lifecycle: ["discovery"]
+  characteristic: ["retrieval-first","tool-routing"]
+  authority: ["read-only"]
+  portability: ["medium"]
+package_file_count: 4
+package_files_inspected: "SKILL.md; references/install/claude-code.md; references/install/copilot-cli.md; references/install/other.md"
+shared_dependency_files_inspected: []
+authority_hard_fail: false
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged as governed intake: name/description matching is not trust or installation eligibility. Preserve discovery routing and plugin-name disambiguation; require exact-version vetting and host approval before suggesting install as ready. No upstream code, cloud/host operation, security scan or representative behavioral/adversarial test executed."
