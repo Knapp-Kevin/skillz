@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
-rationale: "Agent-memory monitoring with approved-only project binding, untrusted source handling and proposal-only architectural relevance; absent approved context, generic synthesis."
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Authorized-only private memory context, proposal-only architecture, and explicit UTC query-window binding. Exact-version static review only; security and behavioral validation are separate."
