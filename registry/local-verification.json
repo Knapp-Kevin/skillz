@@ -560,7 +560,7 @@
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ac4927ff83ffac0b15377b0b4773252ade7a536e",
+      "content_blob_sha": "71d6e8ebb361e6431ebb1d4bd045a2620e3cfb49",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -587,7 +587,7 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -886,7 +886,7 @@
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bfccb4b879a7ffcb67c844b0d3683f3bbc3a0f3e",
+      "content_blob_sha": "bb8d1252ff201256277bc9da9a203e12164ec1b7",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -911,7 +911,7 @@
           "medium"
         ]
       },
-      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
