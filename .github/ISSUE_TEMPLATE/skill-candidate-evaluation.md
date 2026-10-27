@@ -1,57 +1,60 @@
 ---
 name: Skill candidate evaluation
-about: Queue a newly discovered skill or source for evidence-first evaluation before repository admission
+about: Evaluate a newly discovered skill or source to a decisive, evidence-backed disposition
 title: "Candidate evaluation: "
 labels: ""
 assignees: ""
 ---
 
-## Candidate
+## Candidate identity and scope
 
-- Source repository / canonical location:
+- Canonical source URL / publisher:
 - Candidate skill or source family:
-- Upstream path:
-- Discovery surface:
-- Discovery rationale / differentiated capability:
+- Canonical package path and first-class boundary:
+- Discovery surface and differentiated capability:
+- Exact revision, SKILL.md identity, and package-tree fingerprint (when establishable):
+- Eligible source-family denominator / duplicate or alias exposure paths:
 
-## Issue-first admission gate
+## Issue-first evidence boundary
 
-This issue is the evaluation workspace. **Do not add candidate skill material or final provenance/verification companions to the governed repository before this issue reaches a decisive admission result.** Discovery is not admission, and source reputation is not individual skill proof.
+This issue is a temporary pre-admission evidence workspace, not a permanent holding pen. Discovery, popularity, branding, and source reputation do not establish trust, license permission, or installation authority. Do not vendor or create final governed provenance/verification companions before a justified admission decision.
 
-## Evidence to establish before decision
+## Required evidence
 
-- [ ] Canonical source and publisher/author identity
-- [ ] Exact source revision or other exact content identity
-- [ ] Complete package tree/fingerprint when establishable
-- [ ] License, redistribution, attribution, and applicable terms
-- [ ] Skill-specific freshness / last-update evidence when establishable
-- [ ] Purpose, trigger boundary, exclusions, and intended use
-- [ ] Complete dependency/shared-reference/package context
-- [ ] Authority, side effects, credentials, privacy, cost, and mutation profile
-- [ ] Portability and host/tool assumptions
-- [ ] Controlled taxonomy tags
-- [ ] Duplication / overlap comparison against the existing governed corpus
-- [ ] Structured exact-version semantic review and score
-- [ ] Exact-version package-security scan state and scanner identity when applicable
-- [ ] Active security findings and dispositions, if any
-- [ ] Behavioral-evidence state (`not-run` unless representative external evaluation was actually performed)
-- [ ] Useful extraction/adaptation mechanisms identified even if unchanged reuse is rejected
+- [ ] Canonical source, author, exact revision, identity, and complete package boundary established
+- [ ] License, redistribution, attribution, and applicable terms established; unknown terms fail closed for vendoring
+- [ ] Skill-specific freshness and relevant source context established or explicitly unknown
+- [ ] Purpose, trigger/non-trigger boundaries, differentiated mechanism, and existing-corpus overlap reviewed
+- [ ] Shared references, scripts, assets, dependencies, and portability/host assumptions characterized
+- [ ] Authority/side effects reviewed, including infrastructure, money, credentials, identity, communication, destructive actions, and sensitive-data transmission
+- [ ] Secrets, PII, logging, telemetry, retention, and credential-bearing URLs reviewed where relevant
+- [ ] Controlled taxonomy tags and individual exact-version semantic score/rationale recorded
+- [ ] Applicable exact-version package-security state and scanner identity recorded separately; `not-run` is not a pass
+- [ ] External behavioral/adversarial evidence state recorded; `not-run` unless actual representative behavior was observed
+- [ ] Useful adaptation, extraction, checklist, and rejected-pattern evidence preserved
+- [ ] Source-family macro findings and genuine omission/duplication defects summarized where relevant
 
-## Decisive result
+## Decisive disposition
 
-Choose and justify one or more as appropriate:
+Select the outcome justified by evidence, with rationale and exact identity. Do not treat a reference-only or rejected package as approved unchanged use.
 
-- [ ] Admit unchanged candidate
-- [ ] Admit source for selective individual curation
-- [ ] Adapt / extract / supplement / compose only
-- [ ] Reference-only
-- [ ] Reject unchanged
-- [ ] Reject source
+- [ ] ADMIT (unchanged, subject to all required semantic, security, licensing, and authority gates)
+- [ ] ADMIT SOURCE for selective individual review, without blanket package trust
+- [ ] ADAPT / EXTRACT / SUPPLEMENT / COMPOSE / CHECKLIST (no unchanged admission)
+- [ ] REFERENCE-ONLY
+- [ ] REJECT unchanged or REJECT source
+- [ ] DEFER/BLOCKED: identify a concrete external dependency, owner, and resolution condition
 
-## Admission and persistence rule
+**Decision rationale / blocking evidence:**
 
-Only after the issue records a justified admission decision may `skillz` persist the candidate skill/source material as appropriate and create or finalize its provenance, verification, and applicable security metadata. Persisted metadata must match the exact evaluated identity. Rejection and retirement reasons remain useful evidence and should be preserved.
+**Resulting repository paths or linked follow-up issues (if any):**
 
-## Runtime-passive boundary
+## Termination and persistence
 
-Normal user discovery, fit decisions, behavioral evaluation, installation, and external action are performed by the external host agent/environment under user authority. `skillz` gains no user-facing crawler, runtime, scheduler, installer, monitor, or autonomous intake process. Explicit repository maintenance may use the governed pinned package-security scanner/CI path to establish exact-version corpus evidence.
+Once evidence supports a decisive outcome, record the decision and close this bounded candidate issue. Do not leave a completed candidate indefinitely open. For a genuine external blocker, record its exact dependency and a bounded resumption condition.
+
+Only after justified admission may repository maintenance persist appropriately scoped candidate material and exact-version provenance, semantic verification, and security companions. Rejected/reference-only evidence may remain as an issue decision without vendoring restricted material. `verified` requires structured exact-version semantic review; `validated` requires actual external behavioral/adversarial evidence. Neither implies a package-security pass.
+
+## Entirely passive boundary
+
+The external host agent performs authorized discovery, source inspection, scans, behavioral assessments, and any external actions. `skillz` owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. Pinned upstream tooling remains source-owned reference material.

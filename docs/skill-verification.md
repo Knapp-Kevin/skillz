@@ -4,7 +4,7 @@ Source reputation and skill quality are separate facts.
 
 A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. Availability alone never establishes trusted unchanged-selection eligibility.
 
-`skillz` is runtime-passive for consumers. Its semantic quality surface is therefore the **meaning and likely interpretation of its text and complete skill package**, not a user-facing runtime owned by this repository. Semantic verification and validation remain reviewer-driven and probabilistic; package-security evidence is a separate maintainer-side dimension governed by `docs/security-scanning.md`.
+`skillz` is entirely passive. External host agents perform authorized assessments; this repository stores only the resulting instructions and evidence. Its semantic quality surface is therefore the **meaning and likely interpretation of its text and complete skill package**, not a user-facing runtime owned by this repository. Semantic verification and validation remain reviewer-driven and probabilistic; package-security evidence is a separate maintainer-side dimension governed by `docs/security-scanning.md`.
 
 ## Quality lifecycle
 
@@ -15,7 +15,7 @@ any assessed state -> stale
 ```
 
 - `verified` means the exact fingerprint passed the structured semantic quality gate below.
-- `validated` means a verified exact version also received representative scenario/adversarial semantic review and remained coherent under those readings.
+- `validated` means a verified exact version additionally has actual representative external host-executed behavioral/adversarial evidence for that exact version. Static scenario reading alone cannot establish `validated`.
 - `unverified` remains useful as design/reference evidence while review is pending but is not silently trusted for unchanged installation.
 
 These semantic states do not encode package-security status. A skill may be semantically `verified` while security is `not-run`, `failed`, `incomplete`, or `stale`. Security state is recorded independently.
@@ -81,21 +81,15 @@ Promotion to `verified` requires:
 - controlled characterization tags;
 - reviewer notes explaining material limitations.
 
-## Semantic validation
+## Static scenarios versus external behavioral validation
 
-`validated` is optional stronger evidence. It means the exact verified material was reviewed against representative situations rather than only rubric dimensions in isolation.
+Static scenario/adversarial **reading** can strengthen `verified` semantic evidence. It may inspect intended trigger and non-trigger cases, pressure on authority boundaries, ambiguous sequencing, dependencies, and unnecessary workflow burden. Record these as reviewer interpretation, not observed agent behavior.
 
-A useful semantic validation set includes:
+`validated` is a separate, optional stronger state. It requires representative **actual behavior** by an authorized external host agent/environment using the exact reviewed package. Evidence must identify the package fingerprint/revision, host/model/tool context when available, scenario inputs and expected boundaries, observed outputs/actions, pass/fail and adverse findings, and any limitations or unavailable capabilities. Include at least one trigger, one non-trigger, and a relevant adversarial/authority-pressure case when feasible. Never fabricate execution or imply that static reasoning proves a model behaved correctly.
 
-1. a situation where the skill should trigger;
-2. a situation where it should not trigger;
-3. a pressure/adversarial situation targeting its most likely failure mode;
-4. a literal reading looking for ambiguous sequencing, authority, dependency, or completion claims;
-5. a check that the instruction does not create a worse or more burdensome workflow than the problem requires.
+The external host must separately authorize any scenario that would mutate external state, incur cost, send communications, touch secrets, or disclose sensitive data. Use safe simulated or read-only scenarios unless explicit scoped authority exists. No tests, harnesses, CI, runtime, or other execution machinery belong to this repository.
 
-The reviewer records what was examined, the likely interpretation, any ambiguity found, and the resulting revision or disposition. The result remains probabilistic evidence about instruction quality, not executable proof or a benchmark of model capability.
-
-`validation_status: not-run` simply means no separate scenario/adversarial semantic review was recorded beyond the structured verification. It is not a runtime failure and is not, by itself, a repository-completion blocker.
+`validation_status: not-run` means no qualifying external behavioral evidence was established for the exact package. It is an honest state, not a failed test and not by itself a blocker to static corpus completeness.
 
 ## Complete package rule
 
@@ -112,7 +106,7 @@ Verification is attached to the exact canonical skill identity recorded by the c
 1. inspect the delta and dependency changes;
 2. refresh provenance dates/revisions where applicable;
 3. refresh the structured semantic rubric for material behavior changes;
-4. repeat relevant semantic scenario review when prior validation could be invalidated;
+4. re-evaluate any static scenario findings and invalidate/repeat external behavioral validation if the changed material affects previously observed behavior;
 5. update tags if scope, authority, portability, or behavior changed;
 6. record the new fingerprint only after review.
 

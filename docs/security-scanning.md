@@ -2,9 +2,9 @@
 
 ## Purpose
 
-`skillz` is **runtime-passive and maintenance-active**.
+`skillz` is **entirely passive**.
 
-Normal consumers do not need a local shell, Python, CI, Git, or any repository-owned service to use this repository as a knowledge resource. Repository maintainers may, however, use bounded automation to establish security evidence about exact skill packages before those packages are admitted, refreshed, or represented as eligible for unchanged reuse.
+The repository has no scripts, tests, CI workflows, or other active machinery. An authorized external host can use its own tools to assess exact skill packages and record the resulting evidence here before admission or unchanged reuse.
 
 Security scanning is a distinct evidence dimension. It does not replace provenance, licensing, semantic quality review, authority review, portability review, behavioral evidence, or user-fit judgment.
 
@@ -12,7 +12,7 @@ Security scanning is a distinct evidence dimension. It does not replace provenan
 
 The initial canonical scanner is [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector).
 
-The repository invokes SkillSpector as an **external maintenance dependency** and does not vendor its source.
+An authorized external host may invoke SkillSpector at the registered exact pin. This repository does not invoke or vendor its source.
 
 | Attribute | Value |
 |---|---|
@@ -22,7 +22,7 @@ The repository invokes SkillSpector as an **external maintenance dependency** an
 | License | Apache-2.0 |
 | Routine mode | static-only (`--no-llm`) |
 | Default gate | fail on findings or incomplete/partial analysis |
-| Network behavior | declared dependency coordinates may be queried against OSV.dev; skill file contents are not sent by the static-only CI gate |
+| Network behavior | declared dependency coordinates may be queried against OSV.dev; external host operators must verify scanner egress and ensure that skill content is not disclosed without authority |
 
 A future scanner update is a repository-maintenance decision. Do not silently follow an upstream branch or mutable tag.
 
@@ -34,7 +34,7 @@ This repository keeps the integration boundary deliberately narrower:
 
 - `skillz` remains MIT-licensed for its first-party material;
 - SkillSpector source is not copied or relicensed here;
-- CI installs the exact upstream revision as an external dependency;
+- an authorized external host installs the exact upstream revision outside this repository;
 - references to NVIDIA and SkillSpector are descriptive attribution, not endorsement;
 - if SkillSpector source is ever vendored, modified, or redistributed from this repository, the Apache-2.0 redistribution conditions and applicable upstream/third-party notices must be reviewed and satisfied at that time.
 
@@ -89,23 +89,13 @@ At minimum record:
 
 Do not copy volatile scan output into semantic verification fields.
 
-## CI policy
+## External host assessment policy
 
-`.github/workflows/skillspector.yml` is a **maintenance gate**, not repository runtime.
+The repository owns no CI workflow, runner, script, scheduled job or scanner process. An authorized external host may scan relevant pinned packages using its own environment and the exact registered scanner commit. Preserve the actual target package identity, revision, scan arguments, complete coverage proof, severity/findings, report digest and resulting disposition under `registry/security/`.
 
-For pull requests it scans changed skill packages. For source-level changes that cannot be mapped to one package, it expands conservatively to the affected skill family. A manual full scan is available through `workflow_dispatch`.
+A qualifying static assessment uses no LLM credentials, fails closed on active findings or incomplete analysis, and does not disclose private content or credentials to third parties without explicit authority. Host-generated reports are evidence only; do not imply a scan ran unless the host actually executed it. Historical CI results may be retained as dated evidence of their scanned versions, not as a current repository automation requirement.
 
-Routine CI:
-
-- runs static-only;
-- uses no LLM credentials;
-- does not schedule recurring full-corpus scans;
-- fails on active findings;
-- fails on incomplete analysis;
-- fails closed whenever the pinned scanner reports partial or incomplete coverage;
-- installs SkillSpector from the exact pinned commit.
-
-LLM-backed SkillSpector analysis may be used manually as supplemental evidence when justified. It is not required for ordinary CI and must not silently transmit repository content to an external model provider.
+Optional LLM-backed analysis requires separate authorization for any external data transmission.
 
 ## Backfill
 
