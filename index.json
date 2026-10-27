@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-26: PR #416 consolidates 16 passive monitoring-source corrections and 5 distinct first-party authorization/privacy remediations from #410. All 21 are existing skills; no admission or denominator change (44 first-party, 721 third-party exact-version reviews, 22 registered sources). The latest inference-pulse exact version remains semantic unverified; final-blob external package-security and independent integration review remain outstanding. No repository-owned CI, runtime, scanner, or scheduler.",
+    "latest_reconciliation": "2026-10-26: PR #416 consolidates 16 passive monitoring-source corrections and 5 distinct first-party authorization/privacy remediations from #410. All 21 are existing skills; no admission or denominator change (44 first-party, 721 third-party exact-version reviews, 22 registered sources). The latest inference-pulse exact version is semantic verified 17/20 after structured review, with behavioral evidence not-run; final-blob external package-security and independent integration review remain outstanding. No repository-owned CI, runtime, scanner, or scheduler.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host"

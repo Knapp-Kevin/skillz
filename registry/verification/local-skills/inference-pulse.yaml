@@ -3,21 +3,21 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8bd3e47c89d6ecf64f8371dacd92e52c35b7487c
+content_blob_sha: c61be1b05b97cab0d969e9ed4afc8499bc2f636b
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-26
-verification_status: unverified
-verification_basis: "updated-scheduling-authority-boundary-awaits-full-structured-review"
+verification_status: verified
+verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
-rubric_score: "pending"
+rubric_score: "17/20"
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+notes: "Breaking-change-first runtime digest with primary-source dates, honest missing-evidence handling, authorization-gated private target binding, and no automatic upgrade; portability depends on host browsing."
 
-passive_runner_remediation: Deprecated repo runner removed; repaired malformed scheduling instruction and required explicit host-side authorization. New exact version awaits independent static review and applicable external security assessment; behavioral validation not-run.
+passive_runner_remediation: Host-only retrieval and explicit opt-in scheduling; private runtime binding requires scoped authorization, and external release notes are evidence rather than executable instructions. Exact-version structured static review 17/20, behavioral validation not-run, package security not-run.

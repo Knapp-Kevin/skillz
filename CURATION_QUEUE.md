@@ -30,7 +30,7 @@ The bounded controlled-taxonomy conformance audit #342 is also **closed complete
 
 ## First-party pulse maintenance frontier (2026-10-12)
 
-Issue #415 / draft PR #416 now stage 16/17 pulse host-collection repairs plus five distinct authorization/privacy hardenings from #410, for 21 revised existing skills. All 21 have exact-version companion records; `inference-pulse` remains `unverified` after its latest wording fix, and all changed package-security evidence must be reassessed externally at the final identities. No admissions or denominator changes: first-party 44, third-party exact-version reviews 721, registered sources 22. No repository-owned runtime, scanner, CI, runner, or scheduler is introduced.
+Issue #415 / draft PR #416 now stage 16/17 pulse host-collection repairs plus five distinct authorization/privacy hardenings from #410, for 21 revised existing skills. All 21 have exact-version companion records; `inference-pulse` is semantically VERIFIED 17/20 after exact-version structured review of authorized binding and source-evidence safeguards; behavioral validation remains `not-run`, and all changed package-security evidence must be reassessed externally at the final identities. No admissions or denominator changes: first-party 44, third-party exact-version reviews 721, registered sources 22. No repository-owned runtime, scanner, CI, runner, or scheduler is introduced.
 
 ## Package-security backfill
 

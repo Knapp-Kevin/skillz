@@ -55,7 +55,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 ## First-party monitoring hygiene (2026-10-12)
 
-The existing first-party monitoring category remains **17** skills. Draft PR #416 stages host-driven corrections to **16** pulses plus **five** separate first-party security/privacy hardenings inherited from #410. These are 21 existing skill revisions, **zero admissions**; inventory remains 44. The revised `inference-pulse` is pending independent semantic requalification; exact-final package-security evidence and behavioral validation are not established by historical checks.
+The existing first-party monitoring category remains **17** skills. Draft PR #416 stages host-driven corrections to **16** pulses plus **five** separate first-party security/privacy hardenings inherited from #410. These are 21 existing skill revisions, **zero admissions**; inventory remains 44. The revised `inference-pulse` has a 17/20 exact-version structured semantic review; external exact-final package-security evidence and behavioral validation remain `not-run`.
 
 ## First-party skills by purpose
 

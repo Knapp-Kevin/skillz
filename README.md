@@ -27,7 +27,7 @@ The repository provides five surfaces:
 
 Third-party packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those remain upstream package material, not repository-owned execution machinery.
 
-**First-party remediation integration (2026-10-26):** [PR #416](https://github.com/Knapp-Kevin/skillz/pull/416) stages passive host-driven source retrieval for 16 of 17 monitoring skills and consolidates five non-pulse authorization/privacy hardenings formerly on #410. This changes 21 existing skills, not inventory counts. Exact-version external security assessment and independent acceptance remain outstanding.
+**First-party remediation integration (2026-10-26):** [PR #416](https://github.com/Knapp-Kevin/skillz/pull/416) stages passive host-driven source retrieval for 16 of 17 monitoring skills and consolidates five non-pulse authorization/privacy hardenings formerly on #410. This changes 21 existing skills, not inventory counts. Inference Pulse's final manifest has a 17/20 structured static review; all final exact packages still need applicable external security assessment and independent PR acceptance.
 
 ## Core use
 

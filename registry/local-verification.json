@@ -691,10 +691,10 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bd3e47c89d6ecf64f8371dacd92e52c35b7487c",
-      "verification_status": "unverified",
+      "content_blob_sha": "c61be1b05b97cab0d969e9ed4afc8499bc2f636b",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "pending",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -717,7 +717,7 @@
           "medium"
         ]
       },
-      "notes": "Host-driven inference-source retrieval and explicit opt-in external scheduling. The exact 2026-10-26 scheduling repair awaits independent structured semantic requalification and external package-security evidence; no behavioral validation has run.",
+      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
