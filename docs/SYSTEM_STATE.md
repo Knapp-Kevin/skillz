@@ -32,6 +32,8 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
+**Microsoft freshness (2026-10-27):** The registered July Microsoft source remains **186/186** complete at its exact pin. Separate candidate screening at upstream `1a63e5f771987a9a13e9f0571823dc1e80741583` has reached **56/76** changed-existing canonical packages (20 remain); frozen raw additions are 22/22 classified, four removals and the latest eligible denominator remain unresolved. This is not source-pin advancement, new verified admission, security clearance or behavioral validation. See [Foundry/Gateway tranche](../docs/reviews/2026-10-27-microsoft-foundry-gateway-eight-freshness.md) and issue #400.
+
 ## Current admitted-source accounting
 
 | Source family | Reviewed / denominator | Gaps |
