@@ -1,6 +1,6 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-10-12
+**Snapshot date:** 2026-10-27
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, security assessment, and reconciliation. The repository owns no runtime, scripts, tests, CI workflows, or background services.
 
@@ -53,7 +53,7 @@ Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
-**Candidate freshness note (2026-10-27):** Microsoft July pin remains 186/186; separate upstream screening is 56/76 changed-existing with 20 remaining, 22/22 raw additions classified, four removals unresolved, and no source-pin or inventory change. See [bounded Foundry/Azure AI review](docs/reviews/2026-10-27-microsoft-foundry-gateway-eight-freshness.md). This static catalog does not treat candidate screenings as persisted governed verification companions.
+**Candidate freshness note (2026-10-27):** Microsoft July pin remains 186/186; separate upstream screening is 64/76 changed-existing with 12 remaining, 22/22 raw additions classified, and four removed paths confirmed absent at the candidate revision. Successor equivalence and latest eligible denominator remain unresolved. No source-pin or inventory change. See [Python data/telemetry and removals review](docs/reviews/2026-10-27-microsoft-python-data-telemetry-eight-freshness.md). Candidate screenings are not persisted governed verification companions.
 
 ## First-party skills by purpose
 
