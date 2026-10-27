@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
-rationale: "Reviewed 2026-10-26 at exact manifest blob: host-only retrieval, authorized private target binding, no automatic upgrades or schedules; 17/20 semantic review, security and behavioral evidence separate."
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Authorized-only private runtime target, no automatic upgrade, and explicit UTC query-window binding. Exact-version static review only; security and behavioral validation are separate."
