@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "evidence_date": "2026-10-27",
+  "scope": "Eight previously governed but changed Microsoft Azure AI Python package candidates; separate from existing registered pin",
+  "source": "https://github.com/microsoft/skills",
+  "repository_base_head": "66825507835978801d4cf31c733d1b0f831e79fe",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "previous_complete_tree_candidate": "d5741a1e9325adead3a28d1d203bb69283907e06",
+  "latest_candidate": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "identity_basis": "2026-10-10 complete recursive candidate Git tree; GitHub compare d5741...1a63e5 reports 20 commits and 206 changed files, zero files under the eight reviewed package subtrees; exact manifest blobs independently fetched at latest head and matched prior complete-tree records",
+  "source_frontier_oct10": {
+    "registered_governed": 186,
+    "unchanged": 106,
+    "changed": 76,
+    "removed": 4,
+    "new_raw_manifests": 22
+  },
+  "source_frontier_latest": "not established; 138-commit registered-pin compare is capped at 300 files",
+  "reviewed_candidate_packages": 8,
+  "reviewed_package_count": 8,
+  "reviewed_as_changed_oct10": 8,
+  "decisive_rejected_unchanged": 8,
+  "verified_new": 0,
+  "security_passes": 0,
+  "behavioral_validations": 0,
+  "admission_delta": 0,
+  "registered_pin_changed": false,
+  "public_accounting_changed": false,
+  "records": [
+    {
+      "skill_name": "azure-ai-contentsafety-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-contentsafety-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "63dca1fa9603fd7514ce7c586bb1cf1a51ad3761",
+      "manifest_blob_sha": "9caadcc9ee73fa54a2336d6ab117a1e2690e530f",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "529c17761535106b3a6faa9b8c363d7d2237509f"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "3d08cd4522ed615eb3953c1bc05c803ce7dcc42f"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-contentsafety",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "13/20",
+      "prior_registered_pin_score": "13/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "EXTRACT severity decision logic; ADAPT only with consented content scope, remote-fetch boundaries, blocklist write approval and redacted logs.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "evaluation",
+          "implementation",
+          "security"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Severity classification, category coverage, credential-chain preference, context-managed client lifecycle.",
+      "decisive_risk": "Unapproved external transmission of text/images and image URLs; create/update blocklists without distinct persistent-write approval; advice to log moderation results without minimization or retention rules.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-contentunderstanding-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-contentunderstanding-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "bdc77f05d3f0f8fceb5c6160d84a7c8814906e6b",
+      "manifest_blob_sha": "5b59e23e547de5392ef1c98a3b4bb7ab91b34738",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "d03bbc131c15cd4c863b8e2ee7aec0d3f4fc821b"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "754b45efbb519353e109c82813e7dd010a2e71a7"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-contentunderstanding",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "12/20",
+      "prior_registered_pin_score": "11/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "EXTRACT typed extraction/LRO method; require approved data class, region, retention, safe output and separate analyzer lifecycle permits.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "evaluation",
+          "implementation",
+          "research"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Multimodal analyzer selection, long-running poller handling, sync/async lifecycle, extraction schemas.",
+      "decisive_risk": "Cloud analysis of potentially sensitive documents/audio/video/frames and external URLs without disclosure consent; extracted transcripts/invoice fields printed; custom analyzer creation and deletion lack operation-specific authorization.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-language-conversations-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-language-conversations-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "065885039d26abe547d0059e2248cb2da1097717",
+      "manifest_blob_sha": "2d678f3181212c68164e8e0becd844c889079982",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "abaae4b5497f1da0eb43979216606736c5fa20fe"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "fded76ab3ee4ed889affefda31a3e6e507b1ec55"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-language-conversations",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "12/20",
+      "prior_registered_pin_score": "11/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "ADAPT with data classification, participant consent, output minimization, fixed SDK constraints and non-trigger boundaries.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation",
+          "communication"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Structured CLU intent/entity payloads, service logging disabled in examples, retries and context-managed clients. Earlier unclosed Markdown code fence appears repaired.",
+      "decisive_risk": "Arbitrary conversation content transmitted to Azure without participant/privacy authorization; recommends latest SDK without reproducible version pin; entity text can be printed in supporting examples.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-textanalytics-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "375453ad9ff4f6867adf6623a1b567bfe0c60bfb",
+      "manifest_blob_sha": "3f7ec0d3239a968bb2acb0bec5fa6956894365cd",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "19ce159a085f49df02218d03f9b3229dce172761"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "461cb890d8482c2f81f34e956c989d7601117fb7"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-textanalytics",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "12/20",
+      "prior_registered_pin_score": "12/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "REFERENCE/EXTRACT API patterns; require regulated-data authority, consent, redaction before output, bounded retention and approved endpoint.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "evaluation",
+          "implementation",
+          "security"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Sentiment, entities, PII detection, healthcare entities and batch error handling with Entra-first auth.",
+      "decisive_risk": "Explicit raw SSN/email sample prints detected PII after redaction; healthcare example sends patient/medication text to Azure and prints extracted entities; no consent, output-redaction or retention gate.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-transcription-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-transcription-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "c21d6071b1414199c46f08dcf3a1a0632843d00d",
+      "manifest_blob_sha": "e27cf1800cec405570f25dbed2b8f9de014192de",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "9f35147fd7a79ac43546f128bc79207719bd606c"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "5fec3267ca85205468c6d0e8c5f413c490db0a7e"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-transcription",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "11/20",
+      "prior_registered_pin_score": "11/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "EXTRACT timing/diarization procedure; require participant consent, recording-law review, scoped job/budget approval, redacted transcript handling and deletion permit.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "communication",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Batch/streaming speech-to-text, timestamps, diarization, retry/backpressure and client cleanup; now describes optional token credentials.",
+      "decisive_risk": "Audio/meeting content uploaded without recording or participant-consent gate; remote cost-bearing transcription jobs; prints speech content; supporting reference deletes completed transcriptions without explicit lifecycle approval.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-translation-document-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-translation-document-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "e548c746ec02f0ec9d2acb4adf18334d6ca0edf3",
+      "manifest_blob_sha": "64da88e8a88f1ff64c38261c0ca0df09544f3b70",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "d0ead4f44fb47932672a1ac538e618a0900158c4"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "15eb6947c060176985d407d2424c93bc9faae6e2"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-translation-document",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "13/20",
+      "prior_registered_pin_score": "13/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "ADAPT with secure non-chat SAS handling, source/target ownership verification, approved document classification, cost caps and explicit write/cancel permissions.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation",
+          "documentation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Format-preserving batch/single translation, LRO/error handling, least-privilege SAS guidance, sync/async credential lifecycle.",
+      "decisive_risk": "SAS-bearing source/target/glossary URLs and source-document URLs printed in status; remote translation creates persistent output and incurs costs; cancellation and local writes lack scoped authorization.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-translation-text-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-translation-text-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "1d0affb190094b511470c1f6b9622044d5c3c25f",
+      "manifest_blob_sha": "e8ed670c9d5e23a5a08bee0684c7ea18f64fa809",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "379de29cdee61e59a7ea9beec64aefd03216ec35"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "8bc5844dd6aa1b4dee6da1074a8d8b2267d64510"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-translation-text",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "13/20",
+      "prior_registered_pin_score": "13/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "EXTRACT language/dictionary patterns; ADAPT with user-approved data scope, provider/region disclosure and budget threshold.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation",
+          "documentation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Translation, transliteration, dictionary, source-language and output options; Entra/custom-subdomain vs legacy key nuance.",
+      "decisive_risk": "Unapproved transfer of potentially private text to Azure and billable batch operations; no explicit data sensitivity, disclosure or budget gate; unpinned package install.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    },
+    {
+      "skill_name": "azure-ai-vision-imageanalysis-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-vision-imageanalysis-py/SKILL.md",
+      "source_id": "microsoft-skills",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "previous_full_tree_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+      "package_tree_sha": "bc979291b13c4a0b5c3133fb8a12ae94a7a55883",
+      "manifest_blob_sha": "adaaf3c05668d618d8c5a932e37ac78053a255c7",
+      "declared_references": [
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "b24da438beec64aefd03216ec35f8478e757472"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "fe519431024080a6cfe80daaebf4b6459c81c53d"
+        }
+      ],
+      "license": {
+        "root": "MIT",
+        "root_license_blob_sha": "79656060de00aa4659ad2c276d5be8830664d544",
+        "manifest": "MIT",
+        "dependency_terms": "not independently audited"
+      },
+      "dependencies": {
+        "python_package": "azure-ai-vision-imageanalysis",
+        "auth": "azure-identity / azure-core; DefaultAzureCredential or env-backed legacy key where shown",
+        "external": "Azure Cognitive/AI endpoint; billable operations",
+        "package_install": "unpinned pip examples",
+        "reference_files": "two declared Markdown reference files inspected"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "rubric_score": "12/20",
+      "prior_registered_pin_score": "12/20",
+      "candidate_semantic_disposition": "rejected-unchanged",
+      "user_fit_disposition": "EXTRACT feature-selection and OCR method; require image owner consent, external processing approval, output redaction and budget bounds.",
+      "authority_hard_fail": true,
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation",
+          "documentation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware",
+          "production-oriented"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "purpose": "Image caption/OCR/people/object detection and cost-aware feature selection with context-managed credentials.",
+      "decisive_risk": "Unapproved upload or remote URL processing of potentially personal images; OCR outputs and people detections printed without privacy/retention gates; no cost authorization.",
+      "validation_status": "not-run",
+      "package_security_status": "not-run",
+      "package_security_note": "No final-candidate pinned SkillSpector scan or receipt; semantic assessment cannot stand in for it",
+      "admission_status": "not-admitted",
+      "notes": "Candidate-only evidence, not a replacement for current registered-pin companion. Exact package subtree carried from complete 2026-10-10 tree because subsequent 206-file comparison had no paths under this package; full latest source denominator still unresolved."
+    }
+  ]
+}
