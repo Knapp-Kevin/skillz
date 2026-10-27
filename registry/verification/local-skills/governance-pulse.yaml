@@ -3,9 +3,9 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: ac4927ff83ffac0b15377b0b4773252ade7a536e
+content_blob_sha: 71d6e8ebb361e6431ebb1d4bd045a2620e3cfb49
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-12
+reviewed_at: 2026-10-26
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -18,7 +18,9 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis, risk-aware]
   authority: [read-only]
   portability: [medium]
-notes: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+notes: "New exact-version static review 2026-10-26: no implicit private profile/governance document reads; retrieved material is untrusted, jurisdiction and effective dates are required, compliance-control changes and communications need separate authorization. External behavioral validation and final package-security scan not-run."
 passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
 
 external_reference_review: Host/repository paths were clarified as optional externally authorized evidence, not bundled package components. Previous static scan had zero active findings but incomplete link coverage. New exact revision has not been re-scanned; behavioral validation not-run.
+
+review_note: "See docs/reviews/2026-10-26-two-pulse-context-authorization-review.md for the exact-version ten-dimension rubric; package-security state remains not-run."
