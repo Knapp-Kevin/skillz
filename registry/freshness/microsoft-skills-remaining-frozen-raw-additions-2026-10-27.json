@@ -1,0 +1,768 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-27",
+  "type": "candidate-source-vetting-not-governed-verification",
+  "source": "https://github.com/microsoft/skills",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_candidate_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+  "current_candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "repository_main_before": "6e6f472174d334bf5c6a47b56bdd5d1507de3126",
+  "source_tree_evidence": {
+    "registered_raw_manifest_paths": 192,
+    "frozen_raw_manifest_paths": 210,
+    "current_raw_manifest_paths": 212,
+    "registered_governed_canonical": 186,
+    "registered_governed_partition_frozen": {
+      "unchanged": 106,
+      "changed": 76,
+      "removed": 4
+    },
+    "frozen_raw_additions": 22,
+    "frozen_raw_additions_previously_source_vetted": 9,
+    "frozen_raw_additions_this_cycle": 13,
+    "frozen_raw_additions_first_class_this_cycle": 10,
+    "frozen_raw_additions_nested_reference_only_this_cycle": 3,
+    "post_frozen_added_paths": 2,
+    "latest_eligible_denominator": "unresolved; do not equate raw paths with canonical eligible skills",
+    "changed_existing_screened": 40,
+    "changed_existing_remaining": 36
+  },
+  "candidate_records": [
+    {
+      "canonical_path": ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-graph/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "c178ce599f816bf6cb35a749582fd71dab5d5f69",
+      "package_tree_sha": "9d9ea93a2ffb1148a36c62d1e1a6cdc8fb731de7",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 4,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [
+        "references/EXAMPLES.md",
+        "references/SCENARIOS.md"
+      ],
+      "uninspected_relevant_files": [],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "EXTRACT",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "read-only",
+        "mutating"
+      ],
+      "authority_finding": "Kusto graph query-generation mechanics are useful, but examples retrieve security/authentication telemetry and offer execution without a distinct tenant, dataset and disclosure-authorization gate. Persistent graph-model changes do have confirmation.",
+      "privacy_risk": "Security telemetry and incident-response records require explicit scope, minimization and disclosure authority",
+      "portability": "medium",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "security",
+          "domain-modeling"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 14,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Kusto graph query-generation mechanics are useful, but examples retrieve security/authentication telemetry and offer execution without a distinct tenant, dataset and disclosure-authorization gate. Persistent graph-model changes do have confirmation."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql-graph/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "285dc22f943a9b1bdf4f48bd2b861fbaba2273bf",
+      "package_tree_sha": "0a36fe4d04e0075da9cada150482a42f661db155",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 4,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [
+        "references/DEPLOY_IRQL_FUNCTIONS.md"
+      ],
+      "uninspected_relevant_files": [
+        "references/EXAMPLES.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "EXTRACT",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "read-only",
+        "mutating"
+      ],
+      "authority_finding": "Precise query-to-graph routing and function preflight; top-level requires confirmation for deploying functions, but security telemetry retrieval/disclosure scope is not separately authorized and the stored-function deployment reference is consequential.",
+      "privacy_risk": "Security telemetry and incident-response records require explicit scope, minimization and disclosure authority",
+      "portability": "medium",
+      "tags": {
+        "use_case": [
+          "security",
+          "domain-modeling",
+          "observability"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 15,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Precise query-to-graph routing and function preflight; top-level requires confirmation for deploying functions, but security telemetry retrieval/disclosure scope is not separately authorized and the stored-function deployment reference is consequential."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "3af32cdbe307d0d23ea884dead1a0a9a09334390",
+      "package_tree_sha": "916cc9b4930dffc25b549b647fb08abf97a4503d",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 3,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [],
+      "uninspected_relevant_files": [
+        "references/EXAMPLES.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "EXTRACT",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "read-only"
+      ],
+      "authority_finding": "Composable incident-response KQL is differentiated but security log reads, query execution and displayed results lack explicit sensitive-data retrieval/disclosure authorization. Requires deployed Get_/Extract_/Enrich_ functions.",
+      "privacy_risk": "Security telemetry and incident-response records require explicit scope, minimization and disclosure authority",
+      "portability": "medium",
+      "tags": {
+        "use_case": [
+          "security",
+          "observability"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 13,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Composable incident-response KQL is differentiated but security log reads, query execution and displayed results lack explicit sensitive-data retrieval/disclosure authorization. Requires deployed Get_/Extract_/Enrich_ functions."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-local-skills/skills/azure-local-multi-rack/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "99a6561714f5d49f229c1bd6da8f1a057c7523a2",
+      "package_tree_sha": "6f0c6e65c070ac687c140a434472a722a2062698",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 9,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [
+        "references/safety-rules.md"
+      ],
+      "uninspected_relevant_files": [
+        "workflows/plan-and-deploy/plan-and-deploy.md",
+        "workflows/networking/networking.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REFERENCE-ONLY",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating"
+      ],
+      "authority_finding": "Clear separation of multi-rack versus standard control planes and explicit high-impact fabric/SAN/VM confirmation. Multi-rack preview, complete workflow dependencies, operational safety and external scanner evidence remain unqualified.",
+      "privacy_risk": "Cloud resources, tenant identity, workloads and potentially private operational data",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "architecture",
+          "deployment"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 16,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Clear separation of multi-rack versus standard control planes and explicit high-impact fabric/SAN/VM confirmation. Multi-rack preview, complete workflow dependencies, operational safety and external scanner evidence remain unqualified."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-local-skills/skills/azure-local/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "a81dc6fe1006b9de54e4740d41fd525d16ca0360",
+      "package_tree_sha": "0fe5c431fd9766e39c086bd2ea6583a7579f1105",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 10,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [
+        "references/safety-rules.md"
+      ],
+      "uninspected_relevant_files": [
+        "workflows/operate-and-update/operate-and-update.md",
+        "workflows/networking-and-security/networking-and-security.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REFERENCE-ONLY",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating"
+      ],
+      "authority_finding": "Clear scale routing and a safety reference covering updates, Arc bridge, network and VM mutations; full workflow and version-dependent procedures remain uninspected, so unchanged deployment is not approved.",
+      "privacy_risk": "Cloud resources, tenant identity, workloads and potentially private operational data",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "architecture",
+          "deployment"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 16,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Clear scale routing and a safety reference covering updates, Arc bridge, network and VM mutations; full workflow and version-dependent procedures remain uninspected, so unchanged deployment is not approved."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-skills/skills/azure-app-onboard-prereq/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "5897a8937a5180e91990f069ff301ae8ac4df036",
+      "package_tree_sha": "da6314ba04834970836b18ea0b39bf6a20cfde13",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 16,
+      "source_owned_executable_components": [
+        "references/prereq-schemas.ts",
+        "references/session-schemas.ts"
+      ],
+      "inspected_supporting_files": [],
+      "uninspected_relevant_files": [
+        "references/remediation-protocol.md",
+        "references/build-check.md",
+        "references/session-protocol.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REFERENCE-ONLY",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating"
+      ],
+      "authority_finding": "Build-check exceptions require per-command consent; however the procedure writes persistent session artifacts and can route into a mutating orchestrator. Many reference and TypeScript schema dependencies remain uninspected.",
+      "privacy_risk": "Repository/session artifacts, Azure resource identity and secrets; deletion of inactive sessions in orchestrator",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "repository-maintenance",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "planning"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 16,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Build-check exceptions require per-command consent; however the procedure writes persistent session artifacts and can route into a mutating orchestrator. Many reference and TypeScript schema dependencies remain uninspected."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "00635c01fc9518e171e5157185a60999e1455b84",
+      "package_tree_sha": "ce62e3df0d860115631b3fb7658eb7a6c35cf141",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 68,
+      "source_owned_executable_components": [
+        "deploy/references/deploy-schemas.ts",
+        "prepare/references/prepare-schemas.ts",
+        "references/session-schemas.ts",
+        "scaffold/references/scaffold-schemas.ts",
+        "scaffold/scripts/scaffold-conformance.ps1",
+        "scaffold/scripts/scaffold-conformance.sh"
+      ],
+      "inspected_supporting_files": [
+        "references/approval-gates.md",
+        "references/pipeline-rules.md"
+      ],
+      "uninspected_relevant_files": [
+        "deploy/SKILL.md",
+        "prepare/SKILL.md",
+        "scaffold/SKILL.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "EXTRACT",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "authority_finding": "Two separate architecture/scaffold and deploy approval gates are strong prior art, but references/pipeline-rules.md § Session TTL automatically deletes non-active session directories older than seven days on invocation without an independently evidenced destructive-lifecycle authorization. Do not import unchanged.",
+      "privacy_risk": "Repository/session artifacts, Azure resource identity and secrets; deletion of inactive sessions in orchestrator",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "orchestration",
+          "deployment"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation",
+          "release"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 15,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Two separate architecture/scaffold and deploy approval gates are strong prior art, but references/pipeline-rules.md § Session TTL automatically deletes non-active session directories older than seven days on invocation without an independently evidenced destructive-lifecycle authorization. Do not import unchanged."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-app-deploy/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "e3e148299871832471b4b056093e386a132e8d4a",
+      "package_tree_sha": "580e5d0cffde99b0b4e571721570f282d5930d9a",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 42,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [
+        "phases/quick-deploy.md"
+      ],
+      "uninspected_relevant_files": [
+        "references/rollback.md",
+        "references/safeguards.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REJECT",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "authority_finding": "Bundled phases/quick-deploy.md proceeds through ACR build/push, kubectl apply of namespace and all manifests, and optionally installs remote Gateway API CRDs without a scoped user approval gate for these consequential cluster mutations.",
+      "privacy_risk": "Cloud resources, tenant identity, workloads and potentially private operational data",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "deployment",
+          "security"
+        ],
+        "lifecycle": [
+          "implementation",
+          "release"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 12,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Bundled phases/quick-deploy.md proceeds through ACR build/push, kubectl apply of namespace and all manifests, and optionally installs remote Gateway API CRDs without a scoped user approval gate for these consequential cluster mutations."
+    },
+    {
+      "canonical_path": ".github/plugins/azure-skills/skills/discover-azure-skills/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "ce732e882f25414f630e571ce250f062d95335ad",
+      "package_tree_sha": "baf3348531f80582ceb1445357250af80a1aa8c5",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 4,
+      "source_owned_executable_components": [],
+      "inspected_supporting_files": [],
+      "uninspected_relevant_files": [
+        "references/install/claude-code.md",
+        "references/install/copilot-cli.md"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REFERENCE-ONLY",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "read-only"
+      ],
+      "authority_finding": "Source-discovery router resolves mutable main URLs in microsoft/azure-skills and offers plugin installation without independent exact-version provenance, quality, security or license vetting. Useful discovery method, not admission authority.",
+      "privacy_risk": "Untrusted mutable upstream skill metadata and installation advice",
+      "portability": "medium",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "skill-authoring",
+          "web-search"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 2,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rubric_total": 11,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Source-discovery router resolves mutable main URLs in microsoft/azure-skills and offers plugin installation without independent exact-version provenance, quality, security or license vetting. Useful discovery method, not admission authority."
+    },
+    {
+      "canonical_path": ".github/plugins/foundry-iq-skills/skills/foundry-iq/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "manifest_blob_sha": "d81ed5fc5840955acae9d14f022828a580621327",
+      "package_tree_sha": "c45f2a12dcffa1929705b1523cb1645a03de134e",
+      "declared_license": "MIT",
+      "source_license": "MIT (root blob 79656060de00aa4659ad2c276d5be8830664d544)",
+      "manifest_frontmatter": true,
+      "package_file_count": 85,
+      "source_owned_executable_components": [
+        "helpers/_blob_observation.py",
+        "helpers/_blob_source_read.py",
+        "helpers/_bootstrap_io.py",
+        "helpers/_cleanup_dependencies.py",
+        "helpers/_cleanup_receipts.py",
+        "helpers/_common.py",
+        "helpers/_document_adapters.py",
+        "helpers/_document_limits.py",
+        "helpers/_embedding.py",
+        "helpers/_file_inventory.py",
+        "helpers/_file_source_config.py",
+        "helpers/_indexer_observation.py",
+        "helpers/_initial_prompt.py",
+        "helpers/_private_json.py",
+        "helpers/_progress.py",
+        "helpers/_prompt_read.py",
+        "helpers/_search_read.py",
+        "helpers/_source_readback.py",
+        "helpers/blob_inventory.py",
+        "helpers/blob_recheck.py",
+        "helpers/blob_source.py",
+        "helpers/bootstrap_azure.py",
+        "helpers/cleanup_plan.py",
+        "helpers/cu_ingestion_auth.py",
+        "helpers/document_assess.py",
+        "helpers/file_cu_canary.py",
+        "helpers/file_cu_mi.py",
+        "helpers/file_ingest.py",
+        "helpers/file_source.py",
+        "helpers/file_upload.py",
+        "helpers/hosted_connect.py",
+        "helpers/knowledge_base_retrieve.py",
+        "helpers/model_discovery.py",
+        "helpers/private_artifacts.py",
+        "helpers/prompt_cleanup.py",
+        "helpers/prompt_connect.py",
+        "helpers/retrieval_verify.py",
+        "helpers/search_intake.py",
+        "helpers/search_reconcile.py",
+        "helpers/source_vector.py"
+      ],
+      "inspected_supporting_files": [
+        "knowledge-sources/create-azure-blob.md"
+      ],
+      "uninspected_relevant_files": [
+        "helpers/blob_source.py",
+        "helpers/private_artifacts.py"
+      ],
+      "trigger_and_non_trigger": "Read from exact SKILL.md; see source at immutable canonical path. Explicit routing reviewed; not a behavioral invocation.",
+      "candidate_disposition": "REFERENCE-ONLY",
+      "semantic_status": "unverified",
+      "unchanged_use_authorized": false,
+      "authority_profile": [
+        "mutating",
+        "external-side-effect"
+      ],
+      "authority_finding": "Differentiated receipt/plan-fingerprint/owner-and-data-scope controls, with explicit approval for KB and Blob knowledge-source writes. Large source-owned Python helper surface and private-data/credential behavior require complete package security and dependency assessment.",
+      "privacy_risk": "Document and Blob content ingestion, hosted knowledge retrieval and private receipt custody",
+      "portability": "low",
+      "tags": {
+        "use_case": [
+          "cloud",
+          "memory",
+          "orchestration"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 2
+      },
+      "rubric_total": 18,
+      "rubric_scope": "bounded static source-vetting; not full-package verified",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "rationale": "Differentiated receipt/plan-fingerprint/owner-and-data-scope controls, with explicit approval for KB and Blob knowledge-source writes. Large source-owned Python helper surface and private-data/credential behavior require complete package security and dependency assessment."
+    }
+  ],
+  "non_first_class_nested_manifest_named_references": [
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
+      "blob_sha": "78bda0929caf267786ed709d5971bad5630fa94c",
+      "has_yaml_frontmatter": false,
+      "classification": "Nested orchestrator reference procedure, not independently front-mattered first-class skill",
+      "parent": ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md"
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-app-onboard/prepare/SKILL.md",
+      "blob_sha": "020e85775ea331a20e0d801ad9cd98d17039d5de",
+      "has_yaml_frontmatter": false,
+      "classification": "Nested orchestrator reference procedure, not independently front-mattered first-class skill",
+      "parent": ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md"
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-app-onboard/scaffold/SKILL.md",
+      "blob_sha": "24e461da90d1e0f5abe74d4df2ed0fe20d57f40b",
+      "has_yaml_frontmatter": false,
+      "classification": "Nested orchestrator reference procedure, not independently front-mattered first-class skill",
+      "parent": ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md"
+    }
+  ],
+  "controls": {
+    "source_tools_executed": false,
+    "azure_resources_accessed": false,
+    "third_party_scripts_executed": false,
+    "security_scanner_executed": false,
+    "behavioral_tests_executed": false,
+    "source_pin_changed": false,
+    "admission_count_changed": false,
+    "third_party_review_count_changed": false
+  }
+}
