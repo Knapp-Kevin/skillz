@@ -53,7 +53,7 @@ Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
-**Candidate freshness note (2026-10-27):** Microsoft July pin remains 186/186; separate upstream screening is 64/76 changed-existing with 12 remaining, 22/22 raw additions classified, and four removed paths confirmed absent at the candidate revision. Successor equivalence and latest eligible denominator remain unresolved. No source-pin or inventory change. See [Python data/telemetry and removals review](docs/reviews/2026-10-27-microsoft-python-data-telemetry-eight-freshness.md). Candidate screenings are not persisted governed verification companions.
+**Candidate freshness note (2026-10-27):** Microsoft July pin remains 186/186. The prior 64/76 changed-existing tally double-counted six IDs and was 58/76 unique; the [Azure operations/deduplication tranche](docs/reviews/2026-10-27-microsoft-azure-ops-eight-and-frontier-dedup.md) adds eight genuine gaps to reach **66/76 distinct** with **10 remaining**. Frozen raw additions remain 22/22 classified and four removed paths are absent but lack successor-equivalence decisions. Latest eligible denominator remains unresolved; no source-pin or governed verification count change. Candidate screening is not a package-security or behavioral pass.
 
 ## First-party skills by purpose
 

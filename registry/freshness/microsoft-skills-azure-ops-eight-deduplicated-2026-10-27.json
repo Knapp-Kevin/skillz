@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "type": "candidate-freshness-screening-and-accounting-correction",
+  "observed_date": "2026-10-27",
+  "repository_main_start": "ed445bfa3c66e3b29e94ea9100afda25710b3860",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_crosswalk": "registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json",
+  "method": "Crosswalk joined by canonical registered_id, deduplicated across eight previously merged review documents; latest exact Git trees and manifest blobs read for eight new units. Selected high-risk supporting files inspected. Static only.",
+  "accounting": {
+    "frozen_governed_denominator": 76,
+    "prior_claimed_screened": 64,
+    "prior_unique_screened": 58,
+    "duplicate_exposures": [
+      "azure-appconfiguration-py",
+      "azure-cosmos-db-py",
+      "azure-identity-py",
+      "azure-monitor-ingestion-py",
+      "azure-monitor-opentelemetry-exporter-py",
+      "azure-monitor-opentelemetry-py"
+    ],
+    "screened_this_tranche": 8,
+    "unique_screened_after": 66,
+    "remaining": 10,
+    "remaining_ids": [
+      "airunway-aks-setup",
+      "azure-cloud-migrate",
+      "azure-kubernetes-automatic-readiness",
+      "azure-kubernetes",
+      "entra-agent-id",
+      "fastapi-router-py",
+      "m365-agents-py",
+      "pydantic-models-py",
+      "python-appservice-deploy",
+      "skill-creator"
+    ],
+    "unchanged_carry_forward": 106,
+    "removed_paths": 4,
+    "frozen_raw_additions_classified": 22,
+    "latest_physical_manifest_paths": 212,
+    "latest_eligible_denominator": "unresolved",
+    "registered_pin_complete": "186/186",
+    "registered_source_inventory_delta": 0,
+    "governed_third_party_verification_delta": 0
+  },
+  "macro_findings": [
+    "Six changed-existing IDs were screened in two different merged tranches and counted twice. The public 64/76 claim overstated distinct coverage; correct 58/76 before this tranche, 66/76 after it. Do not edit historical review records.",
+    "Azure Skills reference guides repeatedly mix conceptual advice with live mutation instructions, making a guidance-only trigger insufficient for action authorization.",
+    "The shared Azure plugin has source-owned hooks and telemetry assets; none are skillz runtime. Per-skill static screening is not plugin installation approval.",
+    "Kusto and diagnostics read-only operations can disclose sensitive cross-workspace logs or infrastructure topology; read access is not disclosure authorization.",
+    "Quota extension installation, provider registration, storage upload and telemetry creation are separate authorized operations, not incidental to a user question.",
+    "Azure Prepare and Upgrade include meaningful approval safeguards, but very large nested packages require deeper reference-by-reference assessment before any unchanged-use consideration."
+  ],
+  "records": [
+    {
+      "id": "appinsights-instrumentation",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/appinsights-instrumentation/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "8f6b0c9b5af9ab5bbd69d25d58071c9034221eb0",
+      "frozen_october_package_tree_sha": "2bb1307f9a0f22a26c6efbd8c795caf353be9d72",
+      "latest_package_tree_sha": "2bb1307f9a0f22a26c6efbd8c795caf353be9d72",
+      "latest_manifest_blob_sha": "7e0ade1b244f12f6828eaf15b86b7099482c3f3e",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 13,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Application Insights instrumentation guidance for Azure-hosted ASP.NET Core, Node.js and Python apps",
+      "nontrigger": "Do not treat guidance requests as permission to create cloud resources, modify app code, or transmit telemetry",
+      "dependencies": [
+        "Azure CLI",
+        "Azure Monitor OpenTelemetry SDKs",
+        "Application Insights/Log Analytics",
+        "source-owned PowerShell script and Bicep example"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "observability",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "instrumentation",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Manifest claims guidance-only but later directs creation of a Log Analytics workspace, Application Insights resource and app-code changes; no action-specific cloud/cost or telemetry-export authorization.",
+      "sensitive_data_finding": "Instrumentation may export request traces, user identifiers, logs and exceptions without consent, redaction or retention policy.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 11,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "scripts/appinsights.ps1",
+          "sha": "e014cf0c8939619f240308b99f2ce4aca50f5a54"
+        },
+        {
+          "path": "references/python.md",
+          "sha": "3bb44c4b73e8826c1af1866a3f9eb24ff8a26574"
+        }
+      ],
+      "adaptation_value": "Retain SDK selection and environment-aware instrumentation checklist, after explicit change and telemetry-destination approval."
+    },
+    {
+      "id": "azure-diagnostics",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "1b0c314600a11fc0d63249d63c47cfb79a524443",
+      "frozen_october_package_tree_sha": "97443699e171b2f40e969f7ee6302e63e4161d87",
+      "latest_package_tree_sha": "4aa38be032e790f55c2b76a5968c04403145261e",
+      "latest_manifest_blob_sha": "be90cc1ca9af253befc15b0993c43f7184c8535b",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 55,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure production diagnostics for App Service, Functions, AKS, VMs, and messaging",
+      "nontrigger": "Evidence-only analysis should not trigger live cloud queries, bundled scripts, credential resets or remediations",
+      "dependencies": [
+        "Azure CLI",
+        "Azure MCP AppLens/Monitor/resource health",
+        "kubectl",
+        "source-owned Bash/PowerShell diagnostic scripts and troubleshooting references"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "debugging",
+          "observability",
+          "cloud"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "tool-routing",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect",
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Manifest says use supplied evidence first, but also prefers running bundled scripts for permitted live collection without defining the actual permission grant; VM reference permits extension-backed access after safety preflight, which is not itself action authorization.",
+      "sensitive_data_finding": "Log queries, Kubernetes pod inventories and VM diagnostics may reveal user data, resource topology and credentials; source/output scope is not consistently consent-bound.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 11,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "scripts/aks-baseline.sh",
+          "sha": "84ba863410d1ba7a88a4837c2bea87f70009020d"
+        },
+        {
+          "path": "troubleshooting/compute/vm-troubleshooting.md",
+          "sha": "c6333888f1203fa9b7f0f4649199afef44133a69"
+        }
+      ],
+      "adaptation_value": "Preserve symptom-to-service diagnostic routing and evidence-first fallback, requiring scoped live collection and separate remediation approval."
+    },
+    {
+      "id": "azure-kusto",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-kusto/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "71a8cb8f91c6078d4b745c0bf0c46d45437c263f",
+      "frozen_october_package_tree_sha": "8a2191fbf1dd17fc72fc3cc0429977215e2b55fb",
+      "latest_package_tree_sha": "8a2191fbf1dd17fc72fc3cc0429977215e2b55fb",
+      "latest_manifest_blob_sha": "5037190f2739a5d58d2130142571e940a01dde0d",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 1,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure Data Explorer/Kusto KQL schema discovery, telemetry analytics and time-series investigation",
+      "nontrigger": "Not a blanket authorization to enumerate subscriptions, query cross-workspace records, or change retention/ingestion resources",
+      "dependencies": [
+        "Azure MCP Kusto tools",
+        "Azure CLI/REST fallback",
+        "KQL",
+        "subscription, cluster and database access"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "research",
+          "observability",
+          "cloud"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Defaults to discovering all available clusters and databases, and recommends union queries across workspaces without a specified tenant/data-access boundary; tool authentication is not authority to disclose telemetry.",
+      "sensitive_data_finding": "Queries can retrieve unredacted logs, session IDs and customer events across workspaces; no classification/minimization or retention approval.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [],
+      "adaptation_value": "Extract bounded KQL query templates, schema-first discovery and empty-result versus missing-table distinction with approved dataset scopes."
+    },
+    {
+      "id": "azure-messaging",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-messaging/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "de972c7cf2a46e572b5fcfd24ed8963bc41b5a04",
+      "frozen_october_package_tree_sha": "ea4f43fba357f1cdffec81e0db9415da05dea16a",
+      "latest_package_tree_sha": "ea4f43fba357f1cdffec81e0db9415da05dea16a",
+      "latest_manifest_blob_sha": "9a92df2d9548d268548d22d3f4b2cfd705c96a4c",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 1,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure Event Hubs and Service Bus SDK connection/AMQP/message-lock troubleshooting",
+      "nontrigger": "Not a mandate to modify live queue/topic settings, checkpoints, receiver behavior or send messages",
+      "dependencies": [
+        "Azure MCP Event Hubs and Service Bus tools",
+        "Azure Messaging SDK",
+        "service troubleshooting documentation"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "debugging",
+          "cloud"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-routing",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "The procedure ends with 'Recommend fix — Apply remediation' without an explicit approval boundary for changes to live messaging state, consumer offsets or processing behavior.",
+      "sensitive_data_finding": "Message bodies, diagnostic logs and connection details may include private customer data and credential-bearing connection strings.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [],
+      "adaptation_value": "Retain error taxonomy and SDK-version triage as a read-only troubleshooting checklist; gate any applied fix separately."
+    },
+    {
+      "id": "azure-prepare",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-prepare/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "3254fb7a6f2c11b698e7e58ce49aeb4b86f787a9",
+      "frozen_october_package_tree_sha": "4003cdc806c09cc3bd422d27505a02a1b57625b8",
+      "latest_package_tree_sha": "f407aaaa1cf4ddf442ef1bb405f3d6f89fbfc951",
+      "latest_manifest_blob_sha": "1df460faf6a6564a2e9b0b2847d3e2a4fa9acb4e",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 221,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure deployment planning, project analysis, IaC and configuration generation before validation",
+      "nontrigger": "Not approval for deployment, role grants, source mutation or cloud provisioning merely from an approved plan",
+      "dependencies": [
+        "Azure CLI/azd",
+        "Azure MCP",
+        "Bicep/Terraform",
+        "large bundled reference and recipe tree",
+        "downstream azure-validate/azure-deploy"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "deployment",
+          "planning",
+          "cloud"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "orchestration",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Global rules require ask_user for destructive/cost/security actions and confirmed subscription; bundled generate reference requires postprovision SQL access-grant hooks. The 222-file parent package has not received full path-by-path authority qualification.",
+      "sensitive_data_finding": "App configuration, connection settings, role assignments and generated deployment artifacts require scoped handling; no full package privacy assessment was completed.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 0,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_REVIEW",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/global-rules.md",
+          "sha": "182b54b64a22343874348cf7710f9084a31c8618"
+        },
+        {
+          "path": "references/generate.md",
+          "sha": "39b11d71326c39308450701287b2167a7a225b00"
+        }
+      ],
+      "adaptation_value": "Strong plan-first and destructive-action gate; isolate and fully review SQL role-grant hook, generated artifacts, deployment routing and other high-authority references before promotion."
+    },
+    {
+      "id": "azure-quotas",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-quotas/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "8a628e265ecb05a8f78a9a7e4e4772fb82d78c40",
+      "frozen_october_package_tree_sha": "a84712b809a10b9584d99b523a74b52526bb2713",
+      "latest_package_tree_sha": "9abe51b3cbdf48bcb9783700021c78063c0b020b",
+      "latest_manifest_blob_sha": "00eb182af5ceb6861ee0df92d8c3c9986af652ad",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 5,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure regional quota and usage inspection, capacity planning and quota-increase requests",
+      "nontrigger": "Read-only quota lookup is distinct from installing extensions, registering providers or submitting quota increases",
+      "dependencies": [
+        "Azure CLI quota extension",
+        "Azure Quota API",
+        "source-owned quota shell/PowerShell scripts"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "planning",
+          "cloud"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "cost-bounded",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Mandates 'az extension add --name quota' before use, demonstrates 'az quota update' and provider registration without scoped installation/limit-change approval. Naming a subscription does not grant those permissions.",
+      "sensitive_data_finding": "Subscription IDs, resource usage and capacity are organizational metadata; disclose only with authorized scope.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 11,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "scripts/check-quota.sh",
+          "sha": "b095a16561c3318b60b20b30d563656477adbdf4"
+        }
+      ],
+      "adaptation_value": "Retain limit-versus-usage calculation and region comparison; separately approve tool installation, provider registration and quota changes."
+    },
+    {
+      "id": "azure-storage",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-storage/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "58ffdd0c0f466a983a0064239d481fb08e58b7c8",
+      "frozen_october_package_tree_sha": "4c077fa32d77e27b1c1b105d532af6945bb7604f",
+      "latest_package_tree_sha": "4c077fa32d77e27b1c1b105d532af6945bb7604f",
+      "latest_manifest_blob_sha": "09ab9126fcb8418d1fe34db1937ec51ee03eda60",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 15,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure Blob/File/Queue/Table/Data Lake service selection, access tiers and SDK references",
+      "nontrigger": "Explaining storage tiers does not authorize listing, downloading or uploading real customer objects",
+      "dependencies": [
+        "Azure MCP storage tools",
+        "Azure CLI",
+        "Azure Storage SDK references",
+        "Azure RBAC"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Primary guide offers storage_blob_get and storage_blob_put plus CLI upload/download without object-level data access and external-state approval. The credential guide promotes least privilege but is not data-disclosure consent.",
+      "sensitive_data_finding": "Blob and file contents may contain sensitive documents, health or identity records; no per-object classification, recipient or retention gate.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/auth-best-practices.md",
+          "sha": "6938d5f0eb32c0e5726222336cdc9365eceae865"
+        }
+      ],
+      "adaptation_value": "Retain storage-service selection and environment-specific credential selection, with explicit scoped object read/write authorization."
+    },
+    {
+      "id": "azure-upgrade",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-upgrade/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "ad4f782ddd8eab34eacece4ccb1b66d65a0434d9",
+      "frozen_october_package_tree_sha": "a506c3804c11500bede1be1fa0cf3de969f1d36b",
+      "latest_package_tree_sha": "a6d9570e0e6d239a624592fd6eb667e20bb7e02d",
+      "latest_manifest_blob_sha": "4d60fedcaa037dafd098d9ca3c4f8302c7520f1c",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 55,
+      "review_scope": "exact-manifest plus selected decisive bundled references; NOT full package security or behavioral qualification",
+      "trigger": "Azure Functions/Redis workload upgrades and legacy Java SDK modernization",
+      "nontrigger": "An upgrade assessment is not approval to create billable target resources, change source apps or perform cutover",
+      "dependencies": [
+        "Azure CLI/azd",
+        "Azure MCP",
+        "Python >=3.10",
+        "source-owned Java upgrade script",
+        "Functions Linux/Windows and Redis scenario references"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "refactoring",
+          "deployment"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "compatibility-aware",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Global rules and Windows scenario require ask_user for destructive and each source-changing operation, a positive safeguard. However the new target resource name is merely announced before creation and the 66-file package is not fully qualified for target cost, identity and data-copy boundaries.",
+      "sensitive_data_finding": "Migration copies settings, identities, storage and possibly customer data; global rules prohibit raw secret persistence, but complete scenario-specific data-flow qualification is outstanding.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 0,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_REVIEW",
+      "governed_verification_companion": "not-created; registered July companion remains exact-pin valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/global-rules.md",
+          "sha": "bf670e585cd153504f8df7fc00ac87a907bfc369"
+        },
+        {
+          "path": "references/services/functions/consumption-to-flex/linux/workflow.md",
+          "sha": "5d5d9e4ede82a94a0c56057a7aa391532705c3bc"
+        },
+        {
+          "path": "references/services/functions/consumption-to-flex/windows/workflow.md",
+          "sha": "e246589d4baf1091574f47b32728698d4584d63d"
+        }
+      ],
+      "adaptation_value": "Preserve source-read-only and per-action Windows cutover approval, compatibility checks and rollback planning; review all target-creation, Redis and Java paths before promotion."
+    }
+  ]
+}
