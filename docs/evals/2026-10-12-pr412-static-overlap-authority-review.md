@@ -44,6 +44,6 @@ Both skills prohibit automatic changes, credential solicitation and out-of-scope
 
 1. New package scan `38309617787` passed both candidates, but the exact per-package JSON report/digest was not retained. Canonical security companions truthfully say `incomplete`, so unchanged admission remains blocked by current `docs/security-scanning.md`.
 2. This is not a separate human review, nor behavioral validation.
-3. Branch is behind merged PR #407; branch reconciliation remains.
+3. This document is an October 12 review snapshot. Current `main` and PR head must be compared before integration; mergeability alone is not a completed semantic, security or admission review. As of the October 27 reconciliation, `main` was `17c7d9abd58ecf670036949cda22cfe8da406726` and this PR remained a draft at `77f7ff47e21a19eae7ae8376f1f909c2fd862289`. Reconcile with current main and any first-party registry changes from #416 before admission.
 4. **Do not increment 44 to 46** or modify all five public accounting surfaces until the above blockers are cleared in a cohesive admission tranche.
-5. Current user instruction forbids repository-owned CI. Existing Tier-1 docs still allow maintainer CI and `.github/workflows/skillspector.yml` is live. That governance inconsistency is cross-PR architectural debt, not solved by adding passive skills.
+5. Current Tier-1 governance explicitly prohibits repository-owned CI, test runners, scanners, workflows and automation. The historical October 12 Actions run is **evidence of a past external assessment only**, not authorization to retain or reintroduce workflows. Do not mistake a historical workflow URL or scan log for a current execution capability or a complete persisted security receipt.
