@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-27",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+  "method": "Full non-truncated upstream recursive Git tree: group physical SKILL.md paths by directory basename; compare complete package-tree and manifest blob SHAs. Frontmatter for both exposures fetched at exact revision. No scripts executed.",
+  "physical_skill_md_paths": 212,
+  "distinct_directory_basenames": 210,
+  "known_nonfirstclass_phase_references": 3,
+  "exact_eligible_denominator": "unresolved",
+  "collisions": [
+    {
+      "name": "applicationinsights-web-ts",
+      "exposures": [
+        {
+          "path": ".github/skills/applicationinsights-web-ts",
+          "package_tree_sha": "cb03b364b8f9dcb5fc2ee9662758a1f949c23102",
+          "manifest_sha": "e1bfcc76ab8e76060350426a04115dc33de8bbd4",
+          "source_owned_blob_count": 4
+        },
+        {
+          "path": ".github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts",
+          "package_tree_sha": "cb03b364b8f9dcb5fc2ee9662758a1f949c23102",
+          "manifest_sha": "e1bfcc76ab8e76060350426a04115dc33de8bbd4",
+          "source_owned_blob_count": 4
+        }
+      ],
+      "classification": "EXACT_PACKAGE_TREE_MIRROR",
+      "canonical_count_implication": "one canonical package, two physical exposure paths; authoritative route still to be documented"
+    },
+    {
+      "name": "entra-agent-id",
+      "exposures": [
+        {
+          "path": ".github/skills/entra-agent-id",
+          "package_tree_sha": "3ea709c1b312d75518093040b47faa2f7e23a238",
+          "manifest_sha": "a8653ea1e50451c43e1ab7dc95f5024543d63658",
+          "source_owned_blob_count": 4
+        },
+        {
+          "path": ".github/plugins/azure-skills/skills/entra-agent-id",
+          "package_tree_sha": "2757439372801955542e909dc218f74914811203",
+          "manifest_sha": "ec3318657c9709665e9f22c70e4820cb5bacb986",
+          "source_owned_blob_count": 7
+        }
+      ],
+      "classification": "DIVERGENT_SAME_NAME_VERSIONS",
+      "canonical_count_implication": "do not silently merge or count twice; decide source-routing authority and whether one path is retired"
+    }
+  ],
+  "notes": [
+    "All four manifests are frontmattered; applicationinsights-web-ts paths have identical complete four-blob package trees, not just identical SKILL.md.",
+    "Entra root and Azure plugin paths have different manifests and four-blob versus seven-blob trees; this is not an exact mirror.",
+    "The two collisions do not by themselves establish the full eligible denominator; aliases and other package semantics require review.",
+    "No source pin, inventory, semantic verification, security or behavioral state changes."
+  ]
+}

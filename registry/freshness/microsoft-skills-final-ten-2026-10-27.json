@@ -29,7 +29,7 @@
   },
   "macro_findings": [
     "Frozen changed-existing screening is 76/76 unique, not latest-source completion or admission.",
-    "212 physical manifests are not a canonical eligible denominator: three non-frontmattered nested phase references, six previously ungoverned July paths, nonidentical entra-agent-id exposures and nested first-class AKS skills need routing reconciliation.",
+    "212 physical manifests are not a canonical eligible denominator: three non-frontmattered nested phase references, six previously ungoverned July paths, an exact four-blob applicationinsights-web-ts mirror, divergent entra-agent-id exposures and nested first-class AKS skills need routing reconciliation.",
     "Upstream 61fe changes shared plugin hooks and previously screened diagnostics/prepare packages; the ten package trees are unchanged from 1a63.",
     "Hard authority failures: broad Graph identity grants, unapproved paid App Service creation, AKS provisioning, missing FastAPI object authorization.",
     "Positive partial safeguards: read-only AKS Automatic assessment and explicit migration approvals.",
@@ -791,5 +791,6 @@
       ],
       "adaptation_value": "Retain progressive disclosure and SDK patterns; inspect full 67k-character manifest and all scripts before unchanged use."
     }
-  ]
+  ],
+  "duplicate_exposure_crosswalk": "registry/freshness/microsoft-skills-duplicate-exposure-crosswalk-2026-10-27.json"
 }
