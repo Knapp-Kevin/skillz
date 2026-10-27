@@ -1,0 +1,37 @@
+schema_version: 1
+skill_name: aks-known-issues
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0642cbfede48e571a698325dccdf9c29ac6650e8
+skill_md_blob_sha: a0d46fac012c39520a351eb2fdcb8bc915e05228
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: verified
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 18/20
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 2
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 2
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, debugging]
+  lifecycle: [operations, verification]
+  characteristic: [evidence-first, source-driven, safety-bounded]
+  authority: [read-only]
+  portability: [high]
+package_file_count: 2
+package_files_inspected: "All 2 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+authority_hard_fail: false
+notes: "VERIFY static only: exact-signature matching prevents broad guesses, catalog requires read-only verification labeled not-run and approval-gated proposed fixes. No behavioral or security scan evidence. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."
