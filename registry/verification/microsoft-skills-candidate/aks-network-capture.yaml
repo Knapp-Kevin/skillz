@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "aks-network-capture"
+candidate_key: "aks-network-capture"
+source_id: "microsoft-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "bd71608b467949a7b33fcebbecccd56ebc4002ff"
+skill_md_blob_sha: "cffcb7322710cd1f02db709aa6d504ae61ac2772"
+characterized_at: "2026-10-27"
+last_verified_at: "2026-10-27"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "13/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","debugging","security"]
+  lifecycle: ["operations","verification"]
+  characteristic: ["evidence-first","risk-aware","tool-assisted"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 13
+package_files_inspected: "SKILL.md; references/capture-authorization.md; scripts/collect-azure-network-info.ps1; scripts/collect-azure-network-info.sh; scripts/create-capture.ps1; scripts/create-capture.sh; scripts/generate-test-traffic.ps1; scripts/generate-test-traffic.sh; scripts/retrieve-captures.ps1; scripts/retrieve-captures.sh; scripts/run-capture.sh; scripts/setup-capture-configmap.ps1; scripts/setup-capture-configmap.sh"
+shared_dependency_files_inspected: []
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged: target-binding approval exists in prose but executable selectors default to all Linux nodes, making broad capture possible. Preserve run-ID cleanup, explicit host capability gate and separate debug-container approval as extraction prior art. No upstream code, cloud/host operation, security scan or representative behavioral/adversarial test executed."

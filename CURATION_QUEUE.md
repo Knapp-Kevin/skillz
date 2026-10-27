@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **735** persisted exact-version third-party verification companions.
+- **743** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -102,11 +102,11 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
-**Candidate full-package static reviews (2026-10-27):** [Three Kusto packages](docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md) were REJECTED unchanged, followed by [eight AKS/Advisor/Cost packages](docs/reviews/2026-10-27-microsoft-aks-advisor-cost-eight-exact-static.md) (**4 VERIFIED semantic only, 4 REJECT unchanged**). All 11 have exact package/manifest fingerprints, individual authority/privacy/dependency findings and truthful `security: not-run`, `behavioral: not-run` states. The current candidate-version full-review frontier is **91**. Independently counted persisted third-party verification companions: **727 before this tranche + 8 = 735**. No admissions or source-pin changes.
+**Candidate full-package static reviews (2026-10-27):** Three Kusto candidates were rejected, eight AKS/Advisor/Cost candidates were reviewed (4 VERIFIED semantic only / 4 REJECT unchanged), and [eight authority/privacy candidates](docs/reviews/2026-10-27-microsoft-authority-eight-exact-static.md) were rejected unchanged after all 52 bundled blobs plus three shared hook files were inspected. **19/26 new candidates** reviewed, **83** candidate-version full reviews remain. Persisted third-party verification companions: **735 before this tranche + 8 = 743**. No admissions, scanner execution, behavioral evidence or pin changes.
 
 ## Active Microsoft freshness frontier (issue #400, 2026-10-27)
 
-Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical - 3 non-frontmattered phases - 1 exact mirror). **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. Frozen changed screening **76/76** is not full requalification. **11/26 new candidates** have full static companions (3 Kusto rejected, 4 AKS/Advisor/Cost verified semantic only, 4 rejected), leaving **15 new + 76 changed = 91** current-version full reviews. Four removed paths still require successor/retirement decisions. No source pin, admission, security or behavioral state was promoted. PRs #412/#413/#416 remain independent external-security/acceptance holds.
+Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **19/26 new candidates** now have full static companions (4 VERIFIED semantic only / 15 REJECT unchanged), leaving **7 new + 76 changed = 83** full current-version reviews. Four removed-path successor decisions remain. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
 
 ## Governed discovery / source-vetting
 

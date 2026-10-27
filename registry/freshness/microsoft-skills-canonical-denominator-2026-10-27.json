@@ -265,17 +265,17 @@
     }
   ],
   "qualification": {
-    "semantic": "candidate 76 changed screened but not promoted; 26 new/ungoverned require first governed companions; 106 exact-tree carry-forwards retain revision-bound evidence",
+    "semantic": "76 changed-existing packages screened but not fully requalified; 19/26 new/ungoverned have full exact-version static companions (4 verified semantic only, 15 rejected), 7 new require first full review; 106 exact-tree carry-forwards retain revision-bound evidence",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
     "full_package_review": "incomplete",
-    "note": "208 is the candidate structural denominator, not an admission or security pass. Three Kusto packages rejected plus eight AKS/Advisor/Cost complete-package static reviews (four verified semantic only, four rejected), leaving 15 new and 76 changed for full review. No source pin, security or behavioral promotion.",
-    "candidate_new_full_static_rejected": 7,
-    "candidate_new_remaining_first_review": 15,
-    "candidate_total_remaining_full_review": 91,
-    "review": "docs/reviews/2026-10-27-microsoft-aks-advisor-cost-eight-exact-static.md",
+    "note": "208 is structural candidate denominator, not admission. 19 new candidates have full static review (4 verified semantic only, 15 rejected unchanged), leaving 7 new and 76 changed for current-version full review. No pin, security or behavioral promotion.",
+    "candidate_new_full_static_rejected": 15,
+    "candidate_new_remaining_first_review": 7,
+    "candidate_total_remaining_full_review": 83,
+    "review": "docs/reviews/2026-10-27-microsoft-authority-eight-exact-static.md",
     "candidate_new_full_static_verified": 4,
-    "candidate_new_full_static_reviewed": 11
+    "candidate_new_full_static_reviewed": 19
   }
 }
