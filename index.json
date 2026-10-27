@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-27: Ten distinct Microsoft frozen changed-existing candidate screenings complete 66/76 to 76/76; latest eligible denominator unresolved; no source pin, admission, security or behavioral change.",
+    "latest_reconciliation": "2026-10-27: Ten distinct Microsoft frozen changed-existing candidate screenings complete 66/76 to 76/76; latest eligible denominator unresolved; no source pin, admission, security or behavioral change. Exact-tree audit found one mirrored Application Insights package and one divergent same-name Entra pair; no denominator inferred.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -200,7 +200,8 @@
       "removed_paths_absence_classified": 4,
       "unique_screening_reconciliation": "Six historical duplicate exposures corrected; final ten distinct candidates bring frozen changed-existing screening to 76/76. Latest eligible denominator and security remain open.",
       "latest_physical_manifest_paths": 212,
-      "unresolved_latest_source_drift": "Six old ungoverned physical paths, duplicate Entra exposure, nested packages, four removals and newer plugin hooks/diagnostics/prepare changes."
+      "unresolved_latest_source_drift": "Six old ungoverned physical paths; exact four-blob applicationinsights-web-ts mirror; divergent entra-agent-id versions; nested packages, four removals and newer plugin hooks/diagnostics/prepare changes.",
+      "duplicate_exposure_crosswalk": "registry/freshness/microsoft-skills-duplicate-exposure-crosswalk-2026-10-27.json"
     }
   }
 }
