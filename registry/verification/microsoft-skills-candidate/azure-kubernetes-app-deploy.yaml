@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "azure-kubernetes-app-deploy"
+candidate_key: "azure-kubernetes-app-deploy"
+source_id: "microsoft-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "580e5d0cffde99b0b4e571721570f282d5930d9a"
+skill_md_blob_sha: "e3e148299871832471b4b056093e386a132e8d4a"
+characterized_at: "2026-10-27"
+last_verified_at: "2026-10-27"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "13/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 0
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: ["cloud","deployment","implementation"]
+  lifecycle: ["implementation","release"]
+  characteristic: ["risk-aware","reference-heavy","production-oriented"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 42
+package_files_inspected: "SKILL.md; knowledge-packs/frameworks/aspnet-core.md; knowledge-packs/frameworks/django.md; knowledge-packs/frameworks/express.md; knowledge-packs/frameworks/fastapi.md; knowledge-packs/frameworks/flask.md; knowledge-packs/frameworks/go.md; knowledge-packs/frameworks/nestjs.md; knowledge-packs/frameworks/nextjs.md; knowledge-packs/frameworks/spring-boot.md; phases/quick-deploy.md; references/base-images.md; references/detection.md; references/rollback.md; references/safeguards.md; references/workload-identity.md; templates/dockerfiles/dotnet.Dockerfile; templates/dockerfiles/dotnet.dockerignore; templates/dockerfiles/go.Dockerfile; templates/dockerfiles/go.dockerignore; templates/dockerfiles/java.Dockerfile; templates/dockerfiles/java.dockerignore; templates/dockerfiles/node.Dockerfile; templates/dockerfiles/node.dockerignore; templates/dockerfiles/python.Dockerfile; templates/dockerfiles/python.dockerignore; templates/dockerfiles/rust.Dockerfile; templates/dockerfiles/rust.dockerignore; templates/github-actions/deploy.yml; templates/k8s/configmap.yaml; templates/k8s/deployment.yaml; templates/k8s/gateway.yaml; templates/k8s/hpa.yaml; templates/k8s/httproute.yaml; templates/k8s/ingress.yaml; templates/k8s/namespace.yaml; templates/k8s/networkpolicy.yaml; templates/k8s/pdb.yaml; templates/k8s/service.yaml; templates/k8s/serviceaccount.yaml; templates/mermaid/architecture-diagram.md; templates/mermaid/summary-dashboard.md"
+shared_dependency_files_inspected: ["../azure-kubernetes-automatic-readiness/references/constraint-spec-v1.yaml@59f6c6b930628e93627291e585bf1c43b2212e2a"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_CHECKLIST"
+notes: "REJECT unchanged. Strong framework detection, non-root/read-only-rootfs Docker and Kubernetes templates, Workload Identity, DS001-DS013 checklist and git-SHA image tags are reusable design/checklist material. But broad production deployment, registry build, automatic CI and cluster/identity mutations lack scoped approval. Rollback-on-failure is effectively bypassed when rollout fails before deployed=true is written, because the workflow's failure condition requires that output. The sibling constraint-spec-v1.yaml describes 21 workload safeguards rather than the local 13-rule checklist, requiring scope reconciliation; do not equate this static comparison with live cluster policy. Preserve reference/extraction value only. Static source review only. No upstream command, cloud action, scanner, behavioral/adversarial test or live AKS safeguard verification executed."
