@@ -3,9 +3,9 @@ skill_name: memory-pulse
 source_id: local-skills
 local_path: "skills/memory-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: bfccb4b879a7ffcb67c844b0d3683f3bbc3a0f3e
+content_blob_sha: bb8d1252ff201256277bc9da9a203e12164ec1b7
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-12
+reviewed_at: 2026-10-26
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -18,6 +18,8 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [medium]
-notes: "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+notes: "New exact-version static review 2026-10-26: explicit operator approval before reading private memory-layer project context, no credential/sensitive-data collection, retrieved source text untrusted and architecture changes proposal-only. External behavioral validation and final package-security scan not-run."
 
 passive_runner_remediation: Repository script invocation replaced by authorized host retrieval. Current revision manually reviewed for passive collection boundaries; behavioral validation not-run and old package scan evidence does not transfer.
+
+review_note: "See docs/reviews/2026-10-26-two-pulse-context-authorization-review.md for the exact-version ten-dimension rubric; package-security state remains not-run."
