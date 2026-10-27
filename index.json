@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-12: Passive architecture clarification staged on PR #408. No corpus admission or count changes; registered sources, semantic review counts, and current-standard source denominators remain unchanged. Historic SkillSpector CI run evidence is retained as version-bound reference, while repository-owned CI is removed in favor of host-executed assessments.",
+    "latest_reconciliation": "2026-10-27: Reconciled six duplicated Microsoft changed-existing screening IDs; eight new Azure operations candidate screenings bring unique coverage to 66/76. No source pin, governed review inventory, security or behavioral state changed.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -187,17 +187,18 @@
       "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
       "registered_current_standard": "186/186",
       "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
-      "frozen_changed_existing_screened": 64,
+      "frozen_changed_existing_screened": 66,
       "frozen_changed_existing_denominator": 76,
-      "frozen_changed_existing_remaining": 12,
+      "frozen_changed_existing_remaining": 10,
       "frozen_raw_additions_classified": 22,
       "frozen_raw_additions_total": 22,
       "removed_paths_unresolved": 4,
       "latest_eligible_denominator": "unresolved",
       "admitted_delta": 0,
       "security_and_behavioral_candidate_validation": "not-run",
-      "review": "docs/reviews/2026-10-27-microsoft-python-data-telemetry-eight-freshness.md",
-      "removed_paths_absence_classified": 4
+      "review": "docs/reviews/2026-10-27-microsoft-azure-ops-eight-and-frontier-dedup.md",
+      "removed_paths_absence_classified": 4,
+      "unique_screening_reconciliation": "Prior 64 review slots included six repeated canonical IDs; corrected to 58 unique before eight new screenings, 66 unique after."
     }
   }
 }
