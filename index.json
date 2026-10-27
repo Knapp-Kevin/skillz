@@ -7,7 +7,7 @@
     "first_party_provenance_complete": 44,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 721,
+    "persisted_third_party_exact_version_reviews": 727,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
     "jwynia_agent_skills_fiction_verified": 39,
@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-27: Microsoft latest candidate structural denominator 208 established from 212 physical SKILL.md paths minus three non-first-class phase references and one exact package-tree mirror; 106 carry-forwards, 76 changed, 26 new/ungoverned. July governed pin remains 186/186. 102 require new exact-version qualification; no admission/security/behavioral promotion.",
+    "latest_reconciliation": "2026-10-27: exact Microsoft candidate denominator 208 unchanged. Three Kusto new candidate packages have decisive rejected full-package static companions, leaving 23 new and 76 changed for full review (99). Live verification tree count corrected 721 to 724, plus 3 new = 727 third-party companions; no source pin/admission/security/behavioral promotion.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -207,10 +207,17 @@
       "exact_package_mirror_exclusions": 1,
       "candidate_exact_tree_carry_forward": 106,
       "candidate_changed_existing_requiring_full_qualification": 76,
-      "candidate_new_or_ungoverned_requiring_first_review": 26,
-      "candidate_total_needing_current_standard_review": 102,
+      "candidate_new_or_ungoverned_requiring_first_review": 23,
+      "candidate_total_needing_current_standard_review": 99,
       "old_ungoverned_exposures_classified": 6,
-      "canonical_denominator_evidence": "registry/freshness/microsoft-skills-canonical-denominator-2026-10-27.json"
+      "canonical_denominator_evidence": "registry/freshness/microsoft-skills-canonical-denominator-2026-10-27.json",
+      "candidate_new_full_static_rejected": 3,
+      "candidate_new_remaining_first_review": 23,
+      "candidate_total_remaining_full_review": 99,
+      "candidate_full_review": "docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md",
+      "public_count_reconciliation": "Live verification tree 768 YAML records including 44 local first-party = 724 third-party before this tranche; 3 candidate exact-version rejected companions = 727.",
+      "candidate_total_initial_review_frontier": 102,
+      "candidate_new_or_ungoverned_initial_first_review": 26
     }
   }
 }

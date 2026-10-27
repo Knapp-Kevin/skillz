@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **721** persisted exact-version third-party verification companions.
+- **727** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -102,9 +102,11 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
+**Kusto exact-version candidate review (2026-10-27):** Three newly eligible Microsoft Kusto packages have full-package static **REJECT unchanged** companions at candidate revision `61fe0305` ([macro review](docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md)); 23/26 new candidate packages still lack decisive full static review, and 76 changed packages remain to requalify. The current-version semantic frontier is 99; the registered 186/186 July pin is unchanged. A live verification-tree count corrected third-party companion accounting from 721 to 724 before this tranche; three candidate-version rejection companions bring the persisted total to **727**, without admission, security or behavioral promotion.
+
 ## Active Microsoft freshness frontier (issue #400, 2026-10-27)
 
-Registered July remains **186/186** at its own pin. [Canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical - 3 non-frontmattered phase references - 1 exact package mirror). Macro map: **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**; frozen changed screening **76/76**, but **102 packages still need current-standard exact-version qualification** and four removed paths need successor/retirement decisions. Six old ungoverned paths were classified individually: one mirror excluded, four rejected unchanged on authority/privacy hard fail, one reference-only pending full shared-package review. No source pin/admission/governed verification/security/behavioral state changed. PRs #412/#413/#416 remain qualification holds.
+Registered July remains **186/186** at its own pin. [Canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical - 3 non-frontmattered phase references - 1 exact package mirror). Macro map: **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**; frozen changed screening **76/76**, with **3 newly eligible Kusto packages now decisively rejected unchanged at candidate revision** and **99 still requiring full exact-version qualification** (76 changed + 23 new); four removed paths need successor/retirement decisions. Six old ungoverned paths were classified individually: one mirror excluded, four rejected unchanged on authority/privacy hard fail, one reference-only pending full shared-package review. No source pin/admission/security/behavioral state changed; three candidate-version rejection verification companions were added. PRs #412/#413/#416 remain qualification holds.
 
 ## Governed discovery / source-vetting
 

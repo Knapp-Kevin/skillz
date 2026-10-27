@@ -270,6 +270,10 @@
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
     "full_package_review": "incomplete",
-    "note": "208 is the structurally eligible candidate denominator, not an admission, unchanged-use approval, or security pass."
+    "note": "208 is the structurally eligible candidate denominator, not an admission, unchanged-use approval, or security pass. Three new Kusto packages now have candidate-revision complete-package static REJECT companions; 99 remain to requalify. Structural denominator remains 208; no source pin promotion.",
+    "candidate_new_full_static_rejected": 3,
+    "candidate_new_remaining_first_review": 23,
+    "candidate_total_remaining_full_review": 99,
+    "review": "docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md"
   }
 }

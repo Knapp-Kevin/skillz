@@ -14,7 +14,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 721 |
+| Persisted third-party exact-version reviews | 727 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |
@@ -53,7 +53,9 @@ Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
-**Candidate freshness note (2026-10-27):** The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible first-class packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf`: 212 physical `SKILL.md` paths minus three non-frontmattered App Onboard phase references and one exact four-blob Application Insights mirror. Crosswalk: **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned = 208**. Frozen changed-existing screening is **76/76**, but **102 candidate packages still require current-standard exact-version qualification** (76 changed + 26 new); four removed paths lack proven successors. The registered July pin remains **186/186** complete at its own revision. No pin, admission, governed verification, security, or behavioral state changed; issue #400 stays open.
+**Candidate freshness note (2026-10-27):** The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible first-class packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf`: 212 physical `SKILL.md` paths minus three non-frontmattered App Onboard phase references and one exact four-blob Application Insights mirror. Crosswalk: **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned = 208**. Frozen changed-existing screening is **76/76**, of those **3 newly eligible Kusto packages now have decisive candidate-version rejection companions** and **99 still require full exact-version qualification** (76 changed + 23 new); four removed paths lack proven successors. The registered July pin remains **186/186** complete at its own revision. No pin, admission, security, or behavioral approval changed; three candidate-version rejection companions were added and issue #400 stays open.
+
+**Kusto exact-version candidate review (2026-10-27):** Three newly eligible Microsoft Kusto packages have full-package static **REJECT unchanged** companions at candidate revision `61fe0305` ([macro review](docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md)); 23/26 new candidate packages still lack decisive full static review, and 76 changed packages remain to requalify. The current-version semantic frontier is 99; the registered 186/186 July pin is unchanged. A live verification-tree count corrected third-party companion accounting from 721 to 724 before this tranche; three candidate-version rejection companions bring the persisted total to **727**, without admission, security or behavioral promotion.
 
 ## First-party skills by purpose
 

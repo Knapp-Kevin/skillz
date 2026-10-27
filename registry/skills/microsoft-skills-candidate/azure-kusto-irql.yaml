@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-kusto-irql
+display_name: Microsoft azure-kusto-irql candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 916cc9b4930dffc25b549b647fb08abf97a4503d
+skill_md_blob_sha: 3af32cdbe307d0d23ea884dead1a0a9a09334390
+package_file_count: 3
+permission_tier: security-telemetry-read-disclosure-and-optional-mutation
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: 'Kusto database with pre-deployed IRQL stored functions; Azure MCP query/schema tools; references/EXAMPLES.md and shared KUSTO_EXPLORER_LAUNCH.md; optional Kusto Explorer on Windows.'
+purpose: 'Compose Kusto incident-response queries from existing IRQL Get_*, Extract_* and Enrich_* functions.'
+trigger_nontrigger: 'Explicit IRQL or function-pipeline request; not generic security queries or arbitrary NL-to-KQL conversion.'
+authority_finding: 'Incident-response queries can retrieve and display auth, identity, email and network telemetry without explicit tenant/dataset, retrieval and disclosure authorization; optional file saving/launch does require user consent.'
+privacy_finding: 'Get_Event_Authentication_All includes PasswordHash column in declared schema; examples expose names, roles, email, user identities and command-line evidence.'
+import_eligibility: adaptation-extraction-reference-only
+rationale: 'REJECT unchanged: composable selectors and early filtering are useful, but live security-data retrieval/disclosure lacks explicit scoped authorization. Extract IRQL pipeline composition and minimization with host-enforced data access boundaries; do not expose PasswordHash or secret-bearing columns.'
