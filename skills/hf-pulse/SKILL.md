@@ -26,6 +26,8 @@ Topic pulse for the Hugging Face ecosystem — the cross-vendor view: what's act
    - `hub_repo_search` / `hub_repo_details` — trending models and datasets
    - `space_search` — trending spaces (often the earliest demo signal)
 
+   Limit routine discovery to public Hub metadata. A connected tool may expose private or gated repositories, account history, or restricted datasets; tool access is not permission to inspect them. Do not retrieve private content, token-bearing links, or personal account details without separately approved scope. If public-only filtering cannot be established, use public browsing and report the connected-tool coverage gap.
+
 2. **Collect remaining sources** using the external host's authorized tools:
 
    Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
