@@ -32,6 +32,6 @@ tags:
   authority: [read-only]
   portability: [high]
 package_file_count: 2
-package_files_inspected: "All 2 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md; references/error-code-map.md"
 authority_hard_fail: false
 notes: "VERIFY static only: exact-signature matching prevents broad guesses, catalog requires read-only verification labeled not-run and approval-gated proposed fixes. No behavioral or security scan evidence. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."

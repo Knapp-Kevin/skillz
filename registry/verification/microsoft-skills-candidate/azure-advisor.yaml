@@ -32,6 +32,6 @@ tags:
   authority: [read-only, mutating]
   portability: [medium]
 package_file_count: 1
-package_files_inspected: "All 1 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md"
 authority_hard_fail: true
 notes: "REJECT unchanged: useful capped-list avoidance and tool routing, but complete/dismiss/postpone/reactivate are consequential state mutations with only generic confirmation. Extract read-only summary/list behavior; require specific target, intended new state, effects and explicit action authorization. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."

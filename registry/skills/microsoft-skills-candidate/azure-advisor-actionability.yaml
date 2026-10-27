@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: 339baea1441cc468bdcf620ad90d43944544e701
 skill_md_blob_sha: b9a5ad54433b1398b11ebaf3f2cc1bd156f47a18
 package_file_count: 1
+package_file_paths: ["SKILL.md"]
 permission_tier: "generate-only remediation instructions; execution is prohibited without explicit confirmation"
 portability: medium
 review_status: verified-structured-static-security-pending

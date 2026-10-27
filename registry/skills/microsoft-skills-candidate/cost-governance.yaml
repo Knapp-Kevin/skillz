@@ -18,6 +18,7 @@ local_path: not-materialized-at-candidate-revision
 package_tree_sha: dd006778491a957cd453b02ca0dcda6fb06f337b
 skill_md_blob_sha: 4902a03e2b7950bcb7e84b6bfe799b4c92927d9b
 package_file_count: 5
+package_file_paths: ["SKILL.md","references/budget-health.md","references/budget-setup.md","references/guardrails.md","references/tool-fallback.md"]
 permission_tier: "create_budget creates persistent budget and recipient notifications; confirmation of configuration fields alone does not explicitly authorize creation and notifications"
 portability: medium
 review_status: rejected-unchanged-structured

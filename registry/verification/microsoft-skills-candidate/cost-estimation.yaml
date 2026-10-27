@@ -32,6 +32,6 @@ tags:
   authority: [read-only, external-side-effect]
   portability: [medium]
 package_file_count: 8
-package_files_inspected: "All 8 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md; references/cost-forecast/error-handling.md; references/cost-forecast/examples.md; references/cost-forecast/guardrails.md; references/cost-forecast/request-body-schema.md; references/cost-forecast/workflow.md; references/pricing-estimate.md; references/tool-fallback.md"
 authority_hard_fail: true
 notes: "REJECT unchanged: pricing-estimate instructs returning the short-lived pricesheet ZIP URL to conversational output, directly conflicting with its tool-fallback warning not to expose pricesheet URLs. Extract public retail estimation and typed forecast constraints; require secure credential-bearing artifact handoff. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."

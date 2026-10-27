@@ -32,6 +32,6 @@ tags:
   authority: [read-only, mutating, external-side-effect]
   portability: [medium]
 package_file_count: 5
-package_files_inspected: "All 5 source-owned package blobs at the exact revision, including SKILL.md and bundled references."
+package_files_inspected: "SKILL.md; references/budget-health.md; references/budget-setup.md; references/guardrails.md; references/tool-fallback.md"
 authority_hard_fail: true
 notes: "REJECT unchanged: excellent existing-budget and currency safeguards, but step 7 confirms scope, amount and recipient inputs rather than separately authorizing the creation action and future notifications. Extract read-only budget/policy analysis and require an explicit action-and-recipient authorization gate before create_budget. Complete package inspected statically at the exact Git tree. No upstream tooling, Azure operations, security scanner or representative external behavioral/adversarial tests executed."
