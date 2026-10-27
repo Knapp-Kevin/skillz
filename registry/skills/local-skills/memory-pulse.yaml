@@ -9,7 +9,7 @@ license: MIT
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
-last_checked_at: 2026-10-12
+last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/memory-pulse/SKILL.md
 permission_tier: read-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: eligible-with-complete-skill-folder
-rationale: "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+rationale: "Agent-memory monitoring with approved-only project binding, untrusted source handling and proposal-only architectural relevance; absent approved context, generic synthesis."
