@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
-rationale: "AI governance digest distinguishing binding law from drafts; private product context and optional workspace drift reads require explicit scoped operator authorization."
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Authorized-only private governance context, proposal-only digest, and explicit UTC query-window binding. Exact-version static review only; security and behavioral validation are separate."
