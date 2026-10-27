@@ -1,0 +1,27 @@
+schema_version: 1
+skill_name: release-evidence-review
+source_id: local-skills
+source_path: skills/release-evidence-review
+source_revision: 54c115ffc83de582d886c2a51078cf56dc72b874
+fingerprint_algorithm: git-blob-sha1
+manifest_blob_sha: d236826daad241afbfc5c8867221c066b7ff5044
+security_status: not-run
+scanner_execution: not-run
+required_scanner: NVIDIA SkillSpector
+required_scanner_release: v2.12.0
+required_scanner_commit: c7958a3268d9498644b22edb75d0f051bbc8cbfc
+required_scan_mode: static-only-no-llm
+required_scan_flags: [--no-llm, --fail-on-findings, --fail-on-incomplete]
+package_coverage: not-assessed
+risk_score: unknown
+severity: unknown
+recommendation: unknown
+active_findings: unknown
+raw_report_digest: not-available
+raw_report_persisted: false
+behavioral_validation_status: not-run
+recorded_at: 2026-10-26
+rationale: >-
+  No qualifying pinned exact-package SkillSpector execution or report has been
+  obtained for this exact manifest. This record documents the outstanding gate;
+  it is not a scan receipt and cannot support unchanged-use admission.
