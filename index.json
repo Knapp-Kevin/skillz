@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-12",
+  "snapshot_date": "2026-10-27",
   "repository_mode": "passive-skill-knowledge-resource",
   "counts": {
     "first_party_skills": 44,
@@ -187,16 +187,17 @@
       "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
       "registered_current_standard": "186/186",
       "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
-      "frozen_changed_existing_screened": 56,
+      "frozen_changed_existing_screened": 64,
       "frozen_changed_existing_denominator": 76,
-      "frozen_changed_existing_remaining": 20,
+      "frozen_changed_existing_remaining": 12,
       "frozen_raw_additions_classified": 22,
       "frozen_raw_additions_total": 22,
       "removed_paths_unresolved": 4,
       "latest_eligible_denominator": "unresolved",
       "admitted_delta": 0,
       "security_and_behavioral_candidate_validation": "not-run",
-      "review": "docs/reviews/2026-10-27-microsoft-foundry-gateway-eight-freshness.md"
+      "review": "docs/reviews/2026-10-27-microsoft-python-data-telemetry-eight-freshness.md",
+      "removed_paths_absence_classified": 4
     }
   }
 }
