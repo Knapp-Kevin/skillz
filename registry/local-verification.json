@@ -588,7 +588,7 @@
         ]
       },
       "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run.",
-      "reviewed_at": "2026-10-12"
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "handoff-writer",
@@ -912,7 +912,7 @@
         ]
       },
       "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run.",
-      "reviewed_at": "2026-10-12"
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "mistral-pulse",
