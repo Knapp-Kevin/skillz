@@ -26,7 +26,7 @@ Vendor pulse for Meta AI's Llama family and its open-weights ecosystem. Sources 
 
    The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
-2. **Fill gaps.** Fetch the Meta AI blog; run the searches. r/LocalLLaMA is the highest-signal community source for open-weights news — if the Reddit API was blocked, the site-scoped search is mandatory, not optional.
+2. **Fill gaps.** Fetch the Meta AI blog; run the searches. r/LocalLLaMA is a useful community signal, not verified release evidence. If the Reddit API is unavailable, attempt a public site-scoped search only when authorized host search is available; otherwise report the community coverage gap without inventing consensus.
 3. **Synthesize.** New weights and licenses first (license terms matter for local deployment); llama-stack/tooling changes; benchmark and quantization chatter.
 
 ## Scheduling
