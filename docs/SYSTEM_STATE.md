@@ -4,7 +4,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-06 |
+| **Last updated** | 2026-10-27 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
@@ -32,7 +32,7 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
-**Microsoft freshness (2026-10-27):** The registered July Microsoft source remains **186/186** complete at its exact pin. An audit found six duplicated candidate IDs across earlier review tranches: the previous 64/76 claim was only **58/76 distinct**. Eight new Azure operations packages now bring distinct changed-existing screening to **66/76** (**10 remain**) at upstream `1a63e5f771987a9a13e9f0571823dc1e80741583`. Frozen raw additions are 22/22 classified; four removed canonical paths remain absent with successor equivalence unresolved. The latest eligible denominator is not established. Candidate screening is not governed verification, source-pin advancement, security clearance or behavioral validation. See [Azure operations and deduplication review](../docs/reviews/2026-10-27-microsoft-azure-ops-eight-and-frontier-dedup.md) and issue #400.
+**Microsoft freshness (2026-10-27):** Registered July remains **186/186** at its exact pin. The [final ten-package review](../docs/reviews/2026-10-27-microsoft-final-ten-and-frontier-closure.md) advances the **frozen changed-existing screening 66/76 → 76/76 distinct**, at upstream `61fe0305ea70389ed8705eec6026a786f57865cf`. Frozen raw additions remain 22/22 classified (19 first-class candidates, three non-first-class phase references); four removed canonical paths lack successor equivalence. The latest upstream has **212 physical `SKILL.md` paths**, not a proven eligible denominator; six historically ungoverned paths, duplicate named Entra exposure, nested packages and newer upstream hook/diagnostics/prepare changes remain. **No source pin, admission, governed verification, security or behavioral state changed.** Issue #400 stays open.
 
 ## Current admitted-source accounting
 

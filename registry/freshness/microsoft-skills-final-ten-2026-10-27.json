@@ -1,0 +1,795 @@
+{
+  "schema_version": 1,
+  "type": "candidate-freshness-screening",
+  "observed_date": "2026-10-27",
+  "repository_main_start": "28a4d9972a3f2d5941eaeb0c3bfd98c3782cb3d5",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_crosswalk": "registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json",
+  "method": "Exact upstream Git tree and ten canonical manifests, selected decisive supporting files; partial review clearly marked. No external execution.",
+  "accounting": {
+    "frozen_changed_existing_denominator": 76,
+    "unique_screened_before": 66,
+    "screened_this_tranche": 10,
+    "unique_screened_after": 76,
+    "remaining_frozen_changed_existing": 0,
+    "unchanged_carry_forward": 106,
+    "removed_paths": 4,
+    "frozen_raw_additions_classified": 22,
+    "latest_physical_manifest_paths": 212,
+    "latest_eligible_denominator": "unresolved",
+    "registered_pin_complete": "186/186",
+    "registered_source_inventory_delta": 0,
+    "governed_third_party_verification_delta": 0,
+    "dispositions": {
+      "reject_unchanged": 4,
+      "reference_only": 6
+    }
+  },
+  "macro_findings": [
+    "Frozen changed-existing screening is 76/76 unique, not latest-source completion or admission.",
+    "212 physical manifests are not a canonical eligible denominator: three non-frontmattered nested phase references, six previously ungoverned July paths, nonidentical entra-agent-id exposures and nested first-class AKS skills need routing reconciliation.",
+    "Upstream 61fe changes shared plugin hooks and previously screened diagnostics/prepare packages; the ten package trees are unchanged from 1a63.",
+    "Hard authority failures: broad Graph identity grants, unapproved paid App Service creation, AKS provisioning, missing FastAPI object authorization.",
+    "Positive partial safeguards: read-only AKS Automatic assessment and explicit migration approvals.",
+    "No scanner, behavioral execution, pin change or governed companion."
+  ],
+  "records": [
+    {
+      "id": "airunway-aks-setup",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/airunway-aks-setup/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "72ec58c0a7c574dc71e14c63feb3d2aa529849ac",
+      "frozen_october_package_tree_sha": "f1188c99d276aada84992b4e60387f2ad5814dd8",
+      "latest_package_tree_sha": "f1188c99d276aada84992b4e60387f2ad5814dd8",
+      "latest_manifest_blob_sha": "b073a851e1f9678e349032558a51ab2a36f10454",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 12,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Manifest and three decisive steps inspected; other references pending.",
+      "trigger": "AI Runway controller/provider/model onboarding on AKS",
+      "nontrigger": "Not authority for GPU provisioning, arbitrary image installation or model deployment",
+      "dependencies": [
+        "kubectl",
+        "make",
+        "AKS",
+        "GPU inference providers",
+        "optional Hugging Face token"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "deployment"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Per-step installation confirmation and GPU cost awareness exist, but no scoped cluster/namespace/image digest/budget authorization.",
+      "sensitive_data_finding": "Gated-model token is read locally without echo into a permissioned temp file and Kubernetes Secret; no chat secret solicitation. Kubeconfig and secret lifecycle need explicit scope.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 14,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_PACKAGE",
+      "disposition_rationale": "Per-step installation confirmation and GPU cost awareness exist, but no scoped cluster/namespace/image digest/budget authorization.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/steps/step-2-controller.md",
+          "sha": "54d3298de196805609e3812d4425525dc8145bb6"
+        },
+        {
+          "path": "references/steps/step-4-provider.md",
+          "sha": "a3046fb0dcccd2bf9e898adfa0f05f7fd7bbb040"
+        },
+        {
+          "path": "references/steps/step-5-deploy.md",
+          "sha": "7029cc435e6b9fa0d71ab4b973d5b330a9b81123"
+        }
+      ],
+      "adaptation_value": "Retain staged checks and installation prompts; add target/image/cost authorization."
+    },
+    {
+      "id": "azure-cloud-migrate",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-cloud-migrate/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "dd0d5a31e87576d5b46899b19aa3eedb24d412f4",
+      "frozen_october_package_tree_sha": "064dc66880cee5694234690f2b9be17e135dd1dd",
+      "latest_package_tree_sha": "064dc66880cee5694234690f2b9be17e135dd1dd",
+      "latest_manifest_blob_sha": "8daa1b9e40e4657671553958ec8b30bfd710eefb",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 31,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Manifest and two global-rules files inspected; remaining references pending.",
+      "trigger": "Cross-cloud assessment and code conversion into a separate output workspace",
+      "nontrigger": "Not permission to deploy or mutate source cloud state",
+      "dependencies": [
+        "Azure MCP",
+        "Functions",
+        "App Service",
+        "Container Apps",
+        "31-blob scenario package"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "refactoring"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Global rules require ask_user before subscription/region selection, deployment, destructive operations and source overwrites; not all 31 blobs were checked.",
+      "sensitive_data_finding": "Cross-cloud code, configuration and customer data require source/destination privacy approval.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 14,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_PACKAGE",
+      "disposition_rationale": "Global rules require ask_user before subscription/region selection, deployment, destructive operations and source overwrites; not all 31 blobs were checked.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/services/functions/global-rules.md",
+          "sha": "abf3e3f68e5bc798c83f971e6d4292a796358095"
+        },
+        {
+          "path": "references/services/app-service/global-rules.md",
+          "sha": "a000692efb354bbf3cc7690252aadd653736c904"
+        }
+      ],
+      "adaptation_value": "Preserve source-read-only migration, staged assessment and explicit deployment gates."
+    },
+    {
+      "id": "azure-kubernetes-automatic-readiness",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "1694eb4d1069fda2eac18653fdae8d2b55a3646c",
+      "frozen_october_package_tree_sha": "c8ffe7bbfd195951701a5514cbdad6263c817e7a",
+      "latest_package_tree_sha": "c8ffe7bbfd195951701a5514cbdad6263c817e7a",
+      "latest_manifest_blob_sha": "c5618c53ef11a5e392f02dddc4e70501df1b3297",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 6,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Manifest, sanitizer and migration guide inspected; complete constraint-spec evaluation pending.",
+      "trigger": "Offline/sanitized AKS Automatic compatibility assessment",
+      "nontrigger": "Not cluster mutation, unsanitized Secret reads or automatic fix application",
+      "dependencies": [
+        "Azure MCP AKS metadata",
+        "kubectl",
+        "jq",
+        "constraint spec",
+        "migration guide"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "evaluation",
+          "security"
+        ],
+        "lifecycle": [
+          "verification",
+          "planning"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "safety-bounded"
+        ],
+        "authority": [
+          "read-only",
+          "generate-only",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Strong read-only cluster rule and explicit approval before YAML edits; cluster-connected reads still require approved target scope; constraint spec not fully qualified.",
+      "sensitive_data_finding": "Bundled jq allowlist intends to drop secrets and metadata before model exposure; not an executed adversarial proof.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_total": 17,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_PACKAGE",
+      "disposition_rationale": "Strong read-only cluster rule and explicit approval before YAML edits; cluster-connected reads still require approved target scope; constraint spec not fully qualified.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "scripts/sanitize-readiness-input.jq",
+          "sha": "2b1e2d7d7c431037206d929984330399469e021e"
+        },
+        {
+          "path": "references/migration-guide-summary.md",
+          "sha": "b4e0965b77e761df185bdd5a87a7f3c1ebc7fe2f"
+        }
+      ],
+      "adaptation_value": "Retain offline-first assessment, sanitized reads and approved diffs."
+    },
+    {
+      "id": "azure-kubernetes",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "bab7f5eab9e8e1c311ef1fc29b419963903fbe09",
+      "frozen_october_package_tree_sha": "71489aae5cff8383d9699f974493e748825abdbc",
+      "latest_package_tree_sha": "563d312d0625f6c6f815abc147a10375b8ec8ff9",
+      "latest_manifest_blob_sha": "34a04d8010249f24147c0ce66982c8cfa7eedc87",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 55,
+      "nested_first_class_manifest_paths": [
+        ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-app-deploy/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md"
+      ],
+      "review_scope": "Parent tree includes nested first-class AKS packages; parent blob count is not a package count.",
+      "trigger": "AKS Day-0 planning and cluster provisioning",
+      "nontrigger": "Not standing authority to create billable clusters or alter security/networking",
+      "dependencies": [
+        "Azure MCP AKS",
+        "Azure CLI",
+        "kubectl",
+        "nested AKS skills"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Manifest and CLI reference include cluster creation and add-on changes without action-specific subscription/resource/budget approval; requirements collection is not authorization.",
+      "sensitive_data_finding": "Cluster topology, credentials and monitoring configuration require controlled disclosure.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 11,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "disposition_rationale": "Manifest and CLI reference include cluster creation and add-on changes without action-specific subscription/resource/budget approval; requirements collection is not authorization.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/cli-reference.md",
+          "sha": "af100da7f226caec84a94aeb96b4891dd2a5c164"
+        }
+      ],
+      "adaptation_value": "Extract Day-0 architecture checklist; gate every provisioning/change operation."
+    },
+    {
+      "id": "entra-agent-id",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/entra-agent-id/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "405ed207c079150581ef0540a0b4a0a1f176fc9e",
+      "frozen_october_package_tree_sha": "2757439372801955542e909dc218f74914811203",
+      "latest_package_tree_sha": "2757439372801955542e909dc218f74914811203",
+      "latest_manifest_blob_sha": "ec3318657c9709665e9f22c70e4820cb5bacb986",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 7,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Manifest and two high-risk references inspected.",
+      "trigger": "Entra Agent Identity Blueprints, per-agent identities and OAuth token exchange",
+      "nontrigger": "Not implicit authorization to grant Graph scopes or cross-tenant access",
+      "dependencies": [
+        "Microsoft Graph",
+        "PowerShell",
+        "azure-identity",
+        "AgentID sidecar"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "security",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Examples POST identities, grant User.Read.All and AllPrincipals delegated User.Read/Tasks.ReadWrite/Mail.Send with ten-year expiry without owner-approved role/scope/duration.",
+      "sensitive_data_finding": "Environment client secrets and localhost-only sidecar unauthenticated app-token endpoints need strict secret and network isolation.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 12,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "disposition_rationale": "Examples POST identities, grant User.Read.All and AllPrincipals delegated User.Read/Tasks.ReadWrite/Mail.Send with ten-year expiry without owner-approved role/scope/duration.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/runtime-token-exchange.md",
+          "sha": "017ae63360c021c6bbeb031db4d6b4e4418715c7"
+        },
+        {
+          "path": "references/sdk-sidecar.md",
+          "sha": "6e22151f32d6b4f716bf20126f8055af2716eb72"
+        }
+      ],
+      "adaptation_value": "Preserve fmi_path/WIF and identity hierarchy; gate consent and grants individually."
+    },
+    {
+      "id": "fastapi-router-py",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/fastapi-router-py/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "8162d81b2c2856172b495333f5bc3addfcc89ffd",
+      "frozen_october_package_tree_sha": "995dd3c35e422d29a8fb584b069d4657cd47eefd",
+      "latest_package_tree_sha": "995dd3c35e422d29a8fb584b069d4657cd47eefd",
+      "latest_manifest_blob_sha": "be9b22a94a16c840e93baa40d65bfa6a44d52019",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 3,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "All three package blobs read; no generated code executed.",
+      "trigger": "FastAPI CRUD router scaffolding",
+      "nontrigger": "Not a production ownership/tenant authorization implementation",
+      "dependencies": [
+        "FastAPI",
+        "Pydantic",
+        "auth dependencies",
+        "service layer",
+        "template.py"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "api-design",
+          "security"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "contract-first",
+          "modularity"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "PATCH ownership check is commented out and DELETE lacks owner check; GET/list use optional auth without tenant scoping. Authentication is not object authorization.",
+      "sensitive_data_finding": "Read endpoints can expose other users' objects without a policy layer.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 13,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "disposition_rationale": "PATCH ownership check is commented out and DELETE lacks owner check; GET/list use optional auth without tenant scoping. Authentication is not object authorization.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "assets/template.py",
+          "sha": "aeaa23b2f6808898bc808882dc6aabf77b82ded9"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha": "d440f94f9eb871b316536c801aa22fda2f3dfd66"
+        }
+      ],
+      "adaptation_value": "Keep endpoint patterns only after per-object ownership and tenant checks."
+    },
+    {
+      "id": "m365-agents-py",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/m365-agents-py/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "160c753348c6709974d2d3ae1b6d6b8bf7df146c",
+      "frozen_october_package_tree_sha": "7d30932e571b05101cc0060eb2adab2195f7aec8",
+      "latest_package_tree_sha": "7d30932e571b05101cc0060eb2adab2195f7aec8",
+      "latest_manifest_blob_sha": "3d583a89a369594b8880921f17ca1f68ef9ef2f8",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 2,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Both package blobs read; no live bot or message execution.",
+      "trigger": "Teams/M365/Copilot Studio Python agent patterns",
+      "nontrigger": "Not permission to deploy, send real communications or transmit private chats",
+      "dependencies": [
+        "microsoft-agents SDKs",
+        "aiohttp",
+        "MSAL",
+        "Graph",
+        "Copilot Studio",
+        "Azure OpenAI"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "agent-development",
+          "communication"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Samples build message handlers and send activities, but do not establish operational tenant/channel owner approval for a live deployment.",
+      "sensitive_data_finding": "Graph profile, chat contents, client-secret .env and token-cache patterns need explicit recipient, retention and credential controls.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 14,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_OPERATIONAL_AUTHORITY",
+      "disposition_rationale": "Samples build message handlers and send activities, but do not establish operational tenant/channel owner approval for a live deployment.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/capabilities.md",
+          "sha": "b27a60a345f87f9fa50764a8c099a896d8bb2621"
+        }
+      ],
+      "adaptation_value": "Retain async lifecycle, JWT middleware and streaming cleanup with live-send gates."
+    },
+    {
+      "id": "pydantic-models-py",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/pydantic-models-py/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "591af99b6b71425df244508fc0b4d236b27fa683",
+      "frozen_october_package_tree_sha": "f7a11cfe361df8e698cb9ecb42a94dae0889bb77",
+      "latest_package_tree_sha": "f7a11cfe361df8e698cb9ecb42a94dae0889bb77",
+      "latest_manifest_blob_sha": "15bd46d5df97e19c42c1b91d5adc916354c23c8b",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 3,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "All three package blobs read; no scanner or behavioral evidence.",
+      "trigger": "Pydantic v2 schema variants and aliases",
+      "nontrigger": "Not access control, privacy clearance or schema migration approval",
+      "dependencies": [
+        "Pydantic v2",
+        "template.py",
+        "capabilities.md"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "api-design",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "contract-first",
+          "modularity"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "high"
+      },
+      "authority_finding": "Local model generation has no direct external side effect; workspace/author identifiers in schema are not an access-control boundary.",
+      "sensitive_data_finding": "Response schemas contain author/workspace IDs; consuming API must authorize disclosure.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_total": 19,
+      "candidate_disposition": "REFERENCE_ONLY_STATIC_REVIEWED",
+      "disposition_rationale": "Local model generation has no direct external side effect; workspace/author identifiers in schema are not an access-control boundary.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "assets/template.py",
+          "sha": "0ea4ee61b31f7b3a42dce494513ef5e959f33b7b"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha": "7c4614908c57a200283c7e9dba06af5ada241b98"
+        }
+      ],
+      "adaptation_value": "Preserve clear Base/Create/Update/Response/InDB patterns; adapt ownership policies."
+    },
+    {
+      "id": "python-appservice-deploy",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/python-appservice-deploy/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "6e11dad529e50b7fbc37191de665788d0427ccad",
+      "frozen_october_package_tree_sha": "3003f4d14f1e1a63ec94afd28f958560aab4b273",
+      "latest_package_tree_sha": "3003f4d14f1e1a63ec94afd28f958560aab4b273",
+      "latest_manifest_blob_sha": "ca5cc00ee36032b5552bca1ff56d9110341c6396",
+      "manifest_frontmatter": true,
+      "license": "MIT (manifest and upstream root)",
+      "source_owned_package_blob_count": 13,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Manifest and decisive create/deploy references inspected; remaining refs pending.",
+      "trigger": "Python Azure App Service resource creation and deployment",
+      "nontrigger": "Not permission to create paid plans or publish production traffic",
+      "dependencies": [
+        "Azure CLI",
+        "azd",
+        "P0v3 App Service",
+        "Oryx"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "deployment"
+        ],
+        "lifecycle": [
+          "implementation",
+          "release"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "create-app.md says do not ask for confirmation and proceed with defaults before creating RG, paid P0v3 plan, web app and deploying. --track-status false proves ZIP acceptance, not app health.",
+      "sensitive_data_finding": "App code/config may be uploaded to a default subscription and destination without scoped approval.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_total": 10,
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "disposition_rationale": "create-app.md says do not ask for confirmation and proceed with defaults before creating RG, paid P0v3 plan, web app and deploying. --track-status false proves ZIP acceptance, not app health.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "references/create-app.md",
+          "sha": "891186a009ea0560a903257bfb0fd16af0f5b35c"
+        },
+        {
+          "path": "references/deploy-azcli.md",
+          "sha": "89e8d0d6badfc0cce742995c70113b0c13e9132a"
+        }
+      ],
+      "adaptation_value": "Preserve shell quoting and deploy syntax, add budget/target/traffic approval and acceptance evidence."
+    },
+    {
+      "id": "skill-creator",
+      "source_family": "microsoft-skills",
+      "canonical_manifest": ".github/skills/skill-creator/SKILL.md",
+      "source_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_package_tree_sha": "44744c928eba10e9e69272a6bab0859b79c480c5",
+      "frozen_october_package_tree_sha": "f9dc3aaf9210af8eb06ba11bf4883e6ace705673",
+      "latest_package_tree_sha": "f9dc3aaf9210af8eb06ba11bf4883e6ace705673",
+      "latest_manifest_blob_sha": "6429efa083961c855fc5c21da8079ae2f4949007",
+      "manifest_frontmatter": true,
+      "license": "MIT (upstream root; no manifest license field)",
+      "source_owned_package_blob_count": 7,
+      "nested_first_class_manifest_paths": [],
+      "review_scope": "Large manifest and selected scripts inspected, not an exhaustive package review.",
+      "trigger": "Author/package Azure SDK agent skills",
+      "nontrigger": "Not permission to write arbitrary workspace files or run optional evaluations",
+      "dependencies": [
+        "Python init/package scripts",
+        "Azure SDK docs",
+        "optional Vally evaluation"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "skill-authoring",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "progressive-disclosure",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Skill guides local creation, packaging and optional eval commands without a scoped host target/execution authorization; upstream scripts are reference evidence, not skillz runtime.",
+      "sensitive_data_finding": "Recursive package ZIP may include sensitive project files unless scoped/excluded; no real data handled.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_total": 14,
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_PACKAGE",
+      "disposition_rationale": "Skill guides local creation, packaging and optional eval commands without a scoped host target/execution authorization; upstream scripts are reference evidence, not skillz runtime.",
+      "governed_verification_companion": "not-created; July pin companion remains valid",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_eligible": false,
+      "inspected_supporting_blobs": [
+        {
+          "path": "scripts/init_skill.py",
+          "sha": "329ad4e5a71546b2c455f8e08c98b32ecdd3c1e3"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "sha": "5cd36cb16e1314f2ab87d50aaedbc9f26925dac1"
+        }
+      ],
+      "adaptation_value": "Retain progressive disclosure and SDK patterns; inspect full 67k-character manifest and all scripts before unchanged use."
+    }
+  ]
+}
