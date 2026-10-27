@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **721** persisted exact-version third-party verification companions.
+- **727** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -101,6 +101,8 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 **Macro finding:** across all fifty reviews, Corey Haines is consistently stronger as planning/checklist/design prior art than as unchanged operational authority, while still containing meaningful bounded semantic candidates for unchanged use pending applicable package-security evidence. Recurring defects are fragmented action authorization, weak privacy/minimization/consent/retention boundaries, unsupported or volatile quantitative marketing/platform claims, and incomplete safeguards around persuasive or external-action workflows. Upstream evals are intended-behavior evidence, never behavioral validation.
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
+
+**Kusto exact-version candidate review (2026-10-27):** Three newly eligible Microsoft Kusto packages have full-package static **REJECT unchanged** companions at candidate revision `61fe0305` ([macro review](docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md)); 23/26 new candidate packages still lack decisive full static review, and 76 changed packages remain to requalify. The current-version semantic frontier is 99; the registered 186/186 July pin is unchanged. A live verification-tree count corrected third-party companion accounting from 721 to 724 before this tranche; three candidate-version rejection companions bring the persisted total to **727**, without admission, security or behavioral promotion.
 
 ## Active Microsoft freshness frontier (issue #400, 2026-10-27)
 

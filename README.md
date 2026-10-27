@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-721-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-727-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -39,8 +39,10 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 **Microsoft freshness (2026-10-27):** The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible first-class packages** at upstream `61fe0305ea70389ed8705eec6026a786f57865cf`: 212 physical `SKILL.md` paths minus three non-frontmattered App Onboard phase references and one exact four-blob Application Insights mirror. Crosswalk: **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned = 208**. Frozen changed-existing screening is **76/76**, but **102 candidate packages still require current-standard exact-version qualification** (76 changed + 26 new); four removed paths lack proven successors. The registered July pin remains **186/186** complete at its own revision. No pin, admission, governed verification, security, or behavioral state changed; issue #400 stays open.
 
+**Kusto exact-version candidate review (2026-10-27):** Three newly eligible Microsoft Kusto packages have full-package static **REJECT unchanged** companions at candidate revision `61fe0305` ([macro review](docs/reviews/2026-10-27-microsoft-kusto-three-exact-static-rejections.md)); 23/26 new candidate packages still lack decisive full static review, and 76 changed packages remain to requalify. The current-version semantic frontier is 99; the registered 186/186 July pin is unchanged. A live verification-tree count corrected third-party companion accounting from 721 to 724 before this tranche; three candidate-version rejection companions bring the persisted total to **727**, without admission, security or behavioral promotion.
 
-The registry contains **22 unique source identities** and **721 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply a package-security pass, behavioral validation, or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. Security state is recorded separately; for SkillSpector-compatible packages, new unchanged admission or refresh eligibility requires `passed` or explicitly `findings-reviewed` security evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
+
+The registry contains **22 unique source identities** and **727 persisted exact-version third-party verification companions**. `verified` means structured static semantic review of an exact version. It does **not** imply a package-security pass, behavioral validation, or automatic unchanged-use eligibility. `validated` additionally requires representative external behavioral/adversarial evidence. Security state is recorded separately; for SkillSpector-compatible packages, new unchanged admission or refresh eligibility requires `passed` or explicitly `findings-reviewed` security evidence. `rejected` and `retired` remain useful bounded prior art but are excluded from normal unchanged selection.
 
 | Source family | Current-standard state |
 |---|---:|

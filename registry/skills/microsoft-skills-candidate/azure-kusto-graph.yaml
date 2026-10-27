@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-kusto-graph
+display_name: Microsoft azure-kusto-graph candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-kusto-graph-skills/skills/azure-kusto-graph/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 9d9ea93a2ffb1148a36c62d1e1a6cdc8fb731de7
+skill_md_blob_sha: c178ce599f816bf6cb35a749582fd71dab5d5f69
+package_file_count: 4
+permission_tier: security-telemetry-read-disclosure-and-optional-mutation
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: 'Kusto cluster/database; kusto_query and schema/cluster/database MCP tools; references/EXAMPLES.md, references/SCENARIOS.md and shared references/KUSTO_EXPLORER_LAUNCH.md; optional IRQL siblings.'
+purpose: 'Translate working KQL tabular results into transient graph patterns, paths, components or persistent graph models.'
+trigger_nontrigger: 'Existing KQL results and a requested graph analysis; not general natural-language KQL conversion.'
+authority_finding: 'Graph model/snapshot create-alter/drop explicitly requires confirmation, but security/authentication telemetry retrieval, query execution and result disclosure lack separate tenant, dataset, data-minimization and recipient authorization.'
+privacy_finding: 'Authentication events, host/user identities, process and network telemetry can reveal sensitive incident data.'
+import_eligibility: adaptation-extraction-reference-only
+rationale: 'REJECT unchanged: strong edges-first graph construction, path/component and Kusto Explorer guidance; persistent mutations have approval warnings, but read/query/disclosure of private security data is not separately authorized. Extract graph templates and explicit mutation confirmations with host-enforced scoped data consent.'

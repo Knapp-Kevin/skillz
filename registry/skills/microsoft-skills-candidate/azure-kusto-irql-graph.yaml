@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: azure-kusto-irql-graph
+display_name: Microsoft azure-kusto-irql-graph candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql-graph/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 0a36fe4d04e0075da9cada150482a42f661db155
+skill_md_blob_sha: 285dc22f943a9b1bdf4f48bd2b861fbaba2273bf
+package_file_count: 4
+permission_tier: security-telemetry-read-disclosure-and-optional-mutation
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: 'Kusto Explorer; Azure MCP kusto_query; deployed Lift_To_Graph, Graph_Render_View and optional Graph_Fold_By_Property; references/DEPLOY_IRQL_FUNCTIONS.md, references/EXAMPLES.md, shared KUSTO_EXPLORER_LAUNCH.md; external icon URLs.'
+purpose: 'Map supplied KQL/IRQL rows into Lift_To_Graph visualizations with optional fold/extract/enrich functions.'
+trigger_nontrigger: 'Existing KQL/IRQL query and requested icon-decorated graph mapping; not generic graph-match or NL-to-KQL generation.'
+authority_finding: 'Requires confirmation for missing-function deployment but references contain .create-or-alter function commands; private auth/email/process data reads, enrichment, query execution and output disclosure lack independent scoped consent.'
+privacy_finding: 'Graph props include usernames, IPs, email subject/recipients, command lines and user agents; external icon URLs introduce network dependency and disclosure considerations.'
+import_eligibility: adaptation-extraction-reference-only
+rationale: 'REJECT unchanged despite 15/20: missing sensitive-data retrieval/disclosure authorization is a hard fail. Preserve schema-aware mapping and stored-function preflight; adapt with explicit tenant/dataset/data/recipient boundaries and separate deployment approval.'
