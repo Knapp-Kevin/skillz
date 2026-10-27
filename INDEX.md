@@ -53,6 +53,8 @@ Dan Dewhurst Story Skills is **23/23 current-standard complete** at `b113a8298ae
 
 Corey Haines Marketing Skills remains **50/50 current-standard complete**. The final macro tranche adds `sales-enablement`, `schema`, `seo-audit`, and `site-architecture` as **VERIFIED exact-version static reviews** and rejects `revops`, `signup`, `sms`, `social`, and `video` unchanged while preserving adaptation/extraction/reference value. Behavioral validation remains `not-run`.
 
+**Candidate freshness note (2026-10-27):** Microsoft July pin remains 186/186; separate upstream screening is 56/76 changed-existing with 20 remaining, 22/22 raw additions classified, four removals unresolved, and no source-pin or inventory change. See [bounded Foundry/Azure AI review](docs/reviews/2026-10-27-microsoft-foundry-gateway-eight-freshness.md). This static catalog does not treat candidate screenings as persisted governed verification companions.
+
 ## First-party skills by purpose
 
 ### Planning & Productivity

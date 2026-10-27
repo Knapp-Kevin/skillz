@@ -72,29 +72,131 @@
     "microsoft_typescript_direct_package_denominator": 25
   },
   "first_party_categories": {
-    "planning-productivity": ["daily-briefing", "decision-log", "inbox-triage", "learning-plan", "task-surface", "week-in-review"],
-    "writing-communication": ["brief-writer", "deck-outline", "devlog-draft", "handoff-writer", "standup-writer"],
-    "research-analysis": ["compare", "deep-dive", "fact-check", "paper-digest"],
-    "software-repositories": ["repo-doctor", "repo-pulse", "todo-harvester"],
-    "agent-operations-security": ["agent-home-doctor", "agent-postmortem", "automation-receipts", "mcp-vetting", "permissions-review", "session-continuity"],
-    "monitoring-intelligence": ["claude-pulse", "deepseek-pulse", "gemini-pulse", "github-pulse", "glm-pulse", "governance-pulse", "hf-pulse", "inference-pulse", "kimi-pulse", "llama-pulse", "mcp-pulse", "memory-pulse", "mistral-pulse", "openai-pulse", "perplexity-pulse", "qwen-pulse", "xai-pulse"],
-    "business-career": ["career-radar", "finance-review", "smallbiz-ops"]
+    "planning-productivity": [
+      "daily-briefing",
+      "decision-log",
+      "inbox-triage",
+      "learning-plan",
+      "task-surface",
+      "week-in-review"
+    ],
+    "writing-communication": [
+      "brief-writer",
+      "deck-outline",
+      "devlog-draft",
+      "handoff-writer",
+      "standup-writer"
+    ],
+    "research-analysis": [
+      "compare",
+      "deep-dive",
+      "fact-check",
+      "paper-digest"
+    ],
+    "software-repositories": [
+      "repo-doctor",
+      "repo-pulse",
+      "todo-harvester"
+    ],
+    "agent-operations-security": [
+      "agent-home-doctor",
+      "agent-postmortem",
+      "automation-receipts",
+      "mcp-vetting",
+      "permissions-review",
+      "session-continuity"
+    ],
+    "monitoring-intelligence": [
+      "claude-pulse",
+      "deepseek-pulse",
+      "gemini-pulse",
+      "github-pulse",
+      "glm-pulse",
+      "governance-pulse",
+      "hf-pulse",
+      "inference-pulse",
+      "kimi-pulse",
+      "llama-pulse",
+      "mcp-pulse",
+      "memory-pulse",
+      "mistral-pulse",
+      "openai-pulse",
+      "perplexity-pulse",
+      "qwen-pulse",
+      "xai-pulse"
+    ],
+    "business-career": [
+      "career-radar",
+      "finance-review",
+      "smallbiz-ops"
+    ]
   },
   "source_roles": {
-    "pinned-reference-corpus": ["anthropic-skills", "anthropic-knowledge-work-plugins", "vercel-agent-skills", "microsoft-skills", "microsoft-azure-skills", "aws-agent-toolkit", "mattpocock-skills", "addyosmani-agent-skills", "openhands-extensions", "cline-skills", "cloudflare-skills", "google-agents-cli"],
-    "tracked-corpus": ["cole-medin-skills", "david-ondrej-skills", "bm629-agent-skills", "openclaw-agent-skills", "archieindian-superpowers", "corey-haines-marketing-skills", "jwynia-agent-skills", "danjdewhurst-story-skills"],
-    "normative-spec": ["agentskills-spec"],
-    "dynamic-discovery": ["github-awesome-copilot"]
+    "pinned-reference-corpus": [
+      "anthropic-skills",
+      "anthropic-knowledge-work-plugins",
+      "vercel-agent-skills",
+      "microsoft-skills",
+      "microsoft-azure-skills",
+      "aws-agent-toolkit",
+      "mattpocock-skills",
+      "addyosmani-agent-skills",
+      "openhands-extensions",
+      "cline-skills",
+      "cloudflare-skills",
+      "google-agents-cli"
+    ],
+    "tracked-corpus": [
+      "cole-medin-skills",
+      "david-ondrej-skills",
+      "bm629-agent-skills",
+      "openclaw-agent-skills",
+      "archieindian-superpowers",
+      "corey-haines-marketing-skills",
+      "jwynia-agent-skills",
+      "danjdewhurst-story-skills"
+    ],
+    "normative-spec": [
+      "agentskills-spec"
+    ],
+    "dynamic-discovery": [
+      "github-awesome-copilot"
+    ]
   },
-  "interpretation_order": ["user-fit", "exact-version-quality", "operational-fit", "skill-freshness", "provenance-source-context"],
+  "interpretation_order": [
+    "user-fit",
+    "exact-version-quality",
+    "operational-fit",
+    "skill-freshness",
+    "provenance-source-context"
+  ],
   "maintenance": {
     "mode": "hand-maintained-static-snapshot",
     "repository_owned_generator": false,
     "repository_owned_runtime": false,
-    "canonical_companion_paths": ["registry/skills", "registry/verification"],
+    "canonical_companion_paths": [
+      "registry/skills",
+      "registry/verification"
+    ],
     "latest_reconciliation": "2026-10-12: Passive architecture clarification staged on PR #408. No corpus admission or count changes; registered sources, semantic review counts, and current-standard source denominators remain unchanged. Historic SkillSpector CI run evidence is retained as version-bound reference, while repository-owned CI is removed in favor of host-executed assessments.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
-    "security_assessment_executor": "authorized-external-host"
+    "security_assessment_executor": "authorized-external-host",
+    "microsoft_skills_freshness": {
+      "observed_date": "2026-10-27",
+      "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_current_standard": "186/186",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "frozen_changed_existing_screened": 56,
+      "frozen_changed_existing_denominator": 76,
+      "frozen_changed_existing_remaining": 20,
+      "frozen_raw_additions_classified": 22,
+      "frozen_raw_additions_total": 22,
+      "removed_paths_unresolved": 4,
+      "latest_eligible_denominator": "unresolved",
+      "admitted_delta": 0,
+      "security_and_behavioral_candidate_validation": "not-run",
+      "review": "docs/reviews/2026-10-27-microsoft-foundry-gateway-eight-freshness.md"
+    }
   }
 }

@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "type": "bounded-exact-version-candidate-freshness-screening",
+  "observed_date": "2026-10-27",
+  "repo_main_start": "222859cf368fd7be87d4c3e8ec935ef5b05b5c0c",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_crosswalk": "registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json",
+  "scope": "Eight distinct changed-existing governed Microsoft Foundry/Azure AI candidates; no admission or pin change",
+  "frontier": {
+    "frozen_changed_existing_before": 48,
+    "screened_this_tranche": 8,
+    "frozen_changed_existing_after": 56,
+    "frozen_changed_existing_denominator": 76,
+    "remaining": 20,
+    "registered_pin_governed_complete": "186/186",
+    "frozen_raw_additions_classified": "22/22",
+    "four_removed_paths_unresolved": true,
+    "latest_eligible_denominator": "unresolved"
+  },
+  "shared_risk": "Foundry parent includes 5 nested first-class packages and 220 files; parent tree changed after frozen October comparison. Source-owned installers, Azure CLI/MCP and plugin hooks remain upstream reference, not skillz runtime. No independent scanner/behavioral evidence.",
+  "count": 8,
+  "dispositions": {
+    "rejected_unchanged": 6,
+    "reference_only_pending_full_review": 2
+  },
+  "registered_accounting_delta": 0,
+  "records": [
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/SKILL.md",
+      "manifest_blob_sha": "14fd2bc585abbdd62bbb3231bfd62e7eec115c6b",
+      "registered_manifest_blob_sha": "49fe35776ef5ae8d8c028b8f28d5d11b00a47df2",
+      "package_tree_sha": "2311f81bfa096aaefd50068b61443cb92ba70bfe",
+      "registered_package_tree_sha": "75f1fef94394b6ffde32259d0268f2d3381938dc",
+      "package_blob_file_count": 220,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.2.31",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Foundry agent/resource/model creation, deployment, observation, optimization and operations; not generic Azure App Service or Functions.",
+      "package_and_shared_dependencies": "Azure CLI/azd and microsoft.foundry extension, Azure MCP, hosted cloud accounts, extensive source-owned scripts and nested references; five nested first-class SKILL.md children share this subtree.",
+      "controlled_tags": {
+        "use_case": [
+          "agent-development",
+          "deployment",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "orchestration",
+          "reference-heavy",
+          "tool-routing"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "MANDATORY pre-workflow script installs microsoft.foundry azd extension when absent without obtaining installation authorization. Parent also routes production deployments, data/trace processing, role changes, hosted agents and voice workflows; a project selection or tool availability is not action authorization.",
+      "privacy_sensitive_data": "Hosted agent traces, voice streams, datasets and metadata may contain sensitive user or tenant data; scope and disclosure consent not established across child workflows.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Parent manifest and dependency installer shell/PowerShell inspected; latest parent subtree has 220 blobs and 5 nested first-class manifests. Candidate parent tree changed again after frozen October comparison, including new voice/managed-harness references.",
+      "adaptation_extraction_value": "Extract workflow routing, explicit azd context resolution and environment-specific metadata discipline; require install, data, cost and production-change gates.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry-finetuning",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/finetuning/SKILL.md",
+      "manifest_blob_sha": "428b2f3648500aede49730c5e233b7c5dd554ac5",
+      "registered_manifest_blob_sha": "68ad2dc82e4e38b5bdc07170ae1a2aa477b0a277",
+      "package_tree_sha": "91b3afacfb2c855870109207d0b584e8e2993f8e",
+      "registered_package_tree_sha": "f4fce572b9e1db4e7880315bf39045d03f42a0fd",
+      "package_blob_file_count": 34,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "0.0.0-placeholder",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Fine-tuning SFT/DPO/RFT, datasets, graders, training jobs, evaluation and deployment; not generic model deployment.",
+      "package_and_shared_dependencies": "Foundry project, Python/openai SDK, training data, hosted training jobs, source-owned submit/deploy/cleanup/evaluation scripts, 12 reference guides and five workflow guides.",
+      "controlled_tags": {
+        "use_case": [
+          "evaluation",
+          "agent-development",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "iterative",
+          "metric-driven"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "authority_finding": "Primary quickstart proceeds through data upload, billable training submission and deployment without distinct action-specific cost/data authorization. Bundled cleanup.py deletes uploaded files when --delete-files is supplied, with dry-run optional and no independent deletion approval.",
+      "privacy_sensitive_data": "Training and distillation datasets can contain private documents or PII; the primary procedure lacks an explicit upload/disclosure and retention gate.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest, quickstart workflow and cleanup.py inspected; complete package tree identity recorded, not every source file semantically reviewed.",
+      "adaptation_extraction_value": "Extract baseline-first, grader calibration, checkpoint comparison and reward-hacking checks; require explicit data, spend, deployment and deletion consent.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry-deploy-model",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/SKILL.md",
+      "manifest_blob_sha": "fd954ccf1ed94a451cf37a4770dff6f375ccb00e",
+      "registered_manifest_blob_sha": "322b342762abbcd86eb90a92b2c4cb7dccd6aac6",
+      "package_tree_sha": "5e60a08596808fd2dc6209ab309d682664d2e03c",
+      "registered_package_tree_sha": "6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9",
+      "package_blob_file_count": 17,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.0.0",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Route model deployment among preset/customize/capacity; not deletion or azd-managed project deployments.",
+      "package_and_shared_dependencies": "Azure CLI, Foundry project and quota APIs; nested preset, customize and capacity first-class subskills plus source-owned scripts.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "deployment",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "tool-routing",
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Router explicitly confirms target project before deployment, a valuable authorization pattern. However the confirmation omits cost/RAI policy and does not by itself qualify downstream preset resource creation or billable capacity. Full nested script/security review pending.",
+      "privacy_sensitive_data": "Tenant project names, quota, subscription and deployment topology require scoped disclosure.",
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_REVIEW",
+      "semantic_status": "unverified",
+      "score_total": 15,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest, three nested manifests and selected workflow references inspected; 17-blob subtree includes three nested first-class skills, counted separately without double exposure.",
+      "adaptation_extraction_value": "Keep explicit target confirmation and quota checks; require cost/RAI and actual deploy approval per downstream action.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry-deploy-model-capacity",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md",
+      "manifest_blob_sha": "46935315ebdf18fbc93771efb72e7f8f9e9980ac",
+      "registered_manifest_blob_sha": "46935315ebdf18fbc93771efb72e7f8f9e9980ac",
+      "package_tree_sha": "547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd",
+      "registered_package_tree_sha": "edb0b5bb776569c8941e4ed3755d9f65e32c5b80",
+      "package_blob_file_count": 5,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.0.0",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Capacity/region/project discovery, not deployment or quota increases.",
+      "package_and_shared_dependencies": "Azure CLI, jq, Python3 and source-owned bash/PowerShell scripts, Azure ARM capacity/quota API.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "research",
+          "planning"
+        ],
+        "lifecycle": [
+          "discovery",
+          "planning"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "tool-assisted",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "discover_and_rank.sh builds python3 -c source by interpolating unescaped model parameters and API JSON into Python string literals, creating a potential code-injection boundary if data contains quote/code delimiters. Also queries all projects in the active subscription and prints sample names without explicit disclosure scope. No exploit executed.",
+      "privacy_sensitive_data": "Project names and cross-region subscription capacity exposed to output without data minimization or approved scope.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Exact manifest is byte-identical to July but package tree changed; source-owned bash discovery script read. This is why manifest-only identity is insufficient.",
+      "adaptation_extraction_value": "Extract quota-versus-platform-capacity distinction and ranked planning table; pass JSON as data through stdin/file or safe parameterization and scope output.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry-deploy-model-customize",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md",
+      "manifest_blob_sha": "eb4887175301b4751cca679e11863d1ba6f34bc9",
+      "registered_manifest_blob_sha": "7c94d5617bf41dd57289fbd6d7e9cf7ea0d811c2",
+      "package_tree_sha": "118035ed1dad47d2389464e2968c92923dc2c7b5",
+      "registered_package_tree_sha": "3ff8e09076dcc5337257a70845fb509b4ab229a0",
+      "package_blob_file_count": 4,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.0.1",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Interactive version/SKU/capacity/RAI/policy deployment, not quick preset deployment.",
+      "package_and_shared_dependencies": "Azure CLI/ARM REST, subscription quota, Foundry project, workflow and guides references.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "deployment",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted",
+          "evidence-first"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Strong configuration summary and user confirmation before deployment, plus live SKU/quota checks. However confirmation does not explicitly disclose estimated cost/PTU commitment or implications of content-safety policy changes; bundled troubleshooting includes deletion command without separate deletion gate.",
+      "privacy_sensitive_data": "Tenant quota and resource details; optional provider data and policy changes need scoped approval.",
+      "candidate_disposition": "REFERENCE_ONLY_PENDING_FULL_REVIEW",
+      "semantic_status": "unverified",
+      "score_total": 15,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest and customize-workflow.md inspected, including ARM PUT and RAI/upgrade policy paths; remaining guides and security scan not qualified.",
+      "adaptation_extraction_value": "Extract explicit configuration review, live quota checks and fallback; add spend, policy-change and destructive-action authorization.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "microsoft-foundry-deploy-model-preset",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/preset/SKILL.md",
+      "manifest_blob_sha": "61fc18b28031388c58e8e517b1fb93dae491cca5",
+      "registered_manifest_blob_sha": "09fcc94cba4c178ec08650b6e6e1da32437c2701",
+      "package_tree_sha": "643a38ce95fbe3e737002335bd52cb2b164b4380",
+      "registered_package_tree_sha": "2d35e916a63fda4c49eb6f34d697e74ad00d82b9",
+      "package_blob_file_count": 4,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.0.1",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Quick model deployment with automatic region/capacity defaults, not custom PTU/version configuration.",
+      "package_and_shared_dependencies": "Azure CLI, Foundry project, capacity API, generate_deployment_name script and workflow reference.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "deployment"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "metric-driven",
+          "iterative"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Fast path says 'Deploy immediately' and workflow creates a project when needed and deploys with 50% of available capacity without an explicit action-specific spend and resource-creation approval in this standalone skill. Parent target confirmation cannot be assumed when invoked alone.",
+      "privacy_sensitive_data": "Cross-region project discovery exposes tenant names; model routing can affect data residency.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest and references/workflow.md inspected; four-blob package tree recorded, no cloud execution.",
+      "adaptation_extraction_value": "Extract capacity discovery and quota-aware fallback only; require explicit resource, region, cost and data-residency consent.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "azure-ai",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-ai/SKILL.md",
+      "manifest_blob_sha": "6ba99c7a088a27f5c1059f00b8ce9f323a56a984",
+      "registered_manifest_blob_sha": "6cce5b319f57f98f81772e4c8627c573d89e8571",
+      "package_tree_sha": "34c27c0761f1a2f730d45ddc1f395c6036723754",
+      "registered_package_tree_sha": "8a168336305c56e0eea0d89aced7d8a0001de3b5",
+      "package_blob_file_count": 16,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "1.2.2",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Azure AI Search, Speech, OpenAI, OCR, Document Intelligence service selection.",
+      "package_and_shared_dependencies": "Azure MCP server, Azure service accounts, SDK references for Python/TypeScript/.NET/Java.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "research",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "tool-routing"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Primary routing recommends speech_transcribe and speech_synthesize and search_query without a data-transmission or tenant-document access/disclosure gate. Tool availability or a transcription request alone does not establish external transmission permission for sensitive audio/docs.",
+      "privacy_sensitive_data": "Audio, transcripts, indexed documents and OCR can carry PII, health or identity data; consent and minimization are unspecified.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest and reference index inspected; 16-blob package tree identity established; SDK references not fully semantically requalified.",
+      "adaptation_extraction_value": "Extract service routing and SDK pointers; add explicit source/data classification and transmission authorization.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "id": "azure-aigateway",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-aigateway/SKILL.md",
+      "manifest_blob_sha": "2a02dbfc3871846ede816112878cf65f7c8427ca",
+      "registered_manifest_blob_sha": "a8df9f45fae25501acf7fee988047f808d191fa5",
+      "package_tree_sha": "8529348e07a31f48a46f0345a34fcaae9b27e7d0",
+      "registered_package_tree_sha": "fb881f68bdc6d638438b46b04ab6d81f91e985ba",
+      "package_blob_file_count": 9,
+      "package_tree_enumeration_truncated": false,
+      "manifest_frontmatter": true,
+      "manifest_version": "3.2.1",
+      "first_class_identity": "governed canonical crosswalk; nested first-class packages counted once by their own canonical paths",
+      "purpose_trigger_nontrigger": "Azure APIM AI gateway backend, content safety, token limits, routing, monitoring and MCP policies.",
+      "package_and_shared_dependencies": "Azure CLI, APIM instance, Cognitive Services, ARM RBAC, SDK/policy/pattern references.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "security",
+          "deployment"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Hero instructions print APIM subscription keys via 'az apim subscription keys list' and apply backend creation and role assignments without scoped approval. Policies may change production routing/content safety and emit subscription-level metrics without explicit privacy/retention authorization.",
+      "privacy_sensitive_data": "Subscription keys, tenant IDs, usage metrics and potentially sensitive request/response metadata.",
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "rationale": "Manifest, patterns.md and policies.md inspected; nine-blob package tree established, no cloud calls.",
+      "adaptation_extraction_value": "Extract policy ordering and per-subscription rate-limit patterns; secure credential handling, change approval and privacy/retention boundaries are required.",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected decisive bundled-reference static screening; NOT complete package semantic verification"
+    }
+  ]
+}
