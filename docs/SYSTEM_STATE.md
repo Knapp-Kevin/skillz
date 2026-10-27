@@ -4,7 +4,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-12 |
+| **Last updated** | 2026-10-26 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
