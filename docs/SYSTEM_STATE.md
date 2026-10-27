@@ -11,7 +11,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **743** |
+| **Persisted third-party review companions** | **746** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -32,9 +32,9 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
-**Microsoft freshness (2026-10-27):** The [canonical denominator review](reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible** packages at candidate `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical manifests minus 3 non-first-class phase references and 1 exact mirror): **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. The 76 changed-existing packages have been screened, not fully requalified. **19/26 new candidates** have complete exact-version static companions (**4 VERIFIED semantic only, 15 REJECT unchanged**); **7 new + 76 changed = 83** packages still need full current-version qualification. Four removed paths require successor/retirement decisions. Registered July remains **186/186** at its original pin; no candidate security scan, behavioral validation, source-pin movement or admission was claimed.
+**Microsoft freshness (2026-10-27):** The [canonical denominator review](reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible** packages at candidate `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical manifests minus 3 non-first-class phase references and 1 exact mirror): **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. The 76 changed-existing packages have been screened, not fully requalified. **22/26 new candidates** have complete exact-version static companions (**4 VERIFIED semantic only, 18 REJECT unchanged**); **4 new + 76 changed = 80** packages still need full current-version qualification. Four removed paths require successor/retirement decisions. Registered July remains **186/186** at its original pin; no candidate security scan, behavioral validation, source-pin movement or admission was claimed.
 
-**Candidate full-package static reviews (2026-10-27):** Three Kusto candidates were rejected, eight AKS/Advisor/Cost candidates were reviewed (4 VERIFIED semantic only / 4 REJECT unchanged), and [eight authority/privacy candidates](reviews/2026-10-27-microsoft-authority-eight-exact-static.md) were rejected unchanged after all 52 bundled blobs plus three shared hook files were inspected. **19/26 new candidates** reviewed, **83** candidate-version full reviews remain. Persisted third-party verification companions: **735 before this tranche + 8 = 743**. No admissions, scanner execution, behavioral evidence or pin changes.
+**Candidate full-package static reviews (2026-10-27):** Three Kusto rejections, eight AKS/Advisor/Cost reviews (4 VERIFIED semantic only / 4 REJECT unchanged), eight [authority/privacy rejections](docs/reviews/2026-10-27-microsoft-authority-eight-exact-static.md), and three [AKS/readiness/Entra rejections](docs/reviews/2026-10-27-microsoft-aks-prereq-entra-three-exact-static.md) after complete bundled-file inspection. **22/26 new candidates** now have full static companions (4 VERIFIED semantic only / 18 REJECT unchanged); **4 new + 76 changed = 80** candidate-version full reviews remain. Persisted third-party verification companions: **746 before this tranche + 3 = 746**. No admission, scanner execution, behavioral evidence or pin changes.
 
 ## Current admitted-source accounting
 
