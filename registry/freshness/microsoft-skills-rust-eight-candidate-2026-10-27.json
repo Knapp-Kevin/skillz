@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "kind": "exact_version_candidate_freshness_review",
+  "source": "https://github.com/microsoft/skills",
+  "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+  "registered_static_complete": "186/186 at registered pin",
+  "source_root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+  "frozen_frontier_before": {
+    "unchanged": 106,
+    "changed": 76,
+    "removed": 4,
+    "raw_added": 22,
+    "changed_screened": 24
+  },
+  "frozen_frontier_after": {
+    "unchanged": 106,
+    "changed": 76,
+    "removed": 4,
+    "raw_added": 22,
+    "changed_screened": 32,
+    "changed_remaining": 44
+  },
+  "latest_eligible_denominator": "unknown",
+  "candidate_to_latest_compare": {
+    "commits": 20,
+    "files": 206,
+    "rust_paths_changed": 0
+  },
+  "reviews": [
+    {
+      "canonical_id": "azure-cosmos-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-cosmos-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "4464932137813f02b495a56f9db25c3d17125067",
+      "candidate_manifest_blob": "6180d7aa40918ee63ce93811fedd3f175e29afd7",
+      "registered_package_tree_sha": "dd2b4d34ed092a9719d75a114cb44e65ef91bb30",
+      "candidate_package_tree_sha": "ed1e2001dc9d80548aa651ad7390b8eeb6df8ede",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_data_cosmos",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-cosmos-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Document create/patch/replace/delete without database/item authorization",
+      "controlled_tags": {
+        "use_case": [
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Partition-key discipline, official crate, Entra RBAC",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-eventhub-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-eventhub-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "6b728d857b1100fe2f8b43c4c07c6a2d041c7665",
+      "candidate_manifest_blob": "39e8ddaaa38e6c4e94757250eb26ef2e29ef763d",
+      "registered_package_tree_sha": "89d58ddfed067e9997318a6a36a979f0257715f2",
+      "candidate_package_tree_sha": "e7f76b1759742674de009cc3d75bb5668da0d004",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_messaging_eventhubs",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-eventhub-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Sends billable events and prints received event bodies without scoped payload/destination approval",
+      "controlled_tags": {
+        "use_case": [
+          "communication"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 10,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Batching, consumer offsets, least-privilege RBAC",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-identity-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-identity-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "317dc60da7d51ca0d479fb7720fc81b38630d05a",
+      "candidate_manifest_blob": "bbcdd6573d0efede169d7a35d0e9603b86f25241",
+      "registered_package_tree_sha": "70fdb3c2195f292aa8178aad5ab92f3fd62c27ab",
+      "candidate_package_tree_sha": "2a047dcea30ab4010b31c88846fa987716d21456",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_identity",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-identity-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Key Vault authentication example fetches and prints secret value; credential access is not disclosure authorization",
+      "controlled_tags": {
+        "use_case": [
+          "security"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Rust-specific credential selection and managed identity guidance",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-keyvault-certificates-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-keyvault-certificates-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "04363cf5ad7d2c133ccb0d349db94fe6776118ac",
+      "candidate_manifest_blob": "5f12b3391b353becfa8a42a142097f63290ce3ea",
+      "registered_package_tree_sha": "f219e6f1cba6f4f1d2578ca13c0dc93f2a8124ee",
+      "candidate_package_tree_sha": "0df025484a282e71a0bee75de5d3fdc4e1f83e3e",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_security_keyvault_certificates",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-keyvault-certificates-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Certificate issuance, signing, property updates and deletion without vault/name/change-window approval",
+      "controlled_tags": {
+        "use_case": [
+          "security"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Issuance poller, certificate versions and scoped roles",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-keyvault-keys-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-keyvault-keys-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "c82708f0d858473533f8be28619e1d5bb0e0997c",
+      "candidate_manifest_blob": "46c85d4db9dc67761ca7b143d6c52af524c5f379",
+      "registered_package_tree_sha": "24681f9fccb3030c14ef58f0f4e2a9b368cdb10e",
+      "candidate_package_tree_sha": "14b39462ab5460308b52aafb3cde010e9e0da8b8",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_security_keyvault_keys",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-keyvault-keys-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Unapproved key lifecycle mutations; example DEK from rand::random::<u32>().to_le_bytes() is four bytes, at most 32-bit entropy, unsuitable as symmetric data-encryption key",
+      "controlled_tags": {
+        "use_case": [
+          "security"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 0
+      },
+      "score": 8,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Version-aware wrap/unwrap and HSM pattern only after replacing weak DEK",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-keyvault-secrets-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-keyvault-secrets-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "e9a908362d0ebb80cba0c885910264bd08d66d39",
+      "candidate_manifest_blob": "a730a58d8c2a300c75cfc1abd43500b1e50ea977",
+      "registered_package_tree_sha": "e7f544367d2b9f788c91655b4b6787be8e694bfc",
+      "candidate_package_tree_sha": "8549b0a1e53fdb031fd4ba5f2fbecf541178a8e9",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_security_keyvault_secrets",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-keyvault-secrets-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Prints retrieved secret values and error-path secret values; set/delete without explicit approval",
+      "controlled_tags": {
+        "use_case": [
+          "security"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 10,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Metadata pagination, RBAC and secret-safe external credential path",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-storage-blob-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-storage-blob-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "94abf8afbad19acbbc27b1367214fad98052381e",
+      "candidate_manifest_blob": "3e40722372b75c96602ca3801b83e327b6db5e42",
+      "registered_package_tree_sha": "75d6bae5029c6569333639cc5b51c0f96511a3e5",
+      "candidate_package_tree_sha": "1d22a03690fb949dfcdb9e1ce298e0059a90989b",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_storage_blob",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-storage-blob-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Blob upload/download/delete and container creation without object scope, data classification or retention approval",
+      "controlled_tags": {
+        "use_case": [
+          "cloud"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Pagination, storage error handling and official client patterns",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    },
+    {
+      "canonical_id": "azure-storage-queue-rust",
+      "canonical_manifest": ".github/plugins/azure-sdk-rust/skills/azure-storage-queue-rust/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "registered_manifest_blob": "4ce6336f70c96323d064db7dc0486d6a621af9c9",
+      "candidate_manifest_blob": "394fb2c299773253527edcdf8f6505139edd8f27",
+      "registered_package_tree_sha": "be9d64723692c886bd698fd81c90b01cd26dd24f",
+      "candidate_package_tree_sha": "a72fa4d7cea88cc8e0ccf45e5231db6863fe4ff2",
+      "tree_identity_basis": "Full frozen 2026-10-10 candidate subtree SHA; candidate-to-latest 20-commit/206-file compare has no azure-sdk-rust path changes",
+      "source_license": "MIT root and manifest; transitive SDK/service terms not independently audited",
+      "declared_dependency_crates": [
+        "azure_storage_queue",
+        "azure_identity",
+        "tokio"
+      ],
+      "bundled_reference_paths": [],
+      "package_boundary": "Single first-class SKILL.md in previously enumerated package tree; external documentation links not bundled",
+      "trigger": "Rust Azure SDK implementation for azure-storage-queue-rust",
+      "nontrigger": "No production operation, secret disclosure, sensitive data transmission, money-bearing or destructive action without explicit scope/authorization",
+      "authority_and_privacy_findings": "Queue send/delete and payload printing without message-scope authority or processing-completion gate",
+      "controlled_tags": {
+        "use_case": [
+          "communication"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 10,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "prior_art_disposition": "EXTRACT / ADAPT only",
+      "preserved_value": "Pop receipts, message lifecycle and role scoping",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "freshness": "Candidate only; registered-pin companions unchanged",
+      "execution_performed": false
+    }
+  ],
+  "admission_delta": 0,
+  "verification_companion_delta": 0,
+  "security_pass_delta": 0,
+  "behavioral_validation_delta": 0
+}
