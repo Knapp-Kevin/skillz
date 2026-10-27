@@ -102,7 +102,7 @@
       "canonical_manifest": ".github/plugins/azure-skills/skills/azure-compute/SKILL.md",
       "manifest_blob_sha": "8a1d1eabfe5c336f7977afc34439779f76612189",
       "package_tree_sha": "eac48d13e7b19366050bd7a176c7b5189ad34cdb",
-      "package_blob_file_count": 47,
+      "package_blob_file_count": 41,
       "manifest_frontmatter": true,
       "controlled_tags": {
         "use_case": [
@@ -175,7 +175,7 @@
       "canonical_manifest": ".github/plugins/azure-skills/skills/azure-deploy/SKILL.md",
       "manifest_blob_sha": "187e0206cdff0e0af4324761a0eca8aed2fc5ab6",
       "package_tree_sha": "782b021717e199423ed37720a6ba5436b2951aa7",
-      "package_blob_file_count": 43,
+      "package_blob_file_count": 41,
       "manifest_frontmatter": true,
       "controlled_tags": {
         "use_case": [
@@ -246,7 +246,7 @@
       "canonical_manifest": ".github/plugins/azure-skills/skills/azure-enterprise-infra-planner/SKILL.md",
       "manifest_blob_sha": "5bc6f5c5a894507b7f89d0d96edc57927780c690",
       "package_tree_sha": "6a82cbd081dc48dd74d5f726e2c032f8092fa3e4",
-      "package_blob_file_count": 42,
+      "package_blob_file_count": 41,
       "manifest_frontmatter": true,
       "controlled_tags": {
         "use_case": [
@@ -525,7 +525,7 @@
       "canonical_manifest": ".github/plugins/azure-skills/skills/azure-validate/SKILL.md",
       "manifest_blob_sha": "a90886aac989fc59fe8e28155d5d7c66369a669f",
       "package_tree_sha": "23c61eed8d0009d712d71904e21e3c4e0df4d6d0",
-      "package_blob_file_count": 31,
+      "package_blob_file_count": 27,
       "manifest_frontmatter": true,
       "controlled_tags": {
         "use_case": [
