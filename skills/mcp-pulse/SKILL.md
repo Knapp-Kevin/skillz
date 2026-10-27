@@ -26,6 +26,8 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
    The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
 
+   **Resolve source-query windows.** `sources.json` is inert source configuration. For each `github_search[].q` containing `{SINCE}`, substitute a UTC `YYYY-MM-DD` date at the beginning of the requested report window before querying GitHub. If the user supplied no window, use the preceding seven days and label that default in the report. GitHub date-only `created:>` filters are approximate window boundaries, not proof of complete coverage. Never submit a literal `{SINCE}` placeholder, execute the source file, or imply an unexecuted search succeeded; record unavailable tools and incomplete results as evidence gaps.
+
 2. **Fill gaps.** Fetch the spec changelog (the hard source — protocol changes are the deprecation-equivalent); run the searches, especially the security one — MCP server vulnerabilities are an active research area.
 3. **Synthesize.** Spec/SDK changes first with migration impact; security advisories second; then notable new servers (filter: does it unlock a capability we lack, or duplicate a connected one?); registry/ecosystem news.
 
