@@ -21,11 +21,11 @@ Static security review of an MCP server before it earns a connection. An MCP ser
 ## Execution Flow
 
 1. **Provenance.** Identify the maintainer and their organization, the repository's history and activity authenticity, license, and whether the server appears in an official registry listing. Unknown or pseudonymous maintainers cap the trust score per the evaluation framework's source-trust criterion.
-2. **Tool-surface enumeration.** From the server's source or manifest, list every tool it exposes with its declared parameters. Classify each tool by the permission tiers in `docs/evaluation-framework.md` (`read-only` through `destructive`). The server's overall tier is its highest-impact tool.
-3. **Data-flow review.** Determine what data leaves the machine and to which endpoints, where credentials live (env vars, config files, keychain) and how the server reads them, and what the server logs locally or remotely.
+2. **Tool-surface enumeration.** From the server's source or manifest, list every tool it exposes with its declared parameters. Classify each tool by impact tier: read-only, plan-only, generate, staging-write, production-write, identity, cost, or destructive. The server's overall tier is its highest-impact tool.
+3. **Data-flow review.** Inspect public source and authorized redacted configuration metadata to determine outbound endpoints, credential storage mechanisms and logging behavior. Do not read actual credential values, token-bearing URLs, private configuration contents or private logs without a separately authorized secure review path; record unknowns when redacted evidence is insufficient.
 4. **Injection exposure.** Check whether tool output feeds model context unsanitized — fetched web content, third-party API responses, or file contents that an attacker could seed with instructions. Note any sanitization or provenance-marking the server performs.
 5. **Version pinning and update channel.** Confirm a pinnable version exists (tag, hash, lockfile), identify the update mechanism, and flag auto-update behavior or install-time script execution.
-6. Deliver the verdict in the Output Format below: connect / connect-with-restrictions / do-not-connect, the assigned permission tier, and a recommended `registry/candidates.yaml` entry (status, tier, rationale) for a human to record.
+6. Deliver the verdict in the Output Format below: connect / connect-with-restrictions / do-not-connect, the assigned permission tier, and a recommended governed-intake record (status, tier, rationale) for a human to record when the host maintains such a registry.
 
 ## Output Format
 
@@ -60,13 +60,13 @@ rationale: <one sentence>
 
 These override the checklist format. A vetting report that leaks what it vets has failed at its own job.
 
-- **Never reproduce secret-shaped strings** from server configs, env examples, or docs (API keys, tokens, connection strings) — type + short prefix only; a credential visible in a candidate's repo is itself a security finding with a rotation recommendation.
+- **Never reproduce secret-shaped strings** from server configs, environment examples, or docs (API keys, tokens, connection strings, credential-bearing URLs), including prefixes of live values. Record credential type and affected location only; an exposed credential is a security finding with a recommendation for separately authorized rotation.
 - **Never fabricate a security posture.** If a dimension could not be checked (unreadable code, no advisories database, opaque distribution), the verdict line says `not established` for that dimension — an unchecked box is never a passed box.
 - **Unknown stays unknown.** Missing evidence lowers the confidence stated with the verdict; it is never filled with assumptions about what "a typical server" does.
 
 ## Notes
 
-- Never connect, install, or execute the server during vetting — static review of source and documentation only. A server that cannot be reviewed statically fails vetting by default.
+- Never connect, install, or execute the server during vetting. Access to nonpublic configuration or repositories requires explicit source-specific authorization, and a connection recommendation is never authorization to connect. A server that cannot be reviewed statically fails vetting by default.
 - Any single tool at `identity`, `cost`, or `destructive` tier means the whole server carries that tier; tiers do not average.
-- This skill recommends registry entries; it never writes to `registry/candidates.yaml` or the MCP config itself.
+- This skill recommends intake records; it never writes to an intake registry or the MCP configuration itself.
 - Re-vet on major version changes: a vetted server is vetted at a pinned version, not forever.

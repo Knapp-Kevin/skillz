@@ -3,19 +3,21 @@ skill_name: mcp-vetting
 source_id: local-skills
 local_path: "skills/mcp-vetting/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 806e79f593446ad15938249898e15230208f2d81
+content_blob_sha: aa79354448d800c97c577a74b1bc13f97c4c550c
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-26
 verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_basis: "individual-structured-static-review; exact-version manual scenario review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+package_security_status: not-run
 rubric: "docs/skill-verification.md"
-rubric_score: "19/20"
+rubric_score: "18/20"
 tags:
   use_case: [security, evaluation]
   lifecycle: [verification]
   characteristic: [evidence-first, risk-aware, source-driven, traceable, human-review]
   authority: [read-only]
   portability: [high]
-notes: "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+notes: "Static server provenance/tool/data-flow review using public source and authorized redacted metadata; no live credentials, connection, installation or execution."
+static_review_evidence: docs/reviews/2026-10-26-pr410-distinct-five-skill-review.md

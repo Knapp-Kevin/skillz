@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-12: PR #408 merged entirely passive architecture at 07a04794. PR #416 stages host-executed source collection corrections for 16 of 17 existing monitoring skills, with 16 refreshed exact-version review records and no admissions; 44 first-party, 721 third-party reviews, 22 sources remain unchanged. Thirteen packages passed the previous exact-head static gate; three external-reference coverage failures were clarified but final revisions await external host assessment. Behavioral validation not-run.",
+    "latest_reconciliation": "2026-10-26: PR #416 consolidates 16 passive monitoring-source corrections and 5 distinct first-party authorization/privacy remediations from #410. All 21 are existing skills; no admission or denominator change (44 first-party, 721 third-party exact-version reviews, 22 registered sources). The latest inference-pulse exact version remains semantic unverified; final-blob external package-security and independent integration review remain outstanding. No repository-owned CI, runtime, scanner, or scheduler.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host"

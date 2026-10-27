@@ -34,7 +34,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 
 ## Active first-party remediation
 
-PR #416 repairs a confirmed 16/17 monitoring-skills defect: live instructions still referenced a removed repository-owned pulse runner. Sixteen exact-version first-party semantic and provenance companions and the consolidated review index are refreshed; `claude-pulse` was already passive. No skills were added or removed: **44/44 first-party provenance, 721 third-party reviews, 22 registered sources** remain unchanged. A historical pinned SkillSpector workflow at PR head `25c338f` passed 13 of 16 changed packages; three returned incomplete external-file-reference coverage. Their wording has since been corrected, but the final three manifests are **not freshly scanned**. This is not behavioral validation or unchanged-reuse security clearance.
+PR #416 repairs the 16/17 monitoring-skill removed-runner defect and consolidates five additional first-party authorization/privacy remediations from #410. All 21 affected manifests remain existing skills, not new admissions. Sixteen pulse companions and five non-pulse provenance/verification companions are tied to their revised manifest blobs; the consolidated registry preserves both sets. Historical SkillSpector gate evidence applies to older revisions, not the final integration. The inference-pulse revised semantic state remains `unverified`; five non-pulse final-blob security states are `not-run`. External exact-version security assessment and independent acceptance remain outstanding; behavioral validation is `not-run`. First-party 44/44, third-party reviews 721, registered sources 22 remain unchanged.
 
 ## Current admitted-source accounting
 

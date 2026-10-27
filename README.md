@@ -27,7 +27,7 @@ The repository provides five surfaces:
 
 Third-party packages may contain their own scripts, tests, examples, fixtures, templates, or tools. Those remain upstream package material, not repository-owned execution machinery.
 
-**First-party maintenance frontier (2026-10-12):** [PR #416](https://github.com/Knapp-Kevin/skillz/pull/416) proposes replacing removed runner instructions in 16 of the 17 monitoring skills with host-driven collection. It revises existing knowledge only, with no new admissions or count changes; exact-version package-security review remains pending for the final changed manifests.
+**First-party remediation integration (2026-10-26):** [PR #416](https://github.com/Knapp-Kevin/skillz/pull/416) stages passive host-driven source retrieval for 16 of 17 monitoring skills and consolidates five non-pulse authorization/privacy hardenings formerly on #410. This changes 21 existing skills, not inventory counts. Exact-version external security assessment and independent acceptance remain outstanding.
 
 ## Core use
 
