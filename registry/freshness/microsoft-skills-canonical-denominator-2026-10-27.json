@@ -265,7 +265,7 @@
     }
   ],
   "qualification": {
-    "semantic": "candidate 76 changed screened but not promoted; 26 new/ungoverned require first governed companions; 106 exact-tree carry-forwards retain revision-bound evidence",
+    "semantic": "76 changed-existing packages screened but not fully requalified; 19/26 new/ungoverned have full exact-version static companions (4 verified semantic only, 15 rejected), 7 new require first full review; 106 exact-tree carry-forwards retain revision-bound evidence",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
