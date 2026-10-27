@@ -496,7 +496,7 @@
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "eed6bd85ed885da7277749e092fc24f77aabb7cb",
+      "content_blob_sha": "587313bab488dc27411f9e52c1c43516dc8f26f4",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -521,7 +521,7 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -560,7 +560,7 @@
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "71d6e8ebb361e6431ebb1d4bd045a2620e3cfb49",
+      "content_blob_sha": "0709d2f3392b5e63f1e91b98e805cb0e13a95d14",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -587,7 +587,7 @@
           "medium"
         ]
       },
-      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run.",
+      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
@@ -627,7 +627,7 @@
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cae0fe0493d2ead5d8de2f6dbd90fd1c46718df0",
+      "content_blob_sha": "38387fea604b6eb7d9e81b1e449b36f8ca1fc30c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -652,7 +652,7 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -691,7 +691,7 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c61be1b05b97cab0d969e9ed4afc8499bc2f636b",
+      "content_blob_sha": "6c676b7e9e45e82504d84fa4bbd56682830660b8",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -717,7 +717,7 @@
           "medium"
         ]
       },
-      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run.",
+      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
@@ -788,7 +788,7 @@
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d22181cee40f4e26b2563c2893083887d66910e",
+      "content_blob_sha": "818a0d1d9a2225a6ae311eba6b4f19955558a1af",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -813,14 +813,14 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fb2faabfb3de8e7487b5f98d628e1edfc07dc806",
+      "content_blob_sha": "23e62f52dbfdf657106c9f8212a3be3ce312849f",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -847,7 +847,7 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -886,7 +886,7 @@
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bb8d1252ff201256277bc9da9a203e12164ec1b7",
+      "content_blob_sha": "7d0404768a982758ce3bbbf80aadb561b41957e2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -911,7 +911,7 @@
           "medium"
         ]
       },
-      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run.",
+      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
