@@ -3,11 +3,11 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 71d6e8ebb361e6431ebb1d4bd045a2620e3cfb49
+content_blob_sha: 0709d2f3392b5e63f1e91b98e805cb0e13a95d14
 characterized_at: 2026-08-30
 reviewed_at: 2026-10-26
 verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
@@ -24,3 +24,5 @@ passive_runner_remediation: Removed nonexistent repository runner invocation; co
 external_reference_review: Host/repository paths were clarified as optional externally authorized evidence, not bundled package components. Previous static scan had zero active findings but incomplete link coverage. New exact revision has not been re-scanned; behavioral validation not-run.
 
 review_note: "See docs/reviews/2026-10-26-two-pulse-context-authorization-review.md for the exact-version ten-dimension rubric; package-security state remains not-run."
+
+review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
