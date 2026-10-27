@@ -8,7 +8,7 @@ The existing monitoring family has **17** first-party skills: **16** with bundle
 
 The two other concrete defects were: `hf-pulse` preferred connected Hugging Face tools without explicitly limiting routine discovery to public metadata, and `llama-pulse` called a Reddit site-scoped fallback *mandatory* even when no authorized host search was available. The first now requires separately approved scope for private/gated data and a public-web fallback; the second treats missing search as an evidence gap. Source JSON content and upstream package dependencies were not modified.
 
-The other nine pulse source lists contain no `{SINCE}` GitHub search placeholders. The `claude-pulse` source arrangement remains intentionally unchanged. Shared source configuration is inert data; public-source retrieval, publication dates, capability gaps, and provenance are host responsibilities. Source reputation, popularity, and third-party page text confer no execution or admission authority.
+The other eleven pulse source lists contain no `{SINCE}` GitHub search placeholders. The `claude-pulse` source arrangement remains intentionally unchanged. Shared source configuration is inert data; public-source retrieval, publication dates, capability gaps, and provenance are host responsibilities. Source reputation, popularity, and third-party page text confer no execution or admission authority.
 
 ## Exact-version individual static dispositions
 
