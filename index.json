@@ -178,7 +178,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-27: Ten distinct Microsoft frozen changed-existing candidate screenings complete 66/76 to 76/76; latest eligible denominator unresolved; no source pin, admission, security or behavioral change. Exact-tree audit found one mirrored Application Insights package and one divergent same-name Entra pair; no denominator inferred.",
+    "latest_reconciliation": "2026-10-27: Microsoft latest candidate structural denominator 208 established from 212 physical SKILL.md paths minus three non-first-class phase references and one exact package-tree mirror; 106 carry-forwards, 76 changed, 26 new/ungoverned. July governed pin remains 186/186. 102 require new exact-version qualification; no admission/security/behavioral promotion.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -193,15 +193,24 @@
       "frozen_raw_additions_classified": 22,
       "frozen_raw_additions_total": 22,
       "removed_paths_unresolved": 4,
-      "latest_eligible_denominator": "unresolved",
+      "latest_eligible_denominator": 208,
       "admitted_delta": 0,
       "security_and_behavioral_candidate_validation": "not-run",
-      "review": "docs/reviews/2026-10-27-microsoft-final-ten-and-frontier-closure.md",
+      "review": "docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md",
       "removed_paths_absence_classified": 4,
       "unique_screening_reconciliation": "Six historical duplicate exposures corrected; final ten distinct candidates bring frozen changed-existing screening to 76/76. Latest eligible denominator and security remain open.",
       "latest_physical_manifest_paths": 212,
-      "unresolved_latest_source_drift": "Six old ungoverned physical paths; exact four-blob applicationinsights-web-ts mirror; divergent entra-agent-id versions; nested packages, four removals and newer plugin hooks/diagnostics/prepare changes.",
-      "duplicate_exposure_crosswalk": "registry/freshness/microsoft-skills-duplicate-exposure-crosswalk-2026-10-27.json"
+      "unresolved_latest_source_drift": "102 candidate packages require full current-standard qualification, four removed identities require successor/retirement decisions, and changed/new packages require external security evidence before pin advancement.",
+      "duplicate_exposure_crosswalk": "registry/freshness/microsoft-skills-duplicate-exposure-crosswalk-2026-10-27.json",
+      "latest_structural_eligible_denominator": 208,
+      "nonfirstclass_phase_references": 3,
+      "exact_package_mirror_exclusions": 1,
+      "candidate_exact_tree_carry_forward": 106,
+      "candidate_changed_existing_requiring_full_qualification": 76,
+      "candidate_new_or_ungoverned_requiring_first_review": 26,
+      "candidate_total_needing_current_standard_review": 102,
+      "old_ungoverned_exposures_classified": 6,
+      "canonical_denominator_evidence": "registry/freshness/microsoft-skills-canonical-denominator-2026-10-27.json"
     }
   }
 }
