@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "kind": "exact-version-candidate-freshness-screening",
+  "observed_date": "2026-10-27",
+  "repository_main_start": "f8807dd4aebe78108ba988f99caaf9b4f689f07c",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "scope": "Eight distinct changed-existing Python cloud data, identity, telemetry and queue packages; four candidate-absent governed identities",
+  "frozen_crosswalk": "registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json",
+  "review_method": "Exact-manifest and all package file identities, selected decisive bundled references/templates; static only. No full package behavioral or security qualification.",
+  "frozen_changed_existing_before": 56,
+  "frozen_changed_existing_after": 64,
+  "frozen_changed_existing_denominator": 76,
+  "frozen_changed_existing_remaining": 12,
+  "removed_paths_classified": 4,
+  "removed_paths_total": 4,
+  "removed_successor_equivalence": "unproven",
+  "latest_canonical_eligible_denominator": "unresolved",
+  "registered_source_inventory_delta": 0,
+  "source_pin_changed": false,
+  "first_party_delta": 0,
+  "third_party_governed_verification_delta": 0,
+  "security_executions": 0,
+  "behavioral_executions": 0,
+  "macro_findings": [
+    "Credential validity and SDK examples do not authorize tenant-crossing reads, production mutations, telemetry export or destructive queue operations.",
+    "Data/config values and message bodies are printed in examples; avoid sensitive data disclosure.",
+    "OpenTelemetry distro and exporter overlap intentionally but differ in automation breadth; both require explicit signal/destination governance.",
+    "Cosmos DB service-layer templates provide valuable structure but partitioning alone does not enforce tenant authorization; optional SQL filter concatenation is a separate injection concern.",
+    "Four removed canonical paths are absent from the candidate revision; do not silently retire them at the registered July pin or assume successor equivalence."
+  ],
+  "records": [
+    {
+      "id": "azure-appconfiguration-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-appconfiguration-py/SKILL.md",
+      "manifest_blob_sha": "bd07f0434d51ab1efa899c1b234e7f08a05bcab2",
+      "registered_package_tree_sha": "d1c5d69df9fb386eb27d2b26503ff2ceea7728f5",
+      "frozen_candidate_package_tree_sha": "ec240bbbb4fc7e96000e5e9919451c78a07d1fab",
+      "latest_package_tree_sha": "ec240bbbb4fc7e96000e5e9919451c78a07d1fab",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "bd07f0434d51ab1efa899c1b234e7f08a05bcab2"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "9b454b1c449b8e497ec42bf1db4d6c4eaef0693c"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "fe197704f325515f5de546d85084f1543aa67eee"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Python Azure App Configuration client, settings, labels, snapshots and feature flags",
+      "nontrigger": "Not an authorization to change production feature flags or reveal configuration values",
+      "dependencies": [
+        "azure-appconfiguration",
+        "azure-identity",
+        "Azure App Configuration endpoint and RBAC"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Primary examples print complete setting values, enumerate all settings, create/delete settings, toggle read-only status and set feature flags without separate resource/environment authorization. Config values can include secrets; changing flags can affect live traffic.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Extract scoped key/label reads, Entra credential and snapshot-before-change patterns with redaction and explicit change approval.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-cosmos-db-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-cosmos-db-py/SKILL.md",
+      "manifest_blob_sha": "66973512a33a2ce1cd715d96c39f7ddb7ccc645d",
+      "registered_package_tree_sha": "77bdd7486a9195478b4d1663fb36e1b29c42f6b6",
+      "frozen_candidate_package_tree_sha": "1a03b83a1054d4183c58bd828db8c7997f1c38eb",
+      "latest_package_tree_sha": "1a03b83a1054d4183c58bd828db8c7997f1c38eb",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "66973512a33a2ce1cd715d96c39f7ddb7ccc645d"
+        },
+        {
+          "path": "assets/conftest_template.py",
+          "blob_sha": "996c3025b3c83e756bc7e070777cb4550a4480dd"
+        },
+        {
+          "path": "assets/cosmos_client_template.py",
+          "blob_sha": "7af70bae994cbddf64c94a3ade5464559987a124"
+        },
+        {
+          "path": "assets/service_template.py",
+          "blob_sha": "2efff3e0a13eac98ed6cbfb834e243d6a7600598"
+        },
+        {
+          "path": "references/client-setup.md",
+          "blob_sha": "c81c4c803cb119d46baa69a622b14323cca479a2"
+        },
+        {
+          "path": "references/error-handling.md",
+          "blob_sha": "d9001341f2584db73eeb33d4d8929aadb6ce5c8a"
+        },
+        {
+          "path": "references/partitioning.md",
+          "blob_sha": "a98e1758815b42fd6f1287ed6edcca735b6ec533"
+        },
+        {
+          "path": "references/service-layer.md",
+          "blob_sha": "f32dc6773d273279c19702b1e52b4f68150f014c"
+        },
+        {
+          "path": "references/testing.md",
+          "blob_sha": "b7bd21901bf348525b3992ab64d36fff73818cbf"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "FastAPI service layer, Cosmos DB NoSQL data models, partition-aware CRUD and testing",
+      "nontrigger": "Not a tenant authorization system or a safe default for cross-partition writes/moves",
+      "dependencies": [
+        "azure-cosmos",
+        "azure-identity",
+        "FastAPI",
+        "Pydantic",
+        "starlette",
+        "pytest",
+        "bundled Python templates"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation",
+          "security"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "contract-first",
+          "test-driven",
+          "reference-heavy"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Bundled partitioning reference appends caller-supplied extra_filter into SQL query text and falls back to cross-partition SELECT when partition key is absent; partition move example upserts to a new workspace then deletes old data without a distinct owner authorization check. A partition key is not a permission boundary.",
+      "score_total": 13,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Retain testable service-layer separation, parameterized predicates, emulator isolation and lifecycle cleanup; require scoped tenant checks, constrained filter grammar, and approved move/rollback.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-cosmos-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-cosmos-py/SKILL.md",
+      "manifest_blob_sha": "9800d67e64c753e221128e38c43a81bfabdff944",
+      "registered_package_tree_sha": "159aea3f186349abfb5004b51587e3dfe210ab56",
+      "frozen_candidate_package_tree_sha": "75a26c6f97359e532458e1e4c9da92328961bf49",
+      "latest_package_tree_sha": "75a26c6f97359e532458e1e4c9da92328961bf49",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "9800d67e64c753e221128e38c43a81bfabdff944"
+        },
+        {
+          "path": "references/partitioning.md",
+          "blob_sha": "91e2ea93f99996179a93b0f140acbce895aba4ec"
+        },
+        {
+          "path": "references/query-patterns.md",
+          "blob_sha": "217430ea497ee9c7457efefca48b87afe9919430"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Python Cosmos DB SDK CRUD, partitioning, queries and throughput",
+      "nontrigger": "Not permission to query every tenant or alter provisioned RU/s",
+      "dependencies": [
+        "azure-cosmos",
+        "azure-identity",
+        "Cosmos DB account and RBAC"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Examples create containers and data, delete items, perform cross-partition SELECT * and read_all_items, and change provisioned throughput without tenant/disclosure or cost authorization. Partition-key examples discuss efficiency, not actual caller authorization.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Extract parameterized query and partition-aware access patterns; gate cross-partition reads, destructive writes and throughput cost changes.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-identity-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-identity-py/SKILL.md",
+      "manifest_blob_sha": "f187f844b717be8d522ff19699e3a12974098a09",
+      "registered_package_tree_sha": "e5a4071f391ba8b2236bc20a3a1e8dd8998d96b1",
+      "frozen_candidate_package_tree_sha": "024a029bb7accc557287d8a118404e7dea88cbca",
+      "latest_package_tree_sha": "024a029bb7accc557287d8a118404e7dea88cbca",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "f187f844b717be8d522ff19699e3a12974098a09"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "bfc31d6efe88cf04ddb3e2519782b859d250fd62"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "06509500188c302cfc61456dd31a9e636dd4de3f"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Microsoft Entra credential selection, managed identity, token providers, interactive and service-principal authentication",
+      "nontrigger": "Not authority to widen tenant trust or persist bearer-token material",
+      "dependencies": [
+        "azure-identity",
+        "Microsoft Entra tenant and credentials",
+        "optional browser/broker and disk cache"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "security",
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Primary and bundled examples enable unencrypted persistent token-cache fallback and additionally_allowed_tenants=['*'] without scoped tenant/security approval; diagnostic DEBUG logging and authentication exception details need redaction. Placeholder client_secret is illustrative, not an observed live secret.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Extract environment-specific credential chains, production-safe credential restrictions and explicit async disposal; prohibit wildcard tenant and unencrypted cache without security decision.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-monitor-ingestion-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-monitor-ingestion-py/SKILL.md",
+      "manifest_blob_sha": "56f0f86d36e50a701f103f2e20742ad459894804",
+      "registered_package_tree_sha": "6f77179d773886b1c5b47f79e40b6701680cf27c",
+      "frozen_candidate_package_tree_sha": "cf9873304bb7524e71c91e20d6b9188624f38975",
+      "latest_package_tree_sha": "cf9873304bb7524e71c91e20d6b9188624f38975",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "56f0f86d36e50a701f103f2e20742ad459894804"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "be938859751512053769be76e78e4896b2d1f6d0"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "a0e11ba342a03cf8eefc8fefd635fad9ef8f9bd4"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Python LogsIngestionClient upload to Azure Monitor DCR streams",
+      "nontrigger": "Not permission to transmit local log files or user/tenant telemetry",
+      "dependencies": [
+        "azure-monitor-ingestion",
+        "azure-identity",
+        "Azure DCE/DCR",
+        "JSON log files"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "observability",
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "reference-heavy"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Workflow uploads arbitrary logs.json and failed log payloads to an external DCR without explicit dataset classification, privacy scope, consent or retention checks; offers an ignore_errors callback that silently discards failure signals.",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Retain DCE/DCR and partial-failure handling, with approved stream/destination, field minimization, redaction and fail-visible retry.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-monitor-opentelemetry-exporter-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-exporter-py/SKILL.md",
+      "manifest_blob_sha": "7feaa1cd43cedd1d3b2405776622a89651fa0c38",
+      "registered_package_tree_sha": "6f3f29fc5ab34768abdb08ba9c85a038f7deccbe",
+      "frozen_candidate_package_tree_sha": "b9ef1b1944018c8adb2db2e3dae9c654d58f13d6",
+      "latest_package_tree_sha": "b9ef1b1944018c8adb2db2e3dae9c654d58f13d6",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "7feaa1cd43cedd1d3b2405776622a89651fa0c38"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "6cddf9224e775e5cae711bc9f38e7f92120f25f0"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "af09ed2a42b7bd66c6cc9b2adc6abc4d741ddab5"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Custom OpenTelemetry traces, logs and metrics exported to Azure Application Insights",
+      "nontrigger": "Not approval to export application logs or persist offline telemetry on disk",
+      "dependencies": [
+        "azure-monitor-opentelemetry-exporter",
+        "opentelemetry-sdk",
+        "azure-identity",
+        "Application Insights destination"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "observability",
+          "implementation",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "instrumentation",
+          "reference-heavy"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Example adds a LoggingHandler to the root Python logger, exporting potentially sensitive application logs without data minimization or destination authorization. Offline retry storage is enabled by default and can persist sensitive telemetry locally without retention and access policy.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Extract custom pipeline, sampling and flush/shutdown patterns with explicit approved signal classes, redaction and offline storage policy.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-monitor-opentelemetry-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/SKILL.md",
+      "manifest_blob_sha": "4428999e5d475fa2f610b24f71d351fb22e6318c",
+      "registered_package_tree_sha": "14a5c5e6184d8b29cca1dfe53d448b484a79f0a1",
+      "frozen_candidate_package_tree_sha": "43c5891abcc3d700972f42cd3427f5f73b19edcc",
+      "latest_package_tree_sha": "43c5891abcc3d700972f42cd3427f5f73b19edcc",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "4428999e5d475fa2f610b24f71d351fb22e6318c"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "88b570d026f0c81a70333304e6a01da636468af9"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "bffdd918ad5d9d408468e997b671f1b987f6a0ef"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "One-line Azure Monitor OpenTelemetry distro and auto-instrumentation for Python services",
+      "nontrigger": "Not consent for automatic database/HTTP tracing or live metrics transmission",
+      "dependencies": [
+        "azure-monitor-opentelemetry",
+        "azure-identity",
+        "Application Insights resource",
+        "Flask/Django/FastAPI instrumentation"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "observability",
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "instrumentation",
+          "tool-assisted"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Default auto-instrumentation covers HTTP, database and application frameworks; examples export logs with exc_info and enable live metrics without scoped privacy/disclosure approval. The source documents selective disabling, but leaves unlisted instrumentations enabled.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Retain service-name, sampling and instrumentation_options controls; start disabled for sensitive signals until destination and data classes are approved.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    },
+    {
+      "id": "azure-storage-queue-py",
+      "source": "https://github.com/microsoft/skills",
+      "source_family": "microsoft-skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license": "MIT (upstream root and manifest)",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-storage-queue-py/SKILL.md",
+      "manifest_blob_sha": "f8ed9816b14f837795dc9899ff4564e69cd2adc0",
+      "registered_package_tree_sha": "c64f41958010e30f3a43fb8d80d91d174ee13d24",
+      "frozen_candidate_package_tree_sha": "58287bdc78694230979293fbf56a05858e3b8720",
+      "latest_package_tree_sha": "58287bdc78694230979293fbf56a05858e3b8720",
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "f8ed9816b14f837795dc9899ff4564e69cd2adc0"
+        },
+        {
+          "path": "references/capabilities.md",
+          "blob_sha": "af6e9c29da61074750001a8ac07aaf2dbda00a69"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "blob_sha": "c4a37422cd249708f6f7629095c8aca386801d3c"
+        }
+      ],
+      "frontmatter_identity_confirmed": true,
+      "trigger": "Azure Queue Storage Python message send/receive, visibility, TTL and processing",
+      "nontrigger": "Not authorization to clear queues, delete messages or print private payloads",
+      "dependencies": [
+        "azure-storage-queue",
+        "azure-identity",
+        "Azure Storage queue RBAC"
+      ],
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "authority_finding": "Examples clear every message and delete queues without destructive authorization; they print received and peeked message contents, and send JSON to persistent external queues without disclosure/recipient approval.",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "static_disposition": "REJECT_UNCHANGED; ADAPT/EXTRACT/REFERENCE",
+      "semantic_state": "rejected-for-unchanged-candidate-use",
+      "rationale": "Action-specific authorization or sensitive-data boundary absent; SDK credentials and working examples are not user approval.",
+      "adaptation_value": "Extract visibility-timeout, poison-message and idempotent consumer patterns with scoped queue approval, content minimization and explicit destructive gate.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_semantic_verification": false,
+      "source_owned_tooling": "reference evidence only",
+      "unchanged_admission": false
+    }
+  ],
+  "removed_canonical_paths": [
+    {
+      "id": "azure-cost",
+      "registered_manifest": ".github/plugins/azure-skills/skills/azure-cost/SKILL.md",
+      "registered_manifest_blob_sha": "8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4",
+      "registered_package_tree_sha": "b9f59c28575280e1f76aaf2b94d92b040b571c52",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "candidate_manifest_present": false,
+      "candidate_disposition": "ABSENT_FROM_CANDIDATE; PRESERVE_REGISTERED_PIN_EVIDENCE",
+      "automatic_retirement": false,
+      "successor_mapping_status": "unproven",
+      "finding": "Four new azure-cost plugin skills cover portions of this area; equivalence and exact migration are not established.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run"
+    },
+    {
+      "id": "azure-hosted-copilot-sdk",
+      "registered_manifest": ".github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md",
+      "registered_manifest_blob_sha": "64b239df00aa320b64a9009c1875b303a87080b1",
+      "registered_package_tree_sha": "ee166d12b8f9a88a1d4d932a23e844d8203efa13",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "candidate_manifest_present": false,
+      "candidate_disposition": "ABSENT_FROM_CANDIDATE; PRESERVE_REGISTERED_PIN_EVIDENCE",
+      "automatic_retirement": false,
+      "successor_mapping_status": "unproven",
+      "finding": "New .github/skills/copilot-sdk exists; no demonstrated full Azure hosted workflow equivalence.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run"
+    },
+    {
+      "id": "azure-rbac",
+      "registered_manifest": ".github/plugins/azure-skills/skills/azure-rbac/SKILL.md",
+      "registered_manifest_blob_sha": "02ac75d2ba22b4d7aa1e74469b01575281f05ddc",
+      "registered_package_tree_sha": "b52d696609b18a5dc2bae21e368812fe7b020ec5",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "candidate_manifest_present": false,
+      "candidate_disposition": "ABSENT_FROM_CANDIDATE; PRESERVE_REGISTERED_PIN_EVIDENCE",
+      "automatic_retirement": false,
+      "successor_mapping_status": "unproven",
+      "finding": "Other Entra/identity skills exist; none is proven an exact least-privilege RBAC replacement.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run"
+    },
+    {
+      "id": "azure-servicebus-rust",
+      "registered_manifest": ".github/plugins/azure-sdk-rust/skills/azure-servicebus-rust/SKILL.md",
+      "registered_manifest_blob_sha": "365a93a6c3f94310d78791a73e9a3b2891775861",
+      "registered_package_tree_sha": "338bfd05040689d7092d391f24bf29d36f4fb50e",
+      "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "candidate_manifest_present": false,
+      "candidate_disposition": "ABSENT_FROM_CANDIDATE; PRESERVE_REGISTERED_PIN_EVIDENCE",
+      "automatic_retirement": false,
+      "successor_mapping_status": "unproven",
+      "finding": "No same-language first-class Service Bus Rust replacement in latest tree; historical upstream warns crate not production ready.",
+      "security_status": "not-run",
+      "behavioral_validation": "not-run"
+    }
+  ]
+}
