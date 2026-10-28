@@ -1,0 +1,43 @@
+schema_version: 1
+skill_name: azure-prepare
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-prepare
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 441b9a2c42f2e1166d008e31eba4d0efd99ad420
+skill_md_blob_sha: 87cc0872fd2f5588c996dfd0c0f4be60d94ef555
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-166-blob-exact-candidate-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 2
+tags:
+  use_case: [cloud, deployment, implementation, planning]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [evidence-first, incremental, reference-heavy, risk-aware, safety-bounded, tool-assisted]
+  authority: [generate-only, mutating, external-side-effect]
+  portability: [medium]
+package_file_count: 166
+package_bytes: 567575
+source_file_inventory: registry/skills/microsoft-skills-candidate/azure-prepare.yaml
+upstream_manifest_version: "1.3.8"
+external_dependencies_not_executed: Azure MCP, Azure CLI/azd/extensions, Azure SDKs, Bicep/Terraform/Docker, independent Azure skills, source-owned Bash/PowerShell SQL access helpers
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_AUTHORIZATION_AND_SECRET_DISCLOSURE_HARD_FAIL
+prior_registered_verification: registry/verification/microsoft-skills/azure-prepare.yaml
+notes: Complete exact 166-file static review. Root requires first-action .azure/deployment-plan.md write before checking existing path; nested app-service and Functions references bypass mandatory validate/deploy handoff via --no-prompt cloud commands; Key Vault SDK logs secret.value; CLI secret set uses argument value; Durable Task Scheduler recommends unrestricted 0.0.0.0/0 allowlist; SQL access helpers create users and grant reader/writer/optional ddladmin. Preserve secure-by-default and planning patterns for adaptation only. Security and behavioral tests not run. No cloud or source-owned script execution.

@@ -1,0 +1,368 @@
+schema_version: 1
+skill_name: azure-prepare
+display_name: Microsoft Azure Prepare candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-prepare/SKILL.md
+source_class: official
+license: MIT (upstream manifest; Azure service terms separately apply)
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-prepare
+relationship: upstream-reference-not-vendored
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 441b9a2c42f2e1166d008e31eba4d0efd99ad420
+skill_md_blob_sha: 87cc0872fd2f5588c996dfd0c0f4be60d94ef555
+upstream_manifest_version: "1.3.8"
+upstream_last_updated_at: 2026-10-27T11:05:25Z
+upstream_latest_path_commit: 8ec4e0dd3bb6e7fb0b7ba5dd0de6bf30e92a9a68
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+package_file_count: 166
+package_bytes: 567575
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 87cc0872fd2f5588c996dfd0c0f4be60d94ef555
+  - path: "references/analyze.md"
+    blob_sha: aeacc1b854d257f93037d37aa36fcffee4685058
+  - path: "references/apim.md"
+    blob_sha: 0436d825cc1ef10756761f59ba86e1d8a068e78c
+  - path: "references/architecture.md"
+    blob_sha: ca543e4dd212072688720a2736398904f9451490
+  - path: "references/aspire.md"
+    blob_sha: 96361b1313e3079507c9fa964ef9b63e5db4b849
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/azure-context.md"
+    blob_sha: 29eb3b0cd7bbffcb7b88c02d15851ed94dd01928
+  - path: "references/functional-verification.md"
+    blob_sha: 83c2af381bf2cc0614cc6f62983caa15d3b69fc7
+  - path: "references/generate.md"
+    blob_sha: 39b11d71326c39308450701287b2167a7a225b00
+  - path: "references/global-rules.md"
+    blob_sha: 182b54b64a22343874348cf7710f9084a31c8618
+  - path: "references/plan-template.md"
+    blob_sha: cceb1d5127696adb1478a5200233ef455a988d82
+  - path: "references/recipe-selection.md"
+    blob_sha: df636ed71368ac58753b211c22a5e611a43330e1
+  - path: "references/recipes/azcli/README.md"
+    blob_sha: cbd0003428eea8f664d2b7da50fa9a8a4f244c2b
+  - path: "references/recipes/azcli/commands.md"
+    blob_sha: 11f4dd7d65ee8248d7b33fd4017e03a52c793cee
+  - path: "references/recipes/azcli/scripts.md"
+    blob_sha: 69cec6e21afda0529a86b0c41ab63a44799022e3
+  - path: "references/recipes/azd/README.md"
+    blob_sha: c61b54b7a001d6558865964c45b7b46fa3430eab
+  - path: "references/recipes/azd/aspire.md"
+    blob_sha: caed8ee2c745cdeab3afd81405db74f49d2e9f0b
+  - path: "references/recipes/azd/azure-yaml.md"
+    blob_sha: 8cad217c6d4639b7575ed20fe45c9df54a79484a
+  - path: "references/recipes/azd/docker.md"
+    blob_sha: ecc8d14b58f6b525202120771ea5ebe9dc83f379
+  - path: "references/recipes/azd/iac-rules.md"
+    blob_sha: 2f71446e26230d53cc9c11634cf2c9c760fb4790
+  - path: "references/recipes/azd/terraform.md"
+    blob_sha: d4d037b15a0561e2a572a599ea82a49a2b817d16
+  - path: "references/recipes/bicep/README.md"
+    blob_sha: 33557a5c8b5c01d2bad972fef38ff74f70878087
+  - path: "references/recipes/bicep/patterns.md"
+    blob_sha: 482e20b906225d4bf2d6b1c0f04a38acb87036e9
+  - path: "references/recipes/terraform/README.md"
+    blob_sha: f46913bb2c74321d2174562e28df260ff5d9c24a
+  - path: "references/recipes/terraform/patterns.md"
+    blob_sha: 55bac09af354ab357b6b9334f898c758d7847a4d
+  - path: "references/region-availability.md"
+    blob_sha: b1d969fc7d968864ecb00f04e34d6d91f01653b1
+  - path: "references/requirements.md"
+    blob_sha: 9d6add1d82f9b2c0f76993b72732ce7fbeee6ddd
+  - path: "references/research.md"
+    blob_sha: 71f04d48c51cef4a86662b2e3624da912b71dac3
+  - path: "references/resources-limits-quotas.md"
+    blob_sha: ac54f954b4d9657521b20ed5a393f40dc4652b2e
+  - path: "references/runtimes/nodejs.md"
+    blob_sha: ff92a292af8c95fcadd8f06f1021edb8a60c7a6e
+  - path: "references/scan.md"
+    blob_sha: 1ea4c85ce636f10d1aa838950e30b0fe94227e9e
+  - path: "references/sdk/azd-deployment.md"
+    blob_sha: d2ecdf7c5af463bf964e014d3d6ebdac34db8a64
+  - path: "references/sdk/azure-appconfiguration-java.md"
+    blob_sha: c2b11f4c85b5da999b34682501629bf13e3de6f0
+  - path: "references/sdk/azure-appconfiguration-py.md"
+    blob_sha: ea58c2a1b1647416fba749d60c2b3d9aa710591c
+  - path: "references/sdk/azure-appconfiguration-ts.md"
+    blob_sha: b0947fde10214d62edc152f1fd198056c6d8fde5
+  - path: "references/sdk/azure-identity-dotnet.md"
+    blob_sha: 5f39e69fa173d4504fece039c3510bc168b1262e
+  - path: "references/sdk/azure-identity-java.md"
+    blob_sha: ce82adc4dd5d26cbdcd1c7a4b17ad6710eb28956
+  - path: "references/sdk/azure-identity-py.md"
+    blob_sha: 6c46f083e06c862002f10718a3d570a19c3067c4
+  - path: "references/sdk/azure-identity-ts.md"
+    blob_sha: 7083cb01460ddb6ea2d139e165557b3171d39682
+  - path: "references/security.md"
+    blob_sha: 7f12782b3a5d4b9c5d53160a7bcb3af0b17fa300
+  - path: "references/services/aks/README.md"
+    blob_sha: a119068640ca23143bb3b5197ad4791d6c0426af
+  - path: "references/services/aks/addons.md"
+    blob_sha: b38d16421817d565a42656d89a60f55d503ff2a5
+  - path: "references/services/aks/bicep.md"
+    blob_sha: 383e3e2eb402fbb9b32b3599904424b87a5706e2
+  - path: "references/services/aks/manifests.md"
+    blob_sha: 54e38e44dac216b2f3f353ced7d9bb945a65b09e
+  - path: "references/services/app-insights/README.md"
+    blob_sha: 0821b4edebf619a41e3c95817603c529050de236
+  - path: "references/services/app-service/README.md"
+    blob_sha: 1ff34a4b87ba1c8cbd31805dd31a7959971ae26a
+  - path: "references/services/app-service/bicep.md"
+    blob_sha: 8fd567503431982c1c5dcc2a2025ab0e9b75d876
+  - path: "references/services/app-service/custom-domains.md"
+    blob_sha: 505824b90399eb457d731ecb987a64b7d787901e
+  - path: "references/services/app-service/deployment-slots.md"
+    blob_sha: c2f86613d8a9ae1742a13371432698ce2025e8e8
+  - path: "references/services/app-service/networking.md"
+    blob_sha: d3b5e9543a7daa2c733895bcd0b8d27495954dda
+  - path: "references/services/app-service/scaling.md"
+    blob_sha: 8c4f911de0d9df135f4694c73155ea6f9386035f
+  - path: "references/services/app-service/sku-selection.md"
+    blob_sha: 681ff1d928bf491b59539bc8dbe04269b3c1a41f
+  - path: "references/services/app-service/templates/recipes/README.md"
+    blob_sha: 6e9a0957602dd46bc0109a61b1ac08d5c54661ee
+  - path: "references/services/app-service/templates/recipes/auth/README.md"
+    blob_sha: 7edd0c9a5078212a7b3a509c666e256b6517f158
+  - path: "references/services/app-service/templates/recipes/auth/source/dotnet.md"
+    blob_sha: 31ded7686ad53789a61b470295896da26258f037
+  - path: "references/services/app-service/templates/recipes/auth/source/nodejs.md"
+    blob_sha: 557c910973152084ef98c009478098169e9e2213
+  - path: "references/services/app-service/templates/recipes/auth/source/python.md"
+    blob_sha: 830e7d1c8fe26013e855e316e395ae48649751ad
+  - path: "references/services/app-service/templates/recipes/composition.md"
+    blob_sha: c226eb7042ad4235ee4e6a15a580c239efcf8207
+  - path: "references/services/app-service/templates/recipes/cosmos/README.md"
+    blob_sha: 01643554a096bab1bfc9cee7bf5ef5eb8cd2ea68
+  - path: "references/services/app-service/templates/recipes/cosmos/source/dotnet.md"
+    blob_sha: 59695f46945649203cc21faa61c06dec500f4aa4
+  - path: "references/services/app-service/templates/recipes/cosmos/source/nodejs.md"
+    blob_sha: 96f158ca55c35134221f0e4b79f95086762e8b5a
+  - path: "references/services/app-service/templates/recipes/cosmos/source/python.md"
+    blob_sha: b40b5cd37b90e356c0117be812cea165825e8eac
+  - path: "references/services/app-service/templates/recipes/redis/README.md"
+    blob_sha: 175ed45e75d8df4e2cb4de7f72f2051cc4ddb33f
+  - path: "references/services/app-service/templates/recipes/redis/source/dotnet.md"
+    blob_sha: 2838dbc68169a55ad46db22db9ca5353349096a6
+  - path: "references/services/app-service/templates/recipes/redis/source/nodejs.md"
+    blob_sha: 43854788cbc68ad568940e31636cbf8e7287558c
+  - path: "references/services/app-service/templates/recipes/redis/source/python.md"
+    blob_sha: 08e776a98bb8163d5773c5731eada897641560b1
+  - path: "references/services/app-service/templates/recipes/sql/README.md"
+    blob_sha: 0f6c6dd4b31d4047346fac01bbe8c96a42fa124e
+  - path: "references/services/app-service/templates/recipes/sql/source/dotnet.md"
+    blob_sha: 037beaed31b8018673df27feb393ccc25a8f7e90
+  - path: "references/services/app-service/templates/recipes/sql/source/nodejs.md"
+    blob_sha: 6b5b0f3adf42031dfdbc07255abe71db70110e8e
+  - path: "references/services/app-service/templates/recipes/sql/source/python.md"
+    blob_sha: ab73a6f6962a0887db38fad0c155715af450b913
+  - path: "references/services/app-service/templates/selection.md"
+    blob_sha: 4601f11a67d999b7b3b3ec5235b395867e120a9a
+  - path: "references/services/app-service/templates/web-api.md"
+    blob_sha: dfc64a00cf1bf29c2828a4abfd09386d6ba9745e
+  - path: "references/services/app-service/templates/web-app.md"
+    blob_sha: 80bba4122b274d3955f0b5b3fa90b34d742fb81a
+  - path: "references/services/container-apps/README.md"
+    blob_sha: 69dee56e92eed70461b891a4ad674de5cff42eb7
+  - path: "references/services/container-apps/bicep.md"
+    blob_sha: a75706ae680ce4a1cc8d4f041cf70ea1b9f75a92
+  - path: "references/services/container-apps/day2-operations.md"
+    blob_sha: bfb406673c2689c1274a5573e6141e72594711c2
+  - path: "references/services/container-apps/environment.md"
+    blob_sha: 67803c5af6b3ac1e6c84c9af4d5aba83148eeb1c
+  - path: "references/services/container-apps/health-probes.md"
+    blob_sha: b14470d09de16f7fa36b26a1d8bf9068f7f08aa0
+  - path: "references/services/container-apps/networking.md"
+    blob_sha: d14207cc79afdc9ad833935cc97137f44de80555
+  - path: "references/services/container-apps/revisions.md"
+    blob_sha: ded8cccc5d3ef4490034619ac9f84105003dfddd
+  - path: "references/services/container-apps/scaling.md"
+    blob_sha: d749d5343bec98ff65f62dbec199f85ee81e9c84
+  - path: "references/services/container-apps/terraform.md"
+    blob_sha: b9ec974e66b764cd7f7b270eb9bc623697d7cc32
+  - path: "references/services/cosmos-db/README.md"
+    blob_sha: c33c0b2b269ce7b8cfb83979a7f9e862e387afba
+  - path: "references/services/cosmos-db/bicep.md"
+    blob_sha: fab19bc841fe546e13dc2db58669b4018a5c13cb
+  - path: "references/services/cosmos-db/partitioning.md"
+    blob_sha: 4cbd027b276f2c4e7852342368883ba172cb6b5c
+  - path: "references/services/cosmos-db/sdk.md"
+    blob_sha: 741088040a430f2aade0a976483467aa263127e3
+  - path: "references/services/durable-task-scheduler/README.md"
+    blob_sha: 11fc4f6ada90ece03abe977532c28c89cf886c3d
+  - path: "references/services/durable-task-scheduler/bicep.md"
+    blob_sha: b595dc5285fb6f3cb4fc1652d3ccd9d38801e5a3
+  - path: "references/services/durable-task-scheduler/dotnet.md"
+    blob_sha: 09975dc33389bb82bc5e7a74da1ca0d35a589b28
+  - path: "references/services/durable-task-scheduler/java.md"
+    blob_sha: 74c32b21fd6b174a3e22a242578d1948ea36b9e0
+  - path: "references/services/durable-task-scheduler/javascript.md"
+    blob_sha: 32f5e9364034880b5b4ac45085a582c685142865
+  - path: "references/services/durable-task-scheduler/python.md"
+    blob_sha: 883935a6bf765a81fe46f83be0bcd3f822e7aaf5
+  - path: "references/services/event-grid/README.md"
+    blob_sha: 1d30248a9bddb6be04254c1134ec2aa5bb62341c
+  - path: "references/services/event-grid/bicep.md"
+    blob_sha: 09b9c800929ed68e87412705e13d704bebae13b1
+  - path: "references/services/event-grid/subscriptions.md"
+    blob_sha: 4139c1754579d83c4c3203849b5e2db16d934b9e
+  - path: "references/services/foundry/README.md"
+    blob_sha: 12b0d0d5be94c4dc0d01c12041bf3f7e520b904f
+  - path: "references/services/foundry/region-availability.md"
+    blob_sha: 86c3ae969f290e7939ac727bc13445dcd0dfea7e
+  - path: "references/services/functions/README.md"
+    blob_sha: b12afd05c0ed87090fb2840c4bebd39ed7fc8531
+  - path: "references/services/functions/aspire-containerapps.md"
+    blob_sha: 3eef3daa1059053009317b039463ec80802355ca
+  - path: "references/services/functions/bicep.md"
+    blob_sha: 72b506bdbca91760326677fc0d510f034cb88c45
+  - path: "references/services/functions/cold-start.md"
+    blob_sha: eb407c90d22848968ebcd50d247c7755cea65734
+  - path: "references/services/functions/durable.md"
+    blob_sha: cb8c53f43565940abaca58fc60191a69fe28f3bd
+  - path: "references/services/functions/hosting-plans.md"
+    blob_sha: 61287b768b530b7887d404707f2ee755b83e22eb
+  - path: "references/services/functions/templates/README.md"
+    blob_sha: a3dcffcc562f79ab3cbec2b745b224a452269976
+  - path: "references/services/functions/templates/base/eval/python.md"
+    blob_sha: 35e3ae8e8caeec1957788bd91fdf6d1c4d6d9bd1
+  - path: "references/services/functions/templates/base/eval/summary.md"
+    blob_sha: 5a0b5bd25f0381b51380e94b454cf4e66bfb42bd
+  - path: "references/services/functions/templates/base/eval/typescript.md"
+    blob_sha: 7cb2640d7ac8f18b82e72cfe015628f43903bc23
+  - path: "references/services/functions/templates/recipes/README.md"
+    blob_sha: b512b4d5340c4f5541e778fb158ec8c13ecb811b
+  - path: "references/services/functions/templates/recipes/blob-eventgrid/README.md"
+    blob_sha: 709e3690ba9e3d6a0d7ed2fb70937613f889d06b
+  - path: "references/services/functions/templates/recipes/blob-eventgrid/eval/python.md"
+    blob_sha: 79d5059aef5ad7a33e3414e8e3483e4709dcc3ca
+  - path: "references/services/functions/templates/recipes/blob-eventgrid/eval/summary.md"
+    blob_sha: d1ee640f8e73dbb3d67a5398c96f689c689b9f05
+  - path: "references/services/functions/templates/recipes/common/dotnet-entry-point.md"
+    blob_sha: aed686cc2387d0ba2e208297d56a3cdd2c57f556
+  - path: "references/services/functions/templates/recipes/common/error-handling.md"
+    blob_sha: 9e11314afcd2ea9d230cfc17ee6bcf1c15a9e432
+  - path: "references/services/functions/templates/recipes/common/health-check.md"
+    blob_sha: fa389b5c6d41077b39bfd6729291acbbb49dab98
+  - path: "references/services/functions/templates/recipes/common/nodejs-entry-point.md"
+    blob_sha: 21791ac2d151db61e380f7401ac6fb3841e61daa
+  - path: "references/services/functions/templates/recipes/composition.md"
+    blob_sha: 8c09435b2992b6f204029f487423d06263cafdad
+  - path: "references/services/functions/templates/recipes/cosmosdb/README.md"
+    blob_sha: a50e9f42dcec1840f0ce57065bbff7f308e0b105
+  - path: "references/services/functions/templates/recipes/cosmosdb/eval/python.md"
+    blob_sha: bc80b2c71936da8a18c3c0d184b4200450d18d38
+  - path: "references/services/functions/templates/recipes/cosmosdb/eval/summary.md"
+    blob_sha: df35ac746a895986eed55b140f812e5e8622d97f
+  - path: "references/services/functions/templates/recipes/cosmosdb/eval/typescript.md"
+    blob_sha: a611c5f08fc91203bae65be585a6c8413bd606a4
+  - path: "references/services/functions/templates/recipes/durable/README.md"
+    blob_sha: 2a208ce7abddbfc9e2d4d7da6b5e23483fdc25d9
+  - path: "references/services/functions/templates/recipes/durable/eval/python.md"
+    blob_sha: 9216547dfb3808c3554dba91df3d64188dd0acd2
+  - path: "references/services/functions/templates/recipes/durable/eval/summary.md"
+    blob_sha: 2142645035ec13220a2a9ec4a36e8bd03f7642f7
+  - path: "references/services/functions/templates/recipes/eventhubs/README.md"
+    blob_sha: 21b303b9085a0cb4123cf88ecdb18e1bb046debe
+  - path: "references/services/functions/templates/recipes/eventhubs/eval/python.md"
+    blob_sha: bb59caf16afd7915925fe6e3b2008d9230bbeae5
+  - path: "references/services/functions/templates/recipes/eventhubs/eval/summary.md"
+    blob_sha: 7f57e70f8bf1d97faa4373c740f6f910dc264066
+  - path: "references/services/functions/templates/recipes/mcp/README.md"
+    blob_sha: 82174d89190bb013f6eca4c0bb7179fb3fa27ecb
+  - path: "references/services/functions/templates/recipes/mcp/eval/python.md"
+    blob_sha: ab6b48a394e32645efc4312ddf6265e51e584fbb
+  - path: "references/services/functions/templates/recipes/mcp/eval/summary.md"
+    blob_sha: 29595f8ada5428c4d98f568300269320d07ff3a4
+  - path: "references/services/functions/templates/recipes/servicebus/README.md"
+    blob_sha: 5d91b32a914fb161a4795c22b98a36bedecbc860
+  - path: "references/services/functions/templates/recipes/servicebus/eval/python.md"
+    blob_sha: 450572c01da27c30975b307b6acb1d4feef80f0b
+  - path: "references/services/functions/templates/recipes/servicebus/eval/summary.md"
+    blob_sha: 91d2a156cf1856ccda0901409fbbbf763333ba50
+  - path: "references/services/functions/templates/recipes/servicebus/eval/typescript.md"
+    blob_sha: 05320c8d3796d3561b980a2e507e26c2ff48329a
+  - path: "references/services/functions/templates/recipes/sql/README.md"
+    blob_sha: 6e5109fcbd675d1e94bf3a14e54c29f184b1e1cc
+  - path: "references/services/functions/templates/recipes/sql/eval/python.md"
+    blob_sha: 6a11e1b8d19d6383b51a31020434b68007b6707b
+  - path: "references/services/functions/templates/recipes/sql/eval/summary.md"
+    blob_sha: d5f3d1d16e2d9b3dd58251d5b1c88a396093bbbc
+  - path: "references/services/functions/templates/recipes/timer/README.md"
+    blob_sha: a05e753190b7d26ba155b2eba66a3a8eae45eb7f
+  - path: "references/services/functions/templates/recipes/timer/eval/python.md"
+    blob_sha: bc05766472e27d90661e1c85d295d7faf57a9a44
+  - path: "references/services/functions/templates/recipes/timer/eval/summary.md"
+    blob_sha: 4a69a52157b04795a6e36928fce99c4ee172e9f5
+  - path: "references/services/functions/templates/selection.md"
+    blob_sha: c22c7a9a3821b79a6a93af71792b14e8102151ad
+  - path: "references/services/functions/terraform.md"
+    blob_sha: 0a9e3f20deda10590d9633624d33ed9364e3a304
+  - path: "references/services/key-vault/README.md"
+    blob_sha: cd04c28784cd24835549ea22d8483b96ac7330cb
+  - path: "references/services/key-vault/bicep.md"
+    blob_sha: 15de908216773c4a3e22608d76da1f735a8ab7f8
+  - path: "references/services/key-vault/sdk.md"
+    blob_sha: 3dbca912dd3978c4fe76e04e988bba9cba8a892d
+  - path: "references/services/logic-apps/README.md"
+    blob_sha: 9c98a372a74fcd884efa82b44d6e85ce3e34ccb6
+  - path: "references/services/logic-apps/bicep.md"
+    blob_sha: db33c563c60316e362cf1a459e3c2646c76c5638
+  - path: "references/services/logic-apps/triggers.md"
+    blob_sha: 301d1d8a3a3701be28ff5e3159b35ff10a54eb0c
+  - path: "references/services/service-bus/README.md"
+    blob_sha: 50f49ea499f9f039faec88b8720fdf4eed8ade02
+  - path: "references/services/service-bus/bicep.md"
+    blob_sha: 485246a52beb40ba2c9300e6b74155a7ac930c2d
+  - path: "references/services/service-bus/patterns.md"
+    blob_sha: d675dd08d53c5a495aafecd99d0d624c41fce22d
+  - path: "references/services/sql-database/README.md"
+    blob_sha: 1465611a63a9a26ea4f0b9cd55a56c050aec96c1
+  - path: "references/services/sql-database/auth.md"
+    blob_sha: 3420e65dd04777fdb6dca23c04e9fd5f5ced8b84
+  - path: "references/services/sql-database/bicep.md"
+    blob_sha: 123dc1cd6854a7430158511402dfa53c38200bff
+  - path: "references/services/sql-database/scripts/grant-sql-access.ps1"
+    blob_sha: 079e5f4e0275ac32ac8869014f3ebd5a012feac2
+  - path: "references/services/sql-database/scripts/grant-sql-access.sh"
+    blob_sha: 41ed6a1da953e56296a13c16cadf3cd1afe3a3c5
+  - path: "references/services/sql-database/sdk.md"
+    blob_sha: e51c1e737cfb0c5c0ce564457fad57cd5be9c7bb
+  - path: "references/services/static-web-apps/README.md"
+    blob_sha: 20aa03c5e8d1f0b4f9e4cb5629283f40cfbe0348
+  - path: "references/services/static-web-apps/bicep.md"
+    blob_sha: 7593179fa8014ee228c46b641e4ae11b5fd619fc
+  - path: "references/services/static-web-apps/deployment.md"
+    blob_sha: 0db32fa9a4166a61e859c10b631bde4d43d5c2e4
+  - path: "references/services/static-web-apps/region-availability.md"
+    blob_sha: d9d1905e5293c6fcdecd4a2d4909706ad50131fc
+  - path: "references/services/static-web-apps/routing.md"
+    blob_sha: 1c2aa1a4bc799c930a9865fbf1021fe8afa93a2f
+  - path: "references/services/static-web-apps/terraform.md"
+    blob_sha: 2d137f7b37170ca353d7a09cc91d2aa0bec688ca
+  - path: "references/services/storage/README.md"
+    blob_sha: 0193eea55b6bf2ce6455408bb9c2b66f94ef84f7
+  - path: "references/services/storage/access.md"
+    blob_sha: fdce4f12ea4a999e78bd04d0f572c50fb64f8407
+  - path: "references/services/storage/bicep.md"
+    blob_sha: 767bc6deb872cf6058942b8b0ba267bafc771bcc
+  - path: "references/specialized-routing.md"
+    blob_sha: 5b8bb643d3526b30ed45111611a40843b2ad8e2b
+permission_tier: local-workspace-generation-plus-cloud-sensitive-and-deployment-reference
+portability: medium
+review_status: rejected
+dependency_status: complete-166-blob-exact-candidate-static-review
+dependencies: Azure Developer CLI and Azure CLI; Azure MCP and azure-validate/azure-deploy/azure-quotas/other independent skills; Bicep/Terraform/Docker/SDKs; Azure subscriptions, identity, RBAC, Key Vault, SQL, Functions, App Service, Container Apps, Durable Task Scheduler; source-owned Bash/PowerShell SQL grant helpers and 166 upstream package files
+trigger_boundary: azd-focused Azure preparation and IaC/config generation; not generic non-azd deployment, unapproved Azure provisioning, cross-cloud migration or automatic deployment
+authority_profile: workspace plan/IaC writes and overwrites, CLI extensions, optional direct billable provisioning and deployment, role grants, DNS/traffic and security controls in bundled recipes
+privacy_profile: Key Vault secret values, Azure tokens, SQL/Storage connection strings, application configuration, deployment artifacts, diagnostic telemetry, network exposure and sensitive logs require explicit data-owner scope and secure credential handling
+import_eligibility: rejected-unchanged
+rationale: All 166 distinct exact candidate source blobs read at registered candidate tree. Strong root plan-first and validation/deploy separation are contradicted by mandatory first-action .azure/deployment-plan.md write before checking existing content; nested app-service and Functions recipes call azd up/provision/deploy --no-prompt; Key Vault SDK prints secret.value; CLI reference passes secret value in an argument; Durable Task Scheduler troubleshooting recommends 0.0.0.0/0 allowlisting; SQL helper grants data roles and optionally db_ddladmin without a separate owner approval gate. Extract planning, managed identity, Entra-only SQL, rollback and two-phase IaC patterns with scoped authority, secure credential broker, safe plan-file handling and no direct deployment. No security or behavioral assessment executed.
