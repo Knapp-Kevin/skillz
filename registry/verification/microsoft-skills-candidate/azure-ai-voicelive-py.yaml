@@ -1,0 +1,50 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-ai-voicelive-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c9e31e86696d1af0604abc9aa11f6b1b9ce8b87c
+skill_md_blob_sha: 512d0686e39a7be742d99d27a9aac8210abc319d
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-4-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["agent-development", "communication", "cloud"]
+  lifecycle: ["implementation", "operations"]
+  characteristic: ["reference-heavy", "tool-routing", "risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 4
+package_files_inspected:
+  - path: "references/api-reference.md"
+    blob_sha: 2398ede788f0ae17ae64b1e571865febab7539fa
+  - path: "references/examples.md"
+    blob_sha: 2ed3848e3c0ad3293001226f9040c90b9ec81dd0
+  - path: "references/models.md"
+    blob_sha: 3c3d66c38f1b90bb6eab33121a527b11c0b5a0ea
+  - path: "SKILL.md"
+    blob_sha: 512d0686e39a7be742d99d27a9aac8210abc319d
+external_dependencies_not_executed: "Python; azure-ai-voicelive; aiohttp; azure-identity; microphone/playback integration; Azure speech endpoint; three references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-voicelive-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Microphone audio is transmitted over a live external connection and function_call_arguments.done invokes handle_function without a per-action authorization boundary. Avatar and custom/personal voice features require explicit subject/identity rights. Examples print raw transcripts, event details and error strings; lack participant consent, data minimization, recording/transcript retention and disclosure policy. Preserve: Async transport lifecycle, VAD/interrupt patterns, audio format selection and streaming event models; adapt with capture/transmission consent, tool approval and transcript redaction. Static exact-package inspection only. No scanner, service operation, or behavioral validation."
