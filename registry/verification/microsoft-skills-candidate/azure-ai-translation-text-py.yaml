@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-ai-translation-text-py
+candidate_key: azure-ai-translation-text-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1d0affb190094b511470c1f6b9622044d5c3c25f
+skill_md_blob_sha: e8ed670c9d5e23a5a08bee0684c7ea18f64fa809
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 2
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, risk-aware, tool-assisted]
+  authority: ["external-side-effect"]
+  portability: [medium]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: e8ed670c9d5e23a5a08bee0684c7ea18f64fa809
+  - path: "references/capabilities.md"
+    blob_sha: 379de29cdee61e59a7ea9beec64aefd03216ec35
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 8bc5844dd6aa1b4dee6da1074a8d8b2267d64510
+external_dependencies_not_executed: "azure-ai-translation-text; azure-identity; Translator endpoint; optional environment-backed key/region"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-translation-text-py.yaml
+prior_screening: registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json
+notes: "Remote text translation and dictionary example requests have no per-dataset disclosure and cost approval boundary Examples print translated/source text and alignments without classification, redaction or retention controls Preserve token-vs-key endpoint guidance, language and dictionary operations; add transmission approval and output minimization No Azure operations, scanner or behavioral execution; July review preserved separately."

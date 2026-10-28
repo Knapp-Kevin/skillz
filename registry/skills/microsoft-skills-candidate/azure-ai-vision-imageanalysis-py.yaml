@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-ai-vision-imageanalysis-py
+display_name: "Microsoft azure-ai-vision-imageanalysis-py changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-vision-imageanalysis-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: bc979291b13c4a0b5c3133fb8a12ae94a7a55883
+skill_md_blob_sha: adaaf3c05668d618d8c5a932e37ac78053a255c7
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: adaaf3c05668d618d8c5a932e37ac78053a255c7
+  - path: "references/capabilities.md"
+    blob_sha: b24da438beecbcf0190512c8f951f8478e757472
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: fe519431024080a6cfe80daaebf4b6459c81c53d
+permission_tier: "external-side-effect"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-ai-vision-imageanalysis; azure-identity; Azure Vision endpoint; local files/remote URLs; optional key"
+purpose: "Image captioning, OCR, people/object detection and cropping"
+trigger: "ImageAnalysisClient, Azure AI Vision"
+nontrigger: "Not for analyzing private images, faces or documents or printing OCR content without authorization"
+authority_finding: "Image bytes or URLs are sent for remote analysis without scoped data transfer/recipient authority"
+privacy_finding: "OCR examples print extracted lines and words; people detection and image content may be sensitive and lack retention limits"
+skill_specific_freshness: "Candidate revision and all three package blob identities checked 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-vision-imageanalysis-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-vision-imageanalysis-py.yaml
+prior_screening: "registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json and related frozen-screening records"
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Image bytes or URLs are sent for remote analysis without scoped data transfer/recipient authority OCR examples print extracted lines and words; people detection and image content may be sensitive and lack retention limits Preserve feature selection, bounding boxes and context-manager cleanup; gate media transfer, OCR output and people-data handling No security scan, SDK execution, Azure call or behavioral validation."
