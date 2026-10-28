@@ -1,0 +1,67 @@
+schema_version: 1
+skill_name: python-appservice-deploy
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: python-appservice-deploy
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 3003f4d14f1e1a63ec94afd28f958560aab4b273
+skill_md_blob_sha: ca5cc00ee36032b5552bca1ff56d9110341c6396
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-13-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "9/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["cloud", "deployment"]
+  lifecycle: ["implementation", "release"]
+  characteristic: ["incremental", "tool-assisted"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 13
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: ca5cc00ee36032b5552bca1ff56d9110341c6396
+  - path: "references/create-app.md"
+    blob_sha: 891186a009ea0560a903257bfb0fd16af0f5b35c
+  - path: "references/deploy-azcli.md"
+    blob_sha: 89e8d0d6badfc0cce742995c70113b0c13e9132a
+  - path: "references/deploy-azd.md"
+    blob_sha: f95976c2fd1cec518e136585811e6b84cc6371b2
+  - path: "references/detect.md"
+    blob_sha: b9054315874e249155c6a782965bf98b6379c842
+  - path: "references/errors.md"
+    blob_sha: 6e4d09d4e56c2ed7ad9ec495cbd6e79f0fa45b53
+  - path: "references/post-deploy-message.md"
+    blob_sha: b2a8f71a9fe0c1b6157ce01bcf36d8a5fac5c63e
+  - path: "references/startup-commands.md"
+    blob_sha: 7da6c705c12891628d6db191dc9fb6ad66f12dd2
+  - path: "references/transient-retry.md"
+    blob_sha: 85a44266669d188aaebbb3f8f67557a6ed15034f
+  - path: "scripts/generate-app-name.ps1"
+    blob_sha: db64c38e309f35a6f58931bccf79da0bc10a5661
+  - path: "scripts/generate-app-name.sh"
+    blob_sha: c72ceb7f7bb3ecc2bdea474fb6ca4bd5d4e530ba
+  - path: "scripts/retry-az-create.ps1"
+    blob_sha: 412bcd6295106f39c4e5420d4560eb3b96daa185
+  - path: "scripts/retry-az-create.sh"
+    blob_sha: 222faa6f56e8445be0a96f30b1704c125bf05842
+external_dependencies_not_executed: "Azure/MCP/CLI/SDK/AKS and upstream bundled tools, as applicable; none run."
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/python-appservice-deploy.yaml
+notes: "Creates billable P0v3 plan and resource group in derived default subscription and deploys code; explicitly says not to ask for confirmation. Quiet post-deploy stop forbids independent startup acceptance; wildcard Django ALLOWED_HOSTS guidance. Retain: Framework detection, safe runtime quoting, bounded retries and warm-up caveats. No security scan or behavioral validation."

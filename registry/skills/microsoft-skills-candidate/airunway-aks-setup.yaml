@@ -1,0 +1,63 @@
+schema_version: 1
+skill_name: airunway-aks-setup
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/airunway-aks-setup/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; upstream dependencies retain their own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-09T11:06:40Z
+upstream_latest_path_commit: 07ade634651fa0852f6bb5d6d0b12f495b66bacb
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: f1188c99d276aada84992b4e60387f2ad5814dd8
+skill_md_blob_sha: b073a851e1f9678e349032558a51ab2a36f10454
+package_file_count: 12
+package_files:
+  - path: "SKILL.md"
+    blob_sha: b073a851e1f9678e349032558a51ab2a36f10454
+  - path: "references/gpu-profiles.md"
+    blob_sha: d2e88eecb54898909101ffb9f5ead093effc3639
+  - path: "references/model-sizing.md"
+    blob_sha: 5c88d071e318a7efc6abb1731c6ace4924a3f827
+  - path: "references/optional-gpu-day2.md"
+    blob_sha: 835549da2f2ddb44d006c5b8e52a9b3ad51838e6
+  - path: "references/powershell-notes.md"
+    blob_sha: 9cbdb4f48abe4e111afb701bcc65a92bddbaf175
+  - path: "references/steps/step-1-verify.md"
+    blob_sha: aec488a8492dd8ed9199eea66add1bd28d8c9354
+  - path: "references/steps/step-2-controller.md"
+    blob_sha: 54d3298de196805609e3812d4425525dc8145bb6
+  - path: "references/steps/step-3-gpu.md"
+    blob_sha: 553f19f47a9a9e6c8b0a1fbf194381c3f8339a00
+  - path: "references/steps/step-4-provider.md"
+    blob_sha: a3046fb0dcccd2bf9e898adfa0f05f7fd7bbb040
+  - path: "references/steps/step-5-deploy.md"
+    blob_sha: 7029cc435e6b9fa0d71ab4b973d5b330a9b81123
+  - path: "references/steps/step-6-summary.md"
+    blob_sha: 42e109017d391e10c3704bfb1781dfa1484bd436
+  - path: "references/troubleshooting.md"
+    blob_sha: 643f00b50c1f317cd6a81f1f35d0bce9859914dd
+display_name: "Microsoft airunway-aks-setup candidate"
+upstream_manifest_version: "1.1.2"
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: "complete-12-file-package-static-inspected"
+dependencies: "Upstream bundled references and examples; Azure CLI/MCP/SDK or AKS/azd/IaC tooling as specified in the manifest. Not executed."
+purpose: "airunway-aks-setup Azure cloud skill; see exact upstream SKILL.md for scope."
+trigger: "Host request fitting the upstream airunway-aks-setup manifest; no automatic invocation or mutation."
+nontrigger: "No cloud/data/credential action without resource-specific user authorization and privacy controls."
+authority_finding: "Install confirmations exist, but skip-to-step assumes prior state; rollback deletes shared cluster resources without separate approval. Hugging Face tokens are written to plaintext TEMP files before Kubernetes secret creation."
+privacy_finding: "Install confirmations exist, but skip-to-step assumes prior state; rollback deletes shared cluster resources without separate approval. Hugging Face tokens are written to plaintext TEMP files before Kubernetes secret creation."
+skill_specific_freshness: "Candidate exact tree f1188c99d276aada84992b4e60387f2ad5814dd8; latest path commit 07ade634651fa0852f6bb5d6d0b12f495b66bacb at 2026-10-09T11:06:40Z; 12 source blobs inspected 2026-10-28."
+prior_registered_provenance: registry/skills/microsoft-skills/airunway-aks-setup.yaml
+prior_registered_verification: registry/verification/microsoft-skills/airunway-aks-setup.yaml
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECT unchanged 12/20. Install confirmations exist, but skip-to-step assumes prior state; rollback deletes shared cluster resources without separate approval. Hugging Face tokens are written to plaintext TEMP files before Kubernetes secret creation. Preserve: GPU compatibility, VRAM sizing, provider selection and staged status checks. Security/behavioral not-run; July pin unchanged."
