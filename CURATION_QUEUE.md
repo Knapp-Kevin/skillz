@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-**Latest Microsoft candidate qualification (2026-10-28):** [Two Azure Deploy/Foundry Finetuning exact-package reviews](docs/reviews/2026-10-28-microsoft-azure-deploy-foundry-finetuning-two-exact-static.md) advance changed-existing **69/76 → 71/76**, leaving **5** (four Azure operations and Foundry root). **75/75 source files, 320,665 bytes, all distinct**; both **REJECT unchanged** for authorization and private-data/credential boundaries. Third-party companions **821**, total verification YAML **865**. July **186/186** and candidate denominator **208** unchanged; no scan, behavioral validation, admission or pin movement.
+**Latest Microsoft candidate qualification (2026-10-28):** [Azure Diagnostics complete 54-file exact-package review](docs/reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md) advances changed-existing **71/76 → 72/76**, leaving **4** (three Azure operations and Foundry root). **54/54 source files, 229,051 bytes, all distinct**; **REJECT unchanged 12/20** for fragmented production authority, privileged capture and credential/privacy exposure. Third-party companions **822**, total verification YAML **866**. July **186/186** and candidate denominator **208** unchanged; no scan, behavioral validation, admission or pin movement.
 
 This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive even during explicitly authorized maintenance. Detailed exact-version evidence belongs in canonical companions under `registry/`; any scanners or behavioral tests are run by the external host, not by repository-owned automation. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
@@ -9,7 +9,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **821** persisted exact-version third-party verification companions.
+- **822** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -104,7 +104,7 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
-**Candidate full-package static reviews (2026-10-28):** New/ungoverned candidates **26/26** fully reviewed (4 VERIFIED semantic only, 22 REJECT unchanged); changed-existing **71/76** complete with **5** remaining. The latest [two-package Azure Deploy/Foundry Finetuning review](docs/reviews/2026-10-28-microsoft-azure-deploy-foundry-finetuning-two-exact-static.md) adds two REJECT unchanged companions. Current third-party exact-version records **821** and total YAML **865**. Historical tranche checkpoints below remain revision-bound evidence. No scanner, behavioral validation, admission or pin movement.
+**Candidate full-package static reviews (2026-10-28):** New/ungoverned candidates **26/26** fully reviewed (4 VERIFIED semantic only, 22 REJECT unchanged); changed-existing **72/76** complete with **4** remaining. Latest [Azure Diagnostics 54-file review](docs/reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md) adds one REJECT unchanged companion (12/20). Third-party exact-version records **822**, total YAML **866** (44 first-party + 822 third-party). No scanner, behavioral validation, source admission or pin movement.
 
 **Changed-existing Rust qualification (2026-10-28):** [Eight complete single-file Rust reviews](docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md) finished **8/76** changed-existing Microsoft candidates, leaving **68**. All eight are **REJECT unchanged** (8–11/20) for authorization and sensitive-data failures; Key Vault Keys also contains a four-byte DEK example. Exact candidate provenance and static verification are recorded; security and behavioral states `not-run`. Third-party companions **758 at this Rust checkpoint**. Registered July **186/186** and source pin unchanged.
 
