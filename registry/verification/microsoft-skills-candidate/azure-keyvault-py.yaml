@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-keyvault-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-keyvault-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 27962e81b958c741c87fa87dc34554942a179607
+skill_md_blob_sha: ef10d433723c358031c68c76d5a13715a5abe153
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["cloud","security","implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["risk-aware","reference-heavy"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: ef10d433723c358031c68c76d5a13715a5abe153
+  - path: "references/capabilities.md"
+    blob_sha: 5a008b97cb3cb68cc1c638b5aac47950fa9d73cb
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: ccc2649a153c69fffbf6152c35311014235f8c3a
+external_dependencies_not_executed: "azure-keyvault-secrets; azure-keyvault-keys; azure-keyvault-certificates; azure-identity"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-keyvault-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "set_secret, key/certificate creation, deletion and irreversible purge lack owner/object/action authorization. Synchronous and async examples print secret.value; certificate private material is accessed as a secret without disclosure permission. Literal secret example is a placeholder. Retain versioning, soft delete, recovery, managed identity and context managers; require scoped permits and redaction. No package-security scan or behavioral validation."

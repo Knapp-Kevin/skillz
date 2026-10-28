@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-monitor-query-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-monitor-query-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 6b4f1407426414aa44cd60566d0c49fd10493e73
+skill_md_blob_sha: c0ce68264ca6872b488716d800c87d128b7a1dd6
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: c0ce68264ca6872b488716d800c87d128b7a1dd6
+  - path: "references/capabilities.md"
+    blob_sha: 8cf8156ef0db90bc357a7b0ae12aef4ebed59206
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 82a76632f60c3ebda4eb9787b51f259c6722ee2a
+display_name: "Microsoft azure-monitor-query-py candidate"
+permission_tier: sensitive-data-read
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-monitor-query; azure-identity; optional pandas; Log Analytics workspace"
+purpose: "Azure Monitor logs, metrics and Kusto query examples"
+trigger: "LogsQueryClient, MetricsQueryClient and Kusto timespans"
+nontrigger: "Not authority to query arbitrary workspaces or print private log rows"
+authority_finding: "Workspace RBAC does not authorize arbitrary dataset, tenant, subject or disclosure; raw log rows and DataFrame heads are printed."
+privacy_finding: "Request/exception logs and partial_error messages may expose PII, identifiers or service security details without output controls."
+skill_specific_freshness: "Exact candidate tree and three Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-monitor-query-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-monitor-query-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Workspace RBAC does not authorize arbitrary dataset, tenant, subject or disclosure; raw log rows and DataFrame heads are printed. Request/exception logs and partial_error messages may expose PII, identifiers or service security details without output controls. Retain bounded timespans, batch queries, aggregation and partial-result handling; require least-privilege scope and redaction. No scanner, Azure execution or behavioral validation."

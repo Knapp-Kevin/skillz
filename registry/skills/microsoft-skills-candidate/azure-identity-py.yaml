@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-identity-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-identity-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 024a029bb7accc557287d8a118404e7dea88cbca
+skill_md_blob_sha: f187f844b717be8d522ff19699e3a12974098a09
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: f187f844b717be8d522ff19699e3a12974098a09
+  - path: "references/capabilities.md"
+    blob_sha: bfc31d6efe88cf04ddb3e2519782b859d250fd62
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 06509500188c302cfc61456dd31a9e636dd4de3f
+display_name: "Microsoft azure-identity-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-identity; optional azure-identity-broker; Entra tenant and principals"
+purpose: "Azure Python Entra credentials, token acquisition and caching"
+trigger: "DefaultAzureCredential, service principal, managed identity, bearer token provider"
+nontrigger: "Not permission to acquire cross-tenant tokens or persist insecure credentials"
+authority_finding: "Wildcard additionally_allowed_tenants=['*'], direct token acquisition and OnBehalfOfCredential lack tenant, principal and scope approval."
+privacy_finding: "Unencrypted persistent token-cache example and verbose authentication logging lack redaction, custody and retention controls; secret strings are placeholders."
+skill_specific_freshness: "Exact candidate tree and three Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-identity-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-identity-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Wildcard additionally_allowed_tenants=['*'], direct token acquisition and OnBehalfOfCredential lack tenant, principal and scope approval. Unencrypted persistent token-cache example and verbose authentication logging lack redaction, custody and retention controls; secret strings are placeholders. Retain managed/workload identity, production chain restrictions, sovereign clouds and async cleanup; adapt with approved scopes and secure caching. No scanner, Azure execution or behavioral validation."

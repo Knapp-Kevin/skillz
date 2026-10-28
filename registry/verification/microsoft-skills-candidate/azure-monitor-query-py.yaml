@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-monitor-query-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-monitor-query-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 6b4f1407426414aa44cd60566d0c49fd10493e73
+skill_md_blob_sha: c0ce68264ca6872b488716d800c87d128b7a1dd6
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","observability","research"]
+  lifecycle: ["operations","verification"]
+  characteristic: ["evidence-first","reference-heavy","risk-aware"]
+  authority: ["read-only"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: c0ce68264ca6872b488716d800c87d128b7a1dd6
+  - path: "references/capabilities.md"
+    blob_sha: 8cf8156ef0db90bc357a7b0ae12aef4ebed59206
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 82a76632f60c3ebda4eb9787b51f259c6722ee2a
+external_dependencies_not_executed: "azure-monitor-query; azure-identity; optional pandas; Log Analytics workspace"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-monitor-query-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Workspace RBAC does not authorize arbitrary dataset, tenant, subject or disclosure; raw log rows and DataFrame heads are printed. Request/exception logs and partial_error messages may expose PII, identifiers or service security details without output controls. Retain bounded timespans, batch queries, aggregation and partial-result handling; require least-privilege scope and redaction. No package-security scan or behavioral validation."
