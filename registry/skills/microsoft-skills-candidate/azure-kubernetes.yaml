@@ -1,0 +1,163 @@
+schema_version: 1
+skill_name: azure-kubernetes
+display_name: Microsoft Azure Kubernetes parent candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md
+source_class: official
+license: MIT (upstream manifest; cloud service terms separately govern use)
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-kubernetes
+relationship: upstream-reference-not-vendored
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 563d312d0625f6c6f815abc147a10375b8ec8ff9
+skill_md_blob_sha: 34a04d8010249f24147c0ce66982c8cfa7eedc87
+upstream_manifest_version: "1.2.4"
+upstream_last_updated_at: 2026-10-21T11:05:16Z
+upstream_latest_path_commit: 88ccab73fe4124614369413b8b29450ee8f88786
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+package_file_exposures: 55
+parent_owned_files_directly_inspected: 7
+nested_first_class_files_covered_by_prior_exact_review: 48
+package_files:
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/aspnet-core.md"
+    blob_sha: 842309fe363f5e6211d582b7f4b813f389655c9c
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/django.md"
+    blob_sha: 40d80671519e1db96a94963ede2899f45a0f3ae7
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/express.md"
+    blob_sha: 140c293f0d9483fadf7c80c53664d24c7f20ac68
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/fastapi.md"
+    blob_sha: bb7c8a82c443bb8d383497d238125c5312395872
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/flask.md"
+    blob_sha: 5cccfb8c6c5418aac5daa8a3b2872b8a8872c226
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/go.md"
+    blob_sha: 5a2cbe67907d3cc8ccaa5a2ff48d68ef2152d26f
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/nestjs.md"
+    blob_sha: f7f6520edf9ed47faf2f617910c95068ce97c16f
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/nextjs.md"
+    blob_sha: 4fedadfcd68d7547e10388f2933d9a314c7627b2
+  - path: "azure-kubernetes-app-deploy/knowledge-packs/frameworks/spring-boot.md"
+    blob_sha: 12f41d2b2843fb2af4cba9325ede4082f9eb8a67
+  - path: "azure-kubernetes-app-deploy/phases/quick-deploy.md"
+    blob_sha: c8e1242530b2f9b22fcf0d64f89f3ce743986f8e
+  - path: "azure-kubernetes-app-deploy/references/base-images.md"
+    blob_sha: e4639864152f5d635f6cb9d08682ba803d7024c7
+  - path: "azure-kubernetes-app-deploy/references/detection.md"
+    blob_sha: 56d8a7109c3693678557d081c91b99db3eb5b118
+  - path: "azure-kubernetes-app-deploy/references/rollback.md"
+    blob_sha: 940ac0deeacb613c5eeb28c836d0abcf03100f85
+  - path: "azure-kubernetes-app-deploy/references/safeguards.md"
+    blob_sha: 258ecd059d2fcf0e664ba2d39861cc06ce3aa3be
+  - path: "azure-kubernetes-app-deploy/references/workload-identity.md"
+    blob_sha: 3a3569d2ab743663360a4d4ce2bd03965d8ee1d1
+  - path: "azure-kubernetes-app-deploy/SKILL.md"
+    blob_sha: e3e148299871832471b4b056093e386a132e8d4a
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/dotnet.Dockerfile"
+    blob_sha: 337a2043241bde7a7beafb241241e9be67f6149d
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/dotnet.dockerignore"
+    blob_sha: 8df1053613420a676f4ef5cd62217095d171cfc5
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/go.Dockerfile"
+    blob_sha: 1f8663b526f6e520f9f17eb5cdc9ff8bb3bed48a
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/go.dockerignore"
+    blob_sha: 6b1cc2cac7c82b55df787af3fc11cb34c8e4f4cc
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/java.Dockerfile"
+    blob_sha: 6e6e5f6302c52025c6ef509938c20414245fa00d
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/java.dockerignore"
+    blob_sha: c5f60d24b76bca4346241fd73442f01ac4f1324c
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/node.Dockerfile"
+    blob_sha: 7ffb3a734453e0ebb3e1d279ae4d47bc1102dcde
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/node.dockerignore"
+    blob_sha: 414950c2a7c19e1abe5f3cb8cdd9ed644bc31329
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/python.Dockerfile"
+    blob_sha: 526bf35006d742ab78a7be7b773544d9e65f09bb
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/python.dockerignore"
+    blob_sha: fccf853663c23c4fca01f41f49a8f6d541711cb4
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/rust.Dockerfile"
+    blob_sha: cc3962ff8d924df1c9156a37325b4a8df53551cd
+  - path: "azure-kubernetes-app-deploy/templates/dockerfiles/rust.dockerignore"
+    blob_sha: 04876f729e02f69d3330c1b2bc13c5c35b09001a
+  - path: "azure-kubernetes-app-deploy/templates/github-actions/deploy.yml"
+    blob_sha: 4a992df424637ffb8ff3224522ec18371f684116
+  - path: "azure-kubernetes-app-deploy/templates/k8s/configmap.yaml"
+    blob_sha: 55a31a9642e9e91ca600198c0d0853e7f44454bd
+  - path: "azure-kubernetes-app-deploy/templates/k8s/deployment.yaml"
+    blob_sha: f521493b629040603ee4be5283eec45cc949e543
+  - path: "azure-kubernetes-app-deploy/templates/k8s/gateway.yaml"
+    blob_sha: 1a0e3f1687ac570de2fdd0bcf920fd99be9b8e56
+  - path: "azure-kubernetes-app-deploy/templates/k8s/hpa.yaml"
+    blob_sha: f0f80800e4e7fba86b434d21452a171a48b388e5
+  - path: "azure-kubernetes-app-deploy/templates/k8s/httproute.yaml"
+    blob_sha: ce8cac6f6f5a6e63bdf3720735b019e02966656d
+  - path: "azure-kubernetes-app-deploy/templates/k8s/ingress.yaml"
+    blob_sha: 1d3130eef99e42ab0dbc15d353cbd76a9ab17595
+  - path: "azure-kubernetes-app-deploy/templates/k8s/namespace.yaml"
+    blob_sha: a53a5bf92de0e40638fc34feb25fb289388e4b25
+  - path: "azure-kubernetes-app-deploy/templates/k8s/networkpolicy.yaml"
+    blob_sha: 2e6a325c661c58edb7e69e776b6cb786811caa2e
+  - path: "azure-kubernetes-app-deploy/templates/k8s/pdb.yaml"
+    blob_sha: dad4b37a59e428d95b0835e8a207eb3d73241011
+  - path: "azure-kubernetes-app-deploy/templates/k8s/service.yaml"
+    blob_sha: 642d8832e0377ee95bdebaa8c71209310aa9dd00
+  - path: "azure-kubernetes-app-deploy/templates/k8s/serviceaccount.yaml"
+    blob_sha: e28321d866e3adb56211e7595e2c4fa5af877bd2
+  - path: "azure-kubernetes-app-deploy/templates/mermaid/architecture-diagram.md"
+    blob_sha: 28f6ea3864ae5789f9d79c156437408c71aa701a
+  - path: "azure-kubernetes-app-deploy/templates/mermaid/summary-dashboard.md"
+    blob_sha: 9db77906ea91e9483b03a5fb672ff9f797cff4ba
+  - path: "azure-kubernetes-automatic-readiness/references/common-fixes.md"
+    blob_sha: 75de956e8f0ca83270e2290d2c18162630886796
+  - path: "azure-kubernetes-automatic-readiness/references/constraint-spec-v1.yaml"
+    blob_sha: 59f6c6b930628e93627291e585bf1c43b2212e2a
+  - path: "azure-kubernetes-automatic-readiness/references/mcp-integration.md"
+    blob_sha: 85e45f30ed42f49a706c8455380d202a52002683
+  - path: "azure-kubernetes-automatic-readiness/references/migration-guide-summary.md"
+    blob_sha: b4e0965b77e761df185bdd5a87a7f3c1ebc7fe2f
+  - path: "azure-kubernetes-automatic-readiness/scripts/sanitize-readiness-input.jq"
+    blob_sha: 2b1e2d7d7c431037206d929984330399469e021e
+  - path: "azure-kubernetes-automatic-readiness/SKILL.md"
+    blob_sha: c5618c53ef11a5e392f02dddc4e70501df1b3297
+  - path: "references/azure-aks-autoscaler.md"
+    blob_sha: 57e4bbf9b75ae4a6d21eafbc65771937708cc48e
+  - path: "references/azure-aks-rightsizing.md"
+    blob_sha: daabf273b7db9840508ba073e7c80de3cb99fdad
+  - path: "references/azure-aks-spot.md"
+    blob_sha: cfe47cc4b9e731a3b0032264be8011d667c0d2ca
+  - path: "references/azure-aks-vpa.md"
+    blob_sha: 92e34508da3c3d09160e2ce132d840188cb4b064
+  - path: "references/cli-reference.md"
+    blob_sha: af100da7f226caec84a94aeb96b4891dd2a5c164
+  - path: "references/optional-aks-operations.md"
+    blob_sha: ff16c3e3493c908fc6948f279cd6f047fe74d1a8
+  - path: "SKILL.md"
+    blob_sha: 34a04d8010249f24147c0ce66982c8cfa7eedc87
+nested_first_class_dependencies:
+  - name: azure-kubernetes-app-deploy
+    package_tree_sha: 580e5d0cffde99b0b4e571721570f282d5930d9a
+    files: 42
+    prior_verification: registry/verification/microsoft-skills-candidate/azure-kubernetes-app-deploy.yaml
+    prior_disposition: rejected-unchanged
+  - name: azure-kubernetes-automatic-readiness
+    package_tree_sha: c8ffe7bbfd195951701a5514cbdad6263c817e7a
+    files: 6
+    prior_verification: registry/verification/microsoft-skills-candidate/azure-kubernetes-automatic-readiness.yaml
+    prior_disposition: verified-semantic-only
+permission_tier: billable-cluster-and-production-configuration-mutation-reference
+portability: medium
+review_status: rejected
+dependency_status: seven-parent-files-read-plus-48-nested-exact-reviewed-exposures
+dependencies: Azure MCP AKS, Azure CLI, kubectl, AKS/Entra/Key Vault/Policy, Prometheus/Grafana, autoscaler/VPA/Spot; two separately governed nested skills
+purpose: Plan, provision, configure and optimize AKS clusters, routing deployment and readiness subworkflows
+trigger: AKS Day-0 design, creation, networking, node pools, autoscaling, rightsizing, Spot and VPA
+nontrigger: Not authorization to create billable clusters, modify node pools, enable monitoring or identity, read all tenant workloads, alter kubeconfig, apply manifests or install optional skills
+authority_finding: Root CLI gives az aks create, enable-addons and get-credentials without distinct tenant/target/cost/security approval; autoscaler and Spot change node pools, VPA mode still creates resources. Generic requirements and safe defaults are not authorization.
+privacy_finding: Subscription discovery and all-namespace pod/metrics inspection lack explicit data-owner scope; credential acquisition modifies local kubeconfig. Require scoped read, minimization and secure external credential path.
+skill_specific_freshness: Candidate exact parent tree 563d312d0625f6c6f815abc147a10375b8ec8ff9 and root blob 34a04d8010249f24147c0ce66982c8cfa7eedc87; seven direct files read at 2026-10-28, 48 nested exposures reused at exact matching trees; root path commit 2026-10-21
+prior_registered_provenance: registry/skills/microsoft-skills/azure-kubernetes.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-kubernetes.yaml
+import_eligibility: adaptation-extraction-checklist-reference-only-no-automatic-adoption
+rationale: REJECT unchanged 12/20 for authorization and read-scope hard fails. Preserve Day-0/Day-1 architecture, conservative AKS Automatic, networking/identity/reliability, rightsizing and explicit optional plugin-install consent. Nested app-deploy rejection and readiness semantic verification remain independent. Security and behavioral not-run; no cloud operation or source-pin movement.
