@@ -26,7 +26,9 @@
     "candidate_new_or_previously_ungoverned_needing_first_review": 26,
     "candidate_total_needing_current_standard_review": 102,
     "registered_source_denominator_unchanged": 186,
-    "admission_delta": 0
+    "admission_delta": 0,
+    "candidate_changed_existing_full_reviewed": 8,
+    "candidate_changed_existing_full_review_remaining": 68
   },
   "nonfirstclass_phase_references": [
     ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
@@ -281,15 +283,15 @@
     }
   ],
   "qualification": {
-    "semantic": "76 changed-existing screened but not fully requalified; 26/26 new/ungoverned have full exact-version static companions (4 verified semantic only, 22 rejected); 106 exact-tree carry-forwards retain revision-bound evidence",
+    "semantic": "76/76 changed-existing screened; 8/76 fully reviewed at candidate revision (all eight Rust rejected unchanged); 68 remain. 26/26 new complete (4 verified semantic only, 22 rejected).",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
-    "full_package_review": "incomplete",
-    "note": "208 remains a structural candidate denominator, not admission. All 26 new candidates have full static reviews; 76 changed-existing full requalifications remain. Four removed July paths have candidate-only retirement/no-proven-successor decisions. Registered July pin, security and behavioral state unchanged.",
+    "full_package_review": "8/76 changed-existing complete exact-version static companions; 68 remain; 26/26 new complete",
+    "note": "208 remains a structural candidate denominator, not admission. 26/26 new and 8/76 changed-existing candidates have complete static reviews; 68 changed-existing remain. July pin, security, behavioral validation and admissions unchanged.",
     "candidate_new_full_static_rejected": 22,
     "candidate_new_remaining_first_review": 0,
-    "candidate_total_remaining_full_review": 76,
+    "candidate_total_remaining_full_review": 68,
     "review": "docs/reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md",
     "candidate_new_full_static_verified": 4,
     "candidate_new_full_static_reviewed": 26,
@@ -306,6 +308,9 @@
       "security": "not-run",
       "behavioral": "not-run",
       "source_pin": "unchanged"
-    }
+    },
+    "candidate_changed_existing_full_reviewed": 8,
+    "candidate_changed_existing_full_review_remaining": 68,
+    "changed_existing_rust_review": "docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md"
   }
 }
