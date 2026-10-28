@@ -1,0 +1,74 @@
+schema_version: 1
+skill_name: azure-compliance
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-compliance
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 83ec452ff0bb131e41363be040ad22251d7bcb5a
+skill_md_blob_sha: 5f133e417691b7b4bf91ae44cc046c4d667821f2
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-16-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["cloud", "security", "audit"]
+  lifecycle: ["verification", "operations"]
+  characteristic: ["evidence-first", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 16
+package_files_inspected:
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/azqr-recommendations.md"
+    blob_sha: 596fd78807a4e862a0332a72a6e4b582e009a2f1
+  - path: "references/azqr-remediation-patterns.md"
+    blob_sha: fe658826017a4da18c2379cd678f646d3e08f7cf
+  - path: "references/azure-keyvault-expiration-audit.md"
+    blob_sha: 48fa5fbf979f57e18d07a3065fb27e5698461bc8
+  - path: "references/azure-quick-review.md"
+    blob_sha: ca45e843d22b0f0a2d9486ee0feecf095031d7a9
+  - path: "references/azure-resource-graph.md"
+    blob_sha: 762b0a9a601f1544cbc90503a63d81b49f88f23d
+  - path: "references/sdk/azure-keyvault-certificates-rust.md"
+    blob_sha: 02aa0a93781e4c8e2a94c106bc24903dc5cd380b
+  - path: "references/sdk/azure-keyvault-keys-rust.md"
+    blob_sha: 0e225d876ba59bc055e7569d57c4d378002cbe7a
+  - path: "references/sdk/azure-keyvault-keys-ts.md"
+    blob_sha: 914ee38d33ae9601e9fb2b4f137655365c14b50d
+  - path: "references/sdk/azure-keyvault-py.md"
+    blob_sha: 043c80cbc919302f9ca55bcfa6e70105675d5865
+  - path: "references/sdk/azure-keyvault-secrets-rust.md"
+    blob_sha: ad9872763fe9f646ec3d598aac2962abb7d99dbc
+  - path: "references/sdk/azure-keyvault-secrets-ts.md"
+    blob_sha: 3a7dce4d3da3b595b00807cc1db5bb33ab430b10
+  - path: "references/sdk/azure-security-keyvault-keys-dotnet.md"
+    blob_sha: 464e45fcfae666f640c09616f97352b47e932e10
+  - path: "references/sdk/azure-security-keyvault-keys-java.md"
+    blob_sha: 04f3b469dab0eb530cfe80954684418e4a3a38f6
+  - path: "references/sdk/azure-security-keyvault-secrets-java.md"
+    blob_sha: df8a1fa765dedce680c2f399121019d823884d32
+  - path: "SKILL.md"
+    blob_sha: 5f133e417691b7b4bf91ae44cc046c4d667821f2
+external_dependencies_not_executed: "Azure MCP azqr and Key Vault tools; Azure CLI; Reader/Key Vault metadata access; 15 bundled references including SDK quick guides"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_ADAPT_EXTRACT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-compliance.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Key Vault secret-get/az keyvault secret show may retrieve secret values instead of metadata; bundled remediation commands mutate network exposure, storage and vault settings without action-scoped approval. Secret contents, security posture and vault inventory require metadata-only access and controlled redaction; current reference does not guarantee it. Retain Assessment/remediation separation, finding priority, metadata expiry checks and Azure Quick Review recommendations. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

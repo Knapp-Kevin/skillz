@@ -1,0 +1,70 @@
+schema_version: 1
+skill_name: azure-storage
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-storage
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4c077fa32d77e27b1c1b105d532af6945bb7604f
+skill_md_blob_sha: 09ab9126fcb8418d1fe34db1937ec51ee03eda60
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-14-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "storage", "implementation"]
+  lifecycle: ["design", "implementation", "operations"]
+  characteristic: ["reference-heavy", "tool-routing"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 14
+package_files_inspected:
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/sdk-usage.md"
+    blob_sha: 60f65f1bbd362f4ab07f24cae5caadde761e5011
+  - path: "references/sdk/azure-data-tables-java.md"
+    blob_sha: 50cc2c74e4525d46a6806331150bd3da0ef68b8a
+  - path: "references/sdk/azure-data-tables-py.md"
+    blob_sha: 7b10c33316cfd2fc0402cd8e52d86eb25d074cc5
+  - path: "references/sdk/azure-storage-blob-java.md"
+    blob_sha: 2c036895236d0420295ff6dbdabd7c318825dd82
+  - path: "references/sdk/azure-storage-blob-py.md"
+    blob_sha: feee17dd2055484490e19a621aeeb3c8b31a8650
+  - path: "references/sdk/azure-storage-blob-rust.md"
+    blob_sha: 0334976fa17d49759e4dfa60e2d56c09ee350aeb
+  - path: "references/sdk/azure-storage-blob-ts.md"
+    blob_sha: ccbc5afbadea114a7837cf007e4d23db12ec89d4
+  - path: "references/sdk/azure-storage-file-datalake-py.md"
+    blob_sha: 0339961023be474ee1a75d9d8fb518c304efcb79
+  - path: "references/sdk/azure-storage-file-share-py.md"
+    blob_sha: 643e1d6fac354bf89eb6163afa470d7cbf803053
+  - path: "references/sdk/azure-storage-file-share-ts.md"
+    blob_sha: fdc7abd17cb7b97344fd8084b443d70b9e5bf677
+  - path: "references/sdk/azure-storage-queue-py.md"
+    blob_sha: a9061b70bb05b65ff60c65b06bb0dd0d8f2bbdf3
+  - path: "references/sdk/azure-storage-queue-ts.md"
+    blob_sha: 3c2a534ec22cacc0e22a549b3b8bc6d309514bef
+  - path: "SKILL.md"
+    blob_sha: 09ab9126fcb8418d1fe34db1937ec51ee03eda60
+external_dependencies_not_executed: "Azure Storage MCP or az CLI; storage SDKs across Python/TypeScript/Java/Rust; bundled auth and SDK references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_ADAPT_EXTRACT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Normal examples download and upload blobs and SDK references modify storage and delete processed queue messages without explicit data-owner approval, overwrite, retention or destructive-action boundary. Blob contents, queue messages, storage account metadata and connection strings require data-classification and secret-safe output handling absent from the unchanged workflow. Retain Storage tier/redundancy comparisons, service selection, managed identity guidance and language-specific SDK pointers. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

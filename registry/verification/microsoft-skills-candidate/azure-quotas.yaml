@@ -1,0 +1,52 @@
+schema_version: 1
+skill_name: azure-quotas
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-quotas
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9abe51b3cbdf48bcb9783700021c78063c0b020b
+skill_md_blob_sha: 00eb182af5ceb6861ee0df92d8c3c9986af652ad
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-5-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "planning", "operations"]
+  lifecycle: ["planning", "operations"]
+  characteristic: ["tool-assisted", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 5
+package_files_inspected:
+  - path: "references/advanced-commands.md"
+    blob_sha: 9dfec4b008153639ecce28e66eaccbc323b1a29b
+  - path: "references/commands.md"
+    blob_sha: 6040ad4fda176a0b10bde60a41c1b27b8907140e
+  - path: "scripts/check-quota.ps1"
+    blob_sha: 5342fd727672005c5216417e58d275e53fb9120a
+  - path: "scripts/check-quota.sh"
+    blob_sha: b095a16561c3318b60b20b30d563656477adbdf4
+  - path: "SKILL.md"
+    blob_sha: 00eb182af5ceb6861ee0df92d8c3c9986af652ad
+external_dependencies_not_executed: "Azure CLI quota extension; Azure subscription Reader/Quota Request Operator; source-owned bash and PowerShell quota scripts; bundled CLI references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_ADAPT_EXTRACT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-quotas.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "The quota-increase workflow executes az quota update and the troubleshooting path registers Microsoft.Quota without separate subscription-owner approval; scripts also install an extension. Subscription and regional capacity data may be operationally sensitive; output handling and approved scope are not established. Retain Quota-name discovery instead of ARM-name guessing, region comparison, usage-versus-limit calculations and API fallback warnings. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

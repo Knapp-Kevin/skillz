@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-resource-visualizer
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-resource-visualizer/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-02T11:05:21Z
+upstream_latest_path_commit: 8ad897cf4d54ca6316f01594f1a44e605a44f5c0
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 766da0d5907e804ef1bb1245e306e3f99b598f92
+skill_md_blob_sha: 24aa2ca9ce042b70cba745c50ae5a198db4a9a46
+package_file_count: 4
+package_files:
+  - path: "assets/example-diagram.md"
+    blob_sha: 7cccc08177c898c2cba4e4bfd6b9ec3a86576c69
+  - path: "assets/template-architecture.md"
+    blob_sha: 574e5eb38a5662db3b1beb22b4456200579c7a1e
+  - path: "references/azure-resource-graph.md"
+    blob_sha: 4ab7a3d9d67f47164f6e19d004cf465c7257cc4e
+  - path: "SKILL.md"
+    blob_sha: 24aa2ca9ce042b70cba745c50ae5a198db4a9a46
+display_name: "Microsoft azure-resource-visualizer candidate"
+upstream_manifest_version: "1.2.3"
+permission_tier: read-only-generate-only
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-4-file-package-static-inspected
+dependencies: "Azure MCP or az CLI with Reader access; Azure Resource Graph; Mermaid; bundled example, template and ARG reference"
+purpose: "Azure resource-group architecture inventory and Mermaid visualization"
+trigger: "User requests an architecture diagram, resource topology or relationship map"
+nontrigger: "Not cloud mutation, secret extraction, external sharing or silent whole-tenant topology export"
+authority_finding: "Requires user selection of resource group, uses read-only Azure queries, forbids cloud mutation and creates only the user-requested local architecture document."
+privacy_finding: "Explicitly substitutes placeholders for secret values. Topology, IP ranges, network identities and RBAC relationships still require scoped handling and no unsolicited external publication."
+skill_specific_freshness: "Exact candidate package tree and 4 Git blob identities inspected 2026-10-28; latest path commit 8ad897cf4d54ca6316f01594f1a44e605a44f5c0 at 2026-10-02T11:05:21Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-resource-visualizer.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-resource-visualizer.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic only 16/20. Requires user selection of resource group, uses read-only Azure queries, forbids cloud mutation and creates only the user-requested local architecture document. Explicitly substitutes placeholders for secret values. Topology, IP ranges, network identities and RBAC relationships still require scoped handling and no unsolicited external publication. Preserve: Resource-group selection, verified relationships, secret placeholders, Mermaid templates and read-only cloud boundary. No scanner, Azure action or behavioral validation; July pin unchanged."

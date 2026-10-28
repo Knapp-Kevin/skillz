@@ -1,0 +1,68 @@
+schema_version: 1
+skill_name: azure-storage
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-storage/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-05T11:05:46Z
+upstream_latest_path_commit: 3c461b1d01c2073754e157f3f4e525c1be40639
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 4c077fa32d77e27b1c1b105d532af6945bb7604f
+skill_md_blob_sha: 09ab9126fcb8418d1fe34db1937ec51ee03eda60
+package_file_count: 14
+package_files:
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/sdk-usage.md"
+    blob_sha: 60f65f1bbd362f4ab07f24cae5caadde761e5011
+  - path: "references/sdk/azure-data-tables-java.md"
+    blob_sha: 50cc2c74e4525d46a6806331150bd3da0ef68b8a
+  - path: "references/sdk/azure-data-tables-py.md"
+    blob_sha: 7b10c33316cfd2fc0402cd8e52d86eb25d074cc5
+  - path: "references/sdk/azure-storage-blob-java.md"
+    blob_sha: 2c036895236d0420295ff6dbdabd7c318825dd82
+  - path: "references/sdk/azure-storage-blob-py.md"
+    blob_sha: feee17dd2055484490e19a621aeeb3c8b31a8650
+  - path: "references/sdk/azure-storage-blob-rust.md"
+    blob_sha: 0334976fa17d49759e4dfa60e2d56c09ee350aeb
+  - path: "references/sdk/azure-storage-blob-ts.md"
+    blob_sha: ccbc5afbadea114a7837cf007e4d23db12ec89d4
+  - path: "references/sdk/azure-storage-file-datalake-py.md"
+    blob_sha: 0339961023be474ee1a75d9d8fb518c304efcb79
+  - path: "references/sdk/azure-storage-file-share-py.md"
+    blob_sha: 643e1d6fac354bf89eb6163afa470d7cbf803053
+  - path: "references/sdk/azure-storage-file-share-ts.md"
+    blob_sha: fdc7abd17cb7b97344fd8084b443d70b9e5bf677
+  - path: "references/sdk/azure-storage-queue-py.md"
+    blob_sha: a9061b70bb05b65ff60c65b06bb0dd0d8f2bbdf3
+  - path: "references/sdk/azure-storage-queue-ts.md"
+    blob_sha: 3c2a534ec22cacc0e22a549b3b8bc6d309514bef
+  - path: "SKILL.md"
+    blob_sha: 09ab9126fcb8418d1fe34db1937ec51ee03eda60
+display_name: "Microsoft azure-storage candidate"
+upstream_manifest_version: "1.2.2"
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-14-file-package-static-inspected
+dependencies: "Azure Storage MCP or az CLI; storage SDKs across Python/TypeScript/Java/Rust; bundled auth and SDK references"
+purpose: "Azure Blob, File, Queue, Table and Data Lake service guidance"
+trigger: "Storage service selection, tiers, upload/download, lifecycle and SDK reference"
+nontrigger: "Not authorization to read private blobs, overwrite objects, delete messages or expose connection strings"
+authority_finding: "Normal examples download and upload blobs and SDK references modify storage and delete processed queue messages without explicit data-owner approval, overwrite, retention or destructive-action boundary."
+privacy_finding: "Blob contents, queue messages, storage account metadata and connection strings require data-classification and secret-safe output handling absent from the unchanged workflow."
+skill_specific_freshness: "Exact candidate package tree and 14 Git blob identities inspected 2026-10-28; latest path commit 3c461b1d01c2073754e157f3f4e525c1be40639 at 2026-10-05T11:05:46Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-storage.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Normal examples download and upload blobs and SDK references modify storage and delete processed queue messages without explicit data-owner approval, overwrite, retention or destructive-action boundary. Blob contents, queue messages, storage account metadata and connection strings require data-classification and secret-safe output handling absent from the unchanged workflow. Preserve: Storage tier/redundancy comparisons, service selection, managed identity guidance and language-specific SDK pointers. No scanner, Azure action or behavioral validation; July pin unchanged."
