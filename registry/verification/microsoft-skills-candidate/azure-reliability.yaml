@@ -1,0 +1,67 @@
+schema_version: 1
+skill_name: azure-reliability
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-reliability
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9330ac7bb6e8dbe5748219ac467ed066d8baa476
+skill_md_blob_sha: ed5cefb2923cc2e25aa9773dbcfa0f4f7caea033
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-13-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "13/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "monitoring"]
+  lifecycle: ["operations", "maintenance"]
+  characteristic: ["risk-aware", "human-review", "reference-heavy"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 13
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: ed5cefb2923cc2e25aa9773dbcfa0f4f7caea033
+  - path: "references/configure-health-probes.md"
+    blob_sha: 18182b852776fd7a6a023c793fc431abd77b48f3
+  - path: "references/configure-multi-region.md"
+    blob_sha: 05c061975583858c1e090eeb45354ed358aedc2f
+  - path: "references/configure-storage.md"
+    blob_sha: 9b79d0eafeca83ba1130955aab2892858680c48e
+  - path: "references/configure-zone-redundancy.md"
+    blob_sha: ce0588f736e870793c1d61606235504e22cdb606
+  - path: "references/health-probe-checks.md"
+    blob_sha: 060b7155fa80a3f256daec849ee75d761ee63930
+  - path: "references/iac-patching-bicep.md"
+    blob_sha: 1ecb442422d7c0316e64cca98be42823992762a6
+  - path: "references/iac-patching-terraform.md"
+    blob_sha: 59b86a860eb811dacba4d2bc397594b8b2763148
+  - path: "references/multi-region-checks.md"
+    blob_sha: 7e4891d8fba55ffb5c2437a06f0b42abe58c0b55
+  - path: "references/services/app-service/reliability.md"
+    blob_sha: 247113c6aef47e803bf31a7ac6e57ee12546d357
+  - path: "references/services/functions/reliability.md"
+    blob_sha: 84dd4a750d68d10f7011feba8f361408c2bab124
+  - path: "references/storage-redundancy-checks.md"
+    blob_sha: 5e5ea57b9c9c79474f1bbb8b68d457eff7fd4094
+  - path: "references/zone-redundancy-checks.md"
+    blob_sha: e99d5428dd0be0af80fb20ca5c8c355e1ab1cfda
+external_dependencies_not_executed: "Azure/MCP/CLI/SDK/AKS and upstream bundled tools, as applicable; none run."
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-reliability.yaml
+notes: "Useful staged deployment confirmations do not prevent bundled storage assessment from querying AzureWebJobsStorage app-setting .value, which may reveal a credential-bearing connection string. Storage migration and multi-region traffic changes require scoped authorization. Retain: Four-feature reliability matrix, staged consent, compute-before-storage sequencing and IaC/CLI options. No security scan or behavioral validation."

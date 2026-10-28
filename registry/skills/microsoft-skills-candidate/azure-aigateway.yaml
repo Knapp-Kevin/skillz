@@ -1,0 +1,57 @@
+schema_version: 1
+skill_name: azure-aigateway
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-aigateway/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; upstream dependencies retain their own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-28T20:56:53Z
+upstream_latest_path_commit: b3c238ec733eb7a438941d824ca18578cb73d371
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 8529348e07a31f48a46f0345a34fcaae9b27e7d0
+skill_md_blob_sha: 2a02dbfc3871846ede816112878cf65f7c8427ca
+package_file_count: 9
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 2a02dbfc3871846ede816112878cf65f7c8427ca
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/patterns.md"
+    blob_sha: 53397c460a2f9d01a18bdacbf553ea32c0bae64f
+  - path: "references/policies.md"
+    blob_sha: 127cabf3b5700e90414c0dd8e8cc586db1488053
+  - path: "references/sdk/azure-ai-contentsafety-py.md"
+    blob_sha: e6195e9362d60239874ddad1b121fc40fdfd42ee
+  - path: "references/sdk/azure-ai-contentsafety-ts.md"
+    blob_sha: 307aec8f94fcd4224f1f7bb8d9675689cd1f62b8
+  - path: "references/sdk/azure-mgmt-apimanagement-dotnet.md"
+    blob_sha: 8f44361e26c5d1f0af0374e5c0a25c907b6ee758
+  - path: "references/sdk/azure-mgmt-apimanagement-py.md"
+    blob_sha: b4c4cc755e41dd1f66faccd674183ae256940295
+  - path: "references/troubleshooting.md"
+    blob_sha: a46f3b4981ff3c692ed74af8887d68c11aaed393
+display_name: "Microsoft azure-aigateway candidate"
+upstream_manifest_version: "3.2.1"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: "complete-9-file-package-static-inspected"
+dependencies: "Upstream bundled references and examples; Azure CLI/MCP/SDK or AKS/azd/IaC tooling as specified in the manifest. Not executed."
+purpose: "azure-aigateway Azure cloud skill; see exact upstream SKILL.md for scope."
+trigger: "Host request fitting the upstream azure-aigateway manifest; no automatic invocation or mutation."
+nontrigger: "No cloud/data/credential action without resource-specific user authorization and privacy controls."
+authority_finding: "APIM subscription keys are retrieved; backend creation, API import, RBAC role grants, traffic policies and safety-threshold changes lack scoped approval. Prompt caching and token telemetry lack privacy isolation."
+privacy_finding: "APIM subscription keys are retrieved; backend creation, API import, RBAC role grants, traffic policies and safety-threshold changes lack scoped approval. Prompt caching and token telemetry lack privacy isolation."
+skill_specific_freshness: "Candidate exact tree 8529348e07a31f48a46f0345a34fcaae9b27e7d0; latest path commit b3c238ec733eb7a438941d824ca18578cb73d371 at 2026-07-28T20:56:53Z; 9 source blobs inspected 2026-10-28."
+prior_registered_provenance: registry/skills/microsoft-skills/azure-aigateway.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-aigateway.yaml
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECT unchanged 10/20. APIM subscription keys are retrieved; backend creation, API import, RBAC role grants, traffic policies and safety-threshold changes lack scoped approval. Prompt caching and token telemetry lack privacy isolation. Preserve: Managed identity, policy order, rate limits and cost controls as approval-gated design prior art. Security/behavioral not-run; July pin unchanged."

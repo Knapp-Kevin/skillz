@@ -1,0 +1,59 @@
+schema_version: 1
+skill_name: azure-aigateway
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-aigateway
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8529348e07a31f48a46f0345a34fcaae9b27e7d0
+skill_md_blob_sha: 2a02dbfc3871846ede816112878cf65f7c8427ca
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-9-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 1
+  effectiveness_design: 0
+tags:
+  use_case: ["cloud", "security"]
+  lifecycle: ["implementation", "operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 9
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 2a02dbfc3871846ede816112878cf65f7c8427ca
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/patterns.md"
+    blob_sha: 53397c460a2f9d01a18bdacbf553ea32c0bae64f
+  - path: "references/policies.md"
+    blob_sha: 127cabf3b5700e90414c0dd8e8cc586db1488053
+  - path: "references/sdk/azure-ai-contentsafety-py.md"
+    blob_sha: e6195e9362d60239874ddad1b121fc40fdfd42ee
+  - path: "references/sdk/azure-ai-contentsafety-ts.md"
+    blob_sha: 307aec8f94fcd4224f1f7bb8d9675689cd1f62b8
+  - path: "references/sdk/azure-mgmt-apimanagement-dotnet.md"
+    blob_sha: 8f44361e26c5d1f0af0374e5c0a25c907b6ee758
+  - path: "references/sdk/azure-mgmt-apimanagement-py.md"
+    blob_sha: b4c4cc755e41dd1f66faccd674183ae256940295
+  - path: "references/troubleshooting.md"
+    blob_sha: a46f3b4981ff3c692ed74af8887d68c11aaed393
+external_dependencies_not_executed: "Azure/MCP/CLI/SDK/AKS and upstream bundled tools, as applicable; none run."
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-aigateway.yaml
+notes: "APIM subscription keys are retrieved; backend creation, API import, RBAC role grants, traffic policies and safety-threshold changes lack scoped approval. Prompt caching and token telemetry lack privacy isolation. Retain: Managed identity, policy order, rate limits and cost controls as approval-gated design prior art. No security scan or behavioral validation."
