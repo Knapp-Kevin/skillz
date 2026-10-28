@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-mgmt-fabric-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-mgmt-fabric-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 26c5eecd68541a029caa2896af3df606d3a77de2
+skill_md_blob_sha: 31cb7e05a4012d5d0fabb2baa3adda43822eca7f
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "business-operations", "implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["cost-bounded", "reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: 2671e9f66eb0a617dbce8e4858de741371776092
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 7847e5878c1f6f2629bd108b1d7e5b7a884b07d2
+  - path: "SKILL.md"
+    blob_sha: 31cb7e05a4012d5d0fabb2baa3adda43822eca7f
+external_dependencies_not_executed: "azure-mgmt-fabric; azure-identity; Azure subscription/resource group; Fabric capacity and SKU quota; two references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-fabric-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Create, resize, suspend, resume and delete operations materially affect billing and production service without cost ceiling, owner approval, dependency inventory or rollback. Capacity names, subscription IDs and tenant/resource topology may be sensitive; no explicit output classification boundary. Preserve: SKU inventory, LRO polling, capacity-state lifecycle and budget-aware adaptation; require explicit billing, workload-impact and destructive approval. No scanner, external service execution or behavioral validation."

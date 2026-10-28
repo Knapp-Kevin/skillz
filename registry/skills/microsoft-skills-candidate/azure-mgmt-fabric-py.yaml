@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-mgmt-fabric-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-mgmt-fabric-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 26c5eecd68541a029caa2896af3df606d3a77de2
+skill_md_blob_sha: 31cb7e05a4012d5d0fabb2baa3adda43822eca7f
+package_file_count: 3
+package_files:
+  - path: "references/capabilities.md"
+    blob_sha: 2671e9f66eb0a617dbce8e4858de741371776092
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 7847e5878c1f6f2629bd108b1d7e5b7a884b07d2
+  - path: "SKILL.md"
+    blob_sha: 31cb7e05a4012d5d0fabb2baa3adda43822eca7f
+display_name: "Microsoft azure-mgmt-fabric-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "azure-mgmt-fabric; azure-identity; Azure subscription/resource group; Fabric capacity and SKU quota; two references"
+purpose: "Microsoft Fabric capacity provisioning, resizing, pause/resume and deletion"
+trigger: "Fabric capacity lifecycle, SKU selection and Python Azure management SDK"
+nontrigger: "Not authority to spend money, suspend production capacity or delete Fabric resources"
+authority_finding: "Create, resize, suspend, resume and delete operations materially affect billing and production service without cost ceiling, owner approval, dependency inventory or rollback."
+privacy_finding: "Capacity names, subscription IDs and tenant/resource topology may be sensitive; no explicit output classification boundary."
+skill_specific_freshness: "Exact candidate package tree and 3 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-mgmt-fabric-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-fabric-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Create, resize, suspend, resume and delete operations materially affect billing and production service without cost ceiling, owner approval, dependency inventory or rollback. Capacity names, subscription IDs and tenant/resource topology may be sensitive; no explicit output classification boundary. Preserve: SKU inventory, LRO polling, capacity-state lifecycle and budget-aware adaptation; require explicit billing, workload-impact and destructive approval. Package security and behavioral validation not-run."

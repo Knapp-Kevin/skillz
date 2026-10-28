@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-mgmt-apimanagement-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: e7cf59c979b611b71a2b84ce83da54edbf68fe7c
+skill_md_blob_sha: 559dc7e70685f7ce2a31beb51bbea3c492b97c41
+package_file_count: 3
+package_files:
+  - path: "references/capabilities.md"
+    blob_sha: a74cb701165bf2a9a0ae4e32626838c729784560
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: cc26dd53cdf830a7cbbb36857e2d64cc9fb22c79
+  - path: "SKILL.md"
+    blob_sha: 559dc7e70685f7ce2a31beb51bbea3c492b97c41
+display_name: "Microsoft azure-mgmt-apimanagement-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "azure-mgmt-apimanagement; azure-identity; Azure subscription and APIM service; XML policy and OpenAPI; two references"
+purpose: "Azure API Management service, products, subscriptions, policies, backends and users"
+trigger: "APIM Python SDK management, API gateway policy or subscription configuration"
+nontrigger: "Not authority to alter production gateway policies, create billable services or expose subscription secrets"
+authority_finding: "Service provisioning, API imports, published products, subscription issuance, gateway policy changes, named-value secrets, backends and user creation lack change-owner approval."
+privacy_finding: "Hero example prints subscription.primary_key; literal named-value secret example and user email require secure custody, redaction and identity/communication authorization."
+skill_specific_freshness: "Exact candidate package tree and 3 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-mgmt-apimanagement-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-apimanagement-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Service provisioning, API imports, published products, subscription issuance, gateway policy changes, named-value secrets, backends and user creation lack change-owner approval. Hero example prints subscription.primary_key; literal named-value secret example and user email require secure custody, redaction and identity/communication authorization. Preserve: Gateway policy composition, product/API mapping and named-value patterns; adapt with protected approval, Key Vault, secret-safe output and rollback. Package security and behavioral validation not-run."
