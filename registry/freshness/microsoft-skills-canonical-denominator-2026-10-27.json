@@ -27,8 +27,8 @@
     "candidate_total_needing_current_standard_review": 102,
     "registered_source_denominator_unchanged": 186,
     "admission_delta": 0,
-    "candidate_changed_existing_full_reviewed": 16,
-    "candidate_changed_existing_full_review_remaining": 60
+    "candidate_changed_existing_full_reviewed": 24,
+    "candidate_changed_existing_full_review_remaining": 52
   },
   "nonfirstclass_phase_references": [
     ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",

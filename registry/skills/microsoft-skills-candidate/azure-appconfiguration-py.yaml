@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-appconfiguration-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-appconfiguration-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: ec240bbbb4fc7e96000e5e9919451c78a07d1fab
+skill_md_blob_sha: bd07f0434d51ab1efa899c1b234e7f08a05bcab2
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: bd07f0434d51ab1efa899c1b234e7f08a05bcab2
+  - path: "references/capabilities.md"
+    blob_sha: 9b454b1c449b8e497ec42bf1db4d6c4eaef0693c
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: fe197704f325515f5de546d85084f1543aa67eee
+display_name: "Microsoft Azure App Configuration Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-appconfiguration; azure-identity; Azure App Configuration endpoint, RBAC, feature-flag and snapshot APIs"
+purpose: "Key/label settings, feature flags, snapshots, read-only locks"
+trigger: "Python App Configuration SDK use and feature-flag design"
+nontrigger: "Not authorization to enumerate secret-bearing settings or change live feature flags"
+authority_finding: "Setting create/delete, read-only toggles, snapshot creation and feature-flag mutation can change production traffic without resource/environment/owner approval."
+privacy_finding: "Prints unredacted configuration values and enumerates all settings; settings may contain secret or sensitive values."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-appconfiguration-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-appconfiguration-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Setting create/delete, read-only toggles, snapshot creation and feature-flag mutation can change production traffic without resource/environment/owner approval. Prints unredacted configuration values and enumerates all settings; settings may contain secret or sensitive values. Extract scoped key/label reads, snapshots-before-change and Entra credential patterns; require redaction and explicit flag/change approval. Security scan, cloud execution and behavioral validation not-run."

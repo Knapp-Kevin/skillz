@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-eventgrid-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-eventgrid-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 90c336cbe658115749f78e8f7ef89e1d120b7669
+skill_md_blob_sha: bf34e1da1aaebb9cca97f7373d9e278b5f9cb3dc
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: bf34e1da1aaebb9cca97f7373d9e278b5f9cb3dc
+  - path: "references/capabilities.md"
+    blob_sha: 5c18e7d997407f4c8fa0a4cdce438fbfba5f27bc
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 72576325735264ad8d79cfa70d9d05aa117ff929
+display_name: "Microsoft Azure Event Grid Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-eventgrid; azure-identity; Event Grid topic/namespace and downstream subscribers"
+purpose: "CloudEvent/EventGridEvent publication, namespace routing and async publishing"
+trigger: "Python Event Grid publisher or CloudEvents integration"
+nontrigger: "Not permission to publish to live subscribers or disclose event payloads"
+authority_finding: "Publishes externally visible events that can trigger downstream automation and billing without approval for topic, recipient, event class or effects."
+privacy_finding: "Event data and subject fields can carry customer or operational identifiers; no classification, minimization or downstream retention boundary."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-eventgrid-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-eventgrid-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Publishes externally visible events that can trigger downstream automation and billing without approval for topic, recipient, event class or effects. Event data and subject fields can carry customer or operational identifiers; no classification, minimization or downstream retention boundary. Preserve CloudEvent schema and batch/namespace patterns; require topic allowlist, payload classification and explicit publish authorization. Security scan, cloud execution and behavioral validation not-run."

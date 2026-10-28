@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-storage-queue-py
+candidate_key: azure-storage-queue-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 58287bdc78694230979293fbf56a05858e3b8720
+skill_md_blob_sha: f8ed9816b14f837795dc9899ff4564e69cd2adc0
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","implementation","communication"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy","risk-aware","tool-assisted"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: f8ed9816b14f837795dc9899ff4564e69cd2adc0
+  - path: "references/capabilities.md"
+    blob_sha: af6e9c29da61074750001a8ac07aaf2dbda00a69
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: c4a37422cd249708f6f7629095c8aca386801d3c
+external_dependencies_not_executed: "azure-storage-queue; azure-identity; Azure Queue Storage account and message processing workers"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-queue-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Creates/deletes queues, sends messages, changes visibility, deletes received messages and clears entire queues without action-specific owner/consumer authorization. Prints raw message content during receive/peek/async examples; payload may contain PII, credentials or regulated data. Preserve visibility timeout, dequeue_count and poison-message concepts; add scoped consume/delete permits, redaction and idempotency. No package-security scan, cloud operation or behavioral validation; July-pin review remains separate."

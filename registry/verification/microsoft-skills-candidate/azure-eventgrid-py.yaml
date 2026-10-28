@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-eventgrid-py
+candidate_key: azure-eventgrid-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 90c336cbe658115749f78e8f7ef89e1d120b7669
+skill_md_blob_sha: bf34e1da1aaebb9cca97f7373d9e278b5f9cb3dc
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","communication","implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy","tool-assisted","risk-aware"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: bf34e1da1aaebb9cca97f7373d9e278b5f9cb3dc
+  - path: "references/capabilities.md"
+    blob_sha: 5c18e7d997407f4c8fa0a4cdce438fbfba5f27bc
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 72576325735264ad8d79cfa70d9d05aa117ff929
+external_dependencies_not_executed: "azure-eventgrid; azure-identity; Event Grid topic/namespace and downstream subscribers"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-eventgrid-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Publishes externally visible events that can trigger downstream automation and billing without approval for topic, recipient, event class or effects. Event data and subject fields can carry customer or operational identifiers; no classification, minimization or downstream retention boundary. Preserve CloudEvent schema and batch/namespace patterns; require topic allowlist, payload classification and explicit publish authorization. No package-security scan, cloud operation or behavioral validation; July-pin review remains separate."
