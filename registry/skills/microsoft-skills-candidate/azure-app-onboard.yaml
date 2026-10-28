@@ -1,0 +1,35 @@
+schema_version: 1
+skill_name: azure-app-onboard
+candidate_key: azure-app-onboard
+display_name: Microsoft azure-app-onboard candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root LICENSE and SKILL.md; no vendoring)"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: ce62e3df0d860115631b3fb7658eb7a6c35cf141
+skill_md_blob_sha: 00635c01fc9518e171e5157185a60999e1455b84
+package_file_count: 68
+package_tree_bytes: 382357
+package_file_paths: ["SKILL.md","deploy/SKILL.md","deploy/references/approval-gate-template.md","deploy/references/blocked-patterns.md","deploy/references/code-deployment-appservice.md","deploy/references/code-deployment-container-apps.md","deploy/references/code-deployment-swa.md","deploy/references/database-post-deploy.md","deploy/references/deploy-checklist-template.md","deploy/references/deploy-safety.md","deploy/references/deploy-schemas.ts","deploy/references/error-classification.md","deploy/references/health-check-patterns.md","deploy/references/mcp-tools.md","deploy/references/portal-links.md","deploy/references/preflight-checks.md","deploy/references/subagent-preflight.md","prepare/SKILL.md","prepare/references/deploy-strategy.md","prepare/references/mcp-tools.md","prepare/references/naming-patterns.md","prepare/references/prepare-schemas.ts","prepare/references/pricing-guide-services.md","prepare/references/pricing-guide.md","prepare/references/service-mapping.md","prepare/references/sku-matrix.md","prepare/references/sku-quota-validation.md","prepare/references/subagent-pricing.md","prepare/references/subagent-quota.md","prepare/references/validation-rubric.md","references/approval-gates.md","references/azd-template-routing.md","references/handoff-protocol.md","references/iac-resources.md","references/intent-gathering.md","references/mcp-tool-reference.md","references/pipeline-rules-runtime.md","references/pipeline-rules.md","references/session-protocol.md","references/session-schemas.ts","references/subscription-resolution.md","scaffold/SKILL.md","scaffold/references/bicep-app-service.md","scaffold/references/bicep-container-apps.md","scaffold/references/bicep-patterns-data.md","scaffold/references/bicep-patterns-security.md","scaffold/references/bicep-patterns.md","scaffold/references/bicep-swa.md","scaffold/references/cicd-pipelines.md","scaffold/references/dockerfile-generation.md","scaffold/references/env-var-secrets.md","scaffold/references/error-handling.md","scaffold/references/iac-generation-rules.md","scaffold/references/mcp-tools.md","scaffold/references/rbac-roles.md","scaffold/references/scaffold-healing-rules.md","scaffold/references/scaffold-schemas.ts","scaffold/references/self-healing.md","scaffold/references/self-review-checklist.md","scaffold/references/self-review-procedure.md","scaffold/references/subagent-iac-gen.md","scaffold/references/subagent-review.md","scaffold/references/subagent-validate.md","scaffold/references/terraform-patterns.md","scaffold/references/validation-and-manifest.md","scaffold/references/waf-checklist.md","scaffold/scripts/scaffold-conformance.ps1","scaffold/scripts/scaffold-conformance.sh"]
+shared_dependencies: ["azure-app-onboard-prereq (separately reviewed)","Azure CLI and MCP","Bicep/Terraform","Key Vault","cloud resources","Azure enterprise infrastructure handoff"]
+permission_tier: "Mutating and external-side-effect: Azure provisioning, billing, identity/RBAC, app deployment, publishing-auth changes, database migrations, secret management and local session deletion."
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-bundled-package-static-inspected-external-dependencies-characterized-not-executed
+dependencies: "68 source-owned blobs, including nested phase SKILL.md reference files without independent frontmatter, schemas and upstream shell/PowerShell conformance scripts; Azure CLI/MCP, Azure credentials, Bicep/Terraform, deployment targets and optional external skill handoffs."
+purpose: "End-to-end new/existing app assessment, Azure architecture planning, IaC generation, cost estimation, cloud deployment and handoff."
+trigger_nontrigger: "Use for new or existing app Azure onboarding; not existing azd deployment, standalone cost optimization/validation, AKS cluster management or running-service troubleshooting."
+authority_finding: "Two separate scaffold/deploy gates are genuine, but automatic seven-day session deletion, credential display/log and deploy-secrets.env fallback, nonblocking failure to re-disable SCM basic publishing credentials, discovered production DB migrations without distinct authorization, and new billable ACR/RBAC changes during healing fail authority/privacy requirements."
+privacy_finding: "Generated secrets may be displayed in conversation, persisted in deploy-secrets.env or recovered from deploy-audit.log; local Terraform state and session deletion need scoped retention/handling. No live credential was observed."
+import_eligibility: rejected-unchanged-extract-or-checklist
+rationale: "REJECT unchanged 12/20. Preserve distinct approval gates, Azure service/quota/cost mapping, IaC patterns, managed identity/Key Vault guidance, health checks and compaction-safe checklists; remediate independently consequential authorization and privacy defects before unchanged use."
