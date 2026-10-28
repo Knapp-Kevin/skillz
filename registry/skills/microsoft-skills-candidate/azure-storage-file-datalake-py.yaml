@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-storage-file-datalake-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-storage-file-datalake-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: dd1e5344aef7bd25e2480a9af6a89128923e53db
+skill_md_blob_sha: bd8a9e4abbdadee2ef5d55429a39e8c179748e3e
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: bd8a9e4abbdadee2ef5d55429a39e8c179748e3e
+  - path: "references/capabilities.md"
+    blob_sha: b1d101599ef00a7f0f54dca14b4dda9daaaff2d8
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: f23a4960c67c3b82b23bd1245f171d6de150a2f1
+display_name: "Microsoft Azure Data Lake Storage Gen2 Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-storage-file-datalake; azure-identity; ADLS Gen2 filesystem; hierarchical namespace and ACL"
+purpose: "Filesystem/directory/file lifecycle, ranged reads, ACL operations"
+trigger: "Python DataLakeServiceClient and filesystem ACL work"
+nontrigger: "Not permission to delete a filesystem, rewrite files or alter access-control lists"
+authority_finding: "Deletes filesystems, directories and files, uploads with overwrite=True and recursively changes ACLs without explicit resource/owner/permission approval."
+privacy_finding: "Recursive listings, downloads and owner/permission outputs can disclose sensitive paths and data; recursive ACL mutation can expand access."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-storage-file-datalake-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-file-datalake-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Deletes filesystems, directories and files, uploads with overwrite=True and recursively changes ACLs without explicit resource/owner/permission approval. Recursive listings, downloads and owner/permission outputs can disclose sensitive paths and data; recursive ACL mutation can expand access. Extract hierarchical path/range/ACL inspection patterns; separate read authorization from destructive operations and require reviewed ACL diffs. Security scan, cloud execution and behavioral validation not-run."

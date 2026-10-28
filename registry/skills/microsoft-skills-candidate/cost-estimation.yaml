@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: cost-estimation
+display_name: "Microsoft cost-estimation candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-cost/skills/cost-estimation/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: a21080854fecab8e15014121bcfd328bf4cbe5df
+skill_md_blob_sha: 756ad958d176e212254dff123bfdbf2294fdf4d0
+package_file_count: 8
+package_file_paths: ["SKILL.md","references/cost-forecast/error-handling.md","references/cost-forecast/examples.md","references/cost-forecast/guardrails.md","references/cost-forecast/request-body-schema.md","references/cost-forecast/workflow.md","references/pricing-estimate.md","references/tool-fallback.md"]
+permission_tier: "negotiated pricesheet download can expose a short-lived credential-bearing ZIP URL; no safe delivery/recipient authorization boundary"
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: "forecast_costs, get_retail_prices, start_pricesheet_download, get_pricesheet_status; seven bundled forecast/pricing/fallback references."
+purpose: "Forecast Azure spend and estimate retail or negotiated resource pricing."
+trigger_nontrigger: "Future forecasts or pricing estimates, not actual spend, budget setup, rightsizing or commitments."
+authority_finding: "negotiated pricesheet download can expose a short-lived credential-bearing ZIP URL; no safe delivery/recipient authorization boundary"
+privacy_finding: "Negotiated pricing and returned download URLs may be sensitive bearer capabilities; tool-fallback says never expose pricesheet URLs while pricing-estimate directs returning one."
+import_eligibility: adaptation-extraction-reference-only
+rationale: "REJECT unchanged: pricing-estimate instructs returning the short-lived pricesheet ZIP URL to conversational output, directly conflicting with its tool-fallback warning not to expose pricesheet URLs. Extract public retail estimation and typed forecast constraints; require secure credential-bearing artifact handoff."

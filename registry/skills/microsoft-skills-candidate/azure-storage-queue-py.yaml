@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-storage-queue-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-storage-queue-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 58287bdc78694230979293fbf56a05858e3b8720
+skill_md_blob_sha: f8ed9816b14f837795dc9899ff4564e69cd2adc0
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: f8ed9816b14f837795dc9899ff4564e69cd2adc0
+  - path: "references/capabilities.md"
+    blob_sha: af6e9c29da61074750001a8ac07aaf2dbda00a69
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: c4a37422cd249708f6f7629095c8aca386801d3c
+display_name: "Microsoft Azure Queue Storage Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-storage-queue; azure-identity; Azure Queue Storage account and message processing workers"
+purpose: "Queue/message send, peek, receive, update, delete, clear and visibility"
+trigger: "Python QueueClient or QueueServiceClient message lifecycle"
+nontrigger: "Not authorization to publish messages, consume private payloads or clear a queue"
+authority_finding: "Creates/deletes queues, sends messages, changes visibility, deletes received messages and clears entire queues without action-specific owner/consumer authorization."
+privacy_finding: "Prints raw message content during receive/peek/async examples; payload may contain PII, credentials or regulated data."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-storage-queue-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-queue-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Creates/deletes queues, sends messages, changes visibility, deletes received messages and clears entire queues without action-specific owner/consumer authorization. Prints raw message content during receive/peek/async examples; payload may contain PII, credentials or regulated data. Preserve visibility timeout, dequeue_count and poison-message concepts; add scoped consume/delete permits, redaction and idempotency. Security scan, cloud execution and behavioral validation not-run."

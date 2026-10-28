@@ -1,0 +1,36 @@
+schema_version: 1
+skill_name: azure-kusto-irql
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 916cc9b4930dffc25b549b647fb08abf97a4503d
+skill_md_blob_sha: 3af32cdbe307d0d23ea884dead1a0a9a09334390
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 13/20
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: [security, observability]
+  lifecycle: [verification, operations]
+  characteristic: [source-driven, risk-aware, reference-heavy]
+  authority: [read-only]
+  portability: [medium]
+package_files_inspected: 'references/EXAMPLES.md; references/KUSTO_EXPLORER_LAUNCH.md; SKILL.md'
+authority_hard_fail: true
+notes: 'REJECT unchanged: composable selectors and early filtering are useful, but live security-data retrieval/disclosure lacks explicit scoped authorization. Extract IRQL pipeline composition and minimization with host-enforced data access boundaries; do not expose PasswordHash or secret-bearing columns. Full source-authored package files inspected at exact Git tree. No cloud queries, file writes, deployment, security scanner, or external behavioral/adversarial scenarios were executed. These are candidate-version rejection records, not promotion of the registered July pin.'

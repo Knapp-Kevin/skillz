@@ -1,0 +1,107 @@
+schema_version: 1
+skill_name: "finetuning"
+source_id: "microsoft-skills"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_repository: "https://github.com/microsoft/skills"
+source_path: ".github/plugins/azure-skills/skills/microsoft-foundry/finetuning/SKILL.md"
+source_class: "official"
+license: "MIT (upstream manifest; service and dataset terms independently scoped)"
+relationship: "upstream-reference-not-vendored"
+upstream_last_updated_at: "2026-08-07T11:17:12Z"
+upstream_latest_path_commit: "04d245b7888e8c9b063d460aef10106e66e48a4f"
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: "upstream-exact-revision"
+local_path: "not-materialized-at-candidate-revision"
+fingerprint_algorithm: "git-tree-sha1"
+package_tree_sha: "91b3afacfb2c855870109207d0b584e8e2993f8e"
+skill_md_blob_sha: "428b2f3648500aede49730c5e233b7c5dd554ac5"
+package_file_count: 34
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 428b2f3648500aede49730c5e233b7c5dd554ac5
+  - path: "references/agentic-rft.md"
+    blob_sha: 18c515d550d2f2650b9d4af8a897534c13f22bcd
+  - path: "references/dataset-formats.md"
+    blob_sha: c8dfe2b136b8dd96afe193298a22eaaa30bb9665
+  - path: "references/deployment.md"
+    blob_sha: eb69aa2c26c7d92c48fc8e17429ad691f7e9db4b
+  - path: "references/evaluation.md"
+    blob_sha: d5ca739e70bf1f7e7bb0ac874258aec0b1daa8f2
+  - path: "references/grader-design.md"
+    blob_sha: 53bab4887dedf8d4be1deab591c7897f02096454
+  - path: "references/hyperparameters.md"
+    blob_sha: edfa0ceda530ba3e30e26031b589f295dd1cf9fc
+  - path: "references/large-file-uploads.md"
+    blob_sha: 1aa87e18e16567b724d303e1b6b6ac2e7c8802c4
+  - path: "references/platform-gotchas.md"
+    blob_sha: 4b44a009327cf9c95c6f53d38f550e3f2b477d38
+  - path: "references/reward-hacking.md"
+    blob_sha: a8545e7d380baaa951b924b29fcd5b204c80d00f
+  - path: "references/training-curves.md"
+    blob_sha: 04ae80c9c2ccc2f33ab1a4a34aa8cacedc401482
+  - path: "references/training-types.md"
+    blob_sha: 1adcfd2166a4eca9e1ca7df0a63ccc16a56a62bb
+  - path: "references/vision-fine-tuning.md"
+    blob_sha: c55bc32ebf150e5c429edcee6c8c1e165c4de014
+  - path: "scripts/calibrate_grader.py"
+    blob_sha: c4a4582da01d4e014f4ea167e31501f89d5debde
+  - path: "scripts/check_training.py"
+    blob_sha: d6bc261d76e4fa2bdfd6956bdb178ea53b0d3cef
+  - path: "scripts/cleanup.py"
+    blob_sha: f7fe8a32b9d09149667ae98187868ee0f9c3ad2f
+  - path: "scripts/common.py"
+    blob_sha: 6d3c5191c95fa1600fbcd7229ecd09c8985f8904
+  - path: "scripts/convert_dataset.py"
+    blob_sha: a9c8ed451cdac11b7efc77e7b5f2eb7b2c35a2bd
+  - path: "scripts/deploy_model.py"
+    blob_sha: 9b74c4a2c70abac47343f6fcfd21b82f7fdd4bdf
+  - path: "scripts/evaluate_model.py"
+    blob_sha: 391b865ac7544c2475378dc1d08cb233960f7820
+  - path: "scripts/generate_distillation_data.py"
+    blob_sha: ce4969e5bf064a9ec300ba4ede0b5d30535239fe
+  - path: "scripts/monitor_training.py"
+    blob_sha: 5f132457a2d31a62d5e37eb9dfec1e0aaf28b5fa
+  - path: "scripts/score_dataset.py"
+    blob_sha: bd7511afc42e626bb604d6a87b8c3e267b8a21cc
+  - path: "scripts/submit_training.py"
+    blob_sha: 9f91b1bb465d1c16c48beff1ff21f1e73b98906a
+  - path: "scripts/validate/__init__.py"
+    blob_sha: 7d4573e8134c4a50b472b043fc2d779ea900e469
+  - path: "scripts/validate/data_stats.py"
+    blob_sha: d6380ec381cdc734442861ac8d1170ee4c770b49
+  - path: "scripts/validate/validate_dpo.py"
+    blob_sha: b1673985728ded405346f0aad2ae035c649e6b4b
+  - path: "scripts/validate/validate_rft.py"
+    blob_sha: 827a5a2a0a80ca91a0bed957a68f43b0cdd50d76
+  - path: "scripts/validate/validate_sft.py"
+    blob_sha: e914f34415bb103243d3ebfbfc419663fd2b4708
+  - path: "workflows/dataset-creation.md"
+    blob_sha: a82de2084042fa1e5d3b81d3682cdc20c6e3179b
+  - path: "workflows/diagnose-poor-results.md"
+    blob_sha: cf20b683a7d207fb2fe223fabe0c8e8a82aea20a
+  - path: "workflows/full-pipeline.md"
+    blob_sha: 0d0252e807d69aaa97000519123ec07bcd29567c
+  - path: "workflows/iterative-training.md"
+    blob_sha: 5e7da7ad260eda830405f23d47c34b7019d2dfa2
+  - path: "workflows/quickstart.md"
+    blob_sha: e28b45fe674fd2fad090aab4f170b0d36e220469
+display_name: "Microsoft microsoft-foundry-finetuning candidate"
+upstream_manifest_version: "0.0.0-placeholder"
+permission_tier: "high-authority-cloud-operations-reference"
+portability: "low"
+review_status: "rejected"
+dependency_status: "complete-34-file-package-static-inspected"
+dependencies: "Microsoft Foundry/OpenAI/Azure APIs, Azure CLI ARM tokens, Python SDKs, source-owned 14+ Python tools, hosted training, file upload, external graders and model deployments"
+purpose: "Guide SFT/DPO/RFT dataset preparation, training submission, grader calibration, evaluation, deployment and cleanup"
+trigger: "Fine-tuning, distillation, grader calibration, training job operations or fine-tuned model deployment"
+nontrigger: "Not authorization to upload private datasets, spend on training, deploy models, delete files/jobs, collect production logs or place API keys in process arguments"
+authority_finding: "The root's five rules address model quality but omit approval gates for billable training, external dataset upload, deployment and destructive cleanup. submit_training.py and deploy_model.py issue persistent cloud mutations; cleanup.py can delete files/cancel jobs. Quickstart and scripts demonstrate --api-key CLI arguments, creating process/history exposure paths."
+privacy_finding: "Dataset creation explicitly permits production-log collection without participant/data-owner consent, minimization or retention gates. Text, image, user messages, model outputs and grader payloads may be transmitted to external services. PII-dense medical/legal/resume examples are treated as content-safety friction rather than independent disclosure authority."
+skill_specific_freshness: "Candidate package tree 91b3afacfb2c855870109207d0b584e8e2993f8e, all 34 Git blobs read 2026-10-28; manifest path commit 04d245b7888e8c9b063d460aef10106e66e48a4f at 2026-08-07T11:17:12Z"
+prior_registered_provenance: "registry/skills/microsoft-skills/microsoft-foundry-finetuning.yaml"
+prior_registered_verification: "registry/verification/microsoft-skills/microsoft-foundry-finetuning.yaml"
+import_eligibility: "adaptation-extraction-reference-only-no-automatic-adoption"
+rationale: "REJECT unchanged 12/20: The root's five rules address model quality but omit approval gates for billable training, external dataset upload, deployment and destructive cleanup. submit_training.py and deploy_model.py issue persistent cloud mutations; cleanup.py can delete files/cancel jobs. Quickstart and scripts demonstrate --api-key CLI arguments, creating process/history exposure paths. Dataset creation explicitly permits production-log collection without participant/data-owner consent, minimization or retention gates. Text, image, user messages, model outputs and grader payloads may be transmitted to external services. PII-dense medical/legal/resume examples are treated as content-safety friction rather than independent disclosure authority. Preserve: SFT/DPO/RFT separation, holdout discipline, base-model baseline, grader calibration, reward-hacking detection, checkpoint selection, cost-aware comparison and dataset validation. Static exact-package review only; package-security and behavioral not-run; July pin unchanged."

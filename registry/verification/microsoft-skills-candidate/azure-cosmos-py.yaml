@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-cosmos-py
+candidate_key: azure-cosmos-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 75a26c6f97359e532458e1e4c9da92328961bf49
+skill_md_blob_sha: 9800d67e64c753e221128e38c43a81bfabdff944
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","implementation","security"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy","risk-aware","tool-assisted"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 9800d67e64c753e221128e38c43a81bfabdff944
+  - path: "references/partitioning.md"
+    blob_sha: 91e2ea93f99996179a93b0f140acbce895aba4ec
+  - path: "references/query-patterns.md"
+    blob_sha: 217430ea497ee9c7457efefca48b87afe9919430
+external_dependencies_not_executed: "azure-cosmos; azure-identity; Cosmos DB account/container; provisioned RU/s"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-cosmos-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Creates databases/containers/items, deletes items, performs read_all_items and cross-partition queries, and changes throughput without scoped owner, tenant or cost approval. Cross-partition SELECT and item printing may expose data outside caller tenant; partition key is an efficiency mechanism, not access control. Extract parameterized query, continuation pagination and partition-key design; require tenant-level authorization, output minimization and cost/change permits. No package-security scan, cloud operation or behavioral validation; July-pin review remains separate."

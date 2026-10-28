@@ -1,0 +1,73 @@
+schema_version: 1
+skill_name: azure-ai
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-ai
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 34c27c0761f1a2f730d45ddc1f395c6036723754
+skill_md_blob_sha: 6ba99c7a088a27f5c1059f00b8ce9f323a56a984
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-16-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "research"]
+  lifecycle: ["implementation"]
+  characteristic: ["reference-heavy", "tool-routing"]
+  authority: ["external-side-effect", "mutating"]
+  portability: ["medium"]
+package_file_count: 16
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 6ba99c7a088a27f5c1059f00b8ce9f323a56a984
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/sdk/azure-ai-contentsafety-java.md"
+    blob_sha: 44b746fa3f69fe9a698d0322ffc6b6c57daeb807
+  - path: "references/sdk/azure-ai-contentsafety-py.md"
+    blob_sha: e6195e9362d60239874ddad1b121fc40fdfd42ee
+  - path: "references/sdk/azure-ai-contentsafety-ts.md"
+    blob_sha: 307aec8f94fcd4224f1f7bb8d9675689cd1f62b8
+  - path: "references/sdk/azure-ai-document-intelligence-dotnet.md"
+    blob_sha: 41e9e065f17db00e4d25027e903ad0101152a22a
+  - path: "references/sdk/azure-ai-document-intelligence-ts.md"
+    blob_sha: 1e18b149bab8254cfd723e0f9e4ede86e9039461
+  - path: "references/sdk/azure-ai-openai-dotnet.md"
+    blob_sha: 73fd5d08bc5a1e354b917f09d05653281f9f40e8
+  - path: "references/sdk/azure-ai-transcription-py.md"
+    blob_sha: ab80787f49a384279a5b58fde6b49ae7d44d8401
+  - path: "references/sdk/azure-ai-translation-text-py.md"
+    blob_sha: fa102047d5917d66f12a8ed072a67077f31b5684
+  - path: "references/sdk/azure-ai-translation-ts.md"
+    blob_sha: 1449efea23e35981a7470494818cea577a3ddc5b
+  - path: "references/sdk/azure-ai-vision-imageanalysis-java.md"
+    blob_sha: b81ef1c2b7b4053ba0d0f7f8708b100a0a01b92b
+  - path: "references/sdk/azure-ai-vision-imageanalysis-py.md"
+    blob_sha: 48db6ec42c5d0e6dc1034a955ebcc7a9982d267d
+  - path: "references/sdk/azure-search-documents-dotnet.md"
+    blob_sha: aaa956c83f1f4c0f17efe38d379de92b93792f23
+  - path: "references/sdk/azure-search-documents-py.md"
+    blob_sha: 478c88535d60f04daccbea4135a055f54a9e0276
+  - path: "references/sdk/azure-search-documents-ts.md"
+    blob_sha: 52015172cc635af7d4137bb77240dd27f6f4a61d
+external_dependencies_not_executed: "Azure/MCP/CLI/SDK/AKS and upstream bundled tools, as applicable; none run."
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai.yaml
+notes: "Private search documents, audio, images and transcripts may be transmitted to Azure AI without data-owner consent or retention/disclosure scope; bundled SDK references also mutate search indexes. Retain: Cross-SDK routing, managed identity, bounded search, confidence thresholds and SDK patterns. No security scan or behavioral validation."

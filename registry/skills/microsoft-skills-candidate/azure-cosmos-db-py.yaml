@@ -1,0 +1,56 @@
+schema_version: 1
+skill_name: azure-cosmos-db-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-cosmos-db-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 1a03b83a1054d4183c58bd828db8c7997f1c38eb
+skill_md_blob_sha: 66973512a33a2ce1cd715d96c39f7ddb7ccc645d
+package_file_count: 9
+package_files:
+  - path: "assets/conftest_template.py"
+    blob_sha: 996c3025b3c83e756bc7e070777cb4550a4480dd
+  - path: "assets/cosmos_client_template.py"
+    blob_sha: 7af70bae994cbddf64c94a3ade5464559987a124
+  - path: "assets/service_template.py"
+    blob_sha: 2efff3e0a13eac98ed6cbfb834e243d6a7600598
+  - path: "references/client-setup.md"
+    blob_sha: c81c4c803cb119d46baa69a622b14323cca479a2
+  - path: "references/error-handling.md"
+    blob_sha: d9001341f2584db73eeb33d4d8929aadb6ce5c8a
+  - path: "references/partitioning.md"
+    blob_sha: a98e1758815b42fd6f1287ed6edcca735b6ec533
+  - path: "references/service-layer.md"
+    blob_sha: f32dc6773d273279c19702b1e52b4f68150f014c
+  - path: "references/testing.md"
+    blob_sha: b7bd21901bf348525b3992ab64d36fff73818cbf
+  - path: "SKILL.md"
+    blob_sha: 66973512a33a2ce1cd715d96c39f7ddb7ccc645d
+display_name: "Microsoft azure-cosmos-db-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-9-file-package-static-inspected
+dependencies: "azure-cosmos; azure-identity; FastAPI/Starlette; Pydantic; pytest/pytest-mock; Cosmos DB or explicitly isolated emulator; three bundled Python templates and five references"
+purpose: "Python/FastAPI Cosmos DB service layer, CRUD, partitioning and test templates"
+trigger: "Cosmos DB persistence, tenant-partitioned service design or Python Cosmos client integration"
+nontrigger: "Not authority to read, write, move or delete a workspace or bypass TLS/tenant access controls"
+authority_finding: "Service CRUD accepts workspace_id/author_id without establishing caller authority; cross-partition queries, upsert and delete are executable without per-action authorization. Cross-partition move inserts then deletes without approved ownership/compensation."
+privacy_finding: "Potential injection sink from raw extra_filter SQL concatenation if untrusted; substring-based emulator detection can disable TLS verification on non-emulator hostnames; broad exception tracebacks can disclose endpoints and request context."
+skill_specific_freshness: "Exact candidate package tree and 9 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-cosmos-db-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-cosmos-db-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Service CRUD accepts workspace_id/author_id without establishing caller authority; cross-partition queries, upsert and delete are executable without per-action authorization. Cross-partition move inserts then deletes without approved ownership/compensation. Potential injection sink from raw extra_filter SQL concatenation if untrusted; substring-based emulator detection can disable TLS verification on non-emulator hostnames; broad exception tracebacks can disclose endpoints and request context. Preserve: RBAC-first credential selection, emulator isolation, typed service layers, parameterized value bindings, partition design and fixture patterns; adapt with explicit tenant/operation permits, structured query builders, safe TLS, lifecycle and retention policies. Package security and behavioral validation not-run."

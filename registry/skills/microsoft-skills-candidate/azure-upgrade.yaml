@@ -1,0 +1,136 @@
+schema_version: 1
+skill_name: azure-upgrade
+display_name: Microsoft Azure Upgrade candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-upgrade/SKILL.md
+source_class: official
+license: MIT (upstream manifest; Azure service terms separately apply)
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-upgrade
+relationship: upstream-reference-not-vendored
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: a6d9570e0e6d239a624592fd6eb667e20bb7e02d
+skill_md_blob_sha: 4d60fedcaa037dafd098d9ca3c4f8302c7520f1c
+upstream_manifest_version: "1.2.3"
+upstream_last_updated_at: 2026-10-20T11:05:49Z
+upstream_latest_path_commit: 83a4616dcbaa52bea173fc133f7f974dc60de608
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+package_file_count: 50
+package_bytes: 338693
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 4d60fedcaa037dafd098d9ca3c4f8302c7520f1c
+  - path: "references/global-rules.md"
+    blob_sha: bf670e585cd153504f8df7fc00ac87a907bfc369
+  - path: "references/languages/java/INSTRUCTION.md"
+    blob_sha: d6799186ab4a9ce4f9924e8a15dc4b4def182d19
+  - path: "references/languages/java/README.md"
+    blob_sha: b13d590efe29e34341968c94f710fd052ca0124e
+  - path: "references/languages/java/bom-migration/bom-gradle-settings.md"
+    blob_sha: 61bfd0d678598aad481b9ab5b1667b7ae21dcaac
+  - path: "references/languages/java/bom-migration/bom-gradle-toml.md"
+    blob_sha: 0cf1790cae8a6bea3943af2f6573c38660c15a78
+  - path: "references/languages/java/bom-migration/bom-gradle.md"
+    blob_sha: 487bd758612ed35ad954027f4c0f1039db9f2157
+  - path: "references/languages/java/bom-migration/bom-maven.md"
+    blob_sha: 740d62158b7fe49c5ed5ee3d06a8fc935fd36452
+  - path: "references/languages/java/bom-migration/bom-migration.md"
+    blob_sha: 2f7b484fb0f03d180568fad2a457f94d9c3cfa28
+  - path: "references/languages/java/bom-migration/bom-validation.md"
+    blob_sha: 43edc69778881059621b18264d4c57e7ed49f322
+  - path: "references/languages/java/package-specific/com.microsoft.azure.eventprocessorhost.md"
+    blob_sha: e8e47c7cee5e26862fa5940c1dd42b4cc56748a5
+  - path: "references/languages/java/package-specific/com.microsoft.azure.management.md"
+    blob_sha: d6ddc373dfe05dc32b0e1741964c9f2a77305e7a
+  - path: "references/languages/java/rules/efficiency.md"
+    blob_sha: 8e522ff1e71645a7f95003f6713f81983d896ef4
+  - path: "references/languages/java/rules/execution-guidelines.md"
+    blob_sha: eac7c9f1c8b22b7188ab2368a3ee96a0eb579e11
+  - path: "references/languages/java/rules/review-code-changes.md"
+    blob_sha: 2fa42397abe886275f01507a9868dc0e8fc9385a
+  - path: "references/languages/java/rules/troubleshooting.md"
+    blob_sha: 35cbfc068860b824f4275e0dd528ca317fad0d29
+  - path: "references/languages/java/rules/upgrade-strategy.md"
+    blob_sha: 490618245248948bfa60fd197a99a276a716ae80
+  - path: "references/languages/java/rules/upgrade-success-criteria.md"
+    blob_sha: 8d8b67dfcbf0f3a5924c515e156fb39c9b323597
+  - path: "references/languages/java/scripts/upgrade_bom.py"
+    blob_sha: 96bd38f3840be0a53374936c5ecfffc96a69d837
+  - path: "references/languages/java/templates/PLAN_TEMPLATE.md"
+    blob_sha: 69c095613c51e5bbb8673f1fa1731195729646cf
+  - path: "references/languages/java/templates/PROGRESS_TEMPLATE.md"
+    blob_sha: 434ad486831ca3183e847c1aa62c395c5d3575db
+  - path: "references/languages/java/templates/SUMMARY_TEMPLATE.md"
+    blob_sha: b3eb73fe4cb2378e1410748fb283ef7158175e75
+  - path: "references/languages/java/workflow/phase-1-precheck.md"
+    blob_sha: 428a0f4554287064e968114f33eb48321ccba106
+  - path: "references/languages/java/workflow/phase-2-plan.md"
+    blob_sha: 42b1fef070afb23d9c0a1ef8a0a0d77ba0c38013
+  - path: "references/languages/java/workflow/phase-3-execute.md"
+    blob_sha: 060eccbfcacad4f044ac771a63989b07d80cc1af
+  - path: "references/languages/java/workflow/phase-4-summarize.md"
+    blob_sha: 69b549944cec06dab1674cabbd21c85c93470e2e
+  - path: "references/services/functions/consumption-to-flex/linux/assessment.md"
+    blob_sha: 28935e15bf0d3b4df674abf2ee42d8a053b524c2
+  - path: "references/services/functions/consumption-to-flex/linux/automation.md"
+    blob_sha: cd68d05b0cde5a91d76d88bb7f3ee8d9ff73e14b
+  - path: "references/services/functions/consumption-to-flex/linux/workflow.md"
+    blob_sha: 5d5d9e4ede82a94a0c56057a7aa391532705c3bc
+  - path: "references/services/functions/consumption-to-flex/windows/assessment.md"
+    blob_sha: 7f66d8ddaa79c55076ce7e9c808ea8daf47de2ea
+  - path: "references/services/functions/consumption-to-flex/windows/automation.md"
+    blob_sha: 19783f159f21d67fde5af3430435e9a89ba6a2e4
+  - path: "references/services/functions/consumption-to-flex/windows/automation/access-key-copy.md"
+    blob_sha: 70e5e5466cba37422aa16fec3e912e6c5a162db7
+  - path: "references/services/functions/consumption-to-flex/windows/automation/access-key-strategy.md"
+    blob_sha: f5b529d047f742cfeceeff53fa0a6dfad78f9a53
+  - path: "references/services/functions/consumption-to-flex/windows/automation/app-creation.md"
+    blob_sha: f8156630f63135c9ec0def7d32552cdb3ab0450d
+  - path: "references/services/functions/consumption-to-flex/windows/automation/app-settings.md"
+    blob_sha: 207ace7ebb0a7d273c35f0844216c2d60f1fe805
+  - path: "references/services/functions/consumption-to-flex/windows/automation/built-in-authentication.md"
+    blob_sha: 6cd0457815c14b95139a40fed0c121929d53f863
+  - path: "references/services/functions/consumption-to-flex/windows/automation/cleanup-and-rollback.md"
+    blob_sha: 45e0fc6c6a611d8427ea9f5ff8ec1b52b65444ac
+  - path: "references/services/functions/consumption-to-flex/windows/automation/code-deployment.md"
+    blob_sha: b16e37e3607d736b264693a724d71bf5f1a7948f
+  - path: "references/services/functions/consumption-to-flex/windows/automation/configuration-inventory.md"
+    blob_sha: 397d1863a1c71a133c7e6bfa94c325c56e1f216f
+  - path: "references/services/functions/consumption-to-flex/windows/automation/deployment-package.md"
+    blob_sha: 5483bdb5c2c13ed35f508d3cdd4cd436dde1ef5f
+  - path: "references/services/functions/consumption-to-flex/windows/automation/discovery-and-assessment.md"
+    blob_sha: eb761e20296664e1432771db714eeaf5d42789d3
+  - path: "references/services/functions/consumption-to-flex/windows/automation/networking-and-storage.md"
+    blob_sha: a9547678d3b0e9656f209a3c7649257c9dca78a2
+  - path: "references/services/functions/consumption-to-flex/windows/automation/site-and-identity.md"
+    blob_sha: c18c82283b984b58a187bef02b7be30065771f8a
+  - path: "references/services/functions/consumption-to-flex/windows/automation/trigger-safety-and-monitoring.md"
+    blob_sha: ba4b34131f5ecfca27ee46b37dd4a54ed4783f1c
+  - path: "references/services/functions/consumption-to-flex/windows/automation/validation-and-cutover.md"
+    blob_sha: 3ddb02f0fee4851e62f65621e91f02855b05037a
+  - path: "references/services/functions/consumption-to-flex/windows/dependency-scan.md"
+    blob_sha: 74835c7107ef42687d54e89d37bd2fdf8e1e3c91
+  - path: "references/services/functions/consumption-to-flex/windows/progress-tracking.md"
+    blob_sha: e28b1cc6ba2efa3f368a18b5a3530053bb517eb3
+  - path: "references/services/functions/consumption-to-flex/windows/workflow.md"
+    blob_sha: e246589d4baf1091574f47b32728698d4584d63d
+  - path: "references/services/redis/redis-to-amr.md"
+    blob_sha: f7f5a6a05fe666d498c7edaa66c4043feed5a0c5
+  - path: "references/workflow-details.md"
+    blob_sha: 4e7e27f1e7f9ef52319df55a9419d4d7aa068ea4
+permission_tier: cloud-migration-production-mutation-and-sensitive-credential-reference
+portability: medium
+review_status: rejected
+dependency_status: complete-50-blob-exact-candidate-static-review
+dependencies: Azure MCP documentation/best-practices and service tools; Azure CLI and extensions; authenticated Azure identity; Bash/jq or PowerShell 7; Java/Maven/Gradle/OpenRewrite/Python 3.10+ for SDK migration; external independently versioned Redis migration skills; 50 source-owned package blobs
+trigger_boundary: Azure plan/SKU/service migration and Java SDK modernization; not cross-cloud migration, unapproved resource operation, or automatic third-party Redis skill installation
+authority_profile: read-only assessment plus billable resource creation, RBAC/identity and settings mutation, deployment, trigger cutover, DNS/routing and destructive cleanup
+privacy_profile: AzureWebJobsStorage connection strings, function access keys, ARM bearer tokens, application settings, code packages, private telemetry and migration status artifacts require owner scope, minimization, secure external credential paths and retention control
+import_eligibility: rejected-unchanged
+rationale: Candidate 50-file package has useful scenario routing, assessment, rollback, source-app preservation and many Windows action-specific approval gates. Unchanged adoption fails because Linux migration retrieves live AzureWebJobsStorage into an environment variable and uses it for storage operations; Windows inventory and package retrieval also access credential-bearing settings; Java plan/summary templates recommend parsing legacy credential files despite package-specific guidance prohibiting that pattern. Azure CLI extension installation and Java workspace edits/commits lack consistent action-specific authorization. Keep safe design and migration methodology as adaptation/extraction/checklist evidence; do not run bundled tooling from this passive repository. No security scan or behavioral evaluation was performed.

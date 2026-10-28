@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-ai-ml-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-ai-ml-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4d28e7e22af766b358524eb42873aec1bd0680d8
+skill_md_blob_sha: c3b6d0e1765de1f03415d13999c1de850f185ceb
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "implementation", "evaluation"]
+  lifecycle: ["implementation", "operations"]
+  characteristic: ["reference-heavy", "cost-bounded", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: 35896a80f0bff40b01ff5089217164dcea5d173b
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 0556eff5e6629f769fe8369e8930be9cbc7ed2a6
+  - path: "SKILL.md"
+    blob_sha: c3b6d0e1765de1f03415d13999c1de850f185ceb
+external_dependencies_not_executed: "Python; azure-ai-ml; azure-identity; Azure ML workspace, subscription, compute and datastore; two references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-ml-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Workspace creation, dataset/model registration, billable compute cluster provisioning, job submission and pipeline execution are presented without subscription-owner approval, budget ceiling, data-classification permit or lifecycle authorization. Dataset path registration and training/log streaming may disclose sensitive source data or outputs; examples do not establish workspace tenant, retention or recipient constraints. Preserve: Versioned model/data/environment patterns, managed identity, idle scale-down, reproducible pipeline structure and resource tagging; adapt with owner and budget approval, data residency and cleanup. Static exact-package inspection only. No scanner, service operation, or behavioral validation."

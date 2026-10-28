@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-containerregistry-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-containerregistry-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 26cbed5d43ce55fad7487f71421fb9c12f59d7b7
+skill_md_blob_sha: fb6ab982dad6d62a6fbd92b0f32cccf80c600528
+package_file_count: 3
+package_files:
+  - path: "references/capabilities.md"
+    blob_sha: bea1d77b279f1edd1a4f17cd97e4ad22b61e8094
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 033e8b9f731aaf238e8cc2b9d39962f24d7b7aa1
+  - path: "SKILL.md"
+    blob_sha: fb6ab982dad6d62a6fbd92b0f32cccf80c600528
+display_name: "Microsoft azure-containerregistry-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "azure-containerregistry; azure-identity; ACR registry endpoint and permissions; two reference files"
+purpose: "Azure Container Registry Python repository, manifest and tag operations"
+trigger: "Azure Container Registry image/artifact inspection, lifecycle and Python SDK use"
+nontrigger: "Not permission to delete image repositories, manifests, tags or disclose private artifacts"
+authority_finding: "delete_repository, delete_manifest, delete_tag and age-based untagged-manifest cleanup can remove deployable images without registry owner approval, retention hold or rollback."
+privacy_finding: "Registry metadata and downloaded artifact blobs may be private; credential presence is not read/disclosure authorization."
+skill_specific_freshness: "Exact candidate package tree and 3 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-containerregistry-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-containerregistry-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. delete_repository, delete_manifest, delete_tag and age-based untagged-manifest cleanup can remove deployable images without registry owner approval, retention hold or rollback. Registry metadata and downloaded artifact blobs may be private; credential presence is not read/disclosure authorization. Preserve: Tag/manifest enumeration, digest-aware inspection, context-managed sync/async clients and cleanup inventory; retain as governed checklist with dry-run and retention safeguards. Package security and behavioral validation not-run."

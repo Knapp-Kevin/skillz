@@ -1,0 +1,49 @@
+schema_version: 1
+skill_name: customize
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: microsoft-foundry-deploy-model-customize
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 118035ed1dad47d2389464e2968c92923dc2c7b5
+skill_md_blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: verified
+verification_basis: complete-4-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "16/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "deployment", "planning"]
+  lifecycle: ["planning", "release", "operations"]
+  characteristic: ["human-review", "evidence-first", "risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["low"]
+package_file_count: 4
+package_files_inspected:
+  - path: "EXAMPLES.md"
+    blob_sha: a3f25848a09494cbee25143aa71ec43d0a0425f5
+  - path: "SKILL.md"
+    blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+  - path: "references/customize-guides.md"
+    blob_sha: 1009adb4ccbdc7ad182599c6e5ef529a12ee691e
+  - path: "references/customize-workflow.md"
+    blob_sha: 482dfb480318cdc8c6d53ffd4a2c87db0f876f86
+external_dependencies_not_executed: "Azure CLI/REST, Foundry model catalog/quota, bundled workflow and guides; Anthropic modelProviderData tenant organization/country"
+authority_hard_fail: false
+disposition: VERIFIED_SEMANTIC_ONLY_SECURITY_NOT_RUN
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-customize.yaml
+notes: "Phase 12 requires full configuration review and user approval before Phase 13 persistent deployment. Costly PTU/priority changes and separate identity-data disclosure still require appropriate scoped consent. Anthropic modelProviderData includes tenant organization and country; disclose recipient and purpose, never expose tokens. Preserve: Full-config approval, SKU/quota checks, RAI policy and version selection. Exact static only; no security, behavioral, Azure, script execution, source admission or pin movement."

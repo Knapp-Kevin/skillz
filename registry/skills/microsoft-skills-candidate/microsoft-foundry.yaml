@@ -1,0 +1,500 @@
+schema_version: 1
+skill_name: microsoft-foundry
+display_name: Microsoft Foundry root candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/SKILL.md
+source_class: official
+license: MIT (upstream manifest; Azure service, connector, dataset and provider terms separately apply)
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: microsoft-foundry
+relationship: upstream-reference-not-vendored
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 2311f81bfa096aaefd50068b61443cb92ba70bfe
+skill_md_blob_sha: 14fd2bc585abbdd62bbb3231bfd62e7eec115c6b
+upstream_manifest_version: "1.2.31"
+upstream_last_updated_at: 2026-10-23T11:05:18Z
+upstream_latest_path_commit: e7a7b2d2db1723762318285598348a576debb694
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+package_file_count: 220
+package_bytes: 1299560
+distinct_git_blob_count: 220
+parent_owned_file_exposures: 169
+nested_first_class_file_exposures: 51
+nested_first_class_manifest_count: 5
+nested_first_class_exact_review_crosswalk:
+  - key: microsoft-foundry-finetuning
+    relative_path: finetuning/SKILL.md
+    package_tree_sha: 91b3afacfb2c855870109207d0b584e8e2993f8e
+  - key: microsoft-foundry-deploy-model
+    relative_path: models/deploy-model/SKILL.md
+    package_tree_sha: 5e60a08596808fd2dc6209ab309d682664d2e03c
+  - key: microsoft-foundry-deploy-model-capacity
+    relative_path: models/deploy-model/capacity/SKILL.md
+    package_tree_sha: 547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd
+  - key: microsoft-foundry-deploy-model-customize
+    relative_path: models/deploy-model/customize/SKILL.md
+    package_tree_sha: 118035ed1dad47d2389464e2968c92923dc2c7b5
+  - key: microsoft-foundry-deploy-model-preset
+    relative_path: models/deploy-model/preset/SKILL.md
+    package_tree_sha: 643a38ce95fbe3e737002335bd52cb2b164b4380
+package_files:
+  - path: ".gitignore"
+    blob_sha: e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+  - path: "SKILL.md"
+    blob_sha: 14fd2bc585abbdd62bbb3231bfd62e7eec115c6b
+  - path: "finetuning/SKILL.md"
+    blob_sha: 428b2f3648500aede49730c5e233b7c5dd554ac5
+  - path: "finetuning/references/agentic-rft.md"
+    blob_sha: 18c515d550d2f2650b9d4af8a897534c13f22bcd
+  - path: "finetuning/references/dataset-formats.md"
+    blob_sha: c8dfe2b136b8dd96afe193298a22eaaa30bb9665
+  - path: "finetuning/references/deployment.md"
+    blob_sha: eb69aa2c26c7d92c48fc8e17429ad691f7e9db4b
+  - path: "finetuning/references/evaluation.md"
+    blob_sha: d5ca739e70bf1f7e7bb0ac874258aec0b1daa8f2
+  - path: "finetuning/references/grader-design.md"
+    blob_sha: 53bab4887dedf8d4be1deab591c7897f02096454
+  - path: "finetuning/references/hyperparameters.md"
+    blob_sha: edfa0ceda530ba3e30e26031b589f295dd1cf9fc
+  - path: "finetuning/references/large-file-uploads.md"
+    blob_sha: 1aa87e18e16567b724d303e1b6b6ac2e7c8802c4
+  - path: "finetuning/references/platform-gotchas.md"
+    blob_sha: 4b44a009327cf9c95c6f53d38f550e3f2b477d38
+  - path: "finetuning/references/reward-hacking.md"
+    blob_sha: a8545e7d380baaa951b924b29fcd5b204c80d00f
+  - path: "finetuning/references/training-curves.md"
+    blob_sha: 04ae80c9c2ccc2f33ab1a4a34aa8cacedc401482
+  - path: "finetuning/references/training-types.md"
+    blob_sha: 1adcfd2166a4eca9e1ca7df0a63ccc16a56a62bb
+  - path: "finetuning/references/vision-fine-tuning.md"
+    blob_sha: c55bc32ebf150e5c429edcee6c8c1e165c4de014
+  - path: "finetuning/scripts/calibrate_grader.py"
+    blob_sha: c4a4582da01d4e014f4ea167e31501f89d5debde
+  - path: "finetuning/scripts/check_training.py"
+    blob_sha: d6bc261d76e4fa2bdfd6956bdb178ea53b0d3cef
+  - path: "finetuning/scripts/cleanup.py"
+    blob_sha: f7fe8a32b9d09149667ae98187868ee0f9c3ad2f
+  - path: "finetuning/scripts/common.py"
+    blob_sha: 6d3c5191c95fa1600fbcd7229ecd09c8985f8904
+  - path: "finetuning/scripts/convert_dataset.py"
+    blob_sha: a9c8ed451cdac11b7efc77e7b5f2eb7b2c35a2bd
+  - path: "finetuning/scripts/deploy_model.py"
+    blob_sha: 9b74c4a2c70abac47343f6fcfd21b82f7fdd4bdf
+  - path: "finetuning/scripts/evaluate_model.py"
+    blob_sha: 391b865ac7544c2475378dc1d08cb233960f7820
+  - path: "finetuning/scripts/generate_distillation_data.py"
+    blob_sha: ce4969e5bf064a9ec300ba4ede0b5d30535239fe
+  - path: "finetuning/scripts/monitor_training.py"
+    blob_sha: 5f132457a2d31a62d5e37eb9dfec1e0aaf28b5fa
+  - path: "finetuning/scripts/score_dataset.py"
+    blob_sha: bd7511afc42e626bb604d6a87b8c3e267b8a21cc
+  - path: "finetuning/scripts/submit_training.py"
+    blob_sha: 9f91b1bb465d1c16c48beff1ff21f1e73b98906a
+  - path: "finetuning/scripts/validate/__init__.py"
+    blob_sha: 7d4573e8134c4a50b472b043fc2d779ea900e469
+  - path: "finetuning/scripts/validate/data_stats.py"
+    blob_sha: d6380ec381cdc734442861ac8d1170ee4c770b49
+  - path: "finetuning/scripts/validate/validate_dpo.py"
+    blob_sha: b1673985728ded405346f0aad2ae035c649e6b4b
+  - path: "finetuning/scripts/validate/validate_rft.py"
+    blob_sha: 827a5a2a0a80ca91a0bed957a68f43b0cdd50d76
+  - path: "finetuning/scripts/validate/validate_sft.py"
+    blob_sha: e914f34415bb103243d3ebfbfc419663fd2b4708
+  - path: "finetuning/workflows/dataset-creation.md"
+    blob_sha: a82de2084042fa1e5d3b81d3682cdc20c6e3179b
+  - path: "finetuning/workflows/diagnose-poor-results.md"
+    blob_sha: cf20b683a7d207fb2fe223fabe0c8e8a82aea20a
+  - path: "finetuning/workflows/full-pipeline.md"
+    blob_sha: 0d0252e807d69aaa97000519123ec07bcd29567c
+  - path: "finetuning/workflows/iterative-training.md"
+    blob_sha: 5e7da7ad260eda830405f23d47c34b7019d2dfa2
+  - path: "finetuning/workflows/quickstart.md"
+    blob_sha: e28b45fe674fd2fad090aab4f170b0d36e220469
+  - path: "foundry-agent/agent-optimizer/agent-optimizer.md"
+    blob_sha: 1cd592ac6f1e66de7fbd7b9a5c22bc3854813052
+  - path: "foundry-agent/agent-optimizer/references/azd-setup.md"
+    blob_sha: ac9d370d8e7573e1c6d91dae16e1026735ed103f
+  - path: "foundry-agent/agent-optimizer/references/eval-yaml.md"
+    blob_sha: b63957db4dfe648a534bb5699d7d95c00c9b99c5
+  - path: "foundry-agent/agent-optimizer/references/optimize-workflow.md"
+    blob_sha: 3ba775b624c1e7d27c8a3e2aefae37da2da95a06
+  - path: "foundry-agent/agent-optimizer/references/python-patterns.md"
+    blob_sha: e7b524b327f51ceaca902507a3f305e93a4bdd52
+  - path: "foundry-agent/agent-optimizer/references/scaffold.md"
+    blob_sha: 1faef0327b2574d4af0f0e3ac1229df45f3fcd0a
+  - path: "foundry-agent/azd-guidance/azd-guidance.md"
+    blob_sha: 7a0dcd513720a023bcfa967a014f544e64c927e2
+  - path: "foundry-agent/azd-guidance/references/azd-ai-cli.md"
+    blob_sha: 9c7f2381095571d985a1bd7e6b3d1399f5f4ccac
+  - path: "foundry-agent/cicd/cicd.md"
+    blob_sha: 53e24e5e8b4c9ead03e7a079bd8ebcd3867f1436
+  - path: "foundry-agent/create/create-hosted.md"
+    blob_sha: 208d072fc5f4d5a7ed8e8d486eba09675575c4fc
+  - path: "foundry-agent/create/create-managed-harness.md"
+    blob_sha: bda494bdd7bc6fefda496335d1da39032b9530b6
+  - path: "foundry-agent/create/create-prompt.md"
+    blob_sha: 7270b42aa04d15fd860f9682d2a548786a01b0e5
+  - path: "foundry-agent/create/create-voice.md"
+    blob_sha: 4a9a177de8285166b4f3b4353acce8dac4aa1a16
+  - path: "foundry-agent/create/quick-start-hosted.md"
+    blob_sha: cce48700f8dcf8a7fb821bf447a1754af7c350d1
+  - path: "foundry-agent/create/references/enable-incoming-a2a.md"
+    blob_sha: 197cfa6a9483dc69e85409f635278b9b2f962ca2
+  - path: "foundry-agent/create/references/foundry-model.md"
+    blob_sha: 18897260a3f5b5766bd3449a13638f127ed62938
+  - path: "foundry-agent/create/references/foundry-tool-catalog.md"
+    blob_sha: 19bf757544ea94aacd13d8c8151e15f071d1b149
+  - path: "foundry-agent/create/references/guardrails/guardrail-api-create.md"
+    blob_sha: 7215aeeca80a4b3c22ef53ec780cff4a2ffbd8a1
+  - path: "foundry-agent/create/references/guardrails/guardrail-attach.md"
+    blob_sha: 425455bf8ddb91f5b5b8b49f704475d6ad70f6b0
+  - path: "foundry-agent/create/references/guardrails/guardrail-manage.md"
+    blob_sha: a21ad82dde927f67166cc2891675dd02aabbde63
+  - path: "foundry-agent/create/references/hosted-voice-yaml.md"
+    blob_sha: e50e20613d9f6f0439ee6f0de221249eda563ada
+  - path: "foundry-agent/create/references/langchain-langgraph-hosting.md"
+    blob_sha: f49580f341ea143b66d02bfe596c390f39c6784f
+  - path: "foundry-agent/create/references/local-run.md"
+    blob_sha: 52a268bbd47c93a60d3f389e624161f84b0e8346
+  - path: "foundry-agent/create/references/managed-harness-agent.md"
+    blob_sha: 98d7efff6941f778310a6c828976f9767a62de09
+  - path: "foundry-agent/create/references/re-host.md"
+    blob_sha: 97d89b5b87f1bf27c7fe99dbb7f70c5a5c52e8d8
+  - path: "foundry-agent/create/references/sdk-operations.md"
+    blob_sha: e84cccc553967a5bca260fc43de7212e1946041d
+  - path: "foundry-agent/create/references/skills/managed-harness-agent-skill-attach.md"
+    blob_sha: e2ab7756941a19ee0e18d10ca80a027822e1adaf
+  - path: "foundry-agent/create/references/skills/skill-attach.md"
+    blob_sha: 3b2e9923025dc651e0e40447e9b49b3b61dea3f9
+  - path: "foundry-agent/create/references/skills/skill-manage.md"
+    blob_sha: 7ccda3e5803209e1df6c3abf28e2402e7f0d92fc
+  - path: "foundry-agent/create/references/skills/skill-toolbox-attach.md"
+    blob_sha: 661546cac91938d35c7fe0cad245d886973edb32
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/agent-tools.md"
+    blob_sha: 870feeed9a5a8747cba2e0ec7cab5ad6d5974a0b
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-a2a.md"
+    blob_sha: 4411ed49eb186f265658c26cfb54bb59004d118c
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-azure-ai-search.md"
+    blob_sha: 27d8b233df49a5c0f9794f00d0b50b86aab967dc
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-code-interpreter.md"
+    blob_sha: 3ae635f685db56e7222e2723060a256e798e672c
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-fabric-iq.md"
+    blob_sha: 46f343d976141bbf75849fa7d1df340a569bcb24
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-file-search.md"
+    blob_sha: 406ef0481e068aebf98ffe424594f3a0073581f3
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-github-copilot-toolset.md"
+    blob_sha: 2951fbd3cd90b63b6c3adc50d3ed418860124a8f
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-mcp.md"
+    blob_sha: 781c01ffbdfb77f17d58fd61cd025e6cd21d459d
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-openapi.md"
+    blob_sha: 1d614b8de6098d6f324d499805cfd7ad937c631e
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-web-search.md"
+    blob_sha: 12e021ca3c3b293a3aad15b11ffe93df8b7f48fe
+  - path: "foundry-agent/create/references/tools/managed-harness-agent/tool-work-iq.md"
+    blob_sha: 140c573014064a4c9b71a3b611c3c32115ee516c
+  - path: "foundry-agent/create/references/tools/prompt-agent/agent-tools.md"
+    blob_sha: 43f24c5250d161bd7afbc17f29d0f4047db6d658
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-a2a.md"
+    blob_sha: fc72d037eff5d264c20f91a2ea17d9097f3d225c
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-azure-ai-search.md"
+    blob_sha: d0b12497ae0017edafe287f91982aa65bce37e28
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-bing-grounding.md"
+    blob_sha: 82d9c2ad9ab66a0afbe27f8c90563c7c203685e2
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-code-interpreter.md"
+    blob_sha: 952562a07aca85379176cbb308d3bb98106c00a5
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-fabric-iq.md"
+    blob_sha: c5381c28fe1c0578be132e980b226f4ae322e3e0
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-file-search.md"
+    blob_sha: 159f73c83c828d626d899fd89c2e489d5ed069aa
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-function-calling.md"
+    blob_sha: 0217f82a27a5dad373557b474f09cc6e7062c83d
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-mcp.md"
+    blob_sha: 30b0fa3fa28df3998195cd7ae3ce8cd04110c2bd
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-memory.md"
+    blob_sha: b2f761898115cbc04abcd3dcd74b1ef2f102498e
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-openapi.md"
+    blob_sha: 5a9a27059108a1acd478b6bb362e995ed3a984f6
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-web-search.md"
+    blob_sha: 7dfc9b3a0b7f6b9d64b695f13a9f263a80c1886f
+  - path: "foundry-agent/create/references/tools/prompt-agent/tool-work-iq.md"
+    blob_sha: 44ea781c547299d008235e84a6f5b3e005ee7b90
+  - path: "foundry-agent/create/references/use-toolbox-in-hosted-agent.md"
+    blob_sha: 9a3711e0e3a172c6926eca02a81a6ccee15e4bfc
+  - path: "foundry-agent/create/references/voice-agent-common.md"
+    blob_sha: 7b1914bda057056ec72d2ff943d1da735cc6b6cb
+  - path: "foundry-agent/create/references/voice-agent-hosted-bridge.md"
+    blob_sha: 86ebaacf34159cc79f22c81e7d0389e8786bf80b
+  - path: "foundry-agent/create/references/voice-agent-prompt-yaml.md"
+    blob_sha: 90db514739818f538ec094f2159e3441743f720d
+  - path: "foundry-agent/create/references/voice-agent-settings.md"
+    blob_sha: d3e416acfbb01bd79f2a30e03b7b6552ceafd694
+  - path: "foundry-agent/create/references/voice-agent-smoke-test.md"
+    blob_sha: 646e0508d2551dd311dbf702b5ca0db99c4529a9
+  - path: "foundry-agent/create/scripts/check-copilot-app-entry.ps1"
+    blob_sha: 99a102e45817bc4d1579afd54cb04730af78d6ec
+  - path: "foundry-agent/create/scripts/check-copilot-app-entry.sh"
+    blob_sha: f26cc43abbfe444f33d65fe1150cb5a2c477c703
+  - path: "foundry-agent/create/scripts/resolve-project-id.ps1"
+    blob_sha: 233bdc6693d62ae8c46ebcecb7c43e76bfdfb943
+  - path: "foundry-agent/create/scripts/resolve-project-id.sh"
+    blob_sha: 3b21e7e71d103cf83ca8dfc37a8bc2d5ce43c3f8
+  - path: "foundry-agent/create/scripts/smoke-test-voice.ps1"
+    blob_sha: c6fab0136ce75d507ab705f19a803ffa55ebf50a
+  - path: "foundry-agent/create/scripts/smoke-test-voice.sh"
+    blob_sha: f8bc2faeea690deacc4f9dc8dafd4949d730bfc0
+  - path: "foundry-agent/create/scripts/smoke_test_voice.py"
+    blob_sha: c022bd0eb9286f347ccaf2982ab11677e936078b
+  - path: "foundry-agent/create/scripts/verify-environment.ps1"
+    blob_sha: 35c444389571db977b185cd806caf4d283e0784d
+  - path: "foundry-agent/create/scripts/verify-environment.sh"
+    blob_sha: 33fd9e2be36daab386d15b512005b4eb0117c9f1
+  - path: "foundry-agent/deploy/deploy.md"
+    blob_sha: 13c8d86ce9a0ab83a8e2cc1382c79d79439dc1b7
+  - path: "foundry-agent/deploy/references/container-deploy.md"
+    blob_sha: 8765a6cc2e5fececc79f61a166f6d8b6eca1f661
+  - path: "foundry-agent/deploy/references/voice-deploy.md"
+    blob_sha: a923f730b11cb0c041f020ed5d3b25f69bbdd5e6
+  - path: "foundry-agent/eval-datasets/eval-datasets.md"
+    blob_sha: a297882b68ab8e04dea593855862c3673570aeb7
+  - path: "foundry-agent/eval-datasets/references/dataset-comparison.md"
+    blob_sha: 4875ff4b04b7b2b20bfa4165fe754a0a6a44043f
+  - path: "foundry-agent/eval-datasets/references/dataset-curation.md"
+    blob_sha: 82caf7d07209a46de94a861b392a2b61df8e5d10
+  - path: "foundry-agent/eval-datasets/references/dataset-organization.md"
+    blob_sha: 48a0fad6165bdb7dbb8c92ea38c723850db9cd5f
+  - path: "foundry-agent/eval-datasets/references/dataset-versioning.md"
+    blob_sha: 105ca5494fe3baf6cd42aa938ac5ddcc5e81209f
+  - path: "foundry-agent/eval-datasets/references/eval-lineage.md"
+    blob_sha: 0cc3b6e89e39729f241a4dd3ea7c3e0699f39834
+  - path: "foundry-agent/eval-datasets/references/eval-regression.md"
+    blob_sha: c23fca9be17752c6d2c1ca619d999da5c2a17c00
+  - path: "foundry-agent/eval-datasets/references/eval-trending.md"
+    blob_sha: b19a030e25bdb4f3f4c67d2d22ea4bb4ce5fcba5
+  - path: "foundry-agent/eval-datasets/references/generate-seed-dataset.md"
+    blob_sha: bd20c82cd35e3b652d8c159fa58bb73124cb0aa6
+  - path: "foundry-agent/eval-datasets/references/trace-to-dataset.md"
+    blob_sha: 175746e4ffa448f94e4a013159506ba0b60732b9
+  - path: "foundry-agent/insights/insights.md"
+    blob_sha: 4fd7a52ac4fbc68c1674a231ba8c75882cbc9131
+  - path: "foundry-agent/insights/references/tool-contract.md"
+    blob_sha: 3b44be67480e693a8967b78eee59ff23e7d78180
+  - path: "foundry-agent/invocations-ws/invocations-ws.md"
+    blob_sha: 9dfc5774933ff7c6019dfa3dc1a0100c9fdc2bc9
+  - path: "foundry-agent/invocations-ws/references/invocations-ws-protocol.md"
+    blob_sha: 487c26fde4c43a1edda5cfd68a98520255ad8d0b
+  - path: "foundry-agent/invoke/invoke.md"
+    blob_sha: 91d0c389fa557a83fb70450d4180311ab336b481
+  - path: "foundry-agent/invoke/references/file-operations.md"
+    blob_sha: f34c258e84de24a83aced9834f0149deadf34197
+  - path: "foundry-agent/invoke/references/invocations-protocol.md"
+    blob_sha: 552e0051b3a5bb1e14db23658f98abbcf9c107f1
+  - path: "foundry-agent/invoke/references/session-management.md"
+    blob_sha: 06c4993bce3a30b45c71955ee7eb3690ac10e7a9
+  - path: "foundry-agent/observe/observe.md"
+    blob_sha: ba040fe923cfb45769e7da533131d1143b07dcb6
+  - path: "foundry-agent/observe/references/analyze-results.md"
+    blob_sha: 2370bc9300a9d055ccdb81ca472d143875e96a84
+  - path: "foundry-agent/observe/references/cicd-monitoring.md"
+    blob_sha: dbff1b1c5ddf6bfb5f259b4b3be449f5ac617076
+  - path: "foundry-agent/observe/references/compare-iterate.md"
+    blob_sha: 24dda8627b25ab6f70fe7b8f5d72a6987d06319c
+  - path: "foundry-agent/observe/references/continuous-eval.md"
+    blob_sha: afdd91b210c190ee399c09163af54211c7485816
+  - path: "foundry-agent/observe/references/deploy-and-setup.md"
+    blob_sha: 5d2906cdd7ec1b962bb9738b30ef68ef73ce22e9
+  - path: "foundry-agent/observe/references/evaluate-step.md"
+    blob_sha: eb22c26e87e406c2d0747ab8d79de140d1018e89
+  - path: "foundry-agent/observe/references/evaluation-suite-generation.md"
+    blob_sha: d64defb62df16e9a5ea21732c661f09439d8cd5c
+  - path: "foundry-agent/observe/references/optimize-deploy.md"
+    blob_sha: 2b598b23827438e29321107604e6b25ec672d568
+  - path: "foundry-agent/routine/references/azure-yaml.md"
+    blob_sha: e61809fd5e4bb53cf1609583c538dd63d0da6523
+  - path: "foundry-agent/routine/references/cli-crud.md"
+    blob_sha: 2927dc9b27542c10125318faf541b7e90c19a8bf
+  - path: "foundry-agent/routine/routine.md"
+    blob_sha: e8ab16ee51fea93e527e1a77113d55bba2b5b6ad
+  - path: "foundry-agent/toolbox/references/mcp-protocol.md"
+    blob_sha: 63d43cf977ad018a2de9ca03a580d714e9ed350e
+  - path: "foundry-agent/toolbox/references/test-endpoint.md"
+    blob_sha: 4922cc4a53c34cea6c9150081d2058d99c34b809
+  - path: "foundry-agent/toolbox/references/tool-a2a.md"
+    blob_sha: c4a772f518a88bdd5a1aa9993d7316fb36f7642b
+  - path: "foundry-agent/toolbox/references/tool-azure-ai-search.md"
+    blob_sha: 7b02e87e301f33c74d3e2f96cf15e25b649251f2
+  - path: "foundry-agent/toolbox/references/tool-browser-automation.md"
+    blob_sha: 729b0e781922dadc1085577cffce5cc7ee76d623
+  - path: "foundry-agent/toolbox/references/tool-code-interpreter.md"
+    blob_sha: 62fb11aa08a86b02ff3fbdc3044660e28e3753f9
+  - path: "foundry-agent/toolbox/references/tool-fabric-iq.md"
+    blob_sha: 9037d36b65c32fcb9347ee0b47d640eb76337b5a
+  - path: "foundry-agent/toolbox/references/tool-file-search.md"
+    blob_sha: a7e7b7501cdd8de27b255bbd933f6abcaf0e1f7d
+  - path: "foundry-agent/toolbox/references/tool-mcp-agent-identity.md"
+    blob_sha: 8b2992666c3ece62e704fb5ae9e46ec85bf47d53
+  - path: "foundry-agent/toolbox/references/tool-mcp-custom-oauth-azure-starter.md"
+    blob_sha: 05f9b20830cfd46e4a61e2153fdb76083d966a12
+  - path: "foundry-agent/toolbox/references/tool-mcp-custom-oauth.md"
+    blob_sha: 31e6b975b8ba5badb02369aa0cf7d1d892355712
+  - path: "foundry-agent/toolbox/references/tool-mcp-key-auth.md"
+    blob_sha: 748fb40c1012a1794567caf31f7c2b217df2d94e
+  - path: "foundry-agent/toolbox/references/tool-mcp-managed-oauth.md"
+    blob_sha: 2cb9f8ebfb9e824922a3a9d75a5fefb5020ccf48
+  - path: "foundry-agent/toolbox/references/tool-mcp-noauth.md"
+    blob_sha: 824afa43055f10e5df0b4dcda6c3777ff2acc547
+  - path: "foundry-agent/toolbox/references/tool-mcp-user-entra-token.md"
+    blob_sha: f2036632e7d7fb7383c2ea9660c2a36d7b070f00
+  - path: "foundry-agent/toolbox/references/tool-openapi.md"
+    blob_sha: 630e30abe8d4920944844450dc397a47e3687104
+  - path: "foundry-agent/toolbox/references/tool-tool-search.md"
+    blob_sha: 6b06fb8831a83980879599b997c86ce9879eb114
+  - path: "foundry-agent/toolbox/references/tool-web-search.md"
+    blob_sha: c85a671ca5d1563ecd9e83e131245451fec989af
+  - path: "foundry-agent/toolbox/references/tool-work-iq.md"
+    blob_sha: a0079e48b3fa6f72fd527e7f5fa610fe65a2c65d
+  - path: "foundry-agent/toolbox/references/toolbox-azd.md"
+    blob_sha: 25abddbee7091f8fe08483b5216eeea2d61a17c1
+  - path: "foundry-agent/toolbox/scripts/get-catalog-inputs.ps1"
+    blob_sha: e2af479856a11515e5eb8620ca1eb92460c378ef
+  - path: "foundry-agent/toolbox/scripts/get-catalog-inputs.sh"
+    blob_sha: 5b31e78d7f2769cb2bedb87d0a3af6f8d44b6562
+  - path: "foundry-agent/toolbox/toolbox.md"
+    blob_sha: dbeb9577c143e529b83bc8d4cb516d11b09f1d60
+  - path: "foundry-agent/trace/references/analyze-failures.md"
+    blob_sha: fb04343efa1ea05c1055d26c64da57ad59277764
+  - path: "foundry-agent/trace/references/analyze-latency.md"
+    blob_sha: a4bdbb56b5f5a5eccd9911b4798a96aaaec6e425
+  - path: "foundry-agent/trace/references/conversation-detail.md"
+    blob_sha: 42aa4b5a11c4538cbb1dad49c3f5fae3ed02ea33
+  - path: "foundry-agent/trace/references/eval-correlation.md"
+    blob_sha: ef2430cc3ef71bc1a036e7e9400d2674dafe9569
+  - path: "foundry-agent/trace/references/kql-templates.md"
+    blob_sha: 9096ea41a0c3aae12f6448ca25e61b99bb392813
+  - path: "foundry-agent/trace/references/search-traces.md"
+    blob_sha: bdea94d8ace0ef77ec3d39b000846c4d2489c932
+  - path: "foundry-agent/trace/trace.md"
+    blob_sha: a37c576ea8694be50c2cfe411309263a38d0fb33
+  - path: "foundry-agent/troubleshoot/troubleshoot.md"
+    blob_sha: 067175f5660580c1f4149d9fcc38dea53a8923a9
+  - path: "foundry-agent/validate/references/default-rules.yaml"
+    blob_sha: 287267960f3d237dc7ff42e96a53c1cd13771712
+  - path: "foundry-agent/validate/references/report-schema.json"
+    blob_sha: 40fd147ee4be9c26542b5d3f0aa0c1e7865abdd5
+  - path: "foundry-agent/validate/references/report-template.md.tpl"
+    blob_sha: c14a684ad302b2208d7a1f8fdb2496e2b74cdcd0
+  - path: "foundry-agent/validate/references/rules-schema.json"
+    blob_sha: d1b87bcfbf4ba3886fd6f7ce2c83cfef12469f57
+  - path: "foundry-agent/validate/validate.md"
+    blob_sha: 524558b56bb326db5a8214d47cc3c5ee16a68ddb
+  - path: "models/deploy-model/SKILL.md"
+    blob_sha: fd954ccf1ed94a451cf37a4770dff6f375ccb00e
+  - path: "models/deploy-model/TEST_PROMPTS.md"
+    blob_sha: cbba68e132692a6861539043c6978000e98dba23
+  - path: "models/deploy-model/capacity/SKILL.md"
+    blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+  - path: "models/deploy-model/capacity/scripts/discover_and_rank.ps1"
+    blob_sha: 30960b0b8b3ebadc49b28e143025161e0df6df2e
+  - path: "models/deploy-model/capacity/scripts/discover_and_rank.sh"
+    blob_sha: 83c771b47fc3342268ded19d684ecad402c4ade7
+  - path: "models/deploy-model/capacity/scripts/query_capacity.ps1"
+    blob_sha: f65dff5aa99a596d75e19427caf7dd711837d757
+  - path: "models/deploy-model/capacity/scripts/query_capacity.sh"
+    blob_sha: 7869f6904927bf1d83dc29c357f7746a37229504
+  - path: "models/deploy-model/customize/EXAMPLES.md"
+    blob_sha: a3f25848a09494cbee25143aa71ec43d0a0425f5
+  - path: "models/deploy-model/customize/SKILL.md"
+    blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+  - path: "models/deploy-model/customize/references/customize-guides.md"
+    blob_sha: 1009adb4ccbdc7ad182599c6e5ef529a12ee691e
+  - path: "models/deploy-model/customize/references/customize-workflow.md"
+    blob_sha: 482dfb480318cdc8c6d53ffd4a2c87db0f876f86
+  - path: "models/deploy-model/preset/EXAMPLES.md"
+    blob_sha: 8c61f9dccf371222a22e271839a5632d6c900960
+  - path: "models/deploy-model/preset/SKILL.md"
+    blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+  - path: "models/deploy-model/preset/references/preset-workflow.md"
+    blob_sha: 86b4027278efa7e8c851790bb6dac070c98c3122
+  - path: "models/deploy-model/preset/references/workflow.md"
+    blob_sha: 109b2fc69c6379af9b6bf5178694f567689b762e
+  - path: "models/deploy-model/scripts/generate_deployment_url.ps1"
+    blob_sha: b021fdb4eb48fa36392dd8035d53ed55419d1c6f
+  - path: "models/deploy-model/scripts/generate_deployment_url.sh"
+    blob_sha: 2b9ff8b3bf05ff7d1bf4ca1c1ba3441d3f6b0b3c
+  - path: "project/connections.md"
+    blob_sha: 2772aaecf68e0f00f953dec176581eb25fb70d62
+  - path: "project/create/create-foundry-project.md"
+    blob_sha: 0d0fa2bdea23d765a353093d8dbac2eba391aa67
+  - path: "quota/quota.md"
+    blob_sha: 6fd136021aff2bb8a585e47f3b5460052ebe8e65
+  - path: "quota/references/capacity-planning.md"
+    blob_sha: def538f61101ab79998f7dcdf7a3fb43de14aa54
+  - path: "quota/references/error-resolution.md"
+    blob_sha: 3ecdef8541ee8afdbb395ead0ee5124986ab5a7c
+  - path: "quota/references/optimization.md"
+    blob_sha: 6986a7cc262ba2a2bf7f828f93d044de04a8fc44
+  - path: "quota/references/ptu-guide.md"
+    blob_sha: 6dec8b8d268f6f20c0f7aae1923ed4fec0b2a700
+  - path: "quota/references/troubleshooting.md"
+    blob_sha: 8f88752c88064310402cbde0198fc245280f96a7
+  - path: "quota/references/workflows.md"
+    blob_sha: 74ef63195b1d5a2e89c778e3ca15b9d59a85bfaa
+  - path: "rbac/rbac.md"
+    blob_sha: 41a8610b6badb4502e12fa006ec4b0660e925b9e
+  - path: "references/agent-metadata-contract.md"
+    blob_sha: 9ba6956589ae3d41e10200b66d58f3c3b7bb45d9
+  - path: "references/auth-best-practices.md"
+    blob_sha: a2ca1976912c22c83456b0389c73e60c09b9a454
+  - path: "references/standard-agent-setup.md"
+    blob_sha: c2f6d139ba604e676ceb6d4420b0d560282ead51
+  - path: "resource/create/create-foundry-resource.md"
+    blob_sha: c143149d59ddb40d9e3103897bfe9a81eed98224
+  - path: "resource/create/references/patterns.md"
+    blob_sha: 5c7622f7979917593ee6026e5a35c6d658573126
+  - path: "resource/create/references/troubleshooting.md"
+    blob_sha: c4cd1e6751bdaa50a4f4fcf0c0f3bf5202e36268
+  - path: "resource/create/references/workflows.md"
+    blob_sha: a3cd8c52a8ded4a8308ce95347d217e8d39db306
+  - path: "resource/private-network/private-network.md"
+    blob_sha: d6fea8523b6fb4aedc7c9596c244f82d678fb45b
+  - path: "resource/private-network/references/custom-template-adaptation.md"
+    blob_sha: f0abc11dea576774cffb94b64a36e842a5ab9d35
+  - path: "resource/private-network/references/deploy.md"
+    blob_sha: 8901a6f63504a74d0ffacb794e571fb6ab8ed528
+  - path: "resource/private-network/references/end-to-end-test.md"
+    blob_sha: 0df6b53cf1728328ac6db858acf0630748c29adc
+  - path: "resource/private-network/references/intake.md"
+    blob_sha: a30a75f9dd8bb84acfc5c6f90a263a4184aee006
+  - path: "resource/private-network/references/post-deployment-validation.md"
+    blob_sha: fb03bbfa4da093571f6820e4e4d48121e046b1b8
+  - path: "resource/private-network/references/scaffold.md"
+    blob_sha: 4ea980c5b2bd1b0ef7701684fe28e9af4d474137
+  - path: "resource/private-network/references/template-index.md"
+    blob_sha: 6564a45e6225ffb0e3bb8a46a6b888d2a25622b6
+  - path: "resource/private-network/references/vpn-dns-setup.bicep"
+    blob_sha: 565928a59ea7d587a4d22ee214478fcb1b2d2575
+  - path: "resource/private-network/references/vpn-dns-setup.md"
+    blob_sha: 6abb3769f0e8140d0e4bfb1c3fe6a5c58a68b07f
+  - path: "scripts/check-and-setup-dependencies.ps1"
+    blob_sha: 02a64aea4d3e1da70e0261e58b93ecd1ccd805fb
+  - path: "scripts/check-and-setup-dependencies.sh"
+    blob_sha: bc44cec7ea351aa504de3b7125b0102b4d911a87
+purpose: End-to-end Foundry agent, model, infrastructure, identity, observability, evaluation and routine workflow router
+trigger: Explicit Foundry setup, agent development, model deployment, monitoring, fine-tuning, identity or troubleshooting requests
+nontrigger: Not blanket authority to install host extensions, provision cloud resources, grant roles, upload data, send user content, change network policy, create routines or delete resources
+dependency_status: complete-220-blob-static-read-with-five-exact-nested-review-crosswalks
+dependencies: Azure Developer CLI and extensions, Azure CLI/MCP, Microsoft Foundry, Entra, Azure SDKs, App Insights/KQL, Azure resource provider, external OAuth/MCP connectors, source-owned shell/PowerShell/Python helpers, optional Foundry CI/CD and hosted training
+portability: low
+authority_finding: Root mandates first-action host extension installation without explicit host-change approval; noninteractive branches install directly; child workflows create billable infrastructure, grant RBAC, publish agents, persist routines, alter networking and delete resources without consistent action-specific approvals.
+privacy_finding: Production trace harvesting and evaluation dataset upload lack a uniform data-owner, PII-minimization, consent and retention boundary. BYO OAuth recipes pass client secrets through command arguments; RBAC service-principal creation can print credential-bearing JSON. These must use secure external credential handling.
+skill_specific_freshness: Candidate root tree 2311f81bfa096aaefd50068b61443cb92ba70bfe; all 220 exact Git blobs read on 2026-10-28; manifest latest path commit e7a7b2d2db1723762318285598348a576debb694 at 2026-10-23T11:05:18Z; registered July source pin unchanged.
+prior_registered_provenance: registry/skills/microsoft-skills/microsoft-foundry.yaml
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry.yaml
+import_eligibility: adaptation-extraction-reference-only-no-automatic-adoption
+review_status: rejected
+rationale: "REJECT unchanged 11/20: automatic dependency installation, noninteractive install bypass, production and access-control mutations, privacy-sensitive trace harvesting and insecure OAuth/CI credential patterns lack consistent authority. Preserve project/environment routing, agent-type taxonomy, managed-identity guidance, guarded model-deploy subskills, evaluation lineage, safer VNet intake and explicit independent validation procedures. Security and behavioral validation not-run; no admission or pin movement."

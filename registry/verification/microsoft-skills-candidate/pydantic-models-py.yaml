@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: pydantic-models-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: pydantic-models-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f7a11cfe361df8e698cb9ecb42a94dae0889bb77
+skill_md_blob_sha: 15bd46d5df97e19c42c1b91d5adc916354c23c8b
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: verified
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "17/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 2
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["api-design", "domain-modeling", "implementation"]
+  lifecycle: ["design", "implementation"]
+  characteristic: ["contract-first", "modularity", "reference-heavy"]
+  authority: ["generate-only"]
+  portability: ["high"]
+package_file_count: 3
+package_files_inspected:
+  - path: "assets/template.py"
+    blob_sha: 0ea4ee61b31f7b3a42dce494513ef5e959f33b7b
+  - path: "references/capabilities.md"
+    blob_sha: 7c4614908c57a200283c7e9dba06af5ada241b98
+  - path: "SKILL.md"
+    blob_sha: 15bd46d5df97e19c42c1b91d5adc916354c23c8b
+external_dependencies_not_executed: "Python; Pydantic v2; optional application-specific API and database integration; bundled schema template and capabilities reference"
+authority_hard_fail: false
+disposition: VERIFIED_SEMANTIC_ONLY_SECURITY_NOT_RUN
+prior_registered_verification: registry/verification/microsoft-skills/pydantic-models-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "No external action or destructive operation is instructed; schema-generation pattern is bounded. WorkspaceId remains caller-provided and must be validated against authenticated ownership by the consuming service, not this model. Response model includes workspaceId and authorId, so API consumers must independently apply data minimization and tenant/field disclosure policy; no transmission or logging is performed by the template. Preserve: Distinct create/update/response/database models, field constraints, camelCase aliases and from_attributes; semantic static VERIFIED only, security and behavioral not-run. Static exact-package inspection only. No scanner, service operation, or behavioral validation."

@@ -1,0 +1,50 @@
+schema_version: 1
+skill_name: azure-resource-visualizer
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-resource-visualizer
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 766da0d5907e804ef1bb1245e306e3f99b598f92
+skill_md_blob_sha: 24aa2ca9ce042b70cba745c50ae5a198db4a9a46
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: verified
+verification_basis: complete-4-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "16/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "documentation", "visualization"]
+  lifecycle: ["research", "design"]
+  characteristic: ["visual-verification", "evidence-first"]
+  authority: ["read-only", "generate-only"]
+  portability: ["medium"]
+package_file_count: 4
+package_files_inspected:
+  - path: "assets/example-diagram.md"
+    blob_sha: 7cccc08177c898c2cba4e4bfd6b9ec3a86576c69
+  - path: "assets/template-architecture.md"
+    blob_sha: 574e5eb38a5662db3b1beb22b4456200579c7a1e
+  - path: "references/azure-resource-graph.md"
+    blob_sha: 4ab7a3d9d67f47164f6e19d004cf465c7257cc4e
+  - path: "SKILL.md"
+    blob_sha: 24aa2ca9ce042b70cba745c50ae5a198db4a9a46
+external_dependencies_not_executed: "Azure MCP or az CLI with Reader access; Azure Resource Graph; Mermaid; bundled example, template and ARG reference"
+authority_hard_fail: false
+disposition: VERIFIED_SEMANTIC_ONLY_SECURITY_NOT_RUN
+prior_registered_verification: registry/verification/microsoft-skills/azure-resource-visualizer.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Requires user selection of resource group, uses read-only Azure queries, forbids cloud mutation and creates only the user-requested local architecture document. Explicitly substitutes placeholders for secret values. Topology, IP ranges, network identities and RBAC relationships still require scoped handling and no unsolicited external publication. Retain Resource-group selection, verified relationships, secret placeholders, Mermaid templates and read-only cloud boundary. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

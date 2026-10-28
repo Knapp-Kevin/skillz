@@ -1,0 +1,46 @@
+schema_version: 1
+skill_name: azure-resource-lookup
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-resource-lookup
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ba9b018e96ff88bd68d6bfd120eac1f281e4248e
+skill_md_blob_sha: 896c1114e1e6f2b07550037056ed1467ef3e558b
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: verified
+verification_basis: complete-2-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "16/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "research"]
+  lifecycle: ["research", "operations"]
+  characteristic: ["retrieval-first", "tool-routing", "evidence-first"]
+  authority: ["read-only"]
+  portability: ["medium"]
+package_file_count: 2
+package_files_inspected:
+  - path: "references/azure-resource-graph.md"
+    blob_sha: e861de3c7e9245426b690dd727c12b9594b45769
+  - path: "SKILL.md"
+    blob_sha: 896c1114e1e6f2b07550037056ed1467ef3e558b
+external_dependencies_not_executed: "Azure Resource Graph extension/CLI or Azure MCP dedicated tools; Reader RBAC; bundled ARG query reference"
+authority_hard_fail: false
+disposition: VERIFIED_SEMANTIC_ONLY_SECURITY_NOT_RUN
+prior_registered_verification: registry/verification/microsoft-skills/azure-resource-lookup.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Read-only Azure Resource Graph and dedicated MCP inventory; explicitly excludes mutation and requires user-relevant subscription scoping or bounded results. Resource names, topology, tags and subscription IDs may be sensitive; host must restrict results to the requesting user's authorized scope and avoid external publication. Retain Dedicated-tool routing, ARG fallback, subscription scope, case-insensitive type filters and bounded output. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

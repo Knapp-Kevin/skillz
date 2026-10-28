@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-ai-transcription-py
+display_name: "Microsoft azure-ai-transcription-py changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-transcription-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: c21d6071b1414199c46f08dcf3a1a0632843d00d
+skill_md_blob_sha: e27cf1800cec405570f25dbed2b8f9de014192de
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: e27cf1800cec405570f25dbed2b8f9de014192de
+  - path: "references/capabilities.md"
+    blob_sha: 9f35147fd7a79ac43546f128bc79207719bd606c
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 5fec3267ca85205468c6d0e8c5f413c490db0a7e
+permission_tier: "mutating,external-side-effect"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-ai-transcription; Azure transcription endpoint; azure-core/identity; audio URLs or local audio; optional key"
+purpose: "Batch and real-time audio transcription, job listing and cleanup"
+trigger: "TranscriptionClient, speech-to-text batch/streaming"
+nontrigger: "Not for uploading recordings or deleting transcription jobs without consent and retention authority"
+authority_finding: "Batch audio URL submission, stream.send_audio_file and reference delete-transcription operations lack action-specific authorization"
+privacy_finding: "Voice recordings, speaker content and printed transcript events are sensitive; source URL access and deletion retention are not governed"
+skill_specific_freshness: "Candidate revision and all three package blob identities checked 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-transcription-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-transcription-py.yaml
+prior_screening: "registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json and related frozen-screening records"
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Batch audio URL submission, stream.send_audio_file and reference delete-transcription operations lack action-specific authorization Voice recordings, speaker content and printed transcript events are sensitive; source URL access and deletion retention are not governed Preserve batch/stream and LRO patterns; require recording consent, source/destination controls, job deletion approval and transcript minimization No security scan, SDK execution, Azure call or behavioral validation."

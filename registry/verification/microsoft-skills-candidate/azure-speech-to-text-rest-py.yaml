@@ -1,0 +1,46 @@
+schema_version: 1
+skill_name: azure-speech-to-text-rest-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-speech-to-text-rest-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d6a54c61e1c1772e43b6cd3a15849328161b4f25
+skill_md_blob_sha: 0cd1196f591dec4f6d904831497f2282590bdd57
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-2-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "implementation", "communication"]
+  lifecycle: ["implementation", "operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 2
+package_files_inspected:
+  - path: "references/pronunciation-assessment.md"
+    blob_sha: 84601ca710e55c47a1e048053b9e7347e347090c
+  - path: "SKILL.md"
+    blob_sha: 0cd1196f591dec4f6d904831497f2282590bdd57
+external_dependencies_not_executed: "Python; requests or aiohttp; Azure Speech resource and region; secure subscription key or Entra token; pronunciation assessment reference"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-speech-to-text-rest-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Sends audio recordings to an external speech endpoint without explicit subject/owner transmission authorization or data-retention scope; billing and regional data processing are not approved merely by having a key. Quick-start and async examples print raw recognized text; pronunciation reference prints detailed learner voice scores; error path prints raw service response text; require privacy-safe output and credential handling. Preserve: Clear short-audio and 30-second pronunciation limits, PCM/OGG formats, token/header options, chunked streaming and recognition status handling. Static exact-package inspection only. No scanner, service operation, or behavioral validation."

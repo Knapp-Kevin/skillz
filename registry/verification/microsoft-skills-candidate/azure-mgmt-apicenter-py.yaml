@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-mgmt-apicenter-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-mgmt-apicenter-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7a985c0369d797b3aead2e8bcb3e1a15f623c1c0
+skill_md_blob_sha: 97f22bbd3a5c7ca25585dcaeafec6dae05e64cc8
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "api-design", "documentation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: cca2165402889f2b8ffd9f460d964d8951ae4441
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: a327f7a90103c3497bec026b7f145e743a970010
+  - path: "SKILL.md"
+    blob_sha: 97f22bbd3a5c7ca25585dcaeafec6dae05e64cc8
+external_dependencies_not_executed: "azure-mgmt-apicenter; azure-identity; Azure subscription/resource group; OpenAPI documents; two references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-apicenter-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Create/update service, APIs, versions, imported specifications, environments, deployments and classification schemas without owner, subscription, audience or change approval. API specifications, endpoint inventories and contact metadata can expose internal architecture and personal data; no classification/disclosure gate. Preserve: API inventory governance, version/definition tracking, classification metadata and LRO review; adapt with scoped change plans and approved publication boundaries. No scanner, external service execution or behavioral validation."

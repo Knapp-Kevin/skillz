@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-ai-contentunderstanding-py
+display_name: "Microsoft azure-ai-contentunderstanding-py changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-contentunderstanding-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: bdc77f05d3f0f8fceb5c6160d84a7c8814906e6b
+skill_md_blob_sha: 5b59e23e547de5392ef1c98a3b4bb7ab91b34738
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 5b59e23e547de5392ef1c98a3b4bb7ab91b34738
+  - path: "references/capabilities.md"
+    blob_sha: d03bbc131c15cd4c863b8e2ee7aec0d3f4fc821b
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 754b45efbb519353e109c82813e7dd010a2e71a7
+permission_tier: "mutating,external-side-effect"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "Azure Content Understanding; azure-ai-contentunderstanding; azure-identity; external content URLs; async LRO"
+purpose: "Multimodal document, image, audio and video extraction; custom analyzer lifecycle"
+trigger: "ContentUnderstandingClient, prebuilt or custom analyzers"
+nontrigger: "Not for sending private media or creating/deleting analyzers without scoped owner and data approval"
+authority_finding: "Remote media analysis and custom analyzer create/delete are service-side and persistent effects without distinct authorization"
+privacy_finding: "Invoice/document fields, audio/video transcripts and frame descriptions are printed without classification, disclosure and retention controls"
+skill_specific_freshness: "Candidate revision and all three package blob identities checked 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-contentunderstanding-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-contentunderstanding-py.yaml
+prior_screening: "registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json and related frozen-screening records"
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Remote media analysis and custom analyzer create/delete are service-side and persistent effects without distinct authorization Invoice/document fields, audio/video transcripts and frame descriptions are printed without classification, disclosure and retention controls Preserve analyzer types, async polling and schema extraction; require content authority, approved URL sources, analyzer lifecycle approval and redaction No security scan, SDK execution, Azure call or behavioral validation."

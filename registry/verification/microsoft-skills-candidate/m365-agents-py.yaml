@@ -1,0 +1,46 @@
+schema_version: 1
+skill_name: m365-agents-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: m365-agents-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 7d30932e571b05101cc0060eb2adab2195f7aec8
+skill_md_blob_sha: 3d583a89a369594b8880921f17ca1f68ef9ef2f8
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-2-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["agent-development", "communication", "implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["low"]
+package_file_count: 2
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: b27a60a345f87f9fa50764a8c099a896d8bb2621
+  - path: "SKILL.md"
+    blob_sha: 3d583a89a369594b8880921f17ca1f68ef9ef2f8
+external_dependencies_not_executed: "microsoft-agents-hosting-core/aiohttp/activity/authentication-msal/copilotstudio-client; msal; aiohttp; azure-identity; optional Azure OpenAI; two-file package"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/m365-agents-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Message handlers send user text back into channels, Graph profile calls and Copilot Studio conversations without explicit per-recipient, tenant, scope and communication authorization. Echo handlers and Copilot Studio example print private message/activity text; Graph bearer tokens and interactive authentication require secure custody; logging and local token cache examples lack explicit retention policy. Preserve: AgentApplication routing, JWT middleware, scoped auth handlers, streaming labeling and context-managed resources; adapt with explicit messaging/PII consent and durable token safeguards. No scanner, external service execution or behavioral validation."

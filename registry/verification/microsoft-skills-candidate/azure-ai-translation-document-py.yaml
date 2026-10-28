@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-ai-translation-document-py
+candidate_key: azure-ai-translation-document-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e548c746ec02f0ec9d2acb4adf18334d6ca0edf3
+skill_md_blob_sha: 64da88e8a88f1ff64c38261c0ca0df09544f3b70
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "9/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 0
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, risk-aware, tool-assisted]
+  authority: ["mutating", "external-side-effect"]
+  portability: [medium]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 64da88e8a88f1ff64c38261c0ca0df09544f3b70
+  - path: "references/capabilities.md"
+    blob_sha: d0ead4f44fb47932672a1ac538e618a0900158c4
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 15eb6947c060176985d407d2424c93bc9faae6e2
+external_dependencies_not_executed: "azure-ai-translation-document; azure-identity; Azure Blob source/target containers; SAS URLs; optional legacy key"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-translation-document-py.yaml
+prior_screening: registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json
+notes: "Translation jobs write translated documents to persistent target storage and can cancel jobs without owner/destination approval Source/target/glossary SAS-bearing URLs and printed source_document_url can expose credentials or private document locations Preserve format preservation, job polling and glossary design; secure SAS custody, approve destination writes, minimize URL logs and establish retention No Azure operations, scanner or behavioral execution; July review preserved separately."

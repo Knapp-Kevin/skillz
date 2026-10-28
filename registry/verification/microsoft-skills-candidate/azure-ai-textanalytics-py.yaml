@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-ai-textanalytics-py
+candidate_key: azure-ai-textanalytics-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 375453ad9ff4f6867adf6623a1b567bfe0c60bfb
+skill_md_blob_sha: 3f7ec0d3239a968bb2acb0bec5fa6956894365cd
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, implementation, evaluation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, risk-aware, tool-assisted]
+  authority: ["external-side-effect"]
+  portability: [medium]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 3f7ec0d3239a968bb2acb0bec5fa6956894365cd
+  - path: "references/capabilities.md"
+    blob_sha: 19ce159a085f49df02218d03f9b3229dce172761
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 461cb890d8482c2f81f34e956c989d7601117fb7
+external_dependencies_not_executed: "azure-ai-textanalytics; azure-identity; Azure AI Language endpoint; optional legacy API key"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-textanalytics-py.yaml
+prior_screening: registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json
+notes: "External NLP processing is invoked without explicit dataset/recipient/service-use authorization PII example prints entity.text despite providing redacted_text; healthcare example prints clinical entities and normalized details Preserve redaction capability and batch API patterns; remove raw PII/clinical output, gate data transmission and retention No Azure operations, scanner or behavioral execution; July review preserved separately."

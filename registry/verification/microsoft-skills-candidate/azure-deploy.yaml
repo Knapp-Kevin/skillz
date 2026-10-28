@@ -1,0 +1,123 @@
+schema_version: 1
+skill_name: "azure-deploy"
+source_id: "microsoft-skills"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+source_role: "unadmitted-upstream-freshness-candidate"
+candidate_key: "azure-deploy"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "782b021717e199423ed37720a6ba5436b2951aa7"
+skill_md_blob_sha: "187e0206cdff0e0af4324761a0eca8aed2fc5ab6"
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-41-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "deployment", "implementation"]
+  lifecycle: ["implementation", "release", "operations"]
+  characteristic: ["progressive-disclosure", "reference-heavy", "risk-aware", "test-gated"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 41
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 187e0206cdff0e0af4324761a0eca8aed2fc5ab6
+  - path: "references/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "references/global-rules.md"
+    blob_sha: 345904f3d2198bedc6e1dca69f0a3fe44f894bb0
+  - path: "references/live-role-verification.md"
+    blob_sha: 790d5760f6b21064bd32e59766da923797e64e78
+  - path: "references/pre-deploy-checklist.md"
+    blob_sha: df2e2c227cad4f0babd827ee51d30b2fd478bf8a
+  - path: "references/recipes/README.md"
+    blob_sha: 59af3a3fb1dd98d4264cafb4e6161220b13eb34f
+  - path: "references/recipes/azcli/README.md"
+    blob_sha: a5dd9c3a5c39f6dc7623750cdf3112fbcced01ab
+  - path: "references/recipes/azcli/errors.md"
+    blob_sha: f0927b1989d0955eafee6af9ea061af62a98a37b
+  - path: "references/recipes/azcli/verify.md"
+    blob_sha: ba50c855c010fedd62eb9f5f3d3f483233336a9f
+  - path: "references/recipes/azd/README.md"
+    blob_sha: cddb02f926cdbdb60a0feed3437e0960b5899aac
+  - path: "references/recipes/azd/ef-migrations.md"
+    blob_sha: 23a405dc78faa1fbbd906f2ccced072f0f4e6fa0
+  - path: "references/recipes/azd/errors.md"
+    blob_sha: d933d04b42e977654a38f0932c96a7dee316b090
+  - path: "references/recipes/azd/functions-deploy.md"
+    blob_sha: 8e3e41b7e49e19ca95638fce679125c897c480b2
+  - path: "references/recipes/azd/post-deployment.md"
+    blob_sha: 304edcef3fa85091bdec1148517adb7449587bf3
+  - path: "references/recipes/azd/scripts/apply-migrations.ps1"
+    blob_sha: 39c30648ef043c021a4a72f47af1a434e2007bf9
+  - path: "references/recipes/azd/scripts/apply-migrations.sh"
+    blob_sha: f7a5b7664698f6a892dba03366684c9a7c9a5cf9
+  - path: "references/recipes/azd/scripts/grant-and-migrate.ps1"
+    blob_sha: 225511517179271019475711c421c54e8ac97120
+  - path: "references/recipes/azd/scripts/grant-and-migrate.sh"
+    blob_sha: e74376af145f8ac57a5f761f44a7dfd7f71021be
+  - path: "references/recipes/azd/sql-entra-auth.md"
+    blob_sha: d83c34e0b70eb5c044cabb11a37c5e3c889d7758
+  - path: "references/recipes/azd/sql-managed-identity.md"
+    blob_sha: cb90faceaeba84f634e7b760ff3bd4cb812c56d6
+  - path: "references/recipes/azd/verify.md"
+    blob_sha: a20a6b2bb77ab9232e4600798fb95684ffbaa605
+  - path: "references/recipes/bicep/README.md"
+    blob_sha: dfcd33243c9b7514f453d012d1482cb9f88a0826
+  - path: "references/recipes/bicep/errors.md"
+    blob_sha: 88a8277303c0a47d13e59faf8b1524eefd97f259
+  - path: "references/recipes/bicep/verify.md"
+    blob_sha: 45d7ff84a74a4a71af76f80d4d78d50b972f1922
+  - path: "references/recipes/cicd/README.md"
+    blob_sha: 3035cf8edcaad4f13e53c43565ca493aab87ba86
+  - path: "references/recipes/cicd/errors.md"
+    blob_sha: f75b8b2eb7b7aa3768254866944452405c094349
+  - path: "references/recipes/cicd/examples/azdo-azd.yml"
+    blob_sha: 9286d39a71dfe6071063831996607c903882f6af
+  - path: "references/recipes/cicd/examples/azdo-multistage.yml"
+    blob_sha: 9fb5a968ec5145d49c914669b75302fd7fa6fffb
+  - path: "references/recipes/cicd/examples/github-azd.yml"
+    blob_sha: 80eba50588f404a04d52eed9c31392a57490aa8d
+  - path: "references/recipes/cicd/examples/github-bicep.yml"
+    blob_sha: 14d3cdd3ac1a36ce6b4802d39e035fc6be7fb849
+  - path: "references/recipes/cicd/verify.md"
+    blob_sha: aaaab4be7a21c6e44ff4d4b7fb42dd6f9f18c44c
+  - path: "references/recipes/terraform/README.md"
+    blob_sha: 188af0c67c103ae9aa3f1d9fe6c3b7b2649d0269
+  - path: "references/recipes/terraform/errors.md"
+    blob_sha: 421832d7e0fd824ea2be7bf18dc06825a934bf0f
+  - path: "references/recipes/terraform/verify.md"
+    blob_sha: cef3e39b9ba908da6ae23062d891848782499588
+  - path: "references/region-availability.md"
+    blob_sha: bda258470cc2f5cc6df49db3e6c7afec644b00e1
+  - path: "references/sdk/azd-deployment.md"
+    blob_sha: d2ecdf7c5af463bf964e014d3d6ebdac34db8a64
+  - path: "references/sdk/azure-identity-dotnet.md"
+    blob_sha: 5f39e69fa173d4504fece039c3510bc168b1262e
+  - path: "references/sdk/azure-identity-java.md"
+    blob_sha: ce82adc4dd5d26cbdcd1c7a4b17ad6710eb28956
+  - path: "references/sdk/azure-identity-py.md"
+    blob_sha: 6c46f083e06c862002f10718a3d570a19c3067c4
+  - path: "references/sdk/azure-identity-ts.md"
+    blob_sha: 7083cb01460ddb6ea2d139e165557b3171d39682
+  - path: "references/troubleshooting.md"
+    blob_sha: 8092208f7b7797dc44f64a832959fd4cc6a5e46f
+external_dependencies_not_executed: "azure-prepare and azure-validate; Azure CLI/azd, Terraform, Bicep, Azure MCP; SQL Entra administration and EF migrations; bundled source-owned shell/PowerShell and CI templates"
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_AUTHORITY_OR_SENSITIVE_DATA_HARD_FAIL"
+prior_registered_verification: "registry/verification/microsoft-skills/azure-deploy.yaml"
+notes: "Plan status and subscription/region confirmation are prerequisites, not action-specific deployment approval. The root routes directly into azd up/provision and Terraform apply; SQL grant-and-migrate scripts assign db_datareader/db_datawriter/db_ddladmin, and CI examples use noninteractive azd up without guaranteed environment approval. Global rules gate destructive/costly/security actions but do not consistently gate each deployment, database mutation or pipeline activation. Deployment plans, resource inventory, live role reads and SQL/database migrations require tenant/data scope, change-window and retention boundaries; no separate approval for database migration side effects. Preserve: Validation-proof and pre-deploy checks, explicit destructive-action rules, managed identity guidance, split provision/deploy, role propagation verification, recovery recipes and post-deploy endpoint checks. No scanner, Azure execution, behavioral validation, admission or pin movement."

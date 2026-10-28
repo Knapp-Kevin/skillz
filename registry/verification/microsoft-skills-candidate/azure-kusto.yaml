@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-kusto
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-kusto
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 8a2191fbf1dd17fc72fc3cc0429977215e2b55fb
+skill_md_blob_sha: 5037190f2739a5d58d2130142571e940a01dde0d
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-1-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "data-analysis", "observability"]
+  lifecycle: ["research", "operations"]
+  characteristic: ["evidence-first", "tool-assisted", "risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 1
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 5037190f2739a5d58d2130142571e940a01dde0d
+external_dependencies_not_executed: "Azure Data Explorer/Kusto and Log Analytics; Azure MCP Kusto tools or Azure CLI/REST; KQL; Azure RBAC"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_ADAPT_EXTRACT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-kusto.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Read-only cluster/database discovery and KQL queries can retrieve and join sensitive logs across workspaces without explicit dataset, tenant, query, or disclosure authorization; the suggested union workspace query crosses source boundaries. Telemetry, audit records, session IDs and clickstream data may include sensitive personal and security information; no redaction or output minimization gate. Retain KQL time filters, schema-first discovery, bounded take/limit, time-series aggregation and explicit source-location checks. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "continual-learning"
+candidate_key: "continual-learning"
+source_id: "microsoft-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "0c2b5645bbb3fe92e02f2c7b1d11fb51da02eeac"
+skill_md_blob_sha: "1de328f9abe0c345c002a80385619aef277c431e"
+characterized_at: "2026-10-27"
+last_verified_at: "2026-10-27"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["memory","agent-development"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["instrumentation","iterative"]
+  authority: ["external-side-effect"]
+  portability: ["low"]
+package_file_count: 1
+package_files_inspected: "SKILL.md"
+shared_dependency_files_inspected: ["hooks/continual-learning/README.md","hooks/continual-learning/hooks.json","hooks/continual-learning/learn.sh"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged: silent persistent hooks and cross-project telemetry violate authorization/privacy requirements. Extract two-tier scoping and explicit retention design only; no hook installation. No upstream code, cloud/host operation, security scan or representative behavioral/adversarial test executed."

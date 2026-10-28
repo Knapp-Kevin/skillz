@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: azure-advisor
+display_name: "Microsoft azure-advisor candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-advisor/skills/azure-advisor/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: cf9561057dc322d3be42b4a2f78a91adb8eaef6c
+skill_md_blob_sha: d817a28d4a38f845cd589bf8ff8e991b5d7f37e6
+package_file_count: 1
+package_file_paths: ["SKILL.md"]
+permission_tier: "advisor_recommendation_update changes persistent recommendation state; generic 'confirm before' lacks action-specific state/scope/effect authorization"
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: "advisor_recommendation_summary/list/update, advisor_metadata_list/get, advisor_remediation_get; no bundled references."
+purpose: "Browse, summarize and change Azure Advisor recommendation state."
+trigger_nontrigger: "Advisor recommendations, service retirements or recommendation-state updates; not remediation generation."
+authority_finding: "advisor_recommendation_update changes persistent recommendation state; generic 'confirm before' lacks action-specific state/scope/effect authorization"
+privacy_finding: "Subscription recommendations and resource inventory may reveal operational posture."
+import_eligibility: adaptation-extraction-reference-only
+rationale: "REJECT unchanged: useful capped-list avoidance and tool routing, but complete/dismiss/postpone/reactivate are consequential state mutations with only generic confirmation. Extract read-only summary/list behavior; require specific target, intended new state, effects and explicit action authorization."

@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "type": "bounded-exact-version-candidate-freshness-screening",
+  "observed_date": "2026-10-27",
+  "repo_main_start": "0009aaa98fe1c1cb64aeacaf1308a099c6242daf",
+  "source": "https://github.com/microsoft/skills",
+  "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_crosswalk": "registry/freshness/microsoft-skills-governed-crosswalk-2026-10-10.json",
+  "scope": "Eight distinct changed-existing governed Microsoft Azure Skills packages, no admission or source-pin change",
+  "source_family_shared_risk": "Azure Skills plugin has SessionStart and PostToolUse telemetry hooks; default opt-out is AZURE_MCP_COLLECT_TELEMETRY=false; optional debug directory stores raw hook JSON. These are source-owned plugin assets, not skillz runtime. Standalone skill review is not plugin-install approval.",
+  "count": 8,
+  "dispositions": {
+    "rejected_unchanged": 5,
+    "reference_only_pending_full_review": 3
+  },
+  "registered_accounting_delta": 0,
+  "records": [
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-compliance",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-compliance/SKILL.md",
+      "manifest_blob_sha": "5f133e417691b7b4bf91ae44cc046c4d667821f2",
+      "package_tree_sha": "83ec452ff0bb131e41363be040ad22251d7bcb5a",
+      "package_blob_file_count": 16,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "security",
+          "cloud",
+          "monitoring"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "reference-heavy",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 11,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "authority_finding": "Key Vault expiration audit fallback uses `az keyvault secret show` without filtering out the value, and cross-subscription azqr/resource inventory exposes sensitive metadata without an explicit data-access/disclosure scope. Read permissions are not disclosure authorization.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-compliance/references/azure-keyvault-expiration-audit.md",
+        ".github/plugins/azure-skills/skills/azure-compliance/references/azure-quick-review.md",
+        ".github/plugins/azure-skills/skills/azure-compliance/references/azure-resource-graph.md"
+      ],
+      "dependencies": [
+        "Azure MCP azqr and Key Vault tools",
+        "Azure CLI",
+        "Key Vault RBAC",
+        "source SDK references"
+      ],
+      "adaptation_value": "Extract expiry-metadata-only queries with explicit vault/tenant scope and redacted outputs; do not retrieve secret values for expiration checks.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-compute",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-compute/SKILL.md",
+      "manifest_blob_sha": "8a1d1eabfe5c336f7977afc34439779f76612189",
+      "package_tree_sha": "eac48d13e7b19366050bd7a176c7b5189ad34cdb",
+      "package_blob_file_count": 41,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "planning",
+          "deployment"
+        ],
+        "lifecycle": [
+          "planning",
+          "implementation"
+        ],
+        "characteristic": [
+          "tool-routing",
+          "cost-bounded",
+          "progressive-disclosure"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 12,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Capacity Reservation workflow proceeds from specifications to `az capacity reservation create`, which begins pay-as-you-go billing even without deployed VMs, without an action-specific cost approval. The VM creator has a separate MCP-apply confirmation, but that does not cover the CRG path; its fast path also skips the ordinary Plan Card.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-compute/workflows/vm-creator/vm-creator.md",
+        ".github/plugins/azure-skills/skills/azure-compute/workflows/vm-creator/references/output-adapters/mcp-apply.md",
+        ".github/plugins/azure-skills/skills/azure-compute/workflows/capacity-reservation/capacity-reservation.md"
+      ],
+      "dependencies": [
+        "Azure MCP compute and quota tools",
+        "Azure CLI",
+        "Bicep",
+        "Terraform",
+        "GitHub PR delivery",
+        "Capacity Reservations and EMM"
+      ],
+      "adaptation_value": "Extract VM sizing and validation gates; require a scoped cost-bearing approval before CRG creation or any live resource action.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-deploy",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-deploy/SKILL.md",
+      "manifest_blob_sha": "187e0206cdff0e0af4324761a0eca8aed2fc5ab6",
+      "package_tree_sha": "782b021717e199423ed37720a6ba5436b2951aa7",
+      "package_blob_file_count": 41,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "deployment",
+          "cloud",
+          "security"
+        ],
+        "lifecycle": [
+          "release",
+          "operations"
+        ],
+        "characteristic": [
+          "test-gated",
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_disposition": "REFERENCE_ONLY_FULL_REVIEW_REQUIRED",
+      "semantic_status": "unverified",
+      "score_total": 16,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Positive: prepare→validate→deploy proof chain, subscription selection, explicit destructive/cost confirmation rules. Risk: pre-deploy RBAC step invokes `azd provision --no-prompt`; package includes SQL migrations, CI/CD examples and role changes. Complete 43-file supporting-package inspection and exact security evidence are absent; no blanket deploy authority inferred.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-deploy/references/global-rules.md",
+        ".github/plugins/azure-skills/skills/azure-deploy/references/pre-deploy-checklist.md"
+      ],
+      "dependencies": [
+        "azure-prepare",
+        "azure-validate",
+        ".azure/deployment-plan.md",
+        "azd and Azure CLI",
+        "Bicep/Terraform",
+        "SQL migrations and role changes"
+      ],
+      "adaptation_value": "Retain checklist and explicit approval gates; qualify every provisioning, RBAC, migration and CI/CD path before unchanged consideration.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-enterprise-infra-planner",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-enterprise-infra-planner/SKILL.md",
+      "manifest_blob_sha": "5bc6f5c5a894507b7f89d0d96edc57927780c690",
+      "package_tree_sha": "6a82cbd081dc48dd74d5f726e2c032f8092fa3e4",
+      "package_blob_file_count": 41,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "cloud",
+          "deployment"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "test-gated",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_disposition": "REFERENCE_ONLY_FULL_REVIEW_REQUIRED",
+      "semantic_status": "unverified",
+      "score_total": 18,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Strong explicit risk-acknowledged approval after risk presentation, independent phase-5 plan approval, validation/Checkov proof, and referenced-resource additive-deployment safeguards. Still contains many uninspected constraint/generation/deployment references and high-impact subscription/tenant deployment paths; no exact package-security receipt.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-enterprise-infra-planner/references/workflow.md",
+        ".github/plugins/azure-skills/skills/azure-enterprise-infra-planner/references/phases/7-deploy.md"
+      ],
+      "dependencies": [
+        "Azure MCP best-practice/docs/schema tools",
+        "Bicep",
+        "Terraform",
+        "Checkov",
+        "Azure CLI",
+        "existing resource inventory"
+      ],
+      "adaptation_value": "Preserve risk-acknowledged post-plan approval as a positive pattern; full reference/dependency and scanner qualification required.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-resource-lookup",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-resource-lookup/SKILL.md",
+      "manifest_blob_sha": "896c1114e1e6f2b07550037056ed1467ef3e558b",
+      "package_tree_sha": "ba9b018e96ff88bd68d6bfd120eac1f281e4248e",
+      "package_blob_file_count": 2,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "research",
+          "security"
+        ],
+        "lifecycle": [
+          "discovery",
+          "operations"
+        ],
+        "characteristic": [
+          "retrieval-first",
+          "tool-routing",
+          "reference-heavy"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 13,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Cross-subscription resource/role/topology discovery is encouraged without an explicit approved tenant/subscription and disclosure boundary. `--first N` is a result limit, not an authorization scope; read-only tools can still disclose sensitive infrastructure metadata.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-resource-lookup/references/azure-resource-graph.md"
+      ],
+      "dependencies": [
+        "Azure Resource Graph",
+        "Azure CLI resource-graph extension",
+        "Azure MCP subscription/group/CLI tools"
+      ],
+      "adaptation_value": "Extract dedicated-tool routing and bounded ARG patterns; enforce approved subscription set, minimization and output redaction.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-resource-visualizer",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-resource-visualizer/SKILL.md",
+      "manifest_blob_sha": "24aa2ca9ce042b70cba745c50ae5a198db4a9a46",
+      "package_tree_sha": "766da0d5907e804ef1bb1245e306e3f99b598f92",
+      "package_blob_file_count": 4,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "cloud",
+          "documentation"
+        ],
+        "lifecycle": [
+          "discovery",
+          "design"
+        ],
+        "characteristic": [
+          "visual-verification",
+          "evidence-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only",
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_disposition": "REJECT_UNCHANGED_ADAPT",
+      "semantic_status": "rejected",
+      "score_total": 14,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Good explicit secret-value placeholders and resource-group selection, but it collects full network topology, identity/RBAC, app settings and connection-string relationships and writes a persistent architecture file without an explicit sensitive-metadata scope, retention or disclosure boundary.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-resource-visualizer/references/azure-resource-graph.md",
+        ".github/plugins/azure-skills/skills/azure-resource-visualizer/assets/template-architecture.md"
+      ],
+      "dependencies": [
+        "Azure MCP/CLI",
+        "Azure Resource Graph",
+        "Mermaid",
+        "workspace markdown artifact"
+      ],
+      "adaptation_value": "Keep secret placeholders and graph schema; request approved resource/data scope and artifact destination with sensitive topology minimization.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-reliability",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-reliability/SKILL.md",
+      "manifest_blob_sha": "ed5cefb2923cc2e25aa9773dbcfa0f4f7caea033",
+      "package_tree_sha": "9330ac7bb6e8dbe5748219ac467ed066d8baa476",
+      "package_blob_file_count": 13,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "architecture",
+          "deployment"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "human-review",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only",
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_disposition": "REFERENCE_ONLY_FULL_REVIEW_REQUIRED",
+      "semantic_status": "unverified",
+      "score_total": 16,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "authority_finding": "Positive: explicit resource scope, staged fix-plan approval, separate storage-migration and multi-region consent, unsupported-service abstention. Risk: substantial uninspected service/IaC/Front Door references, variable live cost and downtime, and no exact package-security evidence.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-reliability/references/configure-multi-region.md"
+      ],
+      "dependencies": [
+        "Azure CLI and Resource Graph",
+        "Azure Functions/App Service",
+        "Bicep/Terraform",
+        "Front Door",
+        "storage migration"
+      ],
+      "adaptation_value": "Preserve staged consent and unsupported-service abstention; full high-impact reference review and security qualification required.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    },
+    {
+      "source": "https://github.com/microsoft/skills",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "license_declared": "MIT",
+      "root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+      "plugin_telemetry_hook_blob": "bac46f27aa874e2b8e53dbaba07da3e3ad8f1dcb",
+      "plugin_telemetry_script_blob": "abd2ee3998f2304840386faa98c32aacaba1d2bc",
+      "security_state": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_admission": false,
+      "review_scope": "exact-manifest and selected supporting-reference static screening; NOT complete package semantic verification",
+      "id": "azure-validate",
+      "canonical_manifest": ".github/plugins/azure-skills/skills/azure-validate/SKILL.md",
+      "manifest_blob_sha": "a90886aac989fc59fe8e28155d5d7c66369a669f",
+      "package_tree_sha": "23c61eed8d0009d712d71904e21e3c4e0df4d6d0",
+      "package_blob_file_count": 27,
+      "manifest_frontmatter": true,
+      "controlled_tags": {
+        "use_case": [
+          "testing",
+          "deployment",
+          "security"
+        ],
+        "lifecycle": [
+          "verification",
+          "release"
+        ],
+        "characteristic": [
+          "test-gated",
+          "evidence-first",
+          "orchestration"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "candidate_disposition": "REJECT_UNCHANGED_EXTRACT",
+      "semantic_status": "rejected",
+      "score_total": 10,
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "authority_finding": "Critical proof-oracle defect: source-owned `references/scripts/workflow.sh` accepts caller-provided `--completed-step` and writes `.azure/validate-status.json` without checking that validation commands ran or succeeded. `Validated` is an instruction-controlled state, not independently attested proof; companion `azure-deploy` trusts that state.",
+      "inspected_supporting_files": [
+        ".github/plugins/azure-skills/skills/azure-validate/references/scripts/workflow.sh"
+      ],
+      "dependencies": [
+        "azure-prepare",
+        "azure-deploy",
+        "Bash/PowerShell workflow helpers",
+        "Azure CLI/azd",
+        "Bicep/Terraform",
+        "local .azure state"
+      ],
+      "adaptation_value": "Extract the checklist only; require externally observed command results, scope-bound validation receipts and a non-self-attesting promotion gate.",
+      "full_package_review_complete": false,
+      "security_qualification_required": true
+    }
+  ]
+}

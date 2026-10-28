@@ -1,0 +1,47 @@
+schema_version: 1
+skill_name: azure-ai-voicelive-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-voicelive-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-15T21:49:49Z
+upstream_latest_path_commit: e19efc27887e5f1a6380b9135cdbdbf10648fba7
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: c9e31e86696d1af0604abc9aa11f6b1b9ce8b87c
+skill_md_blob_sha: 512d0686e39a7be742d99d27a9aac8210abc319d
+package_file_count: 4
+package_files:
+  - path: "references/api-reference.md"
+    blob_sha: 2398ede788f0ae17ae64b1e571865febab7539fa
+  - path: "references/examples.md"
+    blob_sha: 2ed3848e3c0ad3293001226f9040c90b9ec81dd0
+  - path: "references/models.md"
+    blob_sha: 3c3d66c38f1b90bb6eab33121a527b11c0b5a0ea
+  - path: "SKILL.md"
+    blob_sha: 512d0686e39a7be742d99d27a9aac8210abc319d
+display_name: "Microsoft azure-ai-voicelive-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-4-file-package-static-inspected
+dependencies: "Python; azure-ai-voicelive; aiohttp; azure-identity; microphone/playback integration; Azure speech endpoint; three references"
+purpose: "Real-time Azure Voice Live audio streaming, VAD, transcription, avatars and function calling"
+trigger: "Azure Voice Live Python WebSocket, bidirectional audio or real-time voice assistant"
+nontrigger: "Not permission to capture/transmit microphone audio, print transcripts, generate avatars or invoke voice-triggered functions"
+authority_finding: "Microphone audio is transmitted over a live external connection and function_call_arguments.done invokes handle_function without a per-action authorization boundary. Avatar and custom/personal voice features require explicit subject/identity rights."
+privacy_finding: "Examples print raw transcripts, event details and error strings; lack participant consent, data minimization, recording/transcript retention and disclosure policy."
+skill_specific_freshness: "Exact candidate package tree and 4 blob identities inspected 2026-10-28; latest package-path upstream commit e19efc27887e5f1a6380b9135cdbdbf10648fba7 at 2026-07-15T21:49:49Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-voicelive-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-voicelive-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Microphone audio is transmitted over a live external connection and function_call_arguments.done invokes handle_function without a per-action authorization boundary. Avatar and custom/personal voice features require explicit subject/identity rights. Examples print raw transcripts, event details and error strings; lack participant consent, data minimization, recording/transcript retention and disclosure policy. Preserve: Async transport lifecycle, VAD/interrupt patterns, audio format selection and streaming event models; adapt with capture/transmission consent, tool approval and transcript redaction. Package security and behavioral validation not-run; July source pin unchanged."

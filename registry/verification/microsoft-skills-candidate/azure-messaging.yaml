@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-messaging
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-messaging
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ea4f43fba357f1cdffec81e0db9415da05dea16a
+skill_md_blob_sha: 9a92df2d9548d268548d22d3f4b2cfd705c96a4c
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-1-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "debugging", "messaging"]
+  lifecycle: ["verification", "operations"]
+  characteristic: ["tool-routing", "evidence-first"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 1
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 9a92df2d9548d268548d22d3f4b2cfd705c96a4c
+external_dependencies_not_executed: "Azure Event Hubs/Service Bus/Monitor/Resource Health MCP tools; external azure-diagnostics/troubleshooting/messaging sibling references; Microsoft Learn"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_ADAPT_EXTRACT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-messaging.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "The final 'apply remediation' instruction lacks a distinct permission boundary for changes to live Event Hubs/Service Bus configuration, message handling or production traffic. Connection-string checking and diagnostic log queries require credential redaction and scoped access to message/tenant metadata; neither is stated. Retain Version-first diagnosis, service-health checks, retry/prefetch/lock categorization and documentation lookup. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."

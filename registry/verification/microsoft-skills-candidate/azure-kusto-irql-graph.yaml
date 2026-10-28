@@ -1,0 +1,36 @@
+schema_version: 1
+skill_name: azure-kusto-irql-graph
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 0a36fe4d04e0075da9cada150482a42f661db155
+skill_md_blob_sha: 285dc22f943a9b1bdf4f48bd2b861fbaba2273bf
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 15/20
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: [security, domain-modeling, observability]
+  lifecycle: [verification, operations]
+  characteristic: [source-driven, risk-aware, reference-heavy]
+  authority: [read-only, mutating]
+  portability: [medium]
+package_files_inspected: 'references/DEPLOY_IRQL_FUNCTIONS.md; references/EXAMPLES.md; references/KUSTO_EXPLORER_LAUNCH.md; SKILL.md'
+authority_hard_fail: true
+notes: 'REJECT unchanged despite 15/20: missing sensitive-data retrieval/disclosure authorization is a hard fail. Preserve schema-aware mapping and stored-function preflight; adapt with explicit tenant/dataset/data/recipient boundaries and separate deployment approval. Full source-authored package files inspected at exact Git tree. No cloud queries, file writes, deployment, security scanner, or external behavioral/adversarial scenarios were executed. These are candidate-version rejection records, not promotion of the registered July pin.'

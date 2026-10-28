@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-data-tables-py
+candidate_key: azure-data-tables-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ffea94e6587f3dfd4db8123207e45dfd71f4c46d
+skill_md_blob_sha: 6376581bc3df6d0dabf7283665e093f148da9ca7
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy","risk-aware","tool-assisted"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 6376581bc3df6d0dabf7283665e093f148da9ca7
+  - path: "references/capabilities.md"
+    blob_sha: efb547ee50f33fa8166a1086cd36036b05928b42
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 00a4e48bdcdbc364ba8312a3ed094ed00dc71475
+external_dependencies_not_executed: "azure-data-tables; azure-identity; Azure Storage Tables or Cosmos DB Table API; partition/row keys"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-data-tables-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Create/delete table, upsert/replace/delete entities and submit batch transactions without action-specific authorization; listing all entities crosses logical data boundaries. Examples print complete entities and table names without tenant-scoped disclosure or redaction; partition-key filtering is not identity authorization. Preserve parameterized filters and same-partition transaction constraints; add tenant guards, redacted outputs and approved destructive changes. No package-security scan, cloud operation or behavioral validation; July-pin review remains separate."

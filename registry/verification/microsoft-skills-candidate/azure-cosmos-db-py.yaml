@@ -1,0 +1,60 @@
+schema_version: 1
+skill_name: azure-cosmos-db-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-cosmos-db-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1a03b83a1054d4183c58bd828db8c7997f1c38eb
+skill_md_blob_sha: 66973512a33a2ce1cd715d96c39f7ddb7ccc645d
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-9-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["cloud", "implementation", "security"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy", "test-driven", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 9
+package_files_inspected:
+  - path: "assets/conftest_template.py"
+    blob_sha: 996c3025b3c83e756bc7e070777cb4550a4480dd
+  - path: "assets/cosmos_client_template.py"
+    blob_sha: 7af70bae994cbddf64c94a3ade5464559987a124
+  - path: "assets/service_template.py"
+    blob_sha: 2efff3e0a13eac98ed6cbfb834e243d6a7600598
+  - path: "references/client-setup.md"
+    blob_sha: c81c4c803cb119d46baa69a622b14323cca479a2
+  - path: "references/error-handling.md"
+    blob_sha: d9001341f2584db73eeb33d4d8929aadb6ce5c8a
+  - path: "references/partitioning.md"
+    blob_sha: a98e1758815b42fd6f1287ed6edcca735b6ec533
+  - path: "references/service-layer.md"
+    blob_sha: f32dc6773d273279c19702b1e52b4f68150f014c
+  - path: "references/testing.md"
+    blob_sha: b7bd21901bf348525b3992ab64d36fff73818cbf
+  - path: "SKILL.md"
+    blob_sha: 66973512a33a2ce1cd715d96c39f7ddb7ccc645d
+external_dependencies_not_executed: "azure-cosmos; azure-identity; FastAPI/Starlette; Pydantic; pytest/pytest-mock; Cosmos DB or explicitly isolated emulator; three bundled Python templates and five references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-cosmos-db-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Service CRUD accepts workspace_id/author_id without establishing caller authority; cross-partition queries, upsert and delete are executable without per-action authorization. Cross-partition move inserts then deletes without approved ownership/compensation. Potential injection sink from raw extra_filter SQL concatenation if untrusted; substring-based emulator detection can disable TLS verification on non-emulator hostnames; broad exception tracebacks can disclose endpoints and request context. Preserve: RBAC-first credential selection, emulator isolation, typed service layers, parameterized value bindings, partition design and fixture patterns; adapt with explicit tenant/operation permits, structured query builders, safe TLS, lifecycle and retention policies. No scanner, external service execution or behavioral validation."

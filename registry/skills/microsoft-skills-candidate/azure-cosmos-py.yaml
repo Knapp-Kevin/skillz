@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-cosmos-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-cosmos-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 75a26c6f97359e532458e1e4c9da92328961bf49
+skill_md_blob_sha: 9800d67e64c753e221128e38c43a81bfabdff944
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 9800d67e64c753e221128e38c43a81bfabdff944
+  - path: "references/partitioning.md"
+    blob_sha: 91e2ea93f99996179a93b0f140acbce895aba4ec
+  - path: "references/query-patterns.md"
+    blob_sha: 217430ea497ee9c7457efefca48b87afe9919430
+display_name: "Microsoft Azure Cosmos DB Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-cosmos; azure-identity; Cosmos DB account/container; provisioned RU/s"
+purpose: "Partition-aware CRUD, parameterized queries, pagination and throughput"
+trigger: "Python Cosmos DB SDK data modeling and query design"
+nontrigger: "Not tenant authorization, cross-partition disclosure permission or RU/s budget approval"
+authority_finding: "Creates databases/containers/items, deletes items, performs read_all_items and cross-partition queries, and changes throughput without scoped owner, tenant or cost approval."
+privacy_finding: "Cross-partition SELECT and item printing may expose data outside caller tenant; partition key is an efficiency mechanism, not access control."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-cosmos-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-cosmos-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Creates databases/containers/items, deletes items, performs read_all_items and cross-partition queries, and changes throughput without scoped owner, tenant or cost approval. Cross-partition SELECT and item printing may expose data outside caller tenant; partition key is an efficiency mechanism, not access control. Extract parameterized query, continuation pagination and partition-key design; require tenant-level authorization, output minimization and cost/change permits. Security scan, cloud execution and behavioral validation not-run."

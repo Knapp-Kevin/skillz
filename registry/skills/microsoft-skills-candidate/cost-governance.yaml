@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: cost-governance
+display_name: "Microsoft cost-governance candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-cost/skills/cost-governance/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: dd006778491a957cd453b02ca0dcda6fb06f337b
+skill_md_blob_sha: 4902a03e2b7950bcb7e84b6bfe799b4c92927d9b
+package_file_count: 5
+package_file_paths: ["SKILL.md","references/budget-health.md","references/budget-setup.md","references/guardrails.md","references/tool-fallback.md"]
+permission_tier: "create_budget creates persistent budget and recipient notifications; confirmation of configuration fields alone does not explicitly authorize creation and notifications"
+portability: medium
+review_status: rejected-unchanged-structured
+dependency_status: complete-package-static-inspected
+dependencies: "list_budgets, forecast_costs, query_costs, list_alerts, create_budget, Resource Graph and Azure Policy; four bundled references."
+purpose: "Inspect Azure budget health and policy guardrails; optionally create alerting budgets."
+trigger_nontrigger: "Budget health, budget creation, alert thresholds and policy coverage; not cost forecasting or optimization."
+authority_finding: "create_budget creates persistent budget and recipient notifications; confirmation of configuration fields alone does not explicitly authorize creation and notifications"
+privacy_finding: "Budget spend, owner tags, recipient emails and action-group IDs are sensitive operational data."
+import_eligibility: adaptation-extraction-reference-only
+rationale: "REJECT unchanged: excellent existing-budget and currency safeguards, but step 7 confirms scope, amount and recipient inputs rather than separately authorizing the creation action and future notifications. Extract read-only budget/policy analysis and require an explicit action-and-recipient authorization gate before create_budget."

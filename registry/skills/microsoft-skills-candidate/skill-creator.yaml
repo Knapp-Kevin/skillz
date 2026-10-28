@@ -1,0 +1,54 @@
+schema_version: 1
+skill_name: skill-creator
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/skills/skill-creator/SKILL.md
+source_class: official
+license: "MIT (candidate root; no manifest license field)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-28T21:46:15Z
+upstream_latest_path_commit: 4a2873faffc1b101a33a0b59c24713d4ed78142f
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: f9dc3aaf9210af8eb06ba11bf4883e6ace705673
+skill_md_blob_sha: 6429efa083961c855fc5c21da8079ae2f4949007
+package_file_count: 7
+package_files:
+  - path: "references/azure-sdk-patterns.md"
+    blob_sha: 7f1bf3d28661eeceb28dfc07a4b16793600ef2e4
+  - path: "references/output-patterns.md"
+    blob_sha: ddae31f1169a0e59065e61bee3b2f0753732b8f6
+  - path: "references/workflows.md"
+    blob_sha: cd53c7a451e6097531c85f6868b1f5ec6a28cb8d
+  - path: "scripts/init_skill.py"
+    blob_sha: 329ad4e5a71546b2c455f8e08c98b32ecdd3c1e3
+  - path: "scripts/package_skill.py"
+    blob_sha: 5cd36cb16e1314f2ab87d50aaedbc9f26925dac1
+  - path: "scripts/quick_validate.py"
+    blob_sha: d9fbeb75ee10bd8f89c0ee9b6716867125820c7e
+  - path: "SKILL.md"
+    blob_sha: 6429efa083961c855fc5c21da8079ae2f4949007
+display_name: "Microsoft skill-creator candidate"
+upstream_manifest_version: "not-declared"
+permission_tier: mutating
+portability: medium
+review_status: rejected-unchanged-static
+dependency_status: complete-7-file-package-static-inspected
+dependencies: "Microsoft Learn/microsoft-docs MCP; host Python for source-owned init_skill.py/package_skill.py/quick_validate.py; optional pnpm harness and Vally; 7-file package with 68,147-byte SKILL.md"
+purpose: "Author or update Azure SDK and Foundry skill packages"
+trigger: "Explicit skill authoring or updating with SDK documentation context"
+nontrigger: "Not automatic mutation of this repository, unapproved symlinks/catalog changes, or execution of tests against real resources"
+authority_finding: "Prescribes writes under .github/skills, category symlinks, README changes, harness and optional eval execution without checking the host destination, repo maintenance authority, cost or side effects; cleanup/delete examples and test execution need separate authorization."
+privacy_finding: "Credential-safe managed identity guidance is useful; package and evaluation tools must not ingest secrets or upload private source/test data without explicit scope."
+skill_specific_freshness: "Candidate package tree and all 7 Git blob identities inspected 2026-10-28; latest manifest path commit 4a2873faffc1b101a33a0b59c24713d4ed78142f at 2026-07-28T21:46:15Z"
+prior_registered_provenance: registry/skills/microsoft-skills/skill-creator.yaml
+prior_registered_verification: registry/verification/microsoft-skills/skill-creator.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: adaptation-only-no-unchanged-use
+rationale: "REJECTED semantic 12/20. Prescribes writes under .github/skills, category symlinks, README changes, harness and optional eval execution without checking the host destination, repo maintenance authority, cost or side effects; cleanup/delete examples and test execution need separate authorization. Credential-safe managed identity guidance is useful; package and evaluation tools must not ingest secrets or upload private source/test data without explicit scope. Preserve: SDK freshness checks, context/token budgets, hero versus non-hero scenario design, credential lifecycle patterns and acceptance criteria. External security and behavioral not-run; July source pin unchanged."

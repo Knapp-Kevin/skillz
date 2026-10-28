@@ -1,0 +1,66 @@
+schema_version: 1
+skill_name: appinsights-instrumentation
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/appinsights-instrumentation/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-06T11:05:16Z
+upstream_latest_path_commit: b2f2284da6ba6fbac0f6f0c397abdc396c16802e
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 2bb1307f9a0f22a26c6efbd8c795caf353be9d72
+skill_md_blob_sha: 7e0ade1b244f12f6828eaf15b86b7099482c3f3e
+package_file_count: 13
+package_files:
+  - path: "examples/appinsights.bicep"
+    blob_sha: e60ea800c79e787dad2e368733aa5cb7f019412b
+  - path: "LICENSE.txt"
+    blob_sha: 8dfb11f8b3fd235fe83f30d9dbfe1644b584da2e
+  - path: "references/aspnetcore.md"
+    blob_sha: 7f3ec84a19deaf5bdc9da981bb3408ae46c02cf4
+  - path: "references/auto.md"
+    blob_sha: 40890f42f86cebc6d3ae92bf7fddbf6dd81311e2
+  - path: "references/container-apps.md"
+    blob_sha: 33ca330cca1b91592f33680a671d9762fe4f1a1a
+  - path: "references/nodejs.md"
+    blob_sha: f67690fb84ab77e7b539051e354cf3c0bcd04e44
+  - path: "references/python.md"
+    blob_sha: 3bb44c4b73e8826c1af1866a3f9eb24ff8a26574
+  - path: "references/sdk/azure-monitor-opentelemetry-exporter-java.md"
+    blob_sha: f69800e868cd5d284615811e1465ca6f3157a441
+  - path: "references/sdk/azure-monitor-opentelemetry-exporter-py.md"
+    blob_sha: ff88e9637eca6fff7d7a83487bcc23270eb7b858
+  - path: "references/sdk/azure-monitor-opentelemetry-py.md"
+    blob_sha: 41d98a0ededc373e6a82870cd6d1b3da122dab3e
+  - path: "references/sdk/azure-monitor-opentelemetry-ts.md"
+    blob_sha: 893dbd4c4721d125a0b841e1002fbda896618b9c
+  - path: "scripts/appinsights.ps1"
+    blob_sha: e014cf0c8939619f240308b99f2ce4aca50f5a54
+  - path: "SKILL.md"
+    blob_sha: 7e0ade1b244f12f6828eaf15b86b7099482c3f3e
+display_name: "Microsoft appinsights-instrumentation candidate"
+upstream_manifest_version: "1.2.2"
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-13-file-package-static-inspected
+dependencies: "Azure CLI/Bicep; Azure Monitor/OpenTelemetry SDKs; ASP.NET Core, Node.js, Python; bundled scripts, IaC and platform guides"
+purpose: "Application Insights and OpenTelemetry setup references for web applications"
+trigger: "Questions about instrumentation patterns, SDKs and monitoring concepts"
+nontrigger: "Not permission to provision resources, alter application deployments, export logs or collect personal telemetry"
+authority_finding: "Despite guidance-only trigger wording, the manifest instructs creating Application Insights/Log Analytics resources and editing app code; bundled commands read Log Analytics shared keys and change container app configuration without explicit approval."
+privacy_finding: "Default telemetry/logging examples can transmit application and user data without collection, recipient, consent, retention or redaction gates; shared-key output is sensitive."
+skill_specific_freshness: "Exact candidate package tree and 13 Git blob identities inspected 2026-10-28; latest path commit b2f2284da6ba6fbac0f6f0c397abdc396c16802e at 2026-10-06T11:05:16Z"
+prior_registered_provenance: registry/skills/microsoft-skills/appinsights-instrumentation.yaml
+prior_registered_verification: registry/verification/microsoft-skills/appinsights-instrumentation.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Despite guidance-only trigger wording, the manifest instructs creating Application Insights/Log Analytics resources and editing app code; bundled commands read Log Analytics shared keys and change container app configuration without explicit approval. Default telemetry/logging examples can transmit application and user data without collection, recipient, consent, retention or redaction gates; shared-key output is sensitive. Preserve: Host/language decision matrix, SDK examples, environment-backed configuration and separate instrumentation design guidance. No scanner, Azure action or behavioral validation; July pin unchanged."

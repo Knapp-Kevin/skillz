@@ -1,0 +1,151 @@
+schema_version: 1
+skill_name: "azure-diagnostics"
+source_id: "microsoft-skills"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+source_role: "unadmitted-upstream-freshness-candidate"
+candidate_key: "azure-diagnostics"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "17d064bfbddf07fc8882ecc864b99994921936e2"
+skill_md_blob_sha: "35a21659518211925117404cdd9622aa2eb91380"
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+source_repository: "https://github.com/microsoft/skills"
+source_path: ".github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md"
+source_class: "official"
+license: "MIT (upstream manifest; third-party tools and service terms separately govern use)"
+relationship: "upstream-reference-not-vendored"
+upstream_last_updated_at: "2026-10-27T11:05:25Z"
+upstream_latest_path_commit: "8ec4e0dd3bb6e7fb0b7ba5dd0de6bf30e92a9a68"
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: "upstream-exact-revision"
+local_path: "not-materialized-at-candidate-revision"
+package_tree_sha: "17d064bfbddf07fc8882ecc864b99994921936e2"
+package_file_count: 54
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 35a21659518211925117404cdd9622aa2eb91380
+  - path: "references/app-service/README.md"
+    blob_sha: 36b3bfb4a49d0655e56e2a7fd623e69b47e2e4dc
+  - path: "references/azure-resource-graph.md"
+    blob_sha: 0c1d78ddcbf725c7a5c8c1abac53d07e04773441
+  - path: "references/container-apps/README.md"
+    blob_sha: 6a9ca0c9b66579febf9e8f103056bdc3398e76a9
+  - path: "references/functions/README.md"
+    blob_sha: c90e098965123798a75109afe7c79373cf2757f1
+  - path: "references/functions/durable.md"
+    blob_sha: 9a58268fb181df99ebd0ec77a42abf06df6eba85
+  - path: "references/functions/triggers.md"
+    blob_sha: 39b70346f54a9077172a06181f5a7d97a360453c
+  - path: "references/kql-queries.md"
+    blob_sha: 4dc2f34a24838b5e94a7a82fdea946afecb1a8a2
+  - path: "scripts/aks-baseline.ps1"
+    blob_sha: 9b9a4202dab013c3348acc968c181e4fc566eea4
+  - path: "scripts/aks-baseline.sh"
+    blob_sha: 52d79cbcd33bcc3df76d2f0ba78e529c0842df6b
+  - path: "scripts/appservice-diagnostics.ps1"
+    blob_sha: f19d252c2df22c6333e6f188ef421be22ebadba4
+  - path: "scripts/appservice-diagnostics.sh"
+    blob_sha: f6ac4e5b5fc5bf1ed96b84d890950474afa3bb43
+  - path: "scripts/containerapp-diagnostics.ps1"
+    blob_sha: df5de0db54fba220562e5f1088cb6c0e661fe222
+  - path: "scripts/containerapp-diagnostics.sh"
+    blob_sha: 03ecd4f9283aa96e53df50508fbd390aebc2e679
+  - path: "scripts/pod-evidence.ps1"
+    blob_sha: ac8e6e5f311ecb64389d463d60afda0a7c820299
+  - path: "scripts/pod-evidence.sh"
+    blob_sha: e1e8cd019e45bd5983a543a3501f36e42567889b
+  - path: "scripts/run-ig.ps1"
+    blob_sha: ab2acc9727e10c253701be4e5086e276bd1144c7
+  - path: "scripts/run-ig.sh"
+    blob_sha: c1286d813908a7a9302231d01bc653d785ab05e3
+  - path: "scripts/test-messaging-connectivity.ps1"
+    blob_sha: 203c4d10473addb5647ab74b4100414e1fa59bd3
+  - path: "scripts/test-messaging-connectivity.sh"
+    blob_sha: 212c3318b6076bca572a8772264d8435b371e815
+  - path: "troubleshooting/aks/aks-troubleshooting.md"
+    blob_sha: 28079dc2fbd7280e9106f5c90a23772896f3fb23
+  - path: "troubleshooting/aks/general-diagnostics.md"
+    blob_sha: 844cd12b3e48945f66b5d0bebb29c954219ce7a3
+  - path: "troubleshooting/aks/load-balancer-and-ingress.md"
+    blob_sha: cdcb9aa761e4810c926a6404bad4af347ea38552
+  - path: "troubleshooting/aks/network-policy.md"
+    blob_sha: 32f2147fa2ce89d99d3cf4148b1ce120928e7445
+  - path: "troubleshooting/aks/networking.md"
+    blob_sha: b5fd1ed391ff5afa38b2fde6934a90320ea6492c
+  - path: "troubleshooting/aks/node-issues.md"
+    blob_sha: 9e69be29ea99f8829afcfb5ba209af1be8be79e6
+  - path: "troubleshooting/aks/optional-aks-operations.md"
+    blob_sha: 02266a48b0ce993d09ee056ead9600128987aa99
+  - path: "troubleshooting/aks/pod-failures.md"
+    blob_sha: 114516eae37fcc1b7022b347ee8a05995af981c2
+  - path: "troubleshooting/aks/references/aks-mcp.md"
+    blob_sha: 6f5527f5c8a20ce83c82c57a6f93e35cf8961420
+  - path: "troubleshooting/aks/references/command-flows.md"
+    blob_sha: f9d0935df8d1606002e98a39124f9f689d723de5
+  - path: "troubleshooting/aks/references/inspektor-gadget.md"
+    blob_sha: 14f775ec2b48b3237674e80263aeafc1dd16315c
+  - path: "troubleshooting/aks/references/structured-input-modes.md"
+    blob_sha: 208cc0cd02b46647bcfe3feca3793629462582d8
+  - path: "troubleshooting/aks/spot-and-zone-issues.md"
+    blob_sha: 7b774185cd4179d8fa41bce152853fbd5b7c4f54
+  - path: "troubleshooting/aks/upgrade-operations.md"
+    blob_sha: f2ab3f1997c9ed6049cfc8462bd8e50b8df2a79d
+  - path: "troubleshooting/compute/references/cannot-connect-to-vm.md"
+    blob_sha: ef8ac13b3874d270c9f50335866c9659cbe0d4a3
+  - path: "troubleshooting/compute/references/credential-auth-errors.md"
+    blob_sha: 37e1640ced7bbb4da58cad36939a973019cfb4e4
+  - path: "troubleshooting/compute/references/firewall-blocking.md"
+    blob_sha: 60f7c8c3ef94938399f197fc534a73dd055557a5
+  - path: "troubleshooting/compute/references/network-connectivity.md"
+    blob_sha: 758d60e13503049562dd9de19d31e293b4aeab73
+  - path: "troubleshooting/compute/references/rdp-connectivity.md"
+    blob_sha: d4c3c6b45e6f3c00545f6dd5e02b0ce90fe1c060
+  - path: "troubleshooting/compute/references/rdp-service-config.md"
+    blob_sha: cd8f35bc40d20ba027577e1e726182dc98f01bc5
+  - path: "troubleshooting/compute/references/ssh-connectivity.md"
+    blob_sha: 8d87fafe5fafeb4efdfb99763c3d253e7328a4b8
+  - path: "troubleshooting/compute/references/vm-agent-not-responding.md"
+    blob_sha: 92be89777b9a8b18df0633e342d23f44cb8afe23
+  - path: "troubleshooting/compute/vm-troubleshooting.md"
+    blob_sha: c6333888f1203fa9b7f0f4649199afef44133a69
+  - path: "troubleshooting/messaging/README.md"
+    blob_sha: 0eab25b79477ff57dc5c90a60ede4c9a96ac46d5
+  - path: "troubleshooting/messaging/auth-best-practices.md"
+    blob_sha: 6938d5f0eb32c0e5726222336cdc9365eceae865
+  - path: "troubleshooting/messaging/azure-eventhubs-dotnet.md"
+    blob_sha: 10ad4336dd6be547e7f241ab049282721966c612
+  - path: "troubleshooting/messaging/azure-eventhubs-java.md"
+    blob_sha: 0d8bf97ec90243a5e1c3cb9b71261d3141b903e2
+  - path: "troubleshooting/messaging/azure-eventhubs-js.md"
+    blob_sha: 1bb8c751ef84ca89512dead7f9c1ea776a4a044e
+  - path: "troubleshooting/messaging/azure-eventhubs-py.md"
+    blob_sha: afab2401818381f66f7ca386adab9ec30062c7a4
+  - path: "troubleshooting/messaging/azure-servicebus-dotnet.md"
+    blob_sha: 81cbe6cbe4fc1a91233c074f82018b340b5cd542
+  - path: "troubleshooting/messaging/azure-servicebus-java.md"
+    blob_sha: e4a10d59c13ad5b99987d84ed2d81fbe34d74a53
+  - path: "troubleshooting/messaging/azure-servicebus-js.md"
+    blob_sha: c63c23845a06fb54cd24a6045cc10940cc24ee78
+  - path: "troubleshooting/messaging/azure-servicebus-py.md"
+    blob_sha: cf1ef08da87e606eda19c17a9a7cbcaa330b4876
+  - path: "troubleshooting/messaging/service-troubleshooting.md"
+    blob_sha: 557899e6604a9ce3844ac2a7b1d4810d2faf372d
+display_name: "Microsoft azure-diagnostics candidate"
+upstream_manifest_version: "1.2.12"
+permission_tier: "production-diagnostics-privileged-observability-and-remediation-reference"
+portability: "medium"
+review_status: "rejected"
+dependency_status: "complete-54-file-package-static-inspected"
+dependencies: "Azure CLI, Azure MCP, kubectl, Azure Resource Graph/KQL, App Service, Container Apps, Functions/Durable, AKS, VM agent, Inspektor Gadget, Event Hubs/Service Bus, bundled 12 source-owned Bash/PowerShell scripts and troubleshooting references"
+purpose: "Diagnose production Azure application, AKS, VM and messaging incidents with evidence-first triage and optional remediation guidance"
+trigger: "Azure production incident diagnosis, scoped log/metric/resource-health inspection, troubleshooting of app, cluster, VM or messaging behavior"
+nontrigger: "Not authorization for live tenant-wide discovery, private-log/credential disclosure, privileged node tracing, production mutation, service restart, VM credential reset, purge-history, checkpoint storage policy change or billable scale-up"
+authority_finding: "Root evidence-only option and AKS mutation rule are helpful but not inherited by every App Service, Durable Functions, VM, messaging and source-owned script path. Concrete unapproved effects include az appservice plan update, az webapp log config and auto-heal, TLS binding, func durable purge-history, az vm user update/repair, kubectl debug --profile=sysadmin and disabling checkpoint-store soft delete."
+privacy_finding: "Functions resource graph projects instrumentationKey and connectionString, appsettings list retrieves configuration, streaming logs may disclose PII, VM password examples put secrets in CLI arguments, and node-wide tcpdump/exec traces may expose sensitive traffic/process data. Require secure external credential handling, minimization, capture authorization, redaction and retention."
+skill_specific_freshness: "Candidate package tree 17d064bfbddf07fc8882ecc864b99994921936e2, all 54 Git blobs inspected 2026-10-28 (229051 bytes); path commit 8ec4e0dd3bb6e7fb0b7ba5dd0de6bf30e92a9a68 at 2026-10-27T11:05:25Z"
+prior_registered_provenance: "registry/skills/microsoft-skills/azure-diagnostics.yaml"
+prior_registered_verification: "registry/verification/microsoft-skills/azure-diagnostics.yaml"
+import_eligibility: "adaptation-extraction-checklist-reference-only-no-automatic-adoption"
+rationale: "REJECT unchanged 12/20. Missing action-specific authorization and sensitive-data boundaries across production diagnostics/remediation branches. Preserve evidence-only mode, health-first triage, AKS scoped baseline, script read-only portions, diagnostics queries, remediation proposal and escalation. No scanner, Azure operation, behavioral validation, admission or pin movement."

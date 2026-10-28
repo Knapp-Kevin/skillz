@@ -1,0 +1,50 @@
+schema_version: 1
+skill_name: azure-quotas
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-quotas/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-14T11:05:43Z
+upstream_latest_path_commit: 2eb9ecea0f823d3967ffa3800794a200086d5c9e
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 9abe51b3cbdf48bcb9783700021c78063c0b020b
+skill_md_blob_sha: 00eb182af5ceb6861ee0df92d8c3c9986af652ad
+package_file_count: 5
+package_files:
+  - path: "references/advanced-commands.md"
+    blob_sha: 9dfec4b008153639ecce28e66eaccbc323b1a29b
+  - path: "references/commands.md"
+    blob_sha: 6040ad4fda176a0b10bde60a41c1b27b8907140e
+  - path: "scripts/check-quota.ps1"
+    blob_sha: 5342fd727672005c5216417e58d275e53fb9120a
+  - path: "scripts/check-quota.sh"
+    blob_sha: b095a16561c3318b60b20b30d563656477adbdf4
+  - path: "SKILL.md"
+    blob_sha: 00eb182af5ceb6861ee0df92d8c3c9986af652ad
+display_name: "Microsoft azure-quotas candidate"
+upstream_manifest_version: "1.2.2"
+permission_tier: mutating-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-5-file-package-static-inspected
+dependencies: "Azure CLI quota extension; Azure subscription Reader/Quota Request Operator; source-owned bash and PowerShell quota scripts; bundled CLI references"
+purpose: "Azure regional quota/usage checks and quota-increase procedures"
+trigger: "Quota exceeded, capacity planning, vCPU limits or regional availability"
+nontrigger: "Not authorization to change quotas, register providers or install tooling on the host"
+authority_finding: "The quota-increase workflow executes az quota update and the troubleshooting path registers Microsoft.Quota without separate subscription-owner approval; scripts also install an extension."
+privacy_finding: "Subscription and regional capacity data may be operationally sensitive; output handling and approved scope are not established."
+skill_specific_freshness: "Exact candidate package tree and 5 Git blob identities inspected 2026-10-28; latest path commit 2eb9ecea0f823d3967ffa3800794a200086d5c9e at 2026-10-14T11:05:43Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-quotas.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-quotas.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. The quota-increase workflow executes az quota update and the troubleshooting path registers Microsoft.Quota without separate subscription-owner approval; scripts also install an extension. Subscription and regional capacity data may be operationally sensitive; output handling and approved scope are not established. Preserve: Quota-name discovery instead of ARM-name guessing, region comparison, usage-versus-limit calculations and API fallback warnings. No scanner, Azure action or behavioral validation; July pin unchanged."

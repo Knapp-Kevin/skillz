@@ -1,0 +1,36 @@
+schema_version: 1
+skill_name: azure-kusto-graph
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9d9ea93a2ffb1148a36c62d1e1a6cdc8fb731de7
+skill_md_blob_sha: c178ce599f816bf6cb35a749582fd71dab5d5f69
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: 14/20
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: [cloud, security, domain-modeling]
+  lifecycle: [verification, operations]
+  characteristic: [source-driven, risk-aware, reference-heavy]
+  authority: [read-only, mutating]
+  portability: [medium]
+package_files_inspected: 'references/EXAMPLES.md; references/SCENARIOS.md; references/KUSTO_EXPLORER_LAUNCH.md; SKILL.md'
+authority_hard_fail: true
+notes: 'REJECT unchanged: strong edges-first graph construction, path/component and Kusto Explorer guidance; persistent mutations have approval warnings, but read/query/disclosure of private security data is not separately authorized. Extract graph templates and explicit mutation confirmations with host-enforced scoped data consent. Full source-authored package files inspected at exact Git tree. No cloud queries, file writes, deployment, security scanner, or external behavioral/adversarial scenarios were executed. These are candidate-version rejection records, not promotion of the registered July pin.'

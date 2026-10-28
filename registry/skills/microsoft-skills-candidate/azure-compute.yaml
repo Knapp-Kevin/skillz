@@ -1,0 +1,121 @@
+schema_version: 1
+skill_name: "azure-compute"
+source_id: "microsoft-skills"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_repository: "https://github.com/microsoft/skills"
+source_path: ".github/plugins/azure-skills/skills/azure-compute/SKILL.md"
+source_class: "official"
+license: "MIT (upstream root and manifest; external service terms not independently audited)"
+relationship: "upstream-reference-not-vendored"
+upstream_last_updated_at: "2026-07-28T20:56:53Z"
+upstream_latest_path_commit: "b3c238ec733eb7a438941d824ca18578cb73d371"
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: "upstream-exact-revision"
+local_path: "not-materialized-at-candidate-revision"
+fingerprint_algorithm: "git-tree-sha1"
+package_tree_sha: "eac48d13e7b19366050bd7a176c7b5189ad34cdb"
+skill_md_blob_sha: "8a1d1eabfe5c336f7977afc34439779f76612189"
+package_file_count: 41
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 8a1d1eabfe5c336f7977afc34439779f76612189
+  - path: "references/retail-prices-api.md"
+    blob_sha: 791684b740ef18fe105e9359f036acfd834e849d
+  - path: "references/vm-families.md"
+    blob_sha: 8d9069066757cd65341b46c09ded9e2ef07a6d7c
+  - path: "references/vm-quotas.md"
+    blob_sha: 37f2c75da0ae0fce83e7b46bebcaccd9d48dfe28
+  - path: "references/vmss-guide.md"
+    blob_sha: 554208e470967a4fbe46473ad27353941b1e0b7c
+  - path: "workflows/capacity-reservation/capacity-reservation.md"
+    blob_sha: 3a6e1e3387504ba285c4f15665050951e086e714
+  - path: "workflows/capacity-reservation/references/association-disassociation.md"
+    blob_sha: 59fabb8d288daa637e9088dd685111259c7fce6c
+  - path: "workflows/capacity-reservation/references/capacity-reservation-overview.md"
+    blob_sha: 94f7a647940ba44ac00c059072f6aa2fae50ff37
+  - path: "workflows/essential-machine-management/essential-machine-management.md"
+    blob_sha: 945cec4c74a323abb5a124a68fe68c27069778c4
+  - path: "workflows/essential-machine-management/references/emm-enable-flow-portal-guidance.md"
+    blob_sha: dedf6b59cfa71ed8ecd1da27916af79fa1febd1f
+  - path: "workflows/essential-machine-management/references/emm-enable-flow.md"
+    blob_sha: ba9ff929bd18199632929a5a2ae45aa8256f1451
+  - path: "workflows/essential-machine-management/references/emm-overview.md"
+    blob_sha: 5a60e2d1b31ab6f97dfa47d2be9def298610b91d
+  - path: "workflows/essential-machine-management/references/emm-prerequisites.md"
+    blob_sha: e458f15aab925b84f52519e0fac34c99de1f5f99
+  - path: "workflows/vm-creator/examples/bicep/README.md"
+    blob_sha: 169f7e9b0e5caaf6de428fa9b80ee81f9898ee42
+  - path: "workflows/vm-creator/examples/bicep/main.bicep"
+    blob_sha: 2be62449bbf7fb66e719169ef34758f917c21ccd
+  - path: "workflows/vm-creator/examples/terraform/README.md"
+    blob_sha: 61d306f44fee3de87309af74048c7280bcf5709a
+  - path: "workflows/vm-creator/examples/terraform/main.tf"
+    blob_sha: 53fc859f53d7f8d2fc9e6673c661ace1ac429c93
+  - path: "workflows/vm-creator/examples/terraform/outputs.tf"
+    blob_sha: 142307aada003bdfd510ed545073a6cb1ffc8387
+  - path: "workflows/vm-creator/examples/terraform/variables.tf"
+    blob_sha: 4603e6f62e770247147644834ef6579c41c3f01a
+  - path: "workflows/vm-creator/references/delivery-options/github-pr.md"
+    blob_sha: 41fa12b8c7a2c2fe06d41f7445421989bafe56a2
+  - path: "workflows/vm-creator/references/delivery-options/index.md"
+    blob_sha: d768373d0e3f7511cdd51e81345c5432ad2f5efa
+  - path: "workflows/vm-creator/references/delivery-options/print.md"
+    blob_sha: bdf34d19b077c88c81f7dcd0d590a0dd7d0a0506
+  - path: "workflows/vm-creator/references/delivery-options/save-local.md"
+    blob_sha: 2167fb13ceadd234ce9f6794ee3bf296357c0c47
+  - path: "workflows/vm-creator/references/depth-probe/beginner.md"
+    blob_sha: 89fa0a2b01f3516709619e3ba0c2dfff419872da
+  - path: "workflows/vm-creator/references/depth-probe/cost-deep.md"
+    blob_sha: 71e7bed4d22a9b502714cbeaa513c097f53a36d3
+  - path: "workflows/vm-creator/references/depth-probe/index.md"
+    blob_sha: b482f2a0ec177f09ee1ac1087f2cea09c43ceba5
+  - path: "workflows/vm-creator/references/depth-probe/networking-deep.md"
+    blob_sha: af3b04bacfa2a9366b6c376ab593ed2847ba1522
+  - path: "workflows/vm-creator/references/depth-probe/security-deep.md"
+    blob_sha: 31ee8fe01ea2d9dae59e59a831cc255e800207e3
+  - path: "workflows/vm-creator/references/depth-probe/spec-deep.md"
+    blob_sha: 25e61d1f2137d00dc28e4ca3c8bce9cffa16801e
+  - path: "workflows/vm-creator/references/mcp-tools.md"
+    blob_sha: 9706f3b25c40575f59e2acf07aacb3f90bb6e30f
+  - path: "workflows/vm-creator/references/output-adapters/az-cli.md"
+    blob_sha: bff24cfc01dc6548a5e6a3e86edbf0474c6c0ad9
+  - path: "workflows/vm-creator/references/output-adapters/bicep.md"
+    blob_sha: c07e3e3b0980c7c5eced9aa16882747146c7a739
+  - path: "workflows/vm-creator/references/output-adapters/index.md"
+    blob_sha: 75d8858fa8a671b98dc0beb4223cf427f5561dfb
+  - path: "workflows/vm-creator/references/output-adapters/mcp-apply.md"
+    blob_sha: 539e4a2c45d3edc88be5b1b2bb729544f1ae0031
+  - path: "workflows/vm-creator/references/output-adapters/terraform.md"
+    blob_sha: 75b7025fb6ef7cf81e923b48b4cf14f80563ca8b
+  - path: "workflows/vm-creator/references/plan-card.md"
+    blob_sha: e72b73aab3b862e33245105e8f9d494b8f0f396b
+  - path: "workflows/vm-creator/references/validation-gates.md"
+    blob_sha: 3efc3d574d5d5d01b3d091bc66a2139991ab9c2b
+  - path: "workflows/vm-creator/vm-creator.md"
+    blob_sha: c299b0993c4a3e9e742de33aaf6079216e0d9687
+  - path: "workflows/vm-recommender/references/handoff-to-creator.md"
+    blob_sha: 70515e40de5860be5ebbffa1ab3c5fe9d266a250
+  - path: "workflows/vm-recommender/references/web-fetch-policy.md"
+    blob_sha: 5840ed614609baa3b369b652bcdadb52bb61a4e9
+  - path: "workflows/vm-recommender/vm-recommender.md"
+    blob_sha: 4b6b8607502c790e580ccbc26a0638b68cc01aac
+display_name: "Microsoft azure-compute candidate"
+upstream_manifest_version: "2.5.1"
+permission_tier: "high-authority-cloud-operations-reference"
+portability: "medium"
+review_status: "rejected"
+dependency_status: "complete-41-file-package-static-inspected"
+dependencies: "Azure MCP compute, Azure CLI/ARM, quota and pricing APIs, Bicep, Terraform, subscription-level EMM, CRG management"
+purpose: "Route VM/VMSS sizing, recommendation, provisioning, capacity reservation and Essential Machine Management"
+trigger: "VM/VMSS selection or creation, capacity reservations, subscription machine-management onboarding"
+nontrigger: "Not permission to create paid reservations, enable subscription-wide monitoring/security, destroy resources, or expose SSH/RDP publicly"
+authority_finding: "VM Creator includes a final live-apply confirmation, but Capacity Reservation proceeds from parameter collection directly to billable CRG/reservation creation and EMM provisions subscription-level identities, resource providers, monitoring workspaces and security controls without distinct action-specific approval. Terraform example uses destroy -auto-approve."
+privacy_finding: "Beginner path falls back to NSG source '*' when public-IP detection fails, exposing SSH/RDP; EMM monitoring and resource inventory need scoped authorization and data-retention review."
+skill_specific_freshness: "Exact candidate tree and all 41 Git blobs inspected 2026-10-28; last path commit b3c238ec733eb7a438941d824ca18578cb73d371 at 2026-07-28T20:56:53Z"
+prior_registered_provenance: "registry/skills/microsoft-skills/azure-compute.yaml"
+prior_registered_verification: "registry/verification/microsoft-skills/azure-compute.yaml"
+import_eligibility: "adaptation-extraction-reference-only-no-automatic-adoption"
+rationale: "REJECT unchanged 11/20: VM Creator includes a final live-apply confirmation, but Capacity Reservation proceeds from parameter collection directly to billable CRG/reservation creation and EMM provisions subscription-level identities, resource providers, monitoring workspaces and security controls without distinct action-specific approval. Terraform example uses destroy -auto-approve. Beginner path falls back to NSG source '*' when public-IP detection fails, exposing SSH/RDP; EMM monitoring and resource inventory need scoped authorization and data-retention review. Preserve: VM size/quota/cost selection, Plan Card, generate-only IaC adapters, quota checks, explicit VM-creation gate; extract and require CRG/EMM and network-security approvals. No scanner, cloud action or behavioral validation; July pin unchanged."

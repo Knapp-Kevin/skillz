@@ -1,0 +1,39 @@
+schema_version: 1
+skill_name: slack-to-teams
+candidate_key: slack-to-teams
+display_name: Microsoft Slack-to-Teams candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/slack-to-teams/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root LICENSE; no vendoring)"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+upstream_last_updated_at: "2026-06-15T06:12:01Z (local manifest only; shared-expert freshness not inherited)"
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 41f03fb5bb8791de6d0c2d1c76764372d906bc3c
+skill_md_blob_sha: 11dfd2b3b069b8ae77d835c7317c3698d94346f0
+package_file_count: 1
+package_tree_bytes: 9109
+shared_experts_tree_sha: 39ecbc21af77c72859ec9e32dc7e88fb7052ded9
+shared_expert_files_inspected: 120
+shared_expert_tree_bytes: 1469504
+parent_and_sibling_files_inspected: 27
+total_exact_source_files_inspected: 148
+shared_dependencies: ["teams-app-developer parent SKILL.md", "120 experts in seven domain directories plus root expert routers", "27 parent/sibling references and subskill guides", "Slack Bolt and Web API", "Teams SDK and Microsoft Graph", "Entra ID", "Agents Toolkit", "Azure/AWS cloud and model providers"]
+permission_tier: "Mutating and external-side-effect: cross-platform identity/data migration, file sharing, messaging, app installation, cloud provisioning, credential changes, and source deletion."
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: shared-source-tree-and-parent-sibling-reference-inspected-external-services-not-executed
+dependencies: "One-blob nested manifest delegates to 120 exact shared expert blobs and 27 exact parent/sibling files. Routing, cloud, identity, privacy, storage and communications dependencies are not self-contained in the local tree."
+purpose: "Migrate Slack bots to Teams or dual-platform bots using routed SDK, UI, identity, infrastructure, file and workflow experts."
+trigger_nontrigger: "Use for Slack-to-Teams migration, dual-platform bot implementation and bridge design; not general web development, non-bot projects or standalone Teams-only work (parent skill)."
+authority_finding: "No distinct approval before tenant identity mapping, file sharing, cloud resource/credential mutation, proactive communications, anonymous public tunnel exposure, or destructive source deletion. Planning defaults and API permission are not action authorization."
+privacy_finding: "Parent solicits real secret values in conversational context; identity correlation by email, file URLs/sharing links, persistent conversation IDs, and cross-platform data movement lack sufficiently scoped privacy/retention authority."
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECT unchanged 11/20. Preserve 120-expert routed bridge taxonomy, SDK/UX conversion techniques, Key Vault guidance and file-consent distinctions as adaptation prior art. External package security and behavioral validation not-run."

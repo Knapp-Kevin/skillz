@@ -1,0 +1,45 @@
+schema_version: 1
+skill_name: pydantic-models-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/pydantic-models-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-28T21:46:15Z
+upstream_latest_path_commit: 4a2873faffc1b101a33a0b59c24713d4ed78142f
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: f7a11cfe361df8e698cb9ecb42a94dae0889bb77
+skill_md_blob_sha: 15bd46d5df97e19c42c1b91d5adc916354c23c8b
+package_file_count: 3
+package_files:
+  - path: "assets/template.py"
+    blob_sha: 0ea4ee61b31f7b3a42dce494513ef5e959f33b7b
+  - path: "references/capabilities.md"
+    blob_sha: 7c4614908c57a200283c7e9dba06af5ada241b98
+  - path: "SKILL.md"
+    blob_sha: 15bd46d5df97e19c42c1b91d5adc916354c23c8b
+display_name: "Microsoft pydantic-models-py candidate"
+permission_tier: generate-only
+portability: high
+review_status: verified-structured-static-security-pending
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "Python; Pydantic v2; optional application-specific API and database integration; bundled schema template and capabilities reference"
+purpose: "Pydantic v2 Base/Create/Update/Response/InDB schema design and aliases"
+trigger: "Python Pydantic v2 request/response schema design, optional patch models and Cosmos document shapes"
+nontrigger: "Not an authorization layer; caller-provided workspaceId and response authorId must not be treated as ownership proof"
+authority_finding: "No external action or destructive operation is instructed; schema-generation pattern is bounded. WorkspaceId remains caller-provided and must be validated against authenticated ownership by the consuming service, not this model."
+privacy_finding: "Response model includes workspaceId and authorId, so API consumers must independently apply data minimization and tenant/field disclosure policy; no transmission or logging is performed by the template."
+skill_specific_freshness: "Exact candidate package tree and 3 blob identities inspected 2026-10-28; latest package-path upstream commit 4a2873faffc1b101a33a0b59c24713d4ed78142f at 2026-07-28T21:46:15Z"
+prior_registered_provenance: registry/skills/microsoft-skills/pydantic-models-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/pydantic-models-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic only 17/20. No external action or destructive operation is instructed; schema-generation pattern is bounded. WorkspaceId remains caller-provided and must be validated against authenticated ownership by the consuming service, not this model. Response model includes workspaceId and authorId, so API consumers must independently apply data minimization and tenant/field disclosure policy; no transmission or logging is performed by the template. Preserve: Distinct create/update/response/database models, field constraints, camelCase aliases and from_attributes; semantic static VERIFIED only, security and behavioral not-run. Package security and behavioral validation not-run; July source pin unchanged."

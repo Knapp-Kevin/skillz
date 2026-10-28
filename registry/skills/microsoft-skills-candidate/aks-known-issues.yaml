@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: aks-known-issues
+display_name: "Microsoft aks-known-issues candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/aks-skills/skills/aks-known-issues/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 0642cbfede48e571a698325dccdf9c29ac6650e8
+skill_md_blob_sha: a0d46fac012c39520a351eb2fdcb8bc915e05228
+package_file_count: 2
+package_file_paths: ["SKILL.md","references/error-code-map.md"]
+permission_tier: "read-only diagnosis; proposed fixes explicitly require user approval before mutation"
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-package-static-inspected
+dependencies: "One bundled exact-signature error-code map and public Microsoft Learn citations; optional host-advertised read-only Azure tools."
+purpose: "Match fully qualified AKS failure signatures to cited known causes and proposed fixes."
+trigger_nontrigger: "Exact cataloged AKS code and all qualifiers; not generic AKS, bare wrappers, quota-only or non-AKS incidents."
+authority_finding: "read-only diagnosis; proposed fixes explicitly require user approval before mutation"
+privacy_finding: "Error messages and resource identities should be scoped and minimized before sharing."
+import_eligibility: reference-only-pending-exact-package-security-and-user-fit
+rationale: "VERIFY static only: exact-signature matching prevents broad guesses, catalog requires read-only verification labeled not-run and approval-gated proposed fixes. No behavioral or security scan evidence."

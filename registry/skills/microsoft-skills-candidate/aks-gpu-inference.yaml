@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: aks-gpu-inference
+display_name: "Microsoft aks-gpu-inference candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/aks-skills/skills/aks-gpu-inference/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: MIT
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-27
+last_checked_at: 2026-10-27
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 5b797fd877111afa34a811ffe4545de4789e7964
+skill_md_blob_sha: 42a952599c484f1a437056310e93d7ef273ea252
+package_file_count: 5
+package_file_paths: ["SKILL.md","references/gpu-cost-and-scaling.md","references/gpu-observability.md","references/gpu-scheduling.md","references/kaito-workspaces.md"]
+permission_tier: "read-only GPU telemetry; proposed changes require explicit action authorization"
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-package-static-inspected
+dependencies: "Azure CLI, kubectl and Azure read tools only when host-authorized; four bundled references covering scheduling, observability, KAITO and scaling."
+purpose: "Read-only day-2 diagnosis of AKS GPU scheduling, VRAM, KAITO and autoscaling failures."
+trigger_nontrigger: "Exact AKS GPU or KAITO symptoms; not generic AKS, initial setup, or standalone quota and cost."
+authority_finding: "read-only GPU telemetry; proposed changes require explicit action authorization"
+privacy_finding: "GPU workload logs and telemetry may reveal customer workload details; bind subscription, cluster, namespace, pod and incident window."
+import_eligibility: reference-only-pending-exact-package-security-and-user-fit
+rationale: "VERIFY static only: scoped host capability and target authorization, evidence/missing-data handling, explicit approval before scaling, deletion, add-on or monitoring changes. No behavioral or security scan evidence."

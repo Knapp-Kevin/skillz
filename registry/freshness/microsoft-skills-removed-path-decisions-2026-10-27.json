@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-27",
+  "source": "https://github.com/microsoft/skills",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+  "method": "Four exact old-pin frontmattered manifests read and bound to Git blob SHAs; four old paths tested absent at exact candidate revision (404); candidate plugin/skills Git trees enumerated; related candidate manifests read at exact revision. Candidate retirement/alias decisions only; no complete new package semantic review, security scan, behavioral test or source-pin movement.",
+  "scope": "candidate-revision path lifecycle only; registered July skill identities and their exact-version review companions remain valid at the unchanged July pin",
+  "candidate_removed_governed_count": 4,
+  "decided_count": 4,
+  "pending_count": 0,
+  "registered_source_denominator": 186,
+  "candidate_structural_eligible_denominator": 208,
+  "full_candidate_reviews_remaining": 78,
+  "source_pin_changed": false,
+  "admissions": 0,
+  "security_state": "not-run",
+  "behavioral_validation": "not-run",
+  "records": [
+    {
+      "id": "azure-servicebus-rust",
+      "old_path": ".github/plugins/azure-sdk-rust/skills/azure-servicebus-rust/SKILL.md",
+      "old_manifest_sha": "365a93a6c3f94310d78791a73e9a3b2891775861",
+      "old_version": "not-declared",
+      "old_authority": "Service Bus sends, receives and message settlement; package explicitly warns the Rust crate is pre-production",
+      "candidate_context": [
+        {
+          "path": ".github/plugins/azure-skills/skills/azure-messaging/SKILL.md",
+          "sha": "9a92df2d9548d268548d22d3f4b2cfd705c96a4c",
+          "relationship": "diagnostics/troubleshooting, not a Rust send/receive SDK successor"
+        }
+      ],
+      "candidate_directory_tree": "112b33f4d6fe5948952f58f12e2105996dd0a051",
+      "decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "rationale": "Candidate Azure SDK Rust skills directory has eight siblings and no azure-servicebus-rust. Azure Messaging handles SDK troubleshooting, not the former Rust client implementation. Do not map Python or Event Hubs packages as exact successors.",
+      "old_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "candidate_path_status": "ABSENT_AT_CANDIDATE",
+      "current_july_record_state": "UNCHANGED_AT_REGISTERED_PIN",
+      "successor_identity_proven": false,
+      "license": "MIT (old manifest and upstream root)",
+      "semantic_reverification": "not-performed",
+      "security": "not-run",
+      "behavioral": "not-run"
+    },
+    {
+      "id": "azure-cost",
+      "old_path": ".github/plugins/azure-skills/skills/azure-cost/SKILL.md",
+      "old_manifest_sha": "8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4",
+      "old_version": "1.2.2",
+      "old_authority": "Private subscription/billing cost queries, forecasting and cost-optimization recommendations",
+      "candidate_context": [
+        {
+          "path": ".github/plugins/azure-cost/skills/cost-analysis/SKILL.md",
+          "sha": "3c02cbfaa11f748177fb9b6df80f130f74a87544",
+          "relationship": "historical spend and cost investigation only"
+        },
+        {
+          "path": ".github/plugins/azure-cost/skills/cost-estimation/SKILL.md",
+          "sha": "756ad958d176e212254dff123bfdbf2294fdf4d0",
+          "relationship": "forecasts and pricing only"
+        },
+        {
+          "path": ".github/plugins/azure-cost/skills/cost-governance/SKILL.md",
+          "sha": "4902a03e2b7950bcb7e84b6bfe799b4c92927d9b",
+          "relationship": "budgets, alerts and policy only"
+        },
+        {
+          "path": ".github/plugins/azure-cost/skills/cost-optimization/SKILL.md",
+          "sha": "65104fd7b16b65af4fec3afffa9c5168c98886a1",
+          "relationship": "waste, rightsizing and commitments only"
+        }
+      ],
+      "candidate_directory_tree": "a11acac8d4caf70b47d1077994ab796d19ff8cf8",
+      "decision": "RETIRE_REMOVED_PATH_SPLIT_CAPABILITY_NO_ALIAS",
+      "rationale": "The former three-route umbrella is absent. Four separately frontmattered specialist packages partition its capability, but none is a package-tree or one-to-one identity successor; individual prior semantic decisions and security gates remain separate.",
+      "old_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "candidate_path_status": "ABSENT_AT_CANDIDATE",
+      "current_july_record_state": "UNCHANGED_AT_REGISTERED_PIN",
+      "successor_identity_proven": false,
+      "license": "MIT (old manifest and upstream root)",
+      "semantic_reverification": "not-performed",
+      "security": "not-run",
+      "behavioral": "not-run"
+    },
+    {
+      "id": "azure-hosted-copilot-sdk",
+      "old_path": ".github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md",
+      "old_manifest_sha": "64b239df00aa320b64a9009c1875b303a87080b1",
+      "old_version": "1.1.3",
+      "old_authority": "Mandatory routing, Azure infrastructure scaffolding and deployment of Copilot SDK apps, BYOM credential flows",
+      "candidate_context": [
+        {
+          "path": ".github/skills/copilot-sdk/SKILL.md",
+          "sha": "79f42cd0aef9a7a660f96668bc547d998e2485b4",
+          "relationship": "general multi-language Copilot SDK integration, not the Azure-specific orchestrator"
+        },
+        {
+          "path": ".github/plugins/azure-skills/skills/azure-prepare/SKILL.md",
+          "sha": "87cc0872fd2f5588c996dfd0c0f4be60d94ef555",
+          "relationship": "azd preparation, separate scope"
+        },
+        {
+          "path": ".github/plugins/azure-skills/skills/azure-deploy/SKILL.md",
+          "sha": "187e0206cdff0e0af4324761a0eca8aed2fc5ab6",
+          "relationship": "prepared Azure deployment, separate scope"
+        }
+      ],
+      "decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "rationale": "The Azure-specific Copilot SDK routing/orchestration skill is absent. General Copilot SDK, Azure Prepare and Azure Deploy have different triggers, responsibilities and approval boundaries; no automatic composite successor or inheritance of old review evidence.",
+      "old_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "candidate_path_status": "ABSENT_AT_CANDIDATE",
+      "current_july_record_state": "UNCHANGED_AT_REGISTERED_PIN",
+      "successor_identity_proven": false,
+      "license": "MIT (old manifest and upstream root)",
+      "semantic_reverification": "not-performed",
+      "security": "not-run",
+      "behavioral": "not-run"
+    },
+    {
+      "id": "azure-rbac",
+      "old_path": ".github/plugins/azure-skills/skills/azure-rbac/SKILL.md",
+      "old_manifest_sha": "02ac75d2ba22b4d7aa1e74469b01575281f05ddc",
+      "old_version": "1.1.1",
+      "old_authority": "Azure RBAC role selection and generation of role assignment/custom-role commands",
+      "candidate_context": [
+        {
+          "path": ".github/plugins/azure-skills/skills/entra-app-registration/SKILL.md",
+          "sha": "f7f472ade6f8ce489f3efae8bb8533dd0be6b3f0",
+          "relationship": "Entra app registration and OAuth, not Azure resource RBAC"
+        },
+        {
+          "path": ".github/plugins/azure-skills/skills/azure-resource-lookup/SKILL.md",
+          "sha": "896c1114e1e6f2b07550037056ed1467ef3e558b",
+          "relationship": "resource inventory/read access, not role assignment"
+        }
+      ],
+      "decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "rationale": "No Azure RBAC first-class manifest at the former path in candidate tree. Nearby identity and resource-lookup packages do not establish least-privilege role assignment equivalence; roleAssignments/write authority must not be silently inherited.",
+      "old_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+      "candidate_path_status": "ABSENT_AT_CANDIDATE",
+      "current_july_record_state": "UNCHANGED_AT_REGISTERED_PIN",
+      "successor_identity_proven": false,
+      "license": "MIT (old manifest and upstream root)",
+      "semantic_reverification": "not-performed",
+      "security": "not-run",
+      "behavioral": "not-run"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-ai-translation-document-py
+display_name: "Microsoft azure-ai-translation-document-py changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-translation-document-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: e548c746ec02f0ec9d2acb4adf18334d6ca0edf3
+skill_md_blob_sha: 64da88e8a88f1ff64c38261c0ca0df09544f3b70
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 64da88e8a88f1ff64c38261c0ca0df09544f3b70
+  - path: "references/capabilities.md"
+    blob_sha: d0ead4f44fb47932672a1ac538e618a0900158c4
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 15eb6947c060176985d407d2424c93bc9faae6e2
+permission_tier: "mutating,external-side-effect"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-ai-translation-document; azure-identity; Azure Blob source/target containers; SAS URLs; optional legacy key"
+purpose: "Azure Blob-backed batch document translation, glossary and job management"
+trigger: "DocumentTranslationClient, SingleDocumentTranslationClient"
+nontrigger: "Not for sharing SAS URLs, writing destination containers or translating private files without explicit authorization"
+authority_finding: "Translation jobs write translated documents to persistent target storage and can cancel jobs without owner/destination approval"
+privacy_finding: "Source/target/glossary SAS-bearing URLs and printed source_document_url can expose credentials or private document locations"
+skill_specific_freshness: "Candidate revision and all three package blob identities checked 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-translation-document-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-translation-document-py.yaml
+prior_screening: "registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json and related frozen-screening records"
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 9/20. Translation jobs write translated documents to persistent target storage and can cancel jobs without owner/destination approval Source/target/glossary SAS-bearing URLs and printed source_document_url can expose credentials or private document locations Preserve format preservation, job polling and glossary design; secure SAS custody, approve destination writes, minimize URL logs and establish retention No security scan, SDK execution, Azure call or behavioral validation."

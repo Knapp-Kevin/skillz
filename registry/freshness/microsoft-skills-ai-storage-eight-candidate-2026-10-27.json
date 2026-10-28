@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "kind": "exact_version_candidate_freshness_review",
+  "source": "https://github.com/microsoft/skills",
+  "candidate_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "frozen_revision": "d5741a1e9325adead3a28d1d203bb69283907e06",
+  "source_root_license_blob": "79656060de00aa4659ad2c276d5be8830664d544",
+  "starting_skillz_main": "ea71f65806bd80f76f265b257b1345e1321e91a6",
+  "registered_static_complete": "186/186 at registered pin",
+  "frozen_frontier_before": {
+    "unchanged": 106,
+    "changed": 76,
+    "removed": 4,
+    "raw_added": 22,
+    "changed_screened": 32
+  },
+  "frozen_frontier_after": {
+    "unchanged": 106,
+    "changed": 76,
+    "removed": 4,
+    "raw_added": 22,
+    "changed_screened": 40,
+    "changed_remaining": 36
+  },
+  "latest_eligible_denominator": "unknown; do not infer from frozen comparison",
+  "review_scope": "Eight changed-existing manifests with full package Git tree identities, individually inspected main manifests, enumerated reference/script blob identities and selected supporting content inspection; not all supporting reference prose independently read",
+  "no_security_or_behavioral_execution": true,
+  "reviews": [
+    {
+      "canonical_id": "agent-framework-azure-ai-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/agent-framework-azure-ai-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "98b28f5cc1f34e68cf9ed7f0e1bda6dec04dda0c",
+      "registered_manifest_blob_sha": "04a975fec1379266430f07bc789bae7acd579185",
+      "complete_package_tree_sha": "e9e12ca2e693ff23016569cc3fe61d289dca736a",
+      "registered_package_tree_sha": "d4ba91752ddd62b9cae2d77e8275dc5a8d75685e",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "advanced.md": "13ac0fe8b0ec5dbf1eeeb17d64ad963f96a043f2",
+        "mcp.md": "7dce0bcd2a9c144591bd56b8915751f503dadef5",
+        "threads.md": "610cd60477871bc2cfbee0f5cebe62fea34d99b7",
+        "tools.md": "832a87b97c04d649e8dc3a8869a4e3c211a602ce"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "mcp.md",
+        "tools.md",
+        "threads.md"
+      ],
+      "supporting_content_unread": [
+        "advanced.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "agent-framework-azure-ai (pre-release)",
+        "azure-identity",
+        "Azure AI Foundry hosted agent service",
+        "hosted MCP endpoints"
+      ],
+      "trigger": "Python agent-framework-azure-ai-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Persistent hosted agents, MCP servers and tool execution; references/mcp.md uses approval_mode='never_require' for HostedMCPTool without a scoped user action grant. Threads can persist sensitive conversation content and be written to local JSON.",
+      "preserved_value": "Managed credential chains, client lifetime, hosted-vs-local MCP distinction and thread lifecycle. Require explicit tool allowlist and approval mode before tool use.",
+      "controlled_tags": {
+        "use_case": [
+          "agent-development",
+          "cloud",
+          "orchestration"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "orchestration"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-ai-ml-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-ml-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "c3b6d0e1765de1f03415d13999c1de850f185ceb",
+      "registered_manifest_blob_sha": "64ae23817a4661484e10a2e28eb89ba99c7f4afa",
+      "complete_package_tree_sha": "4d28e7e22af766b358524eb42873aec1bd0680d8",
+      "registered_package_tree_sha": "ae7411d24137b2d0b4a8e44067ba085912115076",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "capabilities.md": "35896a80f0bff40b01ff5089217164dcea5d173b",
+        "non-hero-scenarios.md": "0556eff5e6629f769fe8369e8930be9cbc7ed2a6"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "non-hero-scenarios.md"
+      ],
+      "supporting_content_unread": [
+        "capabilities.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-ai-ml",
+        "azure-identity",
+        "Azure ML workspace",
+        "Azure compute/data services"
+      ],
+      "trigger": "Python azure-ai-ml-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Workspace/compute/job/model/dataset creation and cloud spending, data ingestion and training, with no explicit resource/region/budget or sensitive-data authorization before mutation.",
+      "preserved_value": "Workspace/job/model/compute typed SDK recipes and cost tagging. Adapt with dry-run plan, budget ceiling, region, identity, and explicit write approval.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-ai-projects-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-projects-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "b406c9fdf3bbe3be9546f5e61d8e04edeb60c327",
+      "registered_manifest_blob_sha": "83a80c385301e88f89e67e9a192085f4302994c2",
+      "complete_package_tree_sha": "6d23ede5e1afb2839765204309097c3143a67564",
+      "registered_package_tree_sha": "53d560d95d7f0c865ab8852fc32be027c1c27f99",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "agents.md": "1cf374aafd3f08a3c534a97a4b4e6cc51a13a59c",
+        "api-reference.md": "5e126d6122440b0d2274c57e5d85a2833f565ffd",
+        "async-patterns.md": "67501ef236e7fa1de892c1ca3b6faa8585c7762c",
+        "built-in-evaluators.md": "a8158fe44d6ce84e380639d9c7b12e5d7e35e0b3",
+        "connections.md": "01324af775ebcaa16704ca9279881739d45f5227",
+        "custom-evaluators.md": "03957c10c2ca2eb29e1b5b5041486c75cae107b2",
+        "datasets-indexes.md": "989f484ca98ab295e8c17acace658693acc0570e",
+        "deployments.md": "8c1f72b864596bcb9d69c1ca57f37b8a8f771fe3",
+        "evaluation.md": "89003b93e20e73a4b47898d50efb86a902607402",
+        "tools.md": "f8af17a59a8ff1109d0b5c9e0197b3b67df8fb5d"
+      },
+      "additional_bundled_script": {
+        "scripts/run_batch_evaluation.py": "98bc430b7f6ad125c1d072d91e9d18c5b278fb76"
+      },
+      "supporting_content_inspected": [
+        "tools.md",
+        "datasets-indexes.md",
+        "evaluation.md",
+        "scripts/run_batch_evaluation.py"
+      ],
+      "supporting_content_unread": [
+        "agents.md",
+        "api-reference.md",
+        "async-patterns.md",
+        "built-in-evaluators.md",
+        "connections.md",
+        "custom-evaluators.md",
+        "deployments.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-ai-projects",
+        "azure-identity",
+        "OpenAI SDK",
+        "Azure AI Foundry project/evaluation service"
+      ],
+      "trigger": "Python azure-ai-projects-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Persistent Foundry agents, memory stores, uploaded datasets and hosted evaluation. Bundled script submits test data to cloud evaluation; references/datasets-indexes.md demonstrates get_credentials and upload_folder without disclosure scope or permission gate.",
+      "preserved_value": "Versioned agents, dataset/index separation, evaluation design and context-managed clients. Isolate source-owned batch script and require explicit data egress authorization.",
+      "controlled_tags": {
+        "use_case": [
+          "agent-development",
+          "cloud",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "orchestration"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-ai-voicelive-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-ai-voicelive-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "512d0686e39a7be742d99d27a9aac8210abc319d",
+      "registered_manifest_blob_sha": "1a3f3aa129ef79ff45c6d0fc25160971d9c62a6c",
+      "complete_package_tree_sha": "c9e31e86696d1af0604abc9aa11f6b1b9ce8b87c",
+      "registered_package_tree_sha": "8e2c48a446597c749edca8381cb7d2dd112eed64",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "api-reference.md": "2398ede788f0ae17ae64b1e571865febab7539fa",
+        "examples.md": "2ed3848e3c0ad3293001226f9040c90b9ec81dd0",
+        "models.md": "3c3d66c38f1b90bb6eab33121a527b11c0b5a0ea"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "examples.md"
+      ],
+      "supporting_content_unread": [
+        "api-reference.md",
+        "models.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-ai-voicelive",
+        "aiohttp",
+        "azure-identity",
+        "WebSocket",
+        "Azure Cognitive Services"
+      ],
+      "trigger": "Python azure-ai-voicelive-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Microphone capture and bidirectional live audio/transcript streaming to Azure; prints transcripts, supports remote function calling, legacy key path; no informed consent, retention, recipient/tool authorization.",
+      "preserved_value": "Server VAD, turn-taking, interruption and streaming state machine. Require microphone/speaker consent and transcript minimization before any remote session.",
+      "controlled_tags": {
+        "use_case": [
+          "communication",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "iterative"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 10,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-monitor-query-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-monitor-query-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "c0ce68264ca6872b488716d800c87d128b7a1dd6",
+      "registered_manifest_blob_sha": "95defd74b998e686aa9d28ec8d5ecfc0cb2141bf",
+      "complete_package_tree_sha": "6b4f1407426414aa44cd60566d0c49fd10493e73",
+      "registered_package_tree_sha": "ac052e9e1c0ebee1c7f57d074c3b288a78429813",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "capabilities.md": "8cf8156ef0db90bc357a7b0ae12aef4ebed59206",
+        "non-hero-scenarios.md": "82a76632f60c3ebda4eb9787b51f259c6722ee2a"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "non-hero-scenarios.md"
+      ],
+      "supporting_content_unread": [
+        "capabilities.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-monitor-query",
+        "azure-identity",
+        "Azure Monitor Logs/Metrics"
+      ],
+      "trigger": "Python azure-monitor-query-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Read-only query APIs can retrieve and print entire Azure Monitor log rows, including potentially private operational/identity records, without scoped query/data-output authorization or minimization.",
+      "preserved_value": "Time-bounded KQL, partial-result handling, metric granularity and read-only diagnostics. Require log workspace/row/column scope and redaction.",
+      "controlled_tags": {
+        "use_case": [
+          "observability",
+          "cloud"
+        ],
+        "lifecycle": [
+          "operations",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-speech-to-text-rest-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-speech-to-text-rest-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "0cd1196f591dec4f6d904831497f2282590bdd57",
+      "registered_manifest_blob_sha": "b0f96a3e9b5eac1d898e5b0938e862f164aa0aa1",
+      "complete_package_tree_sha": "d6a54c61e1c1772e43b6cd3a15849328161b4f25",
+      "registered_package_tree_sha": "e3ec4de3b5c76926c40c502ec5afe82d0a0240ac",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "pronunciation-assessment.md": "84601ca710e55c47a1e048053b9e7347e347090c"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "pronunciation-assessment.md"
+      ],
+      "supporting_content_unread": [],
+      "declared_dependencies": [
+        "python",
+        "requests",
+        "aiohttp (optional)",
+        "Azure Speech REST",
+        "subscription key or Entra token"
+      ],
+      "trigger": "Python azure-speech-to-text-rest-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Audio file sent to external Azure Speech REST service, transcripts printed and HTTP error response bodies emitted; subscription-key auth path and no speaker consent/retention control.",
+      "preserved_value": "Short-audio <=60s trigger, audio format and retry boundaries, pronunciation <=30s reference. Require consent and secure credential routing.",
+      "controlled_tags": {
+        "use_case": [
+          "communication",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-storage-file-datalake-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-storage-file-datalake-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "bd8a9e4abbdadee2ef5d55429a39e8c179748e3e",
+      "registered_manifest_blob_sha": "cbf9de12757e9718d6ff120bc4275b27c4118873",
+      "complete_package_tree_sha": "dd1e5344aef7bd25e2480a9af6a89128923e53db",
+      "registered_package_tree_sha": "32ae7f0ea087950c1699629ae7ff16f64e8af597",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "capabilities.md": "b1d101599ef00a7f0f54dca14b4dda9daaaff2d8",
+        "non-hero-scenarios.md": "f23a4960c67c3b82b23bd1245f171d6de150a2f1"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "non-hero-scenarios.md"
+      ],
+      "supporting_content_unread": [
+        "capabilities.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-storage-file-datalake",
+        "azure-identity",
+        "Azure Data Lake Storage Gen2"
+      ],
+      "trigger": "Python azure-storage-file-datalake-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "File-system creation/deletion, recursive ACL updates, overwrite uploads, downloads and file deletion without exact path, tenant, permission, retention or destructive-action approval.",
+      "preserved_value": "Hierarchical namespace, append/flush, ACL inspection and pagination. Require change-plan and explicit path-scoped approval.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    },
+    {
+      "canonical_id": "azure-storage-file-share-py",
+      "canonical_manifest": ".github/plugins/azure-sdk-python/skills/azure-storage-file-share-py/SKILL.md",
+      "source_revision": "1a63e5f771987a9a13e9f0571823dc1e80741583",
+      "registered_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "manifest_blob_sha": "5adf7ad61c2304d8ba4ef3f02b2db7e9fff993db",
+      "registered_manifest_blob_sha": "5200889a0df5498bfe704c12358e2f2c1465c84f",
+      "complete_package_tree_sha": "08ad8bd92ae39f83a50f89eeb5f327569afa6464",
+      "registered_package_tree_sha": "9f58beb6bc9d022669483f4f7c911305a95789e4",
+      "tree_identity_basis": "Exact Git tree SHA from GitHub contents parent directory, at both immutable revisions; root package entries and direct reference/script directories enumerated",
+      "source_license": "MIT root and manifest where declared; SDK/service/transitive terms not independently qualified",
+      "reference_blob_shas": {
+        "capabilities.md": "6044d9b17bd96639d834dc35370768dee2f4ba3c",
+        "non-hero-scenarios.md": "e43eab1fb0fec8b725c3b7b3b35b4f80c0494e97"
+      },
+      "additional_bundled_script": {},
+      "supporting_content_inspected": [
+        "non-hero-scenarios.md"
+      ],
+      "supporting_content_unread": [
+        "capabilities.md"
+      ],
+      "declared_dependencies": [
+        "python",
+        "azure-storage-file-share",
+        "azure-identity",
+        "Azure Files SMB shares"
+      ],
+      "trigger": "Python azure-storage-file-share-py Azure SDK implementation, review or adaptation",
+      "nontrigger": "No production resource change, hosted tool action, private data egress, credential disclosure, microphone capture or destructive operation without explicit user-approved scope",
+      "authority_and_privacy_findings": "Share creation/deletion, file upload/download/delete, snapshot and range mutation without exact resource/path, billing, retention, disclosure or deletion authorization.",
+      "preserved_value": "SMB file-share ranges, snapshots, client lifecycle and streaming download. Require explicit share/file mutation approval.",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "business-operations"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "rubric": {
+        "trigger_precision": 1,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score": 11,
+      "semantic_status": "rejected",
+      "unchanged_reuse_eligible": false,
+      "disposition": "EXTRACT / ADAPT only",
+      "package_security": {
+        "status": "not-run",
+        "required_scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc"
+      },
+      "behavioral_validation": {
+        "status": "not-run"
+      },
+      "execution_performed": false,
+      "registered_pin_companion_changed": false
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+schema_version: 1
+skill_name: azure-kubernetes
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-kubernetes
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 563d312d0625f6c6f815abc147a10375b8ec8ff9
+skill_md_blob_sha: 34a04d8010249f24147c0ce66982c8cfa7eedc87
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: seven-parent-file-complete-static-review-with-48-nested-exact-version-reviews-reused
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, planning, deployment]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [risk-aware, reference-heavy, tool-assisted, production-oriented]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+package_file_exposures: 55
+parent_owned_file_count: 7
+parent_owned_files_inspected:
+  - path: "references/azure-aks-autoscaler.md"
+    blob_sha: 57e4bbf9b75ae4a6d21eafbc65771937708cc48e
+  - path: "references/azure-aks-rightsizing.md"
+    blob_sha: daabf273b7db9840508ba073e7c80de3cb99fdad
+  - path: "references/azure-aks-spot.md"
+    blob_sha: cfe47cc4b9e731a3b0032264be8011d667c0d2ca
+  - path: "references/azure-aks-vpa.md"
+    blob_sha: 92e34508da3c3d09160e2ce132d840188cb4b064
+  - path: "references/cli-reference.md"
+    blob_sha: af100da7f226caec84a94aeb96b4891dd2a5c164
+  - path: "references/optional-aks-operations.md"
+    blob_sha: ff16c3e3493c908fc6948f279cd6f047fe74d1a8
+  - path: "SKILL.md"
+    blob_sha: 34a04d8010249f24147c0ce66982c8cfa7eedc87
+nested_first_class_exposures_reused:
+  - skill: azure-kubernetes-app-deploy
+    files: 42
+    tree_sha: 580e5d0cffde99b0b4e571721570f282d5930d9a
+    exact_review: registry/verification/microsoft-skills-candidate/azure-kubernetes-app-deploy.yaml
+  - skill: azure-kubernetes-automatic-readiness
+    files: 6
+    tree_sha: c8ffe7bbfd195951701a5514cbdad6263c817e7a
+    exact_review: registry/verification/microsoft-skills-candidate/azure-kubernetes-automatic-readiness.yaml
+external_dependencies_not_executed: Azure MCP, az aks, kubectl, Azure Monitor, Entra, Key Vault, cluster autoscaler, Spot/VPA, nested upstream templates and jq filter
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_AUTHORITY_AND_SCOPE_HARD_FAIL
+prior_registered_verification: registry/verification/microsoft-skills/azure-kubernetes.yaml
+notes: Root and six direct references read at exact candidate revision. az aks create, enable-addons, nodepool add/update, az aks update --enable-vpa, kubectl apply, get-credentials and all-namespace metrics discovery lack consistent action-specific authorization. Aggressive-autoscaler confirmation and VPA Auto warning do not authorize earlier effects. Preserve design, bounded read guidance, safer defaults, risk caveats and consent for optional plugin installation. Two nested skills have separately reviewed exact trees and independent dispositions. No Azure operation, source-owned tool, security scan or behavioral validation executed.

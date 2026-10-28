@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-28",
+  "source": "https://github.com/microsoft/skills",
+  "registered_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+  "candidate_revision": "61fe0305ea70389ed8705eec6026a786f57865cf",
+  "method": "Non-truncated exact upstream Git trees; registered 186-path crosswalk; all six previously ungoverned July manifests inspected at candidate revision; 24 additions reconciled against existing frozen and post-frozen screening evidence; complete package-tree mirror comparison; three nested phase files inspected without YAML frontmatter. Static only; no execution.",
+  "accounting": {
+    "july_physical_manifests": 192,
+    "july_governed_canonical": 186,
+    "july_ungoverned_physical": 6,
+    "old_governed_carry_forward": 106,
+    "old_governed_changed": 76,
+    "old_governed_removed": 4,
+    "new_physical_additions": 24,
+    "new_additions_nonfirstclass_phase": 3,
+    "old_ungoverned_exact_mirror_excluded": 1,
+    "old_ungoverned_distinct_firstclass": 5,
+    "new_distinct_firstclass": 21,
+    "candidate_physical_manifests": 212,
+    "candidate_nonfirstclass": 3,
+    "candidate_exact_mirror_excluded": 1,
+    "candidate_structural_eligible_denominator": 208,
+    "candidate_exact_tree_carry_forward": 106,
+    "candidate_changed_existing_needing_requalification": 76,
+    "candidate_new_or_previously_ungoverned_needing_first_review": 26,
+    "candidate_total_needing_current_standard_review": 102,
+    "registered_source_denominator_unchanged": 186,
+    "admission_delta": 0,
+    "candidate_changed_existing_full_reviewed": 76,
+    "candidate_changed_existing_full_review_remaining": 0
+  },
+  "nonfirstclass_phase_references": [
+    ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
+    ".github/plugins/azure-skills/skills/azure-app-onboard/prepare/SKILL.md",
+    ".github/plugins/azure-skills/skills/azure-app-onboard/scaffold/SKILL.md"
+  ],
+  "previously_ungoverned_exposures": [
+    {
+      "path": ".github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts/SKILL.md",
+      "id": "applicationinsights-web-ts",
+      "manifest_sha": "e1bfcc76ab8e76060350426a04115dc33de8bbd4",
+      "package_tree_sha": "cb03b364b8f9dcb5fc2ee9662758a1f949c23102",
+      "classification": "EXACT_TREE_MIRROR_EXCLUDED",
+      "canonical_path": ".github/skills/applicationinsights-web-ts/SKILL.md",
+      "disposition": "ALIAS_NO_INDEPENDENT_ADMISSION",
+      "score": null,
+      "authority": "external-side-effect",
+      "dependencies": "same four-blob tree as canonical root exposure; browser RUM telemetry",
+      "privacy": "browser interaction, error, and GenAI trace collection require explicit data authority",
+      "verification": "not-newly-verified",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "observability"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "instrumentation"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      }
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/entra-app-registration/SKILL.md",
+      "id": "entra-app-registration",
+      "manifest_sha": "f7f472ade6f8ce489f3efae8bb8533dd0be6b3f0",
+      "package_tree_sha": "051071c18ecb38347076f857819987e3ec37685e",
+      "classification": "FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
+      "disposition": "REJECT_UNCHANGED_EXTRACT",
+      "score": null,
+      "authority": "mutating identity/access and credential issuance",
+      "dependencies": "17 source-owned blobs including CLI, OAuth and SDK references; not all fully reviewed",
+      "privacy": "client-secret creation and Microsoft Graph Mail.Send scopes",
+      "rationale": "No distinct tenant/owner/scope/consent authorization before app registration, Graph permission changes or credential generation; least-privilege advice is not approval",
+      "verification": "preliminary-manifest-static-only",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "security",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      }
+    },
+    {
+      "path": ".github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/slack-to-teams/SKILL.md",
+      "id": "slack-to-teams",
+      "manifest_sha": "11dfd2b3b069b8ae77d835c7317c3698d94346f0",
+      "package_tree_sha": "41f03fb5bb8791de6d0c2d1c76764372d906bc3c",
+      "classification": "NESTED_FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
+      "disposition": "REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST",
+      "score": "11/20",
+      "authority": "mutating and external-side-effect: identity mapping, file sharing, bot messaging, credential and cloud changes, destructive source deletion",
+      "dependencies": "one-blob nested manifest; 120/120 exact shared expert blobs in tree 39ecbc21af77c72859ec9e32dc7e88fb7052ded9 plus 27/27 parent and sibling files inspected",
+      "privacy": "parent requests real secrets in conversational context; cross-platform identity correlation, files, messaging and retained conversation IDs lack sufficient approval/retention boundaries",
+      "rationale": "Full 148-blob exact-source static review rejects unchanged use for credential solicitation, unauthorized identity/file/communication/cloud effects and destructive lifecycle; preserve bridge design as adaptation evidence.",
+      "verification": "complete-exact-source-dependency-static-rejected",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "implementation",
+          "communication",
+          "cloud"
+        ],
+        "lifecycle": [
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "retrieval-map",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "low"
+        ]
+      }
+    },
+    {
+      "path": ".github/skills/continual-learning/SKILL.md",
+      "id": "continual-learning",
+      "manifest_sha": "1de328f9abe0c345c002a80385619aef277c431e",
+      "package_tree_sha": "0c2b5645bbb3fe92e02f2c7b1d11fb51da02eeac",
+      "classification": "FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
+      "disposition": "REJECT_UNCHANGED_EXTRACT",
+      "score": null,
+      "authority": "persistent hook installation and global/local memory writes",
+      "dependencies": "single-blob skill; references external hooks/continual-learning directory and local SQLite memory stores",
+      "privacy": "automatic tool-outcome capture, global ~/.copilot/learnings.db and local .copilot-memory/learnings.db",
+      "rationale": "One-step auto-initializing hook install and persistent learning without explicit user authorization, data minimization or host-specific retention consent",
+      "verification": "preliminary-manifest-static-only",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "memory",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "instrumentation"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "low"
+        ]
+      }
+    },
+    {
+      "path": ".github/skills/debugview/SKILL.md",
+      "id": "debugview",
+      "manifest_sha": "606e6dd78d6b492d562bc505ecc29161732a58fd",
+      "package_tree_sha": "1a9e965776b48abb8e0934c27cf9f5f100fc2d95",
+      "classification": "FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
+      "disposition": "REJECT_UNCHANGED_EXTRACT",
+      "score": null,
+      "authority": "administrator kernel capture, persistent boot logging, remote diagnostics and file output",
+      "dependencies": "seven-blob package; DbgViewCli binary, Windows driver, remote capture endpoints",
+      "privacy": "process/kernel debug output may contain credentials, PII or sensitive operational data",
+      "rationale": "Authenticode verification and bounded duration are useful safeguards, but they do not authorize kernel/boot capture, driver loading, persistent logs or remote disclosure",
+      "verification": "preliminary-manifest-static-only",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "debugging",
+          "observability"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "low"
+        ]
+      }
+    },
+    {
+      "path": ".github/skills/entra-agent-id/SKILL.md",
+      "id": "entra-agent-id-root",
+      "manifest_sha": "a8653ea1e50451c43e1ab7dc95f5024543d63658",
+      "package_tree_sha": "3ea709c1b312d75518093040b47faa2f7e23a238",
+      "classification": "DIVERGENT_SAME_NAME_FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
+      "disposition": "REJECT_UNCHANGED_EXTRACT",
+      "score": null,
+      "authority": "Microsoft Graph identity creation, permission consent and destructive identity deletion",
+      "dependencies": "four-blob root package; distinct from seven-blob Azure plugin entra-agent-id package tree 2757439372801955542e909dc218f74914811203",
+      "privacy": "client secrets, bearer tokens, identities and cross-tenant access",
+      "rationale": "Install-Module -Force, identity creation, admin consent and DELETE examples have no action-specific owner/tenant/permission/revocation approval; root beta API guidance differs from plugin v1.0 guidance",
+      "verification": "preliminary-manifest-static-only",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "tags": {
+        "use_case": [
+          "security",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "low"
+        ]
+      }
+    }
+  ],
+  "removed_governed_paths": [
+    {
+      "path": ".github/plugins/azure-sdk-rust/skills/azure-servicebus-rust/SKILL.md",
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "365a93a6c3f94310d78791a73e9a3b2891775861",
+      "registered_july_state": "unchanged at original pin"
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-cost/SKILL.md",
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_SPLIT_CAPABILITY_NO_ALIAS",
+      "old_manifest_sha": "8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4",
+      "registered_july_state": "unchanged at original pin"
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md",
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "64b239df00aa320b64a9009c1875b303a87080b1",
+      "registered_july_state": "unchanged at original pin"
+    },
+    {
+      "path": ".github/plugins/azure-skills/skills/azure-rbac/SKILL.md",
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "02ac75d2ba22b4d7aa1e74469b01575281f05ddc",
+      "registered_july_state": "unchanged at original pin"
+    }
+  ],
+  "qualification": {
+    "semantic": "76/76 changed-existing fully reviewed (8 Rust, 37 Python, 29 Azure operations, one skill-creator, one Foundry finetuning; 70 rejected unchanged, 6 semantic verified). 26/26 new complete (4 verified semantic only, 22 rejected). All 102/102 current-version changed/new static companions complete; security and behavioral not-run.",
+    "security": "not-run on candidate revision",
+    "behavioral": "not-run on candidate revision",
+    "source_pin": "unchanged",
+    "full_package_review": "76/76 changed-existing complete exact-version static companions; 0 remain; 26/26 new complete; 102/102 total candidate fresh static reviews complete.",
+    "note": "208 is the structural candidate denominator, not source admission. All 102/102 changed/new packages have static companions; candidate source-pin promotion is NO-GO at this revision pending qualifying external exact-package security evidence and independent acceptance. Registered July pin unchanged.",
+    "candidate_new_full_static_rejected": 22,
+    "candidate_new_remaining_first_review": 0,
+    "candidate_total_remaining_full_review": 0,
+    "review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md",
+    "candidate_new_full_static_verified": 4,
+    "candidate_new_full_static_reviewed": 26,
+    "removed_path_successor_decisions_complete": 4,
+    "removed_path_successor_decisions_pending": 0,
+    "removed_path_review": "docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md",
+    "foundry_iq_review": {
+      "canonical_skill_tree": "c45f2a12dcffa1929705b1523cb1645a03de134e",
+      "plugin_distribution_tree": "d6d3a76b22e461c34ecf9c902e04745159038af5",
+      "skill_files_inspected": 85,
+      "plugin_extra_files_inspected": 17,
+      "decision": "REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST",
+      "score": "15/20",
+      "security": "not-run",
+      "behavioral": "not-run",
+      "source_pin": "unchanged"
+    },
+    "candidate_changed_existing_full_reviewed": 76,
+    "candidate_changed_existing_full_review_remaining": 0,
+    "changed_existing_rust_review": "docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md",
+    "changed_existing_python_ai_review": "docs/reviews/2026-10-28-microsoft-python-ai-multimodal-eight-exact-static.md",
+    "changed_existing_python_data_storage_events_review": "docs/reviews/2026-10-28-microsoft-python-data-storage-events-eight-exact-static.md",
+    "changed_existing_python_identity_telemetry_review": "docs/reviews/2026-10-28-microsoft-python-identity-telemetry-six-exact-static.md",
+    "changed_existing_python_services_management_review": "docs/reviews/2026-10-28-microsoft-python-services-management-eight-exact-static.md",
+    "changed_existing_python_final_seven_review": "docs/reviews/2026-10-28-microsoft-python-final-seven-exact-static.md",
+    "changed_existing_azure_ops_discovery_review": "docs/reviews/2026-10-28-microsoft-azure-ops-discovery-eight-exact-static.md",
+    "changed_existing_azure_ai_deployment_review": "docs/reviews/2026-10-28-microsoft-azure-ai-deployment-five-exact-static.md",
+    "changed_existing_readiness_identity_authoring_review": "docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md",
+    "changed_existing_foundry_deploy_review": "docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md",
+    "changed_existing_azure_infra_migration_review": "docs/reviews/2026-10-28-microsoft-azure-infra-migration-three-exact-static.md",
+    "changed_existing_azure_deploy_foundry_finetuning_review": "docs/reviews/2026-10-28-microsoft-azure-deploy-foundry-finetuning-two-exact-static.md",
+    "changed_existing_azure_diagnostics_review": "docs/reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md",
+    "changed_existing_azure_upgrade_review": "docs/reviews/2026-10-28-microsoft-azure-upgrade-50-file-exact-static.md",
+    "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
+    "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md",
+    "source_pin_decision": "NO-GO / RETAIN_REGISTERED_JULY_PIN",
+    "source_pin_decision_evidence": "docs/reviews/2026-10-28-microsoft-candidate-pin-no-go-decision.md"
+  },
+  "latest_full_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
+}

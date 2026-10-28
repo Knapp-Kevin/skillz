@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-storage-file-share-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-storage-file-share-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 08ad8bd92ae39f83a50f89eeb5f327569afa6464
+skill_md_blob_sha: 5adf7ad61c2304d8ba4ef3f02b2db7e9fff993db
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 5adf7ad61c2304d8ba4ef3f02b2db7e9fff993db
+  - path: "references/capabilities.md"
+    blob_sha: 6044d9b17bd96639d834dc35370768dee2f4ba3c
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: e43eab1fb0fec8b725c3b7b3b35b4f80c0494e97
+display_name: "Microsoft Azure Files Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-storage-file-share; azure-identity; Azure Files account/share; copy source URL"
+purpose: "Share/directory/file CRUD, snapshots, copy and ranged transfer"
+trigger: "Python ShareServiceClient and Azure Files transfer"
+nontrigger: "Not approval to delete shares, copy sensitive files or change persistent storage"
+authority_finding: "Creates/deletes shares and directories, uploads/deletes/copies files and creates snapshots without resource/owner/destination authorization."
+privacy_finding: "Share and file listings disclose names and sizes; cross-file copy can transmit private documents to unapproved destinations."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-storage-file-share-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-file-share-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Creates/deletes shares and directories, uploads/deletes/copies files and creates snapshots without resource/owner/destination authorization. Share and file listings disclose names and sizes; cross-file copy can transmit private documents to unapproved destinations. Preserve ranged transfer, snapshot and client hierarchy patterns; gate target paths, retention, copy destination and destructive actions. Security scan, cloud execution and behavioral validation not-run."
