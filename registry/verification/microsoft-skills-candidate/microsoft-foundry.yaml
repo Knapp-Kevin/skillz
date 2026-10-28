@@ -1,0 +1,47 @@
+schema_version: 1
+skill_name: microsoft-foundry
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: microsoft-foundry
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 2311f81bfa096aaefd50068b61443cb92ba70bfe
+skill_md_blob_sha: 14fd2bc585abbdd62bbb3231bfd62e7eec115c6b
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-220-distinct-blob-exact-candidate-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [agent-development, cloud, deployment, evaluation, orchestration, security]
+  lifecycle: [planning, design, implementation, verification, operations]
+  characteristic: [evidence-first, orchestration, reference-heavy, risk-aware, tool-routing]
+  authority: [read-only, generate-only, mutating, external-side-effect]
+  portability: [low]
+package_file_count: 220
+package_bytes: 1299560
+distinct_git_blob_count: 220
+parent_owned_file_exposures: 169
+nested_first_class_file_exposures: 51
+source_file_inventory: registry/skills/microsoft-skills-candidate/microsoft-foundry.yaml
+nested_exact_version_reviews: [microsoft-foundry-finetuning, microsoft-foundry-deploy-model, microsoft-foundry-deploy-model-capacity, microsoft-foundry-deploy-model-customize, microsoft-foundry-deploy-model-preset]
+upstream_manifest_version: "1.2.31"
+external_dependencies_not_executed: Azure CLI/azd/extensions, Azure MCP/Foundry, Entra/RBAC, App Insights, third-party OAuth/MCP, hosted agents/training, source-owned Bash/PowerShell/Python scripts
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_INSTALL_AUTHORITY_PRIVACY_AND_CREDENTIAL_HARD_FAIL
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry.yaml
+notes: "Root SKILL.md lines 18-29 mandates first-action dependency setup; scripts/check-and-setup-dependencies.sh lines 19-23 and PowerShell lines 20-27 install microsoft.foundry without scoped approval. quick-start-hosted.md lines 24-43 and routine.md Step 1b permit direct installation in noninteractive mode. project/create/create-foundry-project.md Step 4 provisions billable resources with no distinct target/cost approval; rbac/rbac.md grants broad roles and create-for-rbac prints credential-bearing JSON. toolbox/references/tool-mcp-custom-oauth.md passes client-secret via CLI argument. eval-datasets/references/trace-to-dataset.md harvests production traces into local datasets and optional Foundry storage without a consistent privacy/retention gate. Root does not inherit safe approvals from separately reviewed deploy-model child; finetuning remains independently rejected. Useful design/reference content preserved. All 220 source blobs statically read; no script, scanner, Azure command or behavioral validation run."
