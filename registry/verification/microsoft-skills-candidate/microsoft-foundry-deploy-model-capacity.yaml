@@ -1,0 +1,51 @@
+schema_version: 1
+skill_name: capacity
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: microsoft-foundry-deploy-model-capacity
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd
+skill_md_blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-5-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "research", "planning"]
+  lifecycle: ["discovery", "planning", "verification"]
+  characteristic: ["retrieval-first", "risk-aware", "tool-assisted"]
+  authority: ["read-only"]
+  portability: ["low"]
+package_file_count: 5
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+  - path: "scripts/discover_and_rank.ps1"
+    blob_sha: 30960b0b8b3ebadc49b28e143025161e0df6df2e
+  - path: "scripts/discover_and_rank.sh"
+    blob_sha: 83c771b47fc3342268ded19d684ecad402c4ade7
+  - path: "scripts/query_capacity.ps1"
+    blob_sha: f65dff5aa99a596d75e19427caf7dd711837d757
+  - path: "scripts/query_capacity.sh"
+    blob_sha: 7869f6904927bf1d83dc29c357f7746a37229504
+external_dependencies_not_executed: "Four bundled Bash/PowerShell scripts; Azure CLI management APIs; Bash jq and Python3; parent and deployment handoff skills"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-capacity.yaml
+notes: "discover_and_rank.sh lines 54-60 embeds untrusted CAPACITY_JSON, PROJECTS_JSON and quota JSON directly into Python -c source using triple-quoted literals. This crosses the external-data-to-code boundary without sanitization or separate host execution approval. Subscription-wide project names and metadata are queried and printed without bounded read/disclosure scope; API data may become executable source. Preserve: Capacity-versus-quota distinction, ranking, safe read-only analysis after data-only adaptation. Exact static only; no security, behavioral, Azure, script execution, source admission or pin movement."

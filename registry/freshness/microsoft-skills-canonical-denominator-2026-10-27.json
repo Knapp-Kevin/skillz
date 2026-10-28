@@ -27,8 +27,8 @@
     "candidate_total_needing_current_standard_review": 102,
     "registered_source_denominator_unchanged": 186,
     "admission_delta": 0,
-    "candidate_changed_existing_full_reviewed": 62,
-    "candidate_changed_existing_full_review_remaining": 14
+    "candidate_changed_existing_full_reviewed": 66,
+    "candidate_changed_existing_full_review_remaining": 10
   },
   "nonfirstclass_phase_references": [
     ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
@@ -320,5 +320,6 @@
     "changed_existing_azure_ops_discovery_review": "docs/reviews/2026-10-28-microsoft-azure-ops-discovery-eight-exact-static.md",
     "changed_existing_azure_ai_deployment_review": "docs/reviews/2026-10-28-microsoft-azure-ai-deployment-five-exact-static.md",
     "changed_existing_readiness_identity_authoring_review": "docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md"
-  }
+  },
+  "latest_full_review": "docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md"
 }

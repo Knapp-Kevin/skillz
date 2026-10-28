@@ -1,0 +1,73 @@
+schema_version: 1
+skill_name: deploy-model
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; dependencies retain own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-09-23T11:05:59Z
+upstream_latest_path_commit: b8a1c666fc63a737097558f8289d8fa107914bf9
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 5e60a08596808fd2dc6209ab309d682664d2e03c
+skill_md_blob_sha: fd954ccf1ed94a451cf37a4770dff6f375ccb00e
+package_file_count: 17
+package_files:
+  - path: "SKILL.md"
+    blob_sha: fd954ccf1ed94a451cf37a4770dff6f375ccb00e
+  - path: "TEST_PROMPTS.md"
+    blob_sha: cbba68e132692a6861539043c6978000e98dba23
+  - path: "capacity/SKILL.md"
+    blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+  - path: "capacity/scripts/discover_and_rank.ps1"
+    blob_sha: 30960b0b8b3ebadc49b28e143025161e0df6df2e
+  - path: "capacity/scripts/discover_and_rank.sh"
+    blob_sha: 83c771b47fc3342268ded19d684ecad402c4ade7
+  - path: "capacity/scripts/query_capacity.ps1"
+    blob_sha: f65dff5aa99a596d75e19427caf7dd711837d757
+  - path: "capacity/scripts/query_capacity.sh"
+    blob_sha: 7869f6904927bf1d83dc29c357f7746a37229504
+  - path: "customize/EXAMPLES.md"
+    blob_sha: a3f25848a09494cbee25143aa71ec43d0a0425f5
+  - path: "customize/SKILL.md"
+    blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+  - path: "customize/references/customize-guides.md"
+    blob_sha: 1009adb4ccbdc7ad182599c6e5ef529a12ee691e
+  - path: "customize/references/customize-workflow.md"
+    blob_sha: 482dfb480318cdc8c6d53ffd4a2c87db0f876f86
+  - path: "preset/EXAMPLES.md"
+    blob_sha: 8c61f9dccf371222a22e271839a5632d6c900960
+  - path: "preset/SKILL.md"
+    blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+  - path: "preset/references/preset-workflow.md"
+    blob_sha: 86b4027278efa7e8c851790bb6dac070c98c3122
+  - path: "preset/references/workflow.md"
+    blob_sha: 109b2fc69c6379af9b6bf5178694f567689b762e
+  - path: "scripts/generate_deployment_url.ps1"
+    blob_sha: b021fdb4eb48fa36392dd8035d53ed55419d1c6f
+  - path: "scripts/generate_deployment_url.sh"
+    blob_sha: 2b9ff8b3bf05ff7d1bf4ca1c1ba3441d3f6b0b3c
+display_name: "Microsoft microsoft-foundry-deploy-model candidate"
+upstream_manifest_version: "1.0.0"
+permission_tier: external-side-effect
+portability: low
+review_status: verified-structured-static-security-pending
+dependency_status: "complete-17-file-package-static-inspected; shared external references characterized separately"
+dependencies: "Azure CLI/MCP, model catalog and quota APIs; three separately front-mattered nested sub-skills; optional Foundry portal helper scripts"
+purpose: "Intent-based routing to capacity, preset or customize"
+trigger: "Explicit Foundry model deployment, capacity or configuration routing"
+nontrigger: "No deployment without affirmative Yes deploy here after project, region and resource group disclosure"
+authority_finding: "Root requires an affirmative Yes deploy here after project/region/resource-group display. This is an action-specific deployment authorization, but does not authorize independently invoked preset or separate project creation."
+privacy_finding: "Subscription/project identifiers are shown in confirmation; scope reads and avoid credential-bearing output."
+skill_specific_freshness: "Candidate tree 5e60a08596808fd2dc6209ab309d682664d2e03c, all 17 blobs inspected 2026-10-28; latest path commit b8a1c666fc63a737097558f8289d8fa107914bf9 at 2026-09-23T11:05:59Z"
+prior_registered_provenance: registry/skills/microsoft-skills/microsoft-foundry-deploy-model.yaml
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model.yaml
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic 16/20. Root requires an affirmative Yes deploy here after project/region/resource-group display. This is an action-specific deployment authorization, but does not authorize independently invoked preset or separate project creation. Subscription/project identifiers are shown in confirmation; scope reads and avoid credential-bearing output. Preserve: Intent routing, dynamic SKU and quota checks, explicit deployment target approval. Security and behavioral not-run; July pin unchanged."
