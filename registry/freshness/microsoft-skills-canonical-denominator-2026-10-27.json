@@ -27,8 +27,8 @@
     "candidate_total_needing_current_standard_review": 102,
     "registered_source_denominator_unchanged": 186,
     "admission_delta": 0,
-    "candidate_changed_existing_full_reviewed": 24,
-    "candidate_changed_existing_full_review_remaining": 52
+    "candidate_changed_existing_full_reviewed": 30,
+    "candidate_changed_existing_full_review_remaining": 46
   },
   "nonfirstclass_phase_references": [
     ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
@@ -283,15 +283,15 @@
     }
   ],
   "qualification": {
-    "semantic": "76/76 changed-existing screened; 16/76 fully reviewed at candidate revision (eight Rust and eight Python Azure AI, all rejected unchanged); 60 remain. 26/26 new complete (4 verified semantic only, 22 rejected).",
+    "semantic": "76/76 changed-existing screened; 30/76 fully reviewed (8 Rust, 8 Python AI, 8 Python data/storage/events, 6 Python identity/telemetry; all rejected unchanged); 46 remain. 26/26 new complete (4 verified semantic only, 22 rejected).",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
-    "full_package_review": "16/76 changed-existing complete exact-version static companions; 60 remain; 26/26 new complete",
-    "note": "208 remains a structural candidate denominator, not admission. 26/26 new and 16/76 changed-existing have complete static reviews; 60 changed-existing remain. July pin, security, behavioral validation and admissions unchanged.",
+    "full_package_review": "30/76 changed-existing complete exact-version static companions; 46 remain; 26/26 new complete",
+    "note": "208 remains structural candidate denominator, not admission. 26/26 new and 30/76 changed-existing complete; 46 changed-existing remain. July pin, security, behavioral and admission unchanged.",
     "candidate_new_full_static_rejected": 22,
     "candidate_new_remaining_first_review": 0,
-    "candidate_total_remaining_full_review": 60,
+    "candidate_total_remaining_full_review": 46,
     "review": "docs/reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md",
     "candidate_new_full_static_verified": 4,
     "candidate_new_full_static_reviewed": 26,
@@ -309,9 +309,11 @@
       "behavioral": "not-run",
       "source_pin": "unchanged"
     },
-    "candidate_changed_existing_full_reviewed": 16,
-    "candidate_changed_existing_full_review_remaining": 60,
+    "candidate_changed_existing_full_reviewed": 30,
+    "candidate_changed_existing_full_review_remaining": 46,
     "changed_existing_rust_review": "docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md",
-    "changed_existing_python_ai_review": "docs/reviews/2026-10-28-microsoft-python-ai-multimodal-eight-exact-static.md"
+    "changed_existing_python_ai_review": "docs/reviews/2026-10-28-microsoft-python-ai-multimodal-eight-exact-static.md",
+    "changed_existing_python_data_storage_events_review": "docs/reviews/2026-10-28-microsoft-python-data-storage-events-eight-exact-static.md",
+    "changed_existing_python_identity_telemetry_review": "docs/reviews/2026-10-28-microsoft-python-identity-telemetry-six-exact-static.md"
   }
 }

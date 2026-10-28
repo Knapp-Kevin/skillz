@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-identity-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-identity-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 024a029bb7accc557287d8a118404e7dea88cbca
+skill_md_blob_sha: f187f844b717be8d522ff19699e3a12974098a09
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","security","implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["risk-aware","reference-heavy"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: f187f844b717be8d522ff19699e3a12974098a09
+  - path: "references/capabilities.md"
+    blob_sha: bfc31d6efe88cf04ddb3e2519782b859d250fd62
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 06509500188c302cfc61456dd31a9e636dd4de3f
+external_dependencies_not_executed: "azure-identity; optional azure-identity-broker; Entra tenant and principals"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-identity-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Wildcard additionally_allowed_tenants=['*'], direct token acquisition and OnBehalfOfCredential lack tenant, principal and scope approval. Unencrypted persistent token-cache example and verbose authentication logging lack redaction, custody and retention controls; secret strings are placeholders. Retain managed/workload identity, production chain restrictions, sovereign clouds and async cleanup; adapt with approved scopes and secure caching. No package-security scan or behavioral validation."

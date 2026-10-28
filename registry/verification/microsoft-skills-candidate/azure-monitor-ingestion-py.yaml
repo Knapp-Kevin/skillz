@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-monitor-ingestion-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-monitor-ingestion-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cf9873304bb7524e71c91e20d6b9188624f38975
+skill_md_blob_sha: 56f0f86d36e50a701f103f2e20742ad459894804
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","observability","implementation"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["instrumentation","risk-aware"]
+  authority: ["external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 56f0f86d36e50a701f103f2e20742ad459894804
+  - path: "references/capabilities.md"
+    blob_sha: be938859751512053769be76e78e4896b2d1f6d0
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: a0e11ba342a03cf8eefc8fefd635fad9ef8f9bd4
+external_dependencies_not_executed: "azure-monitor-ingestion; azure-identity; DCR, DCE, Log Analytics workspace"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-monitor-ingestion-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "logs.json upload and retry of failed logs lack dataset, destination, cost, retention and idempotency approval. Private logs may include PII or credentials; error callback can reveal payload details and ignore_errors silently discards failure evidence. Retain DCR mapping, partial-failure callback, batching and sovereign cloud support; add consent, minimization and retry boundaries. No package-security scan or behavioral validation."

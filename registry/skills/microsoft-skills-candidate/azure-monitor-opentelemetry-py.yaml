@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-monitor-opentelemetry-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 43c5891abcc3d700972f42cd3427f5f73b19edcc
+skill_md_blob_sha: 4428999e5d475fa2f610b24f71d351fb22e6318c
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 4428999e5d475fa2f610b24f71d351fb22e6318c
+  - path: "references/capabilities.md"
+    blob_sha: 88b570d026f0c81a70333304e6a01da636468af9
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: bffdd918ad5d9d408468e997b671f1b987f6a0ef
+display_name: "Microsoft azure-monitor-opentelemetry-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-monitor-opentelemetry; OpenTelemetry; optional azure-identity; Application Insights"
+purpose: "Python auto-instrumentation distro for Azure Monitor"
+trigger: "configure_azure_monitor with Flask, Django, FastAPI"
+nontrigger: "Not authorization to collect and transmit HTTP, database or exception telemetry"
+authority_finding: "Broad automatic instrumentation starts without collection/recipient approval; documented default sampling_ratio is 1.0."
+privacy_finding: "Request, database and exception telemetry can contain private data; error handling interpolates raw exception text."
+skill_specific_freshness: "Exact candidate tree and three Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-monitor-opentelemetry-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-monitor-opentelemetry-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Broad automatic instrumentation starts without collection/recipient approval; documented default sampling_ratio is 1.0. Request, database and exception telemetry can contain private data; error handling interpolates raw exception text. Retain instrumentation_options, sampling, cloud role names and opt-in live metrics; add explicit data and retention controls. No scanner, Azure execution or behavioral validation."
