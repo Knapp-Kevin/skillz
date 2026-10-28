@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-ai-textanalytics-py
+display_name: "Microsoft azure-ai-textanalytics-py changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (upstream root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 375453ad9ff4f6867adf6623a1b567bfe0c60bfb
+skill_md_blob_sha: 3f7ec0d3239a968bb2acb0bec5fa6956894365cd
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 3f7ec0d3239a968bb2acb0bec5fa6956894365cd
+  - path: "references/capabilities.md"
+    blob_sha: 19ce159a085f49df02218d03f9b3229dce172761
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 461cb890d8482c2f81f34e956c989d7601117fb7
+permission_tier: "external-side-effect"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-ai-textanalytics; azure-identity; Azure AI Language endpoint; optional legacy API key"
+purpose: "Sentiment, entity, PII and healthcare text analysis"
+trigger: "TextAnalyticsClient, PII recognition, healthcare NLP"
+nontrigger: "Not for transmitting patient/private text or printing detected raw identifiers"
+authority_finding: "External NLP processing is invoked without explicit dataset/recipient/service-use authorization"
+privacy_finding: "PII example prints entity.text despite providing redacted_text; healthcare example prints clinical entities and normalized details"
+skill_specific_freshness: "Candidate revision and all three package blob identities checked 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-textanalytics-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-textanalytics-py.yaml
+prior_screening: "registry/freshness/microsoft-skills-ai-python-candidate-2026-10-27.json and related frozen-screening records"
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. External NLP processing is invoked without explicit dataset/recipient/service-use authorization PII example prints entity.text despite providing redacted_text; healthcare example prints clinical entities and normalized details Preserve redaction capability and batch API patterns; remove raw PII/clinical output, gate data transmission and retention No security scan, SDK execution, Azure call or behavioral validation."
