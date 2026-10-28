@@ -1,0 +1,43 @@
+schema_version: 1
+skill_name: azure-upgrade
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-upgrade
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a6d9570e0e6d239a624592fd6eb667e20bb7e02d
+skill_md_blob_sha: 4d60fedcaa037dafd098d9ca3c4f8302c7520f1c
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-50-blob-exact-candidate-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "13/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, verification, operations]
+  characteristic: [evidence-first, incremental, risk-aware, safety-bounded, reference-heavy, tool-assisted]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+package_file_count: 50
+package_bytes: 338693
+source_file_inventory: registry/skills/microsoft-skills-candidate/azure-upgrade.yaml
+upstream_manifest_version: "1.2.3"
+external_dependencies_not_executed: Azure MCP, Azure CLI/extensions, az rest, Azure Functions, Java/Maven/Gradle/OpenRewrite, Bash/jq/PowerShell, Redis external skills
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_SECRET_AND_AUTHORIZATION_HARD_FAIL
+prior_registered_verification: registry/verification/microsoft-skills/azure-upgrade.yaml
+notes: All 50 exact candidate package blobs were read and source SHA identities reconciled. Strong root/global and Windows cutover gates do not cure Linux AzureWebJobsStorage secret exposure in process environment, Windows key/setting reads, contradictory Java credential-file templates, unauthorized CLI extension installation, and Java workspace edits/commits without a separate owner/destination authorization boundary. Preserve assessment-first, per-function cutover, rollback, identity-first, source preservation and SDK upgrade planning as extraction/adaptation/checklist evidence. Security and behavioral assessments not run. No Azure operations executed.
