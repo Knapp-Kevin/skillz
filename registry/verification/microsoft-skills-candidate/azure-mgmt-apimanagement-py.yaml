@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-mgmt-apimanagement-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-mgmt-apimanagement-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e7cf59c979b611b71a2b84ce83da54edbf68fe7c
+skill_md_blob_sha: 559dc7e70685f7ce2a31beb51bbea3c492b97c41
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "api-design", "security"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: a74cb701165bf2a9a0ae4e32626838c729784560
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: cc26dd53cdf830a7cbbb36857e2d64cc9fb22c79
+  - path: "SKILL.md"
+    blob_sha: 559dc7e70685f7ce2a31beb51bbea3c492b97c41
+external_dependencies_not_executed: "azure-mgmt-apimanagement; azure-identity; Azure subscription and APIM service; XML policy and OpenAPI; two references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-apimanagement-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Service provisioning, API imports, published products, subscription issuance, gateway policy changes, named-value secrets, backends and user creation lack change-owner approval. Hero example prints subscription.primary_key; literal named-value secret example and user email require secure custody, redaction and identity/communication authorization. Preserve: Gateway policy composition, product/API mapping and named-value patterns; adapt with protected approval, Key Vault, secret-safe output and rollback. No scanner, external service execution or behavioral validation."

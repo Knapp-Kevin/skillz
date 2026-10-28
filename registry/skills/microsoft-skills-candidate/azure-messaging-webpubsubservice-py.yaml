@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-messaging-webpubsubservice-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-messaging-webpubsubservice-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 3d4959574cec66dc53330d47e557bf225e250e13
+skill_md_blob_sha: 20cf2ada27b188fcbcdcbfe7c9d13285d74d8849
+package_file_count: 3
+package_files:
+  - path: "references/capabilities.md"
+    blob_sha: 6964e5727580503e6274405b19bc8a8229a57e0b
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: de3313e6a53c8d25f11ee0f5bf3c9e9eeaf53b0a
+  - path: "SKILL.md"
+    blob_sha: 20cf2ada27b188fcbcdcbfe7c9d13285d74d8849
+display_name: "Microsoft azure-messaging-webpubsubservice-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "azure-messaging-webpubsubservice; azure-webpubsub-client; azure-identity; Azure Web PubSub hub and clients; two references"
+purpose: "Web PubSub access-token issuance, broadcasts, connection/group lifecycle and permissions"
+trigger: "WebSocket pub/sub messaging or Azure Web PubSub Python service integration"
+nontrigger: "Not authority to issue bearer connection URLs, message users, alter groups or terminate sessions"
+authority_finding: "Token issuance, send_to_all/user/group, grant/revoke permission, group membership and close_all_connections lack recipient, tenant, audience, scope and user-communication approval."
+privacy_finding: "Hero example prints token['url'] containing a bearer credential while non-hero guidance explicitly says never log it; client callbacks print message contents."
+skill_specific_freshness: "Exact candidate package tree and 3 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-messaging-webpubsubservice-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-messaging-webpubsubservice-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Token issuance, send_to_all/user/group, grant/revoke permission, group membership and close_all_connections lack recipient, tenant, audience, scope and user-communication approval. Hero example prints token['url'] containing a bearer credential while non-hero guidance explicitly says never log it; client callbacks print message contents. Preserve: Short-lived scoped token guidance, connection checks, excluded-connection broadcasts and async clients; adapt with secure URL custody, consent and message minimization. Package security and behavioral validation not-run."

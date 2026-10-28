@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-mgmt-botservice-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-mgmt-botservice-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: cc3364a8c4e688481e68dc7b567fd95ef52259e8
+skill_md_blob_sha: 4ad0b650c8f7c8de546e691be1845f3c7804ed28
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-3-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "communication", "security"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "references/capabilities.md"
+    blob_sha: 9cdefab76462bb686d0b60222bc9cf896fad4be2
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 279f48417edaefdcb8fe768e4b70247e1a454c49
+  - path: "SKILL.md"
+    blob_sha: 4ad0b650c8f7c8de546e691be1845f3c7804ed28
+external_dependencies_not_executed: "azure-mgmt-botservice; azure-identity; Azure subscription; Bot Framework channel configuration and OAuth connection; two references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-botservice-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Bot create/update/delete, channel creation and OAuth connection changes lack resource owner, channel recipient and identity-scope approval. Hero channel-key example prints site.key, whereas non-hero reference avoids key logging; bot channel credentials and OAuth client secrets require external secure custody. Preserve: Channel matrix, managed identity preference, OAuth connection patterns and key-rotation checklist; adapt with explicit permission and no-key-output boundaries. No scanner, external service execution or behavioral validation."

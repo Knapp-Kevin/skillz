@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-mgmt-botservice-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-mgmt-botservice-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: cc3364a8c4e688481e68dc7b567fd95ef52259e8
+skill_md_blob_sha: 4ad0b650c8f7c8de546e691be1845f3c7804ed28
+package_file_count: 3
+package_files:
+  - path: "references/capabilities.md"
+    blob_sha: 9cdefab76462bb686d0b60222bc9cf896fad4be2
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 279f48417edaefdcb8fe768e4b70247e1a454c49
+  - path: "SKILL.md"
+    blob_sha: 4ad0b650c8f7c8de546e691be1845f3c7804ed28
+display_name: "Microsoft azure-mgmt-botservice-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-3-file-package-static-inspected
+dependencies: "azure-mgmt-botservice; azure-identity; Azure subscription; Bot Framework channel configuration and OAuth connection; two references"
+purpose: "Azure Bot Service provisioning, channels, OAuth connections and keys"
+trigger: "Azure Bot Service management or Python bot channel integration"
+nontrigger: "Not authority to provision/delete bots, enable channels or reveal Direct Line keys"
+authority_finding: "Bot create/update/delete, channel creation and OAuth connection changes lack resource owner, channel recipient and identity-scope approval."
+privacy_finding: "Hero channel-key example prints site.key, whereas non-hero reference avoids key logging; bot channel credentials and OAuth client secrets require external secure custody."
+skill_specific_freshness: "Exact candidate package tree and 3 Git blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-mgmt-botservice-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-mgmt-botservice-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Bot create/update/delete, channel creation and OAuth connection changes lack resource owner, channel recipient and identity-scope approval. Hero channel-key example prints site.key, whereas non-hero reference avoids key logging; bot channel credentials and OAuth client secrets require external secure custody. Preserve: Channel matrix, managed identity preference, OAuth connection patterns and key-rotation checklist; adapt with explicit permission and no-key-output boundaries. Package security and behavioral validation not-run."
