@@ -283,16 +283,16 @@
     }
   ],
   "qualification": {
-    "semantic": "76/76 changed-existing screened; 62/76 fully reviewed (8 Rust, 37 Python, 16 Azure operations, one skill-creator; 58 rejected unchanged, 4 semantic verified). 14 Azure operations remain. 26/26 new complete (4 verified semantic only, 22 rejected).",
+    "semantic": "76/76 changed-existing screened; 66/76 fully reviewed (8 Rust, 37 Python, 20 Azure operations, one skill-creator; 60 rejected unchanged, 6 semantic verified). 10 Azure operations remain. 26/26 new complete (4 verified semantic only, 22 rejected).",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
-    "full_package_review": "62/76 changed-existing complete exact-version static companions; 14 remain; 26/26 new complete",
-    "note": "208 remains structural candidate denominator, not admission. 26/26 new and 62/76 changed-existing complete; 14 remain. July pin, security, behavioral and admission unchanged.",
+    "full_package_review": "66/76 changed-existing complete exact-version static companions; 10 remain; 26/26 new complete",
+    "note": "208 remains structural candidate denominator, not admission. 26/26 new and 66/76 changed-existing complete; 10 remain. July pin, security, behavioral and admission unchanged.",
     "candidate_new_full_static_rejected": 22,
     "candidate_new_remaining_first_review": 0,
-    "candidate_total_remaining_full_review": 14,
-    "review": "docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md",
+    "candidate_total_remaining_full_review": 10,
+    "review": "docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md",
     "candidate_new_full_static_verified": 4,
     "candidate_new_full_static_reviewed": 26,
     "removed_path_successor_decisions_complete": 4,
@@ -309,8 +309,8 @@
       "behavioral": "not-run",
       "source_pin": "unchanged"
     },
-    "candidate_changed_existing_full_reviewed": 62,
-    "candidate_changed_existing_full_review_remaining": 14,
+    "candidate_changed_existing_full_reviewed": 66,
+    "candidate_changed_existing_full_review_remaining": 10,
     "changed_existing_rust_review": "docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md",
     "changed_existing_python_ai_review": "docs/reviews/2026-10-28-microsoft-python-ai-multimodal-eight-exact-static.md",
     "changed_existing_python_data_storage_events_review": "docs/reviews/2026-10-28-microsoft-python-data-storage-events-eight-exact-static.md",
@@ -319,7 +319,8 @@
     "changed_existing_python_final_seven_review": "docs/reviews/2026-10-28-microsoft-python-final-seven-exact-static.md",
     "changed_existing_azure_ops_discovery_review": "docs/reviews/2026-10-28-microsoft-azure-ops-discovery-eight-exact-static.md",
     "changed_existing_azure_ai_deployment_review": "docs/reviews/2026-10-28-microsoft-azure-ai-deployment-five-exact-static.md",
-    "changed_existing_readiness_identity_authoring_review": "docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md"
+    "changed_existing_readiness_identity_authoring_review": "docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md",
+    "changed_existing_foundry_deploy_review": "docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md"
   },
   "latest_full_review": "docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md"
 }
