@@ -27,8 +27,8 @@
     "candidate_total_needing_current_standard_review": 102,
     "registered_source_denominator_unchanged": 186,
     "admission_delta": 0,
-    "candidate_changed_existing_full_reviewed": 75,
-    "candidate_changed_existing_full_review_remaining": 1
+    "candidate_changed_existing_full_reviewed": 76,
+    "candidate_changed_existing_full_review_remaining": 0
   },
   "nonfirstclass_phase_references": [
     ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
@@ -288,7 +288,7 @@
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
     "full_package_review": "76/76 changed-existing complete exact-version static companions; 0 remain; 26/26 new complete; 102/102 total candidate fresh static reviews complete.",
-    "note": "208 remains structural candidate denominator, not admission. All 102/102 changed/new packages have static companions; external security, independent acceptance and source-pin decision outstanding. July pin unchanged.",
+    "note": "208 is the structural candidate denominator, not source admission. All 102/102 changed/new packages have static companions; candidate source-pin promotion is NO-GO at this revision pending qualifying external exact-package security evidence and independent acceptance. Registered July pin unchanged.",
     "candidate_new_full_static_rejected": 22,
     "candidate_new_remaining_first_review": 0,
     "candidate_total_remaining_full_review": 0,
@@ -326,7 +326,9 @@
     "changed_existing_azure_diagnostics_review": "docs/reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md",
     "changed_existing_azure_upgrade_review": "docs/reviews/2026-10-28-microsoft-azure-upgrade-50-file-exact-static.md",
     "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
-    "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
+    "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md",
+    "source_pin_decision": "NO-GO / RETAIN_REGISTERED_JULY_PIN",
+    "source_pin_decision_evidence": "docs/reviews/2026-10-28-microsoft-candidate-pin-no-go-decision.md"
   },
   "latest_full_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
 }
