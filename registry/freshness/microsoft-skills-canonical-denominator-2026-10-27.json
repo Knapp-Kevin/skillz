@@ -283,16 +283,16 @@
     }
   ],
   "qualification": {
-    "semantic": "76/76 changed-existing screened; 75/76 fully reviewed (8 Rust, 37 Python, 28 Azure operations, one skill-creator, one Foundry finetuning; 69 rejected unchanged, 6 semantic verified). 1 remains: Foundry root. 26/26 new complete (4 verified semantic only, 22 rejected).",
+    "semantic": "76/76 changed-existing fully reviewed (8 Rust, 37 Python, 29 Azure operations, one skill-creator, one Foundry finetuning; 70 rejected unchanged, 6 semantic verified). 26/26 new complete (4 verified semantic only, 22 rejected). All 102/102 current-version changed/new static companions complete; security and behavioral not-run.",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
-    "full_package_review": "75/76 changed-existing complete exact-version static companions; 1 remains; 26/26 new complete",
-    "note": "208 remains structural candidate denominator, not admission. 26/26 new and 75/76 changed-existing complete; 1 remains. July pin, security, behavioral and admission unchanged.",
+    "full_package_review": "76/76 changed-existing complete exact-version static companions; 0 remain; 26/26 new complete; 102/102 total candidate fresh static reviews complete.",
+    "note": "208 remains structural candidate denominator, not admission. All 102/102 changed/new packages have static companions; external security, independent acceptance and source-pin decision outstanding. July pin unchanged.",
     "candidate_new_full_static_rejected": 22,
     "candidate_new_remaining_first_review": 0,
-    "candidate_total_remaining_full_review": 1,
-    "review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
+    "candidate_total_remaining_full_review": 0,
+    "review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md",
     "candidate_new_full_static_verified": 4,
     "candidate_new_full_static_reviewed": 26,
     "removed_path_successor_decisions_complete": 4,
@@ -309,8 +309,8 @@
       "behavioral": "not-run",
       "source_pin": "unchanged"
     },
-    "candidate_changed_existing_full_reviewed": 75,
-    "candidate_changed_existing_full_review_remaining": 1,
+    "candidate_changed_existing_full_reviewed": 76,
+    "candidate_changed_existing_full_review_remaining": 0,
     "changed_existing_rust_review": "docs/reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md",
     "changed_existing_python_ai_review": "docs/reviews/2026-10-28-microsoft-python-ai-multimodal-eight-exact-static.md",
     "changed_existing_python_data_storage_events_review": "docs/reviews/2026-10-28-microsoft-python-data-storage-events-eight-exact-static.md",
@@ -325,7 +325,8 @@
     "changed_existing_azure_deploy_foundry_finetuning_review": "docs/reviews/2026-10-28-microsoft-azure-deploy-foundry-finetuning-two-exact-static.md",
     "changed_existing_azure_diagnostics_review": "docs/reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md",
     "changed_existing_azure_upgrade_review": "docs/reviews/2026-10-28-microsoft-azure-upgrade-50-file-exact-static.md",
-    "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md"
+    "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
+    "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
   },
-  "latest_full_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md"
+  "latest_full_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
 }
