@@ -1,0 +1,54 @@
+schema_version: 1
+skill_name: entra-agent-id
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/entra-agent-id/SKILL.md
+source_class: official
+license: "MIT (manifest and candidate root)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-28T20:56:53Z
+upstream_latest_path_commit: b3c238ec733eb7a438941d824ca18578cb73d371
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 2757439372801955542e909dc218f74914811203
+skill_md_blob_sha: ec3318657c9709665e9f22c70e4820cb5bacb986
+package_file_count: 7
+package_files:
+  - path: "references/known-limitations.md"
+    blob_sha: 77c00377da96497984323bb0e368f66f67314852
+  - path: "references/oauth2-token-flow.md"
+    blob_sha: 675e9a268d5b8d814457a1b3d54ef6ccf319828a
+  - path: "references/obo-blueprint-setup.md"
+    blob_sha: 27435bad8ea3e3ba971d51fa8eb4015dadfddf63
+  - path: "references/runtime-token-exchange.md"
+    blob_sha: 017ae63360c021c6bbeb031db4d6b4e4418715c7
+  - path: "references/sdk-sidecar-deployment.md"
+    blob_sha: c7de8e9a10e5927b7d478f68d1b930312fda1368
+  - path: "references/sdk-sidecar.md"
+    blob_sha: 6e22151f32d6b4f716bf20126f8055af2716eb72
+  - path: "SKILL.md"
+    blob_sha: ec3318657c9709665e9f22c70e4820cb5bacb986
+display_name: "Microsoft entra-agent-id candidate"
+upstream_manifest_version: "1.1.1"
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-unchanged-static
+dependency_status: complete-7-file-package-static-inspected
+dependencies: "Microsoft Graph v1.0; Graph application/delegated permissions; Entra Blueprint and Principal; ClientSecretCredential or federated identity; PowerShell, Python requests, SDK AgentID sidecar; seven bundled source files"
+purpose: "Create agent identity blueprints, principals, per-instance identities and token exchange"
+trigger: "Explicit agent identity provisioning, per-agent permissions or OBO setup"
+nontrigger: "Not standard app registration, generic Foundry authoring or implicit identity/access authorization"
+authority_finding: "POST creates persistent identity objects and grants User.Read.All or AllPrincipals User.Read Tasks.ReadWrite Mail.Send with ten-year expiry; no distinct tenant, permission, consent, expiry or sponsor approval before action."
+privacy_finding: "Bearer credentials and cross-tenant token exchange need strict custody, recipient and tenant isolation; env-backed secrets are safer than chat solicitation but not an authorization boundary."
+skill_specific_freshness: "Candidate package tree and all 7 Git blob identities inspected 2026-10-28; latest manifest path commit b3c238ec733eb7a438941d824ca18578cb73d371 at 2026-07-28T20:56:53Z"
+prior_registered_provenance: registry/skills/microsoft-skills/entra-agent-id.yaml
+prior_registered_verification: registry/verification/microsoft-skills/entra-agent-id.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: adaptation-only-no-unchanged-use
+rationale: "REJECTED semantic 9/20. POST creates persistent identity objects and grants User.Read.All or AllPrincipals User.Read Tasks.ReadWrite Mail.Send with ten-year expiry; no distinct tenant, permission, consent, expiry or sponsor approval before action. Bearer credentials and cross-tenant token exchange need strict custody, recipient and tenant isolation; env-backed secrets are safer than chat solicitation but not an authorization boundary. Preserve: Per-instance identity separation, BlueprintPrincipal ordering, fmi_path/OBO exchange, managed identity and WIF guidance. External security and behavioral not-run; July source pin unchanged."

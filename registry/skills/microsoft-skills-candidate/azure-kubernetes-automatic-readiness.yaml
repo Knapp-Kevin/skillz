@@ -1,0 +1,52 @@
+schema_version: 1
+skill_name: azure-kubernetes-automatic-readiness
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md
+source_class: official
+license: "MIT (manifest and candidate root)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-09T11:06:40Z
+upstream_latest_path_commit: 07ade634651fa0852f6bb5d6d0b12f495b66bacb
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: c8ffe7bbfd195951701a5514cbdad6263c817e7a
+skill_md_blob_sha: c5618c53ef11a5e392f02dddc4e70501df1b3297
+package_file_count: 6
+package_files:
+  - path: "references/common-fixes.md"
+    blob_sha: 75de956e8f0ca83270e2290d2c18162630886796
+  - path: "references/constraint-spec-v1.yaml"
+    blob_sha: 59f6c6b930628e93627291e585bf1c43b2212e2a
+  - path: "references/mcp-integration.md"
+    blob_sha: 85e45f30ed42f49a706c8455380d202a52002683
+  - path: "references/migration-guide-summary.md"
+    blob_sha: b4e0965b77e761df185bdd5a87a7f3c1ebc7fe2f
+  - path: "scripts/sanitize-readiness-input.jq"
+    blob_sha: 2b1e2d7d7c431037206d929984330399469e021e
+  - path: "SKILL.md"
+    blob_sha: c5618c53ef11a5e392f02dddc4e70501df1b3297
+display_name: "Microsoft azure-kubernetes-automatic-readiness candidate"
+upstream_manifest_version: "1.1.0"
+permission_tier: mutating
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-6-file-package-static-inspected
+dependencies: "Host-approved Azure MCP AKS metadata reads or Azure CLI; permitted kubectl and jq allowlist filter; bundled AKS Automatic constraint spec, fix guidance and migration references"
+purpose: "Assess AKS Automatic compatibility from cluster metadata or offline manifests"
+trigger: "Explicit AKS Automatic readiness or manifest compatibility assessment"
+nontrigger: "Not cluster creation, deployment, live remediation, secret collection or unattended manifest editing"
+authority_finding: "Explicitly forbids cluster mutation, restricts Kubernetes data projection and requires user approval for every local file fix; optional cluster read still must be host-authorized and scoped."
+privacy_finding: "Bundled jq allowlist removes Secret and ConfigMap values and token-bearing fields; namespace, workload and topology metadata still require authorized read scope and minimization."
+skill_specific_freshness: "Candidate package tree and all 6 Git blob identities inspected 2026-10-28; latest manifest path commit 07ade634651fa0852f6bb5d6d0b12f495b66bacb at 2026-10-09T11:06:40Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-kubernetes-automatic-readiness.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-kubernetes-automatic-readiness.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic 17/20. Explicitly forbids cluster mutation, restricts Kubernetes data projection and requires user approval for every local file fix; optional cluster read still must be host-authorized and scoped. Bundled jq allowlist removes Secret and ConfigMap values and token-bearing fields; namespace, workload and topology metadata still require authorized read scope and minimization. Preserve: Deterministic constraint classification, conditional safeguard handling, safe offline fallback, consent-gated YAML diffs and allowlist sanitizer. External security and behavioral not-run; July source pin unchanged."

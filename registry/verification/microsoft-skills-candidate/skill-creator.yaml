@@ -1,0 +1,56 @@
+schema_version: 1
+skill_name: skill-creator
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: skill-creator
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f9dc3aaf9210af8eb06ba11bf4883e6ace705673
+skill_md_blob_sha: 6429efa083961c855fc5c21da8079ae2f4949007
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-7-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["skill-authoring", "agent-development"]
+  lifecycle: ["design", "implementation"]
+  characteristic: ["progressive-disclosure", "source-driven", "test-gated"]
+  authority: ["mutating"]
+  portability: ["medium"]
+package_file_count: 7
+package_files_inspected:
+  - path: "references/azure-sdk-patterns.md"
+    blob_sha: 7f1bf3d28661eeceb28dfc07a4b16793600ef2e4
+  - path: "references/output-patterns.md"
+    blob_sha: ddae31f1169a0e59065e61bee3b2f0753732b8f6
+  - path: "references/workflows.md"
+    blob_sha: cd53c7a451e6097531c85f6868b1f5ec6a28cb8d
+  - path: "scripts/init_skill.py"
+    blob_sha: 329ad4e5a71546b2c455f8e08c98b32ecdd3c1e3
+  - path: "scripts/package_skill.py"
+    blob_sha: 5cd36cb16e1314f2ab87d50aaedbc9f26925dac1
+  - path: "scripts/quick_validate.py"
+    blob_sha: d9fbeb75ee10bd8f89c0ee9b6716867125820c7e
+  - path: "SKILL.md"
+    blob_sha: 6429efa083961c855fc5c21da8079ae2f4949007
+external_dependencies_not_executed: "Microsoft Learn/microsoft-docs MCP; host Python for source-owned init_skill.py/package_skill.py/quick_validate.py; optional pnpm harness and Vally; 7-file package with 68,147-byte SKILL.md"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/skill-creator.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Prescribes writes under .github/skills, category symlinks, README changes, harness and optional eval execution without checking the host destination, repo maintenance authority, cost or side effects; cleanup/delete examples and test execution need separate authorization. Credential-safe managed identity guidance is useful; package and evaluation tools must not ingest secrets or upload private source/test data without explicit scope. Preserve: SDK freshness checks, context/token budgets, hero versus non-hero scenario design, credential lifecycle patterns and acceptance criteria. Exact candidate static inspection only; no package-security, behavioral, cloud or local script execution; no admission or source-pin change."
