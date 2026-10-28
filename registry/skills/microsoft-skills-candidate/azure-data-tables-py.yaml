@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-data-tables-py
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-data-tables-py/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: ffea94e6587f3dfd4db8123207e45dfd71f4c46d
+skill_md_blob_sha: 6376581bc3df6d0dabf7283665e093f148da9ca7
+package_file_count: 3
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 6376581bc3df6d0dabf7283665e093f148da9ca7
+  - path: "references/capabilities.md"
+    blob_sha: efb547ee50f33fa8166a1086cd36036b05928b42
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 00a4e48bdcdbc364ba8312a3ed094ed00dc71475
+display_name: "Microsoft Azure Tables Python candidate"
+permission_tier: mutating-and-external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-three-file-package-static-inspected
+dependencies: "azure-data-tables; azure-identity; Azure Storage Tables or Cosmos DB Table API; partition/row keys"
+purpose: "Table/entity CRUD, partition queries, batch transactions, async client"
+trigger: "Python TableClient or TableServiceClient implementation"
+nontrigger: "Not permission to enumerate all partitions, print records or delete tables"
+authority_finding: "Create/delete table, upsert/replace/delete entities and submit batch transactions without action-specific authorization; listing all entities crosses logical data boundaries."
+privacy_finding: "Examples print complete entities and table names without tenant-scoped disclosure or redaction; partition-key filtering is not identity authorization."
+skill_specific_freshness: "Exact candidate revision and all three package blob identities inspected 2026-10-28; upstream per-package update date not established"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-data-tables-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-data-tables-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Create/delete table, upsert/replace/delete entities and submit batch transactions without action-specific authorization; listing all entities crosses logical data boundaries. Examples print complete entities and table names without tenant-scoped disclosure or redaction; partition-key filtering is not identity authorization. Preserve parameterized filters and same-partition transaction constraints; add tenant guards, redacted outputs and approved destructive changes. Security scan, cloud execution and behavioral validation not-run."

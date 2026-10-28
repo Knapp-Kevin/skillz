@@ -1,0 +1,48 @@
+schema_version: 1
+skill_name: azure-storage-blob-py
+candidate_key: azure-storage-blob-py
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: b0b817e0231ec11785ae5b2e6cbe32ff362c320e
+skill_md_blob_sha: 31cd68bb85830a918a3115b67796d5f5daf0ef0c
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-three-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud","implementation","security"]
+  lifecycle: ["implementation","operations"]
+  characteristic: ["reference-heavy","risk-aware","tool-assisted"]
+  authority: ["mutating","external-side-effect"]
+  portability: ["medium"]
+package_file_count: 3
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 31cd68bb85830a918a3115b67796d5f5daf0ef0c
+  - path: "references/capabilities.md"
+    blob_sha: 3a153a145649e0b74e4bb8c848720b682c39843a
+  - path: "references/non-hero-scenarios.md"
+    blob_sha: 95d21b1b1c9dcda71fe8b6181ecefb2ade3b1b83
+external_dependencies_not_executed: "azure-storage-blob; azure-identity; Blob Storage account; optional user-delegation SAS"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-blob-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Creates containers, uploads with overwrite=True, deletes blobs including snapshots, changes metadata and issues SAS URLs without owner, target, expiry or disclosure approval. Blob listings and downloads may expose private objects; generated SAS-bearing blob_url must be treated as a credential and never logged or pasted into conversation. Retain Entra user-delegation SAS and bounded transfer patterns; require path scoping, redaction, expiration, overwrite and deletion authorization. No package-security scan, cloud operation or behavioral validation; July-pin review remains separate."
