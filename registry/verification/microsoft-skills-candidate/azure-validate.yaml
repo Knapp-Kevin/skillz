@@ -1,0 +1,96 @@
+schema_version: 1
+skill_name: azure-validate
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: azure-validate
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 23c61eed8d0009d712d71904e21e3c4e0df4d6d0
+skill_md_blob_sha: a90886aac989fc59fe8e28155d5d7c66369a669f
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-27-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "deployment"]
+  lifecycle: ["verification", "implementation"]
+  characteristic: ["test-gated", "reference-heavy", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 27
+package_files_inspected:
+  - path: "references/aspire-functions-secrets.md"
+    blob_sha: 529bafd28c77078e3dadbfe8f225fa2f3e2ada56
+  - path: "references/global-rules.md"
+    blob_sha: 9cb6c2000e446f5d5aebf314058ef1a32782d360
+  - path: "references/policy-validation.md"
+    blob_sha: 37cfc5eb72f8a685b56b2d79300227e7dca02f22
+  - path: "references/recipes/azcli/errors.md"
+    blob_sha: b1f283f2ef804a5f14fe7fbc63553366bb055a1e
+  - path: "references/recipes/azcli/README.md"
+    blob_sha: eece00c1408a7e23d47c0800977b5a540a57a245
+  - path: "references/recipes/azd/aspire.md"
+    blob_sha: d470410b1d4dd1358a5a84956b2c780c329c71c1
+  - path: "references/recipes/azd/environment.md"
+    blob_sha: 3bf8caeae93771c374b474dbd89dc623a91b82bc
+  - path: "references/recipes/azd/errors.md"
+    blob_sha: af6cab59ab2c75384cf0fdd2b5b4770e814a4993
+  - path: "references/recipes/azd/README.md"
+    blob_sha: c5edf5c121556efbeef455f4652ed137c82905d8
+  - path: "references/recipes/azd/scripts/set-aspire-aca-env.ps1"
+    blob_sha: e40bf9a1672f22804ec9fd1bf193faedb090b151
+  - path: "references/recipes/azd/scripts/set-aspire-aca-env.sh"
+    blob_sha: a0c0b669267eaf648ac9434733e71c8eb2d066b4
+  - path: "references/recipes/bicep/errors.md"
+    blob_sha: 4ff34489987a7eafc9bf30297365c71bd492c331
+  - path: "references/recipes/bicep/README.md"
+    blob_sha: 29eb484be9d9b42a8d219a2f789f3db90adfe222
+  - path: "references/recipes/README.md"
+    blob_sha: b76535150f2d11cfad53891c7689a3d4631f46ee
+  - path: "references/recipes/scripts/validate-deployment.ps1"
+    blob_sha: f91cbe7ca3f330c137c9a0b841c06de3661a195f
+  - path: "references/recipes/scripts/validate-deployment.sh"
+    blob_sha: 595406c9f2b170f72db829fed861fc5c42849aa9
+  - path: "references/recipes/terraform/errors.md"
+    blob_sha: b7caf02e0e0887303438d327e1372a62d225d617
+  - path: "references/recipes/terraform/README.md"
+    blob_sha: 86288cad4dffb692799cfc8ef26195065943ec6e
+  - path: "references/recipes/terraform/scripts/validate-terraform.ps1"
+    blob_sha: 05af271416a450ac12bc8a4759c9b5452d20e5b6
+  - path: "references/recipes/terraform/scripts/validate-terraform.sh"
+    blob_sha: 43abfbd812d0bc3fb544f5ef1b7c42941e5daf2d
+  - path: "references/region-availability.md"
+    blob_sha: d71309eafae0f75831460eb9842c5f0a7c39149b
+  - path: "references/role-verification.md"
+    blob_sha: 3db966063e77171b3a7c49d5078b41578fff24a3
+  - path: "references/scripts/scan-aspire-functions-secrets.ps1"
+    blob_sha: 946bf237db02a288b417911597f2b76449abecb4
+  - path: "references/scripts/scan-aspire-functions-secrets.sh"
+    blob_sha: 6c657f8cdfb9b139857dd5fe2723840b665b41d1
+  - path: "references/scripts/workflow.ps1"
+    blob_sha: bd45a2561a24e8e695b50b863f09e787c24c4651
+  - path: "references/scripts/workflow.sh"
+    blob_sha: 3896dc3db8efd83eaa71cfc1ce5a661784cb6791
+  - path: "SKILL.md"
+    blob_sha: a90886aac989fc59fe8e28155d5d7c66369a669f
+external_dependencies_not_executed: "azure-prepare and azure-deploy skill chain; Azure CLI/AZD, Bicep, Terraform; source-owned Bash/PowerShell workflow and validation scripts; Azure RBAC and policy reads; 27 bundled files"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/azure-validate.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Mandatory host script immediately writes .azure/validate-status.json; Terraform init and azd env set alter workspace/session, validation queries Azure, and failing checks prompt fixes. Destructive ask_user exists but no distinct authorization for non-destructive local/cloud changes or prerequisite chain; approved plan status is not general action authorization. Subscription, role and environment context may be sensitive; Aspire environment helper prints resolved values and can expose resource metadata. Avoid raw credential-bearing diagnostics. Preserve: What-if previews, RBAC least-privilege inspection, fail-closed validation and separate deploy intent routing. Exact candidate static inspection only; no package-security, behavioral, cloud or local script execution; no admission or source-pin change."
