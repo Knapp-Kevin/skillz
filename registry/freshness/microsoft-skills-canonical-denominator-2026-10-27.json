@@ -245,23 +245,35 @@
   "removed_governed_paths": [
     {
       "path": ".github/plugins/azure-sdk-rust/skills/azure-servicebus-rust/SKILL.md",
-      "status": "ABSENT",
-      "successor": "not-proven"
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "365a93a6c3f94310d78791a73e9a3b2891775861",
+      "registered_july_state": "unchanged at original pin"
     },
     {
       "path": ".github/plugins/azure-skills/skills/azure-cost/SKILL.md",
-      "status": "ABSENT",
-      "successor": "azure-cost plugin now has multiple cost-* packages; not a proven exact successor"
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_SPLIT_CAPABILITY_NO_ALIAS",
+      "old_manifest_sha": "8755e1c4db79a8e1bc44d6d1cdd1d3c55e5976e4",
+      "registered_july_state": "unchanged at original pin"
     },
     {
       "path": ".github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md",
-      "status": "ABSENT",
-      "successor": "copilot-sdk root skill is not proven equivalent"
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "64b239df00aa320b64a9009c1875b303a87080b1",
+      "registered_july_state": "unchanged at original pin"
     },
     {
       "path": ".github/plugins/azure-skills/skills/azure-rbac/SKILL.md",
-      "status": "ABSENT",
-      "successor": "Entra and identity skills are not proven equivalent"
+      "status": "CANDIDATE_PATH_RETIRED",
+      "successor": "none proven; no automatic alias",
+      "candidate_decision": "RETIRE_REMOVED_PATH_NO_PROVEN_SUCCESSOR",
+      "old_manifest_sha": "02ac75d2ba22b4d7aa1e74469b01575281f05ddc",
+      "registered_july_state": "unchanged at original pin"
     }
   ],
   "qualification": {
@@ -270,12 +282,15 @@
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
     "full_package_review": "incomplete",
-    "note": "208 remains structural candidate denominator, not admission. 24 new candidates have full static review (4 verified semantic only, 20 rejected unchanged), leaving 2 new and 76 changed for current-version full review. No pin, security or behavioral promotion.",
+    "note": "208 remains a structural candidate denominator, not admission. 24/26 new candidates have full static reviews; 2 new + 76 changed remain. All four removed July-governed paths have candidate-only retirement/no-proven-successor decisions. Registered July pin, semantic companions, security and behavioral state unchanged.",
     "candidate_new_full_static_rejected": 20,
     "candidate_new_remaining_first_review": 2,
     "candidate_total_remaining_full_review": 78,
     "review": "docs/reviews/2026-10-27-microsoft-azure-app-onboard-68-exact-static.md",
     "candidate_new_full_static_verified": 4,
-    "candidate_new_full_static_reviewed": 24
+    "candidate_new_full_static_reviewed": 24,
+    "removed_path_successor_decisions_complete": 4,
+    "removed_path_successor_decisions_pending": 0,
+    "removed_path_review": "docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md"
   }
 }

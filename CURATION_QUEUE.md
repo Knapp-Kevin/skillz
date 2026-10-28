@@ -106,7 +106,7 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 ## Active Microsoft freshness frontier (issue #400, 2026-10-27)
 
-Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **24/26 new candidates** now have full static companions (4 VERIFIED semantic only / 20 REJECT unchanged), leaving **2 new + 76 changed = 78** full current-version reviews. Four removed-path successor decisions remain. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
+Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **24/26 new candidates** now have full static companions (4 VERIFIED semantic only / 20 REJECT unchanged), leaving **2 new + 76 changed = 78** full current-version reviews. All four removed-path candidate retirement/no-proven-successor decisions are [recorded](docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); July pin evidence remains unchanged. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
 
 ## Governed discovery / source-vetting
 
