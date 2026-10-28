@@ -1,0 +1,45 @@
+schema_version: 1
+skill_name: foundry-iq
+candidate_key: foundry-iq
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: c45f2a12dcffa1929705b1523cb1645a03de134e
+skill_md_blob_sha: d81ed5fc5840955acae9d14f022828a580621327
+plugin_distribution_tree_sha: d6d3a76b22e461c34ecf9c902e04745159038af5
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-exact-skill-and-plugin-distribution-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "15/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 2
+  evidence_discipline: 2
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: [cloud, implementation, research]
+  lifecycle: [planning, implementation, operations]
+  characteristic: [evidence-first, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+package_file_count: 85
+package_tree_bytes: 1276121
+package_files_inspected: ["SKILL.md","agents/connect-hosted-toolbox.md","agents/connect-hosted.md","agents/connect-prompt-sdk-fallback.md","agents/connect.md","agents/create-missing-agent.md","helpers/_blob_observation.py","helpers/_blob_source_read.py","helpers/_bootstrap_io.py","helpers/_cleanup_dependencies.py","helpers/_cleanup_receipts.py","helpers/_common.py","helpers/_document_adapters.py","helpers/_document_limits.py","helpers/_embedding.py","helpers/_file_inventory.py","helpers/_file_source_config.py","helpers/_indexer_observation.py","helpers/_initial_prompt.py","helpers/_private_json.py","helpers/_progress.py","helpers/_prompt_read.py","helpers/_search_read.py","helpers/_source_readback.py","helpers/blob-contracts.md","helpers/blob-cu-contracts.md","helpers/blob_inventory.py","helpers/blob_recheck.py","helpers/blob_source.py","helpers/bootstrap-contracts.md","helpers/bootstrap_azure.py","helpers/cleanup_plan.py","helpers/contracts.md","helpers/cu_ingestion_auth.py","helpers/document-assessment.md","helpers/document_assess.py","helpers/file-upload-recovery.md","helpers/file_cu_canary.py","helpers/file_cu_mi.py","helpers/file_ingest.py","helpers/file_source.py","helpers/file_upload.py","helpers/hosted_connect.py","helpers/kb-contracts.md","helpers/knowledge_base_retrieve.py","helpers/model-discovery-contracts.md","helpers/model-discovery-scopes.md","helpers/model_discovery.py","helpers/private-artifacts.md","helpers/private_artifacts.py","helpers/prompt_cleanup.py","helpers/prompt_connect.py","helpers/requirements-assessment.txt","helpers/retrieval-verification-contracts.md","helpers/retrieval_verify.py","helpers/search-intake-contracts.md","helpers/search_intake.py","helpers/search_reconcile.py","helpers/source_vector.py","helpers/throttle-recovery.md","helpers/vector-contracts.md","knowledge-bases/create.md","knowledge-bases/retrieve.md","knowledge-sources/create-azure-blob.md","knowledge-sources/create-file.md","lifecycle/cleanup.md","references/abstention.md","references/blob-binding-evidence.md","references/blob-indexer-observation.md","references/blob-ingestion-progress.md","references/blob-readiness-recheck.md","references/blob-vector-readiness.md","references/bootstrap-azure.md","references/content-fit.md","references/cu-ingestion.md","references/file-cu-canary.md","references/intent-routing.md","references/owner.md","references/platform-contracts.md","references/platform-interfaces.md","references/resource-intake.md","references/search-substrate.md","references/standard-cu.md","search-services/create.md","troubleshooting/diagnose.md"]
+plugin_level_files_inspected: [".claude-plugin/plugin.json",".cursor-plugin/plugin.json",".mcp.json",".plugin/plugin.json","CHANGELOG.md","LICENSE","README.md","hooks/claude-hooks.json","hooks/copilot-hooks.json","hooks/cursor-hooks.json","hooks/scripts/install-telemetry.ps1","hooks/scripts/install-telemetry.sh","hooks/scripts/pluginPathAllowPattern.ps1","hooks/scripts/pluginPathAllowPattern.sh","hooks/scripts/telemetry-reporter-checksums.txt","hooks/scripts/track-telemetry.ps1","hooks/scripts/track-telemetry.sh"]
+plugin_distribution_file_count: 102
+plugin_distribution_tree_bytes: 1367855
+external_dependencies_not_executed: ["Azure CLI/REST/SDK", "Azure Search and Storage", "Foundry models/agents", "Python parsers", "plugin telemetry reporter"]
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+notes: "Core Azure write/cleanup workflows have unusually strong approval and evidence guards, but plugin hooks invoke opt-out telemetry and native reporter installation at session/tool events, and optional raw-input logs risk sensitive disclosure. Local reporter ZIP override bypasses normal checksum validation. All 85 skill and 17 plugin-level exact blobs inspected statically; no scan, binary execution, cloud operation or behavioral validation. See docs/reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md."
