@@ -1,0 +1,123 @@
+schema_version: 1
+skill_name: "azure-enterprise-infra-planner"
+source_id: "microsoft-skills"
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+source_role: "unadmitted-upstream-freshness-candidate"
+candidate_key: "azure-enterprise-infra-planner"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "6a82cbd081dc48dd74d5f726e2c032f8092fa3e4"
+skill_md_blob_sha: "5bc6f5c5a894507b7f89d0d96edc57927780c690"
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: "complete-41-file-package-structured-static-review"
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "15/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 1
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "architecture", "planning"]
+  lifecycle: ["planning", "design", "implementation", "operations"]
+  characteristic: ["evidence-first", "safety-bounded", "reference-heavy"]
+  authority: ["read-only", "generate-only", "mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 41
+package_files_inspected:
+  - path: "SKILL.md"
+    blob_sha: 5bc6f5c5a894507b7f89d0d96edc57927780c690
+  - path: "references/bicep-generation.md"
+    blob_sha: c84abe0e8b26c3f855d4b2a69a9225661ad00481
+  - path: "references/constraints/README.md"
+    blob_sha: 31b854714754dc7f304c8fb188fbdeb83bb83a92
+  - path: "references/constraints/ai-ml.md"
+    blob_sha: 1fe3b2c68bb07e85e7ae4aa9eb7992e3a259bfdc
+  - path: "references/constraints/compute-apps.md"
+    blob_sha: 66e53e1b9500d617a3ada4185fc5c530871a65e8
+  - path: "references/constraints/compute-infra.md"
+    blob_sha: b5640bfae5e8f332642b969b8b2bf2baf7fa471d
+  - path: "references/constraints/data-analytics.md"
+    blob_sha: 81efb5742ed0f73391b9191adc7f52ec1b779c11
+  - path: "references/constraints/data-relational.md"
+    blob_sha: 197940297742fb7e133cd724a792505fa7dd8630
+  - path: "references/constraints/messaging.md"
+    blob_sha: f44a1f0c73d023a667a1054bfacd88cc2697022a
+  - path: "references/constraints/monitoring.md"
+    blob_sha: 147a5a07ba3bdf61b16d1a4affa33d5c9f2c1a4f
+  - path: "references/constraints/networking-connectivity.md"
+    blob_sha: 849bfe511de7ed1145b185d64f4b4ca7c369229b
+  - path: "references/constraints/networking-core.md"
+    blob_sha: 68cfd67469799407842fac0514d54b044fcfc87a
+  - path: "references/constraints/networking-traffic.md"
+    blob_sha: 8a37708809aee169532ac8cbca7a9e12e0d1cc6e
+  - path: "references/constraints/security.md"
+    blob_sha: 48124824b19f3e1a65ae876b0ae799bf83590dff
+  - path: "references/deployment.md"
+    blob_sha: 49c700547bbe0666744897a1e3162ad9547ffec7
+  - path: "references/pairing-checks.md"
+    blob_sha: d47c5ae6a211f1335640c1f8807884ff800037ca
+  - path: "references/phases/1-extract-insights.md"
+    blob_sha: 36c55d694656511db7955ac51638d22a73192935
+  - path: "references/phases/2-research-best-practices.md"
+    blob_sha: 035c419db6f121637831e8d7550dc2b082c1ab33
+  - path: "references/phases/3-research-resources.md"
+    blob_sha: 41c2b31fdac62e3e846bfbfe24224ba6eae3bbca
+  - path: "references/phases/4-generate-plan.md"
+    blob_sha: c3732a29770e8beb3390ff33851c534018763de1
+  - path: "references/phases/5-verify.md"
+    blob_sha: 61405285b1e640fb271c60b99710d7580fa54f89
+  - path: "references/phases/6-generate-iac.md"
+    blob_sha: 7c5e3db3b32417eff889a246833dceae6ab47354
+  - path: "references/phases/7-deploy.md"
+    blob_sha: 2688bd4373963399285865f67f4d478c02554d63
+  - path: "references/referenced-workload.md"
+    blob_sha: 6fb30ea70e3a02e545dee5223431636e9ed970f8
+  - path: "references/resources/README.md"
+    blob_sha: 4a4be6a026c303f0bb46e2b8f7bcd1e7c58bbbc4
+  - path: "references/resources/ai-ml.md"
+    blob_sha: b0da78bb1286ad2ae00653304ce9b2029fbdb0d0
+  - path: "references/resources/compute-apps.md"
+    blob_sha: 7d6aa9b78859df0ba787e199510f02b83a21fd92
+  - path: "references/resources/compute-infra.md"
+    blob_sha: 7bec7ae9d0e29190abc62992e2b3ab9aa68d03ec
+  - path: "references/resources/data-analytics.md"
+    blob_sha: 422fe9266088e21e360bbb06a0e00502766c588d
+  - path: "references/resources/data-relational.md"
+    blob_sha: 95283895bb8924f298d6645d587c546eec6777c2
+  - path: "references/resources/messaging.md"
+    blob_sha: 722dfa88da4eab9f4aa9d71c74d8a7fe2bdae5c8
+  - path: "references/resources/monitoring.md"
+    blob_sha: adf88dcf795d7397a4b1d573e58eeef39847b8a3
+  - path: "references/resources/networking-connectivity.md"
+    blob_sha: 053e5e43ef018163c772b138f9abb9fccf81c463
+  - path: "references/resources/networking-core.md"
+    blob_sha: 78dd8fe53d4241453f4019465cffed138ec2359d
+  - path: "references/resources/networking-traffic.md"
+    blob_sha: f80c536f5846ff3ae571bfe9521fbe7e449495dd
+  - path: "references/resources/security.md"
+    blob_sha: 7ab9e1a812a77fe61ff453877eccfcfd05e2d246
+  - path: "references/schema.md"
+    blob_sha: cdbe20141aaf316bde5ce37cbfeb33bba9993f97
+  - path: "references/terraform-generation.md"
+    blob_sha: 7f38ef69ec49ea35fbab96f99bc93d6b38813d1c
+  - path: "references/verification.md"
+    blob_sha: 4a174a78826f7db8bcc20dc50623d4475eb166a2
+  - path: "references/waf-checklist.md"
+    blob_sha: e093f70ec65d15460bf630abd8b13c91ab08c14f
+  - path: "references/workflow.md"
+    blob_sha: 71943604b28219cbb2a798940b377303b54ca6bc
+external_dependencies_not_executed: "Azure MCP insights/WAF/docs/schema tools, Azure CLI/Bicep, Terraform, Checkov, local workspace plan and IaC files"
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_AUTHORITY_OR_SENSITIVE_DATA_HARD_FAIL"
+prior_registered_verification: "registry/verification/microsoft-skills/azure-enterprise-infra-planner.yaml"
+notes: "Strong Phase 5 plan approval and Phase 7 risk-acknowledged post-prompt deploy gate; however Phase 1 defaults to subscription-wide insights retrieval when the user does not answer scope selection, and deployment.md describes a weaker 'yes, deploy' checkpoint than Phase 7. These are unsafe unchanged-use ambiguity for sensitive tenant reads and privileged deployment. Default subscription insights are sent to a subagent and persisted under .azure/insights.json without affirmative scope/privacy authorization; require explicit subscription/tenant read, minimization, retention and file destination approval. Preserve Seven-phase gate discipline, existing-resource preservation, secure-by-default IaC, checkov evidence and risk-acknowledged deployment; adapt with explicit scoped reads and consistent deployment gate. Static exact-package inspection only; security and behavioral not-run; no source pin or admission change."
