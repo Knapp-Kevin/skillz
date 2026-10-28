@@ -1,0 +1,47 @@
+schema_version: 1
+skill_name: preset
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/preset/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; dependencies retain own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-09-23T11:05:59Z
+upstream_latest_path_commit: b8a1c666fc63a737097558f8289d8fa107914bf9
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 643a38ce95fbe3e737002335bd52cb2b164b4380
+skill_md_blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+package_file_count: 4
+package_files:
+  - path: "EXAMPLES.md"
+    blob_sha: 8c61f9dccf371222a22e271839a5632d6c900960
+  - path: "SKILL.md"
+    blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+  - path: "references/preset-workflow.md"
+    blob_sha: 86b4027278efa7e8c851790bb6dac070c98c3122
+  - path: "references/workflow.md"
+    blob_sha: 109b2fc69c6379af9b6bf5178694f567689b762e
+display_name: "Microsoft microsoft-foundry-deploy-model-preset candidate"
+upstream_manifest_version: "1.0.1"
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: "complete-4-file-package-static-inspected; shared external references characterized separately"
+dependencies: "Azure CLI, management API, jq, parent router, bundled preset workflow and examples"
+purpose: "Preset model deployment with automatic capacity and region selection"
+trigger: "Quick model deployment only after explicit scoped billable-resource approval"
+nontrigger: "No silent project creation, region change, billable deployment or destructive cleanup"
+authority_finding: "Fast path skips directly to deployment, and alternate path creates AI Services and AIProject resources before model deployment, with no distinct sub-skill authorization checkpoint. Parent approval cannot be assumed when invoked directly."
+privacy_finding: "Raw subscription-scoped capacity API JSON is written to /tmp/capacity_check.json without retention or cleanup control."
+skill_specific_freshness: "Candidate tree 643a38ce95fbe3e737002335bd52cb2b164b4380, all 4 blobs inspected 2026-10-28; latest path commit b8a1c666fc63a737097558f8289d8fa107914bf9 at 2026-09-23T11:05:59Z"
+prior_registered_provenance: registry/skills/microsoft-skills/microsoft-foundry-deploy-model-preset.yaml
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-preset.yaml
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECTED semantic 10/20. Fast path skips directly to deployment, and alternate path creates AI Services and AIProject resources before model deployment, with no distinct sub-skill authorization checkpoint. Parent approval cannot be assumed when invoked directly. Raw subscription-scoped capacity API JSON is written to /tmp/capacity_check.json without retention or cleanup control. Preserve: Regional fallback, quota checks, status monitoring and deployment-planning checklist. Security and behavioral not-run; July pin unchanged."

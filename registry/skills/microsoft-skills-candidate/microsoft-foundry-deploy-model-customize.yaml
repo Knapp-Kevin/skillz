@@ -1,0 +1,47 @@
+schema_version: 1
+skill_name: customize
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; dependencies retain own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-08-07T11:17:12Z
+upstream_latest_path_commit: 04d245b7888e8c9b063d460aef10106e66e48a4f
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 118035ed1dad47d2389464e2968c92923dc2c7b5
+skill_md_blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+package_file_count: 4
+package_files:
+  - path: "EXAMPLES.md"
+    blob_sha: a3f25848a09494cbee25143aa71ec43d0a0425f5
+  - path: "SKILL.md"
+    blob_sha: eb4887175301b4751cca679e11863d1ba6f34bc9
+  - path: "references/customize-guides.md"
+    blob_sha: 1009adb4ccbdc7ad182599c6e5ef529a12ee691e
+  - path: "references/customize-workflow.md"
+    blob_sha: 482dfb480318cdc8c6d53ffd4a2c87db0f876f86
+display_name: "Microsoft microsoft-foundry-deploy-model-customize candidate"
+upstream_manifest_version: "1.0.1"
+permission_tier: external-side-effect
+portability: low
+review_status: verified-structured-static-security-pending
+dependency_status: "complete-4-file-package-static-inspected; shared external references characterized separately"
+dependencies: "Azure CLI/REST, Foundry model catalog/quota, bundled workflow and guides; Anthropic modelProviderData tenant organization/country"
+purpose: "Interactive customized Azure model deployment with explicit configuration review"
+trigger: "Explicit custom model/SKU/version/capacity/RAI deployment request"
+nontrigger: "No deployment without Phase 12 full configuration approval; no unrelated role grants, deletion or undisclosed tenant-data transfer"
+authority_finding: "Phase 12 requires full configuration review and user approval before Phase 13 persistent deployment. Costly PTU/priority changes and separate identity-data disclosure still require appropriate scoped consent."
+privacy_finding: "Anthropic modelProviderData includes tenant organization and country; disclose recipient and purpose, never expose tokens."
+skill_specific_freshness: "Candidate tree 118035ed1dad47d2389464e2968c92923dc2c7b5, all 4 blobs inspected 2026-10-28; latest path commit 04d245b7888e8c9b063d460aef10106e66e48a4f at 2026-08-07T11:17:12Z"
+prior_registered_provenance: registry/skills/microsoft-skills/microsoft-foundry-deploy-model-customize.yaml
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-customize.yaml
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic 16/20. Phase 12 requires full configuration review and user approval before Phase 13 persistent deployment. Costly PTU/priority changes and separate identity-data disclosure still require appropriate scoped consent. Anthropic modelProviderData includes tenant organization and country; disclose recipient and purpose, never expose tokens. Preserve: Full-config approval, SKU/quota checks, RAI policy and version selection. Security and behavioral not-run; July pin unchanged."

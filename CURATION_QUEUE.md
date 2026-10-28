@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-**Latest Microsoft candidate qualification (2026-10-28):** [Four complete readiness, identity and authoring reviews](docs/reviews/2026-10-28-microsoft-readiness-identity-authoring-four-exact-static.md) advance changed-existing **58/76 → 62/76**, leaving **14** (all Azure operations; the skill-creator gap is closed). One semantic VERIFIED only (AKS Automatic Readiness, 17/20) and three REJECT unchanged (Entra Agent ID, Azure Validate, Skill Creator). Third-party exact-version companions **812**; total verification YAML **856**. Registered July **186/186** and candidate structural denominator **208** unchanged; no security scan, behavioral validation, source admission or pin movement.
+**Latest Microsoft candidate qualification (2026-10-28):** [Four Microsoft Foundry deployment reviews](docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md) advance changed-existing **62/76 → 66/76**, leaving **10** Azure operations packages. Parent router and Customize **VERIFIED semantic only** (16/20 each); Capacity and Preset **REJECT unchanged** (11/20 and 10/20) for API JSON interpolated into Python source and unauthorized billable deployment. **30 package exposures / 17 distinct blobs**. Third-party companions **816**; total YAML **860**. July **186/186** and candidate denominator **208** unchanged; no scan, behavioral validation, source admission or pin movement.
 
 This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive even during explicitly authorized maintenance. Detailed exact-version evidence belongs in canonical companions under `registry/`; any scanners or behavioral tests are run by the external host, not by repository-owned automation. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
@@ -9,7 +9,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **812** persisted exact-version third-party verification companions.
+- **816** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -121,9 +121,11 @@ Individual fingerprints, dependencies, controlled tags, freshness evidence, auth
 
 **Changed-existing Azure AI/gateway/deployment qualification (2026-10-28):** [Five complete exact-version static reviews](docs/reviews/2026-10-28-microsoft-azure-ai-deployment-five-exact-static.md) advance **53/76 → 58/76**, leaving **18** (17 Azure operations, one skill-creator). **63 package-file exposures (60 distinct blobs)**, five individual provenance/verification pairs, **five REJECT unchanged** (9–13/20) for APIM key/RBAC changes, private AI data transmission, AKS token TEMP files, unapproved billable App Service creation and storage connection-string disclosure. Security and behavioral states `not-run`; third-party companions **808**, total YAML **852**. July pin **186/186** unchanged.
 
+**Changed-existing Foundry deployment qualification (2026-10-28):** [Four exact-version parent/nested reviews](docs/reviews/2026-10-28-microsoft-foundry-deploy-four-exact-static.md) advance **62/76 → 66/76**, leaving **10** (eight large Azure operations, Foundry root and finetuning). **30 file exposures / 17 distinct blobs**, four provenance/verification pairs, **two VERIFIED semantic only** (router/customize, 16/20) and **two REJECT unchanged** (capacity 11/20, preset 10/20). Security/behavioral `not-run`; third-party **816**, total YAML **860**. July **186/186** and source pin unchanged.
+
 ## Active Microsoft freshness frontier (issue #400, 2026-10-28)
 
-Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **26/26 new candidates** now have full static companions (4 VERIFIED semantic only / 22 REJECT unchanged), leaving **14 changed-existing** full current-version reviews (62/76 complete). All four removed-path candidate retirement/no-proven-successor decisions are [recorded](docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); July pin evidence remains unchanged. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
+Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **26/26 new candidates** now have full static companions (4 VERIFIED semantic only / 22 REJECT unchanged), leaving **10 changed-existing** full current-version reviews (66/76 complete). All four removed-path candidate retirement/no-proven-successor decisions are [recorded](docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); July pin evidence remains unchanged. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
 
 ## Governed discovery / source-vetting
 

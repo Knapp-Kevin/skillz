@@ -1,0 +1,49 @@
+schema_version: 1
+skill_name: capacity
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md
+source_class: official
+license: "MIT (candidate manifest; dependencies retain own terms)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-08-10T11:22:45Z
+upstream_latest_path_commit: a8f19b4330d316b982b3bddbba1dc90242d29d3b
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd
+skill_md_blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+package_file_count: 5
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 46935315ebdf18fbc93771efb72e7f8f9e9980ac
+  - path: "scripts/discover_and_rank.ps1"
+    blob_sha: 30960b0b8b3ebadc49b28e143025161e0df6df2e
+  - path: "scripts/discover_and_rank.sh"
+    blob_sha: 83c771b47fc3342268ded19d684ecad402c4ade7
+  - path: "scripts/query_capacity.ps1"
+    blob_sha: f65dff5aa99a596d75e19427caf7dd711837d757
+  - path: "scripts/query_capacity.sh"
+    blob_sha: 7869f6904927bf1d83dc29c357f7746a37229504
+display_name: "Microsoft microsoft-foundry-deploy-model-capacity candidate"
+upstream_manifest_version: "1.0.0"
+permission_tier: read-only
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: "complete-5-file-package-static-inspected; shared external references characterized separately"
+dependencies: "Four bundled Bash/PowerShell scripts; Azure CLI management APIs; Bash jq and Python3; parent and deployment handoff skills"
+purpose: "Read-only capacity and regional/project quota ranking"
+trigger: "Authorized capacity and subscription-quota discovery"
+nontrigger: "No deployment, quota increase, unscoped project enumeration or execution of unsanitized API data"
+authority_finding: "discover_and_rank.sh lines 54-60 embeds untrusted CAPACITY_JSON, PROJECTS_JSON and quota JSON directly into Python -c source using triple-quoted literals. This crosses the external-data-to-code boundary without sanitization or separate host execution approval."
+privacy_finding: "Subscription-wide project names and metadata are queried and printed without bounded read/disclosure scope; API data may become executable source."
+skill_specific_freshness: "Candidate tree 547adfbf066ba49a8e748a4cb0bbd827c2ab6cbd, all 5 blobs inspected 2026-10-28; latest path commit a8f19b4330d316b982b3bddbba1dc90242d29d3b at 2026-08-10T11:22:45Z"
+prior_registered_provenance: registry/skills/microsoft-skills/microsoft-foundry-deploy-model-capacity.yaml
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-capacity.yaml
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECTED semantic 11/20. discover_and_rank.sh lines 54-60 embeds untrusted CAPACITY_JSON, PROJECTS_JSON and quota JSON directly into Python -c source using triple-quoted literals. This crosses the external-data-to-code boundary without sanitization or separate host execution approval. Subscription-wide project names and metadata are queried and printed without bounded read/disclosure scope; API data may become executable source. Preserve: Capacity-versus-quota distinction, ranking, safe read-only analysis after data-only adaptation. Security and behavioral not-run; July pin unchanged."

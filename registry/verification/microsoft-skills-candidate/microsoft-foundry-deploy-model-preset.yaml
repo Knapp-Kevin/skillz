@@ -1,0 +1,49 @@
+schema_version: 1
+skill_name: preset
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: microsoft-foundry-deploy-model-preset
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 643a38ce95fbe3e737002335bd52cb2b164b4380
+skill_md_blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-4-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud", "deployment", "planning"]
+  lifecycle: ["planning", "release", "operations"]
+  characteristic: ["risk-aware", "tool-assisted"]
+  authority: ["external-side-effect"]
+  portability: ["low"]
+package_file_count: 4
+package_files_inspected:
+  - path: "EXAMPLES.md"
+    blob_sha: 8c61f9dccf371222a22e271839a5632d6c900960
+  - path: "SKILL.md"
+    blob_sha: 61fc18b28031388c58e8e517b1fb93dae491cca5
+  - path: "references/preset-workflow.md"
+    blob_sha: 86b4027278efa7e8c851790bb6dac070c98c3122
+  - path: "references/workflow.md"
+    blob_sha: 109b2fc69c6379af9b6bf5178694f567689b762e
+external_dependencies_not_executed: "Azure CLI, management API, jq, parent router, bundled preset workflow and examples"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/microsoft-foundry-deploy-model-preset.yaml
+notes: "Fast path skips directly to deployment, and alternate path creates AI Services and AIProject resources before model deployment, with no distinct sub-skill authorization checkpoint. Parent approval cannot be assumed when invoked directly. Raw subscription-scoped capacity API JSON is written to /tmp/capacity_check.json without retention or cleanup control. Preserve: Regional fallback, quota checks, status monitoring and deployment-planning checklist. Exact static only; no security, behavioral, Azure, script execution, source admission or pin movement."
