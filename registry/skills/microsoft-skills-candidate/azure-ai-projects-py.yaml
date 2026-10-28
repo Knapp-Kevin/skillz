@@ -1,0 +1,63 @@
+schema_version: 1
+skill_name: azure-ai-projects-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-python/skills/azure-ai-projects-py/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest); external SDK/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-07-28T21:46:15Z
+upstream_latest_path_commit: 4a2873faffc1b101a33a0b59c24713d4ed78142f
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 6d23ede5e1afb2839765204309097c3143a67564
+skill_md_blob_sha: b406c9fdf3bbe3be9546f5e61d8e04edeb60c327
+package_file_count: 12
+package_files:
+  - path: "references/agents.md"
+    blob_sha: 1cf374aafd3f08a3c534a97a4b4e6cc51a13a59c
+  - path: "references/api-reference.md"
+    blob_sha: 5e126d6122440b0d2274c57e5d85a2833f565ffd
+  - path: "references/async-patterns.md"
+    blob_sha: 67501ef236e7fa1de892c1ca3b6faa8585c7762c
+  - path: "references/built-in-evaluators.md"
+    blob_sha: a8158fe44d6ce84e380639d9c7b12e5d7e35e0b3
+  - path: "references/connections.md"
+    blob_sha: 01324af775ebcaa16704ca9279881739d45f5227
+  - path: "references/custom-evaluators.md"
+    blob_sha: 03957c10c2ca2eb29e1b5b5041486c75cae107b2
+  - path: "references/datasets-indexes.md"
+    blob_sha: 989f484ca98ab295e8c17acace658693acc0570e
+  - path: "references/deployments.md"
+    blob_sha: 8c1f72b864596bcb9d69c1ca57f37b8a8f771fe3
+  - path: "references/evaluation.md"
+    blob_sha: 89003b93e20e73a4b47898d50efb86a902607402
+  - path: "references/tools.md"
+    blob_sha: f8af17a59a8ff1109d0b5c9e0197b3b67df8fb5d
+  - path: "scripts/run_batch_evaluation.py"
+    blob_sha: 98bc430b7f6ad125c1d072d91e9d18c5b278fb76
+  - path: "SKILL.md"
+    blob_sha: b406c9fdf3bbe3be9546f5e61d8e04edeb60c327
+display_name: "Microsoft azure-ai-projects-py candidate"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-12-file-package-static-inspected
+dependencies: "Python; azure-ai-projects; azure-identity; OpenAI-compatible eval client; Azure Foundry; SDK agent tools and MCP; ten references plus upstream-owned batch-evaluation Python script"
+purpose: "Foundry project agents, datasets, indexes, memory stores, evaluations and OpenAI-compatible clients"
+trigger: "Azure AI Projects SDK Python project client, agent lifecycle, evaluations, datasets or indexes"
+nontrigger: "Not authority to upload files, retrieve dataset credentials, delete assets, run tools/evaluations or persist memory"
+authority_finding: "Creates persistent agents, threads and memory stores; uploads datasets and files, obtains dataset credentials, creates/deletes indexes, runs evaluations and invokes code/MCP tools without distinct resource, cost, tool, data or deletion permits."
+privacy_finding: "Evaluation inputs and uploaded datasets can contain private data; dataset credential retrieval, conversation logging and output-item printing lack secure custody, minimization and retention controls."
+skill_specific_freshness: "Exact candidate package tree and 12 blob identities inspected 2026-10-28; latest package-path upstream commit 4a2873faffc1b101a33a0b59c24713d4ed78142f at 2026-07-28T21:46:15Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-ai-projects-py.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-ai-projects-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 10/20. Creates persistent agents, threads and memory stores; uploads datasets and files, obtains dataset credentials, creates/deletes indexes, runs evaluations and invokes code/MCP tools without distinct resource, cost, tool, data or deletion permits. Evaluation inputs and uploaded datasets can contain private data; dataset credential retrieval, conversation logging and output-item printing lack secure custody, minimization and retention controls. Preserve: Versioned PromptAgentDefinition, async patterns, evaluator taxonomy, datasets/indexes, project connections and batch-evaluation methodology; keep upstream script as source-owned evidence, not repository runtime. Package security and behavioral validation not-run; July source pin unchanged."

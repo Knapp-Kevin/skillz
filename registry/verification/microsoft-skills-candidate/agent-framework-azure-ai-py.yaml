@@ -1,0 +1,52 @@
+schema_version: 1
+skill_name: agent-framework-azure-ai-py
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+candidate_key: agent-framework-azure-ai-py
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: e9e12ca2e693ff23016569cc3fe61d289dca736a
+skill_md_blob_sha: 98b28f5cc1f34e68cf9ed7f0e1bda6dec04dda0c
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-5-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "10/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 0
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 0
+tags:
+  use_case: ["agent-development", "cloud", "orchestration"]
+  lifecycle: ["implementation", "operations"]
+  characteristic: ["reference-heavy", "tool-routing", "risk-aware"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 5
+package_files_inspected:
+  - path: "references/advanced.md"
+    blob_sha: 13ac0fe8b0ec5dbf1eeeb17d64ad963f96a043f2
+  - path: "references/mcp.md"
+    blob_sha: 7dce0bcd2a9c144591bd56b8915751f503dadef5
+  - path: "references/threads.md"
+    blob_sha: 610cd60477871bc2cfbee0f5cebe62fea34d99b7
+  - path: "references/tools.md"
+    blob_sha: 832a87b97c04d649e8dc3a8869a4e3c211a602ce
+  - path: "SKILL.md"
+    blob_sha: 98b28f5cc1f34e68cf9ed7f0e1bda6dec04dda0c
+external_dependencies_not_executed: "Python; prerelease agent-framework or agent-framework-azure-ai; Azure Identity; Foundry project and deployment; optional Bing, MCP, hosted code/file/web tools; four references"
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+prior_registered_verification: registry/verification/microsoft-skills/agent-framework-azure-ai-py.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+notes: "Persistent service agents and threads, file uploads/vector stores, hosted code execution, external MCP/network use and metered calls lack action-scoped consent. MCP examples use approval_mode=never_require, including private authenticated servers. Prints conversation identifiers and responses; file uploads and verbose Azure SDK debug logging lack classification, disclosure and retention boundaries; placeholder bearer header is not a production secret. Preserve: Async lifecycle/context managers, production-constrained credential chain, tool allowlists, structured output and thread reuse; adapt with per-tool permits, private-data consent, logging redaction and state retention. Static exact-package inspection only. No scanner, service operation, or behavioral validation."
