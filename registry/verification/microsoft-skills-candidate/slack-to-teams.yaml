@@ -1,0 +1,45 @@
+schema_version: 1
+skill_name: slack-to-teams
+candidate_key: slack-to-teams
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 41f03fb5bb8791de6d0c2d1c76764372d906bc3c
+skill_md_blob_sha: 11dfd2b3b069b8ae77d835c7317c3698d94346f0
+shared_experts_tree_sha: 39ecbc21af77c72859ec9e32dc7e88fb7052ded9
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-exact-source-dependency-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 1
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [implementation, communication, cloud]
+  lifecycle: [implementation, operations]
+  characteristic: [retrieval-map, reference-heavy, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+package_file_count: 1
+package_tree_bytes: 9109
+package_files_inspected: "slack-to-teams/SKILL.md"
+shared_dependency_files_inspected: "120/120 exact blobs in experts/ tree 39ecbc21af77c72859ec9e32dc7e88fb7052ded9; 27/27 parent and sibling source files (parent SKILL.md, create-project, docs, provision-deploy, test-playground, test-teams, toolkit, troubleshoot)"
+shared_dependency_tree_bytes: 1469504
+total_exact_source_files_inspected: 148
+external_dependencies_not_executed: ["Slack and Teams APIs", "Microsoft Graph/Entra ID", "Azure and AWS", "Agents Toolkit", "OAuth and credential stores", "model providers"]
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST
+notes: "The one-blob nested package routes to 147 exact shared/sibling files. Parent asks for real secret values; bridge experts correlate identities and transfer/share files without separate authority; cloud deployment, proactive messaging, public tunnel and source deletion lack action-specific approval. Full source-text risk triage, with deep high-risk inspection, but no scanner or behavioral execution. See docs/reviews/2026-10-27-microsoft-slack-to-teams-148-blob-exact-static.md."

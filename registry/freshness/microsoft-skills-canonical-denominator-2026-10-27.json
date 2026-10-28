@@ -108,28 +108,32 @@
       "manifest_sha": "11dfd2b3b069b8ae77d835c7317c3698d94346f0",
       "package_tree_sha": "41f03fb5bb8791de6d0c2d1c76764372d906bc3c",
       "classification": "NESTED_FIRST_CLASS_PREVIOUSLY_UNGOVERNED",
-      "disposition": "REFERENCE_ONLY_PENDING_SHARED_PACKAGE_REVIEW",
-      "score": null,
-      "authority": "external-side-effect for bot deployment, cross-platform messages and identity bridging",
-      "dependencies": "one-blob nested skill, references parent teams-app-developer and 100+ shared micro-expert files; package tree alone understates dependencies",
-      "privacy": "Slack/Teams messages, identities, files, bot traffic and cross-platform transfer",
-      "rationale": "Valid frontmatter and independent trigger boundary, but shared expert references and tenant/channel authority require full review before unchanged use",
-      "verification": "preliminary-manifest-static-only",
+      "disposition": "REJECT_UNCHANGED_EXTRACT_ADAPT_CHECKLIST",
+      "score": "11/20",
+      "authority": "mutating and external-side-effect: identity mapping, file sharing, bot messaging, credential and cloud changes, destructive source deletion",
+      "dependencies": "one-blob nested manifest; 120/120 exact shared expert blobs in tree 39ecbc21af77c72859ec9e32dc7e88fb7052ded9 plus 27/27 parent and sibling files inspected",
+      "privacy": "parent requests real secrets in conversational context; cross-platform identity correlation, files, messaging and retained conversation IDs lack sufficient approval/retention boundaries",
+      "rationale": "Full 148-blob exact-source static review rejects unchanged use for credential solicitation, unauthorized identity/file/communication/cloud effects and destructive lifecycle; preserve bridge design as adaptation evidence.",
+      "verification": "complete-exact-source-dependency-static-rejected",
       "security": "not-run",
       "behavioral": "not-run",
       "tags": {
         "use_case": [
           "implementation",
-          "communication"
+          "communication",
+          "cloud"
         ],
         "lifecycle": [
-          "implementation"
+          "implementation",
+          "operations"
         ],
         "characteristic": [
           "retrieval-map",
-          "reference-heavy"
+          "reference-heavy",
+          "risk-aware"
         ],
         "authority": [
+          "mutating",
           "external-side-effect"
         ],
         "portability": [
@@ -277,18 +281,18 @@
     }
   ],
   "qualification": {
-    "semantic": "76 changed-existing packages screened but not fully requalified; 24/26 new/ungoverned have full exact-version static companions (4 verified semantic only, 20 rejected), 2 new require first full review; 106 exact-tree carry-forwards retain revision-bound evidence",
+    "semantic": "76 changed-existing screened but not fully requalified; 25/26 new/ungoverned have full exact-version static companions (4 verified semantic only, 21 rejected), 1 new Foundry IQ requires first full review; 106 exact-tree carry-forwards retain revision-bound evidence",
     "security": "not-run on candidate revision",
     "behavioral": "not-run on candidate revision",
     "source_pin": "unchanged",
     "full_package_review": "incomplete",
-    "note": "208 remains a structural candidate denominator, not admission. 24/26 new candidates have full static reviews; 2 new + 76 changed remain. All four removed July-governed paths have candidate-only retirement/no-proven-successor decisions. Registered July pin, semantic companions, security and behavioral state unchanged.",
-    "candidate_new_full_static_rejected": 20,
-    "candidate_new_remaining_first_review": 2,
-    "candidate_total_remaining_full_review": 78,
-    "review": "docs/reviews/2026-10-27-microsoft-azure-app-onboard-68-exact-static.md",
+    "note": "208 remains a structural candidate denominator, not admission. 25/26 new candidates have full static reviews; 1 new + 76 changed remain. Four removed July paths have candidate-only retirement/no-proven-successor decisions. Registered July pin, security and behavioral state unchanged.",
+    "candidate_new_full_static_rejected": 21,
+    "candidate_new_remaining_first_review": 1,
+    "candidate_total_remaining_full_review": 77,
+    "review": "docs/reviews/2026-10-27-microsoft-slack-to-teams-148-blob-exact-static.md",
     "candidate_new_full_static_verified": 4,
-    "candidate_new_full_static_reviewed": 24,
+    "candidate_new_full_static_reviewed": 25,
     "removed_path_successor_decisions_complete": 4,
     "removed_path_successor_decisions_pending": 0,
     "removed_path_review": "docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md"
