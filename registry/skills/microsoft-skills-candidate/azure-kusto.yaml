@@ -1,0 +1,42 @@
+schema_version: 1
+skill_name: azure-kusto
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-kusto/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-09T11:06:40Z
+upstream_latest_path_commit: 07ade634651fa0852f6bb5d6d0b12f495b66bacb
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: 8a2191fbf1dd17fc72fc3cc0429977215e2b55fb
+skill_md_blob_sha: 5037190f2739a5d58d2130142571e940a01dde0d
+package_file_count: 1
+package_files:
+  - path: "SKILL.md"
+    blob_sha: 5037190f2739a5d58d2130142571e940a01dde0d
+display_name: "Microsoft azure-kusto candidate"
+upstream_manifest_version: "1.2.2"
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-1-file-package-static-inspected
+dependencies: "Azure Data Explorer/Kusto and Log Analytics; Azure MCP Kusto tools or Azure CLI/REST; KQL; Azure RBAC"
+purpose: "Kusto/ADX query discovery, KQL analysis and telemetry correlation"
+trigger: "Kusto queries, time-series analysis, ADX table discovery"
+nontrigger: "Not blanket permission to search cross-workspace private logs, change retention, or disclose raw records"
+authority_finding: "Read-only cluster/database discovery and KQL queries can retrieve and join sensitive logs across workspaces without explicit dataset, tenant, query, or disclosure authorization; the suggested union workspace query crosses source boundaries."
+privacy_finding: "Telemetry, audit records, session IDs and clickstream data may include sensitive personal and security information; no redaction or output minimization gate."
+skill_specific_freshness: "Exact candidate package tree and 1 Git blob identities inspected 2026-10-28; latest path commit 07ade634651fa0852f6bb5d6d0b12f495b66bacb at 2026-10-09T11:06:40Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-kusto.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-kusto.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 12/20. Read-only cluster/database discovery and KQL queries can retrieve and join sensitive logs across workspaces without explicit dataset, tenant, query, or disclosure authorization; the suggested union workspace query crosses source boundaries. Telemetry, audit records, session IDs and clickstream data may include sensitive personal and security information; no redaction or output minimization gate. Preserve: KQL time filters, schema-first discovery, bounded take/limit, time-series aggregation and explicit source-location checks. No scanner, Azure action or behavioral validation; July pin unchanged."

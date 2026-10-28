@@ -1,0 +1,44 @@
+schema_version: 1
+skill_name: azure-resource-lookup
+source_id: microsoft-skills
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+source_role: unadmitted-upstream-freshness-candidate
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-skills/skills/azure-resource-lookup/SKILL.md
+source_class: official
+license: "MIT (candidate root and manifest; external SDK/service terms not independently audited)"
+relationship: upstream-reference-not-vendored
+upstream_last_updated_at: 2026-10-02T11:05:21Z
+upstream_latest_path_commit: 8ad897cf4d54ca6316f01594f1a44e605a44f5c0
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+fingerprint_algorithm: git-tree-sha1
+package_tree_sha: ba9b018e96ff88bd68d6bfd120eac1f281e4248e
+skill_md_blob_sha: 896c1114e1e6f2b07550037056ed1467ef3e558b
+package_file_count: 2
+package_files:
+  - path: "references/azure-resource-graph.md"
+    blob_sha: e861de3c7e9245426b690dd727c12b9594b45769
+  - path: "SKILL.md"
+    blob_sha: 896c1114e1e6f2b07550037056ed1467ef3e558b
+display_name: "Microsoft azure-resource-lookup candidate"
+upstream_manifest_version: "1.2.3"
+permission_tier: read-only
+portability: medium
+review_status: verified-structured-static-security-pending
+dependency_status: complete-2-file-package-static-inspected
+dependencies: "Azure Resource Graph extension/CLI or Azure MCP dedicated tools; Reader RBAC; bundled ARG query reference"
+purpose: "Read-only Azure resource inventory and Resource Graph discovery"
+trigger: "List, locate, count or inspect resources across specified subscriptions and groups"
+nontrigger: "Not deployment, mutation, real-time monitoring, cost optimization or cross-tenant disclosure without scope"
+authority_finding: "Read-only Azure Resource Graph and dedicated MCP inventory; explicitly excludes mutation and requires user-relevant subscription scoping or bounded results."
+privacy_finding: "Resource names, topology, tags and subscription IDs may be sensitive; host must restrict results to the requesting user's authorized scope and avoid external publication."
+skill_specific_freshness: "Exact candidate package tree and 2 Git blob identities inspected 2026-10-28; latest path commit 8ad897cf4d54ca6316f01594f1a44e605a44f5c0 at 2026-10-02T11:05:21Z"
+prior_registered_provenance: registry/skills/microsoft-skills/azure-resource-lookup.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-resource-lookup.yaml
+prior_screening: registry/freshness/microsoft-skills-tree-frontier-2026-10-10.json
+import_eligibility: semantic-verified-security-pending-no-automatic-adoption
+rationale: "VERIFIED semantic only 16/20. Read-only Azure Resource Graph and dedicated MCP inventory; explicitly excludes mutation and requires user-relevant subscription scoping or bounded results. Resource names, topology, tags and subscription IDs may be sensitive; host must restrict results to the requesting user's authorized scope and avoid external publication. Preserve: Dedicated-tool routing, ARG fallback, subscription scope, case-insensitive type filters and bounded output. No scanner, Azure action or behavioral validation; July pin unchanged."
