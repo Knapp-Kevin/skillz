@@ -4,14 +4,14 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-27 |
+| **Last updated** | 2026-10-28 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **749** |
+| **Persisted third-party review companions** | **750** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -32,9 +32,9 @@ The canonical boundary is stable: user-facing material lives under `skills/`; in
 
 Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this repository as read-only reference material. User-derived skills target the user's active host/environment or a portable handoff. Only explicit REPOSITORY_MAINTENANCE authority permits repository mutation.
 
-**Microsoft freshness (2026-10-27):** The [canonical denominator review](reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible** packages at candidate `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical manifests minus 3 non-first-class references and 1 exact mirror): **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. Changed-existing screening **76/76** is not full requalification. **25/26 new candidates** have complete exact-version static companions (**4 VERIFIED semantic only, 21 REJECT unchanged**); **1 new + 76 changed = 77** full current-version reviews remain. Four removed paths have candidate-only [retirement/no-proven-successor decisions](reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); the registered July reviews remain unchanged. Registered July remains **186/186** at its original pin; no candidate security scan, behavioral validation, source-pin movement or admission was claimed.
+**Microsoft freshness (2026-10-28):** The [canonical denominator review](reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible** packages at candidate `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical manifests minus 3 non-first-class references and 1 exact mirror): **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. Changed-existing screening **76/76** is not full requalification. **26/26 new candidates** now have complete exact-version static companions (**4 VERIFIED semantic only, 22 REJECT unchanged**); **76 changed-existing** full current-version reviews remain. Four removed paths have candidate-only [retirement/no-proven-successor decisions](reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md). Registered July remains **186/186** at unchanged pin; no candidate security scan, behavioral validation, source-pin movement or admission was claimed.
 
-**Candidate full-package static reviews (2026-10-27):** Kusto (3), AKS/Advisor/Cost (8), authority/privacy (8), AKS/prereq/Entra (3), AKS app-deploy (1), Azure App Onboard (1), and [Slack-to-Teams shared-boundary review](reviews/2026-10-27-microsoft-slack-to-teams-148-blob-exact-static.md) (1). **25/26** new candidates have full exact-version static companions (4 semantic VERIFIED only / 21 REJECT unchanged); **1 new Foundry IQ + 76 changed = 77** full candidate-version reviews remain. Persisted third-party verification companions: **748 → 749**. No admission, scanner execution, behavioral evidence or pin changes.
+**Candidate full-package static reviews (2026-10-28):** Kusto (3), AKS/Advisor/Cost (8), authority/privacy (8), AKS/prereq/Entra (3), AKS app-deploy (1), Azure App Onboard (1), Slack-to-Teams (1), and [Foundry IQ 85-skill-file + 17-plugin-file review](reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md) (1). **26/26** new candidates have full exact-version static companions (4 semantic VERIFIED only / 22 REJECT unchanged); **76 changed-existing** packages still require full candidate-version requalification. Persisted third-party verification companions: **749 → 750**. Foundry IQ's default-on plugin telemetry/native installer is an unchanged-use privacy/authority hard fail despite strong core approval controls. No admission, scanner execution, behavioral evidence or pin changes.
 
 ## Current admitted-source accounting
 

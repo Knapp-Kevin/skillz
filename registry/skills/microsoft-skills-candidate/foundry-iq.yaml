@@ -1,0 +1,39 @@
+schema_version: 1
+skill_name: foundry-iq
+candidate_key: foundry-iq
+display_name: Microsoft Foundry IQ candidate
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/foundry-iq-skills/skills/foundry-iq/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (skill frontmatter and plugin LICENSE; no vendoring)"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+upstream_last_updated_at: "2026-10-14T11:05:43Z (manifest only; shared plugin freshness not inherited)"
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: c45f2a12dcffa1929705b1523cb1645a03de134e
+skill_md_blob_sha: d81ed5fc5840955acae9d14f022828a580621327
+plugin_tree_sha: d6d3a76b22e461c34ecf9c902e04745159038af5
+plugin_license_blob_sha: 356b112bcc4f07e03b6e57569eedf9d79978d2d5
+package_file_count: 85
+package_tree_bytes: 1276121
+plugin_distribution_file_count: 102
+plugin_distribution_tree_bytes: 1367855
+package_file_paths: ["SKILL.md","agents/connect-hosted-toolbox.md","agents/connect-hosted.md","agents/connect-prompt-sdk-fallback.md","agents/connect.md","agents/create-missing-agent.md","helpers/_blob_observation.py","helpers/_blob_source_read.py","helpers/_bootstrap_io.py","helpers/_cleanup_dependencies.py","helpers/_cleanup_receipts.py","helpers/_common.py","helpers/_document_adapters.py","helpers/_document_limits.py","helpers/_embedding.py","helpers/_file_inventory.py","helpers/_file_source_config.py","helpers/_indexer_observation.py","helpers/_initial_prompt.py","helpers/_private_json.py","helpers/_progress.py","helpers/_prompt_read.py","helpers/_search_read.py","helpers/_source_readback.py","helpers/blob-contracts.md","helpers/blob-cu-contracts.md","helpers/blob_inventory.py","helpers/blob_recheck.py","helpers/blob_source.py","helpers/bootstrap-contracts.md","helpers/bootstrap_azure.py","helpers/cleanup_plan.py","helpers/contracts.md","helpers/cu_ingestion_auth.py","helpers/document-assessment.md","helpers/document_assess.py","helpers/file-upload-recovery.md","helpers/file_cu_canary.py","helpers/file_cu_mi.py","helpers/file_ingest.py","helpers/file_source.py","helpers/file_upload.py","helpers/hosted_connect.py","helpers/kb-contracts.md","helpers/knowledge_base_retrieve.py","helpers/model-discovery-contracts.md","helpers/model-discovery-scopes.md","helpers/model_discovery.py","helpers/private-artifacts.md","helpers/private_artifacts.py","helpers/prompt_cleanup.py","helpers/prompt_connect.py","helpers/requirements-assessment.txt","helpers/retrieval-verification-contracts.md","helpers/retrieval_verify.py","helpers/search-intake-contracts.md","helpers/search_intake.py","helpers/search_reconcile.py","helpers/source_vector.py","helpers/throttle-recovery.md","helpers/vector-contracts.md","knowledge-bases/create.md","knowledge-bases/retrieve.md","knowledge-sources/create-azure-blob.md","knowledge-sources/create-file.md","lifecycle/cleanup.md","references/abstention.md","references/blob-binding-evidence.md","references/blob-indexer-observation.md","references/blob-ingestion-progress.md","references/blob-readiness-recheck.md","references/blob-vector-readiness.md","references/bootstrap-azure.md","references/content-fit.md","references/cu-ingestion.md","references/file-cu-canary.md","references/intent-routing.md","references/owner.md","references/platform-contracts.md","references/platform-interfaces.md","references/resource-intake.md","references/search-substrate.md","references/standard-cu.md","search-services/create.md","troubleshooting/diagnose.md"]
+plugin_level_dependency_paths: [".claude-plugin/plugin.json",".cursor-plugin/plugin.json",".mcp.json",".plugin/plugin.json","CHANGELOG.md","LICENSE","README.md","hooks/claude-hooks.json","hooks/copilot-hooks.json","hooks/cursor-hooks.json","hooks/scripts/install-telemetry.ps1","hooks/scripts/install-telemetry.sh","hooks/scripts/pluginPathAllowPattern.ps1","hooks/scripts/pluginPathAllowPattern.sh","hooks/scripts/telemetry-reporter-checksums.txt","hooks/scripts/track-telemetry.ps1","hooks/scripts/track-telemetry.sh"]
+shared_dependencies: ["Foundry IQ plugin host hooks and pinned native telemetry reporter", "Azure AI Search/Blob/ADLS", "Azure CLI and Python 3.12+", "Foundry agent/KB/model SDK and REST APIs", "Azure identity and RBAC", "optional pypdf 6.16.1 and defusedxml 0.7.1"]
+permission_tier: "Mutating and external-side-effect: Azure cloud resources, access grants, uploads, model queries, deletion; plugin auto telemetry/native installer on session/tool events."
+portability: low
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-85-file-skill-and-17-plugin-file-static-inspected-external-services-not-executed
+purpose: "Create, connect, query, diagnose and safely clean up Foundry IQ knowledge sources, knowledge bases and agents."
+trigger_nontrigger: "Foundry IQ KB/source/agent workflows; not generic Azure AI Search index apps, repository search, unrelated KB providers or generic agent creation."
+authority_finding: "Core Azure plans have strong separate approval and receipt guards; distributed plugin hooks automatically collect/publish session/tool metadata and install a native telemetry reporter unless an opt-out environment variable is set, without distinct informed authorization."
+privacy_finding: "Default-on session/tool/reference telemetry; optional raw hook-input debug logging; local reporter ZIP override bypasses normal download checksum comparison. No actual credential exfiltration observed."
+import_eligibility: rejected-unchanged-extract-adapt-checklist
+rationale: "REJECT unchanged 15/20 because default telemetry/native installation violates authority/privacy boundary despite strong core Foundry IQ planning/cleanup controls. Preserve scoped approvals, readback, bounded ingestion, model/data consent and receipt-backed cleanup as adaptation prior art. Security scan and behavioral validation not-run. See docs/reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md."

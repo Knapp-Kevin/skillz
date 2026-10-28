@@ -7,7 +7,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **749** persisted exact-version third-party verification companions.
+- **750** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -102,11 +102,11 @@ Final macro tranche: `revops` **13/20 REJECTED unchanged**, `sales-enablement` *
 
 Individual fingerprints, dependencies, controlled tags, freshness evidence, authority findings, and exact rationale remain canonical in `registry/skills/corey-haines-marketing-skills/` and `registry/verification/corey-haines-marketing-skills/`.
 
-**Candidate full-package static reviews (2026-10-27):** Kusto (3), AKS/Advisor/Cost (8), authority/privacy (8), AKS/prereq/Entra (3), AKS app-deploy (1), Azure App Onboard (1), and [Slack-to-Teams shared-boundary review](docs/reviews/2026-10-27-microsoft-slack-to-teams-148-blob-exact-static.md) (1). **25/26** new candidates have full exact-version static companions (4 semantic VERIFIED only / 21 REJECT unchanged); **1 new Foundry IQ + 76 changed = 77** full candidate-version reviews remain. Persisted third-party verification companions: **748 → 749**. No admission, scanner execution, behavioral evidence or pin changes.
+**Candidate full-package static reviews (2026-10-28):** Kusto (3), AKS/Advisor/Cost (8), authority/privacy (8), AKS/prereq/Entra (3), AKS app-deploy (1), Azure App Onboard (1), Slack-to-Teams (1), and [Foundry IQ 85-skill-file + 17-plugin-file review](docs/reviews/2026-10-28-microsoft-foundry-iq-102-blob-exact-static.md) (1). **26/26** new candidates have full exact-version static companions (4 semantic VERIFIED only / 22 REJECT unchanged); **76 changed-existing** packages still require full candidate-version requalification. Persisted third-party verification companions: **749 → 750**. Foundry IQ's default-on plugin telemetry/native installer is an unchanged-use privacy/authority hard fail despite strong core approval controls. No admission, scanner execution, behavioral evidence or pin changes.
 
-## Active Microsoft freshness frontier (issue #400, 2026-10-27)
+## Active Microsoft freshness frontier (issue #400, 2026-10-28)
 
-Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **25/26 new candidates** now have full static companions (4 VERIFIED semantic only / 21 REJECT unchanged), leaving **1 new + 76 changed = 77** full current-version reviews. All four removed-path candidate retirement/no-proven-successor decisions are [recorded](docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); July pin evidence remains unchanged. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
+Registered July remains **186/186** at its own pin. The [canonical denominator review](docs/reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible packages** at `61fe0305ea70389ed8705eec6026a786f57865cf`: 106 carry-forwards + 76 changed + 26 new/ungoverned. Changed screening **76/76** is not requalification. **26/26 new candidates** now have full static companions (4 VERIFIED semantic only / 22 REJECT unchanged), leaving **76 changed-existing** full current-version reviews. All four removed-path candidate retirement/no-proven-successor decisions are [recorded](docs/reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md); July pin evidence remains unchanged. No admission, pin, security or behavioral promotion; PRs #412/#413/#416 remain external qualification holds.
 
 ## Governed discovery / source-vetting
 
