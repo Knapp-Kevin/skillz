@@ -1,6 +1,6 @@
 # System State
 
-**Latest Microsoft candidate qualification (2026-10-28):** [Azure Diagnostics complete 54-file exact-package review](reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md) advances changed-existing **71/76 → 72/76**, leaving **4** (three Azure operations and Foundry root). **54/54 source files, 229,051 bytes, all distinct**; **REJECT unchanged 12/20** for fragmented production authority, privileged capture and credential/privacy exposure. Third-party companions **822**, total verification YAML **866**. July **186/186** and candidate denominator **208** unchanged; no scan, behavioral validation, admission or pin movement.
+**Latest Microsoft candidate qualification (2026-10-28):** [Azure Kubernetes parent exact-version review](reviews/2026-10-28-microsoft-azure-kubernetes-parent-exact-static.md) advances changed-existing **72/76 → 73/76**, leaving **3** (`azure-prepare`, `azure-upgrade`, Foundry root). **55 package-file exposures: 7 parent-owned blobs directly read plus 48 nested first-class blobs covered by existing exact-version companion reviews**; **REJECT unchanged 12/20** for missing cluster/node-pool mutation authorization and broad workload/tenant reads. Third-party companions **823**, total verification YAML **867**. July **186/186**, candidate denominator **208**, source pin and security/behavioral states unchanged.
 
 ## Snapshot
 
@@ -13,7 +13,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **822** |
+| **Persisted third-party review companions** | **823** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -36,7 +36,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 
 **Microsoft freshness (2026-10-28):** The [canonical denominator review](reviews/2026-10-27-microsoft-canonical-denominator-and-ungoverned-exposures.md) establishes **208 structurally eligible** packages at candidate `61fe0305ea70389ed8705eec6026a786f57865cf` (212 physical manifests minus 3 non-first-class references and 1 exact mirror): **106 exact-tree carry-forwards + 76 changed-existing + 26 new/previously ungoverned**. Changed-existing screening **76/76** is not full requalification. **26/26 new candidates** now have complete exact-version static companions (**4 VERIFIED semantic only, 22 REJECT unchanged**); **4 changed-existing** full current-version reviews remain (72/76 fully requalified). Four removed paths have candidate-only [retirement/no-proven-successor decisions](reviews/2026-10-27-microsoft-four-removed-path-candidate-retirements.md). Registered July remains **186/186** at unchanged pin; no candidate security scan, behavioral validation, source-pin movement or admission was claimed.
 
-**Candidate full-package static reviews (2026-10-28):** New/ungoverned candidates **26/26** fully reviewed (4 VERIFIED semantic only, 22 REJECT unchanged); changed-existing **72/76** complete with **4** remaining. Latest [Azure Diagnostics 54-file review](reviews/2026-10-28-microsoft-azure-diagnostics-exact-static.md) adds one REJECT unchanged companion (12/20). Third-party exact-version records **822**, total YAML **866** (44 first-party + 822 third-party). No scanner, behavioral validation, source admission or pin movement.
+**Candidate full-package static reviews (2026-10-28):** New/ungoverned candidates **26/26** fully reviewed (4 VERIFIED semantic only, 22 REJECT unchanged); changed-existing **73/76** complete with **3** remaining. Latest [Azure Kubernetes parent review](reviews/2026-10-28-microsoft-azure-kubernetes-parent-exact-static.md) adds one REJECT unchanged companion (12/20), with seven directly inspected parent-owned files and 48 exact-version nested exposures accounted by prior independent reviews. Third-party companions **823**, total YAML **867**. July pin **186/186**, candidate denominator **208**, no security scan, behavioral validation, source admission or pin movement.
 
 **Changed-existing Rust qualification (2026-10-28):** [Eight complete single-file Rust reviews](reviews/2026-10-28-microsoft-rust-eight-changed-exact-static.md) finished **8/76** changed-existing Microsoft candidates, leaving **68**. All eight are **REJECT unchanged** (8–11/20) for authorization and sensitive-data failures; Key Vault Keys also contains a four-byte DEK example. Exact candidate provenance and static verification are recorded; security and behavioral states `not-run`. Third-party companions **758 at this Rust checkpoint**. Registered July **186/186** and source pin unchanged.
 
