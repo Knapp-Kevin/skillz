@@ -1,0 +1,42 @@
+schema_version: 1
+skill_name: azure-cosmos-rust
+candidate_key: azure-cosmos-rust
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ed1e2001dc9d80548aa651ad7390b8eeb6df8ede
+skill_md_blob_sha: 6180d7aa40918ee63ce93811fedd3f175e29afd7
+characterized_at: 2026-10-28
+last_verified_at: 2026-10-28
+verification_status: rejected
+verification_basis: complete-single-file-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "11/20"
+rubric:
+  trigger_precision: 1
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: ["cloud"]
+  lifecycle: ["implementation"]
+  characteristic: ["risk-aware","tool-assisted"]
+  authority: ["mutating"]
+  portability: ["medium"]
+package_file_count: 1
+package_files_inspected: ["SKILL.md"]
+external_dependencies_not_executed: ["Rust/Cargo","azure_data_cosmos","azure_identity","tokio","Azure service/RBAC"]
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_ADAPT_REFERENCE
+prior_registered_verification: registry/verification/microsoft-skills/azure-cosmos-rust.yaml
+prior_screening: registry/freshness/microsoft-skills-rust-eight-candidate-2026-10-27.json
+notes: "Document create/replace/patch/delete lacks explicit account, database, container, item, recovery and cost authorization. Sensitive document contents and optional account-key credentials require scoped disclosure and secure handling. Preserve Partition-key discipline, official crate, Entra RBAC. Complete one-blob exact package reviewed; July evidence separately valid. No Rust compilation, cloud operations, security scan or behavioral validation."

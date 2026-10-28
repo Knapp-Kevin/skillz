@@ -1,0 +1,34 @@
+schema_version: 1
+skill_name: azure-storage-blob-rust
+display_name: "Microsoft azure-storage-blob-rust changed-existing candidate"
+source_id: microsoft-skills
+source_repository: https://github.com/microsoft/skills
+source_path: .github/plugins/azure-sdk-rust/skills/azure-storage-blob-rust/SKILL.md
+source_class: official
+source_role: unadmitted-upstream-freshness-candidate
+license: "MIT (root and manifest); external crate/service terms not independently audited"
+relationship: upstream-reference-not-vendored
+source_snapshot_revision: 61fe0305ea70389ed8705eec6026a786f57865cf
+registered_source_pin_unchanged: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
+upstream_last_updated_at: not-established
+curated_at: 2026-10-28
+last_checked_at: 2026-10-28
+availability: upstream-exact-revision
+local_path: not-materialized-at-candidate-revision
+package_tree_sha: 1d22a03690fb949dfcdb9e1ce298e0059a90989b
+skill_md_blob_sha: 3e40722372b75c96602ca3801b83e327b6db5e42
+package_file_count: 1
+package_file_paths: ["SKILL.md"]
+permission_tier: "mutating"
+portability: medium
+review_status: rejected-unchanged-structured-static
+dependency_status: complete-single-file-package-static-inspected
+dependencies: ["Rust toolchain/Cargo","azure_storage_blob","azure_identity","tokio","Azure service/RBAC (external, not invoked)"]
+purpose: "Blob upload/download/delete and error handling"
+trigger_nontrigger: "Trigger: Blob upload/download/delete and error handling. Nontrigger: no cloud mutation, credential access, sensitive disclosure or destructive action without specific approval."
+authority_finding: "Blob/container mutations lack object, classification, retention and cost approval."
+privacy_finding: "Transfers can expose private documents without recipient or retention consent."
+prior_registered_provenance: registry/skills/microsoft-skills/azure-storage-blob-rust.yaml
+prior_registered_verification: registry/verification/microsoft-skills/azure-storage-blob-rust.yaml
+import_eligibility: rejected-unchanged-extract-adapt-reference-only
+rationale: "REJECT unchanged 11/20. Blob/container mutations lack object, classification, retention and cost approval. Preserve Pagination, storage error handling and official client patterns as adaptation/checklist evidence. Full one-file package inspected; scanner and behavioral validation not-run."
