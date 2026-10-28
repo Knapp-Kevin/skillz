@@ -18,6 +18,8 @@ The canonical candidate denominator remains **208**: 106 exact-tree carry-forwar
 | `fastapi-router-py` | `995dd3c35e422d29a8fb584b069d4657cd47eefd` | 3 | 11/20 | REJECT unchanged | Bundled template allows unauthenticated list/get via optional get_current_user, with no tenant-scoped service filter. PATCH ownership check is commented out and DELETE never checks owner, despite docstrings claiming ownership is required. |
 | `pydantic-models-py` | `f7a11cfe361df8e698cb9ecb42a94dae0889bb77` | 3 | 17/20 | VERIFIED semantic only | No external action or destructive operation is instructed; schema-generation pattern is bounded. WorkspaceId remains caller-provided and must be validated against authenticated ownership by the consuming service, not this model. |
 
+**Disposition summary:** six REJECT unchanged (10–11/20), one Pydantic 17/20 VERIFIED semantic only. No package-security or behavioral validation was executed.
+
 All seven have separate provenance and ten-dimension structured verification companions with exact package-tree and individual blob identities, source-path commit freshness, dependencies, controlled tags, trigger/non-trigger, authority/privacy findings, scores and explicit package-security and behavioral `not-run`. Older July companions remain intact and do not transfer verification to the candidate.
 
 ## Deep risk synthesis
