@@ -4,7 +4,7 @@
 
 ## Macro map
 
-208 structural candidate packages = 106 exact-tree carry-forwards + 76 changed-existing + 26 new/ungoverned. Before this tranche, 53/76 changed-existing had complete current-version reviews. Five genuine gaps share AI cloud-service, API gateway, inference and PaaS deployment/reliability authority. **63 complete upstream package blobs (238198 Git-tree-reported bytes)** were inspected, including bundled references and upstream-owned scripts. Root exposure aliases are not independent packages. High-authority, credential and production-state risks justified a smaller-than-usual tranche.
+208 structural candidate packages = 106 exact-tree carry-forwards + 76 changed-existing + 26 new/ungoverned. Before this tranche, 53/76 changed-existing had complete current-version reviews. Five genuine gaps share AI cloud-service, API gateway, inference and PaaS deployment/reliability authority. **63 package-file exposures (60 distinct Git blobs; 238,198 exposure bytes / 229,217 distinct-blob bytes)** were inspected, including bundled references and upstream-owned scripts. Root exposure aliases are not independent packages. High-authority, credential and production-state risks justified a smaller-than-usual tranche.
 
 | Package | Exact package tree | Blobs | Score | Static disposition |
 |---|---|---:|---:|---|
@@ -46,6 +46,8 @@
 
 **Preserve for adaptation:** Four-feature reliability matrix, staged consent, compute-before-storage sequencing and IaC/CLI options.
 
+**Duplicate exposure crosswalk:** `azure-ai` and `azure-aigateway` share three byte-identical references: `references/auth-best-practices.md` (blob `6938d5f0`), `references/sdk/azure-ai-contentsafety-py.md` (`e6195e93`), and `references/sdk/azure-ai-contentsafety-ts.md` (`307aec8f`). They count in each complete package-file inventory but not as additional unique evidence or separate first-class skills. The five packages have 63 file exposures, 60 distinct blob identities.
+
 ## Systemic synthesis
 
 - Azure credentials and tools are not action authorization. APIM RBAC/policy mutation, billable P0v3 creation, AKS deployment, storage migration and production traffic changes need scoped consent. A chance to say 'stop' after the host has decided to provision is not consent.
@@ -56,4 +58,4 @@
 
 ## Flow and evidence
 
-Five complete static reviews, five provenance and five verification companions, 63 exact blobs, **5 REJECT unchanged**. Changed-existing **53/76 → 58/76**, remaining **23 → 18** (17 Azure operations and one skill-creator). Third-party verification **803 → 808**; total YAML **847 → 852** (44 first-party + 808 third-party). New candidate frontier **26/26** unchanged, denominator **208**, July **186/186** unchanged. Security scans **0**, behavioral validations **0**, cloud actions **0**, source admissions **0**. Public accounting reconciled atomically.
+Five complete static reviews, five provenance and five verification companions, 63 package-file exposures (60 distinct Git blobs), **5 REJECT unchanged**. Changed-existing **53/76 → 58/76**, remaining **23 → 18** (17 Azure operations and one skill-creator). Third-party verification **803 → 808**; total YAML **847 → 852** (44 first-party + 808 third-party). New candidate frontier **26/26** unchanged, denominator **208**, July **186/186** unchanged. Security scans **0**, behavioral validations **0**, cloud actions **0**, source admissions **0**. Public accounting reconciled atomically.
