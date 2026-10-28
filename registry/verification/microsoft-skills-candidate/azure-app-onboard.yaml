@@ -1,0 +1,42 @@
+schema_version: 1
+skill_name: azure-app-onboard
+candidate_key: azure-app-onboard
+source_id: microsoft-skills
+source_role: unadmitted-upstream-freshness-candidate
+source_snapshot_revision: "61fe0305ea70389ed8705eec6026a786f57865cf"
+registered_source_pin_unchanged: "32cad4ee689c95c309e61aeefcbc6af356f1e6a7"
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ce62e3df0d860115631b3fb7658eb7a6c35cf141
+skill_md_blob_sha: 00635c01fc9518e171e5157185a60999e1455b84
+characterized_at: 2026-10-27
+last_verified_at: 2026-10-27
+verification_status: rejected
+verification_basis: complete-package-structured-static-review
+validation_status: not-run
+package_security_status: not-run
+rubric_score: "12/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 0
+  effectiveness_design: 1
+tags:
+  use_case: [cloud, deployment, implementation]
+  lifecycle: [planning, implementation, release]
+  characteristic: [reference-heavy, risk-aware, production-oriented]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+package_file_count: 68
+package_tree_bytes: 382357
+package_files_inspected: "SKILL.md; deploy/SKILL.md; deploy/references/approval-gate-template.md; deploy/references/blocked-patterns.md; deploy/references/code-deployment-appservice.md; deploy/references/code-deployment-container-apps.md; deploy/references/code-deployment-swa.md; deploy/references/database-post-deploy.md; deploy/references/deploy-checklist-template.md; deploy/references/deploy-safety.md; deploy/references/deploy-schemas.ts; deploy/references/error-classification.md; deploy/references/health-check-patterns.md; deploy/references/mcp-tools.md; deploy/references/portal-links.md; deploy/references/preflight-checks.md; deploy/references/subagent-preflight.md; prepare/SKILL.md; prepare/references/deploy-strategy.md; prepare/references/mcp-tools.md; prepare/references/naming-patterns.md; prepare/references/prepare-schemas.ts; prepare/references/pricing-guide-services.md; prepare/references/pricing-guide.md; prepare/references/service-mapping.md; prepare/references/sku-matrix.md; prepare/references/sku-quota-validation.md; prepare/references/subagent-pricing.md; prepare/references/subagent-quota.md; prepare/references/validation-rubric.md; references/approval-gates.md; references/azd-template-routing.md; references/handoff-protocol.md; references/iac-resources.md; references/intent-gathering.md; references/mcp-tool-reference.md; references/pipeline-rules-runtime.md; references/pipeline-rules.md; references/session-protocol.md; references/session-schemas.ts; references/subscription-resolution.md; scaffold/SKILL.md; scaffold/references/bicep-app-service.md; scaffold/references/bicep-container-apps.md; scaffold/references/bicep-patterns-data.md; scaffold/references/bicep-patterns-security.md; scaffold/references/bicep-patterns.md; scaffold/references/bicep-swa.md; scaffold/references/cicd-pipelines.md; scaffold/references/dockerfile-generation.md; scaffold/references/env-var-secrets.md; scaffold/references/error-handling.md; scaffold/references/iac-generation-rules.md; scaffold/references/mcp-tools.md; scaffold/references/rbac-roles.md; scaffold/references/scaffold-healing-rules.md; scaffold/references/scaffold-schemas.ts; scaffold/references/self-healing.md; scaffold/references/self-review-checklist.md; scaffold/references/self-review-procedure.md; scaffold/references/subagent-iac-gen.md; scaffold/references/subagent-review.md; scaffold/references/subagent-validate.md; scaffold/references/terraform-patterns.md; scaffold/references/validation-and-manifest.md; scaffold/references/waf-checklist.md; scaffold/scripts/scaffold-conformance.ps1; scaffold/scripts/scaffold-conformance.sh"
+shared_dependency_files_inspected: []
+external_dependencies_not_executed: ["azure-app-onboard-prereq (separate exact-version review)","Azure CLI/MCP","Bicep/Terraform","Key Vault","cloud resources"]
+authority_hard_fail: true
+disposition: REJECT_UNCHANGED_EXTRACT_OR_CHECKLIST
+notes: "Two separate scaffold/deploy gates are genuine, but automatic seven-day session deletion, credential display/log and deploy-secrets.env fallback, nonblocking failure to re-disable SCM basic publishing credentials, discovered production DB migrations without distinct authorization, and new billable ACR/RBAC changes during healing fail authority/privacy requirements. Exact source tree and 68/68 manifest/package blob identities verified; scanner, Azure commands and behavioral trials not-run."
