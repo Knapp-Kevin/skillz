@@ -7,7 +7,7 @@ source_path: skills/permissions-review/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 16110dd942aa2ad231c04d8a145297b0ef3de6a4
+source_snapshot_revision: c5d1c139fb547e696e621a068239c6dcf94d9bd7
 curated_at: 2026-08-30
 last_checked_at: 2026-10-29
 availability: in-repo
@@ -16,6 +16,6 @@ permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "Authorized host configuration/log metadata and optional external scheduler; no mandatory Claude Code, secret-store access, or MCP distribution"
+dependencies: "Authorized host configuration/log metadata and optional external scheduler; no mandatory Claude Code, secret-store access, or MCP distribution; controlled authority taxonomy at registry/taxonomy.yaml"
 import_eligibility: conditional-on-security-and-user-fit
-rationale: "Scoped least-privilege inventory avoids retrieving secret values; optional repeated sensitive metadata reads and report delivery require separate explicit authorization."
+rationale: "Version-bound scoped inventory classifies tool effects by current controlled authority taxonomy and separate consequential risks; legacy permission tiers are not approval gates. Secret values remain unread, and recurrence or delivery requires distinct authorization."
