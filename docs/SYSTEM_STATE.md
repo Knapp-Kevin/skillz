@@ -6,7 +6,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-28 |
+| **Last updated** | 2026-10-29 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
@@ -25,6 +25,10 @@
 | **Evaluation model** | Static semantic review + separate exact-version package-security evidence; optional later external behavioral evidence |
 | **Normal-use runtime/CI requirement** | None |
 | **Maintenance security evidence** | Host-executed exact-pinned SkillSpector assessments; no repository-owned CI |
+
+## Exact-tree historical security evidence
+
+**First-party historical security evidence (reconciled 2026-10-29).** At main `713c98fa55d5`, **44/44** package trees and semantic fingerprints match their recorded identities. The retained October 10 baseline has **23 exact-tree PASSED / 20 INCOMPLETE / 1 FAILED**; the separate 44-pass candidate scan matches only **23/44** current-main package trees, so its other 21 passes are not transferable. Eight of the 23 historical matching-pass packages have changed manifests in unmerged #480/#482, leaving 15 unaffected by those drafts. This is existing evidence reconciled, **not** a new scan, behavioral validation, or unchanged-use approval. [Full identity matrix](../docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md).
 
 ## Current architecture
 

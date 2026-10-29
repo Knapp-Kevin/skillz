@@ -38,6 +38,8 @@ Current-main authority debt spans **10 distinct first-party manifests across thr
 
 ## Package-security backfill
 
+**First-party historical security evidence (reconciled 2026-10-29).** At main `713c98fa55d5`, **44/44** package trees and semantic fingerprints match their recorded identities. The retained October 10 baseline has **23 exact-tree PASSED / 20 INCOMPLETE / 1 FAILED**; the separate 44-pass candidate scan matches only **23/44** current-main package trees, so its other 21 passes are not transferable. Eight of the 23 historical matching-pass packages have changed manifests in unmerged #480/#482, leaving 15 unaffected by those drafts. This is existing evidence reconciled, **not** a new scan, behavioral validation, or unchanged-use approval. [Full identity matrix](docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md).
+
 Issue **#402** owns the bounded backfill introduced by the SkillSpector integration. Existing `verified` / `validated` records remain valid semantic evidence but do not inherit a security pass. Backfill priority is first-party, then semantically eligible third-party packages with executable components or consequential authority, then the remaining unchanged-use candidate surface. Security evidence is persisted under `registry/security/` and must bind to the exact package and exact scanner revision.
 
 ## Admitted-source curation
