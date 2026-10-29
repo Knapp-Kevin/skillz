@@ -30,6 +30,10 @@ The corpus-wide provenance-completeness audit #66 is **closed completed**. First
 
 The bounded controlled-taxonomy conformance audit #342 is also **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; do not infer current defects from historical examples without live evidence.
 
+## Current first-party authority repair
+
+[Issue #478](https://github.com/Knapp-Kevin/skillz/issues/478) documents five existing non-#416 first-party skills whose scheduling guidance lacks a distinct approval gate for persistent host routines, future private-data access, and report delivery. This is an authority/portability hygiene defect, **not** a new source admission or corpus-count change. Preserve the single-run read-only workflows, update exact-version companions and the consolidated registry when implementing, and reconcile shared registry ownership with draft PRs #416/#413. No behavioral or security approval is inherited.
+
 ## Package-security backfill
 
 Issue **#402** owns the bounded backfill introduced by the SkillSpector integration. Existing `verified` / `validated` records remain valid semantic evidence but do not inherit a security pass. Backfill priority is first-party, then semantically eligible third-party packages with executable components or consequential authority, then the remaining unchanged-use candidate surface. Security evidence is persisted under `registry/security/` and must bind to the exact package and exact scanner revision.
