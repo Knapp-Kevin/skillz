@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: scaffold-exercises
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d87df28e7d8abb4e57ecc6e47d71c274d16054c7
 characterized_at: 2026-08-29
