@@ -21,7 +21,7 @@ A periodic market scan that answers three questions for the operator's bound pro
 
 ## Execution Flow
 
-1. **Bind the profile.** Read the profile from the operator's career notes, operator profile, or host memory — the bound source is authoritative over remembered assumptions. If none exists, elicit (role focus, seniority, remote/location, core terms) and offer to persist the answers as career notes for future runs. Always say which profile the scan ran against.
+1. **Authorize and bind the profile.** Use only the professional profile or career notes the user has authorized for this review. The named source takes precedence over remembered assumptions; do not mine unrelated host memory or private files. If unavailable, ask for role focus, seniority, remote/location and core terms. Offer a draft profile for future use, but save it only with separate approval. Say which profile and scope the scan used.
 2. **Scan postings:** web-search 4–6 query variants around the profile's core terms (e.g., for a platform-engineering profile: "AI platform engineer remote", "agent infrastructure architect", "LLM platform engineering jobs") across job boards and company career pages surfaced in results. Collect titles, seniority, comp when listed, and posting dates.
 3. **Scan rates:** web-search recent salary/rate surveys and comp threads for the role cluster. Prefer sources dated within 12 months; note the date on every figure.
 4. **Cluster** the postings by role type (e.g. platform engineering, agent infrastructure, AI governance/safety, solutions architecture) with a rate range per cluster.
@@ -29,10 +29,13 @@ A periodic market scan that answers three questions for the operator's bound pro
 6. **Compare against positioning:** where the profile is ahead of demand, where it lags, and 2–3 concrete positioning suggestions (terms to adopt, artifacts to surface).
 7. **Present** in the Output Format below, citing sources for every rate figure.
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Claude Code:** use `/schedule` to create a monthly routine whose instruction is "Run the career-radar skill against the bound profile and post the scan."
-- **Other agent platforms:** a monthly scheduled automation with the same instruction.
+This skill performs **one requested review** by default. Invocation is not consent to create a persistent schedule, use private connectors in future runs, save a profile or portfolio, or deliver recurring reports. Do not invoke `/schedule`, `/loop`, a scheduler API, or any other persistent automation merely because the skill mentions a cadence.
+
+If the user **separately requests** recurrence, first propose and obtain explicit approval for **all** of: frequency, local time/timezone and end/expiry condition; precise account, repository, workspace and data-access scope for future runs; whether private content will be read; report recipients and delivery channel (including whether notification is enabled); data minimization and retention/deletion policy; and how to pause or revoke the routine. Obtain separate authority for any connector access, communication, persistent configuration, or recurring cost. Recheck scope and permissions on each future run; stop rather than silently broaden access. Never embed credentials, tokens, sensitive message bodies, or private documents in scheduler prompts or logs.
+
+Only an authorized **external host** with a suitable capability may create the approved routine. If unavailable, offer a manual calendar reminder or reusable prompt without creating anything. `skillz` has no scheduler, runner, background service, or delivery mechanism.
 
 ## Output Format
 
@@ -57,4 +60,4 @@ A periodic market scan that answers three questions for the operator's bound pro
 
 - Read-only: this skill scans and reports. It never applies to roles, submits forms, or contacts recruiters or companies.
 - Rate figures are only as good as their sources — always cite and date them; if sources disagree, show the spread rather than averaging it away.
-- Keep each scan's output in notes so the next run can report cluster growth and signal changes over time.
+- Offer to retain a minimal scan summary for comparison, but do not persist profile details, job-search history, or reports without explicit approval of location, retention, and access scope.
