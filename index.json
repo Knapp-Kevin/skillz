@@ -306,5 +306,19 @@
     "receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-final-nine-exact-static.md",
     "candidate_reviewed_total": 19,
     "prior_tranche_receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md"
+  },
+  "mattpocock_registered_path_hygiene": {
+    "as_of": "2026-10-29",
+    "registered_pin": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+    "eligible_denominator": 29,
+    "companion_files_audited": 58,
+    "provenance_local_paths_corrected": 25,
+    "verification_local_paths_corrected": 11,
+    "remaining_stale_vendor_local_paths": 0,
+    "source_pin_changed": false,
+    "semantic_reviews_changed": 0,
+    "package_security_executed": 0,
+    "behavioral_validation_executed": 0,
+    "receipt": "docs/reviews/2026-10-29-mattpocock-pinned-path-hygiene.md"
   }
 }

@@ -46,6 +46,8 @@ Issue **#402** owns the bounded backfill introduced by the SkillSpector integrat
 
 **Matt Pocock candidate freshness (2026-10-29).** Registered pin remains **29/29** at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Candidate `a496f5513d4a4cf889bc48e189e579f4b0bdf6aa` has **31 eligible** manifests: 12 unchanged, 16 changed-existing, 3 newly eligible; one pinned package is **retired from candidate exposure only**, with old pinned reference retained. All **19/19 changed/new candidate-only static reviews** are decisive: **6 VERIFIED semantic only / 13 REJECT unchanged**, **0 static gaps**. Source-pin promotion **NO-GO** due authority hard fails and absent security/behavioral acceptance. Published inventory unchanged. [Initial ten](docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md) and [final nine](docs/reviews/2026-10-29-mattpocock-upstream-freshness-final-nine-exact-static.md).
 
+**Matt Pocock pinned path hygiene (2026-10-29).** The registered 29-skill source remains unchanged at its exact pin. A live audit of 58 pinned provenance/verification companions found **25 stale provenance** and **11 stale verification** `local_path` values pointing at removed `vendor/mattpocock-skills/`. All 36 were corrected to `skills/sources/mattpocock-skills/`, without changing upstream identities, fingerprints, dispositions, scores, counts or security/behavioral states. [Exact-path audit](docs/reviews/2026-10-29-mattpocock-pinned-path-hygiene.md).
+
 ## Admitted-source curation
 
 | Source family | Pin / scope | Reviewed | Gaps | State |
