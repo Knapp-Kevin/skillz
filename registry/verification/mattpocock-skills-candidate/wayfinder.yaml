@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "wayfinder"
+candidate_key: "wayfinder"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "25da74eadc3e388b2f2a2cc716f3d44b2fb9dfe0"
+skill_md_blob_sha: "975d6bf9c0a49d18a651f3335e0b4dcf8650fe31"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "14/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 0
+rubric_failure_handling: 2
+rubric_evidence_discipline: 2
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 2
+rubric_adversarial_resilience: 0
+rubric_effectiveness_design: 1
+tags_use_case: ["planning", "orchestration", "decision-support"]
+tags_lifecycle: ["planning", "design"]
+tags_characteristic: ["decomposition", "progressive-disclosure", "traceable"]
+tags_authority: ["mutating", "external-side-effect"]
+tags_portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT this changed candidate unchanged despite the registered pinned Wayfinder being separately VERIFIED at its old exact blob. Preserve map/frontier discipline as adaptation/reference. Candidate instructs tracker issue creation, assignment, closure, research branch pushes and AFK provisioning without action-specific authorization. Issue bodies and research branches can expose private project context; require scoped audience before publishing. No external package-security scan or representative behavioral/adversarial test was executed."

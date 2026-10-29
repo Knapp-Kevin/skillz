@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "implement"
+candidate_key: "implement"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "4804b466ab26c9b9d8d42917547db133d1f20a9f"
+skill_md_blob_sha: "bd49e472984c7b99aac40286fdae749bb955a842"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "11/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 1
+rubric_authority_and_safety: 0
+rubric_failure_handling: 1
+rubric_evidence_discipline: 1
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 1
+rubric_adversarial_resilience: 1
+rubric_effectiveness_design: 1
+tags_use_case: ["implementation"]
+tags_lifecycle: ["implementation"]
+tags_characteristic: ["test-driven", "human-review"]
+tags_authority: ["mutating"]
+tags_portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged. Preserve TDD/review sequence; adapt to propose commit and confirm branch/write authority before persistent mutation. Unconditionally commits to current branch without checking repository/branch write authorization or ownership. No special private-data flow described; honor target repository and tool access scope. No external package-security scan or representative behavioral/adversarial test was executed."

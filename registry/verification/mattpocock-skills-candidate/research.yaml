@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "research"
+candidate_key: "research"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "2f8f36af48796faed5c687c75bb650071631a984"
+skill_md_blob_sha: "ffc9eb89849cc4cf74962ce93d786ffd17c6a5dc"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "13/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 0
+rubric_failure_handling: 1
+rubric_evidence_discipline: 2
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 1
+rubric_adversarial_resilience: 1
+rubric_effectiveness_design: 1
+tags_use_case: ["research", "documentation"]
+tags_lifecycle: ["discovery"]
+tags_characteristic: ["source-driven", "evidence-first"]
+tags_authority: ["mutating", "external-side-effect"]
+tags_portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged. Extract primary-source citation discipline and one-file synthesis as read-only/portable-handoff adaptation. Automatically launches background agent and writes Markdown in repo with no explicit destination/write approval. Potential private question/context transfer to background agent without a scoped disclosure boundary. No external package-security scan or representative behavioral/adversarial test was executed."

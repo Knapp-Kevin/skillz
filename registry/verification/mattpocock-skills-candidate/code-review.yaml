@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "code-review"
+candidate_key: "code-review"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "a8ef561571acbb611de8ff19ba6da75b197c63a8"
+skill_md_blob_sha: "83183e0ad36fd0eef25d37c7e483284b7e34c1f0"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "verified"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "17/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 2
+rubric_failure_handling: 1
+rubric_evidence_discipline: 2
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 2
+rubric_adversarial_resilience: 1
+rubric_effectiveness_design: 2
+tags_use_case: ["code-review", "evaluation"]
+tags_lifecycle: ["verification"]
+tags_characteristic: ["evidence-first", "human-review", "traceable"]
+tags_authority: ["read-only", "generate-only"]
+tags_portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: false
+disposition: "VERIFIED_SEMANTIC_ONLY_CANDIDATE"
+notes: "VERIFIED semantic only. Strong independent axes and evidence requirements; retain uncertainty when spec absent, no executed review claimed. Read-only analysis with clear fixed point and skip behavior for missing spec; host-specific Git and subagent assumptions reduce portability. Private code/spec sent only to host-approved review agents; do not publish excerpts without approval. No external package-security scan or representative behavioral/adversarial test was executed."

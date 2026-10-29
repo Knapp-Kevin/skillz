@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "diagnosing-bugs"
+candidate_key: "diagnosing-bugs"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "5fdd6cc53385395441910b026c72d71768e993d4"
+skill_md_blob_sha: "d039541ddd1c46e6ddbd662fe99d49b686fc5e12"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "13/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 0
+rubric_failure_handling: 2
+rubric_evidence_discipline: 1
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 2
+rubric_adversarial_resilience: 0
+rubric_effectiveness_design: 1
+tags_use_case: ["debugging", "testing"]
+tags_lifecycle: ["implementation", "verification"]
+tags_characteristic: ["hypothesis-driven", "test-driven", "evidence-first"]
+tags_authority: ["mutating", "external-side-effect"]
+tags_portability: ["medium"]
+package_file_count: 3
+package_files_inspected: ["SKILL.md", "agents/openai.yaml", "scripts/hitl-loop.template.sh"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged. Extract repro/minimization/hypothesis discipline; preserve bundled upstream shell template as source-owned reference, not skillz runtime. Executable curl/replay/stress loops and instrumentation can affect live traffic or sensitive data without environment/side-effect authorization. Captured HAR/log/request data can include auth headers, secrets and PII; redaction warning exists but no bounded collection/storage gate. No external package-security scan or representative behavioral/adversarial test was executed."

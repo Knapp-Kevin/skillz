@@ -8,6 +8,8 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
+**Matt Pocock candidate freshness (2026-10-29).** Registered pin remains **29/29** at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Upstream candidate `a496f5513d4a4cf889bc48e189e579f4b0bdf6aa` has **31 structurally eligible** manifests: 12 exact-manifest carry-forwards, 16 changed-existing, 3 newly eligible, and 1 removed from the pinned eligible set. The changed/new frontier is **10/19 candidate-only exact-version static reviews** (3 VERIFIED semantic only, 7 REJECT unchanged), with **9** remaining and a removed-path disposition pending. Candidate source-pin promotion is **NO-GO**; no security/behavioral acceptance or inventory change. [Candidate macro review](docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md).
+
 ## Current totals
 
 | Surface | Count |

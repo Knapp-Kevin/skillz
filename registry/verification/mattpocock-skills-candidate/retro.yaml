@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "retro"
+candidate_key: "retro"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "335c1862a43da9d629abafdb79ca0c0de118be08"
+skill_md_blob_sha: "12149acf2dd23b4514dec57b04a6293eaa1352fa"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "12/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 0
+rubric_failure_handling: 1
+rubric_evidence_discipline: 1
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 2
+rubric_adversarial_resilience: 0
+rubric_effectiveness_design: 1
+tags_use_case: ["evaluation", "repository-maintenance"]
+tags_lifecycle: ["maintenance"]
+tags_characteristic: ["evidence-first", "human-review", "maintainability"]
+tags_authority: ["read-only", "generate-only"]
+tags_portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged. Extract navigation, mechanical-vs-judgment guardrail analysis and tool-economy taxonomy after imposing private-evidence authorization. Unscoped private transcript/log access is a hard failure; suggestions to add CI/hooks must remain proposals and cannot override target-repository governance. Defaults to searching session logs on the machine without prior account/session/time/sensitivity scope. No external package-security scan or representative behavioral/adversarial test was executed."

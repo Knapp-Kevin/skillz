@@ -1,0 +1,38 @@
+schema_version: 1
+skill_name: "implement-spec"
+candidate_key: "implement-spec"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "407c196f5c88af53c71efc8f31ee37c02dbb12e7"
+skill_md_blob_sha: "73d36c23958bd04423ba3ded1c90ff0d0b858b72"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "12/20"
+rubric_trigger_precision: 2
+rubric_procedural_clarity: 2
+rubric_authority_and_safety: 0
+rubric_failure_handling: 1
+rubric_evidence_discipline: 1
+rubric_dependency_coherence: 2
+rubric_portability_honesty: 1
+rubric_usefulness_differentiation: 2
+rubric_adversarial_resilience: 0
+rubric_effectiveness_design: 1
+tags_use_case: ["implementation", "orchestration"]
+tags_lifecycle: ["implementation"]
+tags_characteristic: ["decomposition", "context-efficient", "orchestration"]
+tags_authority: ["mutating", "external-side-effect"]
+tags_portability: ["low"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged. Retain task-graph frontier, fresh-context implementers and context-pointer handoffs as adaptation evidence; gate every write and external side effect. Creates branches, merges code, changes PR readiness and closes tickets without an action-specific approval gate or bounded concurrency/cost policy. Distributes private spec/codebase/tickets to multiple agents without a stated approved data boundary. No external package-security scan or representative behavioral/adversarial test was executed."
