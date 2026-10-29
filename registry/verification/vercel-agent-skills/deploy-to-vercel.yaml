@@ -6,15 +6,15 @@ local_path: skills/sources/vercel-agent-skills/skills/deploy-to-vercel/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a0251ce89a7636230be9c5b989a81e1a54a52a96
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 17/20
 tags:
   use_case: [deployment, repository-maintenance, cloud]
   lifecycle: [implementation, release, operations]
-  characteristic: [safety-bounded, human-review, tool-routing, compatibility-aware, production-oriented]
+  characteristic: [human-review, tool-routing, compatibility-aware, production-oriented]
   authority: [mutating, external-side-effect]
   portability: [low]
-notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 2, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Preview is the default, production requires explicit user intent, unsafe state-detection commands are prohibited, team scope is resolved deliberately, and git push requires approval. Automatic CLI installation and project linking reduce the authority score, and the skill deliberately avoids fetching the deployed URL as a final behavioral check. Bundled fallback resources are present at the pin. Behavioral validation remains pending.
+notes: REJECT unchanged under the current action-specific authority hard fail despite the retained historical 17/20 rubric score (trigger 2, procedure 2, authority 1, failure 2, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2). At exact pinned manifest blob a0251ce89a7636230be9c5b989a81e1a54a52a96, team selection is treated as permission to link a repository/project; absent CLI the flow globally installs software and links; no-auth fallback uploads source to an external deployment service; git add . and push may include unintended contents and trigger production on a production branch. Generic deployment intent or confirmation of a push is not approval for each distinct side effect or disclosure. Preserve preview-first routing, team/scope checks and fallback guidance as adaptation/checklist evidence only; require separate scoped approvals before use. Source material remains intact. Behavioral validation not-run; no new scanner evidence.
