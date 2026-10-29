@@ -320,5 +320,23 @@
     "package_security_executed": 0,
     "behavioral_validation_executed": 0,
     "receipt": "docs/reviews/2026-10-29-mattpocock-pinned-path-hygiene.md"
+  },
+  "cline_registered_path_hygiene": {
+    "as_of": "2026-10-29",
+    "source_id": "cline-skills",
+    "registered_pin": "26378461e978f2b4e2e6d67b57121b86b2a79ba5",
+    "published_denominator": 36,
+    "additional_internal_companion_pairs": 1,
+    "companion_pairs_audited": 37,
+    "companion_files_audited": 74,
+    "provenance_local_paths_corrected": 7,
+    "verification_local_paths_corrected": 7,
+    "remaining_stale_vendor_local_paths": 0,
+    "nested_sdk_submodule_pin": "4174dc764ab4fdc32d22950f1a5bfc0c61886101",
+    "source_pin_changed": false,
+    "semantic_reviews_changed": 0,
+    "package_security_executed": 0,
+    "behavioral_validation_executed": 0,
+    "receipt": "docs/reviews/2026-10-29-cline-pinned-path-hygiene.md"
   }
 }

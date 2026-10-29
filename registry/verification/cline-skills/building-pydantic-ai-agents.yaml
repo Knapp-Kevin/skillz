@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: building-pydantic-ai-agents
 source_id: cline-skills
 source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
-local_path: vendor/cline-skills/skills/building-pydantic-ai-agents/SKILL.md
+local_path: skills/sources/cline-skills/skills/building-pydantic-ai-agents/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 75690b98ee388b9bf60716a8da87349c96769b03
 characterized_at: 2026-08-29
