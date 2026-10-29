@@ -33,6 +33,19 @@
     "pending_separate_scope_authority_pr": 496,
     "pending_scope_authority_review": "docs/reviews/2026-10-29-ten-unchanged-first-party-authority-macro.md"
   },
+  "vercel_deploy_authority_reclassification": {
+    "as_of": "2026-10-29",
+    "source_id": "vercel-agent-skills",
+    "source_pin": "f8a72b9603728bb92a217a879b7e62e43ad76c81",
+    "manifest_blob": "a0251ce89a7636230be9c5b989a81e1a54a52a96",
+    "skill": "deploy-to-vercel",
+    "from": "verified",
+    "to": "rejected",
+    "reason": "Missing action-specific authorization for project linking, global CLI install, source upload, and broad git staging/push with possible production deployment",
+    "behavioral_validation": "not-run",
+    "new_security_scan": false,
+    "receipt": "docs/reviews/2026-10-29-vercel-deploy-authority-reclassification.md"
+  },
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
@@ -84,6 +97,8 @@
     "addy_osmani_agent_skills_current_standard_companions": 24,
     "addy_osmani_agent_skills_eligible_denominator": 24,
     "vercel_agent_skills_current_standard_companions": 9,
+    "vercel_agent_skills_verified_semantic_only": 5,
+    "vercel_agent_skills_rejected_unchanged": 4,
     "vercel_agent_skills_eligible_denominator": 9,
     "openhands_extensions_current_standard_companions": 1,
     "openhands_extensions_eligible_denominator": 1,
