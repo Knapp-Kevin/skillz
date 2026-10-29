@@ -11,13 +11,13 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 upstream_revision: 70c9cb7a211b1b6922712142e0daad4fadf9022b
 upstream_last_updated_at: 2026-04-15T19:04:01Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-29
 availability: vendored
 local_path: skills/sources/cloudflare-skills/skills/cloudflare-email-service/SKILL.md
 permission_tier: external-side-effect-on-explicit-user-request
 portability: low
-review_status: verified-structured
+review_status: rejected-unchanged
 dependency_status: source-intact-current-docs-required
 dependencies: Cloudflare Email Service account/bindings or REST API credentials; bundled sending, routing, deliverability, CLI/MCP, and REST references; current Cloudflare docs
 import_eligibility: already-vendored
-rationale: Focused Email Service implementation and operations guidance with retrieval-first handling, prerequisite checks, secret guidance, transactional-use boundaries, and intact bundled references. Sending and account configuration can create external side effects, so unchanged use is appropriate only within an explicit user-authorized email task.
+rationale: REJECT unchanged at the pinned version. The prerequisite workflow directs the host to enable Email Sending on a domain when absent, and the reference path includes sending email, configuring routing and verifying recipient destinations without separate action-specific approval for account/domain changes, recipients, message content or communications. The retrieval, API/binding, deliverability and secret-handling material remains useful ADAPT/EXTRACT prior art.

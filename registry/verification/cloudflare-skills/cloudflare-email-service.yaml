@@ -6,15 +6,15 @@ local_path: skills/sources/cloudflare-skills/skills/cloudflare-email-service/SKI
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: fb3565111a2ce94761e5ad6642d20d02e7707946
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 15/20
 tags:
   use_case: [cloud, implementation, business-operations]
   lifecycle: [implementation, operations]
   characteristic: [retrieval-first, reference-heavy, production-oriented, risk-aware]
   authority: [mutating, external-side-effect]
   portability: [low]
-notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Clear service boundaries, prerequisites, current-doc retrieval, secret handling, transactional-email scope, and useful bundled operational references. External sending and configuration authority is explicit in the task but not strongly confirmation-gated, so authority and evidence scores remain conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending.
+notes: Rubric scores: trigger 2, procedure 2, authority 0, failure 1, evidence 1, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2 (15/20). Hard fail: prerequisite step directs domain-level Email Sending enablement when absent; subsequent send/routing operations can alter account configuration and communicate externally without a distinct approval boundary for account/domain, sender, recipients, content and destination. Confirming prerequisites or using an authorized tool is not authorization for those actions. Preserve retrieval-first references, transactional-use constraints and secure-credential guidance for adaptation. Pinned manifest identity matched upstream Git tree. Behavioral validation not-run; no new security scan.
