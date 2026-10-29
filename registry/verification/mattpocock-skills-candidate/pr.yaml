@@ -15,21 +15,23 @@ verification_basis: "complete-package-structured-static-review"
 validation_status: "not-run"
 package_security_status: "not-run"
 rubric_score: "17/20"
-rubric_trigger_precision: 2
-rubric_procedural_clarity: 2
-rubric_authority_and_safety: 2
-rubric_failure_handling: 1
-rubric_evidence_discipline: 1
-rubric_dependency_coherence: 2
-rubric_portability_honesty: 2
-rubric_usefulness_differentiation: 2
-rubric_adversarial_resilience: 1
-rubric_effectiveness_design: 2
-tags_use_case: ["documentation", "code-review"]
-tags_lifecycle: ["verification", "release"]
-tags_characteristic: ["evidence-first", "human-review", "traceable"]
-tags_authority: ["generate-only"]
-tags_portability: ["high"]
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 2
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: ["documentation", "code-review"]
+  lifecycle: ["verification", "release"]
+  characteristic: ["evidence-first", "human-review", "traceable"]
+  authority: ["generate-only"]
+  portability: ["high"]
 package_file_count: 3
 package_files_inspected: ["CREDITS.md", "SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]

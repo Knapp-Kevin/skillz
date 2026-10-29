@@ -15,21 +15,23 @@ verification_basis: "complete-package-structured-static-review"
 validation_status: "not-run"
 package_security_status: "not-run"
 rubric_score: "13/20"
-rubric_trigger_precision: 2
-rubric_procedural_clarity: 2
-rubric_authority_and_safety: 0
-rubric_failure_handling: 1
-rubric_evidence_discipline: 2
-rubric_dependency_coherence: 2
-rubric_portability_honesty: 1
-rubric_usefulness_differentiation: 1
-rubric_adversarial_resilience: 1
-rubric_effectiveness_design: 1
-tags_use_case: ["research", "documentation"]
-tags_lifecycle: ["discovery"]
-tags_characteristic: ["source-driven", "evidence-first"]
-tags_authority: ["mutating", "external-side-effect"]
-tags_portability: ["medium"]
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 1
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["research", "documentation"]
+  lifecycle: ["discovery"]
+  characteristic: ["source-driven", "evidence-first"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
 package_file_count: 2
 package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
