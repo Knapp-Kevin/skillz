@@ -7,7 +7,7 @@ source_path: skills/inbox-triage/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: c04f5acceb565e0a93fe06216be3dd0468986167
+source_snapshot_revision: 27d7327d88251156436624f58327897a7aa585fd
 curated_at: 2026-08-30
 last_checked_at: 2026-10-29
 availability: in-repo

@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-29  
 **Source:** `Knapp-Kevin/skillz`, base main `4f2098346022705df74c908b43f10724a87f192a`  
-**Manifest revision:** `c04f5acceb565e0a93fe06216be3dd0468986167` (all five exact SKILL.md blobs resolve at this revision)  
+**Manifest revision:** `27d7327d88251156436624f58327897a7aa585fd` (all five exact SKILL.md blobs resolve at this revision)  
 **Scope:** five first-party manifests, five provenance companions, five individual verification companions, and the 44-entry consolidated first-party registry.  
 **Denominator delta:** 0. No source admission, retirement, catalog-count change, scanner execution, behavioral run, or repository runtime.
 
@@ -20,7 +20,7 @@ The external host must separately authorize frequency/timezone/expiry, bounded a
 | `inbox-triage` | `c265af7280a9819ae1fc80292ba24a77c2b28ccd` | `c1566f6ccfd15cb92094c256c7295234368c4b27` | 17/20 | VERIFIED static only; security unqualified; behavioral not-run |
 | `career-radar` | `a17f9b53b9ed22c2cd4f715effd73ec7585a316b` | `35e211d098f4497568beca3999ecf250a46183c5` | 18/20 | VERIFIED static only; security unqualified; behavioral not-run |
 | `daily-briefing` | `64ee4849a7a06860d8f6ddbd23ae5d42591ffee1` | `86353382996c2ce73b7981d341ef0bea93b7b6c2` | 17/20 | VERIFIED static only; security unqualified; behavioral not-run |
-| `repo-pulse` | `8d78a04e0993069bc3ecc283c756e420969a88d1` | `b39ba02179d19eba575f0000e6cf553e8eb97506` | 17/20 | VERIFIED static only; security unqualified; behavioral not-run |
+| `repo-pulse` | `8d78a04e0993069bc3ecc283c756e420969a88d1` | `91631c593f9923b86b19ec6a4c8e6f0643af7e78` | 17/20 | VERIFIED static only; security unqualified; behavioral not-run |
 
 ## Individual semantic review and limitations
 

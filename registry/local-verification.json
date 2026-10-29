@@ -1127,7 +1127,7 @@
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b39ba02179d19eba575f0000e6cf553e8eb97506",
+      "content_blob_sha": "91631c593f9923b86b19ec6a4c8e6f0643af7e78",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
