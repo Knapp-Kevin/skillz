@@ -2,7 +2,7 @@ schema_version: 1
 skill_name: to-spec
 source_id: mattpocock-skills
 source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-local_path: vendor/mattpocock-skills/skills/engineering/to-spec/SKILL.md
+local_path: skills/sources/mattpocock-skills/skills/engineering/to-spec/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 3f52599ae2a4347aee5a07432c2707518e691a7f
 characterized_at: 2026-08-29
