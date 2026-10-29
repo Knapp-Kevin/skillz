@@ -51,7 +51,7 @@ sources:
     inclusion: pinned-reference
     license: MIT
     pinned_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
-    rationale: First-party Microsoft ecosystem skill references; individual curation remains ongoing.
+    rationale: First-party Microsoft ecosystem reference corpus. Registered July snapshot is 186/186 current-standard reviewed; the later 208-package candidate has 102/102 changed/new exact-version static reviews but an explicit NO-GO pin-promotion decision. Neither static completion nor official provenance grants security or behavioral approval.
 
   - id: microsoft-azure-skills
     name: Microsoft Azure Skills
@@ -73,7 +73,7 @@ sources:
     inclusion: pinned-reference
     license: Apache-2.0
     pinned_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
-    rationale: First-party AWS service and agent-development reference corpus; source-level review remains under reconciliation/closure.
+    rationale: First-party AWS service and agent-development reference corpus. All 72 eligible pinned packages have current-standard exact-version provenance and semantic-review companions; package-security and behavioral eligibility remain separate decisions.
 
   - id: mattpocock-skills
     name: Matt Pocock Skills
