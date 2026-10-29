@@ -13,7 +13,7 @@ upstream_last_updated_at: 2026-05-17T05:22:26Z
 curated_at: 2026-08-28
 last_checked_at: 2026-08-28
 availability: vendored
-local_path: vendor/cline-skills/skills/review-team/SKILL.md
+local_path: skills/sources/cline-skills/skills/review-team/SKILL.md
 permission_tier: mutate-on-explicit-iterate
 portability: medium
 review_status: verified-structured
