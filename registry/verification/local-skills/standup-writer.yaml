@@ -3,9 +3,9 @@ skill_name: standup-writer
 source_id: local-skills
 local_path: "skills/standup-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a1cd8678794c90bbaf4f5f2a70d469576ec4b633
+content_blob_sha: b8473ac1ea68795d9563a21f335b5fd4bc169868
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -16,6 +16,6 @@ tags:
   use_case: [productivity, communication]
   lifecycle: [operations]
   characteristic: [evidence-first, synthesis, traceable, tool-routing]
-  authority: [generate-only]
+  authority: [generate-only, external-side-effect]
   portability: [medium]
-notes: "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."
+notes: "Evidence-only standup with disclosed source gaps; optional future calendar/task access, recurrence, posting and recipients require distinct approval. Behavioral and external package-security qualification are not-run."

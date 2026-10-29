@@ -748,10 +748,10 @@
       "skill_name": "learning-plan",
       "local_path": "skills/learning-plan/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a544118bd121b354aec330f9a565a338868dd53e",
+      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "planning",
@@ -768,13 +768,14 @@
           "human-review"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Strong real-source verification, demonstrable checkpoints, and explicit slip protocol; schedule creation remains approval-gated and separate."
+      "notes": "Source-verified curriculum and checkpoint/slip protocol; one-shot planning separated from explicitly approved recurring check-ins, private-source access and delivery. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "llama-pulse",
@@ -1000,10 +1001,10 @@
       "skill_name": "permissions-review",
       "local_path": "skills/permissions-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
+      "content_blob_sha": "6ad5d97a3e2f964c087a5477036087f007148d79",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "18/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "security",
@@ -1020,13 +1021,14 @@
           "human-review"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+      "notes": "Scoped least-privilege inventory avoids retrieving secret values; optional repeated sensitive metadata reads and report delivery require separate explicit authorization. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "perplexity-pulse",
@@ -1189,7 +1191,7 @@
       "skill_name": "standup-writer",
       "local_path": "skills/standup-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a1cd8678794c90bbaf4f5f2a70d469576ec4b633",
+      "content_blob_sha": "b8473ac1ea68795d9563a21f335b5fd4bc169868",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1208,13 +1210,14 @@
           "tool-routing"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."
+      "notes": "Evidence-only standup with disclosed source gaps; optional future calendar/task access, recurrence, posting and recipients require distinct approval. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "task-surface",
@@ -1287,7 +1290,7 @@
       "skill_name": "week-in-review",
       "local_path": "skills/week-in-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cd6671df6042d5a864850f6362d0947d61eb7357",
+      "content_blob_sha": "f2145e28256ebdfb72b035f1a405fd0e6586c5ba",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1306,13 +1309,14 @@
           "tool-routing"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."
+      "notes": "Evidence-backed retrospective distinguishes shipped from stalled; future private reads, scheduled delivery and carry-forward persistence are separately authorized. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "xai-pulse",

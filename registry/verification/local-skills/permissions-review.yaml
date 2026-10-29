@@ -3,19 +3,19 @@ skill_name: permissions-review
 source_id: local-skills
 local_path: "skills/permissions-review/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 60e1d546e713cfa5b289def082dd73e8b326f029
+content_blob_sha: 6ad5d97a3e2f964c087a5477036087f007148d79
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
-rubric_score: "18/20"
+rubric_score: "17/20"
 tags:
   use_case: [security, evaluation]
   lifecycle: [verification, maintenance]
   characteristic: [evidence-first, risk-aware, traceable, human-review]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
-notes: "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+notes: "Scoped least-privilege inventory avoids retrieving secret values; optional repeated sensitive metadata reads and report delivery require separate explicit authorization. Behavioral and external package-security qualification are not-run."

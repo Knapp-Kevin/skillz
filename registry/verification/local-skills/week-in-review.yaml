@@ -3,9 +3,9 @@ skill_name: week-in-review
 source_id: local-skills
 local_path: "skills/week-in-review/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: cd6671df6042d5a864850f6362d0947d61eb7357
+content_blob_sha: f2145e28256ebdfb72b035f1a405fd0e6586c5ba
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -16,6 +16,6 @@ tags:
   use_case: [productivity, planning]
   lifecycle: [operations]
   characteristic: [evidence-first, synthesis, traceable, tool-routing]
-  authority: [generate-only]
+  authority: [generate-only, external-side-effect]
   portability: [medium]
-notes: "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."
+notes: "Evidence-backed retrospective distinguishes shipped from stalled; future private reads, scheduled delivery and carry-forward persistence are separately authorized. Behavioral and external package-security qualification are not-run."

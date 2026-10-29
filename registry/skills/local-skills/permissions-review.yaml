@@ -7,15 +7,15 @@ source_path: skills/permissions-review/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 16110dd942aa2ad231c04d8a145297b0ef3de6a4
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/permissions-review/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+dependencies: "Authorized host configuration/log metadata and optional external scheduler; no mandatory Claude Code, secret-store access, or MCP distribution"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Scoped least-privilege inventory avoids retrieving secret values; optional repeated sensitive metadata reads and report delivery require separate explicit authorization."
