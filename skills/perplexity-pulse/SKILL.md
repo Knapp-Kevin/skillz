@@ -47,4 +47,4 @@ Vendor pulse for Perplexity — the answer-engine/search-AI lane (Sonar API, Com
 ## Notes
 
 - Official sources are authoritative; community commentary is signal, not truth.
-- Sonar-grounded search is a candidate backend for this repo's research series — flag API changes that affect that option.
+- Sonar-grounded search may be an option for an external host when user fit, access, current terms, and data-handling authorization permit it. This passive repository owns no research backend; flag API changes only as possible host integration implications.

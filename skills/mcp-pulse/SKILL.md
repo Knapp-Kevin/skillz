@@ -16,7 +16,7 @@ metadata:
 
 # MCP Pulse
 
-Topic pulse for the Model Context Protocol — the portability layer this repo's own contract depends on (external services go through MCP so connectors swap per platform). Spec drift here ripples into every agent surface: Claude Code and the bound platform's MCP integration and adapters.
+Topic pulse for the Model Context Protocol, a possible interoperability layer in external agent environments. This passive repository has no MCP runtime or connector requirement. Assess protocol drift only against the user's actual authorized host, integrations, and adapters.
 
 ## Execution Flow
 
@@ -33,7 +33,7 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs with github-pulse (which sweeps MCP repos broadly; this pulse goes narrow and deep — cross-reference, don't duplicate). Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
+- **Optional external host scheduling:** Only after explicit user authorization and only when the host supports it. A weekly cadence can complement github-pulse, but neither scheduling nor MCP integration is a repository requirement.
 
 ## Output Format
 

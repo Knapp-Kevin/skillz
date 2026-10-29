@@ -43,4 +43,4 @@ Vendor pulse for Google Gemini / DeepMind. Sources are data (`sources.json`), sy
 ## Notes
 
 - Official sources are authoritative; community commentary is signal, not truth.
-- Flag anything relevant to the Qor-logic gemini host variant (`.gemini/commands/` distribution).
+- When the user actually uses Gemini CLI, ADK, or another Gemini integration, flag changes affecting that authorized environment. Do not assume a Qor distribution, local command layout, or installed integration.
