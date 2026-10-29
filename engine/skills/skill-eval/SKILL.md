@@ -39,14 +39,16 @@ metadata:
    - failure handling;
    - provenance/licensing;
    - overlap and differentiated value.
-5. Read the instructions adversarially using representative semantic scenarios:
+5. Read the instructions adversarially using representative **static semantic** scenarios:
    - a normal positive trigger;
    - an obvious non-trigger;
    - the most important pressure/failure case.
+   These are reviewer interpretations, not observed host behavior.
 6. Separate whole-skill quality from component value. A skill unsuitable for unchanged reuse may still contain a useful mechanism, provided its constraints and provenance follow that mechanism.
-7. Assign a rubric score and decisive disposition using the repository's current quality vocabulary.
-8. Record material caveats honestly. Do not convert missing evidence into a positive assumption.
-9. Update the appropriate review/provenance records when authorized.
+7. Assign a rubric score and decisive disposition using `docs/skill-verification.md`. `verified` requires an exact-version structured semantic review with no hard fail and the rubric thresholds met. `validated` additionally requires **actual representative external host-executed behavioral/adversarial evidence bound to that exact package**. Static scenarios, plans, and written acceptance cases never qualify.
+8. Record behavioral validation as `not-run` when no qualifying execution evidence exists. Keep package-security state separate under `docs/security-scanning.md`; a semantic pass never implies a scanner pass or unchanged-use eligibility.
+9. Record material caveats, including missing evidence, honestly. Do not convert unknowns into a positive assumption.
+10. Update the appropriate exact-version review/provenance records and controlled tags only when authorized.
 
 ## Output
 
@@ -59,7 +61,9 @@ Quality state: verified | validated | unverified | stale | rejected | retired
 Authority: <classification>
 Portability: <classification>
 Dependencies/license: <material notes>
-Semantic scenarios: <positive / non-trigger / pressure findings>
+Semantic scenarios: <positive / non-trigger / pressure findings; static interpretation only>
+Behavioral validation: <not-run / exact external executed evidence reference>
+Package security: <separate exact-package state/evidence or not-run>
 Differentiated value: <what it adds or duplicates>
 Component value: <useful mechanisms, if any>
 Disposition: <adopt unchanged / adapt / compose / reference-only / reject / retire>
@@ -73,3 +77,4 @@ Material uncertainty: <only unresolved facts>
 - Do not treat source popularity or official branding as proof of individual skill quality.
 - Do not discard skill-owned supporting components merely because they are executable or non-Markdown; evaluate them as part of the skill package.
 - Do not promote an artifact beyond the evidence actually reviewed.
+- Do not call a static scenario review `validated`, or inherit security approval from semantic `verified`.
