@@ -3,9 +3,9 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 23e62f52dbfdf657106c9f8212a3be3ce312849f
+content_blob_sha: d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-26
+reviewed_at: 2026-10-28
 verification_status: verified
 verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
@@ -25,3 +25,5 @@ passive_runner_remediation: Repository script invocation replaced by authorized 
 external_reference_review: Host/repository paths were clarified as optional externally authorized evidence, not bundled package components. Previous static scan had zero active findings but incomplete link coverage. New exact revision has not been re-scanned; behavioral validation not-run.
 
 review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
+
+review_note_2026_10_28_portability: "Exact-version static review of corrected external-host assumptions; no repository-owned MCP runtime, Qor distribution, or Sonar backend. Score and semantic VERIFIED state retained; package-security and behavioral validation not-run. See docs/reviews/2026-10-28-pr416-three-pulse-portability-corrections.md."

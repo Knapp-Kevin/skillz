@@ -3,9 +3,9 @@ skill_name: perplexity-pulse
 source_id: local-skills
 local_path: "skills/perplexity-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4426e6744badf1f77c552fb50aa807a464b8ab8b
+content_blob_sha: f831906d8de3835e92eabae208566bb55dcc22be
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-12
+reviewed_at: 2026-10-28
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -21,3 +21,5 @@ tags:
 notes: "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
 
 passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
+
+review_note_2026_10_28_portability: "Exact-version static review of corrected external-host assumptions; no repository-owned MCP runtime, Qor distribution, or Sonar backend. Score and semantic VERIFIED state retained; package-security and behavioral validation not-run. See docs/reviews/2026-10-28-pr416-three-pulse-portability-corrections.md."

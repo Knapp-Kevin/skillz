@@ -7,7 +7,7 @@ source_path: skills/mcp-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 1ae6f0698ca1b970dfea51683fedd34977d9548f
+source_snapshot_revision: 17edbdf0559c74eb1fd03013578258a96c96c3ea
 curated_at: 2026-08-30
 last_checked_at: 2026-10-28
 availability: in-repo

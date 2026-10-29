@@ -464,7 +464,7 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "36b460f40471134da8e13c16d707b6d17f3004a1",
+      "content_blob_sha": "1b6a1d2d4bca784a6bcaf75bd056b189c65f2ced",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -489,8 +489,8 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
-      "reviewed_at": "2026-10-12"
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "github-pulse",
@@ -820,7 +820,7 @@
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "23e62f52dbfdf657106c9f8212a3be3ce312849f",
+      "content_blob_sha": "d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -847,8 +847,8 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
-      "reviewed_at": "2026-10-12"
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "mcp-vetting",
@@ -1045,7 +1045,7 @@
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4426e6744badf1f77c552fb50aa807a464b8ab8b",
+      "content_blob_sha": "f831906d8de3835e92eabae208566bb55dcc22be",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1070,8 +1070,8 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
-      "reviewed_at": "2026-10-12"
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "qwen-pulse",
