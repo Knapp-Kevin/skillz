@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "pr"
+candidate_key: "pr"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "00b896d811adffad747c7ca30078d909d60c7f93"
+skill_md_blob_sha: "84dd4fb2f068e9f6282690235d20dd505b418119"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "verified"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "17/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 2
+  failure_handling: 1
+  evidence_discipline: 1
+  dependency_coherence: 2
+  portability_honesty: 2
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: ["documentation", "code-review"]
+  lifecycle: ["verification", "release"]
+  characteristic: ["evidence-first", "human-review", "traceable"]
+  authority: ["generate-only"]
+  portability: ["high"]
+package_file_count: 3
+package_files_inspected: ["CREDITS.md", "SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: false
+disposition: "VERIFIED_SEMANTIC_ONLY_CANDIDATE"
+notes: "VERIFIED semantic only. Differentiated evidence/merge-danger structure; use only observed before/after evidence, preserve Humanlayer credit and license notices when copying. No operational write required by this procedure; however pseudocode illustrations must not be represented as executed tests or actual screenshots. Do not paste private diffs or unredacted screenshots outside their approved audience. No external package-security scan or representative behavioral/adversarial test was executed."

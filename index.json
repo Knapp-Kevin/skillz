@@ -278,5 +278,31 @@
       "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
       "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
     }
+  },
+  "mattpocock_candidate_freshness": {
+    "as_of": "2026-10-29",
+    "source_id": "mattpocock-skills",
+    "registered_pin": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+    "candidate_revision": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+    "pinned_eligible_denominator": 29,
+    "candidate_physical_manifests": 38,
+    "candidate_excluded_in_progress": 7,
+    "candidate_eligible_denominator": 31,
+    "exact_manifest_carry_forwards": 12,
+    "changed_existing": 16,
+    "newly_eligible": 3,
+    "removed_from_pinned": 1,
+    "changed_new_frontier": 19,
+    "candidate_reviewed_this_tranche": 10,
+    "candidate_verified_semantic_only": 3,
+    "candidate_rejected_unchanged": 7,
+    "candidate_static_gaps": 9,
+    "removed_path_disposition": "pending",
+    "source_pin_promotion": "NO-GO",
+    "candidate_package_security": "not-run",
+    "candidate_behavioral_validation": "not-run",
+    "registered_pin_inventory_unchanged": true,
+    "candidate_companions_excluded_from_published_826_count": true,
+    "receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md"
   }
 }

@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "domain-modeling"
+candidate_key: "domain-modeling"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "ea30ee454ba264543dbe40737973b1a5afb9f0e6"
+skill_md_blob_sha: "a4438c6879c517d1a08e2b5fbca049b632688dfe"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "15/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 2
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 1
+tags:
+  use_case: ["domain-modeling", "architecture"]
+  lifecycle: ["design"]
+  characteristic: ["contract-first", "human-review", "traceable"]
+  authority: ["mutating"]
+  portability: ["high"]
+package_file_count: 4
+package_files_inspected: ["ADR-FORMAT.md", "GLOSSARY-FORMAT.md", "SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_EXTRACT_OR_REFERENCE"
+notes: "REJECT unchanged under authority hard-fail. Preserve precise term/scenario/ADR threshold as an ADAPT or CHECKLIST candidate. Instructs immediate repository file creation/edits on a discussion trigger without separately confirming write scope. Repo content and domain decisions may be sensitive; write only within an approved repository and audience. No external package-security scan or representative behavioral/adversarial test was executed."

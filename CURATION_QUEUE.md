@@ -42,6 +42,10 @@ Current-main authority debt spans **10 distinct first-party manifests across thr
 
 Issue **#402** owns the bounded backfill introduced by the SkillSpector integration. Existing `verified` / `validated` records remain valid semantic evidence but do not inherit a security pass. Backfill priority is first-party, then semantically eligible third-party packages with executable components or consequential authority, then the remaining unchanged-use candidate surface. Security evidence is persisted under `registry/security/` and must bind to the exact package and exact scanner revision.
 
+## Matt Pocock candidate freshness (unadmitted)
+
+**Matt Pocock candidate freshness (2026-10-29).** Registered pin remains **29/29** at `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`. Upstream candidate `a496f5513d4a4cf889bc48e189e579f4b0bdf6aa` has **31 structurally eligible** manifests: 12 exact-manifest carry-forwards, 16 changed-existing, 3 newly eligible, and 1 removed from the pinned eligible set. The changed/new frontier is **10/19 candidate-only exact-version static reviews** (3 VERIFIED semantic only, 7 REJECT unchanged), with **9** remaining and a removed-path disposition pending. Candidate source-pin promotion is **NO-GO**; no security/behavioral acceptance or inventory change. [Candidate macro review](docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md).
+
 ## Admitted-source curation
 
 | Source family | Pin / scope | Reviewed | Gaps | State |
