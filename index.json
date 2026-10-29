@@ -9,13 +9,13 @@
     "historical_candidate": "registry/security/first-party-candidate-2026-10-10.json",
     "candidate_exact_tree_matches_main": 23,
     "candidate_nonmatching_passes_nontransferable": 21,
-    "unaffected_historical_matching_passes": 10,
+    "unaffected_historical_matching_passes": 8,
     "new_scans_executed": 0,
     "behavioral_validation_executed": 0,
     "receipt": "docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md",
-    "caveat": "Historical evidence only. Pending disjoint drafts #489 (29 changed packages, 8 formerly passing) and #492 (5 changed packages, all formerly passing) affect 34 final package trees. 13 historical matching-pass packages would change; 10 would remain unaffected. All changed final trees require new external security and behavioral acceptance; neither draft is merged.",
+    "caveat": "Historical evidence only. Three disjoint unmerged drafts #489 (29 changed packages, 8 formerly passing), #492 (5 changed packages, all formerly passing), and #496 (2 changed packages, both formerly passing) affect 36 final package trees. 15 historical matching-pass package identities would change; 8 would remain unaffected. All changed final trees require new pinned external security and executed adversarial acceptance; no new scanner or behavioral result is claimed.",
     "pending_integrated_repair_pr": 489,
-    "pending_distinct_final_package_scans": 34,
+    "pending_distinct_final_package_scans": 36,
     "pending_repair_original_prs_closed_superseded": [
       416,
       480,
@@ -26,9 +26,12 @@
     "pending_separate_sensitive_data_pr": 492,
     "pending_final_package_scan_breakdown": {
       "489": 29,
-      "492": 5
+      "492": 5,
+      "496": 2
     },
-    "pending_sensitive_data_review": "docs/reviews/2026-10-29-first-party-sensitive-evidence-five-static.md"
+    "pending_sensitive_data_review": "docs/reviews/2026-10-29-first-party-sensitive-evidence-five-static.md",
+    "pending_separate_scope_authority_pr": 496,
+    "pending_scope_authority_review": "docs/reviews/2026-10-29-ten-unchanged-first-party-authority-macro.md"
   },
   "counts": {
     "first_party_skills": 44,
@@ -36,7 +39,7 @@
     "first_party_historical_exact_tree_security_passed": 23,
     "first_party_historical_exact_tree_security_incomplete": 20,
     "first_party_historical_exact_tree_security_failed": 1,
-    "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 13,
+    "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
     "persisted_third_party_exact_version_reviews": 826,
