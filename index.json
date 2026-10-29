@@ -33,6 +33,22 @@
     "pending_separate_scope_authority_pr": 496,
     "pending_scope_authority_review": "docs/reviews/2026-10-29-ten-unchanged-first-party-authority-macro.md"
   },
+  "cloudflare_authority_reclassification": {
+    "as_of": "2026-10-29",
+    "source_id": "cloudflare-skills",
+    "source_pin": "f96bff754e428838818017f75817f0f9428acd48",
+    "eligible_denominator": 13,
+    "exact_manifest_identities_checked": 13,
+    "changed_static_dispositions": 3,
+    "verified_semantic_only": 8,
+    "rejected_unchanged": 5,
+    "static_gaps": 0,
+    "changed_skills": ["cloudflare-email-service", "cloudflare-one", "cloudflare-one-migrations"],
+    "source_pin_changed": false,
+    "new_security_scans": 0,
+    "behavioral_validation_executed": 0,
+    "receipt": "docs/reviews/2026-10-29-cloudflare-authority-three-reclassification.md"
+  },
   "vercel_deploy_authority_reclassification": {
     "as_of": "2026-10-29",
     "source_id": "vercel-agent-skills",
@@ -93,6 +109,8 @@
     "matt_pocock_skills_eligible_denominator": 29,
     "cloudflare_skills_current_standard_companions": 13,
     "cloudflare_skills_eligible_denominator": 13,
+    "cloudflare_skills_verified_semantic_only": 8,
+    "cloudflare_skills_rejected_unchanged": 5,
     "cloudflare_skills_current_standard_gaps": 0,
     "addy_osmani_agent_skills_current_standard_companions": 24,
     "addy_osmani_agent_skills_eligible_denominator": 24,

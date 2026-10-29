@@ -11,13 +11,13 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 upstream_revision: e638d8c1be5f66f5e056c82b2e21ffa25db95e86
 upstream_last_updated_at: 2026-06-14T19:33:46Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-29
 availability: vendored
 local_path: skills/sources/cloudflare-skills/skills/cloudflare-one/SKILL.md
 permission_tier: mutate-on-explicit-user-request
 portability: low
-review_status: verified-structured
+review_status: rejected-unchanged
 dependency_status: external-current-docs-required
 dependencies: Current Cloudflare One docs/API schemas; target account/context for inspection or changes; identity, network, device, and rollout context relevant to the requested task
 import_eligibility: already-vendored
-rationale: Comprehensive Cloudflare One design, configuration, and review workflow that retrieves current product semantics, inspects existing state before changes, gathers rollout context, and stages risky policy changes to pilots with explicit validation and rollback considerations.
+rationale: REJECT unchanged at the pinned version. The workflow says to inspect sensitive account identity, Access, Gateway, tunnel, DNS, DLP and device-policy state whenever account access is available, without explicit bounded read authority. It also permits staging pilot security, routing and inspection policy changes without separate action-specific approval; approval of a wider rollout is not approval of the initial pilot. Preserve current-doc retrieval, topology mapping, blast-radius analysis and rollback-first planning as ADAPT/EXTRACT/CHECKLIST prior art.
