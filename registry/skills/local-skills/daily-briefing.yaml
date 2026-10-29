@@ -7,15 +7,15 @@ source_path: skills/daily-briefing/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 27d7327d88251156436624f58327897a7aa585fd
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/daily-briefing/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+dependencies: "Authorized external host calendar/mail and optional task/memory/local Git context; partial-coverage fallback; optional approved host scheduling"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Action-first synthesis with least-privilege mail/calendar/workspace access, explicit partial coverage, optional host integrations and separately authorized recurrence/delivery."

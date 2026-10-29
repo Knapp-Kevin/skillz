@@ -7,15 +7,15 @@ source_path: skills/decision-log/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: d410f8bc178ab0f82b5a393c7f64d37dc1d884b0
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/decision-log/SKILL.md
 permission_tier: mutating
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
+dependencies: "Authorized host file access to user-approved decision log; optional explicitly approved mail/calendar connector for context."
 import_eligibility: eligible-standalone
-rationale: "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+rationale: "Exact-path and exact-text approval before append, anti-fabrication and redaction of sensitive details; 18/20 static review, external security not-run."

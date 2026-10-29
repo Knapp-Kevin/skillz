@@ -7,15 +7,15 @@ source_path: skills/smallbiz-ops/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 27d7327d88251156436624f58327897a7aa585fd
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/smallbiz-ops/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+dependencies: "Authorized external host web fetch/search; optional approved portfolio context and separately authorized host scheduling"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Bounded public site/listing comparison, source-trust and no-publish rules; optional recurrence now separately authorizes scope, schedule, delivery and retention. External listing quality remains uneven."

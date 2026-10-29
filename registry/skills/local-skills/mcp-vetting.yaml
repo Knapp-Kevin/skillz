@@ -7,15 +7,15 @@ source_path: skills/mcp-vetting/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 4b7adbad89a9db5397012363db63df57e1cc287d
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/mcp-vetting/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+dependencies: "Authorized external host for static source inspection; docs/skill-verification.md, registry/taxonomy.yaml and docs/candidate-intake.md as passive policy references; no repository runtime"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Static pre-connection review now uses current controlled authority categories and issue-first intake, requires enforceable action/data boundaries, and does not inherit historical trust scores or permission tiers; no external security or behavioral pass."

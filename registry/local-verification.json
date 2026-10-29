@@ -3,7 +3,7 @@
   "source_id": "local-skills",
   "source_class": "first-party",
   "license": "MIT",
-  "reviewed_at": "2026-09-08",
+  "reviewed_at": "2026-10-29",
   "verification_basis": "individual-structured-static-review",
   "rubric": "docs/skill-verification.md",
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
@@ -108,7 +108,7 @@
       "skill_name": "career-radar",
       "local_path": "skills/career-radar/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
+      "content_blob_sha": "35e211d098f4497568beca3999ecf250a46183c5",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -128,13 +128,14 @@
           "evidence-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+      "notes": "Dated public market scan with approved profile scope, minimized search disclosure, untrusted posting boundaries, no automatic profile persistence and separate recurrence approval. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "claude-pulse",
@@ -206,7 +207,7 @@
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
+      "content_blob_sha": "86353382996c2ce73b7981d341ef0bea93b7b6c2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -225,22 +226,23 @@
           "evidence-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+      "notes": "Action-first synthesis with least-privilege mail/calendar/workspace access, explicit partial coverage, optional host integrations and separately authorized recurrence/delivery. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "decision-log",
       "local_path": "skills/decision-log/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "56e5c574c295546c9e654a9e6a14a9814136f2f4",
+      "content_blob_sha": "3e1ceeb3a20e2d933e5ade631e82d54dd582a44b",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "decision-support",
@@ -263,7 +265,7 @@
           "medium"
         ]
       },
-      "notes": "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+      "notes": "Exact-path and text approval for append; optional private mail/calendar reads require source-specific consent; security scan not-run."
     },
     {
       "skill_name": "deck-outline",
@@ -335,7 +337,7 @@
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
+      "content_blob_sha": "1fc968fb94bfcd3618fda085b08cf0cd21d4c23e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -360,16 +362,17 @@
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
+      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "devlog-draft",
       "local_path": "skills/devlog-draft/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "073f18ba2c2f7de21015cd072741c395335e9f2e",
+      "content_blob_sha": "e7f6456fafbe4b432270696d64e3685a8ca8725a",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "writing",
@@ -392,7 +395,7 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+      "notes": "Authorized repository/window evidence with confidential-data redaction and draft-only publication; security scan not-run."
     },
     {
       "skill_name": "fact-check",
@@ -463,7 +466,7 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
+      "content_blob_sha": "69b1b4dd1ba164308f755629510b2043eb358e61",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -488,13 +491,14 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "content_blob_sha": "587313bab488dc27411f9e52c1c43516dc8f26f4",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -519,13 +523,14 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
+      "content_blob_sha": "7c7f92832f42e7cfdafe36da087b1e634ab060b6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -550,13 +555,14 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization."
+      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "content_blob_sha": "0709d2f3392b5e63f1e91b98e805cb0e13a95d14",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -583,16 +589,17 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "handoff-writer",
       "local_path": "skills/handoff-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
+      "content_blob_sha": "b60a41bc26348370eb61a60b9c1287f29044e92c",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "19/20",
       "tags": {
         "use_case": [
           "handoff",
@@ -616,13 +623,13 @@
           "high"
         ]
       },
-      "notes": "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+      "notes": "Zero-context handoff with recipient-scoped pointers, no secret prefixes and separate sending approval; security scan not-run."
     },
     {
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+      "content_blob_sha": "38387fea604b6eb7d9e81b1e449b36f8ca1fc30c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -647,13 +654,14 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
+      "content_blob_sha": "c1566f6ccfd15cb92094c256c7295234368c4b27",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -673,19 +681,19 @@
         ],
         "authority": [
           "read-only",
-          "generate-only"
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+      "notes": "Four-pile private-mail classification and inline draft-only replies; authorized Gmail read scope, optional host capability, source-trust and explicit recurrence consent. No send/archive authority. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "content_blob_sha": "6c676b7e9e45e82504d84fa4bbd56682830660b8",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -711,13 +719,14 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "content_blob_sha": "eefd3337a2875fef8251a4478b391a75318fa694",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -742,16 +751,17 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
+      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "learning-plan",
       "local_path": "skills/learning-plan/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a544118bd121b354aec330f9a565a338868dd53e",
+      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "planning",
@@ -768,19 +778,20 @@
           "human-review"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Strong real-source verification, demonstrable checkpoints, and explicit slip protocol; schedule creation remains approval-gated and separate."
+      "notes": "Source-verified curriculum and checkpoint/slip protocol; one-shot planning separated from explicitly approved recurring check-ins, private-source access and delivery. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
+      "content_blob_sha": "3f0bd40adde01d1855b557c0f62f5e0eb28b0a7e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -805,13 +816,14 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "content_blob_sha": "d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -838,13 +850,14 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "mcp-vetting",
       "local_path": "skills/mcp-vetting/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -870,13 +883,13 @@
           "high"
         ]
       },
-      "notes": "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+      "notes": "Exact-version static pre-connection review at 19/20; current authority taxonomy, no installation, explicit private-data/credential controls and independent external security/behavioral gates; no observed behavioral evidence."
     },
     {
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
+      "content_blob_sha": "7d0404768a982758ce3bbbf80aadb561b41957e2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -901,13 +914,14 @@
           "medium"
         ]
       },
-      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
+      "content_blob_sha": "23bbc1a8f7f8ecd5af2db7d5cf5ebea3488640ce",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -932,13 +946,14 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
+      "content_blob_sha": "7344d2e431afad9e0fde6e179ed14517ec00b8a0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -963,7 +978,8 @@
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "paper-digest",
@@ -1000,10 +1016,10 @@
       "skill_name": "permissions-review",
       "local_path": "skills/permissions-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
+      "content_blob_sha": "dcaf7ff96c832c69bb5be1c7cd8f4c3ed418b707",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "18/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "security",
@@ -1020,19 +1036,20 @@
           "human-review"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+      "notes": "Exact-version static correction: current controlled authority categories and separate consequential risks replace obsolete permission tiers; source text is untrusted evidence, secret values are not retrieved, recurrence and delivery need separate approval. Behavioral and package-security evidence not-run."
     },
     {
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
+      "content_blob_sha": "38eeae61d87c292aeffc4f32bd038b7862d9b6b6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1057,13 +1074,14 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
+      "content_blob_sha": "f56496f4ca0bcd7969d5e5d3fe308d8a45ba251e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1088,7 +1106,8 @@
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
+      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "repo-doctor",
@@ -1125,7 +1144,7 @@
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8d78a04e0993069bc3ecc283c756e420969a88d1",
+      "content_blob_sha": "91631c593f9923b86b19ec6a4c8e6f0643af7e78",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1145,19 +1164,20 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."
+      "notes": "Bounded GitHub/local Git read-only digest, no implicit account-wide enumeration, optional connector/CLI, incomplete-coverage disclosure and separately authorized recurrence. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "smallbiz-ops",
       "local_path": "skills/smallbiz-ops/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e33f99d0585d486a6bb3243aae9402bfc2cac0ec",
+      "content_blob_sha": "83439d9422c5a7bdc57f0ad15ebf4378faf43265",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1177,19 +1197,20 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+      "notes": "Bounded public site/listing comparison, source-trust and no-publish rules; optional recurrence now separately authorizes scope, schedule, delivery and retention. External listing quality remains uneven. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "standup-writer",
       "local_path": "skills/standup-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a1cd8678794c90bbaf4f5f2a70d469576ec4b633",
+      "content_blob_sha": "b8473ac1ea68795d9563a21f335b5fd4bc169868",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1208,13 +1229,14 @@
           "tool-routing"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."
+      "notes": "Evidence-only standup with disclosed source gaps; optional future calendar/task access, recurrence, posting and recipients require distinct approval. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "task-surface",
@@ -1287,7 +1309,7 @@
       "skill_name": "week-in-review",
       "local_path": "skills/week-in-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cd6671df6042d5a864850f6362d0947d61eb7357",
+      "content_blob_sha": "f2145e28256ebdfb72b035f1a405fd0e6586c5ba",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1306,19 +1328,20 @@
           "tool-routing"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."
+      "notes": "Evidence-backed retrospective distinguishes shipped from stalled; future private reads, scheduled delivery and carry-forward persistence are separately authorized. Behavioral and external package-security qualification are not-run."
     },
     {
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
+      "content_blob_sha": "ad904ae0b35fd605780c0ffaa856a2da3606394c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1343,7 +1366,8 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
+      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "automation-receipts",
