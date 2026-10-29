@@ -9,20 +9,26 @@
     "historical_candidate": "registry/security/first-party-candidate-2026-10-10.json",
     "candidate_exact_tree_matches_main": 23,
     "candidate_nonmatching_passes_nontransferable": 21,
-    "unaffected_historical_matching_passes": 15,
+    "unaffected_historical_matching_passes": 10,
     "new_scans_executed": 0,
     "behavioral_validation_executed": 0,
     "receipt": "docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md",
-    "caveat": "Historical evidence only; eight formerly matching-pass packages have changed final manifests in unmerged draft PR #489 (source PRs #416/#480/#482/#485 closed superseded), requiring fresh exact-package scans.",
+    "caveat": "Historical evidence only. Pending disjoint drafts #489 (29 changed packages, 8 formerly passing) and #492 (5 changed packages, all formerly passing) affect 34 final package trees. 13 historical matching-pass packages would change; 10 would remain unaffected. All changed final trees require new external security and behavioral acceptance; neither draft is merged.",
     "pending_integrated_repair_pr": 489,
-    "pending_distinct_final_package_scans": 29,
+    "pending_distinct_final_package_scans": 34,
     "pending_repair_original_prs_closed_superseded": [
       416,
       480,
       482,
       485
     ],
-    "pending_integration_exact_tree_matrix": "docs/reviews/2026-10-29-integrated-29-first-party-final-package-frontier.md"
+    "pending_integration_exact_tree_matrix": "docs/reviews/2026-10-29-integrated-29-first-party-final-package-frontier.md",
+    "pending_separate_sensitive_data_pr": 492,
+    "pending_final_package_scan_breakdown": {
+      "489": 29,
+      "492": 5
+    },
+    "pending_sensitive_data_review": "docs/reviews/2026-10-29-first-party-sensitive-evidence-five-static.md"
   },
   "counts": {
     "first_party_skills": 44,
@@ -30,7 +36,7 @@
     "first_party_historical_exact_tree_security_passed": 23,
     "first_party_historical_exact_tree_security_incomplete": 20,
     "first_party_historical_exact_tree_security_failed": 1,
-    "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 8,
+    "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 13,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
     "persisted_third_party_exact_version_reviews": 826,
