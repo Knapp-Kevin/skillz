@@ -7,7 +7,7 @@ source_path: skills/perplexity-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 17edbdf0559c74eb1fd03013578258a96c96c3ea
+source_snapshot_revision: 014b61b9da005d4665b391c45258f911faf39c51
 curated_at: 2026-08-30
 last_checked_at: 2026-10-28
 availability: in-repo

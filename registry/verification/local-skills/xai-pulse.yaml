@@ -3,9 +3,9 @@ skill_name: xai-pulse
 source_id: local-skills
 local_path: "skills/xai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: fd78686d64ff02b2e730b3839ff7c980c275b7ed
+content_blob_sha: ad904ae0b35fd605780c0ffaa856a2da3606394c
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-12
+reviewed_at: 2026-10-28
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -18,6 +18,6 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
+notes: "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. External-source prompt injection is explicitly refused; consequential claims require dated primary evidence and private data requires separate authorization."
 
 passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.

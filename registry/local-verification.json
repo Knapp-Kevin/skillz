@@ -3,7 +3,7 @@
   "source_id": "local-skills",
   "source_class": "first-party",
   "license": "MIT",
-  "reviewed_at": "2026-10-26",
+  "reviewed_at": "2026-10-28",
   "verification_basis": "individual-structured-static-review",
   "rubric": "docs/skill-verification.md",
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
@@ -335,7 +335,7 @@
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "2aadd8f5d190e3b4ae91cf5877a09ef25ee33304",
+      "content_blob_sha": "1fc968fb94bfcd3618fda085b08cf0cd21d4c23e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -360,7 +360,7 @@
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -464,7 +464,7 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1b6a1d2d4bca784a6bcaf75bd056b189c65f2ced",
+      "content_blob_sha": "69b1b4dd1ba164308f755629510b2043eb358e61",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -489,7 +489,7 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-28"
     },
     {
@@ -528,7 +528,7 @@
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5a0414e6d8bda0433d5fbedbde734b8369a25f6c",
+      "content_blob_sha": "7c7f92832f42e7cfdafe36da087b1e634ab060b6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -553,7 +553,7 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -724,7 +724,7 @@
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4c953878c4c02183d819e94a89462c151bef2f44",
+      "content_blob_sha": "eefd3337a2875fef8251a4478b391a75318fa694",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -749,7 +749,7 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -788,7 +788,7 @@
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "818a0d1d9a2225a6ae311eba6b4f19955558a1af",
+      "content_blob_sha": "3f0bd40adde01d1855b557c0f62f5e0eb28b0a7e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -813,7 +813,7 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -918,7 +918,7 @@
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "81e2d64d29af4fa3ac1fc6aeeda38166ec5bed11",
+      "content_blob_sha": "23bbc1a8f7f8ecd5af2db7d5cf5ebea3488640ce",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -943,14 +943,14 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cfb234de2003eb1024b8e4d7dd7c3172c80e1718",
+      "content_blob_sha": "7344d2e431afad9e0fde6e179ed14517ec00b8a0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -975,7 +975,7 @@
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -1045,7 +1045,7 @@
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "f831906d8de3835e92eabae208566bb55dcc22be",
+      "content_blob_sha": "38eeae61d87c292aeffc4f32bd038b7862d9b6b6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1070,14 +1070,14 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9b78f2c0a4dc3197eb61ec8bafbe8141d15138ad",
+      "content_blob_sha": "f56496f4ca0bcd7969d5e5d3fe308d8a45ba251e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1102,7 +1102,7 @@
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -1333,7 +1333,7 @@
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fd78686d64ff02b2e730b3839ff7c980c275b7ed",
+      "content_blob_sha": "ad904ae0b35fd605780c0ffaa856a2da3606394c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1358,7 +1358,7 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass.",
+      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
       "reviewed_at": "2026-10-12"
     },
     {

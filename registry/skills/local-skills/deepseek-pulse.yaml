@@ -7,7 +7,7 @@ source_path: skills/deepseek-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 1ae6f0698ca1b970dfea51683fedd34977d9548f
+source_snapshot_revision: 014b61b9da005d4665b391c45258f911faf39c51
 curated_at: 2026-08-30
 last_checked_at: 2026-10-28
 availability: in-repo
