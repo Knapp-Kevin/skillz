@@ -22,7 +22,7 @@ skill_md_blob_sha: "73d36c23958bd04423ba3ded1c90ff0d0b858b72"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Creates branches, merges code, changes PR readiness and closes tickets without an action-specific approval gate or bounded concurrency/cost policy."
+authority_profile: "Creates branches, merges code, changes PR readiness and closes tickets without an action-specific approval gate or bounded concurrency/cost policy."
 portability: "low"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

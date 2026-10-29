@@ -22,7 +22,7 @@ skill_md_blob_sha: "84dd4fb2f068e9f6282690235d20dd505b418119"
 package_file_count: 3
 package_file_paths: ["CREDITS.md", "SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "No operational write required by this procedure; however pseudocode illustrations must not be represented as executed tests or actual screenshots."
+authority_profile: "No operational write required by this procedure; however pseudocode illustrations must not be represented as executed tests or actual screenshots."
 portability: "high"
 review_status: "verified-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

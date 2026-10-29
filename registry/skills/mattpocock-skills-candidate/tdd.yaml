@@ -22,7 +22,7 @@ skill_md_blob_sha: "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985"
 package_file_count: 4
 package_file_paths: ["SKILL.md", "agents/openai.yaml", "mocking.md", "tests.md"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Requires user confirmation of test seams before writing tests; no unconditional external side-effect action."
+authority_profile: "Requires user confirmation of test seams before writing tests; no unconditional external side-effect action."
 portability: "high"
 review_status: "verified-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

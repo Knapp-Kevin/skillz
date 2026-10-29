@@ -22,7 +22,7 @@ skill_md_blob_sha: "bd49e472984c7b99aac40286fdae749bb955a842"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Unconditionally commits to current branch without checking repository/branch write authorization or ownership."
+authority_profile: "Unconditionally commits to current branch without checking repository/branch write authorization or ownership."
 portability: "medium"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

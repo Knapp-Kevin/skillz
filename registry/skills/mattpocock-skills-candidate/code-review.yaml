@@ -22,7 +22,7 @@ skill_md_blob_sha: "83183e0ad36fd0eef25d37c7e483284b7e34c1f0"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Read-only analysis with clear fixed point and skip behavior for missing spec; host-specific Git and subagent assumptions reduce portability."
+authority_profile: "Read-only analysis with clear fixed point and skip behavior for missing spec; host-specific Git and subagent assumptions reduce portability."
 portability: "medium"
 review_status: "verified-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

@@ -22,7 +22,7 @@ skill_md_blob_sha: "a4438c6879c517d1a08e2b5fbca049b632688dfe"
 package_file_count: 4
 package_file_paths: ["ADR-FORMAT.md", "GLOSSARY-FORMAT.md", "SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Instructs immediate repository file creation/edits on a discussion trigger without separately confirming write scope."
+authority_profile: "Instructs immediate repository file creation/edits on a discussion trigger without separately confirming write scope."
 portability: "high"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

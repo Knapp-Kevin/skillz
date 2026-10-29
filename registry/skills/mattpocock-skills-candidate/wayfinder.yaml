@@ -22,7 +22,7 @@ skill_md_blob_sha: "975d6bf9c0a49d18a651f3335e0b4dcf8650fe31"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Candidate instructs tracker issue creation, assignment, closure, research branch pushes and AFK provisioning without action-specific authorization."
+authority_profile: "Candidate instructs tracker issue creation, assignment, closure, research branch pushes and AFK provisioning without action-specific authorization."
 portability: "medium"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

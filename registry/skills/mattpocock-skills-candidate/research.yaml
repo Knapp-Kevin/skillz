@@ -22,7 +22,7 @@ skill_md_blob_sha: "ffc9eb89849cc4cf74962ce93d786ffd17c6a5dc"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Automatically launches background agent and writes Markdown in repo with no explicit destination/write approval."
+authority_profile: "Automatically launches background agent and writes Markdown in repo with no explicit destination/write approval."
 portability: "medium"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

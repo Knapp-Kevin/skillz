@@ -22,7 +22,7 @@ skill_md_blob_sha: "12149acf2dd23b4514dec57b04a6293eaa1352fa"
 package_file_count: 2
 package_file_paths: ["SKILL.md", "agents/openai.yaml"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Unscoped private transcript/log access is a hard failure; suggestions to add CI/hooks must remain proposals and cannot override target-repository governance."
+authority_profile: "Unscoped private transcript/log access is a hard failure; suggestions to add CI/hooks must remain proposals and cannot override target-repository governance."
 portability: "medium"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"

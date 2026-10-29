@@ -22,7 +22,7 @@ skill_md_blob_sha: "d039541ddd1c46e6ddbd662fe99d49b686fc5e12"
 package_file_count: 3
 package_file_paths: ["SKILL.md", "agents/openai.yaml", "scripts/hitl-loop.template.sh"]
 shared_dependency_files_inspected: ["LICENSE"]
-permission_tier: "Executable curl/replay/stress loops and instrumentation can affect live traffic or sensitive data without environment/side-effect authorization."
+authority_profile: "Executable curl/replay/stress loops and instrumentation can affect live traffic or sensitive data without environment/side-effect authorization."
 portability: "medium"
 review_status: "rejected-unchanged-structured-static-candidate"
 dependency_status: "complete-bundled-package-static-inspected"
