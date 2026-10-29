@@ -29,9 +29,13 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 3. **Optional operator-workspace review (read-only).** Only when the user has authorized access to a separate governance-instrumented workspace, inspect available governance ledgers and locally recorded process-drift summaries there. These files are external workspace evidence, never required components of this skill package. If no such workspace is authorized and accessible, omit this section. Do not write to governance artifacts.
 4. **Synthesize.** Deadlines and binding changes first; standards drafts; security-framework updates; competitive signals (new governance startups/repos — the bound product's market).
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Claude Code:** `/schedule` weekly; monthly is acceptable — regulation moves slower than models. Schedule only when the user explicitly authorizes it and the external host supports scheduling; this skill does not create a scheduled job.
+Weekly or monthly review is a suggestion, not a standing instruction. This skill defaults to **one requested read-only digest**. Do not invoke `/schedule`, `/loop`, scheduler APIs, or notification tools merely because a cadence is mentioned.
+
+Before an external host creates a recurring run, obtain **separate explicit user approval** for frequency, local time and timezone, end/expiry condition, exact future public and private source/account/workspace access scope, report recipients and delivery channel (including notifications), data minimization and retention/deletion, recurring cost or external egress, and pause/revocation controls. Private or gated content and any disclosure of user/workspace context require their own scoped approval. Recheck authorization and access at each future run; stop rather than silently broaden scope.
+
+Only an authorized external host with a suitable capability may configure the approved routine. If unavailable, provide a reusable one-time prompt or manual reminder instead. Never persist credentials, token-bearing URLs, sensitive documents, or private message bodies in schedule prompts, logs, or reports. `skillz` has no scheduler, runner, or delivery service.
 
 ## Output Format
 

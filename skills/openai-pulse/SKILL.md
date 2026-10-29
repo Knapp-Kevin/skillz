@@ -31,9 +31,13 @@ Vendor pulse for OpenAI: official releases and community reception, synthesized 
 2. **Fill gaps.** Fetch the listed pages (API changelog, news, ChatGPT release notes) and run the listed web searches; the changelog pages are JS-rendered, so search results often beat raw fetches.
 3. **Synthesize.** Deprecations and pricing changes first; then model/feature releases; then SDK/repo activity worth acting on; then community sentiment. Do not paste raw output.
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Claude Code:** `/schedule` weekly — pairs with claude-pulse and the other vendor pulses on the same morning for a cross-vendor view. Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
+Weekly review is a suggestion, not a standing instruction. This skill defaults to **one requested read-only digest**. Do not invoke `/schedule`, `/loop`, scheduler APIs, or notification tools merely because a cadence is mentioned.
+
+Before an external host creates a recurring run, obtain **separate explicit user approval** for frequency, local time and timezone, end/expiry condition, exact future public and private source/account/workspace access scope, report recipients and delivery channel (including notifications), data minimization and retention/deletion, recurring cost or external egress, and pause/revocation controls. Private or gated content and any disclosure of user/workspace context require their own scoped approval. Recheck authorization and access at each future run; stop rather than silently broaden scope.
+
+Only an authorized external host with a suitable capability may configure the approved routine. If unavailable, provide a reusable one-time prompt or manual reminder instead. Never persist credentials, token-bearing URLs, sensitive documents, or private message bodies in schedule prompts, logs, or reports. `skillz` has no scheduler, runner, or delivery service.
 
 ## Output Format
 

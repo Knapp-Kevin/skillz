@@ -31,9 +31,13 @@ Vendor pulse for Meta AI's Llama family and its open-weights ecosystem. Sources 
 2. **Fill gaps.** Fetch the Meta AI blog; run the searches. r/LocalLLaMA is a useful community signal, not verified release evidence. If the Reddit API is unavailable, attempt a public site-scoped search only when authorized host search is available; otherwise report the community coverage gap without inventing consensus.
 3. **Synthesize.** New weights and licenses first (license terms matter for local deployment); llama-stack/tooling changes; benchmark and quantization chatter.
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses. Scheduling is a separate host action requiring explicit user authorization; the repository never schedules runs.
+Weekly review is a suggestion, not a standing instruction. This skill defaults to **one requested read-only digest**. Do not invoke `/schedule`, `/loop`, scheduler APIs, or notification tools merely because a cadence is mentioned.
+
+Before an external host creates a recurring run, obtain **separate explicit user approval** for frequency, local time and timezone, end/expiry condition, exact future public and private source/account/workspace access scope, report recipients and delivery channel (including notifications), data minimization and retention/deletion, recurring cost or external egress, and pause/revocation controls. Private or gated content and any disclosure of user/workspace context require their own scoped approval. Recheck authorization and access at each future run; stop rather than silently broaden scope.
+
+Only an authorized external host with a suitable capability may configure the approved routine. If unavailable, provide a reusable one-time prompt or manual reminder instead. Never persist credentials, token-bearing URLs, sensitive documents, or private message bodies in schedule prompts, logs, or reports. `skillz` has no scheduler, runner, or delivery service.
 
 ## Output Format
 

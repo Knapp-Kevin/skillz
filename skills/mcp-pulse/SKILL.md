@@ -31,9 +31,13 @@ Topic pulse for the Model Context Protocol, a possible interoperability layer in
 2. **Fill gaps.** Fetch the spec changelog (the hard source — protocol changes are the deprecation-equivalent); run the searches, especially the security one — MCP server vulnerabilities are an active research area.
 3. **Synthesize.** Spec/SDK changes first with migration impact; security advisories second; then notable new servers (filter: does it unlock a capability we lack, or duplicate a connected one?); registry/ecosystem news.
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Optional external host scheduling:** Only after explicit user authorization and only when the host supports it. A weekly cadence can complement github-pulse, but neither scheduling nor MCP integration is a repository requirement.
+Weekly review is a suggestion, not a standing instruction. This skill defaults to **one requested read-only digest**. Do not invoke `/schedule`, `/loop`, scheduler APIs, or notification tools merely because a cadence is mentioned.
+
+Before an external host creates a recurring run, obtain **separate explicit user approval** for frequency, local time and timezone, end/expiry condition, exact future public and private source/account/workspace access scope, report recipients and delivery channel (including notifications), data minimization and retention/deletion, recurring cost or external egress, and pause/revocation controls. Private or gated content and any disclosure of user/workspace context require their own scoped approval. Recheck authorization and access at each future run; stop rather than silently broaden scope.
+
+Only an authorized external host with a suitable capability may configure the approved routine. If unavailable, provide a reusable one-time prompt or manual reminder instead. Never persist credentials, token-bearing URLs, sensitive documents, or private message bodies in schedule prompts, logs, or reports. `skillz` has no scheduler, runner, or delivery service.
 
 ## Output Format
 
@@ -49,5 +53,5 @@ Topic pulse for the Model Context Protocol, a possible interoperability layer in
 
 ## Notes
 
-- A server recommended for adoption needs a governed intake record and explicit permission-tier review. If the skillz intake registry is accessible in the authorized host, consult its current decisions; otherwise provide a proposed intake handoff rather than assuming the registry is bundled with this skill.
+- A server recommended for adoption needs a governed intake record and current controlled authority-category and action-specific authorization review. If the skillz intake registry is accessible in the authorized host, consult its current decisions; otherwise provide a proposed intake handoff rather than assuming the registry is bundled with this skill.
 - Flag changes affecting the bound platform's MCP integration or the user's actual connector configuration, when the user has authorized access. Host-specific configuration is external to this skill package and may be unavailable.
