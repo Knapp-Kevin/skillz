@@ -1,10 +1,27 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "repository_mode": "passive-skill-knowledge-resource",
+  "security_evidence_reconciliation": {
+    "as_of": "2026-10-29",
+    "main_commit": "713c98fa55d5c7fa27552f567b4bd73e9f0f7a18",
+    "historical_baseline": "registry/security/first-party-baseline-2026-10-10.json",
+    "historical_candidate": "registry/security/first-party-candidate-2026-10-10.json",
+    "candidate_exact_tree_matches_main": 23,
+    "candidate_nonmatching_passes_nontransferable": 21,
+    "unaffected_historical_matching_passes": 15,
+    "new_scans_executed": 0,
+    "behavioral_validation_executed": 0,
+    "receipt": "docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md",
+    "caveat": "Existing historical exact-tree evidence, not a new scan or unchanged-use approval; eight matching-pass packages have unmerged changes."
+  },
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
+    "first_party_historical_exact_tree_security_passed": 23,
+    "first_party_historical_exact_tree_security_incomplete": 20,
+    "first_party_historical_exact_tree_security_failed": 1,
+    "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 8,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
     "persisted_third_party_exact_version_reviews": 826,
