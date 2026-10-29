@@ -3,9 +3,9 @@ skill_name: mcp-vetting
 source_id: local-skills
 local_path: "skills/mcp-vetting/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 806e79f593446ad15938249898e15230208f2d81
+content_blob_sha: 37a13d7296c7d3d87dc360988bc6aca1f873c4db
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, risk-aware, source-driven, traceable, human-review]
   authority: [read-only]
   portability: [high]
-notes: "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+notes: "19/20 exact-version static semantic review: complete tool-level authority and data-flow inventory, no installation/connection, current taxonomy and issue-first admission, missing-evidence deferral, separate external security/behavioral gates. Host-specific unknowns prevent a perfect score; no behavioral evidence was executed."
