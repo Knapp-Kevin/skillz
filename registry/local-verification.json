@@ -1001,7 +1001,7 @@
       "skill_name": "permissions-review",
       "local_path": "skills/permissions-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "6ad5d97a3e2f964c087a5477036087f007148d79",
+      "content_blob_sha": "dcaf7ff96c832c69bb5be1c7cd8f4c3ed418b707",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1028,7 +1028,7 @@
           "medium"
         ]
       },
-      "notes": "Scoped least-privilege inventory avoids retrieving secret values; optional repeated sensitive metadata reads and report delivery require separate explicit authorization. Behavioral and external package-security qualification are not-run."
+      "notes": "Exact-version static correction: current controlled authority categories and separate consequential risks replace obsolete permission tiers; source text is untrusted evidence, secret values are not retrieved, recurrence and delivery need separate approval. Behavioral and package-security evidence not-run."
     },
     {
       "skill_name": "perplexity-pulse",
