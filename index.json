@@ -13,7 +13,16 @@
     "new_scans_executed": 0,
     "behavioral_validation_executed": 0,
     "receipt": "docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md",
-    "caveat": "Existing historical exact-tree evidence, not a new scan or unchanged-use approval; eight matching-pass packages have unmerged changes."
+    "caveat": "Historical evidence only; eight formerly matching-pass packages have changed final manifests in unmerged draft PR #489 (source PRs #416/#480/#482/#485 closed superseded), requiring fresh exact-package scans.",
+    "pending_integrated_repair_pr": 489,
+    "pending_distinct_final_package_scans": 29,
+    "pending_repair_original_prs_closed_superseded": [
+      416,
+      480,
+      482,
+      485
+    ],
+    "pending_integration_exact_tree_matrix": "docs/reviews/2026-10-29-integrated-29-first-party-final-package-frontier.md"
   },
   "counts": {
     "first_party_skills": 44,
