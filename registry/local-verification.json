@@ -844,7 +844,7 @@
       "skill_name": "mcp-vetting",
       "local_path": "skills/mcp-vetting/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -870,7 +870,7 @@
           "high"
         ]
       },
-      "notes": "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+      "notes": "Exact-version static pre-connection review at 19/20; current authority taxonomy, no installation, explicit private-data/credential controls and independent external security/behavioral gates; no observed behavioral evidence."
     },
     {
       "skill_name": "memory-pulse",
