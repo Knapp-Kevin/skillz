@@ -1,6 +1,6 @@
 # Issue #481: Four first-party recurring-review authorization corrections
 
-**Reviewed:** 2026-10-29. **Main base:** `4f2098346022705df74c908b43f10724a87f192a`. **Manifest revision:** `16110dd942aa2ad231c04d8a145297b0ef3de6a4`. **Scope:** exact-version static semantic review, not an executed behavioral test or package-security scan.
+**Reviewed:** 2026-10-29. **Main base:** `4f2098346022705df74c908b43f10724a87f192a`. **Initial four-manifest revision:** `16110dd942aa2ad231c04d8a145297b0ef3de6a4`. **Permissions-review authority-taxonomy amendment:** `c5d1c139fb547e696e621a068239c6dcf94d9bd7`. **Scope:** exact-version static semantic review, not an executed behavioral test or package-security scan.
 
 ## Macro map
 
@@ -13,11 +13,11 @@ The main-tree first-party denominator is 44 canonical top-level `skills/<name>/S
 | Skill | Git blob SHA-1 | Static disposition / score | Use and non-use boundary | Authority and dependencies |
 |---|---|---|---|---|
 | `learning-plan` | `7941b70fc971bf7c16c1201b7c8876f35db4ab29` | VERIFIED semantic only, 18/20 | Curriculum/checkpoint planning; not a request to create check-ins | Generate-only one-shot, optional host scheduler; high portability |
-| `permissions-review` | `6ad5d97a3e2f964c087a5477036087f007148d79` | VERIFIED semantic only, 17/20 | Authorized agent permission inventory; not unlimited private log/credential access | Read-only scoped metadata, no credential values; optional scheduler; medium portability |
+| `permissions-review` | `dcaf7ff96c832c69bb5be1c7cd8f4c3ed418b707` | VERIFIED semantic only, 17/20 | Authorized agent permission inventory; not unlimited private log/credential access | Read-only scoped metadata, no credential values; optional scheduler; medium portability |
 | `standup-writer` | `b8473ac1ea68795d9563a21f335b5fd4bc169868` | VERIFIED semantic only, 17/20 | Evidence-backed standup draft; not automatic posting | Generate-only, optional repo/task/calendar access and scheduler; medium portability |
 | `week-in-review` | `f2145e28256ebdfb72b035f1a405fd0e6586c5ba` | VERIFIED semantic only, 17/20 | Evidence-backed retrospective; not permission to save, schedule or send | Generate-only, optional repo/calendar/notes/scheduler; medium portability |
 
-Each provenance record points to the exact manifest revision `16110dd942aa2ad231c04d8a145297b0ef3de6a4`, source identity `local-skills`, source path `skills/<name>/SKILL.md`, first-party MIT terms and skill-specific 2026-10-29 freshness. Individual verification records and the consolidated 44-entry registry carry the exact manifest Git blob SHA-1, distinct rationale and controlled tags including conditional `external-side-effect`. Scores are conservative static judgments; they do not imply scanner clearance or observed host behavior. External tool/package versions and actual user fit must be resolved by the host at use time.
+The three non-permissions provenance records point to manifest revision `16110dd942aa2ad231c04d8a145297b0ef3de6a4`; `permissions-review` points to amended manifest revision `c5d1c139fb547e696e621a068239c6dcf94d9bd7`. Each retains source identity `local-skills`, source path `skills/<name>/SKILL.md`, first-party MIT terms and skill-specific 2026-10-29 freshness. Individual verification records and the consolidated 44-entry registry carry the exact manifest Git blob SHA-1, distinct rationale and controlled tags including conditional `external-side-effect`. Scores are conservative static judgments; they do not imply scanner clearance or observed host behavior. External tool/package versions and actual user fit must be resolved by the host at use time.
 
 ## Static adversarial scenario design (all NOT RUN)
 
@@ -35,3 +35,7 @@ Each provenance record points to the exact manifest revision `16110dd942aa2ad231
 ## Lifecycle and remaining qualification
 
 **DRAFT / HOLD.** Complete final-package pinned external SkillSpector v2.12.0 reports/digests and independent adversarial/integration acceptance for the four exact package identities. Reconcile the shared consolidated first-party registry against concurrent #480, #416 and prospective #412/#413 admissions before merge. Do not inherit prior-version security status. Behavioral validation: **not-run**. Security: **not-run**. No five-surface public accounting changes are required before merge because this in-place repair has zero denominator and count delta; verify all five surfaces again at final merge.
+
+## 2026-10-29 independent authority-taxonomy correction (#483)
+
+The original four-skill scheduling repair left `permissions-review` referring to nonexistent permission tiers in `docs/evaluation-framework.md`, including its risk ordering and output column. That was a genuine semantic defect, not a cosmetic label. The amended manifest blob `dcaf7ff96c832c69bb5be1c7cd8f4c3ed418b707` now classifies each MCP tool by the four controlled authority values in `registry/taxonomy.yaml`, separately flags identity/access, destructive, financial, production, notification, credential and sensitive-data consequences, treats unknown coverage as an evidence gap, and rejects untrusted config/log instructions. The old `permission_tier` provenance field is legacy characterization, not an action authorization gate. The existing conservative 17/20 semantic score is retained pending independent re-evaluation; this static correction does not establish a scanner pass or observed behavioral validation. Scenario checks remain **NOT RUN**.
