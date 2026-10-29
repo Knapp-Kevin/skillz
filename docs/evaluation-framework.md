@@ -42,7 +42,8 @@ discovered
   -> provenance + exact identity
   -> structured semantic score
   -> decisive state/disposition
-  -> optional stronger scenario/adversarial semantic validation
+  -> optional stronger static scenario/adversarial reading
+  -> optional actual external behavioral/adversarial validation (separate evidence)
 ```
 
 Do not bulk-promote an upstream repository merely because it was admitted as a tracked source.
@@ -102,7 +103,7 @@ A skill-owned TypeScript/Python/shell helper is not repository engine code merel
 
 ## Semantic scenario review
 
-Stronger review may examine representative situations such as:
+Static semantic review may examine hypothetical representative situations such as:
 
 - a clear positive trigger;
 - an obvious non-trigger;
@@ -110,12 +111,14 @@ Stronger review may examine representative situations such as:
 - interaction with another skill or authority boundary;
 - a host where one optional capability is unavailable.
 
-This is still semantic review. It asks whether the instructions provide a sensible path through those situations. It is not a claim that a particular model will perform perfectly.
+This is still **static semantic review**. It asks whether the instructions provide a sensible path through those situations; it is not evidence that an external host actually behaved correctly. Record hypothetical scenarios and reviewer reasoning under `verified`, never as observed behavioral results.
+
+The stronger `validated` state requires **actual representative external host-executed behavioral/adversarial evidence for the exact reviewed package**, including package identity, host/model/tool context where available, scenario inputs, observed actions/outputs, adverse findings and limitations. A written test plan or static adversarial reading is not an executed result. See [`skill-verification.md`](skill-verification.md) for the normative evidence contract. Security scanning is a separate gate.
 
 ## Current quality vocabulary
 
 - `verified`: exact version passed structured semantic review.
-- `validated`: verified plus representative scenario/adversarial semantic review.
+- `validated`: verified exact version plus representative **actually executed** external host behavioral/adversarial evidence, bound to that version. Static scenario reading alone never qualifies.
 - `unverified`: useful reference/design evidence without the current structured gate.
 - `trusted-baseline`: legacy compatibility state only, not current unchanged-reuse eligibility.
 - `stale`: prior judgment should not be inherited silently after material change.
