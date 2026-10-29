@@ -12,6 +12,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 
 **Matt Pocock pinned path hygiene (2026-10-29).** The registered 29-skill source remains unchanged at its exact pin. A live audit of 58 pinned provenance/verification companions found **25 stale provenance** and **11 stale verification** `local_path` values pointing at removed `vendor/mattpocock-skills/`. All 36 were corrected to `skills/sources/mattpocock-skills/`, without changing upstream identities, fingerprints, dispositions, scores, counts or security/behavioral states. [Exact-path audit](docs/reviews/2026-10-29-mattpocock-pinned-path-hygiene.md).
 
+**Cline pinned path hygiene (2026-10-29).** Audited all **74** provenance/verification companions for **37** governed Cline records (36 published + one separately characterized internal). Found and corrected **7 stale provenance + 7 stale verification** `local_path` values from removed top-level `vendor/cline-skills/` to `skills/sources/cline-skills/`. The registered source gitlink and the nested `cline-sdk` upstream gitlink were checked against exact manifest fingerprints. **0 stale Cline companion paths remain**. No source pin, review disposition, score, security state, behavioral state, or inventory count changed. [Exact-path review](docs/reviews/2026-10-29-cline-pinned-path-hygiene.md).
+
 ## Current totals
 
 | Surface | Count |
