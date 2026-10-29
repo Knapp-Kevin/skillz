@@ -7,15 +7,15 @@ source_path: skills/inbox-triage/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: c04f5acceb565e0a93fe06216be3dd0468986167
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/inbox-triage/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+dependencies: "Authorized external host Gmail read capability for live inbox; user-provided redacted messages fallback; optional approved host scheduling"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Four-pile private-mail classification and inline draft-only replies; authorized Gmail read scope, optional host capability, source-trust and explicit recurrence consent. No send/archive authority."

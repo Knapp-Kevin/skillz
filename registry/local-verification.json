@@ -108,7 +108,7 @@
       "skill_name": "career-radar",
       "local_path": "skills/career-radar/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
+      "content_blob_sha": "35e211d098f4497568beca3999ecf250a46183c5",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -128,13 +128,14 @@
           "evidence-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+      "notes": "Dated public market scan with approved profile scope, minimized search disclosure, untrusted posting boundaries, no automatic profile persistence and separate recurrence approval. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "claude-pulse",
@@ -206,7 +207,7 @@
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
+      "content_blob_sha": "86353382996c2ce73b7981d341ef0bea93b7b6c2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -225,13 +226,14 @@
           "evidence-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+      "notes": "Action-first synthesis with least-privilege mail/calendar/workspace access, explicit partial coverage, optional host integrations and separately authorized recurrence/delivery. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "decision-log",
@@ -653,7 +655,7 @@
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
+      "content_blob_sha": "c1566f6ccfd15cb92094c256c7295234368c4b27",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -673,13 +675,13 @@
         ],
         "authority": [
           "read-only",
-          "generate-only"
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+      "notes": "Four-pile private-mail classification and inline draft-only replies; authorized Gmail read scope, optional host capability, source-trust and explicit recurrence consent. No send/archive authority. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "inference-pulse",
@@ -1125,7 +1127,7 @@
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8d78a04e0993069bc3ecc283c756e420969a88d1",
+      "content_blob_sha": "b39ba02179d19eba575f0000e6cf553e8eb97506",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1145,19 +1147,20 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."
+      "notes": "Bounded GitHub/local Git read-only digest, no implicit account-wide enumeration, optional connector/CLI, incomplete-coverage disclosure and separately authorized recurrence. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "smallbiz-ops",
       "local_path": "skills/smallbiz-ops/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e33f99d0585d486a6bb3243aae9402bfc2cac0ec",
+      "content_blob_sha": "83439d9422c5a7bdc57f0ad15ebf4378faf43265",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1177,13 +1180,14 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+      "notes": "Bounded public site/listing comparison, source-trust and no-publish rules; optional recurrence now separately authorizes scope, schedule, delivery and retention. External listing quality remains uneven. Security and external behavioral qualification remain unestablished for this exact version."
     },
     {
       "skill_name": "standup-writer",

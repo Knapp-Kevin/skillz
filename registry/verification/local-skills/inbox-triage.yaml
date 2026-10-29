@@ -3,19 +3,19 @@ skill_name: inbox-triage
 source_id: local-skills
 local_path: "skills/inbox-triage/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c265af7280a9819ae1fc80292ba24a77c2b28ccd
+content_blob_sha: c1566f6ccfd15cb92094c256c7295234368c4b27
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No matching external behavioral/adversarial execution was performed for this revised exact manifest; state remains not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
 tags:
   use_case: [productivity, communication]
   lifecycle: [operations]
   characteristic: [decomposition, tool-routing, human-review, risk-aware]
-  authority: [read-only, generate-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
-notes: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+notes: "Four-pile private-mail classification and inline draft-only replies; authorized Gmail read scope, optional host capability, source-trust and explicit recurrence consent. No send/archive authority. Security qualification is not established for this changed exact version."

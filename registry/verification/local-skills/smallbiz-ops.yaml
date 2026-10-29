@@ -3,19 +3,19 @@ skill_name: smallbiz-ops
 source_id: local-skills
 local_path: "skills/smallbiz-ops/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e33f99d0585d486a6bb3243aae9402bfc2cac0ec
+content_blob_sha: 83439d9422c5a7bdc57f0ad15ebf4378faf43265
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No matching external behavioral/adversarial execution was performed for this revised exact manifest; state remains not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
   use_case: [business-operations, monitoring]
   lifecycle: [operations, maintenance]
   characteristic: [evidence-first, source-driven, synthesis, risk-aware]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
-notes: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+notes: "Bounded public site/listing comparison, source-trust and no-publish rules; optional recurrence now separately authorizes scope, schedule, delivery and retention. External listing quality remains uneven. Security qualification is not established for this changed exact version."
