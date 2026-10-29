@@ -293,16 +293,18 @@
     "newly_eligible": 3,
     "removed_from_pinned": 1,
     "changed_new_frontier": 19,
-    "candidate_reviewed_this_tranche": 10,
-    "candidate_verified_semantic_only": 3,
-    "candidate_rejected_unchanged": 7,
-    "candidate_static_gaps": 9,
-    "removed_path_disposition": "pending",
-    "source_pin_promotion": "NO-GO",
+    "candidate_reviewed_this_tranche": 9,
+    "candidate_verified_semantic_only": 6,
+    "candidate_rejected_unchanged": 13,
+    "candidate_static_gaps": 0,
+    "removed_path_disposition": "RETIRE_CANDIDATE_EXPOSURE_ONLY; old pinned reference retained; no successor asserted",
+    "source_pin_promotion": "NO-GO: authority hard fails, absent package security and independent behavioral acceptance",
     "candidate_package_security": "not-run",
     "candidate_behavioral_validation": "not-run",
     "registered_pin_inventory_unchanged": true,
     "candidate_companions_excluded_from_published_826_count": true,
-    "receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md"
+    "receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-final-nine-exact-static.md",
+    "candidate_reviewed_total": 19,
+    "prior_tranche_receipt": "docs/reviews/2026-10-29-mattpocock-upstream-freshness-ten-exact-static.md"
   }
 }

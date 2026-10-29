@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: "to-tickets"
+candidate_key: "to-tickets"
+source_id: "mattpocock-skills"
+source_role: "unadmitted-upstream-freshness-candidate"
+source_snapshot_revision: "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+registered_source_pin_unchanged: "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76"
+fingerprint_algorithm: "git-tree-sha1"
+content_blob_sha: "2dee20ad722a31c04ededf9f2d83842473573045"
+skill_md_blob_sha: "9b77a01db9460c99c22d03c910c349f890f12c0e"
+characterized_at: "2026-10-29"
+last_verified_at: "2026-10-29"
+verification_status: "rejected"
+verification_basis: "complete-package-structured-static-review"
+validation_status: "not-run"
+package_security_status: "not-run"
+rubric_score: "15/20"
+rubric:
+  trigger_precision: 2
+  procedural_clarity: 2
+  authority_and_safety: 0
+  failure_handling: 1
+  evidence_discipline: 2
+  dependency_coherence: 2
+  portability_honesty: 1
+  usefulness_differentiation: 2
+  adversarial_resilience: 1
+  effectiveness_design: 2
+tags:
+  use_case: ["planning", "orchestration"]
+  lifecycle: ["planning"]
+  characteristic: ["decomposition", "spec-driven", "traceable"]
+  authority: ["mutating", "external-side-effect"]
+  portability: ["medium"]
+package_file_count: 2
+package_files_inspected: ["SKILL.md", "agents/openai.yaml"]
+shared_dependency_files_inspected: ["LICENSE"]
+authority_hard_fail: true
+disposition: "REJECT_UNCHANGED_CANDIDATE"
+notes: "Extract dependency/expand-contract design; require publication authority. Approving ticket breakdown is not separately approving external issue publication and visibility. Private specs can leak through public tracker issue bodies. Security and behavioral validation not-run."
