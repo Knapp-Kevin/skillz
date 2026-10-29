@@ -4,9 +4,9 @@ You do not need to understand skills, write code, clone repositories, or browse 
 
 **Give your AI the GitHub link to this repository. That is enough to start.**
 
-`skillz` is runtime-passive for normal users. The host agent reads the repository, reasons over legitimately available context, and creates or hands off a fitted skill system using capabilities it already has. Maintainer-side security automation is separate and never a bootstrap prerequisite.
+`skillz` is entirely passive for normal users **and repository maintenance**. The host agent reads the repository, reasons over legitimately available context, and creates or hands off a fitted skill system using capabilities it already has.
 
-There is no CI, runtime, test harness, or executable proof requirement for normal bootstrap. Repository maintenance may use bounded CI/scanner tooling to establish corpus evidence.
+There is no repository-owned CI, runtime, test harness, scanner, or executable proof prerequisite. During explicitly authorized maintenance, an **external host** may run a pinned security assessment or representative behavioral exercise in its own environment and deposit exact-version evidence here. Such work never introduces repository-owned execution machinery.
 
 ## Where generated skills go
 
