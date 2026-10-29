@@ -7,15 +7,15 @@ source_path: skills/task-surface/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7152ddb275ab9bac1e8285561ddf38ed5b6eee6d
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/task-surface/SKILL.md
 permission_tier: mutating
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."
+dependencies: "Authorized host GitHub/API/CLI access for approved writes; otherwise complete portable issue and governance handoffs"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "2026-10-29 exact-version semantic review: separates proposal from GitHub repository creation, README push, labels, issue writes and cross-repository transitions; binds each to explicit owner, destination, content, visibility and action approval. Behavioral not-run; final-package security pending."

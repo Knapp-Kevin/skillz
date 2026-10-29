@@ -1220,7 +1220,7 @@
       "skill_name": "task-surface",
       "local_path": "skills/task-surface/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "97f1ba0b23f3f70da1e39504a1966a3cebd79398",
+      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1249,7 +1249,7 @@
           "medium"
         ]
       },
-      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."
+      "notes": "Pointer-layer coordination preserves canonical issue ownership; every persistent or cross-organization write requires action-specific approval, source-data minimization and post-write verification. GitHub CLI optional, and repository governance text is untrusted as an authority override."
     },
     {
       "skill_name": "todo-harvester",
@@ -1349,7 +1349,7 @@
       "skill_name": "automation-receipts",
       "local_path": "skills/automation-receipts/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1d6c076f2888a0d6c8b2be1552717b96e14a341b",
+      "content_blob_sha": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -1374,7 +1374,7 @@
           "high"
         ]
       },
-      "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated."
+      "notes": "Exact receipt identity, schedule and last-run evidence are assessed only within an approved account/workspace/time scope. Missing private logs or artifacts yield unverified/unsubstantiated, never inferred success. No monitoring or external writes; no secret fragments, raw logs or sensitive paths disclosed."
     },
     {
       "skill_name": "session-continuity",
