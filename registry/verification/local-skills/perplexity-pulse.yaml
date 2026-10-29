@@ -3,9 +3,9 @@ skill_name: perplexity-pulse
 source_id: local-skills
 local_path: "skills/perplexity-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 38eeae61d87c292aeffc4f32bd038b7862d9b6b6
+content_blob_sha: cdc6506a16c5e7a87029783cdcad8f078a009d80
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-28
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -16,10 +16,12 @@ tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
 notes: "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. External-source prompt injection is explicitly refused; consequential claims require dated primary evidence and private data requires separate authorization."
 
 passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
 
 review_note_2026_10_28_portability: "Exact-version static review of corrected external-host assumptions; no repository-owned MCP runtime, Qor distribution, or Sonar backend. Score and semantic VERIFIED state retained; package-security and behavioral validation not-run. See docs/reviews/2026-10-28-pr416-three-pulse-portability-corrections.md."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."

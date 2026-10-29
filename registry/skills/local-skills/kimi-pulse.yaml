@@ -7,9 +7,9 @@ source_path: skills/kimi-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 014b61b9da005d4665b391c45258f911faf39c51
+source_snapshot_revision: dd82725a191c264e46437270d2559efb5b165feb
 curated_at: 2026-08-30
-last_checked_at: 2026-10-28
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/kimi-pulse/SKILL.md
 permission_tier: read-only

@@ -3,9 +3,9 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 6c676b7e9e45e82504d84fa4bbd56682830660b8
+content_blob_sha: c7d7679e6cdfbfb271964e6b9f7e47a8d1c08b60
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-26
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
@@ -16,10 +16,12 @@ tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
 notes: "Breaking-change-first runtime digest with primary-source dates, honest missing-evidence handling, authorization-gated private target binding, and no automatic upgrade; portability depends on host browsing."
 
 passive_runner_remediation: Host-only retrieval and explicit opt-in scheduling; private runtime binding requires scoped authorization, and external release notes are evidence rather than executable instructions. Exact-version structured static review 17/20, behavioral validation not-run, package security not-run.
 
 review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."

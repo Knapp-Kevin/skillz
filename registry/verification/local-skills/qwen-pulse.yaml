@@ -3,9 +3,9 @@ skill_name: qwen-pulse
 source_id: local-skills
 local_path: "skills/qwen-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: f56496f4ca0bcd7969d5e5d3fe308d8a45ba251e
+content_blob_sha: 77dc93a39022008c45f386871a2c94c83fb04146
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-28
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -16,8 +16,10 @@ tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
 notes: "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. External-source prompt injection is explicitly refused; consequential claims require dated primary evidence and private data requires separate authorization."
 
 passive_runner_remediation: Removed nonexistent repository runner; host uses selected source URLs and owned tools. Current revision static-review only; behavioral validation not-run; prior security scans do not transfer.
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."

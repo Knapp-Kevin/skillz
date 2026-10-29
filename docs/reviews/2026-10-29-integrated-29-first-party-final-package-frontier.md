@@ -1,6 +1,6 @@
 # Integrated first-party authority repairs: final exact-package qualification frontier
 
-**Date:** 2026-10-29. **Candidate commit:** `7c05bb6826d4382326a03aa4691107d10cd1f79c`. **Base main:** `f19e78107b91a1897ed04eae53c1cb7d09aaed60`. **PR:** #489 (draft). **Scope:** 29 existing first-party packages. **No scanner or behavioral test executed.**
+**Date:** 2026-10-29. **Candidate manifest commit:** `dd82725a191c264e46437270d2559efb5b165feb`. **Base main:** `f19e78107b91a1897ed04eae53c1cb7d09aaed60`. **PR:** #489 (draft). **Scope:** 29 existing first-party packages. **No scanner or behavioral test executed.**
 
 ## Macro reconciliation
 
@@ -9,29 +9,32 @@
 - Historical October 10 baseline status for the 29 changed packages: **8 PASSED**, **20 INCOMPLETE**, **1 FAILED**. All 29 integrated package trees differ from their historical scanned baseline trees, so **none of those old security results can qualify the new final package identity**. The other **15** unchanged first-party historical matching-pass packages remain outside this tranche.
 - No source admission, source-pin movement, inventory increase, or new repository-owned execution machinery. Current public counts remain **44 first-party, 826 third-party reviews, 870 verification records**. Microsoft candidate remains **102/102 static review and NO-GO pin promotion**.
 
+
+- **2026-10-29 independent pulse recurrence macro review:** 16 of 17 pulse-named skills in this PR had an optional schedule instruction but lacked a complete durable-authority scope contract. Their 16 final manifests now default to one-time reporting and require separately approved cadence/timezone/expiry, future source and private access scope, recipients/delivery, retention, costs and revocation before any external-host recurrence. The seventeenth, `repo-pulse`, already had this boundary; `claude-pulse` outside this PR remains one-time only. The same tranche removes an obsolete `permission-tier` reference from `mcp-pulse` and a nonexistent `skills-pulse` reference from `github-pulse`. See [targeted review](2026-10-29-pr489-sixteen-pulse-recurrence-authority-macro.md). No external execution occurred.
+
 ## Exact final package identities
 
 | Skill | Origin PR | Integrated package tree SHA-1 | Final SKILL.md Git blob SHA-1 | Historical baseline |
 |---|---:|---|---|---|
 | `decision-log` | #416 | `8eb548e7e3f0ea832b6d7f29093caa69b2ec4ff4` | `3e1ceeb3a20e2d933e5ade631e82d54dd582a44b` | INCOMPLETE |
-| `deepseek-pulse` | #416 | `3c575fe6269d4c8db60bb6fc344847aff6ddf84e` | `1fc968fb94bfcd3618fda085b08cf0cd21d4c23e` | INCOMPLETE |
+| `deepseek-pulse` | #416 | `302a655c2ecd1c40cf720063705edb7e5fec5855` | `00e0977fa32c82172ad35cd3fb9344e86d79bfe0` | INCOMPLETE |
 | `devlog-draft` | #416 | `a5c4e1bbb5e33b93d6df01a6ebd0f1f99ea94e76` | `e7f6456fafbe4b432270696d64e3685a8ca8725a` | INCOMPLETE |
-| `gemini-pulse` | #416 | `9d1a2554c59fe899c9dea62832700a1f12406618` | `69b1b4dd1ba164308f755629510b2043eb358e61` | INCOMPLETE |
-| `github-pulse` | #416 | `acfac6174affa184ca9f26ddc403f36352e83d43` | `587313bab488dc27411f9e52c1c43516dc8f26f4` | INCOMPLETE |
-| `glm-pulse` | #416 | `add0ce74321fe264675c05ad32a4c160501a933a` | `7c7f92832f42e7cfdafe36da087b1e634ab060b6` | INCOMPLETE |
-| `governance-pulse` | #416 | `d5252bdc3d6df4e322c9b8da11261ad18153d36b` | `0709d2f3392b5e63f1e91b98e805cb0e13a95d14` | INCOMPLETE |
+| `gemini-pulse` | #416 | `c1a7ac283b563d7a6f38c5f4f8895ba25510f864` | `2656c2ab5615324432502619411fb75210e7b1bf` | INCOMPLETE |
+| `github-pulse` | #416 | `2085adff634cdead09f57446a2e4b07ede0cd80b` | `b0ee1fa9d065527c840ee9f3a6e5a9dc693fc032` | INCOMPLETE |
+| `glm-pulse` | #416 | `7d281f05871cc7f0ca5147c788d1df5a24ae6b06` | `bee05faf21b9ae30cc704e8c77b1a7cf41b6eb06` | INCOMPLETE |
+| `governance-pulse` | #416 | `61080b0db5550b2c8a20119f5d61d29ef6b44cb6` | `69755799a3560771a4bf21cbae39dec341f60b36` | INCOMPLETE |
 | `handoff-writer` | #416 | `0706a8de5d49106d136c1c6c4029ba4ea947e8fd` | `b60a41bc26348370eb61a60b9c1287f29044e92c` | FAILED |
-| `hf-pulse` | #416 | `a4c77c12ada126088ed1e21f177811567bb49daa` | `38387fea604b6eb7d9e81b1e449b36f8ca1fc30c` | INCOMPLETE |
-| `inference-pulse` | #416 | `04e5aa1dc2b6f7af8868db8587d6dfb89d20f6e5` | `6c676b7e9e45e82504d84fa4bbd56682830660b8` | INCOMPLETE |
-| `kimi-pulse` | #416 | `be320e5329997231128e1d452c968192977a47ef` | `eefd3337a2875fef8251a4478b391a75318fa694` | INCOMPLETE |
-| `llama-pulse` | #416 | `133ed88743d5e6f7bb39b93c97e53afda058c7de` | `3f0bd40adde01d1855b557c0f62f5e0eb28b0a7e` | INCOMPLETE |
-| `mcp-pulse` | #416 | `6c54d0a1f5fcb0076ceb6fee92a945f4dc5458a4` | `d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee` | INCOMPLETE |
-| `memory-pulse` | #416 | `70fa836f96636eca978cf1e6b3966653b16b7e99` | `7d0404768a982758ce3bbbf80aadb561b41957e2` | INCOMPLETE |
-| `mistral-pulse` | #416 | `7e1167a5694bc893a28002c0c82c37cb7f9279a8` | `23bbc1a8f7f8ecd5af2db7d5cf5ebea3488640ce` | INCOMPLETE |
-| `openai-pulse` | #416 | `30d85cec0dc9949c677ff13fc98a5e08bd121848` | `7344d2e431afad9e0fde6e179ed14517ec00b8a0` | INCOMPLETE |
-| `perplexity-pulse` | #416 | `25a4fd99f813abab55b4c427ce213243f7d3aca1` | `38eeae61d87c292aeffc4f32bd038b7862d9b6b6` | INCOMPLETE |
-| `qwen-pulse` | #416 | `d1465bae43b301d39213fc02e2f65e40aa370670` | `f56496f4ca0bcd7969d5e5d3fe308d8a45ba251e` | INCOMPLETE |
-| `xai-pulse` | #416 | `6718db3e8fc919504dbf0d4a03b354038ef43c70` | `ad904ae0b35fd605780c0ffaa856a2da3606394c` | INCOMPLETE |
+| `hf-pulse` | #416 | `f2ae9b7b51b8b2a8a112979921907573bd46db5a` | `2862f7f9c0e8d07bae7e68bb64f1edfb9f8a3044` | INCOMPLETE |
+| `inference-pulse` | #416 | `79ac17e06a79d480bee52f682261c8285ab7252b` | `c7d7679e6cdfbfb271964e6b9f7e47a8d1c08b60` | INCOMPLETE |
+| `kimi-pulse` | #416 | `cd210595372709162895da9d93b10edaf98e992c` | `6f9780f934fecbb9d1e949da8b4b93b1f6482d52` | INCOMPLETE |
+| `llama-pulse` | #416 | `ce57a74006d59e11696fa4a4596616b0bea39a64` | `eca89a1a66b51de87e4b7c26f9f449d646e191b6` | INCOMPLETE |
+| `mcp-pulse` | #416 | `f18864b57a0e88daaea486ca877879f1bec4bd26` | `6d8a859704952a7e88488b91c4eb4ab2ff0c52ca` | INCOMPLETE |
+| `memory-pulse` | #416 | `17f9dc8ab0eade44d589646d94f55737eb4d23fd` | `f5acde9edb65db529ef4b1e029d534428f557a2d` | INCOMPLETE |
+| `mistral-pulse` | #416 | `d2fbd53e666548a4d90540cf2f79cdc2ad23df03` | `e47dc0143a7898532cddb94eb0391e7785dfdd1d` | INCOMPLETE |
+| `openai-pulse` | #416 | `1ca3acd6648883f178fd828a0af74958b2e477ee` | `954a1fc98e9c71c59afe034eef2e553cfed63011` | INCOMPLETE |
+| `perplexity-pulse` | #416 | `ac324ead5e31cc366b7d449e92fae6fef8dd221b` | `cdc6506a16c5e7a87029783cdcad8f078a009d80` | INCOMPLETE |
+| `qwen-pulse` | #416 | `02ad927ef67e5a212e52d8ed19928545cf5764d4` | `77dc93a39022008c45f386871a2c94c83fb04146` | INCOMPLETE |
+| `xai-pulse` | #416 | `35c3e5a18faf620db37f92582152365cfcea8eb9` | `c95b9e4e8b8dc37aaa3c7d3d7b27371e84212e18` | INCOMPLETE |
 | `career-radar` | #480 | `23aea5706cb130078f1ec01b8cf937a8f9d37305` | `35e211d098f4497568beca3999ecf250a46183c5` | PASSED |
 | `daily-briefing` | #480 | `eeec1cc5332edf5014150215b215aacd4c429e8d` | `86353382996c2ce73b7981d341ef0bea93b7b6c2` | PASSED |
 | `inbox-triage` | #480 | `65e68d2c50737b4a408b495fe1c1fac5e9209481` | `c1566f6ccfd15cb92094c256c7295234368c4b27` | PASSED |

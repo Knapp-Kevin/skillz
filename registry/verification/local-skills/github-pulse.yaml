@@ -3,9 +3,9 @@ skill_name: github-pulse
 source_id: local-skills
 local_path: "skills/github-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 587313bab488dc27411f9e52c1c43516dc8f26f4
+content_blob_sha: b0ee1fa9d065527c840ee9f3a6e5a9dc693fc032
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-26
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
@@ -16,7 +16,7 @@ tags:
   use_case: [monitoring, research]
   lifecycle: [discovery]
   characteristic: [source-driven, retrieval-first, synthesis, risk-aware]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
 notes: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
 passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
@@ -24,3 +24,5 @@ passive_runner_remediation: Removed nonexistent repository runner invocation; co
 external_reference_review: Host/repository paths were clarified as optional externally authorized evidence, not bundled package components. Previous static scan had zero active findings but incomplete link coverage. New exact revision has not been re-scanned; behavioral validation not-run.
 
 review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 16/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."

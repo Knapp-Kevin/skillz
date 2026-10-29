@@ -3,9 +3,9 @@ skill_name: memory-pulse
 source_id: local-skills
 local_path: "skills/memory-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 7d0404768a982758ce3bbbf80aadb561b41957e2
+content_blob_sha: f5acde9edb65db529ef4b1e029d534428f557a2d
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-26
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
@@ -16,7 +16,7 @@ tags:
   use_case: [monitoring, memory, research]
   lifecycle: [discovery]
   characteristic: [source-driven, retrieval-first, synthesis]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
 notes: "New exact-version static review 2026-10-26: explicit operator approval before reading private memory-layer project context, no credential/sensitive-data collection, retrieved source text untrusted and architecture changes proposal-only. External behavioral validation and final package-security scan not-run."
 
@@ -25,3 +25,5 @@ passive_runner_remediation: Repository script invocation replaced by authorized 
 review_note: "See docs/reviews/2026-10-26-two-pulse-context-authorization-review.md for the exact-version ten-dimension rubric; package-security state remains not-run."
 
 review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."

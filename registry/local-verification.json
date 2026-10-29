@@ -337,7 +337,7 @@
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1fc968fb94bfcd3618fda085b08cf0cd21d4c23e",
+      "content_blob_sha": "00e0977fa32c82172ad35cd3fb9344e86d79bfe0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -356,13 +356,14 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -466,7 +467,7 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "69b1b4dd1ba164308f755629510b2043eb358e61",
+      "content_blob_sha": "2656c2ab5615324432502619411fb75210e7b1bf",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -485,20 +486,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "587313bab488dc27411f9e52c1c43516dc8f26f4",
+      "content_blob_sha": "b0ee1fa9d065527c840ee9f3a6e5a9dc693fc032",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -517,20 +519,21 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7c7f92832f42e7cfdafe36da087b1e634ab060b6",
+      "content_blob_sha": "bee05faf21b9ae30cc704e8c77b1a7cf41b6eb06",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -549,20 +552,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0709d2f3392b5e63f1e91b98e805cb0e13a95d14",
+      "content_blob_sha": "69755799a3560771a4bf21cbae39dec341f60b36",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -583,13 +587,14 @@
           "risk-aware"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "Authorized-only governance product binding; untrusted source text; regulatory effective-date distinction and no automatic compliance actions; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
@@ -629,7 +634,7 @@
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "38387fea604b6eb7d9e81b1e449b36f8ca1fc30c",
+      "content_blob_sha": "2862f7f9c0e8d07bae7e68bb64f1edfb9f8a3044",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -648,13 +653,14 @@
           "tool-routing"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -693,7 +699,7 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "6c676b7e9e45e82504d84fa4bbd56682830660b8",
+      "content_blob_sha": "c7d7679e6cdfbfb271964e6b9f7e47a8d1c08b60",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -713,20 +719,21 @@
           "retrieval-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "Exact-version static review: host-only retrieval, user authorization before private runtime binding or scheduling, dated primary-source evidence, and no auto-upgrade. 17/20; behavioral not-run and package-security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "eefd3337a2875fef8251a4478b391a75318fa694",
+      "content_blob_sha": "6f9780f934fecbb9d1e949da8b4b93b1f6482d52",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -745,13 +752,14 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -791,7 +799,7 @@
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3f0bd40adde01d1855b557c0f62f5e0eb28b0a7e",
+      "content_blob_sha": "eca89a1a66b51de87e4b7c26f9f449d646e191b6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -810,20 +818,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee",
+      "content_blob_sha": "6d8a859704952a7e88488b91c4eb4ab2ff0c52ca",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -844,13 +853,14 @@
           "retrieval-first"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run.",
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-28"
     },
     {
@@ -889,7 +899,7 @@
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7d0404768a982758ce3bbbf80aadb561b41957e2",
+      "content_blob_sha": "f5acde9edb65db529ef4b1e029d534428f557a2d",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -908,20 +918,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "medium"
         ]
       },
-      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run.",
+      "notes": "Authorized-only memory project binding; untrusted retrieved evidence; architecture changes proposal-only; static 17/20, security not-run. 2026-10-26 exact-version source-query/privacy boundary review: host-only, fail-open-to-evidence-gap; behavioral not-run, security not-run. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-26"
     },
     {
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "23bbc1a8f7f8ecd5af2db7d5cf5ebea3488640ce",
+      "content_blob_sha": "e47dc0143a7898532cddb94eb0391e7785dfdd1d",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -940,20 +951,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7344d2e431afad9e0fde6e179ed14517ec00b8a0",
+      "content_blob_sha": "954a1fc98e9c71c59afe034eef2e553cfed63011",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -972,13 +984,14 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -1049,7 +1062,7 @@
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "38eeae61d87c292aeffc4f32bd038b7862d9b6b6",
+      "content_blob_sha": "cdc6506a16c5e7a87029783cdcad8f078a009d80",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1068,20 +1081,21 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Exact-version portability wording re-reviewed 2026-10-28; security and behavioral evidence not-run. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-28"
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "f56496f4ca0bcd7969d5e5d3fe308d8a45ba251e",
+      "content_blob_sha": "77dc93a39022008c45f386871a2c94c83fb04146",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1100,13 +1114,14 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {
@@ -1341,7 +1356,7 @@
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ad904ae0b35fd605780c0ffaa856a2da3606394c",
+      "content_blob_sha": "c95b9e4e8b8dc37aaa3c7d3d7b27371e84212e18",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1360,13 +1375,14 @@
           "synthesis"
         ],
         "authority": [
-          "read-only"
+          "read-only",
+          "external-side-effect"
         ],
         "portability": [
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration.",
+      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency. Passive runner reference replaced by host-managed source retrieval at exact revised blob; no executed behavioral or inherited security pass. Untrusted retrieved source content is now explicitly evidence-only, with private-data authorization and dated-primary-source corroboration. 2026-10-29: optional recurrence requires separate explicit host authorization for future source scope, recipients, retention, costs, expiry and revocation; security and behavioral acceptance not-run.",
       "reviewed_at": "2026-10-12"
     },
     {

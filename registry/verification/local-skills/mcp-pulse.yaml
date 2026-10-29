@@ -3,9 +3,9 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d1a2d62b9f4ffa90a1c13480ca00034ddffd52ee
+content_blob_sha: 6d8a859704952a7e88488b91c4eb4ab2ff0c52ca
 characterized_at: 2026-08-30
-reviewed_at: 2026-10-28
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
@@ -16,7 +16,7 @@ tags:
   use_case: [monitoring, security, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, risk-aware, synthesis, retrieval-first]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
 notes: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
 
@@ -27,3 +27,5 @@ external_reference_review: Host/repository paths were clarified as optional exte
 review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 17/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
 
 review_note_2026_10_28_portability: "Exact-version static review of corrected external-host assumptions; no repository-owned MCP runtime, Qor distribution, or Sonar backend. Score and semantic VERIFIED state retained; package-security and behavioral validation not-run. See docs/reviews/2026-10-28-pr416-three-pulse-portability-corrections.md."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."
