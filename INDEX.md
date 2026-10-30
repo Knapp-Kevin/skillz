@@ -47,6 +47,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
 
+AWS ten-package authority recheck: **6 REJECT unchanged / 4 retained**, with no new review identities, source-pin changes or denominator delta. See [macro evidence](docs/reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md).
+
 Every explicitly current-standard-complete family above has **0** current-standard gaps at its registered exact pin. Selectively tracked corpora are bounded to the individually governed units and are not silently treated as whole-family complete.
 
 `jwynia/agent-skills` is tracked at `e02ec7e226a6e4f8419fd3b88a1d8e472d421b32` for selective curation. Its exact fiction denominator is now **54/54 governed**: **39 VERIFIED** exact-version static references and **15 REJECTED unchanged** references retained as prior art. The final application/orchestrator tranche VERIFIED `book-marketing`, `dna-extraction`, `flash-fiction`, `interactive-fiction`, `media-adaptation`, `paradox-fables`, and `table-tone`; it rejected `adaptation-synthesis`, `game-facilitator`, `list-builder`, `multi-order-evolution`, `sensitivity-check`, `shared-world`, `sleep-story`, and `chapter-drafter` unchanged. The most important Celestara outcome is not the pass count: `shared-world`, `game-facilitator`, and `chapter-drafter` remain high-value adaptation inputs despite unchanged authority/oracle failures, while `systemic-worldbuilding`, `interactive-fiction`, `table-tone`, and `world-fates` provide strong governed references for persistent campaign behavior. Behavioral validation remains `not-run` for all 54.

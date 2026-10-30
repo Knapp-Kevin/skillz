@@ -5,15 +5,15 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 97f3fce0aeb70143e00b7cbde743f24a45673e1b
 characterized_at: 2026-08-30
-last_verified_at: 2026-08-30
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [cloud, deployment, debugging, architecture]
   lifecycle: [design, implementation, release, operations]
   characteristic: [risk-aware, reference-heavy, safety-bounded, production-oriented]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin, including SKILL.md plus ten bundled reference documents. Strong scope boundaries and operational detail cover ECS, Fargate, ECR, ECS Exec, deployment strategies, scaling, networking, logging, and troubleshooting. Safeguards include explicit execution-role versus task-role separation, secret-injection constraints, private-subnet endpoint requirements, lifecycle-policy preview before ECR cleanup, deployment circuit-breaker rollback, health-check grace periods, zero-downtime deployment constraints, and explicit blocking log mode for guaranteed audit/compliance delivery. Authority is mutating because the documented workflows can create repositories, task definitions, services, load balancers, scaling configuration, VPC-related dependencies, deployments, and cloud cost. Portability is medium because practical use depends on AWS-specific services and often AWS CLI, credentials, Docker, Session Manager, CDK, or equivalent host capabilities. Behavioral validation remains not-run.
+notes: "REJECT unchanged. Exact pinned package tree 97f3fce0aeb70143e00b7cbde743f24a45673e1b at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546 and relevant bundled references statically inspected 2026-10-30. The bundled Fargate deployment reference instructs creation of ECS clusters, load balancers, target groups, listeners and services when required parameters are present, explicitly saying not to ask the user to confirm provided parameters. The entry point requires confirmation before destructive ECS operations, but not before new billable infrastructure, network exposure or traffic routing. Retain task/execution-role separation, private subnet, secrets, lifecycle preview and rollback guidance. Static score 14/20; source terms Apache-2.0; security scan not-run and behavioral validation not-run. No upstream bytes modified."

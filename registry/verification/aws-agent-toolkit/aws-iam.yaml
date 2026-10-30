@@ -5,15 +5,15 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 5da0a0c41f57fbf7470deb7970a5f403ab40997d
 characterized_at: 2026-08-30
-last_verified_at: 2026-08-30
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 13/20
 tags:
   use_case: [security, cloud, debugging, implementation]
   lifecycle: [design, implementation, verification, operations]
   characteristic: [risk-aware, reference-heavy, source-driven, progressive-disclosure]
   authority: [mutating]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin, covering SKILL.md plus four bundled reference documents. Strong safeguards include explicit official-document freshness checks, ForAllValues/ForAnyValue condition-key safety, confused-deputy protection, scoped iam:PassRole guidance, explicit privilege-escalation warnings, role/trust-policy hygiene, and separation between deterministic source-code analysis and service-reference fallback. Authority is mutating because operational workflows can create or alter IAM roles, policies, credentials, trust relationships, and related AWS authorization state; policy upload is explicitly gated on user confirmation. Portability is medium because practical use is AWS-specific and supported-language source-code policy generation mandates uv/uvx plus iam-policy-autopilot, while fallback paths require service-reference query capability or curl/jq. The upstream instruction invokes iam-policy-autopilot@latest rather than a pinned tool version, so an external host should verify that dependency at use time; this does not create repository-owned execution. Behavioral validation remains not-run.
+notes: "REJECT unchanged. Exact pinned package tree 5da0a0c41f57fbf7470deb7970a5f403ab40997d at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546 and relevant bundled references statically inspected 2026-10-30. Bundled `references/aws-iam-role-management.md` explicitly says that when resource names/service types are supplied, proceed directly with IAM role creation and do not ask for confirmation. This can create identity/trust/policy state in a live AWS account; an account ID inferred from the session is not action authorization. Separate policy-generation reference correctly gates policy upload, but that safeguard does not cover the role-creation path. Preserve IAM condition-key, confused-deputy, PassRole, and policy-generation prior art. Static score 13/20; source terms Apache-2.0; security scan not-run and behavioral validation not-run. No upstream bytes modified."
