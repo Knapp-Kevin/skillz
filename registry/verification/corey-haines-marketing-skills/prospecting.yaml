@@ -6,15 +6,15 @@ package_tree_sha: 90018c683343a850a78defd09387b6035228098f
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 472435c76bb7c0e03d620b9412994ec016615e42
 characterized_at: 2026-09-24
-last_verified_at: 2026-09-24
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 14/20
 tags:
   use_case: [research, web-search, business-operations]
   lifecycle: [discovery]
   characteristic: [evidence-first, human-review, risk-aware, source-driven, traceable, tool-assisted]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
-notes: "Verified for unchanged reference use as read-only prospect research. Strong safeguards prohibit bulk platform scraping, CAPTCHA/login bypass, breached/unprovenanced data, sensitive-trait targeting, and untraceable contacts; every qualification requires source evidence and contact lineage, and downstream outreach is separated from list building. Optional enrichment/provider use still requires legitimate user access, lawful basis, provider-term compliance, and current-source verification. Behavioral validation was not run."
+notes: "Rubric 14/20. REJECT unchanged under action-specific authority hard fail. The pinned 1.1.0 manifest requires verification of B2B/SaaS contact emails before final lead-sheet inclusion; bundled references/data-sources.md and tools/integrations/truelist.md direct optional paid Truelist or equivalent external API/CSV verification of identity-bearing contact addresses without obtaining approval for recipient/provider, disclosure purpose, fields, batch scope, retention, billing/credits, and secure credential handling. The example inline API passes an email address in a URL query parameter, creating potential URL/log leakage; the optional /me endpoint can return API keys. These are risk paths, not observed execution or exfiltration. Optional Apollo/Clay/ZoomInfo enrichment, GitHub stargazer identity mapping, browser automation, and CSV output add privacy/ToS/retention dependencies. Public business-contact and anti-scraping safeguards, evidence-linked qualification, sensitive-trait prohibition, and no-auto-send demand-signal branch are valuable ADAPT/EXTRACT/CHECKLIST prior art. Source revision, manifest blob and full package-tree SHA are unchanged. Security scan not newly run; behavioral validation not-run."
