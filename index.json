@@ -1,7 +1,44 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-29",
+  "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "addyosmani_second_authority_reclassification": {
+    "as_of": "2026-10-30",
+    "source_id": "addyosmani-agent-skills",
+    "source_pin": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+    "eligible_denominator": 24,
+    "current_standard_companions": 24,
+    "static_gaps": 0,
+    "additional_exact_pinned_packages_inspected": 10,
+    "combined_deep_review_coverage": 20,
+    "remaining_outside_deep_review": 4,
+    "changed_static_dispositions": 2,
+    "unchanged_dispositions_in_tranche": 8,
+    "changed_skills": [
+      {
+        "skill": "debugging-and-error-recovery",
+        "manifest_blob": "03775802b244cddf2f58f6c54039f6e6ee8702f2",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "Unapproved live load/concurrency debugging, logging and persistent alert creation; unbounded diagnostic state changes"
+      },
+      {
+        "skill": "incremental-implementation",
+        "manifest_blob": "6df12f9a878c80305c42bcdbe8a43a10d2e0c933",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Mandatory Git commits and proposed merges to main without repository/branch/write authorization"
+      }
+    ],
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory_delta": 0,
+    "third_party_review_record_delta": 0,
+    "receipt": "docs/reviews/2026-10-30-addyosmani-second-ten-authority-macro.md"
+  },
   "addyosmani_authority_reclassification": {
     "as_of": "2026-10-29",
     "source_id": "addyosmani-agent-skills",

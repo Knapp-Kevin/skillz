@@ -12,13 +12,13 @@ upstream_revision: 91d4d07522de9577caf5d213e5bf1acc38fa3df2
 upstream_last_updated_at: 2026-08-07T11:27:44Z
 source_last_pushed_at: 2026-08-27T19:28:24Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/addyosmani-agent-skills/skills/incremental-implementation/SKILL.md
-permission_tier: generate
+permission_tier: mutating-with-insufficient-authorization-boundary
 portability: high
 review_status: curated-source-reviewed
 dependency_status: source-intact
 dependencies: upstream repo-level references plus related TDD guidance preserved in vendored source
 import_eligibility: already-vendored
-rationale: Strong small-increment execution discipline and verification boundaries with its shared reference material preserved intact.
+rationale: Preserve vertical/risk-first slices, test gates, safe defaults and rollback-friendly checkpoints for ADAPT/EXTRACT/CHECKLIST. REJECT unchanged because the pinned loop mandates Git commits after each slice and proposes merging incomplete increments to main without explicit branch/repository/write authorization; a feature implementation request is not automatic permission to create durable commits or merge to a protected/shared branch.

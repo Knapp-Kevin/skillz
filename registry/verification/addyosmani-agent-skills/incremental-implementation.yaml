@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/incremental-implementa
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6df12f9a878c80305c42bcdbe8a43a10d2e0c933
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 15/20
 tags:
   use_case: [implementation]
   lifecycle: [implementation]
   characteristic: [incremental, test-gated, behavior-preserving]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong vertical/risk-first slicing, strict scope discipline, safe defaults, rollback-friendly increments, and per-change verification. The workflow encourages local commits and mutations as part of implementation, so concrete execution still inherits the user's repository authority. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. REJECT unchanged: the mandatory slice loop (lines 21-42) commits after every increment, the verification checklist (201-209) requires committed changes, and the feature-flag section (147-160) prescribes merging incomplete increments into main. These durable repository writes and branch lifecycle changes require specific user/host approval for target repository, branch, staging, commit and merge. Existing notes that actions inherit host authority do not create an action boundary in the upstream instructions. Preserve small slices, build/test gates, feature flags and safe defaults for authorized adaptation. Exact pinned blob 6df12f9a878c80305c42bcdbe8a43a10d2e0c933 unchanged; behavioral validation not-run."

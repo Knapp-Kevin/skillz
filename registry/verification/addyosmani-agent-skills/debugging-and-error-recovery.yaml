@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/debugging-and-error-re
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 03775802b244cddf2f58f6c54039f6e6ee8702f2
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 14/20
 tags:
   use_case: [debugging]
   lifecycle: [verification]
   characteristic: [hypothesis-driven, evidence-first, iterative]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong stop-the-line, reproduce/localize/reduce/root-cause/regression-test workflow and explicit treatment of logs/errors as untrusted data. Safe-fallback examples can hide invariants if copied outside their stated context, so mutation/safety scoring is conservative. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. REJECT unchanged: non-reproducible incident branch (lines 53-72) directs load/concurrency runs, added logging and creation of a persistent error alert without separate approval for production traffic, telemetry/PII exposure, destination, recipients, retention or cost. Git bisect (101-108) changes checkout state and dependency-install guidance (188-196) mutates host dependencies without a workspace boundary. The untrusted-error-text rule (272-279) is valuable but only governs instructions from logs, not authorization for live diagnostic effects. Retain hypothesis-driven triage and regression-test methods for host-scoped adaptation. Exact pinned blob 03775802b244cddf2f58f6c54039f6e6ee8702f2 unchanged; behavioral validation not-run."
