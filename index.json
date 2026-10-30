@@ -2,6 +2,60 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "microsoft_azure_shared_authority_recheck": {
+    "as_of": "2026-10-30",
+    "sources": [
+      {
+        "id": "microsoft-skills",
+        "pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+        "reviewed": 186,
+        "denominator": 186,
+        "static_gaps": 0
+      },
+      {
+        "id": "microsoft-azure-skills",
+        "pin": "8f8c72bb9e22aee4366e07aadfd5766ef9add8f4",
+        "reviewed": 34,
+        "denominator": 34,
+        "static_gaps": 0
+      }
+    ],
+    "unique_pinned_package_identities_reclassified": 2,
+    "exposure_records_reclassified": 4,
+    "individual_companion_records_refreshed": 8,
+    "authority_packages_inspected": 10,
+    "unchanged_dispositions_in_tranche": 8,
+    "azure_verified_before": 7,
+    "azure_rejected_before": 27,
+    "azure_verified_after": 5,
+    "azure_rejected_after": 29,
+    "changes": [
+      {
+        "skill": "azure-enterprise-infra-planner",
+        "package_tree": "620e71b64d369c1ea3aa5c8f4feee7793841e7a5",
+        "manifest_blob": "a261c21ed056be1958902cf23f6ae4879001b404",
+        "before": "verified semantic only 18/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Phase 1 private subscription insights/subagent read and JSON persistence without affirmative read and retention scope"
+      },
+      {
+        "skill": "microsoft-foundry-deploy-model",
+        "package_tree": "6ea62f4fb44575d28a3324b4c1eada0e0a3f6be9",
+        "manifest_blob": "322b342762abbcd86eb90a92b2c4cb7dccd6aac6",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "Early project/region confirmation delegates to preset deployment and optional project creation without final cost/action authorization"
+      }
+    ],
+    "admitted_source_denominator_delta": 0,
+    "third_party_review_record_delta": 0,
+    "first_party_inventory_delta": 0,
+    "source_pins_changed": false,
+    "upstream_packages_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "receipt": "docs/reviews/2026-10-30-microsoft-azure-shared-authority-ten-macro.md"
+  },
   "anthropic_skills_pinned_authority_provenance_reconciliation": {
     "as_of": "2026-10-30",
     "source_id": "anthropic-skills",
