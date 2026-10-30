@@ -6,15 +6,15 @@ local_path: skills/sources/google-agents-cli/skills/google-agents-cli-deploy/SKI
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: e473814cd2e2cfe9e8cfeb24e972704756dc5184
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-10
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 19/20
+rubric_score: 15/20
 tags:
-  use_case: [deployment, infrastructure, agent-operations]
-  lifecycle: [deployment, operations]
-  characteristic: [production-oriented, human-review, rollback-aware, evidence-first, safety-bounded]
+  use_case: [deployment, cloud, agent-development]
+  lifecycle: [release, operations]
+  characteristic: [production-oriented, human-review, risk-aware, evidence-first, safety-bounded]
   authority: [mutating, external-side-effect]
   portability: [low]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Explicit target tradeoff discussion, dry-run, mandatory human approval before deployment, production Terraform guidance, secret/IAM controls, timeout recovery, rollback, CI/CD references, and deployed-agent testing. High cloud authority remains approval-gated. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger 2, clarity 2, authority 0, failure 2, evidence 1, dependencies 2, portability 2, differentiation 2, adversarial 0, effectiveness 2. REJECT unchanged. The dev deploy command has an explicit approval gate, but separate Terraform provisioning, API enablement, IAM grants, Secret Manager mutations, gateway binding and production rollback/traffic examples lack independent action-specific authorization. Keep target tradeoffs, dry-run, rollback and verification as adaptation/checklist evidence. Exact pinned fingerprint unchanged; behavioral validation not-run."

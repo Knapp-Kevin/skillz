@@ -33,6 +33,27 @@
     "pending_separate_scope_authority_pr": 496,
     "pending_scope_authority_review": "docs/reviews/2026-10-29-ten-unchanged-first-party-authority-macro.md"
   },
+  "google_agents_cli_authority_reclassification": {
+    "as_of": "2026-10-29",
+    "source_id": "google-agents-cli",
+    "source_pin": "ef7808f33fc3038112b69d4ad488ce33b72699b1",
+    "eligible_denominator": 7,
+    "exact_manifest_identities_checked": 7,
+    "changed_static_dispositions": 3,
+    "verified_semantic_only": 4,
+    "rejected_unchanged": 3,
+    "static_gaps": 0,
+    "taxonomy_records_corrected": 5,
+    "changed_skills": [
+      "google-agents-cli-deploy",
+      "google-agents-cli-observability",
+      "google-agents-cli-publish"
+    ],
+    "source_pin_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "receipt": "docs/reviews/2026-10-29-google-agents-cli-authority-taxonomy-macro.md"
+  },
   "cloudflare_authority_reclassification": {
     "as_of": "2026-10-29",
     "source_id": "cloudflare-skills",
