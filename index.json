@@ -2,6 +2,41 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-29",
   "repository_mode": "passive-skill-knowledge-resource",
+  "addyosmani_authority_reclassification": {
+    "as_of": "2026-10-29",
+    "source_id": "addyosmani-agent-skills",
+    "source_pin": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+    "eligible_denominator": 24,
+    "current_standard_companions": 24,
+    "static_gaps": 0,
+    "high_authority_packages_inspected": 10,
+    "changed_static_dispositions": 2,
+    "unchanged_dispositions_in_tranche": 8,
+    "changed_skills": [
+      {
+        "skill": "observability-and-instrumentation",
+        "manifest_blob": "7d56593ec599cce0bae12aa46862884d0208cc59",
+        "before": "verified semantic only 18/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Unapproved telemetry transfer, live alert policy changes and test-fired notifications"
+      },
+      {
+        "skill": "browser-testing-with-devtools",
+        "manifest_blob": "9864d2724e273e1164d62ab10b73590ae00fd6a8",
+        "before": "verified semantic only 19/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "Unpinned host MCP installation/configuration and browser actions with external writes without action-wide authorization"
+      }
+    ],
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory_delta": 0,
+    "third_party_review_record_delta": 0,
+    "receipt": "docs/reviews/2026-10-29-addyosmani-ten-authority-macro.md"
+  },
   "security_evidence_reconciliation": {
     "as_of": "2026-10-29",
     "main_commit": "713c98fa55d5c7fa27552f567b4bd73e9f0f7a18",
