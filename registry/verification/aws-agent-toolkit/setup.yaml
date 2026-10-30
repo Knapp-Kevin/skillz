@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: setup
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: f60a821d6b1e8fd380cc68526199a2be314f71f2
+manifest_blob_sha: f855a5727278411904e4ba6a835691ef77069fef
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [orchestration, security, cloud]
+  lifecycle: [implementation]
+  characteristic: [tool-routing, decomposition]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Orchestrate setup of one or both AWS agents; not a safe general-purpose 'connect' command absent scoped authorization. This thin dispatcher invokes both setup workflows by default on broad 'set up/configure/connect' triggers. Its DevOps child has unapproved unpinned installation and private-read steps; its Security child can create or overwrite IAM, S3 lifecycle and persistent AgentSpace resources. The 'only one if needed' branch is useful, but there is no independent action-specific authority boundary before delegation. Reject unchanged; retain dependency routing as CHECKLIST/COMPOSE input. Exact source path plugins/aws-agents-for-devsecops/skills/setup/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; package tree f60a821d6b1e8fd380cc68526199a2be314f71f2; manifest blob f855a5727278411904e4ba6a835691ef77069fef. Package-specific freshness unknown; no qualifying security scan and behavioral validation not-run.

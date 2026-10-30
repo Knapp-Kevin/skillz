@@ -298,7 +298,7 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 834,
+    "persisted_third_party_exact_version_reviews": 839,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
     "jwynia_agent_skills_fiction_verified": 39,
@@ -315,8 +315,8 @@
     "anthropic_knowledge_work_plugins_current_standard_gaps": 0,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 94,
-    "aws_current_standard_companion_complete": 80,
-    "aws_current_standard_gaps": 14,
+    "aws_current_standard_companion_complete": 85,
+    "aws_current_standard_gaps": 9,
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
@@ -473,7 +473,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-30: AWS pinned plugin denominator correction: 115 SKILL.md exposures, 93 names, 94 distinct package trees; 72/94 -> 80/94 exact-version reviewed, 14 gaps. Eight DevSecOps plugin skills REJECT unchanged for authority/privacy. 44 first-party / 834 third-party / 878 total; source pin unchanged; security and behavioral evidence not-run.",
+    "latest_reconciliation": "2026-10-30: AWS DevSecOps final five exact-pin reviews REJECT unchanged; DevSecOps 13/13 static complete, AWS 80/94 -> 85/94, 9 gaps (AgentCore 7, signing-in-to-aws 1, divergent aws-cdk 1). 115 exposure paths, 94 distinct package identities unchanged. Inventory 44 first-party / 839 third-party / 883 total. No new security/behavioral evidence or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -616,5 +616,59 @@
     "security_scans_run": 0,
     "behavioral_validations_run": 0,
     "receipt": "docs/reviews/2026-10-30-aws-pinned-plugin-denominator-and-eight-static.md"
+  },
+  "aws_devsecops_final_five_static": {
+    "date": "2026-10-30",
+    "source_id": "aws-agent-toolkit",
+    "pinned_revision": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+    "devsecops_family_denominator": 13,
+    "devsecops_reviewed_before": 8,
+    "devsecops_reviewed_after": 13,
+    "aws_denominator": 94,
+    "aws_reviewed_before": 80,
+    "aws_reviewed_after": 85,
+    "aws_gaps_after": 9,
+    "added_exact_version_records": 5,
+    "dispositions": [
+      {
+        "skill": "investigating-incidents-with-aws-devops-agent",
+        "package_tree": "46093040d5302e6a586fceeab7279d0ea5b35b04",
+        "manifest_blob": "ea0a40bf690019426992e3288cd93b8e56579d83",
+        "score": "13/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "setup-devops-agent",
+        "package_tree": "4b3d53ccc19d5664f349a2f5c1e53aec35e26c90",
+        "manifest_blob": "afea862a61c3ae081253cc566220e55398fb4cda",
+        "score": "15/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "setup-security-agent",
+        "package_tree": "0b27efd53c0ca29a3d8882147a402dbcb6db4993",
+        "manifest_blob": "187ac78daedc92d028530a16fa0f8e77b687a380",
+        "score": "11/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "setup",
+        "package_tree": "f60a821d6b1e8fd380cc68526199a2be314f71f2",
+        "manifest_blob": "f855a5727278411904e4ba6a835691ef77069fef",
+        "score": "12/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "threat-modeling-with-aws-security-agent",
+        "package_tree": "a6783b1f796bdf737b096ee6230053eaac819d55",
+        "manifest_blob": "07b7681c61fb6eb00aa20a68606c116b6697464f",
+        "score": "12/20",
+        "state": "rejected-unchanged"
+      }
+    ],
+    "source_pin_changed": false,
+    "security_scans_run": 0,
+    "behavioral_validations_run": 0,
+    "receipt": "docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md"
   }
 }

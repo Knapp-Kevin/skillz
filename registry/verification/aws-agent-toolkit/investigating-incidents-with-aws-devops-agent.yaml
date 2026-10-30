@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: investigating-incidents-with-aws-devops-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 46093040d5302e6a586fceeab7279d0ea5b35b04
+manifest_blob_sha: ea0a40bf690019426992e3288cd93b8e56579d83
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [debugging, observability, monitoring]
+  lifecycle: [operations]
+  characteristic: [evidence-first, tool-routing, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Deep asynchronous incident/root-cause analysis; not a generic cost or architecture chat. The default pre-flight packs full stack traces, local Git history and IaC into a remote managed investigation title without bounded private-data disclosure approval. It starts persistent remote investigations and may incur cost without a separate authorization boundary. Bundled REFERENCE.md additionally offers mitigation task state changes only after approval, which does not cure the earlier unauthorized disclosure and job creation. Preserve pagination, status reporting and no-auto-execute recommendations for ADAPT/CHECKLIST. Exact source path plugins/aws-agents-for-devsecops/skills/investigating-incidents-with-aws-devops-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; package tree 46093040d5302e6a586fceeab7279d0ea5b35b04; manifest blob ea0a40bf690019426992e3288cd93b8e56579d83. Package-specific freshness unknown; no qualifying security scan and behavioral validation not-run.
