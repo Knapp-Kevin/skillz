@@ -12,12 +12,12 @@ package_tree_sha: 5aaf47ba59e4a34547514e44813436c97ce10016
 upstream_revision: 7d0ef87dad1f638cab58995eead9e0e6e3fae237
 upstream_last_updated_at: 2026-08-29T09:14:12Z
 curated_at: 2026-09-10
-last_checked_at: 2026-09-10
+last_checked_at: 2026-10-30
 availability: external
 permission_tier: external-side-effect
 portability: low
 review_status: curated-external
 dependency_status: source-intact-host-specific
 dependencies: bb CLI, configured bb projects/providers/models, provider subscriptions, worktree support, host-specific BB_THREAD_ID and optional BB_CLI environment
-import_eligibility: eligible-standalone-with-portability-caveats
-rationale: Detailed spawn-only recipe with explicit lookup-before-spawn, strong no-guessing rules, read-only prompt constraints, and a user-request trigger that serves as action authorization for spawning a requested worker. Highly host-specific bb/provider/model defaults require adaptation elsewhere.
+import_eligibility: rejected-unchanged-reference-only
+rationale: "The default spawn command uses --permission-mode full (no sandbox) and the skill makes full the default even for investigation/read-only workers, relying on prompt-level no-write text. A request to spawn a worker does not authorize disabling host permission boundaries for its future private reads, writes, production access or external effects. A textual constraint inside an unrestricted agent is not an authorization control. Preserve provider/model lookup, project matching, worktree isolation and precise handoff methods for adaptation."
