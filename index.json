@@ -2,6 +2,55 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "addyosmani_final_four_authority_reclassification": {
+    "as_of": "2026-10-30",
+    "source_id": "addyosmani-agent-skills",
+    "source_pin": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+    "eligible_denominator": 24,
+    "current_standard_companions": 24,
+    "static_gaps": 0,
+    "final_packages_inspected": 4,
+    "combined_deep_review_coverage": 24,
+    "remaining_outside_deep_review": 0,
+    "changed_static_dispositions": 3,
+    "unchanged_dispositions_in_tranche": 1,
+    "family_verified_before": 13,
+    "family_rejected_before": 11,
+    "family_verified_after": 10,
+    "family_rejected_after": 14,
+    "changed_skills": [
+      {
+        "skill": "code-simplification",
+        "manifest_blob": "239b2848489511de30d9e63b0bd183adc4b01347",
+        "before": "verified 18/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Git commits without separately authorized repository/branch write"
+      },
+      {
+        "skill": "context-engineering",
+        "manifest_blob": "be991103fe2b13f7e5f6f5da9d3c6029ad30ac64",
+        "before": "verified 17/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "Persistent rules-file mutation and unscoped private MCP reads"
+      },
+      {
+        "skill": "idea-refine",
+        "manifest_blob": "38955e8943f2ea68c041f10ef1902d94bdfb1cb9",
+        "before": "verified 17/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Optional mkdir helper without path/write authorization"
+      }
+    ],
+    "retained_skill": "doubt-driven-development: verified semantic only 19/20; per-invocation approval, sensitive artifact minimization caveat",
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory_delta": 0,
+    "third_party_review_record_delta": 0,
+    "receipt": "docs/reviews/2026-10-30-addyosmani-final-four-authority-macro.md"
+  },
   "addyosmani_second_authority_reclassification": {
     "as_of": "2026-10-30",
     "source_id": "addyosmani-agent-skills",
@@ -160,7 +209,11 @@
     "verified_semantic_only": 8,
     "rejected_unchanged": 5,
     "static_gaps": 0,
-    "changed_skills": ["cloudflare-email-service", "cloudflare-one", "cloudflare-one-migrations"],
+    "changed_skills": [
+      "cloudflare-email-service",
+      "cloudflare-one",
+      "cloudflare-one-migrations"
+    ],
     "source_pin_changed": false,
     "new_security_scans": 0,
     "behavioral_validation_executed": 0,
@@ -376,7 +429,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-28: microsoft-foundry root 220/220 distinct candidate blobs read (1,299,560 bytes), rejected unchanged 11/20 for mandatory installation, cloud/RBAC authority, production trace and OAuth credential failures. Changed 75/76 -> 76/76, remaining 0; third-party 825 -> 826, total 869 -> 870. July pin/admission/security/behavioral unchanged.",
+    "latest_reconciliation": "2026-10-30: Addy Osmani final four pinned authority recheck; 24/24 deeper reviewed, 3 semantic approvals corrected, family 10 VERIFIED / 14 REJECT unchanged. 24/24 companions, 0 gaps; 44 first-party / 826 third-party / 870 total unchanged. No pin/security/behavioral change.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",

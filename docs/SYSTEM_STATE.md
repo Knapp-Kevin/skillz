@@ -6,7 +6,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-29 |
+| **Last updated** | 2026-10-30 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
@@ -27,6 +27,8 @@
 | **Maintenance security evidence** | Host-executed exact-pinned SkillSpector assessments; no repository-owned CI |
 
 ## Matt Pocock candidate freshness
+
+**Addy Osmani final-four authority closure (2026-10-30).** The last **4/24** previously un-rechecked exact pinned packages received deeper review: `code-simplification` (18/20 VERIFIED -> **15/20 REJECT unchanged**) directs unauthorized Git commits; `context-engineering` (17/20 -> **14/20 REJECT unchanged**) directs unapproved persistent rules files and private MCP reads; `idea-refine` (17/20 -> **15/20 REJECT unchanged**) offers an unapproved directory-creating helper. `doubt-driven-development` remains **VERIFIED semantic only 19/20**, with per-invocation approval and sensitive-artifact minimization caveat. Deeper review **20/24 -> 24/24**, family **13 VERIFIED / 11 REJECT -> 10 VERIFIED / 14 REJECT**. Static companions **24/24 / 0 gaps**, admitted denominator delta **0**, source pin and **44/826/870** inventory unchanged; no security or behavioral passes. [Final four-package macro review](reviews/2026-10-30-addyosmani-final-four-authority-macro.md).
 
 **Addy Osmani second pinned authority tranche (2026-10-30).** A disjoint **10-package** exact-pin review found two additional false unchanged-use approvals: `debugging-and-error-recovery` (17/20 VERIFIED → **14/20 REJECT unchanged**) directs live load/concurrency diagnostics, logging and persistent alerts without action-specific authorization; `incremental-implementation` (17/20 VERIFIED → **15/20 REJECT unchanged**) requires commits and proposes merges to main without a distinct repository/branch/write approval boundary. Eight other reviewed dispositions were retained, including the already rejected `planning-and-task-breakdown` with external-tracker write assumptions. Combined deeper review now covers **20/24** packages, with four lower-authority packages outside these tranches. Family stays **24/24 current-standard complete / 0 static gaps**; no package, pin, admission, security/behavioral state or **44/826/870** inventory change. [Second ten-package macro review](reviews/2026-10-30-addyosmani-second-ten-authority-macro.md).
 
