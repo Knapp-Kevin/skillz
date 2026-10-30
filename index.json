@@ -2,6 +2,50 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "anthropic_skills_pinned_authority_provenance_reconciliation": {
+    "as_of": "2026-10-30",
+    "source_id": "anthropic-skills",
+    "source_pin": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+    "eligible_denominator": 19,
+    "current_standard_companions": 19,
+    "static_gaps": 0,
+    "upstream_template_excluded": 1,
+    "authority_packages_inspected": 10,
+    "changed_static_dispositions": 2,
+    "unchanged_dispositions_in_tranche": 8,
+    "family_verified_before": 12,
+    "family_rejected_before": 7,
+    "family_verified_after": 10,
+    "family_rejected_after": 9,
+    "provenance_records_reconciled": 19,
+    "verification_records_refreshed": 19,
+    "changed_skills": [
+      {
+        "skill": "skill-creator",
+        "manifest_blob": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+        "package_tree": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
+        "before": "verified semantic only 18/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "Background paired subagents, model-cost optimization, private prompt handling, persistent eval workspaces and review server without separate authority"
+      },
+      {
+        "skill": "webapp-testing",
+        "manifest_blob": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+        "package_tree": "5ffb7dc66b9fd4c25c3e400a4c00da99a349b714",
+        "before": "verified semantic only 16/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "Server launch and browser actions without explicit authorization for authenticated or connected-state effects"
+      }
+    ],
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory_delta": 0,
+    "third_party_review_record_delta": 0,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "receipt": "docs/reviews/2026-10-30-anthropic-skills-pinned-authority-and-provenance-macro.md"
+  },
   "addyosmani_final_four_authority_reclassification": {
     "as_of": "2026-10-30",
     "source_id": "addyosmani-agent-skills",

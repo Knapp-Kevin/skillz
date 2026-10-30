@@ -11,7 +11,7 @@ source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: ef740771ac901e03fbca3ce4e1c453a96010f30a
 upstream_last_updated_at: 2025-12-01T18:05:36Z
 curated_at: 2026-08-29
-last_checked_at: 2026-09-30
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/anthropic-skills/skills/mcp-builder/SKILL.md
 package_tree_sha: b866bcfb57b780c10b587c7b543e871a91661ce0
@@ -20,5 +20,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: source-intact-current-sdk-docs-required
 dependencies: Bundled MCP references plus current MCP SDK/spec docs and local test toolchain
-import_eligibility: pin-advance-candidate
-rationale: Exact candidate package tree is unchanged from the registered pin. Structured MCP research, implementation, testing, and evaluation with explicit tool annotations and read-only eval guidance remains applicable; prior review may carry forward if the pin advances.
+import_eligibility: eligible-subject-to-user-fit-and-security-evidence
+rationale: Exact pinned package tree matches the registered source pin. Structured MCP research, implementation, testing, and evaluation with explicit tool annotations and read-only eval guidance remains applicable; structured review applies to this pinned package.

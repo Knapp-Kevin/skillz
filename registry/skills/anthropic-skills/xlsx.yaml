@@ -10,8 +10,8 @@ relationship: pinned-reference
 source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 curated_at: 2026-09-30
-last_checked_at: 2026-09-30
-availability: candidate-reference-only
+last_checked_at: 2026-10-30
+availability: vendored-reference-only
 local_path: skills/sources/anthropic-skills/skills/xlsx/SKILL.md
 package_tree_sha: fe6471cc9b5b97aae0b576ccb92ffd9b0207589d
 skill_blob_sha: 9da54804cc8c938586f89363c8da3b3a6e2a563d
@@ -21,4 +21,4 @@ review_status: rejected-unchanged
 dependency_status: license-restricted
 dependencies: Anthropic-service-governed proprietary materials plus spreadsheet/OOXML tooling and bundled source-owned scripts
 import_eligibility: reference-only-license-restricted
-rationale: Candidate spreadsheet package changed, but the package license remains restrictive and incompatible with normal skillz unchanged reuse, extraction, derivatives, redistribution, or retained copies. Preserve bounded technical reference evidence only.
+rationale: The pinned spreadsheet package changed, but the package license remains restrictive and incompatible with normal skillz unchanged reuse, extraction, derivatives, redistribution, or retained copies. Preserve bounded technical reference evidence only.

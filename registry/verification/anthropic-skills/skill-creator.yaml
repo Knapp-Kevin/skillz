@@ -7,15 +7,15 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 65b3a402dbd09b8e83f9d637c6b553875189085c
 package_tree_sha: 3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-30
-verification_status: verified
-verification_basis: structured-static-review-carried-forward-exact-tree
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review-authority-hard-fail
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 15/20
 tags:
   use_case: [skill-authoring, evaluation, testing, agent-development]
   lifecycle: [planning, implementation, verification, maintenance]
   characteristic: [test-driven, evidence-first, iterative, human-review, holdout-aware, traceable]
-  authority: [generate-only, mutating]
+  authority: [generate-only, mutating, external-side-effect]
   portability: [medium]
-notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Unusually strong evaluation and security methodology remains applicable; host-specific subagent/viewer mechanics reduce portability. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.
+notes: "REJECT unchanged: the default authoring loop launches paired subagents and graders, writes persistent evaluation workspaces, and can run a background review server. The optional trigger optimizer directs repeated paid model calls and realistic prompts containing private file paths or personal context without a separate scope, cost, retention, or disclosure authorization gate. User intent to draft a skill is not approval for those operations. Preserve evaluation design, holdouts, rubrics, and review templates for ADAPT, EXTRACT, and CHECKLIST use; behavioral validation not-run. The registered source pin matches this exact package."

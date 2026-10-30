@@ -18,4 +18,4 @@ tags:
   characteristic: [tool-assisted, production-oriented]
   authority: [generate-only, mutating]
   portability: [low]
-notes: 'Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Hard fail remains a mutable and unpinned executable dependency graph. Adapt with reviewed lockfiles/version pins and no implicit global install. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.'
+notes: 'Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Hard fail remains a mutable and unpinned executable dependency graph. Adapt with reviewed lockfiles/version pins and no implicit global install. Behavioral validation remains not-run. The registered source pin already matches this exact reviewed package.'

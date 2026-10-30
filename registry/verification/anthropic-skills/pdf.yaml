@@ -18,4 +18,4 @@ tags:
   characteristic: [tool-assisted, compatibility-aware]
   authority: [mutating]
   portability: [low]
-notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Technical design scores well, but licensing remains a hard fail. Reference-only; behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.
+notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior rejection carries forward. Technical design scores well, but licensing remains a hard fail. Reference-only; behavioral validation remains not-run. The registered source pin already matches this exact reviewed package.
