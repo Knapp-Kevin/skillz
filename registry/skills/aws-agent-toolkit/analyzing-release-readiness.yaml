@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: analyzing-release-readiness
+display_name: analyzing release readiness
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/analyzing-release-readiness/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/analyzing-release-readiness
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS DevOps Agent Release Readiness API/MCP or aws-mcp fallback, Git/GitHub/GitLab local host, branch push access, optional automated tests
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Exact pinned one-file package tree 22220183e5b148fb171a5bd0eae72e96d644f3b1, manifest blob 7b55190db5081dc67125fb182d4fbd32feaa7fc3. PR URL parsing avoids unnecessary local access and local branch pushes are explicitly confirmed, but the mandatory post-review auto-fix path and remote branch deletion expand a review into durable Git changes. Sending private code and review inputs to the managed AWS service is not independently bounded by disclosure authorization. Preserve review structure as a checklist; reject unchanged use. No behavioral validation or package-security pass is claimed.

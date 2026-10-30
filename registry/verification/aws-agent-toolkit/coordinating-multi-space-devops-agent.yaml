@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: coordinating-multi-space-devops-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: ee9d21044abfd3f3d1e4b5613d9ffe092aafa9a3
+manifest_blob_sha: dd35ca5f256bf3cc594258dd2dbf65f7242eab9e
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, orchestration, security]
+  lifecycle: [planning, operations]
+  characteristic: [orchestration, tool-routing, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Distinct multi-space routing and cross-environment comparison, with an ambiguity question for unnamed environments. However, discovery instructs querying every space for account, service and runbook summaries and copying findings between spaces without per-account private-read and cross-boundary disclosure approval. A guide is only offered, not automatically written. Reject unchanged. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/coordinating-multi-space-devops-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest dd35ca5f256bf3cc594258dd2dbf65f7242eab9e; one-file package tree ee9d21044abfd3f3d1e4b5613d9ffe092aafa9a3. Security scan not established. Behavioral validation not-run.

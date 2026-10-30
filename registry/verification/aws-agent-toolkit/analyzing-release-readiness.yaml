@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: analyzing-release-readiness
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 22220183e5b148fb171a5bd0eae72e96d644f3b1
+manifest_blob_sha: 7b55190db5081dc67125fb182d4fbd32feaa7fc3
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, code-review, repository-maintenance]
+  lifecycle: [verification, release]
+  characteristic: [evidence-first, risk-aware, tool-routing]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  PR URL parsing avoids unnecessary local access and local branch pushes are explicitly confirmed, but the mandatory post-review auto-fix path and remote branch deletion expand a review into durable Git changes. Sending private code and review inputs to the managed AWS service is not independently bounded by disclosure authorization. Preserve review structure as a checklist; reject unchanged use. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/analyzing-release-readiness/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest 7b55190db5081dc67125fb182d4fbd32feaa7fc3; one-file package tree 22220183e5b148fb171a5bd0eae72e96d644f3b1. Security scan not established. Behavioral validation not-run.

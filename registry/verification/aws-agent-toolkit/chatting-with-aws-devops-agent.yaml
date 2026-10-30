@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: chatting-with-aws-devops-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: edd9c42d7464aa26a9e5d1eb7b3632699d6ab929
+manifest_blob_sha: 740a3c60b601ff1f52cb0b30ca5d2fac1a0231d3
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, observability, research]
+  lifecycle: [discovery, operations]
+  characteristic: [context-efficient, tool-routing, source-driven]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Useful fast-chat versus deep-investigation routing, but it recommends injecting local IaC, error logs and private topology into a managed remote conversation and reading account/runbook context without an explicit data classification, access scope or transmission approval. Conversation retention is unspecified. Reject unchanged; extract the routing pattern. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/chatting-with-aws-devops-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest 740a3c60b601ff1f52cb0b30ca5d2fac1a0231d3; one-file package tree edd9c42d7464aa26a9e5d1eb7b3632699d6ab929. Security scan not established. Behavioral validation not-run.

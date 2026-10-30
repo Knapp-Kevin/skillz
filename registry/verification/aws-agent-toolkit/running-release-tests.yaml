@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: running-release-tests
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 57620788b52c582f046e1513e6da40915ebe1467
+manifest_blob_sha: 8416f7c36e0c983a33946b9acdb89d9bb481f793
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [testing, cloud, evaluation]
+  lifecycle: [verification, release]
+  characteristic: [tool-routing, evidence-first, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Requires explicit test-profile and AgentSpace selection and waits for user input, but selection of a credential-bearing UI/API profile is not authorization to send live authenticated requests, mutate backend state or incur managed-test costs. Profile scope and data retention are not independently approved. Reject unchanged; retain report and status workflow. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/running-release-tests/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest 8416f7c36e0c983a33946b9acdb89d9bb481f793; one-file package tree 57620788b52c582f046e1513e6da40915ebe1467. Security scan not established. Behavioral validation not-run.
