@@ -12,13 +12,13 @@ upstream_revision: fea75b16472ba87e8c11f13a9e000c3ffdb2d1f5
 upstream_last_updated_at: 2026-03-31T20:41:45Z
 source_last_pushed_at: 2026-08-27T19:28:24Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/addyosmani-agent-skills/skills/code-simplification/SKILL.md
-permission_tier: generate
+permission_tier: mutating-with-insufficient-authorization-boundary
 portability: high
 review_status: curated-source-reviewed
-dependency_status: self-contained
-dependencies: none identified in canonical SKILL.md
+dependency_status: host-tool-dependent
+dependencies: project conventions/source, available tests and build tools, git history and commit capability; host tools are not guaranteed
 import_eligibility: already-vendored
-rationale: Useful behavior-preserving simplification process with Chesterton's Fence, incremental verification, scope control, and explicit anti-over-simplification rules.
+rationale: Preserve behavior-equivalence checks, Chesterton's Fence, scoped refactors, tests and anti-over-simplification examples for ADAPT/EXTRACT/CHECKLIST. REJECT unchanged because Step 3 directs a Git commit after each passing simplification without separate authorization for repository, branch, staging or durable write. Refactoring permission does not authorize committing.
