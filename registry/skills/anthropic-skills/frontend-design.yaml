@@ -12,7 +12,7 @@ upstream_revision: 41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f
 upstream_last_updated_at: 2026-09-03T16:37:13Z
 curated_at: 2026-09-30
 last_checked_at: 2026-09-30
-availability: candidate-pinned-reference
+availability: vendored
 local_path: skills/sources/anthropic-skills/skills/frontend-design/SKILL.md
 package_tree_sha: d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6
 skill_blob_sha: a5333457c414d20d625f307df945842c0952ecc3

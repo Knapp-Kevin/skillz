@@ -11,7 +11,7 @@ source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 curated_at: 2026-09-30
 last_checked_at: 2026-09-30
-availability: candidate-reference-only
+availability: vendored-reference-only
 local_path: skills/sources/anthropic-skills/skills/docx/SKILL.md
 package_tree_sha: 6e6f5b95c1de6e803cc07b214f5059b074d64e0c
 skill_blob_sha: fb954a460a1ea2294e9595e87fecce8df043eeba
@@ -21,4 +21,4 @@ review_status: rejected-unchanged
 dependency_status: license-restricted
 dependencies: Anthropic-service-governed proprietary materials plus DOCX/OOXML tooling and bundled source-owned scripts
 import_eligibility: reference-only-license-restricted
-rationale: Candidate package and helpers changed, but the package license remains restrictive and does not permit the extraction, reproduction, derivative, redistribution, or retention model required for normal skillz unchanged reuse. Technical material remains bounded reference evidence only.
+rationale: The pinned package and helpers changed, but the package license remains restrictive and does not permit the extraction, reproduction, derivative, redistribution, or retention model required for normal skillz unchanged reuse. Technical material remains bounded reference evidence only.
