@@ -2,6 +2,58 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "microsoft_azure_mirrored_authority_final_five": {
+    "as_of": "2026-10-30",
+    "azure_source_pin": "8f8c72bb9e22aee4366e07aadfd5766ef9add8f4",
+    "microsoft_source_pin": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+    "review_scope": "five previously VERIFIED Azure exposure records; two contradicted existing Microsoft Skills exact-package rejections",
+    "azure_reviewed": 34,
+    "azure_denominator": 34,
+    "azure_static_gaps": 0,
+    "microsoft_reviewed": 186,
+    "microsoft_denominator": 186,
+    "azure_verified_before": 5,
+    "azure_rejected_before": 29,
+    "azure_verified_after": 3,
+    "azure_rejected_after": 31,
+    "changed_azure_exposure_records": 2,
+    "changed_distinct_package_identities": 2,
+    "individual_companions_refreshed": 4,
+    "admitted_source_denominator_delta": 0,
+    "third_party_review_record_delta": 0,
+    "first_party_inventory_delta": 0,
+    "first_party_inventory": 44,
+    "third_party_exact_version_reviews": 848,
+    "total_verification_records": 892,
+    "source_pins_changed": false,
+    "upstream_packages_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "corrected": [
+      {
+        "skill": "airunway-aks-setup",
+        "tree": "72ec58c0a7c574dc71e14c63feb3d2aa529849ac",
+        "manifest": "26bbd92815116826696fb6380d37446a285496b9",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 15/20",
+        "reason": "destructive rollback deletes ModelDeployment, token Secret, provider and controller without separate approval"
+      },
+      {
+        "skill": "azure-cloud-migrate",
+        "tree": "dd0d5a31e87576d5b46899b19aa3eedb24d412f4",
+        "manifest": "b1634cf629d9358eb70a95c089b309c304f9c42c",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 9/20",
+        "reason": "bundled Container Apps provisioning, identity grants, secret transfer and external ingress lack action-specific authority"
+      }
+    ],
+    "retained_verified": [
+      "azure-rbac",
+      "microsoft-foundry-deploy-model-capacity",
+      "microsoft-foundry-deploy-model-customize"
+    ],
+    "receipt": "docs/reviews/2026-10-30-microsoft-azure-five-mirror-authority-reconciliation.md"
+  },
   "microsoft_azure_shared_authority_recheck": {
     "as_of": "2026-10-30",
     "sources": [
