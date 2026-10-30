@@ -11,12 +11,12 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
 upstream_last_updated_at: 2026-05-13T09:01:18Z
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-30
 availability: external
 permission_tier: mutating
 portability: medium
-review_status: verified-structured
+review_status: rejected-structured
 dependency_status: source-intact
 dependencies: AWS CLI and valid AWS credentials for Cost Explorer, Budgets, Billing, Compute Optimizer, Cost Optimization Hub, Savings Plans, Reserved Instances, CUR/Athena, and related APIs; optional AWS MCP server; calculator or scripting capability for deterministic arithmetic; and source-intact reference files bundled with the skill
-import_eligibility: exact-version-reference
-rationale: Strong AWS cost-analysis and optimization guidance with explicit current-date checks, deterministic-calculation requirements, API-specific gotchas, billing-view scoping, troubleshooting, and source-intact deep references. Many workflows are read-oriented, but budget creation, Compute Optimizer enrollment, commitment decisions, and other account-level cost-management actions can mutate configuration or create financial commitments, so use requires current credentials, cost awareness, and explicit host/user authority.
+import_eligibility: adaptation-reference-only
+rationale: "REJECT unchanged at registered AWS pin, exact package tree 78db779f94238b6b7fec6d25cbe9986a03ad2a01. The pinned SKILL.md directly instructs `aws compute-optimizer update-enrollment-status --status Active` as a prerequisite and includes `aws budgets create-budget` without separate approval for account enrollment, persistent budget/notifications, recipients, and billing-view scope. The cost-audit reference begins executing private account billing reads from a generic audit request. Current-date and deterministic-arithmetic safeguards remain useful, but parameter selection is not authorization for money-bearing account state or notification delivery. Authority hard-fail independent of numeric score; preserve source-owned package and useful ADAPT/EXTRACT/CHECKLIST prior art. Behavioral not-run; no package-security scan."

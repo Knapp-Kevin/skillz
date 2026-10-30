@@ -11,12 +11,12 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 upstream_revision: 6c8891273181288a3172850e4501c762feb7c257
 upstream_last_updated_at: 2026-06-17T08:29:37Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-30
 availability: external
 permission_tier: mutating
 portability: medium
-review_status: verified-structured
+review_status: rejected-structured
 dependency_status: source-intact
 dependencies: AWS CLI v2 and/or recent AWS SDKs, valid AWS credentials and regional Bedrock access, Bedrock and AgentCore service APIs, optional AWS MCP server, and the source-intact reference files bundled with the skill
-import_eligibility: exact-version-reference
-rationale: Broad Bedrock and AgentCore guidance with explicit non-use boundaries, endpoint-selection guidance, least-privilege IAM and secrets controls, prompt-injection/untrusted-input cautions, quota and cost safeguards, destructive-operation confirmations, and detailed source-intact procedures. Many workflows can create, configure, invoke, deploy, or mutate AWS resources and therefore require current host capabilities, credentials, cost awareness, and explicit user authority.
+import_eligibility: adaptation-reference-only
+rationale: "REJECT unchanged at registered AWS pin, exact package tree 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da. The entry point mandates executing the Knowledge Base or Agent creation references rather than offering code alone. `references/knowledge-bases-setup.md` says to proceed when parameters exist, creates IAM roles, a Knowledge Base, data source, and ingestion; `references/agents-and-action-groups.md` likewise creates agents, action groups and aliases without separate resource/cost/action authorization. PII/PHI disclosure is queried only before ingestion, after cloud creation has begun. Retain strong quota, secret-handling, guardrail and validation guidance as adaptation/checklist evidence. Authority hard-fail independent of numeric score; preserve source-owned package and useful ADAPT/EXTRACT/CHECKLIST prior art. Behavioral not-run; no package-security scan."

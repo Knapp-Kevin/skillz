@@ -5,15 +5,15 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 13/20
 tags:
   use_case: [agent-development, architecture, cloud, debugging]
   lifecycle: [design, implementation, verification, release, operations]
   characteristic: [risk-aware, reference-heavy, cost-bounded, evidence-first, production-oriented]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin. Strong scope and non-use boundaries, mandatory reference-file routing for fast-changing APIs, least-privilege IAM and Secrets Manager guidance, explicit untrusted-input handling, CloudTrail and PII logging cautions, maxTokens/quota safeguards, cost attribution guidance, dependency checks, execution previews, stop/abort respect, and destructive-operation confirmation. Authority and portability remain constrained because many workflows create, configure, invoke, deploy, or mutate Bedrock/AgentCore resources and depend on AWS credentials, regional service access, recent CLI/SDK behavior, and source-intact references. Behavioral validation remains not-run.
+notes: "REJECT unchanged. Exact pinned package tree 52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546 and relevant bundled references statically inspected 2026-10-30. The entry point mandates executing the Knowledge Base or Agent creation references rather than offering code alone. `references/knowledge-bases-setup.md` says to proceed when parameters exist, creates IAM roles, a Knowledge Base, data source, and ingestion; `references/agents-and-action-groups.md` likewise creates agents, action groups and aliases without separate resource/cost/action authorization. PII/PHI disclosure is queried only before ingestion, after cloud creation has begun. Retain strong quota, secret-handling, guardrail and validation guidance as adaptation/checklist evidence. Static score 13/20; source terms Apache-2.0; security scan not-run and behavioral validation not-run. No upstream bytes modified."

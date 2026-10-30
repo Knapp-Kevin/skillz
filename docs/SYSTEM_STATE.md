@@ -71,6 +71,8 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | Google Agents CLI | 7 / 7 | 0 |
 | Cline Skills (published) | 36 / 36 | 0 |
 
+The [2026-10-30 AWS ten-package authority recheck](reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md) retained **94/94** static coverage, corrected six false unchanged-use approvals, and preserved four narrower VERIFIED semantic records. Unapproved IAM, account, infrastructure, budget, notification and telemetry effects are hard fails; no source, security or behavioral result changed.
+
 Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Python **40/40**, Rust **9/9**, and TypeScript **25/25**.
 
 Completion means decisive current evidence for every eligible package in the explicitly complete families above, not universal approval. Selectively tracked corpora may intentionally have only bounded individually governed units. Rejected and retired material remains useful bounded prior art.

@@ -5,15 +5,15 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 78db779f94238b6b7fec6d25cbe9986a03ad2a01
 characterized_at: 2026-08-30
-last_verified_at: 2026-08-30
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [business-operations, cloud, decision-support]
   lifecycle: [planning, operations]
   characteristic: [cost-bounded, deterministic, reference-heavy, evidence-first, production-oriented]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin. Strong scope and trigger coverage, mandatory current-date checks for time-bounded billing APIs, explicit deterministic-calculation requirements instead of model arithmetic, API-specific correctness traps, billing-view scoping, optimization workflows, and troubleshooting guidance. Authority is mixed in practice but classified mutating because budget creation, Compute Optimizer enrollment, commitment-oriented workflows, and related account changes can alter AWS configuration or create financial consequences. Portability is medium because the guidance depends on AWS CLI/API semantics, valid credentials, optional AWS MCP capabilities, calculator or scripting support, and the source-intact reference package. Behavioral validation remains not-run.
+notes: "REJECT unchanged. Exact pinned package tree 78db779f94238b6b7fec6d25cbe9986a03ad2a01 at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546 and relevant bundled references statically inspected 2026-10-30. The pinned SKILL.md directly instructs `aws compute-optimizer update-enrollment-status --status Active` as a prerequisite and includes `aws budgets create-budget` without separate approval for account enrollment, persistent budget/notifications, recipients, and billing-view scope. The cost-audit reference begins executing private account billing reads from a generic audit request. Current-date and deterministic-arithmetic safeguards remain useful, but parameter selection is not authorization for money-bearing account state or notification delivery. Static score 14/20; source terms Apache-2.0; security scan not-run and behavioral validation not-run. No upstream bytes modified."

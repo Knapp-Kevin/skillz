@@ -3,6 +3,75 @@
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "aws_ten_authority_recheck": {
+    "date": "2026-10-30",
+    "source_id": "aws-agent-toolkit",
+    "source_pin": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+    "eligible_denominator": 94,
+    "manifest_exposure_paths": 115,
+    "distinct_skill_names": 93,
+    "current_standard_companions": 94,
+    "static_gaps": 0,
+    "packages_screened": 10,
+    "corrected_dispositions": 6,
+    "retained_dispositions": 4,
+    "corrected": [
+      {
+        "name": "aws-billing-and-cost-management",
+        "package_tree": "78db779f94238b6b7fec6d25cbe9986a03ad2a01",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 14/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "aws-iam",
+        "package_tree": "5da0a0c41f57fbf7470deb7970a5f403ab40997d",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 13/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "aws-cloudformation",
+        "package_tree": "f597af79ff98108e2d6f4ccebae9bd3efd153653",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 14/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "amazon-bedrock",
+        "package_tree": "52ba62b4dd0e5dbd3ac734e3584dc0fbc55752da",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 13/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "aws-containers",
+        "package_tree": "97f3fce0aeb70143e00b7cbde743f24a45673e1b",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 14/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "aws-observability",
+        "package_tree": "11eea317a047624076348e95f11a7fca96723dff",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 14/20",
+        "behavioral_validation": "not-run"
+      }
+    ],
+    "retained": [
+      "aws-cleanrooms",
+      "aws-secrets-manager",
+      "aws-serverless",
+      "aws-sdk-python-usage"
+    ],
+    "admitted_denominator_delta": 0,
+    "new_review_records": 0,
+    "source_pin_changed": false,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "receipt": "docs/reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md"
+  },
   "anthropic_knowledge_work_data_authority_recheck": {
     "as_of": "2026-10-30",
     "source_id": "anthropic-knowledge-work-plugins",

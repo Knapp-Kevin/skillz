@@ -5,15 +5,15 @@ source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 11eea317a047624076348e95f11a7fca96723dff
 characterized_at: 2026-08-30
-last_verified_at: 2026-08-30
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [observability, monitoring, debugging, cloud]
   lifecycle: [design, implementation, release, operations]
   characteristic: [risk-aware, source-driven, reference-heavy, instrumentation]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin. The package is bound to tree SHA 11eea317a047624076348e95f11a7fca96723dff and includes SKILL.md, two reusable assets, service references, and 16 platform/language Application Signals guides. Strong static evidence includes explicit warning that runtime versions, quota values, and feature matrices may change and must be confirmed against current AWS documentation when precision matters; clear routing by user need; broad troubleshooting coverage; and separation between logs, metrics, traces, auditing, synthetics, and onboarding concerns. The package depends on AWS service semantics and, for direct operations, AWS CLI or the AWS MCP server plus appropriate IAM authority. Authority is mutating because the procedures can enable instrumentation and Application Signals, alter workload configuration, configure ADOT collectors, alarms, dashboards, canaries, IAM, and related observability resources. Portability is medium because observability patterns transfer conceptually, while concrete procedures are AWS-, platform-, and runtime-specific. Behavioral validation remains not-run.
+notes: "REJECT unchanged. Exact pinned package tree 11eea317a047624076348e95f11a7fca96723dff at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546 and relevant bundled references statically inspected 2026-10-30. Bundled Application Signals onboarding instructs the host to edit IaC/CI/CD/deployment files and to enable ServiceEvents git/deployment metadata propagation and OTLP endpoints by default; only optional function-level and dynamic instrumentation require user choice. This can disclose private deployment URLs, IDs, timestamps and application telemetry to AWS and persist configuration changes without a separate scope, destination, retention, cost and data-transmission authorization. Retain reference routing, freshness warnings, observability patterns and opt-in handling for the narrower optional features. Static score 14/20; source terms Apache-2.0; security scan not-run and behavioral validation not-run. No upstream bytes modified."
