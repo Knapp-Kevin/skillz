@@ -3,6 +3,40 @@
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "addyosmani_delegation_rum_recheck": {
+    "date": "2026-10-30",
+    "source_id": "addyosmani-agent-skills",
+    "source_pin": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+    "eligible_denominator": 24,
+    "reviewed": 24,
+    "static_gaps": 0,
+    "screened": 24,
+    "deep_reviewed": 2,
+    "corrected": 2,
+    "retained": 22,
+    "verified_before": 10,
+    "verified_after": 8,
+    "rejected_before": 14,
+    "rejected_after": 16,
+    "manifest_blobs": {
+      "performance-optimization": "6e95266942288ca0330eb2a8a716625958df7c57",
+      "spec-driven-development": "f3f5877c5d6be8f74408c308393bfb45cbcf53c4"
+    },
+    "package_trees": {
+      "performance-optimization": "e736b65c575679204166cefa79a610e99631ca7f",
+      "spec-driven-development": "3f7ea0883fced84b5338688c915ce6e0435e35f3"
+    },
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 867,
+      "total": 911
+    },
+    "denominator_delta": 0,
+    "behavioral_validation_executed": false,
+    "security_scan_executed": false,
+    "source_pin_changed": false,
+    "receipt": "docs/reviews/2026-10-30-addyosmani-delegation-rum-24-macro.md"
+  },
   "aws_ten_authority_recheck": {
     "date": "2026-10-30",
     "source_id": "aws-agent-toolkit",

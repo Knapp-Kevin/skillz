@@ -2,6 +2,8 @@
 
 **Current summary (2026-10-30):** 44 first-party skills, 867 persisted third-party exact-version reviews, 911 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
+**Addy Osmani correction (2026-10-30):** 24/24 pinned packages remain static-reviewed; two false approvals corrected (8 VERIFIED / 16 REJECT), zero gaps and no change to 44/867/911. [Macro review](reviews/2026-10-30-addyosmani-delegation-rum-24-macro.md).
+
 ## Snapshot
 
 | Attribute | Value |
