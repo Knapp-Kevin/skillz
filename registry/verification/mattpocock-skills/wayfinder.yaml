@@ -6,15 +6,15 @@ local_path: skills/sources/mattpocock-skills/skills/engineering/wayfinder/SKILL.
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 812805b760baf328db0ebdef6f3807e381f97016
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [planning, orchestration, decision-support]
   lifecycle: [planning, design]
   characteristic: [decomposition, orchestration, human-review, traceable, progressive-disclosure]
   authority: [external-side-effect]
   portability: [medium]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong destination-first scoping, explicit plan-not-do boundary, one-ticket-per-session rule, claim-before-work concurrency, tracker-visible blocking frontier, fog-of-war discipline, and out-of-scope handling. It creates/updates/closes tracker issues as part of the invoked planning workflow and relies on suite-specific composition plus tracker relationship support, so authority/portability are not maximal. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The exact pinned map explicitly includes AFK `task` tickets for signing up to services, provisioning access, and moving data, with the agent driving them alone where possible. It also creates, assigns, updates, and closes tracker issues as default map operations. Planning authorization does not authorize credentials, subscriptions, access provisioning, data movement, or unrelated persistent tracker mutations. The destination-first frontier, fog, concurrency claim and one-decision discipline remain excellent extracted planning prior art, but unchanged execution fails authority. Exact pinned SKILL.md blob and upstream revision remain unchanged; behavioral validation not-run; no security scan or executed adversarial acceptance claimed."

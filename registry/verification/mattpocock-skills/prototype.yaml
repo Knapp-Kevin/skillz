@@ -6,15 +6,15 @@ local_path: skills/sources/mattpocock-skills/skills/engineering/prototype/SKILL.
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: a0044501fe0d385b4d8575b610188ede9b236ccf
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 14/20
 tags:
   use_case: [prototyping, ux, implementation, evaluation]
   lifecycle: [design, implementation, verification]
   characteristic: [hypothesis-driven, iterative, visual-verification, evidence-first]
   authority: [mutating]
   portability: [medium]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong question-first branching, explicit throwaway labeling, no-persistence default, visible-state requirement, and preservation of the prototype as evidence off main. Deliberately skips tests/polish for throwaway work and can create files/branches, so scope and repository authority must remain explicit. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The exact pinned workflow requires a post-prototype Git commit to a throwaway branch and a context pointer on the implementation issue, without separately authorizing branch creation, durable commit, or issue publication. A request to explore a UI or state model is not permission for those independent persistent repository/tracker effects. Its question-first branching, no-persistence default and visible-state design remain strong adaptation evidence; unchanged use fails the mutation boundary. Exact pinned SKILL.md blob and upstream revision remain unchanged; behavioral validation not-run; no security scan or executed adversarial acceptance claimed."

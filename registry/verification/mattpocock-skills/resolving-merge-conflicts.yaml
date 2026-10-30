@@ -6,15 +6,15 @@ local_path: skills/sources/mattpocock-skills/skills/engineering/resolving-merge-
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: bfb7e5606e231e6808979f623fce76a9aad4b71c
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review-hard-fail
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 13/20
 tags:
   use_case: [repository-maintenance, debugging]
   lifecycle: [maintenance, verification]
   characteristic: [source-driven, evidence-first, compatibility-aware, test-gated]
   authority: [mutating]
   portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. The skill correctly prioritizes primary-source intent over line picking, prohibits invented behavior, and requires automated checks before completing the Git operation. Its insistence on completing the active merge or rebase provides weak abstention behavior when intent is genuinely irreconcilable, and staging/committing is automatic once invoked. No broken bundled dependencies. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 0, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. The exact pinned procedure commands `Always resolve; never --abort` even when primary-source intents cannot be reconciled, then `Stage everything and commit` and continue all rebases. Resolving hunks does not authorize staging unrelated changes or completing potentially destructive Git lifecycle state without a separate reviewed diff and approval. The intent-first comparison and checks remain useful, but the forced completion and no-abstention rule hard-fail unchanged use. Exact pinned SKILL.md blob and upstream revision remain unchanged; behavioral validation not-run; no security scan or executed adversarial acceptance claimed."

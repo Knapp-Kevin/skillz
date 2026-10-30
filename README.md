@@ -62,6 +62,8 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 | Google Agents CLI | 7 / 7 |
 | Cline Skills (published) | 36 / 36 |
 
+A [Matt Pocock ten-package delegated-authority recheck](docs/reviews/2026-10-30-mattpocock-ten-delegated-authority-macro.md) corrected five unchanged-use approvals. The registered family remains **29/29** static-reviewed, now **17 VERIFIED semantic only / 12 REJECT unchanged**; its Wayfinder decision-map discipline remains useful for adapted planning, not blanket authorization for tracker writes or AFK provisioning.
+
 An [Addy Osmani delegated-authority and RUM review](docs/reviews/2026-10-30-addyosmani-delegation-rum-24-macro.md) corrected two unchanged-use approvals. The family remains **24/24** static-reviewed, now **8 VERIFIED / 16 REJECT unchanged**; behavioral validation remains separate.
 
 An [AWS ten-package authority recheck](docs/reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md) corrected six unchanged-use approvals while preserving **94/94** exact-version static coverage and all upstream packages. Static coverage does not grant permission to create cloud resources or transmit private telemetry.
