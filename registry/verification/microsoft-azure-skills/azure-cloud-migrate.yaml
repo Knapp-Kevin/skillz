@@ -6,15 +6,15 @@ fingerprint_algorithm: git-tree-sha1
 content_blob_sha: dd0d5a31e87576d5b46899b19aa3eedb24d412f4
 skill_md_blob_sha: b1634cf629d9358eb70a95c089b309c304f9c42c
 characterized_at: 2026-09-06
-last_verified_at: 2026-09-06
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review-reconciled-identical-package-authority
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 9/20
 tags:
   use_case: [cloud, implementation]
   lifecycle: [discovery, implementation]
   characteristic: [reference-heavy, progressive-disclosure, risk-aware, tool-assisted]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact-package review of the cross-cloud assessment and code-migration guide. Preserve sequential assessment-before-migration, scenario-specific references, source-directory immutability, Kubernetes service-discovery auditing, progress reporting, and explicit deployment handoff. The package writes converted code and reports to a separate local workspace directory. Consequential Azure deployment is not performed as part of the ordinary migration flow: the skill explicitly asks whether to test locally or deploy before handing off to azure-prepare, while destructive actions in the referenced service procedures require ask_user. Static verification therefore passes the current authority hard fail. Behavioral validation remains not-run.
+notes: Azure-source exposure has the same exact package tree and SKILL.md blob as the Microsoft Skills exposure, already REJECT unchanged at 9/20. Exact complete-package review covered SKILL.md and the full bundled reference tree for Functions, App Service, Container Apps, runtime conversion, assessment, deployment, and workflow tracking. The package provides valuable cross-cloud migration prior art: assessment-before-mutation, source-directory preservation, scenario routing, service mapping, runtime modernization, application-code conversion, migration-status reporting, service-discovery audits, and an explicit post-migration user choice between local testing and Azure deployment. It also explicitly requires ask_user for destructive actions. Unchanged adoption is nevertheless rejected under the current authority hard fail. The bundled Container Apps deployment path creates Azure resource groups, Log Analytics workspaces, environments, Key Vaults, managed identities, role assignments, container apps, external ingress, scaling configuration, and ACR imports; it also reads Kubernetes secret material and writes it to Key Vault and retrieves the Log Analytics primary shared key into a shell variable. The generic deploy choice and destructive-action rule do not establish mandatory per-resource target/environment, identity/access, security-control, secret/data-owner, credential-custody, network-exposure, production, retention/recovery, or cost authorization for these consequential actions. Preserve the assessment, staged conversion, source-preservation, compatibility, explicit deployment-choice, and progress-reporting patterns for adaptation/reference use with stronger action-specific authority and secret-custody gates. Behavioral validation remains not-run.
