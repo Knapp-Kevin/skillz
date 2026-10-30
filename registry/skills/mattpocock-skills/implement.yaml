@@ -11,7 +11,7 @@ source_snapshot_revision: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 upstream_revision: 386d4ff719a7c420ad1454232d0436b01f1b8c17
 upstream_last_updated_at: 2026-07-08T13:18:36Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/mattpocock-skills/skills/engineering/implement/SKILL.md
 permission_tier: staging-write
@@ -20,4 +20,4 @@ review_status: curated-vendored
 dependency_status: source-intact
 dependencies: relies on the tdd and code-review skills plus repository typecheck/test commands and Git commit capability; named skill dependencies are present in the pinned source
 import_eligibility: already-vendored
-rationale: Compact implementation controller that keeps work spec/ticket-bound, exercises tests throughout, delegates review, and closes with a repository commit.
+rationale: "Exact-version authority recheck: REJECT unchanged. The exact pinned controller mandates `Commit your work to the current branch` after implementation and review. Permission to implement and run checks does not separately authorize a durable Git commit, especially on the currently checked-out branch. The skill offers no branch, diff, staged-path or commit authorization checkpoint. Its spec/ticket discipline and TDD/review composition remain valuable for adaptation; unchanged use fails the mutation-authority boundary. Source is retained intact as licensed pinned reference and for adaptation/extraction; not behavioral validation."
