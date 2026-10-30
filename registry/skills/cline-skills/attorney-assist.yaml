@@ -11,13 +11,13 @@ source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
 upstream_revision: 750c522b69df264376d2752901485d9f35699a2f
 upstream_last_updated_at: 2026-06-18T23:29:06Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/cline-skills/skills/attorney-assist/SKILL.md
-permission_tier: external-side-effect-after-explicit-user-selection
+permission_tier: external-side-effect
 portability: low
-review_status: verified-structured
+review_status: curated-vendored
 dependency_status: external-service-confirmed
 dependencies: LegalZoom HTTP MCP server confirmed from legalzoom/claude-plugins; named attorney consultation tools; active user entitlement; jurisdiction and availability data returned by the external service
 import_eligibility: already-vendored
-rationale: Strong anti-fabrication, failure-stop, user-choice, scheduling, and human-handoff discipline. The LegalZoom public plugin independently confirms the required MCP service and attorney-assist contract. Because the workflow sends sensitive conversation and legal context to an external professional service, actual use still requires explicit user intent and minimum-necessary disclosure.
+rationale: Pinned LegalZoom consultation procedure and independently confirmed MCP contract are retained intact. REJECT unchanged: attorney/time selection does not authorize transmitting the entire legal conversation, document review details, AI analysis, identity and contact data to an external recipient without a minimum-necessary preview and affirmative disclosure-scope approval. Preserve anti-fabrication, stop-on-error, entitlement checks and human scheduling as adaptation evidence.
