@@ -21,4 +21,4 @@ review_status: rejected-unchanged
 dependency_status: license-unresolved-and-privacy-scope-too-broad
 dependencies: Artifact editing host plus optional organizational connectors/context
 import_eligibility: reference-only-unless-adapted-and-license-resolved
-rationale: Exact candidate package tree is unchanged from the registered pin. Staged coauthoring remains useful, but unchanged use encourages broad organizational/context collection beyond minimum necessary evidence and has unresolved per-skill licensing; prior rejection carries forward if the pin advances.
+rationale: Exact pinned package tree matches the registered source pin. Staged coauthoring remains useful, but unchanged use encourages broad organizational/context collection beyond minimum necessary evidence and has unresolved per-skill licensing; the rejection applies to the registered pinned package.

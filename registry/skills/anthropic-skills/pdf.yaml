@@ -21,4 +21,4 @@ review_status: rejected-unchanged
 dependency_status: license-restricted
 dependencies: Anthropic-service-governed proprietary materials plus PDF/form tooling
 import_eligibility: reference-only-license-restricted
-rationale: Exact candidate package tree is unchanged from the registered pin. Technically broad PDF workflow remains license-restricted, so the prior rejection carries forward if the pin advances.
+rationale: Exact pinned package tree matches the registered source pin. Technically broad PDF workflow remains license-restricted, so the the rejection applies to the registered pinned package.

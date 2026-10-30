@@ -15,10 +15,10 @@ last_checked_at: 2026-09-30
 availability: vendored
 local_path: skills/sources/anthropic-skills/skills/skill-creator/SKILL.md
 package_tree_sha: 3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6
-permission_tier: local-skill-mutation-with-user-intent
+permission_tier: local-mutation-background-evaluation-and-model-cost
 portability: medium
-review_status: verified-structured
+review_status: rejected-unchanged-authority
 dependency_status: source-intact-host-agent-capabilities-required
 dependencies: Bundled eval/grader/analyzer/viewer scripts; Python; agent host with local files and optional subagents
-import_eligibility: pin-advance-candidate
-rationale: Exact candidate package tree is unchanged from the registered pin. Comprehensive skill-authoring loop with baselines, objective assertions, qualitative review, reproducible workspaces, and explicit anti-exfiltration security guidance remains applicable.
+import_eligibility: reference-extract-adapt-only
+rationale: Exact pinned package has a strong skill-evaluation design, but default paired subagent and grader execution, repeated paid model-call optimization, persistent eval workspaces, and background review-server launch lack separate authorization for scope, cost, sensitive prompt data, retention, and side effects. REJECT unchanged; preserve rubrics, holdouts, review templates, and benchmarking design for authorized adaptation.

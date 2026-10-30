@@ -20,5 +20,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: source-intact-current-sdk-docs-required
 dependencies: Bundled MCP references plus current MCP SDK/spec docs and local test toolchain
-import_eligibility: pin-advance-candidate
-rationale: Exact candidate package tree is unchanged from the registered pin. Structured MCP research, implementation, testing, and evaluation with explicit tool annotations and read-only eval guidance remains applicable; prior review may carry forward if the pin advances.
+import_eligibility: eligible-subject-to-user-fit-and-security-evidence
+rationale: Exact pinned package tree matches the registered source pin. Structured MCP research, implementation, testing, and evaluation with explicit tool annotations and read-only eval guidance remains applicable; structured review applies to this pinned package.

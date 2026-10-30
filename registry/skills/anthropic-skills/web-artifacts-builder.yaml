@@ -21,4 +21,4 @@ review_status: rejected-unchanged
 dependency_status: mutable-unpinned-executable-dependency-graph
 dependencies: Node 18+, pnpm, latest create-vite, numerous unpinned npm packages and Parcel/html-inline
 import_eligibility: reference-only-unless-adapted
-rationale: Exact candidate package tree is unchanged from the registered pin. Bundled scripts still install a mutable unpinned package/scaffold graph and may install pnpm globally, so the prior rejection carries forward if the pin advances.
+rationale: Exact pinned package tree matches the registered source pin. Bundled scripts still install a mutable unpinned package/scaffold graph and may install pnpm globally, so the the rejection applies to the registered pinned package.
