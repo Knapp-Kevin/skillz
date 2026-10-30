@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/data/skills/create-viz/SKILL.m
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 54840e6742d5bf4adf27f8fef02c6dc4dd7d76c0
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 14/20
 tags:
   use_case: [ux, evaluation]
   lifecycle: [implementation, verification]
   characteristic: [visual-verification, evidence-first, iterative]
-  authority: [generate-only]
+  authority: [read-only, generate-only, external-side-effect]
   portability: [medium]
-notes: "Verified. Useful chart-selection, labeling, accessibility, and review workflow with ordinary tool dependencies. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged. Exact pinned SKILL.md and package tree a1d964650cb9d2439af30254e88d45ad494ec05d independently inspected 2026-10-30. The connected-warehouse branch writes and executes SQL before binding approved dataset/column/row scope, query cost, and minimization. The skill also saves chart files to the current directory without an explicit output destination and sensitivity/retention decision. Preserve chart selection, accessibility and visualization methods as ADAPT/CHECKLIST material. Source Apache-2.0; behavioral validation not-run, no security scan executed. Individual authority finding is a hard fail regardless of score. Score 17/20 -> 14/20."

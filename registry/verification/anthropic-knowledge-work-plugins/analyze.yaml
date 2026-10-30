@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/data/skills/analyze/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 31ce9c58dd4de3038643750373de5b71a2494fa2
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [evaluation, research]
   lifecycle: [verification]
   characteristic: [evidence-first, traceable, source-driven]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
-notes: "Verified. Strong question framing, metric-definition, validation, reproducibility, and caveat discipline. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged. Exact pinned SKILL.md and package tree 7572805313d85c22d2d0a3e25101fdb1ed187af2 independently inspected 2026-10-30. The connected-warehouse branch executes exploratory SQL and retries without a preceding account/dataset/table/column/time scope or cost boundary. Tool connection is not approval to inspect private warehouse data or incur query costs; the final report can include raw query results. Preserve question framing, validation, and reproducible SQL as ADAPT/CHECKLIST material. Source Apache-2.0; behavioral validation not-run, no security scan executed. Individual authority finding is a hard fail regardless of score. Score 18/20 -> 14/20."
