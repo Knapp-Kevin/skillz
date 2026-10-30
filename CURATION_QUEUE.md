@@ -1,6 +1,8 @@
 # Skill Curation Queue
 
-**Latest Microsoft candidate qualification (2026-10-28):** [Foundry root 220-file exact-version review](docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md) completes changed-existing **75/76 → 76/76**, leaving **0** static gaps. **220/220 distinct candidate blobs read, 1,299,560 bytes**; **REJECT unchanged 11/20** for mandatory installation, cloud/RBAC authority, sensitive trace and OAuth credential handling. Third-party companions **826**, total verification YAML **870**. July **186/186**, candidate denominator **208**, source pin and security/behavioral states unchanged.
+**AWS Agent Toolkit denominator correction (2026-10-30).** Recomputed the registered pinned tree ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546: **115** front-mattered SKILL.md exposure paths, **93** distinct skill names and **94** distinct package-tree identities because the two `aws-cdk` exposures differ materially. Previous **72/72** counted only core/specialized names and omitted **21** first-class plugin names plus the divergent CDK variant. An **8-package** DevSecOps tranche now has individual exact-version provenance and semantic records, all **REJECT unchanged** for consequential authorization or sensitive-disclosure gaps, while preserving adaptation prior art. Current AWS state: **80/94 reviewed, 14 genuine gaps**, no source pin change. Public totals: **44 first-party / 834 third-party / 878 verification records**; no security scan or behavioral pass. [Macro review](docs/reviews/2026-10-30-aws-pinned-plugin-denominator-and-eight-static.md).
+
+**Historical Microsoft candidate qualification (2026-10-28):** [Foundry root 220-file exact-version review](docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md) completes changed-existing **75/76 → 76/76**, leaving **0** static gaps. **220/220 distinct candidate blobs read, 1,299,560 bytes**; **REJECT unchanged 11/20** for mandatory installation, cloud/RBAC authority, sensitive trace and OAuth credential handling. Third-party companions **826**, total verification YAML **870**. July **186/186**, candidate denominator **208**, source pin and security/behavioral states unchanged.
 
 This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive even during explicitly authorized maintenance. Detailed exact-version evidence belongs in canonical companions under `registry/`; any scanners or behavioral tests are run by the external host, not by repository-owned automation. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
@@ -9,7 +11,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **826** persisted exact-version third-party verification companions.
+- **834** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -74,7 +76,7 @@ Issue **#402** owns the bounded backfill introduced by the SkillSpector integrat
 |---|---|---:|---:|---|
 | Anthropic Skills | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | 19 / 19 | 0 | CURRENT-STANDARD COMPLETE |
 | Anthropic Knowledge Work Plugins | `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8` | 74 / 74 | 0 | CURRENT-STANDARD COMPLETE |
-| AWS Agent Toolkit | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | 72 / 72 | 0 | CURRENT-STANDARD COMPLETE |
+| AWS Agent Toolkit | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | **80 / 94** | **14** | ACTIVE: PINNED PLUGIN GAPS |
 | Microsoft Skills | `32cad4ee689c95c309e61aeefcbc6af356f1e6a7` | 186 / 186 | 0 | CURRENT-STANDARD COMPLETE |
 | Microsoft Azure Skills | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | 34 / 34 | 0 | CURRENT-STANDARD COMPLETE |
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |

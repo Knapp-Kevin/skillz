@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: diff-scanning-with-aws-security-agent
+display_name: diff scanning with aws security agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/diff-scanning-with-aws-security-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/diff-scanning-with-aws-security-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS Security Agent, AWS CLI, S3, IAM role and agent space, Git, zip, openssl, local config and scans JSON
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Exact pinned one-file package tree 78bacb08e32aec6a94d832483d0b8df74faa8349, manifest blob e3bf0cb9e4c02f740fbc9ab49a0a47cca014d692. Provides a deterministic diff-only workflow, but uploads both the full source archive and diff to persistent S3 and creates CodeReview resources without separately authorizing private-code disclosure, target bucket/account, retention or cost. Default base ref is a design choice, not permission. Reject unchanged; preserve diff-scope mechanics. No behavioral validation or package-security pass is claimed.

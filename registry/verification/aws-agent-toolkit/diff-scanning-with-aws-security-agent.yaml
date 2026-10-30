@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: diff-scanning-with-aws-security-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 78bacb08e32aec6a94d832483d0b8df74faa8349
+manifest_blob_sha: e3bf0cb9e4c02f740fbc9ab49a0a47cca014d692
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [security, code-review, cloud]
+  lifecycle: [verification]
+  characteristic: [tool-assisted, evidence-first, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Provides a deterministic diff-only workflow, but uploads both the full source archive and diff to persistent S3 and creates CodeReview resources without separately authorizing private-code disclosure, target bucket/account, retention or cost. Default base ref is a design choice, not permission. Reject unchanged; preserve diff-scope mechanics. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/diff-scanning-with-aws-security-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest e3bf0cb9e4c02f740fbc9ab49a0a47cca014d692; one-file package tree 78bacb08e32aec6a94d832483d0b8df74faa8349. Security scan not established. Behavioral validation not-run.

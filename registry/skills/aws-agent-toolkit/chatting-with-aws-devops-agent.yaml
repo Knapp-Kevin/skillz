@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: chatting-with-aws-devops-agent
+display_name: chatting with aws devops agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/chatting-with-aws-devops-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/chatting-with-aws-devops-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS DevOps Agent remote chat or AWS CLI fallback, AgentSpace credentials, optional local IaC/log/runbook context
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Exact pinned one-file package tree edd9c42d7464aa26a9e5d1eb7b3632699d6ab929, manifest blob 740a3c60b601ff1f52cb0b30ca5d2fac1a0231d3. Useful fast-chat versus deep-investigation routing, but it recommends injecting local IaC, error logs and private topology into a managed remote conversation and reading account/runbook context without an explicit data classification, access scope or transmission approval. Conversation retention is unspecified. Reject unchanged; extract the routing pattern. No behavioral validation or package-security pass is claimed.

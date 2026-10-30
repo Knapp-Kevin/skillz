@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: remediating-with-aws-security-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 52b99a9208bb975cd774f861b837ac03261546d9
+manifest_blob_sha: 824007ef79480a836374e520e17220d514568126
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [security, debugging, code-review]
+  lifecycle: [verification, maintenance]
+  characteristic: [evidence-first, risk-aware, safety-bounded]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Strong sensitive-findings hygiene, confidence triage, and explicit confirmation before exporting a guessed scan. But initial account-wide agent-space/pentest/code-review enumeration precedes scoped authorization for private security data, and export retention and read scope are not fully bounded. Do not infer access permission from available credentials. Reject unchanged; retain triage design. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/remediating-with-aws-security-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest 824007ef79480a836374e520e17220d514568126; one-file package tree 52b99a9208bb975cd774f861b837ac03261546d9. Security scan not established. Behavioral validation not-run.

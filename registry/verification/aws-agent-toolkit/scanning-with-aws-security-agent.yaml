@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: scanning-with-aws-security-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: dc915b14c0b37112d79a5df5d05999501016cda3
+manifest_blob_sha: 3a87978a0125f979e576bd78fd407f80edbbf97d
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [security, cloud, code-review]
+  lifecycle: [verification]
+  characteristic: [tool-assisted, evidence-first, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Proactive suggestions ask before scanning and reports preserve detailed findings. The full-scan workflow nevertheless archives the workspace and overwrites a persistent S3 object, creates/reuses billable cloud review state and exports sensitive findings without separately approving source disclosure, exact bucket/account, cost and retention. Exclusion list is not a secret-leak guarantee. Reject unchanged. Pinned exact identity: plugins/aws-agents-for-devsecops/skills/scanning-with-aws-security-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; manifest 3a87978a0125f979e576bd78fd407f80edbbf97d; one-file package tree dc915b14c0b37112d79a5df5d05999501016cda3. Security scan not established. Behavioral validation not-run.

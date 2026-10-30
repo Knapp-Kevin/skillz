@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: running-release-tests
+display_name: running release tests
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/running-release-tests/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/running-release-tests
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS DevOps Agent Release Testing Agent, pre-existing test profile with personas and credentials, remote MCP or CLI, local report output
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Exact pinned one-file package tree 57620788b52c582f046e1513e6da40915ebe1467, manifest blob 8416f7c36e0c983a33946b9acdb89d9bb481f793. Requires explicit test-profile and AgentSpace selection and waits for user input, but selection of a credential-bearing UI/API profile is not authorization to send live authenticated requests, mutate backend state or incur managed-test costs. Profile scope and data retention are not independently approved. Reject unchanged; retain report and status workflow. No behavioral validation or package-security pass is claimed.

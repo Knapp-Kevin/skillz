@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: coordinating-multi-space-devops-agent
+display_name: coordinating multi space devops agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/coordinating-multi-space-devops-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/coordinating-multi-space-devops-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS DevOps Agent multi-AgentSpace SigV4 tools, account/space discovery, local routing guide optionally
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Exact pinned one-file package tree ee9d21044abfd3f3d1e4b5613d9ffe092aafa9a3, manifest blob dd35ca5f256bf3cc594258dd2dbf65f7242eab9e. Distinct multi-space routing and cross-environment comparison, with an ambiguity question for unnamed environments. However, discovery instructs querying every space for account, service and runbook summaries and copying findings between spaces without per-account private-read and cross-boundary disclosure approval. A guide is only offered, not automatically written. Reject unchanged. No behavioral validation or package-security pass is claimed.
