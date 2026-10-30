@@ -16,7 +16,7 @@ last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/addyosmani-agent-skills/skills/spec-driven-development/SKILL.md
 permission_tier: generate
-portability: high
+portability: medium
 review_status: curated-source-reviewed
 dependency_status: rejected-sibling-delegation
 dependencies: planning-and-task-breakdown, incremental-implementation, context-engineering, test-driven-development; first three rejected unchanged at pinned source; separate host authorization needed
