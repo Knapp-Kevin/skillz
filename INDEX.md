@@ -34,6 +34,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
+| Addy Osmani VERIFIED / REJECT unchanged | 8 / 16 |
 | Vercel Agent Skills current-standard companions | 9 / 9 |
 | OpenHands Extensions current-standard companions | 1 / 1 |
 | OpenHands Extensions current-standard gaps | 0 |

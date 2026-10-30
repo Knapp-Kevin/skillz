@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/spec-driven-developmen
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: f3f5877c5d6be8f74408c308393bfb45cbcf53c4
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 13/20
 tags:
   use_case: [planning, implementation]
   lifecycle: [planning, implementation]
   characteristic: [spec-driven, traceable, decomposition]
-  authority: [generate-only]
-  portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong human-gated Specify/Plan/Tasks/Implement flow, explicit assumptions, testable success criteria, capability-map decomposition for multi-capability requests, and clear Always/Ask First/Never boundaries. Some sizing/time heuristics are advisory and the workflow depends on related skills in the same pinned corpus. Exact fingerprint confirmed. Behavioral validation remains pending."
+  authority: [generate-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "REJECT unchanged. Phase 2 declares already-rejected planning-and-task-breakdown canonical and Phase 4 directs already-rejected incremental-implementation and context-engineering, inheriting automatic commits/merges, persistent rules writes and rigid artifact requirements. Human approval of a spec does not authorize those delegated effects. Retain capability maps, assumptions and human-reviewed acceptance criteria for adaptation. Exact pinned MIT package tree 3f7ea0883fced84b5338688c915ce6e0435e35f3, manifest f3f5877c5d6be8f74408c308393bfb45cbcf53c4; source pin f63ec56a3cc936408d792956ae583c3c96a825bd; behavioral not-run and no new package-security scan."
