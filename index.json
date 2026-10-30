@@ -2,6 +2,49 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "danjdewhurst_reader_disclosure_authority_recheck": {
+    "as_of": "2026-10-30",
+    "source_id": "danjdewhurst-story-skills",
+    "source_pin": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+    "eligible_denominator": 23,
+    "current_standard_companions": 23,
+    "static_gaps": 0,
+    "packages_risk_screened": 10,
+    "changed_static_dispositions": 2,
+    "retained_dispositions": 8,
+    "verified_before": 23,
+    "rejected_before": 0,
+    "verified_after": 21,
+    "rejected_after": 2,
+    "changed_skills": [
+      {
+        "skill": "feedback-triage",
+        "manifest_blob": "39557ea5b7ea03c83be6b8dc44bfe70302b73dcc",
+        "package_tree": "5bfcd8869826690b397a5e783be8c6cd43d9260d",
+        "before": "verified semantic only 18/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "The optional upstream GitHub review-copy workflow publishes the full unpublished manuscript to GitHub Pages on every main push, and the issue template collects paragraph excerpts and reader notes. Approval to copy workflow files is not approval for public disclosure, recurring deployment, issue visibility, recipients, retention, or ongoing cost. The upstream template warns about public Pages, but the governing skill does not require a separate publication/data boundary."
+      },
+      {
+        "skill": "reader-panel",
+        "manifest_blob": "bfc8725eb05d3dcb47c965ae91f1a21d2f3c5dcc",
+        "package_tree": "74588f0c72ffab655fff918a4680a75c31d58b60",
+        "before": "verified semantic only 17/20",
+        "after": "rejected unchanged 14/20",
+        "reason": "The default all-five simulated persona round may delegate unpublished manuscript chapters and story context to multiple subagents when available without separately binding manuscript disclosure scope, permitted host/model, retention, or repeated inference costs. A request for simulated feedback does not authorize arbitrary external agent routing of private manuscript material."
+      }
+    ],
+    "admitted_source_denominator_delta": 0,
+    "third_party_review_record_delta": 0,
+    "first_party_inventory": 44,
+    "third_party_exact_version_reviews": 848,
+    "total_verification_records": 892,
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "receipt": "docs/reviews/2026-10-30-danjdewhurst-reader-disclosure-ten-authority-macro.md"
+  },
   "corey_haines_prospecting_external_egress_authority_recheck": {
   "as_of": "2026-10-30",
   "source_id": "corey-haines-marketing-skills",

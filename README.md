@@ -1,5 +1,8 @@
 # 🛠️ skillz
 
+**Dan Dewhurst Story Skills reader-disclosure authority recheck (2026-10-30).** Ten pinned packages were risk-screened across reader feedback, editorial collaboration, publishing, research, adaptation and project maintenance; two previously VERIFIED unchanged-use decisions are now **REJECT unchanged**: `feedback-triage` (18/20 → 14/20) for optional GitHub Pages publication of the unpublished manuscript on every push and public reader-note/quote exposure without a separate disclosure/recurrence gate, and `reader-panel` (17/20 → 14/20) for optional private-manuscript routing to subagents without provider, disclosure, retention or model-cost approval. Eight other decisions retained. Family **23/23** current-standard, **21 VERIFIED / 2 REJECT**, zero gaps; source pin and **44/848/892** inventory unchanged, no scans or behavioral validation. Preserve both as ADAPT/EXTRACT/CHECKLIST evidence. [Macro review](docs/reviews/2026-10-30-danjdewhurst-reader-disclosure-ten-authority-macro.md).
+
+
 **Corey Haines prospecting external-egress authority correction (2026-10-30).** A 16-package risk screen of the registered 50/50 tracked corpus escalated `prospecting` for deep exact-tree review: mandatory email deliverability checks can send personal contact addresses to paid Truelist/other validators (including URL-query and CSV exposure) without specific disclosure, cost, retention or credential-path authorization. `prospecting` **VERIFIED 17/20 → REJECT unchanged 14/20**; fifteen screened dispositions retained. Preserve evidence-linked research, no-scraping and no-auto-send methods for ADAPT/EXTRACT/CHECKLIST. Source pin/denominator **50/50**, inventory **44/848/892**, and behavioral `not-run` unchanged; no scanner or external API ran. [Macro review](docs/reviews/2026-10-30-corey-prospecting-external-egress-authority-macro.md).
 
 
@@ -115,7 +118,7 @@ For Celestara, rejected does not mean useless. `shared-world`, `game-facilitator
 
 ### Dan Dewhurst Story Skills complete intake
 
-`danjdewhurst/story-skills` is tracked at exact snapshot `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. The MIT-licensed corpus has an exact denominator of **23** first-class skills, and **all 23 now have individual provenance and exact-version VERIFIED static-review companions**. Scores range from **16/20 to 18/20**; behavioral validation remains `not-run` for all 23.
+`danjdewhurst/story-skills` is tracked at exact snapshot `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. The MIT-licensed corpus has an exact denominator of **23** first-class skills, and **all 23 have individual provenance and exact-version static-review companions**: **21 VERIFIED semantic only** and **2 REJECT unchanged** (`feedback-triage`, `reader-panel`) after the 2026-10-30 authority recheck. Scores range from **14/20 to 18/20**; behavioral validation remains `not-run` for all 23.
 
 The family is unusually coherent as an end-to-end fiction workflow, but it is not universally portable unchanged. Most skills assume the upstream Markdown/YAML Story Skills project model, and several can invoke the optional `story` CLI. `story-maintenance` also packages a local Node fallback with explicit rename/move/remove operations. Those source-owned runtime assets remain upstream evidence and dependencies rather than repository-owned `skillz` runtime. Submission, publishing, and editorial workflows keep consequential real-world sends, purchases, contracts, account actions, and publication under author control.
 
