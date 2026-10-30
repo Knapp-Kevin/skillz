@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-deploy
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 821a52c3717b9cf6bab0a9741d7bd732992a558d
+manifest_blob_sha: 5cee1ceb11f57e7a97a48216a377336cb3fc2886
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [deployment, cloud, agent-development]
+  lifecycle: [release, operations]
+  characteristic: [evidence-first, risk-aware, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Preflight, deploy, diagnose deployment failures, or version/rollback an existing AgentCore project; not new project scaffolding or security hardening. Exact pinned package tree 821a52c3717b9cf6bab0a9741d7bd732992a558d, manifest blob 5cee1ceb11f57e7a97a48216a377336cb3fc2886. Preflight and CDK diff are useful, but the run-deploy path gives agentcore deploy -y including staging/production without a separate action-specific account, environment, resource, cost and traffic authorization boundary. IAM permission repair and rollback references also affect persistent cloud state. Auto-confirm bypasses the CLI confirmation; preview is not consent. Retain dry-run/diff and region checks as checklist. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-deploy/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

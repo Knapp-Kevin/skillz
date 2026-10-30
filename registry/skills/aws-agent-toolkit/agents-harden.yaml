@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: agents-harden
+display_name: agents harden
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents/skills/agents-harden/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents/skills/agents-harden
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AgentCore CLI >=0.9.0, AWS IAM/EventBridge/CloudWatch/AgentCore APIs, JWT/OIDC identity provider, Secrets Manager, bundled limits reference
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Audit and harden production AgentCore security, auth, quotas, sessions and observability; not outbound credential wiring or general quality tuning. Exact pinned package tree 4da687d992a44da500a6b0b74b6a1ece4c5d260f, manifest blob 8c7ec90edc8de1ece219a9257144914ef26dbd1c. A production checklist proceeds to IAM/auth changes, EventBridge alert rule creation, CloudWatch log retention mutation, online evaluator creation and agentcore deploy -y without independent resource, recipient, telemetry, cost and change-window approval. It suggests decoding a sample JWT at jwt.io without explicitly prohibiting live token disclosure to a third-party site. Strong least-privilege and credential guidance is extractable, not unchanged safe. Package-specific freshness is unknown; security scan and behavioral validation not established.

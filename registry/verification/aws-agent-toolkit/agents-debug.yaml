@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-debug
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 15df718425a2d246c9b517022f8cad98133aa647
+manifest_blob_sha: 6607ec6c6c689f457e9a31463faf563538d7e72b
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [debugging, agent-development, observability]
+  lifecycle: [verification, operations]
+  characteristic: [evidence-first, tool-assisted, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Diagnose broken AgentCore agents, tool failures, logs/traces and local CLI issues; not new deployment, proactive optimization or VPC design. Exact pinned package tree 15df718425a2d246c9b517022f8cad98133aa647, manifest blob 6607ec6c6c689f457e9a31463faf563538d7e72b. Step 3 says to read CloudWatch traces and logs automatically rather than request pasted logs, with no explicit AWS account, runtime, time window, sensitive field or disclosure authorization. Traces can expose model reasoning, tool arguments and private user data. Remediation suggestions include config edits and redeployment without a distinct write/deploy gate. Retain diagnostic decision trees and trace timing caveats as checklist input. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-debug/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

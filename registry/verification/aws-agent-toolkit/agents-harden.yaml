@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-harden
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4da687d992a44da500a6b0b74b6a1ece4c5d260f
+manifest_blob_sha: 8c7ec90edc8de1ece219a9257144914ef26dbd1c
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [security, agent-development, cloud]
+  lifecycle: [verification, operations]
+  characteristic: [risk-aware, production-oriented, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Audit and harden production AgentCore security, auth, quotas, sessions and observability; not outbound credential wiring or general quality tuning. Exact pinned package tree 4da687d992a44da500a6b0b74b6a1ece4c5d260f, manifest blob 8c7ec90edc8de1ece219a9257144914ef26dbd1c. A production checklist proceeds to IAM/auth changes, EventBridge alert rule creation, CloudWatch log retention mutation, online evaluator creation and agentcore deploy -y without independent resource, recipient, telemetry, cost and change-window approval. It suggests decoding a sample JWT at jwt.io without explicitly prohibiting live token disclosure to a third-party site. Strong least-privilege and credential guidance is extractable, not unchanged safe. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-harden/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

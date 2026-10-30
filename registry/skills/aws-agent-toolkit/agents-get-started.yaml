@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: agents-get-started
+display_name: agents get started
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents/skills/agents-get-started/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents/skills/agents-get-started
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AgentCore CLI >=0.9.0, AWS account/Bedrock model access, Strands/LangGraph/GoogleADK/OpenAI Agents, local development server, optional ECR/CDK and bundled support-agent example
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Scaffold a new AgentCore project and guide first local run/deploy; not adding capabilities to an existing project or debugging prerequisites. Exact pinned package tree 9a732edf9c0b65e14871bc3d293b4985cfaa6635, manifest blob 446f4171600406254530fd50ad65c56240d10303. Scaffold command is explicitly presented for developer confirmation, a meaningful local-write safeguard. But the later first-deploy flow advances from general project creation to paid AWS ECR/CDK/runtime provisioning and first invocation without a separately scoped account/region/resource/cost authorization gate; generic CLI preview/confirmation is not a complete host action boundary. The local dev server can call configured remote model providers. Retain framework selection, name validation and scaffold preview for adaptation. Package-specific freshness is unknown; security scan and behavioral validation not established.

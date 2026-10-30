@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-get-started
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 9a732edf9c0b65e14871bc3d293b4985cfaa6635
+manifest_blob_sha: 446f4171600406254530fd50ad65c56240d10303
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [agent-development, cloud, prototyping]
+  lifecycle: [planning, implementation, release]
+  characteristic: [progressive-disclosure, human-review, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Scaffold a new AgentCore project and guide first local run/deploy; not adding capabilities to an existing project or debugging prerequisites. Exact pinned package tree 9a732edf9c0b65e14871bc3d293b4985cfaa6635, manifest blob 446f4171600406254530fd50ad65c56240d10303. Scaffold command is explicitly presented for developer confirmation, a meaningful local-write safeguard. But the later first-deploy flow advances from general project creation to paid AWS ECR/CDK/runtime provisioning and first invocation without a separately scoped account/region/resource/cost authorization gate; generic CLI preview/confirmation is not a complete host action boundary. The local dev server can call configured remote model providers. Retain framework selection, name validation and scaffold preview for adaptation. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-get-started/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

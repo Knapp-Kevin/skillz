@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: agents-build
+display_name: agents build
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents/skills/agents-build/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents/skills/agents-build
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AgentCore CLI >=0.9.0, AWS account/Bedrock permissions, memory/Gateway/VPC/identity resources, 11 bundled references and two upstream payment helper scripts, payment provider and x402 services
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Add capabilities to an existing AgentCore project; not new project scaffolding, external Gateway connection, or basic deployment diagnosis. Exact pinned package tree a7c7cfc787cecf4dc7a20fd2e61540e6263ddc3e, manifest blob 3ec11ae8faaee5f33b2afbb80324c3b3e8c70c40. Top-level routing delegates to payment and teardown references. Payment reference says run provisioning, deploy, instrument/session setup and testing automatically with only connector-secret and wallet-funding pauses; teardown directs resource removals, deploy -y and optional CloudWatch log-group deletion. No independent exact account/resource/cost/destructive authority for these actions. Preserve reference routing, memory patterns, session controls and budget concepts for adaptation. Package-specific freshness is unknown; security scan and behavioral validation not established.

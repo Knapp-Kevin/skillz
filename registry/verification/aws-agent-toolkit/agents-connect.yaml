@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-connect
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: d92b447658b287aaab5c91e04e910d8947c4ddef
+manifest_blob_sha: 0790cd87460eba885c66686d965c9f4d4991addb
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [agent-development, api-design, security]
+  lifecycle: [implementation, operations]
+  characteristic: [tool-routing, risk-aware, reference-heavy]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Connect an existing AgentCore agent to external services via Gateway or credential providers; not project scaffolding or general production hardening. Exact pinned package tree d92b447658b287aaab5c91e04e910d8947c4ddef, manifest blob 0790cd87460eba885c66686d965c9f4d4991addb. Offers gateway-target and credential creation followed by agentcore deploy -y without independent account/resource/endpoint authorization. Examples include --api-key and --client-secret literal command-line patterns despite later shell-history warnings and a safer interactive path. Target registration can expose external APIs and persistent cloud resources; require secure credential entry and explicit target/deploy authority. Retain Gateway-first and auth-type distinction as extraction. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-connect/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

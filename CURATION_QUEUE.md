@@ -1,5 +1,7 @@
 # Skill Curation Queue
 
+**AWS AgentCore seven-package exact-pin static tranche (2026-10-30).** All seven first-class `plugins/aws-agents/skills/` packages now have individual exact-tree provenance and structured semantic reviews. Each is **REJECT unchanged** under action-specific authorization or private-data disclosure rules; retain valuable methods for ADAPT/EXTRACT/CHECKLIST. AWS **85/94 → 92/94**, **9 → 2** genuine gaps; AgentCore **0/7 → 7/7**. Published inventory **44 first-party / 846 third-party / 890 total verification**. No source pin, scanner, behavioral execution or repository-owned machinery changed. [Seven-package macro review](docs/reviews/2026-10-30-aws-agentcore-seven-exact-static.md).
+
 **AWS DevSecOps pinned final-five static review (2026-10-30).** Five previously unreviewed first-class plugin packages received exact-pin provenance and individual semantic dispositions: `investigating-incidents-with-aws-devops-agent`, `setup-devops-agent`, `setup-security-agent`, `setup`, and `threat-modeling-with-aws-security-agent`. All five are **REJECT unchanged** because remote incident disclosure/job creation, unpinned MCP proxy installation/private account reads, IAM/S3/AgentSpace provisioning and retention rewrites, unsafe delegation, or full-source S3 upload lack action-specific authority. The 13-package DevSecOps sub-family is now **13/13 static-reviewed**; AWS **80/94 → 85/94**, **14 → 9** gaps. Current inventory **44 first-party / 839 third-party / 883 total verification**; source pin unchanged, behavioral `not-run`, no security scan. [Exact five-package macro review](docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md).
 
 **AWS Agent Toolkit denominator correction (2026-10-30).** Recomputed the registered pinned tree ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546: **115** front-mattered SKILL.md exposure paths, **93** distinct skill names and **94** distinct package-tree identities because the two `aws-cdk` exposures differ materially. Previous **72/72** counted only core/specialized names and omitted **21** first-class plugin names plus the divergent CDK variant. An **8-package** DevSecOps tranche now has individual exact-version provenance and semantic records, all **REJECT unchanged** for consequential authorization or sensitive-disclosure gaps, while preserving adaptation prior art. Current AWS state: **80/94 reviewed, 14 genuine gaps**, no source pin change. Public totals: **44 first-party / 834 third-party / 878 verification records**; no security scan or behavioral pass. [Macro review](docs/reviews/2026-10-30-aws-pinned-plugin-denominator-and-eight-static.md).
@@ -13,7 +15,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **839** persisted exact-version third-party verification companions.
+- **846** persisted exact-version third-party verification companions.
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
@@ -78,7 +80,7 @@ Issue **#402** owns the bounded backfill introduced by the SkillSpector integrat
 |---|---|---:|---:|---|
 | Anthropic Skills | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | 19 / 19 | 0 | CURRENT-STANDARD COMPLETE |
 | Anthropic Knowledge Work Plugins | `ca3e3fb2c4a1d3eea73fc003998faef6daa650b8` | 74 / 74 | 0 | CURRENT-STANDARD COMPLETE |
-| AWS Agent Toolkit | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | **85 / 94** | **9** | ACTIVE: PINNED PLUGIN GAPS |
+| AWS Agent Toolkit | `ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546` | **92 / 94** | **2** | ACTIVE: PINNED PLUGIN GAPS |
 | Microsoft Skills | `32cad4ee689c95c309e61aeefcbc6af356f1e6a7` | 186 / 186 | 0 | CURRENT-STANDARD COMPLETE |
 | Microsoft Azure Skills | `8f8c72bb9e22aee4366e07aadfd5766ef9add8f4` | 34 / 34 | 0 | CURRENT-STANDARD COMPLETE |
 | Cole Medin Skills | `fb2e876f057c5356d6603ba0c52d6b4418d893ba` | 33 / 33 | 0 | CURRENT-STANDARD COMPLETE |
@@ -191,4 +193,4 @@ Wayfinder #35 remains canonical destination/scope evidence, but stale frontier t
 
 ## Next action
 
-The admitted corpus has no known current-standard gaps in the explicitly complete families, and the narrative capability program is complete. Continue with source freshness and high-salience omission detection, bounded candidate/source evaluation, lifecycle hygiene, and selective behavioral/adversarial evidence produced only by authorized external environments. Preserve decisive prior evidence and do not invent repository runtime or architecture to keep the queue busy.
+AWS Agent Toolkit is the active admitted-source frontier: **92/94** exact-version companion pairs, with **two** genuine gaps at the pinned revision: `signing-in-to-aws` and the divergent plugin `aws-cdk` package. Complete those as a bounded final static tranche before claiming AWS source-family completion, then reconcile all five public accounting surfaces. In parallel, maintain first-party PR qualification holds (#489/#492/#496: 36 changed package trees; #412/#413 separate admissions), governed discovery and high-salience omission detection. Do not invent execution machinery or behavioral evidence.
