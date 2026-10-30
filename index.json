@@ -1084,5 +1084,32 @@
     "security_scan_run": false,
     "behavioral_validation_run": false,
     "receipt": "docs/reviews/2026-10-30-cline-sentry-legalzoom-ten-authority-macro.md"
+  },
+  "cole_medin_second_brain_authority_recheck": {
+    "as_of": "2026-10-30",
+    "source_id": "cole-medin-skills",
+    "source_pin": "fb2e876f057c5356d6603ba0c52d6b4418d893ba",
+    "eligible_denominator": 33,
+    "current_standard_companions": 33,
+    "static_gaps": 0,
+    "packages_risk_screened": 10,
+    "changed_dispositions": 1,
+    "retained_dispositions": 9,
+    "verified_after": 2,
+    "rejected_after": 31,
+    "changed_skill": {
+      "skill": "second-brain-audit",
+      "manifest_blob": "7a3e971c0d6b5b9defc1d28182ef9b302e0e9252",
+      "package_tree": "c5fc704b1ae0fe67c12d7a02c5d7092fcf6278ad",
+      "previous_state": "verified",
+      "previous_score": "19/20",
+      "final_state": "rejected",
+      "final_score": "16/20",
+      "behavioral_validation": "not-run"
+    },
+    "admitted_denominator_delta": 0,
+    "new_review_records": 0,
+    "security_scan_executed": false,
+    "receipt": "docs/reviews/2026-10-30-cole-medin-second-brain-authority-ten-macro.md"
   }
 }
