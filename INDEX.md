@@ -32,6 +32,7 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Corey Haines Marketing Skills current-standard companions | 50 / 50 |
 | Corey Haines Marketing Skills current-standard gaps | 0 |
 | Matt Pocock Skills current-standard companions | 29 / 29 |
+| Matt Pocock Skills VERIFIED / REJECT unchanged | 17 / 12 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
 | Addy Osmani VERIFIED / REJECT unchanged | 8 / 16 |
@@ -47,6 +48,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | Microsoft Python direct-package companions | 40 / 40 |
 | Microsoft Rust direct-package companions | 9 / 9 |
 | Microsoft TypeScript direct-package companions | 25 / 25 |
+
+AWS ten-package authority recheck:Matt Pocock ten-package delegated-authority recheck: **5 REJECT unchanged / 5 retained** at registered 29/29 exact pin, zero gaps and no inventory delta. [Macro evidence](docs/reviews/2026-10-30-mattpocock-ten-delegated-authority-macro.md).
 
 AWS ten-package authority recheck: **6 REJECT unchanged / 4 retained**, with no new review identities, source-pin changes or denominator delta. See [macro evidence](docs/reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md).
 

@@ -3,6 +3,49 @@
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "mattpocock_delegated_authority_recheck": {
+    "date": "2026-10-30",
+    "source_id": "mattpocock-skills",
+    "source_pin": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+    "physical_skill_paths": 37,
+    "excluded_in_progress": 8,
+    "eligible_denominator": 29,
+    "reviewed": 29,
+    "static_gaps": 0,
+    "screened": 10,
+    "corrected": 5,
+    "retained": 5,
+    "verified_before": 22,
+    "verified_after": 17,
+    "rejected_before": 7,
+    "rejected_after": 12,
+    "corrected_skill_names": [
+      "implement",
+      "resolving-merge-conflicts",
+      "wayfinder",
+      "prototype",
+      "to-spec"
+    ],
+    "retained_skill_names": [
+      "triage",
+      "to-tickets",
+      "setup-matt-pocock-skills",
+      "migrate-to-shoehorn",
+      "diagnosing-bugs"
+    ],
+    "admitted_denominator_delta": 0,
+    "new_review_records": 0,
+    "companion_files_refreshed": 10,
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 867,
+      "total": 911
+    },
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "source_pin_changed": false,
+    "receipt": "docs/reviews/2026-10-30-mattpocock-ten-delegated-authority-macro.md"
+  },
   "addyosmani_delegation_rum_recheck": {
     "date": "2026-10-30",
     "source_id": "addyosmani-agent-skills",
