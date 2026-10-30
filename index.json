@@ -2,6 +2,56 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "anthropic_knowledge_work_data_authority_recheck": {
+    "as_of": "2026-10-30",
+    "source_id": "anthropic-knowledge-work-plugins",
+    "source_pin": "ca3e3fb2c4a1d3eea73fc003998faef6daa650b8",
+    "eligible_denominator": 74,
+    "current_standard_companions": 74,
+    "static_gaps": 0,
+    "data_packages_screened": 10,
+    "changed_dispositions": 4,
+    "retained_dispositions": 6,
+    "verified_before": 34,
+    "rejected_before": 40,
+    "verified_after": 30,
+    "rejected_after": 44,
+    "changed_skills": [
+      {
+        "skill": "analyze",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 14/20",
+        "package_tree": "7572805313d85c22d2d0a3e25101fdb1ed187af2"
+      },
+      {
+        "skill": "create-viz",
+        "previous": "verified 17/20",
+        "final": "rejected unchanged 14/20",
+        "package_tree": "a1d964650cb9d2439af30254e88d45ad494ec05d"
+      },
+      {
+        "skill": "data-context-extractor",
+        "previous": "verified 18/20",
+        "final": "rejected unchanged 13/20",
+        "package_tree": "63e9e6585eed590b6af3ee98665500dd5664beba"
+      },
+      {
+        "skill": "explore-data",
+        "previous": "verified 16/20",
+        "final": "rejected unchanged 13/20",
+        "package_tree": "bee4c8c0603859fd60c3622dd41e7a093476fcbf"
+      }
+    ],
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory": 44,
+    "third_party_exact_version_reviews": 867,
+    "total_verification_records": 911,
+    "security_scans_run": 0,
+    "behavioral_validations_run": 0,
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "receipt": "docs/reviews/2026-10-30-anthropic-data-ten-access-persistence-authority-macro.md"
+  },
   "persisted_review_accounting_reconciliation": {
     "as_of": "2026-10-30",
     "verification_yaml_total": 911,
