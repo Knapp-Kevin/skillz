@@ -12,13 +12,13 @@ upstream_revision: 91d4d07522de9577caf5d213e5bf1acc38fa3df2
 upstream_last_updated_at: 2026-08-07T11:27:44Z
 source_last_pushed_at: 2026-08-27T19:28:24Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
+last_checked_at: 2026-10-29
 availability: vendored
 local_path: skills/sources/addyosmani-agent-skills/skills/observability-and-instrumentation/SKILL.md
-permission_tier: generate
+permission_tier: mutating-with-insufficient-confirmation-boundary
 portability: high
 review_status: curated-source-reviewed
 dependency_status: source-intact
 dependencies: upstream repo-level references directory preserved in vendored source
 import_eligibility: already-vendored
-rationale: Valuable production observability guidance with its shared upstream checklists preserved intact.
+rationale: Question-first observability, structured logging, bounded metric cardinality and tracing remain valuable as ADAPT/EXTRACT/CHECKLIST evidence. Unchanged use is blocked: the pinned procedure directs production instrumentation/telemetry and new paging/ticket alerts, then temporary threshold changes and test-fired notifications, without distinct approval for destination, data fields, retention, alert recipients, costs or external effects.
