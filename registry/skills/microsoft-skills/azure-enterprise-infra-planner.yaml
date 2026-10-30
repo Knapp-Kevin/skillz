@@ -11,13 +11,13 @@ source_snapshot_revision: 32cad4ee689c95c309e61aeefcbc6af356f1e6a7
 upstream_revision: ba3700d41a07ab5e01919ce9a42a38907186a9fe
 upstream_last_updated_at: 2026-06-04T12:00:24Z
 curated_at: 2026-09-03
-last_checked_at: 2026-09-03
+last_checked_at: 2026-10-30
 availability: pinned-source
 local_path: skills/sources/microsoft-skills/.github/plugins/azure-skills/skills/azure-enterprise-infra-planner
-permission_tier: cloud-enterprise-planning-and-authorized-provisioning-reference
+permission_tier: cloud-enterprise-planning-and-provisioning-reference
 portability: medium
-review_status: verified
+review_status: rejected
 dependency_status: source-intact
 dependencies: Azure MCP insights/best-practices/WAF/docs/Bicep schema tools; Azure CLI; Bicep; Terraform; bundled workflow, resource, constraint, verification, pairing, IaC-generation, and deployment references
-import_eligibility: eligible-with-host-fit-review
-rationale: Exact complete-package static review at the registered Microsoft Skills pin, bound to package tree SHA 620e71b64d369c1ea3aa5c8f4feee7793841e7a5 and SKILL.md blob a261c21ed056be1958902cf23f6ae4879001b404 plus bundled workflow, seven phase files, resource/constraint catalogs, verification/pairing checks, IaC generation, and deployment guidance. The package is unusually strong on authority: resource selection requires user approval, the verified plan requires separate manual explicit approval before IaC generation, and deployment has a fresh destructive-action gate that explicitly rejects the original task prompt, vague assent, or implicit intent and requires risk acknowledgement in a later reply. It also confirms subscription/resource group and requires explicit confirmation for each destructive action. Security insights may only weaken posture when explicitly requested. No workflow was found that solicits literal secrets into conversational context. Preserve as verified static reference for enterprise Azure planning/provisioning; host agents must still honor the package gates and local authority constraints. Behavioral validation has not been run.
+import_eligibility: rejected-unchanged-reference-and-adaptation-only
+rationale: Private Azure environment inspection and retention occur before consent: Phase 1 automatically reuses .azure/insights.json, defaults to subscription-wide insights_get if the user does not respond, sends infrastructure context to a subagent, and persists raw insights JSON without an explicit account/scope/field/retention approval. Strong Phase 3/5/7 provisioning approvals do not retroactively authorize Phase 1 private access, subagent disclosure or persistence. Preserve architecture constraints, staged plan/deploy gates and WAF checks for ADAPT/EXTRACT/CHECKLIST, but require an affirmative scoped private-read and retention gate before Phase 1; no-response must mean no private read. Exact package tree 620e71b64d369c1ea3aa5c8f4feee7793841e7a5 and manifest a261c21ed056be1958902cf23f6ae4879001b404 unchanged. Behavioral validation not-run.
