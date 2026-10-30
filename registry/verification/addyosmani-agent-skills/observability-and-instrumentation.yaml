@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/observability-and-inst
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7d56593ec599cce0bae12aa46862884d0208cc59
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 15/20
 tags:
   use_case: [observability]
   lifecycle: [operations]
   characteristic: [evidence-first, instrumentation, production-oriented]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. Strong question-first instrumentation, structured logging, correlation IDs, secret/PII exclusions, bounded metric cardinality, vendor-neutral tracing, symptom-based alerting, and explicit verification of telemetry through induced failures and test-fired alerts. Runtime instrumentation and alert changes remain mutation-bearing work and inherit task authority. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. REJECT unchanged: steps 3-5 instrument production event/payment metadata and OpenTelemetry export without a scoped destination/retention/data-disclosure authorization; steps 6-7 create paging/ticket alerts, lower live thresholds temporarily, and test-fire messages to channels without separate action-specific permission. A general feature/instrumentation request or a runbook is not authorization to change monitoring policy or send notifications. Preserve question-first RED/USE design, structured-field allowlists, cardinality, tracing and alert-design checklists for host-authorized adaptation. Exact pinned blob unchanged; behavioral validation not-run."
