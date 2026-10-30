@@ -11,13 +11,13 @@ source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_last_updated_at: 2026-08-28T12:27:42Z
 curated_at: 2026-08-28
-last_checked_at: 2026-09-10
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/google-agents-cli/skills/google-agents-cli-eval/SKILL.md
 permission_tier: external-side-effect
 portability: low
-review_status: verified-structured
+review_status: rejected-unchanged
 dependency_status: source-intact
 dependencies: agents-cli, Google ADK/Agent Platform evaluation environment, source-intact reference files, and model-backed evaluation services for some commands
 import_eligibility: already-vendored
-rationale: Strong metric-driven evaluation loop with explicit failure analysis, holdout guidance, cost warnings, authoritative command discovery, and opt-in boundaries for expensive optimization.
+rationale: REJECT unchanged. Mandatory default model-backed eval runs and iteration, plus optional managed dataset/trace/code submission, lack separate scope for private evaluation data, provider/endpoint, cost and external model calls. Expensive optimization is opt-in but default grading is not separately authorized. Retain metric/holdout/failure-analysis methods as ADAPT/EXTRACT/CHECKLIST.

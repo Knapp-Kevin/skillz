@@ -6,15 +6,15 @@ local_path: skills/sources/google-agents-cli/skills/google-agents-cli-workflow/S
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: b33bd1202885bbdaf17b5c50df0660ae01452b3a
 characterized_at: 2026-08-29
-last_verified_at: 2026-10-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 19/20
+rubric_score: 14/20
 tags:
   use_case: [agent-development, planning, orchestration]
   lifecycle: [discovery, planning, implementation, verification, release]
   characteristic: [orchestration, human-review, spec-driven, progressive-disclosure, safety-bounded]
   authority: [mutating, external-side-effect]
   portability: [low]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Strong lifecycle orchestration with requirement dialogue, user-approved specification before implementation, evaluation sequencing, explicit deployment approval, and intact brainstorming/command/internals/spec/terminology references. Low portability reflects deliberate dependence on the Google Agents CLI skill family. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger 2, clarity 2, authority 0, failure 2, evidence 1, dependencies 2, portability 1, differentiation 2, adversarial 0, effectiveness 2 = 14/20. REJECT unchanged. Phase 0 specification and Phase 5 deploy approval do not authorize Phase 3 recipe Makefile setup-infra/data-ingestion, Phase 4 mandatory model-backed eval, or Phase 6/7 delegation to already rejected publish/observability procedures. Bundled internals maps infrastructure to Terraform apply. Approval for design or deploy is not approval for separate billable provisioning, sensitive data egress, publication or telemetry. Preserve phased design, spec review, recipe study, preservation and debugging as ADAPT/EXTRACT/CHECKLIST. Exact pin, manifest and package tree unchanged; security and behavioral validation not-run."
