@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/context-engineering/SK
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: be991103fe2b13f7e5f6f5da9d3c6029ad30ac64
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 14/20
 tags:
   use_case: [context-management]
   lifecycle: [planning]
   characteristic: [context-efficient, evidence-first]
-  authority: [read-only]
+  authority: [read-only, mutating]
   portability: [high]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Strong context hierarchy, focused loading, trust-level separation, instruction-in-data defenses, explicit conflict surfacing, and stop-and-ask behavior for missing requirements. Some generalized context-performance claims are guidance rather than independently substantiated evidence. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 1, dependency coherence 2, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 1. REJECT unchanged: lines 38-78 direct persistent rules-file creation without a separately approved repository/path/content boundary; lines 180-190 recommend live browser, PostgreSQL, filesystem and GitHub MCP context without binding private-read scope. Lines 98-103 categorically trust team-authored source/tests although repository content can contain untrusted instructions. A context request is not authority to mutate durable rules or read private systems. Preserve focused loading and ambiguity surfacing for adaptation. Exact pinned blob be991103fe2b13f7e5f6f5da9d3c6029ad30ac64 unchanged; behavioral validation not-run."

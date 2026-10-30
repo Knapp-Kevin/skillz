@@ -12,13 +12,13 @@ upstream_revision: 5aacc3bce933539dc85fa7c78a1807aa396f4801
 upstream_last_updated_at: 2026-06-25T17:49:56Z
 source_last_pushed_at: 2026-08-27T19:28:24Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/addyosmani-agent-skills/skills/idea-refine/SKILL.md
-permission_tier: staging-write
+permission_tier: mutating-with-insufficient-authorization-boundary
 portability: medium
 review_status: curated-source-reviewed
 dependency_status: host-tool-and-local-reference-dependent
-dependencies: live user interaction; skill-local frameworks.md, refinement-criteria.md, and examples.md; optional shell helper; codebase inspection tools when available
+dependencies: interactive user decisions, skill-local frameworks.md/refinement-criteria.md/examples.md, optional source-owned scripts/idea-refine.sh (mkdir -p docs/ideas), optional host codebase tools
 import_eligibility: already-vendored
-rationale: Strong divergent-to-convergent ideation workflow with explicit assumptions, user-value/feasibility/differentiation checks, a concrete one-page artifact, and a useful Not Doing boundary. Tool names and local helper assumptions reduce portability but do not undermine the core method.
+rationale: Preserve three-phase ideation, assumption tests and Not Doing checklist for ADAPT/EXTRACT/CHECKLIST. REJECT unchanged because optional setup script creates docs/ideas before explicit path/workspace write approval; the later one-pager save is correctly gated by user confirmation. Named tools are host-dependent.
