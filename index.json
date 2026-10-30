@@ -2,6 +2,64 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "david_ondrej_delegated_authority_recheck": {
+    "as_of": "2026-10-30",
+    "source_id": "david-ondrej-skills",
+    "source_pin": "7d0ef87dad1f638cab58995eead9e0e6e3fae237",
+    "eligible_denominator": 55,
+    "current_standard_companions": 55,
+    "static_gaps": 0,
+    "packages_risk_screened": 10,
+    "changed_dispositions": 4,
+    "retained_dispositions": 6,
+    "changed_skills": [
+      {
+        "skill": "push-skill-to-github",
+        "manifest_blob": "92a96359fab1fc06755cf7b67cf6cbefcf01b5cf",
+        "package_tree": "2c72ceaaa701161192d518e137adb3522bbfa9ba",
+        "previous_state": "verified",
+        "previous_score": "15/20",
+        "final_state": "rejected",
+        "final_score": "13/20"
+      },
+      {
+        "skill": "corral-launch-agents",
+        "manifest_blob": "d3e7862f487a4daa70f79e13fbffe62d383b0f38",
+        "package_tree": "b974bf54ca72cb30cdbb11c367e70a5b35274f79",
+        "previous_state": "verified",
+        "previous_score": "18/20",
+        "final_state": "rejected",
+        "final_score": "15/20"
+      },
+      {
+        "skill": "bb-subagents",
+        "manifest_blob": "82a1f726f4bbbf9682900b87f164c5c9364e5a16",
+        "package_tree": "5aaf47ba59e4a34547514e44813436c97ce10016",
+        "previous_state": "verified",
+        "previous_score": "16/20",
+        "final_state": "rejected",
+        "final_score": "13/20"
+      },
+      {
+        "skill": "git-worktree",
+        "manifest_blob": "b8e4f1a367e67c9a0fd0d8f4d7d9521e2a13e6ba",
+        "package_tree": "7d36eec370ed25112a15288503de1654dea32b3c",
+        "previous_state": "verified",
+        "previous_score": "17/20",
+        "final_state": "rejected",
+        "final_score": "14/20"
+      }
+    ],
+    "admitted_source_denominator_delta": 0,
+    "first_party_inventory": 44,
+    "third_party_exact_version_reviews": 848,
+    "total_verification_records": 892,
+    "security_scans_run": 0,
+    "behavioral_validations_run": 0,
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "receipt": "docs/reviews/2026-10-30-david-ondrej-ten-delegated-authority-macro.md"
+  },
   "danjdewhurst_reader_disclosure_authority_recheck": {
     "as_of": "2026-10-30",
     "source_id": "danjdewhurst-story-skills",
