@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: aws-cdk
+display_name: AWS CDK (aws-core plugin variant)
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-core/skills/aws-cdk/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: 803cbf47025e5f98cc52e4597614ca9bf94205d1
+upstream_last_updated_at: 2026-05-13T09:01:18Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-core/skills/aws-cdk
+permission_tier: external-side-effect
+portability: medium
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS CDK CLI, AWS CLI/credentials and account permissions, TypeScript or Python project tooling, CloudFormation and IAM APIs, nine bundled references; variant differs from core CDK references
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: CDK infrastructure authoring, deployment, import, refactor and troubleshooting; not SAM, Terraform/Pulumi or raw CloudFormation. Distinct plugin package tree 1c69221e639f1e6efe81befa51d3b5cdb064f737, manifest bf47a52741f9b7c97c1dd5189676f6c44397559f; its cross-stack removal and deployment troubleshooting references differ from canonical core aws-cdk. Nine bundled references prescribe bootstrap with IAM/trust grants, deploy, import, force rollback, destroy and resource replacement operations without an independent exact account/region/stack/cost/destructive authorization boundary. CLI confirmation and diff warnings are not approval. REJECT unchanged 14/20; preserve useful ADAPT/EXTRACT/CHECKLIST patterns. No security scan or behavioral execution.

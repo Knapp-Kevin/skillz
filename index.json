@@ -298,7 +298,7 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 846,
+    "persisted_third_party_exact_version_reviews": 848,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
     "jwynia_agent_skills_fiction_verified": 39,
@@ -315,8 +315,8 @@
     "anthropic_knowledge_work_plugins_current_standard_gaps": 0,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 94,
-    "aws_current_standard_companion_complete": 92,
-    "aws_current_standard_gaps": 2,
+    "aws_current_standard_companion_complete": 94,
+    "aws_current_standard_gaps": 0,
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
@@ -473,7 +473,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-30: AWS DevSecOps final five exact-pin reviews REJECT unchanged; DevSecOps 13/13 static complete, AWS 80/94 -> 85/94, 9 gaps (AgentCore 7, signing-in-to-aws 1, divergent aws-cdk 1). 115 exposure paths, 94 distinct package identities unchanged. Inventory 44 first-party / 839 third-party / 883 total. No new security/behavioral evidence or runtime.",
+    "latest_reconciliation": "2026-10-30: AWS final two exact pinned gaps resolved and canonical CDK authority corrected. AWS 92/94 -> 94/94, zero static gaps, 115 exposures/94 distinct trees unchanged. Inventory 44 first-party / 848 third-party / 892 total verification. Both new reviews REJECT unchanged; canonical core aws-cdk VERIFIED 19/20 -> REJECT unchanged 15/20. No scanner or behavioral pass, no repository-owned execution.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -738,5 +738,55 @@
     "security_scans_run": 0,
     "behavioral_validations_run": 0,
     "receipt": "docs/reviews/2026-10-30-aws-agentcore-seven-exact-static.md"
+  },
+  "aws_final_two_and_cdk_authority_static": {
+    "date": "2026-10-30",
+    "source_id": "aws-agent-toolkit",
+    "pinned_revision": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+    "eligible_denominator": 94,
+    "manifest_exposure_paths": 115,
+    "distinct_skill_names": 93,
+    "reviewed_before": 92,
+    "reviewed_after": 94,
+    "static_gaps_before": 2,
+    "static_gaps_after": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_exact_version_reviews": 2,
+    "canonical_disposition_corrections": 1,
+    "dispositions": [
+      {
+        "skill": "signing-in-to-aws",
+        "source_path": "skills/core-skills/signing-in-to-aws/SKILL.md",
+        "package_tree": "ee531e3e75bc80420fa93a7cec433cc3cdb3340f",
+        "manifest_blob": "3f56dd7330dc9ff8ade816425d5d1d5b4a79c5f7",
+        "score": "14/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "aws-cdk",
+        "variant": "aws-core-plugin",
+        "source_path": "plugins/aws-core/skills/aws-cdk/SKILL.md",
+        "package_tree": "1c69221e639f1e6efe81befa51d3b5cdb064f737",
+        "manifest_blob": "bf47a52741f9b7c97c1dd5189676f6c44397559f",
+        "score": "14/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "aws-cdk",
+        "variant": "core",
+        "source_path": "skills/core-skills/aws-cdk/SKILL.md",
+        "package_tree": "6ed8c50838438d4a6f4746fb9d90c4e8ae63b288",
+        "manifest_blob": "27d488115c9fb60ed7a5dc68ff44a7b6e44acab9",
+        "previous_state": "verified",
+        "previous_score": "19/20",
+        "score": "15/20",
+        "state": "rejected-unchanged"
+      }
+    ],
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "security_scans_run": 0,
+    "behavioral_validations_run": 0,
+    "receipt": "docs/reviews/2026-10-30-aws-final-two-and-cdk-authority-macro.md"
   }
 }

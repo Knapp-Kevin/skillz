@@ -1,5 +1,8 @@
 # System State
 
+**AWS pinned final-two closure and canonical CDK authority correction (2026-10-30).** The two genuine exact-tree gaps, `signing-in-to-aws` and the distinct plugin `aws-cdk`, now have individual pinned provenance and structured semantic reviews. Both are **REJECT unchanged** for unapproved identity-read/credential effects or infrastructure lifecycle actions. The already-reviewed canonical core `aws-cdk` is reclassified **VERIFIED 19/20 → REJECT unchanged 15/20** under the same hard authorization rule. AWS **92/94 → 94/94**, **2 → 0** static gaps, denominator unchanged at 94; inventory **44 first-party / 848 third-party / 892 total verification**. All three retain useful ADAPT/EXTRACT/CHECKLIST prior art. No source pin, upstream content, scanner result, behavioral validation, or repository-owned runtime changed. [Macro review](reviews/2026-10-30-aws-final-two-and-cdk-authority-macro.md).
+
+
 **AWS AgentCore seven-package exact-pin static tranche (2026-10-30).** All seven first-class `plugins/aws-agents/skills/` packages now have individual exact-tree provenance and structured semantic reviews. Each is **REJECT unchanged** under action-specific authorization or private-data disclosure rules; retain valuable methods for ADAPT/EXTRACT/CHECKLIST. AWS **85/94 → 92/94**, **9 → 2** genuine gaps; AgentCore **0/7 → 7/7**. Published inventory **44 first-party / 846 third-party / 890 total verification**. No source pin, scanner, behavioral execution or repository-owned machinery changed. [Seven-package macro review](docs/reviews/2026-10-30-aws-agentcore-seven-exact-static.md).
 
 **AWS DevSecOps pinned final-five static review (2026-10-30).** Five previously unreviewed first-class plugin packages received exact-pin provenance and individual semantic dispositions: `investigating-incidents-with-aws-devops-agent`, `setup-devops-agent`, `setup-security-agent`, `setup`, and `threat-modeling-with-aws-security-agent`. All five are **REJECT unchanged** because remote incident disclosure/job creation, unpinned MCP proxy installation/private account reads, IAM/S3/AgentSpace provisioning and retention rewrites, unsafe delegation, or full-source S3 upload lack action-specific authority. The 13-package DevSecOps sub-family is now **13/13 static-reviewed**; AWS **80/94 → 85/94**, **14 → 9** gaps. Current inventory **44 first-party / 839 third-party / 883 total verification**; source pin unchanged, behavioral `not-run`, no security scan. [Exact five-package macro review](docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md).
@@ -19,7 +22,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **846** |
+| **Persisted third-party review companions** | **848** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -80,7 +83,7 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 |---|---:|---:|
 | Anthropic Skills | 19 / 19 | 0 |
 | Anthropic Knowledge Work Plugins | 74 / 74 | 0 |
-| AWS Agent Toolkit | **92 / 94** | **2** |
+| AWS Agent Toolkit | **94 / 94** | **0** |
 | Microsoft Skills | 186 / 186 | 0 |
 | Microsoft Azure Skills | 34 / 34 | 0 |
 | Cole Medin Skills | 33 / 33 | 0 |
@@ -173,4 +176,4 @@ After every material corpus tranche, reconcile these five public surfaces atomic
 
 ## Next action
 
-AWS Agent Toolkit remains **92/94 current-standard reviewed**, with two exact pinned gaps: `signing-in-to-aws` and the divergent plugin `aws-cdk` variant. Close that admitted-source frontier with individual provenance and semantic records and atomic public accounting before switching AWS to freshness maintenance. First-party repair drafts #489/#492/#496 still require exact-package external security and adversarial qualification for 36 changed package trees; admission drafts #412/#413 have separate holds. Keep governed discovery and lifecycle hygiene active. No repository-owned runtime or unsupported behavioral evidence.
+AWS Agent Toolkit is **94/94 current-standard static-reviewed with zero gaps** at its registered pin. Continue selective freshness and high-authority omission checks; static completeness is not package-security approval or behavioral validation. First-party repair drafts #489/#492/#496 still require exact-package external security and adversarial qualification for 36 changed package trees; admission drafts #412/#413 have separate holds. Keep governed discovery and lifecycle hygiene active. No repository-owned runtime or unsupported behavioral evidence.

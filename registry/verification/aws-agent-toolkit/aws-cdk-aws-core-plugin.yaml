@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: aws-cdk
+source_id: aws-agent-toolkit
+source_path: plugins/aws-core/skills/aws-cdk/SKILL.md
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 1c69221e639f1e6efe81befa51d3b5cdb064f737
+manifest_blob_sha: bf47a52741f9b7c97c1dd5189676f6c44397559f
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [cloud, architecture, debugging, deployment]
+  lifecycle: [design, implementation, verification, operations]
+  characteristic: [risk-aware, reference-heavy, evidence-first]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: >-
+  Purpose/non-trigger: CDK infrastructure authoring, deployment, import, refactor and troubleshooting; not SAM, Terraform/Pulumi or raw CloudFormation. Distinct plugin package tree 1c69221e639f1e6efe81befa51d3b5cdb064f737, manifest bf47a52741f9b7c97c1dd5189676f6c44397559f; its cross-stack removal and deployment troubleshooting references differ from canonical core aws-cdk. Nine bundled references prescribe bootstrap with IAM/trust grants, deploy, import, force rollback, destroy and resource replacement operations without an independent exact account/region/stack/cost/destructive authorization boundary. CLI confirmation and diff warnings are not approval. REJECT unchanged 14/20; preserve useful ADAPT/EXTRACT/CHECKLIST patterns. No security scan or behavioral execution. Package-specific last change 2026-05-13. Security scan not established, behavioral validation not-run.
