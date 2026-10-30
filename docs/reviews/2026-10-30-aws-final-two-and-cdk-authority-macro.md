@@ -10,7 +10,7 @@ Live registered source: `aws/agent-toolkit-for-aws@ff1481a7bc1a04ee00ebf63d3a8a1
 | `plugins/aws-core/skills/aws-cdk` | `1c69221e639f1e6efe81befa51d3b5cdb064f737` | `bf47a52741f9b7c97c1dd5189676f6c44397559f` | REJECT unchanged (new variant) | 14/20 |
 | `skills/core-skills/aws-cdk` | `6ed8c50838438d4a6f4746fb9d90c4e8ae63b288` | `27d488115c9fb60ed7a5dc68ff44a7b6e44acab9` | VERIFIED 19/20 → REJECT unchanged 15/20 | 15/20 |
 
-The `signing-in-to-aws` package has no bundled references; the two CDK packages each contain nine source-owned references. Five CDK references have identical blob SHAs across variants, while the manifest, bootstrap, construct, deployment and synth references differ. In particular, the canonical core offers a three-deploy weak-reference migration and newer CloudFormation diagnostics; the plugin variant uses a two-deploy export workaround and older event diagnosis. These are materially different behavior/evidence paths, not duplicate names to count once.
+The `signing-in-to-aws` package has no bundled references; the two CDK packages each contain nine source-owned references. Three CDK references have identical blob SHAs across variants (import, refactor and credentials), while the manifest and six other references differ (bootstrap, compliance, constructs, deployment, synth and v1 migration). In particular, the canonical core offers a three-deploy weak-reference migration and newer CloudFormation diagnostics; the plugin variant uses a two-deploy export workaround and older event diagnosis. These are materially different behavior/evidence paths, not duplicate names to count once.
 
 ## Individual static review and authority findings
 
