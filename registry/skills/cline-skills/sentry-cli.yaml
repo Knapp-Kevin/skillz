@@ -11,7 +11,7 @@ source_snapshot_revision: 26378461e978f2b4e2e6d67b57121b86b2a79ba5
 upstream_revision: f1ad5854eaca4c2d2662db60848ac35feab40f27
 upstream_last_updated_at: 2026-06-18T23:38:11Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/cline-skills/skills/sentry-cli/SKILL.md
 permission_tier: external-side-effect
@@ -24,4 +24,4 @@ dependencies:
   - network access
   - bundled command references
 import_eligibility: already-vendored
-rationale: Broad first-party Sentry operational reference with bounded output guidance, explicit destructive-action confirmation, mutation-context checks, and credential-handling rules; retained with authority caveats recorded in verification.
+rationale: Pinned Sentry CLI and bundled command references are retained intact as operational prior art. REJECT unchanged: automatic private diagnostics and consequential release, alert and arbitrary API operations lack action-specific read/write authority, and bundled auth commands can print raw stored tokens. Preserve bounded output, semantic exit codes and diagnostic command mapping for scoped adaptation; never infer authorization from CLI availability or org/project autodetection.
