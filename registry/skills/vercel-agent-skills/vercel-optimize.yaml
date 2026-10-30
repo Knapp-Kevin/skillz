@@ -11,13 +11,13 @@ source_snapshot_revision: f8a72b9603728bb92a217a879b7e62e43ad76c81
 upstream_revision: 583754a2b2d022e61396b14dc46db5f20c3c1d2b
 upstream_last_updated_at: 2026-05-27T01:39:35Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
+last_checked_at: 2026-10-29
 availability: vendored
 local_path: skills/sources/vercel-agent-skills/skills/vercel-optimize/SKILL.md
-permission_tier: read-mostly-external-observation-with-explicit-scope-and-consent-gates
+permission_tier: private-account-billing-observation-and-persistent-project-linking-needing-separate-authority
 portability: low
-review_status: verified-structured
+review_status: rejected-unchanged
 dependency_status: source-intact-vercel-metrics-and-toolchain-required
 dependencies: Bundled scripts, libraries, references, and citation library; Vercel CLI v53+; linked/authenticated Vercel project; Node.js 20+; Observability Plus for strongest route-level evidence
 import_eligibility: already-vendored
-rationale: Strong observability-first optimization workflow with deterministic candidate gates, exact project/scope resolution, explicit limited-audit consent, secret-command prohibitions, bounded source inspection, version-aware citation controls, withheld unsafe recommendations, reproducible run directories, and verification/regeneration stages. Platform dependence is explicit and substantial.
+rationale: REJECT unchanged at exact pinned SKILL.md blob c8a6d6d7075b2cc3f7921da89de86e6926f78985. Metrics-first candidate gates, account identity matching, bounded source investigation, source-owned deterministic tools, version-aware citations and withheld unsafe recommendations remain valuable ADAPT/EXTRACT/CHECKLIST prior art. Authority hard fail overrides the 15/20 static score: the unlinked and scope-recovery paths instruct vercel link --yes (persistent local/project linkage) after project identification without separately authorizing that mutation; the collector reads private account plan, contract, usage and route metrics and persists raw signals in a fresh temp directory without explicit read/disclosure scope and retention decision. An authenticated session and selection of a project do not authorize every billing read, data retention or link operation. Also the instruction not to inspect source before signals.json conflicts with its scan-codebase step before signals.json creation. Preserve the upstream package unchanged; require scoped approval and minimized, protected, time-bounded evidence in any host adaptation. No scanner or behavioral test executed.

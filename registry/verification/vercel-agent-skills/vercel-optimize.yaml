@@ -6,15 +6,15 @@ local_path: skills/sources/vercel-agent-skills/skills/vercel-optimize/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: c8a6d6d7075b2cc3f7921da89de86e6926f78985
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 19/20
+rubric_score: 15/20
 tags:
   use_case: [monitoring, observability, research, cloud]
   lifecycle: [discovery, verification, operations, maintenance]
   characteristic: [evidence-first, deterministic, cost-bounded, risk-aware, safety-bounded, traceable, tool-assisted, source-driven]
   authority: [read-only, mutating, external-side-effect]
   portability: [low]
-notes: Rubric scores are trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 2, effectiveness 2. Metrics-first collection, project/scope disambiguation, explicit consent for degraded audits, deterministic candidate gates, bounded file access, version-aware citations, withheld recommendations, regeneration, secret-command prohibitions, and customer-output sanitization form a strong evidence loop. Low portability is explicit because the workflow depends on Vercel CLI/metrics and Observability Plus for full strength. Bundled scripts, libs, and references are present. Behavioral validation remains pending.
+notes: Rubric scores are trigger 2, procedure 2, authority 0, failure 1, evidence 2, dependencies 2, portability 1, usefulness 2, adversarial resilience 1, effectiveness 2 (15/20). REJECT unchanged: exact pinned manifest c8a6d6d7075b2cc3f7921da89de86e6926f78985 lacks action-specific authorization before vercel link --yes persistent project/worktree linkage; account/project confirmation is parameter resolution, not consent for mutation. Bundled collect-signals.mjs reads private plan/contract/usage and route metrics, then writes raw signals to a fresh run directory without explicit approved read/disclosure fields, storage or retention boundaries. Prerequisite vercel login does not grant this authority. Its stated do-not-inspect-source-before-signals.json rule also conflicts with the scan-codebase.mjs step before signals.json creation. Deterministic gates, scoped Vercel commands, limited-audit consent, citation verification, secret-command restrictions and output sanitization are useful adaptation prior art; source-owned scripts are not repository runtime. Exact blob and pinned package remain unchanged; security and external behavioral validation not-run.
