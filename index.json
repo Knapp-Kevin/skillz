@@ -43,7 +43,7 @@
     "verified_semantic_only": 4,
     "rejected_unchanged": 3,
     "static_gaps": 0,
-    "taxonomy_records_corrected": 4,
+    "taxonomy_records_corrected": 5,
     "changed_skills": [
       "google-agents-cli-deploy",
       "google-agents-cli-observability",
