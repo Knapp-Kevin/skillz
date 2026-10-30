@@ -11,13 +11,13 @@ source_snapshot_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_revision: ef7808f33fc3038112b69d4ad488ce33b72699b1
 upstream_last_updated_at: 2026-08-28T12:27:42Z
 curated_at: 2026-08-29
-last_checked_at: 2026-09-10
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/google-agents-cli/skills/google-agents-cli-workflow/SKILL.md
-permission_tier: orchestrate-mutations-with-user-approved-spec-and-deployment-approval
+permission_tier: mutating-and-external-side-effect
 portability: low
-review_status: verified-structured
+review_status: rejected-unchanged
 dependency_status: source-intact
-dependencies: agents-cli; related Google Agents CLI scaffold/code/eval/deploy skills; bundled brainstorming, commands, internals, spec-template, and terminology references
+dependencies: agents-cli; Google ADK and related scaffold/code/eval/deploy/publish/observability skills; source-owned recipe Makefiles, Terraform and five bundled references; model-backed evaluation and cloud services where used
 import_eligibility: already-vendored
-rationale: Lifecycle orchestration skill separates discovery, specification, implementation, evaluation, and deployment; requires user-approved requirements/specification before implementation and explicit approval before deployment. Strong cross-skill routing and progressive disclosure are balanced by low portability outside the agents-cli ecosystem.
+rationale: REJECT unchanged. User-approved design/spec and deploy approval do not authorize recipe Makefile infrastructure/data-ingestion, mandatory model-backed evaluation, or separate publish/observability effects inherited from rejected child procedures. Retain phased design, preservation, scoped scaffolding and debugging methods as ADAPT/EXTRACT/CHECKLIST.

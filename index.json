@@ -495,7 +495,8 @@
     "source_pin_changed": false,
     "new_security_scans": 0,
     "new_behavioral_validations": 0,
-    "receipt": "docs/reviews/2026-10-29-google-agents-cli-authority-taxonomy-macro.md"
+    "receipt": "docs/reviews/2026-10-29-google-agents-cli-authority-taxonomy-macro.md",
+    "superseded_by": "docs/reviews/2026-10-30-google-agents-eval-workflow-delegated-authority-macro.md"
   },
   "cloudflare_authority_reclassification": {
     "as_of": "2026-10-29",
@@ -620,7 +621,9 @@
     "microsoft_rust_direct_package_companions": 9,
     "microsoft_rust_direct_package_denominator": 9,
     "microsoft_typescript_direct_package_companions": 25,
-    "microsoft_typescript_direct_package_denominator": 25
+    "microsoft_typescript_direct_package_denominator": 25,
+    "google_agents_cli_verified_semantic_only": 2,
+    "google_agents_cli_rejected_unchanged": 5
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1111,5 +1114,44 @@
     "new_review_records": 0,
     "security_scan_executed": false,
     "receipt": "docs/reviews/2026-10-30-cole-medin-second-brain-authority-ten-macro.md"
+  },
+  "google_agents_cli_eval_workflow_authority_recheck": {
+    "as_of": "2026-10-30",
+    "source_id": "google-agents-cli",
+    "source_pin": "ef7808f33fc3038112b69d4ad488ce33b72699b1",
+    "eligible_denominator": 7,
+    "exact_package_trees_checked": 7,
+    "deep_reviewed": 2,
+    "changed_static_dispositions": 2,
+    "retained_dispositions": 5,
+    "verified_semantic_only": 2,
+    "rejected_unchanged": 5,
+    "static_gaps": 0,
+    "changed_skills": [
+      {
+        "name": "google-agents-cli-eval",
+        "package_tree_sha": "18d16f199fc2347f10c718abd017b19a770feaf7",
+        "previous_state": "verified",
+        "previous_score": "18/20",
+        "final_state": "rejected",
+        "final_score": "14/20",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "google-agents-cli-workflow",
+        "package_tree_sha": "b2617019f14333bc8997375e73043ab78e0b4d23",
+        "previous_state": "verified",
+        "previous_score": "19/20",
+        "final_state": "rejected",
+        "final_score": "14/20",
+        "behavioral_validation": "not-run"
+      }
+    ],
+    "admitted_denominator_delta": 0,
+    "new_review_records": 0,
+    "source_pin_changed": false,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "receipt": "docs/reviews/2026-10-30-google-agents-eval-workflow-delegated-authority-macro.md"
   }
 }

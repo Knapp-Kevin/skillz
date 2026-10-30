@@ -6,15 +6,15 @@ local_path: skills/sources/google-agents-cli/skills/google-agents-cli-eval/SKILL
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 2ce4c881733de6cc75dce97bb7e3c4391df69c75
 characterized_at: 2026-08-28
-last_verified_at: 2026-09-10
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [evaluation, agent-development]
   lifecycle: [verification]
   characteristic: [metric-driven, holdout-aware, evidence-first, iterative, cost-bounded]
-  authority: [external-side-effect]
+  authority: [mutating, external-side-effect]
   portability: [low]
-notes: Explicit metric selection, failure-to-fix mapping, holdout discipline, and warnings around expensive optimization. Requires Google agents-cli/ADK context and may incur external model/service cost. Behavioral validation remains pending.
+notes: "Rubric: trigger 2, clarity 2, authority 0, failure 2, evidence 1, dependencies 2, portability 1, differentiation 2, adversarial 0, effectiveness 2 = 14/20. REJECT unchanged. The mandatory default eval run invokes a local agent and model-backed grading; bundled metrics-guide confirms Gemini/Vertex LLM judge, while user-simulation and advanced-commands describe Vertex scenario synthesis, managed dataset/trace submission and remote metric-code upload. There is no distinct approval for private prompt/trace disclosure, provider/endpoint, model inference cost or iteration budget. GEPA optimize is explicitly opt-in but does not cure the default path. Preserve metric/holdout/failure-analysis methods as ADAPT/EXTRACT/CHECKLIST. Exact pin, manifest and package tree unchanged; security and behavioral validation not-run."
