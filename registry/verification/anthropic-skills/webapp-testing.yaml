@@ -8,14 +8,14 @@ content_blob_sha: 4726215301db64a0cc4d41fc3219c61f37a30f4a
 package_tree_sha: 5ffb7dc66b9fd4c25c3e400a4c00da99a349b714
 characterized_at: 2026-08-29
 last_verified_at: 2026-09-30
-verification_status: verified
-verification_basis: structured-static-review-carried-forward-exact-tree
+verification_status: rejected
+verification_basis: structured-static-review-authority-hard-fail
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 14/20
 tags:
   use_case: [browser-testing, testing, debugging, ux]
   lifecycle: [verification, maintenance]
   characteristic: [tool-assisted, visual-verification, evidence-first, compatibility-aware]
-  authority: [read-only, mutating]
+  authority: [read-only, mutating, external-side-effect]
   portability: [medium]
-notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Pinned helper remains bounded and auditable despite the execute-before-inspect preference. Behavioral validation remains not-run. This companion becomes current corpus evidence only if the Anthropic source pin advances.
+notes: "REJECT unchanged: the browser-testing workflow launches a local application server and directs Playwright actions against discovered UI controls without an action-specific gate for authenticated writes, connected backends, notifications, or sensitive browser state. A request to inspect a UI does not authorize every click or persistent service operation. The bundled server helper is intact upstream evidence, not repository-owned runtime. Preserve selector-discovery, screenshot, and cleanup methods for authorized ADAPT or CHECKLIST use; behavioral validation not-run. The registered source pin matches this exact package."
