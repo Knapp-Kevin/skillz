@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/product-management/skills/spri
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 827a1ab89932c811198ff25eb7f99cf674687acd
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 14/20
 tags:
   use_case: [planning, productivity]
   lifecycle: [planning]
   characteristic: [decomposition, incremental, risk-aware]
-  authority: [generate-only]
+  authority: [external-side-effect]
   portability: [medium]
-notes: "Verified with context caveat. Good sprint-goal, carryover, dependency, and capacity logic; utilization percentages are planning heuristics rather than claims of universal optimality. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged, 14/20. Exact pinned blob 827a1ab89932c811198ff25eb7f99cf674687acd. Standalone sprint-plan generation is useful and capacity percentages are heuristics. The connected-tool panel, however, explicitly includes creating a sprint, assigning tracker items and sharing the plan to chat with no separate user approval of destination, assignments or message. Planning a sprint does not authorize persistent tracker mutations or team communications. Authority changed from generate-only to external-side-effect. Preserve planning methods for ADAPT/CHECKLIST with action-specific approval. Static semantic review only; behavioral validation not-run and no package-security pass claimed."

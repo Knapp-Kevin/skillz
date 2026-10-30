@@ -33,6 +33,30 @@
     "pending_separate_scope_authority_pr": 496,
     "pending_scope_authority_review": "docs/reviews/2026-10-29-ten-unchanged-first-party-authority-macro.md"
   },
+  "anthropic_knowledge_work_authority_reclassification": {
+    "as_of": "2026-10-29",
+    "source_id": "anthropic-knowledge-work-plugins",
+    "source_pin": "ca3e3fb2c4a1d3eea73fc003998faef6daa650b8",
+    "eligible_denominator": 74,
+    "high_authority_procedures_inspected": 10,
+    "existing_verification_records_recounted": 74,
+    "verified_before": 36,
+    "rejected_before": 38,
+    "verified_semantic_only_after": 34,
+    "rejected_unchanged_after": 40,
+    "static_gaps": 0,
+    "changed_static_dispositions": 2,
+    "changed_skills": [
+      "signature-request",
+      "sprint-planning"
+    ],
+    "sprint_planning_authority_corrected_to": "external-side-effect",
+    "source_pin_changed": false,
+    "upstream_package_changed": false,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "receipt": "docs/reviews/2026-10-29-anthropic-knowledge-work-authority-ten-macro.md"
+  },
   "google_agents_cli_authority_reclassification": {
     "as_of": "2026-10-29",
     "source_id": "google-agents-cli",

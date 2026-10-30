@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/legal/skills/signature-request
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 242d64bd0431a7e1d87efda4493d7601a2332f07
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 13/20
 tags:
   use_case: [business-operations, communication]
   lifecycle: [operations]
-  characteristic: [human-review, risk-aware, safety-bounded]
+  characteristic: [human-review, risk-aware]
   authority: [external-side-effect]
   portability: [low]
-notes: "Verified in its declared legal/signature context. The user request supplies the side-effect intent, and the workflow checks final form, entities, signer authority, approvals, and counsel review before routing. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged, 13/20. Exact pinned blob 242d64bd0431a7e1d87efda4493d7601a2332f07. The trigger includes merely verifying signature blocks or setting up an envelope, yet Step 4 directs a connected e-signature platform to create and SEND the envelope without a separate authorization gate for the exact final document, signers, CC recipients, routing and dispatch. Signer authority and counsel review are necessary checks, not user authorization to send. Keep the pre-signature checklist as adaptation/reference evidence; require explicit action-specific host approval. Static semantic review only; behavioral validation not-run and no package-security pass claimed."
