@@ -6,14 +6,14 @@ local_path: skills/sources/google-agents-cli/skills/google-agents-cli-workflow/S
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: b33bd1202885bbdaf17b5c50df0660ae01452b3a
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-10
+last_verified_at: 2026-10-29
 verification_status: verified
 verification_basis: structured-static-review
 validation_status: not-run
 rubric_score: 19/20
 tags:
   use_case: [agent-development, planning, orchestration]
-  lifecycle: [discovery, planning, implementation, verification, deployment]
+  lifecycle: [discovery, planning, implementation, verification, release]
   characteristic: [orchestration, human-review, spec-driven, progressive-disclosure, safety-bounded]
   authority: [mutating, external-side-effect]
   portability: [low]
