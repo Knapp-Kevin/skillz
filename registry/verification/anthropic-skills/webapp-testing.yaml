@@ -7,7 +7,7 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 4726215301db64a0cc4d41fc3219c61f37a30f4a
 package_tree_sha: 5ffb7dc66b9fd4c25c3e400a4c00da99a349b714
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-30
+last_verified_at: 2026-10-30
 verification_status: rejected
 verification_basis: structured-static-review-authority-hard-fail
 validation_status: not-run
