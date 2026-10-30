@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/data/skills/data-context-extra
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 1e065695c4f896f542c641ebeac3a80ccad952b6
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 13/20
 tags:
   use_case: [skill-authoring, domain-modeling, context-management]
   lifecycle: [discovery, design]
   characteristic: [source-driven, progressive-disclosure, traceable]
-  authority: [generate-only]
+  authority: [read-only, mutating]
   portability: [high]
-notes: "Verified. Directed interview method extracts entity semantics, metrics, data hygiene, and domain gotchas into explicit reusable context rather than assuming hidden knowledge. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged. Exact pinned SKILL.md and package tree 63e9e6585eed590b6af3ee98665500dd5664beba independently inspected 2026-10-30. Bootstrap enumerates warehouse schemas before an approved source scope and generates persistent company-specific entity/ID/metric/table references without choosing an authorized destination or retention policy. Bundled source-owned package_data_skill.py recursively zips non-hidden files from the skill directory into cwd by default, without an allowlist or sensitive-data inspection. Preserve analyst-interview and domain-modeling templates as ADAPT/EXTRACT material; never treat upstream script as skillz-owned runtime. Source Apache-2.0; behavioral validation not-run, no security scan executed. Individual authority finding is a hard fail regardless of score. Score 18/20 -> 13/20."

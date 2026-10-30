@@ -6,15 +6,15 @@ local_path: skills/sources/knowledge-work-plugins/data/skills/explore-data/SKILL
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: f1e7032d0abee77903fc3abbfdc7646e383d4993
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 13/20
 tags:
   use_case: [research, evaluation]
   lifecycle: [discovery, verification]
   characteristic: [hypothesis-driven, evidence-first, iterative]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
-notes: "Verified. Provides disciplined exploratory analysis and labels null/outlier cutoffs as heuristics rather than universal truths. Exact fingerprint confirmed; behavioral validation not run."
+notes: "REJECT unchanged. Exact pinned SKILL.md and package tree bee4c8c0603859fd60c3622dd41e7a093476fcbf independently inspected 2026-10-30. When a warehouse is connected, it automatically profiles live rows across all columns, including top/least common values and free-form text. No prior approval binds tables, columns, time, PII exclusion, sample size or query cost; summaries can reveal sensitive values and rare identities. Preserve profiling heuristics and quality checks as ADAPT/CHECKLIST material. Source Apache-2.0; behavioral validation not-run, no security scan executed. Individual authority finding is a hard fail regardless of score. Score 16/20 -> 13/20."
