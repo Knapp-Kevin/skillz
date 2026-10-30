@@ -1,5 +1,7 @@
 # System State
 
+**Persisted exact-version accounting correction (2026-10-30).** Recomputed the Git tree and matched **911 verification YAML records to 911 provenance YAML companions**: 44 first-party, 746 registered/tracked third-party, 102 Microsoft candidate-only and 19 Matt Pocock candidate-only. Earlier **848/892** omitted the 19 existing Matt candidate records while counting Microsoft candidates. Current persisted totals are **867 third-party / 911 total**; **no new reviews, admissions, source-pin changes, scans, or behavioral validations**. Candidate-only evidence remains unadmitted and ineligible for automatic unchanged reuse. [Count reconciliation](reviews/2026-10-30-persisted-candidate-review-count-reconciliation.md).
+
 **David Ondrej delegated-authority recheck (2026-10-30).** Ten already-reviewed pinned packages were risk-screened; four false unchanged-use approvals are now **REJECT unchanged**: `push-skill-to-github` (15→13/20, private push silently auto-publishes a public mirror), `corral-launch-agents` (18→15/20, `--yolo --trust` resume bypass), `bb-subagents` (16→13/20, default unsandboxed `full` worker), and `git-worktree` (17→14/20, automatic `.env`/local database replication without separate scope). Six controls retained. Source **55/55**, zero static gaps, denominator delta **0**, inventory **44/848/892** unchanged, behavioral `not-run`, no scanner execution. Preserve methods as ADAPT/EXTRACT/CHECKLIST. [Macro review](reviews/2026-10-30-david-ondrej-ten-delegated-authority-macro.md).
 
 **Dan Dewhurst Story Skills reader-disclosure authority recheck (2026-10-30).** Ten pinned packages were risk-screened across reader feedback, editorial collaboration, publishing, research, adaptation and project maintenance; two previously VERIFIED unchanged-use decisions are now **REJECT unchanged**: `feedback-triage` (18/20 → 14/20) for optional GitHub Pages publication of the unpublished manuscript on every push and public reader-note/quote exposure without a separate disclosure/recurrence gate, and `reader-panel` (17/20 → 14/20) for optional private-manuscript routing to subagents without provider, disclosure, retention or model-cost approval. Eight other decisions retained. Family **23/23** current-standard, **21 VERIFIED / 2 REJECT**, zero gaps; source pin and **44/848/892** inventory unchanged, no scans or behavioral validation. Preserve both as ADAPT/EXTRACT/CHECKLIST evidence. [Macro review](reviews/2026-10-30-danjdewhurst-reader-disclosure-ten-authority-macro.md).
@@ -35,7 +37,7 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **848** |
+| **Persisted third-party review companions** | **867** (746 registered/tracked + 121 candidate-only) |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
