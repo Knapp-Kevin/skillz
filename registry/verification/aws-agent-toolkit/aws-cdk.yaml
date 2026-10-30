@@ -4,16 +4,18 @@ source_id: aws-agent-toolkit
 source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
 fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288
+manifest_blob_sha: 27d488115c9fb60ed7a5dc68ff44a7b6e44acab9
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-30
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 19/20
+rubric_score: 15/20
 tags:
-  use_case: [cloud, architecture, debugging]
+  use_case: [cloud, architecture, debugging, deployment]
   lifecycle: [design, implementation, verification, operations]
   characteristic: [risk-aware, reference-heavy, evidence-first, production-oriented]
-  authority: [mutating]
+  authority: [external-side-effect]
   portability: [medium]
-notes: Exact package-tree review at the registered AWS pin. Strong trigger and non-trigger boundaries, diff-before-deploy discipline, stateful-resource and logical-ID replacement warnings, staged cross-stack-reference removal, rollback guidance, OIDC and permissions-boundary security guidance, and coherent source-intact references. Authority is the constrained dimension because bootstrap, deploy, import, refactor, drift, rollback, and destroy-related workflows can mutate infrastructure, incur cost, or cause data loss and therefore require credentials plus explicit host/user authority. Behavioral validation remains not-run.
+notes: >-
+  Purpose/non-trigger: CDK construct design, bootstrap, deploy, import, drift, refactor and rollback; not SAM, Terraform, Pulumi or raw CloudFormation. Pinned core package tree 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288, manifest 27d488115c9fb60ed7a5dc68ff44a7b6e44acab9, nine source-owned references. Score 15/20 but authority hard-fail: diff, warning and CLI confirmation do not authorize cdk bootstrap, trust/IAM changes, deploy, import, multi-deploy migration, rollback, force rollback, destroy, production traffic changes or data loss. No distinct approval for account/region/stack, resources, cost, change window and destructive scope. Retain cross-stack migration and replacement safety as ADAPT/EXTRACT/CHECKLIST prior art. Distinct plugin aws-cdk variant has its own record. Package security not established; behavioral validation not-run.

@@ -1,5 +1,8 @@
 # 🛠️ skillz
 
+**AWS pinned final-two closure and canonical CDK authority correction (2026-10-30).** The two genuine exact-tree gaps, `signing-in-to-aws` and the distinct plugin `aws-cdk`, now have individual pinned provenance and structured semantic reviews. Both are **REJECT unchanged** for unapproved identity-read/credential effects or infrastructure lifecycle actions. The already-reviewed canonical core `aws-cdk` is reclassified **VERIFIED 19/20 → REJECT unchanged 15/20** under the same hard authorization rule. AWS **92/94 → 94/94**, **2 → 0** static gaps, denominator unchanged at 94; inventory **44 first-party / 848 third-party / 892 total verification**. All three retain useful ADAPT/EXTRACT/CHECKLIST prior art. No source pin, upstream content, scanner result, behavioral validation, or repository-owned runtime changed. [Macro review](docs/reviews/2026-10-30-aws-final-two-and-cdk-authority-macro.md).
+
+
 **AWS AgentCore seven-package exact-pin static tranche (2026-10-30).** All seven first-class `plugins/aws-agents/skills/` packages now have individual exact-tree provenance and structured semantic reviews. Each is **REJECT unchanged** under action-specific authorization or private-data disclosure rules; retain valuable methods for ADAPT/EXTRACT/CHECKLIST. AWS **85/94 → 92/94**, **9 → 2** genuine gaps; AgentCore **0/7 → 7/7**. Published inventory **44 first-party / 846 third-party / 890 total verification**. No source pin, scanner, behavioral execution or repository-owned machinery changed. [Seven-package macro review](docs/reviews/2026-10-30-aws-agentcore-seven-exact-static.md).
 
 **AWS DevSecOps pinned final-five static review (2026-10-30).** Five previously unreviewed first-class plugin packages received exact-pin provenance and individual semantic dispositions: `investigating-incidents-with-aws-devops-agent`, `setup-devops-agent`, `setup-security-agent`, `setup`, and `threat-modeling-with-aws-security-agent`. All five are **REJECT unchanged** because remote incident disclosure/job creation, unpinned MCP proxy installation/private account reads, IAM/S3/AgentSpace provisioning and retention rewrites, unsafe delegation, or full-source S3 upload lack action-specific authority. The 13-package DevSecOps sub-family is now **13/13 static-reviewed**; AWS **80/94 → 85/94**, **14 → 9** gaps. Current inventory **44 first-party / 839 third-party / 883 total verification**; source pin unchanged, behavioral `not-run`, no security scan. [Exact five-package macro review](docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md).
@@ -8,7 +11,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-846-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-848-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -43,7 +46,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-**Current static corpus (2026-10-30).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **846 persisted third-party exact-version semantic reviews**, and **22 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
+**Current static corpus (2026-10-30).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **848 persisted third-party exact-version semantic reviews**, and **22 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
 
 **Anthropic Skills pinned authority and provenance reconciliation (2026-10-30).** The registered source gitlink at `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` has **19/19** eligible first-class packages (the upstream template is excluded), all with exact-version companions and **0 static gaps**. A bounded **10-package** authority tranche reclassified `skill-creator` (18/20 VERIFIED → **15/20 REJECT unchanged**) for unapproved background/paid model evaluation, private prompt scope and review-server effects, and `webapp-testing` (16/20 VERIFIED → **14/20 REJECT unchanged**) for unapproved server launch and browser actions that may write to authenticated/connected services. Eight dispositions were preserved; family totals are **12 VERIFIED / 7 REJECT unchanged → 10 VERIFIED semantic only / 9 REJECT unchanged**. A full **19/19 provenance + 19/19 verification companion** audit corrected stale candidate-only wording to the already-registered pin without changing upstream packages, licenses, fingerprints, inventory **44/826/870**, security evidence, or behavioral `not-run` states. [Exact pinned macro review](docs/reviews/2026-10-30-anthropic-skills-pinned-authority-and-provenance-macro.md).
 
@@ -77,7 +80,7 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 |---|---:|
 | Anthropic Skills | 19 / 19 |
 | Anthropic Knowledge Work Plugins | 74 / 74 |
-| AWS Agent Toolkit | **92 / 94** |
+| AWS Agent Toolkit | **94 / 94** |
 | Microsoft Skills | 186 / 186 |
 | Microsoft Azure Skills | 34 / 34 |
 | Cole Medin Skills | 33 / 33 |

@@ -1,22 +1,25 @@
 schema_version: 1
 skill_name: aws-cdk
-display_name: AWS CDK
+display_name: AWS CDK (core package)
 source_id: aws-agent-toolkit
 source_repository: https://github.com/aws/agent-toolkit-for-aws
 source_path: skills/core-skills/aws-cdk/SKILL.md
 source_class: official
 license: Apache-2.0
-relationship: external-reference
+relationship: vendored-reference
 source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
-upstream_revision: f5ba81082aafe865ffe947ceabc574a7a0353e57
-upstream_last_updated_at: 2026-06-11T09:06:12Z
+upstream_revision: e089489e33747df19abf0f3548dcfb8d1f4ee6b8
+upstream_last_updated_at: 2026-06-11T07:51:33Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
-availability: external
-permission_tier: mutating
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/skills/core-skills/aws-cdk
+permission_tier: external-side-effect
 portability: medium
-review_status: verified-structured
+review_status: rejected-structured
 dependency_status: source-intact
-dependencies: AWS CDK CLI, AWS CLI/credentials, TypeScript or Python project tooling as applicable, CloudFormation APIs, and the source-intact references bundled with the skill
-import_eligibility: exact-version-reference
-rationale: Strong CDK authoring and operations guidance with explicit non-use boundaries, diff-before-deploy discipline, replacement/data-loss warnings, rollback recovery, least-privilege/security guidance, and source-intact troubleshooting references. Bootstrap, deploy, import, refactor, drift, rollback, and destroy-related operations require host authority, credentials, cost awareness, and user-context checks.
+dependencies: >-
+  AWS CDK CLI, AWS CLI/credentials and account permissions, TypeScript or Python project tooling, CloudFormation and IAM APIs, nine bundled source-owned references; CDK CLI features and prices are version/service dependent
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: CDK construct authoring, bootstrap, deploy, import, refactor, drift, rollback and troubleshooting; not raw CloudFormation, SAM, Terraform or Pulumi. Exact pinned package tree 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288, manifest 27d488115c9fb60ed7a5dc68ff44a7b6e44acab9. Diff-before-deploy and replacement warnings are valuable but not action authorization. The bundled procedures directly prescribe cdk bootstrap, deploy, import, rollback, destroy and cross-stack migrations, including trust/IAM changes, resource lifecycle effects and cost, without independently approving exact account, region, stack, operation, data-loss and spend boundaries. REJECT unchanged 15/20, retain ADAPT/EXTRACT/CHECKLIST. Static semantic review only; package security not established and behavioral validation not-run.
