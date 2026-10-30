@@ -6,15 +6,15 @@ local_path: skills/sources/addyosmani-agent-skills/skills/browser-testing-with-d
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9864d2724e273e1164d62ab10b73590ae00fd6a8
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-29
-verification_status: verified
+last_verified_at: 2026-10-29
+verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 19/20
+rubric_score: 14/20
 tags:
   use_case: [browser-testing]
   lifecycle: [verification]
   characteristic: [tool-assisted, visual-verification, evidence-first]
   authority: [external-side-effect]
   portability: [medium]
-notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Requires Chrome DevTools MCP and therefore is not universally portable, but the dependency is explicit and its canonical source exists. Strong isolated-profile defaults, prompt-injection boundaries, credential restrictions, read-only JavaScript default, user confirmation for mutations, and rendered/console/network/accessibility evidence requirements. Exact pinned fingerprint confirmed. Behavioral validation remains pending."
+notes: "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. REJECT unchanged: setup lines 26-41 persist host MCP configuration and run unpinned npx -y chrome-devtools-mcp@latest; workflows lines 111-208 trigger browser actions, including a PATCH task-status example, without prior authorization for exact account/environment/side effect. The user-confirmation rule in line 90 applies only to JavaScript execution and does not gate ordinary clicks or browser-driven requests; isolated profiles and warnings are useful but insufficient. Retain isolation, untrusted DOM/network handling, secret restrictions and visual/console/network/accessibility checks as host-authorized adaptation evidence. Exact pinned blob unchanged; behavioral validation not-run."
