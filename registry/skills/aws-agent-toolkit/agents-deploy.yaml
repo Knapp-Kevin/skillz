@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: agents-deploy
+display_name: agents deploy
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents/skills/agents-deploy/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents/skills/agents-deploy
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AgentCore CLI >=0.9.0, AWS CLI, CDK/CloudFormation, ECR, IAM, deployment target accounts, bundled versioning reference
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Preflight, deploy, diagnose deployment failures, or version/rollback an existing AgentCore project; not new project scaffolding or security hardening. Exact pinned package tree 821a52c3717b9cf6bab0a9741d7bd732992a558d, manifest blob 5cee1ceb11f57e7a97a48216a377336cb3fc2886. Preflight and CDK diff are useful, but the run-deploy path gives agentcore deploy -y including staging/production without a separate action-specific account, environment, resource, cost and traffic authorization boundary. IAM permission repair and rollback references also affect persistent cloud state. Auto-confirm bypasses the CLI confirmation; preview is not consent. Retain dry-run/diff and region checks as checklist. Package-specific freshness is unknown; security scan and behavioral validation not established.

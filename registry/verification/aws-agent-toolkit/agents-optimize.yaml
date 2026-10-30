@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-optimize
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 383f5d9466653d935ff645fbe9ecab2491775f3d
+manifest_blob_sha: f18f0c53ea71ea71e58ee43e1468d40504889da3
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [evaluation, observability, agent-development]
+  lifecycle: [verification, operations]
+  characteristic: [metric-driven, reference-heavy, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Measure agent quality, configure evaluation/online monitoring, observability and cost analysis; not broken-agent debugging or production IAM hardening. Exact pinned package tree 383f5d9466653d935ff645fbe9ecab2491775f3d, manifest blob f18f0c53ea71ea71e58ee43e1468d40504889da3. Top-level skill delegates to eval and observability references; eval path can enable account-wide CloudWatch Transaction Search, add persistent online evaluators and deploy -y, transmitting potentially sensitive production traces with added evaluation cost. No independent account/data/retention/sampling/cost and deployment authorization before these side effects. Retain 1–5% sampling guidance and evaluation fixture discipline for adaptation. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-optimize/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.

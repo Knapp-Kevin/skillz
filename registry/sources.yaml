@@ -73,7 +73,7 @@ sources:
     inclusion: pinned-reference
     license: Apache-2.0
     pinned_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
-    rationale: First-party AWS service and agent-development reference corpus. At the registered pin, 115 SKILL.md exposure paths resolve to 94 distinct package-tree identities (93 names; one divergent aws-cdk variant). 85 have exact-version provenance/semantic companions and 9 remain; package-security and behavioral eligibility remain separate decisions.
+    rationale: First-party AWS service and agent-development reference corpus. At the registered pin, 115 SKILL.md exposure paths resolve to 94 distinct package-tree identities (93 names; one divergent aws-cdk variant). 92 have exact-version provenance/semantic companions and 2 remain; package-security and behavioral eligibility remain separate decisions.
 
   - id: mattpocock-skills
     name: Matt Pocock Skills

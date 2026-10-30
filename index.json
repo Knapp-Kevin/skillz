@@ -298,7 +298,7 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 839,
+    "persisted_third_party_exact_version_reviews": 846,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
     "jwynia_agent_skills_fiction_verified": 39,
@@ -315,8 +315,8 @@
     "anthropic_knowledge_work_plugins_current_standard_gaps": 0,
     "aws_historical_reviewed": 72,
     "aws_eligible_denominator": 94,
-    "aws_current_standard_companion_complete": 85,
-    "aws_current_standard_gaps": 9,
+    "aws_current_standard_companion_complete": 92,
+    "aws_current_standard_gaps": 2,
     "microsoft_skills_current_standard_companions": 186,
     "microsoft_skills_eligible_denominator": 186,
     "microsoft_skills_current_standard_gaps": 0,
@@ -670,5 +670,73 @@
     "security_scans_run": 0,
     "behavioral_validations_run": 0,
     "receipt": "docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md"
+  },
+  "aws_agentcore_seven_static": {
+    "date": "2026-10-30",
+    "source_id": "aws-agent-toolkit",
+    "pinned_revision": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+    "agentcore_denominator": 7,
+    "agentcore_reviewed_before": 0,
+    "agentcore_reviewed_after": 7,
+    "aws_denominator": 94,
+    "aws_reviewed_before": 85,
+    "aws_reviewed_after": 92,
+    "aws_gaps_after": 2,
+    "added_exact_version_records": 7,
+    "dispositions": [
+      {
+        "skill": "agents-build",
+        "package_tree": "a7c7cfc787cecf4dc7a20fd2e61540e6263ddc3e",
+        "manifest_blob": "3ec11ae8faaee5f33b2afbb80324c3b3e8c70c40",
+        "score": "12/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-connect",
+        "package_tree": "d92b447658b287aaab5c91e04e910d8947c4ddef",
+        "manifest_blob": "0790cd87460eba885c66686d965c9f4d4991addb",
+        "score": "13/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-debug",
+        "package_tree": "15df718425a2d246c9b517022f8cad98133aa647",
+        "manifest_blob": "6607ec6c6c689f457e9a31463faf563538d7e72b",
+        "score": "14/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-deploy",
+        "package_tree": "821a52c3717b9cf6bab0a9741d7bd732992a558d",
+        "manifest_blob": "5cee1ceb11f57e7a97a48216a377336cb3fc2886",
+        "score": "13/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-get-started",
+        "package_tree": "9a732edf9c0b65e14871bc3d293b4985cfaa6635",
+        "manifest_blob": "446f4171600406254530fd50ad65c56240d10303",
+        "score": "15/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-harden",
+        "package_tree": "4da687d992a44da500a6b0b74b6a1ece4c5d260f",
+        "manifest_blob": "8c7ec90edc8de1ece219a9257144914ef26dbd1c",
+        "score": "13/20",
+        "state": "rejected-unchanged"
+      },
+      {
+        "skill": "agents-optimize",
+        "package_tree": "383f5d9466653d935ff645fbe9ecab2491775f3d",
+        "manifest_blob": "f18f0c53ea71ea71e58ee43e1468d40504889da3",
+        "score": "14/20",
+        "state": "rejected-unchanged"
+      }
+    ],
+    "source_pin_changed": false,
+    "security_scans_run": 0,
+    "behavioral_validations_run": 0,
+    "receipt": "docs/reviews/2026-10-30-aws-agentcore-seven-exact-static.md"
   }
 }

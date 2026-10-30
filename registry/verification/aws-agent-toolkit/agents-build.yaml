@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agents-build
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: a7c7cfc787cecf4dc7a20fd2e61540e6263ddc3e
+manifest_blob_sha: 3ec11ae8faaee5f33b2afbb80324c3b3e8c70c40
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [agent-development, cloud, implementation]
+  lifecycle: [implementation, operations]
+  characteristic: [reference-heavy, tool-routing, risk-aware]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Add capabilities to an existing AgentCore project; not new project scaffolding, external Gateway connection, or basic deployment diagnosis. Exact pinned package tree a7c7cfc787cecf4dc7a20fd2e61540e6263ddc3e, manifest blob 3ec11ae8faaee5f33b2afbb80324c3b3e8c70c40. Top-level routing delegates to payment and teardown references. Payment reference says run provisioning, deploy, instrument/session setup and testing automatically with only connector-secret and wallet-funding pauses; teardown directs resource removals, deploy -y and optional CloudWatch log-group deletion. No independent exact account/resource/cost/destructive authority for these actions. Preserve reference routing, memory patterns, session controls and budget concepts for adaptation. Package-specific freshness is unknown; security scan and behavioral validation not established. Exact source path plugins/aws-agents/skills/agents-build/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; no qualifying security scan and behavioral validation not-run.
