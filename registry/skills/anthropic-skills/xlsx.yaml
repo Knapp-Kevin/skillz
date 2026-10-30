@@ -10,7 +10,7 @@ relationship: pinned-reference
 source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 curated_at: 2026-09-30
-last_checked_at: 2026-09-30
+last_checked_at: 2026-10-30
 availability: vendored-reference-only
 local_path: skills/sources/anthropic-skills/skills/xlsx/SKILL.md
 package_tree_sha: fe6471cc9b5b97aae0b576ccb92ffd9b0207589d

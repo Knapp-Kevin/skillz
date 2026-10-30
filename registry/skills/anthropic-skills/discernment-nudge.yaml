@@ -10,7 +10,7 @@ relationship: pinned-reference
 source_snapshot_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 upstream_revision: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
 curated_at: 2026-09-29
-last_checked_at: 2026-09-29
+last_checked_at: 2026-10-30
 availability: vendored
 local_path: skills/sources/anthropic-skills/skills/discernment-nudge/SKILL.md
 permission_tier: generate-only
