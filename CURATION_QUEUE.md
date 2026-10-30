@@ -34,6 +34,8 @@
 
 **Historical Microsoft candidate qualification (2026-10-28):** [Foundry root 220-file exact-version review](docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md) completes changed-existing **75/76 → 76/76**, leaving **0** static gaps. **220/220 distinct candidate blobs read, 1,299,560 bytes**; **REJECT unchanged 11/20** for mandatory installation, cloud/RBAC authority, sensitive trace and OAuth credential handling. Third-party companions **826**, total verification YAML **870**. July **186/186**, candidate denominator **208**, source pin and security/behavioral states unchanged.
 
+This is the **detailed dated evidence ledger**, not the public front door or an automatic skill-authority source. README, SYSTEM_STATE, INDEX, and index.json present compact current snapshots; historical tranche receipts remain here and under docs/reviews/.
+
 This is the living evidence ledger for ongoing `skillz` corpus curation. The repository is entirely passive even during explicitly authorized maintenance. Detailed exact-version evidence belongs in canonical companions under `registry/`; any scanners or behavioral tests are run by the external host, not by repository-owned automation. This ledger tracks source-family state, active frontiers, macro findings, and lifecycle priorities rather than duplicating every companion rationale.
 
 ## Current governed depth

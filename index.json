@@ -2,6 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
+  "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
   "anthropic_knowledge_work_data_authority_recheck": {
     "as_of": "2026-10-30",
     "source_id": "anthropic-knowledge-work-plugins",
