@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: setup-devops-agent
+source_id: aws-agent-toolkit
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+fingerprint_algorithm: git-tree-sha1
+content_blob_sha: 4b3d53ccc19d5664f349a2f5c1e53aec35e26c90
+manifest_blob_sha: afea862a61c3ae081253cc566220e55398fb4cda
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [agent-development, security, orchestration]
+  lifecycle: [implementation, operations]
+  characteristic: [tool-routing, risk-aware, human-review]
+  authority: [external-side-effect]
+  portability: [low]
+notes: >-
+  Purpose/non-trigger: Configure a missing or broken AWS DevOps Agent MCP connection; not routine use of an already healthy connection. The procedure usefully asks for an auth-mode choice and confirms the main MCP config write, but SigV4 verification executes unpinned uvx mcp-proxy-for-aws@latest before separate installation authority, reads account identity, and later lists private AgentSpaces and writes a routing guide without a separate scoped private-read and durable-file authorization. Token guidance keeps values in environment variables rather than asking for chat disclosure, but project-scoped config and remote tool scope still need host governance. Reject unchanged; retain choice and connectivity checks for adaptation. Exact source path plugins/aws-agents-for-devsecops/skills/setup-devops-agent/SKILL.md at ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546; package tree 4b3d53ccc19d5664f349a2f5c1e53aec35e26c90; manifest blob afea862a61c3ae081253cc566220e55398fb4cda. Package-specific freshness unknown; no qualifying security scan and behavioral validation not-run.

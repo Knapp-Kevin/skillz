@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: setup-security-agent
+display_name: setup security agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/setup-security-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/setup-security-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS Security Agent APIs, AWS CLI, IAM roles/trust/inline policies, S3 bucket and lifecycle, local .security-agent config/scans, AWS credentials
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Set up or inspect AWS Security Agent resources; not permission to create or overwrite production IAM, storage or retention policy. Exact pinned package tree 0b27efd53c0ca29a3d8882147a402dbcb6db4993, manifest blob 187ac78daedc92d028530a16fa0f8e77b687a380. Even an 'is security agent configured' read-only trigger can create an AgentSpace, IAM role/policy and S3 bucket. The workflow unconditionally reapplies IAM inline policy, public access block and a whole-bucket 30-day lifecycle without distinct account, resource, cost, access-control and destructive-retention authorization. Reuse selection and confused-deputy protection are positives but do not authorize these writes. Reject unchanged; extract least-privilege checklist and explicit pre-write gate. Source pin is fixed, package-specific freshness unknown; security scan and behavioral validation not established.

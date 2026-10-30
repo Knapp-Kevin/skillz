@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: threat-modeling-with-aws-security-agent
+display_name: threat modeling with aws security agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/threat-modeling-with-aws-security-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/threat-modeling-with-aws-security-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS Security Agent threat-model APIs, AWS CLI, S3, IAM service role, local zip/openssl/md5sum, .security-agent state and report files, setup-security-agent fallback
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: STRIDE review of requirements/design documents; not a license to upload an entire private repository or create paid persistent AWS jobs. Exact pinned package tree a6783b1f796bdf737b096ee6230053eaac819d55, manifest blob 07b7681c61fb6eb00aa20a68606c116b6697464f. A request to review a spec immediately triggers a full-workspace archive, S3 uploads of source and specs, persistent threat-model/job creation, polling and report writes. The archive excludes common directories but not arbitrary secrets or sensitive documents. Missing setup silently delegates to resource-provisioning setup. There is no independent approval of exact source disclosure, account/bucket, retention, cost or workspace writes. Reject unchanged; retain STRIDE categorization and findings format for ADAPT/CHECKLIST. Source pin is fixed, package-specific freshness unknown; security scan and behavioral validation not established.

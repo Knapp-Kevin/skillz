@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: setup-devops-agent
+display_name: setup devops agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/setup-devops-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/setup-devops-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  Claude MCP configuration, DEVOPS_AGENT_TOKEN or AWS SigV4 credentials, curl, uvx mcp-proxy-for-aws@latest, AWS CLI, remote AWS DevOps Agent MCP
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Configure a missing or broken AWS DevOps Agent MCP connection; not routine use of an already healthy connection. Exact pinned package tree 4b3d53ccc19d5664f349a2f5c1e53aec35e26c90, manifest blob afea862a61c3ae081253cc566220e55398fb4cda. The procedure usefully asks for an auth-mode choice and confirms the main MCP config write, but SigV4 verification executes unpinned uvx mcp-proxy-for-aws@latest before separate installation authority, reads account identity, and later lists private AgentSpaces and writes a routing guide without a separate scoped private-read and durable-file authorization. Token guidance keeps values in environment variables rather than asking for chat disclosure, but project-scoped config and remote tool scope still need host governance. Reject unchanged; retain choice and connectivity checks for adaptation. Source pin is fixed, package-specific freshness unknown; security scan and behavioral validation not established.

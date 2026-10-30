@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: investigating-incidents-with-aws-devops-agent
+display_name: investigating incidents with aws devops agent
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/investigating-incidents-with-aws-devops-agent/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/investigating-incidents-with-aws-devops-agent
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  AWS DevOps Agent remote MCP or aws-mcp/AWS CLI fallback, AgentSpace routing, Git, local incident logs and IaC, bundled REFERENCE.md, remote journal/recommendation APIs
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Deep asynchronous incident/root-cause analysis; not a generic cost or architecture chat. Exact pinned package tree 46093040d5302e6a586fceeab7279d0ea5b35b04, manifest blob ea0a40bf690019426992e3288cd93b8e56579d83. The default pre-flight packs full stack traces, local Git history and IaC into a remote managed investigation title without bounded private-data disclosure approval. It starts persistent remote investigations and may incur cost without a separate authorization boundary. Bundled REFERENCE.md additionally offers mitigation task state changes only after approval, which does not cure the earlier unauthorized disclosure and job creation. Preserve pagination, status reporting and no-auto-execute recommendations for ADAPT/CHECKLIST. Source pin is fixed, package-specific freshness unknown; security scan and behavioral validation not established.

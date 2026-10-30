@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**AWS DevSecOps pinned final-five static review (2026-10-30).** Five previously unreviewed first-class plugin packages received exact-pin provenance and individual semantic dispositions: `investigating-incidents-with-aws-devops-agent`, `setup-devops-agent`, `setup-security-agent`, `setup`, and `threat-modeling-with-aws-security-agent`. All five are **REJECT unchanged** because remote incident disclosure/job creation, unpinned MCP proxy installation/private account reads, IAM/S3/AgentSpace provisioning and retention rewrites, unsafe delegation, or full-source S3 upload lack action-specific authority. The 13-package DevSecOps sub-family is now **13/13 static-reviewed**; AWS **80/94 → 85/94**, **14 → 9** gaps. Current inventory **44 first-party / 839 third-party / 883 total verification**; source pin unchanged, behavioral `not-run`, no security scan. [Exact five-package macro review](docs/reviews/2026-10-30-aws-devsecops-final-five-exact-static.md).
+
 **AWS Agent Toolkit denominator correction (2026-10-30).** Recomputed the registered pinned tree ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546: **115** front-mattered SKILL.md exposure paths, **93** distinct skill names and **94** distinct package-tree identities because the two `aws-cdk` exposures differ materially. Previous **72/72** counted only core/specialized names and omitted **21** first-class plugin names plus the divergent CDK variant. An **8-package** DevSecOps tranche now has individual exact-version provenance and semantic records, all **REJECT unchanged** for consequential authorization or sensitive-disclosure gaps, while preserving adaptation prior art. Current AWS state: **80/94 reviewed, 14 genuine gaps**, no source pin change. Public totals: **44 first-party / 834 third-party / 878 verification records**; no security scan or behavioral pass. [Macro review](docs/reviews/2026-10-30-aws-pinned-plugin-denominator-and-eight-static.md).
 
 **Historical Microsoft candidate qualification (2026-10-28):** [Foundry root 220-file exact-version review](docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md) completes changed-existing **75/76 → 76/76**, leaving **0** static gaps. **220/220 distinct candidate blobs read, 1,299,560 bytes**; **REJECT unchanged 11/20** for mandatory installation, cloud/RBAC authority, sensitive trace and OAuth credential handling. Third-party companions **826**, total verification YAML **870**. July **186/186**, candidate denominator **208**, source pin and security/behavioral states unchanged.
@@ -40,14 +42,14 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 826 |
+| Persisted third-party exact-version reviews | 839 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |
 | Anthropic Skills current-standard companions | 19 / 19 |
 | Anthropic Knowledge Work Plugins current-standard companions | 74 / 74 |
 | Anthropic Knowledge Work Plugins current-standard gaps | 0 |
-| AWS current-standard companion-complete | 72 / 72 |
+| AWS current-standard companion-complete | 85 / 94 (9 gaps) |
 | Microsoft Skills current-standard companions | 186 / 186 |
 | Microsoft Azure Skills current-standard companions | 34 / 34 |
 | Cole Medin Skills current-standard companions | 33 / 33 |

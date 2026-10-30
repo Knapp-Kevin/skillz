@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: setup
+display_name: setup
+source_id: aws-agent-toolkit
+source_repository: https://github.com/aws/agent-toolkit-for-aws
+source_path: plugins/aws-agents-for-devsecops/skills/setup/SKILL.md
+source_class: official
+license: Apache-2.0
+relationship: vendored-reference
+source_snapshot_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_revision: ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546
+upstream_last_updated_at: unknown-at-package-level
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: pinned-source
+local_path: skills/sources/aws-agent-toolkit/plugins/aws-agents-for-devsecops/skills/setup
+permission_tier: external-side-effect
+portability: low
+review_status: rejected-structured
+dependency_status: source-intact
+dependencies: >-
+  Delegates to setup-devops-agent and setup-security-agent, Claude plugin/MCP host, AWS account credentials and mutable cloud resources
+import_eligibility: adaptation-reference-only
+rationale: >-
+  Purpose/non-trigger: Orchestrate setup of one or both AWS agents; not a safe general-purpose 'connect' command absent scoped authorization. Exact pinned package tree f60a821d6b1e8fd380cc68526199a2be314f71f2, manifest blob f855a5727278411904e4ba6a835691ef77069fef. This thin dispatcher invokes both setup workflows by default on broad 'set up/configure/connect' triggers. Its DevOps child has unapproved unpinned installation and private-read steps; its Security child can create or overwrite IAM, S3 lifecycle and persistent AgentSpace resources. The 'only one if needed' branch is useful, but there is no independent action-specific authority boundary before delegation. Reject unchanged; retain dependency routing as CHECKLIST/COMPOSE input. Source pin is fixed, package-specific freshness unknown; security scan and behavioral validation not established.
