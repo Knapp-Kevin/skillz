@@ -134,7 +134,7 @@ Microsoft direct-package accounting remains `.NET` **29/29**, Java **26/26**, Py
 - Root license: **MIT**, Copyright (c) 2026 Daniel Dewhurst.
 - Exact eligible denominator: **23** first-class `skills/<name>/SKILL.md` packages.
 - Current provenance/verification companions: **23/23**; gaps **0**.
-- All 23 are **VERIFIED semantic exact-version references**, with static rubric scores **16/20–18/20**. New unchanged-reuse eligibility additionally depends on package-security backfill under #402.
+- All 23 have decisive exact-version semantic records: **21 VERIFIED semantic only / 2 REJECT unchanged** (`feedback-triage`, `reader-panel`), current scores **14/20–18/20**. New unchanged-reuse eligibility additionally depends on package-security backfill under #402.
 - Behavioral validation is `not-run` for all 23; upstream tests/evals remain source evidence only.
 - Main portability caveat: the corpus assumes the upstream Markdown/YAML Story Skills project schema and often an optional upstream `story` CLI.
 - `story-maintenance` packages a local Node fallback with explicit validate/reindex/rename/move/remove/repair operations. That runtime remains upstream-only and is not adopted by `skillz`.

@@ -118,7 +118,7 @@ For Celestara, rejected does not mean useless. `shared-world`, `game-facilitator
 
 ### Dan Dewhurst Story Skills complete intake
 
-`danjdewhurst/story-skills` is tracked at exact snapshot `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. The MIT-licensed corpus has an exact denominator of **23** first-class skills, and **all 23 now have individual provenance and exact-version VERIFIED static-review companions**. Scores range from **16/20 to 18/20**; behavioral validation remains `not-run` for all 23.
+`danjdewhurst/story-skills` is tracked at exact snapshot `b113a8298ae5deb37929a5b1d0cc1536d98a508c`. The MIT-licensed corpus has an exact denominator of **23** first-class skills, and **all 23 have individual provenance and exact-version static-review companions**: **21 VERIFIED semantic only** and **2 REJECT unchanged** (`feedback-triage`, `reader-panel`) after the 2026-10-30 authority recheck. Scores range from **14/20 to 18/20**; behavioral validation remains `not-run` for all 23.
 
 The family is unusually coherent as an end-to-end fiction workflow, but it is not universally portable unchanged. Most skills assume the upstream Markdown/YAML Story Skills project model, and several can invoke the optional `story` CLI. `story-maintenance` also packages a local Node fallback with explicit rename/move/remove operations. Those source-owned runtime assets remain upstream evidence and dependencies rather than repository-owned `skillz` runtime. Submission, publishing, and editorial workflows keep consequential real-world sends, purchases, contracts, account actions, and publication under author control.
 
