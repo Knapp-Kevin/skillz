@@ -19,4 +19,4 @@ tags:
   characteristic: [tool-assisted, visual-verification, compatibility-aware]
   authority: [mutating]
   portability: [low]
-notes: "Candidate package/helper churn does not cure the restrictive package terms. Licensing remains a hard fail for unchanged skillz reuse, extraction, derivatives, redistribution, or retained copies. Preserve as bounded reference evidence only; source-owned scripts remain upstream material. Behavioral validation remains not-run."
+notes: "Pinned package/helper churn does not cure the restrictive package terms. Licensing remains a hard fail for unchanged skillz reuse, extraction, derivatives, redistribution, or retained copies. Preserve as bounded reference evidence only; source-owned scripts remain upstream material. Behavioral validation remains not-run."

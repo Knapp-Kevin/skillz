@@ -19,4 +19,4 @@ tags:
   characteristic: [tool-assisted, compatibility-aware, visual-verification]
   authority: [mutating]
   portability: [low]
-notes: "Candidate package changed, but licensing remains the decisive hard fail. The package terms remain incompatible with normal skillz extraction/reproduction/derivative/redistribution or retained-copy reuse. Keep reference-only; bundled scripts remain upstream package evidence. Behavioral validation remains not-run."
+notes: "Pinned package changed, but licensing remains the decisive hard fail. The package terms remain incompatible with normal skillz extraction/reproduction/derivative/redistribution or retained-copy reuse. Keep reference-only; bundled scripts remain upstream package evidence. Behavioral validation remains not-run."
