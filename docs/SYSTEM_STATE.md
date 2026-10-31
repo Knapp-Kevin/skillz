@@ -51,8 +51,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **989** (868 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **1033** |
+| **Persisted third-party review companions** | **995** (874 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **1039** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -108,6 +108,9 @@ Normal DIRECT_LIBRARY, FIRST_VISIT, and RETURNING_USER work treats this reposito
 | OpenHands Extensions | 1 / 1 | 0 |
 | Google Agents CLI | 7 / 7 | 0 |
 | Cline Skills (published) | 36 / 36 | 0 |
+| Bhushan Modi Agent Skills (tracked) | 68 / 68 | 0 |
+| OpenClaw Agent Skills (tracked) | 8 / 8 | 0 |
+| Archie Indian Superpowers (tracked; terms #544 unresolved) | 56 / 56 | 0 |
 
 The [2026-10-30 AWS ten-package authority recheck](reviews/2026-10-30-aws-ten-authority-and-private-data-macro.md) retained **94/94** static coverage, corrected six false unchanged-use approvals, and preserved four narrower VERIFIED semantic records. Unapproved IAM, account, infrastructure, budget, notification and telemetry effects are hard fails; no source, security or behavioral result changed.
 
