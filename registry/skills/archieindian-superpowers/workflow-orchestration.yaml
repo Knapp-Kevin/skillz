@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: workflow-orchestration
+display_name: "Workflow Orchestration"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/workflow-orchestration/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 3dcbc48327a0775daccfcd5bd43e082e7759e208
+content_blob_sha: e4518490336b0678ef58433d61bae3823b2e2743
+upstream_revision: c3d0b3ea2dba5f97624099531e03b1855bec53bc
+upstream_last_updated_at: 2026-03-15T03:20:07Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "run.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; manually supplied steps YAML; host skill invocation is not implemented"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. SKILL.md says the workflow invokes skills, but run.py only stores step definitions and accepts manual --step-done/--step-failed flags; --complete can mark success without execution evidence. Fallback instructions are printed, not invoked. No action-specific authorization is required before consequential delegated steps, and raw instructions persist in YAML. Trigger: Static checklist for bounded multi-step plans, checkpoint states and failure handling. Non-trigger: Reliable automatic skill execution, validated completion, unapproved recurring workflows or delegated mutations. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."

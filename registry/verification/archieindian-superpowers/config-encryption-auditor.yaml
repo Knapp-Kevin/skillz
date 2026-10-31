@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: config-encryption-auditor
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/config-encryption-auditor/SKILL.md
+package_tree_sha: adcfabdb9dcdc08d71fd1fcbd909af4a3b500308
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7ee599453a3c47c31a5f1681112c238b473a6842
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 10/20
+tags:
+  use_case: [security, monitoring]
+  lifecycle: [verification, maintenance]
+  characteristic: [risk-aware, traceable]
+  authority: [read-only, mutating]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 1, 2, 1, 1, 1, 1] (10/20). REJECT unchanged. Mandatory weekly recursive scanning of private credential-bearing config lacks separately authorized file scope. --fix-permissions chmods files without action-specific approval. SKILL.md recommends real secret literals in shell export examples and a shell profile/.env migration path without secure credential handling; gitignore check is heuristic and does not establish repository exclusion. Preserve non-secret pattern/permissions checklist. Trigger: Owner-authorized static credential-storage review with redacted evidence. Non-trigger: Unapproved secret reads, automatic chmod, pasting actual credentials into chat/shell transcripts or proof of encryption. Exact pinned four-file package statically reviewed; source terms incomplete (#544), security scan and external behavioral validation not-run."

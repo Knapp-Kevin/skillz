@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: installed-skill-auditor
+display_name: "Installed Skill Auditor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/installed-skill-auditor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: a86d22311baaf4f678b597cc293a5ecab18e8ea0
+content_blob_sha: b2a4f54bd8511fa431b0386446c86a58f6e8a021
+upstream_revision: 757aa655cff44b2c0f2fc17cf1bb5f1d248b0e2b
+upstream_last_updated_at: 2026-03-15T18:00:49Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "audit.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; recursive skill-file scans; mutable self-declared hash baselines"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Weekly scanning of installed private skill trees lacks separate read/schedule/retention approval. Regex pattern hits cannot establish malware absence; --baseline unconditionally trusts whatever files currently exist, and --resolve only marks findings in local YAML. The claimed ORPHAN check is absent from audit_skill. Baseline drift is useful provenance evidence, not security clearance. Trigger: Design of owner-scoped file fingerprint/drift checks and triage categories. Non-trigger: Safe-to-install clearance, autonomous recurring scans, verified malicious-code detection or self-authorized trusted baselines. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."

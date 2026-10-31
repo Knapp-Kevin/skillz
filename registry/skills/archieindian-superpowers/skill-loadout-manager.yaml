@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: skill-loadout-manager
+display_name: "Skill Loadout Manager"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/skill-loadout-manager/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 5e1b046ed05e991648ff10afc597466c41abc44c
+content_blob_sha: 1d0045502d0e6cb77881a271a04e7d3124d23233
+upstream_revision: e669a049a4ecde23c45af2081ac78d865762803e
+upstream_last_updated_at: 2026-03-15T18:09:26Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "loadout.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; local skills directory; no demonstrated OpenClaw loader integration"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. --activate updates only its own YAML state and prints that OpenClaw will load the selection; no integration with the actual OpenClaw skill loader is established. Token savings are heuristic, and loadouts can include previously rejected safety skills or suppress needed controls. Activation and persistent skill-selection changes lack independent authorization. Trigger: Advisory design of scoped skill selection and prompt-budget tradeoffs. Non-trigger: Proven loader behavior, enforced safety pinning, unapproved profile activation or validated token savings. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."
