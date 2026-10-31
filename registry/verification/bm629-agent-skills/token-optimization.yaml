@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: token-optimization
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/token-optimization/SKILL.md
+package_tree_sha: db9a85234de4348d3e4174c549d52d6daa8d995b
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 18f53f600e2740e898610f065c20a3bfd1701c3d
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [context-management, productivity, agent-development]
+  lifecycle: [planning, operations]
+  characteristic: [context-efficient, cost-bounded, metric-driven, progressive-disclosure]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 1, 1, 1] (14/20). REJECT unchanged: cheaper-model subagent routing of file scans and context lacks separate private-data recipient/provider/retention/spend approval; host instruction/memory changes require persistent-write authority. Preserve tokens-per-task metrics, cache and context methods for scoped adaptation. 6 exact pinned package files, including source-owned references/tooling. Package-security scan not-run; independent external behavioral/adversarial validation not-run. Historical upstream test claims were not executed here."

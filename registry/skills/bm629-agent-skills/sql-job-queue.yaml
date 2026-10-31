@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: sql-job-queue
+display_name: "SQL Job Queue"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/sql-job-queue/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 1a3a504ea1ad537d2aafa6d8d8b9aeb620dae440
+content_blob_sha: e11ffce7f572501466fc0ed2cdebdfe7bca08b3a
+upstream_revision: 133031fdbacb57f14e6ae1b73558464017ccfa8b
+upstream_last_updated_at: 2026-06-11T10:46:45Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Three files: SQLAlchemy 2.x, SQLite/PostgreSQL/MySQL 8+ reference patterns, source-owned runnable listing, SQLAlchemy and Alembic sibling dependencies."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged for live application: database claims, lease reclaim, worker dispatch and persistent result changes lack independent target/environment/handler-side-effect authorization. The text correctly warns at-least-once handlers can duplicate external effects. Preserve dialect locking and idempotency design evidence."

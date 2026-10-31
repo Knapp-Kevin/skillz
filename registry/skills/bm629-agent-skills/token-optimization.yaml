@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: token-optimization
+display_name: "Token Optimization"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/token-optimization/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: db9a85234de4348d3e4174c549d52d6daa8d995b
+content_blob_sha: 18f53f600e2740e898610f065c20a3bfd1701c3d
+upstream_revision: d2a2ad8e5d11e19d80ea967e18b2fabab0c587bc
+upstream_last_updated_at: 2026-05-24T09:53:50Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Six files: five references for model/subagent routing, context management, cost measurement, output verification and prompt caching; optional provider SDKs and token counters."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: cheaper-model subagent routing of file scans and context lacks separate private-data recipient/provider/retention/spend approval; host instruction/memory changes require persistent-write authority. Preserve tokens-per-task metrics, cache and context methods for scoped adaptation."
