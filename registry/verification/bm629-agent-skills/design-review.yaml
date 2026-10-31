@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: design-review
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/design-review/SKILL.md
+package_tree_sha: c9f69c52e0afc6edc3d2fc8bd2c15d9b8e213b32
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 36e65a8e64dbfa1c065b3061db8b24afc74842e5
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [code-review, architecture, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, risk-aware, traceable, human-review]
+  authority: [read-only, generate-only]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 2, 2, 1, 1] (18/20). VERIFIED semantic only: scoped adversarial pre-approval gap review verifies claims with file:line evidence, avoids whole-tree scans, distinguishes recommendations from human sign-off, and writes review.md only on explicit opt-in. Differentiated from dedicated document-type reviewer twins; private repository access still needs authorized host scope. No execution/behavioral evidence. Exact pinned 2-file package (1 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

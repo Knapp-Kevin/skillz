@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: motion-react
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/motion-react/SKILL.md
+package_tree_sha: 870e75eebbe8b34c7755ffc9d5b82164e74345f1
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 83ff945d34915bc00ed1dc7fffd794c0d01e4ff3
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, ux, testing]
+  lifecycle: [implementation]
+  characteristic: [compatibility-aware, risk-aware, tool-assisted, production-oriented]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged: Step 2 directly instructs npm install motion and app-root MotionConfig mutation without an independent approved dependency, network/supply-chain and repository-change scope. Versioned API guidance, reduced-motion defaults, performance restraint, test stability and simpler CSS alternative remain valuable ADAPT/CHECKLIST material. No actual install or tests performed. Exact pinned 6-file package (5 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

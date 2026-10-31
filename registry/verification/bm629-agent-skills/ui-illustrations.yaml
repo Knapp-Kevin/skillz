@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: ui-illustrations
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/ui-illustrations/SKILL.md
+package_tree_sha: b7639c7f769bdcb61289dc759f8833e553a3e76a
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7ef5828640d3c8c5da1ebfda727f909325a54c6b
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [ux, implementation, documentation]
+  lifecycle: [design, implementation]
+  characteristic: [risk-aware, source-driven, visual-verification, maintainability]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 1] (16/20). VERIFIED semantic only: explicit live per-asset license recheck and provenance/attribution record, consistent illustration family, token-safe theming, accessible alt/decorative treatment and reduced-motion defaults. Storyset premium-license naming was inconsistent at source and must be verified before adoption; marketplace assets may differ. Host must authorize asset acquisition and target writes. No real asset license or behavioral validation performed. Exact pinned 5-file package (4 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

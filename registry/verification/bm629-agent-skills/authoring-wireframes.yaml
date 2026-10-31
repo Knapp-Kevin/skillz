@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-wireframes
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-wireframes/SKILL.md
+package_tree_sha: 666c15f343d51e1fa25abdde12e9c43b725ed271
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: aa5c8326a4cf5cd882254590609bb69403a3fe8e
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [ux, documentation, planning]
+  lifecycle: [design]
+  characteristic: [traceable, spec-driven, human-review, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 1, 2, 1, 1] (17/20). VERIFIED semantic only: produces annotated textual/ASCII screen structure with inventory, empty/loading/error/recovery states, responsive and accessibility composition, scoped amendments and explicit missing-input assumptions. It does not itself execute depicted send/pay/delete actions. Research may be external and requires approved private-source scope if used; artifact destination remains host-controlled. No behavioral or package-security evidence. Exact pinned 4-file package (3 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

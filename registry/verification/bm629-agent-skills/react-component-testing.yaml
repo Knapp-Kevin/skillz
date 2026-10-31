@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: react-component-testing
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/react-component-testing/SKILL.md
+package_tree_sha: b87815c3b4d60aa1f01288d28888083c75c013d8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d2d34461ca8911aa3e7760c366290553be0ce143
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [testing, implementation, security]
+  lifecycle: [implementation, verification]
+  characteristic: [test-driven, contract-first, risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 1] (16/20). VERIFIED semantic only: user-visible component tests mock the network at MSW with onUnhandledRequest:error, assert serialized request bodies and accessibility, and separate the test layer from runner/CI ownership. Freshness caveat: bundled sources disclose a network-restricted forge and version-specific facts requiring current-doc confirmation; test and package changes must remain within the authorized host repository. No tests or scanner run. Exact pinned 6-file package (5 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

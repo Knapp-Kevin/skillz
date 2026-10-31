@@ -1,6 +1,6 @@
 # Skill Curation Queue
 
-**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
+**Bhushan Modi UI-design and implementation tranche (2026-10-31):** Eight genuine exact-pin gaps reviewed: wireframe author/reviewer, hi-fi author/reviewer, design-review, Motion React, React component testing, UI illustrations. **5 VERIFIED semantic only / 3 REJECT unchanged**; tracked **26/68 → 34/68**, genuine gaps **42 → 34**. New **8 provenance + 8 verification** companions; all security/behavioral `not-run`. Current **44 first-party / 899 third-party / 943 total** (778 registered/tracked + 121 candidate-only). [UI-design macro](docs/reviews/2026-10-31-bm629-eight-ui-design-static.md).
 
 **Microsoft/Azure exact-tree mirror reconciliation (2026-10-30):** 33/33 shared package identities and decisive states match across the registered Microsoft Skills (186/186) and Azure Skills (34/34) pins; three Azure mirror scores and risk narratives were inconsistent despite identical package trees. `appinsights-instrumentation` 13→12/20, `azure-ai` 13→10/20, `azure-aigateway` 13→8/20; all remain REJECT unchanged. The full-package reviews capture shared-key exposure, persistent AI Search writes, private AI data transfer, and APIM subscription-key output/routing/security-control effects. One Azure-only package is separately reviewed. Zero new review identities, denominator delta 0, public 44/867/911 unchanged, no scan/behavioral execution. [Macro review](docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -57,7 +57,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **867** persisted exact-version third-party verification companions (746 registered/tracked plus 121 candidate-only, not admitted).
+- **899** persisted exact-version third-party verification companions (778 registered/tracked plus 121 candidate-only, not admitted).
 - Broad **500+** first-party + pinned external reference surface.
 
 Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.

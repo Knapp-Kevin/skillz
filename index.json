@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 891,
-    "total_verification_records": 935,
+    "persisted_third_party_exact_version_reviews": 899,
+    "total_verification_records": 943,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 26,
-    "bm629_agent_skills_current_standard_gaps": 42
+    "bm629_agent_skills_current_standard_companions": 34,
+    "bm629_agent_skills_current_standard_gaps": 34
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1746,6 +1746,99 @@
         "package_files": 3,
         "reference_files": 2,
         "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_eight_ui_design_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_companions": 26,
+    "current_companions": 34,
+    "gaps_before": 42,
+    "gaps_after": 34,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 8,
+    "verified_semantic_only": 5,
+    "rejected_unchanged": 3,
+    "security_and_behavioral": "not-run",
+    "persisted_third_party_reviews": 899,
+    "total_verification_records": 943,
+    "receipt": "docs/reviews/2026-10-31-bm629-eight-ui-design-static.md",
+    "reviewed": [
+      {
+        "name": "authoring-hi-fi",
+        "manifest_blob": "ea345e3e371a709f682b9f1e84227eb421b4fbfe",
+        "package_tree": "ade033481abf104128c499bfa470b4bfb45059ac",
+        "package_files": 4,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-hi-fi",
+        "manifest_blob": "3bacaaf008a3e48954b80db3099e783f687b5abb",
+        "package_tree": "3fe2c648b247bb6672df6d04d6b82556bdf98480",
+        "package_files": 3,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-wireframes",
+        "manifest_blob": "aa5c8326a4cf5cd882254590609bb69403a3fe8e",
+        "package_tree": "666c15f343d51e1fa25abdde12e9c43b725ed271",
+        "package_files": 4,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-wireframes",
+        "manifest_blob": "812f178285055ebfc88b533430dcbdb74e84ad6e",
+        "package_tree": "d51303ed5e5d3c7827f550062565df7e50844a94",
+        "package_files": 3,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "design-review",
+        "manifest_blob": "36e65a8e64dbfa1c065b3061db8b24afc74842e5",
+        "package_tree": "c9f69c52e0afc6edc3d2fc8bd2c15d9b8e213b32",
+        "package_files": 2,
+        "score": 18,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "motion-react",
+        "manifest_blob": "83ff945d34915bc00ed1dc7fffd794c0d01e4ff3",
+        "package_tree": "870e75eebbe8b34c7755ffc9d5b82164e74345f1",
+        "package_files": 6,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "react-component-testing",
+        "manifest_blob": "d2d34461ca8911aa3e7760c366290553be0ce143",
+        "package_tree": "b87815c3b4d60aa1f01288d28888083c75c013d8",
+        "package_files": 6,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "ui-illustrations",
+        "manifest_blob": "7ef5828640d3c8c5da1ebfda727f909325a54c6b",
+        "package_tree": "b7639c7f769bdcb61289dc759f8833e553a3e76a",
+        "package_files": 5,
+        "score": 16,
         "status": "verified",
         "behavioral": "not-run"
       }

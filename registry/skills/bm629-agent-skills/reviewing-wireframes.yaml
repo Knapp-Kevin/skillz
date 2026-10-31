@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-wireframes
+display_name: Reviewing Wireframes
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-wireframes/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: d51303ed5e5d3c7827f550062565df7e50844a94
+content_blob_sha: 812f178285055ebfc88b533430dcbdb74e84ad6e
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file source package: SKILL.md, buildability-bar, sources; submitted wireframes plus optional upstream user-flows and design-system; no executable."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only: independent text-only approve/revise gate checks screen/state coverage, buildability, accessible names, annotations and bounded delta scope without editing or executing. Quality omission: SKILL.md has 15 conditions including two conditional capability/system checks, while its expanded reference labels itself a 13-condition bar. The mismatch must be reconciled before using a machine-enforced rubric. No behavioral validation."
