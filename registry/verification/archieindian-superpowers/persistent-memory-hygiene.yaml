@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: persistent-memory-hygiene
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/persistent-memory-hygiene/SKILL.md
+package_tree_sha: bcd20af5ae048c75bb9799d9f972fc78a3a6edb1
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4b6f1e5106ea189975c3351c5b22917bf31956e4
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 11/20
+tags:
+  use_case: [memory, context-management]
+  lifecycle: [maintenance, operations]
+  characteristic: [traceable, context-efficient]
+  authority: [mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 1, 2, 1, 2, 1, 1] (11/20). REJECT unchanged. Unapproved nightly private-memory reads, daily persistence and stale-entry pruning have no separate recurrence, retention, deletion or personal-data scope. Preserve explicit memory-review checklist, not automatic writing or deletion. Trigger: scoped advisory persistent memory hygiene methods. Non-trigger: unapproved private data access, persistent writes, recurring host actions, or claims of executed validation. Pinned source-owned manifest and complete package inspected; security/behavioral not-run; source license incomplete (#544)."

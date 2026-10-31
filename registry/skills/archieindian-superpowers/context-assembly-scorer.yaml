@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: context-assembly-scorer
+display_name: "Context Assembly Scorer"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/context-assembly-scorer/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: e4550ff2fae25c544a2a5ff60fd5a94f7bd12e42
+content_blob_sha: 0487be6351570a369465c1958116ad4d792befbb
+upstream_revision: c85d820e8f2c7830e5c320a05548b1fe273ce7c9
+upstream_last_updated_at: 2026-03-16T19:21:12Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating+external-side-effect"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "score.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; private MEMORY.md and CONTEXT.md; cron"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Four-hour private-memory reads and unredacted blind-spot storage lack consent. When CONTEXT.md is absent, code uses MEMORY.md for both reference and context, creating misleading perfect coverage; keyword grades are not verified recall quality. Preserve advisory gap-analysis method. Trigger: design/checklist use only; non-trigger: unapproved execution, private reads or persistent storage. Exact manifest 0487be6351570a369465c1958116ad4d792befbb, tree e4550ff2fae25c544a2a5ff60fd5a94f7bd12e42, pin a95a59d221d44b89d4fc27a52934e24fb2060ddb. Pinned MIT grant incomplete (#544); no vendoring or security/behavioral clearance."

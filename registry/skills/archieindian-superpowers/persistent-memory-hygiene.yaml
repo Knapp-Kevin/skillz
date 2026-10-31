@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: persistent-memory-hygiene
+display_name: "Persistent Memory Hygiene"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/persistent-memory-hygiene/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: bcd20af5ae048c75bb9799d9f972fc78a3a6edb1
+content_blob_sha: 4b6f1e5106ea189975c3351c5b22917bf31956e4
+upstream_revision: a46504ccebb66603cc51a589b0e1ccaa0eea09df
+upstream_last_updated_at: 2026-03-15T02:52:23Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "STATE_SCHEMA.yaml; private MEMORY.md/daily files; scheduled 23:00 host cron"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Unapproved nightly private-memory reads, daily persistence and stale-entry pruning have no separate recurrence, retention, deletion or personal-data scope. Preserve explicit memory-review checklist, not automatic writing or deletion. Trigger: design/checklist use only; non-trigger: unapproved execution, private reads or persistent storage. Exact manifest 4b6f1e5106ea189975c3351c5b22917bf31956e4, tree bcd20af5ae048c75bb9799d9f972fc78a3a6edb1, pin a95a59d221d44b89d4fc27a52934e24fb2060ddb. Pinned MIT grant incomplete (#544); no vendoring or security/behavioral clearance."

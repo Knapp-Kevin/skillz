@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: session-persistence
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/session-persistence/SKILL.md
+package_tree_sha: 8a2fdb582395c3e1c8fea42549f1ce111eb5bc74
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d53fb4f2e8dfc09c7fa45897af4eea30ad01644b
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 9/20
+tags:
+  use_case: [memory, context-management]
+  lifecycle: [operations, maintenance]
+  characteristic: [retrieval-first, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 0, 2, 1, 2, 0, 1] (9/20). REJECT unchanged. Unapproved recurring recursive collection of all-channel raw transcripts into searchable durable SQLite, with unredacted search/export and no retention/deletion/recipient gate. Script uses filename stem as conversation ID across directories and counts attempted ignored inserts. Preserve scoped retrieval architecture only. Trigger: scoped advisory session persistence methods. Non-trigger: unapproved private data access, persistent writes, recurring host actions, or claims of executed validation. Pinned source-owned manifest and complete package inspected; security/behavioral not-run; source license incomplete (#544)."
