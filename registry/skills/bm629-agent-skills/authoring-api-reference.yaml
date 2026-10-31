@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-api-reference
+display_name: Authoring Api Reference
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-api-reference/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: d0360582a0208f6714b6db43c84660d0673afe6b
+content_blob_sha: 0bc990bc230d4abaab4c4e59eb64b66f4b0034df
+upstream_revision: 1f48fbb03c4d023aedd600084780e895a845f9b0
+upstream_last_updated_at: 2026-06-14T15:33:18Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/amend.md, references/conventions-and-styles.md, references/sources.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Contract-derived consumer API reference with endpoint/error parity, onboarding and delta re-sync. The published-document label is not permission to publish. Real credentials, live API calls, billable testing and external release require separate authority; examples must not leak secrets."

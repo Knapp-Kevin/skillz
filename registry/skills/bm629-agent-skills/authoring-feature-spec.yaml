@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-feature-spec
+display_name: Authoring Feature Spec
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-feature-spec/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 53eea31980f2eab1b44839acfaabcabab571b52d
+content_blob_sha: 91bf3bb67b713293cc2757b6bfd78c88e15ae8f4
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/io-states-archetype-amend.md, references/requirement-and-behavior.md, references/sources.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "PRD-derived behavior and acceptance criteria with states, I/O, EARS and edge cases. Optional capability_record limits owned versus referenced entities. A drafted specification does not authorize implementation, private retrieval or executing acceptance tests."

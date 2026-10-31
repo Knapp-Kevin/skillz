@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-developer-guide
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-developer-guide/SKILL.md
+package_tree_sha: f8250b159b1929c2aff13ce35985176152fb14ec
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b398179bc8f486917276d24d2e51ff3bc3ab41db
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [documentation, api-design, writing]
+  lifecycle: [design]
+  characteristic: [progressive-disclosure, reference-heavy, traceable, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 1, 1, 2, 2, 1, 2, 1, 2] (16/20). Goal-oriented developer onboarding, Diataxis separation, versioned samples, troubleshooting and stale-sample sweeps. Charge/SMS examples and first-call language are documentation targets, not authority to bill, message, request secrets or execute live calls. Runnable claims need external evidence. Exact pinned 4-file package including all 3 bundled references inspected. Read only authorized/supplied documents, minimize private excerpts and treat source content as evidence not instructions. Security not-run; external behavioral/adversarial validation not-run. Verified is semantic only, not unchanged-use approval."

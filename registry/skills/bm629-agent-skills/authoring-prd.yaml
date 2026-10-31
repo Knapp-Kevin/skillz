@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-prd
+display_name: Authoring Prd
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-prd/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: d5b0e687fdc238d9e5564c69582d7eb84160a7d4
+content_blob_sha: b062894c9bde286b971cafbf550cc027f6b34c10
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/archetype-and-amend.md, references/nfr-and-metrics.md, references/sources.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Problem-first PRD with goals, counter-metrics, scope/non-goals, testable requirements and explicit unknowns. Proposed analytics, external research and sign-offs are document content, not permission to collect telemetry, send messages or publish plans."
