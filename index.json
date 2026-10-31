@@ -875,7 +875,7 @@
     "first_party_historical_exact_tree_security_failed": 1,
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
-    "registered_source_identities": 22,
+    "registered_source_identities": 23,
     "persisted_third_party_exact_version_reviews": 995,
     "total_verification_records": 1039,
     "candidate_only_exact_version_reviews": 121,
@@ -1052,7 +1052,8 @@
       "agentskills-spec"
     ],
     "dynamic-discovery": [
-      "github-awesome-copilot"
+      "github-awesome-copilot",
+      "openai-plugins"
     ]
   },
   "interpretation_order": [
@@ -1070,7 +1071,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Archie final six exact-pin static reviews 50/56 -> 56/56 (native 33/38 -> 38/38; community 0/1 -> 1/1); 0 VERIFIED / 6 REJECT unchanged, six provenance/verification pairs; 44/995/1039 (874 tracked + 121 candidate-only), source terms #544 unresolved, security and behavioral not-run. No runtime or source pin change.",
+    "latest_reconciliation": "2026-10-31: OpenAI Plugins admitted as a dynamic discovery/reference surface only (official successor to deprecated openai/skills), observed tree 0722921d5542fc593105c27bd52630babd8b8c2a; registered sources 22 -> 23; pinned corpora 12, semantic review pairs 44/995/1039 and admitted denominators unchanged. MIXED per-plugin terms, no package execution, scan or behavioral approval.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1134,6 +1135,26 @@
       "changed_existing_azure_upgrade_review": "docs/reviews/2026-10-28-microsoft-azure-upgrade-50-file-exact-static.md",
       "changed_existing_azure_prepare_review": "docs/reviews/2026-10-28-microsoft-azure-prepare-166-file-exact-static.md",
       "changed_existing_foundry_root_review": "docs/reviews/2026-10-28-microsoft-foundry-root-220-file-exact-static.md"
+    },
+    "openai_plugins_discovery": {
+      "observed_date": "2026-10-31",
+      "source_id": "openai-plugins",
+      "observed_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "source_role": "dynamic-discovery",
+      "upstream_predecessor": "openai/skills (deprecated)",
+      "tree_entries": 7775,
+      "raw_skill_manifest_paths": 536,
+      "raw_plugin_skill_manifest_paths": 535,
+      "plugin_manifests": 64,
+      "default_marketplace_entries": 65,
+      "symlinks": 0,
+      "eligible_admitted_skill_denominator": null,
+      "license": "MIXED/per-plugin",
+      "semantic_review": "not-run",
+      "package_security": "not-run",
+      "behavioral_validation": "not-run",
+      "receipt": "docs/reviews/2026-10-31-openai-plugins-discovery-vetting.md",
+      "issue": 554
     }
   },
   "mattpocock_candidate_freshness": {

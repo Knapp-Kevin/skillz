@@ -3,7 +3,7 @@
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-995-8A2BE2)
-![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
+![Registered Sources](https://img.shields.io/badge/registered_sources-23-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -37,11 +37,13 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-**Current static corpus (2026-10-31).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **995 persisted third-party exact-version semantic reviews**, **1039 total verification/provenance pairs**, and **22 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
+**Current static corpus (2026-10-31).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **995 persisted third-party exact-version semantic reviews**, **1039 total verification/provenance pairs**, and **23 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
 
 **Current qualifications.** The admitted source families listed below have current-standard exact-version static coverage at their registered pins. Later Microsoft Skills and Matt Pocock candidates remain **unadmitted / NO-GO for pin promotion** despite complete candidate static review. Semantic `verified` is not a security pass or behavioral validation. See the [curation ledger](CURATION_QUEUE.md), [system state](docs/SYSTEM_STATE.md), and [dated review receipts](docs/reviews/).
 
 **Current tracked-source closure (2026-10-31).** Bhushan Modi Agent Skills **68/68**, OpenClaw Agent Skills **8/8**, and Archie Indian Superpowers **56/56** have exact-pin individual static provenance and verification companions with **zero static gaps**. These are semantic review records, not security or behavioral approvals. Archie's pinned upstream license is incomplete; [#544](https://github.com/Knapp-Kevin/skillz/issues/544) blocks redistribution clearance. All source-owned scripts remain upstream reference material.
+
+**OpenAI Plugins discovery intake (2026-10-31).** The official `openai/plugins` repository supersedes the deprecated `openai/skills` catalog and is now registered as a **dynamic-discovery/reference surface**, not an admitted skill corpus. Its observed exact tree (`0722921d5542fc593105c27bd52630babd8b8c2a`) exposes 536 raw `SKILL.md` paths and 64 plugin manifests; these are not eligible-package denominators or reviewed skills. Terms vary per plugin, including proprietary/restricted material. No package was vendored, installed, executed, scanned, semantically verified, or behaviorally validated. [Source-vetting receipt](docs/reviews/2026-10-31-openai-plugins-discovery-vetting.md) and [#554](https://github.com/Knapp-Kevin/skillz/issues/554) record the decision.
 
 **Review history and macro findings:** The dated tranche receipts, individual dispositions, authority/privacy findings, and earlier count checkpoints remain in [CURATION_QUEUE.md](CURATION_QUEUE.md) and [docs/reviews/](docs/reviews/). Historical counts are evidence of progress, not current catalog totals.
 

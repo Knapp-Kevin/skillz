@@ -253,3 +253,14 @@ sources:
     upstream_copyright: Copyright (c) 2026 Daniel Dewhurst
     pinned_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
     rationale: Creator-maintained 23-skill end-to-end fiction workflow admitted via issue #387 after complete exact-package review. All 23 have exact-version provenance/semantic companions: 21 VERIFIED semantic only and 2 REJECT unchanged (feedback-triage, reader-panel) after the 2026-10-30 authority review. Behavioral validation remains not-run; source-owned runtime remains upstream-only and Story Skills schema/CLI coupling gives medium portability.
+
+  - id: openai-plugins
+    name: OpenAI Plugins
+    source: https://github.com/openai/plugins
+    class: official
+    source_role: dynamic-discovery
+    inclusion: tracked
+    license: MIXED
+    license_terms_status: per-plugin; no-root-license
+    pinned_revision: 0722921d5542fc593105c27bd52630babd8b8c2a
+    rationale: Current official Codex plugin examples and discovery surface; upstream openai/skills README explicitly marks that older repository deprecated and redirects here. The observed tree has 536 raw SKILL.md paths and 64 plugin manifests, not a canonical admitted skill denominator. Plugin terms vary (MIT, Proprietary, LicenseRef-Figma-Developer-Terms); no vendoring, installation, blanket trust, unchanged-use approval, or automatic curation. Source vetting issue #554.

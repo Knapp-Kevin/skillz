@@ -13,7 +13,7 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 | First-party user-facing skills | 44 |
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
-| Unique registered source identities | 22 |
+| Unique registered source identities | 23 |
 | Persisted third-party exact-version reviews | 995 (874 registered/tracked + 121 candidate-only) |
 | Total persisted verification/provenance pairs | 1039 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
@@ -102,7 +102,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **Tracked corpora:** `cole-medin-skills`, `david-ondrej-skills`, `bm629-agent-skills`, `openclaw-agent-skills`, `archieindian-superpowers`, `corey-haines-marketing-skills`, `jwynia-agent-skills`, `danjdewhurst-story-skills`.
 
-**Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` is a dynamic discovery surface.
+**Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` and `openai-plugins` are dynamic discovery surfaces. `openai-plugins` replaces the deprecated `openai/skills` lead, with mixed per-plugin terms and no admitted skill count ([source vetting](docs/reviews/2026-10-31-openai-plugins-discovery-vetting.md)).
 
 ## Interpretation
 

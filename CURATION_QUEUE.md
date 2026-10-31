@@ -86,7 +86,7 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
-- **22** unique registered source identities.
+- **23** unique registered source identities.
 - **995** persisted exact-version third-party verification companions (**874** registered/tracked plus **121** candidate-only, not admitted); **1,039** total matching provenance/verification pairs including 44 first-party.
 - Broad **500+** first-party + pinned external reference surface.
 
@@ -249,6 +249,8 @@ Registered July remains **186/186** at its own pin. The [canonical denominator r
 **Microsoft candidate pin decision (2026-10-28): NO-GO for promotion.** [Decision record](docs/reviews/2026-10-28-microsoft-candidate-pin-no-go-decision.md) closes the bounded 102/102 static-review frontier without changing the registered July source pin. Of 102 changed/new packages, **10 are VERIFIED semantic only** and **92 are REJECT unchanged**; none has qualifying candidate-version package-security or behavioral evidence. Four removed paths have candidate-only dispositions. The 106 exact-tree carry-forwards preserve their existing evidence, not inherited new-version security approval. Re-entry requires scoped external exact-package security evidence, independent acceptance, and a fresh explicit pin decision. Counts stay **44 first-party / 826 third-party / 870 total**, candidate denominator **208**, July **186/186**.
 
 ## Governed discovery / source-vetting
+
+**OpenAI Plugins official source vetting (2026-10-31).** Source `openai/skills` is explicitly deprecated; its canonical successor `openai/plugins` is registered as a **dynamic-discovery/reference surface**, not an admitted or vendored source family. Exact observed tree `0722921d5542fc593105c27bd52630babd8b8c2a`: 7,775 entries, 536 raw `SKILL.md` exposure paths (535 under `plugins/`, one under `.agents/`), 64 plugin manifests, 65 default marketplace entries, no symlinks. Canonical eligible denominator intentionally **not established** because no individual package admission is authorized. Licensing is MIXED/per-plugin, including Proprietary and LicenseRef terms. Overlap with existing sources, authority/privacy risks, and differentiation are documented in [source-vetting receipt](docs/reviews/2026-10-31-openai-plugins-discovery-vetting.md). Issue #554 is the bounded intake workspace. **Source identities 22 → 23; review pairs remain 44/995/1039; admitted denominators and static gaps unchanged.**
 
 Discovery proceeds in parallel without displacing current-standard source maintenance. Current governed surfaces and candidates include the Creator Technical Resource Catalog, Hugging Face Skills, GitHub Awesome Copilot, Agent Skills Specification, creator-methodology sources, and bounded candidate work surfaced through current issues. Discovery intelligence never substitutes for canonical source identity, terms, exact-version evidence, or individual quality review.
 

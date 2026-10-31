@@ -54,7 +54,7 @@
 | **Persisted third-party review companions** | **995** (874 registered/tracked + 121 candidate-only) |
 | **Total persisted verification/provenance pairs** | **1039** |
 | **Pinned external corpora** | 12 |
-| **Registered source identities** | 22 |
+| **Registered source identities** | 23 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
 | **Dan Dewhurst Story Skills current-standard companions** | **23 / 23** |
 | **Dan Dewhurst Story Skills current-standard gaps** | **0** |
@@ -167,6 +167,8 @@ The authority hard fail remains controlling: procedures that can mutate or mater
 The bounded controlled-taxonomy conformance audit #342 is **closed completed**. Ongoing conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; historical examples and audit comments remain evidence only and do not establish current defects without live verification.
 
 ## Discovery and source vetting
+
+**Current official OpenAI plugin discovery surface (2026-10-31).** `openai/skills` declares itself deprecated in favor of `openai/plugins`. Registered `openai-plugins` is dynamic-discovery/reference only at observed tree `0722921d5542fc593105c27bd52630babd8b8c2a`: 7,775 Git tree entries, 536 raw `SKILL.md` paths, 64 plugin manifests and 65 default-marketplace entries. These are distinct exposure metrics, not an admitted skill denominator. Terms are mixed and include proprietary/restricted plugin licenses. No new semantic reviews, security scans, behavioral validation, vendoring or active repository machinery. See [source-vetting receipt](reviews/2026-10-31-openai-plugins-discovery-vetting.md) and #554.
 
 Discovery runs in parallel with admitted-source maintenance but never grants quality, trust, installation authority, redistribution rights, or automatic admission. New third-party discoveries use the issue-first lifecycle in `docs/candidate-intake.md`.
 
