@@ -250,4 +250,4 @@ sources:
     license: MIT
     upstream_copyright: Copyright (c) 2026 Daniel Dewhurst
     pinned_revision: b113a8298ae5deb37929a5b1d0cc1536d98a508c
-    rationale: Creator-maintained 23-skill end-to-end fiction workflow admitted via issue #387 after complete exact-package review. All 23 are individually VERIFIED exact-version static references; source-owned runtime remains upstream-only and Story Skills schema/CLI coupling gives medium portability.
+    rationale: Creator-maintained 23-skill end-to-end fiction workflow admitted via issue #387 after complete exact-package review. All 23 have exact-version provenance/semantic companions: 21 VERIFIED semantic only and 2 REJECT unchanged (feedback-triage, reader-panel) after the 2026-10-30 authority review. Behavioral validation remains not-run; source-owned runtime remains upstream-only and Story Skills schema/CLI coupling gives medium portability.
