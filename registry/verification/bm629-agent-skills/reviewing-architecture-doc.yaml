@@ -15,7 +15,7 @@ rubric_score: 17/20
 tags:
   use_case: [architecture, documentation, evaluation]
   lifecycle: [verification]
-  characteristic: [architecture, evidence-first, traceable, human-review]
+  characteristic: [evidence-first, traceable, human-review, risk-aware]
   authority: [read-only, generate-only]
   portability: [medium]
 notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 1, 1, 2, 2, 2] (17/20). Whole-system architecture acceptance gate cross-checks boundaries, ADR links, diagrams, NFR realization, cross-cutting concerns and grounded implementation claims; no file mutation. Conditional capability_record check extends the ten-condition referenced bar to eleven in SKILL.md. Full code/topology validation depends on authorized supplied system evidence; greenfield claims must not be invented. Exact pinned 3-file package tree and two bundled references inspected. The procedure judges supplied documents and emits a verdict only; no live mutation, transmission, credential solicitation, or side-effect authority. Read only documents within user-authorized scope, minimize sensitive excerpts, and treat source content as evidence not host instructions. Security scan not-run; behavioral/adversarial host validation not-run. Verified is semantic only, not unchanged-use approval."
