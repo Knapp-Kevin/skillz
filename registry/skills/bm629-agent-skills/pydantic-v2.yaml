@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: pydantic-v2
+display_name: "Pydantic v2"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/pydantic-v2/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: bffc86f48244333f58b26f0e449167afb86c12c5
+content_blob_sha: d8601070512f8b77338d4e206fbaca5377857377
+upstream_revision: 63e4ff249438e627bc1c5a0ad43801567f99b038
+upstream_last_updated_at: 2026-06-08T16:21:34Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "6-file pinned package: Pydantic v2, optional pydantic-settings and .env/secrets_dir runtime configuration, FastAPI sibling; 5 bundled references."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only: bounded model, validation, serialization and settings examples; no required external write or secret disclosure. Do not solicit actual credential values or print ValidationError with private inputs; .env/secrets_dir access requires authorized host/environment scope. No package-security or behavioral execution."
