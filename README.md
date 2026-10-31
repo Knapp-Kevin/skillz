@@ -2,7 +2,7 @@
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
-![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-891-8A2BE2)
+![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-899-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-22-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -37,11 +37,11 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 
 ## Corpus and evidence
 
-**Current static corpus (2026-10-31).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **891 persisted third-party exact-version semantic reviews**, **935 total verification/provenance pairs**, and **22 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
+**Current static corpus (2026-10-31).** The repository records **44 first-party user-facing skills** with 44/44 provenance companions, **899 persisted third-party exact-version semantic reviews**, **943 total verification/provenance pairs**, and **22 registered source identities**. The admitted source-family denominators below are current-standard static review counts, **not** package-security or behavioral passes. See [SYSTEM_STATE](docs/SYSTEM_STATE.md) and the [curation ledger](CURATION_QUEUE.md) for source-by-source evidence and active gates.
 
 **Current qualifications.** The admitted source families listed below have current-standard exact-version static coverage at their registered pins. Later Microsoft Skills and Matt Pocock candidates remain **unadmitted / NO-GO for pin promotion** despite complete candidate static review. Semantic `verified` is not a security pass or behavioral validation. See the [curation ledger](CURATION_QUEUE.md), [system state](docs/SYSTEM_STATE.md), and [dated review receipts](docs/reviews/).
 
-**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
+**Bhushan Modi UI-design and implementation tranche (2026-10-31):** Eight genuine exact-pin gaps reviewed: wireframe author/reviewer, hi-fi author/reviewer, design-review, Motion React, React component testing, UI illustrations. **5 VERIFIED semantic only / 3 REJECT unchanged**; tracked **26/68 → 34/68**, genuine gaps **42 → 34**. New **8 provenance + 8 verification** companions; all security/behavioral `not-run`. Current **44 first-party / 899 third-party / 943 total** (778 registered/tracked + 121 candidate-only). [UI-design macro](docs/reviews/2026-10-31-bm629-eight-ui-design-static.md).
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 

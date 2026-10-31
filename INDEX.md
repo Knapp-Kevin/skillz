@@ -7,7 +7,7 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
-**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
+**Bhushan Modi UI-design and implementation tranche (2026-10-31):** Eight genuine exact-pin gaps reviewed: wireframe author/reviewer, hi-fi author/reviewer, design-review, Motion React, React component testing, UI illustrations. **5 VERIFIED semantic only / 3 REJECT unchanged**; tracked **26/68 → 34/68**, genuine gaps **42 → 34**. New **8 provenance + 8 verification** companions; all security/behavioral `not-run`. Current **44 first-party / 899 third-party / 943 total** (778 registered/tracked + 121 candidate-only). [UI-design macro](docs/reviews/2026-10-31-bm629-eight-ui-design-static.md).
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -23,8 +23,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 891 (770 registered/tracked + 121 candidate-only) |
-| Total persisted verification/provenance pairs | 935 |
+| Persisted third-party exact-version reviews | 899 (778 registered/tracked + 121 candidate-only) |
+| Total persisted verification/provenance pairs | 943 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |

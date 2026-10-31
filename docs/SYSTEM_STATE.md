@@ -1,8 +1,8 @@
 # System State
 
-**Current summary (2026-10-31):** 44 first-party skills, 891 persisted third-party exact-version reviews, 935 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-31):** 44 first-party skills, 899 persisted third-party exact-version reviews, 943 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
-**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
+**Bhushan Modi UI-design and implementation tranche (2026-10-31):** Eight genuine exact-pin gaps reviewed: wireframe author/reviewer, hi-fi author/reviewer, design-review, Motion React, React component testing, UI illustrations. **5 VERIFIED semantic only / 3 REJECT unchanged**; tracked **26/68 → 34/68**, genuine gaps **42 → 34**. New **8 provenance + 8 verification** companions; all security/behavioral `not-run`. Current **44 first-party / 899 third-party / 943 total** (778 registered/tracked + 121 candidate-only). [UI-design macro](reviews/2026-10-31-bm629-eight-ui-design-static.md).
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -25,8 +25,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **891** (770 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **935** |
+| **Persisted third-party review companions** | **899** (778 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **943** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |

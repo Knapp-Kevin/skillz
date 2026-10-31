@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-hi-fi
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-hi-fi/SKILL.md
+package_tree_sha: 3fe2c648b247bb6672df6d04d6b82556bdf98480
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3bacaaf008a3e48954b80db3099e783f687b5abb
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [ux, evaluation, browser-testing]
+  lifecycle: [verification]
+  characteristic: [visual-verification, evidence-first, human-review, risk-aware]
+  authority: [read-only, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged: independently re-rendering submitted code and screenshotting every viewport/state is mandatory, but the procedure does not establish isolation, network denial/approval, authorized private input scope or screenshot disclosure/retention before executing potentially untrusted UI. Fresh-render evidence and proportional approve/revise decisions are valuable CHECKLIST/ADAPT material. The expanded reference says 13 conditions while the author bar includes a conditional capability-boundary item. Exact pinned 3-file package (2 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

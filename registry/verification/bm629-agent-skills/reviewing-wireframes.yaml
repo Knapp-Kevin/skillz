@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-wireframes
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-wireframes/SKILL.md
+package_tree_sha: d51303ed5e5d3c7827f550062565df7e50844a94
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 812f178285055ebfc88b533430dcbdb74e84ad6e
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [ux, evaluation, documentation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, traceable, human-review, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 1] (16/20). VERIFIED semantic only: independent text-only approve/revise gate checks screen/state coverage, buildability, accessible names, annotations and bounded delta scope without editing or executing. Quality omission: SKILL.md has 15 conditions including two conditional capability/system checks, while its expanded reference labels itself a 13-condition bar. The mismatch must be reconciled before using a machine-enforced rubric. No behavioral validation. Exact pinned 3-file package (2 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."

@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: design-review
+display_name: Design Review
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/design-review/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: c9f69c52e0afc6edc3d2fc8bd2c15d9b8e213b32
+content_blob_sha: 36e65a8e64dbfa1c065b3061db8b24afc74842e5
+upstream_revision: 72b832dd698f471c309a56eafef84b2ab08df8c9
+upstream_last_updated_at: 2026-06-15T06:19:16Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "2-file source package: SKILL.md and sources; user-supplied design/RFC/ADR/plan and bounded referenced codebase; optional review.md write only if requested."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only: scoped adversarial pre-approval gap review verifies claims with file:line evidence, avoids whole-tree scans, distinguishes recommendations from human sign-off, and writes review.md only on explicit opt-in. Differentiated from dedicated document-type reviewer twins; private repository access still needs authorized host scope. No execution/behavioral evidence."

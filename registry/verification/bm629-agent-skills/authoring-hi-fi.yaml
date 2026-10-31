@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-hi-fi
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-hi-fi/SKILL.md
+package_tree_sha: ade033481abf104128c499bfa470b4bfb45059ac
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ea345e3e371a709f682b9f1e84227eb421b4fbfe
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [ux, prototyping, implementation]
+  lifecycle: [design, verification]
+  characteristic: [visual-verification, iterative, tool-assisted, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged: mandatory generation and headless rendering of code with realistic content and CDN-permitted assets, followed by persistent screenshots, lacks an explicit authorized data scope, network-egress/sandbox boundary, and screenshot destination/retention gate. This can disclose private UI content or run untrusted code. The bounded render/vision iteration, token mapping, responsive/state coverage and numeric accessibility checks are useful ADAPT/EXTRACT prior art. The author enumerates 14 conditions while reviewer depth reference advertises 13. Exact pinned 4-file package (3 bundled references) inspected; source MIT pin and upstream last-change evidence recorded. Package-security not-run; external behavioral/adversarial validation not-run; no execution evidence invented."
