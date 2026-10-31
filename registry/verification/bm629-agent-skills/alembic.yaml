@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: alembic
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/alembic/SKILL.md
+package_tree_sha: 3765d356907809b3bf8081179128dbffab51a111
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 50d2e7ed22613a1f9430e36acab39307b2c72dd0
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [implementation, domain-modeling, deployment]
+  lifecycle: [implementation, operations]
+  characteristic: [compatibility-aware, human-review, risk-aware, source-driven]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 0, 0] (13/20). REJECT unchanged: Unchanged workflow directly invokes alembic upgrade/downgrade/stamp and live DB autogeneration without independent target/environment, backup, data-loss, rollback or execution authorization. batch_alter_table, naming conventions and rename review are useful adapted methods. Three pinned files inspected; scanner/behavioral not-run. Package exact revision and tree bound to source pin; security not-run, external behavioral/adversarial validation not-run, no execution evidence claimed."
