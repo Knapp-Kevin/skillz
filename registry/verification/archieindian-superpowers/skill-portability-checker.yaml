@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: skill-portability-checker
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/core/skill-portability-checker/SKILL.md
+package_tree_sha: 4d789cb06e9a168cf76eb1815efe1d385dfffead
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 41037da98cd0a24123440f4afbf4f2b8eaf1bda3
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 14/20
+tags:
+  use_case: [skill-authoring, evaluation, implementation]
+  lifecycle: [verification, maintenance]
+  characteristic: [compatibility-aware, tool-assisted, evidence-first]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged. The procedure suggests dependency installation and modifying target scripts/frontmatter without separate change approval. Bundled checker uses importlib.import_module to probe imports, which can execute untrusted module top-level code; this is not a safe passive inspection of unknown packages. Preserve static OS/binary dependency inventory, but replace import probes with non-executing checks. Trigger: host portability review. Non-trigger: automatic install or execution of untrusted imports. Exact pinned source tree and source-owned dependencies statically inspected. Package-security scanner not-run; independent host-executed behavioral/adversarial validation not-run."
