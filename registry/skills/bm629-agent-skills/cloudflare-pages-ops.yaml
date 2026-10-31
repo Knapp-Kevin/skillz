@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: cloudflare-pages-ops
+display_name: "Cloudflare Pages Operations"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/cloudflare-pages-ops/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: c88842f90f19d64ccee9ebbd2a4ae0775ead62e3
+content_blob_sha: 9a5adda2d09704118e274527f2cac3df0bd47bbd
+upstream_revision: 97c4d1085a6fce9d1d7fe1e42a7ee9a76a80b1b3
+upstream_last_updated_at: 2026-06-13T09:19:16Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "19-file pinned package: Pages OpenAPI slice, CLI/REST indexes, credential/REST/Wrangler references, source-owned Python resolver and shell scripts; external Wrangler, curl, jq, Cloudflare account/token and built assets required."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: project creation, preview/production upload, domain binding, rollback/deletion and possible DNS follow-up are actionable without independent environment, target, cost, data-egress, DNS and traffic authorization. --commit-dirty true can upload uncommitted private build contents; project .env sourcing is executable. Preserve Direct Upload vs Git and deployment-state guidance as scoped checklist/reference only."

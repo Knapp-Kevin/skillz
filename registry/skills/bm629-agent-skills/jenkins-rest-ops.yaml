@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: jenkins-rest-ops
+display_name: "Jenkins REST Operations"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/jenkins-rest-ops/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 25b93651bfa0e6a265360ad2377c4e18821b3b17
+content_blob_sha: 3df92486d28a740673988034c78f4b67e2c390c7
+upstream_revision: 97c4d1085a6fce9d1d7fe1e42a7ee9a76a80b1b3
+upstream_last_updated_at: 2026-06-13T09:19:16Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "21-file pinned package: unofficial partial Jenkins OpenAPI, CORE path index, credential/pattern/source references, source-owned Python resolver and six shell examples; requires Jenkins server, curl, shell and full-authority user API token."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: build triggers, job configuration/deletion, build stop/delete and console-log retrieval run from a generic injected cicd capability with no action-specific approval or private-log scope. Jenkins token has full user authority; curl -u expands it in process arguments and raw consoleText may disclose credentials. Preserve queue-item polling, crumb fallback and partial-spec caveats for scoped host use."

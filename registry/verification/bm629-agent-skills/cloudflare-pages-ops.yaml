@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: cloudflare-pages-ops
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/cloudflare-pages-ops/SKILL.md
+package_tree_sha: c88842f90f19d64ccee9ebbd2a4ae0775ead62e3
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9a5adda2d09704118e274527f2cac3df0bd47bbd
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, deployment, repository-maintenance]
+  lifecycle: [operations, release]
+  characteristic: [retrieval-first, tool-routing, risk-aware, traceable]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 1, 1, 1, 1, 1] (13/20). REJECT unchanged: project creation, preview/production upload, domain binding, rollback/deletion and possible DNS follow-up are actionable without independent environment, target, cost, data-egress, DNS and traffic authorization. --commit-dirty true can upload uncommitted private build contents; project .env sourcing is executable. Preserve Direct Upload vs Git and deployment-state guidance as scoped checklist/reference only. 19 exact pinned package files including source-owned references and scripts; full multi-MB API specs indexed but not loaded into the reviewer context. Package-security scan not-run; independent external behavioral/adversarial validation not-run; source historical live-smoke claims not independently re-executed."

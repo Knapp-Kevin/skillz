@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: jenkins-rest-ops
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/jenkins-rest-ops/SKILL.md
+package_tree_sha: 25b93651bfa0e6a265360ad2377c4e18821b3b17
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3df92486d28a740673988034c78f4b67e2c390c7
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [deployment, monitoring, security]
+  lifecycle: [operations, release]
+  characteristic: [retrieval-first, traceable, risk-aware, tool-assisted]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 1, 1, 1, 1, 1] (13/20). REJECT unchanged: build triggers, job configuration/deletion, build stop/delete and console-log retrieval run from a generic injected cicd capability with no action-specific approval or private-log scope. Jenkins token has full user authority; curl -u expands it in process arguments and raw consoleText may disclose credentials. Preserve queue-item polling, crumb fallback and partial-spec caveats for scoped host use. 21 exact pinned package files including source-owned references and scripts; full multi-MB API specs indexed but not loaded into the reviewer context. Package-security scan not-run; independent external behavioral/adversarial validation not-run; source historical live-smoke claims not independently re-executed."

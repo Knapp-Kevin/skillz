@@ -1,8 +1,10 @@
 # System State
 
-**Current summary (2026-10-31):** 44 first-party skills, 923 persisted third-party exact-version reviews, 967 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-31):** 44 first-party skills, 928 persisted third-party exact-version reviews, 972 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
-**Bhushan Modi release/creator/engineering tranche (2026-10-31):** Eight genuine exact-pin gaps: release-runbook author/reviewer, content-template-gateway, external-content-sanitizer, openapi-ts-client, polyglot-git-hooks, python-monorepo-architecture and skill-forge. **1 VERIFIED semantic only / 7 REJECT unchanged**; tracked **50/68 → 58/68**, gaps **18 → 10**. Missing authorization for staging rehearsal, persisted private identifiers, template/skill writes, dependency/hook/CI changes and repository refactoring; the release reviewer remains read-only. Eight provenance + eight verification pairs; security/behavioral `not-run`. Current **44 first-party / 923 third-party / 967 total** (802 registered/tracked + 121 candidate-only). [Release/creator macro](reviews/2026-10-31-bm629-release-creator-eight-static.md).
+**Bhushan Modi provider-operations authority tranche (2026-10-31):** Five genuine pinned gaps (`atlassian-rest-ops`, `cloudflare-pages-ops`, `github-cli-ops`, `jenkins-rest-ops`, `netlify-ops`) deep-reviewed as **5 REJECT unchanged** at 13/20 each. Tracked **58/68 → 63/68**, gaps **10 → 5**, source denominator and admissions unchanged. Account/credential injection is not per-action authorization; unapproved external writes/deployments, private CI logs, project `.env` execution and secret-in-argv examples remain hard failures. Five provenance + five verification pairs; security/behavioral `not-run`. Current **44 first-party / 928 third-party / 972 total** (807 registered/tracked + 121 candidate-only). [Provider-operations macro](reviews/2026-10-31-bm629-provider-ops-five-static.md).
+
+**Bhushan Modi release/creator/engineering tranche (2026-10-31):** Eight genuine exact-pin gaps: release-runbook author/reviewer, content-template-gateway, external-content-sanitizer, openapi-ts-client, polyglot-git-hooks, python-monorepo-architecture and skill-forge. **1 VERIFIED semantic only / 7 REJECT unchanged**; tracked **50/68 → 58/68**, gaps **18 → 10**. Missing authorization for staging rehearsal, persisted private identifiers, template/skill writes, dependency/hook/CI changes and repository refactoring; the release reviewer remains read-only. Eight provenance + eight verification pairs; security/behavioral `not-run`. Historical tranche checkpoint **44 first-party / 923 third-party / 967 total** (802 registered/tracked + 121 candidate-only). [Release/creator macro](reviews/2026-10-31-bm629-release-creator-eight-static.md).
 
 **Bhushan Modi prior-art author/reviewer tranche (2026-10-31):** Eight genuine exact-pin gaps across market, security, published-user-research and documented-visual-convention pairs. **3 VERIFIED semantic only / 5 REJECT unchanged**; tracked **42/68 → 50/68**, gaps **26 → 18**. Four producer query-disclosure gates fail, the security reviewer has an unapproved live-probe boundary, and three reviewers have wave-2 trigger drift. Eight provenance + eight verification companions; security/behavioral `not-run`. Historical tranche checkpoint **44 first-party / 915 third-party / 959 total** (794 registered/tracked + 121 candidate-only). [Prior-art macro](reviews/2026-10-31-bm629-four-prior-art-pairs-eight-static.md).
 
@@ -29,8 +31,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **923** (802 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **967** |
+| **Persisted third-party review companions** | **928** (807 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **972** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |

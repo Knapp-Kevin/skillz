@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: github-cli-ops
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/github-cli-ops/SKILL.md
+package_tree_sha: 3ea4c876a138a31061a61461d998c764a406e5cf
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 44d89f79d8e4a65a3fde9c85d1294b47ebcfd31a
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [repository-maintenance, security, api-design]
+  lifecycle: [operations, maintenance]
+  characteristic: [tool-routing, retrieval-first, source-driven, traceable]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 1, 1, 1, 1, 1] (13/20). REJECT unchanged: generic GitHub task/capability grants operational commands for repository, workflow, secret, release and access mutations without per-repository/action approval. Bundled set-secret.sh passes the secret as a command-line argument (--body), contradicting the never-expose claim and risking process/diagnostic leakage; sourcing .env also executes code. Preserve per-call GH_TOKEN, CLI/API routing and schema-resolution methods as ADAPT/CHECKLIST. 21 exact pinned package files including source-owned references and scripts; full multi-MB API specs indexed but not loaded into the reviewer context. Package-security scan not-run; independent external behavioral/adversarial validation not-run; source historical live-smoke claims not independently re-executed."

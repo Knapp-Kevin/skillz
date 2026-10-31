@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: netlify-ops
+display_name: "Netlify Operations"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/netlify-ops/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: cf19f483e219698fe63dadf3e5ed8704c5626a95
+content_blob_sha: f8068e2e49c91382ffade789a9ce26b51f9e7903
+upstream_revision: 97c4d1085a6fce9d1d7fe1e42a7ee9a76a80b1b3
+upstream_last_updated_at: 2026-06-13T09:19:16Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "19-file pinned package: Netlify OpenAPI, CLI/endpoint indexes, credential/REST/CLI references, source-owned Python resolver and shell examples; requires Netlify CLI, curl, jq, site id and PAT."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: site creation, draft and production deployment, domain/DNS changes and deletion can occur without distinct target/environment, cost, publication and DNS approval. CLI --force suppresses prompts but is not authorization; source .env is executable and token-based access is not user consent. Preserve explicit site-id binding, draft-vs-prod and digest/deployment-state guidance for scoped adaptation."
