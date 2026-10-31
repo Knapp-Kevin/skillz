@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: skill-trigger-tester
+display_name: "Skill Trigger Tester"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/skill-trigger-tester/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 828bb07520c51979ba2741bcbb0936bd49f849ba
+content_blob_sha: c8f86989ae0fa0ce3688ec307067d8ae50f1eb4a
+upstream_revision: e5dee481fcabc24e1e95abddca9e8030a9a94b81
+upstream_last_updated_at: 2026-03-15T18:02:33Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Bundled Python test.py; optional PyYAML for YAML spec; keyword/synonym overlap heuristic; local test fixture file."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. The procedure tells the host to commit a persistent trigger-tests.yaml file without separate repository/destination authorization. Its 25-percent token-overlap heuristic is presented as predictive OpenClaw trigger precision/recall although no actual host routing is measured. Retain negative/positive example design and heuristic pre-screening as CHECKLIST, not behavioral validation. Trigger: drafting descriptions. Non-trigger: release approval or automatic commit."

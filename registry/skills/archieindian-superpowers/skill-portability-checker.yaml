@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: skill-portability-checker
+display_name: "Skill Portability Checker"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/skill-portability-checker/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 4d789cb06e9a168cf76eb1815efe1d385dfffead
+content_blob_sha: 41037da98cd0a24123440f4afbf4f2b8eaf1bda3
+upstream_revision: c50005e8c680dd49fe4bfe5d7da9b0f06f38f9fa
+upstream_last_updated_at: 2026-03-15T18:27:09Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Bundled Python check.py; optional PyYAML; local PATH, importlib, OS and skill scripts. importlib.import_module imports inspected modules into host process; never execute on untrusted packages without isolation."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. The procedure suggests dependency installation and modifying target scripts/frontmatter without separate change approval. Bundled checker uses importlib.import_module to probe imports, which can execute untrusted module top-level code; this is not a safe passive inspection of unknown packages. Preserve static OS/binary dependency inventory, but replace import probes with non-executing checks. Trigger: host portability review. Non-trigger: automatic install or execution of untrusted imports."

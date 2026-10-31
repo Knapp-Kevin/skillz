@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: fact-check-before-trust
+display_name: "Fact Check Before Trust"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/fact-check-before-trust/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 35a9f556b097ebaecef8437a377f383928d51170
+content_blob_sha: 27bd217125ea2f4f7f1568d6630695d572a04d02
+upstream_revision: 767f45d4088640d728a6292e53a2a8162dcdb8a8
+upstream_last_updated_at: 2026-03-15T05:40:13Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+external-side-effect"
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Standalone SKILL.md; host search/fetch tools are optional but outbound queries may disclose private context."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Source search/re-fetch of agent claims is a potential outbound disclosure of confidential project, financial or identity context without an independent data/recipient authorization boundary; presence of a document is also mislabeled High confidence rather than verified accuracy. Preserve claim extraction, contradiction tracking, uncertainty reporting. Trigger: factual outputs before consequential use. Non-trigger: public-only fact checks with no independent external search or private-data disclosure."

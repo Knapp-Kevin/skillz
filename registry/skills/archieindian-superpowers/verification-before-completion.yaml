@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: verification-before-completion
+display_name: "Verification Before Completion"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/verification-before-completion/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 85a449bc5b70540f2b91720ee8cf12f196321f82
+content_blob_sha: a889036fdc6f516bbbb0f0d014aecfad06d48b44
+upstream_revision: 49d5653dec5f7e0fd11a9043e4f2f26a2e0b34a3
+upstream_last_updated_at: 2026-03-14T17:57:56Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+generate-only"
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Standalone SKILL.md checklist; external host must supply any real test/API execution evidence; no bundled runner."
+import_eligibility: conditional-exact-version-security-and-user-fit
+rationale: "VERIFIED semantic only. Requires the host to distinguish attempted from demonstrably completed work and to disclose unverified conditions; checklist itself does not run tests or APIs and does not grant execution authority. A checkbox is not independent behavioral proof. Trigger: completion claims. Non-trigger: silently running live API calls or asserting success from planned checks."
