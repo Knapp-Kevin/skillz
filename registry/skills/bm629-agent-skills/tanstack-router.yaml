@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: tanstack-router
+display_name: "TanStack Router"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/tanstack-router/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 7e9885065b1cd0a675d11af62c3053950f80c21a
+content_blob_sha: b26e6433177044cba8aee233aa8aec67296f4285
+upstream_revision: d73573f8d2802b722cfa2856bd09fa4a34e37fd3
+upstream_last_updated_at: 2026-06-09T21:23:53Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "7-file pinned package: React, Vite, TypeScript, TanStack Router v1 (forge 1.170.x), optional Query and Zod, route plugin and test harness; 6 bundled references."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: installs dependencies and modifies application routing/authentication controls and loader data paths without an explicit approved application/security scope. beforeLoad guard is useful but not authority for accessing private data. Version-specific plugin API and degraded full-page sourcing need freshness review."
