@@ -7,15 +7,15 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 56ea935b74f371bfeb4c7d3c19d5139df866e73b
 package_tree_sha: 9869687dcf6deb6802ca88ac11e67b6f7278017a
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-30
-verification_status: verified
-verification_basis: structured-static-review-carried-forward-exact-tree
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-authority-recheck-exact-tree
 validation_status: not-run
-rubric_score: 15/20
+rubric_score: 13/20
 tags:
   use_case: [communication, writing, business-operations]
   lifecycle: [implementation]
   characteristic: [tool-routing, reference-heavy, progressive-disclosure]
-  authority: [generate-only]
+  authority: [read-only, generate-only]
   portability: [high]
-notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward to the candidate revision. Deliberately thin but coherent routing to bundled formats; behavioral validation remains not-run. The registered source pin already matches this exact reviewed package.
+notes: "REJECT unchanged under current action-specific private-data authority hard fail (13/20). The pinned SKILL.md routes into bundled 3p-updates.md, company-newsletter.md and faq-answers.md, which direct broad Slack, Gmail/email, Drive and calendar searches whenever connectors are available, including company-wide and executive context. No distinct approved account/workspace, channel, time, sensitivity, audience, minimization or disclosure boundary precedes those reads. Availability is not authorization; drafting a company newsletter is not permission to inspect all company communications. Preserve 3P/FAQ/newsletter structure, sourcing and concise drafting for approved-scope ADAPT/EXTRACT/CHECKLIST. Exact SKILL blob and package tree unchanged; security scan and behavioral validation not-run."
