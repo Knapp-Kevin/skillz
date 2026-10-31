@@ -7,7 +7,9 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
-**OpenClaw five-package authority/privacy tranche (2026-10-31):** The registered tracked source has **8** canonical first-class packages. Five genuine exact-pin gaps were rejected unchanged for private transcript discovery/export, unapproved live behavioral actions, billable remote leases and untrusted README command execution. OpenClaw **1/8 → 6/8**, gaps **7 → 2**; `autoreview` and `beam` remain for deep review. Five provenance + five verification companions, security/behavioral `not-run`; source and admitted denominators unchanged. Current **44 first-party / 938 third-party / 982 total** (817 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md).
+**OpenClaw final-two exact-pin static closure (2026-10-31):** Deep-reviewed `autoreview` and `beam` against the full pinned upstream packages: **2 REJECT unchanged 15/20** for missing independent confidential-code/model-search disclosure authority and insufficient Beam receiver-audience/retention/future-hook scope. OpenClaw **6/8 → 8/8**, gaps **2 → 0**, denominator **8**, tracked/admitted source denominator delta **0**. Two new provenance + two verification companions, security/behavioral `not-run`. Corrected preliminary 16/9 source-file counts to exact pinned-tree **13/7**. Current **44 first-party / 940 third-party / 984 total** (819 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-openclaw-final-two-static.md).
+
+**Historical OpenClaw five-package authority/privacy tranche (2026-10-31):** The registered tracked source has **8** canonical first-class packages. Five genuine exact-pin gaps were rejected unchanged for private transcript discovery/export, unapproved live behavioral actions, billable remote leases and untrusted README command execution. OpenClaw **1/8 → 6/8**, gaps **7 → 2**; `autoreview` and `beam` remain for deep review. Five provenance + five verification companions, security/behavioral `not-run`; source and admitted denominators unchanged. Historical checkpoint **44 first-party / 938 third-party / 982 total** (817 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md).
 
 **Bhushan Modi final-five static closure (2026-10-31):** Five genuine exact-pin gaps (`project-document-discovery`, `reviewing-document-discovery`, `reviewing-document-set`, `sql-job-queue`, `token-optimization`) received individual provenance/verification companions: **1 VERIFIED semantic only / 4 REJECT unchanged**. Tracked **63/68 → 68/68**, gaps **5 → 0**, denominator unchanged, admitted-source denominator delta 0. Research/forge disclosure, a stale v1 `team` quality-bar contradicting v2 `integrations`/`business`, DB worker side effects and private-context model routing are the decisive defects; the finished-document corpus reviewer is read-only. Security and behavioral validation `not-run`. Historical checkpoint **44 first-party / 933 third-party / 977 total** (812 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-bm629-final-five-static.md).
 
@@ -33,8 +35,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 938 (817 registered/tracked + 121 candidate-only) |
-| Total persisted verification/provenance pairs | 982 |
+| Persisted third-party exact-version reviews | 940 (819 registered/tracked + 121 candidate-only) |
+| Total persisted verification/provenance pairs | 984 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: autoreview
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/autoreview/SKILL.md
+package_tree_sha: b13bac8c660967da6b28cd32fb6bee95a3537cd8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ffbcf92f4f9f6e213c3ca19d9dad990c2b131d22
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [code-review, security, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, risk-aware, test-gated, tool-assisted]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 1, 1] (15/20). REJECT unchanged: an explicit request for code review authorizes a review but does not independently approve disclosure of potentially confidential source, diff, prompt/dataset material, or private repository context to the selected external inference provider or default web-search path. TruffleHog secret scanning and sandbox isolation reduce risks but do not establish recipient, scope, retention, cost, or private-data disclosure authority. Preserve exact Git target pinning, reviewer isolation, pre-send secret screening, bounded passes, and structured finding verification as ADAPT/EXTRACT/CHECKLIST prior art. Trigger: user-requested second-model code review. Non-trigger: implicit pre-commit/PR review, unapproved private-code egress, or automatic fixes. Exact pinned package tree: 13 source-owned Git blob/symlink entries including upstream scripts/tests/references. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

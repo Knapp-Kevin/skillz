@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: beam
+display_name: "Beam"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/beam/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: e910a7830ca569d4f34b503ae674149ac7456124
+content_blob_sha: 8fac3d844bb4aadade27fdda4e50cea3b280aecd
+upstream_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+upstream_last_updated_at: 2026-08-30T18:51:12Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Node.js; Claude Code or Codex local JSONL session roots; source-owned Beam CLI, sanitizer, tests and hook templates; authenticated OpenClaw Gateway endpoint; optional cloudflared and persistent Claude/Codex lifecycle hooks."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: explicit one-snapshot request and named receiver are helpful, but the procedure does not require the user to authorize the actual Gateway operator.read audience, data categories, retention, and further visibility before exporting locally redacted private conversation content. Regex/heuristic redaction is not disclosure clearance. Opt-in persistent Stop hooks likewise lack an explicit bounded duration, recipients, future private-session scope, and revocation/retention contract. Preserve exact-session fail-closed resolution, local dry-run, bounded redaction, read-only receiver projection, HTTPS and token hygiene as ADAPT/EXTRACT/CHECKLIST evidence. Trigger: explicitly requested session sharing. Non-trigger: silent transcript publication, unscoped future hook uploads, or sharing private session content on provider capability alone."
