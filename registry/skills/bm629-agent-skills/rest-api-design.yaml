@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: rest-api-design
+display_name: "REST API Design"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/rest-api-design/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 002793209c06ea6aa5b73239cb56fae1416b1333
+content_blob_sha: c4aebf8ec5549c6c523af786d16b8f8555585d04
+upstream_revision: 63e4ff249438e627bc1c5a0ad43801567f99b038
+upstream_last_updated_at: 2026-06-08T16:21:34Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: generate-only
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "5-file pinned package: RFC 9110/9457, OpenAPI 3.1, optional FastAPI/Pydantic v2 implementation handoff; 4 bundled references."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only: design-only HTTP resource/status/error/pagination/auth contract with no required live API calls or deployments. Safe error-detail minimization; auth in contract is not authorization to change deployed security controls. No security or behavioral execution."
