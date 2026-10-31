@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: session-viewer
+display_name: "Session Viewer"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/session-viewer/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: 270fb2d7e734a559f43582666934d229f9e74f7c
+content_blob_sha: fb9501363277c6d1c7df139b8ab9ac8720ea1acd
+upstream_revision: 128a4ea60a93badf0d6d8f3381057f93f7085b29
+upstream_last_updated_at: 2026-08-21T13:11:55Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Node native TypeScript scripts, Codex/Claude/Pi/OpenClaw JSONL importers, HTML viewer, local filesystem and browser; source-owned tests/tsconfig."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: default generated HTML embeds normalized session records and searchable tool inputs/outputs; --raw embeds original JSONL. Source importer retains reasoning/system events and raw payloads. A user request to view a transcript is not permission to publish or persist sensitive full-content copies at arbitrary paths; no disclosure, minimization, destination or retention gate. Preserve format importers and local viewer design as isolated adaptation prior art. Trigger: Explicit local session viewing/export with known source and output destination. Non-trigger: No automatic sharing or publishing of raw transcripts, reasoning, system/developer instructions, tool outputs, credentials or private session data."

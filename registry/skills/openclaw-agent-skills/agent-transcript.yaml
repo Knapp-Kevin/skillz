@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: agent-transcript
+display_name: "Agent Transcript"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/agent-transcript/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: 60678183a19065c318939dc6bb0d675dc8d02921
+content_blob_sha: 3b7b25dceced036772286679e3e2380edf817ffd
+upstream_revision: 1708ed9f6f2d2592ea28b0f71d614d05f08b93bc
+upstream_last_updated_at: 2026-08-28T02:10:33Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Node.js helper plus source-owned tests; local Codex/Claude/Pi/OpenClaw JSONL session roots; optional gh/HTML preview; public GitHub issue/PR body update by external host."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: automatic find scans up to 400 local cross-agent session logs before separate approval to access those private records. The explicit approval to insert a redacted PR/issue section is valuable but does not authorize broad private session discovery or local preview persistence. Redaction uses best-effort regex, not a guarantee of safe public disclosure; preserve consent/trim/checklist design. Trigger: PR/issue provenance when agent-authored; hosted *.openclaw.ai sessions excluded by default. Non-trigger: No unrelated local sessions, unapproved private-log inspection, or public transcript insertion."

@@ -854,8 +854,15 @@
     "before_companions": 63,
     "after_companions": 68,
     "remaining_gaps": 0,
-    "verified_semantic_only": ["reviewing-document-set"],
-    "rejected_unchanged": ["project-document-discovery", "reviewing-document-discovery", "sql-job-queue", "token-optimization"],
+    "verified_semantic_only": [
+      "reviewing-document-set"
+    ],
+    "rejected_unchanged": [
+      "project-document-discovery",
+      "reviewing-document-discovery",
+      "sql-job-queue",
+      "token-optimization"
+    ],
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-10-31-bm629-final-five-static.md"
@@ -869,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 933,
-    "total_verification_records": 977,
+    "persisted_third_party_exact_version_reviews": 938,
+    "total_verification_records": 982,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -942,7 +949,10 @@
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
     "bm629_agent_skills_current_standard_companions": 68,
-    "bm629_agent_skills_current_standard_gaps": 0
+    "bm629_agent_skills_current_standard_gaps": 0,
+    "openclaw_agent_skills_eligible_denominator": 8,
+    "openclaw_agent_skills_current_standard_companions": 6,
+    "openclaw_agent_skills_current_standard_gaps": 2
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -2202,5 +2212,30 @@
         "behavioral": "not-run"
       }
     ]
+  },
+  "openclaw_five_authority_privacy_static": {
+    "date": "2026-10-31",
+    "source_id": "openclaw-agent-skills",
+    "source_revision": "6cd3366b10e2a8c5608265f692acf9f5da2b2448",
+    "eligible_denominator": 8,
+    "before_companions": 1,
+    "after_companions": 6,
+    "remaining_gaps": 2,
+    "rejected_unchanged": [
+      "agent-transcript",
+      "behavior-validator",
+      "crabbox",
+      "readme-standard",
+      "session-viewer"
+    ],
+    "deferred_for_deep_review": [
+      "autoreview",
+      "beam"
+    ],
+    "admitted_denominator_delta": 0,
+    "new_review_pairs": 5,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md"
   }
 }

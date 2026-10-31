@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: crabbox
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/crabbox/SKILL.md
+package_tree_sha: ecb672b2021cf6707334cab207e67c87b34dedad
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7ac7e76bfb97fef2a1a1cf63bd60fc2016acbcc1
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [testing, cloud, deployment]
+  lifecycle: [verification, operations]
+  characteristic: [risk-aware, evidence-first, tool-routing, production-oriented]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 0, 2, 1, 1] (14/20). REJECT unchanged: Authorization and Isolation section expressly says configured Crabbox/Testbox creation/reuse/stop requires no separate approval; provider operations can create persistent or billable AWS/Testbox/desktop resources and run commands. Existing budget, source-trust and cleanup safeguards do not replace action-specific approval. Preserve provider-routing, untrusted PR isolation and result-provenance methods. Exact pinned package tree: 1 source-owned file(s), including references/scripts where present. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

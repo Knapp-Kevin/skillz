@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: session-viewer
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/session-viewer/SKILL.md
+package_tree_sha: 270fb2d7e734a559f43582666934d229f9e74f7c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fb9501363277c6d1c7df139b8ab9ac8720ea1acd
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 12/20
+tags:
+  use_case: [context-management, documentation, observability]
+  lifecycle: [verification, maintenance]
+  characteristic: [tool-assisted, visual-verification, reference-heavy]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 1, 2, 0, 1] (12/20). REJECT unchanged: default generated HTML embeds normalized session records and searchable tool inputs/outputs; --raw embeds original JSONL. Source importer retains reasoning/system events and raw payloads. A user request to view a transcript is not permission to publish or persist sensitive full-content copies at arbitrary paths; no disclosure, minimization, destination or retention gate. Preserve format importers and local viewer design as isolated adaptation prior art. Exact pinned package tree: 12 source-owned file(s), including references/scripts where present. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

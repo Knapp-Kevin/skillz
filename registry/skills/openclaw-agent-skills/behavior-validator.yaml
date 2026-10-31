@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: behavior-validator
+display_name: "Behavior Validator"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/behavior-validator/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: 2f5873a2232b4bc0d3d44c5c5e08b94bdcc38501
+content_blob_sha: a0e1066b2651e35299dceebd436a0bd8b2e84712
+upstream_revision: 2e86e90a542c11966af687041c68eb6b8f5d7328
+upstream_last_updated_at: 2026-07-01T06:27:41Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Host browser/CLI/API/runtime access and allowed fixtures; source-owned contract template, report schema and agent metadata; no repository-owned runner."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: contract creation and launch/access instructions lead directly to real user/operator tasks, state mutation, API requests and screenshot/log capture without a distinct approval boundary for target environment, billable calls, sensitive-data access or persistence. Strong source-blind and anti-cheat method remains useful for an explicitly authorized sandbox. Trigger: Independent black-box acceptance against a scoped behavior contract. Non-trigger: No production writes, paid endpoints, private telemetry capture or authenticated side effects without separate target/action authority."
