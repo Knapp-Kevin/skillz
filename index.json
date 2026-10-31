@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 923,
-    "total_verification_records": 967,
+    "persisted_third_party_exact_version_reviews": 928,
+    "total_verification_records": 972,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 58,
-    "bm629_agent_skills_current_standard_gaps": 10
+    "bm629_agent_skills_current_standard_companions": 63,
+    "bm629_agent_skills_current_standard_gaps": 5
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi release/creator/engineering eight exact-pin reviews, 50/68 -> 58/68, gaps 18 -> 10; 1 semantic-only verified / 7 rejected unchanged; eight provenance/verification pairs; current 44/923/967 (802 tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi five provider-ops exact-pin reviews, 58/68 -> 63/68, gaps 10 -> 5; 5 REJECT unchanged; five provenance/verification pairs; current 44/928/972 (807 registered/tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -2117,6 +2117,72 @@
         "manifest_blob": "676f43f384cd5e2bcb8e1ae1b524aa6169baf825",
         "package_tree": "2ab7f7b0deae9a7604b60431e31a6b2670026ad4",
         "package_files": 6,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_provider_ops_five_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_companions": 58,
+    "current_companions": 63,
+    "gaps_before": 10,
+    "gaps_after": 5,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 5,
+    "verified_semantic_only": 0,
+    "rejected_unchanged": 5,
+    "security_and_behavioral": "not-run",
+    "persisted_third_party_reviews": 928,
+    "total_verification_records": 972,
+    "receipt": "docs/reviews/2026-10-31-bm629-provider-ops-five-static.md",
+    "reviewed": [
+      {
+        "name": "atlassian-rest-ops",
+        "manifest_blob": "4b4d3106a96e2a979438d3f4203d3af8783f7580",
+        "package_tree": "a15955bf274946156c31483cd77d122fb8f508c2",
+        "package_files": 21,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "cloudflare-pages-ops",
+        "manifest_blob": "9a5adda2d09704118e274527f2cac3df0bd47bbd",
+        "package_tree": "c88842f90f19d64ccee9ebbd2a4ae0775ead62e3",
+        "package_files": 19,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "github-cli-ops",
+        "manifest_blob": "44d89f79d8e4a65a3fde9c85d1294b47ebcfd31a",
+        "package_tree": "3ea4c876a138a31061a61461d998c764a406e5cf",
+        "package_files": 21,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "jenkins-rest-ops",
+        "manifest_blob": "3df92486d28a740673988034c78f4b67e2c390c7",
+        "package_tree": "25b93651bfa0e6a265360ad2377c4e18821b3b17",
+        "package_files": 21,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "netlify-ops",
+        "manifest_blob": "f8068e2e49c91382ffade789a9ce26b51f9e7903",
+        "package_tree": "cf19f483e219698fe63dadf3e5ed8704c5626a95",
+        "package_files": 19,
         "score": 13,
         "status": "rejected",
         "behavioral": "not-run"
