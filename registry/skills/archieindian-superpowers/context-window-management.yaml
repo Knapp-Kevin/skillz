@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: context-window-management
+display_name: "Context Window Management"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/context-window-management/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 62967dbea815cfb7e38d59179ba0e859db1c50f1
+content_blob_sha: 2ee9f19876e986f5899e854fcf18349277c271cd
+upstream_revision: a46504ccebb66603cc51a589b0e1ccaa0eea09df
+upstream_last_updated_at: 2026-03-15T02:52:23Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "STATE_SCHEMA.yaml; writable OpenClaw state; host summarization/file persistence/session restart"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Useful keep/offload criteria, but directs writing potentially private handoffs/files and restarting sessions without an independently approved destination, retention, content scope or preservation verification. Advisory checklist only; no autonomous session restart. Trigger: design/checklist use only; non-trigger: unapproved execution, private reads or persistent storage. Exact manifest 2ee9f19876e986f5899e854fcf18349277c271cd, tree 62967dbea815cfb7e38d59179ba0e859db1c50f1, pin a95a59d221d44b89d4fc27a52934e24fb2060ddb. Pinned MIT grant incomplete (#544); no vendoring or security/behavioral clearance."

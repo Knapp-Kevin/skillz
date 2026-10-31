@@ -876,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 965,
-    "total_verification_records": 1009,
+    "persisted_third_party_exact_version_reviews": 973,
+    "total_verification_records": 1017,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -954,11 +954,11 @@
     "openclaw_agent_skills_current_standard_companions": 8,
     "openclaw_agent_skills_current_standard_gaps": 0,
     "archieindian_superpowers_eligible_denominator": 56,
-    "archieindian_superpowers_current_standard_companions": 26,
-    "archieindian_superpowers_current_standard_gaps": 30,
-    "archieindian_superpowers_openclaw_native_current_standard_companions": 9,
+    "archieindian_superpowers_current_standard_companions": 34,
+    "archieindian_superpowers_current_standard_gaps": 22,
+    "archieindian_superpowers_openclaw_native_current_standard_companions": 17,
     "archieindian_superpowers_openclaw_native_eligible_denominator": 38,
-    "archieindian_superpowers_openclaw_native_current_standard_gaps": 29
+    "archieindian_superpowers_openclaw_native_current_standard_gaps": 21
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -2397,5 +2397,49 @@
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-10-31-archie-eight-native-safety-assurance-static.md"
+  },
+  "archieindian_native_private_context_memory_eight_static": {
+    "date": "2026-10-31",
+    "source_id": "archieindian-superpowers",
+    "source_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+    "eligible_denominator": 56,
+    "core_companions": 17,
+    "native_before": 9,
+    "native_after": 17,
+    "community_companions": 0,
+    "whole_family_before": 26,
+    "whole_family_after": 34,
+    "remaining_gaps": 22,
+    "new_review_pairs": 8,
+    "rejected_unchanged": [
+      "channel-context-bridge",
+      "compaction-resilience-guard",
+      "context-assembly-scorer",
+      "context-budget-guard",
+      "context-window-management",
+      "dag-recall",
+      "persistent-memory-hygiene",
+      "session-persistence"
+    ],
+    "scores": {
+      "channel-context-bridge": "12/20",
+      "compaction-resilience-guard": "11/20",
+      "context-assembly-scorer": "10/20",
+      "context-budget-guard": "12/20",
+      "context-window-management": "14/20",
+      "dag-recall": "12/20",
+      "persistent-memory-hygiene": "11/20",
+      "session-persistence": "9/20"
+    },
+    "admitted_denominator_delta": 0,
+    "first_party": 44,
+    "third_party_persisted_reviews": 973,
+    "registered_tracked_third_party_reviews": 852,
+    "candidate_only_reviews": 121,
+    "total_verification_records": 1017,
+    "license_terms_issue": 544,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-archie-eight-private-context-memory-static.md"
   }
 }

@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: context-budget-guard
+display_name: "Context Budget Guard"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/context-budget-guard/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: e187f7c12ac71e86350d77a213cd8709363cad59
+content_blob_sha: e026d6dfffc30c61b0de371bee45c2c7be151f31
+upstream_revision: c3d0b3ea2dba5f97624099531e03b1855bec53bc
+upstream_last_updated_at: 2026-03-15T03:20:07Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "check.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; context-window-management"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Directs compaction and persistent session-state writes without separate authority. check.py estimates context occupancy solely from elapsed time at fixed 0.8 percentage points per minute, not actual tokens; its HIGH state cannot justify automatic compaction. Preserve labeled estimate/checkpoint guidance. Trigger: design/checklist use only; non-trigger: unapproved execution, private reads or persistent storage. Exact manifest e026d6dfffc30c61b0de371bee45c2c7be151f31, tree e187f7c12ac71e86350d77a213cd8709363cad59, pin a95a59d221d44b89d4fc27a52934e24fb2060ddb. Pinned MIT grant incomplete (#544); no vendoring or security/behavioral clearance."

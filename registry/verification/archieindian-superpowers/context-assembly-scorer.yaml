@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: context-assembly-scorer
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/context-assembly-scorer/SKILL.md
+package_tree_sha: e4550ff2fae25c544a2a5ff60fd5a94f7bd12e42
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0487be6351570a369465c1958116ad4d792befbb
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 10/20
+tags:
+  use_case: [context-management, evaluation, memory]
+  lifecycle: [verification, operations]
+  characteristic: [metric-driven, evidence-first]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 0, 2, 1, 2, 1, 1] (10/20). REJECT unchanged. Four-hour private-memory reads and unredacted blind-spot storage lack consent. When CONTEXT.md is absent, code uses MEMORY.md for both reference and context, creating misleading perfect coverage; keyword grades are not verified recall quality. Preserve advisory gap-analysis method. Trigger: scoped advisory context assembly scorer methods. Non-trigger: unapproved private data access, persistent writes, recurring host actions, or claims of executed validation. Pinned source-owned manifest and complete package inspected; security/behavioral not-run; source license incomplete (#544)."

@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: compaction-resilience-guard
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/compaction-resilience-guard/SKILL.md
+package_tree_sha: 30469a1ab54ba8005a30990230670fedb90da850
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f8ac74762946c596fb71e1aa37331ef6223534c9
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 11/20
+tags:
+  use_case: [context-management, evaluation]
+  lifecycle: [verification, maintenance]
+  characteristic: [risk-aware, deterministic]
+  authority: [read-only, mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 1, 2, 1, 2, 1, 1] (11/20). REJECT unchanged. Claims L1/L2 LLM summaries and guaranteed compaction progress, but script slices lines, and L3 discards middle text without fidelity evidence; scans private DAG summaries and writes audit state without explicit read/retention approval. Preserve failure taxonomy, not false summarization assurance. Trigger: scoped advisory compaction resilience guard methods. Non-trigger: unapproved private data access, persistent writes, recurring host actions, or claims of executed validation. Pinned source-owned manifest and complete package inspected; security/behavioral not-run; source license incomplete (#544)."
