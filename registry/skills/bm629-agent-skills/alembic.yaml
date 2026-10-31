@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: alembic
+display_name: "Alembic Migrations"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/alembic/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 3765d356907809b3bf8081179128dbffab51a111
+content_blob_sha: 50d2e7ed22613a1f9430e36acab39307b2c72dd0
+upstream_revision: 133031fdbacb57f14e6ae1b73558464017ccfa8b
+upstream_last_updated_at: 2026-06-11T10:46:45Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned package: SQLAlchemy 2.x metadata, Alembic 1.18, environment DB_URL, SQLite/PostgreSQL/MySQL drivers; 2 bundled references."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: upgrade/downgrade/stamp and live autogeneration can alter or erase persistent database state without independent environment, backup, target, migration-plan and rollback authorization. Useful batch/rename and SQL-only review methods remain ADAPT/EXTRACT/CHECKLIST evidence."
