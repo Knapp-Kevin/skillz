@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: project-document-discovery
+display_name: "Project Document Discovery"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/project-document-discovery/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: be79fad713011d4351c132a774f0e9306f8066f1
+content_blob_sha: a2c00c1cd5e7be7fd7dd67ab644f19158289106b
+upstream_revision: 2cd69f9eab702545eb8cd2bddcb0efb500882c54
+upstream_last_updated_at: 2026-07-10T08:16:15Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Eleven files: classification, catalog, manifest, architectures, source references, two schemas, source-owned Python validator/tests. Input idea.md; output JSON; caller writes files."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: Step 7 defaults to research or forge-on-gap from possibly confidential project ideas without an explicit outbound query disclosure and skill-creation destination gate. Skill itself returns JSON, not files. Retain proportional document DAG, ten-cluster classification, schema and amendment methods for scoped adaptation."

@@ -846,6 +846,20 @@
     "new_security_scan": false,
     "receipt": "docs/reviews/2026-10-29-vercel-optimize-authority-macro.md"
   },
+  "bm629_final_five_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "denominator": 68,
+    "before_companions": 63,
+    "after_companions": 68,
+    "remaining_gaps": 0,
+    "verified_semantic_only": ["reviewing-document-set"],
+    "rejected_unchanged": ["project-document-discovery", "reviewing-document-discovery", "sql-job-queue", "token-optimization"],
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-bm629-final-five-static.md"
+  },
   "counts": {
     "first_party_skills": 44,
     "first_party_provenance_complete": 44,
@@ -855,8 +869,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 928,
-    "total_verification_records": 972,
+    "persisted_third_party_exact_version_reviews": 933,
+    "total_verification_records": 977,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +941,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 63,
-    "bm629_agent_skills_current_standard_gaps": 5
+    "bm629_agent_skills_current_standard_companions": 68,
+    "bm629_agent_skills_current_standard_gaps": 0
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1051,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi five provider-ops exact-pin reviews, 58/68 -> 63/68, gaps 10 -> 5; 5 REJECT unchanged; five provenance/verification pairs; current 44/928/972 (807 registered/tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi final five exact-pin reviews 63/68 -> 68/68, gaps 5 -> 0; 1 VERIFIED semantic only / 4 REJECT unchanged; 5 provenance/verification pairs; 44/933/977 (812 tracked + 121 candidate-only). No scan/behavioral execution, source pin or runtime change.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",

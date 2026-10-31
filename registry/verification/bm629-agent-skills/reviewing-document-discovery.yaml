@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-document-discovery
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-document-discovery/SKILL.md
+package_tree_sha: 91267b50f03f041f8db10be5f568cedd88c97268
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 824e1eda30feb4afc509a37705f11b791fe5eb6c
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [documentation, evaluation, planning]
+  lifecycle: [verification, planning]
+  characteristic: [human-review, traceable, evidence-first, contract-first]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 0, 2, 1, 1, 1, 1] (14/20). REJECT unchanged: bundled plan-quality-bar condition 10 requires obsolete team and omits integrations/business, contradicting reviewer SKILL.md, producer v6 and strict v2 schema. False-revise risk despite read-only verdict. Preserve method for adaptation after correcting reference. 3 exact pinned package files, including source-owned references/tooling. Package-security scan not-run; independent external behavioral/adversarial validation not-run. Historical upstream test claims were not executed here."

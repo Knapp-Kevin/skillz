@@ -1,0 +1,26 @@
+# Bhushan Modi final five: exact-pin static closure (2026-10-31)
+
+## Live source-family macro map
+- Registered tracked MIT source `bm629/agent-skills` at `f6a700ea94a16cf8e0b5e563d4d48d85503e41f6`; pinned Git tree enumerates **68** canonical first-class `skills/<name>/SKILL.md` packages, **0** nested first-class packages and no aliases/symlink duplicates. Before this tranche **63/68** exact-version companion pairs; the five named packages are genuine gaps, not reference Markdown or duplicate exposures. After: **68/68**, zero static gaps, no admission or denominator change.
+- Five packages contain **26** source-owned files (11+3+3+3+6), with individual canonical source path, Git blob and complete package-tree SHA, upstream last-changing commit/date, dependencies, authority, controlled tags and disposition. `docs/skills/*.md` explanatory mirrors are not first-class SKILL packages. Python validator/tests in project-document-discovery remain pinned upstream reference tooling, not repository-owned runtime.
+- All five security scans and independent behavioral/adversarial validation: **not-run**. Source `forge.status: reviewed` is an upstream claim, not independent evidence. No DB operation, external research, model-routing change, source-owned script or test was executed.
+
+## Exact-version dispositions
+| Skill | Files | Static state | Finding |
+|---|---:|---|---|
+| `project-document-discovery` | 11 | REJECT unchanged 14/20 | Unknown document types trigger external research/skill forging from possibly confidential project context without a disclosure or destination authorization gate. Returns JSON, does not itself write files. |
+| `reviewing-document-discovery` | 3 | REJECT unchanged 14/20 | Bundled quality-bar reference condition 10 still requires obsolete `team` and omits `integrations`/`business` required by producer v6 and the strict schema. False-revise risk. |
+| `reviewing-document-set` | 3 | VERIFIED semantic only 17/20 | Read-only handed-in-document corpus coherence gate: eight dimensions, root traceability, proportionality, delta and version-skew checks, single attributed verdict. |
+| `sql-job-queue` | 3 | REJECT unchanged 14/20 | Live DB/worker mutations and handler dispatch lack independent target, environment and side-effect approval; at-least-once handler effects may duplicate. |
+| `token-optimization` | 6 | REJECT unchanged 14/20 | Cheaper-model/subagent disclosure of private file context, provider/cost changes and host instruction edits lack separate authorization. |
+
+## Systemic findings, value and omissions
+1. **Load-bearing version drift:** `reviewing-document-discovery/SKILL.md` condition 10 and `project-document-discovery/schemas/capability-map.schema.json` require the v2 classification including `integrations`, `business`, and `prior_art_triggers`. The bundled `reviewing-document-discovery/references/plan-quality-bar.md` condition 10 instead lists the retired `team` field. It contradicts its own manifest and producer and can reject correct v2 plans. Do not silently fix pinned upstream material; retain this as exact-version negative evidence.
+2. **Different document gates, not duplicates:** producer builds a proportional capability/DAG plan, plan reviewer checks that plan, corpus reviewer checks finished cross-document relationships. The producer's strict schema and amend contract are useful ADAPT/EXTRACT prior art, but research/forge-on-gap needs scoped external disclosure and destination approval.
+3. **SQL concurrency is valuable but not action authority:** PostgreSQL/MySQL `FOR UPDATE SKIP LOCKED`, SQLite `BEGIN IMMEDIATE`, crash-resume, fairness and at-least-once semantics are differentiated. Upstream runnable reference listings do not turn this passive repository into a scheduler. Live DB/worker activation and handler effects require external host authorization and representative testing.
+4. **Token optimization has an information-flow cost:** tokens-per-task, cache locality and remeasurement are useful. Private-context delegation to new model recipients, changed budgets, or persistent host configuration must be separately authorized. Provider pricing and model features are source-freshness-sensitive (May 2026).
+5. **No unreviewed source-family package remains.** The tracked corpus is **68/68 static reviewed**, not blanket admitted, secure or behaviorally validated. Next cycles should prioritize lifecycle qualification, freshness and omission detection rather than quota-driven new machinery.
+
+## Lifecycle and accounting
+- All seven existing issues and five pre-existing draft PRs triaged. #489/#492/#496 remain external qualification-held for 36 changed first-party package trees: complete pinned SkillSpector v2.12.0 reports/digests, independent executed adversarial acceptance, then shared registry reconciliation. #412/#413 require separate new-skill qualification. No issue evidence-complete for closure. This five-package lane is disjoint.
+- Atomic public accounting: **44 first-party / 933 third-party / 977 total** (812 registered/tracked + 121 candidate-only), Bhushan Modi **63/68 → 68/68**, genuine gaps **5 → 0**, source/admitted denominators unchanged. No source pin movement, vendor copy, runtime, script, test, CI, scheduler, scanner or generator introduced.

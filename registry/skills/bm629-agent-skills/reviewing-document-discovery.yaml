@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-document-discovery
+display_name: "Reviewing Document Discovery"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-document-discovery/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 91267b50f03f041f8db10be5f568cedd88c97268
+content_blob_sha: 824e1eda30feb4afc509a37705f11b791fe5eb6c
+upstream_revision: 2cd69f9eab702545eb8cd2bddcb0efb500882c54
+upstream_last_updated_at: 2026-07-10T08:16:15Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read-only
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Three files: fourteen-condition plan-quality-bar and source references; supplied manifest, project idea/archetype, optional prior plan/change."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: bundled plan-quality-bar condition 10 requires obsolete team and omits integrations/business, contradicting reviewer SKILL.md, producer v6 and strict v2 schema. False-revise risk despite read-only verdict. Preserve method for adaptation after correcting reference."

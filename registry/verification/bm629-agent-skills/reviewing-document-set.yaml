@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-document-set
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-document-set/SKILL.md
+package_tree_sha: 93d2e275ef65610d586d0c5200fcde4ed749ac1d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fbd64ac2414ea068272c48c8b0a57c68d93ef1dc
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, evaluation, architecture]
+  lifecycle: [verification, planning]
+  characteristic: [evidence-first, human-review, traceable, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 1, 2, 1, 1] (17/20). VERIFIED semantic only: independent read-only corpus-level coherence, root traceability, proportional Definition-of-Ready, delta ripple, version skew and one attributed verdict. It does not retrieve unscoped private sources or rewrite documents; approval is not implementation authority. 3 exact pinned package files, including source-owned references/tooling. Package-security scan not-run; independent external behavioral/adversarial validation not-run. Historical upstream test claims were not executed here."
