@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: polyglot-git-hooks
+display_name: "Polyglot Git Hooks"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/polyglot-git-hooks/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 3898d6f97c4a619e259e35186df0a2f2dad872c3
+content_blob_sha: 776280422c6d5be4e9cf4d8a3dba50d0b65b112d
+upstream_revision: 490008e860d1689c8638882f6594b85bd1cf63a5
+upstream_last_updated_at: 2026-06-09T17:39:47Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned package; Lefthook, npm/postinstall or OS package manager, .git/hooks, lefthook.yml, language-specific formatters and optional CI."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: install/activate instructions modify local .git/hooks and npm postinstall/prepare can automatically install persistent hooks on future clones, while auto-fix/stage_fixed mutates and stages files. No separate authorization for hook persistence, developer workflow, dependency installation or staging effects. Preserve scoped staged-file checks and hooks-versus-CI distinction as CHECKLIST/ADAPT."

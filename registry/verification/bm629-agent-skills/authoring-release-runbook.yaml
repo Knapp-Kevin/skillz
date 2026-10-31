@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-release-runbook
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-release-runbook/SKILL.md
+package_tree_sha: 23c6ea3c794d428dce461e9a3955eaef40605c8d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 82b4464ac228406ee1115fa520da8e5f834f8cbc
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [documentation, deployment, planning]
+  lifecycle: [planning, release]
+  characteristic: [source-driven, risk-aware, traceable, human-review]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 1, 1, 1] (14/20). REJECT unchanged: Step 5 describes production cutover and user communications and Step 5's rehearsal aid directs executing a staging deployment with injected failure, without a separate environment, traffic, data, cost and communication authorization. Deep research must not disclose private architecture. Preserve expand-contract, rollback-per-change, measurable go/no-go, secrets-by-reference and versioned-amend methods as CHECKLIST/ADAPT prior art. 4 exact pinned package files, including bundled references, characterized at registered source pin. Security scan not-run; independent external behavioral/adversarial validation not-run; no execution evidence claimed."

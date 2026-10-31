@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: external-content-sanitizer
+display_name: "External Content Sanitizer"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/external-content-sanitizer/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 6d2d441871cea5b0bff9d7c38f3f5e2877c7d436
+content_blob_sha: f4520bfb8b4aab67109171d42dfc3ec0fbb5bc45
+upstream_revision: d2a2ad8e5d11e19d80ea967e18b2fabab0c587bc
+upstream_last_updated_at: 2026-05-24T09:53:50Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "4-file pinned package with regex/LLM detection and three reference catalogs; persistent docs/security/flagged-sources.md incident ledger containing original source identifiers."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: Step 7 automatically persists original unredacted source identifiers, including full URLs/query strings, even though response metadata is sanitized. This can retain credential-bearing URLs, private file paths or sensitive identifiers without explicit disclosure, storage, retention or access authority. Regex/LLM filtering is also fallible; useful severity and never-echo patterns remain EXTRACT/ADAPT evidence."

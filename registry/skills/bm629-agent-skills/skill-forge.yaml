@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: skill-forge
+display_name: "Skill Forge"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/skill-forge/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 2ab7f7b0deae9a7604b60431e31a6b2670026ad4
+content_blob_sha: 676f43f384cd5e2bcb8e1ae1b524aa6169baf825
+upstream_revision: f52abbc5c1f0d31c9d391d6ce4a2daea43b5d7cb
+upstream_last_updated_at: 2026-06-08T15:00:46Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "6-file pinned package; host WebSearch/WebFetch, optional discovery/research/reviewer agents, docs/templates/skill/ workspace marker, scripts validation commands, persistent skills/<slug>/ files and optional caller-agent-file edit."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: a generic knowledge gap triggers web disclosure, script execution, persistent creation/improvement of auto-loaded skills and optional agent-instruction-file append without an independent approval for network, code execution, destination, persistence or authority. Popularity threshold is not quality. Preserve source-first research, anti-injection, provenance, versioning and review rubric as EXTRACT/ADAPT, never an automatic repository skill writer."

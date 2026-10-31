@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: content-template-gateway
+display_name: "Content Template Gateway"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/content-template-gateway/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 841a0d28f50a29e965a1c7581079a3f73f3829ee
+content_blob_sha: fa6103c0c9efe1ecf01fa01e0ec632651e705431
+upstream_revision: 3ca914451d71cc5a4bad5b8644b3709b376e6fec
+upstream_last_updated_at: 2026-05-26T12:31:24Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Single-file package with hardwired docs/templates/<type>/<variant>/ layout; optional deep-research or WebSearch/WebFetch, template/research files and index writes."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: universal trigger for any structured content silently escalates a request to draft a PR, email or document into persistent template/research/README creation and external research. Slug confirmation and accepting variant names are not separate authorization for persistent workspace writes or disclosure of private content. Rigid MUST-follow template can override user intent. Preserve type/variant classification and advice mode as optional ADAPT/CHECKLIST."

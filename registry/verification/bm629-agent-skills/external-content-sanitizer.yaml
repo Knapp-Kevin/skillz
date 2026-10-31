@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: external-content-sanitizer
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/external-content-sanitizer/SKILL.md
+package_tree_sha: 6d2d441871cea5b0bff9d7c38f3f5e2877c7d436
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f4520bfb8b4aab67109171d42dfc3ec0fbb5bc45
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [security, research, context-management]
+  lifecycle: [discovery, verification]
+  characteristic: [risk-aware, safety-bounded, tool-assisted, traceable]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 1, 1, 0] (13/20). REJECT unchanged: Step 7 automatically persists original unredacted source identifiers, including full URLs/query strings, even though response metadata is sanitized. This can retain credential-bearing URLs, private file paths or sensitive identifiers without explicit disclosure, storage, retention or access authority. Regex/LLM filtering is also fallible; useful severity and never-echo patterns remain EXTRACT/ADAPT evidence. 4 exact pinned package files, including bundled references, characterized at registered source pin. Security scan not-run; independent external behavioral/adversarial validation not-run; no execution evidence claimed."

@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 915,
-    "total_verification_records": 959,
+    "persisted_third_party_exact_version_reviews": 923,
+    "total_verification_records": 967,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 50,
-    "bm629_agent_skills_current_standard_gaps": 18
+    "bm629_agent_skills_current_standard_companions": 58,
+    "bm629_agent_skills_current_standard_gaps": 10
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi four prior-art author/reviewer pairs, eight exact-pin reviews, 42/68 -> 50/68, gaps 26 -> 18; 3 semantic-only verified / 5 rejected unchanged; eight provenance/verification pairs; current 44/915/959 (794 tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi release/creator/engineering eight exact-pin reviews, 50/68 -> 58/68, gaps 18 -> 10; 1 semantic-only verified / 7 rejected unchanged; eight provenance/verification pairs; current 44/923/967 (802 tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -2026,6 +2026,99 @@
         "package_files": 13,
         "score": 15,
         "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_release_creator_eight_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_companions": 50,
+    "current_companions": 58,
+    "gaps_before": 18,
+    "gaps_after": 10,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 8,
+    "verified_semantic_only": 1,
+    "rejected_unchanged": 7,
+    "security_and_behavioral": "not-run",
+    "persisted_third_party_reviews": 923,
+    "total_verification_records": 967,
+    "receipt": "docs/reviews/2026-10-31-bm629-release-creator-eight-static.md",
+    "reviewed": [
+      {
+        "name": "authoring-release-runbook",
+        "manifest_blob": "82b4464ac228406ee1115fa520da8e5f834f8cbc",
+        "package_tree": "23c6ea3c794d428dce461e9a3955eaef40605c8d",
+        "package_files": 4,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-release-runbook",
+        "manifest_blob": "b99beebeea91a93446987a9326d43bd287a274f6",
+        "package_tree": "d8438637eb10eb509c3f5e557c4b95b4f04cecd8",
+        "package_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "content-template-gateway",
+        "manifest_blob": "fa6103c0c9efe1ecf01fa01e0ec632651e705431",
+        "package_tree": "841a0d28f50a29e965a1c7581079a3f73f3829ee",
+        "package_files": 1,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "external-content-sanitizer",
+        "manifest_blob": "f4520bfb8b4aab67109171d42dfc3ec0fbb5bc45",
+        "package_tree": "6d2d441871cea5b0bff9d7c38f3f5e2877c7d436",
+        "package_files": 4,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "openapi-ts-client",
+        "manifest_blob": "8209f55baec59f618cbe412417d6cd09b97ff6eb",
+        "package_tree": "a95f8268014c2040ac8282a72eb09101133de2ff",
+        "package_files": 6,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "polyglot-git-hooks",
+        "manifest_blob": "776280422c6d5be4e9cf4d8a3dba50d0b65b112d",
+        "package_tree": "3898d6f97c4a619e259e35186df0a2f2dad872c3",
+        "package_files": 3,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "python-monorepo-architecture",
+        "manifest_blob": "34207dda20999f9df29233ef56007e9cbd6e7163",
+        "package_tree": "77b12775b99c4723a096644828cff21605dd8548",
+        "package_files": 3,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "skill-forge",
+        "manifest_blob": "676f43f384cd5e2bcb8e1ae1b524aa6169baf825",
+        "package_tree": "2ab7f7b0deae9a7604b60431e31a6b2670026ad4",
+        "package_files": 6,
+        "score": 13,
+        "status": "rejected",
         "behavioral": "not-run"
       }
     ]
