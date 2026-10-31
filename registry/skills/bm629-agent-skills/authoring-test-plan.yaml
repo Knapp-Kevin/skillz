@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-test-plan
+display_name: Authoring Test Plan
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-test-plan/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 395215c7c780ba466cd4e541acf72de0fc315aba
+content_blob_sha: f120fe87711935bc5c4758185c8fe4bf90dea499
+upstream_revision: 8ae3ccaabd8acf5caeac646aec064bb24ee2a3c5
+upstream_last_updated_at: 2026-06-15T04:21:03Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream 4-file package: SKILL.md and references/case-design-and-nonfunctional.md, references/execution-and-amend.md, references/sources.md; user-supplied approved upstream documents, optional host template provider and research capability; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Produces traceable risk-weighted test cases from supplied feature/API requirements, including measurable non-functional and probabilistic cases, environment/data assumptions, exit criteria and versioned amendment. Specifies tests but does not execute them. Reference proposes masked production data as an option; real data access, extraction, de-identification, transfers and test-environment provisioning require separate authorization. Prefer synthetic data."

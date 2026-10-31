@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-technical-design
+display_name: Authoring Technical Design
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-technical-design/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 53f812c2efd883bf9d1a99d6437f4d0dbe8fa076
+content_blob_sha: b5f414c338aca6b429c2f8fd2cbe9594622e905c
+upstream_revision: 6795c310ab6c68c38e058b288ed3bf8dacc5c5e5
+upstream_last_updated_at: 2026-06-14T11:11:44Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream 4-file package: SKILL.md and references/design-method.md, references/failure-test-rollout-amend.md, references/sources.md; user-supplied approved upstream documents, optional host template provider and research capability; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Feature-level TDD method derives decisions from approved PRD/feature-spec, traces requirements, weighs real alternatives, and specifies failures, observability, tests, rollout and rollback. Design proposals do not authorize deployment, telemetry, private-data reads or edits outside the requested document destination. Optional host template/research and supplied architecture/API/data-model context are dependencies; absent facts remain assumptions."

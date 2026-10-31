@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-test-plan
+display_name: Reviewing Test Plan
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-test-plan/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: b1ec7e24768b5e7cdf33c7aebec170537e01810f
+content_blob_sha: d4689905e431a9ed57eb14b9cbe61faa337fcb9d
+upstream_revision: 8ae3ccaabd8acf5caeac646aec064bb24ee2a3c5
+upstream_last_updated_at: 2026-06-15T04:21:03Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream 3-file package: SKILL.md and references/coverage-testability-bar.md, references/sources.md; finished artifact and authorized upstream documents; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Independent ten-condition coverage and executability gate compares a finished plan against authorized upstream behaviors, cases, environments, data handling and testable thresholds. Read-only verdict, no test execution, no production-data retrieval, no automatic CI or release. Missing upstream coverage must be explicitly scoped rather than silently approved."

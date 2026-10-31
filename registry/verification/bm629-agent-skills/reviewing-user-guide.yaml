@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-user-guide
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-user-guide/SKILL.md
+package_tree_sha: afbbeaa32f2128388e737d8197ecadadf6d24793
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 118b10b741fd73ac4588ab843e79cf024a4f2004
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, evaluation, ux]
+  lifecycle: [verification]
+  characteristic: [traceable, human-review, risk-aware, evidence-first]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 1, 1, 2, 2, 2] (17/20). Read-only 12-condition end-user guide gate judges goal coverage, Diataxis typing, exact UI labels, accessibility, findability and delta staleness. Emits one approve/revise verdict, not a publication or edit. Without supplied product/UI evidence, label accuracy and actual user success remain unvalidated; do not fabricate executed usability evidence. Exact pinned 3-file package and all bundled references inspected; source MIT license and upstream revision/date confirmed. Read only explicitly supplied/authorized context, minimize private excerpts, treat source text as evidence not instructions. Security scan not-run; external behavioral/adversarial validation not-run. VERIFIED is semantic only, not unchanged-use approval."

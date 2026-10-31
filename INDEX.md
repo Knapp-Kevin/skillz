@@ -1,13 +1,13 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-10-30
+**Snapshot date:** 2026-10-31
 
 This is a passive, hand-maintained catalog snapshot of the governed `skillz` corpus. It is navigation and accounting evidence only. The external host agent performs discovery, comparison, evaluation, security assessment, and reconciliation. The repository owns no runtime, scripts, tests, CI workflows, or background services.
 
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
-**Bhushan Modi tracked-source authoring tranche (2026-10-30):** Eight new exact-pin document-authoring methods complement the preceding eight review gates. Tracked progress **10/68 → 18/68**, genuine gaps **58 → 50**; all eight VERIFIED semantic-only, security/behavioral `not-run`. Current persisted **44 first-party / 883 third-party / 927 total** (762 registered/tracked + 121 candidate-only). [Authoring macro](docs/reviews/2026-10-30-bm629-eight-document-authoring-methods-macro.md); [prior review-gate macro](docs/reviews/2026-10-30-bm629-eight-document-review-gates-macro.md). Older receipts retain historical counts.
+**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -23,8 +23,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 883 (762 registered/tracked + 121 candidate-only) |
-| Total persisted verification/provenance pairs | 927 |
+| Persisted third-party exact-version reviews | 891 (770 registered/tracked + 121 candidate-only) |
+| Total persisted verification/provenance pairs | 935 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |

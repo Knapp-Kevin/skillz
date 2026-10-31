@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
   "microsoft_azure_exact_tree_mirror_reconciliation": {
@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 883,
-    "total_verification_records": 927,
+    "persisted_third_party_exact_version_reviews": 891,
+    "total_verification_records": 935,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 18,
-    "bm629_agent_skills_current_standard_gaps": 50
+    "bm629_agent_skills_current_standard_companions": 26,
+    "bm629_agent_skills_current_standard_gaps": 42
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-30: Bhushan Modi eight exact-pin authoring methods, 10/68 -> 18/68, gaps 58 -> 50; eight new provenance/verification pairs, current 44/883/927. Semantic-only, no security/behavioral execution, admission, pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi four paired document gates, 18/68 -> 26/68, gaps 50 -> 42; eight new exact-pin provenance/verification pairs; current 44/891/935. Semantic-only; no security/behavioral execution, admission, source-pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1643,6 +1643,108 @@
         "package_tree": "d5b0e687fdc238d9e5564c69582d7eb84160a7d4",
         "package_files": 4,
         "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_four_document_pairs_eight_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_current_standard_companions": 18,
+    "new_companions": 8,
+    "current_standard_companions": 26,
+    "genuine_gaps_before": 50,
+    "genuine_gaps_after": 42,
+    "semantic_verified": 8,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "source_pin_changed": false,
+    "admitted_denominator_delta": 0,
+    "first_party": 44,
+    "third_party_persisted_reviews": 891,
+    "total_verification_records": 935,
+    "receipt": "docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md",
+    "reviewed": [
+      {
+        "name": "authoring-technical-design",
+        "manifest_blob": "b5f414c338aca6b429c2f8fd2cbe9594622e905c",
+        "package_tree": "53f812c2efd883bf9d1a99d6437f4d0dbe8fa076",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-technical-design",
+        "manifest_blob": "52a4eae308b86f89970e0b70d891dc5b489d8e45",
+        "package_tree": "d3adae37d5fcff01bc26785beab1976319fc2883",
+        "package_files": 3,
+        "reference_files": 2,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-test-plan",
+        "manifest_blob": "f120fe87711935bc5c4758185c8fe4bf90dea499",
+        "package_tree": "395215c7c780ba466cd4e541acf72de0fc315aba",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-test-plan",
+        "manifest_blob": "d4689905e431a9ed57eb14b9cbe61faa337fcb9d",
+        "package_tree": "b1ec7e24768b5e7cdf33c7aebec170537e01810f",
+        "package_files": 3,
+        "reference_files": 2,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-user-flows",
+        "manifest_blob": "16fb523775537fa298284484500ee0b44353cad6",
+        "package_tree": "fcd367dc5d27102d442e063989703a9ebf6570c0",
+        "package_files": 6,
+        "reference_files": 5,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-user-flows",
+        "manifest_blob": "66baae3a76427af777e4166af52d6a3324c470bc",
+        "package_tree": "2f471079ca855cd6bfe6b24bd2d399cd6e82be81",
+        "package_files": 3,
+        "reference_files": 2,
+        "score": 15,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-user-guide",
+        "manifest_blob": "d2e35d05eb06fbec0981fb48b265dbb814f946ee",
+        "package_tree": "0d9eb65a21c52c2028d76e370569d179bb01db30",
+        "package_files": 3,
+        "reference_files": 2,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-user-guide",
+        "manifest_blob": "118b10b741fd73ac4588ab843e79cf024a4f2004",
+        "package_tree": "afbbeaa32f2128388e737d8197ecadadf6d24793",
+        "package_files": 3,
+        "reference_files": 2,
         "score": 17,
         "status": "verified",
         "behavioral": "not-run"

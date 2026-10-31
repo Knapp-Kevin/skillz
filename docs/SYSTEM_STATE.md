@@ -1,8 +1,8 @@
 # System State
 
-**Current summary (2026-10-30):** 44 first-party skills, 883 persisted third-party exact-version reviews, 927 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-31):** 44 first-party skills, 891 persisted third-party exact-version reviews, 935 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
-**Bhushan Modi tracked-source authoring tranche (2026-10-30):** Eight new exact-pin document-authoring methods complement the preceding eight review gates. Tracked progress **10/68 → 18/68**, genuine gaps **58 → 50**; all eight VERIFIED semantic-only, security/behavioral `not-run`. Current persisted **44 first-party / 883 third-party / 927 total** (762 registered/tracked + 121 candidate-only). [Authoring macro](reviews/2026-10-30-bm629-eight-document-authoring-methods-macro.md); [prior review-gate macro](reviews/2026-10-30-bm629-eight-document-review-gates-macro.md). Older receipts retain historical counts.
+**Bhushan Modi paired document gates (2026-10-31):** Eight exact-pin author/reviewer methods (technical design, test plan, user flows, user guide) added as semantic-only VERIFIED references. Tracked progress **18/68 → 26/68**, genuine gaps **50 → 42**; all eight security/behavioral `not-run`. Current persisted **44 first-party / 891 third-party / 935 total** (770 registered/tracked + 121 candidate-only). [Four-pair macro](docs/reviews/2026-10-31-bm629-four-document-pairs-eight-static.md); previous authoring/review receipts remain historical.
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -18,15 +18,15 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-30 |
+| **Last updated** | 2026-10-31 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **883** (762 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **927** |
+| **Persisted third-party review companions** | **891** (770 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **935** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
@@ -46,7 +46,7 @@ The registered Matt Pocock pin remains **29/29** reviewed. Its later candidate h
 
 ## Exact-tree historical security evidence
 
-**First-party historical security evidence (reconciled 2026-10-29).** At main `713c98fa55d5`, **44/44** package trees and semantic fingerprints matched their recorded identities. The retained October 10 baseline recorded **23 exact-tree PASSED / 20 INCOMPLETE / 1 FAILED**; a separate 44-pass candidate report matches only **23/44** of those package trees, so its other 21 passes cannot transfer. Three disjoint unmerged repair drafts now revise **36 distinct existing first-party skills**: [#489](https://github.com/Knapp-Kevin/skillz/pull/489) **29** (including 8 formerly passing), [#492](https://github.com/Knapp-Kevin/skillz/pull/492) **5** (all formerly passing), and [#496](https://github.com/Knapp-Kevin/skillz/pull/496) **2** (both formerly passing). If all three merge unchanged, **15** historical matching-pass package identities will have changed and only **8** historical matching-pass identities will remain unaffected. All **36 final changed package trees** require fresh pinned external security reports and independent executed adversarial acceptance. These are pending candidate identities, not merged or newly scanned packages. The 44 first-party / 826 third-party / 870 total semantic inventory is unchanged. No new scan, behavioral validation, or unchanged-use approval is claimed. [Full historical identity matrix](../docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md).
+**First-party historical security evidence (reconciled 2026-10-29).** At main `713c98fa55d5`, **44/44** package trees and semantic fingerprints matched their recorded identities. The retained October 10 baseline recorded **23 exact-tree PASSED / 20 INCOMPLETE / 1 FAILED**; a separate 44-pass candidate report matches only **23/44** of those package trees, so its other 21 passes cannot transfer. Three disjoint unmerged repair drafts now revise **36 distinct existing first-party skills**: [#489](https://github.com/Knapp-Kevin/skillz/pull/489) **29** (including 8 formerly passing), [#492](https://github.com/Knapp-Kevin/skillz/pull/492) **5** (all formerly passing), and [#496](https://github.com/Knapp-Kevin/skillz/pull/496) **2** (both formerly passing). If all three merge unchanged, **15** historical matching-pass package identities will have changed and only **8** historical matching-pass identities will remain unaffected. All **36 final changed package trees** require fresh pinned external security reports and independent executed adversarial acceptance. These are pending candidate identities, not merged or newly scanned packages. The first-party inventory remains 44; the historical 826 third-party / 870 total checkpoint is superseded by the current counts above. No new scan, behavioral validation, or unchanged-use approval is claimed. [Full historical identity matrix](../docs/reviews/2026-10-29-first-party-security-exact-tree-reconciliation.md).
 
 ## Current architecture
 

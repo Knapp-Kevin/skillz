@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-user-guide
+display_name: Reviewing User Guide
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-user-guide/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: afbbeaa32f2128388e737d8197ecadadf6d24793
+content_blob_sha: 118b10b741fd73ac4588ab843e79cf024a4f2004
+upstream_revision: 9b017244c76ddaae915a822d0e1e3c0305ff7609
+upstream_last_updated_at: 2026-06-15T09:44:17Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream 3-file package: SKILL.md and references/sources.md, references/usability-bar.md; finished artifact and authorized upstream documents; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Read-only 12-condition end-user guide gate judges goal coverage, Diataxis typing, exact UI labels, accessibility, findability and delta staleness. Emits one approve/revise verdict, not a publication or edit. Without supplied product/UI evidence, label accuracy and actual user success remain unvalidated; do not fabricate executed usability evidence."

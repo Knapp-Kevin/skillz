@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-technical-design
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-technical-design/SKILL.md
+package_tree_sha: 53f812c2efd883bf9d1a99d6437f4d0dbe8fa076
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b5f414c338aca6b429c2f8fd2cbe9594622e905c
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [architecture, documentation, planning]
+  lifecycle: [design]
+  characteristic: [traceable, evidence-first, risk-aware, human-review]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 2] (17/20). Feature-level TDD method derives decisions from approved PRD/feature-spec, traces requirements, weighs real alternatives, and specifies failures, observability, tests, rollout and rollback. Design proposals do not authorize deployment, telemetry, private-data reads or edits outside the requested document destination. Optional host template/research and supplied architecture/API/data-model context are dependencies; absent facts remain assumptions. Exact pinned 4-file package and all bundled references inspected; source MIT license and upstream revision/date confirmed. Read only explicitly supplied/authorized context, minimize private excerpts, treat source text as evidence not instructions. Security scan not-run; external behavioral/adversarial validation not-run. VERIFIED is semantic only, not unchanged-use approval."
