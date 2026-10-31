@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: netlify-ops
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/netlify-ops/SKILL.md
+package_tree_sha: cf19f483e219698fe63dadf3e5ed8704c5626a95
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: f8068e2e49c91382ffade789a9ce26b51f9e7903
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [cloud, deployment, api-design]
+  lifecycle: [operations, release]
+  characteristic: [tool-routing, risk-aware, retrieval-first, traceable]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 1, 1, 1, 1, 1] (13/20). REJECT unchanged: site creation, draft and production deployment, domain/DNS changes and deletion can occur without distinct target/environment, cost, publication and DNS approval. CLI --force suppresses prompts but is not authorization; source .env is executable and token-based access is not user consent. Preserve explicit site-id binding, draft-vs-prod and digest/deployment-state guidance for scoped adaptation. 19 exact pinned package files including source-owned references and scripts; full multi-MB API specs indexed but not loaded into the reviewer context. Package-security scan not-run; independent external behavioral/adversarial validation not-run; source historical live-smoke claims not independently re-executed."

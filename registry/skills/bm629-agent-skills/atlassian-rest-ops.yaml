@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: atlassian-rest-ops
+display_name: "Atlassian REST Operations"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/atlassian-rest-ops/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: a15955bf274946156c31483cd77d122fb8f508c2
+content_blob_sha: 4b4d3106a96e2a979438d3f4203d3af8783f7580
+upstream_revision: 81e6a7f05af7a94d154c2c8dcca2d4c84182c00f
+upstream_last_updated_at: 2026-07-01T10:11:47Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "21-file pinned package: two multi-MB Atlassian OpenAPI JSON assets, endpoint index, ADF/credential/pattern references, source-owned Python resolver/converter and shell examples; requires authorized Atlassian Cloud credentials, curl, Python and jq for example writes."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: caller-injected Atlassian account/capability is treated as permission to create, update, transition, delete or permanently purge Jira/Confluence resources without a separate target/action/destructive approval. Project .env sourcing executes shell content and curl Basic-auth arguments can expose tokens in process inspection. Preserve exact endpoint/ADF/pagination and trash-vs-purge reference methods for approved host-scoped adaptation."
