@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: data-lifecycle-review
+display_name: Data Lifecycle Review
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/data-lifecycle-review/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+source_snapshot_revision: 5c30fc53917881c76bfa25e154e0e1b9f8e9b864
+curated_at: 2026-10-10
+last_checked_at: 2026-10-10
+availability: in-repo
+local_path: skills/data-lifecycle-review/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-structured
+dependency_status: self-contained
+dependencies: External host agent for authorized evidence access; no repository-owned tools
+import_eligibility: conditional-on-security-and-user-fit
+rationale: Scope and recipient boundaries, privacy minimization and truthful deletion/export evidence. Host-specific data stores and legal holds require external confirmation.
