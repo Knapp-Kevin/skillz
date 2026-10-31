@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: heartbeat-governor
+display_name: "Heartbeat Governor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/heartbeat-governor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 8bb52374ea77f7a1c2e6aa7f777def3833f2277f
+content_blob_sha: 5d5dc52ffb0c4ef4967fefff4e5c0b4bf4122bfe
+upstream_revision: 6da45d4a3ed05a2448fb556229d2ec80c9b4e2f3
+upstream_last_updated_at: 2026-03-15T18:26:56Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "governor.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; manually recorded run ledgers; no demonstrated OpenClaw scheduler/cancel integration"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Claimed automatic pause/abort/alert enforcement only sets local YAML paused flags and prints notices; no scheduler cancellation, live-run termination or notification transport is implemented. Per-run and wall-clock breaches are logged after a run is recorded. Daily-run breaches print alerts without skipping actual executions. Unapproved recurring monitoring, budget changes and restart state are consequential. Trigger: Design/reference checklist for host-enforced budget and cancellation contracts. Non-trigger: Actual spending protection, live abort, scheduler pause, unattended alerts or autonomous budget updates. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."

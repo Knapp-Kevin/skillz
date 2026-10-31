@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: multi-agent-coordinator
+display_name: "Multi Agent Coordinator"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/multi-agent-coordinator/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: e97b0860f84a623195ac54c2c613e73429675d35
+content_blob_sha: 6ec460fb2b02a9b1917d3fe59715f85982d98ba1
+upstream_revision: 21a77e409ce93465b71e4ef1fd8b641d147ad386
+upstream_last_updated_at: 2026-03-15T05:30:11Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "run.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; manual agent heartbeat and output recording; local YAML handoff registry"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Consistency check compares raw string equality, not semantic contradictions, and state retains raw agent outputs, task context and channel identifiers without audience/retention approval. Health check relies on manually updated timestamps; registration/handoff only mutate local YAML, not real agent sessions. No per-agent authority, recipient or data-minimization boundary. Trigger: Static design of bounded multi-agent handoff and review checkpoints. Non-trigger: Automatic fleet health, semantic agreement, cross-channel private handoff or autonomous reassignment. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."

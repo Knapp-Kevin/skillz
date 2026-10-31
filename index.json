@@ -876,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 981,
-    "total_verification_records": 1025,
+    "persisted_third_party_exact_version_reviews": 989,
+    "total_verification_records": 1033,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -954,11 +954,11 @@
     "openclaw_agent_skills_current_standard_companions": 8,
     "openclaw_agent_skills_current_standard_gaps": 0,
     "archieindian_superpowers_eligible_denominator": 56,
-    "archieindian_superpowers_current_standard_companions": 42,
-    "archieindian_superpowers_current_standard_gaps": 14,
-    "archieindian_superpowers_openclaw_native_current_standard_companions": 25,
+    "archieindian_superpowers_current_standard_companions": 50,
+    "archieindian_superpowers_current_standard_gaps": 6,
+    "archieindian_superpowers_openclaw_native_current_standard_companions": 33,
     "archieindian_superpowers_openclaw_native_eligible_denominator": 38,
-    "archieindian_superpowers_openclaw_native_current_standard_gaps": 13
+    "archieindian_superpowers_openclaw_native_current_standard_gaps": 5
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -2489,5 +2489,53 @@
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-10-31-archie-eight-memory-continuity-dag-static.md"
+  },
+  "archieindian_native_ops_config_eight_static": {
+    "date": "2026-10-31",
+    "source_id": "archieindian-superpowers",
+    "source_role": "tracked-corpus",
+    "source_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+    "eligible_denominator": 56,
+    "core_companions": 17,
+    "openclaw_native_denominator": 38,
+    "native_before": 25,
+    "native_after": 33,
+    "community_companions": 0,
+    "whole_family_before": 42,
+    "whole_family_after": 50,
+    "remaining_gaps": 6,
+    "new_review_pairs": 8,
+    "verified_semantic_only": [],
+    "rejected_unchanged": [
+      "cron-hygiene",
+      "heartbeat-governor",
+      "multi-agent-coordinator",
+      "workflow-orchestration",
+      "openclaw-config-advisor",
+      "config-encryption-auditor",
+      "skill-loadout-manager",
+      "installed-skill-auditor"
+    ],
+    "scores": {
+      "cron-hygiene": "10/20",
+      "heartbeat-governor": "8/20",
+      "multi-agent-coordinator": "11/20",
+      "workflow-orchestration": "11/20",
+      "openclaw-config-advisor": "14/20",
+      "config-encryption-auditor": "10/20",
+      "skill-loadout-manager": "10/20",
+      "installed-skill-auditor": "11/20"
+    },
+    "admitted_denominator_delta": 0,
+    "source_pin_changed": false,
+    "first_party": 44,
+    "third_party_persisted_reviews": 989,
+    "registered_tracked_third_party_reviews": 868,
+    "candidate_only_reviews": 121,
+    "total_verification_records": 1033,
+    "license_terms_issue": 544,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-archie-eight-native-ops-config-static.md"
   }
 }

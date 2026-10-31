@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: config-encryption-auditor
+display_name: "Config Encryption Auditor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/config-encryption-auditor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: adcfabdb9dcdc08d71fd1fcbd909af4a3b500308
+content_blob_sha: 7ee599453a3c47c31a5f1681112c238b473a6842
+upstream_revision: 020bb9a4d88b454d5b07ea07f60587fc98d48a19
+upstream_last_updated_at: 2026-03-15T19:19:43Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "audit.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; recursive OpenClaw credential-file reads; POSIX chmod; local audit history"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Mandatory weekly recursive scanning of private credential-bearing config lacks separately authorized file scope. --fix-permissions chmods files without action-specific approval. SKILL.md recommends real secret literals in shell export examples and a shell profile/.env migration path without secure credential handling; gitignore check is heuristic and does not establish repository exclusion. Preserve non-secret pattern/permissions checklist. Trigger: Owner-authorized static credential-storage review with redacted evidence. Non-trigger: Unapproved secret reads, automatic chmod, pasting actual credentials into chat/shell transcripts or proof of encryption. Pinned source-owned package inspected; no code executed, no vendoring, source license incomplete (#544), package-security and behavioral validation not-run."
