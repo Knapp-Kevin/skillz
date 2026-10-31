@@ -3,6 +3,48 @@
   "snapshot_date": "2026-10-30",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "microsoft_azure_exact_tree_mirror_reconciliation": {
+    "date": "2026-10-30",
+    "microsoft_source_id": "microsoft-skills",
+    "azure_source_id": "microsoft-azure-skills",
+    "microsoft_denominator": 186,
+    "azure_denominator": 34,
+    "exact_mirrored_pairs": 33,
+    "azure_only_packages": 1,
+    "mirrored_package_identity_matches": 33,
+    "mirrored_semantic_disposition_matches": 33,
+    "azure_score_corrections": [
+      {
+        "skill": "appinsights-instrumentation",
+        "before": "13/20",
+        "after": "12/20",
+        "status": "rejected"
+      },
+      {
+        "skill": "azure-ai",
+        "before": "13/20",
+        "after": "10/20",
+        "status": "rejected"
+      },
+      {
+        "skill": "azure-aigateway",
+        "before": "13/20",
+        "after": "8/20",
+        "status": "rejected"
+      }
+    ],
+    "new_review_records": 0,
+    "admitted_denominator_delta": 0,
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 867,
+      "total": 911
+    },
+    "source_pins_changed": false,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "receipt": "docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md"
+  },
   "cloudflare_telemetry_staging_authority_recheck": {
     "date": "2026-10-30",
     "source_id": "cloudflare-skills",

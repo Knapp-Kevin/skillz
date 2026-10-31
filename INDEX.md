@@ -7,6 +7,8 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
+**Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](docs/reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
+
 **Cloudflare 13-package authority recheck (2026-10-30):** 13/13 static companions, now **6 VERIFIED / 7 REJECT unchanged** after two corrections for unapproved production telemetry and staging deployment. [Evidence](docs/reviews/2026-10-30-cloudflare-telemetry-and-staging-authority-13-macro.md). Public totals unchanged.
 
 **Anthropic Skills authority recheck (2026-10-30):** 19/19 exact-version companions, now **8 VERIFIED / 11 REJECT unchanged** after two corrected private-source/evaluation approvals. [Evidence](docs/reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md). Total inventory unchanged.

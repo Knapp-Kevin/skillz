@@ -6,15 +6,15 @@ fingerprint_algorithm: git-tree-sha1
 content_blob_sha: 8a168336305c56e0eea0d89aced7d8a0001de3b5
 skill_md_blob_sha: 6cce5b319f57f98f81772e4c8627c573d89e8571
 characterized_at: 2026-09-05
-last_verified_at: 2026-09-05
+last_verified_at: 2026-10-30
 verification_status: rejected
 verification_basis: structured-static-review
 validation_status: not-run
-rubric_score: 13/20
+rubric_score: 10/20
 tags:
   use_case: [cloud, implementation, research]
   lifecycle: [discovery, implementation, operations]
   characteristic: [reference-heavy, progressive-disclosure, tool-routing]
-  authority: [external-side-effect]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Exact-package review of the Azure AI services guide. Preserve its service-routing table, MCP-first tool map, AI Search and Speech capability summaries, cross-language SDK references, and bundled authentication guidance that prefers managed identity and avoids hardcoded credentials. Reject unchanged under the authority hard fail and sensitive-data discipline because ordinary triggered use can send search queries, audio, text-to-speech inputs, documents/OCR payloads, prompts, or other user data to external Azure services and may incur paid usage without an explicit action-specific authorization checkpoint immediately before transmission or invocation. Behavioral validation remains not-run.
+notes: "Exact-tree mirror reconciliation against Microsoft Skills package 8a168336305c56e0eea0d89aced7d8a0001de3b5 and manifest 6cce5b319f57f98f81772e4c8627c573d89e8571. REJECT unchanged 10/20: bundled Search SDK references include index creation, create-or-update and document upload, while transcription, OCR, speech, translation, vision, Content Safety and model examples can transmit sensitive content to Azure services and incur usage charges without distinct data-owner, destination, mutation, retention, cost and credential-custody approvals. Managed-identity and least-privilege guidance are positive safeguards, not authorization. Preserve service routing, SDK references and authentication patterns as ADAPT/EXTRACT/CHECKLIST prior art. Source pin and package bytes unchanged; behavioral not-run and no security scan."

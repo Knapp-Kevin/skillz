@@ -11,13 +11,13 @@ source_snapshot_revision: 8f8c72bb9e22aee4366e07aadfd5766ef9add8f4
 upstream_revision: 317a8e7b879c0ed6a1890378eafd939bdd9bc749
 upstream_last_updated_at: 2026-04-22
 curated_at: 2026-09-06
-last_checked_at: 2026-09-06
+last_checked_at: 2026-10-30
 availability: pinned-source
 local_path: skills/sources/azure-skills/skills/azure-aigateway
-permission_tier: mutating
-portability: low
+permission_tier: external-ai-gateway-security-and-routing-mutation
+portability: medium
 review_status: rejected
 dependency_status: source-intact
 dependencies: Complete azure-aigateway package tree; Azure CLI; existing Azure API Management and Azure AI resources; bundled policy, configuration-pattern, troubleshooting, authentication, and SDK references
 import_eligibility: rejected-unchanged
-rationale: Exact package review bound to tree fb881f68bdc6d638438b46b04ab6d81f91e985ba and SKILL.md blob a8df9f45fae25501acf7fee988047f808d191fa5. Preserve AI-gateway policy selection, managed-identity guidance, semantic caching, token limits, content safety, load-balancing, MCP protection, and troubleshooting patterns. Reject unchanged because ordinary triggered procedures directly enable APIM managed identity, create RBAC role assignments, create APIM backends, import APIs, and alter gateway policy without a distinct action-specific authorization checkpoint immediately before those consequential mutations. Behavioral validation is not-run.
+rationale: "Exact package tree and manifest match Microsoft Skills. Reconciled Azure score 13/20 to the full-package 8/20 review and authority profile: unapproved APIM identity/RBAC/backend/policy/routing changes, content-safety/rate-control effects, live AI traffic, and a credential-bearing subscription-key listing command. The prior Azure rationale omitted the secret-output defect. REJECT unchanged; preserve gateway architecture only behind scoped identity, security-control, routing, data, cost and credential authority. Behavioral not-run."
