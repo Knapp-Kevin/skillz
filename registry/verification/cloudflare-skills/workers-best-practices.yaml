@@ -5,16 +5,17 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 local_path: skills/sources/cloudflare-skills/skills/workers-best-practices/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: bebd018cdcae1771eacdee30cfb96af3ad3bd936
+package_tree_sha: 7dd384e79c76d3e388dfe53e12e93642679ff1fd
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-authority-recheck-exact-tree
 validation_status: not-run
-rubric_score: 18/20
+rubric_score: 14/20
 tags:
   use_case: [code-review, implementation, security, cloud]
   lifecycle: [implementation, verification]
   characteristic: [retrieval-first, evidence-first, production-oriented, tool-assisted, compatibility-aware]
-  authority: [read-only, mutating]
+  authority: [read-only, mutating, external-side-effect]
   portability: [medium]
-notes: Rubric scores are trigger 2, procedure 2, authority 1, failure 2, evidence 2, dependencies 2, portability 2, usefulness 2, adversarial resilience 1, effectiveness 2. Requires latest best-practice docs and types retrieval, reads full files rather than diffs alone, validates config, bindings and types, flags concrete security and runtime anti-patterns, and asks for line or tool evidence. Mutation is appropriate only when the user requested authoring or fixes; the review path remains read-oriented. Exact pinned fingerprint confirmed. Behavioral validation remains pending.
+notes: "REJECT unchanged (14/20) under the action-specific authority hard fail. Pinned SKILL.md presents enabling observability as a default configuration rule; bundled references/rules.md explicitly directs enabling Workers Logs and Traces before production deployment with logs sampled at 1 and request method/path in structured logs. The review workflow checks observability config but does not require approval of data fields, privacy/retention, sampling/cost, account/environment or transmission before applying that advice. A request to review or author Worker code does not independently authorize new production telemetry. The package also suggests wrangler secret put, which requires separately scoped credential/config mutation. Preserve retrieval-first Workers correctness, streaming, type, crypto and code-review checklists for scoped ADAPT/EXTRACT; do not silently activate logging. Exact pinned manifest/tree and bundled references verified; behavioral validation not-run, no scanner executed."
