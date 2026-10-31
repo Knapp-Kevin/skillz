@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: rest-api-design
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/rest-api-design/SKILL.md
+package_tree_sha: 002793209c06ea6aa5b73239cb56fae1416b1333
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: c4aebf8ec5549c6c523af786d16b8f8555585d04
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [api-design, architecture, documentation]
+  lifecycle: [design, planning]
+  characteristic: [contract-first, compatibility-aware, risk-aware, source-driven]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 2, 2, 1, 1] (18/20). VERIFIED semantic only: Design-only HTTP resource/status/pagination/problem+json/OpenAPI 3.1 contract; does not require calling live APIs, changing deployed auth or publishing a spec. RFC 9110/9457 and OAS 3.1 cited; emerging RateLimit fields are explicitly non-RFC. Five pinned files inspected; scanner/behavioral not-run. Package exact revision and tree bound to source pin; security not-run, external behavioral/adversarial validation not-run, no execution evidence claimed."
