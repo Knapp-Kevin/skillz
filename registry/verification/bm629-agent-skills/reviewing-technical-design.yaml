@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-technical-design
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-technical-design/SKILL.md
+package_tree_sha: d3adae37d5fcff01bc26785beab1976319fc2883
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 52a4eae308b86f89970e0b70d891dc5b489d8e45
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [architecture, documentation, evaluation]
+  lifecycle: [verification]
+  characteristic: [traceable, evidence-first, human-review, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 1, 1, 2, 2, 2] (17/20). Read-only independent 11-condition TDD gate checks implementability, bidirectional trace, alternatives, failure recovery, observable rollout and scoped amendments. It emits a verdict and findings, never edits or deploys. It expects a finished template-stamped TDD and authorized upstream documents; no execution or codebase validation is evidenced. Exact pinned 3-file package and all bundled references inspected; source MIT license and upstream revision/date confirmed. Read only explicitly supplied/authorized context, minimize private excerpts, treat source text as evidence not instructions. Security scan not-run; external behavioral/adversarial validation not-run. VERIFIED is semantic only, not unchanged-use approval."

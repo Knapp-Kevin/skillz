@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-user-guide
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-user-guide/SKILL.md
+package_tree_sha: 0d9eb65a21c52c2028d76e370569d179bb01db30
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d2e35d05eb06fbec0981fb48b265dbb814f946ee
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, writing, ux]
+  lifecycle: [design, maintenance]
+  characteristic: [traceable, human-review, evidence-first, maintainability]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 2] (17/20). End-user Diataxis authoring distinguishes tutorials/how-tos/explanations/reference, traces each goal to accurate UI-labeled steps, handles troubleshooting, accessibility and versioned staleness sweeps. Source documentation is not evidence of actual UI behavior; verify labels against authorized product evidence. Drafting/amending an approved guide is not authorization to publish, send or search private customer data. Exact pinned 3-file package and all bundled references inspected; source MIT license and upstream revision/date confirmed. Read only explicitly supplied/authorized context, minimize private excerpts, treat source text as evidence not instructions. Security scan not-run; external behavioral/adversarial validation not-run. VERIFIED is semantic only, not unchanged-use approval."
