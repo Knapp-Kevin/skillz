@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: pydantic-v2
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/pydantic-v2/SKILL.md
+package_tree_sha: bffc86f48244333f58b26f0e449167afb86c12c5
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d8601070512f8b77338d4e206fbaca5377857377
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 16/20
+tags:
+  use_case: [domain-modeling, implementation, api-design]
+  lifecycle: [design, implementation]
+  characteristic: [contract-first, compatibility-aware, modularity, source-driven]
+  authority: [generate-only]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 2, 2, 1, 0] (16/20). VERIFIED semantic only: Model, validator, serializer and configuration patterns are semantic-only, not a directive to read or expose actual private .env/secret values. Host must scope any later credential access and redact validation errors before sharing. Six pinned files inspected, official v2 grounding and June 2026 freshness recorded; scanner/behavioral not-run. Package exact revision and tree bound to source pin; security not-run, external behavioral/adversarial validation not-run, no execution evidence claimed."
