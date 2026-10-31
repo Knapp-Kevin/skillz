@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: tool-description-optimizer
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/tool-description-optimizer/SKILL.md
+package_tree_sha: 86fc1fe489367e003e6d30f83996470cfcf6dc67
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 75011c638ea9a5f3c469e132313219c8bf41ca4d
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 12/20
+tags:
+  use_case: [skill-authoring, evaluation]
+  lifecycle: [design, verification]
+  characteristic: [metric-driven, iterative]
+  authority: [read-only, mutating]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 1, 1, 1, 1] (12/20). REJECT unchanged. Lexical Jaccard, word-count and verb heuristics do not establish real host trigger precision/recall; grade labels claim expected trigger reliability without behavioral evidence. Suggested rewrites can prepend malformed or exaggerated action verbs, while --scan persists raw descriptions from installed private skills without a bounded access/retention gate. Trigger: Advisory description comparison with independent holdout trigger/non-trigger tests. Non-trigger: Predicted activation accuracy, automatic skill rewrite/publication or quality certification. Exact pinned four-file package reviewed statically; source license unresolved (#544), security scan and external behavioral validation not-run."

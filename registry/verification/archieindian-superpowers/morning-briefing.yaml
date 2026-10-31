@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: morning-briefing
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/morning-briefing/SKILL.md
+package_tree_sha: 9bde74383ea8ccc321d9db8538bdedf4958f842d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 596f9abb055b39b8035dbf38620af45e8e24c77b
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 9/20
+tags:
+  use_case: [productivity, communication]
+  lifecycle: [operations]
+  characteristic: [synthesis, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 0, 2, 1, 1, 1, 1] (9/20). REJECT unchanged. Recurring private task/handoff reads and channel delivery require separate source/account/audience/schedule approval. run.py only prints a briefing and marks it delivered in local state without sending through a messaging channel or receiving a delivery receipt; this creates false delivery assurance and suppresses later attempts. A no-PyYAML fallback flattens nested YAML state. Trigger: User-requested local draft of a daily priority brief from authorized inputs. Non-trigger: Unapproved recurring private-state access, messaging, or verified notification delivery. Exact pinned four-file package reviewed statically; source license unresolved (#544), security scan and external behavioral validation not-run."
