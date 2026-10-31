@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: mcp-health-checker
+display_name: "MCP Health Checker"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/mcp-health-checker/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 09c6452ff00f520b8c0208cc33bbbc5cbbd38fcb
+content_blob_sha: c66abfe85425cfe778bb054faf5e040aa83a1a22
+upstream_revision: 644bf54d2183dd8cb53ef7db455dc774ab2a1217
+upstream_last_updated_at: 2026-03-15T19:27:19Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3 check.py, optional PyYAML, subprocess/urllib, STATE_SCHEMA.yaml and example-state.yaml; private MCP config/env; stdio command spawn or HTTP GET; periodic cron."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. check.py starts configured MCP server commands with inherited/configured environment and performs outbound HTTP probes without per-server execution, network or credential scope authorization. Six-hour cron and persistent health state are assumed; a probe can cause real side effects or private-data disclosure. Trigger: designing MCP observability. Non-trigger: automatically spawning local services, contacting private endpoints or reading credential-bearing config. Upstream MIT grant is incomplete at the registered pin (#544); no vendoring or unchanged-use clearance."

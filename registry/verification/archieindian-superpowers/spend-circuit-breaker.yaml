@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: spend-circuit-breaker
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/spend-circuit-breaker/SKILL.md
+package_tree_sha: 1eb2523224f15e9e47c0ce765d90a0c131a272a7
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 11d9c93f175ed5d1c16a22920360a1b9154dcca6
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 9/20
+tags:
+  use_case: [monitoring, business-operations]
+  lifecycle: [operations]
+  characteristic: [cost-bounded, metric-driven]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 0, 0, 1, 1, 2, 0, 1] (9/20). REJECT unchanged. Claimed hard monthly cap and automatic cron pause are not implemented: check.py merely sets circuit_open and prints a future-work comment, while rescan of any modified JSONL file charges its full historical contents again and may double-count spend. Static March 2026 model prices are stale for billing decisions. No independent approval for recurring private-log access or schedule mutation. Trigger: conceptual spend-risk review. Non-trigger: hard budget enforcement, financial assurances or automatic cron suspension. Exact pinned manifest 11d9c93f175ed5d1c16a22920360a1b9154dcca6, package tree 1eb2523224f15e9e47c0ce765d90a0c131a272a7, bundled source-owned script/schema/example inspected; source license text incomplete (#544), no redistribution clearance. Security scanner and independent behavioral/adversarial validation not-run."

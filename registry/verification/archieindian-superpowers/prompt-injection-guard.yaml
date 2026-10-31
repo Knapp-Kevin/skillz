@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: prompt-injection-guard
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/prompt-injection-guard/SKILL.md
+package_tree_sha: 03c70ea1bf5a205f2fb75fff3b04e7c3af2ae010
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 209d1617b5f39493c866a29e0c1157496456cdb3
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 11/20
+tags:
+  use_case: [security, evaluation]
+  lifecycle: [verification, operations]
+  characteristic: [risk-aware, tool-assisted]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 0, 1, 2, 1, 2, 0, 1] (11/20). REJECT unchanged. Zero regex hits is labeled clean and invites action, an unsound safety clearance. guard.py persists unredacted first-content excerpts and source identifiers for flagged messages; those can contain secrets, sensitive documents or credential-bearing URLs. User override is not permission to obey injected instructions. Trigger: injection risk analysis. Non-trigger: safety certification, automatic processing of private content or persistence of raw excerpts. Exact pinned manifest 209d1617b5f39493c866a29e0c1157496456cdb3, package tree 03c70ea1bf5a205f2fb75fff3b04e7c3af2ae010, bundled source-owned script/schema/example inspected; source license text incomplete (#544), no redistribution clearance. Security scanner and independent behavioral/adversarial validation not-run."

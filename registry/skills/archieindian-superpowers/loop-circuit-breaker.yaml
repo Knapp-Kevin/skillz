@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: loop-circuit-breaker
+display_name: "Loop Circuit Breaker"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/loop-circuit-breaker/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 564e5b81e3ecb4b52db977140d32b0a35f0ca699
+content_blob_sha: eea5c7e13bd2e0c5652b0f7e0ebec1e488c9f3ce
+upstream_revision: fe4763d065681c93963e1bc8e1329c86b90ea9c0
+upstream_last_updated_at: 2026-03-15T05:22:36Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3 check.py, optional PyYAML, STATE_SCHEMA.yaml and example-state.yaml; OpenClaw tool-call error/argument access and persisted session state."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Useful normalized retry-signature concept, but check.py persists first 100 characters of raw tool arguments and first 200 of errors, potentially secrets, URLs or PII, with no redaction or retention authorization. Its TRIP is advisory and depends on host integration; deterministic versus transient heuristics are not reliable proof. Trigger: analyzing repeated tool errors. Non-trigger: automatic sensitive tool-call capture or assured enforcement. Upstream MIT grant is incomplete at the registered pin (#544); no vendoring or unchanged-use clearance."
