@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: using-superpowers
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/core/using-superpowers/SKILL.md
+package_tree_sha: 58cb6c8c88abfde4f1bbd2ae16f6287b3278f83d
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5262a935dbff9ff68ba675d353f3195e6fc61bb8
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 13/20
+tags:
+  use_case: [orchestration, productivity]
+  lifecycle: [discovery, operations]
+  characteristic: [tool-routing, progressive-disclosure]
+  authority: [read-only, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 1, 2, 1, 1] (13/20). REJECT unchanged. One-percent heuristic and 'follow exactly' instruction bypass individual provenance, security and authority gates for downstream skills. Preserve capability discovery, not unconditional invocation. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance. Exact pinned manifest, package tree and bundled source dependencies inspected. Security scanner and independent behavioral/adversarial validation not-run."

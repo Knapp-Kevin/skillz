@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: writing-plans
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/core/writing-plans/SKILL.md
+package_tree_sha: 3785f4552e341ec45ee3ddcd906490ba838f6014
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: bfe88131e0a7d477e2e66fc80c9fe728928c6a1d
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 15/20
+tags:
+  use_case: [planning, documentation]
+  lifecycle: [planning]
+  characteristic: [spec-driven, traceable]
+  authority: [generate-only, mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 2, 2, 1, 1] (15/20). REJECT unchanged. Good plan format, but required durable private memory checkpoints lack destination, retention and approval gates. Retain goal/steps/risks/DoD checklist without automatic persistence. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance. Exact pinned manifest, package tree and bundled source dependencies inspected. Security scanner and independent behavioral/adversarial validation not-run."

@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: project-onboarding
+display_name: "Project Onboarding"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/project-onboarding/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 155e3ef30d3a5f9f2e3e5aec24ce97d180b86a4b
+content_blob_sha: e06ce4040bcfb9022b144056368117a72dc9cef7
+upstream_revision: 778266822e77024779197a57967a592dd15ffad4
+upstream_last_updated_at: 2026-03-15T05:31:57Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Bundled onboard.py (Python3, optional PyYAML), STATE_SCHEMA.yaml, example-state.yaml; reads code, writes PROJECT.md and OpenClaw state."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Private codebase crawl, PROJECT.md/state writes, auto-load and monthly refresh lack read/write/retention/recurrence approval. Python helper reports registration even when missing PyYAML prevents state persistence. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance."

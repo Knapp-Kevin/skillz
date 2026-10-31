@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: test-driven-development
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/core/test-driven-development/SKILL.md
+package_tree_sha: a5f8bc721245984cc630d0e10d4fca9f925950a6
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e0c0df52242a9e2ab86304f70807aceb91ccd471
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 15/20
+tags:
+  use_case: [testing, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [test-driven, incremental]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 2, 2, 1, 1] (15/20). REJECT unchanged. Red-green-refactor is useful, but test execution and code edits have no target/environment/side-effect boundary; tests can mutate live data or external services. Adapt only to approved test scope. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance. Exact pinned manifest, package tree and bundled source dependencies inspected. Security scanner and independent behavioral/adversarial validation not-run."
