@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: skill-doctor
+display_name: "Skill Doctor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/skill-doctor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+license_terms_status: incomplete-pinned-license-issue-544
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: b4ce8bf00403e3308d805e1d0dca2560d5a95a77
+content_blob_sha: c269529b3ecbca332c4ac85fc5c3a7751052f258
+upstream_revision: 36c927a06bfa6ce1d3b747bb4b56d71988ecd84a
+upstream_last_updated_at: 2026-03-15T17:53:13Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "doctor.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; recursive installed skill manifests; cron regex; persisted scan history; suggested install.sh integration"
+package_files: 4
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. A six-check heuristic cannot establish whether a skill will load in the actual host; cron validation uses a five-field shape regex rather than range/scheduler semantics, and without PyYAML the fallback is not a complete YAML parser. The procedure recommends post-install integration and persistent private skill scans without scoped authorization; PASS is falsely described as guaranteed load. Trigger: Owner-scoped frontmatter/schema lint checklist and advisory fix hints. Non-trigger: Verified loader acceptance, install gate, automatic repair or continuous monitoring. Exact four-file pinned package inspected without execution or vendoring. Upstream MIT terms are incomplete (#544); security and behavioral validation not-run."

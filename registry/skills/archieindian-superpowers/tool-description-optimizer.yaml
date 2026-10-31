@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: tool-description-optimizer
+display_name: "Tool Description Optimizer"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/tool-description-optimizer/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+license_terms_status: incomplete-pinned-license-issue-544
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 86fc1fe489367e003e6d30f83996470cfcf6dc67
+content_blob_sha: 75011c638ea9a5f3c469e132313219c8bf41ca4d
+upstream_revision: 775462eda111cd5ee031f5f092b17aa9ddf87357
+upstream_last_updated_at: 2026-03-15T19:23:07Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "optimize.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; installed skill description reads; local Jaccard/lexical heuristics; persistent raw description scores"
+package_files: 4
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Lexical Jaccard, word-count and verb heuristics do not establish real host trigger precision/recall; grade labels claim expected trigger reliability without behavioral evidence. Suggested rewrites can prepend malformed or exaggerated action verbs, while --scan persists raw descriptions from installed private skills without a bounded access/retention gate. Trigger: Advisory description comparison with independent holdout trigger/non-trigger tests. Non-trigger: Predicted activation accuracy, automatic skill rewrite/publication or quality certification. Exact four-file pinned package inspected without execution or vendoring. Upstream MIT terms are incomplete (#544); security and behavioral validation not-run."

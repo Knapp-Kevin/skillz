@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: community-skill-radar
+display_name: "Community Skill Radar"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/community-skill-radar/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+license_terms_status: incomplete-pinned-license-issue-544
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 364c71b3d3ceac19a8679529fcad221d1c167e10
+content_blob_sha: 8a798e789b4c8beed3159368ac64d55063d7b930
+upstream_revision: ada20f513ab5e67e74c4db77dd000b3b28792ccd
+upstream_last_updated_at: 2026-03-15T18:48:42Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "external-side-effect+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "radar.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; public Reddit JSON API; local persistent proposal/state files; cron declared in frontmatter"
+package_files: 4
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. A declared three-day cron and Reddit fetches plus persistent PROPOSALS.md/state writes lack independent schedule, network, storage, source-terms and retention authorization. Popularity/keyword scoring is discovery intelligence, not evidence of skill quality; the code groups by title-derived slugs, not semantic equivalence, and search failures can be silently ignored. Trigger: Owner-scoped, manually authorized discovery and signal triage. Non-trigger: Autonomous source admission, safe-to-install recommendation, automatic issue/skill creation or unattended monitoring. Exact four-file pinned package inspected without execution or vendoring. Upstream MIT terms are incomplete (#544); security and behavioral validation not-run."

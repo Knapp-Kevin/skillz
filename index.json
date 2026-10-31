@@ -876,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 989,
-    "total_verification_records": 1033,
+    "persisted_third_party_exact_version_reviews": 995,
+    "total_verification_records": 1039,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -954,11 +954,14 @@
     "openclaw_agent_skills_current_standard_companions": 8,
     "openclaw_agent_skills_current_standard_gaps": 0,
     "archieindian_superpowers_eligible_denominator": 56,
-    "archieindian_superpowers_current_standard_companions": 50,
-    "archieindian_superpowers_current_standard_gaps": 6,
-    "archieindian_superpowers_openclaw_native_current_standard_companions": 33,
+    "archieindian_superpowers_current_standard_companions": 56,
+    "archieindian_superpowers_current_standard_gaps": 0,
+    "archieindian_superpowers_openclaw_native_current_standard_companions": 38,
     "archieindian_superpowers_openclaw_native_eligible_denominator": 38,
-    "archieindian_superpowers_openclaw_native_current_standard_gaps": 5
+    "archieindian_superpowers_openclaw_native_current_standard_gaps": 0,
+    "archieindian_superpowers_community_current_standard_companions": 1,
+    "archieindian_superpowers_community_eligible_denominator": 1,
+    "archieindian_superpowers_community_current_standard_gaps": 0
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1067,7 +1070,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi final five exact-pin reviews 63/68 -> 68/68, gaps 5 -> 0; 1 VERIFIED semantic only / 4 REJECT unchanged; 5 provenance/verification pairs; 44/933/977 (812 tracked + 121 candidate-only). No scan/behavioral execution, source pin or runtime change.",
+    "latest_reconciliation": "2026-10-31: Archie final six exact-pin static reviews 50/56 -> 56/56 (native 33/38 -> 38/38; community 0/1 -> 1/1); 0 VERIFIED / 6 REJECT unchanged, six provenance/verification pairs; 44/995/1039 (874 tracked + 121 candidate-only), source terms #544 unresolved, security and behavioral not-run. No runtime or source pin change.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -2537,5 +2540,51 @@
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-10-31-archie-eight-native-ops-config-static.md"
+  },
+  "archieindian_final_six_static": {
+    "date": "2026-10-31",
+    "source_id": "archieindian-superpowers",
+    "source_role": "tracked-corpus",
+    "source_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+    "eligible_denominator": 56,
+    "core_companions": 17,
+    "native_denominator": 38,
+    "native_before": 33,
+    "native_after": 38,
+    "community_denominator": 1,
+    "community_before": 0,
+    "community_after": 1,
+    "whole_family_before": 50,
+    "whole_family_after": 56,
+    "remaining_gaps": 0,
+    "new_review_pairs": 6,
+    "verified_semantic_only": [],
+    "rejected_unchanged": [
+      "community-skill-radar",
+      "morning-briefing",
+      "skill-compatibility-checker",
+      "skill-doctor",
+      "tool-description-optimizer",
+      "obsidian-sync"
+    ],
+    "scores": {
+      "community-skill-radar": "11/20",
+      "morning-briefing": "9/20",
+      "skill-compatibility-checker": "11/20",
+      "skill-doctor": "12/20",
+      "tool-description-optimizer": "12/20",
+      "obsidian-sync": "9/20"
+    },
+    "admitted_denominator_delta": 0,
+    "source_pin_changed": false,
+    "first_party": 44,
+    "third_party_persisted_reviews": 995,
+    "registered_tracked_third_party_reviews": 874,
+    "candidate_only_reviews": 121,
+    "total_verification_records": 1039,
+    "license_terms_issue": 544,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-archie-final-six-static.md"
   }
 }
