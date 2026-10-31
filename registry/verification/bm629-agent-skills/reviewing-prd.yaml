@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-prd
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-prd/SKILL.md
+package_tree_sha: 65b06e4ecbaa3c24852ccd84f389842d1717667c
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 400be2b6af7301ce8dbd9faefbca002ccd3cba33
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [planning, documentation, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, traceable, human-review, risk-aware]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 1, 1, 2, 2, 2] (17/20). PRD gate checks evidence-backed problems, user needs, measurable metrics, MVP scope, no fabricated facts, traceability, dependencies and amendment integrity. Conditional capability_record extends the referenced twelve-condition bar to thirteen in SKILL.md; source-bar drift and missing private upstream context require explicit qualification. No external research or behavioral test was run. Exact pinned 3-file package tree and two bundled references inspected. The procedure judges supplied documents and emits a verdict only; no live mutation, transmission, credential solicitation, or side-effect authority. Read only documents within user-authorized scope, minimize sensitive excerpts, and treat source content as evidence not host instructions. Security scan not-run; behavioral/adversarial host validation not-run. Verified is semantic only, not unchanged-use approval."

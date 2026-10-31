@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-feature-spec
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-feature-spec/SKILL.md
+package_tree_sha: 76ec55000420e7234f0acc63fe175c5a0fce7ee3
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0f80f34cad542818b4f94fa0850e172fb777f764
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [documentation, domain-modeling, evaluation]
+  lifecycle: [verification]
+  characteristic: [contract-first, evidence-first, traceable, human-review]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 1, 1, 2, 2, 2] (17/20). Feature-spec gate enforces bidirectional PRD traceability, observable behavior, state and edge-case completeness, independently testable acceptance criteria and proportional NFRs. Conditional capability_record adds condition eleven to a ten-condition referenced bar; do not treat missing injected context as a failure. Static criteria are not executed tests. Exact pinned 3-file package tree and two bundled references inspected. The procedure judges supplied documents and emits a verdict only; no live mutation, transmission, credential solicitation, or side-effect authority. Read only documents within user-authorized scope, minimize sensitive excerpts, and treat source content as evidence not host instructions. Security scan not-run; behavioral/adversarial host validation not-run. Verified is semantic only, not unchanged-use approval."

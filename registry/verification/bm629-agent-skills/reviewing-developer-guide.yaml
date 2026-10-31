@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-developer-guide
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-developer-guide/SKILL.md
+package_tree_sha: 5a5f4daf6bfd52a9987f36cd774542916302bcea
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e03ef02d32aa5a473957156eaac5f75c22f6a70f
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [documentation, api-design, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, contract-first, human-review, traceable]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 2, 2] (18/20). Developer-guide gate separates adoption narrative from API reference, checks verifiable sandbox-first setup, current runnable samples, troubleshooting and upstream accuracy. Review is document-only; it does not execute sample code or obtain credentials. Missing upstream contract must be disclosed, not silently passed; host must not run sample integrations against live systems without authorization. Exact pinned 3-file package tree and two bundled references inspected. The procedure judges supplied documents and emits a verdict only; no live mutation, transmission, credential solicitation, or side-effect authority. Read only documents within user-authorized scope, minimize sensitive excerpts, and treat source content as evidence not host instructions. Security scan not-run; behavioral/adversarial host validation not-run. Verified is semantic only, not unchanged-use approval."
