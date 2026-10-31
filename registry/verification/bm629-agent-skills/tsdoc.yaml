@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: tsdoc
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/tsdoc/SKILL.md
+package_tree_sha: 7e360ed596676729f7ea1bfceedb5947e0d52cbb
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 123a31589b6ff1b0411d1adb154af85b5058d404
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 18/20
+tags:
+  use_case: [documentation, writing, implementation]
+  lifecycle: [implementation, verification]
+  characteristic: [maintainability, source-driven, progressive-disclosure, human-review]
+  authority: [mutating]
+  portability: [high]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 2, 2, 1, 1] (18/20). VERIFIED semantic only: Semantic-only convention for requested public TypeScript doc-comments; avoids generated/private trivial comments and treats eslint-plugin-tsdoc/CI as an explicit optional tradeoff. Editing remains limited to approved files; no external side effects required. Four pinned files inspected; scanner/behavioral not-run. Package exact revision and tree bound to source pin; security not-run, external behavioral/adversarial validation not-run, no execution evidence claimed."

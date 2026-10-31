@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 899,
-    "total_verification_records": 943,
+    "persisted_third_party_exact_version_reviews": 907,
+    "total_verification_records": 951,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 34,
-    "bm629_agent_skills_current_standard_gaps": 34
+    "bm629_agent_skills_current_standard_companions": 42,
+    "bm629_agent_skills_current_standard_gaps": 26
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi four paired document gates, 18/68 -> 26/68, gaps 50 -> 42; eight new exact-pin provenance/verification pairs; current 44/891/935. Semantic-only; no security/behavioral execution, admission, source-pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi eight engineering/contract exact-pin reviews, 34/68 -> 42/68, gaps 34 -> 26; 3 semantic-only verified / 5 rejected unchanged; eight new provenance/verification pairs; current 44/907/951 (786 tracked + 121 candidate-only). No security/behavioral execution, admission, pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1839,6 +1839,99 @@
         "package_tree": "b7639c7f769bdcb61289dc759f8833e553a3e76a",
         "package_files": 5,
         "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_eight_engineering_contract_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_companions": 34,
+    "current_companions": 42,
+    "gaps_before": 34,
+    "gaps_after": 26,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 8,
+    "verified_semantic_only": 3,
+    "rejected_unchanged": 5,
+    "security_and_behavioral": "not-run",
+    "persisted_third_party_reviews": 907,
+    "total_verification_records": 951,
+    "receipt": "docs/reviews/2026-10-31-bm629-eight-engineering-contract-static.md",
+    "reviewed": [
+      {
+        "name": "alembic",
+        "manifest_blob": "50d2e7ed22613a1f9430e36acab39307b2c72dd0",
+        "package_tree": "3765d356907809b3bf8081179128dbffab51a111",
+        "package_files": 3,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "biome",
+        "manifest_blob": "36fcd5f2fe6a8f3a0b1b4bbbb4cc7427350ecc30",
+        "package_tree": "02bd7de9d872ce30b6cd48b4586fa182a4f56ec3",
+        "package_files": 6,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "pydantic-v2",
+        "manifest_blob": "d8601070512f8b77338d4e206fbaca5377857377",
+        "package_tree": "bffc86f48244333f58b26f0e449167afb86c12c5",
+        "package_files": 6,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "sqlalchemy",
+        "manifest_blob": "1445a5405b7257d0b93fb9a9635a0a566ff71f14",
+        "package_tree": "ad3081070ce33401a1cf986876b4fe85745ce7c4",
+        "package_files": 3,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "tanstack-router",
+        "manifest_blob": "b26e6433177044cba8aee233aa8aec67296f4285",
+        "package_tree": "7e9885065b1cd0a675d11af62c3053950f80c21a",
+        "package_files": 7,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "tsdoc",
+        "manifest_blob": "123a31589b6ff1b0411d1adb154af85b5058d404",
+        "package_tree": "7e360ed596676729f7ea1bfceedb5947e0d52cbb",
+        "package_files": 4,
+        "score": 18,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "typescript-typecheck",
+        "manifest_blob": "85539f4ca93bb8d2455960f9f72314b707e14cbd",
+        "package_tree": "1b8e6f0dd454d782364f34ca030d856b78df9ef5",
+        "package_files": 6,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "rest-api-design",
+        "manifest_blob": "c4aebf8ec5549c6c523af786d16b8f8555585d04",
+        "package_tree": "002793209c06ea6aa5b73239cb56fae1416b1333",
+        "package_files": 5,
+        "score": 18,
         "status": "verified",
         "behavioral": "not-run"
       }

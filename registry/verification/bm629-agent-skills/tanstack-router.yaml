@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: tanstack-router
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/tanstack-router/SKILL.md
+package_tree_sha: 7e9885065b1cd0a675d11af62c3053950f80c21a
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b26e6433177044cba8aee233aa8aec67296f4285
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [implementation, ux, security]
+  lifecycle: [implementation, verification]
+  characteristic: [contract-first, test-driven, tool-assisted, risk-aware]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 1, 0] (14/20). REJECT unchanged: Unchanged workflow installs dependencies and rewrites routing/authentication boundaries, potentially enabling private data loaders, without separately approved app/security scope. beforeLoad guard and memory-history tests are useful adaptation methods, not approval. Forge references rely partly on search summaries rather than full official pages; exact API freshness requires check. Seven pinned files inspected; scanner/behavioral not-run. Package exact revision and tree bound to source pin; security not-run, external behavioral/adversarial validation not-run, no execution evidence claimed."

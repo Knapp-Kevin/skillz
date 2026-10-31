@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: sqlalchemy
+display_name: "SQLAlchemy 2.x ORM"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/sqlalchemy/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: ad3081070ce33401a1cf986876b4fe85745ce7c4
+content_blob_sha: 1445a5405b7257d0b93fb9a9635a0a566ff71f14
+upstream_revision: 133031fdbacb57f14e6ae1b73558464017ccfa8b
+upstream_last_updated_at: 2026-06-11T10:46:45Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned package: SQLAlchemy 2.0/2.1, SQLite/PostgreSQL/MySQL drivers, optional async drivers; Alembic and sql-job-queue siblings; 2 bundled references."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: prescribed create_all, session writes and live database queries lack a separate approved target/environment/data scope; placeholder password URLs must not become logged real credentials. Dialect-specific locking/upsert and short-lived transaction patterns remain useful."
