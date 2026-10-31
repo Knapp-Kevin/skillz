@@ -87,10 +87,10 @@ This is the living evidence ledger for ongoing `skillz` corpus curation. The rep
 - **44** first-party user-facing skills, **44/44** provenance-complete.
 - **12** pinned upstream reference corpora under `skills/sources/`.
 - **22** unique registered source identities.
-- **940** persisted exact-version third-party verification companions (819 registered/tracked plus 121 candidate-only, not admitted).
+- **995** persisted exact-version third-party verification companions (**874** registered/tracked plus **121** candidate-only, not admitted); **1,039** total matching provenance/verification pairs including 44 first-party.
 - Broad **500+** first-party + pinned external reference surface.
 
-Historical source-level review evidence remains broader than the one-file companion shelf for some completed corpora. Recover compatible prior evidence before fresh re-review.
+Historical source-level review evidence and dated tranche counters remain useful prior art, but the current exact-version companion counts above control. Recover compatible prior evidence before any re-review of a genuine future gap.
 
 ## Curation and admission model
 
