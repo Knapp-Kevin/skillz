@@ -5,16 +5,17 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 local_path: skills/sources/cloudflare-skills/skills/sandbox-migrate-to-next/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 745bcc5655dec3b690d6df4c31141a2b46a6d4c3
+package_tree_sha: 6653491197cd99b53582df12eca6b51dcf1e60a1
 characterized_at: 2026-08-29
-last_verified_at: 2026-08-29
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-authority-recheck-exact-tree
 validation_status: not-run
-rubric_score: 20/20
+rubric_score: 16/20
 tags:
   use_case: [cloud, implementation, deployment, refactoring]
   lifecycle: [implementation, verification, release]
   characteristic: [compatibility-aware, retrieval-first, test-gated, human-review, safety-bounded, evidence-first, risk-aware]
   authority: [mutating, external-side-effect]
   portability: [low]
-notes: Rubric scores are 2 in all ten dimensions. Exact package-line gate, explicit stop points for user decisions, no forced production cutover, immediate-rollout reasoning for incompatible protocols, secret handling, error distinctions, anti-invention rules, grep, type and smoke validation, and post-cutover checks form a complete migration control loop. Exact pinned fingerprint confirmed. Behavioral validation remains pending.
+notes: "REJECT unchanged (16/20) under the action-specific external-state authority hard fail. The migration workflow correctly requires user agreement before production cutover, but its Deploy cutover phase instructs staging/branch first and shows npx wrangler deploy --containers-rollout=immediate without an independent target-account/environment and staging-deployment approval. Its validation checklist requires production used immediate rollout even when the user requested only a local code port, risking an implied deployment obligation. Production consent is a valuable safeguard but does not authorize a separate staging deployment or infer consent to deploy from permission to edit code. Preserve exact package/image compatibility, process lifetime, secret handling, explicit production decision, rollback/cutover reasoning and smoke tests for scoped ADAPT/CHECKLIST. Exact pinned manifest/tree unchanged; behavioral validation not-run, no scanner executed."

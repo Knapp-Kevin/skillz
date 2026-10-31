@@ -11,13 +11,15 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 upstream_revision: 426c3b406b3d3ef2ad3ca9bc2d3f41dd5be32ba0
 upstream_last_updated_at: 2026-02-12T20:50:56Z
 curated_at: 2026-08-29
-last_checked_at: 2026-08-29
-availability: vendored
+last_checked_at: 2026-10-30
+behavioral_validation: not-run
+availability: vendored-reference-only
 local_path: skills/sources/cloudflare-skills/skills/workers-best-practices/SKILL.md
-permission_tier: mutate-on-explicit-user-request
+package_tree_sha: 7dd384e79c76d3e388dfe53e12e93642679ff1fd
+permission_tier: review-or-author-with-separate-telemetry-and-secret-mutation-approval
 portability: medium
-review_status: verified-structured
+review_status: rejected-unchanged-authority
 dependency_status: source-intact-current-docs-and-types-required
 dependencies: Bundled review/rules references; current Cloudflare Workers docs; latest @cloudflare/workers-types; project Wrangler config schema; TypeScript and lint tooling for validation where available
-import_eligibility: already-vendored
-rationale: Strong Workers authoring and review skill with current-reference retrieval, concrete security and concurrency anti-patterns, config/type validation, full-file review guidance, and evidence-backed findings. Cloudflare and tooling specificity is explicit.
+import_eligibility: reference-extract-adapt-only
+rationale: REJECT unchanged at the exact pinned tree. The parent quick reference and bundled rules instruct enabling Workers Logs/Traces, including full request sampling and request path logging, before production deployment without a separate account, privacy/data-field, sampling/cost, retention or telemetry activation authorization boundary. Secret-put guidance likewise requires scoped authority. Keep strong retrieval-first code correctness, types, streaming and security review methods for scoped adaptation/checklists. Upstream bytes unchanged; no scanner or behavioral validation.
