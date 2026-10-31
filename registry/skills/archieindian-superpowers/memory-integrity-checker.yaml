@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: memory-integrity-checker
+display_name: "Memory Integrity Checker"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/memory-integrity-checker/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 233795a9dc0831c3b660274ed93947fe77d63522
+content_blob_sha: 31fa0c97b12f97abd22a48764c42c8c8300f6ff8
+upstream_revision: 713969588c5154d48a0e207794a21d5d3d440299
+upstream_last_updated_at: 2026-03-16T19:27:00Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "integrity.py; STATE_SCHEMA.yaml; example-state.yaml; memory-dag-compactor state.yaml; optional PyYAML; weekly cron"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged 10/20. The ORPHAN_NODE check labels any valid depth>0 root without a parent as HIGH orphan, contradicting the compactor's active higher-depth roots. --check writes persistent finding state; --fix deactivates stale nodes and mutates the DAG without independent authorization or backup. Auto-fixable HIGH findings are excluded by severity, despite repair-plan listing. Preserve check taxonomy with corrected root semantics. Trigger: Static DAG integrity checklist and repair-plan critique. Non-trigger: Unapproved weekly audits, private-state reads, auto-deactivation or assurance that eight checks establish integrity. Pinned source-owned package inspected, no scripts run. Upstream MIT-labeled grant incomplete (#544); no vendoring, scanner or behavioral approval."

@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: memory-graph-builder
+display_name: "Memory Graph Builder"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/memory-graph-builder/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: b5dbf16d284459a8ed194d00a3bf3b09e6ccf3c6
+content_blob_sha: 0868901c4d1fa6909108e27b483947db89ef695b
+upstream_revision: 734359b3b21cc4f48a63ce99b932b772fa6bbbfa
+upstream_last_updated_at: 2026-03-15T19:31:42Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "graph.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; OpenClaw root MEMORY.md (differs from compactor workspace/MEMORY.md); nightly cron"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged 8/20. Unapproved nightly private-memory graph/digest persistence and --prune destructive MEMORY.md rewrite. graph.py resets added_at and last_referenced to now and is_stale to false on every build, so advertised staleness detection cannot work. Heuristic lexical contradiction and token-saving claims are unvalidated; digest can omit evidence. Preserve graph/dedup ideas as checklist. Trigger: Static evaluation of memory graph construction and duplicate review. Non-trigger: Autonomous prune, private-memory ingestion, digest injection or claim of proven staleness/30-60% savings. Pinned source-owned package inspected, no scripts run. Upstream MIT-labeled grant incomplete (#544); no vendoring, scanner or behavioral approval."

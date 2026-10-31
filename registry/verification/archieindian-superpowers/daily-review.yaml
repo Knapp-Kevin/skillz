@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: daily-review
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/daily-review/SKILL.md
+package_tree_sha: 8249127ff5aaa9cf2550eb2602792cc0f1d6ec82
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9d38af8c91df2ab9659137294526bac9413f6316
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 13/20
+tags:
+  use_case: [productivity, memory]
+  lifecycle: [maintenance]
+  characteristic: [traceable, synthesis]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 1, 2, 1, 1] (13/20). REJECT unchanged. Daily-review outline is useful, but scheduled weekday runs and writes to private daily/durable memory and task state have no independent recurrence, data-access, retention or delivery authorization. A proposed review is not permission to persist user preferences or mark work done. Preserve opt-in review template. Trigger: User-authorized end-of-day retrospective. Non-trigger: Automatic recurring reviews, unapproved memory writes or unsupported completion claims. Complete pinned package static-reviewed; package-security and external behavioral validation not-run; source terms unresolved (#544)."

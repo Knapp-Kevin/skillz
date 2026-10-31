@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: large-file-interceptor
+display_name: "Large File Interceptor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/large-file-interceptor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 78a687ecc49f1719a6ffc0e9c0f685257dc3dc4a
+content_blob_sha: e4799430144593ac285760857b59abb35e154825
+upstream_revision: 82ada8c3e8a57de298ab37467e9acf7b49257a08
+upstream_last_updated_at: 2026-03-16T19:18:22Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "intercept.py; STATE_SCHEMA.yaml; example-state.yaml; optional PyYAML; recursive filesystem read/copy; ~/.openclaw/lcm-files/"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged 9/20. Recursive scanning includes .env, private logs, CSV PII and other sensitive content; copies full plaintext into a second durable store without access, retention or deletion gates. Structural JSON/CSV summaries and --restore can print secret/PII values. Token savings are heuristic and not measured host usage. Preserve redacted structural-preview method only. Trigger: Scoped structural inspection of an authorized oversized file. Non-trigger: Automatic recursive private scanning, plaintext duplication, unredacted preview/export or claimed actual token savings. Pinned source-owned package inspected, no scripts run. Upstream MIT-labeled grant incomplete (#544); no vendoring, scanner or behavioral approval."

@@ -1,0 +1,36 @@
+# Archie Indian Superpowers: eight memory-continuity and DAG exact-pin reviews (2026-10-31)
+
+## Live macro map and boundaries
+
+Starting main `8880f73451d1c7b141a743cdc6d95d165c801db0`. The registered tracked source at `a95a59d221d44b89d4fc27a52934e24fb2060ddb` contains **56** canonical front-mattered SKILL.md packages: **17 core, 38 OpenClaw-native, 1 community**. The pinned source tree has no extra first-class nested aliases or symlinks. Before this tranche **34/56** exact-version provenance/verification pairs (17 core, 17 native, 0 community) existed; **22** genuine gaps remained. These eight are previously unreviewed native paths, disjoint from five first-party draft PRs. Their complete package trees contain **24 source-owned files** (four 4-file packages and four 2-file packages). The external source's root MIT text is incomplete (#544), so this remains tracked/reference-only with no vendoring or redistribution clearance.
+
+The remaining gap macro map after this tranche is **14**: 13 native packages spanning recurring orchestration/notifications, configuration and credential review, skill discovery/installation/compatibility, plus the one community Obsidian synchronization package. Common exposure paths: OpenClaw private workspace, durable YAML state, memory and task files, optional PyYAML, recurring cron, and Python helper scripts. No duplicates are counted as separate eligible packages.
+
+## Individual exact-version decisions
+
+| Package | SKILL.md Git blob | Full package tree | Latest pinned package commit/date (UTC) | Static decision |
+|---|---|---|---|---|
+| `memory-dag-compactor` | `b32130879be6bc75f0a397d35f4ed4be477a8227` | `92cf0a1dd5735e8aa8d4333136b1aa0e0b5e7108` | `01afdbc4fcce5517217545c196f2ba8e20348c63` / 2026-03-16T19:13:17Z | REJECT 10/20 |
+| `memory-graph-builder` | `0868901c4d1fa6909108e27b483947db89ef695b` | `b5dbf16d284459a8ed194d00a3bf3b09e6ccf3c6` | `734359b3b21cc4f48a63ce99b932b772fa6bbbfa` / 2026-03-15T19:31:42Z | REJECT 8/20 |
+| `memory-integrity-checker` | `31fa0c97b12f97abd22a48764c42c8c8300f6ff8` | `233795a9dc0831c3b660274ed93947fe77d63522` | `713969588c5154d48a0e207794a21d5d3d440299` / 2026-03-16T19:27:00Z | REJECT 10/20 |
+| `agent-self-recovery` | `599cffb1a7f1c3c4975e21f5d32dda4c18c57a5c` | `a80ed0e46eb529651f0465a9a484b505e9326ba1` | `a46504ccebb66603cc51a589b0e1ccaa0eea09df` / 2026-03-15T02:52:23Z | REJECT 14/20 |
+| `large-file-interceptor` | `e4799430144593ac285760857b59abb35e154825` | `78a687ecc49f1719a6ffc0e9c0f685257dc3dc4a` | `82ada8c3e8a57de298ab37467e9acf7b49257a08` / 2026-03-16T19:18:22Z | REJECT 9/20 |
+| `long-running-task-management` | `db2868177339843f2f9d1d8d8fbff310138633e8` | `777880e454c4f87393aadf718c17721ea06becc5` | `a46504ccebb66603cc51a589b0e1ccaa0eea09df` / 2026-03-15T02:52:23Z | REJECT 13/20 |
+| `task-handoff` | `bc751cd62a780e63383df1e2f40d59034068c8f7` | `e1c57cf65f6d035d112d64de6bbeab2468e3182e` | `a46504ccebb66603cc51a589b0e1ccaa0eea09df` / 2026-03-15T02:52:23Z | REJECT 14/20 |
+| `daily-review` | `9d38af8c91df2ab9659137294526bac9413f6316` | `8249127ff5aaa9cf2550eb2602792cc0f1d6ec82` | `a46504ccebb66603cc51a589b0e1ccaa0eea09df` / 2026-03-15T02:52:23Z | REJECT 13/20 |
+
+Each package has its own provenance and ten-axis semantic verification companion, canonical path, exact source pin, package-tree and manifest fingerprints, upstream revision/date, source-owned dependency characterization, controlled tags, trigger/non-trigger boundary, authority/side effects, portability, decisive rationale and explicit `not-run` scanner/behavioral states. These are **static reviewer judgments**, not observed host behavior.
+
+## Macro synthesis
+
+1. **False memory fidelity and freshness:** `memory-dag-compactor/compact.py` uses deterministic truncation of 10/8 lines and 200/150-character arcs, not LLM depth-aware summarization; raw MEMORY.md is preserved but summary content is lossy. `memory-graph-builder/graph.py` resets all nodes' `added_at`/`last_referenced` to now and `is_stale` to false each build, making its advertised stale detection ineffective. Its duplicate and contradiction detection is lexical, not validated semantic inference. The compactor reads `workspace/MEMORY.md` while the graph builder reads root `MEMORY.md`, an unacknowledged source-identity mismatch.
+2. **Broken integrity oracle:** `memory-integrity-checker/integrity.py` flags legitimate active higher-depth DAG roots as HIGH `ORPHAN_NODE` because it assumes only depth-0 nodes may be roots. `--check` writes findings state; `--fix` mutates the DAG and deactivates stale nodes without independent approval. Repair-plan `auto_fixable` also disagrees with severity-limited actual fix behavior. The eight named checks do not establish validated memory correctness.
+3. **Private persistence and destructive state:** Graph building stores full private memory nodes and writes a digest for future prompt injection; `--prune` rewrites MEMORY.md. The large-file interceptor recursively scans files including `.env`, logs and CSV, duplicates full plaintext into `~/.openclaw/lcm-files/`, and emits unredacted structural samples and restored content. No source-scope, consent, access, retention, deletion or disclosure boundary is established.
+4. **Recurring and task-authority creep:** `long-running-task-management` suggests commits and 15-minute cron, `daily-review` schedules weekday private-memory writes, `agent-self-recovery` logs attempted approaches persistently, and `task-handoff` writes/deletes potentially sensitive task documents. These are host-side operations, not repo-owned machinery, but unchanged procedures lack independent per-action authorization. Checklists and redacted opt-in handoff/recovery templates remain useful.
+5. **Evidence honesty:** Source examples are examples, not observed acceptance. Claimed 30-60% token savings, staleness, lossless recall, and test passing were not independently measured. All external behavioral and package-security states remain `not-run`. Preserve useful DAG lineage, manual integrity checklist, context-budget heuristics and bounded task checkpoints as adaptation material.
+
+## Atomic accounting and lifecycle
+
+Archie **34/56 → 42/56**, native **17/38 → 25/38**, core **17/17**, community **0/1**, gaps **22 → 14** (13 native + community); admitted/source denominator delta **0**. Eight new provenance and eight verification companions. Public **44 first-party / 973 → 981 third-party / 1017 → 1025 total**; registered/tracked **852 → 860**, candidate-only **121** unchanged. All five public accounting surfaces reconciled from exact tree evidence. No source pin, admission, upstream package, repo-owned runtime, script, CI, scanner, scheduler or generator changed.
+
+All eight pre-existing issues remain held for their actual evidence/merge dependencies; #544 requires upstream license clarification. Existing drafts #489/#492/#496 still need complete pinned external SkillSpector v2.12.0 reports and independent executed adversarial acceptance for **36** final changed first-party trees, followed by shared registry reconciliation; #412/#413 retain separate admission gates. No draft qualified for merge or closure. Discovery/source-vetting delta zero. Next priority: external first-party qualification; while blocked, continue the remaining native orchestration/config/skill tooling tranche.
