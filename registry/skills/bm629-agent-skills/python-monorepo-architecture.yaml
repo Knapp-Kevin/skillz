@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: python-monorepo-architecture
+display_name: "Python Monorepo Architecture"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/python-monorepo-architecture/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 77b12775b99c4723a096644828cff21605dd8548
+content_blob_sha: 34207dda20999f9df29233ef56007e9cbd6e7163
+upstream_revision: 96bb2f22b06e9675a95864be34245c50112a3222
+upstream_last_updated_at: 2026-06-08T18:08:36Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: mutating
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned package; uv workspace and pyproject.toml member wiring, Python src-layout, pytest, optional import-linter/CI contract, worked extraction example."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: the architecture guidance escalates into moving modules, rewriting import/dependency topology and recommending CI import-linter enforcement without an explicit separately authorized change scope and target. Green tests do not authorize repository restructuring. Preserve DAG direction, public API boundaries and safety-net-first extraction as architecture CHECKLIST/ADAPT."

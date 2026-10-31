@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-release-runbook
+display_name: "Reviewing Release Runbook"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-release-runbook/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: d8438637eb10eb509c3f5e557c4b95b4f04cecd8
+content_blob_sha: b99beebeea91a93446987a9326d43bd287a274f6
+upstream_revision: da8e11c755c46f2063e68b92e2b068a2dff137b1
+upstream_last_updated_at: 2026-06-15T08:05:01Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned review package; supplied release runbook and available architecture/technical-design/test-plan upstreams, two bundled references; no execution or outbound research required."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only as a read-only document gate: 11 proportional conditions check per-step evidence, rollback completeness, secrets, unverifiable commands and delta-scoped amendments. The literal approve/revise verdict is document quality only, not deployment authorization or executed validation; missing upstreams must be reported, not assumed. Security and behavioral acceptance not-run."

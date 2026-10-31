@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: skill-forge
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/skill-forge/SKILL.md
+package_tree_sha: 2ab7f7b0deae9a7604b60431e31a6b2670026ad4
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 676f43f384cd5e2bcb8e1ae1b524aa6169baf825
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [skill-authoring, research, agent-development]
+  lifecycle: [discovery, implementation]
+  characteristic: [source-driven, progressive-disclosure, human-review, orchestration]
+  authority: [external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 1, 1, 1, 1, 1] (13/20). REJECT unchanged: a generic knowledge gap triggers web disclosure, script execution, persistent creation/improvement of auto-loaded skills and optional agent-instruction-file append without an independent approval for network, code execution, destination, persistence or authority. Popularity threshold is not quality. Preserve source-first research, anti-injection, provenance, versioning and review rubric as EXTRACT/ADAPT, never an automatic repository skill writer. 6 exact pinned package files, including bundled references, characterized at registered source pin. Security scan not-run; independent external behavioral/adversarial validation not-run; no execution evidence claimed."

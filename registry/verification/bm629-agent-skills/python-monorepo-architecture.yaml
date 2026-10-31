@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: python-monorepo-architecture
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/python-monorepo-architecture/SKILL.md
+package_tree_sha: 77b12775b99c4723a096644828cff21605dd8548
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 34207dda20999f9df29233ef56007e9cbd6e7163
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [architecture, refactoring, implementation]
+  lifecycle: [design, implementation]
+  characteristic: [modularity, behavior-preserving, maintainability, test-gated]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 1, 1, 1] (14/20). REJECT unchanged: the architecture guidance escalates into moving modules, rewriting import/dependency topology and recommending CI import-linter enforcement without an explicit separately authorized change scope and target. Green tests do not authorize repository restructuring. Preserve DAG direction, public API boundaries and safety-net-first extraction as architecture CHECKLIST/ADAPT. 3 exact pinned package files, including bundled references, characterized at registered source pin. Security scan not-run; independent external behavioral/adversarial validation not-run; no execution evidence claimed."
