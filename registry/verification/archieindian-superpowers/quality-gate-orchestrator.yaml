@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: quality-gate-orchestrator
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/quality-gate-orchestrator/SKILL.md
+package_tree_sha: 9d5dd90c05ac4c29926a21ed1aad04d9975775c4
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: e1cdb43dba9dba5d4f02e4d63e82ae92e2c24d7d
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 13/20
+tags:
+  use_case: [evaluation, testing, release]
+  lifecycle: [verification, release]
+  characteristic: [test-gated, traceable, evidence-first]
+  authority: [mutating]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 2, 2, 0, 1] (13/20). REJECT unchanged as a release-readiness gate. gate.py accepts caller-recorded pass with no executed evidence and required-gate waived with only a note, then reports ready=true; default empty gate set is ready. Waiver authority and exact command/revision evidence are absent, so it can launder unexecuted tests into completion approval. Useful checklist and status tracking can be extracted as advisory only. Trigger: planning validation gates. Non-trigger: proof of test execution or release authorization. Exact pinned manifest e1cdb43dba9dba5d4f02e4d63e82ae92e2c24d7d, package tree 9d5dd90c05ac4c29926a21ed1aad04d9975775c4, bundled source-owned script/schema/example inspected; source license text incomplete (#544), no redistribution clearance. Security scanner and independent behavioral/adversarial validation not-run."

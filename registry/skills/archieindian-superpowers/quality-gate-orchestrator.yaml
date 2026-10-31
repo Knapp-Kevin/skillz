@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: quality-gate-orchestrator
+display_name: "Quality Gate Orchestrator"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/quality-gate-orchestrator/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 9d5dd90c05ac4c29926a21ed1aad04d9975775c4
+content_blob_sha: e1cdb43dba9dba5d4f02e4d63e82ae92e2c24d7d
+upstream_revision: 18d87bc942313f756a81367caedb62aafcfc5ac7
+upstream_last_updated_at: 2026-04-17T03:22:49Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3 gate.py and standard-library JSON state in .yaml file; STATE_SCHEMA.yaml and example-state.yaml; commands are metadata only and not executed by this helper."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged as a release-readiness gate. gate.py accepts caller-recorded pass with no executed evidence and required-gate waived with only a note, then reports ready=true; default empty gate set is ready. Waiver authority and exact command/revision evidence are absent, so it can launder unexecuted tests into completion approval. Useful checklist and status tracking can be extracted as advisory only. Trigger: planning validation gates. Non-trigger: proof of test execution or release authorization. Upstream MIT grant is incomplete at the registered pin (#544); no vendoring or unchanged-use clearance."

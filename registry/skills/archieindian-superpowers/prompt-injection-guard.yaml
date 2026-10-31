@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: prompt-injection-guard
+display_name: "Prompt Injection Guard"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/prompt-injection-guard/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 03c70ea1bf5a205f2fb75fff3b04e7c3af2ae010
+content_blob_sha: 209d1617b5f39493c866a29e0c1157496456cdb3
+upstream_revision: f80bb4f8f93cca3bfd740d119423c42d2daae1d9
+upstream_last_updated_at: 2026-03-15T04:31:18Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3 guard.py, optional PyYAML, regex-based SIGNALS, STATE_SCHEMA.yaml and example-state.yaml; input from untrusted web/email/doc/tool content and persistent local scan log."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Zero regex hits is labeled clean and invites action, an unsound safety clearance. guard.py persists unredacted first-content excerpts and source identifiers for flagged messages; those can contain secrets, sensitive documents or credential-bearing URLs. User override is not permission to obey injected instructions. Trigger: injection risk analysis. Non-trigger: safety certification, automatic processing of private content or persistence of raw excerpts. Upstream MIT grant is incomplete at the registered pin (#544); no vendoring or unchanged-use clearance."

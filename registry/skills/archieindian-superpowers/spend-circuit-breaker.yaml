@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: spend-circuit-breaker
+display_name: "Spend Circuit Breaker"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/spend-circuit-breaker/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 1eb2523224f15e9e47c0ce765d90a0c131a272a7
+content_blob_sha: 11d9c93f175ed5d1c16a22920360a1b9154dcca6
+upstream_revision: 52814f79075e4afee9dc44a14009ed2bbd25a646
+upstream_last_updated_at: 2026-03-15T04:33:10Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3 check.py, optional PyYAML, local ~/.openclaw/sessions/*.jsonl, model-price table, cron scheduling and host install.sh integration; STATE_SCHEMA.yaml and example-state.yaml."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Claimed hard monthly cap and automatic cron pause are not implemented: check.py merely sets circuit_open and prints a future-work comment, while rescan of any modified JSONL file charges its full historical contents again and may double-count spend. Static March 2026 model prices are stale for billing decisions. No independent approval for recurring private-log access or schedule mutation. Trigger: conceptual spend-risk review. Non-trigger: hard budget enforcement, financial assurances or automatic cron suspension. Upstream MIT grant is incomplete at the registered pin (#544); no vendoring or unchanged-use clearance."

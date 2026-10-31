@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: expansion-grant-guard
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/expansion-grant-guard/SKILL.md
+package_tree_sha: 123c6ba57f253b154482d308cbc12f12763603f8
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 237064fe8cb6007e7ffda35d44cb773a6e657e3c
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 12/20
+tags:
+  use_case: [orchestration, security, context-management]
+  lifecycle: [operations]
+  characteristic: [cost-bounded, traceable, risk-aware]
+  authority: [mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 1, 2, 1, 2, 0, 1] (12/20). REJECT unchanged. guard.py issues arbitrary scope grants from caller parameters without validating a user's or parent's authority, signed issuer, audience or delegated resource boundary; consuming skills only cooperate voluntarily. Ledger is JSON despite YAML description and is not protected against concurrent lost updates. Trigger: studying delegation accounting. Non-trigger: issuing genuine access rights, reading private session data or invoking tools. Preserve bounded TTL/budget model as prior art. Exact pinned manifest 237064fe8cb6007e7ffda35d44cb773a6e657e3c, package tree 123c6ba57f253b154482d308cbc12f12763603f8, bundled source-owned script/schema/example inspected; source license text incomplete (#544), no redistribution clearance. Security scanner and independent behavioral/adversarial validation not-run."
