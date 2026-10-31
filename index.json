@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 907,
-    "total_verification_records": 951,
+    "persisted_third_party_exact_version_reviews": 915,
+    "total_verification_records": 959,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 42,
-    "bm629_agent_skills_current_standard_gaps": 26
+    "bm629_agent_skills_current_standard_companions": 50,
+    "bm629_agent_skills_current_standard_gaps": 18
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-31: Bhushan Modi eight engineering/contract exact-pin reviews, 34/68 -> 42/68, gaps 34 -> 26; 3 semantic-only verified / 5 rejected unchanged; eight new provenance/verification pairs; current 44/907/951 (786 tracked + 121 candidate-only). No security/behavioral execution, admission, pin change or runtime.",
+    "latest_reconciliation": "2026-10-31: Bhushan Modi four prior-art author/reviewer pairs, eight exact-pin reviews, 42/68 -> 50/68, gaps 26 -> 18; 3 semantic-only verified / 5 rejected unchanged; eight provenance/verification pairs; current 44/915/959 (794 tracked + 121 candidate-only). No scanner/behavioral execution, admission, pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1932,6 +1932,99 @@
         "package_tree": "002793209c06ea6aa5b73239cb56fae1416b1333",
         "package_files": 5,
         "score": 18,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_four_prior_art_pairs_eight_static": {
+    "date": "2026-10-31",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_companions": 42,
+    "current_companions": 50,
+    "gaps_before": 26,
+    "gaps_after": 18,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 8,
+    "verified_semantic_only": 3,
+    "rejected_unchanged": 5,
+    "security_and_behavioral": "not-run",
+    "persisted_third_party_reviews": 915,
+    "total_verification_records": 959,
+    "receipt": "docs/reviews/2026-10-31-bm629-four-prior-art-pairs-eight-static.md",
+    "reviewed": [
+      {
+        "name": "market-competitive-prior-art-survey",
+        "manifest_blob": "539d47d4955fb2c61757c92ec2cdf4a48dbccb6a",
+        "package_tree": "19ae8ef60d343e98b87251882b3fee43dd4a64e6",
+        "package_files": 34,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "security-prior-art-survey",
+        "manifest_blob": "6f3ef55746091e11ff6dc551c650e51c59e881ff",
+        "package_tree": "9fc0b727a136f259e89951959f31b8ffb2ab1696",
+        "package_files": 38,
+        "score": 13,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "user-research-prior-art-survey",
+        "manifest_blob": "b118c3444df28405daf2d8ab579f25e5d49cc8f6",
+        "package_tree": "58b99e47ae4a87129df0c010c0381b5726aadc68",
+        "package_files": 33,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "visual-prior-art-survey",
+        "manifest_blob": "58733bbe85649aeaf43aaf8ef4038f8f2602aea8",
+        "package_tree": "c40f497f9f84c177a6173d361b1326b7eb1778ea",
+        "package_files": 33,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-market-competitive-prior-art-survey",
+        "manifest_blob": "0e25ffc9dda7f201cd5f5e57b59f94975d5ee961",
+        "package_tree": "bdc125640ab6cf80b5763c5a95c390546c825202",
+        "package_files": 8,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-security-prior-art-survey",
+        "manifest_blob": "aa485661439350792d60b5b629ba99f8970f2448",
+        "package_tree": "52d41dd93ba2a3d6fcbd4de9f3b17291b11663ee",
+        "package_files": 3,
+        "score": 14,
+        "status": "rejected",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-user-research-prior-art-survey",
+        "manifest_blob": "69de5c70be0157135ab0583a5df7563c0b25bc99",
+        "package_tree": "29f648fb0896e3725ae7aa1723bc2a994957aded",
+        "package_files": 8,
+        "score": 15,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-visual-prior-art-survey",
+        "manifest_blob": "486b46a834f737abeab0af708bcfcc993225d197",
+        "package_tree": "4423cf0c8bec7df25c58e2b88baaa46ce707c14f",
+        "package_files": 13,
+        "score": 15,
         "status": "verified",
         "behavioral": "not-run"
       }

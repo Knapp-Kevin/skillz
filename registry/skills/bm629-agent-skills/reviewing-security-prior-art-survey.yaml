@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-security-prior-art-survey
+display_name: "Reviewing Security Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-security-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 52d41dd93ba2a3d6fcbd4de9f3b17291b11663ee
+content_blob_sha: aa485661439350792d60b5b629ba99f8970f2448
+upstream_revision: b37ff1bb0b4acee9f9c0282c0fc15f563f683f11
+upstream_last_updated_at: 2026-08-03T12:37:17Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "3-file pinned reviewer: 38-condition bar and provenance reference; co-installed security-prior-art-survey producer validator, schemas, source registry, angle briefs and original scope/map; optional live corpus probes."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: mandatory independent live spot-checks can repeat confidential threat/architecture-derived search queries to external sources without separate scope-disclosure approval; degradation can still emit approve while significant live or scope-fit conditions are not assessed. Keep deterministic-first, no-false-revise and evidence-tier checks as adapted reviewer material; source forge metadata says unreviewed and no external validation is claimed."

@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: user-research-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/user-research-prior-art-survey/SKILL.md
+package_tree_sha: 58b99e47ae4a87129df0c010c0381b5726aadc68
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: b118c3444df28405daf2d8ab579f25e5d49cc8f6
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research, ux]
+  lifecycle: [discovery, planning]
+  characteristic: [evidence-first, source-driven, retrieval-map, traceable, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 0, 1] (14/20). REJECT unchanged: external literature queries are generated from supplied user populations, tasks and product scope without an explicit private/sensitive-context disclosure gate. It correctly excludes conducting participant studies and requires published full-text method evidence; however wave-2 extract/synthesis claims conflict with the wave-1-only activation text. Preserve source-versus-finding identity, independent-study convergence and honest access/throttle accounting. 33 exact pinned package files characterized by tree and manifest identity; upstream tools/fixtures are source-owned evidence only. Security scan not-run; external behavioral/adversarial validation not-run; no execution evidence claimed."

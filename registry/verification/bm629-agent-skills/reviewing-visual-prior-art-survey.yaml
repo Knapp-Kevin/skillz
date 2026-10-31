@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-visual-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-visual-prior-art-survey/SKILL.md
+package_tree_sha: 4423cf0c8bec7df25c58e2b88baaa46ce707c14f
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 486b46a834f737abeab0af708bcfcc993225d197
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, ux, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, human-review, traceable, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 1, 1, 1, 0] (15/20). VERIFIED semantic only for wave-1 map/search acceptance: checks actual cited convention, normative-versus-descriptive authority, screenshot terms and honest zero-hit cells. Body says both 40 and 27 conditions and excludes wave 2 despite description and reference covering it; do not use unchanged for wave-2 review. No external behavioral execution. 13 exact pinned package files characterized by tree and manifest identity; upstream tools/fixtures are source-owned evidence only. Security scan not-run; external behavioral/adversarial validation not-run; no execution evidence claimed."

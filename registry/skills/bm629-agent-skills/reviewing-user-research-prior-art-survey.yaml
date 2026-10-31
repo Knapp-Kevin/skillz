@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-user-research-prior-art-survey
+display_name: "Reviewing User Research Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-user-research-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 29f648fb0896e3725ae7aa1723bc2a994957aded
+content_blob_sha: 69de5c70be0157135ab0583a5df7563c0b25bc99
+upstream_revision: a9d444a5780502ee4e6dbc54b8c4009627803005
+upstream_last_updated_at: 2026-08-05T16:56:39Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "8-file pinned reviewer: 7 bundled reference/fixture files including 40-condition bar; co-installed producer validator, source registry, schemas and vocabulary map; no independent participant studies."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only for wave-1 map/search acceptance: requires source-method and full-text admission, preserves thin-but-honest results and avoids re-probing throttled corpora. The body says 27 conditions and excludes wave 2 although the authoritative reference contains 40 including extract/synthesis; wave-2 unchanged routing is not supported. No validator or behavioral execution here."

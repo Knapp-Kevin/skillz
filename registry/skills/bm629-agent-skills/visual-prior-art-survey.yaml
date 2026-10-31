@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: visual-prior-art-survey
+display_name: "Visual Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/visual-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: c40f497f9f84c177a6173d361b1326b7eb1778ea
+content_blob_sha: 58733bbe85649aeaf43aaf8ef4038f8f2602aea8
+upstream_revision: 54dfdb05fbefc10ae5a7ab6beebce778af24826f
+upstream_last_updated_at: 2026-08-07T07:05:39Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "33-file pinned package: 16 references, 4 schemas, 12 source-owned scripts/fixtures; Python 3 with PyYAML/jsonschema; documented design systems, ARIA APG/WCAG/platform standards and reviewer conditions; excludes screenshot galleries."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: maps potentially private product screen/components into external queries without a disclosure/minimization authorization gate; four procedures are described but only two are activated. Preserve documentation-only research, design-system token fidelity, accessibility authority/prescriptivity distinction and screenshot-gallery terms discipline."

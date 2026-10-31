@@ -1,6 +1,8 @@
 # System State
 
-**Current summary (2026-10-31):** 44 first-party skills, 907 persisted third-party exact-version reviews, 951 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-31):** 44 first-party skills, 915 persisted third-party exact-version reviews, 959 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+
+**Bhushan Modi prior-art author/reviewer tranche (2026-10-31):** Eight genuine exact-pin gaps across market, security, published-user-research and documented-visual-convention pairs. **3 VERIFIED semantic only / 5 REJECT unchanged**; tracked **42/68 → 50/68**, gaps **26 → 18**. Four producer query-disclosure gates fail, the security reviewer has an unapproved live-probe boundary, and three reviewers have wave-2 trigger drift. Eight provenance + eight verification companions; security/behavioral `not-run`. Current **44 first-party / 915 third-party / 959 total** (794 registered/tracked + 121 candidate-only). [Prior-art macro](reviews/2026-10-31-bm629-four-prior-art-pairs-eight-static.md).
 
 **Bhushan Modi engineering/contract tranche (2026-10-31):** Eight genuine exact-pin gaps reviewed: Alembic, Biome, Pydantic v2, SQLAlchemy, TanStack Router, TSDoc, TypeScript typecheck, REST API design. **3 VERIFIED semantic only / 5 REJECT unchanged**; tracked **34/68 → 42/68**, gaps **34 → 26**. Eight new provenance + eight verification companions; all security/behavioral `not-run`. Current **44 first-party / 907 third-party / 951 total** (786 registered/tracked + 121 candidate-only). [Engineering macro](reviews/2026-10-31-bm629-eight-engineering-contract-static.md).
 
@@ -25,8 +27,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **907** (786 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **951** |
+| **Persisted third-party review companions** | **915** (794 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **959** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |

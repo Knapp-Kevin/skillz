@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: reviewing-user-research-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/reviewing-user-research-prior-art-survey/SKILL.md
+package_tree_sha: 29f648fb0896e3725ae7aa1723bc2a994957aded
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 69de5c70be0157135ab0583a5df7563c0b25bc99
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [research, ux, evaluation]
+  lifecycle: [verification]
+  characteristic: [evidence-first, human-review, traceable, risk-aware]
+  authority: [read-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 2, 2, 2, 1, 1, 1, 0] (15/20). VERIFIED semantic only for wave-1 map/search acceptance: requires source-method and full-text admission, preserves thin-but-honest results and avoids re-probing throttled corpora. The body says 27 conditions and excludes wave 2 although the authoritative reference contains 40 including extract/synthesis; wave-2 unchanged routing is not supported. No validator or behavioral execution here. 8 exact pinned package files characterized by tree and manifest identity; upstream tools/fixtures are source-owned evidence only. Security scan not-run; external behavioral/adversarial validation not-run; no execution evidence claimed."
