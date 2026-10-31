@@ -23,16 +23,17 @@ Write a standup entry — did, doing, blocked — assembled entirely from eviden
 
 1. **Bind the workspace.** Discover the bound workspace root(s) — the directory(ies) whose git repos supply the evidence — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions. If none is discoverable, ask once and offer to persist the answer for future runs.
 2. **Set the window.** Default is since yesterday's workday start; if a previous standup exists in the project's notes or memory files, use its timestamp instead.
-3. **Collect git evidence** with local git commands across the bound repos: `git log --all --since=<window> --author=<user> --oneline` per repo, plus `git status` for uncommitted work in progress. Group commits by repo and by theme, not one bullet per commit.
-4. **Collect task and calendar evidence.** Diff task lists or memory files for state changes (done, started, dropped). Pull the window's meetings from the Google Calendar MCP tools — meetings attended are legitimate "did" items.
+3. **Collect git evidence** through the authorized host's repository tools or local git when available across the bound repos: `git log --all --since=<window> --author=<user> --oneline` per repo, plus `git status` for uncommitted work in progress. Group commits by repo and by theme, not one bullet per commit.
+4. **Collect authorized task and calendar evidence.** Read only the task lists, memory files, and meeting metadata the operator has allowed for this report. Use a connected calendar tool when available and authorized, without assuming a particular MCP integration. A scheduled future run needs its own continuing access grant. Missing or inaccessible sources become disclosed coverage gaps, not inferred meetings or accomplishments.
 5. **Draft did / doing / blocked.** "Did" comes from commits, closed tasks, and meetings. "Doing" comes from open branches, uncommitted changes, and in-progress tasks. "Blocked" only from explicit evidence (a task marked blocked, a commit message saying so) or the user's own words.
 6. **Verify against the evidence rule.** Every line must trace to a commit, task change, or event. If the git trail is ambiguous — e.g. commits on a branch whose purpose is unclear — ask the user rather than guessing a narrative.
 7. **Present** in the Output Format below.
 
-## Scheduling
+## Optional host-managed scheduling
 
-- **Claude Code:** use `/schedule` to create a weekday-morning routine that drafts the standup before the meeting, or `/loop` for an in-session interval.
-- **Other agent platforms:** a scheduled automation whose instruction is "Run the standup-writer skill and post the entry."
+- Default to a one-time draft. A weekday routine or report delivery is not implied by asking for a standup.
+- Before an authorized external host creates recurrence, obtain separate explicit approval of frequency/timezone, future repo/task/calendar access scope, delivery destination and recipients, retention, applicable cost, and pause/revocation method. Posting or notifying recipients requires its own authorization.
+- Without an approved scheduler or continuing data-access grant, provide a reusable standup prompt and mark scheduling `not configured`.
 
 ## Output Format
 
@@ -56,5 +57,5 @@ Write a standup entry — did, doing, blocked — assembled entirely from eviden
 ## Notes
 
 - Evidence-only rule: never pad the standup with plausible-sounding work the trail does not show. An honest short standup beats an embellished one.
-- Git data comes from local git commands; calendar comes from the connected Google Calendar MCP tools — never raw API calls.
+- Use the host's legitimately available git/repository and calendar capabilities, not mandatory local CLI or Google Calendar MCP assumptions. State missing evidence explicitly.
 - Read-only: this skill produces text for the user to post. If posting to Slack is requested, prepare the message via the Slack MCP tools as a draft and send only with explicit approval.

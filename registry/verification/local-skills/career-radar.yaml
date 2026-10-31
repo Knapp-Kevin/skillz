@@ -3,19 +3,19 @@ skill_name: career-radar
 source_id: local-skills
 local_path: "skills/career-radar/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a17f9b53b9ed22c2cd4f715effd73ec7585a316b
+content_blob_sha: 35e211d098f4497568beca3999ecf250a46183c5
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No matching external behavioral/adversarial execution was performed for this revised exact manifest; state remains not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
   use_case: [career, research, monitoring]
   lifecycle: [discovery]
   characteristic: [retrieval-first, source-driven, synthesis, evidence-first]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [medium]
-notes: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+notes: "Dated public market scan with approved profile scope, minimized search disclosure, untrusted posting boundaries, no automatic profile persistence and separate recurrence approval. Security qualification is not established for this changed exact version."

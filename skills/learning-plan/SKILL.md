@@ -24,14 +24,16 @@ Produce a learning plan a real week can survive: a goal pinned to the operator's
 2. **Build the curriculum from real sources.** Select named docs, books, and courses. Verify each exists via web search before including it — confirm title, author/publisher, and that it covers what the plan claims. Never invent a title, and drop anything that cannot be confirmed.
 3. **Set the weekly cadence.** Map sources to weeks sized to the time budget. Every week gets a concrete checkpoint: build X, or explain Y without notes. "Read chapter 3" is an activity, not a checkpoint.
 4. **Define checkpoint pass criteria.** For each checkpoint, state what passing looks like specifically enough that the operator can self-grade (the thing runs; the explanation covers these three ideas).
-5. **Pair with a schedule.** Propose the weekly check-in (see Scheduling) so review is automatic rather than willpower-dependent.
+5. **Offer an optional check-in.** Propose a weekly checkpoint review, but do not create a recurring host schedule from a request for a learning plan. Recurrence, future context access, and delivery are separate actions requiring specific authorization.
 6. **Write the slip protocol.** State what to do when a week slips: compress (cut optional material), shift (push everything one week), or re-scope (shrink the goal) — and which signal picks which. A slipped checkpoint means the plan adjusts; it is never silently skipped.
 7. **Present** in the Output Format below.
 
-## Scheduling
+## Optional host-managed scheduling
 
-- **Claude Code:** create a weekly `/schedule` check-in that asks whether this week's checkpoint passed, and applies the slip protocol when it didn't.
-- The check-in reviews against checkpoints, not hours logged — output over attendance.
+- Default to a one-time learning plan and a manually reusable check-in prompt. No scheduling capability is required to use this skill.
+- Before creating a recurring check-in in an authorized external host, obtain separate explicit approval of frequency, timezone, start/end or cancellation terms, exact future information sources and private-data scope, report destination/recipients, retention, and any cost. Confirm how the user can inspect, pause, or revoke it.
+- If the host lacks an authorized scheduling capability, provide the check-in prompt as a handoff; never claim that a schedule was created.
+- The check-in evaluates demonstrated checkpoints, not hours logged.
 
 ## Output Format
 
@@ -58,5 +60,5 @@ Produce a learning plan a real week can survive: a goal pinned to the operator's
 
 - Sources must be real and verified via web search; a plan citing an invented book is worse than no plan.
 - Checkpoints are demonstrable artifacts or from-memory explanations — never "finished reading".
-- Read-only: this skill produces the plan document. Creating the actual `/schedule` routine or sharing the plan happens only with explicit operator approval.
+- The one-shot plan is read-only. Scheduling, sharing, future private-data access, and persistent storage are separate host actions; a request for a plan is not permission for them.
 - For build-from-scratch goals, draw candidate tutorials from codecrafters-io/build-your-own-x (curated, CC0-claimed link index) - still verify each linked source individually before inclusion.

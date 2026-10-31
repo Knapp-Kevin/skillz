@@ -7,9 +7,9 @@ source_path: skills/hf-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: dd82725a191c264e46437270d2559efb5b165feb
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/hf-pulse/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,5 @@ portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
-rationale: "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Public-only default for connected HF retrieval; private and gated data require separate scope approval. Exact-version static review only; security and behavioral validation are separate."

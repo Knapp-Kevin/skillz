@@ -7,15 +7,15 @@ source_path: skills/career-radar/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 27d7327d88251156436624f58327897a7aa585fd
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/career-radar/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+dependencies: "External host web search/fetch and optional approved professional profile context; optional approved host scheduling"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Dated public market scan with approved profile scope, minimized search disclosure, untrusted posting boundaries, no automatic profile persistence and separate recurrence approval."

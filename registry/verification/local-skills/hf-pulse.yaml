@@ -3,11 +3,11 @@ skill_name: hf-pulse
 source_id: local-skills
 local_path: "skills/hf-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: de2d55b632e88deaa71aa145cf83293f5877381a
+content_blob_sha: 2862f7f9c0e8d07bae7e68bb64f1edfb9f8a3044
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_basis: "individual-structured-static-review-2026-10-26"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
@@ -16,6 +16,11 @@ tags:
   use_case: [monitoring, research]
   lifecycle: [discovery]
   characteristic: [source-driven, retrieval-first, synthesis, tool-routing]
-  authority: [read-only]
+  authority: [read-only, external-side-effect]
   portability: [high]
 notes: "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+passive_runner_remediation: Removed nonexistent repository runner invocation; collection is external-host-driven, with source provenance and authorization preserved. Static wording check only; behavioral validation not-run. Previously scanned package identity does not transfer to this changed blob.
+
+review_note_2026_10_26: "Exact-version source-window and host-boundary review; see docs/reviews/2026-10-26-pulse-source-query-and-privacy-review.md. Semantic VERIFIED 16/20; behavioral validation not-run; final pinned package-security assessment not-run and previous scans do not transfer."
+
+review_note_2026_10_29_recurrence: "Exact-version static delta review: optional external-host recurrence now requires separately approved cadence, future data scope, recipients, retention, costs, expiry and revocation; no host execution or security scan. Prior semantic score retained; behavioral validation not-run."
