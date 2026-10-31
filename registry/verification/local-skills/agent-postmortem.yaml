@@ -3,13 +3,13 @@ skill_name: agent-postmortem
 source_id: local-skills
 local_path: "skills/agent-postmortem/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: fb8777d18a27a89f47f9e8a022385b480d49f7c0
+content_blob_sha: 6c467bf07e3817404410614a25d98d34879dc718
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No representative host-executed behavioral or adversarial evidence for this exact revision; not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "19/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, decomposition, traceable, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+notes: "Earliest-determining-point analysis retained. Transcript/log/cost access now requires session-scoped approval, retrieved logs are untrusted, report distribution is separate, and secret fragments are prohibited."
