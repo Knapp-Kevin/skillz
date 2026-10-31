@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: memory-integrity-checker
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/memory-integrity-checker/SKILL.md
+package_tree_sha: 233795a9dc0831c3b660274ed93947fe77d63522
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 31fa0c97b12f97abd22a48764c42c8c8300f6ff8
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 10/20
+tags:
+  use_case: [memory, evaluation]
+  lifecycle: [verification, maintenance]
+  characteristic: [traceable, risk-aware]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 1, 2, 1, 2, 0, 1] (10/20). REJECT unchanged. The ORPHAN_NODE check labels any valid depth>0 root without a parent as HIGH orphan, contradicting the compactor's active higher-depth roots. --check writes persistent finding state; --fix deactivates stale nodes and mutates the DAG without independent authorization or backup. Auto-fixable HIGH findings are excluded by severity, despite repair-plan listing. Preserve check taxonomy with corrected root semantics. Trigger: Static DAG integrity checklist and repair-plan critique. Non-trigger: Unapproved weekly audits, private-state reads, auto-deactivation or assurance that eight checks establish integrity. Complete pinned package static-reviewed; package-security and external behavioral validation not-run; source terms unresolved (#544)."

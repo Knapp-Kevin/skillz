@@ -1,0 +1,22 @@
+schema_version: 1
+skill_name: memory-graph-builder
+source_id: archieindian-superpowers
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+source_path: skills/openclaw-native/memory-graph-builder/SKILL.md
+package_tree_sha: b5dbf16d284459a8ed194d00a3bf3b09e6ccf3c6
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 0868901c4d1fa6909108e27b483947db89ef695b
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+package_security_scan: not-run
+rubric_score: 8/20
+tags:
+  use_case: [memory, context-management]
+  lifecycle: [operations, maintenance]
+  characteristic: [retrieval-first, traceable]
+  authority: [read-only, mutating, external-side-effect]
+  portability: [low]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 1, 0, 0, 0, 2, 1, 1, 0, 1] (8/20). REJECT unchanged. Unapproved nightly private-memory graph/digest persistence and --prune destructive MEMORY.md rewrite. graph.py resets added_at and last_referenced to now and is_stale to false on every build, so advertised staleness detection cannot work. Heuristic lexical contradiction and token-saving claims are unvalidated; digest can omit evidence. Preserve graph/dedup ideas as checklist. Trigger: Static evaluation of memory graph construction and duplicate review. Non-trigger: Autonomous prune, private-memory ingestion, digest injection or claim of proven staleness/30-60% savings. Complete pinned package static-reviewed; package-security and external behavioral validation not-run; source terms unresolved (#544)."

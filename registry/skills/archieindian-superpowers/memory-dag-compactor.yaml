@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: memory-dag-compactor
+display_name: "Memory Dag Compactor"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/openclaw-native/memory-dag-compactor/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 92cf0a1dd5735e8aa8d4333136b1aa0e0b5e7108
+content_blob_sha: b32130879be6bc75f0a397d35f4ed4be477a8227
+upstream_revision: 01afdbc4fcce5517217545c196f2ba8e20348c63
+upstream_last_updated_at: 2026-03-16T19:13:17Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "read-only+mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "compact.py; STATE_SCHEMA.yaml; example-state.yaml; PyYAML (optional but persistence fails without it); OpenClaw workspace/MEMORY.md; nightly cron"
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged 10/20. Nightly private MEMORY.md ingestion and persistent DAG writes lack consent, retention and recurrence scope. compact.py uses deterministic text slicing (10 lines/200 or 150 characters), not the claimed depth-aware LLM prompts or lossless summaries; entry IDs and child deactivation can mask omitted details. Preserve source-linked hierarchical summary design, not unchanged execution. Trigger: Opt-in design review of hierarchical memory summarization. Non-trigger: Unapproved nightly processing, private memory reads, state writes or lossless-recall claims. Pinned source-owned package inspected, no scripts run. Upstream MIT-labeled grant incomplete (#544); no vendoring, scanner or behavioral approval."
