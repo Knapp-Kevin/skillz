@@ -198,7 +198,7 @@ sources:
     license: MIT
     upstream_copyright: Copyright (c) 2026 openclaw-superpowers contributors
     pinned_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
-    rationale: Community OpenClaw superpowers corpus (56 skills) tracked for selective curation; LICENSE read at pinned revision is standard MIT despite API NOASSERTION detection. Admitted via issue #70 with the secrets-hygiene skill individually reviewed.
+    rationale: Community OpenClaw superpowers corpus (56 skills) tracked for selective curation; Pinned LICENSE declares MIT but is only a 259-byte opening grant missing standard notice/disclaimer clauses; API NOASSERTION. Terms and redistribution require upstream clarification (#544). Tracked reference only, no vendoring or automatic unchanged-use clearance. Admitted via issue #70 with the secrets-hygiene skill individually reviewed.
 
   - id: agentskills-spec
     name: Agent Skills Specification

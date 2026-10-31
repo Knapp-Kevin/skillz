@@ -876,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 948,
-    "total_verification_records": 992,
+    "persisted_third_party_exact_version_reviews": 957,
+    "total_verification_records": 1001,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -954,8 +954,8 @@
     "openclaw_agent_skills_current_standard_companions": 8,
     "openclaw_agent_skills_current_standard_gaps": 0,
     "archieindian_superpowers_eligible_denominator": 56,
-    "archieindian_superpowers_current_standard_companions": 9,
-    "archieindian_superpowers_current_standard_gaps": 47
+    "archieindian_superpowers_current_standard_companions": 18,
+    "archieindian_superpowers_current_standard_gaps": 38
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -2255,8 +2255,18 @@
     "after_companions": 9,
     "remaining_gaps": 47,
     "new_review_pairs": 8,
-    "verified_semantic_only": ["skill-effectiveness-auditor", "verification-before-completion"],
-    "rejected_unchanged": ["fact-check-before-trust", "skill-conflict-detector", "skill-portability-checker", "skill-trigger-tester", "skill-vetting", "systematic-debugging"],
+    "verified_semantic_only": [
+      "skill-effectiveness-auditor",
+      "verification-before-completion"
+    ],
+    "rejected_unchanged": [
+      "fact-check-before-trust",
+      "skill-conflict-detector",
+      "skill-portability-checker",
+      "skill-trigger-tester",
+      "skill-vetting",
+      "systematic-debugging"
+    ],
     "admitted_denominator_delta": 0,
     "first_party": 44,
     "third_party_persisted_reviews": 948,
@@ -2299,5 +2309,42 @@
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-10-31-openclaw-final-two-static.md"
+  },
+  "archieindian_core_planning_execution_nine_static": {
+    "date": "2026-10-31",
+    "source_id": "archieindian-superpowers",
+    "source_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+    "source_role": "tracked-corpus",
+    "eligible_denominator": 56,
+    "core_denominator": 17,
+    "core_before": 8,
+    "core_after": 17,
+    "whole_family_before": 9,
+    "whole_family_after": 18,
+    "remaining_gaps": 38,
+    "new_review_pairs": 9,
+    "verified_semantic_only": [
+      "brainstorming",
+      "pull-request-feedback-loop"
+    ],
+    "rejected_unchanged": [
+      "create-skill",
+      "executing-plans",
+      "project-onboarding",
+      "subagent-driven-development",
+      "test-driven-development",
+      "using-superpowers",
+      "writing-plans"
+    ],
+    "admitted_denominator_delta": 0,
+    "first_party": 44,
+    "third_party_persisted_reviews": 957,
+    "registered_tracked_third_party_reviews": 836,
+    "candidate_only_reviews": 121,
+    "total_verification_records": 1001,
+    "license_terms_issue": 544,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-archie-nine-core-planning-execution-static.md"
   }
 }

@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: test-driven-development
+display_name: "Test Driven Development"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/test-driven-development/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: a5f8bc721245984cc630d0e10d4fca9f925950a6
+content_blob_sha: e0c0df52242a9e2ab86304f70807aceb91ccd471
+upstream_revision: 49d5653dec5f7e0fd11a9043e4f2f26a2e0b34a3
+upstream_last_updated_at: 2026-03-14T17:57:56Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating"
+portability: high
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Standalone SKILL.md; host code editing and test runner; fixtures may touch databases/networks."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Red-green-refactor is useful, but test execution and code edits have no target/environment/side-effect boundary; tests can mutate live data or external services. Adapt only to approved test scope. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance."

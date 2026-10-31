@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: subagent-driven-development
+display_name: "Subagent Driven Development"
+source_id: archieindian-superpowers
+source_repository: https://github.com/archieindian/openclaw-superpowers
+source_path: skills/core/subagent-driven-development/SKILL.md
+source_class: community-vetted
+source_role: tracked-corpus
+license: MIT
+upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
+relationship: external-reference
+source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
+package_tree_sha: 45655661646e2c5847930aff74bfa7d36bbe9a12
+content_blob_sha: 21f0ef38c492e6c678e0d69110daa597e9929c97
+upstream_revision: 49d5653dec5f7e0fd11a9043e4f2f26a2e0b34a3
+upstream_last_updated_at: 2026-03-14T17:57:56Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: "mutating+external-side-effect"
+portability: low
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Standalone SKILL.md; external claude CLI, exec background:true, bypassPermissions, model disclosure/cost, host tests."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged. Mandatory --permission-mode bypassPermissions can enable unapproved writes, external confidential-code disclosure and model costs. Retain decomposition method, not unsafe delegation. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance."
