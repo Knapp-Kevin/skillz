@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-design-system
+display_name: Authoring Design System
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-design-system/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 9b248e2c1ecd6cecdaaed497a1856d90eb637d19
+content_blob_sha: 4fcb71f77d443023668b76a8a9237ad1821cb3c6
+upstream_revision: 74804da546d6cf6e591b4d711fc73f3dde7c81df
+upstream_last_updated_at: 2026-06-13T14:29:45Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/accessibility-wcag22.md, references/amend.md, references/governance.md, references/i18n-rtl.md, references/sources.md, references/tokens-dtcg.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Tokens, components, WCAG, i18n and proportional governance with six bundled references. Accessibility and DTCG requirements are design targets, not executed compliance evidence. No screenshot, browser test or deployed UI validation was performed."

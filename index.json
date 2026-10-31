@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 875,
-    "total_verification_records": 919,
+    "persisted_third_party_exact_version_reviews": 883,
+    "total_verification_records": 927,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -927,8 +927,8 @@
     "google_agents_cli_verified_semantic_only": 2,
     "google_agents_cli_rejected_unchanged": 5,
     "bm629_agent_skills_tracked_denominator": 68,
-    "bm629_agent_skills_current_standard_companions": 10,
-    "bm629_agent_skills_current_standard_gaps": 58
+    "bm629_agent_skills_current_standard_companions": 18,
+    "bm629_agent_skills_current_standard_gaps": 50
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1037,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-30: Bhushan Modi tracked source eight exact-version document review gates; 2/68 -> 10/68, 66 -> 58 genuine gaps. Eight new provenance/verification pairs, semantic VERIFIED only; current 44 first-party / 875 third-party / 919 total. No security/behavioral execution, pin change, admission or repository runtime.",
+    "latest_reconciliation": "2026-10-30: Bhushan Modi eight exact-pin authoring methods, 10/68 -> 18/68, gaps 58 -> 50; eight new provenance/verification pairs, current 44/883/927. Semantic-only, no security/behavioral execution, admission, pin change or runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1541,6 +1541,108 @@
         "name": "reviewing-prd",
         "manifest_blob": "400be2b6af7301ce8dbd9faefbca002ccd3cba33",
         "package_tree": "65b06e4ecbaa3c24852ccd84f389842d1717667c",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
+  },
+  "bm629_eight_document_authoring_methods": {
+    "date": "2026-10-30",
+    "source_id": "bm629-agent-skills",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "eligible_denominator": 68,
+    "previous_current_standard_companions": 10,
+    "new_companions": 8,
+    "current_standard_companions": 18,
+    "genuine_gaps_before": 58,
+    "genuine_gaps_after": 50,
+    "semantic_verified": 8,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "source_pin_changed": false,
+    "admitted_denominator_delta": 0,
+    "first_party": 44,
+    "third_party_persisted_reviews": 883,
+    "total_verification_records": 927,
+    "receipt": "docs/reviews/2026-10-30-bm629-eight-document-authoring-methods-macro.md",
+    "reviewed": [
+      {
+        "name": "authoring-api-reference",
+        "manifest_blob": "0bc990bc230d4abaab4c4e59eb64b66f4b0034df",
+        "package_tree": "d0360582a0208f6714b6db43c84660d0673afe6b",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-api-spec",
+        "manifest_blob": "6ea00b88ed6d74ff449be083bfe909ffed5e6042",
+        "package_tree": "b28634646a7ea507f9aa30f259204ab4efcbe822",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-architecture-doc",
+        "manifest_blob": "a725d42406117d81e231a70415188236d5eb6feb",
+        "package_tree": "63d12131f46f8a36cb1c574b861ca776fe11b449",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-data-model",
+        "manifest_blob": "ed5466a13162bcc447008daa9445bbe5fabff086",
+        "package_tree": "c0bb2501575aa0790a51f7c71ad763c5f102b115",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-design-system",
+        "manifest_blob": "4fcb71f77d443023668b76a8a9237ad1821cb3c6",
+        "package_tree": "9b248e2c1ecd6cecdaaed497a1856d90eb637d19",
+        "package_files": 7,
+        "reference_files": 6,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-developer-guide",
+        "manifest_blob": "b398179bc8f486917276d24d2e51ff3bc3ab41db",
+        "package_tree": "f8250b159b1929c2aff13ce35985176152fb14ec",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-feature-spec",
+        "manifest_blob": "91bf3bb67b713293cc2757b6bfd78c88e15ae8f4",
+        "package_tree": "53eea31980f2eab1b44839acfaabcabab571b52d",
+        "package_files": 4,
+        "reference_files": 3,
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "authoring-prd",
+        "manifest_blob": "b062894c9bde286b971cafbf550cc027f6b34c10",
+        "package_tree": "d5b0e687fdc238d9e5564c69582d7eb84160a7d4",
+        "package_files": 4,
+        "reference_files": 3,
         "score": 17,
         "status": "verified",
         "behavioral": "not-run"

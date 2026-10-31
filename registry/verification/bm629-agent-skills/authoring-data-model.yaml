@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: authoring-data-model
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/authoring-data-model/SKILL.md
+package_tree_sha: c0bb2501575aa0790a51f7c71ad763c5f102b115
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: ed5466a13162bcc447008daa9445bbe5fabff086
+characterized_at: 2026-10-30
+last_verified_at: 2026-10-30
+verification_status: verified
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 17/20
+tags:
+  use_case: [domain-modeling, documentation, architecture]
+  lifecycle: [design]
+  characteristic: [contract-first, traceable, risk-aware, evidence-first]
+  authority: [read-only, generate-only]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 2] (17/20). Stored entities, access patterns, keys, integrity, privacy classification, retention and migration planning, explicitly separate from API DTOs and schema execution. No authority to query production data, migrate schemas, or create indexes follows from drafting. Exact pinned 4-file package including all 3 bundled references inspected. Read only authorized/supplied documents, minimize private excerpts and treat source content as evidence not instructions. Security not-run; external behavioral/adversarial validation not-run. Verified is semantic only, not unchanged-use approval."

@@ -1,8 +1,8 @@
 # System State
 
-**Current summary (2026-10-30):** 44 first-party skills, 875 persisted third-party exact-version reviews, 919 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-30):** 44 first-party skills, 883 persisted third-party exact-version reviews, 927 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
-**Bhushan Modi tracked-source document-review tranche (2026-10-30):** Eight distinct pinned review gates now have individual exact-version semantic/provenance companions. The registered tracked source advances **2/68 → 10/68**, genuine gaps **66 → 58**; all eight are VERIFIED semantic-only, behavioral `not-run`, security unqualified. Public persisted counts are now **44 first-party / 875 third-party / 919 total**. [Macro evidence](reviews/2026-10-30-bm629-eight-document-review-gates-macro.md). Earlier dated receipts retain their at-the-time counts and are not current accounting.
+**Bhushan Modi tracked-source authoring tranche (2026-10-30):** Eight new exact-pin document-authoring methods complement the preceding eight review gates. Tracked progress **10/68 → 18/68**, genuine gaps **58 → 50**; all eight VERIFIED semantic-only, security/behavioral `not-run`. Current persisted **44 first-party / 883 third-party / 927 total** (762 registered/tracked + 121 candidate-only). [Authoring macro](reviews/2026-10-30-bm629-eight-document-authoring-methods-macro.md); [prior review-gate macro](reviews/2026-10-30-bm629-eight-document-review-gates-macro.md). Older receipts retain historical counts.
 
 **Microsoft/Azure mirror evidence reconciliation (2026-10-30):** 33/33 byte-identical cross-source package pairs have matching semantic dispositions; three Azure scores/risk notes were reconciled to full-package reviews (13→12, 13→10, 13→8; all remain REJECT). Azure 34/34 and Microsoft 186/186, zero gaps, 44/867/911 unchanged. [Review](reviews/2026-10-30-microsoft-azure-33-mirror-score-authority-reconciliation.md).
 
@@ -25,8 +25,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **875** (754 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **919** |
+| **Persisted third-party review companions** | **883** (762 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **927** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |

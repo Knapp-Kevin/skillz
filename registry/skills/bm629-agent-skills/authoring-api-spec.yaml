@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-api-spec
+display_name: Authoring Api Spec
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-api-spec/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: b28634646a7ea507f9aa30f259204ab4efcbe822
+content_blob_sha: 6ea00b88ed6d74ff449be083bfe909ffed5e6042
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/contract-method.md, references/sources.md, references/versioning-and-amend.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Engineering wire contract across REST, GraphQL and RPC with typed schemas, errors, upstream traceability and versioned changes. Drafting is not authority to deploy endpoints, create credentials or invoke operations; unknown requirements stay open questions."

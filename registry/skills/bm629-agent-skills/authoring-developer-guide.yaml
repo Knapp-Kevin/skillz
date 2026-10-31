@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: authoring-developer-guide
+display_name: Authoring Developer Guide
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/authoring-developer-guide/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: f8250b159b1929c2aff13ce35985176152fb14ec
+content_blob_sha: b398179bc8f486917276d24d2e51ff3bc3ab41db
+upstream_revision: e3dd1fce7df99d5adbb37752ce72c8ef4c051567
+upstream_last_updated_at: 2026-06-14T15:23:38Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md and references/bestpractices-archetype-amend.md, references/sources.md, references/structure-onboarding.md; user-supplied upstream documents, optional host template gateway and deep-research capability. Markdown reference only; no package-owned execution tooling."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Goal-oriented developer onboarding, Diataxis separation, versioned samples, troubleshooting and stale-sample sweeps. Charge/SMS examples and first-call language are documentation targets, not authority to bill, message, request secrets or execute live calls. Runnable claims need external evidence."
