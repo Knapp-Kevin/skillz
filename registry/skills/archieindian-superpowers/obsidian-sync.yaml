@@ -6,7 +6,9 @@ source_repository: https://github.com/archieindian/openclaw-superpowers
 source_path: skills/community/obsidian-sync/SKILL.md
 source_class: community-vetted
 source_role: tracked-corpus
-license: MIT
+license: NOASSERTION
+upstream_license_label: MIT
+license_terms_status: incomplete-upstream-license
 license_terms_status: incomplete-pinned-license-issue-544
 upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
 relationship: external-reference

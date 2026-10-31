@@ -6,7 +6,9 @@ source_repository: https://github.com/archieindian/openclaw-superpowers
 source_path: skills/openclaw-native/context-budget-guard/SKILL.md
 source_class: community-vetted
 source_role: tracked-corpus
-license: MIT
+license: NOASSERTION
+upstream_license_label: MIT
+license_terms_status: incomplete-upstream-license
 upstream_copyright: "Copyright (c) 2026 openclaw-superpowers contributors"
 relationship: external-reference
 source_snapshot_revision: a95a59d221d44b89d4fc27a52934e24fb2060ddb
