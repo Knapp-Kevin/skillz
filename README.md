@@ -62,6 +62,8 @@ Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECK
 | Google Agents CLI | 7 / 7 |
 | Cline Skills (published) | 36 / 36 |
 
+An [Anthropic Skills private-source and MCP evaluation authority review](docs/reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md) corrected two unchanged-use approvals. The family remains **19/19** static-reviewed, now **8 VERIFIED semantic only / 11 REJECT unchanged**. Broad connected-company reads and model-backed evaluation of private MCP tool outputs require separate source, disclosure, budget and retention authority; no scanner or behavioral validation was executed.
+
 A [Matt Pocock ten-package delegated-authority recheck](docs/reviews/2026-10-30-mattpocock-ten-delegated-authority-macro.md) corrected five unchanged-use approvals. The registered family remains **29/29** static-reviewed, now **17 VERIFIED semantic only / 12 REJECT unchanged**; its Wayfinder decision-map discipline remains useful for adapted planning, not blanket authorization for tracker writes or AFK provisioning.
 
 An [Addy Osmani delegated-authority and RUM review](docs/reviews/2026-10-30-addyosmani-delegation-rum-24-macro.md) corrected two unchanged-use approvals. The family remains **24/24** static-reviewed, now **8 VERIFIED / 16 REJECT unchanged**; behavioral validation remains separate.

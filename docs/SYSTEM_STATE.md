@@ -2,6 +2,8 @@
 
 **Current summary (2026-10-30):** 44 first-party skills, 867 persisted third-party exact-version reviews, 911 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
+**Anthropic Skills authority correction (2026-10-30):** 19/19 exact-pin static companions, zero gaps, two corrected unchanged-use approvals (`internal-comms`, `mcp-builder`), **8 VERIFIED / 11 REJECT**. Private connected-source reads and model-backed evaluation data/cost/retention require independent authority. Inventory 44/867/911 unchanged; behavioral/security evidence not-run. [Macro review](reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md).
+
 **Matt Pocock correction (2026-10-30):** registered pin 29/29, zero static gaps, 10-package authority screen, five corrected approvals, five retained. Family **17 VERIFIED / 12 REJECT unchanged**; 44/867/911 unchanged. The Wayfinder method remains useful for adapted planning, but AFK access provisioning and data movement require separate authority. [Macro review](reviews/2026-10-30-mattpocock-ten-delegated-authority-macro.md).
 
 **Addy Osmani correction (2026-10-30):** 24/24 pinned packages remain static-reviewed; two false approvals corrected (8 VERIFIED / 16 REJECT), zero gaps and no change to 44/867/911. [Macro review](reviews/2026-10-30-addyosmani-delegation-rum-24-macro.md).

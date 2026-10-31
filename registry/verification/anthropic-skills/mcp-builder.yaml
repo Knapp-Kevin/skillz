@@ -7,15 +7,15 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8a1a77a47d141967b246adb4da4f91037578ff7d
 package_tree_sha: b866bcfb57b780c10b587c7b543e871a91661ce0
 characterized_at: 2026-08-29
-last_verified_at: 2026-09-30
-verification_status: verified
-verification_basis: structured-static-review-carried-forward-exact-tree
+last_verified_at: 2026-10-30
+verification_status: rejected
+verification_basis: structured-static-authority-recheck-exact-tree
 validation_status: not-run
-rubric_score: 16/20
+rubric_score: 13/20
 tags:
   use_case: [agent-development, api-design, implementation, testing, evaluation]
   lifecycle: [planning, implementation, verification]
   characteristic: [spec-driven, test-driven, reference-heavy, source-driven, tool-assisted]
-  authority: [read-only, generate-only, mutating]
+  authority: [read-only, generate-only, mutating, external-side-effect]
   portability: [medium]
-notes: Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward. Strong local workflow remains applicable; mutable official SDK docs are an explicit freshness dependency. Behavioral validation remains not-run. The registered source pin already matches this exact reviewed package.
+notes: "REJECT unchanged under current authority hard fail (13/20). The pinned skill mandates a Phase 4 evaluation workflow and bundled evaluation.md directs live read-only MCP tool exploration and answer verification. Bundled scripts/evaluation.py calls Anthropic messages.create with questions and MCP tool responses, records full answers/feedback in reports, and may consume repeated inference calls; no independent approval for private data scope, external model provider/disclosure, cost budget, tool result minimization or report retention. Read-only/non-destructive tool selection does not authorize sensitive-data egress or paid model calls. Keep MCP design, tool annotation, test-question and read-only safeguards for scoped ADAPT/EXTRACT/CHECKLIST; source-owned helper scripts are not skillz runtime. Exact blob/tree unchanged; behavioral validation not-run, no scanner executed."

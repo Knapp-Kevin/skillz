@@ -7,6 +7,8 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
+**Anthropic Skills authority recheck (2026-10-30):** 19/19 exact-version companions, now **8 VERIFIED / 11 REJECT unchanged** after two corrected private-source/evaluation approvals. [Evidence](docs/reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md). Total inventory unchanged.
+
 ## Current totals
 
 | Surface | Count |
