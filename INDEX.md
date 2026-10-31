@@ -104,6 +104,8 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **Normative/discovery:** `agentskills-spec` is a normative specification; `github-awesome-copilot` and `openai-plugins` are dynamic discovery surfaces. `openai-plugins` replaces the deprecated `openai/skills` lead, with mixed per-plugin terms and no admitted skill count ([source vetting](docs/reviews/2026-10-31-openai-plugins-discovery-vetting.md)).
 
+**OpenAI Developers bounded candidate intake:** five source-level decisions at the observed official plugin snapshot, **4 REFERENCE-ONLY / 1 REJECT unchanged**. Parent Proprietary and two child Apache-text license scopes are not reconciled for copying; a live escalated API retry fails the authority boundary. This is not five semantic reviews or admissions. [Exact-source macro](docs/reviews/2026-10-31-openai-developers-five-candidate-vetting.md).
+
 ## Interpretation
 
 Physical presence, registration, or a `verified` static review does not by itself establish behavioral validation or automatic unchanged-use eligibility. For unchanged third-party consideration, use exact-version companion evidence and apply:
