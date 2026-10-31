@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: market-competitive-prior-art-survey
+display_name: "Market Competitive Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/market-competitive-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 19ae8ef60d343e98b87251882b3fee43dd4a64e6
+content_blob_sha: 539d47d4955fb2c61757c92ec2cdf4a48dbccb6a
+upstream_revision: 54dfdb05fbefc10ae5a7ab6beebce778af24826f
+upstream_last_updated_at: 2026-08-07T07:05:39Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "34-file pinned package: 17 references, 4 schemas, 12 source-owned script/fixture files; Python 3 with PyYAML/jsonschema for validation; public competitive research sources and independent reviewing-market-competitive-prior-art-survey conditions."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: turns a possibly confidential pre-launch product scope into outbound public-market search queries without a separate disclosure/minimization authorization boundary. Procedures 3/4 are described but activation text still excludes them. Preserve substitute discovery, dated prices, source-terms exclusions and honest coverage as ADAPT/EXTRACT/CHECKLIST prior art."

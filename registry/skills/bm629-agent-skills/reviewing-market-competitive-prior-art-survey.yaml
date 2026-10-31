@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-market-competitive-prior-art-survey
+display_name: "Reviewing Market Competitive Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-market-competitive-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: bdc125640ab6cf80b5763c5a95c390546c825202
+content_blob_sha: 0e25ffc9dda7f201cd5f5e57b59f94975d5ee961
+upstream_revision: a76348510d9c03dfd0d34d5fd22f935126e140f7
+upstream_last_updated_at: 2026-08-05T16:26:09Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: read-only
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "8-file pinned reviewer: 7 bundled reference/fixture files including 40-condition bar; producer's source registry, schemas, validator and original vocabulary map required for mechanical checks; Python 3 with PyYAML/jsonschema via producer."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "VERIFIED semantic only for wave-1 map/search acceptance: independent condition-named verdict, proportionality, vendor-claim grounding and status-typed zero/failure checks. Description advertises extract/register review but body explicitly excludes those waves despite 40-condition reference including them; do not route wave 2 unchanged. Source-owned validator has not been executed in this review."

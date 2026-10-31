@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: security-prior-art-survey
+display_name: "Security Prior-Art Survey"
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/security-prior-art-survey/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 9fc0b727a136f259e89951959f31b8ffb2ab1696
+content_blob_sha: 6f3ef55746091e11ff6dc551c650e51c59e881ff
+upstream_revision: 54dfdb05fbefc10ae5a7ab6beebce778af24826f
+upstream_last_updated_at: 2026-08-07T07:05:39Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "38-file pinned package: 17 references, 4 schemas, 16 source-owned scripts/fixtures; Python 3, PyYAML/jsonschema, public CWE/CAPEC/ATT&CK/CVE/OSV/KEV/EPSS/OWASP research surfaces, companion reviewer."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: directs external queries derived from product attack surfaces, data classes, named vendors and architecture without explicit approval to disclose sensitive system context. Public advisory research and no-exploit/no-execution rules are strengths, but sanitizing fetched pages does not sanitize outbound queries. Retain threat vocabulary, evidence-tier and status-typed coverage methods for scoped adaptation."

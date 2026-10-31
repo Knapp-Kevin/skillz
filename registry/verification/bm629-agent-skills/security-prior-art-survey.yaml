@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: security-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/security-prior-art-survey/SKILL.md
+package_tree_sha: 9fc0b727a136f259e89951959f31b8ffb2ab1696
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6f3ef55746091e11ff6dc551c650e51c59e881ff
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [security, research]
+  lifecycle: [discovery, planning]
+  characteristic: [evidence-first, source-driven, retrieval-map, traceable, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 1, 0, 1] (13/20). REJECT unchanged: directs external queries derived from product attack surfaces, data classes, named vendors and architecture without explicit approval to disclose sensitive system context. Public advisory research and no-exploit/no-execution rules are strengths, but sanitizing fetched pages does not sanitize outbound queries. Retain threat vocabulary, evidence-tier and status-typed coverage methods for scoped adaptation. 38 exact pinned package files characterized by tree and manifest identity; upstream tools/fixtures are source-owned evidence only. Security scan not-run; external behavioral/adversarial validation not-run; no execution evidence claimed."

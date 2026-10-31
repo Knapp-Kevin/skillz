@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: market-competitive-prior-art-survey
+source_id: bm629-agent-skills
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+source_path: skills/market-competitive-prior-art-survey/SKILL.md
+package_tree_sha: 19ae8ef60d343e98b87251882b3fee43dd4a64e6
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 539d47d4955fb2c61757c92ec2cdf4a48dbccb6a
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [research, decision-support]
+  lifecycle: [discovery, planning]
+  characteristic: [evidence-first, source-driven, retrieval-map, traceable, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 0, 1] (14/20). REJECT unchanged: turns a possibly confidential pre-launch product scope into outbound public-market search queries without a separate disclosure/minimization authorization boundary. Procedures 3/4 are described but activation text still excludes them. Preserve substitute discovery, dated prices, source-terms exclusions and honest coverage as ADAPT/EXTRACT/CHECKLIST prior art. 34 exact pinned package files characterized by tree and manifest identity; upstream tools/fixtures are source-owned evidence only. Security scan not-run; external behavioral/adversarial validation not-run; no execution evidence claimed."
