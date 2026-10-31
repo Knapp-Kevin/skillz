@@ -7,7 +7,9 @@ This is a passive, hand-maintained catalog snapshot of the governed `skillz` cor
 Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 
-**Bhushan Modi final-five static closure (2026-10-31):** Five genuine exact-pin gaps (`project-document-discovery`, `reviewing-document-discovery`, `reviewing-document-set`, `sql-job-queue`, `token-optimization`) received individual provenance/verification companions: **1 VERIFIED semantic only / 4 REJECT unchanged**. Tracked **63/68 → 68/68**, gaps **5 → 0**, denominator unchanged, admitted-source denominator delta 0. Research/forge disclosure, a stale v1 `team` quality-bar contradicting v2 `integrations`/`business`, DB worker side effects and private-context model routing are the decisive defects; the finished-document corpus reviewer is read-only. Security and behavioral validation `not-run`. Current **44 first-party / 933 third-party / 977 total** (812 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-bm629-final-five-static.md).
+**OpenClaw five-package authority/privacy tranche (2026-10-31):** The registered tracked source has **8** canonical first-class packages. Five genuine exact-pin gaps were rejected unchanged for private transcript discovery/export, unapproved live behavioral actions, billable remote leases and untrusted README command execution. OpenClaw **1/8 → 6/8**, gaps **7 → 2**; `autoreview` and `beam` remain for deep review. Five provenance + five verification companions, security/behavioral `not-run`; source and admitted denominators unchanged. Current **44 first-party / 938 third-party / 982 total** (817 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md).
+
+**Bhushan Modi final-five static closure (2026-10-31):** Five genuine exact-pin gaps (`project-document-discovery`, `reviewing-document-discovery`, `reviewing-document-set`, `sql-job-queue`, `token-optimization`) received individual provenance/verification companions: **1 VERIFIED semantic only / 4 REJECT unchanged**. Tracked **63/68 → 68/68**, gaps **5 → 0**, denominator unchanged, admitted-source denominator delta 0. Research/forge disclosure, a stale v1 `team` quality-bar contradicting v2 `integrations`/`business`, DB worker side effects and private-context model routing are the decisive defects; the finished-document corpus reviewer is read-only. Security and behavioral validation `not-run`. Historical checkpoint **44 first-party / 933 third-party / 977 total** (812 registered/tracked + 121 candidate-only). [Macro](docs/reviews/2026-10-31-bm629-final-five-static.md).
 
 **Historical Bhushan Modi provider-operations authority tranche (2026-10-31):** Five genuine pinned gaps (`atlassian-rest-ops`, `cloudflare-pages-ops`, `github-cli-ops`, `jenkins-rest-ops`, `netlify-ops`) deep-reviewed as **5 REJECT unchanged** at 13/20 each. Tracked **58/68 → 63/68**, gaps **10 → 5**, source denominator and admissions unchanged. Account/credential injection is not per-action authorization; unapproved external writes/deployments, private CI logs, project `.env` execution and secret-in-argv examples remain hard failures. Five provenance + five verification pairs; security/behavioral `not-run`. Historical checkpoint **44 first-party / 928 third-party / 972 total** (807 registered/tracked + 121 candidate-only). [Provider-operations macro](docs/reviews/2026-10-31-bm629-provider-ops-five-static.md).
 
@@ -31,8 +33,8 @@ Canonical inputs are `registry/categories.yaml`, `registry/sources.yaml`, `regis
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
 | Unique registered source identities | 22 |
-| Persisted third-party exact-version reviews | 933 (812 registered/tracked + 121 candidate-only) |
-| Total persisted verification/provenance pairs | 977 |
+| Persisted third-party exact-version reviews | 938 (817 registered/tracked + 121 candidate-only) |
+| Total persisted verification/provenance pairs | 982 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
 | Dan Dewhurst Story Skills current-standard companions | 23 / 23 |
 | Dan Dewhurst Story Skills current-standard gaps | 0 |

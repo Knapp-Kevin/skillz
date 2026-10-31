@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: readme-standard
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/readme-standard/SKILL.md
+package_tree_sha: 078f49d83acd9e7c47bb68c101688fedd39ef680
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7bbf5213e988e344a67022a45b4d16cdf481a16d
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 13/20
+tags:
+  use_case: [documentation, writing, repository-maintenance]
+  lifecycle: [implementation, verification]
+  characteristic: [progressive-disclosure, evidence-first, maintainability]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 1, 1, 2, 1, 1] (13/20). REJECT unchanged: mandatory verification requires installing/building packages, executing every README command and probing external links without a separate command/network/target authorization gate. A README can contain untrusted commands. The progressive documentation spine, factual-preservation gate and dynamic badge guidance remain valuable checklist prior art. Exact pinned package tree: 1 source-owned file(s), including references/scripts where present. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

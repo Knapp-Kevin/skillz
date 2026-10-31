@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: behavior-validator
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/behavior-validator/SKILL.md
+package_tree_sha: 2f5873a2232b4bc0d3d44c5c5e08b94bdcc38501
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a0e1066b2651e35299dceebd436a0bd8b2e84712
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [testing, evaluation, browser-testing]
+  lifecycle: [verification]
+  characteristic: [contract-first, evidence-first, test-gated, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged: contract creation and launch/access instructions lead directly to real user/operator tasks, state mutation, API requests and screenshot/log capture without a distinct approval boundary for target environment, billable calls, sensitive-data access or persistence. Strong source-blind and anti-cheat method remains useful for an explicitly authorized sandbox. Exact pinned package tree: 4 source-owned file(s), including references/scripts where present. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

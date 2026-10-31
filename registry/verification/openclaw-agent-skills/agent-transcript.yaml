@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: agent-transcript
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/agent-transcript/SKILL.md
+package_tree_sha: 60678183a19065c318939dc6bb0d675dc8d02921
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 3b7b25dceced036772286679e3e2380edf817ffd
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 14/20
+tags:
+  use_case: [documentation, communication, context-management]
+  lifecycle: [release, maintenance]
+  characteristic: [evidence-first, traceable, risk-aware]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 1, 2, 1, 1] (14/20). REJECT unchanged: automatic find scans up to 400 local cross-agent session logs before separate approval to access those private records. The explicit approval to insert a redacted PR/issue section is valuable but does not authorize broad private session discovery or local preview persistence. Redaction uses best-effort regex, not a guarantee of safe public disclosure; preserve consent/trim/checklist design. Exact pinned package tree: 3 source-owned file(s), including references/scripts where present. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

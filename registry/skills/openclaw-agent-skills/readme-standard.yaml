@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: readme-standard
+display_name: "README Standard"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/readme-standard/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: 078f49d83acd9e7c47bb68c101688fedd39ef680
+content_blob_sha: 7bbf5213e988e344a67022a45b4d16cdf481a16d
+upstream_revision: 2a409d348a4bcf6f15e41e9a20efd0b298a32528
+upstream_last_updated_at: 2026-08-02T23:57:21Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Repository toolchain/build or package installer; optional HTTP badge/link checks; steipete/openclaw house style and fs-safe README prior art."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: mandatory verification requires installing/building packages, executing every README command and probing external links without a separate command/network/target authorization gate. A README can contain untrusted commands. The progressive documentation spine, factual-preservation gate and dynamic badge guidance remain valuable checklist prior art. Trigger: Author or review a README for a matching project, adapting house conventions to project needs. Non-trigger: No automatic dependency installation, executing arbitrary quickstart commands or outbound private-repository link probes from a documentation-only request."
