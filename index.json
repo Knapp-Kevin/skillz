@@ -876,8 +876,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 938,
-    "total_verification_records": 982,
+    "persisted_third_party_exact_version_reviews": 940,
+    "total_verification_records": 984,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -951,8 +951,8 @@
     "bm629_agent_skills_current_standard_companions": 68,
     "bm629_agent_skills_current_standard_gaps": 0,
     "openclaw_agent_skills_eligible_denominator": 8,
-    "openclaw_agent_skills_current_standard_companions": 6,
-    "openclaw_agent_skills_current_standard_gaps": 2
+    "openclaw_agent_skills_current_standard_companions": 8,
+    "openclaw_agent_skills_current_standard_gaps": 0
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -2236,6 +2236,40 @@
     "new_review_pairs": 5,
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
-    "receipt": "docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md"
+    "receipt": "docs/reviews/2026-10-31-openclaw-five-authority-privacy-static.md",
+    "historical_checkpoint": true
+  },
+  "openclaw_final_two_static": {
+    "date": "2026-10-31",
+    "source_id": "openclaw-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_revision": "6cd3366b10e2a8c5608265f692acf9f5da2b2448",
+    "eligible_denominator": 8,
+    "before_companions": 6,
+    "after_companions": 8,
+    "remaining_gaps": 0,
+    "package_files": {
+      "autoreview": 13,
+      "beam": 7
+    },
+    "rejected_unchanged": [
+      "autoreview",
+      "beam"
+    ],
+    "scores": {
+      "autoreview": "15/20",
+      "beam": "15/20"
+    },
+    "source_pin_changed": false,
+    "admitted_denominator_delta": 0,
+    "new_review_pairs": 2,
+    "first_party": 44,
+    "third_party_persisted_reviews": 940,
+    "registered_tracked_third_party_reviews": 819,
+    "candidate_only_reviews": 121,
+    "total_verification_records": 984,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-10-31-openclaw-final-two-static.md"
   }
 }

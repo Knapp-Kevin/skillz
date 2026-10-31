@@ -1,0 +1,21 @@
+schema_version: 1
+skill_name: beam
+source_id: openclaw-agent-skills
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+source_path: skills/beam/SKILL.md
+package_tree_sha: e910a7830ca569d4f34b503ae674149ac7456124
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 8fac3d844bb4aadade27fdda4e50cea3b280aecd
+characterized_at: 2026-10-31
+last_verified_at: 2026-10-31
+verification_status: rejected
+verification_basis: structured-static-review
+validation_status: not-run
+rubric_score: 15/20
+tags:
+  use_case: [handoff, communication, context-management]
+  lifecycle: [maintenance, release]
+  characteristic: [safety-bounded, traceable, risk-aware, tool-assisted]
+  authority: [external-side-effect]
+  portability: [medium]
+notes: "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 2, 2, 2, 1, 2, 1, 1] (15/20). REJECT unchanged: explicit one-snapshot request and named receiver are helpful, but the procedure does not require the user to authorize the actual Gateway operator.read audience, data categories, retention, and further visibility before exporting locally redacted private conversation content. Regex/heuristic redaction is not disclosure clearance. Opt-in persistent Stop hooks likewise lack an explicit bounded duration, recipients, future private-session scope, and revocation/retention contract. Preserve exact-session fail-closed resolution, local dry-run, bounded redaction, read-only receiver projection, HTTPS and token hygiene as ADAPT/EXTRACT/CHECKLIST evidence. Trigger: explicitly requested session sharing. Non-trigger: silent transcript publication, unscoped future hook uploads, or sharing private session content on provider capability alone. Exact pinned package tree: 7 source-owned Git blob/symlink entries including upstream scripts/tests/references. Package-security scan not-run; independent external behavioral/adversarial validation not-run; upstream tests not executed."

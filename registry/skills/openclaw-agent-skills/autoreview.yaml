@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: autoreview
+display_name: "Auto Review"
+source_id: openclaw-agent-skills
+source_repository: https://github.com/openclaw/agent-skills
+source_path: skills/autoreview/SKILL.md
+source_class: official-ecosystem
+license: MIT
+relationship: external-reference
+source_snapshot_revision: 6cd3366b10e2a8c5608265f692acf9f5da2b2448
+package_tree_sha: b13bac8c660967da6b28cd32fb6bee95a3537cd8
+content_blob_sha: ffbcf92f4f9f6e213c3ca19d9dad990c2b131d22
+upstream_revision: b7c3d0827dfc7e66d579b171b44ac5a7354b0b49
+upstream_last_updated_at: 2026-08-30T02:20:55Z
+curated_at: 2026-10-31
+last_checked_at: 2026-10-31
+availability: external
+permission_tier: external-side-effect
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Python 3, Git, TruffleHog, selected Codex/Claude/Amp/Pi/Kimi CLI and authenticated provider; source-owned 234 KB review helper, test harness and fixtures; POSIX isolation or documented Windows restrictions; optional WebSearch/WebFetch."
+import_eligibility: reference-only-rejected-unchanged
+rationale: "REJECT unchanged: an explicit request for code review authorizes a review but does not independently approve disclosure of potentially confidential source, diff, prompt/dataset material, or private repository context to the selected external inference provider or default web-search path. TruffleHog secret scanning and sandbox isolation reduce risks but do not establish recipient, scope, retention, cost, or private-data disclosure authority. Preserve exact Git target pinning, reviewer isolation, pre-send secret screening, bounded passes, and structured finding verification as ADAPT/EXTRACT/CHECKLIST prior art. Trigger: user-requested second-model code review. Non-trigger: implicit pre-commit/PR review, unapproved private-code egress, or automatic fixes."

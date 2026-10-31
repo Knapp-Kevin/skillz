@@ -1,8 +1,10 @@
 # System State
 
-**Current summary (2026-10-31):** 44 first-party skills, 938 persisted third-party exact-version reviews, 982 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-10-31):** 44 first-party skills, 940 persisted third-party exact-version reviews, 984 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
 
-**OpenClaw five-package authority/privacy tranche (2026-10-31):** The registered tracked source has **8** canonical first-class packages. Five genuine exact-pin gaps were rejected unchanged for private transcript discovery/export, unapproved live behavioral actions, billable remote leases and untrusted README command execution. OpenClaw **1/8 → 6/8**, gaps **7 → 2**; `autoreview` and `beam` remain for deep review. Five provenance + five verification companions, security/behavioral `not-run`; source and admitted denominators unchanged. Current **44 first-party / 938 third-party / 982 total** (817 registered/tracked + 121 candidate-only). [Macro](reviews/2026-10-31-openclaw-five-authority-privacy-static.md).
+**OpenClaw final-two exact-pin static closure (2026-10-31):** Deep-reviewed `autoreview` and `beam` against the full pinned upstream packages: **2 REJECT unchanged 15/20** for missing independent confidential-code/model-search disclosure authority and insufficient Beam receiver-audience/retention/future-hook scope. OpenClaw **6/8 → 8/8**, gaps **2 → 0**, denominator **8**, tracked/admitted source denominator delta **0**. Two new provenance + two verification companions, security/behavioral `not-run`. Corrected preliminary 16/9 source-file counts to exact pinned-tree **13/7**. Current **44 first-party / 940 third-party / 984 total** (819 registered/tracked + 121 candidate-only). [Macro](reviews/2026-10-31-openclaw-final-two-static.md).
+
+**Historical OpenClaw five-package authority/privacy tranche (2026-10-31):** The registered tracked source has **8** canonical first-class packages. Five genuine exact-pin gaps were rejected unchanged for private transcript discovery/export, unapproved live behavioral actions, billable remote leases and untrusted README command execution. OpenClaw **1/8 → 6/8**, gaps **7 → 2**; `autoreview` and `beam` remain for deep review. Five provenance + five verification companions, security/behavioral `not-run`; source and admitted denominators unchanged. Historical checkpoint **44 first-party / 938 third-party / 982 total** (817 registered/tracked + 121 candidate-only). [Macro](reviews/2026-10-31-openclaw-five-authority-privacy-static.md).
 
 **Bhushan Modi final-five static closure (2026-10-31):** Five genuine exact-pin gaps (`project-document-discovery`, `reviewing-document-discovery`, `reviewing-document-set`, `sql-job-queue`, `token-optimization`) received individual provenance/verification companions: **1 VERIFIED semantic only / 4 REJECT unchanged**. Tracked **63/68 → 68/68**, gaps **5 → 0**, denominator unchanged, admitted-source denominator delta 0. Research/forge disclosure, a stale v1 `team` quality-bar contradicting v2 `integrations`/`business`, DB worker side effects and private-context model routing are the decisive defects; the finished-document corpus reviewer is read-only. Security and behavioral validation `not-run`. Historical checkpoint **44 first-party / 933 third-party / 977 total** (812 registered/tracked + 121 candidate-only). [Macro](reviews/2026-10-31-bm629-final-five-static.md).
 
@@ -35,8 +37,8 @@
 | **Reference surface** | 500+ first-party + pinned external skill/reference artifacts |
 | **First-party skills** | 44 |
 | **First-party provenance complete** | 44 / 44 |
-| **Persisted third-party review companions** | **938** (817 registered/tracked + 121 candidate-only) |
-| **Total persisted verification/provenance pairs** | **982** |
+| **Persisted third-party review companions** | **940** (819 registered/tracked + 121 candidate-only) |
+| **Total persisted verification/provenance pairs** | **984** |
 | **Pinned external corpora** | 12 |
 | **Registered source identities** | 22 |
 | **Jwynia Agent Skills selectively reviewed units** | **54 / 54 fiction** |
