@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-api-spec
+display_name: Reviewing Api Spec
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-api-spec/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 4c5614ac11b4c9a5f40ff16bd3163fae2aec1b5d
+content_blob_sha: eb696666731306823c469f413637329652fb6766
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md, references/api-spec-quality-bar.md, references/sources.md; handed-in artifact and any available upstream documents for comparison. No package-owned scripts or runtime."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "Style-agnostic API contract gate checks typed operations, authorization, errors, shared types, examples and upstream consistency; conditional capability-boundary review is explicit. SKILL.md adds conditional capability_record condition 12 while the bundled bar still calls itself eleven-condition. The host must follow the exact pinned SKILL and mark the optional condition N/A when context is absent; shared-bar drift merits adaptation."

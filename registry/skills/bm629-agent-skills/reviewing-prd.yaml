@@ -1,0 +1,24 @@
+schema_version: 1
+skill_name: reviewing-prd
+display_name: Reviewing Prd
+source_id: bm629-agent-skills
+source_repository: https://github.com/bm629/agent-skills
+source_path: skills/reviewing-prd/SKILL.md
+source_class: community-vetted
+license: MIT
+relationship: external-reference
+source_snapshot_revision: f6a700ea94a16cf8e0b5e563d4d48d85503e41f6
+package_tree_sha: 65b06e4ecbaa3c24852ccd84f389842d1717667c
+content_blob_sha: 400be2b6af7301ce8dbd9faefbca002ccd3cba33
+upstream_revision: bbad6caad536e01eb3fe4fb67ce502ae8da1896a
+upstream_last_updated_at: 2026-06-20T20:51:03Z
+curated_at: 2026-10-30
+last_checked_at: 2026-10-30
+availability: external
+permission_tier: generate
+portability: medium
+review_status: curated-external
+dependency_status: source-intact
+dependencies: "Complete upstream package: SKILL.md, references/plannability-bar.md, references/sources.md; handed-in artifact and any available upstream documents for comparison. No package-owned scripts or runtime."
+import_eligibility: reference-only-pending-exact-package-security
+rationale: "PRD gate checks evidence-backed problems, user needs, measurable metrics, MVP scope, no fabricated facts, traceability, dependencies and amendment integrity. Conditional capability_record extends the referenced twelve-condition bar to thirteen in SKILL.md; source-bar drift and missing private upstream context require explicit qualification. No external research or behavioral test was run."

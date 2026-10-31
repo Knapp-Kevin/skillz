@@ -77,37 +77,37 @@
     "receipt": "docs/reviews/2026-10-30-cloudflare-telemetry-and-staging-authority-13-macro.md"
   },
   "anthropic_private_data_authority_recheck": {
-  "date": "2026-10-30",
-  "source_id": "anthropic-skills",
-  "source_pin": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
-  "eligible_denominator": 19,
-  "reviewed": 19,
-  "static_gaps": 0,
-  "screened_companions": 19,
-  "deep_reviewed": 2,
-  "corrected": 2,
-  "retained": 17,
-  "verified_before": 10,
-  "verified_after": 8,
-  "rejected_before": 9,
-  "rejected_after": 11,
-  "corrected_skill_names": [
-    "internal-comms",
-    "mcp-builder"
-  ],
-  "admitted_denominator_delta": 0,
-  "new_review_records": 0,
-  "companion_files_refreshed": 4,
-  "public_inventory": {
-    "first_party": 44,
-    "third_party": 867,
-    "total": 911
+    "date": "2026-10-30",
+    "source_id": "anthropic-skills",
+    "source_pin": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+    "eligible_denominator": 19,
+    "reviewed": 19,
+    "static_gaps": 0,
+    "screened_companions": 19,
+    "deep_reviewed": 2,
+    "corrected": 2,
+    "retained": 17,
+    "verified_before": 10,
+    "verified_after": 8,
+    "rejected_before": 9,
+    "rejected_after": 11,
+    "corrected_skill_names": [
+      "internal-comms",
+      "mcp-builder"
+    ],
+    "admitted_denominator_delta": 0,
+    "new_review_records": 0,
+    "companion_files_refreshed": 4,
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 867,
+      "total": 911
+    },
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "source_pin_changed": false,
+    "receipt": "docs/reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md"
   },
-  "security_scan_executed": false,
-  "behavioral_validation_executed": false,
-  "source_pin_changed": false,
-  "receipt": "docs/reviews/2026-10-30-anthropic-comms-mcp-private-data-authority-macro.md"
-},
   "mattpocock_delegated_authority_recheck": {
     "date": "2026-10-30",
     "source_id": "mattpocock-skills",
@@ -855,8 +855,8 @@
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
     "registered_source_identities": 22,
-    "persisted_third_party_exact_version_reviews": 867,
-    "total_verification_records": 911,
+    "persisted_third_party_exact_version_reviews": 875,
+    "total_verification_records": 919,
     "candidate_only_exact_version_reviews": 121,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -925,7 +925,10 @@
     "microsoft_typescript_direct_package_companions": 25,
     "microsoft_typescript_direct_package_denominator": 25,
     "google_agents_cli_verified_semantic_only": 2,
-    "google_agents_cli_rejected_unchanged": 5
+    "google_agents_cli_rejected_unchanged": 5,
+    "bm629_agent_skills_tracked_denominator": 68,
+    "bm629_agent_skills_current_standard_companions": 10,
+    "bm629_agent_skills_current_standard_gaps": 58
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1034,7 +1037,7 @@
       "registry/skills",
       "registry/verification"
     ],
-    "latest_reconciliation": "2026-10-30: AWS final two exact pinned gaps resolved and canonical CDK authority corrected. AWS 92/94 -> 94/94, zero static gaps, 115 exposures/94 distinct trees unchanged. Inventory 44 first-party / 848 third-party / 892 total verification. Both new reviews REJECT unchanged; canonical core aws-cdk VERIFIED 19/20 -> REJECT unchanged 15/20. No scanner or behavioral pass, no repository-owned execution.",
+    "latest_reconciliation": "2026-10-30: Bhushan Modi tracked source eight exact-version document review gates; 2/68 -> 10/68, 66 -> 58 genuine gaps. Eight new provenance/verification pairs, semantic VERIFIED only; current 44 first-party / 875 third-party / 919 total. No security/behavioral execution, pin change, admission or repository runtime.",
     "repository_owned_ci": false,
     "repository_owned_scripts": false,
     "security_assessment_executor": "authorized-external-host",
@@ -1455,5 +1458,93 @@
     "security_scan_executed": false,
     "behavioral_validation_executed": false,
     "receipt": "docs/reviews/2026-10-30-google-agents-eval-workflow-delegated-authority-macro.md"
+  },
+  "bm629_eight_document_review_gates": {
+    "date": "2026-10-30",
+    "source_id": "bm629-agent-skills",
+    "source_role": "tracked-corpus",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "root_first_class_packages": 68,
+    "nested_first_class_packages": 0,
+    "previous_current_standard_companions": 2,
+    "new_companions": 8,
+    "current_standard_companions": 10,
+    "genuine_gaps_before": 66,
+    "genuine_gaps_after": 58,
+    "semantic_verified": 8,
+    "behavioral_validation": "not-run",
+    "security_scan": "not-run",
+    "source_pin_changed": false,
+    "admitted_denominator_delta": 0,
+    "first_party": 44,
+    "third_party_persisted_reviews": 875,
+    "total_verification_records": 919,
+    "receipt": "docs/reviews/2026-10-30-bm629-eight-document-review-gates-macro.md",
+    "reviewed": [
+      {
+        "name": "reviewing-api-reference",
+        "manifest_blob": "31a18bc2ed97ce204aff5b04a6f5daad8a31239e",
+        "package_tree": "b64e27285831fb7481539fe18f481909a87ac235",
+        "score": 18,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-api-spec",
+        "manifest_blob": "eb696666731306823c469f413637329652fb6766",
+        "package_tree": "4c5614ac11b4c9a5f40ff16bd3163fae2aec1b5d",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-architecture-doc",
+        "manifest_blob": "2cbafdf0b8ca06ead40c71518f58eaaeb8f16b26",
+        "package_tree": "add562c2998495af6ddb35a20f230c68b0540d0f",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-data-model",
+        "manifest_blob": "15585931eb52765ca7700fd0325e1a40d118d3ee",
+        "package_tree": "0925f6850dcb7f01628e0c451b916da39e7008ff",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-design-system",
+        "manifest_blob": "810f7c2fe684cba14022852f46c5d7a097818fa5",
+        "package_tree": "4430ad5d069c6d611a41debb29f99dc868690e60",
+        "score": 16,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-developer-guide",
+        "manifest_blob": "e03ef02d32aa5a473957156eaac5f75c22f6a70f",
+        "package_tree": "5a5f4daf6bfd52a9987f36cd774542916302bcea",
+        "score": 18,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-feature-spec",
+        "manifest_blob": "0f80f34cad542818b4f94fa0850e172fb777f764",
+        "package_tree": "76ec55000420e7234f0acc63fe175c5a0fce7ee3",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      },
+      {
+        "name": "reviewing-prd",
+        "manifest_blob": "400be2b6af7301ce8dbd9faefbca002ccd3cba33",
+        "package_tree": "65b06e4ecbaa3c24852ccd84f389842d1717667c",
+        "score": 17,
+        "status": "verified",
+        "behavioral": "not-run"
+      }
+    ]
   }
 }
