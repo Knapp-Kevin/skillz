@@ -86,7 +86,13 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **Current first-party authority debt:** [#478](https://github.com/Knapp-Kevin/skillz/issues/478), [#481](https://github.com/Knapp-Kevin/skillz/issues/481) and [#483](https://github.com/Knapp-Kevin/skillz/issues/483) track **10 distinct affected current-main skills**. Four earlier repair PRs #416/#480/#482/#485 were closed **superseded, not merged** and consolidated into draft [#489](https://github.com/Knapp-Kevin/skillz/pull/489): **29 distinct changed final packages**, 29/29 static identity companions, 44/44 first-party registry fingerprints. No security or behavioral acceptance, no inventory/count change, and no merge of the fixes.
 
-## First-party skills by purpose
+## Capability-first discovery and source neutrality
+
+**This document is currently a snapshot, not a comprehensive capability search index.** Begin with [the discovery matrix](docs/capability-discovery-matrix.md) and [source registry](registry/sources.yaml); inspect governed third-party evidence in `registry/skills/` and `registry/verification/`, and pinned/tracked references in `skills/sources/` where accessible. First-party records in `registry/local-verification.json` are **one source-family view**, not the default or top-ranked search results. Compare candidates by capability fit, license, evidence, safety and portability, never authorship.
+
+**Coverage limitation:** the provisional crosswalk currently maps 44 first-party identities, while 995 third-party review identities remain to be crosswalked. Do not use the first-party category listing below as the corpus-wide capability taxonomy or a proxy for completeness.
+
+## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
 `daily-briefing`, `decision-log`, `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
