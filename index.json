@@ -2743,11 +2743,12 @@
       "supabase": 2,
       "notion": 4,
       "circleci": 4,
-      "build_ios_apps": 9
+      "build_ios_apps": 9,
+      "temporal": 4
     },
-    "terminal_candidate_decisions": 115,
-    "reference_only": 46,
-    "rejected_unchanged": 69,
+    "terminal_candidate_decisions": 119,
+    "reference_only": 49,
+    "rejected_unchanged": 70,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -3057,5 +3058,43 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-build-ios-nine-candidate-vetting.md",
     "issue": 580
+  },
+  "openai_temporal_four_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "temporal",
+    "plugin_version": "0.4.0",
+    "plugin_manifest_blob": "71130c81a2b6c9ce7ffb432925a000a79f4da6dc",
+    "skills_tree": "25fe264d72e1e268560f0c2b694ec5506f8a05bb",
+    "license": "MIT; complete plugin-local LICENSE, copyright 2026 Temporal Technologies Inc.",
+    "license_blob": "7092ef5b7509a89b861a4bda602424dfc19d2435",
+    "first_class_candidate_denominator": 4,
+    "terminal_candidate_decisions": 4,
+    "reference_only": 3,
+    "rejected_unchanged": 1,
+    "exact_skill_package_trees": {
+      "temporal-cloud-setup": "308a7e5bb2d60842d7a5fae0e24b6c3fe369afa2",
+      "temporal-developer": "5d7ace606e286e33604d647303895235b15d1941",
+      "temporal-ops": "920f0d4f32147434f9e79123328d0d56d3d180e7",
+      "temporal-serverless": "2aead9dfc66321f00094515d496dcad396b25518"
+    },
+    "mirror_path_last_change": "2026-08-26T20:49:26Z",
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-temporal-four-candidate-vetting.md",
+    "issue": 582
   }
 }
