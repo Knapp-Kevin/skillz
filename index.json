@@ -2746,11 +2746,13 @@
       "build_ios_apps": 9,
       "temporal": 4,
       "adobe": 6,
-      "airtable": 3
+      "airtable": 3,
+      "google_drive": 5,
+      "dropbox": 6
     },
-    "terminal_candidate_decisions": 128,
-    "reference_only": 51,
-    "rejected_unchanged": 77,
+    "terminal_candidate_decisions": 139,
+    "reference_only": 56,
+    "rejected_unchanged": 83,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -3209,5 +3211,172 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-adobe-airtable-nine-candidate-vetting.md",
     "issue": 584
+  },
+  "openai_google_drive_dropbox_eleven_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugins": {
+      "google-drive": {
+        "version": "0.1.15",
+        "plugin_tree": "14ec4043bb90d3ea4effe27dcf215effb87cd8d4",
+        "skills_tree": "17a1ac3986361a4cf6ce1d1efe133cd8d5340e56",
+        "denominator": 5,
+        "reference_only": 0,
+        "rejected_unchanged": 5,
+        "license": "MIT declared; NOASSERTION for copying"
+      },
+      "dropbox": {
+        "version": "5.0.1",
+        "plugin_tree": "71d222e051fe240afa78a211185c768c87415bd6",
+        "skills_tree": "0b6dd74c1d79a31c48a3e6e975a522889e9c6158",
+        "denominator": 6,
+        "reference_only": 5,
+        "rejected_unchanged": 1,
+        "license": "No declared license; NOASSERTION for copying"
+      }
+    },
+    "candidate_records": [
+      {
+        "plugin": "google-drive",
+        "name": "google-docs",
+        "tree": "cc80605d8d4a9dd1ba87e7998f8b18224954782e",
+        "skill_blob": "32095d7ebf5fbdc9787b7b50c357c381f4537fe0",
+        "skill_path_last_change": "2026-08-27",
+        "decision": "REJECT unchanged",
+        "score": 13,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "google-drive",
+        "name": "google-drive-comments",
+        "tree": "de6d7d556dd5493d1c3c8642aa47ecc5d89a6f68",
+        "skill_blob": "f4124a337f276bd1b23213f91bdf3994f27f25d7",
+        "skill_path_last_change": "2026-04-07",
+        "decision": "REJECT unchanged",
+        "score": 13,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "google-drive",
+        "name": "google-drive",
+        "tree": "fc0453cb068d6c4fb0601384e4bc56167b558a39",
+        "skill_blob": "418efac481d4bfb9dc770d170a7d499df4522bb5",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REJECT unchanged",
+        "score": 12,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "google-drive",
+        "name": "google-sheets",
+        "tree": "d8d14972cbdb8b6b433fe6affd8f5b1ec4862fb1",
+        "skill_blob": "5f7f744a9b849c4f0028849b60505e7cf4094da9",
+        "skill_path_last_change": "2026-08-27",
+        "decision": "REJECT unchanged",
+        "score": 14,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "google-drive",
+        "name": "google-slides",
+        "tree": "38c10de3ad2157852a530b4cc8fef2a96823ddc9",
+        "skill_blob": "d576f9907487e092b99689b34603fb1a9b5eab03",
+        "skill_path_last_change": "2026-08-27",
+        "decision": "REJECT unchanged",
+        "score": 11,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "clean-up-dropbox-content",
+        "tree": "7827bb319a79f8b4d22b820a1df6bd5955568410",
+        "skill_blob": "d482f3231116b22890436b8b9d3572563e0ae9b7",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REFERENCE-ONLY",
+        "score": 16,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "collect-files-with-request",
+        "tree": "c96ccf61c1394b4a738c6ad08eacb2828d71d6a9",
+        "skill_blob": "90cd5f61ded00b45e2b3fb14816ff7e14ebb0071",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REJECT unchanged",
+        "score": 14,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "find-dropbox-content",
+        "tree": "8ff629d50b35b865212f3ca719e4c6c3e9f5049d",
+        "skill_blob": "3bbe938de1dd20749334bd537bff987fadb00687",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REFERENCE-ONLY",
+        "score": 17,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "inspect-dropbox-file",
+        "tree": "b1688c81825b4aa3cbd7620bd572a7a2d88a0568",
+        "skill_blob": "912d12d57473dee919e312ad2f8870262848beb1",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REFERENCE-ONLY",
+        "score": 16,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "organize-dropbox-folder",
+        "tree": "86ceb9ca28d68347c0da3a1af269b2b7821a67e5",
+        "skill_blob": "b43fcffc7c5fe1644d185352089032ac7b2ec204",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REFERENCE-ONLY",
+        "score": 16,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      },
+      {
+        "plugin": "dropbox",
+        "name": "share-dropbox-content",
+        "tree": "140482b4ec9d2b2d8f1af02212dc24c76441485d",
+        "skill_blob": "e022bcf0f7174bed40aa8a7742404e595c1728d4",
+        "skill_path_last_change": "2026-08-26",
+        "decision": "REFERENCE-ONLY",
+        "score": 16,
+        "behavioral_validation": "not-run",
+        "security_scan": "not-run"
+      }
+    ],
+    "terminal_candidate_decisions": 11,
+    "reference_only": 5,
+    "rejected_unchanged": 6,
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-google-drive-dropbox-eleven-candidate-vetting.md",
+    "issue": 586
   }
 }
