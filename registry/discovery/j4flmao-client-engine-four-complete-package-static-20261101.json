@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "kind": "four complete seven-file source-local client-engine exact-package static candidate reviews",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "macro": {
+    "raw_source_paths": 645,
+    "direct_shape": 424,
+    "other_shape": 221,
+    "game_nested_first_class": 23,
+    "game_nested_terminal_before": 5,
+    "game_nested_terminal_after": 9,
+    "game_nested_seven_file_pending_before": 18,
+    "game_nested_seven_file_pending_after": 14,
+    "source_terminal_candidate_decisions_before": 23,
+    "source_terminal_candidate_decisions_after": 27,
+    "source_direct_shape_terminal": 18,
+    "source_other_shape_still_unclassified": 198,
+    "packages_reviewed": 4,
+    "source_files_reviewed": 28,
+    "bundled_references_reviewed": 24,
+    "reference_only": 3,
+    "reject_unchanged": 1,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_ecosystem_denominator": null
+  },
+  "macro_findings": [
+    "Four complete pinned seven-file trees have independent source-local SKILL.md identities; bundled reference Markdown is not extra skill inventory.",
+    "Source-level MIT text is complete, but linked external libraries and engine APIs are not relicensed; no copying or installation performed.",
+    "Strong shared architecture patterns: bounded work queues, deterministic state transitions, version-aware engine APIs, profiling; hard-coded thresholds are unmeasured.",
+    "Authority concerns: level-streaming ship gates, watchdog self-healing and editor hot-reload require separate authorization; input/IME and dialogue/player-location telemetry require privacy scoping.",
+    "Audio read-ahead/latency statements conflict between main skill and bundled reference; deterministic byte-parity across audio platforms is unsupported.",
+    "Game-engine conceptual overlap is not an exact-package duplicate; global semantic deduplication and full eligible denominator remain unknown.",
+    "No source admission, governed semantic pair, security scan, behavioral validation or installed artifact is inferred from this static candidate tranche."
+  ],
+  "records": [
+    {
+      "name": "animation-systems",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "canonical_path": "skills/game/client-engine/animation-systems/SKILL.md",
+      "frontmatter_name": "animation-systems",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "a47f9181a727aee821b9db040d8f9d60fd1b9aaf",
+      "package_tree": "19dd1efaa46266d1d89430b7e8f12ee720962160",
+      "package_file_count": 7,
+      "package_tree_complete": true,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "a47f9181a727aee821b9db040d8f9d60fd1b9aaf",
+          "bytes": 7115
+        },
+        {
+          "path": "references/animation-blending.md",
+          "blob_sha": "b120e929d39bfcbb7f99086b783ffa3dc619dc81",
+          "bytes": 3827
+        },
+        {
+          "path": "references/clip-compression.md",
+          "blob_sha": "16c51e08b8b5ec73741a1d2ec24d550fe2773f89",
+          "bytes": 3427
+        },
+        {
+          "path": "references/performance-budgeting.md",
+          "blob_sha": "bdc3cec1216916b28c3537fd900a8d18db4e3311",
+          "bytes": 3315
+        },
+        {
+          "path": "references/retargeting.md",
+          "blob_sha": "d798057054fae0dbd89e0c2034c1c221de46e743",
+          "bytes": 3050
+        },
+        {
+          "path": "references/root-motion-and-ik.md",
+          "blob_sha": "f7d8eb1443d3d6dab2d49087f6fe1e2484646307",
+          "bytes": 3695
+        },
+        {
+          "path": "references/skeleton-and-skinning.md",
+          "blob_sha": "cd48144a90a2821d78eec098d437e91bca3c19a4",
+          "bytes": 3310
+        }
+      ],
+      "license": "MIT at pinned root, complete text and copyright (c) 2026 j4flmao; package frontmatter MIT; preserve notice; external references separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "game-development/client-engine/animation-pipeline",
+      "trigger_nontrigger": "Runtime skeletal animation, blend trees, root motion, retargeting or IK; not DCC authoring, UI motion or ragdoll physics.",
+      "dependencies": "Six bundled source-local references on blending, compression, crowd budgets, retargeting, IK and skinning; optional external ACL/engine APIs not vendored.",
+      "freshness": "Pinned 2026-11-01; engine, OS, codec and middleware details require project-specific version checks",
+      "authority": "Generate architecture and snippets only. Editing project files, importing assets, executing builds or shipping changes requires separate scoped user/host authorization.",
+      "privacy_egress": "No required personal-data egress; motion capture or character assets may be licensed or sensitive and must not be uploaded without authority.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "score_20": 15,
+      "static_decision": "REFERENCE-ONLY",
+      "static_rationale": "Useful pose-level blending, hierarchy, root motion and retargeting decomposition. Unmeasured crowd CPU/GPU cost tables, blanket 16-ms assumptions and cross-platform deterministic decode claims are not established. Source references prescribe project-level tests but none were run.",
+      "macro_risk": "Version/platform-dependent animation cost, compressed-pose determinism and external ACL usage.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/client-engine/animation-systems/SKILL.md"
+    },
+    {
+      "name": "audio-engine",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "canonical_path": "skills/game/client-engine/audio-engine/SKILL.md",
+      "frontmatter_name": "audio-engine",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "a8054bc0748e8c20402c3547e0beefc75ce98db1",
+      "package_tree": "b2cccdce8df283963b7a8fefd25ca9053b5784db",
+      "package_file_count": 7,
+      "package_tree_complete": true,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "a8054bc0748e8c20402c3547e0beefc75ce98db1",
+          "bytes": 6486
+        },
+        {
+          "path": "references/dsp-graph.md",
+          "blob_sha": "977f11c32d4a0f0b8fd6fa1ce39f497b1684e7fc",
+          "bytes": 3155
+        },
+        {
+          "path": "references/effects-and-reverb.md",
+          "blob_sha": "29efbc19312b9af7ca59f22d0468c1f395121176",
+          "bytes": 2652
+        },
+        {
+          "path": "references/mixing-and-ducking.md",
+          "blob_sha": "c4c5125783cf60b0cfb6f9dbfd001e2335484f24",
+          "bytes": 3103
+        },
+        {
+          "path": "references/performance-and-voice.md",
+          "blob_sha": "d286d8d64e6f72514bb3ce9b3283d6ab92f4b746",
+          "bytes": 3039
+        },
+        {
+          "path": "references/spatial-audio.md",
+          "blob_sha": "29ef641d70e1c29870e4c1047d50a13cdf6ab42e",
+          "bytes": 2896
+        },
+        {
+          "path": "references/streaming-and-decode.md",
+          "blob_sha": "b6fa866e91085cd4d27e3086f8fc67d695694123",
+          "bytes": 3001
+        }
+      ],
+      "license": "MIT at pinned root, complete text and copyright (c) 2026 j4flmao; package frontmatter MIT; preserve notice; external references separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "game-development/client-engine/runtime-audio-dsp",
+      "trigger_nontrigger": "Game audio graph, DSP buses, spatial audio, streaming decode, voice limits and ducking; not composition, middleware UI authoring or VoIP servers.",
+      "dependencies": "Six bundled source-local references on DSP, reverb, mixing, polyphony, spatialization and streaming; external middleware/codecs are unpinned examples.",
+      "freshness": "Pinned 2026-11-01; engine, OS, codec and middleware details require project-specific version checks",
+      "authority": "Read-only architectural guidance and generated code. Device access, project writes, audio capture, publishing, middleware installation and profiling require task-specific authority.",
+      "privacy_egress": "Voice/dialogue content and microphone/device capture are potentially sensitive; no remote upload or telemetry without explicit scope.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "score_20": 13,
+      "static_decision": "REFERENCE-ONLY",
+      "static_rationale": "Differentiated event-to-DSP boundary, shared send buses, voice stealing and thread isolation. Bundled streaming reference contradicts the main skill on read-ahead latency, while 30-ms/CPU targets and byte-identical DSP replay are unqualified across platforms; no benchmarks or behavioral tests.",
+      "macro_risk": "Audio callback safety, codec latency, contradictory buffering claims and privacy-sensitive dialogue/voice streams.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/client-engine/audio-engine/SKILL.md"
+    },
+    {
+      "name": "input-systems",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "canonical_path": "skills/game/client-engine/input-systems/SKILL.md",
+      "frontmatter_name": "input-systems",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "79f8ec616b36d3053a9c082a9f37bec52b2ee5dc",
+      "package_tree": "33950b38405b7130903f1307903c25453d89a37c",
+      "package_file_count": 7,
+      "package_tree_complete": true,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "79f8ec616b36d3053a9c082a9f37bec52b2ee5dc",
+          "bytes": 6529
+        },
+        {
+          "path": "references/action-mapping.md",
+          "blob_sha": "a88bccb9f045b603a1b35d9a1abfe4057b3fd1cc",
+          "bytes": 2780
+        },
+        {
+          "path": "references/device-abstraction.md",
+          "blob_sha": "1114114851eec6d7e0ef8859795bef8f6e050248",
+          "bytes": 3279
+        },
+        {
+          "path": "references/haptics-and-tuning.md",
+          "blob_sha": "a6a89ac79ce8323293a4cb0684e1c621e537fc6e",
+          "bytes": 3192
+        },
+        {
+          "path": "references/sampling-and-events.md",
+          "blob_sha": "f65c73cb629d3be9375c39f1c78558515682a174",
+          "bytes": 2734
+        },
+        {
+          "path": "references/text-and-ime.md",
+          "blob_sha": "f8e35f134eb5654fb08d353ec0cfb085d7086d6a",
+          "bytes": 3541
+        },
+        {
+          "path": "references/touch-and-gestures.md",
+          "blob_sha": "38403f2c1b12d4b597d2e093c0e91c3f820f655e",
+          "bytes": 3149
+        }
+      ],
+      "license": "MIT at pinned root, complete text and copyright (c) 2026 j4flmao; package frontmatter MIT; preserve notice; external references separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "game-development/client-engine/device-input-and-accessibility",
+      "trigger_nontrigger": "Input abstraction, action rebinding, IME, touch gestures, haptics or fixed-tick sampling; not widget styling or a complete accessibility audit.",
+      "dependencies": "Six bundled source-local references on mapping, device lifecycle, haptics, sampling, IME and gestures; platform device APIs not pinned.",
+      "freshness": "Pinned 2026-11-01; engine, OS, codec and middleware details require project-specific version checks",
+      "authority": "Design and code suggestions only. Persisting keybinds, collecting device telemetry, modifying gameplay input or running hardware tests requires separately scoped approval.",
+      "privacy_egress": "Text/IME, paste, password fields and chat input are sensitive; never log raw composition, keystrokes or device identifiers without authorization.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation",
+          "ux"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "deterministic",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "score_20": 16,
+      "static_decision": "REFERENCE-ONLY",
+      "static_rationale": "Strong separation of gameplay actions from text/IME and touch cancel/ownership semantics. First-arrival conflict arbitration and fixed-tick determinism need explicit ordering tests; universal 33–80-ms click-to-result, haptic rate and platform polling figures are not validated.",
+      "macro_risk": "Keystroke/IME privacy, device-specific timing, rebinding persistence and haptic accessibility.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/client-engine/input-systems/SKILL.md"
+    },
+    {
+      "name": "level-streaming",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "canonical_path": "skills/game/client-engine/level-streaming/SKILL.md",
+      "frontmatter_name": "level-streaming",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "9c03055391b6ebf8a2ea590beac397433a221240",
+      "package_tree": "4f402f929ab3ecc5e011001122c41f3c6929f23a",
+      "package_file_count": 7,
+      "package_tree_complete": true,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "9c03055391b6ebf8a2ea590beac397433a221240",
+          "bytes": 6429
+        },
+        {
+          "path": "references/asset-dependencies.md",
+          "blob_sha": "afefcc2a64b7c30d9aac49b184c8ab66ef714d59",
+          "bytes": 3184
+        },
+        {
+          "path": "references/async-loading.md",
+          "blob_sha": "ac61b99003526c1f47a642bd00b71a0732445957",
+          "bytes": 3083
+        },
+        {
+          "path": "references/cells-and-residency.md",
+          "blob_sha": "d1bc497d196d08b1d5ee6975b28c6875d2f3ed19",
+          "bytes": 3761
+        },
+        {
+          "path": "references/hitch-prevention.md",
+          "blob_sha": "93cf56659e2c998e330c16c16f35c1899d601e3f",
+          "bytes": 3281
+        },
+        {
+          "path": "references/progressive-transitions.md",
+          "blob_sha": "8839502bf1ebbdd6cdeaf67fe950d62055ab1e8b",
+          "bytes": 2855
+        },
+        {
+          "path": "references/stream-strategies.md",
+          "blob_sha": "a1dc37368e0026becd689354e1ebcc78545f4be1",
+          "bytes": 2892
+        }
+      ],
+      "license": "MIT at pinned root, complete text and copyright (c) 2026 j4flmao; package frontmatter MIT; preserve notice; external references separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "game-development/client-engine/open-world-level-streaming",
+      "trigger_nontrigger": "Open-world cell residency, dependency closure, async loading, pop-in and hitch mitigation; not asset cooking or server-zone sharding.",
+      "dependencies": "Six bundled source-local references on asset dependencies, async IO, residency, hitch prevention, transitions and stream strategies; references to sibling asset-pipeline/platform-abstraction are outside this package.",
+      "freshness": "Pinned 2026-11-01; engine, OS, codec and middleware details require project-specific version checks",
+      "authority": "Unchanged procedure implies hard build/ship gates, watchdog self-healing and project hot-reload without action-specific authorization. Retain only planning/checklist extracts; no automatic edits, build gate changes, runtime recovery or persistent monitoring.",
+      "privacy_egress": "No required personal-data egress, but game telemetry, player location, multiplayer state and external asset metadata need explicit authorized scope.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation",
+          "testing"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only",
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "score_20": 13,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Useful cell residency, transitive dependency caching, predictive loading and proxy transitions. Reference hard-codes 8-ms/0.2-ms thresholds, requires a ship-gate test suite and watchdog self-healing, and implies editor hot-reload changes without scoped action authorization. The claim that asynchronous asset arrivals cannot change simulation outcomes is not substantiated. Reject unchanged, extract design checklists.",
+      "macro_risk": "Build-gate and self-healing authority, engine-specific resource budgets, nondeterministic asset activation and player-position telemetry.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/client-engine/level-streaming/SKILL.md"
+    }
+  ]
+}

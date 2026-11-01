@@ -1023,7 +1023,11 @@
     "archieindian_superpowers_openclaw_native_current_standard_gaps": 0,
     "archieindian_superpowers_community_current_standard_companions": 1,
     "archieindian_superpowers_community_eligible_denominator": 1,
-    "archieindian_superpowers_community_current_standard_gaps": 0
+    "archieindian_superpowers_community_current_standard_gaps": 0,
+    "j4flmao_source_total_terminal_candidate_decisions": 27,
+    "j4flmao_nested_game_terminal_candidate_decisions": 9,
+    "j4flmao_nested_game_seven_file_pending": 14,
+    "j4flmao_other_shape_unclassified": 198
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -3994,6 +3998,37 @@
     "source_total_terminal_candidate_reviews": 23,
     "reference_only": 5,
     "rejected_unchanged": 0,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 25,
+      "pinned_corpora": 12
+    }
+  },
+  "j4flmao_client_engine_four_complete_package_static_20261101": {
+    "date": "2026-11-01",
+    "source_id": "j4flmao-agent-skills",
+    "source_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "record": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json",
+    "receipt": "docs/reviews/2026-11-01-j4flmao-client-engine-four-complete-package-static.md",
+    "source_files_reviewed": 28,
+    "bundled_references_reviewed": 24,
+    "new_terminal_candidate_decisions": 4,
+    "reference_only": 3,
+    "rejected_unchanged": 1,
+    "nested_game_terminal_candidate_reviews_before": 5,
+    "nested_game_terminal_candidate_reviews_after": 9,
+    "nested_game_seven_file_pending_after": 14,
+    "source_total_terminal_candidate_decisions_before": 23,
+    "source_total_terminal_candidate_decisions_after": 27,
+    "direct_shape_terminal_decisions_unchanged": 18,
+    "other_shape_unclassified_unchanged": 198,
     "eligible_distinct_denominator": null,
     "admitted_source_denominator_delta": 0,
     "governed_semantic_pairs_delta": 0,
