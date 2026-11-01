@@ -11,7 +11,7 @@
     "registry/governed-review-name-index.json",
     "registry/discovery/dynamic-four-source-frontier-20261101.json"
   ],
-  "browse_overview_legend": "Evidence preview links to existing exact-version static review records, including possible rejects. Name-only preview is a lexical hint from review file names, not a verified capability fit, license/security approval or install recommendation. Every domain is only partially indexed; emptiness means unknown coverage.",
+  "browse_overview_legend": "Evidence preview links to existing exact-version static review records, including possible rejects. Name-only preview is a lexical hint from review file names, not a verified capability fit, license/security approval or install recommendation. Every domain is only partially indexed; emptiness means unknown coverage. Source-vetted reference records (when present) are separate from governed reviewed records and may have REJECT unchanged decisions; a 0-20 source-vetting score is not install eligibility.",
   "browse_overview": [
     {
       "domain": "software-engineering",
@@ -78,7 +78,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "testing",
@@ -115,7 +116,24 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/agentic-eval/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "3cb14203efaf62af98065bd599600ba808f0ef31",
+          "package_tree": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "agent-mcp-development",
@@ -182,7 +200,38 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 2,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/ai-team-orchestration/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "bdbf711aece38d17671a190abbbc7d0ba924ad85",
+          "package_tree": "a0f6cb6367244e66ffa0435f5c28ed59eb38be15",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/agentic-eval/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "3cb14203efaf62af98065bd599600ba808f0ef31",
+          "package_tree": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "cloud-devops",
@@ -219,7 +268,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "security",
@@ -276,7 +326,38 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/security-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+          "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/security-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+          "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "research",
@@ -343,7 +424,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Research capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "planning",
@@ -400,7 +482,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Planning capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "marketing",
@@ -467,7 +550,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Marketing capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "product",
@@ -504,7 +588,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "ux-ui",
@@ -551,7 +636,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "UX / UI capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "visual-design",
@@ -578,7 +664,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Visual design capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "illustration",
@@ -594,7 +681,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Illustration capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "3d-cad-animation",
@@ -608,7 +696,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "3D / CAD / animation capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "game-design",
@@ -623,7 +712,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Game design capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "fiction-narrative-worldbuilding",
@@ -670,7 +760,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Fiction / narrative / worldbuilding capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "technical-writing",
@@ -697,7 +788,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "music-composition",
@@ -709,7 +801,8 @@
       "name_only_preview": [],
       "coverage": "partial unassessed",
       "search_hint": "Music composition capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "audio-voice-sound",
@@ -724,7 +817,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Audio / voice / sound capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "video-film",
@@ -747,7 +841,8 @@
       "name_only_preview": [],
       "coverage": "partial evidence-linked",
       "search_hint": "Video / film capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "communication",
@@ -814,7 +909,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Communication capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "analytics",
@@ -841,7 +937,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Analytics capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "time-productivity",
@@ -908,7 +1005,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Time / productivity capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "memory-context",
@@ -945,7 +1043,38 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Memory / context capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/memory-merger/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+          "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/memory-merger/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+          "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "business",
@@ -982,7 +1111,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Business capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "sales",
@@ -1019,7 +1149,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Sales capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "career",
@@ -1052,7 +1183,8 @@
       "name_only_preview": [],
       "coverage": "partial evidence-linked",
       "search_hint": "Career capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "education",
@@ -1068,7 +1200,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Education capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "science",
@@ -1080,7 +1213,8 @@
       "name_only_preview": [],
       "coverage": "partial unassessed",
       "search_hint": "Science capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "medicine",
@@ -1092,7 +1226,8 @@
       "name_only_preview": [],
       "coverage": "partial unassessed",
       "search_hint": "Medicine capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "law",
@@ -1108,7 +1243,8 @@
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Law capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "finance",
@@ -1134,7 +1270,8 @@
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Finance capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     },
     {
       "domain": "robotics-iot",
@@ -1146,7 +1283,8 @@
       "name_only_preview": [],
       "coverage": "partial unassessed",
       "search_hint": "Robotics / IoT capability",
-      "not_found_means": "unknown; broaden to name index and discovery manifests"
+      "not_found_means": "unknown; broaden to name index and discovery manifests",
+      "source_vetted_reference_count": 0
     }
   ],
   "canonical_source": "docs/capability-discovery-matrix.md",
@@ -1510,7 +1648,23 @@
             "bm629-agent-skills/reviewing-test-plan"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/agentic-eval/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "3cb14203efaf62af98065bd599600ba808f0ef31",
+              "package_tree": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -1596,7 +1750,23 @@
             "archieindian-superpowers/subagent-driven-development"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 8
+          "name_only_review_hits_in_scope": 8,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/ai-team-orchestration/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "bdbf711aece38d17671a190abbbc7d0ba924ad85",
+              "package_tree": "a0f6cb6367244e66ffa0435f5c28ed59eb38be15",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "permissions",
@@ -1639,7 +1809,23 @@
             "openclaw-agent-skills/behavior-validator"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/agentic-eval/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "3cb14203efaf62af98065bd599600ba808f0ef31",
+              "package_tree": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "agent-observability",
@@ -1679,7 +1865,23 @@
             "david-ondrej-skills/bb-subagents"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/ai-team-orchestration/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "bdbf711aece38d17671a190abbbc7d0ba924ad85",
+              "package_tree": "a0f6cb6367244e66ffa0435f5c28ed59eb38be15",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -1873,7 +2075,23 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/security-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+              "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "identity-access",
@@ -1929,7 +2147,23 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/security-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+              "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "supply-chain",
@@ -4328,7 +4562,23 @@
             "archieindian-superpowers/persistent-memory-hygiene"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 7
+          "name_only_review_hits_in_scope": 7,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/memory-merger/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+              "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "provenance",
@@ -4345,7 +4595,23 @@
             "archieindian-superpowers/memory-dag-compactor"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/memory-merger/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+              "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "context-compression",
@@ -7315,7 +7581,9 @@
     "cross_source_exact_blob_matches": 0,
     "semantic_duplicate_review": "not-assessed",
     "path_lookup_procedure": "Read the source manifest from entry.sources[].manifest; for chunked indexes follow parts[]; compare capability terms, inspect exact upstream package, provenance, rights, authority, and qualification independently",
-    "reviewed_record_count_is_not_discovery_count": true
+    "reviewed_record_count_is_not_discovery_count": true,
+    "review_progress_4813": "registry/discovery/pinned-4813-review-progress-20261101.json",
+    "github_awesome_copilot_new_candidate_vetting": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
   },
   "first_party_identity_links_mapped": 44,
   "third_party_identity_links_mapped": 34,
