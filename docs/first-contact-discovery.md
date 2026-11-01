@@ -31,7 +31,7 @@ Stop once further questioning is unlikely to change a decision. Mark unsupported
 
 ## 3. Map needs to categories, then candidates
 
-Start with [the current category catalog](../INDEX.md) and [machine-readable snapshot](../index.json). Search whole skills and any required supporting components, not names alone. Compare the user's existing skills, first-party `skills/`, host-native abilities, governed third-party records, and relevant reference-only packages. Do **not** install or copy a reference corpus simply because a package exists.
+Start with [the current catalog](../INDEX.md), [machine-readable snapshot](../index.json), and [source registry](../registry/sources.yaml) as **complementary discovery surfaces**, not a first-party ranking. Search by capabilities and inspect whole skills plus relevant components. Compare the user's existing skills and host-native abilities against **all capability-matched indexed resources together**, including governed third-party records, pinned/tracked upstream references, reference-only packages, and first-party `skills/`. Never prioritize a source merely because its metadata is simpler to access. Disclose missing external-source access rather than silently narrowing the search to first-party records. Do **not** install or copy a reference corpus simply because a package exists.
 
 For each candidate, write down its mechanism, fit, required tools, authority/side effects, provenance, exact-version semantic state, applicable package-security state, and license. If `verified` is merely semantic, do not imply security or behavioral testing. Use `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST`, `DYNAMIC`, or `NO CHANGE` only after comparing with existing coverage.
 
