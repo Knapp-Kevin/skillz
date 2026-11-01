@@ -12,7 +12,6 @@
   "first_party_evidence": "registry/local-verification.json",
   "governed_identity_denominator": 1039,
   "third_party_identity_denominator": 995,
-  "identity_level_capability_links_verified": 10,
   "domains": [
     {
       "id": "software-engineering",
@@ -1957,7 +1956,7 @@
       ]
     }
   ],
-  "identity_level_capability_links_scope": "Ten evidence-backed third-party exact-version associations; not behavioral validation or maturity",
+  "identity_level_capability_links_scope": "Mapped exact-version identities include rejected skills for discoverability, not unchanged-use eligibility; no behavioral validation or maturity claimed.",
   "skill_records": [
     {
       "id": "corey-haines-marketing-skills/seo-audit",
@@ -2105,5 +2104,7 @@
       "license_resolution": "consult registry/skills companion; not established in this crosswalk",
       "restriction": "discovery/reference only; unchanged adoption rejected"
     }
-  ]
+  ],
+  "identity_level_capability_links_mapped": 10,
+  "third_party_identity_links_remaining": 985
 }
