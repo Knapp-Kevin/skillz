@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-31",
+  "snapshot_date": "2026-11-01",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
   "openai_canva_eight_candidate_vetting": {
@@ -2722,5 +2722,67 @@
     },
     "issue": 566,
     "receipt": "docs/reviews/2026-11-01-openai-game-studio-nine-candidate-vetting.md"
+  },
+  "openai_plugins_finite_candidate_summary": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "source_role": "dynamic-discovery",
+    "families": {
+      "developers": 5,
+      "product_design": 10,
+      "plugin_eval": 5,
+      "superpowers": 14,
+      "canva": 8,
+      "game_studio": 9,
+      "figma": 12
+    },
+    "terminal_candidate_decisions": 63,
+    "reference_only": 29,
+    "rejected_unchanged": 34,
+    "admitted_source_denominator_delta": 0,
+    "new_verification_pairs": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false
+  },
+  "openai_figma_twelve_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "figma",
+    "plugin_version": "2.0.20",
+    "plugin_tree": "9059b8c62a81cac85e22999e75f4bfde1071a728",
+    "source_role": "dynamic-discovery",
+    "license": "LicenseRef-Figma-Developer-Terms",
+    "first_class_candidate_denominator": 12,
+    "terminal_candidate_decisions": 12,
+    "reference_only": 7,
+    "rejected_unchanged": 5,
+    "skills": [
+      "figma-code-connect",
+      "figma-create-new-file",
+      "figma-design-to-code",
+      "figma-generate-design",
+      "figma-generate-diagram",
+      "figma-generate-library",
+      "figma-implement-motion",
+      "figma-swiftui",
+      "figma-use-figjam",
+      "figma-use-motion",
+      "figma-use-slides",
+      "figma-use"
+    ],
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-figma-twelve-candidate-vetting.md"
   }
 }
