@@ -19,6 +19,7 @@ These documents define the current architecture and must agree.
 | Human/AI front door | `README.md` | passive-resource identity, current corpus shape, current user-flow guidance |
 | Agent contract | `AGENTS.md` | routing, privacy, authority, mutation and artifact-destination boundaries |
 | Agent entry point | `AGENT_START_HERE.md` | current host-agent routing without repository execution or write-back assumptions |
+| Agent value/orientation procedure | `docs/agent-value-discovery.md` | default “take a look” route: public value, bounded authorized task context, observed recurring needs, adjacent hypotheses and non-installing brief |
 | Consumer discovery and installation contract | `docs/consumer-discovery-and-installation.md` | capability-first cross-source discovery, legal/quality/host gates, user-owned output, explicit installation evidence; passive instructions only |
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | passive first-visit and returning-user procedure; generated skills target the user's host/handoff |
 | System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, curation status, known drift |
