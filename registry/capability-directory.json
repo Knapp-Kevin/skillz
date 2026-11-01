@@ -21,9 +21,13 @@
         {
           "id": "frontend",
           "name": "frontend",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Review React component composition patterns within a pinned static reference"
+          ],
+          "matched_skill_ids": [
+            "vercel-agent-skills/vercel-composition-patterns"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "frontend",
             "Software engineering frontend"
@@ -114,9 +118,15 @@
         {
           "id": "architecture",
           "name": "architecture",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Evaluate codebase architecture and design tradeoffs",
+            "Review React component composition patterns within a pinned static reference"
+          ],
+          "matched_skill_ids": [
+            "vercel-agent-skills/vercel-composition-patterns",
+            "mattpocock-skills/codebase-design"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "architecture",
             "Software engineering architecture"
@@ -124,7 +134,6 @@
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/authoring-architecture-doc",
             "cole-medin-skills/plan-architecture",
-            "mattpocock-skills/codebase-design",
             "bm629-agent-skills/authoring-technical-design",
             "bm629-agent-skills/python-monorepo-architecture",
             "bm629-agent-skills/reviewing-architecture-doc"
@@ -243,15 +252,18 @@
         {
           "id": "end-to-end",
           "name": "end-to-end",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects"
+          ],
+          "matched_skill_ids": [
+            "addyosmani-agent-skills/browser-testing-with-devtools"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "end-to-end",
             "Testing end-to-end"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/browser-testing-with-devtools",
             "anthropic-skills/webapp-testing",
             "microsoft-skills/azure-microsoft-playwright-testing-ts",
             "microsoft-skills/azure-resource-manager-playwright-dotnet"
@@ -459,10 +471,12 @@
           "id": "evaluation",
           "name": "evaluation",
           "capabilities": [
+            "Reference evaluation methods; default external LLM judge/trace egress not approved",
             "Analyze failed agent sessions and propose falsifiable improvements"
           ],
           "matched_skill_ids": [
-            "local-skills/agent-postmortem"
+            "local-skills/agent-postmortem",
+            "google-agents-cli/google-agents-cli-eval"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -470,7 +484,6 @@
             "Agent / MCP development evaluation"
           ],
           "name_only_review_candidate_ids": [
-            "google-agents-cli/google-agents-cli-eval",
             "openclaw-agent-skills/behavior-validator"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -2841,15 +2854,18 @@
         {
           "id": "dashboards",
           "name": "dashboards",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Reference dashboard workflows; unchanged output may leak private data and use CDN code"
+          ],
+          "matched_skill_ids": [
+            "anthropic-knowledge-work-plugins/build-dashboard"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "dashboards",
             "Analytics dashboards"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/build-dashboard",
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -3164,17 +3180,20 @@
         {
           "id": "context-compression",
           "name": "context compression",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Reference context-budget techniques; autonomous writes/restarts are not approved"
+          ],
+          "matched_skill_ids": [
+            "archieindian-superpowers/context-window-management"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "context compression",
             "Memory / context context compression"
           ],
           "name_only_review_candidate_ids": [
             "archieindian-superpowers/compaction-resilience-guard",
-            "archieindian-superpowers/context-budget-guard",
-            "archieindian-superpowers/context-window-management"
+            "archieindian-superpowers/context-budget-guard"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
@@ -5670,10 +5689,123 @@
       "link_basis": "individual existing exact-version static verified record plus narrow task fit",
       "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
       "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "vercel-agent-skills/vercel-composition-patterns",
+      "source_id": "vercel-agent-skills",
+      "skill_name": "vercel-composition-patterns",
+      "source_snapshot_revision": "f8a72b9603728bb92a217a879b7e62e43ad76c81",
+      "content_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "software-engineering/frontend",
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/vercel-agent-skills/vercel-composition-patterns.yaml",
+      "provenance_path": "registry/skills/vercel-agent-skills/vercel-composition-patterns.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
+    },
+    {
+      "id": "mattpocock-skills/codebase-design",
+      "source_id": "mattpocock-skills",
+      "skill_name": "codebase-design",
+      "source_snapshot_revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "content_blob_sha": "3f63c8146dd2604b419c929e9876b90c30d410e9",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/mattpocock-skills/codebase-design.yaml",
+      "provenance_path": "registry/skills/mattpocock-skills/codebase-design.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
+    },
+    {
+      "id": "addyosmani-agent-skills/browser-testing-with-devtools",
+      "source_id": "addyosmani-agent-skills",
+      "skill_name": "browser-testing-with-devtools",
+      "source_snapshot_revision": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+      "content_blob_sha": "9864d2724e273e1164d62ab10b73590ae00fd6a8",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "testing/end-to-end"
+      ],
+      "evidence_path": "registry/verification/addyosmani-agent-skills/browser-testing-with-devtools.yaml",
+      "provenance_path": "registry/skills/addyosmani-agent-skills/browser-testing-with-devtools.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected",
+      "restriction": "reference/analysis only; unchanged adoption NOT eligible"
+    },
+    {
+      "id": "google-agents-cli/google-agents-cli-eval",
+      "source_id": "google-agents-cli",
+      "skill_name": "google-agents-cli-eval",
+      "source_snapshot_revision": "ef7808f33fc3038112b69d4ad488ce33b72699b1",
+      "content_blob_sha": "2ce4c881733de6cc75dce97bb7e3c4391df69c75",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "agent-mcp-development/evaluation"
+      ],
+      "evidence_path": "registry/verification/google-agents-cli/google-agents-cli-eval.yaml",
+      "provenance_path": "registry/skills/google-agents-cli/google-agents-cli-eval.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected",
+      "restriction": "reference/analysis only; unchanged adoption NOT eligible"
+    },
+    {
+      "id": "archieindian-superpowers/context-window-management",
+      "source_id": "archieindian-superpowers",
+      "skill_name": "context-window-management",
+      "source_snapshot_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+      "content_blob_sha": "2ee9f19876e986f5899e854fcf18349277c271cd",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "memory-context/context-compression"
+      ],
+      "evidence_path": "registry/verification/archieindian-superpowers/context-window-management.yaml",
+      "provenance_path": "registry/skills/archieindian-superpowers/context-window-management.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected",
+      "restriction": "reference/analysis only; unchanged adoption NOT eligible"
+    },
+    {
+      "id": "anthropic-knowledge-work-plugins/build-dashboard",
+      "source_id": "anthropic-knowledge-work-plugins",
+      "skill_name": "build-dashboard",
+      "source_snapshot_revision": "ca3e3fb2c4a1d3eea73fc003998faef6daa650b8",
+      "content_blob_sha": "030c8aad751c289898cef092a67d340712ecccb9",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "analytics/dashboards"
+      ],
+      "evidence_path": "registry/verification/anthropic-knowledge-work-plugins/build-dashboard.yaml",
+      "provenance_path": "registry/skills/anthropic-knowledge-work-plugins/build-dashboard.yaml",
+      "source_role": "third-party",
+      "link_basis": "existing exact-version static review and narrow procedural reference fit",
+      "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
+      "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected",
+      "restriction": "reference/analysis only; unchanged adoption NOT eligible"
     }
   ],
-  "identity_level_capability_links_mapped": 60,
-  "third_party_identity_links_remaining": 979,
+  "identity_level_capability_links_mapped": 66,
+  "third_party_identity_links_remaining": 973,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
@@ -5728,15 +5860,15 @@
     "reviewed_record_count_is_not_discovery_count": true
   },
   "first_party_identity_links_mapped": 44,
-  "third_party_identity_links_mapped": 16,
+  "third_party_identity_links_mapped": 22,
   "unmapped_review_identity_count": 985,
   "navigation_start": "docs/capability-quickstart.md",
   "search_fallback_index": "registry/governed-review-name-index.json",
   "navigation_population": {
     "mapped_first_party_distinct": 44,
-    "mapped_third_party_distinct": 16,
-    "mapped_total_distinct": 60,
-    "subdomains_with_evidence_linked_examples": 39,
+    "mapped_third_party_distinct": 22,
+    "mapped_total_distinct": 66,
+    "subdomains_with_evidence_linked_examples": 44,
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
