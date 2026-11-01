@@ -1,12 +1,12 @@
 # Governance Index
 
-**Last reviewed:** 2026-09-29
+**Last reviewed:** 2026-11-01 (agent-first consumer contract and source-frontier reconciliation; draft #597)
 
 This file maps the current control surfaces for `skillz`.
 
 `skillz` is an **entirely passive skill knowledge resource**. The external host agent is the active system for normal use and authorized maintenance. The repository owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. External host-executed assessments may contribute passive exact-version evidence.
 
-During normal `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER` use, the repository is also **read-only reference material**. Skills created, adapted, composed, refined, packaged, or installed for a user belong in the user's active host/environment or in a portable handoff. They do not belong in `skillz`. Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation.
+During normal `REPOSITORY_ORIENTATION`, `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER` use, the repository is also **read-only reference material**. Skills created, adapted, composed, refined, packaged, or installed for a user belong in the user's active host/environment or in a portable handoff. They do not belong in `skillz`. Only an explicit `REPOSITORY_MAINTENANCE` request may authorize repository mutation.
 
 Historical Qor, alpha, CI, preflight, runtime, generator, evaluator, and test-era artifacts are historical evidence only unless a current Tier 1 document explicitly re-establishes a current maintenance requirement from them. They never create a consumer runtime requirement or override the runtime-passive boundary.
 
@@ -19,9 +19,12 @@ These documents define the current architecture and must agree.
 | Human/AI front door | `README.md` | passive-resource identity, current corpus shape, current user-flow guidance |
 | Agent contract | `AGENTS.md` | routing, privacy, authority, mutation and artifact-destination boundaries |
 | Agent entry point | `AGENT_START_HERE.md` | current host-agent routing without repository execution or write-back assumptions |
+| Agent value/orientation procedure | `docs/agent-value-discovery.md` | default “take a look” route: use available host-native memory and relevant past user tasks, propose evidence-labeled direct/adjacent capabilities and give a non-installing value brief |
+| Consumer discovery and installation contract | `docs/consumer-discovery-and-installation.md` | capability-first cross-source discovery, legal/quality/host gates, user-owned output, explicit installation evidence; passive instructions only |
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | passive first-visit and returning-user procedure; generated skills target the user's host/handoff |
 | System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, curation status, known drift |
 | Governance index | `docs/GOVERNANCE_INDEX.md` | current authoritative control-surface map |
+| Second agent UX adversarial review | `docs/reviews/2026-11-01-second-agent-interaction-adversarial-review.md` | bounded desk-check findings, historical archive integrity, link audit and external agent test criteria; no independent host test claimed |
 | Curation queue | `CURATION_QUEUE.md` | living admitted-source, provenance-reconciliation, and discovery/source-vetting evidence ledger |
 
 The canonical physical boundary is:
@@ -38,6 +41,8 @@ These define where material came from, how candidates are found, and how `skillz
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
+| Capability navigation directory (draft) | `registry/capability-directory.json` | proposed open-ended domains and sparse identity links, not a complete catalog or a negative-result oracle |
+| Source snapshot/accounting ledger (draft) | `registry/corpus-source-reconciliation.json` | 25 registered source identities plus four pinned dynamic path inventories and source-level review counters; no deduplicated eligible universe claimed |
 | Source registry | `registry/sources.yaml` | third-party source identity, role, inclusion, exact pin/reference, license/terms, canonical physical path where locally admitted |
 | Source context/signals | `registry/source-signals.yaml` | timestamped volatile source-level context kept separate from skill quality |
 | Governed discovery surfaces | `docs/discovery-surfaces.md` | intentional lead-generation inputs and promotion rules; discovery intelligence never substitutes for canonical provenance or exact-version quality evidence |
@@ -54,7 +59,9 @@ The connected Creator Technical Resource Catalog is an intentional internal disc
 
 For new third-party discoveries, the definitive lifecycle begins with an evaluation issue before corpus admission:
 
-**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → exact-version security scan → decisive admission result → repository persistence when justified → user-fit decision**
+**Normal consumer path:** capability discovery → untrusted candidate inspection → user/host fit → rights and independent quality/security/authority checks → user-owned handoff, or specific-authority installation. No repository admission is needed to examine reference material.
+
+**Explicit repository-maintenance admission path:** discovery lead → issue and provenance/pin → candidate/source vetting → individual exact-version semantic and applicable security/legal review → justified admission, reference-only or rejection disposition → persist governed material only when authorized. New indexed leads do not automatically become installed, copied, admitted or promoted.
 
 The candidate issue is the pre-admission evidence workspace. Do not persist a newly discovered candidate as governed corpus material or finalize provenance/verification companions before the issue establishes a justified admission result.
 

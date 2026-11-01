@@ -8,7 +8,7 @@
 
 **Snapshot date:** 2026-11-01
 
-This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
+This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. **For a first-link “take a look” request, the agent first performs [value orientation](docs/agent-value-discovery.md); consumer navigation then begins with the open-ended [capability directory](registry/capability-directory.json) and [discovery/installation contract](docs/consumer-discovery-and-installation.md)**; directory matches are still sparse, so agents must extend searches across the governed and upstream evidence rather than treating an empty domain as proof of absence. Fixed snapshot review counts are **not** the library-size target. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 **OpenAI Web Data Visualization final nine (2026-11-01).** The nine previously unresolved direct first-class candidates at registered `openai/plugins` pin `0722921d5542fc593105c27bd52630babd8b8c2a` now have **9/9 terminal source-vetting decisions (7 REFERENCE-ONLY / 2 REJECT unchanged)**. Family **18/18 (13 REFERENCE-ONLY / 5 REJECT)**; scoped official OpenAI Plugins **169/169 across 22 families (74 REFERENCE-ONLY / 95 REJECT)**. This is finite **candidate source-vetting**, not admission, exact-package semantic verification, security, behavioral testing, or whole-repository discovery coverage. Plugin MIT manifest lacks controlling license grant (**NOASSERTION for copying**); individual complete package-tree SHA/freshness beyond pin was not re-established in this tranche. Governed inventory stays **44 first-party / 995 third-party / 1,039 pairs**, **23 sources**, **12 pinned corpora**, admitted denominator delta **0**. [Final-nine exact-SKILL review](docs/reviews/2026-11-01-openai-web-data-visualization-final-nine-candidate-vetting.md), [#598](https://github.com/Knapp-Kevin/skillz/issues/598).
 
@@ -94,7 +94,13 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **Current first-party authority debt:** [#478](https://github.com/Knapp-Kevin/skillz/issues/478), [#481](https://github.com/Knapp-Kevin/skillz/issues/481) and [#483](https://github.com/Knapp-Kevin/skillz/issues/483) track **10 distinct affected current-main skills**. Four earlier repair PRs #416/#480/#482/#485 were closed **superseded, not merged** and consolidated into draft [#489](https://github.com/Knapp-Kevin/skillz/pull/489): **29 distinct changed final packages**, 29/29 static identity companions, 44/44 first-party registry fingerprints. No security or behavioral acceptance, no inventory/count change, and no merge of the fixes.
 
-## First-party skills by purpose
+## Capability-first discovery and source neutrality
+
+**This document is currently a snapshot, not a comprehensive capability search index.** Begin with [the capability-first directory](registry/capability-directory.json) and [discovery matrix](docs/capability-discovery-matrix.md); inspect governed third-party evidence in `registry/skills/` and `registry/verification/`, and pinned/tracked references in `skills/sources/` where accessible. First-party records in `registry/local-verification.json` are **one source-family view**, not the default or top-ranked search results. Compare candidates by capability fit, license, evidence, safety and portability, never authorship.
+
+**Coverage limitation (current snapshot):** the machine-readable directory links **10** of the **995** governed third-party review records to proposed capabilities; the other **985 reviewed identities remain unmapped**. The [four pinned discovery-source manifests](registry/discovery/dynamic-four-source-frontier-20261101.json) additionally list 4,813 raw SKILL.md paths / 4,537 direct-shape candidates, **not necessarily unique eligible, licensed, or reviewed skill packages**. The provisional 44-first-party crosswalk is one source-family appendix, never the corpus-wide taxonomy or a completeness proxy. These snapshot counts may grow.
+
+## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
 `daily-briefing`, `decision-log`, `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`

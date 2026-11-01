@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-01",
+  "navigation_principle": "capability-first; this ledger is accounting/provenance, not a source-first browse directory",
+  "registered_sources": 25,
+  "reviewed_source_families": 20,
+  "source_level_slots_sum": 873,
+  "persisted_third_party_exact_version_review_records": 995,
+  "candidate_only_review_records": 121,
+  "distinct_discovered_package_denominator": null,
+  "distinct_eligible_package_denominator": null,
+  "known_overlap": [
+    {
+      "a": "microsoft-skills",
+      "b": "microsoft-azure-skills",
+      "exact_mirrored_pairs": 33
+    }
+  ],
+  "source_rows": [
+    {
+      "source_id": "anthropic-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "review_denominator_slots": 19,
+      "count_key": "anthropic_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "anthropic-knowledge-work-plugins",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "ca3e3fb2c4a1d3eea73fc003998faef6daa650b8",
+      "review_denominator_slots": 74,
+      "count_key": "anthropic_knowledge_work_plugins_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "vercel-agent-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "f8a72b9603728bb92a217a879b7e62e43ad76c81",
+      "review_denominator_slots": 9,
+      "count_key": "vercel_agent_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "microsoft-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "review_denominator_slots": 186,
+      "count_key": "microsoft_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "microsoft-azure-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "8f8c72bb9e22aee4366e07aadfd5766ef9add8f4",
+      "review_denominator_slots": 34,
+      "count_key": "microsoft_azure_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "aws-agent-toolkit",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+      "review_denominator_slots": 94,
+      "count_key": "aws_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "mattpocock-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "review_denominator_slots": 29,
+      "count_key": "matt_pocock_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "addyosmani-agent-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+      "review_denominator_slots": 24,
+      "count_key": "addy_osmani_agent_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "openhands-extensions",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "87959a7da3e75445647e77b2fbf5bf5b66fb037b",
+      "review_denominator_slots": 1,
+      "count_key": "openhands_extensions_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "cline-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "26378461e978f2b4e2e6d67b57121b86b2a79ba5",
+      "review_denominator_slots": 36,
+      "count_key": "cline_skills_published_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "cloudflare-skills",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "f96bff754e428838818017f75817f0f9428acd48",
+      "review_denominator_slots": 13,
+      "count_key": "cloudflare_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "google-agents-cli",
+      "source_role": "pinned-reference-corpus",
+      "pinned_revision": "ef7808f33fc3038112b69d4ad488ce33b72699b1",
+      "review_denominator_slots": 7,
+      "count_key": "google_agents_cli_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "cole-medin-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "fb2e876f057c5356d6603ba0c52d6b4418d893ba",
+      "review_denominator_slots": 33,
+      "count_key": "cole_medin_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "david-ondrej-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "7d0ef87dad1f638cab58995eead9e0e6e3fae237",
+      "review_denominator_slots": 55,
+      "count_key": "david_ondrej_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "bm629-agent-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "review_denominator_slots": 68,
+      "count_key": "bm629_agent_skills_tracked_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "openclaw-agent-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "6cd3366b10e2a8c5608265f692acf9f5da2b2448",
+      "review_denominator_slots": 8,
+      "count_key": "openclaw_agent_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "archieindian-superpowers",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+      "review_denominator_slots": 56,
+      "count_key": "archieindian_superpowers_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "agentskills-spec",
+      "source_role": "normative-spec",
+      "pinned_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "corey-haines-marketing-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "review_denominator_slots": 50,
+      "count_key": "corey_haines_marketing_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "jwynia-agent-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "review_denominator_slots": 54,
+      "count_key": "jwynia_agent_skills_fiction_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "danjdewhurst-story-skills",
+      "source_role": "tracked-corpus",
+      "pinned_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "review_denominator_slots": 23,
+      "count_key": "danjdewhurst_story_skills_eligible_denominator",
+      "enumeration_state": "source-level-denominator-only",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "openai-plugins",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "agentskillexchange-skills",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    }
+  ],
+  "limitations": [
+    "Source-level slots are not a deduplicated package manifest",
+    "Dynamic discovery sources and normative spec have no eligible-package count here",
+    "Some source families have reviewed packages beyond the scoped counters",
+    "No numeric target or upper bound defines library completion; each new source/pin changes the review frontier"
+  ],
+  "issue": "https://github.com/Knapp-Kevin/skillz/issues/599",
+  "review_record_arithmetic": {
+    "registered_tracked_source_family_slots": 873,
+    "candidate_only_exact_version_reviews": 121,
+    "cline_internal_unlisted_companion_records": 1,
+    "total": 995,
+    "reported_persisted_third_party_exact_version_reviews": 995,
+    "interpretation": "Arithmetic reconciles review record counts, not deduplicated distinct skill packages; Cline internal record is counted separately from 36 published Cline packages",
+    "evidence": "index.json counts.cline_skills_internal_unlisted_companions and counts.persisted_third_party_exact_version_reviews",
+    "verified_third_party_total": 995
+  },
+  "main_branch_drift": {
+    "observed": "PR branch one commit behind main",
+    "overlap_paths": [
+      "README.md",
+      "INDEX.md"
+    ],
+    "handling": "Do not overwrite newer main content; reconcile before merge"
+  },
+  "completion_claim": "rolling-snapshot-coverage-not-established",
+  "review_program_goal": "Open-ended skill discovery; all distinct eligible identities in each declared source snapshot receive terminal review dispositions, with ongoing new-source intake and freshness",
+  "discovery_frontier": {
+    "evidence_path": "registry/discovery/dynamic-four-source-frontier-20261101.json",
+    "source_snapshots": [
+      {
+        "source_id": "github-awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "raw_skill_md_paths": 432,
+        "direct_shape_candidates": 415,
+        "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+        "terminal_source_vetting_decisions": 10
+      },
+      {
+        "source_id": "openai-plugins",
+        "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "raw_skill_md_paths": 536,
+        "direct_shape_candidates": 502,
+        "manifest": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+        "terminal_source_vetting_decisions": 169
+      },
+      {
+        "source_id": "agentskillexchange-skills",
+        "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+        "raw_skill_md_paths": 3200,
+        "direct_shape_candidates": 3196,
+        "manifest": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
+        "terminal_source_vetting_decisions": 0
+      },
+      {
+        "source_id": "j4flmao-agent-skills",
+        "pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+        "raw_skill_md_paths": 645,
+        "direct_shape_candidates": 424,
+        "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
+        "terminal_source_vetting_decisions": 10
+      }
+    ],
+    "raw_skill_md_paths": 4813,
+    "direct_shape_candidates": 4537,
+    "unique_exact_blobs_across_four": 4813,
+    "semantic_duplicates": "not-assessed",
+    "eligible_unique_skill_denominator": null,
+    "caution": "Exact blob uniqueness is not semantic deduplication; direct-shape candidate is not an approved/reviewed package"
+  }
+}
