@@ -37,7 +37,7 @@ The `candidate score` is a **bounded pre-admission usefulness/risk estimate out 
 | `canva-design-feedback` | `0b8b11f1bd3c4c33d21662ed8ef523e48cfa36d5` | `ce1c52b5312f125ca07d825b82c5d74abb3c39c8` | 15/20 | REFERENCE-ONLY |
 | `canva-edit-design` | `1dfbea9395d74b8ee3b72a68b60521d1781ad764` | `d0aaf0c0fb163a4a2a69cd62f9cbd1408b2010a1` | 16/20 | REFERENCE-ONLY |
 | `canva-implement-feedback` | `e4db5efa884f1d1483a995569533b0451629f8b9` | `6bb8a7ce5244e158f6d8dec3ea05103e21f46b31` | 11/20 | REJECT unchanged |
-| `canva-resize-for-social-media` | `a4d5eefa13b8d1bd60c5dce85d7c1f60cc3f16a` | `8d94bca516fa265256bf509f74c708fa352b1fb6` | 12/20 | REJECT unchanged |
+| `canva-resize-for-social-media` | `1e6f69cb3362c4e01459127e54344ab2327aab85` | `8d94bca516fa265256bf509f74c708fa352b1fb6` | 12/20 | REJECT unchanged |
 | `canva-translate-design` | `853520b2134ddc1acc7c7a72b91d509318a222fb` | `1e3feb3cc09708709e23ea05e83e3deb1adc3fdf` | 12/20 | REJECT unchanged |
 
 ### Individual rationale, boundaries and dependencies
