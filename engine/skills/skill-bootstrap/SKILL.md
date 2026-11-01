@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.9.0
+  version: 0.10.0
 ---
 
 # Skill Bootstrap
@@ -56,6 +56,7 @@ Stop a stage when additional work is unlikely to materially change the next deci
 
 Choose exactly one route:
 
+- `REPOSITORY_ORIENTATION` — when the user points at this repository and says “take a look” or asks what value it offers, use the [agent value-discovery guide](../../../docs/agent-value-discovery.md) for a short public, context-bounded value brief; stop this full bootstrap unless they request a fitted system.
 - `DIRECT_LIBRARY` — browse/search/compare/install a known skill; stop this bootstrap.
 - `FIRST_VISIT` — build a fitted skill system.
 - `RETURNING_USER` — review/refine an existing fitted system.
@@ -91,22 +92,24 @@ Unknown installation method does not block discovery. If still unknown at handof
 
 ## S2 — Discover durable needs
 
-Inspect the **minimum relevant evidence** needed to identify stable reusable patterns. Prefer already-exposed history, memory, workspace rules, existing skills, recurring corrections, repeated tool sequences, definitions of done, failure modes, and human-verification points.
+Inspect the **minimum relevant, authorized evidence** needed to identify stable reusable patterns. Prefer already-exposed task history, available relevant memory summaries, workspace rules, existing skills, recurring corrections, repeated tool sequences, definitions of done, failure modes, and human-verification points. A memory summary is not a complete task log. An explicit request to analyze the user's past work permits only task-relevant history actually accessible and allowed by the host. A generic repository link alone does **not** authorize new searches across private chats, unrelated files or connected accounts.
 
 For each candidate need record:
 
 - observed evidence;
 - inference, if any;
 - recurrence/stability;
-- failure or cost it prevents.
+- failure or cost it prevents;
+- evidence level (`OBSERVED`, `INFERRED`, or `PROVISIONAL`) and whether it is a direct recurring need or an adjacent opportunity;
+- existing host/user skill coverage, if known, and expected maintenance cost.
 
-Do not mine unrelated private connectors merely because they are accessible.
+Do not mine unrelated private connectors merely because they are accessible. Do not copy user history, secrets or private artifacts into this public repository or pass them to upstream skill authors. Retrieve only the minimum authorized context that changes the next decision.
 
 Stop when more evidence is unlikely to change the capability requirements. Mark thinly supported items `PROVISIONAL`; never invent unavailable history.
 
-Use a **fit checklist**, not a list of familiar skill names: operator role and current goals; tools and authority; recurring cadences; costly failure modes; preferred handoff/verification; what is already working. Prefer evidence already in scope and ask only for details that materially change the fit. Exclude unrelated private data.
+Use a **fit checklist**, not a list of familiar skill names: operator role and current goals; tools and authority; recurring cadences; costly failure modes; preferred handoff/verification; what is already working. Seek **untapped opportunities** in recurring corrections, verification bottlenecks, missing handoffs or safeguards adjacent to observed work. Label these hypotheses until supported; never invent regular tasks or quantify time savings without measurements. Prefer evidence already in scope and ask only for details that materially change the fit. Exclude unrelated private data.
 
-**Output:** short durable-need list.
+**Output:** short durable-need list, plus at most one evidence-labeled adjacent opportunity. A high-impact safeguard can outrank a frequent trivial task, and `NO SKILL NEEDED` may be the right answer.
 
 ## S3 — Define capability requirements
 
@@ -152,7 +155,7 @@ For each relevant candidate inspect:
 
 Stop when every material requirement has an adequate candidate path or a justified custom/dynamic/no-skill path.
 
-For first contact, map needs to categories before names, note where adjacent skills are merely *reference* rather than eligible unchanged, and state what was deliberately deferred. Do not read the entire registry as a ritual.
+For first contact, map needs to categories before names, note where adjacent skills are merely *reference* rather than eligible unchanged, and state what was deliberately deferred. Rank a short set of candidate mechanisms by evidence-grounded value, recurrence/severity, risk reduction, overlap, rights/host feasibility and maintenance burden, **not raw repository count or first-party authorship**. Do not claim personalized fit when past-work evidence was unavailable. Do not read the entire registry as a ritual.
 
 **Output:** capability-to-candidate/component map.
 
