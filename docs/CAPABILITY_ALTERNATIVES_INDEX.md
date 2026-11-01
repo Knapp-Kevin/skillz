@@ -20,6 +20,12 @@ Grades are **evidence-bounded** and must be displayed **per exact skill version*
 
 For every *critical subdomain*, seek **three independent original-source alternatives** when viable: a primary production-oriented candidate, a distinct-method candidate, and a fallback or narrow specialist. Three is a **discovery target**, not a forced admission quota. Preserve additional distinct perspectives when they contribute meaningful methodology or host compatibility. Do not pad with forks, language translations, identical content, or repackaged aliases. Evaluate independently and display differences, not just a winner.
 
+## Expand the universe without prematurely pruning choices
+
+The existing **25 domain families** below are the first navigation layer, not an assertion that every human discipline fits them. The [proposed exhaustive discovery checklist](discovery/2026-11-01/CAPABILITY_UNIVERSE.csv) now enumerates **48 provisional families and 441 explicit subdomains** (the prior 25 plus 23 specialist additions). Each is explicitly `NOT_MAPPED / UNKNOWN / NOT_GRADED` until actual source identities and outcome evidence are linked; this is **not** a count of 441 absent skills.
+
+New specialist lanes include climate and environment, GIS, public policy, veterinary health, industrial manufacturing, electronics, supply chain, heritage/history, inclusive accessibility, energy, transportation, insurance, social services, disaster response, food preparation, libraries and other fields. Domains may overlap; assign skills to multiple justified outcomes rather than forcing false exclusivity. See the [continuous expansion, evaluation and gap-fill loop](CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md) for criteria to discover again or build a new original skill.
+
 ## Domain coverage and source alternatives
 
 All sources below are **discovery leads or already-governed families**, not evidence of qualified per-skill coverage. `GAP` means the subdomain-level completeness/quality proof is not established. The table explicitly keeps source options visible while packages are collected.
@@ -64,4 +70,6 @@ Rows lacking evidence display `Not graded`, `Unknown`, or `Not run`, never zero-
 
 ## Collection milestone
 
-The latest [pinned-source discovery catalog](discovery/2026-11-01/INDEX.md) and [under-covered-domain expansion](discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md) now index **29 independent repository sources, 33 static source/category inventories and 3,743 Git-tree-discovered SKILL.md path records**. All records carry immutable source and Git object identities. **These are file-path records, not 3,743 qualified or independent skills.** Distribution copies, mirrored techniques, localization variants and semantic near-duplicates require reconciliation. The repository's governed **44 first-party / 995 third-party review identities** are unchanged. No new admission, scanner pass or behavioral grade is claimed. Collect and deduplicate package identities before comparative evaluation and quality promotion.
+The [pinned 46-source catalog](discovery/2026-11-01/INDEX.md), [specialist expansion tranche](discovery/2026-11-01/DOMAIN_EXPANSION_3.md) and [full byte-identity audit](discovery/2026-11-01/audit/CUMULATIVE_46_SOURCES.md) now record **50 source/category inventories, 4,183 Git-tree `SKILL.md` path occurrences and 4,155 distinct file blob hashes**. There are 28 extra exact-byte occurrences. Neither byte uniqueness nor source diversity constitutes independent task methods, qualified options, license clearance, security passes or measured performance.
+
+The original governed **44 first-party and 995 third-party review identities** remain unchanged, as do their existing verification states. The 441-subdomain checklist is **unmapped**, not evidence that all 441 have no candidates. Only future identity-level mapping plus evaluations can support truthful coverage fractions. Discovery remains deliberately inclusive. The [expansion and refinement protocol](CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md) preserves alternatives and documents when new first-party skills are justified.
