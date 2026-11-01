@@ -3,6 +3,42 @@
   "snapshot_date": "2026-10-31",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "openai_canva_eight_candidate_vetting": {
+    "date": "2026-10-31",
+    "source_id": "openai-plugins",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "canva",
+    "plugin_version": "14.0.0",
+    "plugin_tree": "acc9c9bc8c9e6d0d5acc4f5fb41666ac4bdcce2f",
+    "source_role": "dynamic-discovery",
+    "license": "NOASSERTION",
+    "first_class_candidate_denominator": 8,
+    "terminal_candidate_decisions": 8,
+    "reference_only": 3,
+    "rejected_unchanged": 5,
+    "skills": [
+      "canva-brand-check",
+      "canva-branded-presentation",
+      "canva-bulk-create",
+      "canva-design-feedback",
+      "canva-edit-design",
+      "canva-implement-feedback",
+      "canva-resize-for-social-media",
+      "canva-translate-design"
+    ],
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23
+    },
+    "receipt": "docs/reviews/2026-10-31-openai-canva-eight-candidate-vetting.md"
+  },
   "microsoft_azure_exact_tree_mirror_reconciliation": {
     "date": "2026-10-30",
     "microsoft_source_id": "microsoft-skills",
