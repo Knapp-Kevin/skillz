@@ -2125,6 +2125,21 @@
       "Microsoft Azure skills mirror 33 Microsoft skills identities; do not sum as unique packages",
       "The 995 third-party review records include 121 candidate-only reviews and can include different revisions or mirrors",
       "Registered/tracked source packages are not all discovered or referenced external skill packages"
-    ]
+    ],
+    "reconciliation_program": {
+      "next_required_artifact": "deduplicated source-package identity ledger",
+      "source_family_denominator_slots": 873,
+      "source_family_count": 20,
+      "known_mirrored_pair_count": 33,
+      "unverified_external_discovery_denominator": true,
+      "workflow": [
+        "Enumerate each registered source's exact first-class SKILL.md paths at recorded pin",
+        "Attach exact package fingerprint and provenance",
+        "Identify mirrored packages and revision duplicates without deleting records",
+        "Crosswalk each unique eligible identity to capabilities",
+        "Record exact-version static review decisions and distinct security/behavioral evidence"
+      ],
+      "acceptance": "No corpus-wide reviewed percentage until eligible distinct package denominator and discovery coverage are independently reconciled"
+    }
   }
 }
