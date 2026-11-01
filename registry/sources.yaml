@@ -264,3 +264,25 @@ sources:
     license_terms_status: per-plugin; no-root-license
     pinned_revision: 0722921d5542fc593105c27bd52630babd8b8c2a
     rationale: Current official Codex plugin examples and discovery surface; upstream openai/skills README explicitly marks that older repository deprecated and redirects here. The observed tree has 536 raw SKILL.md paths and 64 plugin manifests, not a canonical admitted skill denominator. Plugin terms vary (MIT, Proprietary, LicenseRef-Figma-Developer-Terms); no vendoring, installation, blanket trust, unchanged-use approval, or automatic curation. Source vetting issue #554.
+
+  - id: agentskillexchange-skills
+    name: Agent Skill Exchange
+    source: https://github.com/agentskillexchange/skills
+    class: community-aggregated
+    source_role: dynamic-discovery
+    inclusion: tracked
+    license: MIT
+    license_terms_status: repository-root; linked-upstream-rights-unverified
+    pinned_revision: a6017b4af9d0298b7be3af7a6ec7485943d2c3e7
+    rationale: Discovery-only, source-vetted 2026-11-01. Nontruncated pinned tree contains 3200 raw SKILL.md paths, 3196 direct-shape and 4 other-shape. Publisher security labels are unverified external assertions; per-package upstream provenance, licensing, authority and quality must be independently reviewed. No vendoring, installation, blanket trust or admission. See docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md.
+
+  - id: j4flmao-agent-skills
+    name: j4flmao Agent Skills
+    source: https://github.com/j4flmao/agent-skills
+    class: community-vetted
+    source_role: dynamic-discovery
+    inclusion: tracked
+    license: MIT
+    license_terms_status: repository-root; package-local-terms-pending
+    pinned_revision: 982203e52afe0b726a7847599a8bfb293890e0c5
+    rationale: Discovery-only, source-vetted 2026-11-01. Nontruncated pinned tree contains 645 raw SKILL.md paths, 424 direct-shape and 221 other-shape including nested skill packages. No hooks, installs, scripts, runtime or source admission. Exact paths are retained in registry/discovery/leads/. See docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md.

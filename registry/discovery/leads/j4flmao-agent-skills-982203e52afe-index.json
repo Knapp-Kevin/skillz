@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_id": "j4flmao-agent-skills",
+  "upstream_repository": "j4flmao/agent-skills",
+  "pinned_commit": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "discovered-only",
+  "tree_entries": 6145,
+  "tree_truncated": false,
+  "raw_skill_md_paths": 645,
+  "direct_shape_candidates": 424,
+  "other_shape_paths": 221,
+  "unique_skill_blobs": 645,
+  "license_scope": "MIT repository metadata; license text and per-package terms still require vetting",
+  "quality_caveat": "Bundle/agent-config paths may be duplicates or internal; shape alone does not prove first-class eligibility",
+  "eligibility_denominator": null,
+  "individual_reviews": 0,
+  "parts": [
+    "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
+    "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
+  ]
+}

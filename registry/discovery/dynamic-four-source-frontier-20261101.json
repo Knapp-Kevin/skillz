@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-01",
+  "scope": "Four exact-pinned dynamic-discovery sources; not all ecosystem sources",
+  "sources": [
+    {
+      "source_id": "github-awesome-copilot",
+      "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "raw": 432,
+      "direct_shape": 415,
+      "other_shape": 17,
+      "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+      "terminal_static_candidate_reviews": 10
+    },
+    {
+      "source_id": "openai-plugins",
+      "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "raw": 536,
+      "direct_shape": 502,
+      "other_shape": 34,
+      "manifest": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+      "terminal_static_candidate_reviews": 169,
+      "review_count_caveat": "22 scoped plugin families; not path-reconciled with the 502 direct-shape candidates"
+    },
+    {
+      "source_id": "agentskillexchange-skills",
+      "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+      "raw": 3200,
+      "direct_shape": 3196,
+      "other_shape": 4,
+      "manifest": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
+      "terminal_static_candidate_reviews": 0
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "raw": 645,
+      "direct_shape": 424,
+      "other_shape": 221,
+      "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
+      "terminal_static_candidate_reviews": 10
+    }
+  ],
+  "raw_skill_md_path_sum": 4813,
+  "direct_shape_sum": 4537,
+  "other_shape_sum": 276,
+  "exact_blob_identity_distinct_count_across_four": 4813,
+  "exact_blob_duplicate_groups": 0,
+  "semantic_duplicate_groups": "not-assessed",
+  "eligible_distinct_skill_denominator": null,
+  "verified_review_completion_fraction": null,
+  "governed_third_party_review_records_unchanged": 995,
+  "warning": "Raw path and direct-shape counts are NOT a verified eligible/reviewed corpus denominator; source-level publisher security labels are not independently validated.",
+  "program_issue": 599,
+  "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
+  "dynamic_source_candidate_review_totals": {
+    "github_awesome_copilot": 10,
+    "openai_plugins": 169,
+    "agentskillexchange_skills": 0,
+    "j4flmao_agent_skills": 10,
+    "not_deduplicated_or_governed_semantic_reviews": true
+  }
+}

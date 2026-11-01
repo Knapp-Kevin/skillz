@@ -1,8 +1,16 @@
 # Skill Catalog Snapshot
 
+**j4flmao persona ten-package static vetting (2026-11-01).** At registered pinned `j4flmao/agent-skills` commit `982203e52afe0b726a7847599a8bfb293890e0c5`, ten complete single-file persona packages received individual exact-tree/blob static candidate decisions: **6 REFERENCE-ONLY / 4 REJECT unchanged**. Useful task-specific principles were retained; universal deployment, testing, performance, product and privacy-affecting mandates were not approved. **No source admission, governed semantic pairs, security scans or behavioral validations**; third-party governed review count remains **995**. The four-source discovery frontier remains **4,813 raw paths**, not 4,813 eligible or reviewed skills. Evidence: `registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json`; #599.
+
+**Expanded pinned discovery frontier (2026-11-01).** Two additional source-vetted, **dynamic-discovery-only** repositories are now registered: Agent Skill Exchange (**3,200 raw SKILL.md paths**) and j4flmao Agent Skills (**645 raw paths**). Together with GitHub Awesome Copilot (432) and OpenAI Plugins (536), the four exact snapshots contain **4,813 raw SKILL.md paths / 4,537 direct-shape candidates**; all 4,813 exact SKILL blob SHAs are distinct across these snapshots, but semantic duplication, package eligibility and upstream license rights remain unresolved. **25 registered sources**, still **995 governed third-party exact-version reviews**; 10 Awesome Copilot terminal candidate decisions remain separate. This is *not* 4,813 reviewed or eligible skills. See `registry/discovery/dynamic-four-source-frontier-20261101.json`, [source-vetting receipt](docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md), and #599.
+
+**Discovery-surface exact-path inventory (2026-11-01).** `registry/discovery/` now contains pinned inventories of **432 GitHub Awesome Copilot** and **536 OpenAI Plugins** raw `SKILL.md` paths (respectively **415** and **502** direct-shape candidates). All rows carry source-relative path, exact skill blob and package tree where present. Direct shape is not a reviewed/eligible unique skill. Ten single-file GitHub Awesome Copilot packages received individual terminal static candidate decisions (**3 REFERENCE-ONLY / 7 REJECT**); no governed semantic pairs, security scans, behavioral validations or source admissions. See #599 for the unreconciled 4,000+ objective.
+
 **Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. **Consumer navigation begins with the open-ended [capability directory](registry/capability-directory.json) and [discovery/installation contract](docs/consumer-discovery-and-installation.md)**; directory matches are still sparse, so agents must extend searches across the governed and upstream evidence rather than treating an empty domain as proof of absence. Fixed snapshot review counts are **not** the library-size target. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
+
+**OpenAI Web Data Visualization final nine (2026-11-01).** The nine previously unresolved direct first-class candidates at registered `openai/plugins` pin `0722921d5542fc593105c27bd52630babd8b8c2a` now have **9/9 terminal source-vetting decisions (7 REFERENCE-ONLY / 2 REJECT unchanged)**. Family **18/18 (13 REFERENCE-ONLY / 5 REJECT)**; scoped official OpenAI Plugins **169/169 across 22 families (74 REFERENCE-ONLY / 95 REJECT)**. This is finite **candidate source-vetting**, not admission, exact-package semantic verification, security, behavioral testing, or whole-repository discovery coverage. Plugin MIT manifest lacks controlling license grant (**NOASSERTION for copying**); individual complete package-tree SHA/freshness beyond pin was not re-established in this tranche. Governed inventory stays **44 first-party / 995 third-party / 1,039 pairs**, **23 sources**, **12 pinned corpora**, admitted denominator delta **0**. [Final-nine exact-SKILL review](docs/reviews/2026-11-01-openai-web-data-visualization-final-nine-candidate-vetting.md), [#598](https://github.com/Knapp-Kevin/skillz/issues/598).
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 
@@ -25,7 +33,7 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 | First-party user-facing skills | 44 |
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
-| Unique registered source identities | 23 |
+| Unique registered source identities | 25 |
 | Persisted third-party exact-version reviews | 995 (874 registered/tracked + 121 candidate-only) |
 | Total persisted verification/provenance pairs | 1039 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
