@@ -2626,5 +2626,27 @@
     "admitted_source_denominator_delta": 0,
     "issue": 560,
     "receipt": "docs/reviews/2026-10-31-openai-product-design-ten-candidate-vetting.md"
+  },
+  "openai_superpowers_candidate_vetting": {
+    "date": "2026-10-31",
+    "source_id": "openai-plugins",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "superpowers",
+    "canonical_author": "Jesse Vincent",
+    "canonical_upstream": "https://github.com/obra/superpowers",
+    "plugin_version": "6.3.0",
+    "manifest_blob": "688466c0ae3df4f8ea5b0dc707e37ea3501e233a",
+    "license": "MIT",
+    "license_blob": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+    "first_class_candidate_denominator": 14,
+    "terminal_candidate_decisions": 14,
+    "reference_only": 5,
+    "rejected_unchanged": 9,
+    "admissions": 0,
+    "new_semantic_review_pairs": 0,
+    "security_and_behavioral": "not-run",
+    "admitted_source_denominator_delta": 0,
+    "issue": 562,
+    "receipt": "docs/reviews/2026-10-31-openai-superpowers-fourteen-candidate-vetting.md"
   }
 }
