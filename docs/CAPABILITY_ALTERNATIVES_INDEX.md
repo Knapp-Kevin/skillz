@@ -39,15 +39,18 @@ All sources below are **discovery leads or already-governed families**, not evid
 | Games & interactive media | poorvith game dev, Scenario, Ellmos game dev, Jwynia | GAP | Engines, level design, testing, TTRPG |
 | Music composition | jtydhr88 music composition, SJY051 music composition, Ellmos music composer, Scenario audio | GAP | Notation, arrangement, MIDI and score |
 | Audio, voice & SFX | Scenario audio, poorvith game audio, Ellmos music composer | GAP | Recording, restoration, SFX, mastering |
-| Film, video & motion | Scenario video, EL4CTEO Blender video, Ellmos video transcription, Adobe reference | GAP | Editing, VFX, subtitles, output QA |
+| Film, video & motion | thenguyentrong video production, Scenario video, EL4CTEO Blender video, Ellmos video transcription, Adobe reference | GAP | Editing, VFX, subtitles, output QA |
 | Writing & narrative | Jwynia, Dan Dewhurst, Ellmos, first-party writing | GAP | Fiction, script, editorial, localization |
-| Education & learning | Ellmos education, Kalaris scientific teaching, OpenMedSkills education | GAP | Curriculum, pedagogy, accessibility, assessment |
+| Education & learning | GarethManning learning science, poorvith education, Ellmos education, Kalaris scientific teaching, OpenMedSkills education | GAP | Curriculum, pedagogy, accessibility, assessment |
 | Science & mathematics | Kalaris, AWS HCLS, OpenMedSkills | GAP | Physics, chemistry, mathematics, experimental design |
-| Robotics & physical engineering | earthtojake CAD, Gwaihir, glotoff, sathyavikram FreeCAD | GAP | Electronics, control, embedded, robot safety |
+| Robotics & physical engineering | arpitg1304 robotics, dbwls99706 ROS2, graph-robots manipulation, earthtojake CAD, Gwaihir, glotoff, sathyavikram FreeCAD | GAP | Electronics, control, embedded, robot safety |
 | Legal & compliance | CaseMark legal, first-party permissions, Microsoft governance | GAP | Jurisdictional legal review and compliance |
 | Healthcare & biomedical | CaseMark med, OpenMedSkills, AWS HCLS, Kalaris | GAP | Clinical governance and specialty evidence |
-| Finance & accounting | CaseMark finance/capital, LLMQuant, first-party finance | GAP | Accounting, audit, markets, tax |
-| Additional disciplines | Source discovery ongoing | GAP | Architecture, agriculture, environment, public sector and other specialist domains |
+| Finance & accounting | CaseMark finance/capital, LLMQuant, anthonymankaho HK accounting, first-party finance | GAP | Accounting, audit, markets, tax |
+| Architecture & construction | constructelligence-lab construction, sahilyousafp AEC IFC, FreeCAD and CAD source families | GAP | Building codes, structural checks, estimating, IFC/BIM, professional sign-off |
+| Agriculture, food & nutrition | farmfriend-labs farming, PangenomeAI academic agri/food, Kalaris research | GAP | Crop/soil systems, farm operations, food science, regional evidence |
+| Language & localization | BrunoMiguens product translation, skills-il Hebrew/RTL, lingui internationalization | GAP | Translation quality, contextual culture, Unicode/RTL, language coverage |
+| Additional disciplines | Source discovery ongoing | GAP | Public policy, environment/climate, veterinary, manufacturing, historical research and other specialist domains |
 
 **No domain is marked complete solely because three sources are listed.** This matrix intentionally distinguishes *alternative-source discovery* from *qualified, independently useful options*.
 
@@ -61,4 +64,4 @@ Rows lacking evidence display `Not graded`, `Unknown`, or `Not run`, never zero-
 
 ## Collection milestone
 
-The existing discovery receipts include **15 source-family leads**, **405 source-registry SKILL.md paths** from Ellmos and **325 README-derived candidate paths** from Kalaris/AWS after excluding three GitHub chrome false positives. These **730 path records are not a deduplicated, qualified skill count**. The repository's canonical admitted/review identity counts remain unchanged. Collect full exact-package identities first; evaluate alternatives and publish evidence grades afterward.
+The latest [pinned-source discovery catalog](discovery/2026-11-01/INDEX.md) and [under-covered-domain expansion](discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md) now index **29 independent repository sources, 33 static source/category inventories and 3,743 Git-tree-discovered SKILL.md path records**. All records carry immutable source and Git object identities. **These are file-path records, not 3,743 qualified or independent skills.** Distribution copies, mirrored techniques, localization variants and semantic near-duplicates require reconciliation. The repository's governed **44 first-party / 995 third-party review identities** are unchanged. No new admission, scanner pass or behavioral grade is claimed. Collect and deduplicate package identities before comparative evaluation and quality promotion.
