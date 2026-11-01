@@ -8,6 +8,8 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 
 **Official Plugin Eval candidate vetting (2026-10-31):** Five distinct `openai/plugins` source-vetting decisions, **1 REFERENCE-ONLY / 4 REJECT unchanged**. Executable metric packs, Codex credential/benchmark retention, automatic config writes and broken `--dry-run` guidance prevent unchanged approval. No admission or counted semantic review. [Exact-source review](docs/reviews/2026-10-31-openai-plugin-eval-five-candidate-vetting.md).
 
+**OpenAI Product Design bounded source vetting (2026-10-31).** All **10/10** front-mattered first-class skills under `plugins/product-design/skills/` at registered official `openai/plugins` revision have terminal candidate decisions: **2 REFERENCE-ONLY / 8 REJECT unchanged**. Proprietary plugin terms prohibit assumed redistribution; cross-workflow private-context preflight and image disclosure, unscoped connector reads, live-site asset copying, local dependency/write operations, and deployment authorization are material risks. The source's same-state design QA and visual selection discipline remain valuable reference methods. **0 admissions, 0 new semantic pairs, 0 denominator change, 0 scans/behavioral runs**. Public **44 / 995 / 1039**, sources **23** unchanged. [Ten-candidate review](docs/reviews/2026-10-31-openai-product-design-ten-candidate-vetting.md), [#560](https://github.com/Knapp-Kevin/skillz/issues/560).
+
 ## Current totals
 
 | Surface | Count |
