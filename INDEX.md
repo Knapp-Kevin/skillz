@@ -1,12 +1,14 @@
 # Skill Catalog Snapshot
 
-**Cross-source SHA deduplication:** [Complete 3,743-entry exact-blob audit](docs/discovery/2026-11-01/audit/README.md) confirms **3,740 distinct entrypoint blobs** and three matching FreeCAD host-path copies, with **no cross-repository byte-identical files** in the 29-source discovery archive. Semantic and package-level deduplication remain open; no qualification is inferred.
+**Cumulative discovery, source-pinned but not admitted:** [46 original repositories, 50 source/category inventories, 4,183 `SKILL.md` paths](docs/discovery/2026-11-01/INDEX.md). [Exact-blob audit](docs/discovery/2026-11-01/audit/CUMULATIVE_46_SOURCES.md): **4,155 distinct entrypoint blobs**, 28 repeated occurrences, and zero byte-identical cross-repository instances. Semantic duplication, license eligibility and behavioral quality remain unknown.
+
+**Future coverage and quality loop:** [48 provisional domain families / 441 explicit subdomains](docs/discovery/2026-11-01/CAPABILITY_UNIVERSE.csv) and [expansion → evaluation → targeted rediscovery → bounded original gap-fill](docs/CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md). The original 25 domain families remain the existing defined navigation; 23 new specialist families are provisional discovery additions, not unilaterally changed controlled taxonomy.
 
 **Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
-**Discovery archive expansion:** [29 pinned original sources, 3,743 SKILL.md path records, 33 static inventories](docs/discovery/2026-11-01/INDEX.md) and [the 14-source professional-domain expansion](docs/discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md) are **REFERENCE-ONLY**. Distinct file paths are not equivalent to independent, licensed, secure or behaviorally qualified skill options; canonical admitted/review counts below remain unchanged.
+**Discovery intake status:** [Second, 14-source professional-domain expansion](docs/discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md) and [third, 17-source specialist expansion](docs/discovery/2026-11-01/DOMAIN_EXPANSION_3.md) remain **REFERENCE-ONLY**. Distinct file paths are not the same as independent, licensed, safe or behaviorally qualified skill options; canonical admitted/review counts below remain unchanged.
 
 **Capability choices and visible grades:** [Capability alternatives and evidence-grade index](docs/CAPABILITY_ALTERNATIVES_INDEX.md) lists every broad domain, independent source alternatives, evidence requirements and explicit coverage gaps. Discovery candidates are not admitted or graded without receipts.
 
