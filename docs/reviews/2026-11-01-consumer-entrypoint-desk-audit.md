@@ -30,6 +30,10 @@
 4. Updated first-contact receipt and provenance/governance docs to preserve controlling package notices and distinguish source, package, static review, security and behavioral evidence.
 5. Reframed the goal as an **open-ended corpus**: coverage is measured for each declared source snapshot; expanding sources, domains and versions is ongoing work.
 
+## Connector-based static consistency check
+
+An external host read the current draft JSON/YAML files and cross-checked: **25/25 registered source rows**, **4/4 dynamic frontier source IDs registered**, raw paths **4,813 = sum of four source counts**, direct-shape candidates **4,537 = sum of four source counts**, source-ledger/frontier counts in agreement, and **10/10 capability links resolving bidirectionally to 10 governed identity records**. **Zero internal cross-reference discrepancies observed in this bounded check.** This does not validate semantics, rights, package completeness, a user's host installation, nor discovery accuracy across the missing capability links.
+
 ## Remaining acceptance gates, not represented as passed
 
 - **Coverage:** crosswalk all governed and discoverable exact-version identities, not only the 10 mapped candidates. Preserve unclassified and undiscoverable states; test false negatives. The domain ontology itself remains proposed.
