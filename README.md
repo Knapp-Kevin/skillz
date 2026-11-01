@@ -13,6 +13,12 @@
 
 > **Normal-use boundary:** skills created, adapted, composed, or refined for a user belong in that user's active AI/agent environment or in a portable handoff. They are not written back here unless repository maintenance/curation was explicitly requested.
 
+## Discover the indexed ecosystem
+
+**The index is the primary offering.** Explore capabilities across governed third-party exact-version reviews, pinned/tracked upstream skill references, discovery-only leads, and first-party resources. First-party authorship is provenance metadata, **not** a default recommendation, ranking signal, or privileged catalog section. Source status, license, exact version, authority, security and behavioral evidence determine eligibility independently of ownership.
+
+Start with the [capability discovery matrix](docs/capability-discovery-matrix.md), [source registry](registry/sources.yaml), [full catalog snapshot](INDEX.md), and [discovery-first ontology](docs/discovery-first-capability-ontology.md). The domain matrix is a proposed discovery map, **not** a complete skill-to-domain index. The existing first-party category map is a source-family view only. If indexed external records cannot be searched, disclose incomplete coverage rather than presenting first-party results as the full corpus.
+
 ## What `skillz` is
 
 `skillz` is **entirely passive**. It owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An authorized external host may run assessments elsewhere and deposit exact-version evidence here; pinned upstream package tooling stays source-owned reference material.
