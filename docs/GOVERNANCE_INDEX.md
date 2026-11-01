@@ -20,6 +20,8 @@ These documents define the current architecture and must agree.
 | Agent contract | `AGENTS.md` | routing, privacy, authority, mutation and artifact-destination boundaries |
 | Agent entry point | `AGENT_START_HERE.md` | current host-agent routing without repository execution or write-back assumptions |
 | Agent value/orientation procedure | `docs/agent-value-discovery.md` | default “take a look” route: use available host-native memory and relevant past user tasks, propose evidence-labeled direct/adjacent capabilities and give a non-installing value brief |
+| Populated capability browse entry | `docs/capability-quickstart.md` | task-to-skill examples from first-party and external exact-version evidence, including rejected reference-only examples |
+| Governed review name search | `registry/governed-review-name-index.json` | 44 first-party and 995 third-party exact-version review names; names are search leads, not quality or legal approval |
 | Consumer discovery and installation contract | `docs/consumer-discovery-and-installation.md` | capability-first cross-source discovery, legal/quality/host gates, user-owned output, explicit installation evidence; passive instructions only |
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | passive first-visit and returning-user procedure; generated skills target the user's host/handoff |
 | System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, curation status, known drift |
