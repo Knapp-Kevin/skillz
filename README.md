@@ -5,7 +5,7 @@
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-995-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-25-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
-![License](https://img.shields.io/badge/license-MIT-green)
+![First-Party License](https://img.shields.io/badge/first--party_license-MIT-green)
 
 **First time here?** If you pointed an AI agent at this repository and said *“take a look”*, start with [Agent Start Here](AGENT_START_HERE.md) and the [agent value-discovery guide](docs/agent-value-discovery.md). The first job is to determine **whether and how the library could improve the agent's work for its user**, not to list every skill or install anything.
 
