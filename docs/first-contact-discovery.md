@@ -26,6 +26,7 @@ Ask or infer from relevant, authorized evidence only:
 3. What cadences exist, if any? Which ones have been explicitly authorized?
 4. What failure, privacy, security, cost, or quality controls must survive adaptation?
 5. How will success be verified, and where can finished artifacts live?
+6. When external material may be installed or adapted, what use is intended (private, organizational, commercial, public redistribution), and do any host/organization license policies or approval requirements apply? Ask only if those distinctions can change the selected path.
 
 Stop once further questioning is unlikely to change a decision. Mark unsupported inferred needs `provisional`. Avoid collecting unrelated private history.
 
@@ -60,6 +61,7 @@ host_capabilities:
   user_in_loop: unknown # yes | no | unknown
   scheduling: unknown # yes | no | unknown
   side_effect_authority: unknown # read-only | approval-gated | autonomous | unknown
+  license_use_policy: unknown # e.g. internal-only, commercial, public redistribution, restricted licenses; ask only if material
 needs:
   - capability: <material user need>
     evidence: <observed, or provisional>
