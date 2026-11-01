@@ -6,7 +6,7 @@
 
 Read [AGENTS.md](../AGENTS.md), [AGENT_START_HERE.md](../AGENT_START_HERE.md), [INDEX.md](../INDEX.md), [CURATION_QUEUE.md](../CURATION_QUEUE.md), [registry/sources.yaml](../registry/sources.yaml), [registry/taxonomy.yaml](../registry/taxonomy.yaml), [docs/SYSTEM_STATE.md](SYSTEM_STATE.md), and [security-scanning.md](security-scanning.md) before applying this map. Do not override those canonical records.
 
-At the observed repository baseline: **44 first-party skills**, **995 persisted third-party exact-version reviews** (874 registered/tracked and 121 candidate-only), **1,039 total verification/provenance pairs**, **23 registered sources**, and **12 pinned reference corpora**. These are **review identities**, not proof of unique usable skills or live upstream freshness. **Unique identities exhaustively mapped in this document: 0/1,039.** The family and first-party examples below are source-supported leads, not a completed identity-level crosswalk. This explicit zero avoids silently misrepresenting category examples as verified per-identity mapping.
+At the observed repository baseline: **44 first-party skills**, **995 persisted third-party exact-version reviews** (874 registered/tracked and 121 candidate-only), **1,039 total verification/provenance pairs**, **23 registered sources**, and **12 pinned reference corpora**. These are **review identities**, not proof of unique usable skills or live upstream freshness. **Unique identities mapped by existing controlled tags: 44/1,039 (4.23%)** in [the first-party exact-identity crosswalk](CAPABILITY_FIRST_PARTY_CROSSWALK.md). **Third-party identities mapped: 0/995.** The domain-family examples below are source-supported leads, not a completed third-party identity-level crosswalk. This mapping does not establish full-package semantics, security clearance, or behavioral validation.
 
 ## Capability ontology: initial broad domains
 
@@ -54,7 +54,7 @@ Each candidate needs source ID, repository URL, immutable revision, package path
 
 1. **P0: security backfill** for current first-party and verified third-party packages with executable or consequential authority. Preserve existing semantic/provenance companions. Link to existing scanner backfill issue; no repo-owned runner.
 2. **P0: pin-freshness reconciliation** across 23 registered sources: immutable pinned package tree versus live upstream package tree, changed/new/removed skill identities, candidate review status, safety implications. Historical static review is not current-upstream clearance.
-3. **P1: full identity crosswalk**: map 44 first-party and 995 third-party review identities to one or more capability IDs; report unique mapped denominator and unclassified remainder; do not double-count multi-category identities.
+3. **P1: full identity crosswalk**: corroborate the 44 tag-mapped first-party identities and map 995 third-party review identities to one or more capability IDs; report unique mapped denominator and unclassified remainder; do not double-count multi-category identities.
 4. **P1: creative gap discovery**: audio/music, 3D/CAD, game systems, visual art, video, narrative, accessibility. Discovery leads remain reference-only pending package and license review.
 5. **P1: professional-specialist gap discovery**: education, science, medicine, law, finance, robotics. Higher-stakes skills require stronger subject-matter acceptance and safety tests.
 6. **P2: representative controlled evaluations**: negative-trigger cases, agent baseline versus skill, adversarial prompt-injection tests, privacy/authority tests, reproducibility, measured capability lift and token/time costs. Only externally and with explicit authorization.
@@ -62,6 +62,6 @@ Each candidate needs source ID, repository URL, immutable revision, package path
 ## First tranche completion receipt
 
 - Branch: `docs/capability-coverage-evidence-20261101-no-ci`.
-- This artifact: capability ontology, conservative family leads, explicit **0/1,039** identity-level crosswalk completion, qualification rules and measured backlog.
+- This artifact: capability ontology, conservative family leads, **44/1,039** identity-level broad-category mappings (first-party existing-tag derived; 995 third-party unmapped), qualification rules and measured backlog.
 - Source pins changed: **0**. Skills copied/admitted: **0**. Security scans executed: **0**. Behavioral runs executed: **0**. Repository-owned automation added: **0**.
 - Next tranche: materialize a static, identity-level crosswalk from canonical review records, starting with 44 first-party entries and then 995 third-party review identities; update the denominator and evidence links only for actually inspected identities.
