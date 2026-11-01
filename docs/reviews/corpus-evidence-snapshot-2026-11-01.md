@@ -106,3 +106,7 @@ The family-level pattern is stable but not absolute: Corey Haines is stronger as
 
 The bounded controlled-taxonomy conformance audit in #342 is **closed completed**. Ongoing tag conformance is ordinary curation hygiene against `registry/taxonomy.yaml`; historical invalid-tag examples remain evidence only and must not be assumed to describe current records.
 
+## Additional 2026-11-01 source-vetting checkpoint retained from README
+
+**Historical game-engine and Web3D exact-package checkpoint (2026-11-01; superseded by nested-game classification above).** Eight pinned `j4flmao/agent-skills` complete single-file packages now have individual static source-vetting decisions (**7 REFERENCE-ONLY / 1 REJECT unchanged**). All six direct-shape game guides were reviewed; at this checkpoint the 23 nested/other-shape game paths were still unclassified. J4flmao direct-shape candidate decisions **10 → 18 of 424**, leaving 406 direct-shape paths without decisions and, at that checkpoint, 221 other-shape paths unresolved. This is not a verified eligible denominator. No admission, new governed pairs, security scans or behavioral tests; **44 / 995 / 1,039** unchanged. [Evidence](docs/reviews/2026-11-01-j4flmao-game-web3d-eight-candidate-vetting.md) and [records](registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json).
+
