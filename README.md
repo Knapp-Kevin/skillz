@@ -51,7 +51,7 @@ The [live catalog](INDEX.md), [system state](docs/SYSTEM_STATE.md), [curation qu
 - **4,813 raw `SKILL.md` paths** in the currently pinned four-source discovery frontier: 4,537 direct-shape and 276 nested/other-shape. These are **structural discovery leads**, not a reconciled distinct-eligible-skill denominator.
 - **25 registered source identities**, including 12 pinned upstream Git submodules. Some identities, mirrors and revisions overlap. The ecosystem and the review backlog remain open-ended.
 
-Full-corpus qualification is ongoing: reconcile package boundaries and duplicates, inspect complete packages, assign evidence-backed domain/subdomain placements and rubric scores, preserve rejected/reference-only findings, and expand into underrepresented capabilities. **No fixed lifetime skill count is a finish line.**
+Full-corpus qualification is ongoing: [track pinned path-level review progress](registry/discovery/pinned-4813-review-progress-20261101.json), reconcile package boundaries and duplicates, inspect complete packages, assign evidence-backed domain/subdomain placements and rubric scores, preserve rejected/reference-only findings, and expand into underrepresented capabilities. **No fixed lifetime skill count is a finish line.**
 
 Historical source-intake receipts are retained in the [corpus evidence archive](docs/reviews/corpus-evidence-snapshot-2026-11-01.md), with [additional source-vetting reviews](docs/reviews/). They are not required reading for first-contact discovery.
 
