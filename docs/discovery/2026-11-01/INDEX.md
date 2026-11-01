@@ -1,5 +1,7 @@
 # Discovery source index: immutable package identities
 
+**Whole-archive SHA reconciliation:** [Cross-source exact-file audit](audit/README.md) compares all 3,743 path records in four immutable-source input partitions and finds **3,740 unique SKILL.md blobs**, with three matching same-repository FreeCAD pairs. Byte distinction does **not** imply independent approaches; semantic and package-level reconciliation remain open.
+
 **Expanded collection:** [14 additional under-covered-domain source inventories](DOMAIN_GAP_EXPANSION.md) have now been added, spanning education, construction, farming, robotics, localization, video and accounting. **Combined discovery archive: 29 original sources, 33 source/category CSV files and 3,743 source-tree `SKILL.md` path records** (3,310 from the initial tranche plus 433 new ones). Both tranches include complete pinned Git tree identities; **cross-tranche deduplication remains pending**, and this is not a count of usable/admitted skills.
 
 **2026-11-01 snapshot. This is reference-only collection, not admission.** Source-of-truth governed inventory remains in [the repository catalog](../../../INDEX.md), [source registry](../../../registry/sources.yaml), provenance and verification directories. This discovery index does **not** change those denominators or imply the sources have been admitted.
