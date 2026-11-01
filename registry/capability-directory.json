@@ -2139,7 +2139,10 @@
         "Crosswalk each unique eligible identity to capabilities",
         "Record exact-version static review decisions and distinct security/behavioral evidence"
       ],
-      "acceptance": "No corpus-wide reviewed percentage until eligible distinct package denominator and discovery coverage are independently reconciled"
-    }
+      "acceptance": "No corpus-wide reviewed percentage until eligible distinct package denominator and discovery coverage are independently reconciled",
+      "source_snapshot_rows_recorded": 23,
+      "source_level_denominator_rows_recorded": 20
+    },
+    "source_reconciliation_ledger": "registry/corpus-source-reconciliation.json"
   }
 }
