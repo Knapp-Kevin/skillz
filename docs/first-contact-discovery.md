@@ -4,7 +4,7 @@ This is a **passive walkthrough**, not a runnable installer or hard repository c
 
 ## 1. Route and establish authority
 
-Choose the route before selecting skills. A public repository link alone is **REPOSITORY_ORIENTATION**, not permission to mine personal history or initiate installation. If the user explicitly requests personalized matching or a fitted system, consider only relevant previously exposed/authorized history; check the host's actual tool, storage, and approval capabilities. Never interpret access to this public corpus as consent to modify the user's environment, collect private data, run commands, schedule tasks, or mutate this repository.
+Choose the route before selecting skills. A public repository link alone is **REPOSITORY_ORIENTATION**: the consuming agent should **evaluate its available host-native memories and relevant task/conversation history** to understand the user's patterns, while separately assessing the public corpus. This is host-side analysis with existing permissions; no separate `skillz` consent gate applies. A link does not authorize installing anything, altering the environment, collecting unrelated connected-account data, scheduling tasks, or mutating the repository. For requested fitted systems, also check the host's actual tools, storage and approval capabilities.
 
 Answer four axes with **yes / no / unknown**, except for authority:
 
@@ -28,7 +28,7 @@ Ask or infer from relevant, authorized evidence only:
 5. How will success be verified, and where can finished artifacts live?
 6. When external material may be installed or adapted, what use is intended (private, organizational, commercial, public redistribution), and do any host/organization license policies or approval requirements apply? Ask only if those distinctions can change the selected path.
 
-Stop once further questioning is unlikely to change a decision. Distinguish `OBSERVED` repeated workflows from `INFERRED` quality/adjacent gaps and `PROVISIONAL` ideas. An accessible memory summary is not a complete task history, a single topic mention is not a recurring need, and a generic link does not authorize a new search across unrelated private chats or connected apps. Do not transmit user task histories to the public library or skill authors. Prioritize quality improvements and important safeguards as well as frequent tasks. Avoid collecting unrelated private history.
+Stop once further questioning is unlikely to change a decision. Distinguish `OBSERVED` repeated workflows from `INFERRED` quality/adjacent gaps and `PROVISIONAL` ideas. **Review host-native memory and relevant prior interactions without making the user restate them.** Memory summaries are not complete histories, and a single topic mention is not a recurring need. Access to unrelated external services remains a separate question; do not transmit user task histories to the public library or skill authors. Prioritize quality improvements and important safeguards as well as frequent tasks.
 
 ## 3. Map needs to categories, then candidates
 
