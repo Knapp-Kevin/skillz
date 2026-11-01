@@ -137,6 +137,9 @@ Search in this order when available:
 
 When the capability directory has no linked candidate, **continue** by searching the governed verification/provenance companions and pinned/tracked upstream packages with capability terms, synonyms and mechanism clues, then accessible discovery-only leads. An empty map entry is not a negative search result. State which surfaces were inaccessible or did not have a machine-readable index. Never assume a fixed corpus denominator or stop discovering because a historical review count was reached.
 
+For additional discovered-only candidates, inspect the [pinned dynamic discovery frontier](../../../registry/discovery/dynamic-four-source-frontier-20261101.json) and follow each indexed source manifest (including chunked `parts[]` inventories). Path/blob/shape listings are leads only. Inspect whole packages, license text, authority and evidence before an unchanged-reuse recommendation. These observed source snapshots may grow; do not treat their path counts as a target.
+
+
 **No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat the local 44 as a representative sample of the indexed corpus. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
 
 The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory and not a destination for generated user artifacts.
