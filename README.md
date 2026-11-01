@@ -1,5 +1,7 @@
 # 🛠️ skillz
 
+**Dynamic-source discovery reconciliation (2026-11-01).** Two registered pinned discovery surfaces now have exact-path, blob, and package-tree inventories: `github/awesome-copilot` **432 raw SKILL.md paths / 415 direct-shape candidates**, and `openai/plugins` **536 raw paths / 502 direct-shape candidates**. These **968 paths / 917 direct-shape candidates** are *not* an eligible, deduplicated, reviewed or security-qualified denominator. Ten individually evidenced GitHub Awesome Copilot single-file candidates have terminal static source-vetting decisions (**3 REFERENCE-ONLY / 7 REJECT unchanged**); zero admissions or governed semantic pairs. See `registry/discovery/` and [#599](https://github.com/Knapp-Kevin/skillz/issues/599).
+
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-995-8A2BE2)

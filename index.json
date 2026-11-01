@@ -3864,5 +3864,50 @@
       }
     ],
     "receipt": "docs/reviews/2026-11-01-openai-web-data-visualization-final-nine-candidate-vetting.md"
+  },
+  "dynamic_discovery_snapshot_enumeration_20261101": {
+    "date": "2026-11-01",
+    "program_issue": 599,
+    "source_snapshots": [
+      {
+        "source_id": "github-awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "raw_skill_md_paths": 432,
+        "direct_shape_candidates": 415,
+        "nested_or_internal_paths": 17,
+        "tree_truncated": false,
+        "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json"
+      },
+      {
+        "source_id": "openai-plugins",
+        "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "raw_skill_md_paths": 536,
+        "direct_shape_candidates": 502,
+        "nested_or_internal_paths": 34,
+        "tree_truncated": false,
+        "manifest": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json"
+      }
+    ],
+    "raw_path_sum": 968,
+    "direct_shape_sum": 917,
+    "eligibility_deduplicated": false,
+    "corpus_wide_distinct_eligible_denominator": null,
+    "semantic_review_count_delta": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "interpretation": "Path-shape enumeration is not an eligible or reviewed skill denominator; includes dynamic discovery, may overlap governed sources and candidate records."
+  },
+  "github_awesome_copilot_ten_candidate_static_vetting_20261101": {
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "single_file_packages_static_reviewed": 10,
+    "reference_only": 3,
+    "rejected_unchanged": 7,
+    "unreviewed_direct_shape_candidates_after_tranche": 405,
+    "record": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
+    "governed_verification_pairs_added": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "source_admissions": 0
   }
 }
