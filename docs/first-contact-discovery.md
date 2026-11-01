@@ -1,10 +1,10 @@
 # First-contact discovery for a consuming agent
 
-This is a **passive walkthrough**, not a runnable installer or hard repository compliance gate. For FIRST_VISIT and RETURNING_USER use [AGENT_START_HERE](../AGENT_START_HERE.md) and the canonical [skill-bootstrap](../engine/skills/skill-bootstrap/SKILL.md). For an explicitly named skill or simple comparison, take the lighter DIRECT_LIBRARY route without forcing an interview.
+This is a **passive walkthrough**, not a runnable installer or hard repository compliance gate. For a generic “look at this repository” request take the lightweight [REPOSITORY_ORIENTATION / value-discovery route](agent-value-discovery.md) **before** attempting a full fitted-system build. For explicit FIRST_VISIT and RETURNING_USER skill-system requests use [AGENT_START_HERE](../AGENT_START_HERE.md) and the canonical [skill-bootstrap](../engine/skills/skill-bootstrap/SKILL.md). For an explicitly named skill or simple comparison, take DIRECT_LIBRARY without forcing an interview.
 
 ## 1. Route and establish authority
 
-Choose the bootstrap route before selecting skills. Check the current user's instruction and the host's actual tool, storage, and approval capabilities. Never interpret access to this public corpus as consent to modify the user's environment, collect private data, run commands, schedule tasks, or mutate this repository.
+Choose the route before selecting skills. A public repository link alone is **REPOSITORY_ORIENTATION**, not permission to mine personal history or initiate installation. If the user explicitly requests personalized matching or a fitted system, consider only relevant previously exposed/authorized history; check the host's actual tool, storage, and approval capabilities. Never interpret access to this public corpus as consent to modify the user's environment, collect private data, run commands, schedule tasks, or mutate this repository.
 
 Answer four axes with **yes / no / unknown**, except for authority:
 
@@ -28,7 +28,7 @@ Ask or infer from relevant, authorized evidence only:
 5. How will success be verified, and where can finished artifacts live?
 6. When external material may be installed or adapted, what use is intended (private, organizational, commercial, public redistribution), and do any host/organization license policies or approval requirements apply? Ask only if those distinctions can change the selected path.
 
-Stop once further questioning is unlikely to change a decision. Mark unsupported inferred needs `provisional`. Avoid collecting unrelated private history.
+Stop once further questioning is unlikely to change a decision. Distinguish `OBSERVED` repeated workflows from `INFERRED` quality/adjacent gaps and `PROVISIONAL` ideas. An accessible memory summary is not a complete task history, a single topic mention is not a recurring need, and a generic link does not authorize a new search across unrelated private chats or connected apps. Do not transmit user task histories to the public library or skill authors. Prioritize quality improvements and important safeguards as well as frequent tasks. Avoid collecting unrelated private history.
 
 ## 3. Map needs to categories, then candidates
 
@@ -64,7 +64,10 @@ host_capabilities:
   license_use_policy: unknown # e.g. internal-only, commercial, public redistribution, restricted licenses; ask only if material
 needs:
   - capability: <material user need>
-    evidence: <observed, or provisional>
+    evidence: <OBSERVED | INFERRED | PROVISIONAL; concise supporting workflow evidence>
+    opportunity_kind: <recurring-need | adjacent-hypothesis>
+    existing_host_coverage: <covered | partial | unknown>
+    likely_value: <specific quality/effort/risk improvement; no fabricated metrics>
 shortlist:
   - skill: <name / path>
     disposition: <ADOPT | ADAPT | COMPOSE | NO CHANGE | ...>
@@ -76,10 +79,15 @@ deferred: []
 installation_state: not-run # do not infer from selecting a skill
 completion_evidence: <what actually passed, or not-run; not a claim of behavioral validation>
 search_limitations: <inaccessible family, sparse directory, unknown coverage>
+context_access: <only relevant already-available sources examined; unavailable or out of scope noted>
+untapped_opportunity: <one evidence-labeled adjacent idea or none>
 next_action: <single action or none>
 ```
 
 ## 6. Definition of done
+
+For `REPOSITORY_ORIENTATION` (a link plus “take a look”), use the separate [value-brief definition of done](agent-value-discovery.md): clear public value proposition, honest limitations, up to three capability opportunities ranked by specific benefit and evidence, and one next action. **Do not use the full installation receipt or require a personal interview** for a vague first look.
+
 
 - Route and authority established with material unknowns shown.
 - Durable needs and minimum viable shortlist map to actual capabilities, not popularity.
