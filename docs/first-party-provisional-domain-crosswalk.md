@@ -1,5 +1,7 @@
 # First-party provisional domain crosswalk (44/44)
 
+**Scope notice:** This is a dated **first-party-only tag-derived domain association**, not the agent's primary navigation page or a current measure of the entire corpus. For concrete cross-source task examples use [the quickstart](capability-quickstart.md), [live capability directory](../registry/capability-directory.json) (44 first-party + 10 third-party identities currently evidence-linked) and [all governed review names](../registry/governed-review-name-index.json). Counts below describe **this historical first-party mapping**, not the live directory or the open-ended discovery ecosystem.
+
 **Evidence:** `registry/local-verification.json` on main `f71371400b38c04f5342b68c54468271562eaae0`. This is a **controlled-tag-derived provisional discovery map**, not semantic review of each skill's full instructions, domain specialization, or behavioral validation. Source identities are canonical skill names; counts are unique within a domain, not additive across domains.
 
 **Coverage:** 44/44 first-party identities provisionally mapped; 0/995 third-party review identities mapped here; **44/1,039** total provisional mapping, **995/1,039** remaining. Every mapping must be reviewed against exact-version skill content before maturity claims. Existing tag-to-domain translations can be overbroad: e.g. `monitoring` is not automatically professional analytics and `evaluation` is not automatically software testing.
