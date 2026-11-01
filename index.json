@@ -2742,11 +2742,12 @@
       "stripe": 7,
       "supabase": 2,
       "notion": 4,
-      "circleci": 4
+      "circleci": 4,
+      "build_ios_apps": 9
     },
-    "terminal_candidate_decisions": 106,
-    "reference_only": 42,
-    "rejected_unchanged": 64,
+    "terminal_candidate_decisions": 115,
+    "reference_only": 46,
+    "rejected_unchanged": 69,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -3009,5 +3010,52 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-notion-circleci-eight-candidate-vetting.md",
     "issue": 578
+  },
+  "openai_build_ios_nine_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "build-ios-apps",
+    "plugin_version": "0.1.2",
+    "plugin_tree": "f9a0d9e756f52a8a6764e823dc7760b64b6ec2f1",
+    "plugin_manifest_blob": "cea374fe5d45bf09a93826d21cce102208152fa7",
+    "skills_tree": "6c3f05cd4d55a65278bb2f15effb193c743be23e",
+    "first_class_candidate_denominator": 9,
+    "terminal_candidate_decisions": 9,
+    "reference_only": 4,
+    "rejected_unchanged": 5,
+    "license_label": "MIT",
+    "redistribution_terms": "NOASSERTION; no controlling root/plugin/child license text at pin",
+    "skills": [
+      "ios-app-intents",
+      "ios-debugger-agent",
+      "ios-ettrace-performance",
+      "ios-memgraph-leaks",
+      "ios-simulator-browser",
+      "swiftui-liquid-glass",
+      "swiftui-performance-audit",
+      "swiftui-ui-patterns",
+      "swiftui-view-refactor"
+    ],
+    "last_skill_path_change_dates": [
+      "2026-05-27T14:26:30Z",
+      "2026-06-03T16:49:21Z"
+    ],
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-build-ios-nine-candidate-vetting.md",
+    "issue": 580
   }
 }
