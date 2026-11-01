@@ -2775,15 +2775,27 @@
       "airtable": 3,
       "google_drive": 5,
       "dropbox": 6,
-      "remotion": 12
+      "remotion": 12,
+      "build_web_data_visualization": 9
     },
-    "terminal_candidate_decisions": 151,
-    "reference_only": 61,
-    "rejected_unchanged": 90,
+    "terminal_candidate_decisions": 160,
+    "reference_only": 67,
+    "rejected_unchanged": 93,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
-    "behavioral_validation_executed": false
+    "behavioral_validation_executed": false,
+    "candidate_families_in_scope": 22,
+    "fully_completed_families": 21,
+    "partial_families": {
+      "build_web_data_visualization": {
+        "decided": 9,
+        "denominator": 18,
+        "remaining": 9
+      }
+    },
+    "finite_candidate_denominator": 169,
+    "known_remaining_candidate_gaps": 9
   },
   "openai_figma_twelve_candidate_vetting": {
     "date": "2026-11-01",
@@ -3585,5 +3597,159 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-remotion-twelve-candidate-vetting.md",
     "issue": 593
+  },
+  "openai_web_data_visualization_nine_candidate_vetting": {
+    "date": "2026-11-01",
+    "issue": 595,
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "build-web-data-visualization",
+    "plugin_version": "0.1.21",
+    "plugin_tree": "bc053f29725f02c887a5a905a39824a41fb6a19b",
+    "plugin_manifest_blob": "86b325f117e87115e44ad3311532e5a615833e57",
+    "skills_tree": "56a7859c9f870064ff8b9aa560585ab81ae7aee6",
+    "plugin_tree_entries": 226,
+    "unique_blob_identities": 164,
+    "symlinks": 0,
+    "first_class_candidate_denominator": 18,
+    "terminal_candidate_decisions": 9,
+    "remaining_candidate_gaps": 9,
+    "reference_only": 6,
+    "rejected_unchanged": 3,
+    "license_label": "MIT",
+    "redistribution_terms": "NOASSERTION; manifest label without controlling repository/plugin/package license text",
+    "candidate_records": [
+      {
+        "name": "accessibility-and-inclusive-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/accessibility-and-inclusive-visualization/SKILL.md",
+        "package_tree": "2850d9a4bc6d543164394a5d27eaeed1d9b2ac95",
+        "skill_blob": "6cef595762177aa3aa1364037a9d417da824ae6d",
+        "candidate_score": 18,
+        "decision": "REFERENCE-ONLY",
+        "authority": "generate-only",
+        "portability": "high",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "canvas2d-data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/canvas2d-data-visualization/SKILL.md",
+        "package_tree": "4adfe92e53d21b1cc06edd09357e96c3ce6c1555",
+        "skill_blob": "349a15611f2b87336249004d41def5096a6e9667",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "authority": "generate-only",
+        "portability": "high",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "d3-data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/d3-data-visualization/SKILL.md",
+        "package_tree": "6367060ed53e92e3dd9fe0b0d3cd9addfb6a4aef",
+        "skill_blob": "71d3f9ee2fe5954a5c7aaa985ac31f5847214d13",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "authority": "generate-only",
+        "portability": "high",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "dashboards-and-real-time-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/dashboards-and-real-time-visualization/SKILL.md",
+        "package_tree": "99396c457b9eea8fe97f66dcd7a6108cd2b48eb5",
+        "skill_blob": "6e2999c20b1503f35b46cdfb2d67d42c78baa7d6",
+        "candidate_score": 14,
+        "decision": "REJECT unchanged",
+        "authority": "external-side-effect",
+        "portability": "medium",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/data-visualization/SKILL.md",
+        "package_tree": "632e4acaa7c066effddec6719d0b1166e772e3ac",
+        "skill_blob": "c7fcf094f16ad8052825d370f3c6891f60c98a4e",
+        "candidate_score": 16,
+        "decision": "REFERENCE-ONLY",
+        "authority": "read-only",
+        "portability": "medium",
+        "mirror_path_last_change": "2026-05-28",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "gantt-chart-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/gantt-chart-visualization/SKILL.md",
+        "package_tree": "bdbc5c847df44c8893f6aa299138cea90003b447",
+        "skill_blob": "c6152f7fbec0d6575ff3f735f136874dc6352232",
+        "candidate_score": 13,
+        "decision": "REJECT unchanged",
+        "authority": "external-side-effect",
+        "portability": "medium",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "geospatial-and-cartographic-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization/SKILL.md",
+        "package_tree": "420de6234f1d7b9fb180e6072303a392655577d9",
+        "skill_blob": "51b926ba198cf89b4776a483de5534f596a4521e",
+        "candidate_score": 13,
+        "decision": "REJECT unchanged",
+        "authority": "external-side-effect",
+        "portability": "medium",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "grammar-of-graphics-and-declarative-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/grammar-of-graphics-and-declarative-visualization/SKILL.md",
+        "package_tree": "7577181e2eb76fdf89ebd1ebb264f810cf109cd9",
+        "skill_blob": "cdb6fdb6aabde83e5efa5548480c2cf7bec3ab40",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "authority": "generate-only",
+        "portability": "high",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "node-link-and-diagram-layout",
+        "canonical_path": "plugins/build-web-data-visualization/skills/node-link-and-diagram-layout/SKILL.md",
+        "package_tree": "c5b4fff2200ca2ad9736f27cfac55919d6663724",
+        "skill_blob": "d608506627659ad71286b992937aff39623775db",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "authority": "generate-only",
+        "portability": "high",
+        "mirror_path_last_change": "2026-05-26",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      }
+    ],
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-web-data-visualization-nine-candidate-vetting.md"
   }
 }
