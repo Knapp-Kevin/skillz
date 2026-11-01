@@ -2118,6 +2118,13 @@
     "unreviewed_eligible_count": null,
     "review_completion_fraction": null,
     "review_program_issue": "https://github.com/Knapp-Kevin/skillz/issues/599",
-    "counting_rule": "Do not use 995 as the full discovered corpus denominator; do not treat source-vetting-only decisions as exact-version semantic reviews."
+    "counting_rule": "Do not use 995 as the full discovered corpus denominator; do not treat source-vetting-only decisions as exact-version semantic reviews.",
+    "registered_or_tracked_source_package_denominator_sum_before_cross_source_deduplication": 873,
+    "registered_or_tracked_source_package_denominator_sum_basis": "20 source-family eligible/denominator counters in main index.json; excludes first-party 44 and candidate-only 121; not a unique corpus-wide count",
+    "registered_or_tracked_source_package_denominator_caveats": [
+      "Microsoft Azure skills mirror 33 Microsoft skills identities; do not sum as unique packages",
+      "The 995 third-party review records include 121 candidate-only reviews and can include different revisions or mirrors",
+      "Registered/tracked source packages are not all discovered or referenced external skill packages"
+    ]
   }
 }
