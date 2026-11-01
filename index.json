@@ -2735,11 +2735,12 @@
       "superpowers": 14,
       "canva": 8,
       "game_studio": 9,
-      "figma": 12
+      "figma": 12,
+      "build_macos_apps": 11
     },
-    "terminal_candidate_decisions": 63,
-    "reference_only": 29,
-    "rejected_unchanged": 34,
+    "terminal_candidate_decisions": 74,
+    "reference_only": 32,
+    "rejected_unchanged": 42,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -2784,5 +2785,53 @@
       "registered_sources": 23
     },
     "receipt": "docs/reviews/2026-11-01-openai-figma-twelve-candidate-vetting.md"
+  },
+  "openai_build_macos_eleven_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "source_role": "dynamic-discovery",
+    "plugin": "build-macos-apps",
+    "plugin_version": "0.1.4",
+    "plugin_tree": "b150c7ad29479b9431f9028a281f5667ea3a673a",
+    "plugin_manifest_blob": "78ae3298c49b3903933000114e2019299872de2c",
+    "license_label": "MIT",
+    "redistribution_terms": "NOASSERTION; no controlling root/plugin license text",
+    "first_class_candidate_denominator": 11,
+    "terminal_candidate_decisions": 11,
+    "reference_only": 3,
+    "rejected_unchanged": 8,
+    "skill_names": [
+      "appkit-interop",
+      "build-run-debug",
+      "liquid-glass",
+      "packaging-notarization",
+      "signing-entitlements",
+      "swiftpm-macos",
+      "swiftui-patterns",
+      "telemetry",
+      "test-triage",
+      "view-refactor",
+      "window-management"
+    ],
+    "last_skill_path_change": "2464aee42116fc51482c84ceb053369380a8b5ce",
+    "last_skill_path_change_date": "2026-05-27T14:26:24Z",
+    "admissions": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "admitted_source_denominator_delta": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 995,
+      "registered_tracked": 874,
+      "candidate_only": 121,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "issue": 570,
+    "receipt": "docs/reviews/2026-11-01-openai-build-macos-eleven-candidate-vetting.md"
   }
 }
