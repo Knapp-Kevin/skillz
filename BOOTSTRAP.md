@@ -39,6 +39,8 @@ Then:
 9. adversarially review important instructions for likely misinterpretation, overreach, hidden assumptions, or unnecessary ceremony;
 10. resolve actual package-specific copying/adaptation/redistribution rights and notices, then install only when the user authorizes that specific action and the host supports it; otherwise provide a complete portable handoff. Verify the installed package and safe trigger behavior where possible; do not equate selection or drafting with installation.
 
+**Continuation after a fitted decision:** Do not restart orientation or re-ask which of the previously inspected candidates to adapt. `EXPLORE` alone ends with per-candidate read-only findings; a subsequent instruction to **implement those decisions** should produce full user-host skills for the selected `ADAPT` items (or portable, ready-to-use artifacts when host writes lack authorization), preserve `NO CHANGE`, and report `NOT INSTALLED` honestly. Actual install/persistence and external side effects still require the appropriate approval.
+
 ## Returning visit
 
 Do not rebuild from zero.
