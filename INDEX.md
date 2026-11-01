@@ -6,7 +6,7 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 
-**OpenAI Plugins finite candidate decisions (2026-11-01).** Eight bounded families (Developers 5, Product Design 10, Plugin Eval 5, Superpowers 14, Canva 8, Game Studio 9, Figma 12, Build macOS Apps 11) have **74/74 terminal decisions: 32 REFERENCE-ONLY / 42 REJECT unchanged**. This is dynamic discovery/reference material, not admitted inventory. The [macOS receipt](docs/reviews/2026-11-01-openai-build-macos-eleven-candidate-vetting.md) binds eleven exact package trees, shared run-button script hazards, privacy-sensitive telemetry and NOASSERTION licensing; [Figma](docs/reviews/2026-11-01-openai-figma-twelve-candidate-vetting.md) retains restricted editor-specific findings. Earlier family decisions remain in [CURATION_QUEUE.md](CURATION_QUEUE.md). No source pin, semantic pair, denominator, security or behavioral status changed.
+**OpenAI Plugins finite candidate decisions (2026-11-01).** Nine bounded families (Developers 5, Product Design 10, Plugin Eval 5, Superpowers 14, Canva 8, Game Studio 9, Figma 12, Build macOS Apps 11, Cloudflare 9) have **83/83 terminal decisions: 34 REFERENCE-ONLY / 49 REJECT unchanged**. This is dynamic discovery/reference material, not admitted inventory. The [Cloudflare receipt](docs/reviews/2026-11-01-openai-cloudflare-nine-candidate-vetting.md) reconciles six existing Cloudflare names, three plugin-only exposures, two identical manifests with divergent package trees, license conflicts, action authority and a README omission. A separate exact-pin correction makes admitted Cloudflare **13/13 reviewed: 5 VERIFIED semantic only / 8 REJECT unchanged**. [macOS](docs/reviews/2026-11-01-openai-build-macos-eleven-candidate-vetting.md) and [Figma](docs/reviews/2026-11-01-openai-figma-twelve-candidate-vetting.md) retain their prior evidence. No source pin, admitted denominator, semantic pair, security or behavioral status changed.
 
 ## Current totals
 
@@ -35,6 +35,7 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 | Matt Pocock Skills current-standard companions | 29 / 29 |
 | Matt Pocock Skills VERIFIED / REJECT unchanged | 17 / 12 |
 | Cloudflare Skills current-standard companions | 13 / 13 |
+| Cloudflare Skills VERIFIED / REJECT unchanged | 5 / 8 |
 | Addy Osmani Agent Skills current-standard companions | 24 / 24 |
 | Addy Osmani VERIFIED / REJECT unchanged | 8 / 16 |
 | Vercel Agent Skills current-standard companions | 9 / 9 |

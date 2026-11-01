@@ -8,16 +8,18 @@ source_class: official
 license: Apache-2.0
 relationship: vendored-reference
 source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
+package_tree_sha: fe7c98385541543a62abf65090654fcbc181c8b7
 upstream_revision: e96fbc77bcedab03c5f00378103d6453ca8dafc0
 upstream_last_updated_at: 2026-04-15T07:46:50Z
 curated_at: 2026-08-28
-last_checked_at: 2026-08-28
-availability: vendored
+last_checked_at: 2026-11-01
+behavioral_validation: not-run
+availability: vendored-reference-only
 local_path: skills/sources/cloudflare-skills/skills/agents-sdk/SKILL.md
-permission_tier: mutating
+permission_tier: mutating-with-separate-persistence-scheduling-logging-and-email-send-authorization
 portability: medium
-review_status: verified-structured
-dependency_status: source-intact
-dependencies: Cloudflare Agents SDK package plus source-intact references and current Cloudflare documentation
-import_eligibility: already-vendored
-rationale: Retrieval-first platform guidance explicitly counteracts stale model knowledge, maps tasks to authoritative docs, and documents installation/configuration assumptions and gotchas.
+review_status: rejected-unchanged-authority
+dependency_status: source-intact-current-docs-and-scheduling-email-refs
+dependencies: Cloudflare Agents SDK and Node/npm; bundled state-scheduling/email and other references; current Cloudflare docs; Wrangler and account for deployment
+import_eligibility: reference-extract-adapt-only
+rationale: REJECT unchanged (14/20) at the exact pinned tree. The procedure offers npm install and durable state/scheduling without an independent action-specific gate; bundled email.md demonstrates reading/logging sender and subject and automatic replyToEmail without separately established private-mail read, outbound communication, recipient, retention or disclosure authority. Persistent state broadcasts to clients, and scheduled work may recur. Preserve retrieval-first SDK guidance, typed state validation and docs routing for scoped ADAPT/EXTRACT, not automatic installation, scheduling, logging or mail. Pinned bytes unchanged; no external scanner or behavioral validation.
