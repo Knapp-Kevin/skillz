@@ -1,0 +1,73 @@
+# OpenAI Temporal: four exact-pin candidate decisions
+
+**Date:** 2026-11-01. **Source:** [openai/plugins](https://github.com/openai/plugins/tree/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/temporal) at registered discovery pin `0722921d5542fc593105c27bd52630babd8b8c2a`; source role **dynamic-discovery/reference**, not admitted. **Bounded intake:** [issue #582](https://github.com/Knapp-Kevin/skillz/issues/582). **Plugin:** Temporal Technologies Inc., `temporal` v0.4.0; manifest Git blob `71130c81a2b6c9ce7ffb432925a000a79f4da6dc`; skills subtree `25fe264d72e1e268560f0c2b694ec5506f8a05bb`.
+
+## Macro-first denominator, identity, terms, freshness
+
+The exact registered Git tree contains **four** distinct direct `plugins/temporal/skills/*/SKILL.md` first-class packages. Recursive enumeration of the skills subtree found **182 tree entries**, **149 Markdown blobs** (four first-class manifests plus **145 supporting Markdown references**), and **no nested first-class manifests or symlinks**. Reference Markdown, `agents/openai.yaml`, IAM templates and the bundled `provision.sh` are dependencies, not additional skills. All four package-tree identities and manifest blobs are distinct. There is no mirrored exposure path or prior governed candidate receipt for this exact family.
+
+The plugin manifest declares MIT and names Temporal as the upstream author, **not OpenAI**. Unlike many other official-plugin families, this plugin contains a **complete MIT LICENSE** at `plugins/temporal/LICENSE`, Git blob `7092ef5b7509a89b861a4bda602424dfc19d2435`, copyright (c) 2026 Temporal Technologies Inc. The license requires preservation of the notice; it does not confer operational authorization or quality approval. **No material was copied or vendored.**
+
+The last change to each `SKILL.md` *within the observed openai/plugins history* is import/sync commit `33bd9529725fcee78c9e51fcbaa93cd963c3a47b` dated **2026-08-26 20:49:26 UTC**. That is a **mirror-path freshness fact**, not proof of the last original Temporal-authored edit or compatibility with current Temporal CLI/SDK releases. Skill-declared versions vary independently from the plugin version.
+
+## Exact identities and terminal dispositions
+
+The two hashes per row are **complete package Git tree / SKILL.md Git blob** at the registered pin. Scores are **pre-admission static candidate assessments out of 20**, not persisted governed semantic verification, package-security reports, or executed behavioral evidence.
+
+| First-class package | Version | Package tree / SKILL.md blob | Static decision | Authority / portability |
+|---|---|---|---|---|
+| `temporal-cloud-setup` | 0.8.1 | `308a7e5bb2d60842d7a5fae0e24b6c3fe369afa2` / `b6b9ec4b15c970eb1442ec226250da2e636a8c01` | **REJECT unchanged 11/20** | external-side-effect; low |
+| `temporal-developer` | 0.6.0 | `5d7ace606e286e33604d647303895235b15d1941` / `50a1603740fe868a6b629deadc22b006a2d2a7b0` | **REFERENCE-ONLY 16/20** | mutating when acted on; high as conceptual reference |
+| `temporal-ops` | 0.2.0 | `920f0d4f32147434f9e79123328d0d56d3d180e7` / `23b24d5153f2bffc1bfe2656fc06c66577b4a0cf` | **REFERENCE-ONLY 16/20** | external-side-effect; medium as diagnosis checklist |
+| `temporal-serverless` | 0.6.0 | `2aead9dfc66321f00094515d496dcad396b25518` / `54ece146c2d604dcb6ccef4616836a5d94a5465a` | **REFERENCE-ONLY 16/20** | external-side-effect; medium as scoped deployment plan |
+
+### `temporal-cloud-setup`: REJECT unchanged, 11/20
+
+- **Purpose / trigger:** End-to-end Temporal Cloud onboarding, namespace, API key, SDK sample and workflow. **Non-trigger:** local-only learning, production setup without a separately approved cost/account/resource/credential scope.
+- **Dependencies:** 69 KB SKILL.md, three Markdown references, source-owned `scripts/provision.sh` (106 KB, blob `c09136797e34823a8581cea86c37c2da65f249e6`), prerelease Temporal CLI, Homebrew or SDK package managers, Git sample, gRPC Cloud API, local config and Worker process.
+- **Authority failure:** It expressly treats the **generic tool-permission prompt** as approval for each disclosed command and reserves separate user go-ahead only for login and workflow/failure runs. The namespace-create gate is `DISCLOSE` and the command uses `--auto-confirm --async`; API-key mint uses `--auto-confirm`. This is **not** a durable, action-specific user approval for billable cloud resources, persistent namespaces, identity credentials, dependency installs or retained local config. The prescribed no-skip flow and unconditional CLI update further narrow user control. Target region selection and warnings that resources are billable do not substitute for consent.
+- **Good source-owned safeguards:** The script sets `umask 077`, locks key-capture files to mode 0600, redacts token output and directs the host not to read `temporal.toml` into conversational context. The distinction between offline cached `whoami` and actual Cloud connectivity is strong diagnostic evidence. These are **static observations**, not a claim that the 106 KB shell helper has been executed or fully security-audited.
+- **Controlled tags:** use case `cloud, deployment`; lifecycle `operations`; characteristics `risk-aware, tool-assisted`; authority `external-side-effect`. Portability **low**; depends on shell/network, Temporal Cloud, changing CLI, SDK/toolchain and live credentials.
+- **Retain as:** reference to safe token capture, explicit gate display, phased setup, region and network verification; extract only with real independent resource/cost/identity approval. **Security not-run; behavioral validation not-run.**
+
+### `temporal-developer`: REFERENCE-ONLY, 16/20
+
+- **Purpose / trigger:** Durable workflow/activity design, deterministic replay, retry/versioning, SDK development and local troubleshooting across Python, TypeScript, Go, Java, .NET, Ruby and Rust. **Non-trigger:** automatic CLI installation, unapproved live workflow mutations, production server administration.
+- **Dependencies:** **102** source-owned Markdown references spanning core, seven language trees and integrations; Temporal CLI/server, SDKs and optional OpenAI Agents SDK/Google ADK/other integrations. No source-owned executable in this package tree.
+- **Boundary:** The entry point tells the host to install the CLI if absent and routes to CLI start/execute/signal/update guidance without a consolidated target/environment, install, persistent-state or private-history approval contract. It is a strong **knowledge index**, not unchanged operational authority. Its conceptual claim that workflow definitions are deterministic and activities carry effects is useful but does not authorize actual activity effects.
+- **Controlled tags:** use case `architecture, implementation`; lifecycle `design, implementation`; characteristics `compatibility-aware, reference-heavy`; authority `mutating` when followed as a procedure. Portability **high as reference**, medium/low when executing environment-specific SDK guidance.
+- **Retain as:** deterministic replay, history/event reasoning, workflow versioning, saga/compensation, Task Queue Fairness and SDK-specific anti-patterns. **Security not-run; behavioral validation not-run.**
+
+### `temporal-ops`: REFERENCE-ONLY, 16/20
+
+- **Purpose / trigger:** Scoped Temporal Cloud/self-hosted diagnosis, CLI operations and workflow/namespace health. **Non-trigger:** generic unrelated TLS failures, writing SDK application code, unapproved private telemetry access or account mutations.
+- **Dependencies:** **32** Markdown references (operations and triage), `temporal` and `tcld` CLIs, Cloud/self-hosted account access, workflow histories, audit/billing/log data; no bundled executable helper.
+- **Strong safeguards:** The destructive tier covers irreversible deletion, access revocation, production failover and broad batch queries; it requires the exact command/namespace, byte-identical batch query and count, explicit approval, and post-action verification. It explicitly refuses to interpret `--yes` or credential/tool availability as authorization. Reversible alternatives and bottom-up network/auth/worker/workflow diagnostic ladder are differentiated value.
+- **Remaining authority/privacy defects:** Ordinary non-destructive mutations are directed to execute when requested without a similarly explicit account/namespace/resource/cost scope. The entry point says read-only `get/list/describe/count/show` run **freely**, but workflow histories, billing, audit logs, worker logs and identity details can be private; access permission alone is not user authorization to read or disclose them. The diagnosis asks for exact pasted error/log text without a prior redaction instruction at the entry point. It also instructs the host to **save backend/environment answers to memory** without a separate retention/privacy boundary. Do not inherit the destructive-operation approval gate as a blanket pass for these other surfaces.
+- **Controlled tags:** use case `cloud, observability`; lifecycle `operations`; characteristics `evidence-first, risk-aware`; authority `external-side-effect`. Portability **medium as checklist**, low for live Cloud/self-hosted administration.
+- **Retain as:** destructive blast-radius accounting, safer cancel/disable alternatives, diagnosis ladder and exact verification discipline. **Security not-run; behavioral validation not-run.**
+
+### `temporal-serverless`: REFERENCE-ONLY, 16/20
+
+- **Purpose / trigger:** Build and deploy a Temporal Worker through Worker Controller Instance (WCI) to AWS Lambda, then diagnose and verify deployment. **Non-trigger:** unrelated serverless infrastructure, unapproved IAM/compute changes, unattended production traffic migration.
+- **Dependencies:** **eight** Markdown references, two source-owned AWS IAM role YAML templates, SDK-specific serverless packages, AWS account/region and Temporal Cloud/self-hosted access, Lambda/WCI/Task Queue, CLI or browser console.
+- **Strong safeguards:** The entry point asks the user to choose the actual account/Namespace and resource prefix, distinguishes authentication from permission, prohibits pasting credentials into chat, and requires an **exact named resource inventory and approval before the first account-mutating command**. It recognizes existing shared roles, separate invocation/execution roles, validation invocation, build identity and inventory-before-teardown. This is materially better than the Cloud setup flow.
+- **Remaining gap:** The approved initial create-list is not an explicit independent authorization for the later **`set current`** operation that can redirect live Task Queue traffic to a new Worker version. A newly approved resource inventory does not automatically authorize production cutover or broad shared-role permission changes. Logs and workflow histories used for verification also need bounded private-data access and retention. The source relies on Public Preview SDK APIs and provider-specific IAM/compute behavior; live compatibility is not established by the pinned static tree.
+- **Controlled tags:** use case `cloud, deployment`; lifecycle `implementation, operations`; characteristics `contract-first, traceable`; authority `external-side-effect`. Portability **medium as design/reference**, low for unchanged live AWS/Temporal execution.
+- **Retain as:** account-identity confirmation, explicit resource inventory, no secret-paste rule, two-role IAM separation, WCI validation and handoff/teardown discipline. **Security not-run; behavioral validation not-run.**
+
+## Cross-family synthesis and omissions
+
+1. **Authorization is the dividing line.** Cloud setup uses generic shell permission prompts and `--auto-confirm` for billable namespace/key creation, whereas serverless explicitly asks for a named resource inventory approval and ops explicitly gates destructive actions. None can inherit blanket approval for private reads, identity changes, production cutover, recurring/persistent effects or data disclosure.
+2. **Source-owned credential hygiene is useful but not assurance.** The provisioner has intentional locked-file and redaction handling. The present review did not execute or comprehensively scan its 106 KB script; never treat this as a proven secret-safety guarantee. Avoid secret values in chat, terminal logs, URLs, diffs or unredacted diagnostic artifacts.
+3. **Differentiated mechanisms:** deterministic workflow replay/Activity separation; exact namespace/query/count destructive gates; bottom-up operational diagnosis; WCI validation before cutover; distinct AWS Lambda execution vs invocation IAM roles; safe local key capture. These are higher-value extraction/checklist patterns than generic install/deploy prompt wrappers.
+4. **Privacy and freshness:** workflow history, audit/billing logs, identity data, diagnostics and memory retention are not harmless because commands are read-only. All four mirror paths last changed in the August 26 sync; source freshness and Public Preview compatibility require later evidence. Version numbers in plugin metadata and individual SKILL.md are separate.
+5. **No omission defect in this bounded family:** four direct manifests; 145 supporting Markdown references are not separate front-mattered skills; no aliases, symlinks or duplicate exposure paths. This closes only the Temporal candidate slice, **not** the full official plugin catalog.
+
+## Decision, accounting, lifecycle
+
+**Four terminal candidate decisions: 3 REFERENCE-ONLY / 1 REJECT unchanged / 0 ADMIT.** These are source-vetting outcomes, not admitted `verified` or `validated` semantic records. All package-security and behavioral states **not-run**; no command, script, cloud API, SDK, scanner, test or deployment was executed; no vendoring or source pin change.
+
+Official-plugin bounded intake **115/115 (15 families; 46 REFERENCE-ONLY / 69 REJECT unchanged) → 119/119 (16 families; 49 REFERENCE-ONLY / 70 REJECT unchanged)**. Admitted-source denominator delta **0**. Governed inventory remains **44 first-party / 995 third-party / 1,039 matching provenance/verification pairs**, 23 registered source identities and 12 pinned corpora. README, SYSTEM_STATE, CURATION_QUEUE, INDEX and index.json are reconciled in the same tranche.
+
+Open repair drafts #489 (29), #492 (5), #496 (2) still need complete external pinned SkillSpector v2.12.0 reports and independently executed adversarial acceptance for **36 distinct final changed first-party package trees**, followed by shared-registry reconciliation. Admissions #412/#413 have separate gates; Archie licensing #544 remains externally dependent. **Next priority:** obtain those 36 exact-package security/behavioral receipts, then merge only qualified repairs.
