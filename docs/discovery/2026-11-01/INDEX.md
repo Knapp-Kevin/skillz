@@ -1,8 +1,10 @@
 # Discovery source index: immutable package identities
 
+**Expanded collection:** [14 additional under-covered-domain source inventories](DOMAIN_GAP_EXPANSION.md) have now been added, spanning education, construction, farming, robotics, localization, video and accounting. **Combined discovery archive: 29 original sources, 33 source/category CSV files and 3,743 source-tree `SKILL.md` path records** (3,310 from the initial tranche plus 433 new ones). Both tranches include complete pinned Git tree identities; **cross-tranche deduplication remains pending**, and this is not a count of usable/admitted skills.
+
 **2026-11-01 snapshot. This is reference-only collection, not admission.** Source-of-truth governed inventory remains in [the repository catalog](../../../INDEX.md), [source registry](../../../registry/sources.yaml), provenance and verification directories. This discovery index does **not** change those denominators or imply the sources have been admitted.
 
-## What was actually collected
+## Initial tranche: what was actually collected
 
 - **15 original GitHub source repositories** fetched at explicit, observed immutable commit SHAs.
 - **19 source/category CSV files** containing **3,310 actual repository-tree-discovered `SKILL.md` path records**. Unlike README claims, each entry was enumerated from Git's recursive tree, and paired with its Git file blob SHA and package-directory tree SHA.
