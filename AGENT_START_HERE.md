@@ -83,6 +83,16 @@ When only repository guidance is accessible:
 - produce complete portable artifacts in the response or available artifact surface;
 - state material unavailable evidence explicitly.
 
+## 3. Consumer-facing licensing is not optional
+
+For **DIRECT_LIBRARY**, **FIRST_VISIT** and **RETURNING_USER** selection of any original-source skill, disclose its exact original publisher, pinned source/version and legal terms **before** recommending direct copying, installation or adaptation. Use [the per-skill rights index](docs/discovery/2026-11-01/RIGHTS_INDEX.md) and [licensing disclosure contract](docs/SKILL_LICENSE_DISCLOSURE.md) for recently discovered references; canonical review/verification companions may contain more precise rights receipts for already-governed skills.
+
+- The source's root LICENSE is only an observed upstream claim and may not govern a specific skill, scripts, dependencies or third-party assets. Show explicit per-SKILL.md terms and licensing gaps.
+- A listed skill is **not relicensed by skillz**. A `HOLD_RIGHTS_AND_SECURITY`, `NOASSERTION`, source-specific restricted, CC BY-NC, or unknown-rights reference is **not** clearance for unchanged copying, installation or commercial derivative reuse.
+- Present the **actual original license link and its material conditions**, copyright/attribution/NOTICE and change-log obligations when applicable; don't hide restrictions behind a single “open source” badge.
+- **Inspiration** means prior-art examination and independent expression where lawful; it is **not** permission to copy protected upstream instructions, examples, code, assets or rights-restricted derivatives.
+- Retain the original source credit in the user's portable handoff and any generated comparison. If rights or security evidence is unknown, provide a reference-only assessment or separately original user-side skill, never an invented license grant.
+
 ## 3. Corpus and quality rule
 
 Availability is not verification, and source reputation is not individual skill proof.
