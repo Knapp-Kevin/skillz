@@ -24,7 +24,6 @@ These documents define the current architecture and must agree.
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | passive first-visit and returning-user procedure; generated skills target the user's host/handoff |
 | System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, curation status, known drift |
 | Governance index | `docs/GOVERNANCE_INDEX.md` | current authoritative control-surface map |
-| Second agent UX adversarial review | `docs/reviews/2026-11-01-second-agent-interaction-adversarial-review.md` | bounded desk-check findings, historical archive integrity, link audit and external agent test criteria; no independent host test claimed |
 | Curation queue | `CURATION_QUEUE.md` | living admitted-source, provenance-reconciliation, and discovery/source-vetting evidence ledger |
 
 The canonical physical boundary is:
