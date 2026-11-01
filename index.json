@@ -2737,11 +2737,12 @@
       "game_studio": 9,
       "figma": 12,
       "build_macos_apps": 11,
-      "cloudflare": 9
+      "cloudflare": 9,
+      "build_web_apps": 6
     },
-    "terminal_candidate_decisions": 83,
-    "reference_only": 34,
-    "rejected_unchanged": 49,
+    "terminal_candidate_decisions": 89,
+    "reference_only": 37,
+    "rejected_unchanged": 52,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -2886,5 +2887,37 @@
     "security_scan_executed": false,
     "behavioral_validation_executed": false,
     "receipt": "docs/reviews/2026-11-01-openai-cloudflare-nine-candidate-vetting.md"
+  },
+  "openai_build_web_apps_six_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "build-web-apps",
+    "plugin_version": "0.1.2",
+    "plugin_tree": "83e3adc1eeb8e474e60aae43eb56a1c2a90ebc22",
+    "plugin_manifest_blob": "73b8b918db5c6339172aba5994c4db669dcf4133",
+    "first_class_candidate_denominator": 6,
+    "terminal_candidate_decisions": 6,
+    "reference_only": 3,
+    "rejected_unchanged": 3,
+    "license_status": "NOASSERTION for copying; manifest MIT label without controlling license text",
+    "same_pin_overlap_subjects": [
+      "react-best-practices",
+      "stripe-best-practices",
+      "supabase-postgres-best-practices"
+    ],
+    "same_pin_freshness_drift": [
+      "Stripe API date 2026-02-25.clover vs 2026-07-29.dahlia",
+      "Supabase skill 1.1.0 vs 1.1.1"
+    ],
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "receipt": "docs/reviews/2026-11-01-openai-build-web-apps-six-candidate-vetting.md",
+    "issue": 574
   }
 }
