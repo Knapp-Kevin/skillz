@@ -17,7 +17,7 @@
 
 **The index is the primary offering.** Explore capabilities across governed third-party exact-version reviews, pinned/tracked upstream skill references, discovery-only leads, and first-party resources. First-party authorship is provenance metadata, **not** a default recommendation, ranking signal, or privileged catalog section. Source status, license, exact version, authority, security and behavioral evidence determine eligibility independently of ownership.
 
-Start with the [capability discovery matrix](docs/capability-discovery-matrix.md), [source registry](registry/sources.yaml), [full catalog snapshot](INDEX.md), and [discovery-first ontology](docs/discovery-first-capability-ontology.md). The domain matrix is a proposed discovery map, **not** a complete skill-to-domain index. The existing first-party category map is a source-family view only. If indexed external records cannot be searched, disclose incomplete coverage rather than presenting first-party results as the full corpus.
+Start with the [capability discovery matrix](docs/capability-discovery-matrix.md), [machine-readable external-source directory](registry/discovery-source-index.json), [canonical source registry](registry/sources.yaml), [full catalog snapshot](INDEX.md), and [discovery-first ontology](docs/discovery-first-capability-ontology.md). The domain matrix is a proposed discovery map, **not** a complete skill-to-domain index. The existing first-party category map is a source-family view only. If indexed external records cannot be searched, disclose incomplete coverage rather than presenting first-party results as the full corpus.
 
 ## What `skillz` is
 
