@@ -1,6 +1,6 @@
 # Capability discovery matrix: tranche 1
 
-**Status:** Proposed coverage targets, **not** a verified skill-to-capability crosswalk. Companion to [discovery-first charter](discovery-first-capability-ontology.md) and [#588](https://github.com/Knapp-Kevin/skillz/issues/588). Baseline main: `f71371400b38c04f5342b68c54468271562eaae0` (2026-11-01). Existing governed identities: 44 first-party + 995 third-party exact-version review pairs = **1,039**, but **0/1,039 identities are crosswalked by this document**. This is a documentation tranche, not evidence of absence or capability maturity.
+**Status:** Proposed coverage targets, **not** a verified skill-to-capability crosswalk. Companion to [discovery-first charter](discovery-first-capability-ontology.md) and [#588](https://github.com/Knapp-Kevin/skillz/issues/588). This document defines the taxonomy, rather than linking skill identities. **For usable current links start at [capability quickstart](capability-quickstart.md), then [the live directory](../registry/capability-directory.json) and [review name finder](../registry/governed-review-name-index.json)**. The directory presently seeds 44 first-party and 10 third-party review identities with explicit per-subdomain evidence links and separately labeled name-only leads. The full governed review-record population is 1,039; the directory is still incomplete, and empty entries do not imply absence.
 
 ## Reading the matrix
 
