@@ -36,7 +36,7 @@
             "cole-medin-skills/prime-frontend",
             "anthropic-skills/webapp-testing"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 14
         },
         {
@@ -55,7 +55,7 @@
             "microsoft-skills/azure-resource-manager-postgresql-dotnet",
             "aws-agent-toolkit/aws-serverless"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -71,7 +71,7 @@
           "name_only_review_candidate_ids": [
             "vercel-agent-skills/vercel-react-native-skills"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -87,7 +87,7 @@
           "name_only_review_candidate_ids": [
             "cline-skills/desktop-commander-overview"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -108,7 +108,7 @@
             "cloudflare-skills/agents-sdk",
             "aws-agent-toolkit/aws-sdk-python-usage"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 14
         },
         {
@@ -129,7 +129,7 @@
             "bm629-agent-skills/python-monorepo-architecture",
             "bm629-agent-skills/reviewing-architecture-doc"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 11
         },
         {
@@ -146,7 +146,7 @@
             "addyosmani-agent-skills/code-simplification",
             "mattpocock-skills/improve-codebase-architecture"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -180,7 +180,7 @@
             "bm629-agent-skills/reviewing-developer-guide",
             "mattpocock-skills/setup-pre-commit"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -210,7 +210,7 @@
             "mattpocock-skills/code-review",
             "addyosmani-agent-skills/debugging-and-error-recovery"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 10
         }
       ]
@@ -235,7 +235,7 @@
             "archieindian-superpowers/test-driven-development",
             "mattpocock-skills/tdd"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -254,7 +254,7 @@
             "microsoft-skills/azure-microsoft-playwright-testing-ts",
             "microsoft-skills/azure-resource-manager-playwright-dotnet"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -271,7 +271,7 @@
             "addyosmani-agent-skills/performance-optimization",
             "cloudflare-skills/web-perf"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -301,7 +301,7 @@
           "name_only_review_candidate_ids": [
             "archieindian-superpowers/skill-compatibility-checker"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -346,7 +346,7 @@
             "bm629-agent-skills/authoring-test-plan",
             "bm629-agent-skills/reviewing-test-plan"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
       ]
@@ -371,7 +371,7 @@
             "david-ondrej-skills/agentic-productivity-setup",
             "microsoft-skills/agent-framework-azure-ai-py"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -388,7 +388,7 @@
             "anthropic-skills/mcp-builder",
             "microsoft-skills/mcp-builder"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -410,7 +410,7 @@
             "archieindian-superpowers/mcp-health-checker",
             "microsoft-skills/mcp-builder"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -424,14 +424,12 @@
             "Agent / MCP development orchestration"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/git-workflow-and-versioning",
             "archieindian-superpowers/multi-agent-coordinator",
-            "cline-skills/amplify-workflow",
             "david-ondrej-skills/codex-subagent",
             "google-agents-cli/google-agents-cli-workflow",
             "archieindian-superpowers/subagent-driven-development"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 8
         },
         {
@@ -452,7 +450,7 @@
           "name_only_review_candidate_ids": [
             "archieindian-superpowers/dangerous-action-guard"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -473,7 +471,7 @@
             "google-agents-cli/google-agents-cli-eval",
             "openclaw-agent-skills/behavior-validator"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -496,7 +494,7 @@
             "google-agents-cli/google-agents-cli-observability",
             "aws-agent-toolkit/aws-observability"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -513,7 +511,7 @@
             "archieindian-superpowers/multi-agent-coordinator",
             "david-ondrej-skills/bb-subagents"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
       ]
@@ -544,7 +542,7 @@
             "aws-agent-toolkit/aws-cdk-aws-core-plugin",
             "microsoft-skills/azure-compute-batch-java"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6
         },
         {
@@ -562,7 +560,7 @@
             "aws-agent-toolkit/aws-cdk-aws-core-plugin",
             "aws-agent-toolkit/aws-cloudformation"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -577,12 +575,11 @@
           ],
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/ci-cd-and-automation",
-            "anthropic-knowledge-work-plugins/pipeline-review",
             "aws-agent-toolkit/creating-ec2-image-builder-pipeline",
             "bm629-agent-skills/authoring-release-runbook",
             "bm629-agent-skills/reviewing-release-runbook"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -603,7 +600,7 @@
             "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
             "microsoft-skills/azure-kubernetes"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 15
         },
         {
@@ -624,7 +621,7 @@
             "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
             "microsoft-skills/azure-kubernetes"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 15
         },
         {
@@ -645,7 +642,7 @@
             "microsoft-skills/azure-deploy",
             "microsoft-azure-skills/microsoft-foundry-deploy-model"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 23
         },
         {
@@ -662,7 +659,7 @@
             "microsoft-azure-skills/azure-reliability",
             "microsoft-skills/azure-reliability"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -680,7 +677,7 @@
             "microsoft-azure-skills/azure-cost",
             "microsoft-skills/azure-cost"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         }
       ]
@@ -703,7 +700,7 @@
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/security-and-hardening"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -721,14 +718,13 @@
             "Security identity/access"
           ],
           "name_only_review_candidate_ids": [
-            "jwynia-agent-skills/identity-denial",
             "microsoft-azure-skills/azure-rbac",
             "microsoft-skills/azure-identity-dotnet",
             "microsoft-skills/azure-identity-java",
             "microsoft-skills/azure-identity-py",
             "microsoft-skills/azure-identity-rust"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 10
         },
         {
@@ -759,10 +755,8 @@
             "vulnerability management",
             "Security vulnerability management"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/legal-risk-assessment"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -782,7 +776,7 @@
           "name_only_review_candidate_ids": [
             "archieindian-superpowers/installed-skill-auditor"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -812,7 +806,7 @@
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/external-content-sanitizer"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         }
       ]
@@ -872,14 +866,12 @@
             "Research source discovery"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/source-driven-development",
             "anthropic-knowledge-work-plugins/account-research",
-            "aws-agent-toolkit/connecting-to-data-source",
             "bm629-agent-skills/project-document-discovery",
             "cline-skills/exa-search",
             "anthropic-knowledge-work-plugins/bio-research-start"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 28
         },
         {
@@ -899,13 +891,12 @@
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/brief",
-            "jwynia-agent-skills/adaptation-synthesis",
             "anthropic-knowledge-work-plugins/call-summary",
             "anthropic-knowledge-work-plugins/digest",
             "anthropic-knowledge-work-plugins/knowledge-synthesis",
             "anthropic-knowledge-work-plugins/marketing-competitive-brief"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 7
         },
         {
@@ -937,11 +928,10 @@
             "Research fact-checking"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/source-driven-development",
             "archieindian-superpowers/fact-check-before-trust",
             "archieindian-superpowers/verification-before-completion"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -989,10 +979,9 @@
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/roadmap-update",
-            "corey-haines-marketing-skills/content-strategy",
             "anthropic-knowledge-work-plugins/search-strategy"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -1012,7 +1001,7 @@
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/planning-and-task-breakdown"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1043,7 +1032,7 @@
             "addyosmani-agent-skills/planning-and-task-breakdown",
             "anthropic-knowledge-work-plugins/roadmap-update"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1065,7 +1054,7 @@
           "name_only_review_candidate_ids": [
             "david-ondrej-skills/next-decision"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1084,7 +1073,7 @@
             "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
             "microsoft-skills/azure-kubernetes-automatic-readiness"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         }
       ]
@@ -1122,7 +1111,7 @@
             "anthropic-knowledge-work-plugins/brand-review",
             "anthropic-skills/brand-guidelines"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1147,7 +1136,7 @@
             "bm629-agent-skills/external-content-sanitizer",
             "corey-haines-marketing-skills/copywriting"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6
         },
         {
@@ -1168,11 +1157,10 @@
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/seo-audit",
-            "aws-agent-toolkit/dms-schema-conversion",
             "corey-haines-marketing-skills/ai-seo",
             "corey-haines-marketing-skills/programmatic-seo"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -1189,7 +1177,7 @@
             "corey-haines-marketing-skills/ad-creative",
             "corey-haines-marketing-skills/ads"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1207,7 +1195,7 @@
             "cline-skills/ui5-typescript-conversion",
             "corey-haines-marketing-skills/cro"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -1231,7 +1219,7 @@
             "microsoft-skills/azure-communication-sms-java",
             "corey-haines-marketing-skills/cold-email"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -1248,7 +1236,7 @@
             "corey-haines-marketing-skills/analytics",
             "corey-haines-marketing-skills/attribution"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1266,7 +1254,7 @@
             "corey-haines-marketing-skills/competitor-profiling",
             "corey-haines-marketing-skills/customer-research"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         }
       ]
@@ -1291,7 +1279,7 @@
             "cole-medin-skills/opportunity-scan",
             "corey-haines-marketing-skills/customer-research"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -1311,7 +1299,7 @@
             "bm629-agent-skills/reviewing-feature-spec",
             "bm629-agent-skills/reviewing-prd"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -1327,7 +1315,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/roadmap-update"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1357,7 +1345,7 @@
           "name_only_review_candidate_ids": [
             "corey-haines-marketing-skills/ab-testing"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1373,7 +1361,7 @@
           "name_only_review_candidate_ids": [
             "corey-haines-marketing-skills/analytics"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1392,7 +1380,7 @@
             "david-ondrej-skills/corral-launch-agents",
             "david-ondrej-skills/launch-subagent"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -1432,7 +1420,7 @@
             "corey-haines-marketing-skills/customer-research",
             "bm629-agent-skills/user-research-prior-art-survey"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -1453,7 +1441,7 @@
             "bm629-agent-skills/authoring-user-flows",
             "bm629-agent-skills/reviewing-user-flows"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1489,7 +1477,7 @@
             "mattpocock-skills/prototype",
             "bm629-agent-skills/reviewing-hi-fi"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -1519,7 +1507,7 @@
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/browser-testing-with-devtools"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1536,7 +1524,7 @@
             "bm629-agent-skills/authoring-design-system",
             "bm629-agent-skills/reviewing-design-system"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
       ]
@@ -1559,7 +1547,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-skills/canvas-design"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1604,7 +1592,7 @@
             "anthropic-skills/theme-factory",
             "openhands-extensions/theme-factory"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1618,14 +1606,9 @@
             "Visual design identity systems"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-skills/brand-guidelines",
-            "jwynia-agent-skills/identity-denial",
-            "microsoft-skills/azure-identity-dotnet",
-            "microsoft-skills/azure-identity-java",
-            "microsoft-skills/azure-identity-py",
-            "microsoft-skills/azure-identity-rust"
+            "anthropic-skills/brand-guidelines"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 9
         },
         {
@@ -1642,7 +1625,7 @@
             "anthropic-knowledge-work-plugins/create-viz",
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -1658,7 +1641,7 @@
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/motion-react"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         }
       ]
@@ -1681,7 +1664,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-skills/algorithmic-art"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1694,10 +1677,8 @@
             "editorial",
             "Illustration editorial"
           ],
-          "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/editorial-review"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1725,12 +1706,10 @@
             "Illustration character/environment"
           ],
           "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/worldbuilding",
             "jwynia-agent-skills/oblique-worldbuilding",
-            "jwynia-agent-skills/systemic-worldbuilding",
-            "jwynia-agent-skills/worldbuilding"
+            "jwynia-agent-skills/systemic-worldbuilding"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -1760,7 +1739,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-skills/canvas-design"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         }
       ]
@@ -1822,10 +1801,8 @@
             "procedural design",
             "3D / CAD / animation procedural design"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-skills/algorithmic-art"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1883,7 +1860,7 @@
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/motion-react"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1920,7 +1897,7 @@
           "name_only_review_candidate_ids": [
             "jwynia-agent-skills/game-facilitator"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1964,7 +1941,7 @@
           "name_only_review_candidate_ids": [
             "jwynia-agent-skills/interactive-fiction"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -1977,10 +1954,8 @@
             "economy",
             "Game design economy"
           ],
-          "name_only_review_candidate_ids": [
-            "jwynia-agent-skills/economic-systems"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2022,7 +1997,7 @@
           "name_only_review_candidate_ids": [
             "jwynia-agent-skills/game-facilitator"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         }
       ]
@@ -2046,7 +2021,7 @@
             "danjdewhurst-story-skills/plot-structure",
             "danjdewhurst-story-skills/premise-workshop"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2066,7 +2041,7 @@
             "danjdewhurst-story-skills/scene-craft",
             "jwynia-agent-skills/prose-style"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2086,7 +2061,7 @@
             "danjdewhurst-story-skills/revision-continuity",
             "jwynia-agent-skills/revision"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2105,7 +2080,7 @@
             "jwynia-agent-skills/character-naming",
             "jwynia-agent-skills/dialogue"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -2121,7 +2096,7 @@
           "name_only_review_candidate_ids": [
             "jwynia-agent-skills/dialogue"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2142,7 +2117,7 @@
             "aws-agent-toolkit/setting-up-ec2-instance-profiles",
             "jwynia-agent-skills/systemic-worldbuilding"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 7
         },
         {
@@ -2158,7 +2133,7 @@
           "name_only_review_candidate_ids": [
             "jwynia-agent-skills/interactive-fiction"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2175,7 +2150,7 @@
             "danjdewhurst-story-skills/revision-continuity",
             "danjdewhurst-story-skills/series-continuity"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
       ]
@@ -2203,7 +2178,7 @@
             "bm629-agent-skills/reviewing-api-spec",
             "bm629-agent-skills/reviewing-developer-guide"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6
         },
         {
@@ -2223,7 +2198,7 @@
             "bm629-agent-skills/reviewing-developer-guide",
             "bm629-agent-skills/reviewing-user-guide"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2243,7 +2218,7 @@
             "microsoft-skills/microsoft-docs",
             "bm629-agent-skills/reviewing-user-guide"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2263,7 +2238,7 @@
             "bm629-agent-skills/reviewing-architecture-doc",
             "bm629-agent-skills/reviewing-technical-design"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2285,7 +2260,7 @@
             "microsoft-skills/wiki-changelog",
             "bm629-agent-skills/reviewing-release-runbook"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -2302,7 +2277,7 @@
             "addyosmani-agent-skills/documentation-and-adrs",
             "cline-skills/mintlify"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2320,7 +2295,7 @@
             "microsoft-skills/azure-ai-translation-text-py",
             "microsoft-skills/azure-ai-translation-ts"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         }
       ]
@@ -2382,10 +2357,8 @@
             "orchestration",
             "Music composition orchestration"
           ],
-          "name_only_review_candidate_ids": [
-            "archieindian-superpowers/workflow-orchestration"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2464,7 +2437,7 @@
           "name_only_review_candidate_ids": [
             "microsoft-skills/azure-ai-transcription-py"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2534,11 +2507,10 @@
             "Audio / voice / sound speech/voice"
           ],
           "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/voice-style",
             "microsoft-skills/azure-ai-transcription-py",
             "microsoft-skills/azure-speech-to-text-rest-py"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2568,7 +2540,7 @@
           "name_only_review_candidate_ids": [
             "microsoft-skills/azure-ai-transcription-py"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
       ]
@@ -2725,14 +2697,8 @@
             "interpersonal",
             "Communication interpersonal"
           ],
-          "name_only_review_candidate_ids": [
-            "microsoft-skills/azure-communication-callautomation-java",
-            "microsoft-skills/azure-communication-callingserver-java",
-            "microsoft-skills/azure-communication-chat-java",
-            "microsoft-skills/azure-communication-common-java",
-            "microsoft-skills/azure-communication-sms-java"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -2752,7 +2718,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-skills/pptx"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2768,7 +2734,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/meeting-briefing"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2838,7 +2804,7 @@
             "microsoft-skills/azure-communication-callautomation-java",
             "microsoft-skills/azure-communication-callingserver-java"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 11
         }
       ]
@@ -2862,7 +2828,7 @@
             "cline-skills/data-analyst",
             "corey-haines-marketing-skills/analytics"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2879,7 +2845,7 @@
             "anthropic-knowledge-work-plugins/build-dashboard",
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2895,7 +2861,7 @@
           "name_only_review_candidate_ids": [
             "corey-haines-marketing-skills/ab-testing"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2925,7 +2891,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/forecast"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -2942,7 +2908,7 @@
             "anthropic-knowledge-work-plugins/create-viz",
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -2962,7 +2928,7 @@
           "name_only_review_candidate_ids": [
             "corey-haines-marketing-skills/analytics"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         }
       ]
@@ -2993,7 +2959,7 @@
             "anthropic-knowledge-work-plugins/sprint-planning",
             "archieindian-superpowers/daily-review"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -3012,14 +2978,13 @@
             "Time / productivity task systems"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/git-workflow-and-versioning",
             "anthropic-knowledge-work-plugins/task-management",
             "archieindian-superpowers/long-running-task-management",
             "cline-skills/amplify-workflow",
             "google-agents-cli/google-agents-cli-workflow",
             "addyosmani-agent-skills/planning-and-task-breakdown"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 8
         },
         {
@@ -3035,7 +3000,7 @@
           "name_only_review_candidate_ids": [
             "david-ondrej-skills/agentic-productivity-setup"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3066,7 +3031,7 @@
             "archieindian-superpowers/cron-hygiene",
             "david-ondrej-skills/agent-self-scheduling"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3083,7 +3048,7 @@
             "archieindian-superpowers/context-budget-guard",
             "archieindian-superpowers/long-running-task-management"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3103,7 +3068,7 @@
             "openclaw-agent-skills/handoff",
             "archieindian-superpowers/task-handoff"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6
         }
       ]
@@ -3131,7 +3096,7 @@
             "archieindian-superpowers/context-assembly-scorer",
             "archieindian-superpowers/dag-recall"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3148,7 +3113,7 @@
             "anthropic-knowledge-work-plugins/call-summary",
             "archieindian-superpowers/compaction-resilience-guard"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3174,7 +3139,7 @@
             "archieindian-superpowers/memory-integrity-checker",
             "archieindian-superpowers/persistent-memory-hygiene"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 7
         },
         {
@@ -3191,7 +3156,7 @@
             "addyosmani-agent-skills/source-driven-development",
             "archieindian-superpowers/memory-dag-compactor"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3209,7 +3174,7 @@
             "archieindian-superpowers/context-budget-guard",
             "archieindian-superpowers/context-window-management"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -3272,10 +3237,9 @@
             "Business strategy"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/search-strategy",
             "corey-haines-marketing-skills/content-strategy"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3313,12 +3277,11 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/audit-support",
             "cole-medin-skills/second-brain-audit",
-            "jwynia-agent-skills/governance-systems",
             "microsoft-azure-skills/azure-compliance",
             "microsoft-skills/azure-compliance",
             "anthropic-knowledge-work-plugins/compliance-check"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 9
         },
         {
@@ -3334,7 +3297,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/legal-risk-assessment"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3387,7 +3350,7 @@
             "corey-haines-marketing-skills/cold-email",
             "corey-haines-marketing-skills/prospecting"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3
         },
         {
@@ -3415,10 +3378,9 @@
             "Sales pipeline"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/pipeline-review",
-            "aws-agent-toolkit/creating-ec2-image-builder-pipeline"
+            "anthropic-knowledge-work-plugins/pipeline-review"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -3434,7 +3396,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/account-research"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3536,10 +3498,8 @@
             "interviews",
             "Career interviews"
           ],
-          "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/interview-me"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3628,7 +3588,7 @@
             "david-ondrej-skills/teach",
             "mattpocock-skills/teach"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -3646,7 +3606,7 @@
             "david-ondrej-skills/teach",
             "mattpocock-skills/teach"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -3659,10 +3619,8 @@
             "assessment",
             "Education assessment"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/legal-risk-assessment"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3826,15 +3784,8 @@
             "scientific communication",
             "Science scientific communication"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/account-research",
-            "bm629-agent-skills/reviewing-user-research-prior-art-survey",
-            "corey-haines-marketing-skills/customer-research",
-            "danjdewhurst-story-skills/research",
-            "david-ondrej-skills/deep-research",
-            "anthropic-knowledge-work-plugins/bio-research-start"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 12
         }
       ]
@@ -3882,13 +3833,8 @@
             "diagnostics",
             "Medicine diagnostics"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-knowledge-work-plugins/ticket-triage",
-            "danjdewhurst-story-skills/feedback-triage",
-            "mattpocock-skills/triage",
-            "anthropic-knowledge-work-plugins/triage-nda"
-          ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
         {
@@ -3965,7 +3911,7 @@
           "name_only_review_candidate_ids": [
             "cline-skills/attorney-assist"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -3981,7 +3927,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/review-contract"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -4027,7 +3973,7 @@
             "microsoft-azure-skills/azure-compliance",
             "microsoft-skills/azure-compliance"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4
         },
         {
@@ -4146,10 +4092,9 @@
             "Finance budgeting"
           ],
           "name_only_review_candidate_ids": [
-            "archieindian-superpowers/context-budget-guard",
             "aws-agent-toolkit/aws-billing-and-cost-management"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         },
         {
@@ -4169,7 +4114,7 @@
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/close-management"
           ],
-          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
         {
@@ -5698,9 +5643,11 @@
   "name_only_fallback_summary": {
     "review_identity_source": "registry/governed-review-name-index.json",
     "index_count": 995,
-    "subdomains_with_some_name_only_leads": 134,
-    "total_name_only_suggestions": 381,
+    "subdomains_with_some_name_only_leads": 124,
+    "total_name_only_suggestions": 336,
     "not_an_eligibility_or_quality_claim": true,
-    "warning": "Candidates are inferred from NAME TOKENS only; read per-ID verification, provenance, SKILL.md and license before recommending unchanged use; zero name hits does not mean the capability is absent."
+    "warning": "Candidates are inferred from NAME TOKENS only; read per-ID verification, provenance, SKILL.md and license before recommending unchanged use; zero name hits does not mean the capability is absent.",
+    "precision_note": "Name-only suggestions exclude known misleading matches (e.g. fiction identity vs IAM, context-token budgets vs finance, engineering pipelines vs sales). Other false positives may remain; all require source reading.",
+    "quality_status": "lexical-only, manually pruned obvious cross-domain collisions, not individually semantically verified"
   }
 }
