@@ -22,6 +22,10 @@ Unless the user explicitly asks to maintain, curate, or change this repository i
 
 Repository admission is a separate governed maintainer activity. A useful skill discovered or generated during normal use does not become a `skillz` repository candidate merely because it exists.
 
+## Index-first discovery and recommendation rule
+
+The **indexed corpus**, including governed third-party records and tracked/pinned external references, is the primary discovery surface. First-party skills are ordinary source-family members. Do not prefer, rank, or recommend them because their metadata is locally convenient or they are authored here. For all discovery routes, search by capability across available source families; preserve source ownership only as provenance. Report inaccessible source families and avoid claiming a first-party-only result represents the corpus. Eligibility remains subject to exact-version license, security, authority, privacy, and behavioral evidence.
+
 ## Inventory boundary
 
 - `skills/`: first-party user-facing **reference/corpus material maintained by this repository**, not a destination for host-generated user skills.
