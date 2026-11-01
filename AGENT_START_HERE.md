@@ -100,7 +100,7 @@ The library is open-ended. Review counts are historical/accounting evidence, **n
 
 Availability is not verification, and source reputation is not individual skill proof.
 
-The repository intentionally exposes a broad 500+ reference surface. That breadth exists to improve discovery and prior-art comparison. It does not mean every visible external skill is trusted unchanged.
+The repository exposes an open-ended reference and discovery ecosystem. Pinned external manifest counts, candidate shapes and governed review records are **different units**; no historical count is an upper bound. Discovery improves comparison and prior-art access, but does not make any visible external skill trusted unchanged.
 
 For unchanged third-party reuse:
 
