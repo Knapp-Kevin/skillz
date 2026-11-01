@@ -4,6 +4,12 @@
 
 This charter does not change the canonical first-party browse categories in `registry/categories.yaml`, controlled characterization tags in `registry/taxonomy.yaml`, source admission policy, or existing inventory counts. No skill is newly admitted or qualified by this document.
 
+## Product emphasis: the indexed ecosystem, not the first-party collection
+
+The primary product is a **discovery index of external and local skill resources across the broadest practical capability landscape**. First-party skills are one source family among many, never the homepage or coverage default merely because they are easiest to parse. Prioritize indexed sources, discovery-only leads, exact-version references, alternatives, domain breadth, and explicit gaps. Source provenance and qualification status are visible facets, not reasons to hide unassessed discoveries. An indexed lead is not an admitted, redistributable, or approved package.
+
+**Index-first navigation:** domain → subdomain → capability → relevant skill/reference identities, with cross-domain discovery, source/license/status facets, differentiated alternatives, and unmet workflows. Counts must separate discovered leads, admitted exact-version identities, evaluated identities, and behaviorally validated identities. Never imply the 1,039 governed review pairs are the full discoverable ecosystem.
+
 ## Purpose and hierarchy
 
 - **Domain:** a broad discipline or practice. Domain inventory is open-ended; no numerical ceiling.
@@ -82,7 +88,7 @@ Each recognized capability must have an independently documented assessment:
 ## First bounded execution tranche
 
 - Inventory domain and subdomain candidates for engineering, creative production, productivity, and marketing, plus a separately visible remainder.
-- Crosswalk all 44 first-party skills and 995 third-party exact-version review identities **or publish exact mapped and unmapped denominators**. Never imply complete mapping before it is performed.
+- **Prioritize the 995 third-party exact-version review identities and indexed external discovery leads**; also crosswalk all 44 first-party skills as one ordinary source family, **or publish exact mapped and unmapped denominators**. Never imply complete mapping before it is performed.
 - Prioritize absent and thin capabilities for new discovery, not just repeatedly reviewing software-oriented sources.
 - Publish a passive crosswalk and prioritized gap ledger through a separate reviewed PR. Reconcile source pins and license constraints before admission.
 - Keep `README.md`, `docs/SYSTEM_STATE.md`, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` synchronized if and only if their published inventory/accounting changes.
