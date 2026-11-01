@@ -2,7 +2,7 @@
 
 You do not need to understand skills, write code, clone repositories, or browse hundreds of files.
 
-**Give your AI the GitHub link to this repository. That is enough to start.**
+**Give your AI the GitHub link to this repository. That is enough to start discovery, not permission to install or execute anything.** See the [consumer discovery and installation contract](docs/consumer-discovery-and-installation.md).
 
 `skillz` is entirely passive for normal users **and repository maintenance**. The host agent reads the repository, reasons over legitimately available context, and creates or hands off a fitted skill system using capabilities it already has.
 
@@ -26,14 +26,14 @@ Then:
 
 1. inspect the minimum relevant accessible evidence needed to identify durable working patterns;
 2. translate those patterns into capability requirements before searching by skill name;
-3. compare existing user/project skills, the local library, governed third-party records, the pinned 500+ reference corpus when available, and relevant tracked upstream references;
+3. start from the capability directory, then compare existing user/project skills, governed third-party records, pinned and tracked external references, discovery leads, and first-party records without source priority. The directory is sparse; expand by capability search when unassessed;
 4. inspect both whole-skill fit and reusable components, including required scripts, templates, references, fixtures, or other package material;
 5. gate unchanged third-party reuse on exact-version semantic quality, applicable package-security evidence, provenance, licensing, dependencies, authority, portability, identity confidence, and user fit;
 6. choose explicitly among reuse, refinement, adaptation, supplementation, composition, custom creation, helper/checklist, dynamic handling, or no skill;
 7. compose the smallest coherent system;
 8. adapt artifacts to the actual host instead of assuming one product's format;
 9. adversarially review important instructions for likely misinterpretation, overreach, hidden assumptions, or unnecessary ceremony;
-10. install only when capability and authority exist, otherwise provide a complete portable handoff.
+10. resolve actual package-specific copying/adaptation/redistribution rights and notices, then install only when the user authorizes that specific action and the host supports it; otherwise provide a complete portable handoff. Verify the installed package and safe trigger behavior where possible; do not equate selection or drafting with installation.
 
 ## Returning visit
 
