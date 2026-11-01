@@ -4,7 +4,7 @@
 
 ## Macro-first denominator, provenance and terms
 
-The pinned Git tree contains **nine distinct direct front-mattered `plugins/build-ios-apps/skills/*/SKILL.md` packages** and the pinned plugin README names those same nine. No nested first-class SKILL.md, symlink alias, mirrored exposure or independently front-mattered reference was found in this plugin subtree. The nine package trees and nine manifest blobs below are unique; 76 plugin-tree blobs include supporting materials, not 76 skills. The plugin bundles its own Node/Python/shell helpers, Swift templates, 42 reference Markdown files, MCP configuration and metadata. They remain **upstream source-owned evidence**; nothing here becomes `skillz` runtime or is executed.
+The pinned Git tree contains **nine distinct direct front-mattered `plugins/build-ios-apps/skills/*/SKILL.md` packages** and the pinned plugin README names those same nine. No nested first-class SKILL.md, symlink alias, mirrored exposure or independently front-mattered reference was found in this plugin subtree. The nine package trees and nine manifest blobs below are unique; 76 plugin-tree blobs include supporting materials, not 76 skills. The plugin bundles its own Node/Python/shell helpers, Swift templates, 43 reference Markdown files, MCP configuration and metadata. They remain **upstream source-owned evidence**; nothing here becomes `skillz` runtime or is executed.
 
 The manifest identifies **OpenAI** as plugin publisher and labels the plugin **MIT**, but the pinned root and plugin trees do not contain controlling LICENSE text; no child grant was established. **Redistribution: NOASSERTION**. Source access and official branding do not authorize copying, installation, publication or unchanged use. All exact identities below are from Git tree/blob objects at the registered pin, not from the latest upstream branch. Eight SKILL.md paths last changed in commit `11b5af688423fb5ba8bdae1c04ea666596c1ff59` on **2026-05-27 14:26 UTC**; `ios-simulator-browser` last changed in `a47b2656a41d9279ae68745cd4f0b192dce0f6ea` on **2026-06-03 16:49 UTC**. These are path freshness facts, not runtime compatibility proof.
 
@@ -78,14 +78,14 @@ The two hashes in each row are the **complete skill package tree / SKILL.md Git 
 
 - **Purpose/trigger and exclusion:** Code-first audit or authorized trace review; not automatic app edits or uploading unredacted captures.
 - **Bundled/shared dependencies:** 7 reference guides (smells, profiling intake, report, WWDC/Apple summaries), optional Instruments evidence.
-- **Controlled tags:** `observability, evaluation | verification | metric-driven, evidence-first | read-only` (use case | lifecycle | characteristics | authority); portability high as checklist.
+- **Controlled tags:** `observability, evaluation | verification | metric-driven, evidence-first | mutating` (use case | lifecycle | characteristics | authority); portability high as checklist.
 - **Decision and rationale:** **REFERENCE-ONLY 17/20.** Useful suspicion-versus-trace discipline and before/after metrics; `Apply targeted fixes` has no separate edit approval, and requested traces/screenshots require privacy minimization.
 - **Exact-version behavioral validation:** `not-run`; package security: `not-run`; no scan or execution claim.
 
 ### `swiftui-ui-patterns`
 
 - **Purpose/trigger and exclusion:** Design/compare SwiftUI composition and state ownership; not unapproved scaffolding or compilation.
-- **Bundled/shared dependencies:** 29 SwiftUI component/navigation/state references, Xcode build/previews, OS-specific Observation APIs.
+- **Bundled/shared dependencies:** 30 SwiftUI component/navigation/state references, Xcode build/previews, OS-specific Observation APIs.
 - **Controlled tags:** `ux, architecture | design, implementation | modularity, compatibility-aware | mutating` (use case | lifecycle | characteristics | authority); portability medium.
 - **Decision and rationale:** **REFERENCE-ONLY 16/20.** Broad practical reference index and iOS 16/17 compatibility routing, but mandates project scaffolding, component creation, builds and previews without separate mutation/side-effect scope.
 - **Exact-version behavioral validation:** `not-run`; package security: `not-run`; no scan or execution claim.
