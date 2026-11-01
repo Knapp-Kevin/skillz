@@ -2,6 +2,8 @@
 
 **Status:** discovery-stage index, 2026-11-01. This is a passive human-readable navigation surface, not an installer, ranking algorithm, or security verdict. It complements [the capability ontology](CAPABILITY_COVERAGE.md), [gap closure](CAPABILITY_GAP_CLOSURE.md), and the canonical [catalog](../INDEX.md). Existing governed skills retain their canonical statuses. **Do not treat any discovery candidate as admitted.**
 
+**Rights disclosure is a prerequisite for consumer selection:** [per-skill original license and restriction ledger](discovery/2026-11-01/RIGHTS_INDEX.md) and [direct-use versus inspiration requirements](SKILL_LICENSE_DISCLOSURE.md). Listing a skill here does not relicense it or authorize copying; unresolved per-package rights are visibly held.
+
 ## Grading visible in the index
 
 Grades are **evidence-bounded** and must be displayed **per exact skill version**, never inferred from the source publisher, popularity, category, or README claims.
@@ -52,11 +54,11 @@ All sources below are **discovery leads or already-governed families**, not evid
 | Robotics & physical engineering | arpitg1304 robotics, dbwls99706 ROS2, graph-robots manipulation, earthtojake CAD, Gwaihir, glotoff, sathyavikram FreeCAD | GAP | Electronics, control, embedded, robot safety |
 | Legal & compliance | CaseMark legal, first-party permissions, Microsoft governance | GAP | Jurisdictional legal review and compliance |
 | Healthcare & biomedical | CaseMark med, OpenMedSkills, AWS HCLS, Kalaris | GAP | Clinical governance and specialty evidence |
-| Finance & accounting | CaseMark finance/capital, LLMQuant, anthonymankaho HK accounting, first-party finance | GAP | Accounting, audit, markets, tax |
+| Finance & accounting | CaseMark finance/capital, LLMQuant, anthonymankaho HK accounting, kalta actuarial, open-source insurance, first-party finance | GAP | Accounting, audit, markets, tax |
 | Architecture & construction | constructelligence-lab construction, sahilyousafp AEC IFC, FreeCAD and CAD source families | GAP | Building codes, structural checks, estimating, IFC/BIM, professional sign-off |
 | Agriculture, food & nutrition | farmfriend-labs farming, PangenomeAI academic agri/food, Kalaris research | GAP | Crop/soil systems, farm operations, food science, regional evidence |
 | Language & localization | BrunoMiguens product translation, skills-il Hebrew/RTL, lingui internationalization | GAP | Translation quality, contextual culture, Unicode/RTL, language coverage |
-| Additional disciplines | Source discovery ongoing | GAP | Public policy, environment/climate, veterinary, manufacturing, historical research and other specialist domains |
+| Additional disciplines | Energy industry, aviation, journalism/newsroom, hydrology, culinary, sports analytics, insurance, nonprofit and HR discovery leads; source discovery ongoing | GAP | Public policy, environment/climate, veterinary, manufacturing, historical research and other specialist domains |
 
 **No domain is marked complete solely because three sources are listed.** This matrix intentionally distinguishes *alternative-source discovery* from *qualified, independently useful options*.
 
@@ -70,6 +72,6 @@ Rows lacking evidence display `Not graded`, `Unknown`, or `Not run`, never zero-
 
 ## Collection milestone
 
-The [pinned 46-source catalog](discovery/2026-11-01/INDEX.md), [specialist expansion tranche](discovery/2026-11-01/DOMAIN_EXPANSION_3.md) and [full byte-identity audit](discovery/2026-11-01/audit/CUMULATIVE_46_SOURCES.md) now record **50 source/category inventories, 4,183 Git-tree `SKILL.md` path occurrences and 4,155 distinct file blob hashes**. There are 28 extra exact-byte occurrences. Neither byte uniqueness nor source diversity constitutes independent task methods, qualified options, license clearance, security passes or measured performance.
+The current [65-source pinned discovery index](discovery/2026-11-01/INDEX.md), [fourth 19-source expansion](discovery/2026-11-01/DOMAIN_EXPANSION_4.md), and [65-source byte-identity and licensing audit](discovery/2026-11-01/audit/CUMULATIVE_65_SOURCES.md) cover **69 source/category inventories, 4,835 exact SKILL.md paths and 4,807 unique Git entrypoint blobs**. The 28 byte-identical extras do not imply 4,807 independent skill methods. The comprehensive [per-entrypoint rights catalog](discovery/2026-11-01/RIGHTS_INDEX.md) holds a pinned upstream license and use-restriction context for all 4,835, with **none** cleared for unchanged direct reuse without additional package-specific rights/security review.
 
-The original governed **44 first-party and 995 third-party review identities** remain unchanged, as do their existing verification states. The 441-subdomain checklist is **unmapped**, not evidence that all 441 have no candidates. Only future identity-level mapping plus evaluations can support truthful coverage fractions. Discovery remains deliberately inclusive. The [expansion and refinement protocol](CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md) preserves alternatives and documents when new first-party skills are justified.
+The [441-subdomain discovery checklist](discovery/2026-11-01/CAPABILITY_UNIVERSE.csv) (48 provisional families) is **not yet individually mapped or fully represented by qualified options**. Broad source collection remains the primary focus, with semantic deduplication and behavioral quality grading deferred until meaningful category coverage is established. Existing governed **44 first-party and 995 third-party version-review identities** remain unchanged; these discovery references grant no admission or license.
