@@ -187,6 +187,8 @@
           "id": "maintenance",
           "name": "maintenance",
           "capabilities": [
+            "Compare code against standards and specification evidence",
+            "Review code quality using severity, tests and evidence rather than rubber-stamping",
             "Diagnose repository problems, monitor changes, and triage technical debt with evidence"
           ],
           "matched_skill_ids": [
@@ -195,7 +197,9 @@
             "local-skills/github-pulse",
             "local-skills/repo-doctor",
             "local-skills/repo-pulse",
-            "local-skills/todo-harvester"
+            "local-skills/todo-harvester",
+            "addyosmani-agent-skills/code-review-and-quality",
+            "mattpocock-skills/code-review"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -203,11 +207,9 @@
             "Software engineering maintenance"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/code-review-and-quality",
             "archieindian-superpowers/systematic-debugging",
             "aws-agent-toolkit/debugging-lambda-timeouts",
             "cole-medin-skills/prime-codebase",
-            "mattpocock-skills/code-review",
             "addyosmani-agent-skills/debugging-and-error-recovery"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -1281,9 +1283,13 @@
         {
           "id": "requirements",
           "name": "requirements",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Draft a problem-first product requirements document with non-goals and acceptance measures"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-prd"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "requirements",
             "Product requirements"
@@ -1291,7 +1297,6 @@
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/authoring-feature-spec",
             "cole-medin-skills/plan-create-prd",
-            "bm629-agent-skills/authoring-prd",
             "bm629-agent-skills/reviewing-feature-spec",
             "bm629-agent-skills/reviewing-prd"
           ],
@@ -2006,15 +2011,18 @@
         {
           "id": "plotting",
           "name": "plotting",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Plan and analyze story plot structure"
+          ],
+          "matched_skill_ids": [
+            "danjdewhurst-story-skills/plot-structure"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "plotting",
             "Fiction / narrative / worldbuilding plotting"
           ],
           "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/plot-structure",
             "danjdewhurst-story-skills/premise-workshop"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -2098,9 +2106,13 @@
         {
           "id": "setting-lore",
           "name": "setting/lore",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Diagnose a fictional setting's cultures, systems, and internal consequences"
+          ],
+          "matched_skill_ids": [
+            "jwynia-agent-skills/worldbuilding"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "setting/lore",
             "Fiction / narrative / worldbuilding setting/lore"
@@ -2159,15 +2171,18 @@
         {
           "id": "api-docs",
           "name": "API docs",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Author an API reference traceable to a supplied contract"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-api-reference"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "API docs",
             "Technical writing API docs"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-api-reference",
             "bm629-agent-skills/authoring-api-spec",
             "bm629-agent-skills/authoring-developer-guide",
             "bm629-agent-skills/reviewing-api-reference",
@@ -4226,7 +4241,7 @@
       ]
     }
   ],
-  "identity_level_capability_links_scope": "54 records linked: 44 first-party individually static-reviewed and conservatively capability-mapped, plus 10 previously mapped third-party; this is incomplete discovery coverage. Behavioral evidence and third-party installation rights are separate.",
+  "identity_level_capability_links_scope": "First-party plus exact-version third-party review records mapped as evidence-backed domain starting points, including some rejected unchanged records; not behavioral validation, external eligibility or complete search coverage.",
   "skill_records": [
     {
       "id": "corey-haines-marketing-skills/seo-audit",
@@ -5547,10 +5562,118 @@
       "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "addyosmani-agent-skills/code-review-and-quality",
+      "source_id": "addyosmani-agent-skills",
+      "skill_name": "code-review-and-quality",
+      "source_snapshot_revision": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+      "content_blob_sha": "7dfa56362fa65fff450ee5aa02393b85b9c26d85",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "software-engineering/maintenance"
+      ],
+      "evidence_path": "registry/verification/addyosmani-agent-skills/code-review-and-quality.yaml",
+      "provenance_path": "registry/skills/addyosmani-agent-skills/code-review-and-quality.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "mattpocock-skills/code-review",
+      "source_id": "mattpocock-skills",
+      "skill_name": "code-review",
+      "source_snapshot_revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "content_blob_sha": "e28d7acbf7b3bb4d7817b7eb5d9c105af03f6ec4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "software-engineering/maintenance"
+      ],
+      "evidence_path": "registry/verification/mattpocock-skills/code-review.yaml",
+      "provenance_path": "registry/skills/mattpocock-skills/code-review.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "bm629-agent-skills/authoring-api-reference",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-api-reference",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "0bc990bc230d4abaab4c4e59eb64b66f4b0034df",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "technical-writing/api-docs"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-api-reference.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-api-reference.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "jwynia-agent-skills/worldbuilding",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "worldbuilding",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "a264e62536c2be42c651157a80a36f278697c2c5",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/setting-lore"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/worldbuilding.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/worldbuilding.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "danjdewhurst-story-skills/plot-structure",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "plot-structure",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "4523ccc4ecda8b3c60048fc2e65823da82449c9d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/plot-structure.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/plot-structure.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "bm629-agent-skills/authoring-prd",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-prd",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "b062894c9bde286b971cafbf550cc027f6b34c10",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "product/requirements"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-prd.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-prd.yaml",
+      "source_role": "third-party",
+      "link_basis": "individual existing exact-version static verified record plus narrow task fit",
+      "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
+      "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
     }
   ],
-  "identity_level_capability_links_mapped": 54,
-  "third_party_identity_links_remaining": 985,
+  "identity_level_capability_links_mapped": 60,
+  "third_party_identity_links_remaining": 979,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
@@ -5605,15 +5728,15 @@
     "reviewed_record_count_is_not_discovery_count": true
   },
   "first_party_identity_links_mapped": 44,
-  "third_party_identity_links_mapped": 10,
+  "third_party_identity_links_mapped": 16,
   "unmapped_review_identity_count": 985,
   "navigation_start": "docs/capability-quickstart.md",
   "search_fallback_index": "registry/governed-review-name-index.json",
   "navigation_population": {
     "mapped_first_party_distinct": 44,
-    "mapped_third_party_distinct": 10,
-    "mapped_total_distinct": 54,
-    "subdomains_with_evidence_linked_examples": 35,
+    "mapped_third_party_distinct": 16,
+    "mapped_total_distinct": 60,
+    "subdomains_with_evidence_linked_examples": 39,
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
