@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+Travishistory/history-research-agent,515ab776f4906f35e13e6142cde738388813c519,SKILL.md,5fdaf5b9640edebe61b91e2ca7213a431c034830,ae2bd7bd2cb979446124c464ab1ed039bbab2d04,9,source-skill,DISCOVERED_UNGRADED
