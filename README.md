@@ -1,6 +1,6 @@
 # 🛠️ skillz
 
-![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
+![Discovery Ecosystem](https://img.shields.io/badge/discovery_ecosystem-expanding-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-995-8A2BE2)
 ![Registered Sources](https://img.shields.io/badge/registered_sources-23-6f42c1)
@@ -15,9 +15,9 @@
 
 ## Discover the indexed ecosystem
 
-**The index is the primary offering.** Explore capabilities across governed third-party exact-version reviews, pinned/tracked upstream skill references, discovery-only leads, and first-party resources. First-party authorship is provenance metadata, **not** a default recommendation, ranking signal, or privileged catalog section. Source status, license, exact version, authority, security and behavioral evidence determine eligibility independently of ownership.
+**The open-ended discovery index is the primary offering.** Explore capabilities across governed third-party exact-version reviews, pinned/tracked upstream skill references, discovery-only leads, and first-party resources. First-party authorship is provenance metadata, **not** a default recommendation, ranking signal, or privileged catalog section. Source status, license, exact version, authority, security and behavioral evidence determine eligibility independently of ownership.
 
-Start with the [capability discovery matrix](docs/capability-discovery-matrix.md), [machine-readable external-source directory](registry/discovery-source-index.json), [canonical source registry](registry/sources.yaml), [full catalog snapshot](INDEX.md), and [discovery-first ontology](docs/discovery-first-capability-ontology.md). The 23-source directory is optional provenance metadata, **not** a navigation root. The domain matrix is a proposed discovery map, **not** a complete skill-to-domain index. The existing first-party category map is a source-family view only. If indexed external records cannot be searched, disclose incomplete coverage rather than presenting first-party results as the full corpus.
+Start with the [capability-first directory](registry/capability-directory.json) (domain → subdomain → specific outcome), the [discovery matrix](docs/capability-discovery-matrix.md), and the [consumer discovery, licensing, creation and installation contract](docs/consumer-discovery-and-installation.md). Then use [governed skill evidence](registry/verification/), [source provenance](registry/sources.yaml), the [full catalog snapshot](INDEX.md), and the [discovery-first ontology](docs/discovery-first-capability-ontology.md) to expand the search. **The directory is currently sparse and provisional**, not a complete enumeration; empty matches mean unassessed coverage. Continue capability-keyword searches across governed, pinned, tracked, discovery-only and first-party surfaces when needed. Source lists are attribution and review accounting, not a navigation root. Disclose inaccessible sources instead of presenting first-party matches as the full corpus.
 
 ## What `skillz` is
 
@@ -39,7 +39,7 @@ The host agent should identify durable user needs, inspect the minimum relevant 
 
 **user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
 
-Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECKLIST, DYNAMIC behavior, or NO CHANGE. The goal is the smallest coherent fitted system, not maximum reuse.
+Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECKLIST, DYNAMIC behavior, or NO CHANGE. The goal is the smallest coherent fitted system, not maximum reuse. **Discovery is not installation consent**: before copying, adapting, packaging, publishing or installing, inspect controlling per-package rights and notices, security/authority requirements, host compatibility and the user's permitted destination. Root MIT does not relicense upstream content. An agent must distinguish a finished portable artifact from an actually installed and tested skill.
 
 ## Corpus and evidence
 
