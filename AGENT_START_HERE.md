@@ -8,6 +8,12 @@ The normal user experience has **one canonical orchestrator**:
 
 Use that for first-visit and returning-user skill-system work. Do not choose among the other `engine/skills/` helpers during normal bootstrap; most of them are optional repository-maintenance procedures.
 
+## Source-neutral discovery invariant
+
+**The indexed ecosystem is the product; first-party skills are one ordinary source family.** For every browse, search, compare, first-visit or returning-user workflow, discover capability-matched candidates across third-party governed records, tracked/pinned upstream sources and first-party skills **without source-ownership priority**. Existing user/project skills and host capabilities are checked for fit, not ranked as repository content. Use capability relevance, exact-version evidence, licensing, safety, and user fit to compare candidates. A reference-only or discovery-only lead may be shown with clear restrictions, but is not automatically approved for reuse.
+
+Do not use `registry/local-verification.json` or `skills/` as the initial or exclusive search simply because they are easy to enumerate. When indexed external sources are inaccessible, disclose that gap rather than returning first-party-only results as if comprehensive.
+
 ## 1. Route the request first
 
 Choose exactly one route:
