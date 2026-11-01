@@ -38,7 +38,7 @@
       "direct_shape": 424,
       "other_shape": 221,
       "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
-      "terminal_static_candidate_reviews": 0
+      "terminal_static_candidate_reviews": 10
     }
   ],
   "raw_skill_md_path_sum": 4813,
@@ -52,5 +52,12 @@
   "governed_third_party_review_records_unchanged": 995,
   "warning": "Raw path and direct-shape counts are NOT a verified eligible/reviewed corpus denominator; source-level publisher security labels are not independently validated.",
   "program_issue": 599,
-  "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md"
+  "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
+  "dynamic_source_candidate_review_totals": {
+    "github_awesome_copilot": 10,
+    "openai_plugins": 169,
+    "agentskillexchange_skills": 0,
+    "j4flmao_agent_skills": 10,
+    "not_deduplicated_or_governed_semantic_reviews": true
+  }
 }
