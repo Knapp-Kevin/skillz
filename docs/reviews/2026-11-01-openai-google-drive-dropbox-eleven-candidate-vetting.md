@@ -89,7 +89,7 @@ This is **dynamic-discovery source vetting**, not an admitted-source semantic re
 - **Purpose / trigger and non-trigger:** Create/list file requests to collect third-party uploads; not for sharing existing files.
 - **Dependencies / portability:** Dropbox create_file_request, create_folder, metadata/list tools; no bundled scripts. Portability **high**; all bundled helpers are upstream source-owned reference material.
 - **Authority and privacy finding:** Explicit title/destination/deadline confirmation is good, but a live upload portal can collect sensitive third-party documents; procedure lacks action-specific audience, uploader consent, access visibility, collection purpose, retention and revocation approval. Root-folder validation is not disclosure authorization.
-- **Controlled tags:** `communication`, `privacy`, `external-side-effect` (use case/characteristic/authority as applicable). Candidate score **14/20**, **REJECT unchanged** for unchanged use; preserve selective adaptation/checklist evidence.
+- **Controlled tags:** `communication`, `risk-aware`, `external-side-effect` (use case/characteristic/authority as applicable). Candidate score **14/20**, **REJECT unchanged** for unchanged use; preserve selective adaptation/checklist evidence.
 - **Evidence:** Static source inspection only; behavioral validation **not-run**, adversarial execution **not-run**, pinned package-security scan **not-run**, redistribution **not cleared**.
 
 ### 8. `dropbox/find-dropbox-content`
