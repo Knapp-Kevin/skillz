@@ -2,7 +2,7 @@
 
 **Snapshot date:** 2026-11-01
 
-This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
+This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. **Consumer navigation begins with the open-ended [capability directory](registry/capability-directory.json) and [discovery/installation contract](docs/consumer-discovery-and-installation.md)**; directory matches are still sparse, so agents must extend searches across the governed and upstream evidence rather than treating an empty domain as proof of absence. Fixed snapshot review counts are **not** the library-size target. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 
