@@ -1,5 +1,7 @@
 # Second comprehensive discovery tranche: under-covered professional domains
 
+**Cross-source deduplication:** [Exact-blob audit of all 29 sources](audit/README.md) confirms 3,740 distinct Git file blobs among 3,743 entrypoint occurrences, including three same-source duplicates. Semantic differences and distributed variants remain ungraded.
+
 **2026-11-01.** This passive reference catalog augments the [first 15-source inventory](INDEX.md). It is not an installation list, admission record, an instruction to access services, or proof of skill quality.
 
 ## Verified collection
