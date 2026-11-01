@@ -88,7 +88,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 ## Capability-first discovery and source neutrality
 
-**This document is currently a snapshot, not a comprehensive capability search index.** Begin with [the discovery matrix](docs/capability-discovery-matrix.md) and [source registry](registry/sources.yaml); inspect governed third-party evidence in `registry/skills/` and `registry/verification/`, and pinned/tracked references in `skills/sources/` where accessible. First-party records in `registry/local-verification.json` are **one source-family view**, not the default or top-ranked search results. Compare candidates by capability fit, license, evidence, safety and portability, never authorship.
+**This document is currently a snapshot, not a comprehensive capability search index.** Begin with [the discovery matrix](docs/capability-discovery-matrix.md) and [external-source directory](registry/discovery-source-index.json) and [canonical source registry](registry/sources.yaml); inspect governed third-party evidence in `registry/skills/` and `registry/verification/`, and pinned/tracked references in `skills/sources/` where accessible. First-party records in `registry/local-verification.json` are **one source-family view**, not the default or top-ranked search results. Compare candidates by capability fit, license, evidence, safety and portability, never authorship.
 
 **Coverage limitation:** the provisional crosswalk currently maps 44 first-party identities, while 995 third-party review identities remain to be crosswalked. Do not use the first-party category listing below as the corpus-wide capability taxonomy or a proxy for completeness.
 
