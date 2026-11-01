@@ -187,7 +187,7 @@
           "id": "maintenance",
           "name": "maintenance",
           "capabilities": [
-            "Find reviewed skill candidates for maintenance"
+            "Diagnose repository problems, monitor changes, and triage technical debt with evidence"
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor",
@@ -395,7 +395,7 @@
           "id": "mcp-clients-servers",
           "name": "MCP clients/servers",
           "capabilities": [
-            "Find reviewed skill candidates for mcp clients/servers"
+            "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
           ],
           "matched_skill_ids": [
             "local-skills/mcp-pulse"
@@ -436,7 +436,7 @@
           "id": "permissions",
           "name": "permissions",
           "capabilities": [
-            "Find reviewed skill candidates for permissions"
+            "Inspect MCP integrations and agent access permissions before connection"
           ],
           "matched_skill_ids": [
             "local-skills/mcp-vetting",
@@ -457,7 +457,7 @@
           "id": "evaluation",
           "name": "evaluation",
           "capabilities": [
-            "Find reviewed skill candidates for evaluation"
+            "Analyze failed agent sessions and propose falsifiable improvements"
           ],
           "matched_skill_ids": [
             "local-skills/agent-postmortem"
@@ -478,7 +478,7 @@
           "id": "agent-observability",
           "name": "agent observability",
           "capabilities": [
-            "Find reviewed skill candidates for agent observability"
+            "Verify claimed automation status against durable run evidence"
           ],
           "matched_skill_ids": [
             "local-skills/automation-receipts"
@@ -530,7 +530,7 @@
           "matched_skill_ids": [
             "microsoft-skills/azure-ai"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "cloud architecture",
             "Cloud / DevOps cloud architecture"
@@ -707,7 +707,7 @@
           "id": "identity-access",
           "name": "identity/access",
           "capabilities": [
-            "Find reviewed skill candidates for identity/access"
+            "Review permissions and least-privilege exposure without accessing secret values"
           ],
           "matched_skill_ids": [
             "local-skills/permissions-review"
@@ -745,7 +745,7 @@
           "id": "vulnerability-management",
           "name": "vulnerability management",
           "capabilities": [
-            "Find reviewed skill candidates for vulnerability management"
+            "Plan safety-aware repository hygiene; not a vulnerability scanner"
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor"
@@ -763,7 +763,7 @@
           "id": "supply-chain",
           "name": "supply chain",
           "capabilities": [
-            "Find reviewed skill candidates for supply chain"
+            "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
           ],
           "matched_skill_ids": [
             "local-skills/mcp-vetting"
@@ -820,7 +820,7 @@
           "id": "literature-review",
           "name": "literature review",
           "capabilities": [
-            "Find reviewed skill candidates for literature review"
+            "Appraise papers and replication evidence; not a complete systematic review"
           ],
           "matched_skill_ids": [
             "local-skills/paper-digest"
@@ -838,7 +838,7 @@
           "id": "source-discovery",
           "name": "source discovery",
           "capabilities": [
-            "Find reviewed skill candidates for source discovery"
+            "Discover sources and monitor technical developments using dated primary evidence"
           ],
           "matched_skill_ids": [
             "local-skills/claude-pulse",
@@ -878,7 +878,7 @@
           "id": "synthesis",
           "name": "synthesis",
           "capabilities": [
-            "Find reviewed skill candidates for synthesis"
+            "Compare competing evidence and synthesize a bounded research finding"
           ],
           "matched_skill_ids": [
             "local-skills/compare",
@@ -917,7 +917,7 @@
           "id": "fact-checking",
           "name": "fact-checking",
           "capabilities": [
-            "Find reviewed skill candidates for fact-checking"
+            "Decompose claims and verify each subclaim against primary dated sources"
           ],
           "matched_skill_ids": [
             "local-skills/fact-check"
@@ -987,13 +987,9 @@
         {
           "id": "project-scheduling",
           "name": "project scheduling",
-          "capabilities": [
-            "Find reviewed skill candidates for project scheduling"
-          ],
-          "matched_skill_ids": [
-            "local-skills/task-surface"
-          ],
-          "coverage_status": "partial-linked-evidence",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed",
           "search_hints": [
             "project scheduling",
             "Planning project scheduling"
@@ -1039,7 +1035,7 @@
           "id": "decision-frameworks",
           "name": "decision frameworks",
           "capabilities": [
-            "Find reviewed skill candidates for decision frameworks"
+            "Compare options, frame decisions, and record outcomes with explicit authority"
           ],
           "matched_skill_ids": [
             "local-skills/brief-writer",
@@ -1123,7 +1119,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/social"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "content",
             "Marketing content"
@@ -1150,7 +1146,7 @@
             "corey-haines-marketing-skills/seo-audit",
             "corey-haines-marketing-skills/schema"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "SEO",
             "Marketing SEO"
@@ -1207,7 +1203,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/sms"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "lifecycle",
             "Marketing lifecycle"
@@ -1432,7 +1428,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/signup"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "interaction design",
             "UX / UI interaction design"
@@ -1453,7 +1449,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/site-architecture"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "information architecture",
             "UX / UI information architecture"
@@ -2244,13 +2240,9 @@
         {
           "id": "release-notes",
           "name": "release notes",
-          "capabilities": [
-            "Find reviewed skill candidates for release notes"
-          ],
-          "matched_skill_ids": [
-            "local-skills/devlog-draft"
-          ],
-          "coverage_status": "partial-linked-evidence",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed",
           "search_hints": [
             "release notes",
             "Technical writing release notes"
@@ -2573,7 +2565,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/video"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "preproduction",
             "Video / film preproduction"
@@ -2705,7 +2697,7 @@
           "id": "presentations",
           "name": "presentations",
           "capabilities": [
-            "Find reviewed skill candidates for presentations"
+            "Outline a coherent slide narrative before slide production"
           ],
           "matched_skill_ids": [
             "local-skills/deck-outline"
@@ -2783,7 +2775,7 @@
           "id": "organizational-communication",
           "name": "organizational communication",
           "capabilities": [
-            "Find reviewed skill candidates for organizational communication"
+            "Write evidence-backed updates, handoffs, briefs, and standups"
           ],
           "matched_skill_ids": [
             "local-skills/brief-writer",
@@ -2914,13 +2906,9 @@
         {
           "id": "measurement",
           "name": "measurement",
-          "capabilities": [
-            "Find reviewed skill candidates for measurement"
-          ],
-          "matched_skill_ids": [
-            "local-skills/automation-receipts"
-          ],
-          "coverage_status": "partial-linked-evidence",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed",
           "search_hints": [
             "measurement",
             "Analytics measurement"
@@ -2942,7 +2930,7 @@
           "id": "personal-planning",
           "name": "personal planning",
           "capabilities": [
-            "Find reviewed skill candidates for personal planning"
+            "Prepare daily and weekly planning briefs and grounded learning plans"
           ],
           "matched_skill_ids": [
             "local-skills/daily-briefing",
@@ -2966,7 +2954,7 @@
           "id": "task-systems",
           "name": "task systems",
           "capabilities": [
-            "Find reviewed skill candidates for task systems"
+            "Triage incoming tasks and coordinate approved task pointers"
           ],
           "matched_skill_ids": [
             "local-skills/inbox-triage",
@@ -3082,7 +3070,7 @@
           "id": "retrieval",
           "name": "retrieval",
           "capabilities": [
-            "Find reviewed skill candidates for retrieval"
+            "Recover relevant prior-session decisions with provenance and freshness checks"
           ],
           "matched_skill_ids": [
             "local-skills/session-continuity"
@@ -3120,10 +3108,9 @@
           "id": "long-term-memory",
           "name": "long-term memory",
           "capabilities": [
-            "Find reviewed skill candidates for long-term memory"
+            "Use existing host memory for scoped continuity; persistent capture requires approval"
           ],
           "matched_skill_ids": [
-            "local-skills/memory-pulse",
             "local-skills/session-continuity"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -3246,7 +3233,7 @@
           "id": "operations",
           "name": "operations",
           "capabilities": [
-            "Find reviewed skill candidates for operations"
+            "Monitor bounded small-business operating questions without autonomous changes"
           ],
           "matched_skill_ids": [
             "local-skills/smallbiz-ops"
@@ -3264,7 +3251,7 @@
           "id": "governance",
           "name": "governance",
           "capabilities": [
-            "Find reviewed skill candidates for governance"
+            "Monitor governance changes and distinguish binding policy from noise"
           ],
           "matched_skill_ids": [
             "local-skills/governance-pulse"
@@ -3408,7 +3395,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/sales-enablement"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "proposals",
             "Sales proposals"
@@ -3440,7 +3427,7 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/revops"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed",
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "sales operations",
             "Sales sales operations"
@@ -3460,7 +3447,7 @@
           "id": "job-search",
           "name": "job search",
           "capabilities": [
-            "Find reviewed skill candidates for job search"
+            "Research current career-market opportunities; not automatic job applications"
           ],
           "matched_skill_ids": [
             "local-skills/career-radar"
@@ -3506,7 +3493,7 @@
           "id": "professional-development",
           "name": "professional development",
           "capabilities": [
-            "Find reviewed skill candidates for professional development"
+            "Prepare a learning plan with measurable checkpoints"
           ],
           "matched_skill_ids": [
             "local-skills/learning-plan"
@@ -3552,7 +3539,7 @@
           "id": "career-transitions",
           "name": "career transitions",
           "capabilities": [
-            "Find reviewed skill candidates for career transitions"
+            "Evaluate changing career directions with current market evidence"
           ],
           "matched_skill_ids": [
             "local-skills/career-radar"
@@ -3773,13 +3760,9 @@
         {
           "id": "scientific-communication",
           "name": "scientific communication",
-          "capabilities": [
-            "Find reviewed skill candidates for scientific communication"
-          ],
-          "matched_skill_ids": [
-            "local-skills/paper-digest"
-          ],
-          "coverage_status": "partial-linked-evidence",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed",
           "search_hints": [
             "scientific communication",
             "Science scientific communication"
@@ -4101,7 +4084,7 @@
           "id": "reporting",
           "name": "reporting",
           "capabilities": [
-            "Find reviewed skill candidates for reporting"
+            "Review financial statements and trace conclusions to reported rows"
           ],
           "matched_skill_ids": [
             "local-skills/finance-review"
@@ -4121,7 +4104,7 @@
           "id": "financial-literacy",
           "name": "financial literacy",
           "capabilities": [
-            "Find reviewed skill candidates for financial literacy"
+            "Explain statement changes and financial context without investment or tax advice"
           ],
           "matched_skill_ids": [
             "local-skills/finance-review"
@@ -4695,7 +4678,6 @@
       "verification_status": "verified",
       "validation_status": "not-run",
       "capability_paths": [
-        "technical-writing/release-notes",
         "communication/organizational-communication"
       ],
       "evidence_path": "registry/verification/local-skills/devlog-draft.yaml",
@@ -5126,7 +5108,6 @@
       "verification_status": "verified",
       "validation_status": "not-run",
       "capability_paths": [
-        "memory-context/long-term-memory",
         "research/source-discovery"
       ],
       "evidence_path": "registry/verification/local-skills/memory-pulse.yaml",
@@ -5206,8 +5187,7 @@
       "verification_status": "verified",
       "validation_status": "not-run",
       "capability_paths": [
-        "research/literature-review",
-        "science/scientific-communication"
+        "research/literature-review"
       ],
       "evidence_path": "registry/verification/local-skills/paper-digest.yaml",
       "skill_path": "skills/paper-digest/SKILL.md",
@@ -5416,8 +5396,7 @@
       "verification_status": "verified",
       "validation_status": "not-run",
       "capability_paths": [
-        "time-productivity/task-systems",
-        "planning/project-scheduling"
+        "time-productivity/task-systems"
       ],
       "evidence_path": "registry/verification/local-skills/task-surface.yaml",
       "skill_path": "skills/task-surface/SKILL.md",
@@ -5523,8 +5502,7 @@
       "verification_status": "verified",
       "validation_status": "not-run",
       "capability_paths": [
-        "agent-mcp-development/agent-observability",
-        "analytics/measurement"
+        "agent-mcp-development/agent-observability"
       ],
       "evidence_path": "registry/verification/local-skills/automation-receipts.yaml",
       "skill_path": "skills/automation-receipts/SKILL.md",
@@ -5635,10 +5613,11 @@
     "mapped_first_party_distinct": 44,
     "mapped_third_party_distinct": 10,
     "mapped_total_distinct": 54,
-    "subdomains_with_evidence_linked_examples": 39,
+    "subdomains_with_evidence_linked_examples": 35,
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
-    "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests."
+    "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
+    "note": "All 44 first-party and 10 third-party review identities linked at least once; link counts per subdomain vary. A domain's presence is only the specific supported procedure, not the whole specialty."
   },
   "name_only_fallback_summary": {
     "review_identity_source": "registry/governed-review-name-index.json",
