@@ -6,6 +6,8 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 
+**Official Plugin Eval candidate vetting (2026-10-31):** Five distinct `openai/plugins` source-vetting decisions, **1 REFERENCE-ONLY / 4 REJECT unchanged**. Executable metric packs, Codex credential/benchmark retention, automatic config writes and broken `--dry-run` guidance prevent unchanged approval. No admission or counted semantic review. [Exact-source review](docs/reviews/2026-10-31-openai-plugin-eval-five-candidate-vetting.md).
+
 ## Current totals
 
 | Surface | Count |
