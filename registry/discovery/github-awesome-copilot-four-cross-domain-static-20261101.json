@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-01",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "review_kind": "individual complete-package STATIC source-vetting (not admitted governed verification)",
+  "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+  "source_license_blob": "89bc5e962c9944cdb050887062afdaaf89be504a",
+  "selected_package_count": 4,
+  "terminal_static_decisions": {
+    "rejected_unchanged": 4,
+    "reference_only": 0
+  },
+  "rubric": "10 dimensions scored 0-2 each, but hard-fail prevents verification at any numeric total",
+  "behavioral_validation_executed": false,
+  "package_security_scan_executed": false,
+  "admitted_source_denominator_delta": 0,
+  "governed_exact_version_review_pairs_created": 0,
+  "review_scope_note": "Four individually pinned, previously unreviewed direct-shape packages. Existing 10 candidate decisions remain unchanged. Package-tree identities and bundled file names were checked against upstream Git trees; no scripts executed.",
+  "records": [
+    {
+      "name": "agentic-eval",
+      "source_id": "github-awesome-copilot",
+      "canonical_path": "skills/agentic-eval/SKILL.md",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "skill_blob": "3cb14203efaf62af98065bd599600ba808f0ef31",
+      "package_tree": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+      "package_files": [
+        "SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "MIT root text inspected at pinned source revision; no local license in package file inventory; check additional referenced content rights separately",
+      "review_method": "complete pinned SKILL.md and each bundled referenced package file inspected; static reasoning only",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "hard_fail_issues": [
+        "External-model inference, code-test execution and potentially sensitive evaluation logging require scoped permission; examples lack those gates.",
+        "Unbounded private-context egress through model-as-judge and logging, undefined llm/run_tests and incomplete JSON/metric failure handling."
+      ],
+      "capability_paths": [
+        "agent-mcp-development/evaluation",
+        "testing/test-strategy"
+      ],
+      "authority_and_safety": "External-model inference, code-test execution and potentially sensitive evaluation logging require scoped permission; examples lack those gates.",
+      "material_findings": "Unbounded private-context egress through model-as-judge and logging, undefined llm/run_tests and incomplete JSON/metric failure handling.",
+      "reusable_inspiration": "Bounded generator-evaluator patterns and explicit score rubrics for independently authorized, non-sensitive tasks.",
+      "license_reuse": "reference-only patterns; root MIT requires preservation of applicable license/notice on protected adaptation or copying",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/agentic-eval/SKILL.md"
+    },
+    {
+      "name": "memory-merger",
+      "source_id": "github-awesome-copilot",
+      "canonical_path": "skills/memory-merger/SKILL.md",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+      "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
+      "package_files": [
+        "SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "MIT root text inspected at pinned source revision; no local license in package file inventory; check additional referenced content rights separately",
+      "review_method": "complete pinned SKILL.md and each bundled referenced package file inspected; static reasoning only",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "hard_fail_issues": [
+        "Requires explicit selection of scope, per-item promotion and permission for both persistent instruction-file writes and deletion from memory source; default global is overbroad.",
+        "No atomic write, recovery/backup or rollback when removal follows merge; may erase valuable context or change global behavior."
+      ],
+      "capability_paths": [
+        "memory-context/long-term-memory",
+        "memory-context/provenance"
+      ],
+      "authority_and_safety": "Requires explicit selection of scope, per-item promotion and permission for both persistent instruction-file writes and deletion from memory source; default global is overbroad.",
+      "material_findings": "No atomic write, recovery/backup or rollback when removal follows merge; may erase valuable context or change global behavior.",
+      "reusable_inspiration": "Propose mature memories for explicit review, preserve provenance, promote only authorized and independently verified scope-specific instructions.",
+      "license_reuse": "reference-only patterns; root MIT requires preservation of applicable license/notice on protected adaptation or copying",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/memory-merger/SKILL.md"
+    },
+    {
+      "name": "ai-team-orchestration",
+      "source_id": "github-awesome-copilot",
+      "canonical_path": "skills/ai-team-orchestration/SKILL.md",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "skill_blob": "bdbf711aece38d17671a190abbbc7d0ba924ad85",
+      "package_tree": "a0f6cb6367244e66ffa0435f5c28ed59eb38be15",
+      "package_files": [
+        "SKILL.md",
+        "references/anti-patterns.md",
+        "references/brainstorm-format.md",
+        "references/project-brief-template.md",
+        "references/sprint-plan-template.md"
+      ],
+      "package_files_inspected": 5,
+      "source_license_scope": "MIT root text inspected at pinned source revision; no local license in package file inventory; check additional referenced content rights separately",
+      "review_method": "complete pinned SKILL.md and each bundled referenced package file inspected; static reasoning only",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "hard_fail_issues": [
+        "Designated producer/dev/QA roles do not themselves provide merge, broad tool, durable write or external-account authority; repo policy and explicit user approval still govern.",
+        "Skill requires @ai-team-producer, @ai-team-dev and @ai-team-qa agent definitions not bundled in the five-file package; inherited MCP tools imply unbounded capability surface; merge instruction not separately authorized."
+      ],
+      "capability_paths": [
+        "agent-mcp-development/orchestration",
+        "agent-mcp-development/multi-agent-collaboration"
+      ],
+      "authority_and_safety": "Designated producer/dev/QA roles do not themselves provide merge, broad tool, durable write or external-account authority; repo policy and explicit user approval still govern.",
+      "material_findings": "Skill requires @ai-team-producer, @ai-team-dev and @ai-team-qa agent definitions not bundled in the five-file package; inherited MCP tools imply unbounded capability surface; merge instruction not separately authorized.",
+      "reusable_inspiration": "Risk-proportional role separation, optional independent QA, small progress notes and anti-patterns, with host-specific roles and allowed tools supplied explicitly.",
+      "license_reuse": "reference-only patterns; root MIT requires preservation of applicable license/notice on protected adaptation or copying",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/ai-team-orchestration/SKILL.md"
+    },
+    {
+      "name": "security-review",
+      "source_id": "github-awesome-copilot",
+      "canonical_path": "skills/security-review/SKILL.md",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+      "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+      "package_files": [
+        "SKILL.md",
+        "references/language-patterns.md",
+        "references/report-format.md",
+        "references/secret-patterns.md",
+        "references/vuln-categories.md",
+        "references/vulnerable-packages.md"
+      ],
+      "package_files_inspected": 6,
+      "source_license_scope": "MIT root text inspected at pinned source revision; no local license in package file inventory; check additional referenced content rights separately",
+      "review_method": "complete pinned SKILL.md and each bundled referenced package file inspected; static reasoning only",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "hard_fail_issues": [
+        "Scanning .env and credentials and reporting exact snippets risks unnecessary secret disclosure without explicit secret-minimization, scope and allowed-recipient boundaries.",
+        "Unscoped whole-project secret reading, secret values reproduced in report samples, outdated fixed CVE watchlist, no source-freshness checks and misleading unqualified 'No vulnerabilities found' requirement."
+      ],
+      "capability_paths": [
+        "security/application-security",
+        "security/vulnerability-management"
+      ],
+      "authority_and_safety": "Scanning .env and credentials and reporting exact snippets risks unnecessary secret disclosure without explicit secret-minimization, scope and allowed-recipient boundaries.",
+      "material_findings": "Unscoped whole-project secret reading, secret values reproduced in report samples, outdated fixed CVE watchlist, no source-freshness checks and misleading unqualified 'No vulnerabilities found' requirement.",
+      "reusable_inspiration": "Source-to-sink trace, verified finding cards and patch proposals with explicit read-only scope, redaction and external advisory freshness.",
+      "license_reuse": "reference-only patterns; root MIT requires preservation of applicable license/notice on protected adaptation or copying",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/security-review/SKILL.md"
+    }
+  ]
+}
