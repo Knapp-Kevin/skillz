@@ -12,7 +12,7 @@
   "first_party_evidence": "registry/local-verification.json",
   "governed_identity_denominator": 1039,
   "third_party_identity_denominator": 995,
-  "identity_level_capability_links_verified": 0,
+  "identity_level_capability_links_verified": 2,
   "domains": [
     {
       "id": "software-engineering",
@@ -225,9 +225,13 @@
         {
           "id": "cloud-architecture",
           "name": "cloud architecture",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "Azure AI service integration architecture"
+          ],
+          "matched_skill_ids": [
+            "microsoft-skills/azure-ai"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "infrastructure-as-code",
@@ -470,9 +474,13 @@
         {
           "id": "seo",
           "name": "SEO",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "read-only SEO audit"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/seo-audit"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "paid-acquisition",
@@ -1917,6 +1925,38 @@
           "coverage_status": "unassessed"
         }
       ]
+    }
+  ],
+  "identity_level_capability_links_scope": "Two evidence-backed third-party exact-version associations, not behavioral validations or capability maturity",
+  "skill_records": [
+    {
+      "id": "corey-haines-marketing-skills/seo-audit",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "seo-audit",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "af014ef82989c61a672cdab26cd898821ef9518b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "marketing/seo"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/seo-audit.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk"
+    },
+    {
+      "id": "microsoft-skills/azure-ai",
+      "source_id": "microsoft-skills",
+      "skill_name": "azure-ai",
+      "source_snapshot_revision": "32cad4ee689c95c309e61aeefcbc6af356f1e6a7",
+      "content_blob_sha": "8a168336305c56e0eea0d89aced7d8a0001de3b5",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "cloud-devops/cloud-architecture"
+      ],
+      "evidence_path": "registry/verification/microsoft-skills/azure-ai.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference context only; not eligible for unchanged adoption"
     }
   ]
 }
