@@ -1,6 +1,8 @@
 # Agent Start Here
 
-If you can read this repository, you can use `skillz`.
+If you can read this repository, you can use `skillz` as a passive reference; access alone is not permission to install, execute, copy restricted third-party content, or change user/repository files.
+
+**Consumer path:** [discovery → rights/quality decisions → creation or authorized installation → truthful verification](docs/consumer-discovery-and-installation.md). Begin with capability requirements, not a fixed corpus size or source preference.
 
 The normal user experience has **one canonical orchestrator**:
 
@@ -12,18 +14,18 @@ Use that for first-visit and returning-user skill-system work. Do not choose amo
 
 **The indexed ecosystem is the product; first-party skills are one ordinary source family.** Start discovery from [the capability-domain directory](registry/capability-directory.json): domain → subdomain → specific need → candidate skill evidence. Resolve source identity and license from [the source registry](registry/sources.yaml) **after** identifying relevant candidates; the 23-source directory is not the entry point. For every browse, search, compare, first-visit or returning-user workflow, discover capability-matched candidates across third-party governed records, tracked/pinned upstream sources and first-party skills **without source-ownership priority**. Existing user/project skills and host capabilities are checked for fit, not ranked as repository content. Use capability relevance, exact-version evidence, licensing, safety, and user fit to compare candidates. A reference-only or discovery-only lead may be shown with clear restrictions, but is not automatically approved for reuse.
 
-Do not use `registry/local-verification.json` or `skills/` as the initial or exclusive search simply because they are easy to enumerate. When indexed external sources are inaccessible, disclose that gap rather than returning first-party-only results as if comprehensive.
+The capability directory is still sparsely populated: empty `matched_skill_ids` and `unassessed` are **unknown coverage**, never proof that a skill is absent. Fall back to capability-keyword and mechanism search across governed companions, pinned/tracked upstream files, discovery leads and first-party records. Do not use `registry/local-verification.json` or `skills/` as the initial or exclusive search simply because they are easy to enumerate. When indexed external sources are inaccessible, disclose that gap rather than returning first-party-only results as if comprehensive.
 
 ## 1. Route the request first
 
 Choose exactly one route:
 
-- **DIRECT_LIBRARY** — the user named a skill or only wants browse/search/compare/install help.
+- **DIRECT_LIBRARY** — the user named a skill or only wants browse/search/compare/install help. Follow the lightweight [consumer contract](docs/consumer-discovery-and-installation.md); installation still requires exact-rights and safety checks plus explicit host/action authorization.
 - **FIRST_VISIT** — the user wants a fitted skill system and no existing fitted system is being reviewed.
 - **RETURNING_USER** — an existing fitted skill system should be reviewed/refined.
 - **REPOSITORY_MAINTENANCE** — the user explicitly wants to change `skillz` itself.
 
-For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md` and use the [first-contact discovery walkthrough](docs/first-contact-discovery.md) to collect host capabilities and choose candidate skills without guessing. `DIRECT_LIBRARY` remains a lightweight route; it does not require a full bootstrap.
+For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md` and use the [first-contact discovery walkthrough](docs/first-contact-discovery.md) to collect host capabilities and choose candidate skills without guessing. `DIRECT_LIBRARY` remains a lightweight route and should terminate in comparison, a licensed/authorized installation, or an explicit portable handoff; it does not require a full bootstrap.
 
 ### Destination invariant
 
@@ -91,6 +93,8 @@ When only repository guidance is accessible:
 
 ## 3. Corpus and quality rule
 
+The library is open-ended. Review counts are historical/accounting evidence, **not a ceiling or finish line**. Discovery leads and new skills can increase the denominator at any time. The current capability crosswalk is incomplete; distinguish `not indexed here yet` from `not found after sufficient discovery`. For a shortlist, resolve package-specific license text and obligations (including copied/adapted components and third-party notices), not merely a source label or the repository's root MIT license. See the [consumer contract](docs/consumer-discovery-and-installation.md).
+
 Availability is not verification, and source reputation is not individual skill proof.
 
 The repository intentionally exposes a broad 500+ reference surface. That breadth exists to improve discovery and prior-art comparison. It does not mean every visible external skill is trusted unchanged.
@@ -121,6 +125,8 @@ Create/package the fitted skill system for the **user's active environment**. If
 A selected user-facing skill may still legitimately use its own bundled components when the user's host supports them and the skill's authority/dependency requirements are acceptable.
 
 ## 5. Completion rule
+
+An install or generation decision is **not** a completed install. Record the actual target, retained license/NOTICE files, tool/dependency/permission implications, observed install state, and a safe positive/non-trigger/failure check when executable. If no approved installer exists, hand off a complete portable package with `NOT INSTALLED` or `READY TO UPLOAD`. Never claim behavioral validation from semantic review.
 
 A normal bootstrap is complete when the agent has:
 
