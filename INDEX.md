@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**Cross-source SHA deduplication:** [Complete 3,743-entry exact-blob audit](docs/discovery/2026-11-01/audit/README.md) confirms **3,740 distinct entrypoint blobs** and three matching FreeCAD host-path copies, with **no cross-repository byte-identical files** in the 29-source discovery archive. Semantic and package-level deduplication remain open; no qualification is inferred.
+
 **Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
