@@ -24,7 +24,7 @@ Repository admission is a separate governed maintainer activity. A useful skill 
 
 ## Index-first discovery and recommendation rule
 
-The **indexed corpus**, including governed third-party records and tracked/pinned external references, is the primary discovery surface. First-party skills are ordinary source-family members. Do not prefer, rank, or recommend them because their metadata is locally convenient or they are authored here. For all discovery routes, search by capability across available source families; preserve source ownership only as provenance. Report inaccessible source families and avoid claiming a first-party-only result represents the corpus. Eligibility remains subject to exact-version license, security, authority, privacy, and behavioral evidence.
+The **open-ended indexed corpus**, including governed third-party records and tracked/pinned external references, is the primary discovery surface. Use [the capability directory](registry/capability-directory.json) to navigate, but treat its currently sparse skill links as unknown coverage, not negative search results. Expand by capability terms across all accessible record/source families; see [the consumer lifecycle contract](docs/consumer-discovery-and-installation.md). First-party skills are ordinary source-family members. Do not prefer, rank, or recommend them because their metadata is locally convenient or they are authored here. For all discovery routes, search by capability across available source families; preserve source ownership only as provenance. Report inaccessible source families and avoid claiming a first-party-only result represents the corpus. Eligibility remains subject to exact-version license, security, authority, privacy, and behavioral evidence.
 
 ## Inventory boundary
 
@@ -37,7 +37,7 @@ The **indexed corpus**, including governed third-party records and tracked/pinne
 - `registry/local-verification.json`: structured review of first-party skills.
 - `CURATION_QUEUE.md`: living curation evidence ledger and active frontier.
 
-The broad repository surface is **500+ skills/reference artifacts**, but availability and individual unchanged-reuse eligibility are separate facts.
+The discovery ecosystem is **open-ended**. Registered/persisted review counts are snapshots rather than a ceiling, and availability and individual unchanged-reuse eligibility are separate facts.
 
 ## Route before acting
 
@@ -70,7 +70,7 @@ Unchanged third-party reuse requires an individually reviewed exact version whos
 - `stale`: do not inherit the old review silently.
 - `rejected` / `retired`: exclude from normal unchanged selection.
 
-If exact identity cannot be established, say so and take the conservative path.
+If exact identity cannot be established, say so and take the conservative path. Root `skillz` MIT licensing applies only to first-party material; inspect controlling third-party package/child license text and preserve required notices before any copying, adaptation, packaging or redistribution. A valid license is not authority to execute, install, disclose information or access user accounts.
 
 ## Core doctrine
 
