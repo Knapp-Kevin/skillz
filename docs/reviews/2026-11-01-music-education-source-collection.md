@@ -1,0 +1,13 @@
+# Discovery-first collection: music composition and education (2026-11-01)
+
+**Passive reference collection only.** No source package imported, executed, installed, security-cleared or behaviorally validated. GitHub commit IDs are observed source snapshots, not complete package-tree fingerprints; repository content requires re-fetching at the specific revision before promotion.
+
+| Source | Observed commit SHA | Domain | Upstream claims and source paths | Collection decision |
+|---|---|---|---|---|
+| [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills) | `e283141babb8806f2798d5fd2d9e833e75c1bd26` | Music composition, arranging, orchestration, harmony, production specification | README advertises 29 skills; `plugins/music-composition/skills/`; arrangement-spec artifacts and multiple downstream generation formats | Collected source; enumerate unique skill folders, licenses, references, copyright and model/API dependencies |
+| [SJY051/music-composition](https://github.com/SJY051/music-composition) | `07cecf9c8fd15249ea3da311dc9a7c7893ff801f` | Music theory, songwriting, arrangement, genre, instrumentation | Root `SKILL.md`, `references/`, `assets/`, `scripts/`; README states CC BY 4.0 documents and MIT code, subject to license-file confirmation | Collected source; assess split licensing and attribution before any redistribution |
+| [ellmos-ai/skills](https://github.com/ellmos-ai/skills) | `96c859a8964e42d111b40f58292f31be465f1c34` | Education, worksheets, game development, general productivity | README claims 142 public runtime skills, including 5 education and 5 game-development skills; `skills/education/`, `skills/game-dev/`; `registry/public-skill-files.json` canonical file list | Collected source; distinguish original content from mirrored or third-party material; inspect controlling licenses |
+
+**Collection totals:** three additional original source leads, raising documented leads from 12 to **15**, without asserting 15 unique non-overlapping packages or any new governed admission. Music composition and education now have **concrete discovery sources**, but no qualified coverage gain is claimed.
+
+**Immediate collection next:** enumerate source-owned `SKILL.md` entrypoints at each commit, compare hashes against existing 995 governed third-party review identities, record controlling licenses and dependent assets, and preserve candidates in a static reference catalog. Do not run upstream installers or scripts. For music, separate composition guidance from actual MIDI/audio generation; for education, distinguish worksheet generation from evidence of learning outcomes.
