@@ -3,19 +3,21 @@ skill_name: decision-log
 source_id: local-skills
 local_path: "skills/decision-log/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 56e5c574c295546c9e654a9e6a14a9814136f2f4
+content_blob_sha: 3e1ceeb3a20e2d933e5ade631e82d54dd582a44b
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-26
 verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_basis: "individual-structured-static-review; exact-version manual scenario review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+package_security_status: not-run
 rubric: "docs/skill-verification.md"
-rubric_score: "19/20"
+rubric_score: "18/20"
 tags:
   use_case: [decision-support, documentation]
   lifecycle: [planning, maintenance]
   characteristic: [evidence-first, traceable, human-review, risk-aware]
   authority: [mutating]
   portability: [medium]
-notes: "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+notes: "Exact-path and entry approval before append, anti-backfill and optional revisit date; external mail/calendar reads require source-specific authorization. Host file write is separately gated."
+static_review_evidence: docs/reviews/2026-10-26-pr410-distinct-five-skill-review.md

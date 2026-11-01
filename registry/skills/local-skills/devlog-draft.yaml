@@ -7,15 +7,15 @@ source_path: skills/devlog-draft/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: fad41ef5d7b1c47c4d87ca21d7330b8fb5638d29
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-26
 availability: in-repo
 local_path: skills/devlog-draft/SKILL.md
 permission_tier: generate-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
+dependencies: "Authorized host Git/repository history and optionally approved decision ledger; no repository-owned runner."
 import_eligibility: eligible-standalone
-rationale: "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+rationale: "Source-bound evidence-to-narrative drafting with scoped private history access, sensitive-content redaction and publication approval; 17/20 static review."

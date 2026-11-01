@@ -16,24 +16,28 @@ metadata:
 
 # MCP Pulse
 
-Topic pulse for the Model Context Protocol — the portability layer this repo's own contract depends on (external services go through MCP so connectors swap per platform). Spec drift here ripples into every agent surface: Claude Code and the bound platform's MCP integration and adapters.
+Topic pulse for the Model Context Protocol, a possible interoperability layer in external agent environments. This passive repository has no MCP runtime or connector requirement. Assess protocol drift only against the user's actual authorized host, integrations, and adapters.
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
+1. **Collect.** Use the authorized external host's retrieval capabilities:
 
-   ```
-   node scripts/pulse-run.ts --sources skills/mcp-pulse/sources.json [--since 30d]
-   ```
+   Read the bundled `sources.json` in this skill folder. Use authorized host browsing or connected search tools to inspect selected sources, keep source dates and URLs, and state which sources were unavailable. No repository-owned runner, script, or automatic collection process exists.
 
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+   The external host selects the available approved web/API capabilities; unavailable retrieval is reported as an evidence gap, not silently filled.
+
+   **Resolve source-query windows.** `sources.json` is inert source configuration. For each `github_search[].q` containing `{SINCE}`, substitute a UTC `YYYY-MM-DD` date at the beginning of the requested report window before querying GitHub. If the user supplied no window, use the preceding seven days and label that default in the report. GitHub date-only `created:>` filters are approximate window boundaries, not proof of complete coverage. Never submit a literal `{SINCE}` placeholder, execute the source file, or imply an unexecuted search succeeded; record unavailable tools and incomplete results as evidence gaps.
 
 2. **Fill gaps.** Fetch the spec changelog (the hard source — protocol changes are the deprecation-equivalent); run the searches, especially the security one — MCP server vulnerabilities are an active research area.
 3. **Synthesize.** Spec/SDK changes first with migration impact; security advisories second; then notable new servers (filter: does it unlock a capability we lack, or duplicate a connected one?); registry/ecosystem news.
 
-## Scheduling
+## Optional recurrence (external host only)
 
-- **Claude Code:** `/schedule` weekly — pairs with github-pulse (which sweeps MCP repos broadly; this pulse goes narrow and deep — cross-reference, don't duplicate).
+Weekly review is a suggestion, not a standing instruction. This skill defaults to **one requested read-only digest**. Do not invoke `/schedule`, `/loop`, scheduler APIs, or notification tools merely because a cadence is mentioned.
+
+Before an external host creates a recurring run, obtain **separate explicit user approval** for frequency, local time and timezone, end/expiry condition, exact future public and private source/account/workspace access scope, report recipients and delivery channel (including notifications), data minimization and retention/deletion, recurring cost or external egress, and pause/revocation controls. Private or gated content and any disclosure of user/workspace context require their own scoped approval. Recheck authorization and access at each future run; stop rather than silently broaden scope.
+
+Only an authorized external host with a suitable capability may configure the approved routine. If unavailable, provide a reusable one-time prompt or manual reminder instead. Never persist credentials, token-bearing URLs, sensitive documents, or private message bodies in schedule prompts, logs, or reports. `skillz` has no scheduler, runner, or delivery service.
 
 ## Output Format
 
@@ -49,5 +53,5 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Notes
 
-- Server finds that merit adoption go through the intake registry (`registry/candidates.yaml`) with a permission tier — an MCP server is the highest-trust dependency class there is.
-- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).
+- A server recommended for adoption needs a governed intake record and current controlled authority-category and action-specific authorization review. If the skillz intake registry is accessible in the authorized host, consult its current decisions; otherwise provide a proposed intake handoff rather than assuming the registry is bundled with this skill.
+- Flag changes affecting the bound platform's MCP integration or the user's actual connector configuration, when the user has authorized access. Host-specific configuration is external to this skill package and may be unavailable.
