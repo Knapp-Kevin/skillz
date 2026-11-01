@@ -19,6 +19,9 @@
 
 Start with the [capability-first directory](registry/capability-directory.json) (domain → subdomain → specific outcome), the [discovery matrix](docs/capability-discovery-matrix.md), and the [consumer discovery, licensing, creation and installation contract](docs/consumer-discovery-and-installation.md). Then use [governed skill evidence](registry/verification/), [source provenance](registry/sources.yaml), the [full catalog snapshot](INDEX.md), and the [discovery-first ontology](docs/discovery-first-capability-ontology.md) to expand the search. **The directory is currently sparse and provisional**, not a complete enumeration; empty matches mean unassessed coverage. Continue capability-keyword searches across governed, pinned, tracked, discovery-only and first-party surfaces when needed. Source lists are attribution and review accounting, not a navigation root. Disclose inaccessible sources instead of presenting first-party matches as the full corpus.
 
+The [current dynamic discovery frontier](registry/discovery/dynamic-four-source-frontier-20261101.json) contains exact-pinned path/blob manifests from broader external sources. Its raw paths and direct-shape candidates are **unqualified leads**, not eligible/reviewed skills. Use these manifests when a capability is not yet linked in the directory, and check source-specific rights before copying or installation. The indexed library's size and scope are deliberately open-ended.
+
+
 ## What `skillz` is
 
 `skillz` is **entirely passive**. It owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An authorized external host may run assessments elsewhere and deposit exact-version evidence here; pinned upstream package tooling stays source-owned reference material.
