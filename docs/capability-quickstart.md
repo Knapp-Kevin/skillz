@@ -26,6 +26,8 @@ If the user only shared the repository and said **“take a look”**, first del
 
 **Key distinction:** an existing exact-version review is not an install permit. `verified` above refers to **static semantic review**, not a security scan, behavioral test, distribution license or compatibility assurance. The third-party links point to evidence companions; read the companion's full package path, provenance, license/NOTICE obligations and its specific security context before adoption. These examples are not ranked by authorship.
 
+**Need a first-party security result without opening two large baseline files?** Use the compact [per-skill package-security lookup](../registry/security/first-party-package-lookup.json). Its 44 entries point to the historical exact-tree scan states; 23 passed, 20 were incomplete and one failed for the recorded matching package trees. This is a lookup of prior evidence, **not a newly run scan or install approval**. For a skill modified after the indexed snapshot, recheck the package-tree identity before relying on it.
+
 ## Find beyond these examples
 
 1. **Browse [the capability directory](../registry/capability-directory.json)** by domain → subdomain. Its `matched_skill_ids` are evidence-linked seed examples; `name_only_review_candidate_ids` are **uninspected name-token leads** from the reviewed-record index. Those leads may be rejected, candidate-only or semantically irrelevant. An empty list is **unknown coverage**, never absence.
