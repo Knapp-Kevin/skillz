@@ -2740,11 +2740,13 @@
       "cloudflare": 9,
       "build_web_apps": 6,
       "stripe": 7,
-      "supabase": 2
+      "supabase": 2,
+      "notion": 4,
+      "circleci": 4
     },
-    "terminal_candidate_decisions": 98,
-    "reference_only": 40,
-    "rejected_unchanged": 58,
+    "terminal_candidate_decisions": 106,
+    "reference_only": 42,
+    "rejected_unchanged": 64,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -2964,5 +2966,48 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-stripe-supabase-nine-candidate-vetting.md",
     "issue": 576
+  },
+  "openai_notion_circleci_eight_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "families": {
+      "notion": {
+        "plugin_version": "0.1.7",
+        "plugin_tree": "87f8c1848b571ba616df607a11a075674b65b080",
+        "denominator": 4,
+        "reference_only": 1,
+        "rejected_unchanged": 3,
+        "license": "MIT per-skill complete LICENSE.txt"
+      },
+      "circleci": {
+        "plugin_version": "1.0.4",
+        "plugin_tree": "c07c153d604229b232b1f09640438c8af4a6a08e",
+        "denominator": 4,
+        "reference_only": 1,
+        "rejected_unchanged": 3,
+        "license": "NOASSERTION; manifest MIT label only"
+      }
+    },
+    "first_class_candidate_denominator": 8,
+    "terminal_candidate_decisions": 8,
+    "reference_only": 2,
+    "rejected_unchanged": 6,
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-notion-circleci-eight-candidate-vetting.md",
+    "issue": 578
   }
 }
