@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-11-01",
   "navigation_root": "capability-domains",
-  "description": "Passive capability-first discovery directory with evidence-linked starting points and explicit name-search fallback. Sparse/empty entries mean no mapped example yet, NOT no skills.",
+  "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "canonical_source": "docs/capability-discovery-matrix.md",
   "source_metadata_lookup": "registry/sources.yaml",
   "third_party_skill_evidence": [
@@ -23,63 +23,165 @@
           "name": "frontend",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "frontend",
+            "Software engineering frontend"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/frontend-ui-engineering",
+            "anthropic-skills/frontend-design",
+            "bm629-agent-skills/motion-react",
+            "cline-skills/frontend-design",
+            "cole-medin-skills/prime-frontend",
+            "anthropic-skills/webapp-testing"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 14
         },
         {
           "id": "backend",
           "name": "backend",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "backend",
+            "Software engineering backend"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/amazon-aurora-postgresql",
+            "cole-medin-skills/prime-backend",
+            "microsoft-skills/azure-resource-manager-postgresql-dotnet",
+            "aws-agent-toolkit/aws-serverless"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "mobile",
           "name": "mobile",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "mobile",
+            "Software engineering mobile"
+          ],
+          "name_only_review_candidate_ids": [
+            "vercel-agent-skills/vercel-react-native-skills"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "desktop",
           "name": "desktop",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "desktop",
+            "Software engineering desktop"
+          ],
+          "name_only_review_candidate_ids": [
+            "cline-skills/desktop-commander-overview"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "apis",
           "name": "APIs",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "APIs",
+            "Software engineering APIs"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/api-and-interface-design",
+            "aws-agent-toolkit/aws-sdk-js-v3-usage",
+            "bm629-agent-skills/authoring-api-reference",
+            "cline-skills/cline-sdk",
+            "cloudflare-skills/agents-sdk",
+            "aws-agent-toolkit/aws-sdk-python-usage"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 14
         },
         {
           "id": "architecture",
           "name": "architecture",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "architecture",
+            "Software engineering architecture"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-architecture-doc",
+            "cole-medin-skills/plan-architecture",
+            "mattpocock-skills/codebase-design",
+            "bm629-agent-skills/authoring-technical-design",
+            "bm629-agent-skills/python-monorepo-architecture",
+            "bm629-agent-skills/reviewing-architecture-doc"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 11
         },
         {
           "id": "refactoring",
           "name": "refactoring",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "refactoring",
+            "Software engineering refactoring"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/code-simplification",
+            "mattpocock-skills/improve-codebase-architecture"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "build-tooling",
           "name": "build tooling",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "build tooling",
+            "Software engineering build tooling"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "developer-experience",
           "name": "developer experience",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "developer experience",
+            "Software engineering developer experience"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/git-workflow-and-versioning",
+            "bm629-agent-skills/authoring-developer-guide",
+            "mattpocock-skills/git-guardrails-claude-code",
+            "bm629-agent-skills/reviewing-developer-guide",
+            "mattpocock-skills/setup-pre-commit"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "maintenance",
@@ -95,7 +197,21 @@
             "local-skills/repo-pulse",
             "local-skills/todo-harvester"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "maintenance",
+            "Software engineering maintenance"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/code-review-and-quality",
+            "archieindian-superpowers/systematic-debugging",
+            "aws-agent-toolkit/debugging-lambda-timeouts",
+            "cole-medin-skills/prime-codebase",
+            "mattpocock-skills/code-review",
+            "addyosmani-agent-skills/debugging-and-error-recovery"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 10
         }
       ]
     },
@@ -109,56 +225,129 @@
           "name": "unit/integration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "unit/integration",
+            "Testing unit/integration"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/test-driven-development",
+            "archieindian-superpowers/test-driven-development",
+            "mattpocock-skills/tdd"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "end-to-end",
           "name": "end-to-end",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "end-to-end",
+            "Testing end-to-end"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/browser-testing-with-devtools",
+            "anthropic-skills/webapp-testing",
+            "microsoft-skills/azure-microsoft-playwright-testing-ts",
+            "microsoft-skills/azure-resource-manager-playwright-dotnet"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "performance",
           "name": "performance",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "performance",
+            "Testing performance"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/performance-optimization",
+            "cloudflare-skills/web-perf"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "accessibility",
           "name": "accessibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "accessibility",
+            "Testing accessibility"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "compatibility",
           "name": "compatibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "compatibility",
+            "Testing compatibility"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/skill-compatibility-checker"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "fuzz-property-testing",
           "name": "fuzz/property testing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "fuzz/property testing",
+            "Testing fuzz/property testing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "regression",
           "name": "regression",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "regression",
+            "Testing regression"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "test-strategy",
           "name": "test strategy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "test strategy",
+            "Testing test strategy"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-test-plan",
+            "bm629-agent-skills/reviewing-test-plan"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         }
       ]
     },
@@ -172,14 +361,35 @@
           "name": "agent architecture",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "agent architecture",
+            "Agent / MCP development agent architecture"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/agents-build",
+            "david-ondrej-skills/agentic-productivity-setup",
+            "microsoft-skills/agent-framework-azure-ai-py"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "tool-design",
           "name": "tool design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "tool design",
+            "Agent / MCP development tool design"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/mcp-builder",
+            "microsoft-skills/mcp-builder"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "mcp-clients-servers",
@@ -190,14 +400,39 @@
           "matched_skill_ids": [
             "local-skills/mcp-pulse"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "MCP clients/servers",
+            "Agent / MCP development MCP clients/servers"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/mcp-builder",
+            "archieindian-superpowers/mcp-health-checker",
+            "microsoft-skills/mcp-builder"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "orchestration",
           "name": "orchestration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "orchestration",
+            "Agent / MCP development orchestration"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/git-workflow-and-versioning",
+            "archieindian-superpowers/multi-agent-coordinator",
+            "cline-skills/amplify-workflow",
+            "david-ondrej-skills/codex-subagent",
+            "google-agents-cli/google-agents-cli-workflow",
+            "archieindian-superpowers/subagent-driven-development"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 8
         },
         {
           "id": "permissions",
@@ -209,7 +444,16 @@
             "local-skills/mcp-vetting",
             "local-skills/permissions-review"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "permissions",
+            "Agent / MCP development permissions"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/dangerous-action-guard"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "evaluation",
@@ -220,7 +464,17 @@
           "matched_skill_ids": [
             "local-skills/agent-postmortem"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "evaluation",
+            "Agent / MCP development evaluation"
+          ],
+          "name_only_review_candidate_ids": [
+            "google-agents-cli/google-agents-cli-eval",
+            "openclaw-agent-skills/behavior-validator"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "agent-observability",
@@ -231,14 +485,36 @@
           "matched_skill_ids": [
             "local-skills/automation-receipts"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "agent observability",
+            "Agent / MCP development agent observability"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/observability-and-instrumentation",
+            "aws-agent-toolkit/agents-debug",
+            "google-agents-cli/google-agents-cli-observability",
+            "aws-agent-toolkit/aws-observability"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "multi-agent-collaboration",
           "name": "multi-agent collaboration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "multi-agent collaboration",
+            "Agent / MCP development multi-agent collaboration"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/multi-agent-coordinator",
+            "david-ondrej-skills/bb-subagents"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         }
       ]
     },
@@ -256,56 +532,156 @@
           "matched_skill_ids": [
             "microsoft-skills/azure-ai"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "cloud architecture",
+            "Cloud / DevOps cloud architecture"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/aws-cdk",
+            "microsoft-azure-skills/azure-compute",
+            "microsoft-skills/azure-compute",
+            "aws-agent-toolkit/aws-cdk-aws-core-plugin",
+            "microsoft-skills/azure-compute-batch-java"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 6
         },
         {
           "id": "infrastructure-as-code",
           "name": "infrastructure as code",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "infrastructure as code",
+            "Cloud / DevOps infrastructure as code"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/aws-cdk",
+            "aws-agent-toolkit/aws-cdk-aws-core-plugin",
+            "aws-agent-toolkit/aws-cloudformation"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "ci-cd",
           "name": "CI/CD",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "CI/CD",
+            "Cloud / DevOps CI/CD"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/ci-cd-and-automation",
+            "anthropic-knowledge-work-plugins/pipeline-review",
+            "aws-agent-toolkit/creating-ec2-image-builder-pipeline",
+            "bm629-agent-skills/authoring-release-runbook",
+            "bm629-agent-skills/reviewing-release-runbook"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "containers",
           "name": "containers",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "containers",
+            "Cloud / DevOps containers"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/aws-containers",
+            "microsoft-azure-skills/airunway-aks-setup",
+            "microsoft-skills/airunway-aks-setup",
+            "microsoft-azure-skills/azure-kubernetes",
+            "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
+            "microsoft-skills/azure-kubernetes"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 15
         },
         {
           "id": "orchestration",
           "name": "orchestration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "orchestration",
+            "Cloud / DevOps orchestration"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/workflow-orchestration",
+            "microsoft-azure-skills/airunway-aks-setup",
+            "microsoft-skills/airunway-aks-setup",
+            "microsoft-azure-skills/azure-kubernetes",
+            "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
+            "microsoft-skills/azure-kubernetes"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 15
         },
         {
           "id": "deployment",
           "name": "deployment",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "deployment",
+            "Cloud / DevOps deployment"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/shipping-and-launch",
+            "aws-agent-toolkit/agents-deploy",
+            "google-agents-cli/google-agents-cli-deploy",
+            "microsoft-azure-skills/azure-deploy",
+            "microsoft-skills/azure-deploy",
+            "microsoft-azure-skills/microsoft-foundry-deploy-model"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 23
         },
         {
           "id": "sre",
           "name": "SRE",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "SRE",
+            "Cloud / DevOps SRE"
+          ],
+          "name_only_review_candidate_ids": [
+            "microsoft-azure-skills/azure-reliability",
+            "microsoft-skills/azure-reliability"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "cost-optimization",
           "name": "cost optimization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "cost optimization",
+            "Cloud / DevOps cost optimization"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/aws-billing-and-cost-management",
+            "microsoft-azure-skills/azure-cost",
+            "microsoft-skills/azure-cost"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         }
       ]
     },
@@ -319,7 +695,16 @@
           "name": "application security",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "application security",
+            "Security application security"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/security-and-hardening"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "identity-access",
@@ -330,14 +715,35 @@
           "matched_skill_ids": [
             "local-skills/permissions-review"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "identity/access",
+            "Security identity/access"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/identity-denial",
+            "microsoft-azure-skills/azure-rbac",
+            "microsoft-skills/azure-identity-dotnet",
+            "microsoft-skills/azure-identity-java",
+            "microsoft-skills/azure-identity-py",
+            "microsoft-skills/azure-identity-rust"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 10
         },
         {
           "id": "threat-modeling",
           "name": "threat modeling",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "threat modeling",
+            "Security threat modeling"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "vulnerability-management",
@@ -348,7 +754,16 @@
           "matched_skill_ids": [
             "local-skills/agent-home-doctor"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "vulnerability management",
+            "Security vulnerability management"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/legal-risk-assessment"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "supply-chain",
@@ -359,21 +774,46 @@
           "matched_skill_ids": [
             "local-skills/mcp-vetting"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "supply chain",
+            "Security supply chain"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/installed-skill-auditor"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "incident-response",
           "name": "incident response",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "incident response",
+            "Security incident response"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "privacy-engineering",
           "name": "privacy engineering",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "privacy engineering",
+            "Security privacy engineering"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/external-content-sanitizer"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         }
       ]
     },
@@ -391,7 +831,14 @@
           "matched_skill_ids": [
             "local-skills/paper-digest"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "literature review",
+            "Research literature review"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "source-discovery",
@@ -419,7 +866,21 @@
             "local-skills/qwen-pulse",
             "local-skills/xai-pulse"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "source discovery",
+            "Research source discovery"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/source-driven-development",
+            "anthropic-knowledge-work-plugins/account-research",
+            "aws-agent-toolkit/connecting-to-data-source",
+            "bm629-agent-skills/project-document-discovery",
+            "cline-skills/exa-search",
+            "anthropic-knowledge-work-plugins/bio-research-start"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 28
         },
         {
           "id": "synthesis",
@@ -431,14 +892,35 @@
             "local-skills/compare",
             "local-skills/deep-dive"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "synthesis",
+            "Research synthesis"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/brief",
+            "jwynia-agent-skills/adaptation-synthesis",
+            "anthropic-knowledge-work-plugins/call-summary",
+            "anthropic-knowledge-work-plugins/digest",
+            "anthropic-knowledge-work-plugins/knowledge-synthesis",
+            "anthropic-knowledge-work-plugins/marketing-competitive-brief"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 7
         },
         {
           "id": "systematic-review",
           "name": "systematic review",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "systematic review",
+            "Research systematic review"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "fact-checking",
@@ -449,21 +931,44 @@
           "matched_skill_ids": [
             "local-skills/fact-check"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "fact-checking",
+            "Research fact-checking"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/source-driven-development",
+            "archieindian-superpowers/fact-check-before-trust",
+            "archieindian-superpowers/verification-before-completion"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "field-methods",
           "name": "field methods",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "field methods",
+            "Research field methods"
+          ],
+          "name_only_review_candidate_ids": []
         },
         {
           "id": "reproducibility",
           "name": "reproducibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "reproducibility",
+            "Research reproducibility"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -477,7 +982,18 @@
           "name": "strategic planning",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "strategic planning",
+            "Planning strategic planning"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/roadmap-update",
+            "corey-haines-marketing-skills/content-strategy",
+            "anthropic-knowledge-work-plugins/search-strategy"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "project-scheduling",
@@ -488,21 +1004,47 @@
           "matched_skill_ids": [
             "local-skills/task-surface"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "project scheduling",
+            "Planning project scheduling"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/planning-and-task-breakdown"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "resource-allocation",
           "name": "resource allocation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "resource allocation",
+            "Planning resource allocation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "roadmapping",
           "name": "roadmapping",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "roadmapping",
+            "Planning roadmapping"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/planning-and-task-breakdown",
+            "anthropic-knowledge-work-plugins/roadmap-update"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "decision-frameworks",
@@ -515,14 +1057,35 @@
             "local-skills/compare",
             "local-skills/decision-log"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "decision frameworks",
+            "Planning decision frameworks"
+          ],
+          "name_only_review_candidate_ids": [
+            "david-ondrej-skills/next-decision"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "risk-planning",
           "name": "risk planning",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "risk planning",
+            "Planning risk planning"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/legal-risk-assessment",
+            "aws-agent-toolkit/analyzing-release-readiness",
+            "microsoft-azure-skills/azure-kubernetes-automatic-readiness",
+            "microsoft-skills/azure-kubernetes-automatic-readiness"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         }
       ]
     },
@@ -536,14 +1099,31 @@
           "name": "positioning",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "positioning",
+            "Marketing positioning"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "branding",
           "name": "branding",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "branding",
+            "Marketing branding"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/brand-review",
+            "anthropic-skills/brand-guidelines"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "content",
@@ -554,7 +1134,21 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/social"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "content",
+            "Marketing content"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/content-creation",
+            "bm629-agent-skills/content-template-gateway",
+            "corey-haines-marketing-skills/content-strategy",
+            "anthropic-knowledge-work-plugins/draft-content",
+            "bm629-agent-skills/external-content-sanitizer",
+            "corey-haines-marketing-skills/copywriting"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 6
         },
         {
           "id": "seo",
@@ -567,21 +1161,54 @@
             "corey-haines-marketing-skills/seo-audit",
             "corey-haines-marketing-skills/schema"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "SEO",
+            "Marketing SEO"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/seo-audit",
+            "aws-agent-toolkit/dms-schema-conversion",
+            "corey-haines-marketing-skills/ai-seo",
+            "corey-haines-marketing-skills/programmatic-seo"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "paid-acquisition",
           "name": "paid acquisition",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "paid acquisition",
+            "Marketing paid acquisition"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/ad-creative",
+            "corey-haines-marketing-skills/ads"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "growth",
           "name": "growth",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "growth",
+            "Marketing growth"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/dms-schema-conversion",
+            "cline-skills/ui5-typescript-conversion",
+            "corey-haines-marketing-skills/cro"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "lifecycle",
@@ -592,21 +1219,55 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/sms"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "lifecycle",
+            "Marketing lifecycle"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/email-sequence",
+            "cloudflare-skills/cloudflare-email-service",
+            "corey-haines-marketing-skills/churn-prevention",
+            "microsoft-skills/azure-communication-sms-java",
+            "corey-haines-marketing-skills/cold-email"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "attribution",
           "name": "attribution",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "attribution",
+            "Marketing attribution"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/analytics",
+            "corey-haines-marketing-skills/attribution"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "market-research",
           "name": "market research",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "market research",
+            "Marketing market research"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/customer-research",
+            "corey-haines-marketing-skills/competitor-profiling",
+            "corey-haines-marketing-skills/customer-research"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         }
       ]
     },
@@ -620,56 +1281,133 @@
           "name": "discovery",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "discovery",
+            "Product discovery"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/customer-research",
+            "cole-medin-skills/opportunity-scan",
+            "corey-haines-marketing-skills/customer-research"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "requirements",
           "name": "requirements",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "requirements",
+            "Product requirements"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-feature-spec",
+            "cole-medin-skills/plan-create-prd",
+            "bm629-agent-skills/authoring-prd",
+            "bm629-agent-skills/reviewing-feature-spec",
+            "bm629-agent-skills/reviewing-prd"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "product-strategy",
           "name": "product strategy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "product strategy",
+            "Product product strategy"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/roadmap-update"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "prioritization",
           "name": "prioritization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "prioritization",
+            "Product prioritization"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "experimentation",
           "name": "experimentation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "experimentation",
+            "Product experimentation"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/ab-testing"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "product-analytics",
           "name": "product analytics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "product analytics",
+            "Product product analytics"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/analytics"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "launch",
           "name": "launch",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "launch",
+            "Product launch"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/shipping-and-launch",
+            "corey-haines-marketing-skills/launch",
+            "david-ondrej-skills/corral-launch-agents",
+            "david-ondrej-skills/launch-subagent"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "lifecycle",
           "name": "lifecycle",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "lifecycle",
+            "Product lifecycle"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -683,7 +1421,19 @@
           "name": "user research",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "user research",
+            "UX / UI user research"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/customer-research",
+            "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+            "corey-haines-marketing-skills/customer-research",
+            "bm629-agent-skills/user-research-prior-art-survey"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "interaction-design",
@@ -694,7 +1444,17 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/signup"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "interaction design",
+            "UX / UI interaction design"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-user-flows",
+            "bm629-agent-skills/reviewing-user-flows"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "information-architecture",
@@ -705,35 +1465,79 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/site-architecture"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "information architecture",
+            "UX / UI information architecture"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "prototyping",
           "name": "prototyping",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "prototyping",
+            "UX / UI prototyping"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-hi-fi",
+            "mattpocock-skills/prototype",
+            "bm629-agent-skills/reviewing-hi-fi"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "accessibility",
           "name": "accessibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "accessibility",
+            "UX / UI accessibility"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "usability-testing",
           "name": "usability testing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "usability testing",
+            "UX / UI usability testing"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/browser-testing-with-devtools"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "design-systems",
           "name": "design systems",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "design systems",
+            "UX / UI design systems"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-design-system",
+            "bm629-agent-skills/reviewing-design-system"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         }
       ]
     },
@@ -747,49 +1551,115 @@
           "name": "graphic design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "graphic design",
+            "Visual design graphic design"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/canvas-design"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "typography",
           "name": "typography",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "typography",
+            "Visual design typography"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "layout",
           "name": "layout",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "layout",
+            "Visual design layout"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "color",
           "name": "color",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "color",
+            "Visual design color"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/theme-factory",
+            "openhands-extensions/theme-factory"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "identity-systems",
           "name": "identity systems",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "identity systems",
+            "Visual design identity systems"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/brand-guidelines",
+            "jwynia-agent-skills/identity-denial",
+            "microsoft-skills/azure-identity-dotnet",
+            "microsoft-skills/azure-identity-java",
+            "microsoft-skills/azure-identity-py",
+            "microsoft-skills/azure-identity-rust"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 9
         },
         {
           "id": "information-visualization",
           "name": "information visualization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "information visualization",
+            "Visual design information visualization"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/create-viz",
+            "anthropic-knowledge-work-plugins/data-visualization"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "motion-graphics",
           "name": "motion graphics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "motion graphics",
+            "Visual design motion graphics"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/motion-react"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         }
       ]
     },
@@ -803,42 +1673,95 @@
           "name": "concept art",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "concept art",
+            "Illustration concept art"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/algorithmic-art"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "editorial",
           "name": "editorial",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "editorial",
+            "Illustration editorial"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/editorial-review"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "scientific",
           "name": "scientific",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "scientific",
+            "Illustration scientific"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "character-environment",
           "name": "character/environment",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "character/environment",
+            "Illustration character/environment"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/worldbuilding",
+            "jwynia-agent-skills/oblique-worldbuilding",
+            "jwynia-agent-skills/systemic-worldbuilding",
+            "jwynia-agent-skills/worldbuilding"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "sequential-art",
           "name": "sequential art",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "sequential art",
+            "Illustration sequential art"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "digital-traditional-media",
           "name": "digital/traditional media",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "digital/traditional media",
+            "Illustration digital/traditional media"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/canvas-design"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         }
       ]
     },
@@ -852,63 +1775,130 @@
           "name": "3D modeling",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "3D modeling",
+            "3D / CAD / animation 3D modeling"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "sculpting",
           "name": "sculpting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "sculpting",
+            "3D / CAD / animation sculpting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "rigging",
           "name": "rigging",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "rigging",
+            "3D / CAD / animation rigging"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "procedural-design",
           "name": "procedural design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "procedural design",
+            "3D / CAD / animation procedural design"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/algorithmic-art"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "cad",
           "name": "CAD",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "CAD",
+            "3D / CAD / animation CAD"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "simulation",
           "name": "simulation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "simulation",
+            "3D / CAD / animation simulation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "rendering",
           "name": "rendering",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "rendering",
+            "3D / CAD / animation rendering"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "animation",
           "name": "animation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "animation",
+            "3D / CAD / animation animation"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/motion-react"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "technical-drawing",
           "name": "technical drawing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "technical drawing",
+            "3D / CAD / animation technical drawing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -922,56 +1912,118 @@
           "name": "mechanics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "mechanics",
+            "Game design mechanics"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/game-facilitator"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "level-design",
           "name": "level design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "level design",
+            "Game design level design"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "systems-balancing",
           "name": "systems balancing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "systems balancing",
+            "Game design systems balancing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "narrative-design",
           "name": "narrative design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "narrative design",
+            "Game design narrative design"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/interactive-fiction"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "economy",
           "name": "economy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "economy",
+            "Game design economy"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/economic-systems"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "playtesting",
           "name": "playtesting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "playtesting",
+            "Game design playtesting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "accessibility",
           "name": "accessibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "accessibility",
+            "Game design accessibility"
+          ],
+          "name_only_review_candidate_ids": []
         },
         {
           "id": "tabletop-games",
           "name": "tabletop games",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "tabletop games",
+            "Game design tabletop games"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/game-facilitator"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         }
       ]
     },
@@ -985,56 +2037,146 @@
           "name": "plotting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "plotting",
+            "Fiction / narrative / worldbuilding plotting"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/plot-structure",
+            "danjdewhurst-story-skills/premise-workshop"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "prose",
           "name": "prose",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "prose",
+            "Fiction / narrative / worldbuilding prose"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/chapter-writing",
+            "jwynia-agent-skills/drafting",
+            "danjdewhurst-story-skills/discovery-drafting",
+            "danjdewhurst-story-skills/scene-craft",
+            "jwynia-agent-skills/prose-style"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "editing",
           "name": "editing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "editing",
+            "Fiction / narrative / worldbuilding editing"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/editorial-review",
+            "jwynia-agent-skills/novel-revision",
+            "danjdewhurst-story-skills/line-editing",
+            "danjdewhurst-story-skills/revision-continuity",
+            "jwynia-agent-skills/revision"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "character",
           "name": "character",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "character",
+            "Fiction / narrative / worldbuilding character"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/character-management",
+            "jwynia-agent-skills/character-arc",
+            "jwynia-agent-skills/character-naming",
+            "jwynia-agent-skills/dialogue"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "dialogue",
           "name": "dialogue",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "dialogue",
+            "Fiction / narrative / worldbuilding dialogue"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/dialogue"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "setting-lore",
           "name": "setting/lore",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "setting/lore",
+            "Fiction / narrative / worldbuilding setting/lore"
+          ],
+          "name_only_review_candidate_ids": [
+            "aws-agent-toolkit/setting-up-cloudtrail-multi-region",
+            "danjdewhurst-story-skills/worldbuilding",
+            "jwynia-agent-skills/oblique-worldbuilding",
+            "aws-agent-toolkit/setting-up-cloudwatch-alarm-notifications",
+            "aws-agent-toolkit/setting-up-ec2-instance-profiles",
+            "jwynia-agent-skills/systemic-worldbuilding"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 7
         },
         {
           "id": "interactive-fiction",
           "name": "interactive fiction",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "interactive fiction",
+            "Fiction / narrative / worldbuilding interactive fiction"
+          ],
+          "name_only_review_candidate_ids": [
+            "jwynia-agent-skills/interactive-fiction"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "continuity",
           "name": "continuity",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "continuity",
+            "Fiction / narrative / worldbuilding continuity"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/revision-continuity",
+            "danjdewhurst-story-skills/series-continuity"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         }
       ]
     },
@@ -1048,28 +2190,81 @@
           "name": "API docs",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "API docs",
+            "Technical writing API docs"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-api-reference",
+            "bm629-agent-skills/authoring-api-spec",
+            "bm629-agent-skills/authoring-developer-guide",
+            "bm629-agent-skills/reviewing-api-reference",
+            "bm629-agent-skills/reviewing-api-spec",
+            "bm629-agent-skills/reviewing-developer-guide"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 6
         },
         {
           "id": "tutorials",
           "name": "tutorials",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "tutorials",
+            "Technical writing tutorials"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/academy-guide",
+            "bm629-agent-skills/authoring-developer-guide",
+            "bm629-agent-skills/authoring-user-guide",
+            "bm629-agent-skills/reviewing-developer-guide",
+            "bm629-agent-skills/reviewing-user-guide"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "reference-manuals",
           "name": "reference manuals",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "reference manuals",
+            "Technical writing reference manuals"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-user-guide",
+            "david-ondrej-skills/brain-to-docs",
+            "mattpocock-skills/grill-with-docs",
+            "microsoft-skills/microsoft-docs",
+            "bm629-agent-skills/reviewing-user-guide"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "architecture-records",
           "name": "architecture records",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "architecture records",
+            "Technical writing architecture records"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/documentation-and-adrs",
+            "bm629-agent-skills/authoring-architecture-doc",
+            "bm629-agent-skills/authoring-technical-design",
+            "bm629-agent-skills/reviewing-architecture-doc",
+            "bm629-agent-skills/reviewing-technical-design"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "release-notes",
@@ -1080,21 +2275,53 @@
           "matched_skill_ids": [
             "local-skills/devlog-draft"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "release notes",
+            "Technical writing release notes"
+          ],
+          "name_only_review_candidate_ids": [
+            "bm629-agent-skills/authoring-release-runbook",
+            "microsoft-skills/wiki-changelog",
+            "bm629-agent-skills/reviewing-release-runbook"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "documentation-ia",
           "name": "documentation IA",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "documentation IA",
+            "Technical writing documentation IA"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/documentation-and-adrs",
+            "cline-skills/mintlify"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "localization",
           "name": "localization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "localization",
+            "Technical writing localization"
+          ],
+          "name_only_review_candidate_ids": [
+            "microsoft-skills/azure-ai-translation-document-py",
+            "microsoft-skills/azure-ai-translation-text-py",
+            "microsoft-skills/azure-ai-translation-ts"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         }
       ]
     },
@@ -1108,56 +2335,114 @@
           "name": "harmony",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "harmony",
+            "Music composition harmony"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "melody",
           "name": "melody",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "melody",
+            "Music composition melody"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "rhythm",
           "name": "rhythm",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "rhythm",
+            "Music composition rhythm"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "orchestration",
           "name": "orchestration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "orchestration",
+            "Music composition orchestration"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/workflow-orchestration"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "arranging",
           "name": "arranging",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "arranging",
+            "Music composition arranging"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "notation",
           "name": "notation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "notation",
+            "Music composition notation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "scoring",
           "name": "scoring",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "scoring",
+            "Music composition scoring"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "electronic-composition",
           "name": "electronic composition",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "electronic composition",
+            "Music composition electronic composition"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1171,56 +2456,120 @@
           "name": "recording",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "recording",
+            "Audio / voice / sound recording"
+          ],
+          "name_only_review_candidate_ids": [
+            "microsoft-skills/azure-ai-transcription-py"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "editing",
           "name": "editing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "editing",
+            "Audio / voice / sound editing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "mixing",
           "name": "mixing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "mixing",
+            "Audio / voice / sound mixing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "mastering",
           "name": "mastering",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "mastering",
+            "Audio / voice / sound mastering"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "sound-design",
           "name": "sound design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "sound design",
+            "Audio / voice / sound sound design"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "speech-voice",
           "name": "speech/voice",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "speech/voice",
+            "Audio / voice / sound speech/voice"
+          ],
+          "name_only_review_candidate_ids": [
+            "danjdewhurst-story-skills/voice-style",
+            "microsoft-skills/azure-ai-transcription-py",
+            "microsoft-skills/azure-speech-to-text-rest-py"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "acoustics",
           "name": "acoustics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "acoustics",
+            "Audio / voice / sound acoustics"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "accessibility",
           "name": "accessibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "accessibility",
+            "Audio / voice / sound accessibility"
+          ],
+          "name_only_review_candidate_ids": [
+            "microsoft-skills/azure-ai-transcription-py"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         }
       ]
     },
@@ -1234,7 +2583,14 @@
           "name": "screenwriting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "screenwriting",
+            "Video / film screenwriting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "preproduction",
@@ -1245,56 +2601,112 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/video"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "preproduction",
+            "Video / film preproduction"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "cinematography",
           "name": "cinematography",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "cinematography",
+            "Video / film cinematography"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "lighting",
           "name": "lighting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "lighting",
+            "Video / film lighting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "editing",
           "name": "editing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "editing",
+            "Video / film editing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "color",
           "name": "color",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "color",
+            "Video / film color"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "vfx",
           "name": "VFX",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "VFX",
+            "Video / film VFX"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "captions",
           "name": "captions",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "captions",
+            "Video / film captions"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "delivery",
           "name": "delivery",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "delivery",
+            "Video / film delivery"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1308,7 +2720,20 @@
           "name": "interpersonal",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "interpersonal",
+            "Communication interpersonal"
+          ],
+          "name_only_review_candidate_ids": [
+            "microsoft-skills/azure-communication-callautomation-java",
+            "microsoft-skills/azure-communication-callingserver-java",
+            "microsoft-skills/azure-communication-chat-java",
+            "microsoft-skills/azure-communication-common-java",
+            "microsoft-skills/azure-communication-sms-java"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "presentations",
@@ -1319,35 +2744,74 @@
           "matched_skill_ids": [
             "local-skills/deck-outline"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "presentations",
+            "Communication presentations"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/pptx"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "facilitation",
           "name": "facilitation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "facilitation",
+            "Communication facilitation"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/meeting-briefing"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "negotiation",
           "name": "negotiation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "negotiation",
+            "Communication negotiation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "conflict-resolution",
           "name": "conflict resolution",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "conflict resolution",
+            "Communication conflict resolution"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "public-speaking",
           "name": "public speaking",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "public speaking",
+            "Communication public speaking"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "organizational-communication",
@@ -1361,7 +2825,21 @@
             "local-skills/handoff-writer",
             "local-skills/standup-writer"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "organizational communication",
+            "Communication organizational communication"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/internal-comms",
+            "archieindian-superpowers/task-handoff",
+            "david-ondrej-skills/handoff",
+            "mattpocock-skills/handoff",
+            "microsoft-skills/azure-communication-callautomation-java",
+            "microsoft-skills/azure-communication-callingserver-java"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 11
         }
       ]
     },
@@ -1375,42 +2853,97 @@
           "name": "descriptive analytics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "descriptive analytics",
+            "Analytics descriptive analytics"
+          ],
+          "name_only_review_candidate_ids": [
+            "cline-skills/data-analyst",
+            "corey-haines-marketing-skills/analytics"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "dashboards",
           "name": "dashboards",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "dashboards",
+            "Analytics dashboards"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/build-dashboard",
+            "anthropic-knowledge-work-plugins/data-visualization"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "experimentation",
           "name": "experimentation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "experimentation",
+            "Analytics experimentation"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/ab-testing"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "causal-inference",
           "name": "causal inference",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "causal inference",
+            "Analytics causal inference"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "forecasting",
           "name": "forecasting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "forecasting",
+            "Analytics forecasting"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/forecast"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "visualization",
           "name": "visualization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "visualization",
+            "Analytics visualization"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/create-viz",
+            "anthropic-knowledge-work-plugins/data-visualization"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "measurement",
@@ -1421,7 +2954,16 @@
           "matched_skill_ids": [
             "local-skills/automation-receipts"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "measurement",
+            "Analytics measurement"
+          ],
+          "name_only_review_candidate_ids": [
+            "corey-haines-marketing-skills/analytics"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         }
       ]
     },
@@ -1441,7 +2983,18 @@
             "local-skills/learning-plan",
             "local-skills/week-in-review"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "personal planning",
+            "Time / productivity personal planning"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/planning-and-task-breakdown",
+            "anthropic-knowledge-work-plugins/sprint-planning",
+            "archieindian-superpowers/daily-review"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "task-systems",
@@ -1453,42 +3006,105 @@
             "local-skills/inbox-triage",
             "local-skills/task-surface"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "task systems",
+            "Time / productivity task systems"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/git-workflow-and-versioning",
+            "anthropic-knowledge-work-plugins/task-management",
+            "archieindian-superpowers/long-running-task-management",
+            "cline-skills/amplify-workflow",
+            "google-agents-cli/google-agents-cli-workflow",
+            "addyosmani-agent-skills/planning-and-task-breakdown"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 8
         },
         {
           "id": "focus",
           "name": "focus",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "focus",
+            "Time / productivity focus"
+          ],
+          "name_only_review_candidate_ids": [
+            "david-ondrej-skills/agentic-productivity-setup"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "habit-formation",
           "name": "habit formation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "habit formation",
+            "Time / productivity habit formation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "scheduling",
           "name": "scheduling",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "scheduling",
+            "Time / productivity scheduling"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/cron-hygiene",
+            "david-ondrej-skills/agent-self-scheduling"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "workload",
           "name": "workload",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "workload",
+            "Time / productivity workload"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/context-budget-guard",
+            "archieindian-superpowers/long-running-task-management"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "collaboration",
           "name": "collaboration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "collaboration",
+            "Time / productivity collaboration"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/multi-agent-coordinator",
+            "david-ondrej-skills/handoff",
+            "mattpocock-skills/handoff",
+            "openclaw-agent-skills/handoff",
+            "archieindian-superpowers/task-handoff"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 6
         }
       ]
     },
@@ -1506,14 +3122,34 @@
           "matched_skill_ids": [
             "local-skills/session-continuity"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "retrieval",
+            "Memory / context retrieval"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/context-assembly-scorer",
+            "archieindian-superpowers/dag-recall"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "summarization",
           "name": "summarization",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "summarization",
+            "Memory / context summarization"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/call-summary",
+            "archieindian-superpowers/compaction-resilience-guard"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "long-term-memory",
@@ -1525,35 +3161,84 @@
             "local-skills/memory-pulse",
             "local-skills/session-continuity"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "long-term memory",
+            "Memory / context long-term memory"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/memory-management",
+            "archieindian-superpowers/memory-dag-compactor",
+            "danjdewhurst-story-skills/revision-continuity",
+            "archieindian-superpowers/memory-graph-builder",
+            "archieindian-superpowers/memory-integrity-checker",
+            "archieindian-superpowers/persistent-memory-hygiene"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 7
         },
         {
           "id": "provenance",
           "name": "provenance",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "provenance",
+            "Memory / context provenance"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/source-driven-development",
+            "archieindian-superpowers/memory-dag-compactor"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "context-compression",
           "name": "context compression",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "context compression",
+            "Memory / context context compression"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/compaction-resilience-guard",
+            "archieindian-superpowers/context-budget-guard",
+            "archieindian-superpowers/context-window-management"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "privacy",
           "name": "privacy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "privacy",
+            "Memory / context privacy"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "forgetting",
           "name": "forgetting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "forgetting",
+            "Memory / context forgetting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1567,14 +3252,31 @@
           "name": "business models",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "business models",
+            "Business business models"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "strategy",
           "name": "strategy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "strategy",
+            "Business strategy"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/search-strategy",
+            "corey-haines-marketing-skills/content-strategy"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "operations",
@@ -1585,7 +3287,14 @@
           "matched_skill_ids": [
             "local-skills/smallbiz-ops"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "operations",
+            "Business operations"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "governance",
@@ -1596,28 +3305,65 @@
           "matched_skill_ids": [
             "local-skills/governance-pulse"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "governance",
+            "Business governance"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/audit-support",
+            "cole-medin-skills/second-brain-audit",
+            "jwynia-agent-skills/governance-systems",
+            "microsoft-azure-skills/azure-compliance",
+            "microsoft-skills/azure-compliance",
+            "anthropic-knowledge-work-plugins/compliance-check"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 9
         },
         {
           "id": "risk",
           "name": "risk",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "risk",
+            "Business risk"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/legal-risk-assessment"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "organizational-design",
           "name": "organizational design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "organizational design",
+            "Business organizational design"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "procurement",
           "name": "procurement",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "procurement",
+            "Business procurement"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1631,28 +3377,65 @@
           "name": "prospecting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "prospecting",
+            "Sales prospecting"
+          ],
+          "name_only_review_candidate_ids": [
+            "cline-skills/vibe-prospecting",
+            "corey-haines-marketing-skills/cold-email",
+            "corey-haines-marketing-skills/prospecting"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 3
         },
         {
           "id": "qualification",
           "name": "qualification",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "qualification",
+            "Sales qualification"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "pipeline",
           "name": "pipeline",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "pipeline",
+            "Sales pipeline"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/pipeline-review",
+            "aws-agent-toolkit/creating-ec2-image-builder-pipeline"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "account-management",
           "name": "account management",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "account management",
+            "Sales account management"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/account-research"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "proposals",
@@ -1663,14 +3446,28 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/sales-enablement"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "proposals",
+            "Sales proposals"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "negotiation",
           "name": "negotiation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "negotiation",
+            "Sales negotiation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "sales-operations",
@@ -1681,7 +3478,14 @@
           "matched_skill_ids": [
             "corey-haines-marketing-skills/revops"
           ],
-          "coverage_status": "evidence-linked; maturity-unassessed"
+          "coverage_status": "evidence-linked; maturity-unassessed",
+          "search_hints": [
+            "sales operations",
+            "Sales sales operations"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1699,21 +3503,44 @@
           "matched_skill_ids": [
             "local-skills/career-radar"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "job search",
+            "Career job search"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "portfolios",
           "name": "portfolios",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "portfolios",
+            "Career portfolios"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "interviews",
           "name": "interviews",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "interviews",
+            "Career interviews"
+          ],
+          "name_only_review_candidate_ids": [
+            "addyosmani-agent-skills/interview-me"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "professional-development",
@@ -1724,21 +3551,42 @@
           "matched_skill_ids": [
             "local-skills/learning-plan"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "professional development",
+            "Career professional development"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "networking",
           "name": "networking",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "networking",
+            "Career networking"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "compensation",
           "name": "compensation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "compensation",
+            "Career compensation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "career-transitions",
@@ -1749,7 +3597,14 @@
           "matched_skill_ids": [
             "local-skills/career-radar"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "career transitions",
+            "Career career transitions"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1763,49 +3618,108 @@
           "name": "subject instruction",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "subject instruction",
+            "Education subject instruction"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-skills/academy-guide",
+            "david-ondrej-skills/teach",
+            "mattpocock-skills/teach"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "tutoring",
           "name": "tutoring",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "tutoring",
+            "Education tutoring"
+          ],
+          "name_only_review_candidate_ids": [
+            "cole-medin-skills/setup-ai-tutor",
+            "david-ondrej-skills/teach",
+            "mattpocock-skills/teach"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "assessment",
           "name": "assessment",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "assessment",
+            "Education assessment"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/legal-risk-assessment"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "curriculum",
           "name": "curriculum",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "curriculum",
+            "Education curriculum"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "accessibility",
           "name": "accessibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "accessibility",
+            "Education accessibility"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "classroom-management",
           "name": "classroom management",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "classroom management",
+            "Education classroom management"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "learning-technology",
           "name": "learning technology",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "learning technology",
+            "Education learning technology"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1819,42 +3733,84 @@
           "name": "experimental design",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "experimental design",
+            "Science experimental design"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "laboratory-methods",
           "name": "laboratory methods",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "laboratory methods",
+            "Science laboratory methods"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "physics",
           "name": "physics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "physics",
+            "Science physics"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "chemistry",
           "name": "chemistry",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "chemistry",
+            "Science chemistry"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "earth-sciences",
           "name": "earth sciences",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "earth sciences",
+            "Science earth sciences"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "reproducibility",
           "name": "reproducibility",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "reproducibility",
+            "Science reproducibility"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "scientific-communication",
@@ -1865,7 +3821,21 @@
           "matched_skill_ids": [
             "local-skills/paper-digest"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "scientific communication",
+            "Science scientific communication"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/account-research",
+            "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+            "corey-haines-marketing-skills/customer-research",
+            "danjdewhurst-story-skills/research",
+            "david-ondrej-skills/deep-research",
+            "anthropic-knowledge-work-plugins/bio-research-start"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 12
         }
       ]
     },
@@ -1879,49 +3849,101 @@
           "name": "clinical information literacy",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "clinical information literacy",
+            "Medicine clinical information literacy"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "specialties",
           "name": "specialties",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "specialties",
+            "Medicine specialties"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "diagnostics",
           "name": "diagnostics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "diagnostics",
+            "Medicine diagnostics"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/ticket-triage",
+            "danjdewhurst-story-skills/feedback-triage",
+            "mattpocock-skills/triage",
+            "anthropic-knowledge-work-plugins/triage-nda"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 5
         },
         {
           "id": "therapeutics",
           "name": "therapeutics",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "therapeutics",
+            "Medicine therapeutics"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "patient-communication",
           "name": "patient communication",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "patient communication",
+            "Medicine patient communication"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "clinical-workflows",
           "name": "clinical workflows",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "clinical workflows",
+            "Medicine clinical workflows"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "evidence-appraisal",
           "name": "evidence appraisal",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "evidence appraisal",
+            "Medicine evidence appraisal"
+          ],
+          "name_only_review_candidate_ids": []
         }
       ]
     },
@@ -1935,49 +3957,106 @@
           "name": "legal research",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "legal research",
+            "Law legal research"
+          ],
+          "name_only_review_candidate_ids": [
+            "cline-skills/attorney-assist"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "contracts",
           "name": "contracts",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "contracts",
+            "Law contracts"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/review-contract"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "litigation-support",
           "name": "litigation support",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "litigation support",
+            "Law litigation support"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "legislation",
           "name": "legislation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "legislation",
+            "Law legislation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "regulatory-analysis",
           "name": "regulatory analysis",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "regulatory analysis",
+            "Law regulatory analysis"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/compliance-check",
+            "microsoft-azure-skills/azure-compliance",
+            "microsoft-skills/azure-compliance"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 4
         },
         {
           "id": "legal-drafting",
           "name": "legal drafting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "legal drafting",
+            "Law legal drafting"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "jurisdictional-comparison",
           "name": "jurisdictional comparison",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "jurisdictional comparison",
+            "Law jurisdictional comparison"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -1991,42 +4070,87 @@
           "name": "financial planning",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "financial planning",
+            "Finance financial planning"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "corporate-finance",
           "name": "corporate finance",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "corporate finance",
+            "Finance corporate finance"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "investments",
           "name": "investments",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "investments",
+            "Finance investments"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "risk",
           "name": "risk",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "risk",
+            "Finance risk"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "valuation",
           "name": "valuation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "valuation",
+            "Finance valuation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "budgeting",
           "name": "budgeting",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "budgeting",
+            "Finance budgeting"
+          ],
+          "name_only_review_candidate_ids": [
+            "archieindian-superpowers/context-budget-guard",
+            "aws-agent-toolkit/aws-billing-and-cost-management"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 2
         },
         {
           "id": "reporting",
@@ -2037,7 +4161,16 @@
           "matched_skill_ids": [
             "local-skills/finance-review"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "reporting",
+            "Finance reporting"
+          ],
+          "name_only_review_candidate_ids": [
+            "anthropic-knowledge-work-plugins/close-management"
+          ],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 1
         },
         {
           "id": "financial-literacy",
@@ -2048,7 +4181,14 @@
           "matched_skill_ids": [
             "local-skills/finance-review"
           ],
-          "coverage_status": "partial-linked-evidence"
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "financial literacy",
+            "Finance financial literacy"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     },
@@ -2062,49 +4202,98 @@
           "name": "perception",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "perception",
+            "Robotics / IoT perception"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "control",
           "name": "control",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "control",
+            "Robotics / IoT control"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "motion-planning",
           "name": "motion planning",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "motion planning",
+            "Robotics / IoT motion planning"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "embedded-integration",
           "name": "embedded integration",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "embedded integration",
+            "Robotics / IoT embedded integration"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "sensing",
           "name": "sensing",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "sensing",
+            "Robotics / IoT sensing"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "industrial-automation",
           "name": "industrial automation",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "industrial automation",
+            "Robotics / IoT industrial automation"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         },
         {
           "id": "safety",
           "name": "safety",
           "capabilities": [],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "coverage_status": "unassessed",
+          "search_hints": [
+            "safety",
+            "Robotics / IoT safety"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
+          "name_only_review_hits_in_scope": 0
         }
       ]
     }
@@ -3505,5 +5694,13 @@
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests."
+  },
+  "name_only_fallback_summary": {
+    "review_identity_source": "registry/governed-review-name-index.json",
+    "index_count": 995,
+    "subdomains_with_some_name_only_leads": 134,
+    "total_name_only_suggestions": 381,
+    "not_an_eligibility_or_quality_claim": true,
+    "warning": "Candidates are inferred from NAME TOKENS only; read per-ID verification, provenance, SKILL.md and license before recommending unchanged use; zero name hits does not mean the capability is absent."
   }
 }
