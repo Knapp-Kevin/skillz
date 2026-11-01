@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "kind": "five complete seven-file game-server source-vetting static reviews",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "macro": {
+    "raw_source_paths": 645,
+    "direct_shape": 424,
+    "other_shape": 221,
+    "nested_game_first_class": 23,
+    "nested_game_terminal_before": 9,
+    "nested_game_terminal_after": 14,
+    "nested_game_seven_file_pending_before": 14,
+    "nested_game_seven_file_pending_after": 9,
+    "source_terminal_candidate_decisions_before": 27,
+    "source_terminal_candidate_decisions_after": 32,
+    "source_direct_shape_terminal_unchanged": 18,
+    "source_other_shape_still_unclassified": 198,
+    "packages_reviewed": 5,
+    "source_files_reviewed": 35,
+    "bundled_references_reviewed": 30,
+    "reference_only": 2,
+    "reject_unchanged": 3,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_ecosystem_denominator": null
+  },
+  "macro_findings": [
+    "Five server packages are distinct first-class pinned source-local seven-file trees; 30 reference files are components, not 30 more skills.",
+    "Three packages hard-fail unchanged adoption on authorization or privacy: anti-cheat sanctions and device profiling, matchmaking account penalties and player correlation, and fleet scaling with monetary/production/data effects.",
+    "Cross-file contradictions matter: authoritative tick ordering arrival-vs-sequence and lag compensation time math; matchmaking mercy vs optional requeue; reliable-event global ordering vs priority reordering.",
+    "Capacity example is mathematically wrong (24 players/match × 4 matches/pod = 96, not 64); unmeasured network/CPU/false-positive thresholds are not validation evidence.",
+    "Reusable methods: server-owned state, deterministic replay and appeals, idempotent lobby handoff, per-observer budgets, safe draining and persistence conflict checks. No copying, installation, scan or behavioral execution.",
+    "Source-root MIT applies to the pinned source material, not external APIs/algorithms; no cross-source semantic deduplication or ecosystem eligible denominator established."
+  ],
+  "records": [
+    {
+      "name": "anti-cheat-server",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+      "frontmatter_name": "anti-cheat-server",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
+      "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "861f2ca79d594492a1f603e02280a60180ba208f",
+          "bytes": 7199
+        },
+        {
+          "path": "references/anomaly-detection.md",
+          "blob_sha": "1ac701b11328d6a0b36fe283e4da96c7256c2d22",
+          "bytes": 4102
+        },
+        {
+          "path": "references/cheat-vectors.md",
+          "blob_sha": "df6eeb13afbf9b1ca9e3876b6cfeabf5dec4dd87",
+          "bytes": 4164
+        },
+        {
+          "path": "references/client-integrity.md",
+          "blob_sha": "9379597120c340e79c99a681d5814fb4f0081362",
+          "bytes": 3665
+        },
+        {
+          "path": "references/evidence-and-audit.md",
+          "blob_sha": "f7ce564cfa2dfdbdde7070c957da10b480552f38",
+          "bytes": 3740
+        },
+        {
+          "path": "references/response-and-escalation.md",
+          "blob_sha": "2f7dc92739e81bcf4615925925145bc5d81bda6c",
+          "bytes": 4152
+        },
+        {
+          "path": "references/server-side-validation.md",
+          "blob_sha": "409f2dc3e7b325b3dae4642d19c0cd3b7fea90e1",
+          "bytes": 3828
+        }
+      ],
+      "source_license": "Complete pinned MIT root license; preserve copyright and license notice; external implementations/APIs separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "security/application-security/game-server-anti-cheat",
+      "trigger_nontrigger": "Server-side anti-cheat architecture, evidence and detection; not kernel drivers, fraud detection or an authorization to profile or sanction real players.",
+      "nontrigger_boundary": "No production bans, device inspection, personal data collection or messaging without explicit authority.",
+      "dependencies": "Six complete pinned bundled references listed in package_files; cross-package game-server and engine links are optional prior art, not package-owned dependencies; external frameworks/algorithms not vendored",
+      "freshness": "Pinned exact 2026-11-01 source snapshot; API, player privacy law, networking and platform assumptions require deployment-specific checking",
+      "authority": "HARD FAIL: bundled response-and-escalation.md prescribes automated shadowbans, account bans, MMR changes and player notifications without separately authorized policy/action scope.",
+      "privacy_egress": "Client module lists, executable hashes, command-line flags, IP/device cohorts, persistent player wire logs and cross-session profiles need lawful collection purpose, consent/notice where required, minimization, access control, deletion/retention and appeal policy. The package assumes collection and even forever verdict retention.",
+      "controlled_tags": {
+        "use_case": [
+          "security",
+          "architecture",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "design",
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "reference-heavy"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Strong server-authority and evidence/appeal decomposition, but source prescribes auto-sanctions and private attestation/telemetry collection without a scoped authorization boundary. Unmeasured 1e-4 false-positive claim and permanent verdict retention are unsafe defaults; HMAC attestation by an untrusted client is not hardware-rooted proof.",
+      "macro_risk": "Player sanctions, sensitive device profiling, immutable wire records and automatic notification; separate governance required.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-server/anti-cheat-server/SKILL.md"
+    },
+    {
+      "name": "authoritative-server",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-server/authoritative-server/SKILL.md",
+      "frontmatter_name": "authoritative-server",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+      "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+          "bytes": 9496
+        },
+        {
+          "path": "references/connection-and-session.md",
+          "blob_sha": "facab4eaa8497ba74368d31835bd34e518ff6d26",
+          "bytes": 4130
+        },
+        {
+          "path": "references/input-authority.md",
+          "blob_sha": "da09a288d54b8c1a16325b6cf87bb5feff2d8603",
+          "bytes": 4162
+        },
+        {
+          "path": "references/lag-compensation.md",
+          "blob_sha": "0e8d3d5f5339912df3a41fcfff651141cf965447",
+          "bytes": 3974
+        },
+        {
+          "path": "references/rollback-and-reconciliation.md",
+          "blob_sha": "3d736794197421d22d67626943f0b35c9d903334",
+          "bytes": 4663
+        },
+        {
+          "path": "references/tick-loop.md",
+          "blob_sha": "be1e68cdbb26aa46b69b1a5bf9971616f825ba95",
+          "bytes": 3524
+        },
+        {
+          "path": "references/world-state-snapshot.md",
+          "blob_sha": "1f0af0ddfda5a1c07d0fbbcc37ecad86f743d6e9",
+          "bytes": 4197
+        }
+      ],
+      "source_license": "Complete pinned MIT root license; preserve copyright and license notice; external implementations/APIs separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "software-engineering/backend/authoritative-game-server",
+      "trigger_nontrigger": "Design server tick loops, input authority, snapshot/delta and reconciliation for online games; not client-only netcode or fleet scaling.",
+      "nontrigger_boundary": "No server deploy, session mutation, persistent match archive or chaos test without authorization.",
+      "dependencies": "Six complete pinned bundled references listed in package_files; cross-package game-server and engine links are optional prior art, not package-owned dependencies; external frameworks/algorithms not vendored",
+      "freshness": "Pinned exact 2026-11-01 source snapshot; API, player privacy law, networking and platform assumptions require deployment-specific checking",
+      "authority": "Design/snippet generation only; deploying servers, touching sessions, restoring or archiving player state and live load/chaos tests require separate scoped authorization.",
+      "privacy_egress": "Session tokens, player IDs, IP-based throttling and match recordings are sensitive; use secure external credential handling and scoped retention.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation",
+          "testing"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "deterministic",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REFERENCE-ONLY",
+      "static_rationale": "Useful deterministic-simulation, input trust and bounded rollback decomposition. Main SKILL and input-authority require sequence ordering, but tick-loop reference says arrival order. Lag-compensation reference mixes RTT, wall-clock and shootClockMs inconsistently. Session handshake omits signing key trust model, while snapshot quantization claims unrealistic resolution and fixed cost budgets lack measurement.",
+      "macro_risk": "Security-sensitive session/auth design and contradictory timing semantics; must be corrected and tested before implementation.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-server/authoritative-server/SKILL.md"
+    },
+    {
+      "name": "matchmaking-lobby",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+      "frontmatter_name": "matchmaking-lobby",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+      "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+          "bytes": 6907
+        },
+        {
+          "path": "references/match-formation.md",
+          "blob_sha": "39386d2174be9bbdbd5011b45dbcaa89d3c2cdfa",
+          "bytes": 3886
+        },
+        {
+          "path": "references/party-and-lobby-state.md",
+          "blob_sha": "9d469c357f0217d7b2096d64da56644eefe902f1",
+          "bytes": 4139
+        },
+        {
+          "path": "references/queue-engineering.md",
+          "blob_sha": "b1014b4c97b9d6e44898a368849a8510a456ef00",
+          "bytes": 3939
+        },
+        {
+          "path": "references/regions-and-ping.md",
+          "blob_sha": "d91c7b7475a097ca5feabff953effa5b42ad066f",
+          "bytes": 3794
+        },
+        {
+          "path": "references/server-handoff.md",
+          "blob_sha": "1fd7621c94b1b77f6c2f914ef1f198b6c92576c7",
+          "bytes": 3485
+        },
+        {
+          "path": "references/skill-rating.md",
+          "blob_sha": "1fae8e3f879e758f85ef01ae54536c8eeadcc756",
+          "bytes": 3998
+        }
+      ],
+      "source_license": "Complete pinned MIT root license; preserve copyright and license notice; external implementations/APIs separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "game-design/systems-balancing/matchmaking-fairness",
+      "trigger_nontrigger": "Design player queues, party/lobby state, match fairness and rating updates; not live player matching, matchmaking service deployment or penalties.",
+      "nontrigger_boundary": "No live match allocation, account changes, player notification or device/IP correlation without explicit scope.",
+      "dependencies": "Six complete pinned bundled references listed in package_files; cross-package game-server and engine links are optional prior art, not package-owned dependencies; external frameworks/algorithms not vendored",
+      "freshness": "Pinned exact 2026-11-01 source snapshot; API, player privacy law, networking and platform assumptions require deployment-specific checking",
+      "authority": "HARD FAIL: automatic MMR losses, cooldowns, leader kicks, player messaging and server allocation are prescribed as defaults without explicit action-specific authorization or fairness/appeal policy.",
+      "privacy_egress": "IP/device correlation for smurf detection, player rating history, region probes and session tokens require consent/notice, minimization and privacy-aware retention. Cross-region placement must not disclose location.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "decision-support",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "operations"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Good queue/offer/handoff decomposition and recognition of skill uncertainty. Main guide mandates a forced worst-match mercy timer, but match-formation reference recommends advising requeue rather than forcing poor matches. Rating formula is schematic and warns to consult original paper; TrueSkill rights require independent check. Player sanctions and device/IP profiling are not safely authorized.",
+      "macro_risk": "Account penalties, private player profiling and fairness decisions are high-impact; no unchanged adoption.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-server/matchmaking-lobby/SKILL.md"
+    },
+    {
+      "name": "interest-management",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-server/interest-management/SKILL.md",
+      "frontmatter_name": "interest-management",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+      "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+          "bytes": 6210
+        },
+        {
+          "path": "references/budgeting-and-prioritization.md",
+          "blob_sha": "f1057337eface0d9352b3a888f37d62354f61171",
+          "bytes": 3422
+        },
+        {
+          "path": "references/event-queue.md",
+          "blob_sha": "31dc5d61be865054687f91502e3118e53b846880",
+          "bytes": 3941
+        },
+        {
+          "path": "references/network-lod.md",
+          "blob_sha": "1d8099816d91681dbfa174ae2498ac86934f68eb",
+          "bytes": 3127
+        },
+        {
+          "path": "references/observer-sets.md",
+          "blob_sha": "e612562e6b662972a3d85a881a90597c2b1dfa26",
+          "bytes": 3249
+        },
+        {
+          "path": "references/state-vs-event-replication.md",
+          "blob_sha": "feb5cbf8d5fca157123ab8f55ae4316a38aa1a10",
+          "bytes": 3619
+        },
+        {
+          "path": "references/visibility-and-spatial.md",
+          "blob_sha": "4589899d1df46163242ef14a0210d4eecae70dca",
+          "bytes": 3893
+        }
+      ],
+      "source_license": "Complete pinned MIT root license; preserve copyright and license notice; external implementations/APIs separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "software-engineering/backend/game-network-interest-replication",
+      "trigger_nontrigger": "Design spatial relevance, observer sets, channel budgets, network LOD and event/state replication; not rendering culling or matchmaking.",
+      "nontrigger_boundary": "No live packet changes or access to player-location streams without separate authorization.",
+      "dependencies": "Six complete pinned bundled references listed in package_files; cross-package game-server and engine links are optional prior art, not package-owned dependencies; external frameworks/algorithms not vendored",
+      "freshness": "Pinned exact 2026-11-01 source snapshot; API, player privacy law, networking and platform assumptions require deployment-specific checking",
+      "authority": "Reference architecture only; changing live replication, packet prioritization or dropping player-visible events requires scoped implementation and operational authorization.",
+      "privacy_egress": "Observer sets and player positions can reveal location/activity; minimize replication and avoid logging or sharing location and private inventory across unauthorized observers.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation",
+          "testing"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "metric-driven",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REFERENCE-ONLY",
+      "static_rationale": "Useful separation of latest-wins state, reliable events, per-observer budgets and spatial indexing. Event-queue reference demands globally in-order exactly-once events but also proposes priority reordering in a single deque, an unresolved correctness conflict. Camera-frustum culling can hide gameplay-critical entities; fixed rates/latency and O(1) spatial claims lack evidence.",
+      "macro_risk": "Incorrect priority ordering or visibility gating can lose critical game events or expose unauthorized state.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-server/interest-management/SKILL.md"
+    },
+    {
+      "name": "scaling-architecture",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-server/scaling-architecture/SKILL.md",
+      "frontmatter_name": "scaling-architecture",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+      "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+          "bytes": 7040
+        },
+        {
+          "path": "references/capacity-and-autoscaling.md",
+          "blob_sha": "70942272e034a91412b2bd13058f08d30af66acc",
+          "bytes": 3598
+        },
+        {
+          "path": "references/observability.md",
+          "blob_sha": "1f15599f4d1640363be77bc97d9a2a1a9c9d0226",
+          "bytes": 3609
+        },
+        {
+          "path": "references/region-and-edge.md",
+          "blob_sha": "1d42727949761393ac698773c80d977668e1e08c",
+          "bytes": 3683
+        },
+        {
+          "path": "references/state-and-persistence.md",
+          "blob_sha": "cd90ddda9afe7735c476e20bb9e2b97e2a652b10",
+          "bytes": 3882
+        },
+        {
+          "path": "references/stateless-services.md",
+          "blob_sha": "05d5432cbf150ff181f0e1508c134dfaf316d471",
+          "bytes": 3612
+        },
+        {
+          "path": "references/zone-and-shard.md",
+          "blob_sha": "132076cf508a0d0a497ee79c0b9dc8567c97a66e",
+          "bytes": 3978
+        }
+      ],
+      "source_license": "Complete pinned MIT root license; preserve copyright and license notice; external implementations/APIs separately licensed",
+      "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+      "capability_path": "cloud-devops/cloud-architecture/game-server-fleet-scaling",
+      "trigger_nontrigger": "Plan game-server capacity, region topology, shard boundaries and persistence; not live autoscaling or single-server tick design.",
+      "nontrigger_boundary": "No cloud provisioning, route changes, production scale tests, billing changes or data collection without explicit authority.",
+      "dependencies": "Six complete pinned bundled references listed in package_files; cross-package game-server and engine links are optional prior art, not package-owned dependencies; external frameworks/algorithms not vendored",
+      "freshness": "Pinned exact 2026-11-01 source snapshot; API, player privacy law, networking and platform assumptions require deployment-specific checking",
+      "authority": "HARD FAIL: prescribes prewarming, pod budgets, routing, telemetry by default and persistence writes affecting money, production traffic and player data without separate owner approval and cost bounds.",
+      "privacy_egress": "Trace IDs, player progression, inventory, MMR, wire logs and location-derived routing require scoped access, retention, regional data-handling and privacy protections. Default logging/tracing lacks minimization.",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "cloud",
+          "deployment"
+        ],
+        "lifecycle": [
+          "design",
+          "operations",
+          "verification"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 10,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Valuable distinction between stateless services, stateful simulation, draining and idempotent persistence. Worked capacity example is arithmetically inconsistent: 24 players/match × 4 matches/pod = 96 players/pod, not 64; 40,000/96 ≈ 417 pods rather than stated 625. References also claim async write-behind + CAS ensures no lost updates and unbounded automatic prewarm is cheaper, without durable queue guarantees or cost evidence.",
+      "macro_risk": "Money-bearing cloud autoscaling, persistent player state, regional routing and sensitive telemetry; must be re-designed under explicit authorization.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-server/scaling-architecture/SKILL.md"
+    }
+  ]
+}

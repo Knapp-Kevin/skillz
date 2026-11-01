@@ -51,6 +51,8 @@ The [live catalog](INDEX.md), [system state](docs/SYSTEM_STATE.md), [curation qu
 - **4,813 raw `SKILL.md` paths** in the currently pinned four-source discovery frontier: 4,537 direct-shape and 276 nested/other-shape. These are **structural discovery leads**, not a reconciled distinct-eligible-skill denominator.
 - **25 registered source identities**, including 12 pinned upstream Git submodules. Some identities, mirrors and revisions overlap. The ecosystem and the review backlog remain open-ended.
 
+**Current source-vetting progress:** j4flmao has **32/645 raw paths** with exact-path candidate decisions, including **14/23** structurally confirmed nested game packages. These are not admitted or installation-approved; [full game-server grade evidence](registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json) records the latest five. The eligible distinct ecosystem denominator remains unknown.
+
 Full-corpus qualification is ongoing: [track pinned path-level review progress](registry/discovery/pinned-4813-review-progress-20261101.json), reconcile package boundaries and duplicates, inspect complete packages, assign evidence-backed domain/subdomain placements and rubric scores, preserve rejected/reference-only findings, and expand into underrepresented capabilities. **No fixed lifetime skill count is a finish line.**
 
 Historical source-intake receipts are retained in the [corpus evidence archive](docs/reviews/corpus-evidence-snapshot-2026-11-01.md), with [additional source-vetting reviews](docs/reviews/). They are not required reading for first-contact discovery.
