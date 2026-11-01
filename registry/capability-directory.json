@@ -16,15 +16,27 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 10,
+      "linked_reviewed_examples": 11,
       "subdomains_with_linked_examples": 3,
-      "name_only_candidate_count": 34,
+      "name_only_candidate_count": 33,
       "evidence_preview": [
         {
           "id": "vercel-agent-skills/vercel-composition-patterns",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/vercel-agent-skills/vercel-composition-patterns.yaml",
+          "source_class": "external-provenance",
+          "path": "software-engineering/frontend",
+          "capability_example": "Review React component composition patterns within a pinned static reference"
+        },
+        {
+          "id": "anthropic-skills/frontend-design",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/anthropic-skills/frontend-design.yaml",
+          "source_class": "external-provenance",
           "path": "software-engineering/frontend",
           "capability_example": "Review React component composition patterns within a pinned static reference"
         },
@@ -32,31 +44,37 @@
           "id": "mattpocock-skills/codebase-design",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/mattpocock-skills/codebase-design.yaml",
+          "source_class": "external-provenance",
           "path": "software-engineering/architecture",
           "capability_example": "Evaluate codebase architecture and design tradeoffs"
         },
         {
-          "id": "addyosmani-agent-skills/code-review-and-quality",
+          "id": "local-skills/agent-home-doctor",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/agent-home-doctor.yaml",
+          "source_class": "local-provenance",
           "path": "software-engineering/maintenance",
           "capability_example": "Compare code against standards and specification evidence"
         },
         {
-          "id": "mattpocock-skills/code-review",
+          "id": "local-skills/agent-postmortem",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/agent-postmortem.yaml",
+          "source_class": "local-provenance",
           "path": "software-engineering/maintenance",
           "capability_example": "Compare code against standards and specification evidence"
         }
       ],
       "name_only_preview": [
         "addyosmani-agent-skills/frontend-ui-engineering",
-        "anthropic-skills/frontend-design",
-        "bm629-agent-skills/motion-react"
+        "bm629-agent-skills/motion-react",
+        "cline-skills/frontend-design"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
@@ -65,15 +83,27 @@
     {
       "domain": "testing",
       "display_name": "Testing",
-      "linked_reviewed_examples": 1,
-      "subdomains_with_linked_examples": 1,
-      "name_only_candidate_count": 11,
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 10,
       "evidence_preview": [
+        {
+          "id": "bm629-agent-skills/authoring-test-plan",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-test-plan.yaml",
+          "source_class": "external-provenance",
+          "path": "testing/test-strategy",
+          "capability_example": "Existing static-reviewed reference for test strategy"
+        },
         {
           "id": "addyosmani-agent-skills/browser-testing-with-devtools",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/addyosmani-agent-skills/browser-testing-with-devtools.yaml",
+          "source_class": "external-provenance",
           "path": "testing/end-to-end",
           "capability_example": "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects"
         }
@@ -90,15 +120,17 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 6,
-      "subdomains_with_linked_examples": 4,
+      "linked_reviewed_examples": 7,
+      "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 17,
       "evidence_preview": [
         {
           "id": "local-skills/mcp-pulse",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/mcp-pulse.yaml",
+          "source_class": "local-provenance",
           "path": "agent-mcp-development/mcp-clients-servers",
           "capability_example": "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
         },
@@ -106,7 +138,9 @@
           "id": "local-skills/mcp-vetting",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
+          "source_class": "local-provenance",
           "path": "agent-mcp-development/permissions",
           "capability_example": "Inspect MCP integrations and agent access permissions before connection"
         },
@@ -114,7 +148,9 @@
           "id": "local-skills/permissions-review",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/permissions-review.yaml",
+          "source_class": "local-provenance",
           "path": "agent-mcp-development/permissions",
           "capability_example": "Inspect MCP integrations and agent access permissions before connection"
         },
@@ -122,9 +158,21 @@
           "id": "local-skills/agent-postmortem",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/agent-postmortem.yaml",
+          "source_class": "local-provenance",
           "path": "agent-mcp-development/evaluation",
           "capability_example": "Reference evaluation methods; default external LLM judge/trace egress not approved"
+        },
+        {
+          "id": "local-skills/automation-receipts",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/automation-receipts.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/agent-observability",
+          "capability_example": "Verify claimed automation status against durable run evidence"
         }
       ],
       "name_only_preview": [
@@ -139,23 +187,35 @@
     {
       "domain": "cloud-devops",
       "display_name": "Cloud / DevOps",
-      "linked_reviewed_examples": 1,
-      "subdomains_with_linked_examples": 1,
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 28,
       "evidence_preview": [
         {
           "id": "microsoft-skills/azure-ai",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/microsoft-skills/azure-ai.yaml",
+          "source_class": "external-provenance",
           "path": "cloud-devops/cloud-architecture",
           "capability_example": "Azure AI service integration architecture"
+        },
+        {
+          "id": "aws-agent-toolkit/aws-cdk",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "15/20",
+          "review_evidence_path": "registry/verification/aws-agent-toolkit/aws-cdk.yaml",
+          "source_class": "external-provenance",
+          "path": "cloud-devops/infrastructure-as-code",
+          "capability_example": "Existing static-reviewed reference for infrastructure as code"
         }
       ],
       "name_only_preview": [
-        "aws-agent-toolkit/aws-cdk",
         "microsoft-azure-skills/azure-compute",
-        "microsoft-skills/azure-compute"
+        "microsoft-skills/azure-compute",
+        "aws-agent-toolkit/aws-cdk-aws-core-plugin"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
@@ -164,15 +224,27 @@
     {
       "domain": "security",
       "display_name": "Security",
-      "linked_reviewed_examples": 3,
-      "subdomains_with_linked_examples": 3,
-      "name_only_candidate_count": 8,
+      "linked_reviewed_examples": 4,
+      "subdomains_with_linked_examples": 4,
+      "name_only_candidate_count": 7,
       "evidence_preview": [
+        {
+          "id": "addyosmani-agent-skills/security-and-hardening",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/addyosmani-agent-skills/security-and-hardening.yaml",
+          "source_class": "external-provenance",
+          "path": "security/application-security",
+          "capability_example": "Existing static-reviewed reference for application security"
+        },
         {
           "id": "local-skills/permissions-review",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/permissions-review.yaml",
+          "source_class": "local-provenance",
           "path": "security/identity-access",
           "capability_example": "Review permissions and least-privilege exposure without accessing secret values"
         },
@@ -180,7 +252,9 @@
           "id": "local-skills/agent-home-doctor",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/agent-home-doctor.yaml",
+          "source_class": "local-provenance",
           "path": "security/vulnerability-management",
           "capability_example": "Plan safety-aware repository hygiene; not a vulnerability scanner"
         },
@@ -188,15 +262,17 @@
           "id": "local-skills/mcp-vetting",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
+          "source_class": "local-provenance",
           "path": "security/supply-chain",
           "capability_example": "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
         }
       ],
       "name_only_preview": [
-        "addyosmani-agent-skills/security-and-hardening",
         "microsoft-azure-skills/azure-rbac",
-        "microsoft-skills/azure-identity-dotnet"
+        "microsoft-skills/azure-identity-dotnet",
+        "microsoft-skills/azure-identity-java"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
@@ -205,15 +281,17 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 21,
+      "linked_reviewed_examples": 22,
       "subdomains_with_linked_examples": 4,
-      "name_only_candidate_count": 11,
+      "name_only_candidate_count": 10,
       "evidence_preview": [
         {
           "id": "local-skills/paper-digest",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/paper-digest.yaml",
+          "source_class": "local-provenance",
           "path": "research/literature-review",
           "capability_example": "Appraise papers and replication evidence; not a complete systematic review"
         },
@@ -221,7 +299,9 @@
           "id": "local-skills/claude-pulse",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/claude-pulse.yaml",
+          "source_class": "local-provenance",
           "path": "research/source-discovery",
           "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
         },
@@ -229,7 +309,9 @@
           "id": "local-skills/deep-dive",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/deep-dive.yaml",
+          "source_class": "local-provenance",
           "path": "research/source-discovery",
           "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
         },
@@ -237,7 +319,19 @@
           "id": "local-skills/deepseek-pulse",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/deepseek-pulse.yaml",
+          "source_class": "local-provenance",
+          "path": "research/source-discovery",
+          "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
+        },
+        {
+          "id": "local-skills/gemini-pulse",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/gemini-pulse.yaml",
+          "source_class": "local-provenance",
           "path": "research/source-discovery",
           "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
         }
@@ -254,15 +348,17 @@
     {
       "domain": "planning",
       "display_name": "Planning",
-      "linked_reviewed_examples": 3,
-      "subdomains_with_linked_examples": 1,
+      "linked_reviewed_examples": 4,
+      "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 8,
       "evidence_preview": [
         {
           "id": "local-skills/brief-writer",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/brief-writer.yaml",
+          "source_class": "local-provenance",
           "path": "planning/decision-frameworks",
           "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
         },
@@ -270,7 +366,9 @@
           "id": "local-skills/compare",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/compare.yaml",
+          "source_class": "local-provenance",
           "path": "planning/decision-frameworks",
           "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
         },
@@ -278,15 +376,27 @@
           "id": "local-skills/decision-log",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/decision-log.yaml",
+          "source_class": "local-provenance",
           "path": "planning/decision-frameworks",
           "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
+        },
+        {
+          "id": "addyosmani-agent-skills/planning-and-task-breakdown",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "14/20",
+          "review_evidence_path": "registry/verification/addyosmani-agent-skills/planning-and-task-breakdown.yaml",
+          "source_class": "external-provenance",
+          "path": "planning/project-scheduling",
+          "capability_example": "Existing static-reviewed reference for project scheduling"
         }
       ],
       "name_only_preview": [
         "anthropic-knowledge-work-plugins/roadmap-update",
         "anthropic-knowledge-work-plugins/search-strategy",
-        "addyosmani-agent-skills/planning-and-task-breakdown"
+        "david-ondrej-skills/next-decision"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Planning capability",
@@ -295,15 +405,17 @@
     {
       "domain": "marketing",
       "display_name": "Marketing",
-      "linked_reviewed_examples": 4,
-      "subdomains_with_linked_examples": 3,
-      "name_only_candidate_count": 26,
+      "linked_reviewed_examples": 5,
+      "subdomains_with_linked_examples": 4,
+      "name_only_candidate_count": 25,
       "evidence_preview": [
         {
           "id": "corey-haines-marketing-skills/seo-audit",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/seo-audit.yaml",
+          "source_class": "external-provenance",
           "path": "marketing/seo",
           "capability_example": "read-only SEO audit"
         },
@@ -311,7 +423,9 @@
           "id": "corey-haines-marketing-skills/schema",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/schema.yaml",
+          "source_class": "external-provenance",
           "path": "marketing/seo",
           "capability_example": "read-only SEO audit"
         },
@@ -319,15 +433,29 @@
           "id": "corey-haines-marketing-skills/social",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/social.yaml",
+          "source_class": "external-provenance",
           "path": "marketing/content",
           "capability_example": "social media content planning"
+        },
+        {
+          "id": "corey-haines-marketing-skills/ad-creative",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "15/20",
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/ad-creative.yaml",
+          "source_class": "external-provenance",
+          "path": "marketing/paid-acquisition",
+          "capability_example": "Existing static-reviewed reference for paid acquisition"
         },
         {
           "id": "corey-haines-marketing-skills/sms",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/sms.yaml",
+          "source_class": "external-provenance",
           "path": "marketing/lifecycle",
           "capability_example": "SMS lifecycle communication"
         }
@@ -344,23 +472,35 @@
     {
       "domain": "product",
       "display_name": "Product",
-      "linked_reviewed_examples": 1,
-      "subdomains_with_linked_examples": 1,
-      "name_only_candidate_count": 14,
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 13,
       "evidence_preview": [
         {
           "id": "bm629-agent-skills/authoring-prd",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-prd.yaml",
+          "source_class": "external-provenance",
           "path": "product/requirements",
           "capability_example": "Draft a problem-first product requirements document with non-goals and acceptance measures"
+        },
+        {
+          "id": "cole-medin-skills/opportunity-scan",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "15/20",
+          "review_evidence_path": "registry/verification/cole-medin-skills/opportunity-scan.yaml",
+          "source_class": "external-provenance",
+          "path": "product/discovery",
+          "capability_example": "Existing static-reviewed reference for discovery"
         }
       ],
       "name_only_preview": [
         "anthropic-knowledge-work-plugins/customer-research",
-        "cole-medin-skills/opportunity-scan",
-        "corey-haines-marketing-skills/customer-research"
+        "corey-haines-marketing-skills/customer-research",
+        "bm629-agent-skills/authoring-feature-spec"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
@@ -369,15 +509,27 @@
     {
       "domain": "ux-ui",
       "display_name": "UX / UI",
-      "linked_reviewed_examples": 2,
+      "linked_reviewed_examples": 3,
       "subdomains_with_linked_examples": 2,
-      "name_only_candidate_count": 12,
+      "name_only_candidate_count": 11,
       "evidence_preview": [
+        {
+          "id": "bm629-agent-skills/authoring-user-flows",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-user-flows.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/interaction-design",
+          "capability_example": "signup flow design"
+        },
         {
           "id": "corey-haines-marketing-skills/site-architecture",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/site-architecture.yaml",
+          "source_class": "external-provenance",
           "path": "ux-ui/information-architecture",
           "capability_example": "website information architecture"
         },
@@ -385,7 +537,9 @@
           "id": "corey-haines-marketing-skills/signup",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/signup.yaml",
+          "source_class": "external-provenance",
           "path": "ux-ui/interaction-design",
           "capability_example": "signup flow design"
         }
@@ -402,14 +556,25 @@
     {
       "domain": "visual-design",
       "display_name": "Visual design",
-      "linked_reviewed_examples": 0,
-      "subdomains_with_linked_examples": 0,
-      "name_only_candidate_count": 7,
-      "evidence_preview": [],
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 6,
+      "evidence_preview": [
+        {
+          "id": "anthropic-skills/canvas-design",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/anthropic-skills/canvas-design.yaml",
+          "source_class": "external-provenance",
+          "path": "visual-design/graphic-design",
+          "capability_example": "Existing static-reviewed reference for graphic design"
+        }
+      ],
       "name_only_preview": [
-        "anthropic-skills/canvas-design",
         "anthropic-skills/theme-factory",
-        "openhands-extensions/theme-factory"
+        "openhands-extensions/theme-factory",
+        "anthropic-skills/brand-guidelines"
       ],
       "coverage": "partial name-only leads",
       "search_hint": "Visual design capability",
@@ -463,31 +628,45 @@
     {
       "domain": "fiction-narrative-worldbuilding",
       "display_name": "Fiction / narrative / worldbuilding",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 2,
-      "name_only_candidate_count": 23,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 22,
       "evidence_preview": [
         {
           "id": "danjdewhurst-story-skills/plot-structure",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/plot-structure.yaml",
+          "source_class": "external-provenance",
           "path": "fiction-narrative-worldbuilding/plotting",
           "capability_example": "Plan and analyze story plot structure"
+        },
+        {
+          "id": "danjdewhurst-story-skills/chapter-writing",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/chapter-writing.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/prose",
+          "capability_example": "Existing static-reviewed reference for prose"
         },
         {
           "id": "jwynia-agent-skills/worldbuilding",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/worldbuilding.yaml",
+          "source_class": "external-provenance",
           "path": "fiction-narrative-worldbuilding/setting-lore",
           "capability_example": "Diagnose a fictional setting's cultures, systems, and internal consequences"
         }
       ],
       "name_only_preview": [
         "danjdewhurst-story-skills/premise-workshop",
-        "danjdewhurst-story-skills/chapter-writing",
-        "jwynia-agent-skills/drafting"
+        "jwynia-agent-skills/drafting",
+        "danjdewhurst-story-skills/discovery-drafting"
       ],
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Fiction / narrative / worldbuilding capability",
@@ -504,7 +683,9 @@
           "id": "bm629-agent-skills/authoring-api-reference",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-api-reference.yaml",
+          "source_class": "external-provenance",
           "path": "technical-writing/api-docs",
           "capability_example": "Author an API reference traceable to a supplied contract"
         }
@@ -556,7 +737,9 @@
           "id": "corey-haines-marketing-skills/video",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/video.yaml",
+          "source_class": "external-provenance",
           "path": "video-film/preproduction",
           "capability_example": "marketing video planning"
         }
@@ -577,7 +760,9 @@
           "id": "local-skills/deck-outline",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/deck-outline.yaml",
+          "source_class": "local-provenance",
           "path": "communication/presentations",
           "capability_example": "Outline a coherent slide narrative before slide production"
         },
@@ -585,7 +770,9 @@
           "id": "local-skills/brief-writer",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/brief-writer.yaml",
+          "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
         },
@@ -593,7 +780,9 @@
           "id": "local-skills/devlog-draft",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/devlog-draft.yaml",
+          "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
         },
@@ -601,7 +790,19 @@
           "id": "local-skills/handoff-writer",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/handoff-writer.yaml",
+          "source_class": "local-provenance",
+          "path": "communication/organizational-communication",
+          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
+        },
+        {
+          "id": "local-skills/standup-writer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/standup-writer.yaml",
+          "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
         }
@@ -626,7 +827,9 @@
           "id": "anthropic-knowledge-work-plugins/build-dashboard",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/anthropic-knowledge-work-plugins/build-dashboard.yaml",
+          "source_class": "external-provenance",
           "path": "analytics/dashboards",
           "capability_example": "Reference dashboard workflows; unchanged output may leak private data and use CDN code"
         }
@@ -651,7 +854,9 @@
           "id": "local-skills/daily-briefing",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/daily-briefing.yaml",
+          "source_class": "local-provenance",
           "path": "time-productivity/personal-planning",
           "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
         },
@@ -659,7 +864,9 @@
           "id": "local-skills/learning-plan",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/learning-plan.yaml",
+          "source_class": "local-provenance",
           "path": "time-productivity/personal-planning",
           "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
         },
@@ -667,7 +874,9 @@
           "id": "local-skills/week-in-review",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/week-in-review.yaml",
+          "source_class": "local-provenance",
           "path": "time-productivity/personal-planning",
           "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
         },
@@ -675,7 +884,19 @@
           "id": "local-skills/inbox-triage",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/inbox-triage.yaml",
+          "source_class": "local-provenance",
+          "path": "time-productivity/task-systems",
+          "capability_example": "Triage incoming tasks and coordinate approved task pointers"
+        },
+        {
+          "id": "local-skills/task-surface",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/task-surface.yaml",
+          "source_class": "local-provenance",
           "path": "time-productivity/task-systems",
           "capability_example": "Triage incoming tasks and coordinate approved task pointers"
         }
@@ -700,7 +921,9 @@
           "id": "local-skills/session-continuity",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/session-continuity.yaml",
+          "source_class": "local-provenance",
           "path": "memory-context/retrieval",
           "capability_example": "Recover relevant prior-session decisions with provenance and freshness checks"
         },
@@ -708,7 +931,9 @@
           "id": "archieindian-superpowers/context-window-management",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/archieindian-superpowers/context-window-management.yaml",
+          "source_class": "external-provenance",
           "path": "memory-context/context-compression",
           "capability_example": "Reference context-budget techniques; autonomous writes/restarts are not approved"
         }
@@ -733,7 +958,9 @@
           "id": "local-skills/smallbiz-ops",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/smallbiz-ops.yaml",
+          "source_class": "local-provenance",
           "path": "business/operations",
           "capability_example": "Monitor bounded small-business operating questions without autonomous changes"
         },
@@ -741,7 +968,9 @@
           "id": "local-skills/governance-pulse",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/governance-pulse.yaml",
+          "source_class": "local-provenance",
           "path": "business/governance",
           "capability_example": "Monitor governance changes and distinguish binding policy from noise"
         }
@@ -766,7 +995,9 @@
           "id": "corey-haines-marketing-skills/sales-enablement",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/sales-enablement.yaml",
+          "source_class": "external-provenance",
           "path": "sales/proposals",
           "capability_example": "sales enablement collateral"
         },
@@ -774,7 +1005,9 @@
           "id": "corey-haines-marketing-skills/revops",
           "verification_status": "rejected",
           "validation_status": "not-run",
-          "source_class": "third-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/corey-haines-marketing-skills/revops.yaml",
+          "source_class": "external-provenance",
           "path": "sales/sales-operations",
           "capability_example": "revenue operations"
         }
@@ -799,7 +1032,9 @@
           "id": "local-skills/career-radar",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/career-radar.yaml",
+          "source_class": "local-provenance",
           "path": "career/job-search",
           "capability_example": "Research current career-market opportunities; not automatic job applications"
         },
@@ -807,7 +1042,9 @@
           "id": "local-skills/learning-plan",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/learning-plan.yaml",
+          "source_class": "local-provenance",
           "path": "career/professional-development",
           "capability_example": "Prepare a learning plan with measurable checkpoints"
         }
@@ -884,7 +1121,9 @@
           "id": "local-skills/finance-review",
           "verification_status": "verified",
           "validation_status": "not-run",
-          "source_class": "first-party",
+          "static_score": null,
+          "review_evidence_path": "registry/verification/local-skills/finance-review.yaml",
+          "source_class": "local-provenance",
           "path": "finance/reporting",
           "capability_example": "Review financial statements and trace conclusions to reported rows"
         }
@@ -932,7 +1171,8 @@
             "Review React component composition patterns within a pinned static reference"
           ],
           "matched_skill_ids": [
-            "vercel-agent-skills/vercel-composition-patterns"
+            "vercel-agent-skills/vercel-composition-patterns",
+            "anthropic-skills/frontend-design"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -941,7 +1181,6 @@
           ],
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/frontend-ui-engineering",
-            "anthropic-skills/frontend-design",
             "bm629-agent-skills/motion-react",
             "cline-skills/frontend-design",
             "cole-medin-skills/prime-frontend",
@@ -1256,15 +1495,18 @@
         {
           "id": "test-strategy",
           "name": "test strategy",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for test strategy"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-test-plan"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "test strategy",
             "Testing test strategy"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-test-plan",
             "bm629-agent-skills/reviewing-test-plan"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -1298,15 +1540,18 @@
         {
           "id": "tool-design",
           "name": "tool design",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for tool design"
+          ],
+          "matched_skill_ids": [
+            "anthropic-skills/mcp-builder"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "tool design",
             "Agent / MCP development tool design"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-skills/mcp-builder",
             "microsoft-skills/mcp-builder"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -1470,15 +1715,18 @@
         {
           "id": "infrastructure-as-code",
           "name": "infrastructure as code",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for infrastructure as code"
+          ],
+          "matched_skill_ids": [
+            "aws-agent-toolkit/aws-cdk"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "infrastructure as code",
             "Cloud / DevOps infrastructure as code"
           ],
           "name_only_review_candidate_ids": [
-            "aws-agent-toolkit/aws-cdk",
             "aws-agent-toolkit/aws-cdk-aws-core-plugin",
             "aws-agent-toolkit/aws-cloudformation"
           ],
@@ -1612,16 +1860,18 @@
         {
           "id": "application-security",
           "name": "application security",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for application security"
+          ],
+          "matched_skill_ids": [
+            "addyosmani-agent-skills/security-and-hardening"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "application security",
             "Security application security"
           ],
-          "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/security-and-hardening"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
@@ -1842,7 +2092,8 @@
             "Decompose claims and verify each subclaim against primary dated sources"
           ],
           "matched_skill_ids": [
-            "local-skills/fact-check"
+            "local-skills/fact-check",
+            "archieindian-superpowers/fact-check-before-trust"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -1850,7 +2101,6 @@
             "Research fact-checking"
           ],
           "name_only_review_candidate_ids": [
-            "archieindian-superpowers/fact-check-before-trust",
             "archieindian-superpowers/verification-before-completion"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -1909,16 +2159,18 @@
         {
           "id": "project-scheduling",
           "name": "project scheduling",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for project scheduling"
+          ],
+          "matched_skill_ids": [
+            "addyosmani-agent-skills/planning-and-task-breakdown"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "project scheduling",
             "Planning project scheduling"
           ],
-          "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/planning-and-task-breakdown"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
@@ -2084,15 +2336,18 @@
         {
           "id": "paid-acquisition",
           "name": "paid acquisition",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for paid acquisition"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/ad-creative"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "paid acquisition",
             "Marketing paid acquisition"
           ],
           "name_only_review_candidate_ids": [
-            "corey-haines-marketing-skills/ad-creative",
             "corey-haines-marketing-skills/ads"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -2185,16 +2440,19 @@
         {
           "id": "discovery",
           "name": "discovery",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for discovery"
+          ],
+          "matched_skill_ids": [
+            "cole-medin-skills/opportunity-scan"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "discovery",
             "Product discovery"
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/customer-research",
-            "cole-medin-skills/opportunity-scan",
             "corey-haines-marketing-skills/customer-research"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -2351,7 +2609,8 @@
             "signup flow design"
           ],
           "matched_skill_ids": [
-            "corey-haines-marketing-skills/signup"
+            "corey-haines-marketing-skills/signup",
+            "bm629-agent-skills/authoring-user-flows"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -2359,7 +2618,6 @@
             "UX / UI interaction design"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-user-flows",
             "bm629-agent-skills/reviewing-user-flows"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -2458,16 +2716,18 @@
         {
           "id": "graphic-design",
           "name": "graphic design",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for graphic design"
+          ],
+          "matched_skill_ids": [
+            "anthropic-skills/canvas-design"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "graphic design",
             "Visual design graphic design"
           ],
-          "name_only_review_candidate_ids": [
-            "anthropic-skills/canvas-design"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
@@ -2951,15 +3211,18 @@
         {
           "id": "prose",
           "name": "prose",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Existing static-reviewed reference for prose"
+          ],
+          "matched_skill_ids": [
+            "danjdewhurst-story-skills/chapter-writing"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "prose",
             "Fiction / narrative / worldbuilding prose"
           ],
           "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/chapter-writing",
             "jwynia-agent-skills/drafting",
             "danjdewhurst-story-skills/discovery-drafting",
             "danjdewhurst-story-skills/scene-craft",
@@ -6709,10 +6972,298 @@
       "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected",
       "restriction": "reference/analysis only; unchanged adoption NOT eligible"
+    },
+    {
+      "id": "anthropic-skills/frontend-design",
+      "source_id": "anthropic-skills",
+      "skill_name": "frontend-design",
+      "content_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "source_snapshot_revision": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "software-engineering/frontend"
+      ],
+      "evidence_path": "registry/verification/anthropic-skills/frontend-design.yaml",
+      "provenance_path": "registry/skills/anthropic-skills/frontend-design.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "17/20",
+      "score_source": "registry/verification/anthropic-skills/frontend-design.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "The registered pinned package remains a differentiated, accessibility-aware frontend design method with strong anti-template and visual-review discipline. The instruction to use remembered client context is bounded as a privacy/minimization caveat: only relevant non-sensitive context may inform design, and it does not authorize unrelated private retrieval or disclosure. No static hard fail found. Behavioral validation remains not-run.\" "
+    },
+    {
+      "id": "bm629-agent-skills/authoring-test-plan",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-test-plan",
+      "content_blob_sha": "f120fe87711935bc5c4758185c8fe4bf90dea499",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "testing/test-strategy"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-test-plan.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-test-plan.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "17/20",
+      "score_source": "registry/verification/bm629-agent-skills/authoring-test-plan.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 2] (17/20). Produces traceable risk-weighted test cases from supplied feature/API requirements, including measurable non-functional and probabilistic cases, environment/data assumptions, exit criteria and versioned amendment. Specifies tests but does not execute them. Reference proposes masked production data as an option; "
+    },
+    {
+      "id": "anthropic-skills/mcp-builder",
+      "source_id": "anthropic-skills",
+      "skill_name": "mcp-builder",
+      "content_blob_sha": "8a1a77a47d141967b246adb4da4f91037578ff7d",
+      "source_snapshot_revision": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "agent-mcp-development/tool-design"
+      ],
+      "evidence_path": "registry/verification/anthropic-skills/mcp-builder.yaml",
+      "provenance_path": "registry/skills/anthropic-skills/mcp-builder.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "13/20",
+      "score_source": "registry/verification/anthropic-skills/mcp-builder.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "REJECT unchanged under current authority hard fail (13/20). The pinned skill mandates a Phase 4 evaluation workflow and bundled evaluation.md directs live read-only MCP tool exploration and answer verification. Bundled scripts/evaluation.py calls Anthropic messages.create with questions and MCP tool responses, records full answers/feedback in reports, and may consume repeated inference calls; no independent approval for private data scope, external model provider/disclosure, "
+    },
+    {
+      "id": "aws-agent-toolkit/aws-cdk",
+      "source_id": "aws-agent-toolkit",
+      "skill_name": "aws-cdk",
+      "content_blob_sha": "6ed8c50838438d4a6f4746fb9d90c4e8ae63b288",
+      "source_snapshot_revision": "ff1481a7bc1a04ee00ebf63d3a8a149aa6a2c546",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "cloud-devops/infrastructure-as-code"
+      ],
+      "evidence_path": "registry/verification/aws-agent-toolkit/aws-cdk.yaml",
+      "provenance_path": "registry/skills/aws-agent-toolkit/aws-cdk.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "15/20",
+      "score_source": "registry/verification/aws-agent-toolkit/aws-cdk.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": ">- Purpose/non-trigger: CDK construct design, bootstrap, deploy, import, drift, refactor and rollback; not SAM, Terraform, Pulumi or raw CloudFormation. Pinned core package tree 6ed8c50838438d4a6f4746fb9d90c4e8ae63b288, manifest 27d488115c9fb60ed7a5dc68ff44a7b6e44acab9, nine source-owned references. Score 15/20 but authority hard-fail: diff, warning and CLI confirmation do not authorize cdk bootstrap, trust/IAM changes, deploy, import, multi-deploy migration, rollback, force "
+    },
+    {
+      "id": "addyosmani-agent-skills/security-and-hardening",
+      "source_id": "addyosmani-agent-skills",
+      "skill_name": "security-and-hardening",
+      "content_blob_sha": "c00236e94bf52be841d575a99e09602110dc1216",
+      "source_snapshot_revision": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "security/application-security"
+      ],
+      "evidence_path": "registry/verification/addyosmani-agent-skills/security-and-hardening.yaml",
+      "provenance_path": "registry/skills/addyosmani-agent-skills/security-and-hardening.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "18/20",
+      "score_source": "registry/verification/addyosmani-agent-skills/security-and-hardening.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 1. Strong threat-model-first approach, explicit trust boundaries and abuse cases, ask-first controls for consequential changes, useful SSRF DNS-rebinding caveat, supply-chain script hygiene, secret-rotation guidance, and privacy minimizat"
+    },
+    {
+      "id": "archieindian-superpowers/fact-check-before-trust",
+      "source_id": "archieindian-superpowers",
+      "skill_name": "fact-check-before-trust",
+      "content_blob_sha": "27bd217125ea2f4f7f1568d6630695d572a04d02",
+      "source_snapshot_revision": "a95a59d221d44b89d4fc27a52934e24fb2060ddb",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "research/fact-checking"
+      ],
+      "evidence_path": "registry/verification/archieindian-superpowers/fact-check-before-trust.yaml",
+      "provenance_path": "registry/skills/archieindian-superpowers/fact-check-before-trust.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "14/20",
+      "score_source": "registry/verification/archieindian-superpowers/fact-check-before-trust.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 0, 1, 2, 2, 2, 1, 1, 1] (14/20). REJECT unchanged. Source search/re-fetch of agent claims is a potential outbound disclosure of confidential project, financial or identity context without an independent data/recipient authorization boundary; presence of a document is also mislabeled High confidence rather than verified accuracy. Preserve claim "
+    },
+    {
+      "id": "addyosmani-agent-skills/planning-and-task-breakdown",
+      "source_id": "addyosmani-agent-skills",
+      "skill_name": "planning-and-task-breakdown",
+      "content_blob_sha": "b10995ce30a0e61bc507a538c768e8513c1804db",
+      "source_snapshot_revision": "f63ec56a3cc936408d792956ae583c3c96a825bd",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "planning/project-scheduling"
+      ],
+      "evidence_path": "registry/verification/addyosmani-agent-skills/planning-and-task-breakdown.yaml",
+      "provenance_path": "registry/skills/addyosmani-agent-skills/planning-and-task-breakdown.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "14/20",
+      "score_source": "registry/verification/addyosmani-agent-skills/planning-and-task-breakdown.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 1, failure handling 1, evidence discipline 1, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 1. Rejected for unchanged reuse because good decomposition mechanics are coupled to mandatory tasks/plan.md and task-list artifacts, an unconditional human-approval gate, approximate two-hour session assumptions, and file-count heuristics"
+    },
+    {
+      "id": "corey-haines-marketing-skills/ad-creative",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "ad-creative",
+      "content_blob_sha": "d2cafa2f4559ff595897e8108df3362e1902403e",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "marketing/paid-acquisition"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/ad-creative.yaml",
+      "provenance_path": "registry/skills/corey-haines-marketing-skills/ad-creative.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "15/20",
+      "score_source": "registry/verification/corey-haines-marketing-skills/ad-creative.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 1, evidence discipline 2, dependency coherence 2, portability honesty 1, usefulness/differentiation 2, adversarial resilience 1, effectiveness design 2. The exact package is unusually substantive: it grounds scaled creative in real winning ads/reviews/comments, forbids invented claims/stats/testimonials, requires source traceability, separates generation from performance-driven iterati"
+    },
+    {
+      "id": "cole-medin-skills/opportunity-scan",
+      "source_id": "cole-medin-skills",
+      "skill_name": "opportunity-scan",
+      "content_blob_sha": "15147cd2ee55ff5c556dc21956e5876c074d2df5",
+      "source_snapshot_revision": "fb2e876f057c5356d6603ba0c52d6b4418d893ba",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "product/discovery"
+      ],
+      "evidence_path": "registry/verification/cole-medin-skills/opportunity-scan.yaml",
+      "provenance_path": "registry/skills/cole-medin-skills/opportunity-scan.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "15/20",
+      "score_source": "registry/verification/cole-medin-skills/opportunity-scan.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 0, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 2, usefulness/differentiation 2, adversarial resilience 0, effectiveness design 2. The package is differentiated evidence-driven system-improvement guidance. It separates reactive one-run diagnosis from proactive recurrence scanning, requires learning the current host agent's actual extension points before mapping re"
+    },
+    {
+      "id": "bm629-agent-skills/authoring-user-flows",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-user-flows",
+      "content_blob_sha": "16fb523775537fa298284484500ee0b44353cad6",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "ux-ui/interaction-design"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-user-flows.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-user-flows.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "16/20",
+      "score_source": "registry/verification/bm629-agent-skills/authoring-user-flows.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 1] (16/20). Derives navigable task/interaction graphs from authorized PRD goals and personas, including branches, recovery, accessibility, screens index and scoped amendments. Depicting pay/send/delete confirmation is a design instruction, not authority to execute those actions. Optional capability_record adds boundary cons"
+    },
+    {
+      "id": "anthropic-skills/canvas-design",
+      "source_id": "anthropic-skills",
+      "skill_name": "canvas-design",
+      "content_blob_sha": "9f63fee82de84cd4230e1d0e322247b61eb4c94c",
+      "source_snapshot_revision": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "visual-design/graphic-design"
+      ],
+      "evidence_path": "registry/verification/anthropic-skills/canvas-design.yaml",
+      "provenance_path": "registry/skills/anthropic-skills/canvas-design.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "17/20",
+      "score_source": "registry/verification/anthropic-skills/canvas-design.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Exact package tree and SKILL blob are unchanged from the registered pin, so the prior structured semantic review carries forward to the candidate revision without inventing new behavioral evidence. Strong originality and visual-refinement controls remain applicable; host artifact tooling lowers portability. Behavioral validation remains not-run. The registered source pin already matches this exact reviewed package.\" "
+    },
+    {
+      "id": "danjdewhurst-story-skills/chapter-writing",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "chapter-writing",
+      "content_blob_sha": "300932f320835d353e3fc92cc5c377c3f686667d",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/prose"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/chapter-writing.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/chapter-writing.yaml",
+      "source_role": "source identity in provenance; no ranking advantage",
+      "link_basis": "existing exact-version verified/rejected semantic review plus limited task fit inferred from companion notes; not independent complete-package re-review",
+      "license_resolution": "Not determined by semantic rubric or directory; inspect provenance and controlling terms",
+      "security_resolution": "Not implied by semantic grade; inspect separate exact-package security evidence",
+      "rubric_score": "18/20",
+      "score_source": "registry/verification/danjdewhurst-story-skills/chapter-writing.yaml",
+      "grade_origin": "existing persisted structured static-review; not regraded here",
+      "behavioral_tested_in_this_tranche": false,
+      "security_scan_run_in_this_tranche": false,
+      "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Complete package tree reviewed; behavioral validation not run. Issue #387.\" "
     }
   ],
-  "identity_level_capability_links_mapped": 66,
-  "third_party_identity_links_remaining": 973,
+  "identity_level_capability_links_mapped": 78,
+  "third_party_identity_links_remaining": 961,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
@@ -6767,13 +7318,13 @@
     "reviewed_record_count_is_not_discovery_count": true
   },
   "first_party_identity_links_mapped": 44,
-  "third_party_identity_links_mapped": 22,
-  "unmapped_review_identity_count": 985,
+  "third_party_identity_links_mapped": 34,
+  "unmapped_review_identity_count": 961,
   "navigation_population": {
     "mapped_first_party_distinct": 44,
-    "mapped_third_party_distinct": 22,
-    "mapped_total_distinct": 66,
-    "subdomains_with_evidence_linked_examples": 44,
+    "mapped_third_party_distinct": 34,
+    "mapped_total_distinct": 78,
+    "subdomains_with_evidence_linked_examples": 53,
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
@@ -6782,11 +7333,15 @@
   "name_only_fallback_summary": {
     "review_identity_source": "registry/governed-review-name-index.json",
     "index_count": 995,
-    "subdomains_with_some_name_only_leads": 124,
-    "total_name_only_suggestions": 326,
+    "subdomains_with_some_name_only_leads": 121,
+    "total_name_only_suggestions": 314,
     "not_an_eligibility_or_quality_claim": true,
     "warning": "Candidates are inferred from NAME TOKENS only; read per-ID verification, provenance, SKILL.md and license before recommending unchanged use; zero name hits does not mean the capability is absent.",
     "precision_note": "Name-only suggestions exclude known misleading matches (e.g. fiction identity vs IAM, context-token budgets vs finance, engineering pipelines vs sales). Other false positives may remain; all require source reading.",
     "quality_status": "lexical-only, manually pruned obvious cross-domain collisions, not individually semantically verified"
-  }
+  },
+  "grade_evidence_tranches": [
+    "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
+  ],
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads."
 }
