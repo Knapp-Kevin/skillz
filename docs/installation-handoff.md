@@ -6,6 +6,10 @@ It is complete when the user knows exactly how to get those skills working on th
 
 This document defines the installation handoff contract for `skill-bootstrap` and other skill-generation workflows.
 
+## Selection-to-delivery continuity
+
+When a user has already approved **working on the adaptations** chosen during prior exploration, produce those complete adapted skills for the user's host or as portable artifacts. Do not ask the user to select the same adaptations again. A portable artifact requires no installation authority; an actual persistent write/install remains host- and permission-dependent. `NO CHANGE` decisions require no new package. Report `NOT INSTALLED` or `READY TO UPLOAD` rather than implying that generating a skill activated it.
+
 ## The simple rule
 
 At the end of the process, the agent must do one of these three things:
@@ -54,7 +58,7 @@ Procedure:
 7. Run a simple trigger test when possible.
 8. Report **INSTALLED + VERIFIED** only if both installation and verification actually occurred.
 
-If the repository's `skill-sync` supports the target, prefer it over inventing another copy mechanism.
+This passive repository does **not** provide a `skill-sync` runtime or installer. Use only the target host's documented, authorized skill installation mechanism; otherwise provide a portable handoff.
 
 ### API-INSTALL
 
@@ -128,7 +132,7 @@ Do not substitute GPT knowledge files or Project instructions and call that an i
 
 ### Claude Code / local coding agents
 
-Use the host's supported local skill directory or installer. For this repository, `skill-sync` already supports Claude Code user skills plus several markdown-host repository layouts.
+Use the host's actual documented local skill directory or installer. **No repository-owned `skill-sync` is available**: do not search for, require, or claim a tool that does not exist here.
 
 The exact filesystem destination must be resolved from the active host rather than assumed from an example path.
 
