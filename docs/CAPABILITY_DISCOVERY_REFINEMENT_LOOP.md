@@ -15,7 +15,15 @@ For each subdomain, preserve three independent *denominators*:
 
 The initial `NOT_MAPPED / UNKNOWN / NOT_GRADED` statuses in the universe CSV are **intentional**. Do not convert unknown to zero, extrapolate one source into every related subdomain, or assign a quality score based on repository popularity or quantity.
 
-## 2. Repeatable discovery-to-quality cycle
+## 2. Owner sequencing: comprehensive intake before comparative grading
+
+**Current mode: COLLECTION / RIGHTS DISCLOSURE.** Broadly ingest original source references across all 48 provisional families and 441 subdomains. First pass should make every major category meaningfully represented by real, source-backed package paths and, where available, several independent source perspectives. Do **not** begin bulk behavioral ranking merely because a large number of files has been found.
+
+For a subdomain to count as *provisionally represented*, it must have a mapped task outcome and at least one original pinned skill or documented evidence-backed source-search gap. Three independent methodological approaches per important subdomain remain a discovery target, not an admission quota. Record missing sources honestly and keep seeking additional specialist archives. A provisional representation score is not a qualification score.
+
+At **every ingestion event**, preserve copyright/rights provenance immediately: pinned source license URL, restriction summary, per-skill license override where inspected, bundled-rights unknowns, and direct versus inspiration usage status. See [rights index](discovery/2026-11-01/RIGHTS_INDEX.md) and [licensing contract](SKILL_LICENSE_DISCLOSURE.md). Pending rights are not a reason to discard useful reference leads, but they **do block claims of unchanged reuse eligibility**. Only after substantial category representation should bulk comparative functional/security evaluations and quality grading become the dominant workstream. High-risk candidates may still require urgent safety triage to prevent accidental use.
+
+## 3. Repeatable discovery-to-quality cycle
 
 | Phase | Input | Active external host operation | Persistent passive evidence | Exit condition |
 |---|---|---|---|---|
@@ -29,7 +37,7 @@ The initial `NOT_MAPPED / UNKNOWN / NOT_GRADED` statuses in the universe CSV are
 
 There is **no automatic loop executed by this repository**. The cycle is a repeatable instruction for external hosts during an explicitly authorized `REPOSITORY_MAINTENANCE` engagement.
 
-## 3. Options and grades visible in index results
+## 4. Options and grades visible in index results
 
 A comparison view for a specific subdomain must show **all viable independent choices** and still preserve unqualified prior-art references below them. Suggested display columns:
 
@@ -41,7 +49,7 @@ A comparison view for a specific subdomain must show **all viable independent ch
 - More than three good methods may be useful; preserve narrow specialists, creative alternatives, distinct quality/latency/cost tradeoffs and accessibility-oriented options.
 - Never erase rejected, superseded, unsafe or license-restricted **evidence records**. Keep their rationale, fingerprints and salvageable reference ideas; exclude them from unchanged recommendation if the current governed policy requires exclusion.
 
-## 4. Evidence-based gap taxonomy
+## 5. Evidence-based gap taxonomy
 
 | Gap code | Meaning | Next action |
 |---|---|---|
@@ -58,7 +66,7 @@ A comparison view for a specific subdomain must show **all viable independent ch
 
 Each gap record should contain: `domain_id, subdomain_id, target_task, expected_output, candidate_ids, search_receipts, test_receipts, gap_code, severity, alternatives, disposition, reviewer, review_date, next_discovery_query, success_check`.
 
-## 5. Guardrail for creating missing skills
+## 6. Guardrail for creating missing skills
 
 Start authoring a new first-party `skillz` corpus candidate **only when** an identified task matters, previous references have been searched and compared, and there is evidence that existing eligible methods are absent, unsuitable, unsafe, too restrictive or meaningfully underperforming. A sparse count alone is not a reason.
 
@@ -72,13 +80,13 @@ A draft must include:
 
 Normal user-specific skill creation belongs **in the user's active host or portable handoff**, not in this corpus. The owner has explicitly authorized ongoing `skillz` **repository maintenance** here; that permission does not bypass third-party rights or give new drafts automatic admission.
 
-## 6. Priority of work right now
+## 7. Priority of work right now
 
 **Expansion first**, without pretending collection is qualification:
-1. Maintain the full [46-source / 4,183-entrypoint collection](discovery/2026-11-01/DOMAIN_EXPANSION_3.md) and expand into uncovered disciplines.
+1. Maintain the full [65-source / 4,835-entrypoint reference collection](discovery/2026-11-01/INDEX.md), [per-skill original licensing evidence](discovery/2026-11-01/RIGHTS_INDEX.md), and expand into unrepresented disciplines.
 2. Cross-map those records and the **995 governed third-party review identities** into the 441 provisional checklist rows. Preserve the 44 first-party and existing review denominators independently.
 3. Identify real alternatives at the method and task level. Keep creative divergence visible.
-4. Qualify/evaluate most promising options and safety-critical cases with the external evaluator in a bounded environment.
+4. **After broad subdomain representation**, qualify/evaluate promising alternatives and safety-critical cases with an authorized external evaluator. Keep licensing/authority triage at intake time.
 5. Use evaluated weaknesses to drive targeted new searches, adaptations or original gap-fill drafts. Repeat.
 
 **Acceptance for a claim of “strong” domain coverage:** every critical subdomain has a defined target task, at least one evidence-qualified safe option, explicit alternative search results, maintained source identity and comparable quality evidence. Where multiple high-quality independent options exist, present the choice. **“Mature”** additionally requires refreshed, independently reproduced task and adversarial evidence. No current domain has been proven to meet this standard in the discovery receipts.
