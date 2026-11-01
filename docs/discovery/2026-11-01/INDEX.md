@@ -1,10 +1,10 @@
 # Discovery source index: immutable package identities
 
-**Whole-archive SHA reconciliation:** [Cross-source exact-file audit](audit/README.md) compares all 3,743 path records in four immutable-source input partitions and finds **3,740 unique SKILL.md blobs**, with three matching same-repository FreeCAD pairs. Byte distinction does **not** imply independent approaches; semantic and package-level reconciliation remain open.
+**Current cumulative collection:** **46 original source repositories, 50 source/category CSV files, 4,183 exact `SKILL.md` path records, 4,155 byte-distinct entrypoint blobs**. [The six-batch cumulative source SHA audit](audit/CUMULATIVE_46_SOURCES.md) identifies 28 extra copies: three FreeCAD alternate paths, one GIS host alternate, 23 creative-writing cross-host copies and one accessibility duplicated content pair. No byte-identical entrypoint was observed across different original repositories. **Semantic-method independence remains untested.**
 
-**Expanded collection:** [14 additional under-covered-domain source inventories](DOMAIN_GAP_EXPANSION.md) have now been added, spanning education, construction, farming, robotics, localization, video and accounting. **Combined discovery archive: 29 original sources, 33 source/category CSV files and 3,743 source-tree `SKILL.md` path records** (3,310 from the initial tranche plus 433 new ones). Both tranches include complete pinned Git tree identities; **cross-tranche deduplication remains pending**, and this is not a count of usable/admitted skills.
+**Discover by discipline:** [first 15-source tranche below](#initial-tranche-what-was-actually-collected) · [14-source education/industry expansion](DOMAIN_GAP_EXPANSION.md) · [17-source environment, civic, electrical, accessibility and media expansion](DOMAIN_EXPANSION_3.md) · [441-subdomain provisional capability universe](CAPABILITY_UNIVERSE.csv) · [expansion-to-evaluation feedback loop](../../CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md).
 
-**2026-11-01 snapshot. This is reference-only collection, not admission.** Source-of-truth governed inventory remains in [the repository catalog](../../../INDEX.md), [source registry](../../../registry/sources.yaml), provenance and verification directories. This discovery index does **not** change those denominators or imply the sources have been admitted.
+**2026-11-01 snapshot.** This is passive reference-only collection, not new admission or an endorsement. Source-of-truth governed inventory remains the [catalog](../../../INDEX.md) and canonical verification/source registries. The existing **44 first-party / 995 third-party review identity** denominators have **not** been enlarged by the 4,183 ungraded discovery paths.
 
 ## Initial tranche: what was actually collected
 
@@ -66,9 +66,9 @@ Concrete example: `glotoff/freecad-skills` has six paths but only **three** dist
 
 ## What comes next
 
-1. **Reconcile** these 3,310 source-pinned paths against the existing **995** exact-version third-party review identities. Compare canonical source, path, revision, package tree and semantic similarity without altering governed statuses.
-2. **Subdomain assignment** for all [25 provisional domain families](../../CAPABILITY_ALTERNATIVES_INDEX.md). Record critical subdomain denominators and evidence for three independent alternatives where they exist; surface missing/underrepresented disciplines rather than declaring coverage from raw counts.
+1. **Reconcile** these 4,183 source-pinned paths against the existing **995** exact-version third-party review identities. Compare canonical source, path, revision, package tree and semantic similarity without altering governed statuses.
+2. **Subdomain assignment** for all [48 proposed discovery domain families, of which 25 were previously defined](../../CAPABILITY_ALTERNATIVES_INDEX.md). Record critical subdomain denominators and evidence for three independent alternatives where they exist; surface missing/underrepresented disciplines rather than declaring coverage from raw counts.
 3. **Full-package rights/security reviews** for high-value candidates, then representative task-based grading across distinct methods. Specialist/legal/clinical review gates remain in place.
-4. **Further original-source discovery** for missing disciplines and non-GitHub sources. These 15 repositories are not a claim to have exhausted the ecosystem.
+4. **Further original-source discovery** for missing disciplines and non-GitHub sources. These 46 repositories are not a claim to have exhausted the ecosystem.
 
 No agent code, installer, crawler, CI workflow or execution gate was added to the passive repository.
