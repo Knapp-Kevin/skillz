@@ -79,7 +79,54 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 3,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/authoritative-server/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+          "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
+          "capability": "Design authoritative server input, tick and snapshot boundaries",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+          "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+          "capability": "Design lobby and match handoff state machines",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/interest-management/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+          "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
+          "capability": "Design observer sets and reliable-event network replication",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "testing",
@@ -269,7 +316,24 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/scaling-architecture/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+          "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
+          "capability": "Evaluate game fleet capacity and durability without provisioning",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "security",
@@ -327,7 +391,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -352,6 +416,21 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
+          "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
+          "capability": "Design server-authoritative anti-cheat and evidence/appeals, without auto-sanctioning",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -713,7 +792,24 @@
       "coverage": "partial name-only leads",
       "search_hint": "Game design capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+          "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+          "capability": "Evaluate fairness and queue policies without account penalties",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "fiction-narrative-worldbuilding",
@@ -1344,7 +1440,54 @@
             "aws-agent-toolkit/aws-serverless"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/authoritative-server/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+              "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
+              "capability": "Design authoritative server input, tick and snapshot boundaries",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+              "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+              "capability": "Design lobby and match handoff state machines",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/interest-management/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+              "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
+              "capability": "Design observer sets and reliable-event network replication",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "mobile",
@@ -1912,7 +2055,24 @@
             "microsoft-skills/azure-compute-batch-java"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 6
+          "name_only_review_hits_in_scope": 6,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/scaling-architecture/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+              "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
+              "capability": "Evaluate game fleet capacity and durability without provisioning",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "infrastructure-as-code",
@@ -2086,6 +2246,23 @@
               "static_candidate_score": "11/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
+              "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
+              "capability": "Design server-authoritative anti-cheat and evidence/appeals, without auto-sanctioning",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -3341,7 +3518,24 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+              "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+              "capability": "Evaluate fairness and queue policies without account penalties",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "narrative-design",
@@ -7611,5 +7805,8 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads."
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Five new game-server candidate-only grades are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids.",
+  "source_vetted_grade_tranches": [
+    "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+  ]
 }

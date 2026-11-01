@@ -1024,9 +1024,9 @@
     "archieindian_superpowers_community_current_standard_companions": 1,
     "archieindian_superpowers_community_eligible_denominator": 1,
     "archieindian_superpowers_community_current_standard_gaps": 0,
-    "j4flmao_source_total_terminal_candidate_decisions": 27,
-    "j4flmao_nested_game_terminal_candidate_decisions": 9,
-    "j4flmao_nested_game_seven_file_pending": 14,
+    "j4flmao_source_total_terminal_candidate_decisions": 32,
+    "j4flmao_nested_game_terminal_candidate_decisions": 14,
+    "j4flmao_nested_game_seven_file_pending": 9,
     "j4flmao_other_shape_unclassified": 198
   },
   "first_party_categories": {
@@ -4085,5 +4085,29 @@
     "new_governed_exact_version_review_pairs": 0,
     "capability_index_reference": "registry/capability-directory.json",
     "scope_note": "Existing per-skill exact-version static grades surfaced in architecture; rejected hard fails override numeric rubric. No security scans or behavioral tests."
+  },
+  "j4flmao_game_server_five_complete_package_static_20261101": {
+    "date": "2026-11-01",
+    "source_id": "j4flmao-agent-skills",
+    "source_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "record": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+    "receipt": "docs/reviews/2026-11-01-j4flmao-game-server-five-complete-package-static.md",
+    "source_files_reviewed": 35,
+    "bundled_references_reviewed": 30,
+    "new_terminal_candidate_decisions": 5,
+    "reference_only": 2,
+    "rejected_unchanged": 3,
+    "nested_game_terminal_before": 9,
+    "nested_game_terminal_after": 14,
+    "nested_game_seven_file_pending_after": 9,
+    "source_total_terminal_before": 27,
+    "source_total_terminal_after": 32,
+    "direct_shape_terminal_unchanged": 18,
+    "other_shape_unclassified_unchanged": 198,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "eligible_distinct_denominator": null
   }
 }

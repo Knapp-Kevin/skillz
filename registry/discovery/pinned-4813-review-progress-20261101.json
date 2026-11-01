@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 41,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 46,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -68,15 +68,17 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 27,
-      "terminal_static_candidate_decisions": 27,
+      "exact_path_fingerprints_checked": 32,
+      "terminal_static_candidate_decisions": 32,
       "direct_shape_path_decisions": 18,
-      "other_shape_path_decisions": 9,
-      "raw_paths_without_terminal_decision": 618,
+      "other_shape_path_decisions": 14,
+      "raw_paths_without_terminal_decision": 613,
       "direct_shape_without_terminal_decision": 406,
-      "other_shape_without_terminal_decision": 212,
+      "other_shape_without_terminal_decision": 207,
       "next_direct_shape_path": "skills/ai/agentic-workflows/SKILL.md",
-      "next_other_shape_path": ".claude/skills/commit/SKILL.md"
+      "next_other_shape_path": ".claude/skills/commit/SKILL.md",
+      "next_structurally_qualified_nested_game_path": "skills/game/game-development/vulkan/SKILL.md",
+      "next_structurally_qualified_nested_game_note": "Nine seven-file nested game-engine/game-development packages remain; the lexical next_other_shape_path also includes unclassified paths."
     }
   ],
   "reviewed_path_decisions": [
@@ -458,7 +460,7 @@
       "shape": "other-shape",
       "grade_20": 15,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -468,7 +470,7 @@
       "shape": "other-shape",
       "grade_20": 13,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -478,7 +480,7 @@
       "shape": "other-shape",
       "grade_20": 16,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -488,7 +490,57 @@
       "shape": "other-shape",
       "grade_20": 13,
       "candidate_decision": "REJECT unchanged",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+      "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
+      "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
+      "shape": "other-shape",
+      "grade_20": 12,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/authoritative-server/SKILL.md",
+      "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+      "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+      "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+      "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+      "shape": "other-shape",
+      "grade_20": 11,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/interest-management/SKILL.md",
+      "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+      "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/scaling-architecture/SKILL.md",
+      "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+      "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
+      "shape": "other-shape",
+      "grade_20": 10,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names."
