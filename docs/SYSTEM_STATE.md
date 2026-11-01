@@ -1,6 +1,8 @@
 # System State
 
-**Current summary (2026-10-31):** 44 first-party skills, 995 persisted third-party exact-version reviews, 1039 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+**Current summary (2026-11-01):** 44 first-party skills, 995 persisted third-party exact-version reviews, 1039 total verification/provenance pairs. Admitted source-family static coverage is complete for the explicitly listed denominators below; package-security and behavioral acceptance remain separate. Detailed dated evidence lives in the [curation ledger](../CURATION_QUEUE.md) and [review receipts](reviews/).
+
+**OpenAI Game Studio source vetting (2026-11-01).** **9/9** first-class candidates resolved at the registered `openai/plugins` pin: **7 REFERENCE-ONLY / 2 REJECT unchanged**. The game engine, HUD and glTF methods are useful reference material, but unbounded browser playtest/screenshots and external sprite imagegen plus overwrite risks fail authority/privacy boundaries. The plugin's MIT label lacks controlling license text. **0 admissions, 0 new semantic pairs, 0 denominator change, 0 scans or behavioral runs.** [Macro receipt](reviews/2026-11-01-openai-game-studio-nine-candidate-vetting.md), [#566](https://github.com/Knapp-Kevin/skillz/issues/566).
 
 **OpenAI Canva plugin candidate vetting (2026-10-31).** All **8/8** first-class Canva skills at the registered `openai/plugins` revision have terminal decisions: **3 REFERENCE-ONLY / 5 REJECT unchanged**. Exact Canva edit transaction preview/commit authorization and visual evidence-gap handling are useful references; persistent bulk/design copies, model/data uploads and reviewer comment replies lack sufficiently separate authority or disclosure scope. No root/plugin license grant found, so **no vendoring or admission**. **0 new semantic/provenance pairs, 0 scans or behavioral runs, 0 denominator or pin change**. Public inventory remains **44 / 995 / 1039**, with **23** registered sources. [Eight-candidate review](reviews/2026-10-31-openai-canva-eight-candidate-vetting.md), [issue #564](https://github.com/Knapp-Kevin/skillz/issues/564).
 
@@ -48,7 +50,7 @@
 
 | Attribute | Value |
 |---|---|
-| **Last updated** | 2026-10-31 |
+| **Last updated** | 2026-11-01 |
 | **Milestone** | Entirely passive architecture + external security evidence |
 | **State** | Governed curation mode |
 | **Repository type** | Entirely passive skill knowledge resource |
