@@ -1,5 +1,7 @@
 # Capability gap closure: acquisition and qualification program
 
+**Owner discovery-first program (2026-11-01):** Expand broadly before narrowing. [48 provisional domain families and 441 subdomains](discovery/2026-11-01/CAPABILITY_UNIVERSE.csv) now define a trackable candidate universe. [The continuous discovery and refinement loop](CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md) requires source enumeration, independent-method comparisons, evidence-based grading, targeted rediscovery and only then justified original gap-fill creation. Preserve alternative approaches, even when one scores better; do not conflate source counts with qualified coverage. The [46-source catalog](discovery/2026-11-01/INDEX.md) records **4,183 ungraded entrypoints**, not new admitted skills.
+
 **Status:** active discovery and candidate qualification; no automatic admission. Supports [#588](https://github.com/Knapp-Kevin/skillz/issues/588), [#589](https://github.com/Knapp-Kevin/skillz/issues/589), and [draft #590](https://github.com/Knapp-Kevin/skillz/pull/590). The repo remains passive; external hosts conduct research, scans and evaluations.
 
 ## Goal and acceptance standard
