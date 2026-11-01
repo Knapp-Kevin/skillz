@@ -16,6 +16,9 @@ Use that for first-visit and returning-user skill-system work. Do not choose amo
 
 The capability directory is still sparsely populated: empty `matched_skill_ids` and `unassessed` are **unknown coverage**, never proof that a skill is absent. Fall back to capability-keyword and mechanism search across governed companions, pinned/tracked upstream files, discovery leads and first-party records. Do not use `registry/local-verification.json` or `skills/` as the initial or exclusive search simply because they are easy to enumerate. When indexed external sources are inaccessible, disclose that gap rather than returning first-party-only results as if comprehensive.
 
+The [dynamic discovery frontier](registry/discovery/dynamic-four-source-frontier-20261101.json) and its pinned per-source/chunked path manifests offer additional **unqualified discovery** beyond linked records. Search by capability cues and inspect the exact upstream package before interpreting a name, shape or publisher claim. The current four-source raw path count is an observed snapshot, never a fixed-size finish line or approved inventory.
+
+
 ## 1. Route the request first
 
 Choose exactly one route:
