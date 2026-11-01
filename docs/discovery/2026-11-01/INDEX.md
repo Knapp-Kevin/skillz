@@ -65,7 +65,7 @@ Concrete example: `glotoff/freecad-skills` has six paths but only **three** dist
 ## What comes next
 
 1. **Reconcile** these 3,310 source-pinned paths against the existing **995** exact-version third-party review identities. Compare canonical source, path, revision, package tree and semantic similarity without altering governed statuses.
-2. **Subdomain assignment** for all [22 domain families](../../CAPABILITY_ALTERNATIVES_INDEX.md). Record critical subdomain denominators and evidence for three independent alternatives where they exist; surface missing/underrepresented disciplines rather than declaring coverage from raw counts.
+2. **Subdomain assignment** for all [25 provisional domain families](../../CAPABILITY_ALTERNATIVES_INDEX.md). Record critical subdomain denominators and evidence for three independent alternatives where they exist; surface missing/underrepresented disciplines rather than declaring coverage from raw counts.
 3. **Full-package rights/security reviews** for high-value candidates, then representative task-based grading across distinct methods. Specialist/legal/clinical review gates remain in place.
 4. **Further original-source discovery** for missing disciplines and non-GitHub sources. These 15 repositories are not a claim to have exhausted the ecosystem.
 
