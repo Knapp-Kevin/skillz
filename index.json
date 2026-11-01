@@ -937,7 +937,7 @@
     "first_party_historical_exact_tree_security_failed": 1,
     "first_party_historical_exact_tree_passes_with_pending_manifest_changes": 15,
     "pinned_external_corpora": 12,
-    "registered_source_identities": 23,
+    "registered_source_identities": 25,
     "persisted_third_party_exact_version_reviews": 995,
     "total_verification_records": 1039,
     "candidate_only_exact_version_reviews": 121,
@@ -3909,5 +3909,32 @@
     "security_scan_executed": false,
     "behavioral_validation_executed": false,
     "source_admissions": 0
+  },
+  "expanded_dynamic_discovery_four_source_frontier_20261101": {
+    "date": "2026-11-01",
+    "program_issue": 599,
+    "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
+    "source_ids_added": [
+      "agentskillexchange-skills",
+      "j4flmao-agent-skills"
+    ],
+    "source_roles": "dynamic-discovery only; no admission",
+    "source_count_before": 23,
+    "source_count_after": 25,
+    "source_count_delta": 2,
+    "raw_skill_md_paths_four_sources": 4813,
+    "direct_shape_candidates_four_sources": 4537,
+    "other_shape_paths_four_sources": 276,
+    "unique_git_blob_sha_four_sources": 4813,
+    "semantic_deduplication": "not-performed",
+    "eligible_distinct_skill_denominator": null,
+    "security_and_behavioral_qualification": "not-run",
+    "governed_semantic_review_pairs_delta": 0,
+    "source_manifests": [
+      "registry/discovery/dynamic-four-source-frontier-20261101.json",
+      "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
+      "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json"
+    ],
+    "interpretation": "This establishes 4,813 raw paths in a bounded discovery frontier, NOT 4,813 eligible, reviewed, unique, licensed or security-qualified skills."
   }
 }

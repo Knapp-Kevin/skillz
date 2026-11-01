@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_id": "agentskillexchange-skills",
+  "upstream_repository": "agentskillexchange/skills",
+  "pinned_commit": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+  "source_role": "discovered-only",
+  "tree_entries": 6652,
+  "tree_truncated": false,
+  "raw_skill_md_paths": 3200,
+  "direct_shape_candidates": 3196,
+  "other_shape_paths": 4,
+  "unique_skill_blobs": 3200,
+  "license_scope": "MIT repository root; third-party upstream license rights not independently reconciled",
+  "quality_caveat": "Publisher-provided verification labels are claims, not independent evidence",
+  "eligibility_denominator": null,
+  "individual_reviews": 0,
+  "parts": [
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-01.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-02.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-03.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-04.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-05.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-06.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-07.json",
+    "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-08.json"
+  ]
+}
