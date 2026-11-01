@@ -231,5 +231,22 @@
     "The 4,000+ discovered population remains unverified",
     "Some source families have reviewed packages beyond the scoped counters"
   ],
-  "issue": "https://github.com/Knapp-Kevin/skillz/issues/599"
+  "issue": "https://github.com/Knapp-Kevin/skillz/issues/599",
+  "review_record_arithmetic": {
+    "registered_tracked_source_family_slots": 873,
+    "candidate_only_exact_version_reviews": 121,
+    "cline_internal_unlisted_companion_records": 1,
+    "total": 995,
+    "reported_persisted_third_party_exact_version_reviews": 995,
+    "interpretation": "Arithmetic reconciles review record counts, not deduplicated distinct skill packages; Cline internal record is counted separately from 36 published Cline packages",
+    "evidence": "index.json counts.cline_skills_internal_unlisted_companions and counts.persisted_third_party_exact_version_reviews"
+  },
+  "main_branch_drift": {
+    "observed": "PR branch one commit behind main",
+    "overlap_paths": [
+      "README.md",
+      "INDEX.md"
+    ],
+    "handling": "Do not overwrite newer main content; reconcile before merge"
+  }
 }
