@@ -78,6 +78,7 @@ Establish, as far as the host permits:
 - host/surface;
 - installation/packaging capability;
 - privacy, cost, and authority limits;
+- the operator's actual license/use policy when material: permitted copying/adaptation/redistribution, internal versus commercial/public deployment, required notices/approval, organizational restrictions, and whether rights are unresolved. Do not assume permission based on root repository licensing;
 - four capability axes: **persistence** (yes/no/unknown), **user-in-the-loop** (yes/no/unknown), **scheduling** (yes/no/unknown), and **side-effect authority** (read-only/approval-gated/autonomous/unknown). A host's actual controls, not an agent's self-label, determine these values.
 
 For FIRST_VISIT or RETURNING_USER, use the [first-contact discovery walkthrough](../../../docs/first-contact-discovery.md) to produce a compact host-profile receipt. Do not create a mandatory persistent file or assume storage. If writing is unavailable or unauthorized, include the receipt in the reply or portable handoff. Never treat a receipt as permission to perform actions.
@@ -160,6 +161,7 @@ Check, as far as the host can truthfully establish:
 
 - source/provenance;
 - exact version/fingerprint;
+- intended treatment of the skill (read/link, unchanged install, internal derivative, distributed/public package, commercial use), which determines which source rights and notices must be resolved;
 - semantic quality state;
 - applicable exact-version package-security state;
 - license/attribution, checked against the actual package/child license and required notices, not just the root `skillz` MIT license or an unverified source-level label;
