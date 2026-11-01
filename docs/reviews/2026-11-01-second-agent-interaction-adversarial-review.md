@@ -66,6 +66,25 @@ Repeat with a second agent/host lacking memory, then with a bounded adversarial 
 
 **Retest acceptance:** provide only `https://github.com/Knapp-Kevin/skillz` and the original “take a look” request. The agent must complete the useful value brief without another user turn. Keep memory and private-context details brief and host-local; do not print sensitive raw history. Evaluate discovery precision separately from a plausible-sounding answer. Another external run is needed to see whether the clarified instructions change model behavior.
 
+## Muse AI retest: completed value brief (user-reported)
+
+**Source:** user-provided follow-up response from Muse AI after reading the public repository's corrected default-branch entrypoint. This is a **single reported external-agent output**, not a host telemetry trace, independent confirmation of memory retrieval, or proof that recommendations improve task performance. No private task-history excerpts are copied into this public audit.
+
+| Acceptance dimension | Observation | Result |
+|---|---|---|
+| Completes orientation in its first response | Muse returned an explicit value verdict, concrete task-pattern rationale, three candidate opportunities, existing-skill overlap and next action | **PASS (reported)** |
+| Memory/personalization | It cited recurring workflows and corrections, marked them `OBSERVED`; underlying host memory retrieval is not independently accessible here | **Plausible output; retrieval UNVERIFIED** |
+| Source-neutral library discovery | It named `fact-check`, `agent-postmortem`, `session-continuity` without claiming a full corpus search | **PARTIAL**; no independent comparison of other source families |
+| Identity and review-state accuracy | Muse said names only, candidates not inspected, then labeled them `UNREVIEWED` | **Ambiguous terminology**: all three actually have first-party `skills/<name>/SKILL.md` and exact matching `registry/verification/local-skills/<name>.yaml` records with `verification_status: verified` and `validation_status: not-run` |
+| Security/licensing / host-specific deployment | It made no unchanged-install eligibility or deployment claims | **PASS for restraint**; host-specific applicability not established |
+| Consent/side effects | It reported `NOT INSTALLED` and suggested later comparison rather than taking actions | **PASS (reported)** |
+
+**Grounded repository check:** the three named `SKILL.md` files exist. Their governed verification records match the current source Git blob SHA and report **exact-version static `verified`, behavioral `not-run`**. `fact-check` and `agent-postmortem` are read-only; `session-continuity` can capture durable user-host context only with appropriate authorization and supported memory facilities. These source-level facts do not demonstrate fit to Muse's unknown host or license/security completeness beyond the actual evidence reviewed.
+
+**UX follow-up:** the current `docs/agent-value-discovery.md` distinguishes **agent inspection** (`NAME_ONLY` / `PATH_CONFIRMED` / `CONTENT_INSPECTED`) from **repository qualification** (static verification, security, behavioral validation, license rights). An agent may say “I have not inspected this candidate,” but must not imply “the repository has never reviewed it” without checking the verification companion. A next step to inspect candidates can be offered, but a user request to compare them should not require another needless pick before read-only work starts.
+
+**Verdict:** **PASS for first-contact answer completion, with unverified host-memory execution and incomplete candidate evaluation**. No installation, independent multi-host test, or observed behavioral improvement is claimed.
+
 ## Remaining blockers to stronger qualification
 
 - **One user-reported external-agent first-contact run (Muse AI) is available** and showed successful routing but failed value-brief completion. Independent host traces, repeated runs and cross-host validation are still outstanding.
