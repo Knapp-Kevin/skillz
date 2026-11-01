@@ -96,6 +96,7 @@ These establish a separate package-security dimension. Security scanning does no
 |---|---|---|
 | Security scanning policy | `docs/security-scanning.md` | external scanner boundary, security states, fail-closed rules, licensing, and backfill policy |
 | Security-tool registry | `registry/security-tools.yaml` | exact scanner identity, release, revision, license, mode, and gate configuration |
+| First-party package-security lookup | `registry/security/first-party-package-lookup.json` | compact name-keyed historical scan state and exact-tree match for 44 first-party packages; no new scans or blanket approval |
 | Exact-version security records | `registry/security/` | persisted package-bound security evidence and finding dispositions |
 | Historical maintainer CI | Git history | former workflow evidence only; no live repository-owned CI |
 
