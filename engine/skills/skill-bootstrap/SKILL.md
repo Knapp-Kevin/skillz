@@ -196,6 +196,12 @@ Prefer an independently expressed clean implementation when copying source-speci
 
 **Output:** `ELIGIBLE_UNCHANGED`, `ADAPTATION_EVIDENCE_ONLY`, or `EXCLUDED` for whole-skill candidates, plus component constraints.
 
+### Continue prior discovery without resetting user choices
+
+When entering via an already-completed `REPOSITORY_ORIENTATION` or `EXPLORE` stage, reuse the bounded user need, skill identities, checked provenance and stated dispositions that remain current. Do not restart a first-visit questionnaire or ask the user to select an already selected set. A repeated “take a look” is **not** a bootstrap request; a request only to `EXPLORE` should finish with read-only candidate assessments.
+
+When the user subsequently says to **apply an established set of adaptations**, do S7–S11 for all eligible `ADAPT` items, preserve every `NO CHANGE` item, and produce finished user-host or portable outputs. A host without authorized write access can still finish **complete portable skill artifacts**. An installation, memory write or external action requires distinct applicable permission; generic “proceed” does not create it. If one item is blocked, describe the reason and complete the others safely.
+
 ## S6 — Make the fit decision
 
 Choose one disposition for each meaningful requirement:
