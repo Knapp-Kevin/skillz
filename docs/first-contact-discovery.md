@@ -31,9 +31,9 @@ Stop once further questioning is unlikely to change a decision. Mark unsupported
 
 ## 3. Map needs to categories, then candidates
 
-Start with [the current catalog](../INDEX.md), [machine-readable snapshot](../index.json), and [source registry](../registry/sources.yaml) as **complementary discovery surfaces**, not a first-party ranking. Search by capabilities and inspect whole skills plus relevant components. Compare the user's existing skills and host-native abilities against **all capability-matched indexed resources together**, including governed third-party records, pinned/tracked upstream references, reference-only packages, and first-party `skills/`. Never prioritize a source merely because its metadata is simpler to access. Disclose missing external-source access rather than silently narrowing the search to first-party records. Do **not** install or copy a reference corpus simply because a package exists.
+Start with the [capability directory](../registry/capability-directory.json) (domain → subdomain → specific capability). **This is a sparse proposed map, not proof of exhaustiveness:** an empty list or unassessed entry must trigger capability-keyword fallback across other accessible source and review surfaces. Use [the current catalog](../INDEX.md), [machine-readable snapshot](../index.json), and [source registry](../registry/sources.yaml) as **complementary evidence/accounting surfaces**, not first-party ranking or complete enumeration. Search by capabilities and inspect whole skills plus relevant components. Compare the user's existing skills and host-native abilities against **all capability-matched indexed resources together**, including governed third-party records, pinned/tracked upstream references, reference-only packages, and first-party `skills/`. Never prioritize a source merely because its metadata is simpler to access. Disclose missing external-source access rather than silently narrowing the search to first-party records. Do **not** install or copy a reference corpus simply because a package exists.
 
-For each candidate, write down its mechanism, fit, required tools, authority/side effects, provenance, exact-version semantic state, applicable package-security state, and license. If `verified` is merely semantic, do not imply security or behavioral testing. Use `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST`, `DYNAMIC`, or `NO CHANGE` only after comparing with existing coverage.
+For each candidate, write down its mechanism, fit, required tools, authority/side effects, provenance, exact-version semantic state, applicable package-security state, and controlling package license/NOTICE requirements. Determine whether the user's intended action is mere reading/linking, copying, adapting, combining, redistribution, or installation: each requires its own rights check. If rights are unresolved, do not assume root MIT applies or install/copy unchanged. See [consumer lifecycle contract](consumer-discovery-and-installation.md). If `verified` is merely semantic, do not imply security or behavioral testing. Use `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, `CHECKLIST`, `DYNAMIC`, or `NO CHANGE` only after comparing with existing coverage.
 
 Defer first-contact deep provenance dives for irrelevant packages, full registry enumeration, and installation of anything not selected.
 
@@ -66,12 +66,14 @@ needs:
 shortlist:
   - skill: <name / path>
     disposition: <ADOPT | ADAPT | COMPOSE | NO CHANGE | ...>
-    identity_and_security: <verified / unresolved / not applicable with reason>
+    identity_and_security: <exact pin, semantic state and independent security state or unresolved>
+    rights_and_notices: <package-specific licensing, requested use and unresolved obligations>
     activation: <request-driven / host event / separately authorized scheduled>
     destination: <user host / portable handoff>
 deferred: []
 installation_state: not-run # do not infer from selecting a skill
-completion_evidence: <what actually passed, or not-run>
+completion_evidence: <what actually passed, or not-run; not a claim of behavioral validation>
+search_limitations: <inaccessible family, sparse directory, unknown coverage>
 next_action: <single action or none>
 ```
 
@@ -81,7 +83,7 @@ next_action: <single action or none>
 - Durable needs and minimum viable shortlist map to actual capabilities, not popularity.
 - Whole-skill and component overlap checked; reuse eligibility not exaggerated.
 - Action boundaries, side effects, host prerequisites, and verification named.
-- Selected artifacts prepared for the user's host or portable handoff; installation truthfully stated.
+- Selected artifacts prepared for the user's host or portable handoff; licensing/notice obligations preserved for protected source material; installation truthfully stated and post-install observations distinguished from semantic desk-check.
 - A return visit can conclude `NO CHANGE`.
 
 ## Examples of failure to prevent
