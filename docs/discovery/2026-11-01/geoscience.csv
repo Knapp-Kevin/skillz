@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+gronbow/GeoSkills,5f90c54a03e5b489902496cfc7a38d7912bf1c96,skills/geoskills/SKILL.md,f04131329ca7d34f0d326da29476394a8cfce253,17fad2283b6b2e062aee419503ee940f0762abf0,60,source-skill,DISCOVERED_UNGRADED

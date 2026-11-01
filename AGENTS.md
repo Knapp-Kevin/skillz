@@ -54,6 +54,12 @@ Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized 
 
 When `skills/sources/<source-id>/` is available in the host, use the applicable pinned corpus as local reference material. When a pinned corpus is not locally materialized or accessible through the current host, resolve the same registered upstream source through whatever legitimate repository/API/web capability the host has, preserving the registered source identity and exact pin when the task depends on exact-version evidence.
 
+## Mandatory original-skill rights and downstream disclosure
+
+**The index does not grant a new license.** Every listed skill remains governed by its original author, original license and any package-local or third-party restrictions. For any consumer-facing skill selection, read the [original source license register](docs/discovery/2026-11-01/SOURCE_LICENSE_EVIDENCE.csv), [individual rights companion rows](docs/discovery/2026-11-01/RIGHTS_INDEX.md), [legal disclosure contract](docs/SKILL_LICENSE_DISCLOSURE.md), and any stronger canonical governed records available for that exact skill.
+
+Show the original source and immutable version, actual declared licensing, attribution/NOTICE duties, commercial restrictions, any source-specific conditions, unknown child-resource rights and **direct-use eligibility separately from reference/inspiration**. Do not silently treat permissive parent-repository terms as the license for every child or contributor, or treat `skillz` licensing as ownership of indexed upstream work. For license `NOASSERTION` or pending package reviews, unchanged-use disposition is HOLD; the source may still be cited as prior art. Carry license/attribution/rights limitations into export manifests and user handoffs.
+
 ## Third-party reuse rule
 
 Source reputation does not equal individual verification.

@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+kalta-ai/actuarial-skills,8919fcde9bab192d9c02e3eda0ae4f19c2d3b120,loss-reserve-analysis/SKILL.md,a296a5074ebbac0ba804621f626a416612b071ae,92d096842863970b80363f94bab7e7b1addb869b,7,source-skill,DISCOVERED_UNGRADED

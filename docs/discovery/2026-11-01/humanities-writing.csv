@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+tizzy916/humanities-writing-companion,e097ff629f6575af1b2ec129afa7b23f30d2a39c,SKILL.md,348020f8c149ea25a32b602ccfe8bdfde38a4941,6ff6555ad6e385d3565e8d830f3536284b3e061e,70,source-skill,DISCOVERED_UNGRADED

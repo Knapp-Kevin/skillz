@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+jinwx/weather-data-skills,263437cf110d64c20f3eed8e9429240e7c976973,skills/cds-download/SKILL.md,c151fdc31c08e797c4beab9b7373b85b39839070,9a1ef679c17d26619102bbf1b3064e79ab887f34,8,source-skill,DISCOVERED_UNGRADED

@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+ilkeraslan/actuarial-skills,84b1142effc7e11ec0a8a6676ee09d086d008c31,loss-reserve-analysis/SKILL.md,191b297d6f477de3924bfc7d57fd5f1ee15a64aa,3cea70f935ebd04ea9592f16dc701560b8cd60d5,7,source-skill,DISCOVERED_UNGRADED

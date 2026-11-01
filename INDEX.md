@@ -1,8 +1,18 @@
 # Skill Catalog Snapshot
 
+**Current passive discovery:** [65 pinned original source repositories, 69 source/category inventories, 4,835 exact SKILL.md path records](docs/discovery/2026-11-01/INDEX.md). [Cumulative identity audit](docs/discovery/2026-11-01/audit/CUMULATIVE_65_SOURCES.md): **4,807 distinct entrypoint Git blobs**, 28 byte-identical extra occurrences, no exact-blob duplicates across source repositories. Byte-distinct paths are not necessarily distinct methods or independently qualified skills.
+
+**Every discovered skill has a consumer licensing row:** [per-skill rights and restriction index](docs/discovery/2026-11-01/RIGHTS_INDEX.md), [65-source original license evidence](docs/discovery/2026-11-01/SOURCE_LICENSE_EVIDENCE.csv), and [skill licensing disclosure contract](docs/SKILL_LICENSE_DISCLOSURE.md). **Indexing does not transfer copyright, relicense the original or authorize direct installation/copying.** All new discovery entries remain `HOLD_RIGHTS_AND_SECURITY`; consult original license terms and unresolved per-skill/asset rights before use. Reference/inspiration is not a substitute for permission to copy protected instructions.
+
+**Scope of ongoing collection:** [48 provisional capability families and 441 explicit subdomains](docs/discovery/2026-11-01/CAPABILITY_UNIVERSE.csv), [discovery-first improvement loop](docs/CAPABILITY_DISCOVERY_REFINEMENT_LOOP.md), and [fourth specialist discovery tranche](docs/discovery/2026-11-01/DOMAIN_EXPANSION_4.md). Preserve independently valuable alternatives and source legal provenance before subsequent grading. The 25 previously defined families remain the prior navigation; 23 specialist additions are proposals, not changes to controlled taxonomy.
+
 **Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
+
+**Discovery intake status:** The [second](docs/discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md), [third](docs/discovery/2026-11-01/DOMAIN_EXPANSION_3.md), and [fourth](docs/discovery/2026-11-01/DOMAIN_EXPANSION_4.md) expansions remain **REFERENCE-ONLY**. Distinct file paths are not the same as independent, licensed, safe or behaviorally qualified skill options; canonical admitted/review counts below remain unchanged.
+
+**Capability choices and visible grades:** [Capability alternatives and evidence-grade index](docs/CAPABILITY_ALTERNATIVES_INDEX.md) lists every broad domain, independent source alternatives, evidence requirements and explicit coverage gaps. Discovery candidates are not admitted or graded without receipts.
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 

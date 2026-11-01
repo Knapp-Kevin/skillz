@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+AirsupHQ/factory-skill,9fde7554e6a30e77ea1008dec08f2ba8d8d37f27,SKILL.md,b9a7d892c1a3c417a1f781bcfc45d78593e7869c,936b94c827a2dcc1ad4f9ab145ddce89cc0a16eb,46,source-skill,DISCOVERED_UNGRADED

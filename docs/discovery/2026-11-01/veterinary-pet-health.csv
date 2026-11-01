@@ -1,0 +1,2 @@
+repository,source_commit,skill_path,entrypoint_blob_sha,package_tree_sha,supporting_blob_count,path_role,status
+Glumoo-ai/glumoo-pet-health-skill,62fbf378a1476cb1ddce87787c98c7ddebeb5e21,glumoo-pet-health/SKILL.md,1cc69ffd5bbfd2c17189461ca1e182e3f7b76e38,3761cccea9a0b30da78b48eb962902ee2e0c6846,7,source-skill,DISCOVERED_UNGRADED
