@@ -1,6 +1,8 @@
 # Capability coverage and evidence frontier (2026-11-01)
 
-> **Status: initial, incomplete crosswalk.** Maintainer evidence artifact for [#588](https://github.com/Knapp-Kevin/skillz/issues/588) and external qualification [#589](https://github.com/Knapp-Kevin/skillz/issues/589). This is a passive document, not a scanner, scheduler, admission decision, or installable skill.
+> **Status: historical initial identity crosswalk, not the current discovery total.** The current [65-source / 4,835-path reference archive](discovery/2026-11-01/INDEX.md), [48-family / 441-subdomain universe](discovery/2026-11-01/CAPABILITY_UNIVERSE.csv) and [per-skill original license disclosure](discovery/2026-11-01/RIGHTS_INDEX.md) were added later. This older maturity table is **not** an updated category evaluation. No new discovery candidates have been admitted.
+>
+> **Initial crosswalk below remains incomplete.** Maintainer evidence artifact for [#588](https://github.com/Knapp-Kevin/skillz/issues/588) and external qualification [#589](https://github.com/Knapp-Kevin/skillz/issues/589). This is a passive document, not a scanner, scheduler, admission decision, or installable skill.
 
 ## Source of truth and accounting
 
