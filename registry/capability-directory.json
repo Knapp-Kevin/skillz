@@ -2108,7 +2108,7 @@
   "identity_level_capability_links_mapped": 10,
   "third_party_identity_links_remaining": 985,
   "population_accounting": {
-    "owner_target": "all distinct eligible discovered skill packages; owner estimates 4,000+ but total unverified",
+    "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
     "known_first_party_skill_records": 44,
     "known_total_governed_review_records": 1039,
@@ -2139,10 +2139,12 @@
         "Crosswalk each unique eligible identity to capabilities",
         "Record exact-version static review decisions and distinct security/behavioral evidence"
       ],
-      "acceptance": "No corpus-wide reviewed percentage until eligible distinct package denominator and discovery coverage are independently reconciled",
+      "acceptance": "Never calculate a corpus-wide fixed-target reviewed percentage from historical review counts; report snapshot-scoped coverage once each denominator is reconciled, and separately report discovery expansion and unknown coverage",
       "source_snapshot_rows_recorded": 23,
       "source_level_denominator_rows_recorded": 20
     },
-    "source_reconciliation_ledger": "registry/corpus-source-reconciliation.json"
+    "source_reconciliation_ledger": "registry/corpus-source-reconciliation.json",
+    "success_definition": "Snapshot-specific: complete identity enumeration plus individual evidence-backed terminal review states; ecosystem-wide: breadth, freshness, capability access, legal/operational usability, discovery backlog and new-intake throughput; no fixed all-time skill count",
+    "consumer_contract": "docs/consumer-discovery-and-installation.md"
   }
 }
