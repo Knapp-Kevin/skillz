@@ -4,6 +4,8 @@
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
+**Discovery archive expansion:** [29 pinned original sources, 3,743 SKILL.md path records, 33 static inventories](docs/discovery/2026-11-01/INDEX.md) and [the 14-source professional-domain expansion](docs/discovery/2026-11-01/DOMAIN_GAP_EXPANSION.md) are **REFERENCE-ONLY**. Distinct file paths are not equivalent to independent, licensed, secure or behaviorally qualified skill options; canonical admitted/review counts below remain unchanged.
+
 **Capability choices and visible grades:** [Capability alternatives and evidence-grade index](docs/CAPABILITY_ALTERNATIVES_INDEX.md) lists every broad domain, independent source alternatives, evidence requirements and explicit coverage gaps. Discovery candidates are not admitted or graded without receipts.
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
