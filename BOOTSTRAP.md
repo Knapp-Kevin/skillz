@@ -16,16 +16,20 @@ When the host agent decides to `CREATE`, `ADAPT`, `COMPOSE`, or `REFINE` a skill
 
 The repository's own `skills/` directory is maintained corpus material, not the output folder for every skill a connected agent generates. Repository mutation happens only when the user explicitly requests `skillz` maintenance/curation and that work follows the repository's maintainer governance.
 
-## First visit
+## First contact: determine value before suggesting installation
 
-If the user provides this repository with no narrower task and has no fitted skill system to review, begin first-visit bootstrap.
+If the user provides only the repository link or says “take a look,” use [agent value discovery](docs/agent-value-discovery.md). Explain what the indexed library could help the agent accomplish, then match **observed, legitimately available** user routines and difficulties to likely capability areas when context is already in scope. Add an adjacent opportunity as a labeled hypothesis rather than assuming every interesting package is useful. If no authorized history is available, give a useful general orientation and acknowledge that personalized recommendations would need relevant user context. Do not automatically mine private conversations, collect accounts, install skills, or create a fitted system on this vague request.
+
+## First visit: build a fitted system when requested
+
+If the user explicitly requests a fitted skill system and no existing system is being reviewed, begin first-visit bootstrap.
 
 Read [`AGENT_START_HERE.md`](AGENT_START_HERE.md), [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md), and [`AGENTS.md`](AGENTS.md).
 
 Then:
 
-1. inspect the minimum relevant accessible evidence needed to identify durable working patterns;
-2. translate those patterns into capability requirements before searching by skill name;
+1. inspect the minimum relevant, appropriately authorized evidence needed to identify durable working patterns: recurring user requests, meaningful corrections, repeated workflows, operational constraints and existing skills, not just frequently mentioned topics;
+2. distinguish observed needs, supported inferences and provisional adjacent opportunities; translate stable workflows and consequential gaps into capability requirements before searching by skill name;
 3. start from the capability directory, then compare existing user/project skills, governed third-party records, pinned and tracked external references, discovery leads, and first-party records without source priority. The directory is sparse; expand by capability search when unassessed;
 4. inspect both whole-skill fit and reusable components, including required scripts, templates, references, fixtures, or other package material;
 5. gate unchanged third-party reuse on exact-version semantic quality, applicable package-security evidence, provenance, licensing, dependencies, authority, portability, identity confidence, and user fit;
