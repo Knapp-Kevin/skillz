@@ -3948,5 +3948,33 @@
     "source_admissions": 0,
     "security_scan_executed": false,
     "behavioral_validation_executed": false
+  },
+  "j4flmao_game_web3d_eight_static_candidate_vetting_20261101": {
+    "date": "2026-11-01",
+    "source_id": "j4flmao-agent-skills",
+    "source_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "record": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json",
+    "receipt": "docs/reviews/2026-11-01-j4flmao-game-web3d-eight-candidate-vetting.md",
+    "raw_source_paths": 645,
+    "direct_shape_candidates": 424,
+    "other_shape_unresolved": 221,
+    "prior_terminal_candidate_decisions": 10,
+    "new_terminal_candidate_decisions": 8,
+    "total_direct_shape_candidate_decisions": 18,
+    "direct_shape_remaining_without_decision": 406,
+    "reference_only": 7,
+    "rejected_unchanged": 1,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 25,
+      "pinned_corpora": 12
+    }
   }
 }
