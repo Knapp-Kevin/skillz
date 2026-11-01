@@ -19,6 +19,7 @@ These documents define the current architecture and must agree.
 | Human/AI front door | `README.md` | passive-resource identity, current corpus shape, current user-flow guidance |
 | Agent contract | `AGENTS.md` | routing, privacy, authority, mutation and artifact-destination boundaries |
 | Agent entry point | `AGENT_START_HERE.md` | current host-agent routing without repository execution or write-back assumptions |
+| Consumer discovery and installation contract | `docs/consumer-discovery-and-installation.md` | capability-first cross-source discovery, legal/quality/host gates, user-owned output, explicit installation evidence; passive instructions only |
 | Bootstrap/refinement guide | `BOOTSTRAP.md` | passive first-visit and returning-user procedure; generated skills target the user's host/handoff |
 | System state | `docs/SYSTEM_STATE.md` | current architecture, inventory boundaries, curation status, known drift |
 | Governance index | `docs/GOVERNANCE_INDEX.md` | current authoritative control-surface map |
@@ -38,6 +39,8 @@ These define where material came from, how candidates are found, and how `skillz
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
+| Capability navigation directory (draft) | `registry/capability-directory.json` | proposed open-ended domains and sparse identity links, not a complete catalog or a negative-result oracle |
+| Source snapshot/accounting ledger (draft) | `registry/corpus-source-reconciliation.json` | 23 registered source identities and source-level review counters; not a deduplicated discovered universe |
 | Source registry | `registry/sources.yaml` | third-party source identity, role, inclusion, exact pin/reference, license/terms, canonical physical path where locally admitted |
 | Source context/signals | `registry/source-signals.yaml` | timestamped volatile source-level context kept separate from skill quality |
 | Governed discovery surfaces | `docs/discovery-surfaces.md` | intentional lead-generation inputs and promotion rules; discovery intelligence never substitutes for canonical provenance or exact-version quality evidence |
