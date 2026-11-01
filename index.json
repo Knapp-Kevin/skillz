@@ -2684,5 +2684,43 @@
     "admitted_source_denominator_delta": 0,
     "issue": 562,
     "receipt": "docs/reviews/2026-10-31-openai-superpowers-fourteen-candidate-vetting.md"
+  },
+  "openai_game_studio_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "game-studio",
+    "plugin_version": "0.1.2",
+    "plugin_tree": "b20ed7187bf5633b8b18ee9c7780e69eb68686e4",
+    "plugin_manifest_blob": "5e44d10c60c6415130c5f8442e60577be257979c",
+    "license_label": "MIT",
+    "redistribution_terms": "NOASSERTION; no controlling license text",
+    "first_class_candidate_denominator": 9,
+    "terminal_candidate_decisions": 9,
+    "reference_only": 7,
+    "rejected_unchanged": 2,
+    "rejected_names": [
+      "game-playtest",
+      "sprite-pipeline"
+    ],
+    "last_skill_path_change": "d965fdc57d1f872f52bcdb10c9e1cbf922a8a761",
+    "last_skill_path_change_date": "2026-03-16T17:03:20Z",
+    "admissions": 0,
+    "new_semantic_review_pairs": 0,
+    "admitted_source_denominator_delta": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "public_inventory": {
+      "first_party": 44,
+      "third_party": 995,
+      "registered_tracked": 874,
+      "candidate_only": 121,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "issue": 566,
+    "receipt": "docs/reviews/2026-11-01-openai-game-studio-nine-candidate-vetting.md"
   }
 }

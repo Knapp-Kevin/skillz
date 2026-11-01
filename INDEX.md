@@ -1,18 +1,12 @@
 # Skill Catalog Snapshot
 
-**Snapshot date:** 2026-10-31
+**Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
 
 **Current review history:** [CURATION_QUEUE.md](CURATION_QUEUE.md) and [dated macro receipts](docs/reviews/) preserve prior tranches and historical count checkpoints. The table below is the current snapshot, not a timeline.
 
-**OpenAI Canva plugin candidate vetting (2026-10-31).** All **8/8** first-class Canva skills at the registered `openai/plugins` revision have terminal decisions: **3 REFERENCE-ONLY / 5 REJECT unchanged**. Exact Canva edit transaction preview/commit authorization and visual evidence-gap handling are useful references; persistent bulk/design copies, model/data uploads and reviewer comment replies lack sufficiently separate authority or disclosure scope. No root/plugin license grant found, so **no vendoring or admission**. **0 new semantic/provenance pairs, 0 scans or behavioral runs, 0 denominator or pin change**. Public inventory remains **44 / 995 / 1039**, with **23** registered sources. [Eight-candidate review](docs/reviews/2026-10-31-openai-canva-eight-candidate-vetting.md), [issue #564](https://github.com/Knapp-Kevin/skillz/issues/564).
-
-**OpenAI Superpowers source vetting (2026-10-31):** 14/14 candidate decisions at the registered `openai/plugins` pin, **5 REFERENCE-ONLY / 9 REJECT unchanged**. MIT source terms verified, but default remote brand-image egress, raw environment logging and unapproved installs/delegation/destructive changes preclude unchanged use. **0 admissions, 0 new semantic pairs**. [Exact-source review](docs/reviews/2026-10-31-openai-superpowers-fourteen-candidate-vetting.md).
-
-**Official Plugin Eval candidate vetting (2026-10-31):** Five distinct `openai/plugins` source-vetting decisions, **1 REFERENCE-ONLY / 4 REJECT unchanged**. Executable metric packs, Codex credential/benchmark retention, automatic config writes and broken `--dry-run` guidance prevent unchanged approval. No admission or counted semantic review. [Exact-source review](docs/reviews/2026-10-31-openai-plugin-eval-five-candidate-vetting.md).
-
-**OpenAI Product Design bounded source vetting (2026-10-31).** All **10/10** front-mattered first-class skills under `plugins/product-design/skills/` at registered official `openai/plugins` revision have terminal candidate decisions: **2 REFERENCE-ONLY / 8 REJECT unchanged**. Proprietary plugin terms prohibit assumed redistribution; cross-workflow private-context preflight and image disclosure, unscoped connector reads, live-site asset copying, local dependency/write operations, and deployment authorization are material risks. The source's same-state design QA and visual selection discipline remain valuable reference methods. **0 admissions, 0 new semantic pairs, 0 denominator change, 0 scans/behavioral runs**. Public **44 / 995 / 1039**, sources **23** unchanged. [Ten-candidate review](docs/reviews/2026-10-31-openai-product-design-ten-candidate-vetting.md), [#560](https://github.com/Knapp-Kevin/skillz/issues/560).
+**OpenAI Plugins finite candidate decisions (2026-11-01).** Six bounded families (Developers 5, Product Design 10, Plugin Eval 5, Superpowers 14, Canva 8, Game Studio 9) have **51/51 terminal decisions: 22 REFERENCE-ONLY / 29 REJECT unchanged**. This is dynamic discovery/reference material, not admitted inventory. The [Game Studio receipt](docs/reviews/2026-11-01-openai-game-studio-nine-candidate-vetting.md) binds nine exact identities and rejects unscoped playtest and sprite external disclosure/write procedures. Its MIT manifest label lacks controlling license text. No source pin, semantic pair or denominator changed. Earlier family findings remain in [CURATION_QUEUE.md](CURATION_QUEUE.md).
 
 ## Current totals
 
