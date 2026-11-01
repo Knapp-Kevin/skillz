@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**Expanded pinned discovery frontier (2026-11-01).** Two additional source-vetted, **dynamic-discovery-only** repositories are now registered: Agent Skill Exchange (**3,200 raw SKILL.md paths**) and j4flmao Agent Skills (**645 raw paths**). Together with GitHub Awesome Copilot (432) and OpenAI Plugins (536), the four exact snapshots contain **4,813 raw SKILL.md paths / 4,537 direct-shape candidates**; all 4,813 exact SKILL blob SHAs are distinct across these snapshots, but semantic duplication, package eligibility and upstream license rights remain unresolved. **25 registered sources**, still **995 governed third-party exact-version reviews**; 10 Awesome Copilot terminal candidate decisions remain separate. This is *not* 4,813 reviewed or eligible skills. See `registry/discovery/dynamic-four-source-frontier-20261101.json`, [source-vetting receipt](docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md), and #599.
+
 **Discovery-surface exact-path inventory (2026-11-01).** `registry/discovery/` now contains pinned inventories of **432 GitHub Awesome Copilot** and **536 OpenAI Plugins** raw `SKILL.md` paths (respectively **415** and **502** direct-shape candidates). All rows carry source-relative path, exact skill blob and package tree where present. Direct shape is not a reviewed/eligible unique skill. Ten single-file GitHub Awesome Copilot packages received individual terminal static candidate decisions (**3 REFERENCE-ONLY / 7 REJECT**); no governed semantic pairs, security scans, behavioral validations or source admissions. See #599 for the unreconciled 4,000+ objective.
 
 **Snapshot date:** 2026-11-01
@@ -29,7 +31,7 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 | First-party user-facing skills | 44 |
 | First-party provenance-complete | 44 / 44 |
 | Pinned external corpora | 12 |
-| Unique registered source identities | 23 |
+| Unique registered source identities | 25 |
 | Persisted third-party exact-version reviews | 995 (874 registered/tracked + 121 candidate-only) |
 | Total persisted verification/provenance pairs | 1039 |
 | Jwynia Agent Skills selectively reviewed units | 54 |
