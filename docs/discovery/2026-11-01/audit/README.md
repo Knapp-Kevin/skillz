@@ -1,5 +1,7 @@
 # Cross-source exact file SHA audit: 29-source discovery archive
 
+**Latest cumulative result:** [46-source, 4,183-entrypoint audit](CUMULATIVE_46_SOURCES.md) verifies **4,155 distinct Git blobs** and **28 extra byte-identical occurrences** across six SHA batches. This document retains the original 29-source four-batch historical receipt below; the latest cumulative page supersedes its totals but does not rewrite its original evidence.
+
 **Audit date:** 2026-11-01. Passive Git object comparison only. No upstream code, scans, CI, external service, execution or installations.
 
 ## Scope and method
