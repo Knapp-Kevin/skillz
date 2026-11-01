@@ -4041,5 +4041,49 @@
       "registered_sources": 25,
       "pinned_corpora": 12
     }
+  },
+  "github_awesome_copilot_cross_domain_four_static_vetting_20261101": {
+    "date": "2026-11-01",
+    "source_id": "github-awesome-copilot",
+    "source_revision": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "scope": "four individually reviewed complete pinned packages (13 total files: 4 SKILL.md + 9 bundled references); candidate source vetting only",
+    "package_names": [
+      "agentic-eval",
+      "memory-merger",
+      "ai-team-orchestration",
+      "security-review"
+    ],
+    "rubric_scores_out_of_20": [
+      9,
+      12,
+      12,
+      11
+    ],
+    "terminal_reference_only": 0,
+    "terminal_rejected_unchanged": 4,
+    "source_direct_shape_terminal_before": 10,
+    "source_direct_shape_terminal_after": 14,
+    "source_direct_shape_total": 415,
+    "source_direct_shape_pending_after": 401,
+    "source_raw_skill_paths": 432,
+    "grade_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+    "source_license": "MIT root text at pinned source, package-local terms not detected in inspected package trees",
+    "admitted_denominator_delta": 0,
+    "new_governed_review_pairs": 0,
+    "security_scans_executed": 0,
+    "behavioral_validations_executed": 0,
+    "reason": "Insufficient authority/privacy/error gates, missing host definitions or stale advisory evidence; useful methods retained as reference-only prior art."
+  },
+  "existing_semantic_grade_architecture_tranche_20261101": {
+    "date": "2026-11-01",
+    "source_neutral": true,
+    "grade_records_transcribed": 12,
+    "verification_companion_basis": "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json",
+    "verified": 6,
+    "rejected": 6,
+    "new_semantic_scores_awarded": 0,
+    "new_governed_exact_version_review_pairs": 0,
+    "capability_index_reference": "registry/capability-directory.json",
+    "scope_note": "Existing per-skill exact-version static grades surfaced in architecture; rejected hard fails override numeric rubric. No security scans or behavioral tests."
   }
 }
