@@ -3936,5 +3936,17 @@
       "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json"
     ],
     "interpretation": "This establishes 4,813 raw paths in a bounded discovery frontier, NOT 4,813 eligible, reviewed, unique, licensed or security-qualified skills."
+  },
+  "j4flmao_persona_ten_static_candidate_vetting_20261101": {
+    "source_id": "j4flmao-agent-skills",
+    "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "single_file_exact_package_static_reviews": 10,
+    "reference_only": 6,
+    "rejected_unchanged": 4,
+    "record": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json",
+    "governed_semantic_review_pairs_added": 0,
+    "source_admissions": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false
   }
 }
