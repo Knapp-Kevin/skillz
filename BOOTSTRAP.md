@@ -18,7 +18,7 @@ The repository's own `skills/` directory is maintained corpus material, not the 
 
 ## First contact: determine value before suggesting installation
 
-If the user provides only the repository link or says “take a look,” use [agent value discovery](docs/agent-value-discovery.md). Explain what the indexed library could help the agent accomplish, then match **observed, legitimately available** user routines and difficulties to likely capability areas when context is already in scope. Add an adjacent opportunity as a labeled hypothesis rather than assuming every interesting package is useful. If no authorized history is available, give a useful general orientation and acknowledge that personalized recommendations would need relevant user context. Do not automatically mine private conversations, collect accounts, install skills, or create a fitted system on this vague request.
+If the user provides only the repository link or says “take a look,” use [agent value discovery](docs/agent-value-discovery.md). **Consult the consuming agent's own available memory and relevant prior user requests using normal host facilities.** Identify repeated work, corrections, friction and durable needs, then compare them to capability areas, including one evidence-labeled adjacent opportunity. The passive repository does not run or store the memory evaluation, but it should explicitly invite the host to perform it. The user need not repeat history that the host can legitimately access. If memory/history is unavailable, mark personalized hypotheses provisional. Do not automatically access unrelated external accounts, install skills, or create a fitted system on this vague request.
 
 ## First visit: build a fitted system when requested
 
