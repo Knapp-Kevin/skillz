@@ -2145,6 +2145,19 @@
     },
     "source_reconciliation_ledger": "registry/corpus-source-reconciliation.json",
     "success_definition": "Snapshot-specific: complete identity enumeration plus individual evidence-backed terminal review states; ecosystem-wide: breadth, freshness, capability access, legal/operational usability, discovery backlog and new-intake throughput; no fixed all-time skill count",
-    "consumer_contract": "docs/consumer-discovery-and-installation.md"
+    "consumer_contract": "docs/consumer-discovery-and-installation.md",
+    "registered_source_identities_observed": 25,
+    "discovery_scope_note": "Four current discovery-only source snapshots list 4813 raw SKILL.md paths, 4537 direct-shape; not a deduplicated eligible package denominator, not a fixed volume target"
+  },
+  "discovery_manifests": {
+    "entry": "registry/discovery/dynamic-four-source-frontier-20261101.json",
+    "role": "additional discovery-only exact-pinned path/shape listings; NOT capability-verified or eligible for unchanged use",
+    "raw_skill_md_paths_in_observed_four_source_scope": 4813,
+    "direct_shape_candidates_in_scope": 4537,
+    "scope": "Four pinned dynamic-discovery sources, not an all-time target or reviewed/eligible denominator",
+    "cross_source_exact_blob_matches": 0,
+    "semantic_duplicate_review": "not-assessed",
+    "path_lookup_procedure": "Read the source manifest from entry.sources[].manifest; for chunked indexes follow parts[]; compare capability terms, inspect exact upstream package, provenance, rights, authority, and qualification independently",
+    "reviewed_record_count_is_not_discovery_count": true
   }
 }
