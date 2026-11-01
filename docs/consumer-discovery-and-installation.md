@@ -34,6 +34,14 @@ The possible results are `USE EXISTING`, `ADOPT`, `ADAPT`, `EXTRACT`, `COMPOSE`,
 
 **Security is not licensing.** A legally distributable package can have unsafe side effects. A statically `verified` skill is not necessarily security-approved or behaviorally validated. Screen dependency installation, network egress, credentials, access to private data, shell or subprocess execution, paid APIs, destructive writes, persistent memory, and scheduler or autonomous behavior. Host capability is not user authorization.
 
+### Follow-up execution contract
+
+**Carry forward the previously completed stage.** If a user merely asks to repeat an orientation, stay in orientation. If the user requests `EXPLORE`, inspect the previously named candidates **as a set** and finish a per-candidate read-only decision. Once the agent recommends `ADAPT` and the user subsequently asks to **proceed with implementation**, do not require the user to choose those same adaptations again. Produce each selected fully specified adaptation, run a bounded semantic review and return an artifact plus an explicit host handoff state. Keep `NO CHANGE` candidates unchanged.
+
+`EXPLORE` itself does **not** authorize installation or creation. “Take action” authorizes the **clearly referenced work product** when the current exchange establishes it, but does not silently authorize persistent writes, account access, egress, credentials, publication, background activity or an install destination. If the host has no authorized write/install surface, provide complete copyable or downloadable portable skills instead of stopping at a plan. Ask a question only if a missing fact materially changes the deliverable or risks an unauthorized side effect.
+
+**Fast first-party security lookup:** [`registry/security/first-party-package-lookup.json`](../registry/security/first-party-package-lookup.json) maps each of 44 first-party skill names to historical baseline and candidate security states and package-tree matches. Check the current exact tree against the indexed tree (or source evidence) before using the historical state; do not transfer a different-tree candidate pass. The baseline has 23 matching passes, 20 incomplete and one failed at the recorded snapshot. This lookup is **not a scanner run, behavioral proof, license check or installation permit**. For external skills use their actual package-security evidence; never infer a pass from semantic verification alone.
+
 ## From selection to actual user skill
 
 For `FIRST_VISIT` and `RETURNING_USER`, continue through [`skill-bootstrap`](../engine/skills/skill-bootstrap/SKILL.md), which must produce the finished artifact, not merely a list of recommendations. The `DIRECT_LIBRARY` route may stop at comparison or proceed to user-authorized installation of a named, eligible package.
