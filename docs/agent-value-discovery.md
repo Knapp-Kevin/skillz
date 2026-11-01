@@ -81,6 +81,14 @@ Use three evidence levels: `OBSERVED` (actual relevant repeated artifacts/reques
 4. Choose the smallest coherent solution: keep native behavior, adapt a licensed skill, combine safe mechanisms, author an independently expressed skill, or use a checklist/dynamic response. The **skill-bootstrap procedure** guides generation for the user's own environment; repository-bound `skill-forge` is only for explicit library maintenance.
 5. For an orientation-only brief, the result is **a candidate opportunity**, not an approved install. A deeper build/install request triggers the rights, security, authority and post-install checks in the [consumer contract](consumer-discovery-and-installation.md).
 
+## Follow-up behavior, without confirmation loops
+
+The first-link value brief is a completed stage. A later request to **repeat orientation** stays on `REPOSITORY_ORIENTATION`, produces an updated brief, and does not automatically elevate permissions or begin installation. A later **`EXPLORE`** request means read-only inspection of the nominated candidate set and an evidence-backed per-candidate decision; it does **not** mean another request to pick one.
+
+If an agent has already inspected the candidates, selected `ADAPT` for two and `NO CHANGE` for one, and the user now directs it to **apply those decisions or take action**, proceed to [skill-bootstrap S7–S11](../engine/skills/skill-bootstrap/SKILL.md). Complete the **two adaptation artifacts**, preserve the third unchanged, and report the actual installation state. Do not ask “Which adaptations do you want?” when those choices are already the operative decisions and no material ambiguity remains.
+
+**Important authority distinction:** drafting a complete portable skill package is not installing, writing into persistent user memory, sending data or modifying the user's accounts. If target-host write authorization is missing, deliver the package in a portable handoff and label it `NOT INSTALLED` or `READY TO UPLOAD`. Only a specific, authorized side effect permits an actual install. Do not post user-facing evaluation transcripts or UX feedback into `skillz` by default.
+
 ## Default orientation output
 
 Keep the ordinary first response brief enough to act on, and adapt to available evidence rather than filling every field:
