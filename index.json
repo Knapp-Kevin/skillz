@@ -2776,26 +2776,20 @@
       "google_drive": 5,
       "dropbox": 6,
       "remotion": 12,
-      "build_web_data_visualization": 9
+      "build_web_data_visualization": 18
     },
-    "terminal_candidate_decisions": 160,
-    "reference_only": 67,
-    "rejected_unchanged": 93,
+    "terminal_candidate_decisions": 169,
+    "reference_only": 74,
+    "rejected_unchanged": 95,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
     "behavioral_validation_executed": false,
     "candidate_families_in_scope": 22,
-    "fully_completed_families": 21,
-    "partial_families": {
-      "build_web_data_visualization": {
-        "decided": 9,
-        "denominator": 18,
-        "remaining": 9
-      }
-    },
+    "fully_completed_families": 22,
+    "partial_families": {},
     "finite_candidate_denominator": 169,
-    "known_remaining_candidate_gaps": 9
+    "known_remaining_candidate_gaps": 0
   },
   "openai_figma_twelve_candidate_vetting": {
     "date": "2026-11-01",
@@ -3751,5 +3745,124 @@
       "pinned_corpora": 12
     },
     "receipt": "docs/reviews/2026-11-01-openai-web-data-visualization-nine-candidate-vetting.md"
+  },
+  "openai_web_data_visualization_final_nine_candidate_vetting": {
+    "date": "2026-11-01",
+    "issue": 598,
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugin": "build-web-data-visualization",
+    "plugin_version": "0.1.21",
+    "first_class_candidate_denominator": 18,
+    "previous_terminal_candidate_decisions": 9,
+    "new_terminal_candidate_decisions": 9,
+    "family_terminal_candidate_decisions": 18,
+    "family_reference_only": 13,
+    "family_rejected_unchanged": 5,
+    "new_reference_only": 7,
+    "new_rejected_unchanged": 2,
+    "complete_package_trees_independently_reestablished": false,
+    "skill_path_freshness_independently_reestablished": false,
+    "redistribution_terms": "NOASSERTION; plugin MIT manifest label without controlling grant",
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "source_admissions": 0,
+    "new_governed_pairs": 0,
+    "admitted_source_denominator_delta": 0,
+    "scope_note": "22 scoped plugin families only; not all 536 raw OpenAI Plugins SKILL.md paths or distinct internet-wide skills",
+    "candidate_records": [
+      {
+        "name": "react-and-nextjs-data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/react-and-nextjs-data-visualization/SKILL.md",
+        "skill_blob": "9fb78c4f7e17e82259e8ac3e234778b11f3aa14f",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 14,
+        "decision": "REJECT unchanged",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "reports-pdfs-and-slide-automation",
+        "canonical_path": "plugins/build-web-data-visualization/skills/reports-pdfs-and-slide-automation/SKILL.md",
+        "skill_blob": "cb3d3753fa0f5afd2ddf019232b49a36fbd63b50",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 14,
+        "decision": "REJECT unchanged",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "scrollytelling-and-parallax-data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/scrollytelling-and-parallax-data-visualization/SKILL.md",
+        "skill_blob": "3d861c961dd48ef0ca8ff3334b72b1f19ae855e9",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "statistical-and-uncertainty-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/statistical-and-uncertainty-visualization/SKILL.md",
+        "skill_blob": "4370b0a0be83ea92be56f260c23888065155f686",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 18,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "testing-data-visualizations",
+        "canonical_path": "plugins/build-web-data-visualization/skills/testing-data-visualizations/SKILL.md",
+        "skill_blob": "6804377cb3951d990730fe1858db869743fec582",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "threejs-data-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/threejs-data-visualization/SKILL.md",
+        "skill_blob": "c3dcf7f190beb323c6b13bed2b28de29c4f25a56",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "typescript-data-visualization-engineering",
+        "canonical_path": "plugins/build-web-data-visualization/skills/typescript-data-visualization-engineering/SKILL.md",
+        "skill_blob": "6eab264f8506e58f157d5457812914de159ad23e",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 16,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "uml-and-software-architecture-visualization",
+        "canonical_path": "plugins/build-web-data-visualization/skills/uml-and-software-architecture-visualization/SKILL.md",
+        "skill_blob": "cd9afdc6cf81cc9989dec65955e1b5c344ffca86",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 17,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      },
+      {
+        "name": "visualization-strategy-and-critique",
+        "canonical_path": "plugins/build-web-data-visualization/skills/visualization-strategy-and-critique/SKILL.md",
+        "skill_blob": "7ac5e20f09457bd6089b16512a895cd452815774",
+        "package_tree": "not independently established in this pass",
+        "candidate_score": 16,
+        "decision": "REFERENCE-ONLY",
+        "security_scan": "not-run",
+        "behavioral_validation": "not-run"
+      }
+    ],
+    "receipt": "docs/reviews/2026-11-01-openai-web-data-visualization-final-nine-candidate-vetting.md"
   }
 }
