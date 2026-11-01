@@ -1,0 +1,1922 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-01",
+  "navigation_root": "capability-domains",
+  "description": "Passive capability-first discovery directory. Proposed domain/subdomain targets are not skill qualifications or evidence of absent skills.",
+  "canonical_source": "docs/capability-discovery-matrix.md",
+  "source_metadata_lookup": "registry/sources.yaml",
+  "third_party_skill_evidence": [
+    "registry/skills/",
+    "registry/verification/"
+  ],
+  "first_party_evidence": "registry/local-verification.json",
+  "governed_identity_denominator": 1039,
+  "third_party_identity_denominator": 995,
+  "identity_level_capability_links_verified": 0,
+  "domains": [
+    {
+      "id": "software-engineering",
+      "name": "Software engineering",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "frontend",
+          "name": "frontend",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "backend",
+          "name": "backend",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "mobile",
+          "name": "mobile",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "desktop",
+          "name": "desktop",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "apis",
+          "name": "APIs",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "architecture",
+          "name": "architecture",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "refactoring",
+          "name": "refactoring",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "build-tooling",
+          "name": "build tooling",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "developer-experience",
+          "name": "developer experience",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "maintenance",
+          "name": "maintenance",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "unit-integration",
+          "name": "unit/integration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "end-to-end",
+          "name": "end-to-end",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "performance",
+          "name": "performance",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "accessibility",
+          "name": "accessibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "compatibility",
+          "name": "compatibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "fuzz-property-testing",
+          "name": "fuzz/property testing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "regression",
+          "name": "regression",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "test-strategy",
+          "name": "test strategy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "agent-mcp-development",
+      "name": "Agent / MCP development",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "agent-architecture",
+          "name": "agent architecture",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "tool-design",
+          "name": "tool design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "mcp-clients-servers",
+          "name": "MCP clients/servers",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "orchestration",
+          "name": "orchestration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "permissions",
+          "name": "permissions",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "evaluation",
+          "name": "evaluation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "agent-observability",
+          "name": "agent observability",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "multi-agent-collaboration",
+          "name": "multi-agent collaboration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "cloud-devops",
+      "name": "Cloud / DevOps",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "cloud-architecture",
+          "name": "cloud architecture",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "infrastructure-as-code",
+          "name": "infrastructure as code",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "ci-cd",
+          "name": "CI/CD",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "containers",
+          "name": "containers",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "orchestration",
+          "name": "orchestration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "deployment",
+          "name": "deployment",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sre",
+          "name": "SRE",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "cost-optimization",
+          "name": "cost optimization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "application-security",
+          "name": "application security",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "identity-access",
+          "name": "identity/access",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "threat-modeling",
+          "name": "threat modeling",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "vulnerability-management",
+          "name": "vulnerability management",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "supply-chain",
+          "name": "supply chain",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "incident-response",
+          "name": "incident response",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "privacy-engineering",
+          "name": "privacy engineering",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "literature-review",
+          "name": "literature review",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "source-discovery",
+          "name": "source discovery",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "synthesis",
+          "name": "synthesis",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "systematic-review",
+          "name": "systematic review",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "fact-checking",
+          "name": "fact-checking",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "field-methods",
+          "name": "field methods",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "reproducibility",
+          "name": "reproducibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "planning",
+      "name": "Planning",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "strategic-planning",
+          "name": "strategic planning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "project-scheduling",
+          "name": "project scheduling",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "resource-allocation",
+          "name": "resource allocation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "roadmapping",
+          "name": "roadmapping",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "decision-frameworks",
+          "name": "decision frameworks",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "risk-planning",
+          "name": "risk planning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "positioning",
+          "name": "positioning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "branding",
+          "name": "branding",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "content",
+          "name": "content",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "seo",
+          "name": "SEO",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "paid-acquisition",
+          "name": "paid acquisition",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "growth",
+          "name": "growth",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "lifecycle",
+          "name": "lifecycle",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "attribution",
+          "name": "attribution",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "market-research",
+          "name": "market research",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "discovery",
+          "name": "discovery",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "requirements",
+          "name": "requirements",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "product-strategy",
+          "name": "product strategy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "prioritization",
+          "name": "prioritization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "experimentation",
+          "name": "experimentation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "product-analytics",
+          "name": "product analytics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "launch",
+          "name": "launch",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "lifecycle",
+          "name": "lifecycle",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "ux-ui",
+      "name": "UX / UI",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "user-research",
+          "name": "user research",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "interaction-design",
+          "name": "interaction design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "information-architecture",
+          "name": "information architecture",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "prototyping",
+          "name": "prototyping",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "accessibility",
+          "name": "accessibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "usability-testing",
+          "name": "usability testing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "design-systems",
+          "name": "design systems",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "visual-design",
+      "name": "Visual design",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "graphic-design",
+          "name": "graphic design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "typography",
+          "name": "typography",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "layout",
+          "name": "layout",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "color",
+          "name": "color",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "identity-systems",
+          "name": "identity systems",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "information-visualization",
+          "name": "information visualization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "motion-graphics",
+          "name": "motion graphics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "illustration",
+      "name": "Illustration",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "concept-art",
+          "name": "concept art",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "editorial",
+          "name": "editorial",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "scientific",
+          "name": "scientific",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "character-environment",
+          "name": "character/environment",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sequential-art",
+          "name": "sequential art",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "digital-traditional-media",
+          "name": "digital/traditional media",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "3d-cad-animation",
+      "name": "3D / CAD / animation",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "3d-modeling",
+          "name": "3D modeling",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sculpting",
+          "name": "sculpting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "rigging",
+          "name": "rigging",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "procedural-design",
+          "name": "procedural design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "cad",
+          "name": "CAD",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "simulation",
+          "name": "simulation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "rendering",
+          "name": "rendering",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "animation",
+          "name": "animation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "technical-drawing",
+          "name": "technical drawing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "game-design",
+      "name": "Game design",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "mechanics",
+          "name": "mechanics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "level-design",
+          "name": "level design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "systems-balancing",
+          "name": "systems balancing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "narrative-design",
+          "name": "narrative design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "economy",
+          "name": "economy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "playtesting",
+          "name": "playtesting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "accessibility",
+          "name": "accessibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "tabletop-games",
+          "name": "tabletop games",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "fiction-narrative-worldbuilding",
+      "name": "Fiction / narrative / worldbuilding",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "plotting",
+          "name": "plotting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "prose",
+          "name": "prose",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "editing",
+          "name": "editing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "character",
+          "name": "character",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "dialogue",
+          "name": "dialogue",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "setting-lore",
+          "name": "setting/lore",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "interactive-fiction",
+          "name": "interactive fiction",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "continuity",
+          "name": "continuity",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "technical-writing",
+      "name": "Technical writing",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "api-docs",
+          "name": "API docs",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "tutorials",
+          "name": "tutorials",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "reference-manuals",
+          "name": "reference manuals",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "architecture-records",
+          "name": "architecture records",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "release-notes",
+          "name": "release notes",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "documentation-ia",
+          "name": "documentation IA",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "localization",
+          "name": "localization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "music-composition",
+      "name": "Music composition",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "harmony",
+          "name": "harmony",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "melody",
+          "name": "melody",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "rhythm",
+          "name": "rhythm",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "orchestration",
+          "name": "orchestration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "arranging",
+          "name": "arranging",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "notation",
+          "name": "notation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "scoring",
+          "name": "scoring",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "electronic-composition",
+          "name": "electronic composition",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "audio-voice-sound",
+      "name": "Audio / voice / sound",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "recording",
+          "name": "recording",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "editing",
+          "name": "editing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "mixing",
+          "name": "mixing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "mastering",
+          "name": "mastering",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sound-design",
+          "name": "sound design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "speech-voice",
+          "name": "speech/voice",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "acoustics",
+          "name": "acoustics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "accessibility",
+          "name": "accessibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "video-film",
+      "name": "Video / film",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "screenwriting",
+          "name": "screenwriting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "preproduction",
+          "name": "preproduction",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "cinematography",
+          "name": "cinematography",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "lighting",
+          "name": "lighting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "editing",
+          "name": "editing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "color",
+          "name": "color",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "vfx",
+          "name": "VFX",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "captions",
+          "name": "captions",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "delivery",
+          "name": "delivery",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "interpersonal",
+          "name": "interpersonal",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "presentations",
+          "name": "presentations",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "facilitation",
+          "name": "facilitation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "negotiation",
+          "name": "negotiation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "conflict-resolution",
+          "name": "conflict resolution",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "public-speaking",
+          "name": "public speaking",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "organizational-communication",
+          "name": "organizational communication",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "descriptive-analytics",
+          "name": "descriptive analytics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "dashboards",
+          "name": "dashboards",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "experimentation",
+          "name": "experimentation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "causal-inference",
+          "name": "causal inference",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "forecasting",
+          "name": "forecasting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "visualization",
+          "name": "visualization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "measurement",
+          "name": "measurement",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "time-productivity",
+      "name": "Time / productivity",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "personal-planning",
+          "name": "personal planning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "task-systems",
+          "name": "task systems",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "focus",
+          "name": "focus",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "habit-formation",
+          "name": "habit formation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "scheduling",
+          "name": "scheduling",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "workload",
+          "name": "workload",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "collaboration",
+          "name": "collaboration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "memory-context",
+      "name": "Memory / context",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "retrieval",
+          "name": "retrieval",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "summarization",
+          "name": "summarization",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "long-term-memory",
+          "name": "long-term memory",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "provenance",
+          "name": "provenance",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "context-compression",
+          "name": "context compression",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "privacy",
+          "name": "privacy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "forgetting",
+          "name": "forgetting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "business-models",
+          "name": "business models",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "strategy",
+          "name": "strategy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "operations",
+          "name": "operations",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "governance",
+          "name": "governance",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "risk",
+          "name": "risk",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "organizational-design",
+          "name": "organizational design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "procurement",
+          "name": "procurement",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "prospecting",
+          "name": "prospecting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "qualification",
+          "name": "qualification",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "pipeline",
+          "name": "pipeline",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "account-management",
+          "name": "account management",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "proposals",
+          "name": "proposals",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "negotiation",
+          "name": "negotiation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sales-operations",
+          "name": "sales operations",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "career",
+      "name": "Career",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "job-search",
+          "name": "job search",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "portfolios",
+          "name": "portfolios",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "interviews",
+          "name": "interviews",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "professional-development",
+          "name": "professional development",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "networking",
+          "name": "networking",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "compensation",
+          "name": "compensation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "career-transitions",
+          "name": "career transitions",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "subject-instruction",
+          "name": "subject instruction",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "tutoring",
+          "name": "tutoring",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "assessment",
+          "name": "assessment",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "curriculum",
+          "name": "curriculum",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "accessibility",
+          "name": "accessibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "classroom-management",
+          "name": "classroom management",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "learning-technology",
+          "name": "learning technology",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "experimental-design",
+          "name": "experimental design",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "laboratory-methods",
+          "name": "laboratory methods",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "physics",
+          "name": "physics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "chemistry",
+          "name": "chemistry",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "earth-sciences",
+          "name": "earth sciences",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "reproducibility",
+          "name": "reproducibility",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "scientific-communication",
+          "name": "scientific communication",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "clinical-information-literacy",
+          "name": "clinical information literacy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "specialties",
+          "name": "specialties",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "diagnostics",
+          "name": "diagnostics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "therapeutics",
+          "name": "therapeutics",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "patient-communication",
+          "name": "patient communication",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "clinical-workflows",
+          "name": "clinical workflows",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "evidence-appraisal",
+          "name": "evidence appraisal",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "legal-research",
+          "name": "legal research",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "contracts",
+          "name": "contracts",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "litigation-support",
+          "name": "litigation support",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "legislation",
+          "name": "legislation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "regulatory-analysis",
+          "name": "regulatory analysis",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "legal-drafting",
+          "name": "legal drafting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "jurisdictional-comparison",
+          "name": "jurisdictional comparison",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "financial-planning",
+          "name": "financial planning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "corporate-finance",
+          "name": "corporate finance",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "investments",
+          "name": "investments",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "risk",
+          "name": "risk",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "valuation",
+          "name": "valuation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "budgeting",
+          "name": "budgeting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "reporting",
+          "name": "reporting",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "financial-literacy",
+          "name": "financial literacy",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    },
+    {
+      "id": "robotics-iot",
+      "name": "Robotics / IoT",
+      "classification": "proposed",
+      "subdomains": [
+        {
+          "id": "perception",
+          "name": "perception",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "control",
+          "name": "control",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "motion-planning",
+          "name": "motion planning",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "embedded-integration",
+          "name": "embedded integration",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "sensing",
+          "name": "sensing",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "industrial-automation",
+          "name": "industrial automation",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        },
+        {
+          "id": "safety",
+          "name": "safety",
+          "capabilities": [],
+          "matched_skill_ids": [],
+          "coverage_status": "unassessed"
+        }
+      ]
+    }
+  ]
+}
