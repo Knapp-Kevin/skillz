@@ -3,6 +3,913 @@
   "snapshot_date": "2026-11-01",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
+  "reading_route": [
+    "docs/agent-value-discovery.md",
+    "docs/capability-quickstart.md",
+    "browse_overview (this JSON)",
+    "domains[].subdomains[]",
+    "registry/governed-review-name-index.json",
+    "registry/discovery/dynamic-four-source-frontier-20261101.json"
+  ],
+  "browse_overview_legend": "Evidence preview links to existing exact-version static review records, including possible rejects. Name-only preview is a lexical hint from review file names, not a verified capability fit, license/security approval or install recommendation. Every domain is only partially indexed; emptiness means unknown coverage.",
+  "browse_overview": [
+    {
+      "domain": "software-engineering",
+      "display_name": "Software engineering",
+      "linked_reviewed_examples": 10,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 34,
+      "evidence_preview": [
+        {
+          "id": "vercel-agent-skills/vercel-composition-patterns",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "software-engineering/frontend",
+          "capability_example": "Review React component composition patterns within a pinned static reference"
+        },
+        {
+          "id": "mattpocock-skills/codebase-design",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "software-engineering/architecture",
+          "capability_example": "Evaluate codebase architecture and design tradeoffs"
+        },
+        {
+          "id": "addyosmani-agent-skills/code-review-and-quality",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "software-engineering/maintenance",
+          "capability_example": "Compare code against standards and specification evidence"
+        },
+        {
+          "id": "mattpocock-skills/code-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "software-engineering/maintenance",
+          "capability_example": "Compare code against standards and specification evidence"
+        }
+      ],
+      "name_only_preview": [
+        "addyosmani-agent-skills/frontend-ui-engineering",
+        "anthropic-skills/frontend-design",
+        "bm629-agent-skills/motion-react"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Software engineering capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "testing",
+      "display_name": "Testing",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 11,
+      "evidence_preview": [
+        {
+          "id": "addyosmani-agent-skills/browser-testing-with-devtools",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "testing/end-to-end",
+          "capability_example": "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects"
+        }
+      ],
+      "name_only_preview": [
+        "addyosmani-agent-skills/test-driven-development",
+        "archieindian-superpowers/test-driven-development",
+        "mattpocock-skills/tdd"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Testing capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "agent-mcp-development",
+      "display_name": "Agent / MCP development",
+      "linked_reviewed_examples": 6,
+      "subdomains_with_linked_examples": 4,
+      "name_only_candidate_count": 17,
+      "evidence_preview": [
+        {
+          "id": "local-skills/mcp-pulse",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "agent-mcp-development/mcp-clients-servers",
+          "capability_example": "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
+        },
+        {
+          "id": "local-skills/mcp-vetting",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "agent-mcp-development/permissions",
+          "capability_example": "Inspect MCP integrations and agent access permissions before connection"
+        },
+        {
+          "id": "local-skills/permissions-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "agent-mcp-development/permissions",
+          "capability_example": "Inspect MCP integrations and agent access permissions before connection"
+        },
+        {
+          "id": "local-skills/agent-postmortem",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "agent-mcp-development/evaluation",
+          "capability_example": "Reference evaluation methods; default external LLM judge/trace egress not approved"
+        }
+      ],
+      "name_only_preview": [
+        "aws-agent-toolkit/agents-build",
+        "david-ondrej-skills/agentic-productivity-setup",
+        "microsoft-skills/agent-framework-azure-ai-py"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Agent / MCP development capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "cloud-devops",
+      "display_name": "Cloud / DevOps",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 28,
+      "evidence_preview": [
+        {
+          "id": "microsoft-skills/azure-ai",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "cloud-devops/cloud-architecture",
+          "capability_example": "Azure AI service integration architecture"
+        }
+      ],
+      "name_only_preview": [
+        "aws-agent-toolkit/aws-cdk",
+        "microsoft-azure-skills/azure-compute",
+        "microsoft-skills/azure-compute"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Cloud / DevOps capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "security",
+      "display_name": "Security",
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 8,
+      "evidence_preview": [
+        {
+          "id": "local-skills/permissions-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "security/identity-access",
+          "capability_example": "Review permissions and least-privilege exposure without accessing secret values"
+        },
+        {
+          "id": "local-skills/agent-home-doctor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "security/vulnerability-management",
+          "capability_example": "Plan safety-aware repository hygiene; not a vulnerability scanner"
+        },
+        {
+          "id": "local-skills/mcp-vetting",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "security/supply-chain",
+          "capability_example": "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
+        }
+      ],
+      "name_only_preview": [
+        "addyosmani-agent-skills/security-and-hardening",
+        "microsoft-azure-skills/azure-rbac",
+        "microsoft-skills/azure-identity-dotnet"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Security capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "research",
+      "display_name": "Research",
+      "linked_reviewed_examples": 21,
+      "subdomains_with_linked_examples": 4,
+      "name_only_candidate_count": 11,
+      "evidence_preview": [
+        {
+          "id": "local-skills/paper-digest",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "research/literature-review",
+          "capability_example": "Appraise papers and replication evidence; not a complete systematic review"
+        },
+        {
+          "id": "local-skills/claude-pulse",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "research/source-discovery",
+          "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
+        },
+        {
+          "id": "local-skills/deep-dive",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "research/source-discovery",
+          "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
+        },
+        {
+          "id": "local-skills/deepseek-pulse",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "research/source-discovery",
+          "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-knowledge-work-plugins/account-research",
+        "bm629-agent-skills/project-document-discovery",
+        "cline-skills/exa-search"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Research capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "planning",
+      "display_name": "Planning",
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 8,
+      "evidence_preview": [
+        {
+          "id": "local-skills/brief-writer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "planning/decision-frameworks",
+          "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
+        },
+        {
+          "id": "local-skills/compare",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "planning/decision-frameworks",
+          "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
+        },
+        {
+          "id": "local-skills/decision-log",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "planning/decision-frameworks",
+          "capability_example": "Compare options, frame decisions, and record outcomes with explicit authority"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-knowledge-work-plugins/roadmap-update",
+        "anthropic-knowledge-work-plugins/search-strategy",
+        "addyosmani-agent-skills/planning-and-task-breakdown"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Planning capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "marketing",
+      "display_name": "Marketing",
+      "linked_reviewed_examples": 4,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 26,
+      "evidence_preview": [
+        {
+          "id": "corey-haines-marketing-skills/seo-audit",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "marketing/seo",
+          "capability_example": "read-only SEO audit"
+        },
+        {
+          "id": "corey-haines-marketing-skills/schema",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "marketing/seo",
+          "capability_example": "read-only SEO audit"
+        },
+        {
+          "id": "corey-haines-marketing-skills/social",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "marketing/content",
+          "capability_example": "social media content planning"
+        },
+        {
+          "id": "corey-haines-marketing-skills/sms",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "marketing/lifecycle",
+          "capability_example": "SMS lifecycle communication"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-knowledge-work-plugins/brand-review",
+        "anthropic-skills/brand-guidelines",
+        "anthropic-knowledge-work-plugins/content-creation"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Marketing capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "product",
+      "display_name": "Product",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 14,
+      "evidence_preview": [
+        {
+          "id": "bm629-agent-skills/authoring-prd",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "product/requirements",
+          "capability_example": "Draft a problem-first product requirements document with non-goals and acceptance measures"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-knowledge-work-plugins/customer-research",
+        "cole-medin-skills/opportunity-scan",
+        "corey-haines-marketing-skills/customer-research"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Product capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "ux-ui",
+      "display_name": "UX / UI",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 12,
+      "evidence_preview": [
+        {
+          "id": "corey-haines-marketing-skills/site-architecture",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "ux-ui/information-architecture",
+          "capability_example": "website information architecture"
+        },
+        {
+          "id": "corey-haines-marketing-skills/signup",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "ux-ui/interaction-design",
+          "capability_example": "signup flow design"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-knowledge-work-plugins/customer-research",
+        "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+        "corey-haines-marketing-skills/customer-research"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "UX / UI capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "visual-design",
+      "display_name": "Visual design",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 7,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "anthropic-skills/canvas-design",
+        "anthropic-skills/theme-factory",
+        "openhands-extensions/theme-factory"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Visual design capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "illustration",
+      "display_name": "Illustration",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 4,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "anthropic-skills/algorithmic-art",
+        "jwynia-agent-skills/oblique-worldbuilding",
+        "jwynia-agent-skills/systemic-worldbuilding"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Illustration capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "3d-cad-animation",
+      "display_name": "3D / CAD / animation",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 1,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "bm629-agent-skills/motion-react"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "3D / CAD / animation capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "game-design",
+      "display_name": "Game design",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 2,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "jwynia-agent-skills/game-facilitator",
+        "jwynia-agent-skills/interactive-fiction"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Game design capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "fiction-narrative-worldbuilding",
+      "display_name": "Fiction / narrative / worldbuilding",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 23,
+      "evidence_preview": [
+        {
+          "id": "danjdewhurst-story-skills/plot-structure",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "fiction-narrative-worldbuilding/plotting",
+          "capability_example": "Plan and analyze story plot structure"
+        },
+        {
+          "id": "jwynia-agent-skills/worldbuilding",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "fiction-narrative-worldbuilding/setting-lore",
+          "capability_example": "Diagnose a fictional setting's cultures, systems, and internal consequences"
+        }
+      ],
+      "name_only_preview": [
+        "danjdewhurst-story-skills/premise-workshop",
+        "danjdewhurst-story-skills/chapter-writing",
+        "jwynia-agent-skills/drafting"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Fiction / narrative / worldbuilding capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "technical-writing",
+      "display_name": "Technical writing",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 23,
+      "evidence_preview": [
+        {
+          "id": "bm629-agent-skills/authoring-api-reference",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "technical-writing/api-docs",
+          "capability_example": "Author an API reference traceable to a supplied contract"
+        }
+      ],
+      "name_only_preview": [
+        "bm629-agent-skills/authoring-api-spec",
+        "bm629-agent-skills/authoring-developer-guide",
+        "bm629-agent-skills/reviewing-api-reference"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Technical writing capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "music-composition",
+      "display_name": "Music composition",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [],
+      "name_only_preview": [],
+      "coverage": "partial unassessed",
+      "search_hint": "Music composition capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "audio-voice-sound",
+      "display_name": "Audio / voice / sound",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 2,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "microsoft-skills/azure-ai-transcription-py",
+        "microsoft-skills/azure-speech-to-text-rest-py"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Audio / voice / sound capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "video-film",
+      "display_name": "Video / film",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [
+        {
+          "id": "corey-haines-marketing-skills/video",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "video-film/preproduction",
+          "capability_example": "marketing video planning"
+        }
+      ],
+      "name_only_preview": [],
+      "coverage": "partial evidence-linked",
+      "search_hint": "Video / film capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "communication",
+      "display_name": "Communication",
+      "linked_reviewed_examples": 5,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 8,
+      "evidence_preview": [
+        {
+          "id": "local-skills/deck-outline",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "communication/presentations",
+          "capability_example": "Outline a coherent slide narrative before slide production"
+        },
+        {
+          "id": "local-skills/brief-writer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "communication/organizational-communication",
+          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
+        },
+        {
+          "id": "local-skills/devlog-draft",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "communication/organizational-communication",
+          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
+        },
+        {
+          "id": "local-skills/handoff-writer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "communication/organizational-communication",
+          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
+        }
+      ],
+      "name_only_preview": [
+        "anthropic-skills/pptx",
+        "anthropic-knowledge-work-plugins/meeting-briefing",
+        "anthropic-skills/internal-comms"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Communication capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "analytics",
+      "display_name": "Analytics",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
+      "name_only_candidate_count": 6,
+      "evidence_preview": [
+        {
+          "id": "anthropic-knowledge-work-plugins/build-dashboard",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "analytics/dashboards",
+          "capability_example": "Reference dashboard workflows; unchanged output may leak private data and use CDN code"
+        }
+      ],
+      "name_only_preview": [
+        "cline-skills/data-analyst",
+        "corey-haines-marketing-skills/analytics",
+        "anthropic-knowledge-work-plugins/data-visualization"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Analytics capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "time-productivity",
+      "display_name": "Time / productivity",
+      "linked_reviewed_examples": 5,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 16,
+      "evidence_preview": [
+        {
+          "id": "local-skills/daily-briefing",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "time-productivity/personal-planning",
+          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
+        },
+        {
+          "id": "local-skills/learning-plan",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "time-productivity/personal-planning",
+          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
+        },
+        {
+          "id": "local-skills/week-in-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "time-productivity/personal-planning",
+          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
+        },
+        {
+          "id": "local-skills/inbox-triage",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "time-productivity/task-systems",
+          "capability_example": "Triage incoming tasks and coordinate approved task pointers"
+        }
+      ],
+      "name_only_preview": [
+        "addyosmani-agent-skills/planning-and-task-breakdown",
+        "anthropic-knowledge-work-plugins/sprint-planning",
+        "archieindian-superpowers/daily-review"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Time / productivity capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "memory-context",
+      "display_name": "Memory / context",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 12,
+      "evidence_preview": [
+        {
+          "id": "local-skills/session-continuity",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "memory-context/retrieval",
+          "capability_example": "Recover relevant prior-session decisions with provenance and freshness checks"
+        },
+        {
+          "id": "archieindian-superpowers/context-window-management",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "memory-context/context-compression",
+          "capability_example": "Reference context-budget techniques; autonomous writes/restarts are not approved"
+        }
+      ],
+      "name_only_preview": [
+        "archieindian-superpowers/context-assembly-scorer",
+        "archieindian-superpowers/dag-recall",
+        "anthropic-knowledge-work-plugins/call-summary"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Memory / context capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "business",
+      "display_name": "Business",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 7,
+      "evidence_preview": [
+        {
+          "id": "local-skills/smallbiz-ops",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "business/operations",
+          "capability_example": "Monitor bounded small-business operating questions without autonomous changes"
+        },
+        {
+          "id": "local-skills/governance-pulse",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "business/governance",
+          "capability_example": "Monitor governance changes and distinguish binding policy from noise"
+        }
+      ],
+      "name_only_preview": [
+        "corey-haines-marketing-skills/content-strategy",
+        "anthropic-knowledge-work-plugins/audit-support",
+        "cole-medin-skills/second-brain-audit"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Business capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "sales",
+      "display_name": "Sales",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 5,
+      "evidence_preview": [
+        {
+          "id": "corey-haines-marketing-skills/sales-enablement",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "sales/proposals",
+          "capability_example": "sales enablement collateral"
+        },
+        {
+          "id": "corey-haines-marketing-skills/revops",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "source_class": "third-party",
+          "path": "sales/sales-operations",
+          "capability_example": "revenue operations"
+        }
+      ],
+      "name_only_preview": [
+        "cline-skills/vibe-prospecting",
+        "corey-haines-marketing-skills/cold-email",
+        "corey-haines-marketing-skills/prospecting"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Sales capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "career",
+      "display_name": "Career",
+      "linked_reviewed_examples": 2,
+      "subdomains_with_linked_examples": 3,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [
+        {
+          "id": "local-skills/career-radar",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "career/job-search",
+          "capability_example": "Research current career-market opportunities; not automatic job applications"
+        },
+        {
+          "id": "local-skills/learning-plan",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "career/professional-development",
+          "capability_example": "Prepare a learning plan with measurable checkpoints"
+        }
+      ],
+      "name_only_preview": [],
+      "coverage": "partial evidence-linked",
+      "search_hint": "Career capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "education",
+      "display_name": "Education",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 4,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "anthropic-skills/academy-guide",
+        "david-ondrej-skills/teach",
+        "mattpocock-skills/teach"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Education capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "science",
+      "display_name": "Science",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [],
+      "name_only_preview": [],
+      "coverage": "partial unassessed",
+      "search_hint": "Science capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "medicine",
+      "display_name": "Medicine",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [],
+      "name_only_preview": [],
+      "coverage": "partial unassessed",
+      "search_hint": "Medicine capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "law",
+      "display_name": "Law",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 5,
+      "evidence_preview": [],
+      "name_only_preview": [
+        "cline-skills/attorney-assist",
+        "anthropic-knowledge-work-plugins/review-contract",
+        "anthropic-knowledge-work-plugins/compliance-check"
+      ],
+      "coverage": "partial name-only leads",
+      "search_hint": "Law capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "finance",
+      "display_name": "Finance",
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 2,
+      "name_only_candidate_count": 2,
+      "evidence_preview": [
+        {
+          "id": "local-skills/finance-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "source_class": "first-party",
+          "path": "finance/reporting",
+          "capability_example": "Review financial statements and trace conclusions to reported rows"
+        }
+      ],
+      "name_only_preview": [
+        "aws-agent-toolkit/aws-billing-and-cost-management",
+        "anthropic-knowledge-work-plugins/close-management"
+      ],
+      "coverage": "partial evidence-linked name-only leads",
+      "search_hint": "Finance capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    },
+    {
+      "domain": "robotics-iot",
+      "display_name": "Robotics / IoT",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [],
+      "name_only_preview": [],
+      "coverage": "partial unassessed",
+      "search_hint": "Robotics / IoT capability",
+      "not_found_means": "unknown; broaden to name index and discovery manifests"
+    }
+  ],
   "canonical_source": "docs/capability-discovery-matrix.md",
   "source_metadata_lookup": "registry/sources.yaml",
   "third_party_skill_evidence": [
@@ -5862,8 +6769,6 @@
   "first_party_identity_links_mapped": 44,
   "third_party_identity_links_mapped": 22,
   "unmapped_review_identity_count": 985,
-  "navigation_start": "docs/capability-quickstart.md",
-  "search_fallback_index": "registry/governed-review-name-index.json",
   "navigation_population": {
     "mapped_first_party_distinct": 44,
     "mapped_third_party_distinct": 22,
@@ -5878,7 +6783,7 @@
     "review_identity_source": "registry/governed-review-name-index.json",
     "index_count": 995,
     "subdomains_with_some_name_only_leads": 124,
-    "total_name_only_suggestions": 336,
+    "total_name_only_suggestions": 326,
     "not_an_eligibility_or_quality_claim": true,
     "warning": "Candidates are inferred from NAME TOKENS only; read per-ID verification, provenance, SKILL.md and license before recommending unchanged use; zero name hits does not mean the capability is absent.",
     "precision_note": "Name-only suggestions exclude known misleading matches (e.g. fiction identity vs IAM, context-token budgets vs finance, engineering pipelines vs sales). Other false positives may remain; all require source reading.",
