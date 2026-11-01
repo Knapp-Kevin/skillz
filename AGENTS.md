@@ -53,6 +53,8 @@ FIRST_VISIT and RETURNING_USER follow `skill-bootstrap`.
 
 Only `REPOSITORY_MAINTENANCE` may target repository files for mutation. Every other route treats the repository as read-only unless an explicit, separate maintainer instruction changes the route.
 
+**Follow-up execution:** Repeating “take a look” stays in `REPOSITORY_ORIENTATION`; it does not authorize deeper work by itself. A user-requested `EXPLORE` inspects the already identified candidates as a set and returns read-only decisions, without asking the user to select them again. When the user then says to **apply the decided `ADAPT` work**, build every selected adaptation for the user-host or a complete portable handoff and leave `NO CHANGE` candidates alone. Do not ask which already-selected candidate to adapt. New installation, persistent writes, account access or external disclosure remain separately authorization-bound. Testing conversations are not repo content without a separate explicit maintenance request. See [the consumer follow-up contract](docs/consumer-discovery-and-installation.md).
+
 ## Capability routing
 
 Never require local shell, Git, Node/Bun, writable filesystem, CI, materialized source corpora, repository scanners, or repository scripts for normal user work. During explicit `REPOSITORY_MAINTENANCE`, the external host may use its authorized tools to assess source material and commit passive evidence; this repository owns no scanners, scripts, tests, or CI workflows.
