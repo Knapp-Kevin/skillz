@@ -4,6 +4,10 @@
 
 This charter does not change the canonical first-party browse categories in `registry/categories.yaml`, controlled characterization tags in `registry/taxonomy.yaml`, source admission policy, or existing inventory counts. No skill is newly admitted or qualified by this document.
 
+## Agent value comes before catalog breadth
+
+When handed the repository link, an agent should first establish **what the library might improve for this user's actual work**. Follow [agent value discovery](agent-value-discovery.md) to distinguish grounded recurring tasks, evidence-supported quality gaps and provisional adjacent opportunities from unrequested skill installation. Discovery is capability-first and source-neutral, but user fit, existing skills, authorized context and host capabilities determine whether adding any skill is valuable. Do not use a large catalog count as a substitute for successful consumer orientation or recommend unfitted skills merely to consume the index.
+
 ## Product emphasis: the indexed ecosystem, not the first-party collection
 
 The primary product is a **discovery index of external and local skill resources across the broadest practical capability landscape**. First-party skills are one source family among many, never the homepage or coverage default merely because they are easiest to parse. Prioritize indexed sources, discovery-only leads, exact-version references, alternatives, domain breadth, and explicit gaps. Source provenance and qualification status are visible facets, not reasons to hide unassessed discoveries. An indexed lead is not an admitted, redistributable, or approved package.
