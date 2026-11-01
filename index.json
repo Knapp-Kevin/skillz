@@ -2744,11 +2744,13 @@
       "notion": 4,
       "circleci": 4,
       "build_ios_apps": 9,
-      "temporal": 4
+      "temporal": 4,
+      "adobe": 6,
+      "airtable": 3
     },
-    "terminal_candidate_decisions": 119,
-    "reference_only": 49,
-    "rejected_unchanged": 70,
+    "terminal_candidate_decisions": 128,
+    "reference_only": 51,
+    "rejected_unchanged": 77,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -3096,5 +3098,116 @@
     },
     "receipt": "docs/reviews/2026-11-01-openai-temporal-four-candidate-vetting.md",
     "issue": 582
+  },
+  "openai_adobe_airtable_nine_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "plugins": {
+      "adobe": {
+        "version": "8.0.0",
+        "manifest_blob": "31c776a3b832a1fc7de627a945987fc71ad540ac",
+        "skills_tree": "06b531cf86711972163a95964984ba2c45b06219",
+        "denominator": 6,
+        "reference_only": 0,
+        "rejected_unchanged": 6,
+        "license": "Apache-2.0 declared per skill; NOASSERTION for copying",
+        "path_last_change": "2026-08-27T20:29:11Z"
+      },
+      "airtable": {
+        "version": "6.0.1",
+        "manifest_blob": "d4fac3dfd88b24792d365fddb4661eec14f3702c",
+        "skills_tree": "82d719ffa6150b327a50ae851286f5c7df43cd90",
+        "denominator": 3,
+        "reference_only": 2,
+        "rejected_unchanged": 1,
+        "license": "MIT declared for filters/overview, none for cli; NOASSERTION for copying",
+        "path_last_change": "2026-05-28T03:57:12Z"
+      }
+    },
+    "candidate_records": [
+      {
+        "name": "adobe-batch-edit-photos",
+        "tree": "bba54e73e105a96555a7ad8ba207b5e6252ffe6d",
+        "skill_blob": "78cf17f3158b120fae967b8fd248cd227ec14a6e",
+        "decision": "REJECT unchanged",
+        "score": 14
+      },
+      {
+        "name": "adobe-create-mockups",
+        "tree": "ee836ce313ba56f96118c9400b07c75486be75d9",
+        "skill_blob": "2459e742e4e7e0c34140035f14b8d17dda9ad98c",
+        "decision": "REJECT unchanged",
+        "score": 14
+      },
+      {
+        "name": "adobe-create-social-variations",
+        "tree": "e7ec119917ed8d97e9a86925600fbd9614dd54af",
+        "skill_blob": "78bc3459ce3206953c8daf5b164c26aa3c6cee62",
+        "decision": "REJECT unchanged",
+        "score": 13
+      },
+      {
+        "name": "adobe-design-from-template",
+        "tree": "5c99ff1f508663bf25d7f5f6f3f15c70be3ea9b9",
+        "skill_blob": "cc52d936ba8330028f813f8a3368aa3b79a8d94a",
+        "decision": "REJECT unchanged",
+        "score": 14
+      },
+      {
+        "name": "adobe-edit-quick-cut",
+        "tree": "a6c89e59a76805a6fcd321ef5fc3b74dea51cb13",
+        "skill_blob": "f71032608c218b6c06b6ed10bcff5b2ef3adf61c",
+        "decision": "REJECT unchanged",
+        "score": 13
+      },
+      {
+        "name": "adobe-retouch-portraits",
+        "tree": "08f578416aa375dde38266717328bb8c6b28233c",
+        "skill_blob": "dfd980e857549db804f34a98930367d592b2206c",
+        "decision": "REJECT unchanged",
+        "score": 14
+      },
+      {
+        "name": "airtable-cli",
+        "tree": "7559233a461bf4e234cb295fbb23590a83028880",
+        "skill_blob": "18c640ed84b8ad18334d4d3770bb867017af38cf",
+        "decision": "REJECT unchanged",
+        "score": 12
+      },
+      {
+        "name": "airtable-filters",
+        "tree": "fb9b40bce3d37fd27eb34bba2a6d3b3c7bce91e7",
+        "skill_blob": "cbd085dd84e5167d5600fbf4cbcd1bc68fd6f131",
+        "decision": "REFERENCE-ONLY",
+        "score": 17
+      },
+      {
+        "name": "airtable-overview",
+        "tree": "932e1854ca5e1439bb8b39524db19fc05223f01c",
+        "skill_blob": "c8e70d1ef23338c7eb77faf3a52b4b920b05e377",
+        "decision": "REFERENCE-ONLY",
+        "score": 16
+      }
+    ],
+    "terminal_candidate_decisions": 9,
+    "reference_only": 2,
+    "rejected_unchanged": 7,
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-adobe-airtable-nine-candidate-vetting.md",
+    "issue": 584
   }
 }
