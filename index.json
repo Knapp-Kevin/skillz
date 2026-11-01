@@ -3,6 +3,32 @@
   "snapshot_date": "2026-11-01",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "freecad_four_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_repository": "sathyavikram/agent-plugins",
+    "source_revision": "d29084314aea78989ca08f3ddd2b23238b092eef",
+    "source_role": "discovered-only",
+    "source_license": "MIT",
+    "review_scope": "four FreeCAD skill packages, excluding two common skills",
+    "first_class_candidate_denominator": 4,
+    "terminal_candidate_decisions": 4,
+    "reference_only": 2,
+    "rejected_unchanged": 2,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "review_receipt": "docs/reviews/2026-11-01-freecad-four-candidate-vetting.md",
+    "issue": 591
+  },
   "openai_canva_eight_candidate_vetting": {
     "date": "2026-10-31",
     "source_id": "openai-plugins",
