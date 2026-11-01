@@ -2,13 +2,17 @@
 
 If you can read this repository, you can use `skillz` as a passive reference; access alone is not permission to install, execute, copy restricted third-party content, or change user/repository files.
 
-**Consumer path:** [discovery → rights/quality decisions → creation or authorized installation → truthful verification](docs/consumer-discovery-and-installation.md). Begin with capability requirements, not a fixed corpus size or source preference.
+**New to this repository?** For a link plus “take a look,” begin with [agent value discovery](docs/agent-value-discovery.md): determine whether the library would materially improve the user's workflows, using only relevant authorized context. Then, if requested, proceed through [discovery → rights/quality decisions → creation or authorized installation → truthful verification](docs/consumer-discovery-and-installation.md). Do not begin with an indiscriminate inventory dump or install.
 
 The normal user experience has **one canonical orchestrator**:
 
 [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md)
 
-Use that for first-visit and returning-user skill-system work. Do not choose among the other `engine/skills/` helpers during normal bootstrap; most of them are optional repository-maintenance procedures.
+Use that for explicitly requested first-visit and returning-user skill-system work. A generic “look at this repository” request takes the lighter repository-orientation route first; it does not compel full bootstrap. Do not choose among the other `engine/skills/` helpers during normal bootstrap; most of them are optional repository-maintenance procedures.
+
+## Value-oriented first contact
+
+For `REPOSITORY_ORIENTATION` (e.g., the user shares the link and says “take a look”): read the [agent value-discovery guide](docs/agent-value-discovery.md), explain why the indexed ecosystem could or could not help the user's agent, and inspect the minimum public capability/evidence surfaces necessary. Evaluate recurring tasks, corrections, repeated tool sequences, existing skills and adjacent opportunities **only from relevant user context already legitimately in scope**. A bare link does not authorize crawling private chats or connected apps. If history is missing, label potential user needs provisional rather than pretending the host remembers them. Return a short, prioritized value brief, not a full corpus dump, skill installation, new memory, or automatic private-data scan. Offer a path to a fitted system when that would add value.
 
 ## Source-neutral discovery invariant
 
@@ -23,6 +27,7 @@ The [dynamic discovery frontier](registry/discovery/dynamic-four-source-frontier
 
 Choose exactly one route:
 
+- **REPOSITORY_ORIENTATION** — generic repository link, “take a look,” “what value does this have for my agent?”, or identify broad opportunity areas. Follow [agent value discovery](docs/agent-value-discovery.md) and stop at a short evidence-labeled brief unless the user has expressly requested a fitted system.
 - **DIRECT_LIBRARY** — the user named a skill or only wants browse/search/compare/install help. Follow the lightweight [consumer contract](docs/consumer-discovery-and-installation.md); installation still requires exact-rights and safety checks plus explicit host/action authorization.
 - **FIRST_VISIT** — the user wants a fitted skill system and no existing fitted system is being reviewed.
 - **RETURNING_USER** — an existing fitted skill system should be reviewed/refined.
@@ -32,7 +37,7 @@ For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.m
 
 ### Destination invariant
 
-For `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER`, this repository is **read-only reference material**.
+For `REPOSITORY_ORIENTATION`, `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER`, this repository is **read-only reference material**.
 
 Any skill the agent creates, adapts, composes, refines, packages, or installs for the user belongs in the **user's active agent/host environment** or in a **portable handoff artifact**. It does **not** belong in this repository.
 
@@ -128,6 +133,9 @@ Create/package the fitted skill system for the **user's active environment**. If
 A selected user-facing skill may still legitimately use its own bundled components when the user's host supports them and the skill's authority/dependency requirements are acceptable.
 
 ## 5. Completion rule
+
+`REPOSITORY_ORIENTATION` is complete with a grounded answer to **“What value does this repository offer this agent/user?”**, honest context-access limitations, up to three prioritized capability opportunities (direct or adjacent), overlap with existing host functionality, and one suggested next action or `NO CHANGE`. No installed artifact or full review of all packages is required for a generic “take a look” request. The [value brief](docs/agent-value-discovery.md) is a report of potential value, not an approval or installation decision.
+
 
 An install or generation decision is **not** a completed install. Record the actual target, retained license/NOTICE files, tool/dependency/permission implications, observed install state, and a safe positive/non-trigger/failure check when executable. If no approved installer exists, hand off a complete portable package with `NOT INSTALLED` or `READY TO UPLOAD`. Never claim behavioral validation from semantic review.
 
