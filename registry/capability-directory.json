@@ -6746,7 +6746,7 @@
         "Record exact-version static review decisions and distinct security/behavioral evidence"
       ],
       "acceptance": "Never calculate a corpus-wide fixed-target reviewed percentage from historical review counts; report snapshot-scoped coverage once each denominator is reconciled, and separately report discovery expansion and unknown coverage",
-      "source_snapshot_rows_recorded": 23,
+      "source_snapshot_rows_recorded": 25,
       "source_level_denominator_rows_recorded": 20
     },
     "source_reconciliation_ledger": "registry/corpus-source-reconciliation.json",
