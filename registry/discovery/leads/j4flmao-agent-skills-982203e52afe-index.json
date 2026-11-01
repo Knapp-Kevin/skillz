@@ -10,12 +10,17 @@
   "direct_shape_candidates": 424,
   "other_shape_paths": 221,
   "unique_skill_blobs": 645,
-  "license_scope": "MIT repository metadata; license text and per-package terms still require vetting",
+  "license_scope": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; package-local and external linked content require separate rights checks",
   "quality_caveat": "Bundle/agent-config paths may be duplicates or internal; shape alone does not prove first-class eligibility",
   "eligibility_denominator": null,
   "individual_reviews": 0,
   "parts": [
     "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
     "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
-  ]
+  ],
+  "individual_reviews_scope": "governed exact-version semantic review pairs only; source-vetting candidate decisions are separate",
+  "terminal_static_candidate_reviews": 23,
+  "other_shape_structurally_classified": 23,
+  "other_shape_still_unclassified": 198,
+  "nested_game_multi_file_pending": 18
 }
