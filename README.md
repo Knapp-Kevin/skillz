@@ -43,9 +43,9 @@ Third-party packages may contain their own scripts, tests, examples, fixtures, t
 
 ## Core use
 
-The host agent first asks whether this repository has material value for the user's actual repeated work, actively consulting its own available memory and relevant user-task history through normal host capabilities. For an orientation-only request, it returns a short evidence-labeled value brief. For an explicitly requested fitted system, it discovers capability-matched candidates across all accessible source families without first-party priority, then evaluates in this order:
+The host agent first asks whether this repository has material value for the user's repeated work, consulting its available memory and relevant user-task history through normal host capabilities. For an orientation-only request, it returns a short evidence-labeled value brief. For an explicitly requested fitted system, it discovers capability-matched candidates across all accessible source families without first-party priority.
 
-**user fit → exact-version quality → operational fit → skill freshness → provenance/source context**
+**Selection order:** establish user need and existing coverage → locate capability-matched candidates → check provenance and exact package identity → resolve rights, static quality, independent package security, authority/privacy and dependencies → decide whether to reuse, adapt, create or keep existing behavior. These are **separate gates**, not a blended quality score or automatic adoption.
 
 Valid outcomes include ADOPT, ADAPT, EXTRACT, SUPPLEMENT, COMPOSE, CREATE, CHECKLIST, DYNAMIC behavior, or NO CHANGE. The goal is the smallest coherent fitted system, not maximum reuse. **Discovery is not installation consent**: before copying, adapting, packaging, publishing or installing, inspect controlling per-package rights and notices, security/authority requirements, host compatibility and the user's permitted destination. Root MIT does not relicense upstream content. An agent must distinguish a finished portable artifact from an actually installed and tested skill.
 
@@ -73,7 +73,9 @@ The detailed source-vetting commentary, historical checkpoints, provenance cavea
 
 ## Discovery and admission
 
-**discovery surface → candidate issue/source → source-vetting → exact-version static evaluation → exact-version security scan → decisive admission result → repository persistence when justified → user-fit decision**
+**Ordinary agent use:** discover by capability → inspect candidates as untrusted references → assess user fit and existing coverage → resolve applicable rights/safety/host constraints → recommend or produce user-owned artifacts, with separate installation approval.
+
+**Explicit repository maintenance only:** consider discovery leads → pin provenance and source → conduct source-vetting and individual review → apply required security/legal gates → record a justified admission, rejection or reference-only disposition. An external lead can remain indexed without ever becoming admitted or copied. **Repository admission is not a prerequisite for learning from or linking to public reference material**, and normal consumer work never writes personal skills here.
 
 New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-intake.md). Discovery scores, popularity, official branding, creator reputation, or catalog recommendations are signals only. Restricted or unclear-license material remains reference-only unless terms justify another role.
 
@@ -82,6 +84,7 @@ New third-party discoveries use [`docs/candidate-intake.md`](docs/candidate-inta
 | Area | Purpose |
 |---|---|
 | [`AGENT_START_HERE.md`](AGENT_START_HERE.md) | Agent routing and capability floor |
+| [`docs/agent-value-discovery.md`](docs/agent-value-discovery.md) | First-link value assessment using host memory and evidence-grounded skill opportunities |
 | [`docs/first-contact-discovery.md`](docs/first-contact-discovery.md) | Capability-aware first-visit walkthrough and portable receipt |
 | [`CHANGES.md`](CHANGES.md) | Dated material repository changes; no adoption claims inferred |
 | [`AGENTS.md`](AGENTS.md) | Repository-wide agent contract |
