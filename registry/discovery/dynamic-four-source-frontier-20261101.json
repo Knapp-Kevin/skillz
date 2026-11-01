@@ -38,7 +38,11 @@
       "direct_shape": 424,
       "other_shape": 221,
       "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
-      "terminal_static_candidate_reviews": 10
+      "terminal_static_candidate_reviews": 18,
+      "review_ledgers": [
+        "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json",
+        "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+      ]
     }
   ],
   "raw_skill_md_path_sum": 4813,
@@ -57,7 +61,7 @@
     "github_awesome_copilot": 10,
     "openai_plugins": 169,
     "agentskillexchange_skills": 0,
-    "j4flmao_agent_skills": 10,
+    "j4flmao_agent_skills": 18,
     "not_deduplicated_or_governed_semantic_reviews": true
   }
 }

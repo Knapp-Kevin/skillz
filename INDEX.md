@@ -28,6 +28,8 @@ This is a passive, hand-maintained navigation and accounting snapshot, not a gen
 
 ## Current totals
 
+**Game-engine and Web3D exact-package candidate tranche (2026-11-01).** Eight pinned `j4flmao/agent-skills` complete single-file packages now have individual static source-vetting decisions (**7 REFERENCE-ONLY / 1 REJECT unchanged**). All six direct-shape game guides were reviewed, but 23 nested/other-shape game paths remain unclassified. J4flmao direct-shape candidate decisions **10 → 18 of 424**, leaving 406 direct-shape paths without decisions and 221 other-shape paths unresolved. This is not a verified eligible denominator. No admission, new governed pairs, security scans or behavioral tests; **44 / 995 / 1,039** unchanged. [Evidence](docs/reviews/2026-11-01-j4flmao-game-web3d-eight-candidate-vetting.md) and [records](registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json).
+
 | Surface | Count |
 |---|---:|
 | First-party user-facing skills | 44 |
