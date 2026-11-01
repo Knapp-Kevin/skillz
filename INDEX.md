@@ -98,7 +98,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 
 **This document is currently a snapshot, not a comprehensive capability search index.** Begin with [the capability-first directory](registry/capability-directory.json) and [discovery matrix](docs/capability-discovery-matrix.md); inspect governed third-party evidence in `registry/skills/` and `registry/verification/`, and pinned/tracked references in `skills/sources/` where accessible. First-party records in `registry/local-verification.json` are **one source-family view**, not the default or top-ranked search results. Compare candidates by capability fit, license, evidence, safety and portability, never authorship.
 
-**Coverage limitation:** the provisional crosswalk currently maps 44 first-party identities, while 995 third-party review identities remain to be crosswalked. Do not use the first-party category listing below as the corpus-wide capability taxonomy or a proxy for completeness.
+**Coverage limitation (current snapshot):** the machine-readable directory links **10** of the **995** governed third-party review records to proposed capabilities; the other **985 reviewed identities remain unmapped**. The [four pinned discovery-source manifests](registry/discovery/dynamic-four-source-frontier-20261101.json) additionally list 4,813 raw SKILL.md paths / 4,537 direct-shape candidates, **not necessarily unique eligible, licensed, or reviewed skill packages**. The provisional 44-first-party crosswalk is one source-family appendix, never the corpus-wide taxonomy or a completeness proxy. These snapshot counts may grow.
 
 ## First-party source-family appendix: skills by purpose
 
