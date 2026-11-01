@@ -129,13 +129,12 @@ Search by capability and controlled metadata, not filename resemblance alone.
 
 Search in this order when available:
 
-1. user's existing skills/instructions;
-2. current project/repository skills;
-3. local user-facing `skills/` corpus as read-only reference material;
-4. built-in host capabilities;
-5. tracked upstream reference sources;
-6. individually governed external skills;
-7. live external sources only for a still-unmet material capability.
+1. user's existing skills/instructions and current project/repository skills, to establish actual needs and avoid duplication;
+2. built-in host capabilities, to determine whether an additional skill is needed;
+3. **capability-matched candidates across the entire indexed ecosystem together**: individually governed third-party records in `registry/skills/` and `registry/verification/`, tracked and pinned upstream reference sources in `registry/sources.yaml` and `skills/sources/`, and first-party `skills/` records. These are parallel discovery surfaces, **not a ranking**. Use capability fit, evidence and licensing, not source ownership, to determine which candidate to inspect first;
+4. live external discovery for meaningful capability gaps or missing alternatives, including beyond the registered corpus when the user's task warrants it.
+
+**No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat the local 44 as a representative sample of the indexed corpus. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
 
 The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory and not a destination for generated user artifacts.
 
