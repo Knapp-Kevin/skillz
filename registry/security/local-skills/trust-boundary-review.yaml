@@ -1,0 +1,33 @@
+schema_version: 1
+skill_name: trust-boundary-review
+source_id: local-skills
+source_path: skills/trust-boundary-review
+source_revision: fc6f74c8e39777458388d352f3782fd3216ee063
+fingerprint_algorithm: git-blob-sha1
+manifest_blob_sha: 50fe2928509a0d235e25813e5524b5305a688b1e
+scanned_at: 2026-10-12
+scanner: NVIDIA SkillSpector
+scanner_release: v2.12.0
+scanner_commit: c7958a3268d9498644b22edb75d0f051bbc8cbfc
+scan_mode: static-only-no-llm
+scan_flags: [--no-llm, --fail-on-findings, --fail-on-incomplete]
+workflow_run: https://github.com/Knapp-Kevin/skillz/actions/runs/38309617787
+workflow_job_id: 115011868192
+workflow_outcome: passed
+package_gate_result: passed
+package_coverage: complete-according-to-gate
+active_findings_in_gate: 0
+risk_score: unknown
+severity: unknown
+recommendation: unknown
+raw_report_digest: not-available
+raw_report_persisted: false
+security_status: incomplete
+behavioral_validation_status: not-run
+rationale: >-
+  Exact-head CI log reports PASS for this exact package with zero workflow
+  failures. No archived package JSON report was available from the run;
+  individual risk fields and report digest cannot be independently checked.
+  Keep canonical persisted security evidence incomplete pending retrievable
+  report detail or another authorized exact-version evidence collection.
+evidence_doc: docs/evals/2026-10-12-pr412-exact-head-security-evidence.md

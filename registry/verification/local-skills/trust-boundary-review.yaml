@@ -1,0 +1,23 @@
+schema_version: 1
+skill_name: trust-boundary-review
+source_id: local-skills
+local_path: skills/trust-boundary-review/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 50fe2928509a0d235e25813e5524b5305a688b1e
+characterized_at: 2026-10-10
+reviewed_at: 2026-10-12
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+validation_note: No host-executed behavioral scenarios were run.
+package_security_status: incomplete
+package_security_note: Exact-head SkillSpector CI gate passed at fc6f74c8 for this package; persisted per-package JSON risk metrics and digest are unavailable. See registry/security/local-skills/trust-boundary-review.yaml.
+rubric: docs/skill-verification.md
+rubric_score: 19/20
+tags:
+  use_case: [security, evaluation, agent-development]
+  lifecycle: [verification, operations]
+  characteristic: [evidence-first, risk-aware, safety-bounded, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: Source-trust labeling, instruction/data separation, scoped approval and false-positive controls are explicit. No guarantee of injection immunity.
