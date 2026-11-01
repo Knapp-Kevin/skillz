@@ -228,8 +228,8 @@
   "limitations": [
     "Source-level slots are not a deduplicated package manifest",
     "Dynamic discovery sources and normative spec have no eligible-package count here",
-    "The 4,000+ discovered population remains unverified",
-    "Some source families have reviewed packages beyond the scoped counters"
+    "Some source families have reviewed packages beyond the scoped counters",
+    "No numeric target or upper bound defines library completion; each new source/pin changes the review frontier"
   ],
   "issue": "https://github.com/Knapp-Kevin/skillz/issues/599",
   "review_record_arithmetic": {
@@ -248,5 +248,7 @@
       "INDEX.md"
     ],
     "handling": "Do not overwrite newer main content; reconcile before merge"
-  }
+  },
+  "completion_claim": "rolling-snapshot-coverage-not-established",
+  "review_program_goal": "Open-ended skill discovery; all distinct eligible identities in each declared source snapshot receive terminal review dispositions, with ongoing new-source intake and freshness"
 }
