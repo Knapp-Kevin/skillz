@@ -125,7 +125,7 @@ If the behavior is too volatile, trivial, or rare for a skill, classify it `DYNA
 
 ## S4 — Discover skills and components
 
-Search by capability and controlled metadata, not filename resemblance alone.
+Search by capability and controlled metadata, not filename resemblance alone. Use `registry/capability-directory.json` as the **navigation map**, not as an exhaustive identity database: most domain slots are still unassessed and only a subset of reviews have individual links. See [consumer discovery and installation](../../../docs/consumer-discovery-and-installation.md).
 
 Search in this order when available:
 
@@ -133,6 +133,8 @@ Search in this order when available:
 2. built-in host capabilities, to determine whether an additional skill is needed;
 3. **capability-matched candidates across the entire indexed ecosystem together**: individually governed third-party records in `registry/skills/` and `registry/verification/`, tracked and pinned upstream reference sources in `registry/sources.yaml` and `skills/sources/`, and first-party `skills/` records. These are parallel discovery surfaces, **not a ranking**. Use capability fit, evidence and licensing, not source ownership, to determine which candidate to inspect first;
 4. live external discovery for meaningful capability gaps or missing alternatives, including beyond the registered corpus when the user's task warrants it.
+
+When the capability directory has no linked candidate, **continue** by searching the governed verification/provenance companions and pinned/tracked upstream packages with capability terms, synonyms and mechanism clues, then accessible discovery-only leads. An empty map entry is not a negative search result. State which surfaces were inaccessible or did not have a machine-readable index. Never assume a fixed corpus denominator or stop discovering because a historical review count was reached.
 
 **No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat the local 44 as a representative sample of the indexed corpus. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
 
@@ -160,7 +162,7 @@ Check, as far as the host can truthfully establish:
 - exact version/fingerprint;
 - semantic quality state;
 - applicable exact-version package-security state;
-- license/attribution;
+- license/attribution, checked against the actual package/child license and required notices, not just the root `skillz` MIT license or an unverified source-level label;
 - required supporting components and dependencies;
 - authority/side effects;
 - portability/host assumptions.
@@ -178,7 +180,7 @@ Rules:
 
 A blocked whole skill may still contain a useful idea, but component reuse does not bypass governance. Check whether license/provenance, dependencies, rejection reason, authority, privacy, cost, or host assumptions affect the component.
 
-Prefer an independently expressed clean implementation when copying source-specific text or ceremony would create avoidable risk or baggage.
+Prefer an independently expressed clean implementation when copying source-specific text or ceremony would create avoidable risk or baggage. Separate mere inspiration and links from copying, protected adaptation and redistribution. If the controlling license, permissions or NOTICE requirements remain ambiguous, do not copy, package, install or redistribute that material on the assumption it is permitted. Preserve relationships and attribution as specified in `docs/third-party-provenance.md`.
 
 **Output:** `ELIGIBLE_UNCHANGED`, `ADAPTATION_EVIDENCE_ONLY`, or `EXCLUDED` for whole-skill candidates, plus component constraints.
 
@@ -253,7 +255,8 @@ For each artifact define at minimum:
 - human-verification points;
 - failure handling;
 - completion criteria;
-- provenance/attribution when material was copied or adapted.
+- provenance/attribution when material was copied or adapted;
+- the target host's actual skill/package format, required bundled files, controlling license and NOTICE obligations, installation destination and permission/credential implications.
 
 Use host-specific packaging only when established. Otherwise produce portable Markdown preserving the semantic contract and clearly describe any supporting files the target skill requires.
 
@@ -302,7 +305,9 @@ Determine the target's real installation/handoff mode from the active host:
 - `UI-UPLOAD`
 - `PORTABLE-HANDOFF`
 
-Install only with both capability and authority. Otherwise provide the complete package and shortest correct handoff.
+Install only with both capability and **specific user authorization for the destination/action**, plus resolved license rights and applicable security gates. Otherwise provide the complete package and shortest correct handoff. A copy request alone does not grant credentials, third-party account access, network disclosure, scheduling or autonomous operations.
+
+After an actual installation, check the installed package identity and required files; if the host safely supports it, exercise a positive trigger, a non-trigger and a bounded failure/rollback scenario. Report results as observed or `NOT TESTED`. State a reversible removal method for an installed skill. Do not claim `INSTALLED` merely because an artifact was drafted, uploaded incompletely or an install command was suggested.
 
 The installation target is the user's host/environment, never `skillz` during normal bootstrap.
 
