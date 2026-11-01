@@ -1,11 +1,13 @@
 # 🛠️ skillz
 
+**Expanded pinned discovery frontier (2026-11-01).** Two additional source-vetted, **dynamic-discovery-only** repositories are now registered: Agent Skill Exchange (**3,200 raw SKILL.md paths**) and j4flmao Agent Skills (**645 raw paths**). Together with GitHub Awesome Copilot (432) and OpenAI Plugins (536), the four exact snapshots contain **4,813 raw SKILL.md paths / 4,537 direct-shape candidates**; all 4,813 exact SKILL blob SHAs are distinct across these snapshots, but semantic duplication, package eligibility and upstream license rights remain unresolved. **25 registered sources**, still **995 governed third-party exact-version reviews**; 10 Awesome Copilot terminal candidate decisions remain separate. This is *not* 4,813 reviewed or eligible skills. See `registry/discovery/dynamic-four-source-frontier-20261101.json`, [source-vetting receipt](docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md), and #599.
+
 **Dynamic-source discovery reconciliation (2026-11-01).** Two registered pinned discovery surfaces now have exact-path, blob, and package-tree inventories: `github/awesome-copilot` **432 raw SKILL.md paths / 415 direct-shape candidates**, and `openai/plugins` **536 raw paths / 502 direct-shape candidates**. These **968 paths / 917 direct-shape candidates** are *not* an eligible, deduplicated, reviewed or security-qualified denominator. Ten individually evidenced GitHub Awesome Copilot single-file candidates have terminal static source-vetting decisions (**3 REFERENCE-ONLY / 7 REJECT unchanged**); zero admissions or governed semantic pairs. See `registry/discovery/` and [#599](https://github.com/Knapp-Kevin/skillz/issues/599).
 
 ![Reference Corpus](https://img.shields.io/badge/reference_corpus-500%2B-blue)
 ![First-Party Skills](https://img.shields.io/badge/first--party_skills-44-brightgreen)
 ![Persisted Third-Party Reviews](https://img.shields.io/badge/exact--version_reviews-995-8A2BE2)
-![Registered Sources](https://img.shields.io/badge/registered_sources-23-6f42c1)
+![Registered Sources](https://img.shields.io/badge/registered_sources-25-6f42c1)
 ![Repository](https://img.shields.io/badge/repository-entirely--passive-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
