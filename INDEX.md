@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**Discovery-surface exact-path inventory (2026-11-01).** `registry/discovery/` now contains pinned inventories of **432 GitHub Awesome Copilot** and **536 OpenAI Plugins** raw `SKILL.md` paths (respectively **415** and **502** direct-shape candidates). All rows carry source-relative path, exact skill blob and package tree where present. Direct shape is not a reviewed/eligible unique skill. Ten single-file GitHub Awesome Copilot packages received individual terminal static candidate decisions (**3 REFERENCE-ONLY / 7 REJECT**); no governed semantic pairs, security scans, behavioral validations or source admissions. See #599 for the unreconciled 4,000+ objective.
+
 **Snapshot date:** 2026-11-01
 
 This is a passive, hand-maintained navigation and accounting snapshot, not a generated catalog or runtime. The external host performs discovery, evaluation, security assessment and any authorized actions. Canonical evidence lives in `registry/categories.yaml`, `registry/sources.yaml`, `registry/local-verification.json`, `registry/skills/`, and `registry/verification/`.
