@@ -6,10 +6,8 @@
 
 - README Git blob: `2192c8c301fc8edad7a5b376978d8e8c20294cd7`
 - Snapshot commit: `fa023d6d166562a8de118f59bb73647c0e444b8c`
-- 285 distinct first-level `skills/<name>/SKILL.md` candidate paths mentioned in README; this is **not** the upstream's total skill count.
+- 282 distinct first-level `skills/<name>/SKILL.md` candidate paths mentioned in README; this is **not** the upstream's total skill count.
 
-- [`skills/commits/SKILL.md`](https://github.com/KalarisLabs/research-agent-skills/blob/fa023d6d166562a8de118f59bb73647c0e444b8c/skills/commits/SKILL.md)
-- [`skills/actions/SKILL.md`](https://github.com/KalarisLabs/research-agent-skills/blob/fa023d6d166562a8de118f59bb73647c0e444b8c/skills/actions/SKILL.md)
 - [`skills/hypothesis-generation/SKILL.md`](https://github.com/KalarisLabs/research-agent-skills/blob/fa023d6d166562a8de118f59bb73647c0e444b8c/skills/hypothesis-generation/SKILL.md)
 - [`skills/scientific-brainstorming/SKILL.md`](https://github.com/KalarisLabs/research-agent-skills/blob/fa023d6d166562a8de118f59bb73647c0e444b8c/skills/scientific-brainstorming/SKILL.md)
 - [`skills/scientific-critical-thinking/SKILL.md`](https://github.com/KalarisLabs/research-agent-skills/blob/fa023d6d166562a8de118f59bb73647c0e444b8c/skills/scientific-critical-thinking/SKILL.md)
