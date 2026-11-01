@@ -1,11 +1,9 @@
 {
   "schema_version": 1,
-  "purpose": "Per-skill lookup into persisted historical package-security evidence for the 44 first-party skills, with current exact package-tree binding.",
-  "not_an_install_permission": true,
-  "assessed_against_git_commit": "9ed8013c95759ccf03a984052109d30735b5ef2a",
-  "baseline_reference": "registry/security/first-party-baseline-2026-10-10.json",
-  "candidate_reference": "registry/security/first-party-candidate-2026-10-10.json",
-  "read_me": "Each record includes the original baseline and candidate source paths and exact package tree comparisons. Baseline state is transferable only for identical tree; newer/different candidate scan passes are not. A matching historical PASSED is not newly executed security testing and does not imply behavioral validation, licensing clearance, or host authorization.",
+  "purpose": "Compact, exact-package-tree-bound security evidence lookup for first-party skills. Static lookup; no scanner executed by this index.",
+  "snapshot_git_commit": "9ed8013c95759ccf03a984052109d30735b5ef2a",
+  "lookup": "Find key <skill-name>. Original historical evidence is in registry/security/first-party-baseline-2026-10-10.json and registry/security/first-party-candidate-2026-10-10.json, under records[].package = skills/<skill-name>. Match the displayed package tree to the current Git tree before using this snapshot after any source changes.",
+  "limits": "Use matching historical BASELINE state only; do not transfer candidate PASSED across a different tree. A matching historical passed scan is not a new scan, behavioral validation, actual authority, or legal/host approval.",
   "counts": {
     "first_party_total": 44,
     "baseline_exact_tree_matching": 44,
@@ -15,1238 +13,358 @@
     "candidate_exact_tree_matching": 23,
     "candidate_pass_nonmatching": 21
   },
-  "records": [
-    {
-      "identity": "local-skills/agent-home-doctor",
-      "package_path": "skills/agent-home-doctor",
-      "source_skill_path": "skills/agent-home-doctor/SKILL.md",
+  "skills": {
+    "agent-home-doctor": {
       "current_package_tree_sha": "715150a85cf47b6f68e08735996f5fe394deac72",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/agent-home-doctor",
-        "target_package_tree_sha": "715150a85cf47b6f68e08735996f5fe394deac72",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "4967e6078438cbb0d2455d469713291acfaf02ef475052e479972807d2875108",
-        "scan_timestamp": "2026-10-10T14:58:05.776721+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/agent-home-doctor",
-        "target_package_tree_sha": "715150a85cf47b6f68e08735996f5fe394deac72",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.986051+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/agent-postmortem",
-      "package_path": "skills/agent-postmortem",
-      "source_skill_path": "skills/agent-postmortem/SKILL.md",
+    "agent-postmortem": {
       "current_package_tree_sha": "2859a7ce0b9424e52c4c044cef7074bcd924af8a",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/agent-postmortem",
-        "target_package_tree_sha": "2859a7ce0b9424e52c4c044cef7074bcd924af8a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "83259d57ed759e70d1ff89385fc6a028c66c7d76062a70b3cf9d9611436be6bb",
-        "scan_timestamp": "2026-10-10T14:58:05.778529+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/agent-postmortem",
-        "target_package_tree_sha": "2859a7ce0b9424e52c4c044cef7074bcd924af8a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.988324+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/automation-receipts",
-      "package_path": "skills/automation-receipts",
-      "source_skill_path": "skills/automation-receipts/SKILL.md",
+    "automation-receipts": {
       "current_package_tree_sha": "cdf9aa3df667e2b1156b310d924b0559716c7d6a",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/automation-receipts",
-        "target_package_tree_sha": "cdf9aa3df667e2b1156b310d924b0559716c7d6a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "1327e21745994d1157e00a6b98ba2bd19a321490e23b5b86227f9c25d7821853",
-        "scan_timestamp": "2026-10-10T14:58:05.780319+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/automation-receipts",
-        "target_package_tree_sha": "cdf9aa3df667e2b1156b310d924b0559716c7d6a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.990166+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/brief-writer",
-      "package_path": "skills/brief-writer",
-      "source_skill_path": "skills/brief-writer/SKILL.md",
+    "brief-writer": {
       "current_package_tree_sha": "c6d40fbd06c310a0259548c37c2d5338bfc42903",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/brief-writer",
-        "target_package_tree_sha": "c6d40fbd06c310a0259548c37c2d5338bfc42903",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "9b55e194abdab6be4899fc7296db73ea39c5856ea322ea7d5a4521260c91d867",
-        "scan_timestamp": "2026-10-10T14:58:05.782060+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/brief-writer",
-        "target_package_tree_sha": "c6d40fbd06c310a0259548c37c2d5338bfc42903",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.992134+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/career-radar",
-      "package_path": "skills/career-radar",
-      "source_skill_path": "skills/career-radar/SKILL.md",
+    "career-radar": {
       "current_package_tree_sha": "cfcbff6d7d3b1d6300e3287a3e01caebd8855104",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/career-radar",
-        "target_package_tree_sha": "cfcbff6d7d3b1d6300e3287a3e01caebd8855104",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "3e4c3a36b2b0b7f72ff886f922f433bb718ea8d9fa8a5dcb09c1749191c527d7",
-        "scan_timestamp": "2026-10-10T14:58:05.783906+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/career-radar",
-        "target_package_tree_sha": "cfcbff6d7d3b1d6300e3287a3e01caebd8855104",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.993879+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/claude-pulse",
-      "package_path": "skills/claude-pulse",
-      "source_skill_path": "skills/claude-pulse/SKILL.md",
+    "claude-pulse": {
       "current_package_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/claude-pulse",
-        "target_package_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "76c8b05d5b20e2e3d3f41342a2ef95b3541b695c6077bc89b03e80d9ae7180dc",
-        "scan_timestamp": "2026-10-10T14:58:05.785663+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/claude-pulse",
-        "target_package_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.996013+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/compare",
-      "package_path": "skills/compare",
-      "source_skill_path": "skills/compare/SKILL.md",
+    "compare": {
       "current_package_tree_sha": "6d67ced9cf7a588ad35774918ed07b9a2a6d7f71",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/compare",
-        "target_package_tree_sha": "6d67ced9cf7a588ad35774918ed07b9a2a6d7f71",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "896c61b8b782b18f0693a69c6b0cf4126a43c90be29936a5125adaf69e4d01ae",
-        "scan_timestamp": "2026-10-10T14:58:05.787470+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/compare",
-        "target_package_tree_sha": "6d67ced9cf7a588ad35774918ed07b9a2a6d7f71",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:25:59.998241+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/daily-briefing",
-      "package_path": "skills/daily-briefing",
-      "source_skill_path": "skills/daily-briefing/SKILL.md",
+    "daily-briefing": {
       "current_package_tree_sha": "a43d8314e09a10227eac37c710261160b0a887d2",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/daily-briefing",
-        "target_package_tree_sha": "a43d8314e09a10227eac37c710261160b0a887d2",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "c4edbc44225026c5804cb33b07a9dc7c4e766b3c3647303ce4b784eed1e6a05d",
-        "scan_timestamp": "2026-10-10T14:58:05.789188+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/daily-briefing",
-        "target_package_tree_sha": "a43d8314e09a10227eac37c710261160b0a887d2",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.000120+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/decision-log",
-      "package_path": "skills/decision-log",
-      "source_skill_path": "skills/decision-log/SKILL.md",
+    "decision-log": {
       "current_package_tree_sha": "286f2aac12926ba8fba0836c35dce3daf2d83965",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/decision-log",
-        "target_package_tree_sha": "286f2aac12926ba8fba0836c35dce3daf2d83965",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "32c8cdfe4e6abceb52bd19700430db75cdee62c88d2fce644b1552989e173432",
-        "scan_timestamp": "2026-10-10T14:58:05.790917+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/decision-log",
-        "target_package_tree_sha": "319f47a72655509275bf83cd85d230d7667ea812",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.001945+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/deck-outline",
-      "package_path": "skills/deck-outline",
-      "source_skill_path": "skills/deck-outline/SKILL.md",
+    "deck-outline": {
       "current_package_tree_sha": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/deck-outline",
-        "target_package_tree_sha": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "259fa1cbbeff058d250c93b08a6ef14799a76077fa79a298f4aceb0e03a4f641",
-        "scan_timestamp": "2026-10-10T14:58:05.792664+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/deck-outline",
-        "target_package_tree_sha": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.003941+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/deep-dive",
-      "package_path": "skills/deep-dive",
-      "source_skill_path": "skills/deep-dive/SKILL.md",
+    "deep-dive": {
       "current_package_tree_sha": "aca9a5ead634fa4e7bf986ab11c38da228890e56",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/deep-dive",
-        "target_package_tree_sha": "aca9a5ead634fa4e7bf986ab11c38da228890e56",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "a71b2030c06f89029f562fa4a1b5798dee7b56161fae8c27f3cb525fd1ccf9ed",
-        "scan_timestamp": "2026-10-10T14:58:05.794395+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/deep-dive",
-        "target_package_tree_sha": "aca9a5ead634fa4e7bf986ab11c38da228890e56",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.005837+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/deepseek-pulse",
-      "package_path": "skills/deepseek-pulse",
-      "source_skill_path": "skills/deepseek-pulse/SKILL.md",
+    "deepseek-pulse": {
       "current_package_tree_sha": "10aa4e6d8b2cf89ac9c27b538684de75581653e0",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/deepseek-pulse",
-        "target_package_tree_sha": "10aa4e6d8b2cf89ac9c27b538684de75581653e0",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "98df6469e168d2acd1a7225ff326e8cb6e52c0f215c7aa8e7394ca107ff232f6",
-        "scan_timestamp": "2026-10-10T14:58:05.796315+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/deepseek-pulse",
-        "target_package_tree_sha": "14a1326c6d750031e04d80539bb3cc4e9dbd3943",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.008061+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/devlog-draft",
-      "package_path": "skills/devlog-draft",
-      "source_skill_path": "skills/devlog-draft/SKILL.md",
+    "devlog-draft": {
       "current_package_tree_sha": "867a94024356cc4545c4fc712b247c9fc0cd0244",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/devlog-draft",
-        "target_package_tree_sha": "867a94024356cc4545c4fc712b247c9fc0cd0244",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "21a3aabe4bd7edc14a54ecedea64efc1cf1f2636773208e16ec04afae15ac361",
-        "scan_timestamp": "2026-10-10T14:58:05.798167+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/devlog-draft",
-        "target_package_tree_sha": "2d5847a99d0567799b40a69fea0c4ace0b280906",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.010039+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/fact-check",
-      "package_path": "skills/fact-check",
-      "source_skill_path": "skills/fact-check/SKILL.md",
+    "fact-check": {
       "current_package_tree_sha": "a922bd0405fe1779b43349ac2336f71a86e8e099",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/fact-check",
-        "target_package_tree_sha": "a922bd0405fe1779b43349ac2336f71a86e8e099",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "2f384a5e44e51aa85653d50b181e6131dd72fc8309475167c4ef5956c012cc2d",
-        "scan_timestamp": "2026-10-10T14:58:05.799997+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/fact-check",
-        "target_package_tree_sha": "a922bd0405fe1779b43349ac2336f71a86e8e099",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.012256+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/finance-review",
-      "package_path": "skills/finance-review",
-      "source_skill_path": "skills/finance-review/SKILL.md",
+    "finance-review": {
       "current_package_tree_sha": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/finance-review",
-        "target_package_tree_sha": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "935d57329c4630a96a65f0021d13f87dcbf7a26f5646df1586bb5d636dd5d04e",
-        "scan_timestamp": "2026-10-10T14:58:05.801830+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/finance-review",
-        "target_package_tree_sha": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.014471+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/gemini-pulse",
-      "package_path": "skills/gemini-pulse",
-      "source_skill_path": "skills/gemini-pulse/SKILL.md",
+    "gemini-pulse": {
       "current_package_tree_sha": "b08a023ebe015ef072b1c3acfb566c218c494508",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/gemini-pulse",
-        "target_package_tree_sha": "b08a023ebe015ef072b1c3acfb566c218c494508",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "5409fa5078a6c2d4b021fc8d2bc7067a7bffda808aa1ba8f01e273508d14ceab",
-        "scan_timestamp": "2026-10-10T14:58:05.803564+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/gemini-pulse",
-        "target_package_tree_sha": "f82aefb0d6ebaf75aed394a68f729cfc39fb2531",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.016445+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/github-pulse",
-      "package_path": "skills/github-pulse",
-      "source_skill_path": "skills/github-pulse/SKILL.md",
+    "github-pulse": {
       "current_package_tree_sha": "3e914c97c76ec2e5ef9f861ee434516dfbd70455",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/github-pulse",
-        "target_package_tree_sha": "3e914c97c76ec2e5ef9f861ee434516dfbd70455",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "eeae9fc74f7f525a9e9ce1749cc7f3570ad6245e1a06d5a09924d1f89b3b3070",
-        "scan_timestamp": "2026-10-10T14:58:05.805306+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/github-pulse",
-        "target_package_tree_sha": "018a7cd3ba5fa524b4bbfbfdbfd8b7ef74334a9e",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.018344+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/glm-pulse",
-      "package_path": "skills/glm-pulse",
-      "source_skill_path": "skills/glm-pulse/SKILL.md",
+    "glm-pulse": {
       "current_package_tree_sha": "32584b50b6a82a5186a6133539c33ed702f6f3a9",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/glm-pulse",
-        "target_package_tree_sha": "32584b50b6a82a5186a6133539c33ed702f6f3a9",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "cadb2259c3c3226a305bb7a201a6fe41b81d96c5bca5d85c8f27df6829e94284",
-        "scan_timestamp": "2026-10-10T14:58:05.807114+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/glm-pulse",
-        "target_package_tree_sha": "3b25f516773d7626cb856da86c96bfc422649c8b",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.020216+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/governance-pulse",
-      "package_path": "skills/governance-pulse",
-      "source_skill_path": "skills/governance-pulse/SKILL.md",
+    "governance-pulse": {
       "current_package_tree_sha": "af3a1710ea1c187956bd6034e52327e2f257b8d5",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/governance-pulse",
-        "target_package_tree_sha": "af3a1710ea1c187956bd6034e52327e2f257b8d5",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "dce44d043fc665c5eb1e38d01c6a104a50a471090c894a1e13dd97061b3dcc36",
-        "scan_timestamp": "2026-10-10T14:58:05.808944+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/governance-pulse",
-        "target_package_tree_sha": "ae45a9d9fd3ec350d82d60ab4f880d17bea1d679",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.022002+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/handoff-writer",
-      "package_path": "skills/handoff-writer",
-      "source_skill_path": "skills/handoff-writer/SKILL.md",
+    "handoff-writer": {
       "current_package_tree_sha": "430f96ac8b01b0ade5ffbe680131d1e2d575af2d",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/handoff-writer",
-        "target_package_tree_sha": "430f96ac8b01b0ade5ffbe680131d1e2d575af2d",
-        "exact_tree_match": true,
-        "state": "failed",
-        "coverage": "complete",
-        "active_findings_count": 1,
-        "report_sha256": "42e87a36331f5ab49c85313335562687683d6a7e1df8a013ce8561549322729c",
-        "scan_timestamp": "2026-10-10T14:58:05.810726+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/handoff-writer",
-        "target_package_tree_sha": "84b987d0491dce05c52b0b109e64b4b660927a15",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.023820+00:00"
-      },
-      "current_exact_version_evidence": "failed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "failed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/hf-pulse",
-      "package_path": "skills/hf-pulse",
-      "source_skill_path": "skills/hf-pulse/SKILL.md",
+    "hf-pulse": {
       "current_package_tree_sha": "5bc8e3c60139688e4fc9ff0a7e2d10685701ca7a",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/hf-pulse",
-        "target_package_tree_sha": "5bc8e3c60139688e4fc9ff0a7e2d10685701ca7a",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "8ab036225d0069d2c4eeffe7a21717eebf08eafda405b0abe3c832c7c6bc4bb7",
-        "scan_timestamp": "2026-10-10T14:58:05.812488+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/hf-pulse",
-        "target_package_tree_sha": "45eff355eb0296c5ca0ba120b09f2214ecd7b8f4",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.025531+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/inbox-triage",
-      "package_path": "skills/inbox-triage",
-      "source_skill_path": "skills/inbox-triage/SKILL.md",
+    "inbox-triage": {
       "current_package_tree_sha": "b00a0c36f604147b4665e34a62aaffc608b8f246",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/inbox-triage",
-        "target_package_tree_sha": "b00a0c36f604147b4665e34a62aaffc608b8f246",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "7f58d028a830bbf967d5155e1b7cd835cfbe0c0a3132d4959159788288af5420",
-        "scan_timestamp": "2026-10-10T14:58:05.814218+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/inbox-triage",
-        "target_package_tree_sha": "b00a0c36f604147b4665e34a62aaffc608b8f246",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.028642+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/inference-pulse",
-      "package_path": "skills/inference-pulse",
-      "source_skill_path": "skills/inference-pulse/SKILL.md",
+    "inference-pulse": {
       "current_package_tree_sha": "7c7b0b48bba555f4e989d78a1d4463af933bdc05",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/inference-pulse",
-        "target_package_tree_sha": "7c7b0b48bba555f4e989d78a1d4463af933bdc05",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "39ba992603d831f062a9fc74ddf0df608808ca057e10743d047393aef01ab332",
-        "scan_timestamp": "2026-10-10T14:58:05.815948+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/inference-pulse",
-        "target_package_tree_sha": "f3d48f28b935a0f55182c8489d6ae4a88fd3b455",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.030635+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/kimi-pulse",
-      "package_path": "skills/kimi-pulse",
-      "source_skill_path": "skills/kimi-pulse/SKILL.md",
+    "kimi-pulse": {
       "current_package_tree_sha": "0b6d6d9d339448fe9baaea566ee28c2a2b8583ad",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/kimi-pulse",
-        "target_package_tree_sha": "0b6d6d9d339448fe9baaea566ee28c2a2b8583ad",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "e4e7633c6bdabd9a124a101a83878824b6f73e8f3f6eb3f6fb47f1d2eeb15547",
-        "scan_timestamp": "2026-10-10T14:58:05.817853+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/kimi-pulse",
-        "target_package_tree_sha": "d11b16fa999bc2c47a2d4c8cb91916272cb827e0",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.032656+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/learning-plan",
-      "package_path": "skills/learning-plan",
-      "source_skill_path": "skills/learning-plan/SKILL.md",
+    "learning-plan": {
       "current_package_tree_sha": "706728f600246427b77609ff3cd9904c1490218a",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/learning-plan",
-        "target_package_tree_sha": "706728f600246427b77609ff3cd9904c1490218a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "a467391e27a88ac668c3db14170e071d7cb71cb6ebf0942a3fbc838119fc4721",
-        "scan_timestamp": "2026-10-10T14:58:05.819678+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/learning-plan",
-        "target_package_tree_sha": "706728f600246427b77609ff3cd9904c1490218a",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.034524+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/llama-pulse",
-      "package_path": "skills/llama-pulse",
-      "source_skill_path": "skills/llama-pulse/SKILL.md",
+    "llama-pulse": {
       "current_package_tree_sha": "221db05d2638e6407eb608ba1225e17fdf0abb95",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/llama-pulse",
-        "target_package_tree_sha": "221db05d2638e6407eb608ba1225e17fdf0abb95",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "50568a07cb364be11db61f55ff1d2c2c3c67a13495d4fa2c3c8c2d2f1e222879",
-        "scan_timestamp": "2026-10-10T14:58:05.821463+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/llama-pulse",
-        "target_package_tree_sha": "496a95036651b0bf49350724a5b2abd11fd3578d",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.036546+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/mcp-pulse",
-      "package_path": "skills/mcp-pulse",
-      "source_skill_path": "skills/mcp-pulse/SKILL.md",
+    "mcp-pulse": {
       "current_package_tree_sha": "fe568a39ebd18f11353f74ae4d567b785c07afa0",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/mcp-pulse",
-        "target_package_tree_sha": "fe568a39ebd18f11353f74ae4d567b785c07afa0",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "0fc6af8bdd154e98550c0597e19665d5641a0893607fca78ce37631bf51b94d4",
-        "scan_timestamp": "2026-10-10T14:58:05.823237+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/mcp-pulse",
-        "target_package_tree_sha": "ae30a1778a239aef6696263908d8e86a93de4565",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.038326+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/mcp-vetting",
-      "package_path": "skills/mcp-vetting",
-      "source_skill_path": "skills/mcp-vetting/SKILL.md",
+    "mcp-vetting": {
       "current_package_tree_sha": "d06472b10125e598253ca82564a43242433f58f7",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/mcp-vetting",
-        "target_package_tree_sha": "d06472b10125e598253ca82564a43242433f58f7",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "34b87b7c3ed445a65e8fc710db4a8f53b13dfd4e01fcdd1c0092b6642da28bcc",
-        "scan_timestamp": "2026-10-10T14:58:05.824960+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/mcp-vetting",
-        "target_package_tree_sha": "cb17eb4f9943915ca0ed4a3597164d5a6ea910ac",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.040205+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/memory-pulse",
-      "package_path": "skills/memory-pulse",
-      "source_skill_path": "skills/memory-pulse/SKILL.md",
+    "memory-pulse": {
       "current_package_tree_sha": "da8047567efa064415e0945542835c444fbe1b01",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/memory-pulse",
-        "target_package_tree_sha": "da8047567efa064415e0945542835c444fbe1b01",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "48fe302a76cd5a94d7782b524a364391ef3b34ccb6eec9ebb6315f817d270600",
-        "scan_timestamp": "2026-10-10T14:58:05.826936+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/memory-pulse",
-        "target_package_tree_sha": "a90385459ce60aac04ce5c2a01729bdf4c2b445a",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.041992+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/mistral-pulse",
-      "package_path": "skills/mistral-pulse",
-      "source_skill_path": "skills/mistral-pulse/SKILL.md",
+    "mistral-pulse": {
       "current_package_tree_sha": "cb9b3571e69a60d4f2fd76c52704202331f0efa3",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/mistral-pulse",
-        "target_package_tree_sha": "cb9b3571e69a60d4f2fd76c52704202331f0efa3",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "0e24d339a009618d3e43af45f76d91b1e0a62e3ade84d55868a0454563412bcf",
-        "scan_timestamp": "2026-10-10T14:58:05.828826+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/mistral-pulse",
-        "target_package_tree_sha": "3088cb849a20ab7b8225b87625163411628ac81d",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.043869+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/openai-pulse",
-      "package_path": "skills/openai-pulse",
-      "source_skill_path": "skills/openai-pulse/SKILL.md",
+    "openai-pulse": {
       "current_package_tree_sha": "aabca083ed4bef6e520089d39dba36fc545b892b",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/openai-pulse",
-        "target_package_tree_sha": "aabca083ed4bef6e520089d39dba36fc545b892b",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "de3c8a606a97c29d45b16fba5ce7b3275bfac14c51ce7220e0f192c17a3a669f",
-        "scan_timestamp": "2026-10-10T14:58:05.830747+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/openai-pulse",
-        "target_package_tree_sha": "738aebb86f9a04f7c72b4c6d3533c135facee011",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.045973+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/paper-digest",
-      "package_path": "skills/paper-digest",
-      "source_skill_path": "skills/paper-digest/SKILL.md",
+    "paper-digest": {
       "current_package_tree_sha": "6820240e263bafbf832742f47310cab4958573a4",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/paper-digest",
-        "target_package_tree_sha": "6820240e263bafbf832742f47310cab4958573a4",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "c03a95b1eb988acc78d759650d48aa10fc4c98af9bc2e651d553dd041ac7de9d",
-        "scan_timestamp": "2026-10-10T14:58:05.832679+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/paper-digest",
-        "target_package_tree_sha": "6820240e263bafbf832742f47310cab4958573a4",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.048009+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/permissions-review",
-      "package_path": "skills/permissions-review",
-      "source_skill_path": "skills/permissions-review/SKILL.md",
+    "permissions-review": {
       "current_package_tree_sha": "71246bf93839c94885d43acd21ee3a4dc5704ef3",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/permissions-review",
-        "target_package_tree_sha": "71246bf93839c94885d43acd21ee3a4dc5704ef3",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "cb90a408d2b63902997c3c04d490f7349a238399e77c8231fced1bad64af0b66",
-        "scan_timestamp": "2026-10-10T14:58:05.834595+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/permissions-review",
-        "target_package_tree_sha": "f987bed716db4c2826a0e9d9df1f34cdd4911a2f",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.049750+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/perplexity-pulse",
-      "package_path": "skills/perplexity-pulse",
-      "source_skill_path": "skills/perplexity-pulse/SKILL.md",
+    "perplexity-pulse": {
       "current_package_tree_sha": "819d6aadafdfb37887efda8bb7ed5aa42e8befea",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/perplexity-pulse",
-        "target_package_tree_sha": "819d6aadafdfb37887efda8bb7ed5aa42e8befea",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "87669d20312801cc50a75fe43d1fead4403139a9d26d0bc9e2269d0e2885729a",
-        "scan_timestamp": "2026-10-10T14:58:05.836518+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/perplexity-pulse",
-        "target_package_tree_sha": "3e4c1d95c75fd907ce502b39d9075c0ff88ff1ce",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.051626+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/qwen-pulse",
-      "package_path": "skills/qwen-pulse",
-      "source_skill_path": "skills/qwen-pulse/SKILL.md",
+    "qwen-pulse": {
       "current_package_tree_sha": "0103e9d55e6c7e804dc765386644605b4ac2c072",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/qwen-pulse",
-        "target_package_tree_sha": "0103e9d55e6c7e804dc765386644605b4ac2c072",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "6e7406ecd4a7e3590afa7814f1ceb992e5688f4b71e09e7ab67b8a6cae1d31bf",
-        "scan_timestamp": "2026-10-10T14:58:05.838435+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/qwen-pulse",
-        "target_package_tree_sha": "3878b928702b9c3e1968aa10b99c5d5376c13e46",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.053472+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/repo-doctor",
-      "package_path": "skills/repo-doctor",
-      "source_skill_path": "skills/repo-doctor/SKILL.md",
+    "repo-doctor": {
       "current_package_tree_sha": "c2529253b35b5f90d58500091a0d1efbb1c14c2b",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/repo-doctor",
-        "target_package_tree_sha": "c2529253b35b5f90d58500091a0d1efbb1c14c2b",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "5ef2dcd5b456cbc93fa5b6705f3d6255fd23f9a9982b04a3509345935b3b16cb",
-        "scan_timestamp": "2026-10-10T14:58:05.840756+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/repo-doctor",
-        "target_package_tree_sha": "c2529253b35b5f90d58500091a0d1efbb1c14c2b",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.055241+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/repo-pulse",
-      "package_path": "skills/repo-pulse",
-      "source_skill_path": "skills/repo-pulse/SKILL.md",
+    "repo-pulse": {
       "current_package_tree_sha": "bb8e4cac90acfadabf235a0b09435e7e2f8fa50d",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/repo-pulse",
-        "target_package_tree_sha": "bb8e4cac90acfadabf235a0b09435e7e2f8fa50d",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "a31414b7b7d4b6871e1970ba09d7c4d22c221a3cd1056abf8538a67f74902f86",
-        "scan_timestamp": "2026-10-10T14:58:05.843036+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/repo-pulse",
-        "target_package_tree_sha": "bb8e4cac90acfadabf235a0b09435e7e2f8fa50d",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.056949+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/session-continuity",
-      "package_path": "skills/session-continuity",
-      "source_skill_path": "skills/session-continuity/SKILL.md",
+    "session-continuity": {
       "current_package_tree_sha": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/session-continuity",
-        "target_package_tree_sha": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "a8bceda285c16614e8e01dd5bceb669d362cd1e2183f11d0a57f46f6c862e6fe",
-        "scan_timestamp": "2026-10-10T14:58:05.845363+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/session-continuity",
-        "target_package_tree_sha": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.058684+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/smallbiz-ops",
-      "package_path": "skills/smallbiz-ops",
-      "source_skill_path": "skills/smallbiz-ops/SKILL.md",
+    "smallbiz-ops": {
       "current_package_tree_sha": "979bf89b0a3d3ec2b8858462560b1a05ef100cdc",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/smallbiz-ops",
-        "target_package_tree_sha": "979bf89b0a3d3ec2b8858462560b1a05ef100cdc",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "e8ed6c61e0bd4631ea10f9bb43573ad126165dd9aaf40f502f65d97e22186ffe",
-        "scan_timestamp": "2026-10-10T14:58:05.847616+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/smallbiz-ops",
-        "target_package_tree_sha": "979bf89b0a3d3ec2b8858462560b1a05ef100cdc",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.060521+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/standup-writer",
-      "package_path": "skills/standup-writer",
-      "source_skill_path": "skills/standup-writer/SKILL.md",
+    "standup-writer": {
       "current_package_tree_sha": "ff5aef8e22cad85d0423cc3ce50b857316b2dbdc",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/standup-writer",
-        "target_package_tree_sha": "ff5aef8e22cad85d0423cc3ce50b857316b2dbdc",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "f887078d3329f08c76d74ec79df159b1bebef829050b6121775daeb46c938ccb",
-        "scan_timestamp": "2026-10-10T14:58:05.849618+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/standup-writer",
-        "target_package_tree_sha": "ff5aef8e22cad85d0423cc3ce50b857316b2dbdc",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.062417+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/task-surface",
-      "package_path": "skills/task-surface",
-      "source_skill_path": "skills/task-surface/SKILL.md",
+    "task-surface": {
       "current_package_tree_sha": "084c416caea0bf8413859dff06cbc23370019168",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/task-surface",
-        "target_package_tree_sha": "084c416caea0bf8413859dff06cbc23370019168",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "2336ed6764751fa8450593d9902ee687a99062c8ff5dc803de2b54259541052a",
-        "scan_timestamp": "2026-10-10T14:58:05.851538+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/task-surface",
-        "target_package_tree_sha": "084c416caea0bf8413859dff06cbc23370019168",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.064291+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/todo-harvester",
-      "package_path": "skills/todo-harvester",
-      "source_skill_path": "skills/todo-harvester/SKILL.md",
+    "todo-harvester": {
       "current_package_tree_sha": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/todo-harvester",
-        "target_package_tree_sha": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "8779f45153ed360aa0de02f3b678922c885f86def7dda391c89aea38a15299eb",
-        "scan_timestamp": "2026-10-10T14:58:05.853490+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/todo-harvester",
-        "target_package_tree_sha": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.066239+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/week-in-review",
-      "package_path": "skills/week-in-review",
-      "source_skill_path": "skills/week-in-review/SKILL.md",
+    "week-in-review": {
       "current_package_tree_sha": "36c5b72bdba27b46118b5745032ea066ecf8cdb9",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/week-in-review",
-        "target_package_tree_sha": "36c5b72bdba27b46118b5745032ea066ecf8cdb9",
-        "exact_tree_match": true,
-        "state": "passed",
-        "coverage": "complete",
-        "active_findings_count": 0,
-        "report_sha256": "3ba1e55ac51183a7cc466cffa085e8ef0ae093eebb968980daa4eb6c0d2f1684",
-        "scan_timestamp": "2026-10-10T14:58:05.855403+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/week-in-review",
-        "target_package_tree_sha": "36c5b72bdba27b46118b5745032ea066ecf8cdb9",
-        "exact_tree_match": true,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.067863+00:00"
-      },
-      "current_exact_version_evidence": "passed",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "passed",
+      "baseline_coverage": "complete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": true,
+      "candidate_state": "passed"
     },
-    {
-      "identity": "local-skills/xai-pulse",
-      "package_path": "skills/xai-pulse",
-      "source_skill_path": "skills/xai-pulse/SKILL.md",
+    "xai-pulse": {
       "current_package_tree_sha": "68a3a03703847cf32d71f74f33068be360315d25",
-      "baseline": {
-        "record_path": "registry/security/first-party-baseline-2026-10-10.json",
-        "lookup_key": "skills/xai-pulse",
-        "target_package_tree_sha": "68a3a03703847cf32d71f74f33068be360315d25",
-        "exact_tree_match": true,
-        "state": "incomplete",
-        "coverage": "incomplete",
-        "active_findings_count": 0,
-        "report_sha256": "fe0749e6f2534d6f0c203d192319157594be7c33501c04711646bc850c3376d4",
-        "scan_timestamp": "2026-10-10T14:58:05.857291+00:00"
-      },
-      "candidate": {
-        "record_path": "registry/security/first-party-candidate-2026-10-10.json",
-        "lookup_key": "skills/xai-pulse",
-        "target_package_tree_sha": "130b8ea97ced5ca9e928299310277f3daa5a103a",
-        "exact_tree_match": false,
-        "state": "passed",
-        "scan_timestamp": "2026-10-10T15:26:00.069755+00:00"
-      },
-      "current_exact_version_evidence": "incomplete",
-      "behavioral_validation": "NOT_ESTABLISHED",
-      "caution": "Historical scan for exact matching package tree; not a fresh scan, behavior test, license clearance or unattended install approval. Candidate pass is NOT transferable if its tree differs."
+      "baseline_state": "incomplete",
+      "baseline_coverage": "incomplete",
+      "baseline_exact_tree_match": true,
+      "candidate_exact_tree_match": false,
+      "candidate_state": "passed"
     }
-  ]
+  }
 }
