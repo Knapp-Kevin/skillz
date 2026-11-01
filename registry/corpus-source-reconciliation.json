@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-11-01",
   "navigation_principle": "capability-first; this ledger is accounting/provenance, not a source-first browse directory",
-  "registered_sources": 23,
+  "registered_sources": 25,
   "reviewed_source_families": 20,
   "source_level_slots_sum": 873,
   "persisted_third_party_exact_version_review_records": 995,
@@ -176,7 +176,7 @@
       "pinned_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
       "review_denominator_slots": null,
       "count_key": null,
-      "enumeration_state": "not-enumerated",
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
       "unique_package_identities": null
     },
     {
@@ -185,7 +185,7 @@
       "pinned_revision": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
       "review_denominator_slots": null,
       "count_key": null,
-      "enumeration_state": "not-enumerated",
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
       "unique_package_identities": null
     },
     {
@@ -221,7 +221,25 @@
       "pinned_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
       "review_denominator_slots": null,
       "count_key": null,
-      "enumeration_state": "not-enumerated",
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "agentskillexchange-skills",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
+      "unique_package_identities": null
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "source_role": "dynamic-discovery",
+      "pinned_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "review_denominator_slots": null,
+      "count_key": null,
+      "enumeration_state": "discovery-inventory-or-not-enumerated",
       "unique_package_identities": null
     }
   ],
@@ -239,7 +257,8 @@
     "total": 995,
     "reported_persisted_third_party_exact_version_reviews": 995,
     "interpretation": "Arithmetic reconciles review record counts, not deduplicated distinct skill packages; Cline internal record is counted separately from 36 published Cline packages",
-    "evidence": "index.json counts.cline_skills_internal_unlisted_companions and counts.persisted_third_party_exact_version_reviews"
+    "evidence": "index.json counts.cline_skills_internal_unlisted_companions and counts.persisted_third_party_exact_version_reviews",
+    "verified_third_party_total": 995
   },
   "main_branch_drift": {
     "observed": "PR branch one commit behind main",
@@ -250,5 +269,48 @@
     "handling": "Do not overwrite newer main content; reconcile before merge"
   },
   "completion_claim": "rolling-snapshot-coverage-not-established",
-  "review_program_goal": "Open-ended skill discovery; all distinct eligible identities in each declared source snapshot receive terminal review dispositions, with ongoing new-source intake and freshness"
+  "review_program_goal": "Open-ended skill discovery; all distinct eligible identities in each declared source snapshot receive terminal review dispositions, with ongoing new-source intake and freshness",
+  "discovery_frontier": {
+    "evidence_path": "registry/discovery/dynamic-four-source-frontier-20261101.json",
+    "source_snapshots": [
+      {
+        "source_id": "github-awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "raw_skill_md_paths": 432,
+        "direct_shape_candidates": 415,
+        "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+        "terminal_source_vetting_decisions": 10
+      },
+      {
+        "source_id": "openai-plugins",
+        "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "raw_skill_md_paths": 536,
+        "direct_shape_candidates": 502,
+        "manifest": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+        "terminal_source_vetting_decisions": 169
+      },
+      {
+        "source_id": "agentskillexchange-skills",
+        "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+        "raw_skill_md_paths": 3200,
+        "direct_shape_candidates": 3196,
+        "manifest": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
+        "terminal_source_vetting_decisions": 0
+      },
+      {
+        "source_id": "j4flmao-agent-skills",
+        "pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+        "raw_skill_md_paths": 645,
+        "direct_shape_candidates": 424,
+        "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
+        "terminal_source_vetting_decisions": 10
+      }
+    ],
+    "raw_skill_md_paths": 4813,
+    "direct_shape_candidates": 4537,
+    "unique_exact_blobs_across_four": 4813,
+    "semantic_duplicates": "not-assessed",
+    "eligible_unique_skill_denominator": null,
+    "caution": "Exact blob uniqueness is not semantic deduplication; direct-shape candidate is not an approved/reviewed package"
+  }
 }
