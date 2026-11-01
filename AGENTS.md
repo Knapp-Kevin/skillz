@@ -2,7 +2,7 @@
 
 `skillz` is an entirely passive skill library, source registry, review corpus, and instruction set. The external host agent performs all active work; it may deposit authorized review evidence here without introducing repository-owned automation.
 
-**Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).**
+**Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** A generic “look at this repository” request uses [agent value discovery](docs/agent-value-discovery.md) before deciding whether a full personal bootstrap is warranted. Public repository access does not grant permission to mine private task history or install skills.
 
 For normal first-visit or returning-user work, use one canonical orchestrator:
 
@@ -43,6 +43,7 @@ The discovery ecosystem is **open-ended**. Registered/persisted review counts ar
 
 Choose one route:
 
+- **REPOSITORY_ORIENTATION**: assess whether the library can improve this agent's work for its user; inspect relevant authorized user context only, identify direct and adjacent opportunities, deliver a short value brief without installing.
 - **DIRECT_LIBRARY**: browse/search/compare/use a known skill.
 - **FIRST_VISIT**: build a fitted skill system.
 - **RETURNING_USER**: refine an existing fitted skill system.
@@ -82,7 +83,7 @@ A skill may legitimately own scripts, references, templates, fixtures, examples,
 
 ## Memory, privacy, and mutation
 
-Use relevant accessible context before asking the user to repeat it. Never reconstruct unavailable history from assumptions or mine unrelated private connectors merely because they exist.
+Use relevant accessible context before asking the user to repeat it. On a user-requested personalized skill fit assessment, prioritize observed recurring requests, friction and quality gaps over topic frequency; treat memories as summaries, not complete activity logs. A generic repository link only authorizes public orientation, not an unrestricted search of private conversations, emails or connected services. Never reconstruct unavailable history from assumptions or mine unrelated private connectors merely because they exist.
 
 Discovery and design are read-only by default. During normal user work, do not modify `skillz`. Create or hand off artifacts for the user's actual environment.
 
