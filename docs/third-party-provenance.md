@@ -15,9 +15,9 @@ Every external source is classified as one of:
 
 Source class affects trust and evaluation priority. It does not determine copyright or license obligations.
 
-## Vendoring policy
+## Pinned reference and inclusion policy
 
-A repository may be included under `vendor/` when:
+An upstream skill repository may be included under `skills/sources/<source-id>/` as a pinned reference when:
 
 1. its license permits the intended use and redistribution pattern,
 2. its provenance is preserved,
@@ -28,11 +28,11 @@ A repository may be included under `vendor/` when:
 
 Git submodules are preferred for intact external repositories because they preserve upstream history, license files, repository identity, and a reviewable pin.
 
-Vendored does **not** mean blanket trusted.
+Pinned or present reference material does **not** mean blanket trusted or independently licensed by `skillz`. The repository's MIT license covers first-party material only; controlling third-party terms may differ per source, package, file or embedded asset. A license field or manifest label without authoritative grant text is not proof of permission to copy or redistribute.
 
 ## Local skills derived from third-party work
 
-When a local skill directly copies, materially adapts, or borrows distinctive procedures from another skill, record provenance in its frontmatter metadata.
+When a **new user-host skill** or an explicitly authorized repository-maintenance skill copies, materially adapts, or borrows distinctive procedures from another skill, record provenance in its frontmatter metadata. Normal user-generated skills belong in the user's host or a portable handoff, not this repository.
 
 Recommended fields:
 
@@ -126,11 +126,11 @@ For each refresh:
 1. inspect upstream changes,
 2. classify the delta as docs-only, skill-content, tooling, security, or license/provenance,
 3. re-run redundancy and security review when behavior changed,
-4. regenerate the index,
+4. reconcile relevant static catalog snapshots through authorized external host maintenance; no repository-owned generator or runtime is required,
 5. re-evaluate any local skill materially derived from changed upstream behavior when the change could invalidate its assumptions.
 
 ## Provenance is not endorsement
 
-Attribution says where material came from. It does not say that the source is safe, correct, current, or appropriate for a particular user.
+Attribution says where material came from. It does not say that the source is safe, correct, current, or appropriate for a particular user. Before actual copying, adaptation, packaging, redistribution or installation, compare the **intended action** against controlling license terms, notice/credit obligations, host capabilities and the user's explicit authority. Linking or learning general ideas is not equivalent to copying protected expression. See [consumer discovery and installation](consumer-discovery-and-installation.md).
 
 Behavioral trust still has to be earned through evaluation.
