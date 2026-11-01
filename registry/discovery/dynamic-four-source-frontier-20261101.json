@@ -10,7 +10,13 @@
       "direct_shape": 415,
       "other_shape": 17,
       "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "terminal_static_candidate_reviews": 10
+      "terminal_static_candidate_reviews": 14,
+      "terminal_candidate_review_ledger_paths": [
+        "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
+        "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
+      ],
+      "direct_shape_terminal_static_candidate_reviews": 14,
+      "direct_shape_without_terminal_static_candidate_decision": 401
     },
     {
       "source_id": "openai-plugins",
@@ -64,10 +70,11 @@
   "program_issue": 599,
   "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
   "dynamic_source_candidate_review_totals": {
-    "github_awesome_copilot": 10,
+    "github_awesome_copilot": 14,
     "openai_plugins": 169,
     "agentskillexchange_skills": 0,
     "j4flmao_agent_skills": 27,
-    "not_deduplicated_or_governed_semantic_reviews": true
+    "not_deduplicated_or_governed_semantic_reviews": true,
+    "scope_caveat": "github-awesome-copilot counts are unique reviewed direct-shape package paths at fixed pin; openai-plugins 169 are finite plugin-family decisions not yet reconciled against 502 direct-shape paths. Neither changes governed exact-version review pairs or security approval."
   }
 }
