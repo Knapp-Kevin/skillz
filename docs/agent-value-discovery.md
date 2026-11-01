@@ -4,6 +4,17 @@
 
 Use this guide when the user shares the `skillz` repository and says “take a look,” “is this useful for us?”, “what skills might help me?”, or asks for overlooked skill opportunities. Route this as `REPOSITORY_ORIENTATION` from [AGENT_START_HERE](../AGENT_START_HERE.md). Use [`skill-bootstrap`](../engine/skills/skill-bootstrap/SKILL.md) when the user actually asks to **build, revise, or install** a personal skill system. Direct named-skill lookups remain `DIRECT_LIBRARY` and must not be turned into a mandatory interview.
 
+## Fast path for the first response
+
+If the user only says **“take a look at this repository”**, do this without a questionnaire:
+
+1. State in a sentence that this is an open-ended, passive **capability discovery and skill reference library**, not a ready-to-run installer or a promise of thousands of approved skills.
+2. Check the **current user task** and any **already legitimately in-scope** summary of repeated tasks, errors, existing skills and host tools. If none is available, do **not** invent a personal profile or start an unrelated private-history search.
+3. Identify **up to three** capability areas where this library could realistically help, with `OBSERVED` / `INFERRED` / `PROVISIONAL` confidence. Provide at least one plausible quality or safety improvement alongside generation/automation opportunities when the evidence supports it. Distinguish actual accessible candidate paths from hypothetical categories.
+4. End with a concrete judgment (`USEFUL`, `CONDITIONAL VALUE`, or `NO CLEAR FIT`) and **one next action**. Do not install, schedule or write anything on the strength of the link alone.
+
+For deeper personalized fitting, continue to [the bootstrap](../engine/skills/skill-bootstrap/SKILL.md) only when requested; a host can use relevant already-authorized user memory, or ask before widening access. This short answer is valuable even when no user history is available.
+
 ## Value proposition in one read
 
 `skillz` is a **capability-first, open-ended knowledge index** for finding whole skills, reusable mechanisms, creation guidance, and risk/quality evidence. The external agent, not this repository, actively searches, compares, authors or installs skills using its own authorized tools.
