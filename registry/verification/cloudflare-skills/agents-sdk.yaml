@@ -5,16 +5,17 @@ source_snapshot_revision: f96bff754e428838818017f75817f0f9428acd48
 local_path: skills/sources/cloudflare-skills/skills/agents-sdk/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d9f1c8a9eaeb271888fb82ecda5d79ebf264944a
+package_tree_sha: fe7c98385541543a62abf65090654fcbc181c8b7
 characterized_at: 2026-08-28
-last_verified_at: 2026-08-28
-verification_status: verified
-verification_basis: structured-static-review
+last_verified_at: 2026-11-01
+verification_status: rejected
+verification_basis: structured-static-authority-recheck-exact-tree
 validation_status: not-run
-rubric_score: 17/20
+rubric_score: 14/20
 tags:
   use_case: [agent-development, cloud]
   lifecycle: [implementation, operations]
   characteristic: [retrieval-first, retrieval-map, reference-heavy, tool-routing, production-oriented]
-  authority: [mutating]
+  authority: [mutating, external-side-effect]
   portability: [medium]
-notes: Strong freshness defense and authoritative task-to-doc mapping. Platform-specific and capable of project mutation, so selection must respect Cloudflare context and user authority. Behavioral validation remains pending.
+notes: "REJECT unchanged (14/20) under the action-specific authority hard fail. The exact pinned SKILL.md instructs npm install and describes durable state and recurring schedules without separate permission; bundled references/email.md demonstrates reading/logging sender and subject and automatic replyToEmail, with no scoped private-data read, recipient, communication or retention approval. State persistence/broadcast and recurring work also require task-specific authorization. Retain retrieval-first API guidance, typed state validation, SDK routing and scoped implementation patterns for ADAPT/EXTRACT; do not auto-install, schedule, log private mail or send replies. The registered pinned package tree is unchanged, and no scanner or behavioral acceptance was executed."
