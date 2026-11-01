@@ -29,6 +29,8 @@ For a fast, populated first look, use the [capability quickstart](docs/capabilit
 
 The [current dynamic discovery frontier](registry/discovery/dynamic-four-source-frontier-20261101.json) contains exact-pinned path/blob manifests from broader external sources. Its raw paths and direct-shape candidates are **unqualified leads**, not eligible/reviewed skills. Use these manifests when a capability is not yet linked in the directory, and check source-specific rights before copying or installation. The indexed library's size and scope are deliberately open-ended.
 
+For deeper game-engine discovery, the [nested game package reconciliation](docs/reviews/2026-11-01-j4flmao-nested-game-23-structural-five-static.md) distinguishes **23 first-class nested packages**, including **five individually reviewed reference-only candidates** and **18 unreviewed multi-file packages**. These are search leads, not install approvals; inspect the exact package and authority/privacy requirements.
+
 ## What `skillz` is
 
 `skillz` is **entirely passive**. It owns no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services. An authorized external host may run assessments elsewhere and deposit exact-version evidence here; pinned upstream package tooling stays source-owned reference material.

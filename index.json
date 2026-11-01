@@ -3976,5 +3976,35 @@
       "registered_sources": 25,
       "pinned_corpora": 12
     }
+  },
+  "j4flmao_nested_game_23_structural_five_static_candidate_vetting_20261101": {
+    "date": "2026-11-01",
+    "source_id": "j4flmao-agent-skills",
+    "source_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "structural_record": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json",
+    "receipt": "docs/reviews/2026-11-01-j4flmao-nested-game-23-structural-five-static.md",
+    "raw_source_paths": 645,
+    "direct_shape_candidates": 424,
+    "other_shape_paths": 221,
+    "nested_game_first_class_packages": 23,
+    "nested_game_complete_single_file_terminal_reviews": 5,
+    "nested_game_seven_file_pending_reviews": 18,
+    "other_shape_remaining_unclassified": 198,
+    "direct_shape_terminal_reviews": 18,
+    "source_total_terminal_candidate_reviews": 23,
+    "reference_only": 5,
+    "rejected_unchanged": 0,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 25,
+      "pinned_corpora": 12
+    }
   }
 }
