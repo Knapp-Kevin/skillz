@@ -1,0 +1,442 @@
+domain_id,domain,domain_kind,subdomain_id,subdomain,coverage_state,confirmed_independent_options,qualified_options,overall_grade
+D01,Software engineering,defined,D01-S01,language ecosystems,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S02,code architecture,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S03,API design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S04,debugging,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S05,unit and integration testing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S06,formal verification,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S07,code review,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S08,refactoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S09,performance engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D01,Software engineering,defined,D01-S10,release engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S01,tool use and MCP,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S02,agent orchestration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S03,memory and context,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S04,retrieval and knowledge graphs,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S05,agent evaluation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S06,prompt security,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S07,authority management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S08,multi-agent collaboration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S09,model routing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D02,Agent engineering,defined,D02-S10,agent deployment,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S01,AWS infrastructure,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S02,Azure infrastructure,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S03,Google Cloud,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S04,Cloudflare and edge,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S05,Vercel and hosting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S06,containers and Kubernetes,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S07,observability,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S08,incident response,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S09,cost governance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D03,Cloud and operations,defined,D03-S10,reliability engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S01,threat modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S02,application security,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S03,supply-chain security,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S04,identity and access,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S05,privacy engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S06,prompt-injection defense,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S07,digital forensics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S08,compliance evidence,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S09,vulnerability triage,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D04,Security and governance,defined,D04-S10,adversarial testing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S01,literature discovery,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S02,source verification,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S03,data preparation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S04,statistical inference,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S05,business intelligence,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S06,causal inference,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S07,experimental design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S08,data visualization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S09,database analytics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D05,Research and data,defined,D05-S10,reproducible research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S01,task decomposition,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S02,project management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S03,time and calendar planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S04,prioritization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S05,knowledge management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S06,personal workflows,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S07,meeting facilitation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S08,decision documentation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S09,goal review,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D06,Planning and productivity,defined,D06-S10,delegation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S01,SEO,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S02,content strategy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S03,advertising,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S04,CRM operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S05,sales outreach,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S06,conversion optimization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S07,customer segmentation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S08,attribution,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S09,pricing communications,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D07,Marketing and sales,defined,D07-S10,market research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S01,product discovery,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S02,competitive analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S03,strategy and operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S04,business modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S05,customer interviews,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S06,product viability,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S07,entrepreneurship,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S08,financial planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S09,go-to-market,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D08,Business and product,defined,D08-S10,product management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S01,user research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S02,interaction design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S03,design systems,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S04,accessibility basics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S05,usability testing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S06,prototype development,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S07,visual illustration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S08,information architecture,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S09,responsive layout,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D09,UX and visual design,defined,D09-S10,design handoff,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S01,mesh modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S02,procedural modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S03,CAD constraints,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S04,materials and shaders,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S05,rigging,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S06,animation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S07,simulation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S08,rendering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S09,interchange and export,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D10,3D CAD and animation,defined,D10-S10,manufacturability,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S01,game mechanics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S02,balance and economy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S03,level design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S04,Godot,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S05,Unity,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S06,Unreal,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S07,game AI,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S08,playtesting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S09,TTRPG design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D11,Games and interactive media,defined,D11-S10,game localization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S01,harmony and theory,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S02,melody,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S03,arrangement,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S04,orchestration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S05,notation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S06,MIDI and symbolic scores,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S07,rhythm and groove,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S08,genre technique,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S09,film scoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D12,Music composition,defined,D12-S10,composition critique,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S01,recording,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S02,dialogue editing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S03,voice synthesis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S04,sound effects,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S05,foley,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S06,audio restoration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S07,mixing and mastering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S08,podcast production,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S09,transcription,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D13,Audio voice and SFX,defined,D13-S10,audio accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S01,storyboarding,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S02,screenwriting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S03,cinematography,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S04,video editing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S05,compositing and VFX,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S06,motion graphics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S07,animation production,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S08,subtitles,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S09,media licensing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D14,Film video and motion,defined,D14-S10,render and delivery QA,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S01,technical writing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S02,creative fiction,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S03,plot and character,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S04,worldbuilding,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S05,scriptwriting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S06,copyediting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S07,editorial critique,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S08,interactive narrative,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S09,long-form structure,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D15,Writing and narrative,defined,D15-S10,publishing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S01,pedagogy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S02,curriculum design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S03,lesson planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S04,learning assessments,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S05,tutoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S06,adaptive learning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S07,special education,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S08,learning analytics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S09,instructional accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D16,Education and learning,defined,D16-S10,study habits,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S01,pure mathematics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S02,applied mathematics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S03,physics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S04,chemistry,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S05,biology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S06,astronomy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S07,laboratory methods,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S08,simulation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S09,scientific computing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D17,Science and mathematics,defined,D17-S10,measurement uncertainty,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S01,ROS and ROS2,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S02,robot perception,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S03,control systems,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S04,navigation and planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S05,robot manipulation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S06,mechanical integration,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S07,embedded systems,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S08,robotic safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S09,simulation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D18,Robotics and physical engineering,defined,D18-S10,field testing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S01,contract drafting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S02,contract analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S03,legal research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S04,case management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S05,regulatory mapping,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S06,privacy and data law,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S07,litigation support,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S08,legal writing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S09,jurisdictional review,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D19,Legal and compliance,defined,D19-S10,legal document security,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S01,clinical literature,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S02,evidence synthesis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S03,clinical research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S04,bioinformatics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S05,imaging,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S06,health informatics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S07,patient education,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S08,medical documentation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S09,clinical safety and privacy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D20,Healthcare and biomedical,defined,D20-S10,specialist validation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S01,bookkeeping,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S02,financial statements,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S03,tax compliance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S04,audit,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S05,financial modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S06,portfolio management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S07,markets and derivatives,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S08,budgeting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S09,treasury,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D21,Finance and accounting,defined,D21-S10,AML and fraud,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S01,BIM and IFC,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S02,structural engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S03,building codes,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S04,construction planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S05,estimating,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S06,contractor safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S07,quantity takeoff,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S08,building energy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S09,geospatial property,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D22,Architecture and construction,defined,D22-S10,site QA,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S01,crop planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S02,soil fertility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S03,irrigation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S04,livestock management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S05,agroecology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S06,farm operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S07,food chemistry,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S08,food safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S09,nutrition science,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D23,Agriculture food and nutrition,defined,D23-S10,harvest logistics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S01,translation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S02,internationalization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S03,terminology management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S04,RTL and script handling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S05,regional adaptation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S06,linguistic QA,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S07,subtitle translation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S08,voice dubbing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S09,cross-cultural communication,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D24,Language and localization,defined,D24-S10,language instruction,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D25,Additional disciplines,existing-catchall,D25-S01,unclassified specialist intake,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D25,Additional disciplines,existing-catchall,D25-S02,new category proposals,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D25,Additional disciplines,existing-catchall,D25-S03,cross-domain method mapping,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D25,Additional disciplines,existing-catchall,D25-S04,ontology conflict review,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D25,Additional disciplines,existing-catchall,D25-S05,low-supply skill discovery,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S01,meteorology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S02,climate observations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S03,emissions accounting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S04,climate adaptation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S05,biodiversity,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S06,ecosystem monitoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S07,environmental impact,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S08,carbon markets,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D26,Climate and environmental science,proposed-addition,D26-S09,environmental sampling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S01,cartography,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S02,spatial ETL,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S03,geocoding,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S04,geostatistics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S05,satellite analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S06,LiDAR,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S07,Earth observation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S08,map publication,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D27,GIS and remote sensing,proposed-addition,D27-S09,geospatial privacy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S01,policy evaluation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S02,regulation monitoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S03,legislative research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S04,public notices,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S05,government services,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S06,public procurement,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S07,civic data,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S08,constituent access,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D28,Public policy and government,proposed-addition,D28-S09,administrative forms,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S01,pet triage education,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S02,animal nutrition,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S03,species identification,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S04,livestock veterinary,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S05,companion-animal welfare,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S06,zoonoses,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S07,wildlife rehabilitation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D29,Veterinary and animal welfare,proposed-addition,D29-S08,veterinary literature,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S01,quality management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S02,CAPA,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S03,production scheduling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S04,process optimization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S05,industrial maintenance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S06,equipment safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S07,factory automation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S08,inspection and tolerances,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D30,Manufacturing and industrial systems,proposed-addition,D30-S09,digital manufacturing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S01,circuit design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S02,PCB layout,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S03,SPICE simulation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S04,component sourcing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S05,power electronics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S06,EMC and EMI,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S07,electrical safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S08,hardware verification,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D31,Electrical and electronics,proposed-addition,D31-S09,embedded firmware,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S01,inventory optimization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S02,demand forecasting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S03,freight logistics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S04,warehouse operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S05,customs and trade,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S06,reverse logistics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S07,supplier management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S08,route optimization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D32,Supply chain and logistics,proposed-addition,D32-S09,logistics exception handling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S01,historical research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S02,primary-source criticism,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S03,archival citation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S04,oral histories,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S05,genealogy,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S06,museum interpretation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S07,preservation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S08,historical geography,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D33,History and cultural heritage,proposed-addition,D33-S09,heritage ethics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S01,screen-reader usability,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S02,motor accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S03,cognitive accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S04,captioning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S05,hearing accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S06,accessible documents,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S07,assistive technology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S08,disability-informed evaluation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D34,Accessibility and inclusive design,proposed-addition,D34-S09,physical environment accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S01,power systems,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S02,grid reliability,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S03,renewables,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S04,energy markets,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S05,utility billing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S06,building efficiency,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S07,water utilities,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S08,metering and forecasts,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D35,Energy and utilities,proposed-addition,D35-S09,energy safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S01,traffic engineering,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S02,transit planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S03,aviation operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S04,maritime operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S05,freight networks,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S06,mobility accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S07,vehicle safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S08,transportation emissions,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D36,Transportation and mobility,proposed-addition,D36-S09,routing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S01,property valuation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S02,property management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S03,leasing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S04,property due diligence,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S05,real-estate compliance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S06,facilities management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S07,building inspection,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D37,Real estate and property,proposed-addition,D37-S08,real-estate market analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S01,claims processing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S02,underwriting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S03,risk pricing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S04,fraud detection,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S05,policy interpretation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S06,actuarial modeling,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S07,regulatory insurance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S08,loss adjustment,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D38,Insurance and actuarial,proposed-addition,D38-S09,insurance consumer education,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S01,recruiting,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S02,interviewing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S03,employee onboarding,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S04,learning and development,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S05,employee relations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S06,labor compliance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S07,compensation analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S08,workforce planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D39,Human resources and employment,proposed-addition,D39-S09,career transition,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S01,grant writing,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S02,fundraising,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S03,donor stewardship,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S04,program evaluation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S05,volunteer coordination,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S06,social impact,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S07,nonprofit governance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D40,Nonprofit and philanthropy,proposed-addition,D40-S08,grant compliance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S01,fact checking,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S02,investigative research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S03,source protection,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S04,news analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S05,data journalism,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S06,media ethics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S07,story verification,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D41,Journalism and media literacy,proposed-addition,D41-S08,publication QA,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S01,cataloging and metadata,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S02,digital preservation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S03,records management,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S04,library research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S05,ontology design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S06,information retrieval,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S07,archive access,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D42,Libraries and information science,proposed-addition,D42-S08,knowledge organization,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S01,itinerary planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S02,hotel operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S03,hospitality accessibility,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S04,destination research,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S05,event services,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S06,travel safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S07,restaurant operations,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D43,Travel tourism and hospitality,proposed-addition,D43-S08,cultural interpretation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S01,training plans,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S02,sports performance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S03,coaching,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S04,injury prevention,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S05,athlete monitoring,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S06,movement analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S07,sports analytics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D44,Sports and fitness,proposed-addition,D44-S08,adaptive physical activity,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S01,resource navigation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S02,casework documentation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S03,accessibility of services,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S04,housing support,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S05,food assistance,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S06,community outreach,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S07,social program evaluation,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D45,Community and social services,proposed-addition,D45-S08,crisis referral,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S01,disaster planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S02,weather emergency alerts,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S03,incident coordination,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S04,hazard mapping,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S05,evacuation planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S06,public communication,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S07,response logistics,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D46,Emergency and disaster management,proposed-addition,D46-S08,recovery planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S01,geology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S02,seismology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S03,hydrology,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S04,geotechnical analysis,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S05,mineral resources,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S06,geochemistry,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S07,groundwater,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D47,Earth sciences and geology,proposed-addition,D47-S08,field mapping,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S01,recipe design,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S02,food substitution,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S03,nutrition-aware cooking,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S04,commercial kitchens,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S05,menu planning,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S06,culinary technique,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S07,food allergen safety,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
+D48,Culinary and food preparation,proposed-addition,D48-S08,food cost controls,NOT_MAPPED,UNKNOWN,UNKNOWN,NOT_GRADED
