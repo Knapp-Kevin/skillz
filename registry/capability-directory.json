@@ -12,7 +12,7 @@
   "first_party_evidence": "registry/local-verification.json",
   "governed_identity_denominator": 1039,
   "third_party_identity_denominator": 995,
-  "identity_level_capability_links_verified": 2,
+  "identity_level_capability_links_verified": 10,
   "domains": [
     {
       "id": "software-engineering",
@@ -467,18 +467,24 @@
         {
           "id": "content",
           "name": "content",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "social media content planning"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/social"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "seo",
           "name": "SEO",
           "capabilities": [
-            "read-only SEO audit"
+            "read-only SEO audit",
+            "structured data schema recommendations"
           ],
           "matched_skill_ids": [
-            "corey-haines-marketing-skills/seo-audit"
+            "corey-haines-marketing-skills/seo-audit",
+            "corey-haines-marketing-skills/schema"
           ],
           "coverage_status": "evidence-linked; maturity-unassessed"
         },
@@ -499,9 +505,13 @@
         {
           "id": "lifecycle",
           "name": "lifecycle",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "SMS lifecycle communication"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/sms"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "attribution",
@@ -597,16 +607,24 @@
         {
           "id": "interaction-design",
           "name": "interaction design",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "signup flow design"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/signup"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "information-architecture",
           "name": "information architecture",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "website information architecture"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/site-architecture"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "prototyping",
@@ -1136,9 +1154,13 @@
         {
           "id": "preproduction",
           "name": "preproduction",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "marketing video planning"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/video"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "cinematography",
@@ -1507,9 +1529,13 @@
         {
           "id": "proposals",
           "name": "proposals",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "sales enablement collateral"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/sales-enablement"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         },
         {
           "id": "negotiation",
@@ -1521,9 +1547,13 @@
         {
           "id": "sales-operations",
           "name": "sales operations",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed"
+          "capabilities": [
+            "revenue operations"
+          ],
+          "matched_skill_ids": [
+            "corey-haines-marketing-skills/revops"
+          ],
+          "coverage_status": "evidence-linked; maturity-unassessed"
         }
       ]
     },
@@ -1927,7 +1957,7 @@
       ]
     }
   ],
-  "identity_level_capability_links_scope": "Two evidence-backed third-party exact-version associations, not behavioral validations or capability maturity",
+  "identity_level_capability_links_scope": "Ten evidence-backed third-party exact-version associations; not behavioral validation or maturity",
   "skill_records": [
     {
       "id": "corey-haines-marketing-skills/seo-audit",
@@ -1957,6 +1987,123 @@
       "evidence_path": "registry/verification/microsoft-skills/azure-ai.yaml",
       "license_resolution": "consult registry/skills companion; not established in this crosswalk",
       "restriction": "discovery/reference context only; not eligible for unchanged adoption"
+    },
+    {
+      "id": "corey-haines-marketing-skills/sales-enablement",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "sales-enablement",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "19dab426e515b24cf2b540c7feefd5114f66093f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "sales/proposals"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/sales-enablement.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk"
+    },
+    {
+      "id": "corey-haines-marketing-skills/schema",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "schema",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "e6012136a998d5881d320dce58360bac1809b246",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "marketing/seo"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/schema.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk"
+    },
+    {
+      "id": "corey-haines-marketing-skills/site-architecture",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "site-architecture",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "b7658d5f3035a77be3474be2cf25065e9b6df713",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "ux-ui/information-architecture"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/site-architecture.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk"
+    },
+    {
+      "id": "corey-haines-marketing-skills/revops",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "revops",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "fba4dc188fa79cc094ba8f3dd878c0791331d1a0",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "sales/sales-operations"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/revops.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference only; unchanged adoption rejected"
+    },
+    {
+      "id": "corey-haines-marketing-skills/signup",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "signup",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "3ef89f8e51f7a58b3994d2c0bdd8754980425db2",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "ux-ui/interaction-design"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/signup.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference only; unchanged adoption rejected"
+    },
+    {
+      "id": "corey-haines-marketing-skills/sms",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "sms",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "50cfa8d32c434ca948fecaa596aa5cd23f91d8cd",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "marketing/lifecycle"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/sms.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference only; unchanged adoption rejected"
+    },
+    {
+      "id": "corey-haines-marketing-skills/social",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "social",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "ab1d083ef4a9dd2a91c1eaedfb5cb745c3055d24",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "marketing/content"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/social.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference only; unchanged adoption rejected"
+    },
+    {
+      "id": "corey-haines-marketing-skills/video",
+      "source_id": "corey-haines-marketing-skills",
+      "skill_name": "video",
+      "source_snapshot_revision": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "content_blob_sha": "6c8e9fdeb640594d3bf36690174f1726a721c4e3",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "capability_paths": [
+        "video-film/preproduction"
+      ],
+      "evidence_path": "registry/verification/corey-haines-marketing-skills/video.yaml",
+      "license_resolution": "consult registry/skills companion; not established in this crosswalk",
+      "restriction": "discovery/reference only; unchanged adoption rejected"
     }
   ]
 }
