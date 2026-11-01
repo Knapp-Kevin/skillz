@@ -41,6 +41,17 @@ Choose exactly one route:
 
 For FIRST_VISIT or RETURNING_USER, follow `engine/skills/skill-bootstrap/SKILL.md` and use the [first-contact discovery walkthrough](docs/first-contact-discovery.md) to collect host capabilities and choose candidate skills without guessing. `DIRECT_LIBRARY` remains a lightweight route and should terminate in comparison, a licensed/authorized installation, or an explicit portable handoff; it does not require a full bootstrap.
 
+### Follow-up intent: do not restart or ask again
+
+Keep the current user's latest instruction and prior completed work together; update **only the requested stage**, rather than repeating a first-contact interview or treating an earlier verdict as permanent authority.
+
+- **Repeat “take another look” without requesting deeper work:** rerun `REPOSITORY_ORIENTATION` and complete a fresh value brief. Do not silently escalate to `EXPLORE`, create skills, or install them.
+- **“EXPLORE”, “inspect those candidates”, or “compare all three”:** inspect **all previously nominated relevant candidates** and the source/security/rights evidence, report `ADAPT`, `USE EXISTING`, `NO CHANGE` or another justified disposition. **Do not ask the user to pick one** when the set is already clear. This stage is read-only and can legitimately finish with an evidence-backed decision.
+- **“Proceed”, “take action”, “apply the adaptations”, or equivalent after specific qualified `ADAPT` decisions:** when the active exchange makes artifact creation the clear intended next stage, **execute the already-selected adaptations** through [skill-bootstrap S7–S11](engine/skills/skill-bootstrap/SKILL.md). Produce complete user-host skill artifacts for **all selected `ADAPT` items**, and leave `NO CHANGE` items untouched. Do not ask which of the already-selected items to do unless materially conflicting choices remain. If an installation destination or write authorization is missing, finish the complete **portable, ready-to-use handoff** instead of stalling or claiming installation.
+- **Install / activate / persist / publish / send data / schedule / change external services:** these are distinct side effects requiring the user's applicable host/action permission. A vague “proceed” is **not** automatic authorization for them. If a particular side effect is blocked, complete all safe remaining artifacts and state the precise blocker.
+
+Do not turn source citations, feedback, or historical memory into fresh authorization. **Test conversations are not repository artifacts**: do not post a consumer's UX feedback to an issue/PR or add a test report unless repository-maintenance publication was explicitly requested.
+
 ### Destination invariant
 
 For `REPOSITORY_ORIENTATION`, `DIRECT_LIBRARY`, `FIRST_VISIT`, and `RETURNING_USER`, this repository is **read-only reference material**.
