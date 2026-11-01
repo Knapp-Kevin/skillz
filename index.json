@@ -2738,11 +2738,13 @@
       "figma": 12,
       "build_macos_apps": 11,
       "cloudflare": 9,
-      "build_web_apps": 6
+      "build_web_apps": 6,
+      "stripe": 7,
+      "supabase": 2
     },
-    "terminal_candidate_decisions": 89,
-    "reference_only": 37,
-    "rejected_unchanged": 52,
+    "terminal_candidate_decisions": 98,
+    "reference_only": 40,
+    "rejected_unchanged": 58,
     "admitted_source_denominator_delta": 0,
     "new_verification_pairs": 0,
     "security_scan_executed": false,
@@ -2919,5 +2921,48 @@
     "behavioral_validation": "not-run",
     "receipt": "docs/reviews/2026-11-01-openai-build-web-apps-six-candidate-vetting.md",
     "issue": 574
+  },
+  "openai_stripe_supabase_nine_candidate_vetting": {
+    "date": "2026-11-01",
+    "source_id": "openai-plugins",
+    "source_role": "dynamic-discovery",
+    "source_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "families": {
+      "stripe": {
+        "plugin_version": "7.0.0",
+        "skills_tree": "73ccfc7ef6f904c0e21ff26b4eee15673c2d039e",
+        "denominator": 7,
+        "reference_only": 2,
+        "rejected_unchanged": 5,
+        "license": "NOASSERTION"
+      },
+      "supabase": {
+        "plugin_version": "1.0.0",
+        "skills_tree": "4819eed202c98e09cb65d822ecc20b5a961beac4",
+        "denominator": 2,
+        "reference_only": 1,
+        "rejected_unchanged": 1,
+        "license": "MIT"
+      }
+    },
+    "first_class_candidate_denominator": 9,
+    "terminal_candidate_decisions": 9,
+    "reference_only": 3,
+    "rejected_unchanged": 6,
+    "admissions": 0,
+    "admitted_source_denominator_delta": 0,
+    "new_provenance_pairs": 0,
+    "new_verification_pairs": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "inventory_unchanged": {
+      "first_party": 44,
+      "third_party": 995,
+      "total_pairs": 1039,
+      "registered_sources": 23,
+      "pinned_corpora": 12
+    },
+    "receipt": "docs/reviews/2026-11-01-openai-stripe-supabase-nine-candidate-vetting.md",
+    "issue": 576
   }
 }
