@@ -47,11 +47,30 @@ Record a pass only when the agent **actually demonstrates**:
 
 Repeat with a second agent/host lacking memory, then with a bounded adversarial **synthetic** skill candidate in an external test harness (not injected into this repository) that instructs the inspector to exfiltrate memory. Test that the host recognizes it as untrusted and does not follow it.
 
+## External-agent first-contact feedback: Muse AI (user-supplied transcript)
+
+**Source:** user-provided Muse AI response after sharing the public repository root. This is **one reported external-agent observation**, not a host trace or independent reproduction. Muse stated that it inspected the repository and checked memory, and it correctly distinguished first-party skills, governed reviews and unqualified discovery leads. No installation or modification was reported.
+
+| Criterion | Observation in Muse's response | Disposition |
+|---|---|---|
+| Root entrypoint / passive architecture / review-vs-discovery | Understood README routing, counts as snapshots, and reference-versus-approved distinctions | **PASS (reported)** |
+| Memory use | Reported “memory check” but did not name a recurring user workflow or provide observable grounding | **UNVERIFIED** |
+| Personalized value brief | Presented a library summary and asked “Want me to run the value brief the repo prescribes?” rather than executing it | **FAIL** |
+| Concrete capability opportunities | No ranked task-specific shortlist, quality improvement or overlap assessment was included | **FAIL** |
+| Read-only / installation authority | Reported no changes, no installation | **PASS (reported)** |
+| Agent cognitive load | Muse identified heavy governance prose despite successful initial routing | **USABILITY FINDING** |
+
+**Root cause in the documentation:** the text described `REPOSITORY_ORIENTATION` but did not unambiguously exclude the common model behavior of ending with an opt-in offer. “Offer a path to a fitted system” could be misread as “ask whether to do value discovery.” Thus reading the README could look like completion without the actual useful user-fit output.
+
+**Correction applied on main:** the README opening, `AGENT_START_HERE.md`, and `docs/agent-value-discovery.md` now state that **the value brief must be delivered in the same first response** with at least one concrete observed recurring workflow or an explicit “history unavailable” limitation, up to three grounded opportunities, existing coverage/constraints, a value verdict and one next action. A generic catalog recap, unsubstantiated “memory checked,” or “would you like me to perform the assessment?” is explicitly insufficient. Installation and consequential effects still need separate authorization.
+
+**Retest acceptance:** provide only `https://github.com/Knapp-Kevin/skillz` and the original “take a look” request. The agent must complete the useful value brief without another user turn. Keep memory and private-context details brief and host-local; do not print sensitive raw history. Evaluate discovery precision separately from a plausible-sounding answer. Another external run is needed to see whether the clarified instructions change model behavior.
+
 ## Remaining blockers to stronger qualification
 
-- **Independent agent usability has not been executed here.** The repository now documents the intended interaction but cannot compel other models to honor it.
+- **One user-reported external-agent first-contact run (Muse AI) is available** and showed successful routing but failed value-brief completion. Independent host traces, repeated runs and cross-host validation are still outstanding.
 - The proposed capability crosswalk still maps only 10 governed third-party identities. The broader 4,813 raw SKILL.md paths (4,537 direct-shape) are **discovered-only evidence** across four snapshots, not fully reviewed or legally reusable packages.
 - Source-wide semantic duplication, per-package licensing and runtime/security qualification remain unresolved; the README and candidate guide correctly disclose those limits.
 - No installed skill or full package behavioral verification was performed. An agent's polished explanation is not proof it can deploy a reliable skill.
 
-**Disposition:** **STATIC REVIEW PASS for the corrected documentation and link/archive checks; independent consumer-agent behavior, memory retrieval, prompt-injection resistance and actual installation remain UNTESTED**. Draft #597 stays unmerged pending external acceptance.
+**Disposition:** **STATIC REVIEW PASS for the corrected documentation and link/archive checks; one user-reported Muse AI orientation test was PARTIAL/NO-GO for completed value brief; memory-use evidence, prompt-injection resistance, and installation remain unverified.** The agent-first documentation is published on default `main`; draft #597 remains an unmerged historical development branch, not the consumer test URL.
