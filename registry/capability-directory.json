@@ -6777,7 +6777,7 @@
     "total_subdomains": 240,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "All 44 first-party and 10 third-party review identities linked at least once; link counts per subdomain vary. A domain's presence is only the specific supported procedure, not the whole specialty."
+    "note": "Evidence-linked examples cover an evolving mix of first-party and third-party exact-version review records, with separate name-only lexical hints. Counts are a dated snapshot, not limits or eligibility claims. A mapping describes a specific procedure, not an entire professional specialty."
   },
   "name_only_fallback_summary": {
     "review_identity_source": "registry/governed-review-name-index.json",
