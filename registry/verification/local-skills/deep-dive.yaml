@@ -3,13 +3,13 @@ skill_name: deep-dive
 source_id: local-skills
 local_path: "skills/deep-dive/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: b518f172abce491d979cf8f8ef854a61605b2790
+content_blob_sha: b577c909a3136998896e12666e72c32f4873de52
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No representative host-executed behavioral or adversarial evidence for this exact revision; not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "19/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [retrieval-first, source-driven, evidence-first, synthesis, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Strong multi-lane research plus active refutation of load-bearing claims, explicit confidence and source hierarchy; runtime source quality still depends on available search/fetch tools."
+notes: "Four-lane research and active refutation retained. Public-first source boundary, explicit private-read/egress authority, untrusted retrieved text and zero secret-fragment reproduction."

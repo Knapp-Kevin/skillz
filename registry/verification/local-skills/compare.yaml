@@ -3,13 +3,13 @@ skill_name: compare
 source_id: local-skills
 local_path: "skills/compare/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: b933a8266b8eda18807de9b9717436c54af0362d
+content_blob_sha: b1ff40ba8931446a912b42d4abcc2133356fe1a6
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No representative host-executed behavioral or adversarial evidence for this exact revision; not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "19/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, metric-driven, human-review, source-driven, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."
+notes: "Precommitted criteria and evidence matrix retained. Private trials/invoices need scoped read authority; public searches exclude private identifiers; no credential fragments in output."

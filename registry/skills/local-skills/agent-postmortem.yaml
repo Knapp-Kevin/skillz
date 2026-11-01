@@ -7,9 +7,9 @@ source_path: skills/agent-postmortem/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 0121d6e7baf80e4caa7549c2f31250f1a14ab651
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/agent-postmortem/SKILL.md
 permission_tier: read-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: eligible-standalone
-rationale: "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+rationale: "2026-10-29 exact-version static review: agent-postmortem retains its differentiated method while removing token-prefix disclosure; private evidence requires scoped authorization and missing sources are disclosed. Behavioral validation not-run; security qualification pending."

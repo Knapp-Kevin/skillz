@@ -7,9 +7,9 @@ source_path: skills/brief-writer/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 0121d6e7baf80e4caa7549c2f31250f1a14ab651
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/brief-writer/SKILL.md
 permission_tier: generate-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled references ship with the skill folder"
 import_eligibility: eligible-with-complete-skill-folder
-rationale: "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured."
+rationale: "2026-10-29 exact-version static review: brief-writer retains its differentiated method while removing token-prefix disclosure; private evidence requires scoped authorization and missing sources are disclosed. Behavioral validation not-run; security qualification pending."

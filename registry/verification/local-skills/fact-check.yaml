@@ -3,19 +3,19 @@ skill_name: fact-check
 source_id: local-skills
 local_path: "skills/fact-check/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e58dea59671c8a7c537e27403d6f52e466bf8d86
+content_blob_sha: 2b077b7e3f6ba9a387402041910a5d69051a2542
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: No representative host-executed behavioral or adversarial evidence for this exact revision; not-run.
 rubric: "docs/skill-verification.md"
-rubric_score: "20/20"
+rubric_score: "19/20"
 tags:
   use_case: [research, decision-support, web-search]
   lifecycle: [verification]
   characteristic: [evidence-first, decomposition, source-driven, traceable, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."
+notes: "Primary-source subclaim verdicts retained. Private claim material is not silently searched or disclosed; quoted instructions are untrusted; secret fragments prohibited."

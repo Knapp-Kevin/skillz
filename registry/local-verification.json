@@ -44,7 +44,7 @@
       "skill_name": "agent-postmortem",
       "local_path": "skills/agent-postmortem/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fb8777d18a27a89f47f9e8a022385b480d49f7c0",
+      "content_blob_sha": "6c467bf07e3817404410614a25d98d34879dc718",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -70,13 +70,13 @@
           "high"
         ]
       },
-      "notes": "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+      "notes": "Earliest-determining-point analysis preserved; private transcripts/logs/cost records require exact session scope and reports cannot be shared by default. Exact-version static semantic VERIFIED only; security and behavioral acceptance not established."
     },
     {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0eb629e92e53a03c26df0ebef15662e1888c25b0",
+      "content_blob_sha": "3d6fea5228447911ad87756b3d4fcf6d8404cb1e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -102,7 +102,7 @@
           "high"
         ]
       },
-      "notes": "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured."
+      "notes": "One-page decision structure and anti-fabrication preserved; Gmail/calendar evidence now requires scoped consent and no mandatory connector. Exact-version static semantic VERIFIED only; security and behavioral acceptance not established."
     },
     {
       "skill_name": "career-radar",
@@ -172,7 +172,7 @@
       "skill_name": "compare",
       "local_path": "skills/compare/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b933a8266b8eda18807de9b9717436c54af0362d",
+      "content_blob_sha": "b1ff40ba8931446a912b42d4abcc2133356fe1a6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -200,7 +200,7 @@
           "high"
         ]
       },
-      "notes": "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."
+      "notes": "Precommitted criteria, cell evidence, and counterargument preserved; private vendor/trial data and public search egress are gated. Exact-version static semantic VERIFIED only; security and behavioral acceptance not established."
     },
     {
       "skill_name": "daily-briefing",
@@ -302,7 +302,7 @@
       "skill_name": "deep-dive",
       "local_path": "skills/deep-dive/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b518f172abce491d979cf8f8ef854a61605b2790",
+      "content_blob_sha": "b577c909a3136998896e12666e72c32f4873de52",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -329,7 +329,7 @@
           "high"
         ]
       },
-      "notes": "Strong multi-lane research plus active refutation of load-bearing claims, explicit confidence and source hierarchy; runtime source quality still depends on available search/fetch tools."
+      "notes": "Four-lane source sweep and active refutation preserved; private account/source reads and disclosure are separately gated. Exact-version static semantic VERIFIED only; security and behavioral acceptance not established."
     },
     {
       "skill_name": "deepseek-pulse",
@@ -398,10 +398,10 @@
       "skill_name": "fact-check",
       "local_path": "skills/fact-check/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e58dea59671c8a7c537e27403d6f52e466bf8d86",
+      "content_blob_sha": "2b077b7e3f6ba9a387402041910a5d69051a2542",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "19/20",
       "tags": {
         "use_case": [
           "research",
@@ -425,7 +425,7 @@
           "high"
         ]
       },
-      "notes": "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."
+      "notes": "Primary-source subclaim method preserved; sensitive claims and private documents are not silently transmitted to searches. Exact-version static semantic VERIFIED only; security and behavioral acceptance not established."
     },
     {
       "skill_name": "finance-review",
