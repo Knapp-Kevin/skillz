@@ -48,16 +48,17 @@
       "direct_shape": 3196,
       "other_shape": 4,
       "manifest": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
-      "terminal_static_candidate_reviews": 1406,
+      "terminal_static_candidate_reviews": 1845,
       "deferred_static_candidate_reviews": 3,
       "terminal_candidate_review_ledger_paths": [
         "registry/discovery/agentskillexchange-authored-procedures-86-static-20261102.json",
         "registry/discovery/agentskillexchange-catalog-stub-462-static-20261102.json",
+        "registry/discovery/agentskillexchange-developer-tools-pointer-439-static-20261102.json",
         "registry/discovery/agentskillexchange-ops-pointer-453-static-20261102.json",
         "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json"
       ],
       "identity_segmentation": "registry/discovery/agentskillexchange-identity-segmentation-20261102.json",
-      "direct_shape_without_terminal_static_candidate_decision": 1793
+      "direct_shape_without_terminal_static_candidate_decision": 1354
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -106,12 +107,12 @@
   "dynamic_source_candidate_review_totals": {
     "github_awesome_copilot": 119,
     "openai_plugins": 169,
-    "agentskillexchange_skills": 1406,
+    "agentskillexchange_skills": 1845,
     "j4flmao_agent_skills": 90,
     "not_deduplicated_or_governed_semantic_reviews": true,
     "scope_caveat": "Path-matched candidate static reviews are source vetting only; not governed semantic review, security, behavior or admission.",
-    "path_matched_across_four_sources": 1615,
-    "path_matched_note": "119 Awesome Copilot + 90 j4flmao + 1406 AgentSkillExchange exact-path terminal candidate decisions (3 AgentSkillExchange DEFER not counted); OpenAI 169 plugin-family decisions not path-reconciled (41 historical exact matches separate). Corrected 2026-11-02: previous value 193 lagged the 209 source sum."
+    "path_matched_across_four_sources": 2054,
+    "path_matched_note": "119 Awesome Copilot + 90 j4flmao + 1845 AgentSkillExchange exact-path terminal candidate decisions (3 AgentSkillExchange DEFER not counted); OpenAI 169 plugin-family decisions not path-reconciled (41 historical exact matches separate). Corrected 2026-11-02: previous value 193 lagged the 209 source sum."
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
   "latest_awesome_copilot_tranche": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
@@ -125,5 +126,5 @@
     "governed_review_delta": 0,
     "blocked_missing_historical_tree": 9
   },
-  "latest_agentskillexchange_tranche": "docs/reviews/2026-11-02-agentskillexchange-security-quality-pointer-408-static.md"
+  "latest_agentskillexchange_tranche": "docs/reviews/2026-11-02-agentskillexchange-developer-tools-pointer-439-static.md"
 }
