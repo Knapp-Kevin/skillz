@@ -10,7 +10,7 @@
       "direct_shape": 415,
       "other_shape": 17,
       "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "terminal_static_candidate_reviews": 95,
+      "terminal_static_candidate_reviews": 103,
       "terminal_candidate_review_ledger_paths": [
         "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
         "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
@@ -21,10 +21,11 @@
         "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
         "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
         "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
-        "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+        "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+        "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
       ],
-      "direct_shape_terminal_static_candidate_reviews": 78,
-      "direct_shape_without_terminal_static_candidate_decision": 337,
+      "direct_shape_terminal_static_candidate_reviews": 86,
+      "direct_shape_without_terminal_static_candidate_decision": 329,
       "other_shape_structurally_classified": 17,
       "other_shape_terminal_static_candidate_reviews": 17,
       "other_shape_without_terminal_static_candidate_decision": 0
