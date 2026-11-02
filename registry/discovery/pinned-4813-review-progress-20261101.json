@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 90,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 100,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 49,
-      "terminal_static_candidate_decisions": 49,
-      "direct_shape_path_decisions": 32,
+      "exact_path_fingerprints_checked": 59,
+      "terminal_static_candidate_decisions": 59,
+      "direct_shape_path_decisions": 42,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 383,
-      "direct_shape_without_terminal_decision": 383,
+      "raw_paths_without_terminal_decision": 373,
+      "direct_shape_without_terminal_decision": 373,
       "other_shape_without_terminal_decision": 0,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": null,
@@ -982,18 +982,118 @@
       "grade_20": 10,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/autoresearch/SKILL.md",
+      "skill_blob": "ad54af302bb47c0c3ac7848271d610bf268c9661",
+      "package_tree": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-model-design-review/SKILL.md",
+      "skill_blob": "5447d29f3f01b8ba7694f76474fef28cb39439d6",
+      "package_tree": "7a28d24dfc4b8d760c37f5b9eaaf50a052c8b9e9",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-report-design-consultation/SKILL.md",
+      "skill_blob": "85a520c5aa923a90c81ce65c5634b0bee1c4ae7f",
+      "package_tree": "cbeb133eaffb89aaeb09c5c39745a3fef560566a",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-operating-cadence/SKILL.md",
+      "skill_blob": "377534c9da3d5fb4819af717fef4c1e2ecad521e",
+      "package_tree": "54681a67b3dcc73c13e3d16d3a28a9b53e52725e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-technical-product-pricing/SKILL.md",
+      "skill_blob": "35c2db5798129c5d108dd1c8ddc4052fe83e53a5",
+      "package_tree": "117e986a663d7d8c4530ca81748ee5ac96b02542",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-product-led-growth/SKILL.md",
+      "skill_blob": "ae5172dafcc339f3357e3325a663a47fd309af4d",
+      "package_tree": "239d904465f131478d95816286c5863b54100503",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-partnership-architecture/SKILL.md",
+      "skill_blob": "984252e864316635fc2450f7ca3a497f847209e4",
+      "package_tree": "4a86d4df893d27bee174d8df8d1b2fa9ef6ceb8c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/architecture-blueprint-generator/SKILL.md",
+      "skill_blob": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
+      "package_tree": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/repo-story-time/SKILL.md",
+      "skill_blob": "650d0d29bfa856620eeecfe6889e94d5e1a773f8",
+      "package_tree": "8f6f45d74ce2ae92538af99b9fb32cf341397647",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-0-to-1-launch/SKILL.md",
+      "skill_blob": "a359ace75a86db333a3b6672992fdee9fde5af1e",
+      "package_tree": "13a06634c3f10ed3e251d6d7d55ddf04e014987f",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-01",
     "source_id": "github-awesome-copilot",
-    "source_candidate_decisions": "39 -> 49 / 432 raw paths",
-    "direct_candidate_decisions": "24 -> 32 / 415",
-    "nested_candidate_decisions": "15 -> 17 / 17",
-    "four_source_exact_path_decisions": "80 -> 90 / 4813 raw paths",
+    "source_candidate_decisions": "49 -> 59 / 432 raw paths",
+    "direct_candidate_decisions": "32 -> 42 / 415",
+    "nested_candidate_decisions": "17 -> 17 / 17",
+    "four_source_exact_path_decisions": "90 -> 100 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-01-awesome-copilot-qdrant-routers-contributor-ten-static.md"
+    "receipt": "docs/reviews/2026-11-01-awesome-copilot-cross-domain-knowledge-business-ten-static.md"
   }
 }

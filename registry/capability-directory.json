@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 12,
+      "source_vetted_reference_count": 13,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -260,6 +260,22 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/architecture-blueprint-generator/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
+          "package_tree": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
+          "capability": "Generate an implementation-grounded architecture blueprint",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -936,7 +952,25 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Research capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/autoresearch/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "ad54af302bb47c0c3ac7848271d610bf268c9661",
+          "package_tree": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
+          "capability": "Run iterative code optimization experiments",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "planning",
@@ -1078,7 +1112,25 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Marketing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/gtm-product-led-growth/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "ae5172dafcc339f3357e3325a663a47fd309af4d",
+          "package_tree": "239d904465f131478d95816286c5863b54100503",
+          "capability": "Assess product-led growth and channel economics",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "product",
@@ -1116,7 +1168,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1141,6 +1193,22 @@
           "static_candidate_score": "13/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/gtm-0-to-1-launch/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "a359ace75a86db333a3b6672992fdee9fde5af1e",
+          "package_tree": "13a06634c3f10ed3e251d6d7d55ddf04e014987f",
+          "capability": "Diagnose early product launch and first-customer traction",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -1410,7 +1478,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1421,6 +1489,22 @@
           "static_candidate_score": "14/20",
           "candidate_disposition": "REFERENCE-ONLY",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/repo-story-time/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "650d0d29bfa856620eeecfe6889e94d5e1a773f8",
+          "package_tree": "8f6f45d74ce2ae92538af99b9fb32cf341397647",
+          "capability": "Summarize repository history and technical evolution",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -1575,7 +1659,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Analytics capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1587,6 +1671,38 @@
           "static_candidate_score": "13/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/power-bi-model-design-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "5447d29f3f01b8ba7694f76474fef28cb39439d6",
+          "package_tree": "7a28d24dfc4b8d760c37f5b9eaaf50a052c8b9e9",
+          "capability": "Review Power BI semantic model architecture and DAX design",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/power-bi-report-design-consultation/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "85a520c5aa923a90c81ce65c5634b0bee1c4ae7f",
+          "package_tree": "cbeb133eaffb89aaeb09c5c39745a3fef560566a",
+          "capability": "Design Power BI charts and report navigation",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -1753,7 +1869,57 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Business capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 3,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/gtm-operating-cadence/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "377534c9da3d5fb4819af717fef4c1e2ecad521e",
+          "package_tree": "54681a67b3dcc73c13e3d16d3a28a9b53e52725e",
+          "capability": "Plan decision-making cadence and reporting for scaling teams",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/gtm-technical-product-pricing/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "35c2db5798129c5d108dd1c8ddc4052fe83e53a5",
+          "package_tree": "117e986a663d7d8c4530ca81748ee5ac96b02542",
+          "capability": "Compare technical-product pricing and freemium strategies",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/gtm-partnership-architecture/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "984252e864316635fc2450f7ca3a497f847209e4",
+          "package_tree": "4a86d4df893d27bee174d8df8d1b2fa9ef6ceb8c",
+          "capability": "Evaluate and stage partner ecosystem commitments",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "sales",
@@ -2311,6 +2477,22 @@
               "static_candidate_score": "11/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/architecture-blueprint-generator/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
+              "package_tree": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
+              "capability": "Generate an implementation-grounded architecture blueprint",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -3688,7 +3870,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/autoresearch/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ad54af302bb47c0c3ac7848271d610bf268c9661",
+              "package_tree": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
+              "capability": "Run iterative code optimization experiments",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -3943,7 +4143,25 @@
             "corey-haines-marketing-skills/cro"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 3
+          "name_only_review_hits_in_scope": 3,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/gtm-product-led-growth/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ae5172dafcc339f3357e3325a663a47fd309af4d",
+              "package_tree": "239d904465f131478d95816286c5863b54100503",
+              "capability": "Assess product-led growth and channel economics",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "lifecycle",
@@ -4164,7 +4382,25 @@
             "david-ondrej-skills/launch-subagent"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/gtm-0-to-1-launch/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "a359ace75a86db333a3b6672992fdee9fde5af1e",
+              "package_tree": "13a06634c3f10ed3e251d6d7d55ddf04e014987f",
+              "capability": "Diagnose early product launch and first-customer traction",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "lifecycle",
@@ -5119,7 +5355,25 @@
             "bm629-agent-skills/reviewing-technical-design"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/repo-story-time/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "650d0d29bfa856620eeecfe6889e94d5e1a773f8",
+              "package_tree": "8f6f45d74ce2ae92538af99b9fb32cf341397647",
+              "capability": "Summarize repository history and technical evolution",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "release-notes",
@@ -5705,7 +5959,25 @@
             "corey-haines-marketing-skills/analytics"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/power-bi-model-design-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "5447d29f3f01b8ba7694f76474fef28cb39439d6",
+              "package_tree": "7a28d24dfc4b8d760c37f5b9eaaf50a052c8b9e9",
+              "capability": "Review Power BI semantic model architecture and DAX design",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "dashboards",
@@ -5788,7 +6060,25 @@
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/power-bi-report-design-consultation/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "85a520c5aa923a90c81ce65c5634b0bee1c4ae7f",
+              "package_tree": "cbeb133eaffb89aaeb09c5c39745a3fef560566a",
+              "capability": "Design Power BI charts and report navigation",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "measurement",
@@ -6151,7 +6441,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/gtm-technical-product-pricing/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "35c2db5798129c5d108dd1c8ddc4052fe83e53a5",
+              "package_tree": "117e986a663d7d8c4530ca81748ee5ac96b02542",
+              "capability": "Compare technical-product pricing and freemium strategies",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "strategy",
@@ -6167,7 +6475,25 @@
             "corey-haines-marketing-skills/content-strategy"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/gtm-partnership-architecture/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "984252e864316635fc2450f7ca3a497f847209e4",
+              "package_tree": "4a86d4df893d27bee174d8df8d1b2fa9ef6ceb8c",
+              "capability": "Evaluate and stage partner ecosystem commitments",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "operations",
@@ -6185,7 +6511,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/gtm-operating-cadence/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "377534c9da3d5fb4819af717fef4c1e2ecad521e",
+              "package_tree": "54681a67b3dcc73c13e3d16d3a28a9b53e52725e",
+              "capability": "Plan decision-making cadence and reporting for scaling teams",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "governance",
@@ -9081,25 +9425,27 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review. The ten additional Qdrant routers/contributor candidates are source-vetted only, not governed verification; all linked children remain independently dispositioned.",
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review. The ten additional Qdrant routers/contributor candidates are source-vetted only, not governed verification; all linked children remain independently dispositioned. Ten additional cross-domain Awesome Copilot packages have source-vetting-only grades; none is governed, security-qualified or behaviorally validated.",
   "source_vetted_grade_tranches": [
     "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
     "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
-    "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+    "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-01",
-    "subdomain_example_instances": 40,
-    "browse_overview_preview_instances": 48,
-    "distinct_source_path_pins": 50,
+    "subdomain_example_instances": 50,
+    "browse_overview_preview_instances": 58,
+    "distinct_source_path_pins": 60,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility. Additional ten are source-vetting only; Qdrant parent/child overlap is retained, not deduplicated by path count.",
+    "note": "Candidate-only static scores across all linked tranches, not governed verification or install eligibility; 10 additional distinct single-file cross-domain packages; earlier candidate examples retained.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
-    "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+    "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
   }
 }
