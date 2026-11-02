@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 18,
+      "source_vetted_reference_count": 20,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -353,6 +353,38 @@
           "static_candidate_score": "6/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": ".claude/skills/commit/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "a11946281686e15da9d87d13051cdbfda891d62a",
+          "package_tree": "1bfd7c4af491794399d65547d7fe19f56da51165",
+          "capability": "commit guidance",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": ".claude/skills/fix-issue/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "9cae1af936efc376f26eca43117b90a0e89721f8",
+          "package_tree": "70eca45ff8be3262a86dacac87ce956ba10a1d37",
+          "capability": "fix issue guidance",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -675,7 +707,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 5,
+      "source_vetted_reference_count": 10,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -749,6 +781,86 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/agentic-workflows/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "dc9f99b5c7c5507c5dd516179763da5c9d3c9e56",
+          "package_tree": "c22b270ec2524bb794a962186cc8807a54a6ebdf",
+          "capability": "agentic workflows guidance",
+          "static_candidate_score": "15/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/ai-agents/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
+          "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
+          "capability": "ai agents guidance",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/ai-agents/core-architectures/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "c83351e1ec01043d367e34be8f173b7a49fabc07",
+          "package_tree": "6f84dd6a70fc48e41b17df8b8382c67e003cd3f3",
+          "capability": "core architectures guidance",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/ai-agents/multi-agent-topology/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "5599dd3de274d258c6676148c7c20b5b64920157",
+          "package_tree": "6d0b26b00bcce30a605c235f9663421b137a69d3",
+          "capability": "multi agent topology guidance",
+          "static_candidate_score": "15/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "94359797ac8571ccacb7ae761bd0e1fc5bb49043",
+          "package_tree": "7f255dc916fd2f9fe7a0208779f55dccb2c7b31f",
+          "capability": "tool calling principles guidance",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -788,7 +900,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 16,
+      "source_vetted_reference_count": 17,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -1040,6 +1152,22 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": ".claude/skills/deploy/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "da4d9acc11b7ddc4b2a0fa98bc013fd6c7a9f0d5",
+          "package_tree": "de6f5fb37fffe59844e51e2ba263e18466217c3d",
+          "capability": "deploy guidance",
+          "static_candidate_score": "4/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -1230,7 +1358,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Research capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1242,6 +1370,22 @@
           "static_candidate_score": "13/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": ".claude/skills/deep-research/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "e30e4851825542ef30eb79bd6dbf7af45ce923ce",
+          "package_tree": "a4328d50983d923912331237474d0ce5542cb1a9",
+          "capability": "deep research guidance",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -2261,7 +2405,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Memory / context capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -2272,6 +2416,22 @@
           "static_candidate_score": "12/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/ai/ai-agents/memory-systems/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "bcf1a672a4619204d04e90c5a69b19e192861a9e",
+          "package_tree": "486420ea608af4e2b3bdf545cf6a786d970ec188",
+          "capability": "memory systems guidance",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -3120,6 +3280,22 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": ".claude/skills/commit/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "a11946281686e15da9d87d13051cdbfda891d62a",
+              "package_tree": "1bfd7c4af491794399d65547d7fe19f56da51165",
+              "capability": "commit guidance",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -3178,6 +3354,24 @@
               "static_candidate_score": "17/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": ".claude/skills/fix-issue/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "9cae1af936efc376f26eca43117b90a0e89721f8",
+              "package_tree": "70eca45ff8be3262a86dacac87ce956ba10a1d37",
+              "capability": "fix issue guidance",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -3574,7 +3768,41 @@
             "microsoft-skills/agent-framework-azure-ai-py"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/ai-agents/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
+              "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
+              "capability": "ai agents guidance",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/ai-agents/core-architectures/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "c83351e1ec01043d367e34be8f173b7a49fabc07",
+              "package_tree": "6f84dd6a70fc48e41b17df8b8382c67e003cd3f3",
+              "capability": "core architectures guidance",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "tool-design",
@@ -3594,7 +3822,25 @@
             "microsoft-skills/mcp-builder"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "94359797ac8571ccacb7ae761bd0e1fc5bb49043",
+              "package_tree": "7f255dc916fd2f9fe7a0208779f55dccb2c7b31f",
+              "capability": "tool calling principles guidance",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "mcp-clients-servers",
@@ -3663,6 +3909,22 @@
               "static_candidate_score": "5/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/agentic-workflows/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "dc9f99b5c7c5507c5dd516179763da5c9d3c9e56",
+              "package_tree": "c22b270ec2524bb794a962186cc8807a54a6ebdf",
+              "capability": "agentic workflows guidance",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -3810,6 +4072,24 @@
               "static_candidate_score": "10/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/ai-agents/multi-agent-topology/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "5599dd3de274d258c6676148c7c20b5b64920157",
+              "package_tree": "6d0b26b00bcce30a605c235f9663421b137a69d3",
+              "capability": "multi agent topology guidance",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -4040,6 +4320,22 @@
               "static_candidate_score": "8/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": ".claude/skills/deploy/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "da4d9acc11b7ddc4b2a0fa98bc013fd6c7a9f0d5",
+              "package_tree": "de6f5fb37fffe59844e51e2ba263e18466217c3d",
+              "capability": "deploy guidance",
+              "static_candidate_score": "4/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -4549,7 +4845,25 @@
             "anthropic-knowledge-work-plugins/marketing-competitive-brief"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 7
+          "name_only_review_hits_in_scope": 7,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": ".claude/skills/deep-research/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "e30e4851825542ef30eb79bd6dbf7af45ce923ce",
+              "package_tree": "a4328d50983d923912331237474d0ce5542cb1a9",
+              "capability": "deep research guidance",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "systematic-review",
@@ -7251,6 +7565,24 @@
               "static_candidate_score": "12/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/ai/ai-agents/memory-systems/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "bcf1a672a4619204d04e90c5a69b19e192861a9e",
+              "package_tree": "486420ea608af4e2b3bdf545cf6a786d970ec188",
+              "capability": "memory systems guidance",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -10353,16 +10685,17 @@
     "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
     "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
-    "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+    "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 78,
-    "browse_overview_preview_instances": 86,
-    "distinct_source_path_pins": 88,
+    "subdomain_example_instances": 88,
+    "browse_overview_preview_instances": 96,
+    "distinct_source_path_pins": 98,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Candidate-only grades, governed 78 identity links unchanged; nine cross-domain examples added with authority/rights caveats",
+    "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
@@ -10370,6 +10703,7 @@
     "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
     "latest_awesome_copilot_testing_quality_ten": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
     "latest_awesome_copilot_visual_cad_nine": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
-    "latest_awesome_copilot_breadth_nine": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    "latest_awesome_copilot_breadth_nine": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+    "latest_j4flmao_agent_architecture_ten": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
   }
 }

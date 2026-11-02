@@ -19,13 +19,13 @@
     "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
   ],
   "individual_reviews_scope": "governed exact-version semantic review pairs only; source-vetting candidate decisions are separate",
-  "terminal_static_candidate_reviews": 41,
-  "other_shape_structurally_classified": 23,
-  "other_shape_still_unclassified": 198,
+  "terminal_static_candidate_reviews": 51,
+  "other_shape_structurally_classified": 31,
+  "other_shape_still_unclassified": 190,
   "nested_game_multi_file_pending": 0,
   "nested_game_terminal_static_candidate_reviews": 23,
-  "direct_shape_terminal_static_candidate_reviews": 18,
-  "latest_review_ledger": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+  "direct_shape_terminal_static_candidate_reviews": 20,
+  "latest_review_ledger": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
   "review_progress_ledger": "registry/discovery/pinned-4813-review-progress-20261101.json",
-  "review_status_scope": "41 exact-path source-vetting candidate decisions, not governed semantic review pairs; 604 raw paths without terminal candidate decision, including 406 direct-shape and 198 other-shape unclassified"
+  "review_status_scope": "51 exact-path source-vetting decisions (20 direct, 31 other), not governed semantic reviews; 594 raw paths pending (404 direct, 190 other). Parent/child first-class package boundaries retained."
 }

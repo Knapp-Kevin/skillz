@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "review_kind": "10 complete exact-path/package static candidate reviews, not governed semantic verification",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_denominator": {
+    "raw": 645,
+    "direct": 424,
+    "other": 221
+  },
+  "macro": {
+    "before": 41,
+    "after": 51,
+    "direct_before": 18,
+    "direct_after": 20,
+    "other_before": 23,
+    "other_after": 31,
+    "other_unclassified_before": 198,
+    "other_unclassified_after": 190,
+    "source_raw_pending_before": 604,
+    "source_raw_pending_after": 594,
+    "four_source_terminal_before": 128,
+    "four_source_terminal_after": 138,
+    "reference_only": 4,
+    "reject_unchanged": 6,
+    "admissions": 0,
+    "governed_reviews_added": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "macro_findings": [
+    "Eight other-shape paths are genuine front-mattered first-class skills (four .claude commands, four nested AI child packages), not ordinary references; two direct-shape AI packages are also distinct.",
+    "Parent ai-agents tree includes four separately front-mattered child skill packages and one bundled planning reference; nested package trees are not additional parent-only reference skills.",
+    "High-risk patterns: deployment and Git mutations without action-specific authorization, refund example missing payment approval, agent-loop arbitrary tool execution, tenant-sensitive order lookup and untrusted memory promoted into system context.",
+    "Strong reusable prior art: bounded workflow orchestration, typed multi-agent contracts, least-privilege tool design, owner-scoped memory schema, explicit commit and research checklists; reuse needs adaptation and source MIT notice.",
+    "No cross-source semantic equivalence established; exact blob identity is not semantic deduplication. No static candidate grade is governed verification, security qualification, behavioral evidence or installation approval."
+  ],
+  "records": [
+    {
+      "name": "commit",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": ".claude/skills/commit/SKILL.md",
+      "frontmatter_name": "commit",
+      "skill_blob": "a11946281686e15da9d87d13051cdbfda891d62a",
+      "package_tree": "1bfd7c4af491794399d65547d7fe19f56da51165",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "unspecified",
+      "capability_path": "software-engineering/developer-experience",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Git CLI and PowerShell; no bundled files; requires explicit repository/branch/file-set authority and a secrets check",
+      "authority_and_side_effects": "git add/commit are persistent local repository mutations; only explicitly requested commit, not blanket staging",
+      "privacy_and_egress": "diff and status may expose secrets or private paths",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Explicit /commit authorization is present, but stage scope is unspecified and status/diff may expose sensitive changes. Keep only as a scoped conventional-commit checklist.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "repository-maintenance"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "deep-research",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": ".claude/skills/deep-research/SKILL.md",
+      "frontmatter_name": "deep-research",
+      "skill_blob": "e30e4851825542ef30eb79bd6dbf7af45ce923ce",
+      "package_tree": "a4328d50983d923912331237474d0ce5542cb1a9",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "unspecified",
+      "capability_path": "research/synthesis",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Claude Explore agent with Read/Grep/Glob; no bundled files",
+      "authority_and_side_effects": "read-only when host has separately authorized repository access; no mutation",
+      "privacy_and_egress": "private source code and findings must stay in authorized scope",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 14,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Useful code-path and file:line research outline; no explicit repo/read-scope or freshness/error handling, and host-specific Explore fork is not portable.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "research"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "low"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "deploy",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": ".claude/skills/deploy/SKILL.md",
+      "frontmatter_name": "deploy",
+      "skill_blob": "da4d9acc11b7ddc4b2a0fa98bc013fd6c7a9f0d5",
+      "package_tree": "de6f5fb37fffe59844e51e2ba263e18466217c3d",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "unspecified",
+      "capability_path": "cloud-devops/deployment",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "git, npm, gh, PowerShell; no bundled files",
+      "authority_and_side_effects": "hard fail: external release/production and Git writes lack action-specific approval",
+      "privacy_and_egress": "release notes, deployment logs and credentials can leak",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 1,
+        "procedural_clarity": 1,
+        "authority_safety": 0,
+        "failure_handling": 0,
+        "evidence_discipline": 0,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 0,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 0
+      },
+      "score_20": 4,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Production deploy command performs git push and gh release create without separate target, release, traffic, or money/identity authorization. User-invocable is not sufficient scoped production approval.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "deployment"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "fix-issue",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": ".claude/skills/fix-issue/SKILL.md",
+      "frontmatter_name": "fix-issue",
+      "skill_blob": "9cae1af936efc376f26eca43117b90a0e89721f8",
+      "package_tree": "70eca45ff8be3262a86dacac87ce956ba10a1d37",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "unspecified",
+      "capability_path": "software-engineering/maintenance",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "gh/git and Read/Write/Edit; no bundled files",
+      "authority_and_side_effects": "hard fail: unscoped persistent repository mutation and commit",
+      "privacy_and_egress": "issue text is untrusted; private issue content and secrets must not be copied into commits",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 9,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Issue implementation request is treated as automatic authority to commit. Missing repository/branch/file boundaries and no pre-commit confirmation; test instructions alone do not authorize writes.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "repository-maintenance"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "agentic-workflows",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/agentic-workflows/SKILL.md",
+      "frontmatter_name": "ai-agentic-workflows",
+      "skill_blob": "dc9f99b5c7c5507c5dd516179763da5c9d3c9e56",
+      "package_tree": "c22b270ec2524bb794a962186cc8807a54a6ebdf",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "agent-mcp-development/orchestration",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "LangGraph, MemorySaver and application-defined functions; one file; external docs/framework version not checked",
+      "authority_and_side_effects": "design/generate-only by default; publish, run, paid model calls and persistent checkpoint writes require separate authority",
+      "privacy_and_egress": "traces and checkpoints can contain prompts, user data and secrets",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 15,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Differentiated workflow decision tree, loop caps, evaluation and LangGraph interrupt example. Approval-or-dry-run wording and trace/production assumptions need stronger host gates; sample has application placeholders.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "ai-agents",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/ai-agents/SKILL.md",
+      "frontmatter_name": "ai-agent-architectures",
+      "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
+      "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        "SKILL.md",
+        "references/planning-strategies.md"
+      ],
+      "nested_first_class_skills": [
+        "core-architectures",
+        "memory-systems",
+        "multi-agent-topology",
+        "tool-calling-principles"
+      ],
+      "package_boundary_note": "Parent tree includes four independently first-class child skill trees, all inspected separately in this tranche; do not count child SKILLs as parent-only references.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "agent-mcp-development/agent-architecture",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Anthropic SDK and referenced four independently first-class child skills; parent owns planning-strategies.md; parent tree includes children, all inspected in this tranche",
+      "authority_and_side_effects": "hard fail: private customer-order retrieval/LLM disclosure not properly scoped in example",
+      "privacy_and_egress": "email/order PII and tool responses can cross tenant or provider boundary",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Parent architecture guide has useful decomposition but runnable customer-email order lookup lacks tenant/subject authorization and PII minimization; tool results are sent to a model without an egress gate.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "core-architectures",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/ai-agents/core-architectures/SKILL.md",
+      "frontmatter_name": "ai-agent-core-loop",
+      "skill_blob": "c83351e1ec01043d367e34be8f173b7a49fabc07",
+      "package_tree": "6f84dd6a70fc48e41b17df8b8382c67e003cd3f3",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "agent-mcp-development/agent-architecture",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Python illustrative policy/tools; parent and planning reference are cross-package dependencies; one file",
+      "authority_and_side_effects": "hard fail: tool side effects executed without actual authorization boundary",
+      "privacy_and_egress": "raw tool outputs and exception text can leak private data into context",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Diagram promises policy validation but example invokes arbitrary tool handlers after name-only check, with no argument authorization and raw tool output in model observations. No-progress detection mistakes any successful call for progress.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "memory-systems",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/ai-agents/memory-systems/SKILL.md",
+      "frontmatter_name": "ai-agent-memory-systems",
+      "skill_blob": "bcf1a672a4619204d04e90c5a69b19e192861a9e",
+      "package_tree": "486420ea608af4e2b3bdf545cf6a786d970ec188",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "memory-context/long-term-memory",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Python, PostgreSQL/pgvector; one file; external store/embedding model versions unverified",
+      "authority_and_side_effects": "hard fail: private persistent memory writes, background collection and model-context elevation lack sufficient authority controls",
+      "privacy_and_egress": "sensitive history, embeddings and summaries require owner-scoped retrieval, deletion and disclosure authority",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Strong owner/tenant and provenance concepts, but sample promotes untrusted summaries and retrieved memory into system-role content, includes background extraction and persistent writes without specific consent/retention gates, and token eviction may break call/result pairing.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "memory"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "multi-agent-topology",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/ai-agents/multi-agent-topology/SKILL.md",
+      "frontmatter_name": "multi-agent-topology",
+      "skill_blob": "5599dd3de274d258c6676148c7c20b5b64920157",
+      "package_tree": "6d0b26b00bcce30a605c235f9663421b137a69d3",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "agent-mcp-development/multi-agent-collaboration",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Pydantic and sibling multi-agent-systems skill; one file; external provider behavior unverified",
+      "authority_and_side_effects": "design-only; executing workers, sharing data and production writes need separate host/user authority",
+      "privacy_and_egress": "work orders, evidence, traces and artifacts can contain private data",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 15,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Useful single-agent baseline, typed edge contracts, least privilege and bounded rounds. Production HITL remains advisory, and cross-provider worker data transfer needs explicit privacy/egress consent.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    },
+    {
+      "name": "tool-calling-principles",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "discovered-only",
+      "canonical_path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
+      "frontmatter_name": "tool-calling-principles",
+      "skill_blob": "94359797ac8571ccacb7ae761bd0e1fc5bb49043",
+      "package_tree": "7f255dc916fd2f9fe7a0208779f55dccb2c7b31f",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        "SKILL.md"
+      ],
+      "nested_first_class_skills": [],
+      "package_boundary_note": "Containing tree inspected; no other package-owned files.",
+      "license": "Pinned root MIT, LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; retain copyright/permission notice; external dependencies retain separate terms",
+      "frontmatter_version": "2.0.0",
+      "capability_path": "agent-mcp-development/tool-design",
+      "trigger": "Explicit request matching the named capability in pinned SKILL.md",
+      "nontrigger": "Read-only discovery is not authority to run tools, mutate state, disclose private content, install or publish",
+      "dependencies": "Pydantic, payment/order service adapters and provider tool APIs; one file",
+      "authority_and_side_effects": "hard fail: financial mutation lacks separate approval at refund execution boundary",
+      "privacy_and_egress": "order IDs, payment exceptions and logs can expose customer/payment information",
+      "portability_and_freshness": "Pinned 2026-11-01 snapshot; host/provider/API currentness and external dependency behavior not independently tested",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Excellent schema/idempotency concepts but the concrete refund handler executes a money-bearing refund on owner lookup alone, with no human action authorization; generic approval table does not fix the example.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "evidence-first"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only"
+    }
+  ]
+}
