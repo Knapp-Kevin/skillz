@@ -4440,5 +4440,32 @@
     "security_scans": 0,
     "behavioral_validations": 0,
     "eligible_distinct_denominator": null
+  },
+  "j4flmao_cloud_native_eight_complete_static_20261102": {
+    "date": "2026-11-02",
+    "source_id": "j4flmao-agent-skills",
+    "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "exact_path_candidate_decisions_before": 71,
+    "exact_path_candidate_decisions_after": 79,
+    "direct_decisions": 40,
+    "other_decisions": 39,
+    "remaining_raw_paths": 566,
+    "four_source_path_decisions": 166,
+    "graded_packages": 8,
+    "reference_only": 0,
+    "rejected_unchanged": 8,
+    "package_distinct_file_count": 17,
+    "review_evidence": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
+    "macro_review": "docs/reviews/2026-11-02-j4flmao-cloud-native-eight-static.md",
+    "governed_review_delta": 0,
+    "admitted_source_denominator_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "eligible_distinct_denominator": null,
+    "capability_directory_counts": {
+      "subdomain_examples": 116,
+      "overview_previews": 124,
+      "distinct_source_path_pins": 126
+    }
   }
 }
