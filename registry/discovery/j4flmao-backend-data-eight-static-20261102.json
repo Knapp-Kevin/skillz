@@ -78,7 +78,7 @@
       "trigger": "CRDT, local-first collaboration, Yjs, offline merge",
       "nontrigger": "Single-writer authoritative data or offline caching without concurrent edits",
       "dependencies": "Yjs, Automerge, Loro, optional WebSocket relay and IndexedDB",
-      "authority_and_side_effects": "The Yjs example persists documents in IndexedDB and sends document/presence data to a WebSocket endpoint without a scoped user/document egress or persistence authorization. Strong convergence and server-invariant warnings are useful extraction evidence.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require user authorization for document/room, remote sync origin, local persistence, presence recipients, retention and deletion before using a live client.",
       "privacy_and_egress": "Private collaborative documents and presence metadata; example remote sync and local durable storage require explicit user, room, destination, retention and revocation authority",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -110,7 +110,8 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": "medium"
       },
@@ -119,7 +120,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/crdts/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/crdts/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require user authorization for document/room, remote sync origin, local persistence, presence recipients, retention and deletion before using a live client.",
+      "hard_fail_reason": "Require user authorization for document/room, remote sync origin, local persistence, presence recipients, retention and deletion before using a live client."
     },
     {
       "name": "architecture-micro-frontends",
@@ -148,7 +153,7 @@
       "trigger": "micro-frontends, module federation, independent UI deploys",
       "nontrigger": "Design systems or bundler tuning without federation",
       "dependencies": "webpack Module Federation, React, react-error-boundary, CDN-hosted remote bundles",
-      "authority_and_side_effects": "Strong organizational go/no-go and singleton/contract checklist, but executable remoteEntry from a CDN has no trust/integrity/version pin, deployment ownership approval, or production rollout authorization. Design prior art only.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require approved remote origin, version/integrity and release/rollback owner before loading production remote code or changing deployment.",
       "privacy_and_egress": "Remote JavaScript execution and independent production deployment require origin integrity, release authorization and rollback ownership; events may carry user data",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -180,7 +185,8 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "external-side-effect"
         ],
         "portability": "medium"
       },
@@ -189,7 +195,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/micro-frontends/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/micro-frontends/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require approved remote origin, version/integrity and release/rollback owner before loading production remote code or changing deployment.",
+      "hard_fail_reason": null
     },
     {
       "name": "backend-caching-strategies",
@@ -218,7 +228,7 @@
       "trigger": "cache-aside, write-behind, Redis stampede and invalidation",
       "nontrigger": "CDN/browser cache or distributed-lock-only tasks",
       "dependencies": "Redis, Go go-redis v9, x/sync/singleflight; optional Python redis and SQL",
-      "authority_and_side_effects": "The Go example writes a user's email into Redis without data-scope, tenant-isolation, encryption or retention approval; database updates and cache invalidation have no action-specific authority. The write-behind example explicitly has a double-count failure window. Preserve TTL jitter and singleflight patterns.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require target DB/Redis, tenant/PII classification, key retention, mutation scope and rollback approval; never treat TTL as privacy consent.",
       "privacy_and_egress": "PII cached under predictable keys; Redis and database mutations, logging identifiers, and write-behind persistence require scoped authorization",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -250,7 +260,8 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "mutating"
         ],
         "portability": "medium"
       },
@@ -259,7 +270,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/caching-strategies/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/caching-strategies/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require target DB/Redis, tenant/PII classification, key retention, mutation scope and rollback approval; never treat TTL as privacy consent.",
+      "hard_fail_reason": "Require target DB/Redis, tenant/PII classification, key retention, mutation scope and rollback approval; never treat TTL as privacy consent."
     },
     {
       "name": "backend-event-driven-architecture",
@@ -288,7 +303,7 @@
       "trigger": "Kafka, RabbitMQ, at-least-once, consumer group, event ordering",
       "nontrigger": "Event sourcing persistence or broker infrastructure operations",
       "dependencies": "confluent-kafka-go v2, Kafka or RabbitMQ, SQL dedupe store",
-      "authority_and_side_effects": "Producer publishes customer IDs and monetary totals to a broker without destination/recipient/data authority; examples include SQL writes and operational DLQ replay without an action-specific approval gate. The consumer sample returns on first handler failure despite claiming retry/DLQ handoff. Keep envelope and dedupe guidance.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require producer/topic/consumer identities, private payload disclosure, broker retention, production rollout and replay authority before publishing.",
       "privacy_and_egress": "Customer IDs and payment totals in broker messages; publication, consumer effects, DLQ retention/replay and schema rollout need explicit scope",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -320,7 +335,9 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "mutating",
+          "external-side-effect"
         ],
         "portability": "medium"
       },
@@ -329,7 +346,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/event-driven-architecture/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/event-driven-architecture/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require producer/topic/consumer identities, private payload disclosure, broker retention, production rollout and replay authority before publishing.",
+      "hard_fail_reason": "Require producer/topic/consumer identities, private payload disclosure, broker retention, production rollout and replay authority before publishing."
     },
     {
       "name": "backend-graphql-optimization",
@@ -358,7 +379,7 @@
       "trigger": "GraphQL N+1, DataLoader, query complexity, persisted queries",
       "nontrigger": "GraphQL schema design or client-side caching",
       "dependencies": "Apollo Server 4+, dataloader, pg, graphql-depth-limit",
-      "authority_and_side_effects": "Per-request loaders avoid cross-request cache leaks, but SQL batch queries select by arbitrary IDs without a demonstrated tenant/row authorization predicate. Advice to enable SQL logging can expose private queries; GET/CDN caching needs per-user isolation. Useful DataLoader ordering and cost-limit reference.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require authorization-filtered batch reads, tenant/user partitioned loaders and redacted query telemetry before touching private data.",
       "privacy_and_egress": "Query logs and user/author data can disclose PII; require authorization-scoped loaders and cache partitioning before implementation",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -390,6 +411,7 @@
           "risk-aware"
         ],
         "authority": [
+          "read-only",
           "generate-only"
         ],
         "portability": "medium"
@@ -399,7 +421,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/graphql-optimization/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/graphql-optimization/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require authorization-filtered batch reads, tenant/user partitioned loaders and redacted query telemetry before touching private data.",
+      "hard_fail_reason": "Require authorization-filtered batch reads, tenant/user partitioned loaders and redacted query telemetry before touching private data."
     },
     {
       "name": "data-airflow-dbt-orchestration",
@@ -428,7 +454,7 @@
       "trigger": "Airflow dbt, Cosmos, scheduled ETL and asset-triggered DAGs",
       "nontrigger": "General data architecture or streaming systems",
       "dependencies": "Airflow 3, dbt Core/Cloud, Astronomer Cosmos, warehouse connections",
-      "authority_and_side_effects": "Sample DAGs schedule recurring production warehouse transformations and trigger dbt Cloud jobs with no approval for schedule, cost, warehouse target, external provider or downstream data publishing. Airflow connections protect credentials but are not authorization. Preserve dependency-isolation and freshness checks.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require warehouse and cloud-account scope, approved recurrence, compute budget, destination/recipient, retention and revocation before activating DAGs.",
       "privacy_and_egress": "Scheduled private warehouse transformations, cloud job charges, cross-provider transmission and durable output require separate scoped approval",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -460,7 +486,9 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "mutating",
+          "external-side-effect"
         ],
         "portability": "medium"
       },
@@ -469,7 +497,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/etl-pipelines/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/etl-pipelines/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require warehouse and cloud-account scope, approved recurrence, compute budget, destination/recipient, retention and revocation before activating DAGs.",
+      "hard_fail_reason": "Require warehouse and cloud-account scope, approved recurrence, compute budget, destination/recipient, retention and revocation before activating DAGs."
     },
     {
       "name": "database-internals-mechanics",
@@ -506,7 +538,7 @@
       "trigger": "WAL, MVCC, B-tree, LSM-tree, write skew",
       "nontrigger": "Schema migrations or database-specific query tuning",
       "dependencies": "PostgreSQL, InnoDB, RocksDB; two bundled explanatory Markdown references",
-      "authority_and_side_effects": "Useful engine-specific isolation and amplification comparisons, but the bundled WAL reference says a commit is acknowledged immediately after append without requiring durable log flush, conflicting with the main SKILL. pg_stat_activity query can reveal sensitive SQL; durability-setting changes need approval. Reference-only until corrected.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require authorized DB/read-scope and SQL redaction for diagnostics; durability, isolation or engine settings need separate production change approval.",
       "privacy_and_egress": "Read-only diagnostics can expose active SQL/PII; production durability/isolation tuning is mutating and requires target/change-window approval",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -538,7 +570,8 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "read-only",
+          "mutating"
         ],
         "portability": "medium"
       },
@@ -547,7 +580,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/database-internals/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/database-internals/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require authorized DB/read-scope and SQL redaction for diagnostics; durability, isolation or engine settings need separate production change approval.",
+      "hard_fail_reason": null
     },
     {
       "name": "architecture-event-driven",
@@ -580,7 +617,7 @@
       "trigger": "EDA, pub/sub, outbox, CQRS, event contracts",
       "nontrigger": "Event sourcing implementation or stream analytics",
       "dependencies": "Kafka/RabbitMQ/cloud queues, SQL outbox, Debezium; one bundled CQRS/event-sourcing reference",
-      "authority_and_side_effects": "Transactional outbox and inbox are useful, but executable CREATE/INSERT, broker relay, event-carried state and DLQ replay lack target/recipient/PII and production-change authorization. Bundled event-sourcing note overclaims perfect audit logs and presents crypto-shredding as a universal deletion solution.",
+      "authority_and_side_effects": "Design/reference only until action-specific host approval. Require exact DB, broker, data payload, event retention, downstream recipients, replay/delete and deployment authority before SQL/relay operations.",
       "privacy_and_egress": "Broker egress, durable event retention, private payloads, schema deployment and destructive replay require explicit approval",
       "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
       "rubric_dimensions": {
@@ -612,7 +649,9 @@
           "risk-aware"
         ],
         "authority": [
-          "generate-only"
+          "generate-only",
+          "mutating",
+          "external-side-effect"
         ],
         "portability": "medium"
       },
@@ -621,7 +660,11 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/event-driven/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/event-driven/SKILL.md",
+      "frontmatter_license": "MIT",
+      "package_local_license": "No separate package-local LICENSE in inspected pinned package tree; root MIT notice controls source-owned text",
+      "required_authorization_boundary": "Require exact DB, broker, data payload, event retention, downstream recipients, replay/delete and deployment authority before SQL/relay operations.",
+      "hard_fail_reason": "Require exact DB, broker, data payload, event retention, downstream recipients, replay/delete and deployment authority before SQL/relay operations."
     }
   ]
 }
