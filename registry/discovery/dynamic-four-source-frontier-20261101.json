@@ -10,16 +10,17 @@
       "direct_shape": 415,
       "other_shape": 17,
       "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "terminal_static_candidate_reviews": 49,
+      "terminal_static_candidate_reviews": 59,
       "terminal_candidate_review_ledger_paths": [
         "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
         "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
         "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
         "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
-        "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+        "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+        "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
       ],
-      "direct_shape_terminal_static_candidate_reviews": 32,
-      "direct_shape_without_terminal_static_candidate_decision": 383,
+      "direct_shape_terminal_static_candidate_reviews": 42,
+      "direct_shape_without_terminal_static_candidate_decision": 373,
       "other_shape_structurally_classified": 17,
       "other_shape_terminal_static_candidate_reviews": 17,
       "other_shape_without_terminal_static_candidate_decision": 0
@@ -78,15 +79,15 @@
   "program_issue": 599,
   "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
   "dynamic_source_candidate_review_totals": {
-    "github_awesome_copilot": 39,
+    "github_awesome_copilot": 59,
     "openai_plugins": 169,
     "agentskillexchange_skills": 0,
     "j4flmao_agent_skills": 41,
     "not_deduplicated_or_governed_semantic_reviews": true,
-    "scope_caveat": "github-awesome-copilot has 39 terminal exact-path candidate decisions (24 direct and 15 nested); OpenAI 169 plugin-family decisions remain not path-reconciled. None is a governed verification pair or security approval.",
-    "path_matched_across_four_sources": 80,
-    "path_matched_note": "39 github-awesome-copilot (24 direct, 15 nested) + 41 j4flmao; OpenAI 169 plugin-family decisions not path-reconciled; agentskillexchange 0"
+    "scope_caveat": "Awesome Copilot 59 terminal candidate decisions (42 direct and 17 nested); OpenAI 169 plugin-family decisions remain not path-reconciled. None is governed verification or security approval.",
+    "path_matched_across_four_sources": 100,
+    "path_matched_note": "59 Awesome Copilot + 41 j4flmao exact-path terminal candidate decisions; OpenAI 169 plugin-family decisions not path-reconciled; AgentSkillExchange 0"
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
-  "latest_awesome_copilot_tranche": "docs/reviews/2026-11-01-awesome-copilot-qdrant-nested-fifteen-static.md"
+  "latest_awesome_copilot_tranche": "docs/reviews/2026-11-01-awesome-copilot-cross-domain-knowledge-business-ten-static.md"
 }
