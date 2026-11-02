@@ -3961,10 +3961,10 @@
     "snapshot_date": "2026-11-02",
     "historical_candidate_only_exact_blob_tree_matches": 41,
     "historical_candidate_only_ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
-    "blocked_identical_blob_mismatched_tree": 9,
     "remaining_raw_paths_without_any_exact_path_candidate_decision_evidence": 495,
     "current_standard_ten_dimension_path_reviews": 0,
     "source_family_decisions_reported_separately": 169,
-    "distinct_eligible_denominator": null
+    "distinct_eligible_denominator": null,
+    "blocked_identical_blob_missing_historical_tree": 9
   }
 }

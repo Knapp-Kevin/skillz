@@ -4657,12 +4657,12 @@
     "source_id": "openai-plugins",
     "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
     "exact_blob_tree_candidate_only": 41,
-    "blob_only_tree_mismatch": 9,
     "family_only_without_exact_record": 119,
     "ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
     "review": "docs/reviews/2026-11-02-openai-plugins-41-identity-crosswalk.md",
     "current_standard_new_reviews": 0,
     "governed_review_delta": 0,
-    "security_and_behavioral": "not-run"
+    "security_and_behavioral": "not-run",
+    "blob_only_missing_historical_tree": 9
   }
 }
