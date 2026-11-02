@@ -21,6 +21,22 @@ The agent's own memory review is an ordinary part of orientation when supported.
 
 **Minimum visible output (no forms or ceremony):** “What I found in your recent work: [one concrete recurring workflow, or unknown]. Where this library might help: [one to three capabilities, each with evidence and a specific improvement; include candidate links or say not inspected]. Current overlap/limits: [what already works; license/security status where relevant]. Verdict: [value]. Next action: [specific next step].” Do not replace this output with an opt-in question.
 
+## Improve existing skills, discover missing capabilities, and revisit the corpus
+
+**Overlap is a comparison starting point, not automatically a reason to stop.** When a candidate resembles an existing skill or host-native capability, compare mechanisms and outcomes: triggers and exclusions, evidence quality, authorization/privacy boundaries, failure recovery, interoperability, dependency cost and maintenance burden. Distinguish:
+
+- **KEEP AS IS:** Current behavior is sufficient and inspected alternatives offer no substantiated incremental benefit.
+- **REFINE EXISTING:** A candidate provides a specific improvement to a current skill, such as more precise triggers, a safer permission gate, stronger verification or better recovery. Identify the proposed change and trade-offs instead of creating a redundant skill.
+- **SUPPLEMENT / COMPOSE:** A complementary mechanism fills a real gap alongside existing behavior. Explain interfaces and collision risks.
+- **CREATE NEW:** A worthwhile recurring outcome is not covered by the host or existing skills. Prefer independently authored procedures when adaptation rights or quality are unresolved.
+- **HYPOTHESIS TO EXPLORE:** Infer a plausible *unrequested* adjacent capability from observed task chains, lifecycle stages, recurring corrections or failure modes. State the observed basis, confidence, smallest safe read-only experiment and what would falsify the hypothesis. Inferred needs are not user requests.
+
+For broad recommendations (for example, “top 20”), honor the requested scope when enough defensible opportunities exist. Group or annotate recommendations as *already adequate*, *specific improvement*, *missing capability* or *inferred opportunity*; rank by incremental impact, evidence, effort, risk and maintenance cost, not raw skill counts. Never invent the user's installed-skill inventory or claim that uninspected source filenames are qualified skills.
+
+**Returning-user discovery delta:** When the user revisits the library, compare the current live capability directory, source-pinned corpus, governed reviews and review states with any *actually accessible* prior visit evidence, source snapshot, shortlist or decisions in the host context. Separate **newly discovered**, **newly reviewed**, **changed safety/licensing/freshness**, and **previously known** opportunities. Reconsider past overlaps when new mechanisms might refine existing skills. A rising raw-path count is not proof of new usable capabilities. If there is no retrievable prior snapshot, explicitly state that the delta is unknown and perform a fresh capability search rather than inventing history. Do not store private visitor data in skillz or create background monitoring.
+
+**Analysis is not implementation authority:** The agent can complete a read-only comparison and improvement blueprint using its normal authorized tools without asking permission to assess. Modifying installed skills, writing persistent host state, scheduling, external communication, installation or sensitive-data transfer still requires the appropriate separate authorization. NO CHANGE remains an acceptable outcome when supported by evidence.
+
 ## Value proposition in one read
 
 `skillz` is a **capability-first, open-ended knowledge index** for finding whole skills, reusable mechanisms, creation guidance, and risk/quality evidence. The external agent, not this repository, actively searches, compares, authors or installs skills using its own authorized tools.
