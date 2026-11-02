@@ -258,7 +258,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -370,7 +370,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -671,7 +671,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -844,7 +844,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Planning capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 1,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -966,7 +966,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1260,7 +1260,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 1,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1549,7 +1549,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Memory / context capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0,
+      "source_vetted_reference_count": 1,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -8782,11 +8782,12 @@
     "date": "2026-11-01",
     "subdomain_example_instances": 30,
     "browse_overview_preview_instances": 38,
-    "distinct_source_path_pins": 29,
+    "distinct_source_path_pins": 40,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
-    "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+    "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged."
   }
 }
