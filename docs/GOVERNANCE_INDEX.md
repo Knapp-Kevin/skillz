@@ -1,6 +1,6 @@
 # Governance Index
 
-**Last reviewed:** 2026-11-01 (agent-first consumer contract and source-frontier reconciliation; draft #597)
+**Last reviewed:** 2026-11-02 (current consumer contract and merged source/capability accounting; draft #597 is superseded historical evidence)
 
 This file maps the current control surfaces for `skillz`.
 
@@ -42,8 +42,8 @@ These define where material came from, how candidates are found, and how `skillz
 
 | Artifact | Path | Freshness contract |
 |---|---|---|
-| Capability navigation directory (draft) | `registry/capability-directory.json` | proposed open-ended domains and sparse identity links, not a complete catalog or a negative-result oracle |
-| Source snapshot/accounting ledger (draft) | `registry/corpus-source-reconciliation.json` | 25 registered source identities plus four pinned dynamic path inventories and source-level review counters; no deduplicated eligible universe claimed |
+| Capability navigation directory (current snapshot) | `registry/capability-directory.json` | open-ended domains and partial evidence-linked identity mappings, not a complete catalog or a negative-result oracle |
+| Source snapshot/accounting ledger (current snapshot) | `registry/corpus-source-reconciliation.json` | 25 registered source identities, source overlap/reconciliation observations, and four pinned dynamic path inventories; no deduplicated eligible universe claimed |
 | Source registry | `registry/sources.yaml` | third-party source identity, role, inclusion, exact pin/reference, license/terms, canonical physical path where locally admitted |
 | Source context/signals | `registry/source-signals.yaml` | timestamped volatile source-level context kept separate from skill quality |
 | Governed discovery surfaces | `docs/discovery-surfaces.md` | intentional lead-generation inputs and promotion rules; discovery intelligence never substitutes for canonical provenance or exact-version quality evidence |
