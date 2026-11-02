@@ -3051,14 +3051,14 @@
   ],
   "review_progress": {
     "snapshot_date": "2026-11-02",
-    "exact_path_terminal_candidate_decisions": 103,
-    "direct_shape_terminal_candidate_decisions": 86,
-    "direct_shape_remaining": 329,
+    "exact_path_terminal_candidate_decisions": 111,
+    "direct_shape_terminal_candidate_decisions": 94,
+    "direct_shape_remaining": 321,
     "other_shape_pending_classification": 0,
     "governed_exact_version_reviews_created": 0,
     "security_scans": 0,
     "behavioral_validations": 0,
-    "latest_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "latest_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
     "other_shape_structurally_classified": 17,
     "other_shape_terminal_candidate_decisions": 17,
     "other_shape_pending_review": 0
