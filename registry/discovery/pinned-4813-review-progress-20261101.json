@@ -5435,7 +5435,7 @@
       "skill_blob": "4aa5a55b1f9605fca3d6537afdd5939016d1ea0e",
       "package_tree": "80dbcacc784f39e0e271c8cf652d6f6885e4d9ea",
       "shape": "direct",
-      "grade_20": 6,
+      "grade_20": 5,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-catalog-stub-462-static-20261102.json"
     },
@@ -5645,7 +5645,7 @@
       "skill_blob": "c167156e43cac248aa8556e9b27e89b48b136b8b",
       "package_tree": "c0728bd1ef97d1319c4ca986386e40851420c996",
       "shape": "direct",
-      "grade_20": 6,
+      "grade_20": 5,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-catalog-stub-462-static-20261102.json"
     },
@@ -5675,7 +5675,7 @@
       "skill_blob": "4e8923bd57abe32487f58dd40bea64ea1cbf1b5e",
       "package_tree": "03287e27f7576837bb037a5296aab163f9fa58c1",
       "shape": "direct",
-      "grade_20": 7,
+      "grade_20": 6,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-catalog-stub-462-static-20261102.json"
     },
@@ -6405,7 +6405,7 @@
       "skill_blob": "201ce0f0ac135bb3a3e6c180a93f98db6aedacb3",
       "package_tree": "d05ee31bf8a1c52d1e95f42a01dc1e58848981a0",
       "shape": "direct",
-      "grade_20": 4,
+      "grade_20": 3,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-catalog-stub-462-static-20261102.json"
     },
@@ -18175,7 +18175,7 @@
       "skill_blob": "ac3b0147982bf26a70e9f8a7de54b644d81c6285",
       "package_tree": "7fbb06e9a7b0ca2e3ca35629dd8778580f596a53",
       "shape": "direct",
-      "grade_20": 5,
+      "grade_20": 4,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-developer-tools-pointer-439-static-20261102.json"
     },
@@ -23475,7 +23475,7 @@
       "skill_blob": "3628de1da2a092e90309b7e291093a34fc34bfde",
       "package_tree": "b9bc1d708fa98319255a6d13259bdd8eabb6fb46",
       "shape": "direct",
-      "grade_20": 5,
+      "grade_20": 6,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json"
     },
