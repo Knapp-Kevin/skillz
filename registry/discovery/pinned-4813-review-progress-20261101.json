@@ -76,7 +76,7 @@
       "raw_paths_without_terminal_decision": 594,
       "direct_shape_without_terminal_decision": 404,
       "other_shape_without_terminal_decision": 190,
-      "next_direct_shape_path": "skills/ai/agentic-workflows/SKILL.md",
+      "next_direct_shape_path": "skills/ai/genai-vision/SKILL.md",
       "next_other_shape_path": "skills/ai/llm-engineering/kv-cache/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
       "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 198 other-shape paths remain structurally unclassified.",
