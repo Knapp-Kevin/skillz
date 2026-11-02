@@ -1140,7 +1140,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 26,
+      "source_vetted_reference_count": 34,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -1547,6 +1547,70 @@
           "static_candidate_score": "13/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/aws-cloudwatch-investigation/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "ad433312bcf093a3e4b529131db9308d8a047a1d",
+          "package_tree": "7998b9b0ee7c8d14deab8deffbb2ef0fc06d06d9",
+          "capability": "Production incident triage and CloudWatch query patterns",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/aws-cost-optimize/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "ed7581e130db7dd600ab1e9caefb050066622e73",
+          "package_tree": "8ce26214b5f856b834042dbed2df450c3e89f87d",
+          "capability": "AWS resource cost analysis and GitHub issue planning",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/azure-container-registry-cli/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "61543032900e74fac0e5e47e5d1ffa9f0131f108",
+          "package_tree": "0519fbf761731492941e7412c4257881c0865d1e",
+          "capability": "ACR CLI reference for image lifecycle, access and network controls",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/azure-deployment-preflight/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "2a44dd5d7620dab51e4ae44efd30117c8722d971",
+          "package_tree": "dba68c7c606f72f275d21dc150a0f5c1c647393e",
+          "capability": "Bicep syntax and what-if preflight",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -4925,6 +4989,22 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aws-well-architected-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ff7952f270ba6912ac5de22e4e6fc818878217b5",
+              "package_tree": "1fbcdd9dac139d719a6ada1655f57671be35dc66",
+              "capability": "Six-pillar AWS IaC architecture review and issue planning",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -4947,7 +5027,25 @@
             "aws-agent-toolkit/aws-cloudformation"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 3
+          "name_only_review_hits_in_scope": 3,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aws-cdk-python-setup/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "90b5e4903dc7fb82e2e278c7f18cab1140504fb5",
+              "package_tree": "7aed6e86e09b4fe1dcc845378c0f9c7b1a131823",
+              "capability": "Local CDK Python project setup and synth",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "ci-cd",
@@ -4987,7 +5085,25 @@
             "microsoft-skills/azure-kubernetes"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 15
+          "name_only_review_hits_in_scope": 15,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/azure-container-registry-cli/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "61543032900e74fac0e5e47e5d1ffa9f0131f108",
+              "package_tree": "0519fbf761731492941e7412c4257881c0865d1e",
+              "capability": "ACR CLI reference for image lifecycle, access and network controls",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "orchestration",
@@ -5105,6 +5221,22 @@
               "static_candidate_score": "4/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/azure-deployment-preflight/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2a44dd5d7620dab51e4ae44efd30117c8722d971",
+              "package_tree": "dba68c7c606f72f275d21dc150a0f5c1c647393e",
+              "capability": "Bicep syntax and what-if preflight",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
               "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
@@ -5304,6 +5436,38 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aws-cloudwatch-investigation/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ad433312bcf093a3e4b529131db9308d8a047a1d",
+              "package_tree": "7998b9b0ee7c8d14deab8deffbb2ef0fc06d06d9",
+              "capability": "Production incident triage and CloudWatch query patterns",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aws-resource-health-diagnose/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2c44a40bf4634e234fcdab1cdf4d47afb88962ac",
+              "package_tree": "0d30f5c90a5ef887bf5e1c3c8b776c601b7264a8",
+              "capability": "Investigate one specified AWS resource",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -5367,6 +5531,38 @@
               "static_candidate_score": "13/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aws-cost-optimize/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ed7581e130db7dd600ab1e9caefb050066622e73",
+              "package_tree": "8ce26214b5f856b834042dbed2df450c3e89f87d",
+              "capability": "AWS resource cost analysis and GitHub issue planning",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/az-cost-optimize/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ec619b532f402a0a104480c30b99955f655521d1",
+              "package_tree": "75941e175066d21b970698c2f3e00de19f5c1c91",
+              "capability": "Azure cost recommendations with GitHub issue tracking",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
               "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
@@ -11590,13 +11786,14 @@
     "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json",
     "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
     "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
-    "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
+    "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 116,
-    "browse_overview_preview_instances": 124,
-    "distinct_source_path_pins": 126,
+    "subdomain_example_instances": 124,
+    "browse_overview_preview_instances": 128,
+    "distinct_source_path_pins": 134,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
@@ -11612,6 +11809,7 @@
     "latest_j4flmao_llm_data_ten": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json",
     "latest_j4flmao_backend_data_eight": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
     "latest_j4flmao_deno_oak_two": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
-    "latest_j4flmao_cloud_native_eight": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    "latest_j4flmao_cloud_native_eight": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
+    "latest_awesome_copilot_aws_azure_eight": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
   }
 }
