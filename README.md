@@ -10,7 +10,7 @@
 [![Raw discovered SKILL.md paths: 4813](https://img.shields.io/badge/raw_discovery_paths-4813-64748b)](registry/discovery/dynamic-four-source-frontier-20261101.json)
 [![Architecture: passive](https://img.shields.io/badge/architecture-passive-334155)](AGENTS.md)
 
-<sub>Badges reflect a **2026-11-01 repository snapshot**, not live counters or eligibility certificates. Review records, raw paths, and distinct eligible skills are different populations. Numbers will change as discovery and review advance.</sub>
+<sub>Badges reflect a **2026-11-02 repository snapshot**, not live counters or eligibility certificates. Review records, raw paths, and distinct eligible skills are different populations. Numbers will change as discovery and review advance.</sub>
 
 ## Find the capability, not the publisher
 
