@@ -79,8 +79,8 @@
       "capability_subdomain": "backend",
       "specific_capability": "KV cache sizing and paged attention",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "KV cache, PagedAttention, GQA, vLLM serving memory and context OOM",
+      "nontrigger": "Weight quantization, local Ollama setup or unapproved GPU-service launch",
       "dependencies": "vLLM, model config and GPU budget; no bundled files",
       "authority_and_side_effects": "GPU model service and resource allocation; must be proposed until host/user approves target, cost and service lifecycle",
       "privacy_and_egress": "Prompts, cached prefixes and serving logs can carry private context; no authorization to inspect or export them",
@@ -104,15 +104,16 @@
       "rationale": "Useful GQA-aware cache sizing, vLLM flags and evaluation checks, but sample launch and GPU allocation are not scoped to an authorized host, and V1/default assumptions require version verification.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "architecture",
+          "evaluation"
         ],
         "lifecycle": [
           "design",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "metric-driven",
+          "cost-bounded"
         ],
         "authority": [
           "generate-only"
@@ -124,7 +125,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/kv-cache/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/kv-cache/SKILL.md",
+      "frontmatter_name": "llm-kv-cache-paged-attention"
     },
     {
       "name": "model-quantization",
@@ -152,8 +154,8 @@
       "capability_subdomain": "backend",
       "specific_capability": "Weight quantization format and evaluation",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Quantize weights using GPTQ, AWQ, GGUF, NF4 or FP8 for a specified model and engine",
+      "nontrigger": "KV cache sizing, fine-tuning, unapproved model/dataset downloads or persistent output",
       "dependencies": "llm-compressor, transformers, llama.cpp, models/calibration datasets; no bundled files",
       "authority_and_side_effects": "Local persistent model and calibration outputs, model download and compute use lack a scoped authorization boundary",
       "privacy_and_egress": "Calibration corpora may contain sensitive content; external model/data license and egress require separate checks",
@@ -177,15 +179,16 @@
       "rationale": "Concrete model conversion downloads datasets/models and writes persistent quantized weights without an action-specific authorization or dataset/model-rights gate; the suggested GGUF imatrix command assumes an optional file exists. Preserve method comparison and evaluation checklist.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "implementation",
+          "evaluation"
         ],
         "lifecycle": [
           "design",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "metric-driven",
+          "risk-aware"
         ],
         "authority": [
           "external-side-effect"
@@ -197,7 +200,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/model-quantization/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/model-quantization/SKILL.md",
+      "frontmatter_name": "llm-model-quantization"
     },
     {
       "name": "rag-architecture",
@@ -225,8 +229,8 @@
       "capability_subdomain": "retrieval",
       "specific_capability": "ANN HNSW and IVF-PQ hybrid retrieval",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "HNSW/IVF-PQ index tuning, hybrid retrieval, reranking and RAG quality evaluation",
+      "nontrigger": "Prompt-only RAG, agent memory or private corpus export to an unapproved reranker",
       "dependencies": "FAISS, numpy, BM25, cross-encoder or external reranker; no bundled files",
       "authority_and_side_effects": "Index construction and data processing need explicit corpus and output authorization; no automatic CI or deployment",
       "privacy_and_egress": "Document/vector data may include private identity, health, customer or proprietary text; reranker provider and retention are unspecified",
@@ -250,15 +254,16 @@
       "rationale": "Useful ANN/RRF concepts, but cross-encoder reranking sends retrieved private passages without an egress boundary; sample IVF training samples 200,000 vectors without guarding smaller corpora; repository-specific CI and chunking rules are not portable.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "architecture",
+          "evaluation"
         ],
         "lifecycle": [
           "design",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "retrieval-first",
+          "metric-driven"
         ],
         "authority": [
           "external-side-effect"
@@ -270,7 +275,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/rag-architecture/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-engineering/rag-architecture/SKILL.md",
+      "frontmatter_name": "llm-rag-retrieval-internals"
     },
     {
       "name": "postgresql-internals",
@@ -298,8 +304,8 @@
       "capability_subdomain": "backend",
       "specific_capability": "PostgreSQL MVCC vacuum and WAL diagnostics",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Postgres MVCC, vacuum, WAL, checkpoints, bloat and query-plan diagnosis",
+      "nontrigger": "ORM design, sharding or executing production ALTER/VACUUM without authorization",
       "dependencies": "PostgreSQL major-version catalog/statistics and optional pg_stat_statements; no bundled files",
       "authority_and_side_effects": "ALTER TABLE, configuration and VACUUM FULL are persistent/high-impact operations; approval is absent",
       "privacy_and_egress": "pg_stat_activity query text and query plans can expose sensitive values; redact before reporting",
@@ -323,15 +329,16 @@
       "rationale": "Read-only diagnostic queries are useful, but ALTER TABLE/autovacuum and performance changes appear as direct fixes without separate production target, lock, rollback and change-window authorization. Query excerpts can expose sensitive SQL.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "debugging",
+          "architecture"
         ],
         "lifecycle": [
-          "design",
+          "discovery",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "evidence-first",
+          "risk-aware"
         ],
         "authority": [
           "external-side-effect"
@@ -343,7 +350,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/databases/postgresql-internals/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/databases/postgresql-internals/SKILL.md",
+      "frontmatter_name": "architecture-postgresql-internals"
     },
     {
       "name": "scaling-and-sharding",
@@ -371,8 +379,8 @@
       "capability_subdomain": "cloud-architecture",
       "specific_capability": "Database scaling ladder and resharding design",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Database scaling ladder, shard key selection, replicas, partitions and resharding design",
+      "nontrigger": "Postgres internals, NoSQL product selection or executing DDL/routing changes",
       "dependencies": "Citus/Vitess/PostgreSQL or distributed SQL; no bundled files",
       "authority_and_side_effects": "DDL, routing-map flips, dual writes and old-copy deletion require explicit owner and rollback authorization",
       "privacy_and_egress": "Tenant placement, residency and migration datasets require privacy and access scoping",
@@ -396,15 +404,16 @@
       "rationale": "Good vertical-before-sharding and bucket-routing advice, but executable CREATE TABLE/Citus distribution and resharding deletion steps lack action-specific database, traffic and destructive-state approval. Hash-ring sample has no explicit duplicate-node safeguards.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "architecture",
+          "planning"
         ],
         "lifecycle": [
           "design",
-          "verification"
+          "planning"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "decomposition",
+          "risk-aware"
         ],
         "authority": [
           "external-side-effect"
@@ -416,7 +425,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/databases/scaling-and-sharding/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/databases/scaling-and-sharding/SKILL.md",
+      "frontmatter_name": "architecture-database-scaling"
     },
     {
       "name": "domain-driven-design",
@@ -444,8 +454,8 @@
       "capability_subdomain": "architecture",
       "specific_capability": "DDD bounded contexts and aggregate invariants",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "DDD bounded contexts, aggregates, value objects and domain events",
+      "nontrigger": "Simple CRUD, mere folder layering or unapproved persistence/event publishing",
       "dependencies": "TypeScript sample, domain experts and optional persistence/outbox; no bundled files",
       "authority_and_side_effects": "Design/generation-only; actual order persistence and cross-context publishing require separate host authorization",
       "privacy_and_egress": "Order customer identifiers and ERP address/name fields must be minimized and scoped",
@@ -469,15 +479,16 @@
       "rationale": "Strong bounded-context, aggregate and outbox modeling reference; TypeScript example is illustrative, not a complete transactional implementation, and event publishing/ERP mapping need data ownership and PII checks before use.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "domain-modeling",
+          "architecture"
         ],
         "lifecycle": [
           "design",
-          "verification"
+          "implementation"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "decomposition",
+          "contract-first"
         ],
         "authority": [
           "generate-only"
@@ -489,7 +500,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/system-design/domain-driven-design/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/system-design/domain-driven-design/SKILL.md",
+      "frontmatter_name": "architecture-domain-driven-design"
     },
     {
       "name": "microservices-patterns",
@@ -517,8 +529,8 @@
       "capability_subdomain": "architecture",
       "specific_capability": "Service decomposition sagas and resilience",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Service decomposition, sagas, circuit breakers and strangler migration",
+      "nontrigger": "DDD inside one service, service mesh operations or unapproved payment/refund/deploy actions",
       "dependencies": "Python sample, durable saga log/Temporal, Resilience4j and service mesh; no bundled files",
       "authority_and_side_effects": "Money-bearing charges/refunds, production routing and deployment need explicit separate approvals",
       "privacy_and_egress": "Saga context, customer/payment data and tracing/logging need redaction, retention and egress controls",
@@ -542,15 +554,16 @@
       "rationale": "The sample saga includes charge_payment and refund compensation with no payment-action authorization boundary; generic idempotency and logging do not confer consent. Compensation failures are not safely handled and exception logs can leak data.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "architecture",
+          "orchestration"
         ],
         "lifecycle": [
           "design",
-          "verification"
+          "planning"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "decomposition",
+          "risk-aware"
         ],
         "authority": [
           "external-side-effect"
@@ -562,7 +575,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/system-design/microservices-patterns/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/system-design/microservices-patterns/SKILL.md",
+      "frontmatter_name": "architecture-microservices-patterns"
     },
     {
       "name": "genai-vision",
@@ -590,8 +604,8 @@
       "capability_subdomain": "digital-traditional-media",
       "specific_capability": "Local image generation and audio transcription",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Diffusers text-to-image, inpainting, Whisper transcription and GPU memory planning",
+      "nontrigger": "Vision understanding, training diffusion from scratch or unapproved private audio/image persistence",
       "dependencies": "diffusers, torch, faster-whisper, GPU and separately licensed model weights; no bundled files",
       "authority_and_side_effects": "Persistent image/metadata writes, model downloads and service hosting require target and storage authorization",
       "privacy_and_egress": "Audio, prompts, images and metadata can be sensitive; explicit consent, model license and egress/retention controls missing",
@@ -615,15 +629,16 @@
       "rationale": "Image code persists full prompts and generated files to disk without a scoped privacy/retention authorization; audio transcription and speech-to-image flow lack subject/voice-data consent and storage boundary. Model-card license checks are advisory only.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "implementation",
+          "prototyping"
         ],
         "lifecycle": [
           "design",
-          "verification"
+          "implementation"
         ],
         "characteristic": [
           "risk-aware",
-          "evidence-first"
+          "visual-verification"
         ],
         "authority": [
           "external-side-effect"
@@ -635,7 +650,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/genai-vision/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/genai-vision/SKILL.md",
+      "frontmatter_name": "genai-vision"
     },
     {
       "name": "llm-finetuning",
@@ -663,8 +679,8 @@
       "capability_subdomain": "reproducibility",
       "specific_capability": "LoRA QLoRA supervised fine-tuning",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "LoRA/QLoRA fine-tuning, PEFT/TRL SFT, dataset preparation and evaluation",
+      "nontrigger": "Changing factual retrieval, post-training serving quantization or unauthorized private dataset/compute use",
       "dependencies": "PEFT, TRL, datasets, transformers, torch, model and dataset rights; no bundled files",
       "authority_and_side_effects": "Training jobs, checkpoint persistence, compute spending and model publication require explicit approval",
       "privacy_and_egress": "Private datasets, identity fields, licensed model weights and derivative artifacts require scoped handling",
@@ -688,15 +704,16 @@
       "rationale": "Training recipe writes adapter checkpoints and may ingest private licensed datasets without an action-specific training/compute and retention gate; data-cleaning advice is not authorization to use user documents or pay for GPU resources.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "evaluation",
+          "implementation"
         ],
         "lifecycle": [
           "design",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "holdout-aware",
+          "metric-driven"
         ],
         "authority": [
           "external-side-effect"
@@ -708,7 +725,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-finetuning/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/llm-finetuning/SKILL.md",
+      "frontmatter_name": "llm-finetuning"
     },
     {
       "name": "multi-agent-systems",
@@ -744,8 +762,8 @@
       "capability_subdomain": "orchestration",
       "specific_capability": "Multi-agent state graphs and approval handoffs",
       "capability_mapping_note": "Existing controlled directory nearest fit; AI/ML model lifecycle lacks a dedicated domain, no coverage or eligibility inference",
-      "trigger": "Use only for the specific capability described in pinned SKILL.md after task fit",
-      "nontrigger": "Read-only orientation, unrelated user tasks, or lack of scoped permission for any external effect",
+      "trigger": "Multi-agent LangGraph state graphs, checkpointers, handoffs and HITL",
+      "nontrigger": "Single-agent loop, topology choice alone or unapproved production deploy/notification",
       "dependencies": "LangGraph, PostgresSaver, two bundled references, application-defined nodes and database; model/provider versions not pinned",
       "authority_and_side_effects": "Deploy, notify_human and durable state writes require action-specific scoped authority, independent of an interrupt",
       "privacy_and_egress": "Checkpoints/traces can persist prompts, code, private documents and identity; no data minimization/retention contract",
@@ -769,15 +787,16 @@
       "rationale": "LangGraph sample can resume a production deploy after state approval flag update without verifying actor, exact target, expiry or revision inside deploy_node; notification and durable checkpoints retain sensitive state by default. HITL reference is conceptual, not authorization.",
       "controlled_taxonomy_tags": {
         "use_case": [
-          "agent-development"
+          "agent-development",
+          "orchestration"
         ],
         "lifecycle": [
           "design",
           "verification"
         ],
         "characteristic": [
-          "risk-aware",
-          "evidence-first"
+          "contract-first",
+          "risk-aware"
         ],
         "authority": [
           "external-side-effect"
@@ -789,7 +808,8 @@
       "governed_exact_version_review": false,
       "admitted": false,
       "source_vetting_stage": "terminal-exact-path-candidate-only",
-      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/multi-agent-systems/SKILL.md"
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/ai/multi-agent-systems/SKILL.md",
+      "frontmatter_name": "ai-multi-agent-systems"
     }
   ]
 }
