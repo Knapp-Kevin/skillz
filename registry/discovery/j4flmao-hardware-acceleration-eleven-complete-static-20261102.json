@@ -1,0 +1,892 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "review_kind": "Eleven complete one-file hardware acceleration package source-vetting decisions, not governed admission",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_denominator": {
+    "raw": 645,
+    "direct": 424,
+    "other": 221
+  },
+  "macro": {
+    "before": 79,
+    "after": 90,
+    "direct_before": 40,
+    "direct_after": 51,
+    "other_before": 39,
+    "other_after": 39,
+    "source_raw_pending_before": 566,
+    "source_raw_pending_after": 555,
+    "four_source_terminal_before": 174,
+    "four_source_terminal_after": 185,
+    "reference_only": 4,
+    "reject_unchanged": 7,
+    "admissions": 0,
+    "governed_reviews_added": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null,
+    "hardware_subfamily": "11/11 first-class direct-shape packages reviewed"
+  },
+  "macro_findings": [
+    "Hardware acceleration subfamily has exactly 11 pinned direct-shape SKILL.md packages, each with a distinct blob and a one-file package tree; 11/11 now have individual source-vetting static decisions.",
+    "Cross-cutting hard-fail: commands launch profilers, training jobs, inference servers, network fabric probes or paid TPU/GPU workloads without action-specific execution, cost, data and endpoint authority.",
+    "Concrete correctness issues: FlashAttention code reuses SDPA (B,H,L,D) tensors for flash-attn_func (B,L,H,D); PTX inline memory load omits compiler memory clobber; CUDA warp reduction assumes a full active warp.",
+    "Reference methods retained for kernel design, SASS inspection, TPU architecture and Triton fusion. No package is approved unchanged or promoted to governed verified status.",
+    "New ml-accelerators domain needed because existing 32-domain ontology had no precise GPU kernel, inference, fabric or accelerator architecture route."
+  ],
+  "records": [
+    {
+      "name": "cuda-programming",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/cuda-programming/SKILL.md",
+      "frontmatter_name": "cuda-programming",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "9325c10295afc02f022f0df768eb775191688154",
+      "package_tree": "ff52a6259b584319fb072f834d96e4076001adcb",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "9325c10295afc02f022f0df768eb775191688154"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "gpu-kernels",
+      "specific_capability": "Design and diagnose CUDA kernels, memory tiling, synchronization and profiler evidence",
+      "trigger": "CUDA C++ kernel authoring or performance diagnosis",
+      "nontrigger": "Triton, PTX/SASS-only inspection, TensorRT, multi-GPU training",
+      "dependencies": "CUDA toolkit, nvcc, CUDA-capable GPU, Nsight Compute/Systems, compute-sanitizer; optional CUB/CUTLASS",
+      "authority_and_side_effects": "Build/profile commands execute an arbitrary application on a local or shared GPU; no explicit permission for process execution, dataset exposure, or device load. Partial-warp reduction example uses a full-warp mask.",
+      "privacy_and_egress": "Profiler reports and kernel inputs can reveal proprietary code or private tensor contents; retain locally unless authorized.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Strong coalescing and correctness workflow; retain as reference, but profile/execute only under explicit host/device/data authority and fix partial-warp example.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Unchanged selection withheld; source commands do not independently authorize execution.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 16,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/cuda-programming/SKILL.md"
+    },
+    {
+      "name": "distributed-training",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/distributed-training/SKILL.md",
+      "frontmatter_name": "distributed-training",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "0bf134d7049f4e357a874ad3d3361a9836d0848d",
+      "package_tree": "1863c21a4c91b79cee3d6a04b0db2ab577d2ae53",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "0bf134d7049f4e357a874ad3d3361a9836d0848d"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "distributed-training",
+      "specific_capability": "Plan DDP, FSDP, ZeRO and parallelism against GPU memory and collective costs",
+      "trigger": "Distributed PyTorch training and communication strategy",
+      "nontrigger": "Inference serving, single CUDA kernels, fabric-only diagnostics",
+      "dependencies": "PyTorch distributed, torchrun, NCCL, DeepSpeed, GPU cluster and fabric; examples leave build_model and dataset undefined",
+      "authority_and_side_effects": "Training/benchmark launches can allocate multi-node GPUs, billed capacity, checkpoint state and private training data; no separate cluster/account/budget/data approval.",
+      "privacy_and_egress": "Training data, model checkpoints, logs and NCCL diagnostics may be sensitive and must stay within authorized cluster boundaries.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Useful memory arithmetic and topology choices, but direct multi-node launch recipes lack cost, identity, dataset and persistent-state authorization.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Training/benchmark launches can allocate multi-node GPUs, billed capacity, checkpoint state and private training data; no separate cluster/account/budget/data approval.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/distributed-training/SKILL.md"
+    },
+    {
+      "name": "extreme-quantization",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/extreme-quantization/SKILL.md",
+      "frontmatter_name": "extreme-quantization-mastery",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "b95c2edfa05c7f1b9f1d883af828a1a228727355",
+      "package_tree": "acb8d9e22afde6fef53d1fc835db92cfeb3259f9",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "b95c2edfa05c7f1b9f1d883af828a1a228727355"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "model-quantization",
+      "specific_capability": "Select INT4/INT8/FP8/FP4 model quantization and evaluate accuracy tradeoffs",
+      "trigger": "LLM weight, activation or KV quantization on GPU",
+      "nontrigger": "General model-serving infrastructure or unrelated low-bit theory",
+      "dependencies": "llm-compressor, vLLM, transformers, bitsandbytes, GPU-specific kernels; external gated model and dataset licenses",
+      "authority_and_side_effects": "Example downloads gated model/dataset, writes quantized weights and starts vLLM service without model-rights, network, storage, GPU or endpoint approval.",
+      "privacy_and_egress": "Calibration sets may contain production prompts, user documents or regulated data; do not transmit or cache without scoped authorization.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Differentiated format/accuracy guidance, but gated model terms and uncontrolled downloads, artifacts and serving fail unchanged-use boundary.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Example downloads gated model/dataset, writes quantized weights and starts vLLM service without model-rights, network, storage, GPU or endpoint approval.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/extreme-quantization/SKILL.md"
+    },
+    {
+      "name": "flash-attention",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/flash-attention/SKILL.md",
+      "frontmatter_name": "flash-attention",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "b6c7cf7946aacbc9d27a4f0bf5e40eecca7c38df",
+      "package_tree": "995de921a7ae18a3dff4ba1037ddd49b8852338a",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "b6c7cf7946aacbc9d27a4f0bf5e40eecca7c38df"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "attention-kernels",
+      "specific_capability": "Choose FlashAttention/SDPA implementations and verify kernel selection",
+      "trigger": "FlashAttention kernel selection, memory use or fallback diagnosis",
+      "nontrigger": "KV paging, quantization or generic CUDA kernel authoring",
+      "dependencies": "PyTorch SDPA, flash-attn, HF transformers, CUDA GPU, profiler; architecture-specific FA3/FA4 builds",
+      "authority_and_side_effects": "Profiler code runs GPU workloads without explicit host approval; source's flash_attn_func example reuses q/k/v from (B,H,L,D) SDPA layout although flash-attn requires (B,L,H,D).",
+      "privacy_and_egress": "Profiler traces and model tensors may contain private workload shape and data; do not export by default.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Strong online-softmax explanation, but concrete incompatible tensor-layout example can silently produce incorrect attention; reject unchanged pending correction.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Profiler code runs GPU workloads without explicit host approval; source's flash_attn_func example reuses q/k/v from (B,H,L,D) SDPA layout although flash-attn requires (B,L,H,D).",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/flash-attention/SKILL.md"
+    },
+    {
+      "name": "paged-attention",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/paged-attention/SKILL.md",
+      "frontmatter_name": "paged-attention",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "ba29bc0eef7b6836b42cb0871459894b2b2e61a6",
+      "package_tree": "b91245a336a4027d8b54d4a26f53262578017ff5",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "ba29bc0eef7b6836b42cb0871459894b2b2e61a6"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "inference-serving",
+      "specific_capability": "Estimate paged KV-cache capacity and tune vLLM serving concurrency",
+      "trigger": "KV-cache memory, PagedAttention or vLLM capacity tuning",
+      "nontrigger": "FlashAttention math, model quantization or generic serving orchestration",
+      "dependencies": "vLLM/SGLang/TensorRT-LLM, compatible GPU, model weights, serving telemetry",
+      "authority_and_side_effects": "vllm serve opens an inference endpoint, allocates GPU resources and may persist model caches; no explicit authorization for endpoint exposure, cloud cost or model terms.",
+      "privacy_and_egress": "Prefix caching may retain shared prompts or documents across requests/tenants; tenant isolation and retention are not bounded.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Clear GQA KV arithmetic and paging tradeoffs, but unapproved service startup and cross-request prompt cache risks prohibit unchanged adoption.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "vllm serve opens an inference endpoint, allocates GPU resources and may persist model caches; no explicit authorization for endpoint exposure, cloud cost or model terms.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/paged-attention/SKILL.md"
+    },
+    {
+      "name": "ptx-assembly",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/ptx-assembly/SKILL.md",
+      "frontmatter_name": "ptx-assembly",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "6dc5bc80ad3c176245615fc2e72ba0b158f0b176",
+      "package_tree": "e39d06ae5a4fdf7bf7b2c95d7ba589e12604b0c0",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "6dc5bc80ad3c176245615fc2e72ba0b158f0b176"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "gpu-kernels",
+      "specific_capability": "Inspect and author PTX/inline assembly with register and synchronization diagnostics",
+      "trigger": "PTX virtual ISA or inline PTX analysis",
+      "nontrigger": "Final SASS performance analysis, generic CUDA or Triton",
+      "dependencies": "CUDA nvcc, ptxas, cuobjdump, architecture-specific PTX ISA",
+      "authority_and_side_effects": "Inline ld.global.cs example reads memory without the stated compiler memory clobber; may permit unsafe reordering. Build and inspection commands assume authority to compile user binaries.",
+      "privacy_and_egress": "PTX/cubin listings can reveal proprietary kernels; retain within authorized host workspace.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Useful ISA and ptxas reference, but memory-clobber omission in supplied code undermines correctness; reject unchanged.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Inline ld.global.cs example reads memory without the stated compiler memory clobber; may permit unsafe reordering. Build and inspection commands assume authority to compile user binaries.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/ptx-assembly/SKILL.md"
+    },
+    {
+      "name": "rdma-roce",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/rdma-roce/SKILL.md",
+      "frontmatter_name": "rdma-roce",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "ea00dbc48b3076efd2bc98908bb441b4a502f746",
+      "package_tree": "05079c39de41fb87a1745f1ac5c1a2a5c7380fe2",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "ea00dbc48b3076efd2bc98908bb441b4a502f746"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "accelerator-fabrics",
+      "specific_capability": "Diagnose RDMA, RoCEv2, GPUDirect and NCCL fabric transport",
+      "trigger": "RoCE, InfiniBand, GPUDirect or NCCL fabric diagnosis",
+      "nontrigger": "Application TCP tuning or training parallelism strategy",
+      "dependencies": "InfiniBand/RoCE NICs, switch QoS, ibverbs/perftest/nccl-tests, GPU and privileged host access",
+      "authority_and_side_effects": "Network throughput probes and recommended PFC/ECN/NCCL settings can disrupt shared production fabrics; no device, network, traffic or change authorization.",
+      "privacy_and_egress": "Switch/NCCL logs, topology, GIDs and NIC configuration may expose private infrastructure metadata.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Strong RDMA data-path model; reject unchanged until bounded maintenance window, load limit, destination, rollback and network owner approval.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Network throughput probes and recommended PFC/ECN/NCCL settings can disrupt shared production fabrics; no device, network, traffic or change authorization.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/rdma-roce/SKILL.md"
+    },
+    {
+      "name": "sass-machine-code",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/sass-machine-code/SKILL.md",
+      "frontmatter_name": "sass-machine-code",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "2387144f9258cdf8d8f49e9234f8b404d9727130",
+      "package_tree": "b3fec27c2f857a91de6ea8ddba8c048ae755078c",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "2387144f9258cdf8d8f49e9234f8b404d9727130"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "gpu-kernels",
+      "specific_capability": "Interpret SASS instructions and Nsight per-instruction stall evidence",
+      "trigger": "SASS instruction or warp-stall analysis",
+      "nontrigger": "Writing PTX or generic kernel design",
+      "dependencies": "CUDA binary utilities, nvdisasm, cuobjdump, Nsight Compute, user-provided cubin or executable",
+      "authority_and_side_effects": "ncu command executes an application and captures source/performance telemetry without a separate execution and data scope gate.",
+      "privacy_and_egress": "Disassembly and imported source may be proprietary; do not upload or publish without explicit permission.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Differentiated read-only SASS/stall interpretation is useful; retain as reference, not automatic permission to run profiler on arbitrary binaries.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Unchanged selection withheld; source commands do not independently authorize execution.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 16,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/sass-machine-code/SKILL.md"
+    },
+    {
+      "name": "tensorrt-optimization",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/tensorrt-optimization/SKILL.md",
+      "frontmatter_name": "tensorrt-optimization",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "ebbb2c67d3b7ded5acf937c494ec034c8bc39481",
+      "package_tree": "683100b09e84891578fe520bbf776b71008655ee",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "ebbb2c67d3b7ded5acf937c494ec034c8bc39481"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "inference-serving",
+      "specific_capability": "Build and validate TensorRT inference engines and dynamic shape profiles",
+      "trigger": "ONNX-to-TensorRT engine tuning or TRT-LLM serving",
+      "nontrigger": "Generic CUDA kernels, standalone quantization theory",
+      "dependencies": "TensorRT 10, ONNX, Polygraphy, TensorRT-LLM, GPU-specific engine build, external model license",
+      "authority_and_side_effects": "Build recipe persists model.plan, benchmarks GPU and describes public trtllm-serve endpoint; no storage, rights, cost or network authority gate.",
+      "privacy_and_egress": "Model weights and profiling artifacts may be proprietary; serving exposes prompt and output data.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Solid engine/version and precision constraints, but artifact writes, model rights and serving endpoint require explicit authorization.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Build recipe persists model.plan, benchmarks GPU and describes public trtllm-serve endpoint; no storage, rights, cost or network authority gate.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/tensorrt-optimization/SKILL.md"
+    },
+    {
+      "name": "tpu-systolic-arrays",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/tpu-systolic-arrays/SKILL.md",
+      "frontmatter_name": "tpu-systolic-arrays",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "9a694152f91783b3999503ca7e10cd0965929c63",
+      "package_tree": "62616014ead8cef9656e577a2abe31387983482d",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "9a694152f91783b3999503ca7e10cd0965929c63"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "accelerator-architecture",
+      "specific_capability": "Reason about TPU MXU tiling, JAX sharding and compilation performance",
+      "trigger": "TPU architecture, JAX/XLA tiling or sharding",
+      "nontrigger": "NVIDIA GPU kernels or RDMA fabric diagnostics",
+      "dependencies": "Google Cloud TPU/JAX/XLA, TPU generation-specific tiles, JAX profiling and sharding APIs",
+      "authority_and_side_effects": "Sample JAX device_put and profiling can allocate or execute on billed TPU slices without account/budget/data authorization; example jax.devices() does not enforce TPU-only target.",
+      "privacy_and_egress": "Model tensors and traces may expose sensitive data; do not send to hosted tracing without approval.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Useful systolic architecture and shape principles, but GPU/TPU device and billing authority must be bound before executing samples.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Unchanged selection withheld; source commands do not independently authorize execution.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 15,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/tpu-systolic-arrays/SKILL.md"
+    },
+    {
+      "name": "triton-kernels",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/hardware-acceleration/triton-kernels/SKILL.md",
+      "frontmatter_name": "triton-kernels",
+      "frontmatter_version": "1.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "856fac656b8771ecaa1cda651478be8c44c785d5",
+      "package_tree": "243a324e45a08b29ab1258824030082da3157f08",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "856fac656b8771ecaa1cda651478be8c44c785d5"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no local LICENSE or bundled file in package directory; linked external tools/models retain separate rights",
+      "capability_domain": "ml-accelerators",
+      "capability_subdomain": "gpu-kernels",
+      "specific_capability": "Write and benchmark Triton fused GPU kernels against PyTorch baselines",
+      "trigger": "Triton GPU kernel authoring or autotuning",
+      "nontrigger": "Triton Inference Server, CUDA C++ or SASS disassembly",
+      "dependencies": "PyTorch, Triton JIT, compatible GPU, triton.testing and CUDA/ROCm runtime",
+      "authority_and_side_effects": "JIT kernel launches, autotune and benchmarks consume GPU resources and may write caches; no explicit approval for shared GPU execution or private tensor processing.",
+      "privacy_and_egress": "Input tensors and benchmark traces may contain proprietary or sensitive data; use synthetic data absent scoped authorization.",
+      "portability_and_freshness": "Hardware/driver/toolkit and cloud billing versions must be verified for the target; static source reviewed, no command executed.",
+      "rationale": "Strong masks, shape tests and baseline discipline; reference-only until execution, caching, device/data and side-effect boundaries are explicit.",
+      "required_authorization_boundary": "Explicit approval for exact host/device/account, data, cost, network endpoint and persistent writes before any execution; use read-only supplied evidence otherwise.",
+      "hard_fail_reason": "Unchanged selection withheld; source commands do not independently authorize execution.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 15,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/hardware-acceleration/triton-kernels/SKILL.md"
+    }
+  ]
+}
