@@ -99,10 +99,10 @@
     "j4flmao_agent_skills": 90,
     "not_deduplicated_or_governed_semantic_reviews": true,
     "scope_caveat": "Path-matched candidate static reviews are source vetting only; not governed semantic review, security, behavior or admission.",
-    "path_matched_across_four_sources": 174,
-    "path_matched_note": "95 Awesome Copilot + 79 j4flmao exact-path terminal candidate decisions; OpenAI 169 plugin-family decisions not path-reconciled; AgentSkillExchange 0"
+    "path_matched_across_four_sources": 185,
+    "path_matched_note": "95 Awesome Copilot + 90 j4flmao exact-path terminal candidate decisions; OpenAI 169 plugin-family decisions not path-reconciled; AgentSkillExchange 0"
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
   "latest_awesome_copilot_tranche": "docs/reviews/2026-11-02-awesome-copilot-aws-azure-eight-static.md",
-  "latest_j4flmao_tranche": "docs/reviews/2026-11-02-j4flmao-deno-oak-two-complete-static.md"
+  "latest_j4flmao_tranche": "docs/reviews/2026-11-02-j4flmao-hardware-acceleration-eleven-static.md"
 }
