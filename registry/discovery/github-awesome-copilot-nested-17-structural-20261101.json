@@ -3,13 +3,13 @@
   "snapshot_date": "2026-11-01",
   "source_id": "github-awesome-copilot",
   "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-  "scope": "All 17 nested/internal paths structurally classified; 15 Qdrant complete-package terminal candidate reviews, 2 upstream .github paths still unreviewed",
+  "scope": "17/17 nested paths individually terminally source-vetted at exact pinned identity; 15 Qdrant children and 2 upstream contributor skills; semantic cross-source overlaps and eligible denominator still unresolved",
   "raw_nested_or_internal": 17,
   "frontmatter_confirmed": 17,
   "first_class_candidates": 17,
   "proven_duplicates_confirmed": 0,
-  "semantic_duplicates_unresolved": 2,
-  "terminal_candidate_decisions_added": 15,
+  "semantic_duplicates_unresolved": 0,
+  "terminal_candidate_decisions_added": 17,
   "governed_reviews_added": 0,
   "structural_family_counts": {
     "upstream-repository-maintenance": 2,
@@ -310,5 +310,12 @@
     }
   ],
   "semantic_overlap_reconciled_paths": 15,
-  "graded_ledger": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+  "graded_ledger": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+  "terminal_review_completion": {
+    "date": "2026-11-01",
+    "new_ledger": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+    "nested_terminal": 17,
+    "nested_remaining": 0,
+    "global_semantic_duplicate_reconciliation": "not-run"
+  }
 }
