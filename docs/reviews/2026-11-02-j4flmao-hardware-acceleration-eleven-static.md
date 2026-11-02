@@ -12,7 +12,7 @@
 2. **Specific code hazards matter beyond generic safety.** The FlashAttention package uses SDPA-shaped `(B,H,L,D)` tensors for `flash_attn_func`, which requires `(B,L,H,D)`. The PTX inline global-memory load example omits the memory clobber its own guidance recommends. The CUDA warp reduction example assumes a full active warp. These are not safe unchanged implementation templates.
 3. **Useful differentiated mechanisms survive rejection.** CUDA coalescing/tiling and correctness checks, SASS stall attribution, TPU MXU/XLA tiling and Triton masked/fused kernels are valuable reference material. Preserve them as reference-only; do not imply automatic installation or execution. The rest retain explicit adaptation/extraction potential without approval unchanged.
 4. **Rights and privacy are distinct.** Root MIT is complete and applies to this source's material, but not to gated model weights, calibration datasets, cloud services, external dependencies or private training/profiling data. Prefix caching and serving require tenant and retention controls.
-5. **Capability omission exposed.** Existing directory domains lacked a precise GPU-kernel/ML-inference/fabric route. Add a source-neutral `ml-accelerators` domain with six subdomains; entries are candidate-only, with no change to governed review population.
+5. **Capability omission exposed.** Existing directory domains lacked a precise GPU-kernel/ML-inference/fabric route. Add a source-neutral `ml-accelerators` domain with seven subdomains; entries are candidate-only, with no change to governed review population.
 
 ## Accounting and next frontier
 
