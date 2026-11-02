@@ -16,11 +16,11 @@
     "reported_family_candidate_decisions": 169,
     "candidate_records_with_exact_skill_blob": 50,
     "exact_blob_and_tree_candidate_only_matches": 41,
-    "blob_only_tree_mismatches_blocked": 9,
     "other_family_decisions_without_exact_record_in_index": 119,
     "current_standard_new_reviews": 0,
     "governed_review_delta": 0,
-    "unique_eligible_denominator": null
+    "unique_eligible_denominator": null,
+    "blob_only_missing_historical_package_tree_blocked": 9
   },
   "matched_source_families": {
     "openai_adobe_airtable_nine_candidate_vetting": 9,
@@ -891,14 +891,16 @@
       "behavioral_validation": "not-run"
     }
   ],
-  "blocked_blob_only_records": [
+  "authority_and_license": "Original source-vetting restrictions and license/terms govern; source root or plugin metadata is not a redistribution grant. Do not infer unchanged-use approval or permission for external writes.",
+  "next_action": "Establish full package-tree evidence for nine historical candidate records that lack it, then reconcile remaining 119 family-only decisions; separately continue new current-standard package reviews.",
+  "blocked_missing_historical_package_tree_records": [
     {
       "source_id": "openai-plugins",
       "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
       "canonical_path": "plugins/build-web-data-visualization/skills/react-and-nextjs-data-visualization/SKILL.md",
       "skill_blob": "9fb78c4f7e17e82259e8ac3e234778b11f3aa14f",
       "manifest_package_tree": "ebbaa39ba90e056ab1feb6c23a356dc51ec4b2fe",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "react-and-nextjs-data-visualization",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -912,7 +914,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -920,7 +923,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/reports-pdfs-and-slide-automation/SKILL.md",
       "skill_blob": "cb3d3753fa0f5afd2ddf019232b49a36fbd63b50",
       "manifest_package_tree": "6196e42aad8d99f889712a7f21f01c90b6354eef",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "reports-pdfs-and-slide-automation",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -934,7 +937,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -942,7 +946,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/scrollytelling-and-parallax-data-visualization/SKILL.md",
       "skill_blob": "3d861c961dd48ef0ca8ff3334b72b1f19ae855e9",
       "manifest_package_tree": "724a166d295469a8f712b979f7d5bd8c10efdc5c",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "scrollytelling-and-parallax-data-visualization",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -956,7 +960,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -964,7 +969,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/statistical-and-uncertainty-visualization/SKILL.md",
       "skill_blob": "4370b0a0be83ea92be56f260c23888065155f686",
       "manifest_package_tree": "207daf3beddce558ed6175e80a5c2597d6a3c046",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "statistical-and-uncertainty-visualization",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -978,7 +983,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -986,7 +992,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/testing-data-visualizations/SKILL.md",
       "skill_blob": "6804377cb3951d990730fe1858db869743fec582",
       "manifest_package_tree": "2eae12d4253ed82cc926cc32a3f57e0e2e0f8471",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "testing-data-visualizations",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -1000,7 +1006,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -1008,7 +1015,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/threejs-data-visualization/SKILL.md",
       "skill_blob": "c3dcf7f190beb323c6b13bed2b28de29c4f25a56",
       "manifest_package_tree": "095cfe58bf49c5ec58bb66996bda8b2a019509b2",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "threejs-data-visualization",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -1022,7 +1029,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -1030,7 +1038,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/typescript-data-visualization-engineering/SKILL.md",
       "skill_blob": "6eab264f8506e58f157d5457812914de159ad23e",
       "manifest_package_tree": "64d2215071e8d04ee9f6c86fbac1b90d3f231d94",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "typescript-data-visualization-engineering",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -1044,7 +1052,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -1052,7 +1061,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/uml-and-software-architecture-visualization/SKILL.md",
       "skill_blob": "cd9afdc6cf81cc9989dec65955e1b5c344ffca86",
       "manifest_package_tree": "a20b42ec5b845b171b3d69f6ade64bdee02df01b",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "uml-and-software-architecture-visualization",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -1066,7 +1075,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     },
     {
       "source_id": "openai-plugins",
@@ -1074,7 +1084,7 @@
       "canonical_path": "plugins/build-web-data-visualization/skills/visualization-strategy-and-critique/SKILL.md",
       "skill_blob": "7ac5e20f09457bd6089b16512a895cd452815774",
       "manifest_package_tree": "7bb61729cb282f043eaa188aea40b2ba6058ef40",
-      "historical_record_package_tree": "not independently established in this pass",
+      "historical_record_package_tree": null,
       "shape": "direct",
       "name": "visualization-strategy-and-critique",
       "source_family": "openai_web_data_visualization_final_nine_candidate_vetting",
@@ -1088,9 +1098,8 @@
       "unchanged_use_approved": false,
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
-      "blocker": "Identical SKILL.md blob but recorded complete-package tree differs from pinned manifest; no automatic carry-forward"
+      "blocker": "Pinned manifest package tree is known but historical candidate review did not establish its complete-package tree; cannot carry forward package-level qualification",
+      "historical_record_package_tree_note": "Historical candidate record contains literal placeholder 'not independently established in this pass'; no historical tree hash exists"
     }
-  ],
-  "authority_and_license": "Original source-vetting restrictions and license/terms govern; source root or plugin metadata is not a redistribution grant. Do not infer unchanged-use approval or permission for external writes.",
-  "next_action": "Inspect nine complete-package tree mismatches at the pin, then reconcile remaining 119 family-only candidate decisions with exact path/blob/tree evidence. Separately continue genuinely new current-standard package reviews."
+  ]
 }

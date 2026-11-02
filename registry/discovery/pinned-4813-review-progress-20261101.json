@@ -40,16 +40,16 @@
       "manifest_index": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
       "exact_path_fingerprints_checked": 0,
       "terminal_static_candidate_decisions": null,
-      "path_reconciliation": "PARTIAL: 41 existing historical candidate-only exact blob/tree matches; NOT current-standard reviewed or governed; 9 tree mismatches held",
+      "path_reconciliation": "PARTIAL: 41 existing historical candidate-only exact blob/tree matches; NOT current-standard reviewed or governed; 9 historical package-tree identities missing and held",
       "source_family_candidate_decisions_reported": 169,
       "remaining_eligible_paths": "unknown until package boundary, licensing and path matching completed",
       "historical_candidate_only_exact_blob_tree_matches": 41,
       "historical_candidate_only_evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
-      "historical_blob_only_tree_mismatches_blocked": 9,
       "historical_family_decisions_lacking_exact_record_in_index": 119,
       "raw_paths_without_any_exact_path_decision_evidence": 495,
       "current_standard_ten_dimension_path_decisions": 0,
-      "raw_paths_without_current_standard_ten_dimension_review": 536
+      "raw_paths_without_current_standard_ten_dimension_review": 536,
+      "historical_blob_only_missing_historical_tree_blocked": 9
     },
     {
       "source_id": "agentskillexchange-skills",
