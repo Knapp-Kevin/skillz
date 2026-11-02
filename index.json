@@ -4513,5 +4513,23 @@
     "behavioral_validations": 0,
     "eligible_distinct_denominator": null,
     "review_stage": "source-vetted-candidate-only"
+  },
+  "pinned_four_source_identity_preflight": {
+    "date": "2026-11-02",
+    "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-pinned-four-source-identity-preflight.md",
+    "raw_paths": 4813,
+    "distinct_skill_md_blob_shas": 4813,
+    "distinct_package_tree_shas": 4813,
+    "exact_blob_or_tree_collisions": 0,
+    "nested_descendant_paths": 58,
+    "cross_source_same_leaf_groups": 14,
+    "cross_source_same_leaf_paths": 35,
+    "governed_name_only_overlap_paths": 40,
+    "eligible_distinct_denominator": null,
+    "review_decisions_delta": 0,
+    "governed_review_records_delta": 0,
+    "behavioral_validation": "not-run",
+    "caution": "Fingerprint uniqueness excludes exact collisions in four manifests, not semantic duplicates or governed mirrors; names are leads only."
   }
 }
