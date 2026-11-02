@@ -19,8 +19,13 @@
     "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
   ],
   "individual_reviews_scope": "governed exact-version semantic review pairs only; source-vetting candidate decisions are separate",
-  "terminal_static_candidate_reviews": 23,
+  "terminal_static_candidate_reviews": 41,
   "other_shape_structurally_classified": 23,
   "other_shape_still_unclassified": 198,
-  "nested_game_multi_file_pending": 18
+  "nested_game_multi_file_pending": 0,
+  "nested_game_terminal_static_candidate_reviews": 23,
+  "direct_shape_terminal_static_candidate_reviews": 18,
+  "latest_review_ledger": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+  "review_progress_ledger": "registry/discovery/pinned-4813-review-progress-20261101.json",
+  "review_status_scope": "41 exact-path source-vetting candidate decisions, not governed semantic review pairs; 604 raw paths without terminal candidate decision, including 406 direct-shape and 198 other-shape unclassified"
 }
