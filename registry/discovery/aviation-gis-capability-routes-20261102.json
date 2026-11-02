@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "navigation_root": "capability-first discovery candidates, not main directory admission",
+  "source_scope": [
+    "alexbrooker/aviation-skills",
+    "danmaps/gis-agent-skills"
+  ],
+  "note": "All mappings are source-vetting discovery leads; none is approved for unchanged installation, security, behavioral validation or host action.",
+  "routes": [
+    {
+      "domain": "law",
+      "subdomain": "regulatory-analysis",
+      "capability": "Aviation AI hazard and assurance portfolio screening",
+      "candidates": [
+        {
+          "path": "skills/aviation-ai-assurance",
+          "score": "17/20",
+          "disposition": "REFERENCE-ONLY",
+          "evidence": "registry/discovery/aviation-four-pinned-static-20261102.json"
+        }
+      ]
+    },
+    {
+      "domain": "analytics",
+      "subdomain": "measurement",
+      "capability": "Dated aviation feed evidence and denominator discipline",
+      "candidates": [
+        {
+          "path": "skills/aviation-data-story",
+          "score": "18/20",
+          "disposition": "REFERENCE-ONLY",
+          "evidence": "registry/discovery/aviation-four-pinned-static-20261102.json"
+        }
+      ]
+    },
+    {
+      "domain": "research",
+      "subdomain": "fact-checking",
+      "capability": "Time-bounded aviation identifier verification",
+      "candidates": [
+        {
+          "path": "skills/aviation-identity-check",
+          "score": "18/20",
+          "disposition": "REFERENCE-ONLY",
+          "evidence": "registry/discovery/aviation-four-pinned-static-20261102.json"
+        }
+      ]
+    },
+    {
+      "domain": "product",
+      "subdomain": "discovery",
+      "capability": "Aviation AI opportunity mapping and feed lineage",
+      "candidates": [
+        {
+          "path": "skills/aviation-opportunity-map",
+          "score": "14/20",
+          "disposition": "REJECT_UNCHANGED",
+          "evidence": "registry/discovery/aviation-four-pinned-static-20261102.json"
+        }
+      ]
+    },
+    {
+      "domain": "science",
+      "subdomain": "earth-sciences",
+      "capability": "GIS analysis, spatial data quality, mapping and publishing",
+      "candidates": [
+        {
+          "path": "danmaps/gis-agent-skills/skills/",
+          "score": null,
+          "disposition": "DISCOVERED_UNGRADED",
+          "evidence": "registry/discovery/gis-operations-21-identity-rights-20261102.csv",
+          "rights": "HOLD: README MIT claim lacks located full license grant; 20 canonical packages plus one configuration alias"
+        }
+      ]
+    }
+  ]
+}
