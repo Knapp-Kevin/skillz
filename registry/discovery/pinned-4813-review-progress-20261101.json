@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 3405,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 3718,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,16 +20,19 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 119,
-      "terminal_static_candidate_decisions": 119,
-      "direct_shape_path_decisions": 102,
+      "exact_path_fingerprints_checked": 432,
+      "terminal_static_candidate_decisions": 432,
+      "direct_shape_path_decisions": 415,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 313,
-      "direct_shape_without_terminal_decision": 313,
+      "raw_paths_without_terminal_decision": 0,
+      "direct_shape_without_terminal_decision": 0,
       "other_shape_without_terminal_decision": 0,
-      "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
+      "next_direct_shape_path": null,
       "next_other_shape_path": null,
-      "other_shape_structurally_classified": 17
+      "other_shape_structurally_classified": 17,
+      "deferred_static_candidate_decisions": 0,
+      "exact_path_fingerprint_basis": "all 432 manifest blob/tree SHAs re-verified against a nontruncated checkout of the pin (0 mismatches), 2026-11-02",
+      "current_standard_ten_dimension_path_decisions": 432
     },
     {
       "source_id": "openai-plugins",
@@ -34185,10 +34188,3140 @@
       "grade_20": 3,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/acquire-codebase-knowledge/SKILL.md",
+      "skill_blob": "b449afdb7081ee37e679405d12432fe757fbb1dd",
+      "package_tree": "21f240c8fa6898781ca7154e282ec8c79e420c20",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/acreadiness-assess/SKILL.md",
+      "skill_blob": "ad369996b9c9788cbad48410056f6e02667bf728",
+      "package_tree": "edf76e6a6a24f32ed7166c504b75182432272c8a",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/acreadiness-generate-instructions/SKILL.md",
+      "skill_blob": "6be9341aaa448670594ee22671272e801e3ed574",
+      "package_tree": "9c94b95b76a508851a0c21e404b64134240f6c02",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ad-campaign-analyzer/SKILL.md",
+      "skill_blob": "b3312d058aeb36c047edda1e8a4d592071eec450",
+      "package_tree": "328c71a53a48c071b724c5828e68e012ac7c56d5",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/adobe-illustrator-scripting/SKILL.md",
+      "skill_blob": "103bf7ce7c4edc21a4648971cc0d4ad146546b8f",
+      "package_tree": "c15d2d228ce409264bf757f8ea18fe840eca00d0",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/agent-governance/SKILL.md",
+      "skill_blob": "a3c2501676c11fd8433c802b7f1c21d174ff6721",
+      "package_tree": "b76e562c86d4c19ecaa1b857967399ff239147a9",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/agent-owasp-compliance/SKILL.md",
+      "skill_blob": "3c4032dc5e2f69709fbfc040caf5c77dee756136",
+      "package_tree": "1b9d0266771e9f87a3e26d375ab38188399315bd",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/agent-skill-stack/SKILL.md",
+      "skill_blob": "e89c861c51f249247ec923e0e8fa69251d3c169e",
+      "package_tree": "1eb1086a047b65b10db61c57e1cf00ddd58c690f",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/agent-supply-chain/SKILL.md",
+      "skill_blob": "995c87835577fc396d31ff4447cea9d91ca61484",
+      "package_tree": "7c9231a915167858a34fb12cb23727bc433d3671",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/appinsights-instrumentation/SKILL.md",
+      "skill_blob": "81056fdc7979a62c74014f858cd1fc67132a9675",
+      "package_tree": "fc9cc4b1a305109965c826791cc0184b0899fd1f",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/apple-appstore-reviewer/SKILL.md",
+      "skill_blob": "8cbcfb8e660f1c9a40c78bc9fc038e2a94f6daf3",
+      "package_tree": "d56f7f4c6ab318f8dc7074120a0d187a4c5c9a6d",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arduino-azure-iot-edge-integration/SKILL.md",
+      "skill_blob": "39ccfc9e7dc02cd9d6dc27f5847cbf6f3425a65b",
+      "package_tree": "26d4b4a77f03dcc9bcff87536d65ecdc2ae4f56b",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-ai-provider-integration/SKILL.md",
+      "skill_blob": "806be8e59d52ce3b5f855151d6cbc76767507890",
+      "package_tree": "116f61113ba6bfe30e02ade8cda1389f51637e29",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-annotation/SKILL.md",
+      "skill_blob": "3f69f32bcec7de451bb227ae8b324cdd7a9026cc",
+      "package_tree": "18140c658191e517bdb7946e781749c79695b31d",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-dataset/SKILL.md",
+      "skill_blob": "4046570a88b9436ca6b9069d26237507bb92933d",
+      "package_tree": "d505df74921c46b0e4e2b28d6c06b19736689a4f",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-evaluator/SKILL.md",
+      "skill_blob": "1336030d8fcb38d0f861bf85d348993b79a2d32f",
+      "package_tree": "034438bdb9bbc66deb738f4cf0cd37f993ef08a1",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-experiment/SKILL.md",
+      "skill_blob": "45759467a531014e46219a8a0cce7b504334ee62",
+      "package_tree": "5477e04b4b12e52e7bc1723cad228e0d847eef21",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-release/SKILL.md",
+      "skill_blob": "afd9c4c24af18ca38b708fb908515ee4964b617a",
+      "package_tree": "c07ae797ba0078c7e949909b85325388b11a5c9f",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gitmoji/SKILL.md",
+      "skill_blob": "1630e480d37204575dbc69169e0d6b822ee4921f",
+      "package_tree": "ff148dd54a1817abcff13bf433c0e4df0be10695",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/go-mcp-server-generator/SKILL.md",
+      "skill_blob": "c47670ac62827e8011dcd7a183b4c90f0ec95676",
+      "package_tree": "cb0462ac2dc457e79d9b5e32ca93b933f55d5491",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gsap-framer-scroll-animation/SKILL.md",
+      "skill_blob": "dfb3a84fde584080ce17938d014aaa049eae4c5f",
+      "package_tree": "b67d31bd2cd4e33cd22874c35ff35c4359fd9b8f",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-ai-gtm/SKILL.md",
+      "skill_blob": "a1266e8f8784408c593bd076444ab0103d212a6a",
+      "package_tree": "8383b316d3539a9c4b56c5043a829a78e998bf07",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-board-and-investor-communication/SKILL.md",
+      "skill_blob": "39b7c7e4f2d4bb7d8a2e45cef796462cd7703d43",
+      "package_tree": "2c631fd077f15daee699fb55f0e7b3d775fd3b39",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-developer-ecosystem/SKILL.md",
+      "skill_blob": "ffd661364ce9b4aebfde55b03e2860a04f7fb2f8",
+      "package_tree": "acdc88ad99bd4d31a32355303d2580f2cf6eeca0",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-enterprise-account-planning/SKILL.md",
+      "skill_blob": "89eb4600ed2710013b481a38d6ff60ba2888a3e4",
+      "package_tree": "a8ae97392c87460200047e5ca34816f097ba79e2",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-enterprise-onboarding/SKILL.md",
+      "skill_blob": "b7c66eb8a022bbe5dc309cfe7e4895b27b0a5d35",
+      "package_tree": "b4a843a66cecfb9e2e44294d3de5d67527273f4c",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-positioning-strategy/SKILL.md",
+      "skill_blob": "1bf94498936fee96e674477fedec15e2b9554f3c",
+      "package_tree": "1c39e15a30bc35c16469719e569a33ce54df260a",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/harness-engineering/SKILL.md",
+      "skill_blob": "7dcaad853e624c8d418dd975118e757e2a30dfdc",
+      "package_tree": "7135eb67252e4d77c70f388b6cdcbaaa684d3dc7",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/image-annotations/SKILL.md",
+      "skill_blob": "2662a967a786ab654f33982c81ec3bc9b62465d5",
+      "package_tree": "5aa803d6fb8181255522fae2e35acd48f92baa2a",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/impediment-prioritization/SKILL.md",
+      "skill_blob": "e92040680b1739ba787eb732889a1183c3355f46",
+      "package_tree": "05cf1b8ebfc32392a9450390d30cedee3785c63b",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/import-infrastructure-as-code/SKILL.md",
+      "skill_blob": "dde2f2efa8da2f4a42beddf3f0547d2d529af7e0",
+      "package_tree": "21f1a41c47279e4dc9a11be7eacc8621e0252207",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/incident-postmortem/SKILL.md",
+      "skill_blob": "1d3faf2176d90b6dda0a89640e227b2757959bc9",
+      "package_tree": "94ea4d7f3d72ab83b2a59bb1b7e68bb2f02e2fa2",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/integrate-context-matic/SKILL.md",
+      "skill_blob": "23a2b5e3312ae565e8794bbeee14096d8b26e658",
+      "package_tree": "86cfeb1cd71db975ed5d1a79d25b5f8cb7f19f62",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/issue-fields-migration/SKILL.md",
+      "skill_blob": "8a41b8f8e4f8b0d167cbc63ce93ba1670b3aa10e",
+      "package_tree": "34fc47d2d1426412332a6d54c46b7b98eac63e74",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-add-graalvm-native-image-support/SKILL.md",
+      "skill_blob": "9034f356252fe016ba764ae37a85d9bc52c4afea",
+      "package_tree": "eb3b37e80e12b4f363b02dafbee7530906bad381",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-helidon/SKILL.md",
+      "skill_blob": "0b654dac6ee4c4eeb5df7d803829ccec6ff6df66",
+      "package_tree": "064d0a1b8259296a083156e193cdb51134e3facf",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-mcp-server-generator/SKILL.md",
+      "skill_blob": "88b366916a3e966299c058aa16a4be929847172c",
+      "package_tree": "4ebe805ff33e75d237b5673c3751d0aca0baa7de",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-springboot/SKILL.md",
+      "skill_blob": "39ae2e5f13de608cfac6e4fb15bb7842bd413215",
+      "package_tree": "1def6a95f59c924c9233774fbcf9be4c6fab7081",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/javax-to-jakarta-migration/SKILL.md",
+      "skill_blob": "549bb86628d370a0c1accda0c0369a09562909c0",
+      "package_tree": "00d0ad17702adc8c469c5cb78e5d3059ace46f26",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/kotlin-mcp-server-generator/SKILL.md",
+      "skill_blob": "93dbb30417d6edc1d58de1a2aa6674d7c7e9f913",
+      "package_tree": "de1371a82525240a4f24b2aabc07a604422aa60d",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/kotlin-springboot/SKILL.md",
+      "skill_blob": "7737e98b2b965fd12f3b1fa9ddd69ca474ba409a",
+      "package_tree": "008707336b83e6de0e2e40aa1870dda22354b14e",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/landing-page-conversion-audit/SKILL.md",
+      "skill_blob": "e1d627d2bdb38cac223c87eb046a4b520d429a26",
+      "package_tree": "9c532aa1c6f97a8733d3de951fcaed84f196b807",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/latchshot-page-capture/SKILL.md",
+      "skill_blob": "d4734b18af46fdd754c1b9efcf62ce1cc05db536",
+      "package_tree": "d0079db2d271d7a2a65ed9eabbc0ec49a04ba6b3",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/legacy-circuit-mockups/SKILL.md",
+      "skill_blob": "711f59273cc80eb50335831ea49e718d26ddb2cc",
+      "package_tree": "56f75d5f40fe7ad6085bdcadea0ff5754f00604e",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/linkedin-post-formatter/SKILL.md",
+      "skill_blob": "1e375e7972cb167e38973920aeb81fffa808e890",
+      "package_tree": "b6d57d88860875e0ddad72c23702552f43d2bf0e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/lsp-setup/SKILL.md",
+      "skill_blob": "3a0a5159616efe96891fe8764ce0b1b6a9d810d7",
+      "package_tree": "a07bf32140543c8e0d2e26ed6849b8ce48b8ca1c",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/make-repo-contribution/SKILL.md",
+      "skill_blob": "3666baccb658194e4b4bc252f5565ec45a3dbd23",
+      "package_tree": "00db961c2dfb0c27be715a37bf1ddc5ad1bc7185",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/markdown-to-html/SKILL.md",
+      "skill_blob": "430ad69a4130c327b4316c6a200cbe9a5106e1f1",
+      "package_tree": "bd8cd071f08f841753283719eeaa28adbb167051",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/markstream-install/SKILL.md",
+      "skill_blob": "ffc5d84ea8a87a262dd4888f49eb3de0cb7487ba",
+      "package_tree": "e131b5f472054b4fe9db20f7216ab8cbb0414b51",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-cli/SKILL.md",
+      "skill_blob": "d5b801ee45e3b9ebfcf8f94f54d0a8b84b0177ce",
+      "package_tree": "7f4ae3a3cf2b9bd394ac60ab93db4471e6a0b61b",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-copilot-studio-server-generator/SKILL.md",
+      "skill_blob": "bbb5e81c6b069eec5f15763c794d1700787a5884",
+      "package_tree": "d73259be9c383ea4d44b8d4b661a26594037fe0d",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-create-adaptive-cards/SKILL.md",
+      "skill_blob": "974129394ec77bb66d01adb2bfd90e99b767a0b0",
+      "package_tree": "9a9768bd8823bf9a3aa276b37c498bbb7d206ed0",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-create-declarative-agent/SKILL.md",
+      "skill_blob": "8a5273ce96fb64006db16859857724af5eb70571",
+      "package_tree": "93bea0c5c8f3fe20f227e85adce119964237f93e",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-deploy-manage-agents/SKILL.md",
+      "skill_blob": "e3c7b252768bbd0ffebd0f2128b3bd0efd8793af",
+      "package_tree": "c8f56db4cc87ef2668b88da03c61011785af7553",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-implementation-security-review/SKILL.md",
+      "skill_blob": "5bf9d01b7be7e2661c78ab75afac232caecb2c05",
+      "package_tree": "d9a6fa0f32da9be8e12881d5a415f124a2477f13",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-release-qa/SKILL.md",
+      "skill_blob": "3d42ef38276e391e57b26e6124d76bb5bec8ffcd",
+      "package_tree": "11d02d5f728e4c0b730a3a333b8b331199b4fbe3",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mcp-security-audit/SKILL.md",
+      "skill_blob": "ef866b906abecd7368d124ce7ebf100c1785f203",
+      "package_tree": "2df476cd96996b39ddfb930b7a5c6d2207b7123b",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/md-to-docx/SKILL.md",
+      "skill_blob": "59e9a142f2266a55c258235804716c09aeef187d",
+      "package_tree": "e72aa6749f03b6c26a88c2cd2a912518111e0fb5",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/meeting-minutes/SKILL.md",
+      "skill_blob": "63424b8be544169f9206b8ce9e9e6d4e67219f69",
+      "package_tree": "4cb5aa761cf7dd3723d0c81584da8f0ff3e0c3a7",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mentoring-juniors/SKILL.md",
+      "skill_blob": "01dba1b83066ca71d23aad756968f91fad7fb4d9",
+      "package_tree": "462f0b6c3a8c2cdd954e501ecb2f2055ef5dc0c8",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/microsoft-agent-framework/SKILL.md",
+      "skill_blob": "f0becbc92ef6df8248ebf06d8b5d47a5fdb6fea7",
+      "package_tree": "f4174d2e96154c2cc78f89b4756c6ae9ac9ce778",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/microsoft-code-reference/SKILL.md",
+      "skill_blob": "24de66989f35959f45c15160158e8b96f3fccf8f",
+      "package_tree": "91b5f3ced9261da178a330b85f738e9fc4f56d2e",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/microsoft-docs/SKILL.md",
+      "skill_blob": "bbfd424c631f402ab32dc4bfa584e31de39faae3",
+      "package_tree": "00d2bd89b941cdfef7191f7eb618fdacac439760",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/microsoft-skill-creator/SKILL.md",
+      "skill_blob": "139faf235cf92c70317d71099e9ad7913496e6de",
+      "package_tree": "e60175ca425911c97377a94d34a7a36674ea2090",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/migrating-oracle-to-postgres-data-access-code/SKILL.md",
+      "skill_blob": "94b1c1a3cbff363039f88e520542ad0b3575d8ea",
+      "package_tree": "64b4cd2d886aa9660001ab3400d46ceeefd88510",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/migrating-oracle-to-postgres-stored-procedures/SKILL.md",
+      "skill_blob": "3c5d101640f0c1743ad51a02d044356e27b0489a",
+      "package_tree": "f2ef8bcd939d1ec750a181702e3baa701d324fad",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/minecraft-plugin-development/SKILL.md",
+      "skill_blob": "947a8f80cf0861b22691d1abdb2e7a6fe1c606a4",
+      "package_tree": "3ef91e92fa33a97fcafaacf76a21962488b9182d",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mini-context-graph/SKILL.md",
+      "skill_blob": "04efc1459849c9dddcd7af5ac2091f1609598fc1",
+      "package_tree": "38ea55ba1fdc348b0ca1abd6bec7ddd884913bb5",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mkdocs-translations/SKILL.md",
+      "skill_blob": "70d4f18ab96cd2f284e42e194046ac50e1dab7fd",
+      "package_tree": "76df8e010efea4fbb4abf4957ef6ef1e7c976c58",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/msgraph-sdk/SKILL.md",
+      "skill_blob": "12665d1251716c1b681510b29a8003e4ab66854a",
+      "package_tree": "539327003db3c89ecf32ddf4bb91f014ede4a753",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/msstore-cli/SKILL.md",
+      "skill_blob": "4cd433889ae782538b1ad1df789d83374df9c81e",
+      "package_tree": "10f91bd2a4413b943bf1be26ce86f4988b8d59f5",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/multi-stage-dockerfile/SKILL.md",
+      "skill_blob": "704382de43e25d889c671455cda076d0d28e71e5",
+      "package_tree": "c48773c7887197168099307c60b5dab2a553259c",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mvvm-toolkit-di/SKILL.md",
+      "skill_blob": "0b5a15f1983e6c4d6ee86e1aada20bfe71987d13",
+      "package_tree": "7183657a160a0e16e535fcba878a96609c15f867",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mvvm-toolkit-messenger/SKILL.md",
+      "skill_blob": "d9ab5e85d029df6264c8237e8c52a66adcd1a6ad",
+      "package_tree": "a96b2951d9ab851574c20b9c3151f228908ccaea",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/mvvm-toolkit/SKILL.md",
+      "skill_blob": "3032cb4a5fd82befd63ca41c05a45ced9bffe79f",
+      "package_tree": "8fa180f926a7d5e83a40d5f39f34958fb9f126f2",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/namecheap/SKILL.md",
+      "skill_blob": "1fae5cea61281105ef590f7a661cac4f5ca3c280",
+      "package_tree": "d9e9c7469e6ddec355f952faeff1d98aed933894",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/nano-banana-pro-openrouter/SKILL.md",
+      "skill_blob": "7eee2b41b7374a8cdf83ebd409c034d5eb660cd3",
+      "package_tree": "23cc21b01fa6babe95da4130e3419fc1b34ec66d",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/napkin/SKILL.md",
+      "skill_blob": "e9484725703510e3be6051922cc9e749ed7a5a0d",
+      "package_tree": "281173e1315851e514a6fd28b43c85869c884d06",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/next-intl-add-language/SKILL.md",
+      "skill_blob": "961e729cc8d5da796af95876a46aa18889bc8576",
+      "package_tree": "5df67700becbb42be63e6a0a66ddfc1bb8908d19",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/noob-mode/SKILL.md",
+      "skill_blob": "6629a08dadbb70423e9429ca45b7ecd2d742abc7",
+      "package_tree": "bf2dc770d9d60f9c035bd9594cee82186fb1444c",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/nuget-manager/SKILL.md",
+      "skill_blob": "3de5ce401b9e7d983e4c87342a709210218748e0",
+      "package_tree": "bf9bfc43ace8f2fcd47cbd62ab0d5136ecff9338",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/onboard-context-matic/SKILL.md",
+      "skill_blob": "16e4f2234430001e10b8fb45a69b13e97f390bb5",
+      "package_tree": "98040a8b4bb90692a3c0b46e14d3a84158e0c8f3",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/oo-component-documentation/SKILL.md",
+      "skill_blob": "7994b07c2f1c42ee3169d4ebf678fe56a5d9961a",
+      "package_tree": "e215f5b311bbcb9054ddfbf66bf896a8d20beadb",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/openapi-to-application-code/SKILL.md",
+      "skill_blob": "1d21db00bfc1dc2845bb3ee10987eed166a99505",
+      "package_tree": "d5c33db5b6d433637a9776a2136f77412d7a0a8b",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/optimize-simplicite-logs/SKILL.md",
+      "skill_blob": "4fce22d25e950e68edee71b578a74926aefad26d",
+      "package_tree": "93bbd01cfc0eec1dec10bdd6ec15b4671447dc61",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pdftk-server/SKILL.md",
+      "skill_blob": "5bdf313dc8f686ff4af18134f361e79df0755292",
+      "package_tree": "ddb29fd3ec999dca5c42f4e55338ba1967fde25f",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/performance-review-writer/SKILL.md",
+      "skill_blob": "1ac49165e836a1539a3e47110fbeb49a9caafa6d",
+      "package_tree": "10f3c8be1923a475e64b28d3236686d435d2d507",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pester-migration/SKILL.md",
+      "skill_blob": "311b77f7865bdc2643c501b176982f39d4c5cc0b",
+      "package_tree": "d09ba7d60b5a4c25a05e87e414f38d8f6486e655",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pester-should-migration/SKILL.md",
+      "skill_blob": "e7682bd2a9464edff7547fbc7ed13eb74a4d5bbd",
+      "package_tree": "cf80a69f9b71a06a0be5e585f5fad95b85e5eb45",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/phoenix-cli/SKILL.md",
+      "skill_blob": "bb7d71d9e192ea1f6655ef777b296d94e1f3c668",
+      "package_tree": "d0ff1d39a88678a48b34f510466a864fd72cd6f3",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/phoenix-evals/SKILL.md",
+      "skill_blob": "1788a37aebbf3ecd918f85de0ae7f8dedb23a22a",
+      "package_tree": "dedeb36e1724aef6766ed866c18dc632cb2f815a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/phoenix-tracing/SKILL.md",
+      "skill_blob": "726715de32b7d4316ee34930a47537addac3cfa4",
+      "package_tree": "9502b8d6032edea2174781ff773cec987b82c816",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/php-mcp-server-generator/SKILL.md",
+      "skill_blob": "a2dd1e5041b0ea68d1369a37a5c2c2af3b5f1cbc",
+      "package_tree": "f54a043828d26dbc214f2314b9ed1cfed320327a",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pinecone-rag/SKILL.md",
+      "skill_blob": "de438a0cc0046266e3a810d1b066f0fcd9408c9f",
+      "package_tree": "638b43f6f1945435647a572b1009ad66e769de1f",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/plantuml-ascii/SKILL.md",
+      "skill_blob": "d01cc750d0e84b5439d44648079dd6ee55f2518a",
+      "package_tree": "69ceb67aa7c029ba157cbffea5338d8e254ddd13",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/playwright-automation-fill-in-form/SKILL.md",
+      "skill_blob": "b67d3aab56775c495e47c66c5c06351fb5374534",
+      "package_tree": "dba0fe8e328bdc37d6c851d2367671fed9ae6c5d",
+      "shape": "direct",
+      "grade_20": 4,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/playwright-explore-website/SKILL.md",
+      "skill_blob": "626c378e118bb81ad83fe08b5d17f2cc5a759ba1",
+      "package_tree": "16c686b950d767e0981287c3599ca3619ce31876",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/poka-yoke/SKILL.md",
+      "skill_blob": "5ef7f70a8f6facd3f3bd59663d14769e46a10d99",
+      "package_tree": "3218d3093f24d721274d134a6b1fb16623eb4f74",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/postgresql-optimization/SKILL.md",
+      "skill_blob": "6e10e258d281c036005ecbf1bf998c4c4e41fd41",
+      "package_tree": "c9fb08005c2dc38d46b1369d9cb4bc24075ece50",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-apps-code-app-scaffold/SKILL.md",
+      "skill_blob": "c6fe8ee513e82a3c0d07bb2a472c1b7fbc005800",
+      "package_tree": "b17a8d8db594cac8fcc58a2c69851f8ee01fb572",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-dax-optimization/SKILL.md",
+      "skill_blob": "54821f62cf5ffacfeab71f21a4ed4a43eecc5c0c",
+      "package_tree": "03dbbac08dc8dbb0526b980088d8b694b6df1d3c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-performance-troubleshooting/SKILL.md",
+      "skill_blob": "89c04bb05952cc013346ae063afc225d06994ffc",
+      "package_tree": "d6d9694db0d2ae829969c959185d9838cb5f4d60",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-platform-architect/SKILL.md",
+      "skill_blob": "1b73b2427c70bce1ee64b17c735760792a6bb309",
+      "package_tree": "e627d30a073da386337667f35439e105df367809",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-platform-mcp-connector-suite/SKILL.md",
+      "skill_blob": "2c73a9d49feb25202afbdada08f572cb5a49595d",
+      "package_tree": "370ab3d9a5db7213e1d8eecad1d479fa1e7db291",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/powerbi-modeling/SKILL.md",
+      "skill_blob": "b4c4f1403354e768510e9a21f64c1df0be1e68b6",
+      "package_tree": "985ce71b33eebf638a7383a7df7c938761583849",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pr-dashboard/SKILL.md",
+      "skill_blob": "101907e629470af9985c92eaba016950ba92ab57",
+      "package_tree": "b39d15a5f4d424693f8b21f83c01fe44953b06cd",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pr-screenshots/SKILL.md",
+      "skill_blob": "44fe49c68584ea5701780802770cf33950e7ff4d",
+      "package_tree": "c1b4397ab7c996bfdde25582029e28eab40939bb",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/prd/SKILL.md",
+      "skill_blob": "b19e77a252c14eed2b8fd1b506aa100fa2010fb3",
+      "package_tree": "b4af69e637f8f2bf620c55273680669ccca3e73c",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/project-workflow-analysis-blueprint-generator/SKILL.md",
+      "skill_blob": "c29ad633e141a493e4fac3307ea4c82c4aba838d",
+      "package_tree": "88a7484818d2e8f5539d3f2b9c8347b874b0d460",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/prompt-optimizer/SKILL.md",
+      "skill_blob": "5166fef080860e213718fbdc4fe04c277bee9283",
+      "package_tree": "5cdb780f315b341ec3ea7735d340ff55462856b8",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/publish-to-pages/SKILL.md",
+      "skill_blob": "5f279d0528d989dbb59d6fa5d81ce8e8a445ef00",
+      "package_tree": "f2ae15c06b7b7e8d7b9cf3a417fde9dbe192f535",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/python-azure-iot-edge-modules/SKILL.md",
+      "skill_blob": "785abc6f14d458473292a845d81bfba0000c6bd6",
+      "package_tree": "9cbff9631574135590e139be71a8a36507978819",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/python-mcp-server-generator/SKILL.md",
+      "skill_blob": "9e77e716dd1c3fc2a996ce3f66940a38c24b1c40",
+      "package_tree": "1e70235853c14ffade02dc3efd0b9bf21b612afb",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/python-pypi-package-builder/SKILL.md",
+      "skill_blob": "e7b4a3841bcc244179fedebcb1dc15e06dcafb64",
+      "package_tree": "3a76688d24af0030577c71ed21f384c49a905dcd",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/quality-playbook/SKILL.md",
+      "skill_blob": "3f0901f3670a03cdbc30f745d22a09ce35e7b548",
+      "package_tree": "3bbf63cd7f69281c62cd991e577ff15eabb14e57",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/quasi-coder/SKILL.md",
+      "skill_blob": "89d6846642efc3eeb2d9f613a9540190c4034896",
+      "package_tree": "9d1e5e39c26d5727bbc51046f9f84fba242b3c20",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react-audit-grep-patterns/SKILL.md",
+      "skill_blob": "5d9cd6765c174e2be172270b02b76ba3e7becfef",
+      "package_tree": "ca58f2efce5fa958755dd06974d3639736437409",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react-container-presentation-component/SKILL.md",
+      "skill_blob": "12e040c78eb224e39b07af8bb2ac3b8ad285a41a",
+      "package_tree": "3f91fcb1f6103426325761edaf0c4122649cd48f",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-batching-patterns/SKILL.md",
+      "skill_blob": "28e343eff80da43895b4ccb8062442bd93dd7c86",
+      "package_tree": "f9b38960304cd7ef97a0bd6621f493218e9eb191",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-dep-compatibility/SKILL.md",
+      "skill_blob": "4d02035cdf0aab935b32f65f3dd4f6f2ce22a6a6",
+      "package_tree": "60e31d5108765889abc2838e74cddff3ba4deaea",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-enzyme-to-rtl/SKILL.md",
+      "skill_blob": "ff90f1ce2f3e03dbd104a6d853a4d5fe9983955b",
+      "package_tree": "8407ef3bbf32b52ebd8738cb54ebd1d4c427301c",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-legacy-context/SKILL.md",
+      "skill_blob": "7c21cb4ee5c59c0e5e70b7a6052d3e7e13483744",
+      "package_tree": "e5ee16ca02aba5d975706419af4d7b57d050295d",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-lifecycle-patterns/SKILL.md",
+      "skill_blob": "3e0b109924157bac7b8fccea6f76602a6ed2f7d5",
+      "package_tree": "40d347277ae55a679f7a52c2f1bb5d8aa6579808",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react18-string-refs/SKILL.md",
+      "skill_blob": "48c516d17ec865cc715fa7daaec150fed43f62cb",
+      "package_tree": "e88c0ff576cbd057cb8c8bb09ca1099cc32f40b2",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react19-concurrent-patterns/SKILL.md",
+      "skill_blob": "55f61d0f0d2b6289c262a7edcf729b77b857acb3",
+      "package_tree": "5bb0a5da13d99496626d4e197e45022db5ae5c90",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react19-source-patterns/SKILL.md",
+      "skill_blob": "8ef7bdacfa09a33b9fd7207672a0dfb61be4b9a1",
+      "package_tree": "03f5daee5b30eb1472d27ae5cd2215c6d9990c47",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/refactor/SKILL.md",
+      "skill_blob": "ba8313b0c1b95c50d648f0b384c008b65ae0b00b",
+      "package_tree": "01cfb6a412faf9d680880cc3f631c419121a9916",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/remember-interactive-programming/SKILL.md",
+      "skill_blob": "ed3b52effde5a8c74e7517dd9422945f8049b9fb",
+      "package_tree": "97c5b87c5725f0bf395ec82a1d51b2396141f19e",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/remember/SKILL.md",
+      "skill_blob": "d8292ecdf5371db067fccf1df347c9b5ffa243f9",
+      "package_tree": "3fb10db1ea66d87fb55d7ed47d479a4e8127ddb8",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/repo-standardizer/SKILL.md",
+      "skill_blob": "2204b906dd36d4a0b3255c58f7ff2db248d8482d",
+      "package_tree": "f96349684b535e530aa741667b46adf75183aa0e",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/resemble-detect/SKILL.md",
+      "skill_blob": "48bc63cf9814894143aa06fe212a389dcbbf8833",
+      "package_tree": "df30fc6681708ace2b3a11a9643b6aa1bc7a5c1e",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/resx-source-generator-migration/SKILL.md",
+      "skill_blob": "4b9c9844484ba365cc2b9a3c30e4f80bd3776d2a",
+      "package_tree": "94a75611a01b5211abdb09e1e4c58054a0a0f8f1",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/reviewing-oracle-to-postgres-migration/SKILL.md",
+      "skill_blob": "f1864d14bb07fa5c5289156e83f6af8f88f70b27",
+      "package_tree": "88e0ec1fc2143b49cd06b76a6b4912942927e536",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/roslyn-analyzers/SKILL.md",
+      "skill_blob": "1a6e198c498800f7c00b545060243361de0e81bf",
+      "package_tree": "d746942395e822b245f1deee292a8dd4230f7c02",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/roundup-setup/SKILL.md",
+      "skill_blob": "9b162a9522905c0ba724097097d0ea5d5fcf2254",
+      "package_tree": "0c774f3e0e93c5f2057aa9ac8518ea2db2b9ac5a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/roundup/SKILL.md",
+      "skill_blob": "c7fdd912f48ec7e798e34a32fad0ff927940b18c",
+      "package_tree": "b2c51a057dc798ba831cf3c2a8a931f8ea8e359e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ruby-mcp-server-generator/SKILL.md",
+      "skill_blob": "5c153336ca2d78b40d145e0b598465fda2029c14",
+      "package_tree": "d10f7349ad01e0a560ddf318b61552a957d4cfac",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ruff-recursive-fix/SKILL.md",
+      "skill_blob": "abc5c26882a78a107d626c0cf401b8b93bae7f98",
+      "package_tree": "779cccbec1795aa47d7138f8f7a871b27bec4509",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/rust-mcp-server-generator/SKILL.md",
+      "skill_blob": "64e982abdafb5c5ece6b51e46230fb92f3362b15",
+      "package_tree": "db412fc9452d20c92687d5379d3cb0a7069d158a",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/salesforce-apex-quality/SKILL.md",
+      "skill_blob": "cfe0f77447bb7c5c80aa4e451ee850fd7e962d15",
+      "package_tree": "c8064061ae1bab51b0f4c1f83024bc8d45a848db",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/salesforce-component-standards/SKILL.md",
+      "skill_blob": "87fd9c7632e7141ca02747ec20bba38854bebae1",
+      "package_tree": "fbe21ec215b1df588e24d5a77e78043e80238d6a",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/salesforce-flow-design/SKILL.md",
+      "skill_blob": "2eece0153a7cea27d7a7c734a7509ab6270aa703",
+      "package_tree": "5b8837d63fa8c27d0d8b566a3a9d8886e6d022ba",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/sandbox-npm-install/SKILL.md",
+      "skill_blob": "ffc4136e5a90841007cd47a7801b35e3d5da0743",
+      "package_tree": "98072c8d453e9286d1c9f1ceffa99bbeaf22261b",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/screen-recording/SKILL.md",
+      "skill_blob": "7bd511b4e0d4b72ae111da23505915634fcd6950",
+      "package_tree": "571ca1038d035618160eb0110a371bc74f0e4b4b",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/secret-scanning/SKILL.md",
+      "skill_blob": "549a9b217d027edc514bfa4b22438bbc226485da",
+      "package_tree": "942efecfe31b477bb7353997b8be10e561a3bf19",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/semantic-kernel/SKILL.md",
+      "skill_blob": "1936d21eb101e627576b699230be39b272241ea9",
+      "package_tree": "5440bebaa083e8376c836769ab8ce19ba00d302c",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/server-side-conversion-tracking/SKILL.md",
+      "skill_blob": "f407bba60978480a3b481d25d45da05027538ec2",
+      "package_tree": "7df7517e98679658b2877e2539fdb2e808b40076",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/setup-my-iq/SKILL.md",
+      "skill_blob": "df6427627ff1a4a349640c36e3f3e50c6831747c",
+      "package_tree": "17ef0d7975f0be3bc07bdee4be001b2f1632f73e",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/shopify-review-triage/SKILL.md",
+      "skill_blob": "18970ef465b48008b39cd39bdfcab9ecc120bf52",
+      "package_tree": "478c553aa5e1983b5f629697235ba70811e2617d",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/shuffle-json-data/SKILL.md",
+      "skill_blob": "777e2126e665ee9128ab070f028e36f91f31009c",
+      "package_tree": "b08fd199cca429ff319e287fc5677539364ca5ca",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/signal-write/SKILL.md",
+      "skill_blob": "03a3d26a69ab78d0f3d29d9affe957c55bc90def",
+      "package_tree": "a8343ea3368f1be41735048b533f904de1ce0c75",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/slang-shader-engineer/SKILL.md",
+      "skill_blob": "e06afdd16ba7b44a45a4e957ffb0e7e7d442cf69",
+      "package_tree": "4dbd28a240cb5dc56dc54c7d84c2e1ac2ca22f6c",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/snowflake-semanticview/SKILL.md",
+      "skill_blob": "8f7493811ac54fdc52e570ca3605b9ee14285b31",
+      "package_tree": "0ddcdcb14af7362790458129083a0edac1709304",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/speak-summary/SKILL.md",
+      "skill_blob": "1abfc1067f0aafba997c1c60e295da9668a6422c",
+      "package_tree": "346947868f17939856cf601f6a8e834115fdceda",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/sponsor-finder/SKILL.md",
+      "skill_blob": "677c77c3149dcd1ad8bd17715458c8941ca9a323",
+      "package_tree": "55663f0e9415b2095d0eb1a9e82b2cb751c72019",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/spring-boot-testing/SKILL.md",
+      "skill_blob": "9e97e9835e1ffefcd26f7b46b7633070cd5fd13e",
+      "package_tree": "a398edb8e3b4e5c2bef402ed29f01571a7c3da96",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/sql-optimization/SKILL.md",
+      "skill_blob": "1403dd9dd851675b5496a85cf19815e1e4d37064",
+      "package_tree": "501800679fcb8e593bf63451c45cf6890ccecff9",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/sql-server-table-reconciliation/SKILL.md",
+      "skill_blob": "027d7e7f0c484508ea922a31ed8a2e490666dfa2",
+      "package_tree": "0f5e960001292a63fc8d2f766cdd5aabdc78b3cf",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ssma-console/SKILL.md",
+      "skill_blob": "e6afe21b0f4651a2df62eede92bf9e8c56f10948",
+      "package_tree": "9d6362a6743dd924d09e0f12d6f139ab666a1c49",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/steno-mode/SKILL.md",
+      "skill_blob": "a1c0ca8eafa637761c0175c6e460a4de72943ef6",
+      "package_tree": "298a841ac7954fc5ae6ee2d698c0ae9c8bfbdc67",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/structured-autonomy-generate/SKILL.md",
+      "skill_blob": "95b6d7e792c86bc771353f453aabbe66efeb08be",
+      "package_tree": "08a4d9ee3ba772c03f263b292ce2d32e985b4d49",
+      "shape": "direct",
+      "grade_20": 5,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/structured-autonomy-implement/SKILL.md",
+      "skill_blob": "7951299545b16805a88e1bdcb30e775a3c3719f3",
+      "package_tree": "6ed5253999c9918e43ad3067d3cc801cd5b895ab",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/structured-autonomy-plan/SKILL.md",
+      "skill_blob": "312210daa2797cc4411ff1e08ee2aaa4b4eacfa6",
+      "package_tree": "b8fdbf2e2705fcf901c279079caefac295d29b3a",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/suggest-awesome-github-copilot-agents/SKILL.md",
+      "skill_blob": "54cf50f5849de27dccdbf044a1b919bf4bf660c2",
+      "package_tree": "bf19ba2746fc7f4d7a94157ed02a6ab0c1241688",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/suggest-awesome-github-copilot-instructions/SKILL.md",
+      "skill_blob": "16f40a1c5c6021901fb6872543b4b041f2ceb3c5",
+      "package_tree": "7cee916b47bb9ebe63cf022657105e087a86718d",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/suggest-awesome-github-copilot-skills/SKILL.md",
+      "skill_blob": "a3aed1e8b4cb18c178b978e896ec0a946d85ea6f",
+      "package_tree": "751f84dfd1e785261c76a0d76a1d8498484b3746",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/swift-mcp-server-generator/SKILL.md",
+      "skill_blob": "8ab31c8857206eb95c116c2757dca68b532a42c2",
+      "package_tree": "20f13ebb9cbaedf688604969994db7d101986393",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/system-commandline-cli/SKILL.md",
+      "skill_blob": "643af46beba3b37635f3f5e3768a93c71e2930ac",
+      "package_tree": "7370c03fad569aa8a2456f134c294011a324019f",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/technical-job-search/SKILL.md",
+      "skill_blob": "2860691dfe9e9810be3da012f7d5c47c1e5c8ab5",
+      "package_tree": "761dba711b7549423f57eccf407ccadfbb1f54c4",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/technology-stack-blueprint-generator/SKILL.md",
+      "skill_blob": "43dce34efceb8c72941ca3a4520ee77372aef9e7",
+      "package_tree": "83e25812c9ddc1452b1bd675e37532f70f25c0cd",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/terraform-azurerm-set-diff-analyzer/SKILL.md",
+      "skill_blob": "2d366793d789de64c49ae3a00ba894db1778e3f4",
+      "package_tree": "5e89d4697ed2a366c07912db32585c6d057151eb",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/threat-model-analyst/SKILL.md",
+      "skill_blob": "9b38ea261d76986d0479300e3d5ea3a07856eac3",
+      "package_tree": "4c51abac7859b9529f721ae5043fffc2f9812b5a",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/tiny-stepping/SKILL.md",
+      "skill_blob": "6e4128c4bcd4579152a74ffc8125b33073dae36b",
+      "package_tree": "2d48f63e5d06a8c7c132d15cd19addedadf4db83",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/tldr-prompt/SKILL.md",
+      "skill_blob": "c080bd92e28c094c2b28a7e707ffeb919d9c91cb",
+      "package_tree": "4f307189bf53ce1545d84ab59b9918ce7e19f6fc",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/tm7-threat-model/SKILL.md",
+      "skill_blob": "9845d39ffdf7b5904ca6d507091febf069ca6236",
+      "package_tree": "7adf96b74b506820d7118389d6e549cbdb1021df",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/transloadit-media-processing/SKILL.md",
+      "skill_blob": "4fd69dde62efe2778492d7af61b84c81c89f1ff8",
+      "package_tree": "5c6391cf56be5e5cb310181ffc8b38ca1c39e23a",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/tugboat/SKILL.md",
+      "skill_blob": "be81c99bcbdb5cf7d9e114b15b542f00a876cecc",
+      "package_tree": "5403e1a1c691586fd3aac3485456fdb7486c9f63",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/typescript-mcp-server-generator/SKILL.md",
+      "skill_blob": "d7a98d272b5084874aff21a50f23c46139c5fe85",
+      "package_tree": "8fc0445a86cf64e8f73e044364c7636c59ea58d3",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/typespec-api-operations/SKILL.md",
+      "skill_blob": "0c9c31734f64c3c231ad97772de95d4ab9431ddd",
+      "package_tree": "c12c92500ceac079cd2b8a7d2a23dcb4095b2c37",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/typespec-create-agent/SKILL.md",
+      "skill_blob": "dd691ea774938a80b6d1d07c7962db772a5f051f",
+      "package_tree": "6a032b96a742c27b3c69f3ea068e9913fa8f329b",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/typespec-create-api-plugin/SKILL.md",
+      "skill_blob": "4f844092954949aab444735864b2db661b8a97ce",
+      "package_tree": "1d4741b1905ce32ed2b4934ee3949cab91f89767",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/unit-test-vue-pinia/SKILL.md",
+      "skill_blob": "05ed68728295d4b6c16676300ab3b925ffc6bd9c",
+      "package_tree": "014da6c3019bef14771d55c3499370a40f52da1c",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/update-avm-modules-in-bicep/SKILL.md",
+      "skill_blob": "fbd90b040f00983320b355a162844241c1b064c1",
+      "package_tree": "ebda2c1da25f568a6a2ec32fbb738a651bd3eaa3",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/update-implementation-plan/SKILL.md",
+      "skill_blob": "4bd64725f520d8b9971f30bb321740be5ac1d08b",
+      "package_tree": "242c50656df9b9379d90bb84b2700f2e98058afd",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/update-llms/SKILL.md",
+      "skill_blob": "b282b3942c39e8877ca087c870fcc1b55adbe69b",
+      "package_tree": "d83629edb40c26972a5594b2e1cb39f668518bbb",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/update-markdown-file-index/SKILL.md",
+      "skill_blob": "f8d02ca2bb3f6a6c790acae1498f535b83102611",
+      "package_tree": "b454a25838085570613d8acf907ac9c5f2a29ba2",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/update-specification/SKILL.md",
+      "skill_blob": "3ef5340671b9b6ca6b7a8e8f6fc7f0c933224980",
+      "package_tree": "d36ddaff888c84b7585f4e898508271b3a4352b8",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/vardoger-analyze/SKILL.md",
+      "skill_blob": "e2f7b6dd28f427960beebcaa4e84611259b82089",
+      "package_tree": "b0a1842662609ed8dc6bc1bf8605724092e8b94d",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/vcpkg/SKILL.md",
+      "skill_blob": "6b1d42dc4a68a158a06ffb202422636504326ea6",
+      "package_tree": "4abf641037bae7aa0591f39c9e80c277de5966b1",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/verify-agent-action/SKILL.md",
+      "skill_blob": "1a8d5dcb0d6accecaef12a806c3c89c689d507a3",
+      "package_tree": "23d23e397768e21750ad9bc3497d01eb32e15736",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/vscode-ext-commands/SKILL.md",
+      "skill_blob": "0d44dc1c4e24030101d2c3d8d0d6d39d4edeb259",
+      "package_tree": "19be04ac2a25cb7999713b9da4f54020150b4027",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/vscode-ext-localization/SKILL.md",
+      "skill_blob": "b92def23a7730a6664de25811ba4747af322bee1",
+      "package_tree": "090650a71636f39ec9ccc83a59eafe79e0f832df",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/webapp-testing/SKILL.md",
+      "skill_blob": "281fff4e9d0b10cccb695f283ea6d8136a75ba56",
+      "package_tree": "2a897b3b3dd467a76ef44e985e2c87c35299ce9f",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/webmcpify/SKILL.md",
+      "skill_blob": "64ad9e64bd18084978bb071838a1e215170f8403",
+      "package_tree": "935a8ed365620dfe131b3201c693d667b6850c00",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/what-context-needed/SKILL.md",
+      "skill_blob": "9088640d9cd3530dd2b6655257742a613de9239e",
+      "package_tree": "95e13a9b2f36d5a106886d7e0aeabbbbafa15b47",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/winmd-api-search/SKILL.md",
+      "skill_blob": "56110a95070d71719656898ecc4db872b0e6db46",
+      "package_tree": "a398b8a31f2376b673bbebec6b9483129f993185",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/winui3-migration-guide/SKILL.md",
+      "skill_blob": "23969d1b631eb1a86301adfbdce915ea6d441e04",
+      "package_tree": "3aa410b52e6205929f4554b2d662a6ff0c84c0cd",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/workiq-copilot/SKILL.md",
+      "skill_blob": "2536e569c7b6494e6efc8c28c69a7f02bc090c97",
+      "package_tree": "4d31a732e72d4edd9320724cb3515169abb06c29",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/workshop-create/SKILL.md",
+      "skill_blob": "f3e18b88d094ee5076509ee484c4c2d093835a09",
+      "package_tree": "88c721ba74e31913bf2c77da382b24c234ec045b",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/write-coding-standards-from-file/SKILL.md",
+      "skill_blob": "0af0193cc23997fb0cce32e5dfb0de193942767a",
+      "package_tree": "1b515eeea72bc2c6bc4ff48485822e5f109db4ab",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/x-twitter-scraper/SKILL.md",
+      "skill_blob": "46e9b3f5bd5a65e74af26a879ab907f39a4ef5de",
+      "package_tree": "ae95b91eeecf40f8af83965c068fc3c46efccd61",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-instrumentation/SKILL.md",
+      "skill_blob": "f1a16a54b3ea7186ea6912481ae50c2715277652",
+      "package_tree": "815b48a6e4919015fbf2297fc53f29db83a9b16a",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-link/SKILL.md",
+      "skill_blob": "44d9f470aed07542a5ee9501258c8ef41f4abc52",
+      "package_tree": "1e13fb6674730aacee01f2df207f18191af1334e",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-prompt-optimization/SKILL.md",
+      "skill_blob": "12b381467facf90a11c5feab17d46b686141dcbf",
+      "package_tree": "2e183847e8c7e3d7d78c660c08816af13eb68f41",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arize-trace/SKILL.md",
+      "skill_blob": "5b76c582131a5d4d87bb89c0628a424ea45b535b",
+      "package_tree": "92a31f1ff661caf4721589e848eaf708ed694e28",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aspire/SKILL.md",
+      "skill_blob": "937dffae63ecab45621d69dbe5686878096f645e",
+      "package_tree": "afafff53a657a959d83109b5da558426126eec74",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/audit-integrity/SKILL.md",
+      "skill_blob": "17ce0466be27e318f84ec441767306013a63dc3b",
+      "package_tree": "7e5fe46893018fbc35517b5b391807e7e4bec152",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/automate-this/SKILL.md",
+      "skill_blob": "3d0cac53fcf5723168916bbfbee6ef9d37b5813f",
+      "package_tree": "34b3970d2ea68bad05fbcde019773d488ece6348",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-resource-query/SKILL.md",
+      "skill_blob": "b2f14e2c7cbcc94df21b97516b5b3d234b303707",
+      "package_tree": "ecba8301cc57f3f5db295aec00948ef6d809279b",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-architecture-autopilot/SKILL.md",
+      "skill_blob": "c9901099182aee93630f779c21420877b49539ce",
+      "package_tree": "51871f48b18d9396ad0b8b9d3d41e88a9d05e492",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-developer-cli/SKILL.md",
+      "skill_blob": "60832f21390823ab827fe63a87f8033c7c972562",
+      "package_tree": "d96b5bd568e5d5a78499db39174872362bfbf815",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-devops-cli/SKILL.md",
+      "skill_blob": "c34f2c40fb696055972b71b1c15bf3b50b346a26",
+      "package_tree": "8581438adbc12a8f2e960f03d3c0ad739aa11b56",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-pricing/SKILL.md",
+      "skill_blob": "056d4fe17e682fa3da36f8805ce0d8d2ccb8df76",
+      "package_tree": "dc69c6dbacbef673d76ba5490fb16b53002d0222",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-resource-health-diagnose/SKILL.md",
+      "skill_blob": "663e02e39a75b3b2f08384131ebc818612388f61",
+      "package_tree": "71189536f8c004ba49573919329adda948a7373d",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-resource-visualizer/SKILL.md",
+      "skill_blob": "2574dd4d73d39d1b0309c738431eb4ca29850672",
+      "package_tree": "4db4c3a3f1175067ae5c2cc9b1d2bf1593a87fb0",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-smart-city-iot-solution-builder/SKILL.md",
+      "skill_blob": "437845a89ae52590b4be6cf9e12620de82a5ae1e",
+      "package_tree": "f546c44251cf89ff17ff821207f0f5d9523fa2ae",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-static-web-apps/SKILL.md",
+      "skill_blob": "ae34169532159ad0f386c8032921f2b405e0a37d",
+      "package_tree": "f0cb53abab29a33c9b30b93c3c9f2d30fff76ef1",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-well-architected-review/SKILL.md",
+      "skill_blob": "c27e7594cd0e895113c266c9a5f415104e054be2",
+      "package_tree": "602c8cbefc282726c84e37030bee60c2b8c80ae7",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/batch-files/SKILL.md",
+      "skill_blob": "73005d4edc8d4b398422a6c1400c50b7b9874070",
+      "package_tree": "36b965f284d096d489d3aeca74a5e1052db1a351",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/bigquery-pipeline-audit/SKILL.md",
+      "skill_blob": "5894927e2b6be515b22e78e7ae0d18ee8f736c30",
+      "package_tree": "320d9dbbca1b3702a6c0f5f25dfd5967e36a18f7",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/bug-receipt/SKILL.md",
+      "skill_blob": "ec311c401428d2a215d30519febccccf2cc93b9b",
+      "package_tree": "18bbe28faa93bed9684403cc7f3dc49a142a5fca",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/build-evidence-map/SKILL.md",
+      "skill_blob": "3d0ff9385a5603242e39989cbfc6e7a8d856d6cc",
+      "package_tree": "e5de9060f2171ee6f1b6d7dae5e30402aad9eb4d",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/cli-mastery/SKILL.md",
+      "skill_blob": "5a6efc7293835158ec3463d1064a794d4e1e1ec5",
+      "package_tree": "89532a9ff3790dda7431326d9ca9894fe17d5261",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/cloud-design-patterns/SKILL.md",
+      "skill_blob": "b9a17433b9bedf95947bfe6624ef0a4bfa053021",
+      "package_tree": "7e9d6507fbcd924c634c276246d6baa061538edb",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/code-tour/SKILL.md",
+      "skill_blob": "2edf704d6279af969b1649c6a5207d6444555ae3",
+      "package_tree": "4092b96dd32d93e85ca0384adecb126973717cee",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/codebase-memory-mcp/SKILL.md",
+      "skill_blob": "f8e78d38ce5d4c8682a38b7be52ffa63d28b82f6",
+      "package_tree": "7000034927467dfcb70eae3e59ef3bafe925586f",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/codeql/SKILL.md",
+      "skill_blob": "672075bba4c545159af38b511b2a1ecb28101ea9",
+      "package_tree": "bbbd09572c265f3a57b2dfbe958f1c64e1828ee1",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/competitor-ad-intelligence/SKILL.md",
+      "skill_blob": "1a0fef5281e7e3612b0a0bbb706d973f14e46d75",
+      "package_tree": "e889a8e59f79a6833e70341dac71e35c7a0f0b62",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/containerize-aspnet-framework/SKILL.md",
+      "skill_blob": "91fd20165af368a929d7e7338cd30dbb4c505820",
+      "package_tree": "3f6837d3412931b068f87ab97dd4444d14421057",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/containerize-aspnetcore/SKILL.md",
+      "skill_blob": "0a683e2c7b4c9938549bac227327e2d2566a4226",
+      "package_tree": "6f53cb7c1f8c8749d300de4a3986028ee8dc152d",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/content-management-systems/SKILL.md",
+      "skill_blob": "c5628d5bf864ac24788d99e89ffa00df4577b926",
+      "package_tree": "8f46e53dc583e7cabeba921947266513ef8e2d6e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/convert-excel-to-md/SKILL.md",
+      "skill_blob": "00d465f4dd13153075975c8601ebd4d161090f29",
+      "package_tree": "c4c7eb1ec85ae9f1b9578c24aea0f64c116f7645",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/convert-pdf-to-md/SKILL.md",
+      "skill_blob": "e9f79ec57f596dbdc0b3bf2e863a4d8e54a61cce",
+      "package_tree": "d5cde2687d17ef7b4efb9a27a997237d8b2d248d",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/convert-word-to-md/SKILL.md",
+      "skill_blob": "482778eaa29eb9aa228268b478b566bee9661884",
+      "package_tree": "0ece736fc2353530866e7f3960a653ab48110c8a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-cli-quickstart/SKILL.md",
+      "skill_blob": "45a592055b9ab2354fb08671de3321af82d1ae35",
+      "package_tree": "826de0aecedd0cf2d107d02efe2c1d725eeaf0f8",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "skill_blob": "007547da846438a11e812ff26bfb96929085f03c",
+      "package_tree": "a67fccf32fc28eda70e5868e65e61e2fce3e64ef",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-pr-autopilot/SKILL.md",
+      "skill_blob": "4df17db4f41ed74b60ffe95c83d99632e0f45041",
+      "package_tree": "aa098179c39b0fdfe40b588cdb7f207b5100867b",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-sdk/SKILL.md",
+      "skill_blob": "88dcf6d4ca5df7e0f73d1a91ec88b474808b9d14",
+      "package_tree": "fcb418a0dde3bc4dcafeb1ae0aeedac846ac86c5",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-spaces/SKILL.md",
+      "skill_blob": "616952af9dd0e87ecd035249cb59dee1fa94c139",
+      "package_tree": "729e40b9bfc47572111dccc63ea6c941230cc319",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/copilot-usage-metrics/SKILL.md",
+      "skill_blob": "ea54910ad752398800cd6df88a267cf29d6e939e",
+      "package_tree": "c624955b348dbd9e51d83fa906896e8fce1c187c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/cosmosdb-datamodeling/SKILL.md",
+      "skill_blob": "4fdf69a1b01d101ec612c0bd094be63a8524c627",
+      "package_tree": "77c0c0bdae7dd095afed1f317558a2c0a5cbbec0",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-github-action-workflow-specification/SKILL.md",
+      "skill_blob": "cfd4bf2e6c82a92c7c9e73769749f248719f6827",
+      "package_tree": "ee740bda6b10915c695084fced55fb4067bebd6b",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-implementation-plan/SKILL.md",
+      "skill_blob": "4540a479c34d298d5f7e78f24d0806652411fcf8",
+      "package_tree": "87d75d82e4ef600fcf15503ba15cb1642b993bc1",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-llms/SKILL.md",
+      "skill_blob": "d9b01dc77ae7f943a1b1548011a9963a51b3451e",
+      "package_tree": "d03fe373e24fb06f2d63a6df54731f37dbfee4d9",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-spring-boot-java-project/SKILL.md",
+      "skill_blob": "dbe9e3d76e3e02a1058d813852ae643df9812f7c",
+      "package_tree": "13ee654c609050cb401f5954b74b1b9457560e8b",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-spring-boot-kotlin-project/SKILL.md",
+      "skill_blob": "d656a4fcecbb3536fbff8c331e3edfc4782e8dd2",
+      "package_tree": "6f5a34d1a5ea92b17318e9dc4e5582c3a717a95b",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/creating-oracle-to-postgres-master-migration-plan/SKILL.md",
+      "skill_blob": "be5c863aabae66311174184f51e92d4da0478a19",
+      "package_tree": "e8a5a102b8d2f6f96b8c2adc12302174f5c72685",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/creating-oracle-to-postgres-migration-bug-report/SKILL.md",
+      "skill_blob": "9cbc89e990e42856245d26aa5a5f484cd77e9f2d",
+      "package_tree": "9e64b6a6433523c282dcc7019a8e2415d2cb1de5",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/d365-solution-blueprint/SKILL.md",
+      "skill_blob": "674c14be56460e44870fced106fc551429b1dea2",
+      "package_tree": "af9f234199572e75055522e1196cee979b440424",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/daily-focus-board/SKILL.md",
+      "skill_blob": "ca4f9c93f966bc57ba2be7418dace757c4189b4b",
+      "package_tree": "b6816f5d51874b15b852090ad9d2880515dde640",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/daily-prep/SKILL.md",
+      "skill_blob": "fc9b7f49fed7f89264a490f2153b0445890ad37b",
+      "package_tree": "1445c0720165bbe92fb2c6a85afd54aeb51a0ec6",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/data-breach-blast-radius/SKILL.md",
+      "skill_blob": "0496b1593ce4758a84aacd5b10198289681c2cb3",
+      "package_tree": "78302666816e9d6154303e8f89b07f6ec848c313",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/datanalysis-credit-risk/SKILL.md",
+      "skill_blob": "6d88fdec7e4cc11ae1e2d67998e75c040a10a410",
+      "package_tree": "1d0bfea4c483e57892e600c81ec05959ab991703",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dataverse-python-advanced-patterns/SKILL.md",
+      "skill_blob": "921ab6033558009f67287445e2f2ddabc3e94d8f",
+      "package_tree": "0ac07de9f3e11c63da075a71c5d5756e80843d7b",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dataverse-python-production-code/SKILL.md",
+      "skill_blob": "932c459f2fb1be9075cb27f61de27413f8481be7",
+      "package_tree": "2e625d4bc8ec557e2272996d7761b6bef4db12f0",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dataverse-python-quickstart/SKILL.md",
+      "skill_blob": "4f0a200c690d5e98a25324c7f101bcb25e7dfa1c",
+      "package_tree": "7b33cd885826f77a9792aaf1a04d9a0813d0c5c5",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dataverse-python-usecase-builder/SKILL.md",
+      "skill_blob": "667d697328100bba4ee6f68287845f641f3199c1",
+      "package_tree": "f878dd7de139005fbc870166da8bb892d52ca6d0",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/debian-linux-triage/SKILL.md",
+      "skill_blob": "9e12275025c4ad8b6c0640f47525c77163cd3934",
+      "package_tree": "864a6de81ae2649734bfbd12849e9a56b0f6c9ca",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/declarative-agents/SKILL.md",
+      "skill_blob": "be11c5e6499d99a0c6feb616591d86d7ec4b9cd9",
+      "package_tree": "619a1bceb366ec65dcacdfe5e0a0099994605ee0",
+      "shape": "direct",
+      "grade_20": 5,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dependabot/SKILL.md",
+      "skill_blob": "710ccb6c4f3e07d073a61714757d3b5bf9e187de",
+      "package_tree": "bae44cbf3624998d19712423d0d3170e2329d426",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/desk-journal/SKILL.md",
+      "skill_blob": "3d5aa4f363ae2dbac8256a542b479a1a46ae9b42",
+      "package_tree": "22afa3c71e16d6e539419716f7ea5f72c78e1666",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/desk-open/SKILL.md",
+      "skill_blob": "6aaacce8582502b84aba9da0dbbaea79160178c5",
+      "package_tree": "fc96f7fdef7c1bdaff02e34ddbdeeccba0408862",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/devops-rollout-plan/SKILL.md",
+      "skill_blob": "7da7c32dce0dfed422132534728ed3b3736ebe65",
+      "package_tree": "0c3b09c895ab2920ed0d7debb2e4b0e3418f5478",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/diagnose/SKILL.md",
+      "skill_blob": "7f11abaf71b96316b9e3ed18ebe6dc414deeb086",
+      "package_tree": "cc40c8fc14293e3944280ade4a237e755a3735bb",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/doc-and-modernize/SKILL.md",
+      "skill_blob": "16ba76286989d1a6c288b8f8b24d6d75f5e88b38",
+      "package_tree": "6584cb9dcb8c21a485804987a4381e514aae3dd1",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dotnet-mcp-builder/SKILL.md",
+      "skill_blob": "048513a35da34683604aa16aec4800541c01aa7e",
+      "package_tree": "0a134ba64f0865502d8a8c063838cd9a24bcd688",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dotnet-upgrade/SKILL.md",
+      "skill_blob": "93ca7605bc711783b7c96d05e33a53977d84b6db",
+      "package_tree": "3a6422fe5e364dc0851d575213603efee9b3986a",
+      "shape": "direct",
+      "grade_20": 4,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/doublecheck/SKILL.md",
+      "skill_blob": "1002a1c8d0e81368253ced53f74a867ea2056a98",
+      "package_tree": "707a0de1c0a5583638cd2b099523d722dc414312",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/draw-io-diagram-generator/SKILL.md",
+      "skill_blob": "b39b6493dc0c43840b967554ea1e5c9431810c57",
+      "package_tree": "6d3c89b64d18ea777ecfff2b00fbc7f9f3e7f7ac",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/editorconfig/SKILL.md",
+      "skill_blob": "d21ff43bf3a3fb00aa76134373b869dba8c2c377",
+      "package_tree": "76ba63d152ab86d585ca33d736c0a7cf42cdc50e",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ef-core/SKILL.md",
+      "skill_blob": "eea8ee4784af975f4e754f92dc19234e3e68cc5d",
+      "package_tree": "19f8f6a560a555946c4a91d07d8207bfa53f9c42",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/efcore-d2-db-diagram/SKILL.md",
+      "skill_blob": "932ce1e4302b335ce183cd6075619b7916edd2fe",
+      "package_tree": "ee0cf11d047c831a3f683efd9bfade4e58aa9f32",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/em-dash/SKILL.md",
+      "skill_blob": "c8622a69341c0d32796e25e89ae50794b86e240b",
+      "package_tree": "0ace523fba27d396e26f3756b52d9319955cbe42",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/email-drafter/SKILL.md",
+      "skill_blob": "c88c0d7c38138adac8b15cae0bcfc216717c2e67",
+      "package_tree": "b74c5b6cf546ef69a709e626a46b7b77f92c12ae",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/entra-agent-user/SKILL.md",
+      "skill_blob": "06f5cfa05dcf4ba59e52af124742cafaad474fea",
+      "package_tree": "1832e34ddb3add4f353451a651d2ad4cad35dd71",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/eval-driven-dev/SKILL.md",
+      "skill_blob": "53b80589bab58082caf4985ebd477104963bb28c",
+      "package_tree": "d1038247a3d9c4c6f5c1f67d7176f9ac5ee2ab36",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/exam-ready/SKILL.md",
+      "skill_blob": "274ceaec59df319930594b623e42452390ed0fe9",
+      "package_tree": "ee7cb6dc5d88c9849f257ebeebefb752b327642d",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/excalidraw-diagram-generator/SKILL.md",
+      "skill_blob": "1a290eae1c7a164f59422e3d8811709ef3357d85",
+      "package_tree": "dd3f9353c4106a8929217b399865db3952f8c13f",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/eyeball/SKILL.md",
+      "skill_blob": "5ecd73fea2e440b30b037941dcc9cb5f741eab53",
+      "package_tree": "2d48af872fcd30220247c90769a3bde0cfa58ce3",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/fabric-lakehouse/SKILL.md",
+      "skill_blob": "4227990a3af4002610fc7cba453441a630f9718a",
+      "package_tree": "b14cd444b804e0a812eacb344054b96f6567fff2",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/fedora-linux-triage/SKILL.md",
+      "skill_blob": "8c3545e51d462b39fb8da907a9a6510009826d40",
+      "package_tree": "5be4b50eb6b4044edcd12e4cac1f7ee398bfd1bc",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/finalize-agent-prompt/SKILL.md",
+      "skill_blob": "54b8647e242acf25ee90fece5716bf53fd84d832",
+      "package_tree": "dd900f86f345f1fcfc0cb8c5d1bd02cf9a816e77",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/finnish-humanizer/SKILL.md",
+      "skill_blob": "b850aa40aec79881e51536d9f4703ebee25854e7",
+      "package_tree": "b397c636a399dd543a1461a538f126f7c7a8d343",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/first-ask/SKILL.md",
+      "skill_blob": "edc441307f4dcffa827a7c240f5a3c901f6ac859",
+      "package_tree": "94d46ab2edcfe314a3b923fd9d88e96cc3428c2f",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/flowstudio-power-automate-build/SKILL.md",
+      "skill_blob": "8723722980509635a1b59a3b6234dc2f20851680",
+      "package_tree": "818132f16f3c6625db7688c3baf982b040dc885b",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/flowstudio-power-automate-debug/SKILL.md",
+      "skill_blob": "c4d1ddd9df760219bb38d3ed3e23c9a145206156",
+      "package_tree": "0508adfe400761e9cacc909c7795347f2a77274e",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/flowstudio-power-automate-governance/SKILL.md",
+      "skill_blob": "58092bcc149d907490659355e1e212f331f02c1d",
+      "package_tree": "01ef192feefb8f77f2487c77dad846b20ae60906",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/flowstudio-power-automate-mcp/SKILL.md",
+      "skill_blob": "de1d9bd485eef9730450f2de63c9fad9fa7e314c",
+      "package_tree": "258d95eed66e326ce7d7afc1a2786abbd0d1826d",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/flowstudio-power-automate-monitoring/SKILL.md",
+      "skill_blob": "bbd1a24867ffd8de8d12b19c820345523ca993e0",
+      "package_tree": "5949887b0b73b47c17fc173ef9b22f3a314d5495",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/fluentui-blazor/SKILL.md",
+      "skill_blob": "4d75590e31b5463f08ea4ccef95a36a638ea17ad",
+      "package_tree": "47086b164a781cb66342a6e03ee3c95e14632522",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/folder-structure-blueprint-generator/SKILL.md",
+      "skill_blob": "7eb0abd65577c5cedf783274ae8c6aeebc20c17b",
+      "package_tree": "84315a2ac50ece326efe728e0447894b43c4aca3",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/foundry-agent-sync/SKILL.md",
+      "skill_blob": "2e155b4987b01bcae37df5097224893ce8041e69",
+      "package_tree": "d6362c5ad02dfbc126af6b1f394a64ce7cab9f4a",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/foundry-hosted-agent-copilotkit/SKILL.md",
+      "skill_blob": "211c8d4454dd48f708542e2ccf296693d335942d",
+      "package_tree": "de3d869e7e428785a878fb4a55bd2ead41dab184",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/freecad-scripts/SKILL.md",
+      "skill_blob": "dda9f63fd5341cb8c601366383c9865dae365bc3",
+      "package_tree": "07b72dce0f43f8ac0a40e600b319fd559b0c3d53",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/from-the-other-side-anitta/SKILL.md",
+      "skill_blob": "6c60f72d3b0fc1e52614c2d28eaed4fa104cf6fb",
+      "package_tree": "17fae11b1820482c0889826a46cb5e1d948f9444",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/from-the-other-side-quinn/SKILL.md",
+      "skill_blob": "dc7abc0c3f11b88847065fd526e09d8c00c461b5",
+      "package_tree": "05ff18a60966cf48bb03e64f5003b1a7c2a51b1f",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/from-the-other-side-vega/SKILL.md",
+      "skill_blob": "d9bca2fa3ceda681def8fdb411291d233bf7451c",
+      "package_tree": "f58d19417b121e1b888c87adc53ceb12e5c51e05",
+      "shape": "direct",
+      "grade_20": 5,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/from-the-other-side-wiggins/SKILL.md",
+      "skill_blob": "0808ecab4dbe2cb88dfb3efe20ed3db13e23b033",
+      "package_tree": "73c24084e6029a4345ca47c9c704f8954640c00f",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/game-engine/SKILL.md",
+      "skill_blob": "5f705898ab72607a9ee0b378b496d551123a7dab",
+      "package_tree": "4a6c98d412aabc984e1cb7f18f475a7a5f645d46",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gdpr-compliant/SKILL.md",
+      "skill_blob": "a2fde315002d904d9530cad70c4f5bc83173e5dc",
+      "package_tree": "3ca171059288aaa2367a2ced8eb825cadd1fbfde",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gem-devops-guidelines/SKILL.md",
+      "skill_blob": "5cd94a545989271ee32f87e1cf13ba91519fe862",
+      "package_tree": "c1364d39f65c337ae5a4abeafe6326ea2ce9d8e8",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gen-specs-as-issues/SKILL.md",
+      "skill_blob": "abbce0e3b6013b28fe274b5039b337edc64589be",
+      "package_tree": "f502c1704d1756283d1f821e155985c64b34f438",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/generate-custom-instructions-from-codebase/SKILL.md",
+      "skill_blob": "777c627f7010a86e9cf87219d01d7ca294d44529",
+      "package_tree": "96b32fc0ba867252c91f84713ff25eb77dc4a4df",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/geofeed-tuner/SKILL.md",
+      "skill_blob": "032c10a438400ce465ba6d79c08caa5a83fe74da",
+      "package_tree": "76ccc539498d820c9673bf4e6722115e9d52aab5",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gh-attach/SKILL.md",
+      "skill_blob": "f1c5bbfe550bca57446daaaa3730e5cc2f65b6ff",
+      "package_tree": "1809d03b5b8f5e731978fd29e3250bfd018122e4",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/git-commit/SKILL.md",
+      "skill_blob": "c35f13b8760c18e5c087e08a762279c5ceab1fb6",
+      "package_tree": "883a6a7466f55a9cd9f22cf1cce2d9333fc9b998",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/git-flow-branch-creator/SKILL.md",
+      "skill_blob": "ded80e259c6eb04c83d61df06a045ab84f74b0c9",
+      "package_tree": "f303999031498939d1c25cc37ad36cb96a0639c5",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-actions-efficiency/SKILL.md",
+      "skill_blob": "e63a2bad12e13978a52ddb655573856d12314746",
+      "package_tree": "a9041cbe0a768c8c11c26c2524e3a780035988f5",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-actions-hardening/SKILL.md",
+      "skill_blob": "61fa956e0ca6a0958ff6713b7b94ed22ecdc2e7e",
+      "package_tree": "25d75a622f5f8c034be5b25bf6585850d6f7fcd7",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-actions-runtime-upgrade-conventions/SKILL.md",
+      "skill_blob": "00bb2241d70662c33494214bfe2c13d41952e71c",
+      "package_tree": "f97248e65f3a5e6ee417fb7e885998da6ca35d59",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-codespaces-efficiency/SKILL.md",
+      "skill_blob": "0e5e3899947ce8f896c56f9956212b3f32921580",
+      "package_tree": "709f933069641feff02feceef8301e2060216797",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-copilot-starter/SKILL.md",
+      "skill_blob": "f3c687eb74a54b4f429daca327b1c2c9562e76e4",
+      "package_tree": "00f804e39e7df79a7f64c99b30caa708b7d37ff3",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/github-issues/SKILL.md",
+      "skill_blob": "438049f069e5e1388f3ebe23fb9f225a6aedd594",
+      "package_tree": "d4591aac716969413e5ee0d7f95caae0540c329c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": "Final 908 AgentSkillExchange install-pointer cards (nine categories) fully reviewed: 900 REJECT unchanged / 8 REFERENCE-ONLY; every pinned AgentSkillExchange path now has a terminal or DEFER decision except the excluded non-skill template; exact ledger registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json; source-vetting only, governed population unchanged",
+  "latest_macro_checkpoint": "All 313 remaining Awesome Copilot packages reviewed: 194 REFERENCE-ONLY / 119 REJECT unchanged; Awesome Copilot pinned snapshot fully dispositioned (432/432); exact ledger registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json; source-vetting only, governed population unchanged",
   "pinned_manifest_identity_preflight": {
     "date": "2026-11-02",
     "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
@@ -34250,10 +37383,10 @@
   },
   "historical_candidate_only_exact_package_matches": 41,
   "historical_candidate_only_exact_package_ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
-  "all_exact_path_candidate_decision_evidence_matches": 3446,
-  "raw_paths_without_any_exact_path_candidate_decision_evidence": 1367,
-  "current_standard_ten_dimension_path_decisions": 3405,
-  "raw_paths_without_current_standard_ten_dimension_decision": 1408,
+  "all_exact_path_candidate_decision_evidence_matches": 3759,
+  "raw_paths_without_any_exact_path_candidate_decision_evidence": 1054,
+  "current_standard_ten_dimension_path_decisions": 3718,
+  "raw_paths_without_current_standard_ten_dimension_decision": 1095,
   "openai_plugins_historical_candidate_only_exact_package_matches": [
     {
       "path": "plugins/adobe/skills/adobe-batch-edit-photos/SKILL.md",
@@ -34719,6 +37852,26 @@
       "security_scan": "not-run",
       "behavioral_validation": "not-run",
       "eligible_distinct_denominator": null
+    }
+  ],
+  "session_checkpoints_20261102": [
+    {
+      "source_id": "github-awesome-copilot",
+      "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+      "review_receipt": "docs/reviews/2026-11-02-awesome-copilot-remaining-313-static.md",
+      "new_terminal": 313,
+      "deferred": 0,
+      "decisions": {
+        "REFERENCE-ONLY": 194,
+        "REJECT": 119
+      },
+      "source_before": 119,
+      "source_after": 432,
+      "four_source_before": 3405,
+      "four_source_after": 3718,
+      "governed_review_delta": 0,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run"
     }
   ]
 }
