@@ -3729,7 +3729,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 43
+          "agentskillexchange_source_vetted_entries": 65
         },
         {
           "id": "backend",
@@ -4117,7 +4117,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 131
+          "agentskillexchange_source_vetted_entries": 174
         },
         {
           "id": "mobile",
@@ -4134,7 +4134,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 4,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": []
         },
         {
@@ -4152,7 +4152,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 4,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": []
         },
         {
@@ -4239,7 +4239,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 54
+          "agentskillexchange_source_vetted_entries": 160
         },
         {
           "id": "architecture",
@@ -4468,7 +4468,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 11
+          "agentskillexchange_source_vetted_entries": 12
         },
         {
           "id": "refactoring",
@@ -4486,7 +4486,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 14,
+          "agentskillexchange_source_vetted_entries": 15,
           "source_vetted_candidate_examples": []
         },
         {
@@ -4502,7 +4502,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 43,
+          "agentskillexchange_source_vetted_entries": 54,
           "source_vetted_candidate_examples": []
         },
         {
@@ -4657,7 +4657,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 229
+          "agentskillexchange_source_vetted_entries": 271
         },
         {
           "id": "maintenance",
@@ -4813,13 +4813,13 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 41
+          "agentskillexchange_source_vetted_entries": 54
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 574,
+        "entries": 815,
         "reference_only": 9,
-        "reject_unchanged": 565,
+        "reject_unchanged": 806,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -4994,7 +4994,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 17
+          "agentskillexchange_source_vetted_entries": 30
         },
         {
           "id": "end-to-end",
@@ -5096,7 +5096,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 13
+          "agentskillexchange_source_vetted_entries": 43
         },
         {
           "id": "performance",
@@ -5161,7 +5161,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": []
         },
         {
@@ -5194,9 +5194,24 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/debug-firefox-only-browser-issues-with-devtools-mcp-before-shipping-web-changes/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "2486fb04c3e7a2fe27cf465ee63477ba5fee43e1",
+              "package_tree": "8dd3994d3526c5e057cb9aaafbd5470b3fb85095",
+              "capability": "reproduce and debug Firefox-only issues via Firefox DevTools MCP",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 2
+          "agentskillexchange_source_vetted_entries": 10
         },
         {
           "id": "fuzz-property-testing",
@@ -5261,7 +5276,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 9
+          "agentskillexchange_source_vetted_entries": 18
         },
         {
           "id": "test-strategy",
@@ -5333,9 +5348,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 71,
-        "reference_only": 2,
-        "reject_unchanged": 69,
+        "entries": 133,
+        "reference_only": 3,
+        "reject_unchanged": 130,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -5396,7 +5411,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 73
+          "agentskillexchange_source_vetted_entries": 90
         },
         {
           "id": "tool-design",
@@ -5435,7 +5450,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 20
+          "agentskillexchange_source_vetted_entries": 47
         },
         {
           "id": "mcp-clients-servers",
@@ -5458,7 +5473,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 78,
+          "agentskillexchange_source_vetted_entries": 138,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -5530,6 +5545,21 @@
               "static_candidate_score": "12/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/retrieve-permission-scoped-workplace-evidence-through-onyx-mcp/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "6053d8a3bb05093f20ac2d81fc31c758e522afc1",
+              "package_tree": "4508cb8ceec25107272355327f845617512c2643",
+              "capability": "Search an Onyx workspace and return source-linked evidence",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -5650,7 +5680,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 85
+          "agentskillexchange_source_vetted_entries": 93
         },
         {
           "id": "permissions",
@@ -5672,7 +5702,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 36,
+          "agentskillexchange_source_vetted_entries": 37,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -5808,7 +5838,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 49
+          "agentskillexchange_source_vetted_entries": 52
         },
         {
           "id": "agent-observability",
@@ -5832,7 +5862,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4,
-          "agentskillexchange_source_vetted_entries": 45,
+          "agentskillexchange_source_vetted_entries": 47,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -5960,13 +5990,13 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 60
+          "agentskillexchange_source_vetted_entries": 64
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 446,
-        "reference_only": 15,
-        "reject_unchanged": 431,
+        "entries": 568,
+        "reference_only": 16,
+        "reject_unchanged": 552,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -6127,7 +6157,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 10
+          "agentskillexchange_source_vetted_entries": 11
         },
         {
           "id": "infrastructure-as-code",
@@ -6167,7 +6197,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 68
+          "agentskillexchange_source_vetted_entries": 71
         },
         {
           "id": "ci-cd",
@@ -6228,7 +6258,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 38
+          "agentskillexchange_source_vetted_entries": 40
         },
         {
           "id": "orchestration",
@@ -6284,7 +6314,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 19
+          "agentskillexchange_source_vetted_entries": 21
         },
         {
           "id": "deployment",
@@ -6400,7 +6430,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 54
+          "agentskillexchange_source_vetted_entries": 60
         },
         {
           "id": "sre",
@@ -6672,7 +6702,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 191
+          "agentskillexchange_source_vetted_entries": 198
         },
         {
           "id": "cost-optimization",
@@ -6777,9 +6807,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 517,
+        "entries": 538,
         "reference_only": 5,
-        "reject_unchanged": 512,
+        "reject_unchanged": 533,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -6839,7 +6869,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 87
+          "agentskillexchange_source_vetted_entries": 88
         },
         {
           "id": "identity-access",
@@ -6882,7 +6912,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 30
+          "agentskillexchange_source_vetted_entries": 31
         },
         {
           "id": "threat-modeling",
@@ -6897,7 +6927,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": []
         },
         {
@@ -6933,7 +6963,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 46,
+          "agentskillexchange_source_vetted_entries": 51,
           "source_vetted_candidate_examples": []
         },
         {
@@ -6955,7 +6985,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 47,
+          "agentskillexchange_source_vetted_entries": 50,
           "source_vetted_candidate_examples": []
         },
         {
@@ -7011,9 +7041,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 237,
+        "entries": 250,
         "reference_only": 0,
-        "reject_unchanged": 237,
+        "reject_unchanged": 250,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -7040,7 +7070,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 5,
+          "agentskillexchange_source_vetted_entries": 14,
           "source_vetted_candidate_examples": []
         },
         {
@@ -7082,7 +7112,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 28,
-          "agentskillexchange_source_vetted_entries": 17,
+          "agentskillexchange_source_vetted_entries": 72,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7143,6 +7173,21 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/pangolinfo-ai-serp/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "a406881a828bf97d7e8ef6869b763c2a0e945db9",
+              "package_tree": "18d4cc254b965c1616e23d8734f3660b757bcb30",
+              "capability": "Fetch structured Google SERP and AI Overview JSON through Pangolinfo",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -7188,7 +7233,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 3
+          "agentskillexchange_source_vetted_entries": 14
         },
         {
           "id": "systematic-review",
@@ -7224,7 +7269,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 1,
+          "agentskillexchange_source_vetted_entries": 2,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7254,7 +7299,7 @@
             "Research field methods"
           ],
           "name_only_review_candidate_ids": [],
-          "agentskillexchange_source_vetted_entries": 1,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7324,9 +7369,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 32,
-        "reference_only": 6,
-        "reject_unchanged": 26,
+        "entries": 112,
+        "reference_only": 7,
+        "reject_unchanged": 105,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -7405,7 +7450,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 1
+          "agentskillexchange_source_vetted_entries": 4
         },
         {
           "id": "resource-allocation",
@@ -7503,9 +7548,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 3,
+        "entries": 6,
         "reference_only": 0,
-        "reject_unchanged": 3,
+        "reject_unchanged": 6,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -7570,7 +7615,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6,
-          "agentskillexchange_source_vetted_entries": 6,
+          "agentskillexchange_source_vetted_entries": 22,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7582,6 +7627,21 @@
               "static_candidate_score": "16/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/agentskillexchange-authored-procedures-86-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/hermes-tweet/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "13200f04d30247a64c88f36982d946fa03ec61f6",
+              "package_tree": "56446ac4d5b763b4b1a2908d721f4bc4cc8cb91b",
+              "capability": "Read X/Twitter data and gate tweet actions through Xquik in Hermes Agent",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -7612,7 +7672,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4,
-          "agentskillexchange_source_vetted_entries": 19,
+          "agentskillexchange_source_vetted_entries": 46,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7649,7 +7709,9 @@
             "corey-haines-marketing-skills/ads"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "agentskillexchange_source_vetted_entries": 2,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "growth",
@@ -7686,7 +7748,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 2
+          "agentskillexchange_source_vetted_entries": 6
         },
         {
           "id": "lifecycle",
@@ -7710,7 +7772,9 @@
             "corey-haines-marketing-skills/cold-email"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "agentskillexchange_source_vetted_entries": 3,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "attribution",
@@ -7746,7 +7810,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 4,
+          "agentskillexchange_source_vetted_entries": 10,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -7782,9 +7846,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 31,
-        "reference_only": 4,
-        "reject_unchanged": 27,
+        "entries": 89,
+        "reference_only": 5,
+        "reject_unchanged": 84,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -7984,7 +8048,9 @@
             "corey-haines-marketing-skills/ab-testing"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "product-analytics",
@@ -8059,9 +8125,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 10,
+        "entries": 11,
         "reference_only": 1,
-        "reject_unchanged": 9,
+        "reject_unchanged": 10,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -8088,7 +8154,9 @@
             "bm629-agent-skills/user-research-prior-art-survey"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "agentskillexchange_source_vetted_entries": 2,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "interaction-design",
@@ -8180,7 +8248,9 @@
             "bm629-agent-skills/reviewing-hi-fi"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 3
+          "name_only_review_hits_in_scope": 3,
+          "agentskillexchange_source_vetted_entries": 7,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "accessibility",
@@ -8264,13 +8334,13 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4
+          "agentskillexchange_source_vetted_entries": 9
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 5,
+        "entries": 19,
         "reference_only": 0,
-        "reject_unchanged": 5,
+        "reject_unchanged": 19,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -8373,9 +8443,24 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/plan-generate-and-review-gemini-images-with-banana-claude/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "da4afa41c6ae54d4677b23aa81016df99fccddef",
+              "package_tree": "18b8ac36cebfc68fe714c30d358950a0a6772cc6",
+              "capability": "generate and review Gemini images from a visual brief in Claude Code",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 10
+          "agentskillexchange_source_vetted_entries": 45
         },
         {
           "id": "typography",
@@ -8406,7 +8491,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 4,
           "source_vetted_candidate_examples": []
         },
         {
@@ -8480,7 +8565,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4
+          "agentskillexchange_source_vetted_entries": 6
         },
         {
           "id": "motion-graphics",
@@ -8496,13 +8581,15 @@
             "bm629-agent-skills/motion-react"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "agentskillexchange_source_vetted_entries": 4,
+          "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 20,
-        "reference_only": 4,
-        "reject_unchanged": 16,
+        "entries": 62,
+        "reference_only": 5,
+        "reject_unchanged": 57,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -8635,9 +8722,17 @@
               "admitted_governed_record": false,
               "unchanged_use_approved": false
             }
-          ]
+          ],
+          "agentskillexchange_source_vetted_entries": 1
         }
-      ]
+      ],
+      "agentskillexchange_source_vetted": {
+        "entries": 1,
+        "reference_only": 0,
+        "reject_unchanged": 1,
+        "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
+        "stage": "source-vetted-candidate-only"
+      }
     },
     {
       "id": "3d-cad-animation",
@@ -8656,7 +8751,9 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "sculpting",
@@ -8698,7 +8795,9 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "cad",
@@ -8807,7 +8906,8 @@
               "admitted_governed_record": false,
               "unchanged_use_approved": false
             }
-          ]
+          ],
+          "agentskillexchange_source_vetted_entries": 1
         },
         {
           "id": "animation",
@@ -8823,7 +8923,9 @@
             "bm629-agent-skills/motion-react"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "technical-drawing",
@@ -8839,7 +8941,14 @@
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0
         }
-      ]
+      ],
+      "agentskillexchange_source_vetted": {
+        "entries": 4,
+        "reference_only": 0,
+        "reject_unchanged": 4,
+        "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
+        "stage": "source-vetted-candidate-only"
+      }
     },
     {
       "id": "game-design",
@@ -8923,7 +9032,9 @@
             "jwynia-agent-skills/interactive-fiction"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "economy",
@@ -8983,9 +9094,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 2,
+        "entries": 3,
         "reference_only": 0,
-        "reject_unchanged": 2,
+        "reject_unchanged": 3,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -9013,7 +9124,9 @@
             "danjdewhurst-story-skills/premise-workshop"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "prose",
@@ -9056,7 +9169,9 @@
             "jwynia-agent-skills/revision"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "agentskillexchange_source_vetted_entries": 3,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "character",
@@ -9151,7 +9266,14 @@
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2
         }
-      ]
+      ],
+      "agentskillexchange_source_vetted": {
+        "entries": 4,
+        "reference_only": 0,
+        "reject_unchanged": 4,
+        "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
+        "stage": "source-vetted-candidate-only"
+      }
     },
     {
       "id": "technical-writing",
@@ -9219,7 +9341,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 7
+          "agentskillexchange_source_vetted_entries": 20
         },
         {
           "id": "tutorials",
@@ -9258,7 +9380,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4
+          "agentskillexchange_source_vetted_entries": 5
         },
         {
           "id": "reference-manuals",
@@ -9315,7 +9437,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4
+          "agentskillexchange_source_vetted_entries": 7
         },
         {
           "id": "architecture-records",
@@ -9406,7 +9528,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 8,
+          "agentskillexchange_source_vetted_entries": 9,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9445,7 +9567,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 17
+          "agentskillexchange_source_vetted_entries": 28
         },
         {
           "id": "localization",
@@ -9464,14 +9586,14 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 4,
           "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 46,
+        "entries": 76,
         "reference_only": 1,
-        "reject_unchanged": 45,
+        "reject_unchanged": 75,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -9631,7 +9753,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 14,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9661,7 +9783,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 4,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9694,7 +9816,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
-          "agentskillexchange_source_vetted_entries": 9,
+          "agentskillexchange_source_vetted_entries": 42,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -9725,7 +9847,9 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "agentskillexchange_source_vetted_entries": 2,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "accessibility",
@@ -9745,9 +9869,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 16,
+        "entries": 63,
         "reference_only": 1,
-        "reject_unchanged": 14,
+        "reject_unchanged": 61,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -9830,7 +9954,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 5,
+          "agentskillexchange_source_vetted_entries": 21,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9860,7 +9984,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 3,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9876,7 +10000,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 12,
           "source_vetted_candidate_examples": []
         },
         {
@@ -9892,7 +10016,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 13,
+          "agentskillexchange_source_vetted_entries": 15,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -9913,9 +10037,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 22,
+        "entries": 51,
         "reference_only": 1,
-        "reject_unchanged": 20,
+        "reject_unchanged": 49,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -9976,7 +10100,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 6,
           "source_vetted_candidate_examples": []
         },
         {
@@ -10064,14 +10188,14 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 11,
-          "agentskillexchange_source_vetted_entries": 6,
+          "agentskillexchange_source_vetted_entries": 8,
           "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 10,
+        "entries": 16,
         "reference_only": 1,
-        "reject_unchanged": 9,
+        "reject_unchanged": 15,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -10145,7 +10269,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 42
+          "agentskillexchange_source_vetted_entries": 46
         },
         {
           "id": "dashboards",
@@ -10314,13 +10438,13 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 9
+          "agentskillexchange_source_vetted_entries": 10
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 69,
+        "entries": 74,
         "reference_only": 3,
-        "reject_unchanged": 65,
+        "reject_unchanged": 70,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -10353,7 +10477,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 4,
           "source_vetted_candidate_examples": []
         },
         {
@@ -10413,7 +10537,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4
+          "agentskillexchange_source_vetted_entries": 23
         },
         {
           "id": "focus",
@@ -10461,7 +10585,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2,
-          "agentskillexchange_source_vetted_entries": 3,
+          "agentskillexchange_source_vetted_entries": 17,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -10495,7 +10619,9 @@
             "archieindian-superpowers/long-running-task-management"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "agentskillexchange_source_vetted_entries": 13,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "collaboration",
@@ -10516,14 +10642,14 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6,
-          "agentskillexchange_source_vetted_entries": 4,
+          "agentskillexchange_source_vetted_entries": 14,
           "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 13,
+        "entries": 71,
         "reference_only": 2,
-        "reject_unchanged": 11,
+        "reject_unchanged": 69,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -10584,9 +10710,24 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/connect-agents-to-openrag-knowledge-bases-over-mcp/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "5696ddc3aa23188c8cdf9ae337bc1be44347a363",
+              "package_tree": "f69b774149c4fc525aa60bd3b3de82fa4040b466",
+              "capability": "Connect an MCP client to a deployed OpenRAG knowledge base",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 70
+          "agentskillexchange_source_vetted_entries": 82
         },
         {
           "id": "summarization",
@@ -10604,7 +10745,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 5,
           "source_vetted_candidate_examples": []
         },
         {
@@ -10665,7 +10806,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 35
+          "agentskillexchange_source_vetted_entries": 53
         },
         {
           "id": "provenance",
@@ -10699,7 +10840,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 4,
+          "agentskillexchange_source_vetted_entries": 8,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -10787,9 +10928,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 120,
-        "reference_only": 3,
-        "reject_unchanged": 117,
+        "entries": 157,
+        "reference_only": 4,
+        "reject_unchanged": 153,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -10928,9 +11069,24 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/maqami-travel-booking/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "c0d7be005f35c248c056d6f468b44951df8dbf43",
+              "package_tree": "93cde82c333c0f096bab5bbe9c8fe21ede2351a9",
+              "capability": "Search and book hotels and flights through MAQAMI remote MCP",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 6
+          "agentskillexchange_source_vetted_entries": 13
         },
         {
           "id": "governance",
@@ -10999,14 +11155,14 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 2,
+          "agentskillexchange_source_vetted_entries": 3,
           "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 8,
-        "reference_only": 2,
-        "reject_unchanged": 6,
+        "entries": 16,
+        "reference_only": 3,
+        "reject_unchanged": 13,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -11131,14 +11287,14 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 1,
+          "agentskillexchange_source_vetted_entries": 9,
           "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 4,
+        "entries": 12,
         "reference_only": 0,
-        "reject_unchanged": 4,
+        "reject_unchanged": 12,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -11533,7 +11689,9 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "scientific-communication",
@@ -11547,13 +11705,15 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 12
+          "name_only_review_hits_in_scope": 12,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 1,
+        "entries": 3,
         "reference_only": 0,
-        "reject_unchanged": 1,
+        "reject_unchanged": 3,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -11645,7 +11805,9 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "evidence-appraisal",
@@ -11659,7 +11821,14 @@
           ],
           "name_only_review_candidate_ids": []
         }
-      ]
+      ],
+      "agentskillexchange_source_vetted": {
+        "entries": 1,
+        "reference_only": 0,
+        "reject_unchanged": 1,
+        "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
+        "stage": "source-vetted-candidate-only"
+      }
     },
     {
       "id": "law",
@@ -11831,7 +12000,7 @@
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
           "name_only_review_hits_in_scope": 0,
-          "agentskillexchange_source_vetted_entries": 6,
+          "agentskillexchange_source_vetted_entries": 8,
           "source_vetted_candidate_examples": []
         },
         {
@@ -11876,7 +12045,9 @@
             "aws-agent-toolkit/aws-billing-and-cost-management"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": []
         },
         {
           "id": "reporting",
@@ -11897,7 +12068,7 @@
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1,
-          "agentskillexchange_source_vetted_entries": 9,
+          "agentskillexchange_source_vetted_entries": 12,
           "source_vetted_candidate_examples": [
             {
               "source_id": "agentskillexchange-skills",
@@ -11932,13 +12103,31 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "agentskillexchange_source_vetted_entries": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "agentskillexchange-skills",
+              "canonical_path": "skills/aperture-wallet-guide/SKILL.md",
+              "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+              "skill_blob": "f84c80f2ed2adb715293f5f744dd9883ed37f3b0",
+              "package_tree": "bc5cd94708420e9225b4a72628b825c8f6c5d85a",
+              "capability": "Answer Oath Wallet product, security and release questions from first-party sources",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 15,
-        "reference_only": 1,
-        "reject_unchanged": 14,
+        "entries": 22,
+        "reference_only": 2,
+        "reject_unchanged": 20,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -12265,7 +12454,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 6
+          "agentskillexchange_source_vetted_entries": 7
         },
         {
           "id": "distributed-training",
@@ -12300,7 +12489,7 @@
               "unchanged_use_approved": false
             }
           ],
-          "agentskillexchange_source_vetted_entries": 1
+          "agentskillexchange_source_vetted_entries": 3
         },
         {
           "id": "accelerator-fabrics",
@@ -12372,9 +12561,9 @@
         }
       ],
       "agentskillexchange_source_vetted": {
-        "entries": 7,
+        "entries": 10,
         "reference_only": 0,
-        "reject_unchanged": 7,
+        "reject_unchanged": 10,
         "index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
         "stage": "source-vetted-candidate-only"
       }
@@ -14323,13 +14512,14 @@
     "registry/discovery/agentskillexchange-ops-pointer-453-static-20261102.json",
     "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json",
     "registry/discovery/agentskillexchange-developer-tools-pointer-439-static-20261102.json",
-    "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json"
+    "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json",
+    "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 219,
+    "subdomain_example_instances": 227,
     "browse_overview_preview_instances": 154,
-    "distinct_source_path_pins": 229,
+    "distinct_source_path_pins": 237,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
@@ -14352,7 +14542,7 @@
     "accounting_reconciliation_20261102": "Recomputed from all source_vetted_candidate_examples PLUS source_vetted_reference_records: 171→179 subdomain instances, 146→154 overview previews, 164→172 unique source/path/pin candidates. Governed evidence-linked 78 unchanged.",
     "latest_awesome_copilot_requirements_eight": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
     "latest_awesome_copilot_test_framework_eight": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json",
-    "latest_agentskillexchange": "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json",
+    "latest_agentskillexchange": "registry/discovery/agentskillexchange-final-pointer-908-static-20261102.json",
     "agentskillexchange_capability_index": "registry/discovery/agentskillexchange-capability-index-20261102.json",
     "accounting_correction_20261102_ase": "Recomputed from actual arrays before the AgentSkillExchange addition: main advertised 179 subdomain example instances / 172 distinct source-path-pins but arrays contained 156 / 166 (overview previews 154 correct). Added 55 AgentSkillExchange REFERENCE-ONLY subdomain examples: 211 instances, 221 distinct union identities. REJECT entries are indexed in registry/discovery/agentskillexchange-capability-index-20261102.json, not in subdomain examples."
   },
