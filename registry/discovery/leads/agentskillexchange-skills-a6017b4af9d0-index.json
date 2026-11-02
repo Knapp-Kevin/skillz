@@ -24,11 +24,11 @@
     "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-07.json",
     "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-08.json"
   ],
-  "terminal_static_candidate_reviews": 1845,
+  "terminal_static_candidate_reviews": 2288,
   "deferred_static_candidate_reviews": 3,
   "individual_reviews_scope": "individual_reviews counts governed exact-version semantic review pairs only (0); source-vetting candidate decisions are separate",
-  "latest_review_ledger": "registry/discovery/agentskillexchange-developer-tools-pointer-439-static-20261102.json",
+  "latest_review_ledger": "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json",
   "review_progress_ledger": "registry/discovery/pinned-4813-review-progress-20261101.json",
   "identity_segmentation": "registry/discovery/agentskillexchange-identity-segmentation-20261102.json",
-  "review_status_scope": "1845 exact-path source-vetting decisions (1842 direct, 3 other) and 3 DEFER; 1355 raw paths without terminal decision. Not governed semantic reviews."
+  "review_status_scope": "2288 exact-path source-vetting decisions (2285 direct, 3 other) and 3 DEFER; 912 raw paths without terminal decision. Not governed semantic reviews."
 }

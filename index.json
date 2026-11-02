@@ -1028,12 +1028,12 @@
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 182,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 2054,
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 2497,
     "github_awesome_copilot_exact_path_candidate_decisions": 119,
     "github_awesome_copilot_nested_structurally_classified": 17,
     "github_awesome_copilot_nested_terminal_candidate_decisions": 17,
     "github_awesome_copilot_nested_pending_terminal": 0,
-    "agentskillexchange_exact_path_candidate_decisions": 1845,
+    "agentskillexchange_exact_path_candidate_decisions": 2288,
     "agentskillexchange_exact_path_deferred": 3,
     "agentskillexchange_identity_segmented_paths": 3200
   },
@@ -4539,8 +4539,8 @@
     "date": "2026-11-02",
     "source_role": "dynamic-discovery-only",
     "raw_discovered_skill_md_paths": 4813,
-    "terminal_exact_path_candidate_decisions": 2054,
-    "raw_paths_without_terminal_path_matched_decision": 2759,
+    "terminal_exact_path_candidate_decisions": 2497,
+    "raw_paths_without_terminal_path_matched_decision": 2316,
     "source_progress": {
       "github_awesome_copilot": {
         "raw": 432,
@@ -4568,14 +4568,14 @@
       },
       "agentskillexchange_skills": {
         "raw": 3200,
-        "path_matched_terminal": 1845,
+        "path_matched_terminal": 2288,
         "deferred": 3,
-        "direct_shape_terminal": 1842,
+        "direct_shape_terminal": 2285,
         "direct_shape_total": 3196,
         "other_shape_terminal": 3,
         "other_shape_total": 4,
         "other_shape_structurally_excluded_non_skill": 1,
-        "raw_pending": 1355,
+        "raw_pending": 912,
         "segments": {
           "catalog-stub-no-procedure": 462,
           "catalog-card-install-pointer": 2651,
@@ -4588,9 +4588,9 @@
     "governed_capability_linked_identities_unchanged": 78,
     "distinct_eligible_denominator": null,
     "capability_directory": {
-      "subdomain_candidate_example_instances": 215,
+      "subdomain_candidate_example_instances": 219,
       "overview_candidate_preview_instances": 154,
-      "distinct_source_path_pin_candidate_identities": 225,
+      "distinct_source_path_pin_candidate_identities": 229,
       "corrected_prior_declared": "179/172 declared vs 156/166 actual before this tranche"
     },
     "new_tranche": [
@@ -4606,16 +4606,16 @@
     "new_security_scans": 0,
     "new_behavioral_validations": 0,
     "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval.",
-    "capability_directory_subdomain_examples": 215,
-    "capability_directory_distinct_source_vetted_candidates": 225,
+    "capability_directory_subdomain_examples": 219,
+    "capability_directory_distinct_source_vetted_candidates": 229,
     "historical_candidate_only_openai_exact_blob_tree_matches": 41,
     "raw_paths_with_any_exact_path_candidate_decision_evidence": 250,
     "raw_paths_without_any_exact_path_candidate_decision_evidence": 4563,
     "current_standard_ten_dimension_path_decisions": 209,
     "historical_candidate_crosswalk": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
     "deferred": 3,
-    "reference_only_agentskillexchange": 59,
-    "reject_unchanged_agentskillexchange": 1786
+    "reference_only_agentskillexchange": 63,
+    "reject_unchanged_agentskillexchange": 2225
   },
   "awesome_copilot_developer_workflows_eight_static_20261102": {
     "date": "2026-11-02",
@@ -4780,6 +4780,27 @@
     "reject_unchanged": 438,
     "four_source_before": 1615,
     "four_source_after": 2054,
+    "governed_review_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "agentskillexchange_templates_data_pointer_443_static_20261102": {
+    "date": "2026-11-02",
+    "source_id": "agentskillexchange-skills",
+    "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+    "evidence": "registry/discovery/agentskillexchange-templates-data-pointer-443-static-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-agentskillexchange-templates-data-pointer-443-static.md",
+    "segment": "catalog-card-install-pointer",
+    "categories": [
+      "Templates & Workflows",
+      "Data Extraction & Transformation"
+    ],
+    "candidate_decisions": 443,
+    "reference_only": 4,
+    "reject_unchanged": 439,
+    "four_source_before": 2054,
+    "four_source_after": 2497,
     "governed_review_delta": 0,
     "security_scans": 0,
     "behavioral_validations": 0,
